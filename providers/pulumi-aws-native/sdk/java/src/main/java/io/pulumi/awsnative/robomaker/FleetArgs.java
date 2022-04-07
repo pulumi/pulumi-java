@@ -17,7 +17,6 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the fleet.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

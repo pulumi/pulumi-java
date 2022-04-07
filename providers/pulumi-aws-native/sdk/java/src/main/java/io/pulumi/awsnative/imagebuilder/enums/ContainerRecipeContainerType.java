@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the type of container, such as Docker.
-     * 
      */
     @EnumType
     public enum ContainerRecipeContainerType {

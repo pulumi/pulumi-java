@@ -17,104 +17,89 @@ import javax.annotation.Nullable;
 
 /**
  * A signing profile is a signing template that can be used to carry out a pre-defined signing job.
- * 
  */
 @ResourceType(type="aws-native:signer:SigningProfile")
 public class SigningProfile extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the specified signing profile.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the specified signing profile.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The ID of the target signing platform.
-     * 
      */
     @Export(name="platformId", type=SigningProfilePlatformId.class, parameters={})
     private Output<SigningProfilePlatformId> platformId;
 
     /**
      * @return The ID of the target signing platform.
-     * 
      */
     public Output<SigningProfilePlatformId> getPlatformId() {
         return this.platformId;
     }
     /**
-     * A name for the signing profile. AWS CloudFormation generates a unique physical ID and uses that ID for the signing profile name.
-     * 
+     * A name for the signing profile. AWS CloudFormation generates a unique physical ID and uses that ID for the signing profile name. 
      */
     @Export(name="profileName", type=String.class, parameters={})
     private Output<String> profileName;
 
     /**
-     * @return A name for the signing profile. AWS CloudFormation generates a unique physical ID and uses that ID for the signing profile name.
-     * 
+     * @return A name for the signing profile. AWS CloudFormation generates a unique physical ID and uses that ID for the signing profile name. 
      */
     public Output<String> getProfileName() {
         return this.profileName;
     }
     /**
      * A version for the signing profile. AWS Signer generates a unique version for each profile of the same profile name.
-     * 
      */
     @Export(name="profileVersion", type=String.class, parameters={})
     private Output<String> profileVersion;
 
     /**
      * @return A version for the signing profile. AWS Signer generates a unique version for each profile of the same profile name.
-     * 
      */
     public Output<String> getProfileVersion() {
         return this.profileVersion;
     }
     /**
      * The Amazon Resource Name (ARN) of the specified signing profile version.
-     * 
      */
     @Export(name="profileVersionArn", type=String.class, parameters={})
     private Output<String> profileVersionArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the specified signing profile version.
-     * 
      */
     public Output<String> getProfileVersionArn() {
         return this.profileVersionArn;
     }
     /**
      * Signature validity period of the profile.
-     * 
      */
     @Export(name="signatureValidityPeriod", type=SigningProfileSignatureValidityPeriod.class, parameters={})
     private Output</* @Nullable */ SigningProfileSignatureValidityPeriod> signatureValidityPeriod;
 
     /**
      * @return Signature validity period of the profile.
-     * 
      */
     public Output</* @Nullable */ SigningProfileSignatureValidityPeriod> getSignatureValidityPeriod() {
         return this.signatureValidityPeriod;
     }
     /**
      * A list of tags associated with the signing profile.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={SigningProfileTag.class})
     private Output</* @Nullable */ List<SigningProfileTag>> tags;
 
     /**
      * @return A list of tags associated with the signing profile.
-     * 
      */
     public Output</* @Nullable */ List<SigningProfileTag>> getTags() {
         return this.tags;

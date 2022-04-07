@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::KMS::Key resource specifies a customer master key (CMK) in AWS Key Management Service (AWS KMS). Authorized users can use the CMK to encrypt and decrypt small amounts of data (up to 4096 bytes), but they are more commonly used to generate data keys. You can also use CMKs to encrypt data stored in AWS services that are integrated with AWS KMS or within their applications.
- * 
  */
 @ResourceType(type="aws-native:kms:Key")
 public class Key extends io.pulumi.resources.CustomResource {
@@ -32,42 +31,36 @@ public class Key extends io.pulumi.resources.CustomResource {
     }
     /**
      * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
-     * 
      */
     @Export(name="enableKeyRotation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableKeyRotation;
 
     /**
      * @return Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableKeyRotation() {
         return this.enableKeyRotation;
     }
     /**
      * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
@@ -80,84 +73,72 @@ public class Key extends io.pulumi.resources.CustomResource {
     }
     /**
      * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
-     * 
      */
     @Export(name="keyPolicy", type=Object.class, parameters={})
     private Output<Object> keyPolicy;
 
     /**
      * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
-     * 
      */
     public Output<Object> getKeyPolicy() {
         return this.keyPolicy;
     }
     /**
      * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
-     * 
      */
     @Export(name="keySpec", type=KeySpec.class, parameters={})
     private Output</* @Nullable */ KeySpec> keySpec;
 
     /**
      * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
-     * 
      */
     public Output</* @Nullable */ KeySpec> getKeySpec() {
         return this.keySpec;
     }
     /**
      * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
-     * 
      */
     @Export(name="keyUsage", type=KeyUsage.class, parameters={})
     private Output</* @Nullable */ KeyUsage> keyUsage;
 
     /**
      * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
-     * 
      */
     public Output</* @Nullable */ KeyUsage> getKeyUsage() {
         return this.keyUsage;
     }
     /**
      * Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
-     * 
      */
     @Export(name="multiRegion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> multiRegion;
 
     /**
      * @return Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
-     * 
      */
     public Output</* @Nullable */ Boolean> getMultiRegion() {
         return this.multiRegion;
     }
     /**
      * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
-     * 
      */
     @Export(name="pendingWindowInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> pendingWindowInDays;
 
     /**
      * @return Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
-     * 
      */
     public Output</* @Nullable */ Integer> getPendingWindowInDays() {
         return this.pendingWindowInDays;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={KeyTag.class})
     private Output</* @Nullable */ List<KeyTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<KeyTag>> getTags() {
         return this.tags;

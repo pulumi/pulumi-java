@@ -17,7 +17,6 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
-     * 
      */
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
@@ -28,7 +27,6 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the stage to associate with the usage plan.
-     * 
      */
     @Import(name="stage")
       private final @Nullable Output<String> stage;
@@ -39,7 +37,6 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, '/pets/GET'. Duplicates are not allowed.
-     * 
      */
     @Import(name="throttle")
       private final @Nullable Output<Object> throttle;

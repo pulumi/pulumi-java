@@ -18,7 +18,6 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A list of ConformancePackInputParameter objects.
-     * 
      */
     @Import(name="conformancePackInputParameters")
       private final @Nullable Output<List<ConformancePackInputParameterArgs>> conformancePackInputParameters;
@@ -29,7 +28,6 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the conformance pack which will be assigned as the unique identifier.
-     * 
      */
     @Import(name="conformancePackName")
       private final @Nullable Output<String> conformancePackName;
@@ -40,7 +38,6 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * AWS Config stores intermediate files while processing conformance pack template.
-     * 
      */
     @Import(name="deliveryS3Bucket")
       private final @Nullable Output<String> deliveryS3Bucket;
@@ -51,7 +48,6 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The prefix for delivery S3 bucket.
-     * 
      */
     @Import(name="deliveryS3KeyPrefix")
       private final @Nullable Output<String> deliveryS3KeyPrefix;
@@ -62,7 +58,6 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
-     * 
      */
     @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
@@ -73,7 +68,6 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
-     * 
      */
     @Import(name="templateS3Uri")
       private final @Nullable Output<String> templateS3Uri;

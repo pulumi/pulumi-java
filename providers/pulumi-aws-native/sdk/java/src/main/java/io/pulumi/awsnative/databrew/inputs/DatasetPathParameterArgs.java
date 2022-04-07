@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to associate dataset parameter name with its definition.
- * 
  */
 public final class DatasetPathParameterArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the settings used to enable server-side encryption
- * 
  */
 public final class TableEncryptionSpecification extends io.pulumi.resources.InvokeArgs {
 

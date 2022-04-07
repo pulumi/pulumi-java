@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DataSourceManifestFileLocation {
     /**
      * <p>Amazon S3 bucket.</p>
-     * 
      */
     private final String bucket;
     /**
      * <p>Amazon S3 key that identifies an object.</p>
-     * 
      */
     private final String key;
 
@@ -30,14 +28,12 @@ public final class DataSourceManifestFileLocation {
 
     /**
      * <p>Amazon S3 bucket.</p>
-     * 
     */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * <p>Amazon S3 key that identifies an object.</p>
-     * 
     */
     public String getKey() {
         return this.key;

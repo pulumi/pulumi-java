@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the AWS::QuickSight::DataSource Resource Type.
- * 
  */
 @ResourceType(type="aws-native:quicksight:DataSource")
 public class DataSource extends io.pulumi.resources.CustomResource {
@@ -37,7 +36,6 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      *             existing data source. If the <code>AlternateDataSourceParameters</code> list is null,
      *             the <code>Credentials</code> originally used with this <code>DataSourceParameters</code>
      *             are automatically allowed.</p>
-     * 
      */
     @Export(name="alternateDataSourceParameters", type=List.class, parameters={DataSourceParameters.class})
     private Output</* @Nullable */ List<DataSourceParameters>> alternateDataSourceParameters;
@@ -52,21 +50,18 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      *             existing data source. If the <code>AlternateDataSourceParameters</code> list is null,
      *             the <code>Credentials</code> originally used with this <code>DataSourceParameters</code>
      *             are automatically allowed.</p>
-     * 
      */
     public Output</* @Nullable */ List<DataSourceParameters>> getAlternateDataSourceParameters() {
         return this.alternateDataSourceParameters;
     }
     /**
      * <p>The Amazon Resource Name (ARN) of the data source.</p>
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return <p>The Amazon Resource Name (ARN) of the data source.</p>
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -79,14 +74,12 @@ public class DataSource extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The time that this data source was created.</p>
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return <p>The time that this data source was created.</p>
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
@@ -117,42 +110,36 @@ public class DataSource extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The last time that this data source was updated.</p>
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return <p>The last time that this data source was updated.</p>
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * <p>A display name for the data source.</p>
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return <p>A display name for the data source.</p>
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * <p>A list of resource permissions on the data source.</p>
-     * 
      */
     @Export(name="permissions", type=List.class, parameters={DataSourceResourcePermission.class})
     private Output</* @Nullable */ List<DataSourceResourcePermission>> permissions;
 
     /**
      * @return <p>A list of resource permissions on the data source.</p>
-     * 
      */
     public Output</* @Nullable */ List<DataSourceResourcePermission>> getPermissions() {
         return this.permissions;
@@ -171,14 +158,12 @@ public class DataSource extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DataSourceTag.class})
     private Output</* @Nullable */ List<DataSourceTag>> tags;
 
     /**
      * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
-     * 
      */
     public Output</* @Nullable */ List<DataSourceTag>> getTags() {
         return this.tags;

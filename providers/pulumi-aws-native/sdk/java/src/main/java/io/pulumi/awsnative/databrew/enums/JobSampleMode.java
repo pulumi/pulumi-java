@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Sample configuration mode for profile jobs.
-     * 
      */
     @EnumType
     public enum JobSampleMode {

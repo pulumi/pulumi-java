@@ -15,7 +15,6 @@ public final class ConnectorProfileSlackConnectorProfilePropertiesArgs extends i
 
     /**
      * The location of the Slack resource
-     * 
      */
     @Import(name="instanceUrl", required=true)
       private final Output<String> instanceUrl;

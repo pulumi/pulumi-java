@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The service endpoints that the agent will connect to.
-     * 
      */
     @EnumType
     public enum AgentEndpointType {

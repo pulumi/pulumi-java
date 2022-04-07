@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Format of the input file
-     * 
      */
     @EnumType
     public enum FaqFileFormat {

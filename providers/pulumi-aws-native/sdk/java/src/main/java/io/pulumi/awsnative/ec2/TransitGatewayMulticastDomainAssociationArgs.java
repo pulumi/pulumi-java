@@ -15,7 +15,6 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
 
     /**
      * The IDs of the subnets to associate with the transit gateway multicast domain.
-     * 
      */
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
@@ -26,7 +25,6 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
 
     /**
      * The ID of the transit gateway attachment.
-     * 
      */
     @Import(name="transitGatewayAttachmentId", required=true)
       private final Output<String> transitGatewayAttachmentId;
@@ -37,7 +35,6 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
 
     /**
      * The ID of the transit gateway multicast domain.
-     * 
      */
     @Import(name="transitGatewayMulticastDomainId", required=true)
       private final Output<String> transitGatewayMulticastDomainId;

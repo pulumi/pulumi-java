@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
- * 
  */
 public final class InstanceAccessControlAttributeConfigurationProperties extends io.pulumi.resources.InvokeArgs {
 

@@ -19,7 +19,6 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
 
     /**
      * The Connect attachment options.
-     * 
      */
     @Import(name="options", required=true)
       private final Output<TransitGatewayConnectOptionsArgs> options;
@@ -30,7 +29,6 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
 
     /**
      * The tags for the attachment.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayConnectTagArgs>> tags;
@@ -41,7 +39,6 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
 
     /**
      * The ID of the attachment from which the Connect attachment was created.
-     * 
      */
     @Import(name="transportTransitGatewayAttachmentId", required=true)
       private final Output<String> transportTransitGatewayAttachmentId;

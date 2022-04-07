@@ -27,7 +27,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name for the bucket.
-     * 
      */
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
@@ -38,7 +37,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the bundle to use for the bucket.
-     * 
      */
     @Import(name="bundleId", required=true)
       private final Output<String> bundleId;
@@ -49,7 +47,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether to enable or disable versioning of objects in the bucket.
-     * 
      */
     @Import(name="objectVersioning")
       private final @Nullable Output<Boolean> objectVersioning;
@@ -60,7 +57,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of strings to specify the AWS account IDs that can access the bucket.
-     * 
      */
     @Import(name="readOnlyAccessAccounts")
       private final @Nullable Output<List<String>> readOnlyAccessAccounts;
@@ -71,7 +67,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The names of the Lightsail resources for which to set bucket access.
-     * 
      */
     @Import(name="resourcesReceivingAccess")
       private final @Nullable Output<List<String>> resourcesReceivingAccess;
@@ -82,7 +77,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<BucketTagArgs>> tags;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The inputs for a monitoring job.
- * 
  */
 public final class MonitoringScheduleMonitoringInputArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -20,7 +20,6 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Operation to be performed on provided source fields
-     * 
      */
     @Import(name="connectorOperator")
       private final @Nullable Output<FlowConnectorOperatorArgs> connectorOperator;
@@ -31,7 +30,6 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A field value on which source field should be validated
-     * 
      */
     @Import(name="destinationField")
       private final @Nullable Output<String> destinationField;
@@ -42,7 +40,6 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source fields on which particular task will be applied
-     * 
      */
     @Import(name="sourceFields", required=true)
       private final Output<List<String>> sourceFields;
@@ -53,7 +50,6 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A Map used to store task related info
-     * 
      */
     @Import(name="taskProperties")
       private final @Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties;
@@ -64,7 +60,6 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of task
-     * 
      */
     @Import(name="taskType", required=true)
       private final Output<FlowTaskType> taskType;

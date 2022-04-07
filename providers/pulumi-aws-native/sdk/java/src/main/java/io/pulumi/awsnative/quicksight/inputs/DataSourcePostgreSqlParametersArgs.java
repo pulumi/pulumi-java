@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * <p>PostgreSQL parameters.</p>
- * 
  */
 public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
 
     /**
      * <p>Database.</p>
-     * 
      */
     @Import(name="database", required=true)
       private final Output<String> database;
@@ -31,7 +29,6 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
 
     /**
      * <p>Host.</p>
-     * 
      */
     @Import(name="host", required=true)
       private final Output<String> host;
@@ -42,7 +39,6 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
 
     /**
      * <p>Port.</p>
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Double> port;

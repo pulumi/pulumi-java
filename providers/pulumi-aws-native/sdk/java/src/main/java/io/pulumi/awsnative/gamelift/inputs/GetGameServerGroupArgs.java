@@ -14,7 +14,6 @@ public final class GetGameServerGroupArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * A generated unique ID for the game server group.
-     * 
      */
     @Import(name="gameServerGroupArn", required=true)
       private final String gameServerGroupArn;

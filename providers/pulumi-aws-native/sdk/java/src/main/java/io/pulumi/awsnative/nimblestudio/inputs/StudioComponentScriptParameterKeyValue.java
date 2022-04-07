@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>A parameter for a studio component script, in the form of a key:value pair.</p>
- * 
  */
 public final class StudioComponentScriptParameterKeyValue extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class StudioComponentScriptParameterKeyValue extends io.pulumi.reso
 
     /**
      * <p>A script parameter key.</p>
-     * 
      */
     @Import(name="key")
       private final @Nullable String key;
@@ -31,7 +29,6 @@ public final class StudioComponentScriptParameterKeyValue extends io.pulumi.reso
 
     /**
      * <p>A script parameter value.</p>
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

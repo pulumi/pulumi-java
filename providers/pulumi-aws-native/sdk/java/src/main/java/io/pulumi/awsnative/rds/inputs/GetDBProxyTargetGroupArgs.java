@@ -14,7 +14,6 @@ public final class GetDBProxyTargetGroupArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The Amazon Resource Name (ARN) representing the target group.
-     * 
      */
     @Import(name="targetGroupArn", required=true)
       private final String targetGroupArn;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Parameters to define a mitigation action that changes the state of the CA certificate to inactive.
- * 
  */
 public final class MitigationActionUpdateCACertificateParams extends io.pulumi.resources.InvokeArgs {
 

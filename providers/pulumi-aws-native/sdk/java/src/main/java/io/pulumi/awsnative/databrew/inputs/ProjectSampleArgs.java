@@ -17,7 +17,6 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sample size
-     * 
      */
     @Import(name="size")
       private final @Nullable Output<Integer> size;
@@ -28,7 +27,6 @@ public final class ProjectSampleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sample type
-     * 
      */
     @Import(name="type", required=true)
       private final Output<ProjectSampleType> type;

@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * <p>An integer parameter.</p>
- * 
  */
 public final class AnalysisIntegerParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AnalysisIntegerParameterArgs extends io.pulumi.resources.Reso
 
     /**
      * <p>The name of the integer parameter.</p>
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class AnalysisIntegerParameterArgs extends io.pulumi.resources.Reso
 
     /**
      * <p>The values for the integer parameter.</p>
-     * 
      */
     @Import(name="values", required=true)
       private final Output<List<Double>> values;

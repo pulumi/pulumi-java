@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class InstanceState {
     /**
      * Status code of the Instance.
-     * 
      */
     private final @Nullable Integer code;
     /**
      * Status code of the Instance.
-     * 
      */
     private final @Nullable String name;
 
@@ -33,14 +31,12 @@ public final class InstanceState {
 
     /**
      * Status code of the Instance.
-     * 
     */
     public Optional<Integer> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Status code of the Instance.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

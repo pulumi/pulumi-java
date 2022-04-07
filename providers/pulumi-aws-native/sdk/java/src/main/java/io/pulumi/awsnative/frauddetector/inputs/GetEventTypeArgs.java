@@ -14,7 +14,6 @@ public final class GetEventTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ARN of the event type.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

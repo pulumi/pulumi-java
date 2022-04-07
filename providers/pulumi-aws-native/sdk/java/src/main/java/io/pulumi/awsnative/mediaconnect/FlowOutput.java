@@ -18,216 +18,185 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::MediaConnect::FlowOutput
- * 
  */
 @ResourceType(type="aws-native:mediaconnect:FlowOutput")
 public class FlowOutput extends io.pulumi.resources.CustomResource {
     /**
      * The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
-     * 
      */
     @Export(name="cidrAllowList", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> cidrAllowList;
 
     /**
      * @return The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
-     * 
      */
     public Output</* @Nullable */ List<String>> getCidrAllowList() {
         return this.cidrAllowList;
     }
     /**
      * A description of the output.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the output.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The address where you want to send the output.
-     * 
      */
     @Export(name="destination", type=String.class, parameters={})
     private Output</* @Nullable */ String> destination;
 
     /**
      * @return The address where you want to send the output.
-     * 
      */
     public Output</* @Nullable */ String> getDestination() {
         return this.destination;
     }
     /**
      * The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
-     * 
      */
     @Export(name="encryption", type=FlowOutputEncryption.class, parameters={})
     private Output</* @Nullable */ FlowOutputEncryption> encryption;
 
     /**
      * @return The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
-     * 
      */
     public Output</* @Nullable */ FlowOutputEncryption> getEncryption() {
         return this.encryption;
     }
     /**
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
-     * 
      */
     @Export(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
     /**
      * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
-     * 
      */
     public Output<String> getFlowArn() {
         return this.flowArn;
     }
     /**
      * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
-     * 
      */
     @Export(name="maxLatency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxLatency;
 
     /**
      * @return The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
-     * 
      */
     public Output</* @Nullable */ Integer> getMaxLatency() {
         return this.maxLatency;
     }
     /**
      * The minimum latency in milliseconds.
-     * 
      */
     @Export(name="minLatency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minLatency;
 
     /**
      * @return The minimum latency in milliseconds.
-     * 
      */
     public Output</* @Nullable */ Integer> getMinLatency() {
         return this.minLatency;
     }
     /**
      * The name of the output. This value must be unique within the current flow.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the output. This value must be unique within the current flow.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The ARN of the output.
-     * 
      */
     @Export(name="outputArn", type=String.class, parameters={})
     private Output<String> outputArn;
 
     /**
      * @return The ARN of the output.
-     * 
      */
     public Output<String> getOutputArn() {
         return this.outputArn;
     }
     /**
      * The port to use when content is distributed to this output.
-     * 
      */
     @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
      * @return The port to use when content is distributed to this output.
-     * 
      */
     public Output</* @Nullable */ Integer> getPort() {
         return this.port;
     }
     /**
      * The protocol that is used by the source or output.
-     * 
      */
     @Export(name="protocol", type=FlowOutputProtocol.class, parameters={})
     private Output<FlowOutputProtocol> protocol;
 
     /**
      * @return The protocol that is used by the source or output.
-     * 
      */
     public Output<FlowOutputProtocol> getProtocol() {
         return this.protocol;
     }
     /**
      * The remote ID for the Zixi-pull stream.
-     * 
      */
     @Export(name="remoteId", type=String.class, parameters={})
     private Output</* @Nullable */ String> remoteId;
 
     /**
      * @return The remote ID for the Zixi-pull stream.
-     * 
      */
     public Output</* @Nullable */ String> getRemoteId() {
         return this.remoteId;
     }
     /**
      * The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
-     * 
      */
     @Export(name="smoothingLatency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> smoothingLatency;
 
     /**
      * @return The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
-     * 
      */
     public Output</* @Nullable */ Integer> getSmoothingLatency() {
         return this.smoothingLatency;
     }
     /**
      * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
-     * 
      */
     @Export(name="streamId", type=String.class, parameters={})
     private Output</* @Nullable */ String> streamId;
 
     /**
      * @return The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
-     * 
      */
     public Output</* @Nullable */ String> getStreamId() {
         return this.streamId;
     }
     /**
      * The name of the VPC interface attachment to use for this output.
-     * 
      */
     @Export(name="vpcInterfaceAttachment", type=FlowOutputVpcInterfaceAttachment.class, parameters={})
     private Output</* @Nullable */ FlowOutputVpcInterfaceAttachment> vpcInterfaceAttachment;
 
     /**
      * @return The name of the VPC interface attachment to use for this output.
-     * 
      */
     public Output</* @Nullable */ FlowOutputVpcInterfaceAttachment> getVpcInterfaceAttachment() {
         return this.vpcInterfaceAttachment;

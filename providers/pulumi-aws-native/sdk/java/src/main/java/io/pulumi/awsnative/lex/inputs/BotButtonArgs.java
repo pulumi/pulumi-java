@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A button to use on a response card used to gather slot values from a user.
- * 
  */
 public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The text that appears on the button.
-     * 
      */
     @Import(name="text", required=true)
       private final Output<String> text;
@@ -30,7 +28,6 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value returned to Amazon Lex when the user chooses this button.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

@@ -16,7 +16,6 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The identifier of the Amazon Connect instance.
-     * 
      */
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
@@ -27,7 +26,6 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the user hierarchy group.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -38,7 +36,6 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Amazon Resource Name (ARN) for the parent user hierarchy group.
-     * 
      */
     @Import(name="parentGroupArn")
       private final @Nullable Output<String> parentGroupArn;

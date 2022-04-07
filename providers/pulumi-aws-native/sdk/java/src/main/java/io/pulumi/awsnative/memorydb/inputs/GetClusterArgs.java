@@ -14,7 +14,6 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the cluster. This value must be unique as it also serves as the cluster identifier.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;

@@ -14,7 +14,6 @@ public final class GetFirewallRuleGroupArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * ResourceId
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

@@ -18,7 +18,433 @@ import javax.annotation.Nullable;
 /**
  * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var samplingRule = new AwsNative.XRay.SamplingRule("samplingRule", new AwsNative.XRay.SamplingRuleArgs
+ *         {
+ *             SamplingRule = new AwsNative.XRay.Inputs.SamplingRuleArgs
+ *             {
+ *                 RuleName = "MySamplingRule",
+ *                 ResourceARN = "*",
+ *                 Priority = 2,
+ *                 FixedRate = 0.05,
+ *                 ReservoirSize = 50,
+ *                 ServiceName = "MyServiceName",
+ *                 ServiceType = "MyServiceType",
+ *                 Host = "MyHost",
+ *                 HttpMethod = "GET",
+ *                 UrlPath = "*",
+ *                 Version = 1,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/xray"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := xray.NewSamplingRule(ctx, "samplingRule", &xray.SamplingRuleArgs{
+ * 			SamplingRule: &xray.SamplingRuleArgs{
+ * 				RuleName:      pulumi.String("MySamplingRule"),
+ * 				ResourceARN:   pulumi.String("*"),
+ * 				Priority:      pulumi.Int(2),
+ * 				FixedRate:     pulumi.Float64(0.05),
+ * 				ReservoirSize: pulumi.Int(50),
+ * 				ServiceName:   pulumi.String("MyServiceName"),
+ * 				ServiceType:   pulumi.String("MyServiceType"),
+ * 				Host:          pulumi.String("MyHost"),
+ * 				HttpMethod:    "GET",
+ * 				UrlPath:       "*",
+ * 				Version:       pulumi.Int(1),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const samplingRule = new aws_native.xray.SamplingRule("samplingRule", {samplingRule: {
+ *     ruleName: "MySamplingRule",
+ *     resourceARN: "*",
+ *     priority: 2,
+ *     fixedRate: 0.05,
+ *     reservoirSize: 50,
+ *     serviceName: "MyServiceName",
+ *     serviceType: "MyServiceType",
+ *     host: "MyHost",
+ *     httpMethod: "GET",
+ *     urlPath: "*",
+ *     version: 1,
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule=aws_native.xray.SamplingRuleArgs(
+ *     rule_name="MySamplingRule",
+ *     resource_arn="*",
+ *     priority=2,
+ *     fixed_rate=0.05,
+ *     reservoir_size=50,
+ *     service_name="MyServiceName",
+ *     service_type="MyServiceType",
+ *     host="MyHost",
+ *     http_method="GET",
+ *     url_path="*",
+ *     version=1,
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var samplingRule = new AwsNative.XRay.SamplingRule("samplingRule", new AwsNative.XRay.SamplingRuleArgs
+ *         {
+ *             SamplingRule = new AwsNative.XRay.Inputs.SamplingRuleArgs
+ *             {
+ *                 RuleName = "MySamplingRule",
+ *                 ResourceARN = "*",
+ *                 Priority = 2,
+ *                 FixedRate = 0.05,
+ *                 ReservoirSize = 50,
+ *                 ServiceName = "MyServiceName",
+ *                 ServiceType = "MyServiceType",
+ *                 Host = "MyHost",
+ *                 HttpMethod = "GET",
+ *                 UrlPath = "*",
+ *                 Version = 1,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/xray"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := xray.NewSamplingRule(ctx, "samplingRule", &xray.SamplingRuleArgs{
+ * 			SamplingRule: &xray.SamplingRuleArgs{
+ * 				RuleName:      pulumi.String("MySamplingRule"),
+ * 				ResourceARN:   pulumi.String("*"),
+ * 				Priority:      pulumi.Int(2),
+ * 				FixedRate:     pulumi.Float64(0.05),
+ * 				ReservoirSize: pulumi.Int(50),
+ * 				ServiceName:   pulumi.String("MyServiceName"),
+ * 				ServiceType:   pulumi.String("MyServiceType"),
+ * 				Host:          pulumi.String("MyHost"),
+ * 				HttpMethod:    "GET",
+ * 				UrlPath:       "*",
+ * 				Version:       pulumi.Int(1),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const samplingRule = new aws_native.xray.SamplingRule("samplingRule", {samplingRule: {
+ *     ruleName: "MySamplingRule",
+ *     resourceARN: "*",
+ *     priority: 2,
+ *     fixedRate: 0.05,
+ *     reservoirSize: 50,
+ *     serviceName: "MyServiceName",
+ *     serviceType: "MyServiceType",
+ *     host: "MyHost",
+ *     httpMethod: "GET",
+ *     urlPath: "*",
+ *     version: 1,
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule=aws_native.xray.SamplingRuleArgs(
+ *     rule_name="MySamplingRule",
+ *     resource_arn="*",
+ *     priority=2,
+ *     fixed_rate=0.05,
+ *     reservoir_size=50,
+ *     service_name="MyServiceName",
+ *     service_type="MyServiceType",
+ *     host="MyHost",
+ *     http_method="GET",
+ *     url_path="*",
+ *     version=1,
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var samplingRule = new AwsNative.XRay.SamplingRule("samplingRule", new AwsNative.XRay.SamplingRuleArgs
+ *         {
+ *             SamplingRuleUpdate = new AwsNative.XRay.Inputs.SamplingRuleUpdateArgs
+ *             {
+ *                 RuleName = "MySamplingRule",
+ *                 ResourceARN = "*",
+ *                 Priority = 1,
+ *                 FixedRate = 0.07,
+ *                 ReservoirSize = 20,
+ *                 ServiceName = "MyServiceName",
+ *                 ServiceType = "MyServiceType",
+ *                 Host = "MyHost",
+ *                 HttpMethod = "GET",
+ *                 UrlPath = "*",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/xray"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := xray.NewSamplingRule(ctx, "samplingRule", &xray.SamplingRuleArgs{
+ * 			SamplingRuleUpdate: &xray.SamplingRuleUpdateArgs{
+ * 				RuleName:      pulumi.String("MySamplingRule"),
+ * 				ResourceARN:   pulumi.String("*"),
+ * 				Priority:      pulumi.Int(1),
+ * 				FixedRate:     pulumi.Float64(0.07),
+ * 				ReservoirSize: pulumi.Int(20),
+ * 				ServiceName:   pulumi.String("MyServiceName"),
+ * 				ServiceType:   pulumi.String("MyServiceType"),
+ * 				Host:          pulumi.String("MyHost"),
+ * 				HttpMethod:    "GET",
+ * 				UrlPath:       "*",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const samplingRule = new aws_native.xray.SamplingRule("samplingRule", {samplingRuleUpdate: {
+ *     ruleName: "MySamplingRule",
+ *     resourceARN: "*",
+ *     priority: 1,
+ *     fixedRate: 0.07,
+ *     reservoirSize: 20,
+ *     serviceName: "MyServiceName",
+ *     serviceType: "MyServiceType",
+ *     host: "MyHost",
+ *     httpMethod: "GET",
+ *     urlPath: "*",
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule_update=aws_native.xray.SamplingRuleUpdateArgs(
+ *     rule_name="MySamplingRule",
+ *     resource_arn="*",
+ *     priority=1,
+ *     fixed_rate=0.07,
+ *     reservoir_size=20,
+ *     service_name="MyServiceName",
+ *     service_type="MyServiceType",
+ *     host="MyHost",
+ *     http_method="GET",
+ *     url_path="*",
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var samplingRule = new AwsNative.XRay.SamplingRule("samplingRule", new AwsNative.XRay.SamplingRuleArgs
+ *         {
+ *             SamplingRuleUpdate = new AwsNative.XRay.Inputs.SamplingRuleUpdateArgs
+ *             {
+ *                 RuleName = "MySamplingRule",
+ *                 ResourceARN = "*",
+ *                 Priority = 1,
+ *                 FixedRate = 0.07,
+ *                 ReservoirSize = 20,
+ *                 ServiceName = "MyServiceName",
+ *                 ServiceType = "MyServiceType",
+ *                 Host = "MyHost",
+ *                 HttpMethod = "GET",
+ *                 UrlPath = "*",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/xray"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := xray.NewSamplingRule(ctx, "samplingRule", &xray.SamplingRuleArgs{
+ * 			SamplingRuleUpdate: &xray.SamplingRuleUpdateArgs{
+ * 				RuleName:      pulumi.String("MySamplingRule"),
+ * 				ResourceARN:   pulumi.String("*"),
+ * 				Priority:      pulumi.Int(1),
+ * 				FixedRate:     pulumi.Float64(0.07),
+ * 				ReservoirSize: pulumi.Int(20),
+ * 				ServiceName:   pulumi.String("MyServiceName"),
+ * 				ServiceType:   pulumi.String("MyServiceType"),
+ * 				Host:          pulumi.String("MyHost"),
+ * 				HttpMethod:    "GET",
+ * 				UrlPath:       "*",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const samplingRule = new aws_native.xray.SamplingRule("samplingRule", {samplingRuleUpdate: {
+ *     ruleName: "MySamplingRule",
+ *     resourceARN: "*",
+ *     priority: 1,
+ *     fixedRate: 0.07,
+ *     reservoirSize: 20,
+ *     serviceName: "MyServiceName",
+ *     serviceType: "MyServiceType",
+ *     host: "MyHost",
+ *     httpMethod: "GET",
+ *     urlPath: "*",
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * sampling_rule = aws_native.xray.SamplingRule("samplingRule", sampling_rule_update=aws_native.xray.SamplingRuleUpdateArgs(
+ *     rule_name="MySamplingRule",
+ *     resource_arn="*",
+ *     priority=1,
+ *     fixed_rate=0.07,
+ *     reservoir_size=20,
+ *     service_name="MyServiceName",
+ *     service_type="MyServiceType",
+ *     host="MyHost",
+ *     http_method="GET",
+ *     url_path="*",
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:xray:SamplingRule")

@@ -17,146 +17,125 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::RDS::DBProxyEndpoint.
- * 
  */
 @ResourceType(type="aws-native:rds:DBProxyEndpoint")
 public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) for the DB proxy endpoint.
-     * 
      */
     @Export(name="dBProxyEndpointArn", type=String.class, parameters={})
     private Output<String> dBProxyEndpointArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the DB proxy endpoint.
-     * 
      */
     public Output<String> getDBProxyEndpointArn() {
         return this.dBProxyEndpointArn;
     }
     /**
      * The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
-     * 
      */
     @Export(name="dBProxyEndpointName", type=String.class, parameters={})
     private Output<String> dBProxyEndpointName;
 
     /**
      * @return The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
-     * 
      */
     public Output<String> getDBProxyEndpointName() {
         return this.dBProxyEndpointName;
     }
     /**
      * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
-     * 
      */
     @Export(name="dBProxyName", type=String.class, parameters={})
     private Output<String> dBProxyName;
 
     /**
      * @return The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
-     * 
      */
     public Output<String> getDBProxyName() {
         return this.dBProxyName;
     }
     /**
      * The endpoint that you can use to connect to the DB proxy. You include the endpoint value in the connection string for a database client application.
-     * 
      */
     @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
      * @return The endpoint that you can use to connect to the DB proxy. You include the endpoint value in the connection string for a database client application.
-     * 
      */
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
     /**
      * A value that indicates whether this endpoint is the default endpoint for the associated DB proxy. Default DB proxy endpoints always have read/write capability. Other endpoints that you associate with the DB proxy can be either read/write or read-only.
-     * 
      */
     @Export(name="isDefault", type=Boolean.class, parameters={})
     private Output<Boolean> isDefault;
 
     /**
      * @return A value that indicates whether this endpoint is the default endpoint for the associated DB proxy. Default DB proxy endpoints always have read/write capability. Other endpoints that you associate with the DB proxy can be either read/write or read-only.
-     * 
      */
     public Output<Boolean> getIsDefault() {
         return this.isDefault;
     }
     /**
      * An optional set of key-value pairs to associate arbitrary data of your choosing with the DB proxy endpoint.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DBProxyEndpointTagFormat.class})
     private Output</* @Nullable */ List<DBProxyEndpointTagFormat>> tags;
 
     /**
      * @return An optional set of key-value pairs to associate arbitrary data of your choosing with the DB proxy endpoint.
-     * 
      */
     public Output</* @Nullable */ List<DBProxyEndpointTagFormat>> getTags() {
         return this.tags;
     }
     /**
      * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
-     * 
      */
     @Export(name="targetRole", type=DBProxyEndpointTargetRole.class, parameters={})
     private Output</* @Nullable */ DBProxyEndpointTargetRole> targetRole;
 
     /**
      * @return A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
-     * 
      */
     public Output</* @Nullable */ DBProxyEndpointTargetRole> getTargetRole() {
         return this.targetRole;
     }
     /**
      * VPC ID to associate with the new DB proxy endpoint.
-     * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
      * @return VPC ID to associate with the new DB proxy endpoint.
-     * 
      */
     public Output<String> getVpcId() {
         return this.vpcId;
     }
     /**
      * VPC security group IDs to associate with the new DB proxy endpoint.
-     * 
      */
     @Export(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpcSecurityGroupIds;
 
     /**
      * @return VPC security group IDs to associate with the new DB proxy endpoint.
-     * 
      */
     public Output</* @Nullable */ List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
     /**
      * VPC subnet IDs to associate with the new DB proxy endpoint.
-     * 
      */
     @Export(name="vpcSubnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSubnetIds;
 
     /**
      * @return VPC subnet IDs to associate with the new DB proxy endpoint.
-     * 
      */
     public Output<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds;

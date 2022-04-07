@@ -31,7 +31,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Clustering key columns of the table
-     * 
      */
     @Import(name="clusteringKeyColumns")
       private final @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
@@ -42,7 +41,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
-     * 
      */
     @Import(name="defaultTimeToLive")
       private final @Nullable Output<Integer> defaultTimeToLive;
@@ -60,7 +58,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name for Cassandra keyspace
-     * 
      */
     @Import(name="keyspaceName", required=true)
       private final Output<String> keyspaceName;
@@ -71,7 +68,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Partition key columns of the table
-     * 
      */
     @Import(name="partitionKeyColumns", required=true)
       private final Output<List<TableColumnArgs>> partitionKeyColumns;
@@ -82,7 +78,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
-     * 
      */
     @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
@@ -93,7 +88,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Non-key columns of the table
-     * 
      */
     @Import(name="regularColumns")
       private final @Nullable Output<List<TableColumnArgs>> regularColumns;
@@ -104,7 +98,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name for Cassandra table
-     * 
      */
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
@@ -115,7 +108,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<TableTagArgs>> tags;

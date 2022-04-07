@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class SecurityProfileStatisticalThreshold {
     /**
      * The percentile which resolves to a threshold value by which compliance with a behavior is determined
-     * 
      */
     private final @Nullable SecurityProfileStatisticalThresholdStatistic statistic;
 
@@ -24,7 +23,6 @@ public final class SecurityProfileStatisticalThreshold {
 
     /**
      * The percentile which resolves to a threshold value by which compliance with a behavior is determined
-     * 
     */
     public Optional<SecurityProfileStatisticalThresholdStatistic> getStatistic() {
         return Optional.ofNullable(this.statistic);

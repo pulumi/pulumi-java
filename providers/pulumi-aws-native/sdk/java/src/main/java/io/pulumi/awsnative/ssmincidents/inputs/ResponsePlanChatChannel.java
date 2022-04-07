@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The chat channel configuration.
- * 
  */
 public final class ResponsePlanChatChannel extends io.pulumi.resources.InvokeArgs {
 

@@ -26,7 +26,314 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::Lambda::Function
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var primer = new AwsNative.Lambda.Function("primer", new AwsNative.Lambda.FunctionArgs
+ *         {
+ *             Runtime = "nodejs12.x",
+ *             Role = "arn:aws:iam::123456789012:role/lambda-role",
+ *             Handler = "index.handler",
+ *             Code = new AwsNative.Lambda.Inputs.FunctionCodeArgs
+ *             {
+ *                 ZipFile = @"var aws = require('aws-sdk')
+ * var response = require('cfn-response')
+ * exports.handler = function(event, context) {
+ *     console.log(""REQUEST RECEIVED:\n"" + JSON.stringify(event))
+ *     // For Delete requests, immediately send a SUCCESS response.
+ *     if (event.RequestType == ""Delete"") {
+ *         response.send(event, context, ""SUCCESS"")
+ *         return
+ *     }
+ *     var responseStatus = ""FAILED""
+ *     var responseData = {}
+ *     var functionName = event.ResourceProperties.FunctionName
+ *     var lambda = new aws.Lambda()
+ *     lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) {
+ *         if (err) {
+ *             responseData = {Error: ""Invoke call failed""}
+ *             console.log(responseData.Error + "":\n"", err)
+ *         }
+ *         else responseStatus = ""SUCCESS""
+ *         response.send(event, context, responseStatus, responseData)
+ *     })
+ * }
+ * ",
+ *             },
+ *             Description = "Invoke a function during stack creation.",
+ *             TracingConfig = new AwsNative.Lambda.Inputs.FunctionTracingConfigArgs
+ *             {
+ *                 Mode = "Active",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewFunction(ctx, "primer", &lambda.FunctionArgs{
+ * 			Runtime: pulumi.String("nodejs12.x"),
+ * 			Role:    pulumi.String("arn:aws:iam::123456789012:role/lambda-role"),
+ * 			Handler: pulumi.String("index.handler"),
+ * 			Code: &lambda.FunctionCodeArgs{
+ * 				ZipFile: pulumi.String("var aws = require('aws-sdk')\nvar response = require('cfn-response')\nexports.handler = function(event, context) {\n    console.log(\"REQUEST RECEIVED:\\n\" + JSON.stringify(event))\n    // For Delete requests, immediately send a SUCCESS response.\n    if (event.RequestType == \"Delete\") {\n        response.send(event, context, \"SUCCESS\")\n        return\n    }\n    var responseStatus = \"FAILED\"\n    var responseData = {}\n    var functionName = event.ResourceProperties.FunctionName\n    var lambda = new aws.Lambda()\n    lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) {\n        if (err) {\n            responseData = {Error: \"Invoke call failed\"}\n            console.log(responseData.Error + \":\\n\", err)\n        }\n        else responseStatus = \"SUCCESS\"\n        response.send(event, context, responseStatus, responseData)\n    })\n}\n"),
+ * 			},
+ * 			Description: pulumi.String("Invoke a function during stack creation."),
+ * 			TracingConfig: &lambda.FunctionTracingConfigArgs{
+ * 				Mode: "Active",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const primer = new aws_native.lambda.Function("primer", {
+ *     runtime: "nodejs12.x",
+ *     role: "arn:aws:iam::123456789012:role/lambda-role",
+ *     handler: "index.handler",
+ *     code: {
+ *         zipFile: `var aws = require('aws-sdk')
+ * var response = require('cfn-response')
+ * exports.handler = function(event, context) {
+ *     console.log("REQUEST RECEIVED:\\n" + JSON.stringify(event))
+ *     // For Delete requests, immediately send a SUCCESS response.
+ *     if (event.RequestType == "Delete") {
+ *         response.send(event, context, "SUCCESS")
+ *         return
+ *     }
+ *     var responseStatus = "FAILED"
+ *     var responseData = {}
+ *     var functionName = event.ResourceProperties.FunctionName
+ *     var lambda = new aws.Lambda()
+ *     lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) {
+ *         if (err) {
+ *             responseData = {Error: "Invoke call failed"}
+ *             console.log(responseData.Error + ":\\n", err)
+ *         }
+ *         else responseStatus = "SUCCESS"
+ *         response.send(event, context, responseStatus, responseData)
+ *     })
+ * }
+ * `,
+ *     },
+ *     description: "Invoke a function during stack creation.",
+ *     tracingConfig: {
+ *         mode: "Active",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * primer = aws_native.lambda_.Function("primer",
+ *     runtime="nodejs12.x",
+ *     role="arn:aws:iam::123456789012:role/lambda-role",
+ *     handler="index.handler",
+ *     code=aws_native.lambda..FunctionCodeArgs(
+ *         zip_file="""var aws = require('aws-sdk')
+ * var response = require('cfn-response')
+ * exports.handler = function(event, context) {
+ *     console.log("REQUEST RECEIVED:\n" + JSON.stringify(event))
+ *     // For Delete requests, immediately send a SUCCESS response.
+ *     if (event.RequestType == "Delete") {
+ *         response.send(event, context, "SUCCESS")
+ *         return
+ *     }
+ *     var responseStatus = "FAILED"
+ *     var responseData = {}
+ *     var functionName = event.ResourceProperties.FunctionName
+ *     var lambda = new aws.Lambda()
+ *     lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) {
+ *         if (err) {
+ *             responseData = {Error: "Invoke call failed"}
+ *             console.log(responseData.Error + ":\n", err)
+ *         }
+ *         else responseStatus = "SUCCESS"
+ *         response.send(event, context, responseStatus, responseData)
+ *     })
+ * }
+ * """,
+ *     ),
+ *     description="Invoke a function during stack creation.",
+ *     tracing_config=aws_native.lambda..FunctionTracingConfigArgs(
+ *         mode="Active",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var function = new AwsNative.Lambda.Function("function", new AwsNative.Lambda.FunctionArgs
+ *         {
+ *             Handler = "index.handler",
+ *             Role = "arn:aws:iam::123456789012:role/lambda-role",
+ *             Code = new AwsNative.Lambda.Inputs.FunctionCodeArgs
+ *             {
+ *                 S3Bucket = "my-bucket",
+ *                 S3Key = "function.zip",
+ *             },
+ *             Runtime = "nodejs12.x",
+ *             Timeout = 5,
+ *             TracingConfig = new AwsNative.Lambda.Inputs.FunctionTracingConfigArgs
+ *             {
+ *                 Mode = "Active",
+ *             },
+ *             VpcConfig = new AwsNative.Lambda.Inputs.FunctionVpcConfigArgs
+ *             {
+ *                 SecurityGroupIds = 
+ *                 {
+ *                     "sg-085912345678492fb",
+ *                 },
+ *                 SubnetIds = 
+ *                 {
+ *                     "subnet-071f712345678e7c8",
+ *                     "subnet-07fd123456788a036",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/lambda"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lambda.NewFunction(ctx, "function", &lambda.FunctionArgs{
+ * 			Handler: pulumi.String("index.handler"),
+ * 			Role:    pulumi.String("arn:aws:iam::123456789012:role/lambda-role"),
+ * 			Code: &lambda.FunctionCodeArgs{
+ * 				S3Bucket: pulumi.String("my-bucket"),
+ * 				S3Key:    pulumi.String("function.zip"),
+ * 			},
+ * 			Runtime: pulumi.String("nodejs12.x"),
+ * 			Timeout: pulumi.Int(5),
+ * 			TracingConfig: &lambda.FunctionTracingConfigArgs{
+ * 				Mode: "Active",
+ * 			},
+ * 			VpcConfig: &lambda.FunctionVpcConfigArgs{
+ * 				SecurityGroupIds: pulumi.StringArray{
+ * 					pulumi.String("sg-085912345678492fb"),
+ * 				},
+ * 				SubnetIds: pulumi.StringArray{
+ * 					pulumi.String("subnet-071f712345678e7c8"),
+ * 					pulumi.String("subnet-07fd123456788a036"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const _function = new aws_native.lambda.Function("function", {
+ *     handler: "index.handler",
+ *     role: "arn:aws:iam::123456789012:role/lambda-role",
+ *     code: {
+ *         s3Bucket: "my-bucket",
+ *         s3Key: "function.zip",
+ *     },
+ *     runtime: "nodejs12.x",
+ *     timeout: 5,
+ *     tracingConfig: {
+ *         mode: "Active",
+ *     },
+ *     vpcConfig: {
+ *         securityGroupIds: ["sg-085912345678492fb"],
+ *         subnetIds: [
+ *             "subnet-071f712345678e7c8",
+ *             "subnet-07fd123456788a036",
+ *         ],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * function = aws_native.lambda_.Function("function",
+ *     handler="index.handler",
+ *     role="arn:aws:iam::123456789012:role/lambda-role",
+ *     code=aws_native.lambda..FunctionCodeArgs(
+ *         s3_bucket="my-bucket",
+ *         s3_key="function.zip",
+ *     ),
+ *     runtime="nodejs12.x",
+ *     timeout=5,
+ *     tracing_config=aws_native.lambda..FunctionTracingConfigArgs(
+ *         mode="Active",
+ *     ),
+ *     vpc_config=aws_native.lambda..FunctionVpcConfigArgs(
+ *         security_group_ids=["sg-085912345678492fb"],
+ *         subnet_ids=[
+ *             "subnet-071f712345678e7c8",
+ *             "subnet-07fd123456788a036",
+ *         ],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:lambda:Function")
@@ -39,294 +346,252 @@ public class Function extends io.pulumi.resources.CustomResource {
     }
     /**
      * Unique identifier for function resources
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Unique identifier for function resources
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The code for the function.
-     * 
      */
     @Export(name="code", type=FunctionCode.class, parameters={})
     private Output<FunctionCode> code;
 
     /**
      * @return The code for the function.
-     * 
      */
     public Output<FunctionCode> getCode() {
         return this.code;
     }
     /**
      * A unique Arn for CodeSigningConfig resource
-     * 
      */
     @Export(name="codeSigningConfigArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> codeSigningConfigArn;
 
     /**
      * @return A unique Arn for CodeSigningConfig resource
-     * 
      */
     public Output</* @Nullable */ String> getCodeSigningConfigArn() {
         return this.codeSigningConfigArn;
     }
     /**
      * A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
-     * 
      */
     @Export(name="deadLetterConfig", type=FunctionDeadLetterConfig.class, parameters={})
     private Output</* @Nullable */ FunctionDeadLetterConfig> deadLetterConfig;
 
     /**
      * @return A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
-     * 
      */
     public Output</* @Nullable */ FunctionDeadLetterConfig> getDeadLetterConfig() {
         return this.deadLetterConfig;
     }
     /**
      * A description of the function.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the function.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Environment variables that are accessible from function code during execution.
-     * 
      */
     @Export(name="environment", type=FunctionEnvironment.class, parameters={})
     private Output</* @Nullable */ FunctionEnvironment> environment;
 
     /**
      * @return Environment variables that are accessible from function code during execution.
-     * 
      */
     public Output</* @Nullable */ FunctionEnvironment> getEnvironment() {
         return this.environment;
     }
     /**
      * Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
-     * 
      */
     @Export(name="fileSystemConfigs", type=List.class, parameters={FunctionFileSystemConfig.class})
     private Output</* @Nullable */ List<FunctionFileSystemConfig>> fileSystemConfigs;
 
     /**
      * @return Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
-     * 
      */
     public Output</* @Nullable */ List<FunctionFileSystemConfig>> getFileSystemConfigs() {
         return this.fileSystemConfigs;
     }
     /**
      * The name of the Lambda function, up to 64 characters in length. If you don't specify a name, AWS CloudFormation generates one.
-     * 
      */
     @Export(name="functionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionName;
 
     /**
      * @return The name of the Lambda function, up to 64 characters in length. If you don't specify a name, AWS CloudFormation generates one.
-     * 
      */
     public Output</* @Nullable */ String> getFunctionName() {
         return this.functionName;
     }
     /**
      * The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
-     * 
      */
     @Export(name="handler", type=String.class, parameters={})
     private Output</* @Nullable */ String> handler;
 
     /**
      * @return The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
-     * 
      */
     public Output</* @Nullable */ String> getHandler() {
         return this.handler;
     }
     /**
      * ImageConfig
-     * 
      */
     @Export(name="imageConfig", type=FunctionImageConfig.class, parameters={})
     private Output</* @Nullable */ FunctionImageConfig> imageConfig;
 
     /**
      * @return ImageConfig
-     * 
      */
     public Output</* @Nullable */ FunctionImageConfig> getImageConfig() {
         return this.imageConfig;
     }
     /**
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
-     * 
      */
     @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyArn;
 
     /**
      * @return The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
-     * 
      */
     public Output</* @Nullable */ String> getKmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
      * A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
-     * 
      */
     @Export(name="layers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> layers;
 
     /**
      * @return A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
-     * 
      */
     public Output</* @Nullable */ List<String>> getLayers() {
         return this.layers;
     }
     /**
      * The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
-     * 
      */
     @Export(name="memorySize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> memorySize;
 
     /**
      * @return The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
-     * 
      */
     public Output</* @Nullable */ Integer> getMemorySize() {
         return this.memorySize;
     }
     /**
      * PackageType.
-     * 
      */
     @Export(name="packageType", type=FunctionPackageType.class, parameters={})
     private Output</* @Nullable */ FunctionPackageType> packageType;
 
     /**
      * @return PackageType.
-     * 
      */
     public Output</* @Nullable */ FunctionPackageType> getPackageType() {
         return this.packageType;
     }
     /**
      * The number of simultaneous executions to reserve for the function.
-     * 
      */
     @Export(name="reservedConcurrentExecutions", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> reservedConcurrentExecutions;
 
     /**
      * @return The number of simultaneous executions to reserve for the function.
-     * 
      */
     public Output</* @Nullable */ Integer> getReservedConcurrentExecutions() {
         return this.reservedConcurrentExecutions;
     }
     /**
      * The Amazon Resource Name (ARN) of the function's execution role.
-     * 
      */
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
      * @return The Amazon Resource Name (ARN) of the function's execution role.
-     * 
      */
     public Output<String> getRole() {
         return this.role;
     }
     /**
      * The identifier of the function's runtime.
-     * 
      */
     @Export(name="runtime", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtime;
 
     /**
      * @return The identifier of the function's runtime.
-     * 
      */
     public Output</* @Nullable */ String> getRuntime() {
         return this.runtime;
     }
     /**
      * A list of tags to apply to the function.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={FunctionTag.class})
     private Output</* @Nullable */ List<FunctionTag>> tags;
 
     /**
      * @return A list of tags to apply to the function.
-     * 
      */
     public Output</* @Nullable */ List<FunctionTag>> getTags() {
         return this.tags;
     }
     /**
      * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
-     * 
      */
     @Export(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
      * @return The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
-     * 
      */
     public Output</* @Nullable */ Integer> getTimeout() {
         return this.timeout;
     }
     /**
      * Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
-     * 
      */
     @Export(name="tracingConfig", type=FunctionTracingConfig.class, parameters={})
     private Output</* @Nullable */ FunctionTracingConfig> tracingConfig;
 
     /**
      * @return Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
-     * 
      */
     public Output</* @Nullable */ FunctionTracingConfig> getTracingConfig() {
         return this.tracingConfig;
     }
     /**
      * For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
-     * 
      */
     @Export(name="vpcConfig", type=FunctionVpcConfig.class, parameters={})
     private Output</* @Nullable */ FunctionVpcConfig> vpcConfig;
 
     /**
      * @return For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
-     * 
      */
     public Output</* @Nullable */ FunctionVpcConfig> getVpcConfig() {
         return this.vpcConfig;

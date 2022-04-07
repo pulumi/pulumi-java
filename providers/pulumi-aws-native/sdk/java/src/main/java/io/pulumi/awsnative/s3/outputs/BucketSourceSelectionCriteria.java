@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class BucketSourceSelectionCriteria {
     /**
      * A filter that you can specify for selection for modifications on replicas.
-     * 
      */
     private final @Nullable BucketReplicaModifications replicaModifications;
     /**
      * A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.
-     * 
      */
     private final @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects;
 
@@ -33,14 +31,12 @@ public final class BucketSourceSelectionCriteria {
 
     /**
      * A filter that you can specify for selection for modifications on replicas.
-     * 
     */
     public Optional<BucketReplicaModifications> getReplicaModifications() {
         return Optional.ofNullable(this.replicaModifications);
     }
     /**
      * A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.
-     * 
     */
     public Optional<BucketSseKmsEncryptedObjects> getSseKmsEncryptedObjects() {
         return Optional.ofNullable(this.sseKmsEncryptedObjects);

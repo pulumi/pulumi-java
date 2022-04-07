@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema for AWS::ServiceCatalogAppRegistry::Application
- * 
  */
 @ResourceType(type="aws-native:servicecatalogappregistry:Application")
 public class Application extends io.pulumi.resources.CustomResource {
@@ -25,29 +24,25 @@ public class Application extends io.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The description of the application.
-     * 
+     * The description of the application. 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The description of the application.
-     * 
+     * @return The description of the application. 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
-     * The name of the application.
-     * 
+     * The name of the application. 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the application.
-     * 
+     * @return The name of the application. 
      */
     public Output<String> getName() {
         return this.name;

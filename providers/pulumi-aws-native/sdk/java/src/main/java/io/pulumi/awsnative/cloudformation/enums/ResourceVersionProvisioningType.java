@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
-     * 
      */
     @EnumType
     public enum ResourceVersionProvisioningType {

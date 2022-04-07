@@ -14,20 +14,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema for AWS::ServiceCatalogAppRegistry::ResourceAssociation
- * 
  */
 @ResourceType(type="aws-native:servicecatalogappregistry:ResourceAssociation")
 public class ResourceAssociation extends io.pulumi.resources.CustomResource {
     /**
      * The name or the Id of the Application.
-     * 
      */
     @Export(name="application", type=String.class, parameters={})
     private Output<String> application;
 
     /**
      * @return The name or the Id of the Application.
-     * 
      */
     public Output<String> getApplication() {
         return this.application;
@@ -40,14 +37,12 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name or the Id of the Resource.
-     * 
      */
     @Export(name="resource", type=String.class, parameters={})
     private Output<String> resource;
 
     /**
      * @return The name or the Id of the Resource.
-     * 
      */
     public Output<String> getResource() {
         return this.resource;
@@ -60,14 +55,12 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
     }
     /**
      * The type of the CFN Resource for now it's enum CFN_STACK.
-     * 
      */
     @Export(name="resourceType", type=ResourceAssociationResourceType.class, parameters={})
     private Output<ResourceAssociationResourceType> resourceType;
 
     /**
      * @return The type of the CFN Resource for now it's enum CFN_STACK.
-     * 
      */
     public Output<ResourceAssociationResourceType> getPropResourceType() {
         return this.resourceType;

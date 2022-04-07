@@ -15,32 +15,26 @@ import javax.annotation.Nullable;
 public final class ApplicationComponentMonitoringSetting {
     /**
      * The ARN of the compnonent.
-     * 
      */
     private final @Nullable String componentARN;
     /**
      * The component monitoring configuration mode.
-     * 
      */
     private final ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode;
     /**
      * The name of the component.
-     * 
      */
     private final @Nullable String componentName;
     /**
      * The monitoring configuration of the component.
-     * 
      */
     private final @Nullable ApplicationComponentConfiguration customComponentConfiguration;
     /**
      * The overwritten settings on default component monitoring configuration.
-     * 
      */
     private final @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration;
     /**
      * The tier of the application component.
-     * 
      */
     private final String tier;
 
@@ -62,42 +56,36 @@ public final class ApplicationComponentMonitoringSetting {
 
     /**
      * The ARN of the compnonent.
-     * 
     */
     public Optional<String> getComponentARN() {
         return Optional.ofNullable(this.componentARN);
     }
     /**
      * The component monitoring configuration mode.
-     * 
     */
     public ApplicationComponentMonitoringSettingComponentConfigurationMode getComponentConfigurationMode() {
         return this.componentConfigurationMode;
     }
     /**
      * The name of the component.
-     * 
     */
     public Optional<String> getComponentName() {
         return Optional.ofNullable(this.componentName);
     }
     /**
      * The monitoring configuration of the component.
-     * 
     */
     public Optional<ApplicationComponentConfiguration> getCustomComponentConfiguration() {
         return Optional.ofNullable(this.customComponentConfiguration);
     }
     /**
      * The overwritten settings on default component monitoring configuration.
-     * 
     */
     public Optional<ApplicationComponentConfiguration> getDefaultOverwriteComponentConfiguration() {
         return Optional.ofNullable(this.defaultOverwriteComponentConfiguration);
     }
     /**
      * The tier of the application component.
-     * 
     */
     public String getTier() {
         return this.tier;

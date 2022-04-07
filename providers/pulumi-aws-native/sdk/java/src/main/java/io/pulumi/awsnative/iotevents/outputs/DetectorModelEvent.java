@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class DetectorModelEvent {
     /**
      * The actions to be performed.
-     * 
      */
     private final @Nullable List<DetectorModelAction> actions;
     /**
      * The Boolean expression that, when `TRUE`, causes the `actions` to be performed. If not present, the `actions` are performed (=`TRUE`). If the expression result is not a `Boolean` value, the `actions` are not performed (=`FALSE`).
-     * 
      */
     private final @Nullable String condition;
     /**
      * The name of the event.
-     * 
      */
     private final String eventName;
 
@@ -41,21 +38,18 @@ public final class DetectorModelEvent {
 
     /**
      * The actions to be performed.
-     * 
     */
     public List<DetectorModelAction> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * The Boolean expression that, when `TRUE`, causes the `actions` to be performed. If not present, the `actions` are performed (=`TRUE`). If the expression result is not a `Boolean` value, the `actions` are not performed (=`FALSE`).
-     * 
     */
     public Optional<String> getCondition() {
         return Optional.ofNullable(this.condition);
     }
     /**
      * The name of the event.
-     * 
     */
     public String getEventName() {
         return this.eventName;

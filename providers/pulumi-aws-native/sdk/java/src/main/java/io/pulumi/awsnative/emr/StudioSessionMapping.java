@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:emr:StudioSessionMapping")
 public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
     /**
      * The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
-     * 
      */
     @Export(name="identityName", type=String.class, parameters={})
     private Output<String> identityName;
 
     /**
      * @return The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
-     * 
      */
     public Output<String> getIdentityName() {
         return this.identityName;
     }
     /**
      * Specifies whether the identity to map to the Studio is a user or a group.
-     * 
      */
     @Export(name="identityType", type=StudioSessionMappingIdentityType.class, parameters={})
     private Output<StudioSessionMappingIdentityType> identityType;
 
     /**
      * @return Specifies whether the identity to map to the Studio is a user or a group.
-     * 
      */
     public Output<StudioSessionMappingIdentityType> getIdentityType() {
         return this.identityType;
     }
     /**
      * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
-     * 
      */
     @Export(name="sessionPolicyArn", type=String.class, parameters={})
     private Output<String> sessionPolicyArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
-     * 
      */
     public Output<String> getSessionPolicyArn() {
         return this.sessionPolicyArn;
     }
     /**
      * The ID of the Amazon EMR Studio to which the user or group will be mapped.
-     * 
      */
     @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**
      * @return The ID of the Amazon EMR Studio to which the user or group will be mapped.
-     * 
      */
     public Output<String> getStudioId() {
         return this.studioId;

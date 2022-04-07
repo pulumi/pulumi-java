@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class CanaryVisualReference {
     /**
      * Canary run id to be used as base reference for visual testing
-     * 
      */
     private final String baseCanaryRunId;
     /**
      * List of screenshots used as base reference for visual testing
-     * 
      */
     private final @Nullable List<CanaryBaseScreenshot> baseScreenshots;
 
@@ -33,14 +31,12 @@ public final class CanaryVisualReference {
 
     /**
      * Canary run id to be used as base reference for visual testing
-     * 
     */
     public String getBaseCanaryRunId() {
         return this.baseCanaryRunId;
     }
     /**
      * List of screenshots used as base reference for visual testing
-     * 
     */
     public List<CanaryBaseScreenshot> getBaseScreenshots() {
         return this.baseScreenshots == null ? List.of() : this.baseScreenshots;

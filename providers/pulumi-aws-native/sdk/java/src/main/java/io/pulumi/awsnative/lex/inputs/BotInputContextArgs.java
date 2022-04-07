@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * InputContext specified for the intent.
- * 
  */
 public final class BotInputContextArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BotInputContextArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the context.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

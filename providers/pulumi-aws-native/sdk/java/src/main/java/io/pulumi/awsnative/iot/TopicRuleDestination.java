@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::IoT::TopicRuleDestination
- * 
  */
 @ResourceType(type="aws-native:iot:TopicRuleDestination")
 public class TopicRuleDestination extends io.pulumi.resources.CustomResource {
     /**
      * Amazon Resource Name (ARN).
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN).
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * HTTP URL destination properties.
-     * 
      */
     @Export(name="httpUrlProperties", type=TopicRuleDestinationHttpUrlDestinationSummary.class, parameters={})
     private Output</* @Nullable */ TopicRuleDestinationHttpUrlDestinationSummary> httpUrlProperties;
 
     /**
      * @return HTTP URL destination properties.
-     * 
      */
     public Output</* @Nullable */ TopicRuleDestinationHttpUrlDestinationSummary> getHttpUrlProperties() {
         return this.httpUrlProperties;
     }
     /**
      * The status of the TopicRuleDestination.
-     * 
      */
     @Export(name="status", type=TopicRuleDestinationStatus.class, parameters={})
     private Output</* @Nullable */ TopicRuleDestinationStatus> status;
 
     /**
      * @return The status of the TopicRuleDestination.
-     * 
      */
     public Output</* @Nullable */ TopicRuleDestinationStatus> getStatus() {
         return this.status;
     }
     /**
      * The reasoning for the current status of the TopicRuleDestination.
-     * 
      */
     @Export(name="statusReason", type=String.class, parameters={})
     private Output<String> statusReason;
 
     /**
      * @return The reasoning for the current status of the TopicRuleDestination.
-     * 
      */
     public Output<String> getStatusReason() {
         return this.statusReason;
     }
     /**
      * VPC destination properties.
-     * 
      */
     @Export(name="vpcProperties", type=TopicRuleDestinationVpcDestinationProperties.class, parameters={})
     private Output</* @Nullable */ TopicRuleDestinationVpcDestinationProperties> vpcProperties;
 
     /**
      * @return VPC destination properties.
-     * 
      */
     public Output</* @Nullable */ TopicRuleDestinationVpcDestinationProperties> getVpcProperties() {
         return this.vpcProperties;

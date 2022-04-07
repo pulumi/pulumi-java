@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BotCustomPayload {
     /**
      * The string that is sent to your application.
-     * 
      */
     private final String value;
 
@@ -22,7 +21,6 @@ public final class BotCustomPayload {
 
     /**
      * The string that is sent to your application.
-     * 
     */
     public String getValue() {
         return this.value;

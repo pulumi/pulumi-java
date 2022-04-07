@@ -22,7 +22,6 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The current revision id.
-     * 
      */
     @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;
@@ -33,7 +32,6 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The URI of the Docker image for the robot application.
-     * 
      */
     @Import(name="environment")
       private final @Nullable Output<String> environment;
@@ -44,7 +42,6 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the simulation application.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -55,7 +52,6 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The rendering engine for the simulation application.
-     * 
      */
     @Import(name="renderingEngine")
       private final @Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine;
@@ -66,7 +62,6 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The robot software suite used by the simulation application.
-     * 
      */
     @Import(name="robotSoftwareSuite", required=true)
       private final Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
@@ -77,7 +72,6 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The simulation software suite used by the simulation application.
-     * 
      */
     @Import(name="simulationSoftwareSuite", required=true)
       private final Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite;
@@ -88,7 +82,6 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The sources of the simulation application.
-     * 
      */
     @Import(name="sources")
       private final @Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources;

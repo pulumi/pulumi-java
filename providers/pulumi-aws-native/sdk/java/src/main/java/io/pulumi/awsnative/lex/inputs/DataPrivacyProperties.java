@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Data privacy setting of the Bot.
- * 
  */
 public final class DataPrivacyProperties extends io.pulumi.resources.InvokeArgs {
 

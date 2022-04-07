@@ -13,34 +13,29 @@ import javax.annotation.Nullable;
 
 /**
  * Associates a set of DHCP options with a VPC, or associates no DHCP options with the VPC.
- * 
  */
 @ResourceType(type="aws-native:ec2:VPCDHCPOptionsAssociation")
 public class VPCDHCPOptionsAssociation extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
-     * 
      */
     @Export(name="dhcpOptionsId", type=String.class, parameters={})
     private Output<String> dhcpOptionsId;
 
     /**
      * @return The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
-     * 
      */
     public Output<String> getDhcpOptionsId() {
         return this.dhcpOptionsId;
     }
     /**
      * The ID of the VPC.
-     * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
      * @return The ID of the VPC.
-     * 
      */
     public Output<String> getVpcId() {
         return this.vpcId;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ServiceEncryptionConfiguration {
     /**
      * The KMS Key
-     * 
      */
     private final String kmsKey;
 
@@ -22,7 +21,6 @@ public final class ServiceEncryptionConfiguration {
 
     /**
      * The KMS Key
-     * 
     */
     public String getKmsKey() {
         return this.kmsKey;

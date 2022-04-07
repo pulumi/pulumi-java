@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the parameters of the database.
- * 
  */
 public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
 
     /**
      * Specifies the valid range of values for the parameter.
-     * 
      */
     @Import(name="allowedValues")
       private final @Nullable Output<String> allowedValues;
@@ -32,7 +30,6 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
 
     /**
      * Indicates when parameter updates are applied. Can be immediate or pending-reboot.
-     * 
      */
     @Import(name="applyMethod")
       private final @Nullable Output<String> applyMethod;
@@ -43,7 +40,6 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
 
     /**
      * Specifies the engine-specific parameter type.
-     * 
      */
     @Import(name="applyType")
       private final @Nullable Output<String> applyType;
@@ -54,7 +50,6 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
 
     /**
      * Specifies the valid data type for the parameter.
-     * 
      */
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
@@ -65,7 +60,6 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
 
     /**
      * Provides a description of the parameter.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -76,7 +70,6 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
 
     /**
      * A Boolean value indicating whether the parameter can be modified.
-     * 
      */
     @Import(name="isModifiable")
       private final @Nullable Output<Boolean> isModifiable;
@@ -87,7 +80,6 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
 
     /**
      * Specifies the name of the parameter.
-     * 
      */
     @Import(name="parameterName")
       private final @Nullable Output<String> parameterName;
@@ -98,7 +90,6 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
 
     /**
      * Specifies the value of the parameter.
-     * 
      */
     @Import(name="parameterValue")
       private final @Nullable Output<String> parameterValue;

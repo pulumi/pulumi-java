@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class MitigationActionPublishFindingToSnsParams {
     /**
      * The ARN of the topic to which you want to publish the findings.
-     * 
      */
     private final String topicArn;
 
@@ -22,7 +21,6 @@ public final class MitigationActionPublishFindingToSnsParams {
 
     /**
      * The ARN of the topic to which you want to publish the findings.
-     * 
     */
     public String getTopicArn() {
         return this.topicArn;

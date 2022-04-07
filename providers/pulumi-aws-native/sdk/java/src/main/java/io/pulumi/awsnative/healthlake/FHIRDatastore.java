@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * HealthLake FHIR Datastore
- * 
  */
 @ResourceType(type="aws-native:healthlake:FHIRDatastore")
 public class FHIRDatastore extends io.pulumi.resources.CustomResource {

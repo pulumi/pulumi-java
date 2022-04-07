@@ -16,13 +16,11 @@ import javax.annotation.Nullable;
 public final class TemplateDataSetConfiguration {
     /**
      * <p>A structure containing the list of column group schemas.</p>
-     * 
      */
     private final @Nullable List<TemplateColumnGroupSchema> columnGroupSchemaList;
     private final @Nullable TemplateDataSetSchema dataSetSchema;
     /**
      * <p>Placeholder.</p>
-     * 
      */
     private final @Nullable String placeholder;
 
@@ -38,7 +36,6 @@ public final class TemplateDataSetConfiguration {
 
     /**
      * <p>A structure containing the list of column group schemas.</p>
-     * 
     */
     public List<TemplateColumnGroupSchema> getColumnGroupSchemaList() {
         return this.columnGroupSchemaList == null ? List.of() : this.columnGroupSchemaList;
@@ -48,7 +45,6 @@ public final class TemplateDataSetConfiguration {
     }
     /**
      * <p>Placeholder.</p>
-     * 
     */
     public Optional<String> getPlaceholder() {
         return Optional.ofNullable(this.placeholder);

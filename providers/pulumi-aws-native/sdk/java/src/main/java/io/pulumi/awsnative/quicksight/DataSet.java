@@ -26,20 +26,17 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the AWS::QuickSight::DataSet Resource Type.
- * 
  */
 @ResourceType(type="aws-native:quicksight:DataSet")
 public class DataSet extends io.pulumi.resources.CustomResource {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -52,14 +49,12 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
-     * 
      */
     @Export(name="columnGroups", type=List.class, parameters={DataSetColumnGroup.class})
     private Output</* @Nullable */ List<DataSetColumnGroup>> columnGroups;
 
     /**
      * @return <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
-     * 
      */
     public Output</* @Nullable */ List<DataSetColumnGroup>> getColumnGroups() {
         return this.columnGroups;
@@ -73,7 +68,6 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     /**
      * <p>The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn't
      *             imported into SPICE.</p>
-     * 
      */
     @Export(name="consumedSpiceCapacityInBytes", type=Double.class, parameters={})
     private Output<Double> consumedSpiceCapacityInBytes;
@@ -81,21 +75,18 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     /**
      * @return <p>The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn't
      *             imported into SPICE.</p>
-     * 
      */
     public Output<Double> getConsumedSpiceCapacityInBytes() {
         return this.consumedSpiceCapacityInBytes;
     }
     /**
      * <p>The time that this dataset was created.</p>
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return <p>The time that this dataset was created.</p>
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
@@ -126,14 +117,12 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The last time that this dataset was updated.</p>
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return <p>The last time that this dataset was updated.</p>
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
@@ -146,14 +135,12 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The display name for the dataset.</p>
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return <p>The display name for the dataset.</p>
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
@@ -161,7 +148,6 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     /**
      * <p>The list of columns after all transforms. These columns are available in templates,
      *             analyses, and dashboards.</p>
-     * 
      */
     @Export(name="outputColumns", type=List.class, parameters={DataSetOutputColumn.class})
     private Output<List<DataSetOutputColumn>> outputColumns;
@@ -169,21 +155,18 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     /**
      * @return <p>The list of columns after all transforms. These columns are available in templates,
      *             analyses, and dashboards.</p>
-     * 
      */
     public Output<List<DataSetOutputColumn>> getOutputColumns() {
         return this.outputColumns;
     }
     /**
      * <p>A list of resource permissions on the dataset.</p>
-     * 
      */
     @Export(name="permissions", type=List.class, parameters={DataSetResourcePermission.class})
     private Output</* @Nullable */ List<DataSetResourcePermission>> permissions;
 
     /**
      * @return <p>A list of resource permissions on the dataset.</p>
-     * 
      */
     public Output</* @Nullable */ List<DataSetResourcePermission>> getPermissions() {
         return this.permissions;
@@ -202,14 +185,12 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DataSetTag.class})
     private Output</* @Nullable */ List<DataSetTag>> tags;
 
     /**
      * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
-     * 
      */
     public Output</* @Nullable */ List<DataSetTag>> getTags() {
         return this.tags;

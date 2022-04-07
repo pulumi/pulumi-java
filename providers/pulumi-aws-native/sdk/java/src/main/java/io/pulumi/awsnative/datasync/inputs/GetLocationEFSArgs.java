@@ -14,7 +14,6 @@ public final class GetLocationEFSArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
-     * 
      */
     @Import(name="locationArn", required=true)
       private final String locationArn;

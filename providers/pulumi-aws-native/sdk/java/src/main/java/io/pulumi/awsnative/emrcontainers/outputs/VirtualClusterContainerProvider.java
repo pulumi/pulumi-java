@@ -12,13 +12,11 @@ import java.util.Objects;
 public final class VirtualClusterContainerProvider {
     /**
      * The ID of the container cluster
-     * 
      */
     private final String id;
     private final VirtualClusterContainerInfo info;
     /**
      * The type of the container provider
-     * 
      */
     private final String type;
 
@@ -34,7 +32,6 @@ public final class VirtualClusterContainerProvider {
 
     /**
      * The ID of the container cluster
-     * 
     */
     public String getId() {
         return this.id;
@@ -44,7 +41,6 @@ public final class VirtualClusterContainerProvider {
     }
     /**
      * The type of the container provider
-     * 
     */
     public String getType() {
         return this.type;

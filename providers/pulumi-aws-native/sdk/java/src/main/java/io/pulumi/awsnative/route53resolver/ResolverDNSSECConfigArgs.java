@@ -16,7 +16,6 @@ public final class ResolverDNSSECConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * ResourceId
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;

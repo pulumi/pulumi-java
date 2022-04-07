@@ -23,7 +23,6 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The description of the topic.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -34,7 +33,6 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The display name of the topic.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -45,7 +43,6 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the topic.
-     * 
      */
     @Import(name="topicName", required=true)
       private final String topicName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value that indicates the last time that a file was modified (that is, a file was written to) before the PREPARING phase.
-     * 
      */
     @EnumType
     public enum TaskOptionsMtime {

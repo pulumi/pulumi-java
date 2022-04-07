@@ -14,7 +14,6 @@ public final class GetFleetMetricArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the fleet metric
-     * 
      */
     @Import(name="metricName", required=true)
       private final String metricName;

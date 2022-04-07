@@ -21,7 +21,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
-     * 
      */
     @Import(name="cloudWatchLogGroupArn")
       private final @Nullable Output<String> cloudWatchLogGroupArn;
@@ -32,7 +31,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN of an AWS storage resource's location.
-     * 
      */
     @Import(name="destinationLocationArn", required=true)
       private final Output<String> destinationLocationArn;
@@ -57,7 +55,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of a task. This value is a text reference that is used to identify the task in the console.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -82,7 +79,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN of the source location for the task.
-     * 
      */
     @Import(name="sourceLocationArn", required=true)
       private final Output<String> sourceLocationArn;
@@ -93,7 +89,6 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<TaskTagArgs>> tags;

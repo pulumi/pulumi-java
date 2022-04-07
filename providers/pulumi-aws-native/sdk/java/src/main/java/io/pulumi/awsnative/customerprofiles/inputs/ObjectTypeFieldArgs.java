@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a field in a ProfileObjectType.
- * 
  */
 public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The content type of the field. Used for determining equality when searching.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<ObjectTypeFieldContentType> contentType;
@@ -32,7 +30,6 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A field of a ProfileObject. For example: _source.FirstName, where "_source" is a ProfileObjectType of a Zendesk user and "FirstName" is a field in that ObjectType.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<String> source;
@@ -43,7 +40,6 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<String> target;

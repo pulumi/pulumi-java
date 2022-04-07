@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
-     * 
      */
     @EnumType
     public enum StorageLensS3BucketDestinationOutputSchemaVersion {

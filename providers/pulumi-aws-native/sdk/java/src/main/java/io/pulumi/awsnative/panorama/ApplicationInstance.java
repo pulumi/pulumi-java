@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schema for ApplicationInstance CloudFormation Resource
- * 
  */
 @ResourceType(type="aws-native:panorama:ApplicationInstance")
 public class ApplicationInstance extends io.pulumi.resources.CustomResource {

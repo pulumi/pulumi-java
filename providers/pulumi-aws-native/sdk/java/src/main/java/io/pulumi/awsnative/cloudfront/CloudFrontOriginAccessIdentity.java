@@ -15,7 +15,145 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cloudfrontoriginaccessidentity = new AwsNative.CloudFront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", new AwsNative.CloudFront.CloudFrontOriginAccessIdentityArgs
+ *         {
+ *             CloudFrontOriginAccessIdentityConfig = new AwsNative.CloudFront.Inputs.CloudFrontOriginAccessIdentityConfigArgs
+ *             {
+ *                 Comment = "string-value",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewCloudFrontOriginAccessIdentity(ctx, "cloudfrontoriginaccessidentity", &cloudfront.CloudFrontOriginAccessIdentityArgs{
+ * 			CloudFrontOriginAccessIdentityConfig: &cloudfront.CloudFrontOriginAccessIdentityConfigArgs{
+ * 				Comment: pulumi.String("string-value"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const cloudfrontoriginaccessidentity = new aws_native.cloudfront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", {cloudFrontOriginAccessIdentityConfig: {
+ *     comment: "string-value",
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * cloudfrontoriginaccessidentity = aws_native.cloudfront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", cloud_front_origin_access_identity_config=aws_native.cloudfront.CloudFrontOriginAccessIdentityConfigArgs(
+ *     comment="string-value",
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cloudfrontoriginaccessidentity = new AwsNative.CloudFront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", new AwsNative.CloudFront.CloudFrontOriginAccessIdentityArgs
+ *         {
+ *             CloudFrontOriginAccessIdentityConfig = new AwsNative.CloudFront.Inputs.CloudFrontOriginAccessIdentityConfigArgs
+ *             {
+ *                 Comment = "string-value",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cloudfront"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cloudfront.NewCloudFrontOriginAccessIdentity(ctx, "cloudfrontoriginaccessidentity", &cloudfront.CloudFrontOriginAccessIdentityArgs{
+ * 			CloudFrontOriginAccessIdentityConfig: &cloudfront.CloudFrontOriginAccessIdentityConfigArgs{
+ * 				Comment: pulumi.String("string-value"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const cloudfrontoriginaccessidentity = new aws_native.cloudfront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", {cloudFrontOriginAccessIdentityConfig: {
+ *     comment: "string-value",
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * cloudfrontoriginaccessidentity = aws_native.cloudfront.CloudFrontOriginAccessIdentity("cloudfrontoriginaccessidentity", cloud_front_origin_access_identity_config=aws_native.cloudfront.CloudFrontOriginAccessIdentityConfigArgs(
+ *     comment="string-value",
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:cloudfront:CloudFrontOriginAccessIdentity")

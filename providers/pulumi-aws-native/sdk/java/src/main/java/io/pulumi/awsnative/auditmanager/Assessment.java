@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
- * 
  */
 @ResourceType(type="aws-native:auditmanager:Assessment")
 public class Assessment extends io.pulumi.resources.CustomResource {
@@ -58,14 +57,12 @@ public class Assessment extends io.pulumi.resources.CustomResource {
     }
     /**
      * The list of delegations.
-     * 
      */
     @Export(name="delegations", type=List.class, parameters={AssessmentDelegation.class})
     private Output<List<AssessmentDelegation>> delegations;
 
     /**
      * @return The list of delegations.
-     * 
      */
     public Output<List<AssessmentDelegation>> getDelegations() {
         return this.delegations;
@@ -90,14 +87,12 @@ public class Assessment extends io.pulumi.resources.CustomResource {
     }
     /**
      * The list of roles for the specified assessment.
-     * 
      */
     @Export(name="roles", type=List.class, parameters={AssessmentRole.class})
     private Output</* @Nullable */ List<AssessmentRole>> roles;
 
     /**
      * @return The list of roles for the specified assessment.
-     * 
      */
     public Output</* @Nullable */ List<AssessmentRole>> getRoles() {
         return this.roles;
@@ -116,14 +111,12 @@ public class Assessment extends io.pulumi.resources.CustomResource {
     }
     /**
      * The tags associated with the assessment.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={AssessmentTag.class})
     private Output</* @Nullable */ List<AssessmentTag>> tags;
 
     /**
      * @return The tags associated with the assessment.
-     * 
      */
     public Output</* @Nullable */ List<AssessmentTag>> getTags() {
         return this.tags;

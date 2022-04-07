@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ReportDeliveryChannelProperties {
     /**
      * A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
-     * 
      */
     private final @Nullable List<String> formats;
     /**
      * The unique name of the S3 bucket that receives your reports.
-     * 
      */
     private final String s3BucketName;
     /**
      * The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/prefix/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
-     * 
      */
     private final @Nullable String s3KeyPrefix;
 
@@ -40,21 +37,18 @@ public final class ReportDeliveryChannelProperties {
 
     /**
      * A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
-     * 
     */
     public List<String> getFormats() {
         return this.formats == null ? List.of() : this.formats;
     }
     /**
      * The unique name of the S3 bucket that receives your reports.
-     * 
     */
     public String getS3BucketName() {
         return this.s3BucketName;
     }
     /**
      * The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/prefix/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
-     * 
     */
     public Optional<String> getS3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);

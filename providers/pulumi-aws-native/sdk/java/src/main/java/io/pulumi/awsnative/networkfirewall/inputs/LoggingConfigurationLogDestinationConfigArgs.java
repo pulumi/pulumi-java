@@ -17,7 +17,6 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends io.pulum
 
     /**
      * A key-value pair to configure the logDestinations.
-     * 
      */
     @Import(name="logDestination", required=true)
       private final Output<Object> logDestination;

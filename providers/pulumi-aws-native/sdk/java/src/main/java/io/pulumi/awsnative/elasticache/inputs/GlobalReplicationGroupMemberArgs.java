@@ -17,7 +17,6 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
 
     /**
      * Regionally unique identifier for the member i.e. ReplicationGroupId.
-     * 
      */
     @Import(name="replicationGroupId")
       private final @Nullable Output<String> replicationGroupId;
@@ -28,7 +27,6 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
 
     /**
      * The AWS region of the Global Datastore member.
-     * 
      */
     @Import(name="replicationGroupRegion")
       private final @Nullable Output<String> replicationGroupRegion;
@@ -39,7 +37,6 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
 
     /**
      * Indicates the role of the member, primary or secondary.
-     * 
      */
     @Import(name="role")
       private final @Nullable Output<GlobalReplicationGroupMemberRole> role;

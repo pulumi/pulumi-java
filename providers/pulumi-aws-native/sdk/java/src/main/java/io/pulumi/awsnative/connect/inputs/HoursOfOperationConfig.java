@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains information about the hours of operation.
- * 
  */
 public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs
 
     /**
      * The day that the hours of operation applies to.
-     * 
      */
     @Import(name="day", required=true)
       private final HoursOfOperationConfigDay day;
@@ -30,7 +28,6 @@ public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs
 
     /**
      * The end time that your contact center closes.
-     * 
      */
     @Import(name="endTime", required=true)
       private final HoursOfOperationTimeSlice endTime;
@@ -41,7 +38,6 @@ public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs
 
     /**
      * The start time that your contact center opens.
-     * 
      */
     @Import(name="startTime", required=true)
       private final HoursOfOperationTimeSlice startTime;

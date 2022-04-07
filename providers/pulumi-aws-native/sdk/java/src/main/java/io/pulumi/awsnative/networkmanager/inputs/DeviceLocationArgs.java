@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The site location.
- * 
  */
 public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The physical address.
-     * 
      */
     @Import(name="address")
       private final @Nullable Output<String> address;
@@ -31,7 +29,6 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The latitude.
-     * 
      */
     @Import(name="latitude")
       private final @Nullable Output<String> latitude;
@@ -42,7 +39,6 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The longitude.
-     * 
      */
     @Import(name="longitude")
       private final @Nullable Output<String> longitude;

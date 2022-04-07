@@ -13,76 +13,65 @@ import javax.annotation.Nullable;
 
 /**
  * Used to install the certificate authority certificate and update the certificate authority status.
- * 
  */
 @ResourceType(type="aws-native:acmpca:CertificateAuthorityActivation")
 public class CertificateAuthorityActivation extends io.pulumi.resources.CustomResource {
     /**
      * Certificate Authority certificate that will be installed in the Certificate Authority.
-     * 
      */
     @Export(name="certificate", type=String.class, parameters={})
     private Output<String> certificate;
 
     /**
      * @return Certificate Authority certificate that will be installed in the Certificate Authority.
-     * 
      */
     public Output<String> getCertificate() {
         return this.certificate;
     }
     /**
      * Arn of the Certificate Authority.
-     * 
      */
     @Export(name="certificateAuthorityArn", type=String.class, parameters={})
     private Output<String> certificateAuthorityArn;
 
     /**
      * @return Arn of the Certificate Authority.
-     * 
      */
     public Output<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
      * Certificate chain for the Certificate Authority certificate.
-     * 
      */
     @Export(name="certificateChain", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateChain;
 
     /**
      * @return Certificate chain for the Certificate Authority certificate.
-     * 
      */
     public Output</* @Nullable */ String> getCertificateChain() {
         return this.certificateChain;
     }
     /**
      * The complete certificate chain, including the Certificate Authority certificate.
-     * 
      */
     @Export(name="completeCertificateChain", type=String.class, parameters={})
     private Output<String> completeCertificateChain;
 
     /**
      * @return The complete certificate chain, including the Certificate Authority certificate.
-     * 
      */
     public Output<String> getCompleteCertificateChain() {
         return this.completeCertificateChain;
     }
     /**
      * The status of the Certificate Authority.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return The status of the Certificate Authority.
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;

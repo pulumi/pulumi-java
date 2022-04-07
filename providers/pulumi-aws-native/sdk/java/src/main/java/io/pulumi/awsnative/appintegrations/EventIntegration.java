@@ -17,104 +17,89 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::AppIntegrations::EventIntegration
- * 
  */
 @ResourceType(type="aws-native:appintegrations:EventIntegration")
 public class EventIntegration extends io.pulumi.resources.CustomResource {
     /**
      * The associations with the event integration.
-     * 
      */
     @Export(name="associations", type=List.class, parameters={EventIntegrationAssociation.class})
     private Output<List<EventIntegrationAssociation>> associations;
 
     /**
      * @return The associations with the event integration.
-     * 
      */
     public Output<List<EventIntegrationAssociation>> getAssociations() {
         return this.associations;
     }
     /**
      * The event integration description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The event integration description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The Amazon Eventbridge bus for the event integration.
-     * 
      */
     @Export(name="eventBridgeBus", type=String.class, parameters={})
     private Output<String> eventBridgeBus;
 
     /**
      * @return The Amazon Eventbridge bus for the event integration.
-     * 
      */
     public Output<String> getEventBridgeBus() {
         return this.eventBridgeBus;
     }
     /**
      * The EventFilter (source) associated with the event integration.
-     * 
      */
     @Export(name="eventFilter", type=EventIntegrationEventFilter.class, parameters={})
     private Output<EventIntegrationEventFilter> eventFilter;
 
     /**
      * @return The EventFilter (source) associated with the event integration.
-     * 
      */
     public Output<EventIntegrationEventFilter> getEventFilter() {
         return this.eventFilter;
     }
     /**
      * The Amazon Resource Name (ARN) of the event integration.
-     * 
      */
     @Export(name="eventIntegrationArn", type=String.class, parameters={})
     private Output<String> eventIntegrationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the event integration.
-     * 
      */
     public Output<String> getEventIntegrationArn() {
         return this.eventIntegrationArn;
     }
     /**
      * The name of the event integration.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the event integration.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The tags (keys and values) associated with the event integration.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={EventIntegrationTag.class})
     private Output</* @Nullable */ List<EventIntegrationTag>> tags;
 
     /**
      * @return The tags (keys and values) associated with the event integration.
-     * 
      */
     public Output</* @Nullable */ List<EventIntegrationTag>> getTags() {
         return this.tags;

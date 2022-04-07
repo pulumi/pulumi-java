@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Provides settings for a message that is sent periodically to the user while a fulfillment Lambda function is running.
- * 
  */
 public final class BotFulfillmentUpdateResponseSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends io.pulu
 
     /**
      * Determines whether the user can interrupt an update message while it is playing.
-     * 
      */
     @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;
@@ -34,7 +32,6 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends io.pulu
 
     /**
      * The frequency that a message is sent to the user. When the period ends, Amazon Lex chooses a message from the message groups and plays it to the user. If the fulfillment Lambda returns before the first period ends, an update message is not played to the user.
-     * 
      */
     @Import(name="frequencyInSeconds", required=true)
       private final Output<Integer> frequencyInSeconds;

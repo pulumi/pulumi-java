@@ -20,133 +20,947 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::AppFlow::Flow.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testFlow = new AwsNative.AppFlow.Flow("testFlow", new AwsNative.AppFlow.FlowArgs
+ *         {
+ *             FlowName = "MyEventFlow",
+ *             Description = "Test event flow for CloudFormation from salesforce to s3",
+ *             TriggerConfig = new AwsNative.AppFlow.Inputs.FlowTriggerConfigArgs
+ *             {
+ *                 TriggerType = "Event",
+ *             },
+ *             SourceFlowConfig = new AwsNative.AppFlow.Inputs.FlowSourceFlowConfigArgs
+ *             {
+ *                 ConnectorType = "Salesforce",
+ *                 ConnectorProfileName = "TestConnectorProfile",
+ *                 SourceConnectorProperties = new AwsNative.AppFlow.Inputs.FlowSourceConnectorPropertiesArgs
+ *                 {
+ *                     Salesforce = new AwsNative.AppFlow.Inputs.FlowSalesforceSourcePropertiesArgs
+ *                     {
+ *                         Object = "Account",
+ *                         EnableDynamicFieldUpdate = false,
+ *                         IncludeDeletedRecords = true,
+ *                     },
+ *                 },
+ *             },
+ *             DestinationFlowConfigList = 
+ *             {
+ *                 new AwsNative.AppFlow.Inputs.FlowDestinationFlowConfigArgs
+ *                 {
+ *                     ConnectorType = "S3",
+ *                     DestinationConnectorProperties = new AwsNative.AppFlow.Inputs.FlowDestinationConnectorPropertiesArgs
+ *                     {
+ *                         S3 = new AwsNative.AppFlow.Inputs.FlowS3DestinationPropertiesArgs
+ *                         {
+ *                             BucketName = "TestOutputBucket",
+ *                             S3OutputFormatConfig = new AwsNative.AppFlow.Inputs.FlowS3OutputFormatConfigArgs
+ *                             {
+ *                                 FileType = "JSON",
+ *                                 AggregationConfig = new AwsNative.AppFlow.Inputs.FlowAggregationConfigArgs
+ *                                 {
+ *                                     AggregationType = "None",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tasks = 
+ *             {
+ *                 new AwsNative.AppFlow.Inputs.FlowTaskArgs
+ *                 {
+ *                     TaskType = "Filter",
+ *                     SourceFields = 
+ *                     {
+ *                         "Id",
+ *                         "Name",
+ *                     },
+ *                     ConnectorOperator = new AwsNative.AppFlow.Inputs.FlowConnectorOperatorArgs
+ *                     {
+ *                         Salesforce = "PROJECTION",
+ *                     },
+ *                 },
+ *                 new AwsNative.AppFlow.Inputs.FlowTaskArgs
+ *                 {
+ *                     TaskType = "Map",
+ *                     SourceFields = 
+ *                     {
+ *                         "Id",
+ *                     },
+ *                     TaskProperties = 
+ *                     {
+ *                         new AwsNative.AppFlow.Inputs.FlowTaskPropertiesObjectArgs
+ *                         {
+ *                             Key = "SOURCE_DATA_TYPE",
+ *                             Value = "id",
+ *                         },
+ *                         new AwsNative.AppFlow.Inputs.FlowTaskPropertiesObjectArgs
+ *                         {
+ *                             Key = "DESTINATION_DATA_TYPE",
+ *                             Value = "id",
+ *                         },
+ *                     },
+ *                     DestinationField = "Id",
+ *                     ConnectorOperator = new AwsNative.AppFlow.Inputs.FlowConnectorOperatorArgs
+ *                     {
+ *                         Salesforce = "NO_OP",
+ *                     },
+ *                 },
+ *                 new AwsNative.AppFlow.Inputs.FlowTaskArgs
+ *                 {
+ *                     TaskType = "Map",
+ *                     SourceFields = 
+ *                     {
+ *                         "Name",
+ *                     },
+ *                     TaskProperties = 
+ *                     {
+ *                         new AwsNative.AppFlow.Inputs.FlowTaskPropertiesObjectArgs
+ *                         {
+ *                             Key = "SOURCE_DATA_TYPE",
+ *                             Value = "string",
+ *                         },
+ *                         new AwsNative.AppFlow.Inputs.FlowTaskPropertiesObjectArgs
+ *                         {
+ *                             Key = "DESTINATION_DATA_TYPE",
+ *                             Value = "string",
+ *                         },
+ *                     },
+ *                     DestinationField = "Name",
+ *                     ConnectorOperator = new AwsNative.AppFlow.Inputs.FlowConnectorOperatorArgs
+ *                     {
+ *                         Salesforce = "NO_OP",
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.AppFlow.Inputs.FlowTagArgs
+ *                 {
+ *                     Key = "testKey",
+ *                     Value = "testValue",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/appflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appflow.NewFlow(ctx, "testFlow", &appflow.FlowArgs{
+ * 			FlowName:    pulumi.String("MyEventFlow"),
+ * 			Description: pulumi.String("Test event flow for CloudFormation from salesforce to s3"),
+ * 			TriggerConfig: &appflow.FlowTriggerConfigArgs{
+ * 				TriggerType: "Event",
+ * 			},
+ * 			SourceFlowConfig: &appflow.FlowSourceFlowConfigArgs{
+ * 				ConnectorType:        "Salesforce",
+ * 				ConnectorProfileName: pulumi.String("TestConnectorProfile"),
+ * 				SourceConnectorProperties: &appflow.FlowSourceConnectorPropertiesArgs{
+ * 					Salesforce: &appflow.FlowSalesforceSourcePropertiesArgs{
+ * 						Object:                   pulumi.String("Account"),
+ * 						EnableDynamicFieldUpdate: pulumi.Bool(false),
+ * 						IncludeDeletedRecords:    pulumi.Bool(true),
+ * 					},
+ * 				},
+ * 			},
+ * 			DestinationFlowConfigList: appflow.FlowDestinationFlowConfigArray{
+ * 				&appflow.FlowDestinationFlowConfigArgs{
+ * 					ConnectorType: "S3",
+ * 					DestinationConnectorProperties: &appflow.FlowDestinationConnectorPropertiesArgs{
+ * 						S3: &appflow.FlowS3DestinationPropertiesArgs{
+ * 							BucketName: pulumi.String("TestOutputBucket"),
+ * 							S3OutputFormatConfig: &appflow.FlowS3OutputFormatConfigArgs{
+ * 								FileType: "JSON",
+ * 								AggregationConfig: &appflow.FlowAggregationConfigArgs{
+ * 									AggregationType: "None",
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tasks: appflow.FlowTaskArray{
+ * 				&appflow.FlowTaskArgs{
+ * 					TaskType: "Filter",
+ * 					SourceFields: pulumi.StringArray{
+ * 						pulumi.String("Id"),
+ * 						pulumi.String("Name"),
+ * 					},
+ * 					ConnectorOperator: &appflow.FlowConnectorOperatorArgs{
+ * 						Salesforce: "PROJECTION",
+ * 					},
+ * 				},
+ * 				&appflow.FlowTaskArgs{
+ * 					TaskType: "Map",
+ * 					SourceFields: pulumi.StringArray{
+ * 						pulumi.String("Id"),
+ * 					},
+ * 					TaskProperties: appflow.FlowTaskPropertiesObjectArray{
+ * 						&appflow.FlowTaskPropertiesObjectArgs{
+ * 							Key:   "SOURCE_DATA_TYPE",
+ * 							Value: pulumi.String("id"),
+ * 						},
+ * 						&appflow.FlowTaskPropertiesObjectArgs{
+ * 							Key:   "DESTINATION_DATA_TYPE",
+ * 							Value: pulumi.String("id"),
+ * 						},
+ * 					},
+ * 					DestinationField: pulumi.String("Id"),
+ * 					ConnectorOperator: &appflow.FlowConnectorOperatorArgs{
+ * 						Salesforce: "NO_OP",
+ * 					},
+ * 				},
+ * 				&appflow.FlowTaskArgs{
+ * 					TaskType: "Map",
+ * 					SourceFields: pulumi.StringArray{
+ * 						pulumi.String("Name"),
+ * 					},
+ * 					TaskProperties: appflow.FlowTaskPropertiesObjectArray{
+ * 						&appflow.FlowTaskPropertiesObjectArgs{
+ * 							Key:   "SOURCE_DATA_TYPE",
+ * 							Value: pulumi.String("string"),
+ * 						},
+ * 						&appflow.FlowTaskPropertiesObjectArgs{
+ * 							Key:   "DESTINATION_DATA_TYPE",
+ * 							Value: pulumi.String("string"),
+ * 						},
+ * 					},
+ * 					DestinationField: pulumi.String("Name"),
+ * 					ConnectorOperator: &appflow.FlowConnectorOperatorArgs{
+ * 						Salesforce: "NO_OP",
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: []appflow.FlowTagArgs{
+ * 				&appflow.FlowTagArgs{
+ * 					Key:   pulumi.String("testKey"),
+ * 					Value: pulumi.String("testValue"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testFlow = new aws_native.appflow.Flow("testFlow", {
+ *     flowName: "MyEventFlow",
+ *     description: "Test event flow for CloudFormation from salesforce to s3",
+ *     triggerConfig: {
+ *         triggerType: "Event",
+ *     },
+ *     sourceFlowConfig: {
+ *         connectorType: "Salesforce",
+ *         connectorProfileName: "TestConnectorProfile",
+ *         sourceConnectorProperties: {
+ *             salesforce: {
+ *                 object: "Account",
+ *                 enableDynamicFieldUpdate: false,
+ *                 includeDeletedRecords: true,
+ *             },
+ *         },
+ *     },
+ *     destinationFlowConfigList: [{
+ *         connectorType: "S3",
+ *         destinationConnectorProperties: {
+ *             s3: {
+ *                 bucketName: "TestOutputBucket",
+ *                 s3OutputFormatConfig: {
+ *                     fileType: "JSON",
+ *                     aggregationConfig: {
+ *                         aggregationType: "None",
+ *                     },
+ *                 },
+ *             },
+ *         },
+ *     }],
+ *     tasks: [
+ *         {
+ *             taskType: "Filter",
+ *             sourceFields: [
+ *                 "Id",
+ *                 "Name",
+ *             ],
+ *             connectorOperator: {
+ *                 salesforce: "PROJECTION",
+ *             },
+ *         },
+ *         {
+ *             taskType: "Map",
+ *             sourceFields: ["Id"],
+ *             taskProperties: [
+ *                 {
+ *                     key: "SOURCE_DATA_TYPE",
+ *                     value: "id",
+ *                 },
+ *                 {
+ *                     key: "DESTINATION_DATA_TYPE",
+ *                     value: "id",
+ *                 },
+ *             ],
+ *             destinationField: "Id",
+ *             connectorOperator: {
+ *                 salesforce: "NO_OP",
+ *             },
+ *         },
+ *         {
+ *             taskType: "Map",
+ *             sourceFields: ["Name"],
+ *             taskProperties: [
+ *                 {
+ *                     key: "SOURCE_DATA_TYPE",
+ *                     value: "string",
+ *                 },
+ *                 {
+ *                     key: "DESTINATION_DATA_TYPE",
+ *                     value: "string",
+ *                 },
+ *             ],
+ *             destinationField: "Name",
+ *             connectorOperator: {
+ *                 salesforce: "NO_OP",
+ *             },
+ *         },
+ *     ],
+ *     tags: [{
+ *         key: "testKey",
+ *         value: "testValue",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_flow = aws_native.appflow.Flow("testFlow",
+ *     flow_name="MyEventFlow",
+ *     description="Test event flow for CloudFormation from salesforce to s3",
+ *     trigger_config=aws_native.appflow.FlowTriggerConfigArgs(
+ *         trigger_type="Event",
+ *     ),
+ *     source_flow_config=aws_native.appflow.FlowSourceFlowConfigArgs(
+ *         connector_type="Salesforce",
+ *         connector_profile_name="TestConnectorProfile",
+ *         source_connector_properties=aws_native.appflow.FlowSourceConnectorPropertiesArgs(
+ *             salesforce=aws_native.appflow.FlowSalesforceSourcePropertiesArgs(
+ *                 object="Account",
+ *                 enable_dynamic_field_update=False,
+ *                 include_deleted_records=True,
+ *             ),
+ *         ),
+ *     ),
+ *     destination_flow_config_list=[aws_native.appflow.FlowDestinationFlowConfigArgs(
+ *         connector_type="S3",
+ *         destination_connector_properties=aws_native.appflow.FlowDestinationConnectorPropertiesArgs(
+ *             s3=aws_native.appflow.FlowS3DestinationPropertiesArgs(
+ *                 bucket_name="TestOutputBucket",
+ *                 s3_output_format_config=aws_native.appflow.FlowS3OutputFormatConfigArgs(
+ *                     file_type="JSON",
+ *                     aggregation_config=aws_native.appflow.FlowAggregationConfigArgs(
+ *                         aggregation_type="None",
+ *                     ),
+ *                 ),
+ *             ),
+ *         ),
+ *     )],
+ *     tasks=[
+ *         aws_native.appflow.FlowTaskArgs(
+ *             task_type="Filter",
+ *             source_fields=[
+ *                 "Id",
+ *                 "Name",
+ *             ],
+ *             connector_operator=aws_native.appflow.FlowConnectorOperatorArgs(
+ *                 salesforce="PROJECTION",
+ *             ),
+ *         ),
+ *         aws_native.appflow.FlowTaskArgs(
+ *             task_type="Map",
+ *             source_fields=["Id"],
+ *             task_properties=[
+ *                 aws_native.appflow.FlowTaskPropertiesObjectArgs(
+ *                     key="SOURCE_DATA_TYPE",
+ *                     value="id",
+ *                 ),
+ *                 aws_native.appflow.FlowTaskPropertiesObjectArgs(
+ *                     key="DESTINATION_DATA_TYPE",
+ *                     value="id",
+ *                 ),
+ *             ],
+ *             destination_field="Id",
+ *             connector_operator=aws_native.appflow.FlowConnectorOperatorArgs(
+ *                 salesforce="NO_OP",
+ *             ),
+ *         ),
+ *         aws_native.appflow.FlowTaskArgs(
+ *             task_type="Map",
+ *             source_fields=["Name"],
+ *             task_properties=[
+ *                 aws_native.appflow.FlowTaskPropertiesObjectArgs(
+ *                     key="SOURCE_DATA_TYPE",
+ *                     value="string",
+ *                 ),
+ *                 aws_native.appflow.FlowTaskPropertiesObjectArgs(
+ *                     key="DESTINATION_DATA_TYPE",
+ *                     value="string",
+ *                 ),
+ *             ],
+ *             destination_field="Name",
+ *             connector_operator=aws_native.appflow.FlowConnectorOperatorArgs(
+ *                 salesforce="NO_OP",
+ *             ),
+ *         ),
+ *     ],
+ *     tags=[aws_native.appflow.FlowTagArgs(
+ *         key="testKey",
+ *         value="testValue",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testFlow = new AwsNative.AppFlow.Flow("testFlow", new AwsNative.AppFlow.FlowArgs
+ *         {
+ *             FlowName = "MyEventFlow",
+ *             Description = "Test flow for CloudFormation from salesforce to s3",
+ *             TriggerConfig = new AwsNative.AppFlow.Inputs.FlowTriggerConfigArgs
+ *             {
+ *                 TriggerType = "Event",
+ *             },
+ *             SourceFlowConfig = new AwsNative.AppFlow.Inputs.FlowSourceFlowConfigArgs
+ *             {
+ *                 ConnectorType = "Salesforce",
+ *                 ConnectorProfileName = "TestConnectorProfile",
+ *                 SourceConnectorProperties = new AwsNative.AppFlow.Inputs.FlowSourceConnectorPropertiesArgs
+ *                 {
+ *                     Salesforce = new AwsNative.AppFlow.Inputs.FlowSalesforceSourcePropertiesArgs
+ *                     {
+ *                         Object = "Account",
+ *                         EnableDynamicFieldUpdate = false,
+ *                         IncludeDeletedRecords = true,
+ *                     },
+ *                 },
+ *             },
+ *             DestinationFlowConfigList = 
+ *             {
+ *                 new AwsNative.AppFlow.Inputs.FlowDestinationFlowConfigArgs
+ *                 {
+ *                     ConnectorType = "S3",
+ *                     DestinationConnectorProperties = new AwsNative.AppFlow.Inputs.FlowDestinationConnectorPropertiesArgs
+ *                     {
+ *                         S3 = new AwsNative.AppFlow.Inputs.FlowS3DestinationPropertiesArgs
+ *                         {
+ *                             BucketName = "TestOutputBucket",
+ *                             S3OutputFormatConfig = new AwsNative.AppFlow.Inputs.FlowS3OutputFormatConfigArgs
+ *                             {
+ *                                 FileType = "JSON",
+ *                                 AggregationConfig = new AwsNative.AppFlow.Inputs.FlowAggregationConfigArgs
+ *                                 {
+ *                                     AggregationType = "None",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tasks = 
+ *             {
+ *                 new AwsNative.AppFlow.Inputs.FlowTaskArgs
+ *                 {
+ *                     TaskType = "Filter",
+ *                     ConnectorOperator = new AwsNative.AppFlow.Inputs.FlowConnectorOperatorArgs
+ *                     {
+ *                         Salesforce = "PROJECTION",
+ *                     },
+ *                     SourceFields = 
+ *                     {
+ *                         "Id",
+ *                     },
+ *                 },
+ *                 new AwsNative.AppFlow.Inputs.FlowTaskArgs
+ *                 {
+ *                     TaskType = "Map",
+ *                     SourceFields = 
+ *                     {
+ *                         "Id",
+ *                     },
+ *                     TaskProperties = 
+ *                     {
+ *                         new AwsNative.AppFlow.Inputs.FlowTaskPropertiesObjectArgs
+ *                         {
+ *                             Key = "SOURCE_DATA_TYPE",
+ *                             Value = "id",
+ *                         },
+ *                         new AwsNative.AppFlow.Inputs.FlowTaskPropertiesObjectArgs
+ *                         {
+ *                             Key = "DESTINATION_DATA_TYPE",
+ *                             Value = "id",
+ *                         },
+ *                     },
+ *                     DestinationField = "Id",
+ *                     ConnectorOperator = new AwsNative.AppFlow.Inputs.FlowConnectorOperatorArgs
+ *                     {
+ *                         Salesforce = "NO_OP",
+ *                     },
+ *                 },
+ *                 new AwsNative.AppFlow.Inputs.FlowTaskArgs
+ *                 {
+ *                     TaskType = "Map",
+ *                     SourceFields = 
+ *                     {
+ *                         "Name",
+ *                     },
+ *                     TaskProperties = 
+ *                     {
+ *                         new AwsNative.AppFlow.Inputs.FlowTaskPropertiesObjectArgs
+ *                         {
+ *                             Key = "SOURCE_DATA_TYPE",
+ *                             Value = "string",
+ *                         },
+ *                         new AwsNative.AppFlow.Inputs.FlowTaskPropertiesObjectArgs
+ *                         {
+ *                             Key = "DESTINATION_DATA_TYPE",
+ *                             Value = "string",
+ *                         },
+ *                     },
+ *                     DestinationField = "Name",
+ *                     ConnectorOperator = new AwsNative.AppFlow.Inputs.FlowConnectorOperatorArgs
+ *                     {
+ *                         Salesforce = "NO_OP",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/appflow"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appflow.NewFlow(ctx, "testFlow", &appflow.FlowArgs{
+ * 			FlowName:    pulumi.String("MyEventFlow"),
+ * 			Description: pulumi.String("Test flow for CloudFormation from salesforce to s3"),
+ * 			TriggerConfig: &appflow.FlowTriggerConfigArgs{
+ * 				TriggerType: "Event",
+ * 			},
+ * 			SourceFlowConfig: &appflow.FlowSourceFlowConfigArgs{
+ * 				ConnectorType:        "Salesforce",
+ * 				ConnectorProfileName: pulumi.String("TestConnectorProfile"),
+ * 				SourceConnectorProperties: &appflow.FlowSourceConnectorPropertiesArgs{
+ * 					Salesforce: &appflow.FlowSalesforceSourcePropertiesArgs{
+ * 						Object:                   pulumi.String("Account"),
+ * 						EnableDynamicFieldUpdate: pulumi.Bool(false),
+ * 						IncludeDeletedRecords:    pulumi.Bool(true),
+ * 					},
+ * 				},
+ * 			},
+ * 			DestinationFlowConfigList: appflow.FlowDestinationFlowConfigArray{
+ * 				&appflow.FlowDestinationFlowConfigArgs{
+ * 					ConnectorType: "S3",
+ * 					DestinationConnectorProperties: &appflow.FlowDestinationConnectorPropertiesArgs{
+ * 						S3: &appflow.FlowS3DestinationPropertiesArgs{
+ * 							BucketName: pulumi.String("TestOutputBucket"),
+ * 							S3OutputFormatConfig: &appflow.FlowS3OutputFormatConfigArgs{
+ * 								FileType: "JSON",
+ * 								AggregationConfig: &appflow.FlowAggregationConfigArgs{
+ * 									AggregationType: "None",
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tasks: appflow.FlowTaskArray{
+ * 				&appflow.FlowTaskArgs{
+ * 					TaskType: "Filter",
+ * 					ConnectorOperator: &appflow.FlowConnectorOperatorArgs{
+ * 						Salesforce: "PROJECTION",
+ * 					},
+ * 					SourceFields: pulumi.StringArray{
+ * 						pulumi.String("Id"),
+ * 					},
+ * 				},
+ * 				&appflow.FlowTaskArgs{
+ * 					TaskType: "Map",
+ * 					SourceFields: pulumi.StringArray{
+ * 						pulumi.String("Id"),
+ * 					},
+ * 					TaskProperties: appflow.FlowTaskPropertiesObjectArray{
+ * 						&appflow.FlowTaskPropertiesObjectArgs{
+ * 							Key:   "SOURCE_DATA_TYPE",
+ * 							Value: pulumi.String("id"),
+ * 						},
+ * 						&appflow.FlowTaskPropertiesObjectArgs{
+ * 							Key:   "DESTINATION_DATA_TYPE",
+ * 							Value: pulumi.String("id"),
+ * 						},
+ * 					},
+ * 					DestinationField: pulumi.String("Id"),
+ * 					ConnectorOperator: &appflow.FlowConnectorOperatorArgs{
+ * 						Salesforce: "NO_OP",
+ * 					},
+ * 				},
+ * 				&appflow.FlowTaskArgs{
+ * 					TaskType: "Map",
+ * 					SourceFields: pulumi.StringArray{
+ * 						pulumi.String("Name"),
+ * 					},
+ * 					TaskProperties: appflow.FlowTaskPropertiesObjectArray{
+ * 						&appflow.FlowTaskPropertiesObjectArgs{
+ * 							Key:   "SOURCE_DATA_TYPE",
+ * 							Value: pulumi.String("string"),
+ * 						},
+ * 						&appflow.FlowTaskPropertiesObjectArgs{
+ * 							Key:   "DESTINATION_DATA_TYPE",
+ * 							Value: pulumi.String("string"),
+ * 						},
+ * 					},
+ * 					DestinationField: pulumi.String("Name"),
+ * 					ConnectorOperator: &appflow.FlowConnectorOperatorArgs{
+ * 						Salesforce: "NO_OP",
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testFlow = new aws_native.appflow.Flow("testFlow", {
+ *     flowName: "MyEventFlow",
+ *     description: "Test flow for CloudFormation from salesforce to s3",
+ *     triggerConfig: {
+ *         triggerType: "Event",
+ *     },
+ *     sourceFlowConfig: {
+ *         connectorType: "Salesforce",
+ *         connectorProfileName: "TestConnectorProfile",
+ *         sourceConnectorProperties: {
+ *             salesforce: {
+ *                 object: "Account",
+ *                 enableDynamicFieldUpdate: false,
+ *                 includeDeletedRecords: true,
+ *             },
+ *         },
+ *     },
+ *     destinationFlowConfigList: [{
+ *         connectorType: "S3",
+ *         destinationConnectorProperties: {
+ *             s3: {
+ *                 bucketName: "TestOutputBucket",
+ *                 s3OutputFormatConfig: {
+ *                     fileType: "JSON",
+ *                     aggregationConfig: {
+ *                         aggregationType: "None",
+ *                     },
+ *                 },
+ *             },
+ *         },
+ *     }],
+ *     tasks: [
+ *         {
+ *             taskType: "Filter",
+ *             connectorOperator: {
+ *                 salesforce: "PROJECTION",
+ *             },
+ *             sourceFields: ["Id"],
+ *         },
+ *         {
+ *             taskType: "Map",
+ *             sourceFields: ["Id"],
+ *             taskProperties: [
+ *                 {
+ *                     key: "SOURCE_DATA_TYPE",
+ *                     value: "id",
+ *                 },
+ *                 {
+ *                     key: "DESTINATION_DATA_TYPE",
+ *                     value: "id",
+ *                 },
+ *             ],
+ *             destinationField: "Id",
+ *             connectorOperator: {
+ *                 salesforce: "NO_OP",
+ *             },
+ *         },
+ *         {
+ *             taskType: "Map",
+ *             sourceFields: ["Name"],
+ *             taskProperties: [
+ *                 {
+ *                     key: "SOURCE_DATA_TYPE",
+ *                     value: "string",
+ *                 },
+ *                 {
+ *                     key: "DESTINATION_DATA_TYPE",
+ *                     value: "string",
+ *                 },
+ *             ],
+ *             destinationField: "Name",
+ *             connectorOperator: {
+ *                 salesforce: "NO_OP",
+ *             },
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_flow = aws_native.appflow.Flow("testFlow",
+ *     flow_name="MyEventFlow",
+ *     description="Test flow for CloudFormation from salesforce to s3",
+ *     trigger_config=aws_native.appflow.FlowTriggerConfigArgs(
+ *         trigger_type="Event",
+ *     ),
+ *     source_flow_config=aws_native.appflow.FlowSourceFlowConfigArgs(
+ *         connector_type="Salesforce",
+ *         connector_profile_name="TestConnectorProfile",
+ *         source_connector_properties=aws_native.appflow.FlowSourceConnectorPropertiesArgs(
+ *             salesforce=aws_native.appflow.FlowSalesforceSourcePropertiesArgs(
+ *                 object="Account",
+ *                 enable_dynamic_field_update=False,
+ *                 include_deleted_records=True,
+ *             ),
+ *         ),
+ *     ),
+ *     destination_flow_config_list=[aws_native.appflow.FlowDestinationFlowConfigArgs(
+ *         connector_type="S3",
+ *         destination_connector_properties=aws_native.appflow.FlowDestinationConnectorPropertiesArgs(
+ *             s3=aws_native.appflow.FlowS3DestinationPropertiesArgs(
+ *                 bucket_name="TestOutputBucket",
+ *                 s3_output_format_config=aws_native.appflow.FlowS3OutputFormatConfigArgs(
+ *                     file_type="JSON",
+ *                     aggregation_config=aws_native.appflow.FlowAggregationConfigArgs(
+ *                         aggregation_type="None",
+ *                     ),
+ *                 ),
+ *             ),
+ *         ),
+ *     )],
+ *     tasks=[
+ *         aws_native.appflow.FlowTaskArgs(
+ *             task_type="Filter",
+ *             connector_operator=aws_native.appflow.FlowConnectorOperatorArgs(
+ *                 salesforce="PROJECTION",
+ *             ),
+ *             source_fields=["Id"],
+ *         ),
+ *         aws_native.appflow.FlowTaskArgs(
+ *             task_type="Map",
+ *             source_fields=["Id"],
+ *             task_properties=[
+ *                 aws_native.appflow.FlowTaskPropertiesObjectArgs(
+ *                     key="SOURCE_DATA_TYPE",
+ *                     value="id",
+ *                 ),
+ *                 aws_native.appflow.FlowTaskPropertiesObjectArgs(
+ *                     key="DESTINATION_DATA_TYPE",
+ *                     value="id",
+ *                 ),
+ *             ],
+ *             destination_field="Id",
+ *             connector_operator=aws_native.appflow.FlowConnectorOperatorArgs(
+ *                 salesforce="NO_OP",
+ *             ),
+ *         ),
+ *         aws_native.appflow.FlowTaskArgs(
+ *             task_type="Map",
+ *             source_fields=["Name"],
+ *             task_properties=[
+ *                 aws_native.appflow.FlowTaskPropertiesObjectArgs(
+ *                     key="SOURCE_DATA_TYPE",
+ *                     value="string",
+ *                 ),
+ *                 aws_native.appflow.FlowTaskPropertiesObjectArgs(
+ *                     key="DESTINATION_DATA_TYPE",
+ *                     value="string",
+ *                 ),
+ *             ],
+ *             destination_field="Name",
+ *             connector_operator=aws_native.appflow.FlowConnectorOperatorArgs(
+ *                 salesforce="NO_OP",
+ *             ),
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:appflow:Flow")
 public class Flow extends io.pulumi.resources.CustomResource {
     /**
      * Description of the flow.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the flow.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * List of Destination connectors of the flow.
-     * 
      */
     @Export(name="destinationFlowConfigList", type=List.class, parameters={FlowDestinationFlowConfig.class})
     private Output<List<FlowDestinationFlowConfig>> destinationFlowConfigList;
 
     /**
      * @return List of Destination connectors of the flow.
-     * 
      */
     public Output<List<FlowDestinationFlowConfig>> getDestinationFlowConfigList() {
         return this.destinationFlowConfigList;
     }
     /**
      * ARN identifier of the flow.
-     * 
      */
     @Export(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
     /**
      * @return ARN identifier of the flow.
-     * 
      */
     public Output<String> getFlowArn() {
         return this.flowArn;
     }
     /**
      * Name of the flow.
-     * 
      */
     @Export(name="flowName", type=String.class, parameters={})
     private Output<String> flowName;
 
     /**
      * @return Name of the flow.
-     * 
      */
     public Output<String> getFlowName() {
         return this.flowName;
     }
     /**
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
-     * 
      */
     @Export(name="kMSArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSArn;
 
     /**
      * @return The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
-     * 
      */
     public Output</* @Nullable */ String> getKMSArn() {
         return this.kMSArn;
     }
     /**
      * Configurations of Source connector of the flow.
-     * 
      */
     @Export(name="sourceFlowConfig", type=FlowSourceFlowConfig.class, parameters={})
     private Output<FlowSourceFlowConfig> sourceFlowConfig;
 
     /**
      * @return Configurations of Source connector of the flow.
-     * 
      */
     public Output<FlowSourceFlowConfig> getSourceFlowConfig() {
         return this.sourceFlowConfig;
     }
     /**
      * List of Tags.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={FlowTag.class})
     private Output</* @Nullable */ List<FlowTag>> tags;
 
     /**
      * @return List of Tags.
-     * 
      */
     public Output</* @Nullable */ List<FlowTag>> getTags() {
         return this.tags;
     }
     /**
      * List of tasks for the flow.
-     * 
      */
     @Export(name="tasks", type=List.class, parameters={FlowTask.class})
     private Output<List<FlowTask>> tasks;
 
     /**
      * @return List of tasks for the flow.
-     * 
      */
     public Output<List<FlowTask>> getTasks() {
         return this.tasks;
     }
     /**
      * Trigger settings of the flow.
-     * 
      */
     @Export(name="triggerConfig", type=FlowTriggerConfig.class, parameters={})
     private Output<FlowTriggerConfig> triggerConfig;
 
     /**
      * @return Trigger settings of the flow.
-     * 
      */
     public Output<FlowTriggerConfig> getTriggerConfig() {
         return this.triggerConfig;

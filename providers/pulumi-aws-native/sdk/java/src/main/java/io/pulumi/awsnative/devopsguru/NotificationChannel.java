@@ -14,7 +14,377 @@ import javax.annotation.Nullable;
 /**
  * This resource schema represents the NotificationChannel resource in the Amazon DevOps Guru.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myNotificationChannel = new AwsNative.DevOpsGuru.NotificationChannel("myNotificationChannel", new AwsNative.DevOpsGuru.NotificationChannelArgs
+ *         {
+ *             Config = new AwsNative.DevOpsGuru.Inputs.NotificationChannelConfigArgs
+ *             {
+ *                 Sns = new AwsNative.DevOpsGuru.Inputs.NotificationChannelSnsChannelConfigArgs
+ *                 {
+ *                     TopicArn = "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/devopsguru"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devopsguru.NewNotificationChannel(ctx, "myNotificationChannel", &devopsguru.NotificationChannelArgs{
+ * 			Config: &devopsguru.NotificationChannelConfigArgs{
+ * 				Sns: &devopsguru.NotificationChannelSnsChannelConfigArgs{
+ * 					TopicArn: pulumi.String("arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myNotificationChannel = new aws_native.devopsguru.NotificationChannel("myNotificationChannel", {config: {
+ *     sns: {
+ *         topicArn: "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *     },
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_notification_channel = aws_native.devopsguru.NotificationChannel("myNotificationChannel", config=aws_native.devopsguru.NotificationChannelConfigArgs(
+ *     sns=aws_native.devopsguru.NotificationChannelSnsChannelConfigArgs(
+ *         topic_arn="arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *     ),
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myNotificationChannel = new AwsNative.DevOpsGuru.NotificationChannel("myNotificationChannel", new AwsNative.DevOpsGuru.NotificationChannelArgs
+ *         {
+ *             Config = new AwsNative.DevOpsGuru.Inputs.NotificationChannelConfigArgs
+ *             {
+ *                 Sns = new AwsNative.DevOpsGuru.Inputs.NotificationChannelSnsChannelConfigArgs
+ *                 {
+ *                     TopicArn = "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/devopsguru"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devopsguru.NewNotificationChannel(ctx, "myNotificationChannel", &devopsguru.NotificationChannelArgs{
+ * 			Config: &devopsguru.NotificationChannelConfigArgs{
+ * 				Sns: &devopsguru.NotificationChannelSnsChannelConfigArgs{
+ * 					TopicArn: pulumi.String("arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myNotificationChannel = new aws_native.devopsguru.NotificationChannel("myNotificationChannel", {config: {
+ *     sns: {
+ *         topicArn: "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *     },
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_notification_channel = aws_native.devopsguru.NotificationChannel("myNotificationChannel", config=aws_native.devopsguru.NotificationChannelConfigArgs(
+ *     sns=aws_native.devopsguru.NotificationChannelSnsChannelConfigArgs(
+ *         topic_arn="arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *     ),
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myNotificationChannel1 = new AwsNative.DevOpsGuru.NotificationChannel("myNotificationChannel1", new AwsNative.DevOpsGuru.NotificationChannelArgs
+ *         {
+ *             Config = new AwsNative.DevOpsGuru.Inputs.NotificationChannelConfigArgs
+ *             {
+ *                 Sns = new AwsNative.DevOpsGuru.Inputs.NotificationChannelSnsChannelConfigArgs
+ *                 {
+ *                     TopicArn = "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *                 },
+ *             },
+ *         });
+ *         var myNotificationChannel2 = new AwsNative.DevOpsGuru.NotificationChannel("myNotificationChannel2", new AwsNative.DevOpsGuru.NotificationChannelArgs
+ *         {
+ *             Config = new AwsNative.DevOpsGuru.Inputs.NotificationChannelConfigArgs
+ *             {
+ *                 Sns = new AwsNative.DevOpsGuru.Inputs.NotificationChannelSnsChannelConfigArgs
+ *                 {
+ *                     TopicArn = "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/devopsguru"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devopsguru.NewNotificationChannel(ctx, "myNotificationChannel1", &devopsguru.NotificationChannelArgs{
+ * 			Config: &devopsguru.NotificationChannelConfigArgs{
+ * 				Sns: &devopsguru.NotificationChannelSnsChannelConfigArgs{
+ * 					TopicArn: pulumi.String("arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = devopsguru.NewNotificationChannel(ctx, "myNotificationChannel2", &devopsguru.NotificationChannelArgs{
+ * 			Config: &devopsguru.NotificationChannelConfigArgs{
+ * 				Sns: &devopsguru.NotificationChannelSnsChannelConfigArgs{
+ * 					TopicArn: pulumi.String("arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myNotificationChannel1 = new aws_native.devopsguru.NotificationChannel("myNotificationChannel1", {config: {
+ *     sns: {
+ *         topicArn: "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *     },
+ * }});
+ * const myNotificationChannel2 = new aws_native.devopsguru.NotificationChannel("myNotificationChannel2", {config: {
+ *     sns: {
+ *         topicArn: "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel2",
+ *     },
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_notification_channel1 = aws_native.devopsguru.NotificationChannel("myNotificationChannel1", config=aws_native.devopsguru.NotificationChannelConfigArgs(
+ *     sns=aws_native.devopsguru.NotificationChannelSnsChannelConfigArgs(
+ *         topic_arn="arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *     ),
+ * ))
+ * my_notification_channel2 = aws_native.devopsguru.NotificationChannel("myNotificationChannel2", config=aws_native.devopsguru.NotificationChannelConfigArgs(
+ *     sns=aws_native.devopsguru.NotificationChannelSnsChannelConfigArgs(
+ *         topic_arn="arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel2",
+ *     ),
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myNotificationChannel1 = new AwsNative.DevOpsGuru.NotificationChannel("myNotificationChannel1", new AwsNative.DevOpsGuru.NotificationChannelArgs
+ *         {
+ *             Config = new AwsNative.DevOpsGuru.Inputs.NotificationChannelConfigArgs
+ *             {
+ *                 Sns = new AwsNative.DevOpsGuru.Inputs.NotificationChannelSnsChannelConfigArgs
+ *                 {
+ *                     TopicArn = "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *                 },
+ *             },
+ *         });
+ *         var myNotificationChannel2 = new AwsNative.DevOpsGuru.NotificationChannel("myNotificationChannel2", new AwsNative.DevOpsGuru.NotificationChannelArgs
+ *         {
+ *             Config = new AwsNative.DevOpsGuru.Inputs.NotificationChannelConfigArgs
+ *             {
+ *                 Sns = new AwsNative.DevOpsGuru.Inputs.NotificationChannelSnsChannelConfigArgs
+ *                 {
+ *                     TopicArn = "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/devopsguru"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devopsguru.NewNotificationChannel(ctx, "myNotificationChannel1", &devopsguru.NotificationChannelArgs{
+ * 			Config: &devopsguru.NotificationChannelConfigArgs{
+ * 				Sns: &devopsguru.NotificationChannelSnsChannelConfigArgs{
+ * 					TopicArn: pulumi.String("arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = devopsguru.NewNotificationChannel(ctx, "myNotificationChannel2", &devopsguru.NotificationChannelArgs{
+ * 			Config: &devopsguru.NotificationChannelConfigArgs{
+ * 				Sns: &devopsguru.NotificationChannelSnsChannelConfigArgs{
+ * 					TopicArn: pulumi.String("arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myNotificationChannel1 = new aws_native.devopsguru.NotificationChannel("myNotificationChannel1", {config: {
+ *     sns: {
+ *         topicArn: "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *     },
+ * }});
+ * const myNotificationChannel2 = new aws_native.devopsguru.NotificationChannel("myNotificationChannel2", {config: {
+ *     sns: {
+ *         topicArn: "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel2",
+ *     },
+ * }});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_notification_channel1 = aws_native.devopsguru.NotificationChannel("myNotificationChannel1", config=aws_native.devopsguru.NotificationChannelConfigArgs(
+ *     sns=aws_native.devopsguru.NotificationChannelSnsChannelConfigArgs(
+ *         topic_arn="arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel",
+ *     ),
+ * ))
+ * my_notification_channel2 = aws_native.devopsguru.NotificationChannel("myNotificationChannel2", config=aws_native.devopsguru.NotificationChannelConfigArgs(
+ *     sns=aws_native.devopsguru.NotificationChannelSnsChannelConfigArgs(
+ *         topic_arn="arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel2",
+ *     ),
+ * ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:devopsguru:NotificationChannel")

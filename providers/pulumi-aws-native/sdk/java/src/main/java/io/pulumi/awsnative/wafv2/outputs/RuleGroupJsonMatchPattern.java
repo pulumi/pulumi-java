@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 public final class RuleGroupJsonMatchPattern {
     /**
      * Inspect all parts of the web request's JSON body.
-     * 
      */
     private final @Nullable Object all;
     private final @Nullable List<String> includedPaths;
@@ -30,7 +29,6 @@ public final class RuleGroupJsonMatchPattern {
 
     /**
      * Inspect all parts of the web request's JSON body.
-     * 
     */
     public Optional<Object> getAll() {
         return Optional.ofNullable(this.all);

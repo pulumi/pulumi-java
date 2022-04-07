@@ -34,63 +34,2175 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::S3::Bucket
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *         });
+ *         var recordingConfiguration = new AwsNative.IVS.RecordingConfiguration("recordingConfiguration", new AwsNative.IVS.RecordingConfigurationArgs
+ *         {
+ *             Name = "“MyRecordingConfiguration”",
+ *             DestinationConfiguration = new AwsNative.IVS.Inputs.RecordingConfigurationDestinationConfigurationArgs
+ *             {
+ *                 S3 = new AwsNative.IVS.Inputs.RecordingConfigurationS3DestinationConfigurationArgs
+ *                 {
+ *                     BucketName = s3Bucket.Id,
+ *                 },
+ *             },
+ *             ThumbnailConfiguration = new AwsNative.IVS.Inputs.RecordingConfigurationThumbnailConfigurationArgs
+ *             {
+ *                 RecordingMode = "INTERVAL",
+ *                 TargetIntervalSeconds = 60,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 s3Bucket,
+ *             },
+ *         });
+ *         var channel = new AwsNative.IVS.Channel("channel", new AwsNative.IVS.ChannelArgs
+ *         {
+ *             Name = "MyRecordedChannel",
+ *             RecordingConfigurationArn = recordingConfiguration.Id,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 recordingConfiguration,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ivs"
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		s3Bucket, err := s3.NewBucket(ctx, "s3Bucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		recordingConfiguration, err := ivs.NewRecordingConfiguration(ctx, "recordingConfiguration", &ivs.RecordingConfigurationArgs{
+ * 			Name: pulumi.String("“MyRecordingConfiguration”"),
+ * 			DestinationConfiguration: &ivs.RecordingConfigurationDestinationConfigurationArgs{
+ * 				S3: &ivs.RecordingConfigurationS3DestinationConfigurationArgs{
+ * 					BucketName: s3Bucket.ID(),
+ * 				},
+ * 			},
+ * 			ThumbnailConfiguration: &ivs.RecordingConfigurationThumbnailConfigurationArgs{
+ * 				RecordingMode:         "INTERVAL",
+ * 				TargetIntervalSeconds: pulumi.Int(60),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			s3Bucket,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ivs.NewChannel(ctx, "channel", &ivs.ChannelArgs{
+ * 			Name:                      pulumi.String("MyRecordedChannel"),
+ * 			RecordingConfigurationArn: recordingConfiguration.ID(),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			recordingConfiguration,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {});
+ * const recordingConfiguration = new aws_native.ivs.RecordingConfiguration("recordingConfiguration", {
+ *     name: "“MyRecordingConfiguration”",
+ *     destinationConfiguration: {
+ *         s3: {
+ *             bucketName: s3Bucket.id,
+ *         },
+ *     },
+ *     thumbnailConfiguration: {
+ *         recordingMode: "INTERVAL",
+ *         targetIntervalSeconds: 60,
+ *     },
+ * }, {
+ *     dependsOn: [s3Bucket],
+ * });
+ * const channel = new aws_native.ivs.Channel("channel", {
+ *     name: "MyRecordedChannel",
+ *     recordingConfigurationArn: recordingConfiguration.id,
+ * }, {
+ *     dependsOn: [recordingConfiguration],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket")
+ * recording_configuration = aws_native.ivs.RecordingConfiguration("recordingConfiguration",
+ *     name="“MyRecordingConfiguration”",
+ *     destination_configuration=aws_native.ivs.RecordingConfigurationDestinationConfigurationArgs(
+ *         s3=aws_native.ivs.RecordingConfigurationS3DestinationConfigurationArgs(
+ *             bucket_name=s3_bucket.id,
+ *         ),
+ *     ),
+ *     thumbnail_configuration=aws_native.ivs.RecordingConfigurationThumbnailConfigurationArgs(
+ *         recording_mode="INTERVAL",
+ *         target_interval_seconds=60,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[s3_bucket]))
+ * channel = aws_native.ivs.Channel("channel",
+ *     name="MyRecordedChannel",
+ *     recording_configuration_arn=recording_configuration.id,
+ *     opts=pulumi.ResourceOptions(depends_on=[recording_configuration]))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *         });
+ *         var recordingConfiguration = new AwsNative.IVS.RecordingConfiguration("recordingConfiguration", new AwsNative.IVS.RecordingConfigurationArgs
+ *         {
+ *             Name = "MyRecordingConfiguration",
+ *             DestinationConfiguration = new AwsNative.IVS.Inputs.RecordingConfigurationDestinationConfigurationArgs
+ *             {
+ *                 S3 = new AwsNative.IVS.Inputs.RecordingConfigurationS3DestinationConfigurationArgs
+ *                 {
+ *                     BucketName = s3Bucket.Id,
+ *                 },
+ *             },
+ *             ThumbnailConfiguration = new AwsNative.IVS.Inputs.RecordingConfigurationThumbnailConfigurationArgs
+ *             {
+ *                 RecordingMode = "INTERVAL",
+ *                 TargetIntervalSeconds = 60,
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 s3Bucket,
+ *             },
+ *         });
+ *         var channel = new AwsNative.IVS.Channel("channel", new AwsNative.IVS.ChannelArgs
+ *         {
+ *             Name = "MyRecordedChannel",
+ *             RecordingConfigurationArn = recordingConfiguration.Id,
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 recordingConfiguration,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ivs"
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		s3Bucket, err := s3.NewBucket(ctx, "s3Bucket", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		recordingConfiguration, err := ivs.NewRecordingConfiguration(ctx, "recordingConfiguration", &ivs.RecordingConfigurationArgs{
+ * 			Name: pulumi.String("MyRecordingConfiguration"),
+ * 			DestinationConfiguration: &ivs.RecordingConfigurationDestinationConfigurationArgs{
+ * 				S3: &ivs.RecordingConfigurationS3DestinationConfigurationArgs{
+ * 					BucketName: s3Bucket.ID(),
+ * 				},
+ * 			},
+ * 			ThumbnailConfiguration: &ivs.RecordingConfigurationThumbnailConfigurationArgs{
+ * 				RecordingMode:         "INTERVAL",
+ * 				TargetIntervalSeconds: pulumi.Int(60),
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			s3Bucket,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ivs.NewChannel(ctx, "channel", &ivs.ChannelArgs{
+ * 			Name:                      pulumi.String("MyRecordedChannel"),
+ * 			RecordingConfigurationArn: recordingConfiguration.ID(),
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			recordingConfiguration,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {});
+ * const recordingConfiguration = new aws_native.ivs.RecordingConfiguration("recordingConfiguration", {
+ *     name: "MyRecordingConfiguration",
+ *     destinationConfiguration: {
+ *         s3: {
+ *             bucketName: s3Bucket.id,
+ *         },
+ *     },
+ *     thumbnailConfiguration: {
+ *         recordingMode: "INTERVAL",
+ *         targetIntervalSeconds: 60,
+ *     },
+ * }, {
+ *     dependsOn: [s3Bucket],
+ * });
+ * const channel = new aws_native.ivs.Channel("channel", {
+ *     name: "MyRecordedChannel",
+ *     recordingConfigurationArn: recordingConfiguration.id,
+ * }, {
+ *     dependsOn: [recordingConfiguration],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket")
+ * recording_configuration = aws_native.ivs.RecordingConfiguration("recordingConfiguration",
+ *     name="MyRecordingConfiguration",
+ *     destination_configuration=aws_native.ivs.RecordingConfigurationDestinationConfigurationArgs(
+ *         s3=aws_native.ivs.RecordingConfigurationS3DestinationConfigurationArgs(
+ *             bucket_name=s3_bucket.id,
+ *         ),
+ *     ),
+ *     thumbnail_configuration=aws_native.ivs.RecordingConfigurationThumbnailConfigurationArgs(
+ *         recording_mode="INTERVAL",
+ *         target_interval_seconds=60,
+ *     ),
+ *     opts=pulumi.ResourceOptions(depends_on=[s3_bucket]))
+ * channel = aws_native.ivs.Channel("channel",
+ *     name="MyRecordedChannel",
+ *     recording_configuration_arn=recording_configuration.id,
+ *     opts=pulumi.ResourceOptions(depends_on=[recording_configuration]))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AccessControl = "PublicRead",
+ *             CorsConfiguration = new AwsNative.S3.Inputs.BucketCorsConfigurationArgs
+ *             {
+ *                 CorsRules = 
+ *                 {
+ *                     new AwsNative.S3.Inputs.BucketCorsRuleArgs
+ *                     {
+ *                         AllowedHeaders = 
+ *                         {
+ *                             "*",
+ *                         },
+ *                         AllowedMethods = 
+ *                         {
+ *                             "GET",
+ *                         },
+ *                         AllowedOrigins = 
+ *                         {
+ *                             "*",
+ *                         },
+ *                         ExposedHeaders = 
+ *                         {
+ *                             "Date",
+ *                         },
+ *                         Id = "myCORSRuleId1",
+ *                         MaxAge = 3600,
+ *                     },
+ *                     new AwsNative.S3.Inputs.BucketCorsRuleArgs
+ *                     {
+ *                         AllowedHeaders = 
+ *                         {
+ *                             "x-amz-*",
+ *                         },
+ *                         AllowedMethods = 
+ *                         {
+ *                             "DELETE",
+ *                         },
+ *                         AllowedOrigins = 
+ *                         {
+ *                             "http://www.example.com",
+ *                             "http://www.example.net",
+ *                         },
+ *                         ExposedHeaders = 
+ *                         {
+ *                             "Connection",
+ *                             "Server",
+ *                             "Date",
+ *                         },
+ *                         Id = "myCORSRuleId2",
+ *                         MaxAge = 1800,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         this.BucketName = s3Bucket.Id;
+ *     }
+ * 
+ *     [Output("bucketName")]
+ *     public Output<string> BucketName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		s3Bucket, err := s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			AccessControl: "PublicRead",
+ * 			CorsConfiguration: &s3.BucketCorsConfigurationArgs{
+ * 				CorsRules: []s3.BucketCorsRuleArgs{
+ * 					&s3.BucketCorsRuleArgs{
+ * 						AllowedHeaders: pulumi.StringArray{
+ * 							pulumi.String("*"),
+ * 						},
+ * 						AllowedMethods: []s3.BucketCorsRuleAllowedMethodsItem{
+ * 							"GET",
+ * 						},
+ * 						AllowedOrigins: pulumi.StringArray{
+ * 							pulumi.String("*"),
+ * 						},
+ * 						ExposedHeaders: pulumi.StringArray{
+ * 							pulumi.String("Date"),
+ * 						},
+ * 						Id:     pulumi.String("myCORSRuleId1"),
+ * 						MaxAge: pulumi.Int(3600),
+ * 					},
+ * 					&s3.BucketCorsRuleArgs{
+ * 						AllowedHeaders: pulumi.StringArray{
+ * 							pulumi.String("x-amz-*"),
+ * 						},
+ * 						AllowedMethods: []s3.BucketCorsRuleAllowedMethodsItem{
+ * 							"DELETE",
+ * 						},
+ * 						AllowedOrigins: pulumi.StringArray{
+ * 							pulumi.String("http://www.example.com"),
+ * 							pulumi.String("http://www.example.net"),
+ * 						},
+ * 						ExposedHeaders: pulumi.StringArray{
+ * 							pulumi.String("Connection"),
+ * 							pulumi.String("Server"),
+ * 							pulumi.String("Date"),
+ * 						},
+ * 						Id:     pulumi.String("myCORSRuleId2"),
+ * 						MaxAge: pulumi.Int(1800),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("bucketName", s3Bucket.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     accessControl: "PublicRead",
+ *     corsConfiguration: {
+ *         corsRules: [
+ *             {
+ *                 allowedHeaders: ["*"],
+ *                 allowedMethods: ["GET"],
+ *                 allowedOrigins: ["*"],
+ *                 exposedHeaders: ["Date"],
+ *                 id: "myCORSRuleId1",
+ *                 maxAge: 3600,
+ *             },
+ *             {
+ *                 allowedHeaders: ["x-amz-*"],
+ *                 allowedMethods: ["DELETE"],
+ *                 allowedOrigins: [
+ *                     "http://www.example.com",
+ *                     "http://www.example.net",
+ *                 ],
+ *                 exposedHeaders: [
+ *                     "Connection",
+ *                     "Server",
+ *                     "Date",
+ *                 ],
+ *                 id: "myCORSRuleId2",
+ *                 maxAge: 1800,
+ *             },
+ *         ],
+ *     },
+ * });
+ * export const bucketName = s3Bucket.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     access_control="PublicRead",
+ *     cors_configuration=aws_native.s3.BucketCorsConfigurationArgs(
+ *         cors_rules=[
+ *             aws_native.s3.BucketCorsRuleArgs(
+ *                 allowed_headers=["*"],
+ *                 allowed_methods=["GET"],
+ *                 allowed_origins=["*"],
+ *                 exposed_headers=["Date"],
+ *                 id="myCORSRuleId1",
+ *                 max_age=3600,
+ *             ),
+ *             aws_native.s3.BucketCorsRuleArgs(
+ *                 allowed_headers=["x-amz-*"],
+ *                 allowed_methods=["DELETE"],
+ *                 allowed_origins=[
+ *                     "http://www.example.com",
+ *                     "http://www.example.net",
+ *                 ],
+ *                 exposed_headers=[
+ *                     "Connection",
+ *                     "Server",
+ *                     "Date",
+ *                 ],
+ *                 id="myCORSRuleId2",
+ *                 max_age=1800,
+ *             ),
+ *         ],
+ *     ))
+ * pulumi.export("bucketName", s3_bucket.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AccessControl = "PublicRead",
+ *             CorsConfiguration = new AwsNative.S3.Inputs.BucketCorsConfigurationArgs
+ *             {
+ *                 CorsRules = 
+ *                 {
+ *                     new AwsNative.S3.Inputs.BucketCorsRuleArgs
+ *                     {
+ *                         AllowedHeaders = 
+ *                         {
+ *                             "*",
+ *                         },
+ *                         AllowedMethods = 
+ *                         {
+ *                             "GET",
+ *                         },
+ *                         AllowedOrigins = 
+ *                         {
+ *                             "*",
+ *                         },
+ *                         ExposedHeaders = 
+ *                         {
+ *                             "Date",
+ *                         },
+ *                         Id = "myCORSRuleId1",
+ *                         MaxAge = 3600,
+ *                     },
+ *                     new AwsNative.S3.Inputs.BucketCorsRuleArgs
+ *                     {
+ *                         AllowedHeaders = 
+ *                         {
+ *                             "x-amz-*",
+ *                         },
+ *                         AllowedMethods = 
+ *                         {
+ *                             "DELETE",
+ *                         },
+ *                         AllowedOrigins = 
+ *                         {
+ *                             "http://www.example.com",
+ *                             "http://www.example.net",
+ *                         },
+ *                         ExposedHeaders = 
+ *                         {
+ *                             "Connection",
+ *                             "Server",
+ *                             "Date",
+ *                         },
+ *                         Id = "myCORSRuleId2",
+ *                         MaxAge = 1800,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         this.BucketName = s3Bucket.Id;
+ *     }
+ * 
+ *     [Output("bucketName")]
+ *     public Output<string> BucketName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		s3Bucket, err := s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			AccessControl: "PublicRead",
+ * 			CorsConfiguration: &s3.BucketCorsConfigurationArgs{
+ * 				CorsRules: []s3.BucketCorsRuleArgs{
+ * 					&s3.BucketCorsRuleArgs{
+ * 						AllowedHeaders: pulumi.StringArray{
+ * 							pulumi.String("*"),
+ * 						},
+ * 						AllowedMethods: []s3.BucketCorsRuleAllowedMethodsItem{
+ * 							"GET",
+ * 						},
+ * 						AllowedOrigins: pulumi.StringArray{
+ * 							pulumi.String("*"),
+ * 						},
+ * 						ExposedHeaders: pulumi.StringArray{
+ * 							pulumi.String("Date"),
+ * 						},
+ * 						Id:     pulumi.String("myCORSRuleId1"),
+ * 						MaxAge: pulumi.Int(3600),
+ * 					},
+ * 					&s3.BucketCorsRuleArgs{
+ * 						AllowedHeaders: pulumi.StringArray{
+ * 							pulumi.String("x-amz-*"),
+ * 						},
+ * 						AllowedMethods: []s3.BucketCorsRuleAllowedMethodsItem{
+ * 							"DELETE",
+ * 						},
+ * 						AllowedOrigins: pulumi.StringArray{
+ * 							pulumi.String("http://www.example.com"),
+ * 							pulumi.String("http://www.example.net"),
+ * 						},
+ * 						ExposedHeaders: pulumi.StringArray{
+ * 							pulumi.String("Connection"),
+ * 							pulumi.String("Server"),
+ * 							pulumi.String("Date"),
+ * 						},
+ * 						Id:     pulumi.String("myCORSRuleId2"),
+ * 						MaxAge: pulumi.Int(1800),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("bucketName", s3Bucket.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     accessControl: "PublicRead",
+ *     corsConfiguration: {
+ *         corsRules: [
+ *             {
+ *                 allowedHeaders: ["*"],
+ *                 allowedMethods: ["GET"],
+ *                 allowedOrigins: ["*"],
+ *                 exposedHeaders: ["Date"],
+ *                 id: "myCORSRuleId1",
+ *                 maxAge: 3600,
+ *             },
+ *             {
+ *                 allowedHeaders: ["x-amz-*"],
+ *                 allowedMethods: ["DELETE"],
+ *                 allowedOrigins: [
+ *                     "http://www.example.com",
+ *                     "http://www.example.net",
+ *                 ],
+ *                 exposedHeaders: [
+ *                     "Connection",
+ *                     "Server",
+ *                     "Date",
+ *                 ],
+ *                 id: "myCORSRuleId2",
+ *                 maxAge: 1800,
+ *             },
+ *         ],
+ *     },
+ * });
+ * export const bucketName = s3Bucket.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     access_control="PublicRead",
+ *     cors_configuration=aws_native.s3.BucketCorsConfigurationArgs(
+ *         cors_rules=[
+ *             aws_native.s3.BucketCorsRuleArgs(
+ *                 allowed_headers=["*"],
+ *                 allowed_methods=["GET"],
+ *                 allowed_origins=["*"],
+ *                 exposed_headers=["Date"],
+ *                 id="myCORSRuleId1",
+ *                 max_age=3600,
+ *             ),
+ *             aws_native.s3.BucketCorsRuleArgs(
+ *                 allowed_headers=["x-amz-*"],
+ *                 allowed_methods=["DELETE"],
+ *                 allowed_origins=[
+ *                     "http://www.example.com",
+ *                     "http://www.example.net",
+ *                 ],
+ *                 exposed_headers=[
+ *                     "Connection",
+ *                     "Server",
+ *                     "Date",
+ *                 ],
+ *                 id="myCORSRuleId2",
+ *                 max_age=1800,
+ *             ),
+ *         ],
+ *     ))
+ * pulumi.export("bucketName", s3_bucket.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AccessControl = "Private",
+ *             LifecycleConfiguration = new AwsNative.S3.Inputs.BucketLifecycleConfigurationArgs
+ *             {
+ *                 Rules = 
+ *                 {
+ *                     new AwsNative.S3.Inputs.BucketRuleArgs
+ *                     {
+ *                         Id = "GlacierRule",
+ *                         Prefix = "glacier",
+ *                         Status = "Enabled",
+ *                         ExpirationInDays = 365,
+ *                         Transitions = 
+ *                         {
+ *                             new AwsNative.S3.Inputs.BucketTransitionArgs
+ *                             {
+ *                                 TransitionInDays = 1,
+ *                                 StorageClass = "GLACIER",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         this.BucketName = s3Bucket.Id;
+ *     }
+ * 
+ *     [Output("bucketName")]
+ *     public Output<string> BucketName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		s3Bucket, err := s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			AccessControl: "Private",
+ * 			LifecycleConfiguration: &s3.BucketLifecycleConfigurationArgs{
+ * 				Rules: []s3.BucketRuleArgs{
+ * 					&s3.BucketRuleArgs{
+ * 						Id:               pulumi.String("GlacierRule"),
+ * 						Prefix:           pulumi.String("glacier"),
+ * 						Status:           "Enabled",
+ * 						ExpirationInDays: pulumi.Int(365),
+ * 						Transitions: s3.BucketTransitionArray{
+ * 							&s3.BucketTransitionArgs{
+ * 								TransitionInDays: pulumi.Int(1),
+ * 								StorageClass:     "GLACIER",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("bucketName", s3Bucket.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     accessControl: "Private",
+ *     lifecycleConfiguration: {
+ *         rules: [{
+ *             id: "GlacierRule",
+ *             prefix: "glacier",
+ *             status: "Enabled",
+ *             expirationInDays: 365,
+ *             transitions: [{
+ *                 transitionInDays: 1,
+ *                 storageClass: "GLACIER",
+ *             }],
+ *         }],
+ *     },
+ * });
+ * export const bucketName = s3Bucket.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     access_control="Private",
+ *     lifecycle_configuration=aws_native.s3.BucketLifecycleConfigurationArgs(
+ *         rules=[aws_native.s3.BucketRuleArgs(
+ *             id="GlacierRule",
+ *             prefix="glacier",
+ *             status="Enabled",
+ *             expiration_in_days=365,
+ *             transitions=[aws_native.s3.BucketTransitionArgs(
+ *                 transition_in_days=1,
+ *                 storage_class="GLACIER",
+ *             )],
+ *         )],
+ *     ))
+ * pulumi.export("bucketName", s3_bucket.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AccessControl = "Private",
+ *             LifecycleConfiguration = new AwsNative.S3.Inputs.BucketLifecycleConfigurationArgs
+ *             {
+ *                 Rules = 
+ *                 {
+ *                     new AwsNative.S3.Inputs.BucketRuleArgs
+ *                     {
+ *                         Id = "GlacierRule",
+ *                         Prefix = "glacier",
+ *                         Status = "Enabled",
+ *                         ExpirationInDays = 365,
+ *                         Transitions = 
+ *                         {
+ *                             new AwsNative.S3.Inputs.BucketTransitionArgs
+ *                             {
+ *                                 TransitionInDays = 1,
+ *                                 StorageClass = "GLACIER",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         this.BucketName = s3Bucket.Id;
+ *     }
+ * 
+ *     [Output("bucketName")]
+ *     public Output<string> BucketName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		s3Bucket, err := s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			AccessControl: "Private",
+ * 			LifecycleConfiguration: &s3.BucketLifecycleConfigurationArgs{
+ * 				Rules: []s3.BucketRuleArgs{
+ * 					&s3.BucketRuleArgs{
+ * 						Id:               pulumi.String("GlacierRule"),
+ * 						Prefix:           pulumi.String("glacier"),
+ * 						Status:           "Enabled",
+ * 						ExpirationInDays: pulumi.Int(365),
+ * 						Transitions: s3.BucketTransitionArray{
+ * 							&s3.BucketTransitionArgs{
+ * 								TransitionInDays: pulumi.Int(1),
+ * 								StorageClass:     "GLACIER",
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("bucketName", s3Bucket.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     accessControl: "Private",
+ *     lifecycleConfiguration: {
+ *         rules: [{
+ *             id: "GlacierRule",
+ *             prefix: "glacier",
+ *             status: "Enabled",
+ *             expirationInDays: 365,
+ *             transitions: [{
+ *                 transitionInDays: 1,
+ *                 storageClass: "GLACIER",
+ *             }],
+ *         }],
+ *     },
+ * });
+ * export const bucketName = s3Bucket.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     access_control="Private",
+ *     lifecycle_configuration=aws_native.s3.BucketLifecycleConfigurationArgs(
+ *         rules=[aws_native.s3.BucketRuleArgs(
+ *             id="GlacierRule",
+ *             prefix="glacier",
+ *             status="Enabled",
+ *             expiration_in_days=365,
+ *             transitions=[aws_native.s3.BucketTransitionArgs(
+ *                 transition_in_days=1,
+ *                 storage_class="GLACIER",
+ *             )],
+ *         )],
+ *     ))
+ * pulumi.export("bucketName", s3_bucket.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var loggingBucket = new AwsNative.S3.Bucket("loggingBucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AccessControl = "LogDeliveryWrite",
+ *         });
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AccessControl = "Private",
+ *             LoggingConfiguration = new AwsNative.S3.Inputs.BucketLoggingConfigurationArgs
+ *             {
+ *                 DestinationBucketName = loggingBucket.Id,
+ *                 LogFilePrefix = "testing-logs",
+ *             },
+ *         });
+ *         this.BucketName = s3Bucket.Id;
+ *     }
+ * 
+ *     [Output("bucketName")]
+ *     public Output<string> BucketName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		loggingBucket, err := s3.NewBucket(ctx, "loggingBucket", &s3.BucketArgs{
+ * 			AccessControl: "LogDeliveryWrite",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		s3Bucket, err := s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			AccessControl: "Private",
+ * 			LoggingConfiguration: &s3.BucketLoggingConfigurationArgs{
+ * 				DestinationBucketName: loggingBucket.ID(),
+ * 				LogFilePrefix:         pulumi.String("testing-logs"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("bucketName", s3Bucket.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const loggingBucket = new aws_native.s3.Bucket("loggingBucket", {accessControl: "LogDeliveryWrite"});
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     accessControl: "Private",
+ *     loggingConfiguration: {
+ *         destinationBucketName: loggingBucket.id,
+ *         logFilePrefix: "testing-logs",
+ *     },
+ * });
+ * export const bucketName = s3Bucket.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * logging_bucket = aws_native.s3.Bucket("loggingBucket", access_control="LogDeliveryWrite")
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     access_control="Private",
+ *     logging_configuration=aws_native.s3.BucketLoggingConfigurationArgs(
+ *         destination_bucket_name=logging_bucket.id,
+ *         log_file_prefix="testing-logs",
+ *     ))
+ * pulumi.export("bucketName", s3_bucket.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var loggingBucket = new AwsNative.S3.Bucket("loggingBucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AccessControl = "LogDeliveryWrite",
+ *         });
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AccessControl = "Private",
+ *             LoggingConfiguration = new AwsNative.S3.Inputs.BucketLoggingConfigurationArgs
+ *             {
+ *                 DestinationBucketName = loggingBucket.Id,
+ *                 LogFilePrefix = "testing-logs",
+ *             },
+ *         });
+ *         this.BucketName = s3Bucket.Id;
+ *     }
+ * 
+ *     [Output("bucketName")]
+ *     public Output<string> BucketName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		loggingBucket, err := s3.NewBucket(ctx, "loggingBucket", &s3.BucketArgs{
+ * 			AccessControl: "LogDeliveryWrite",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		s3Bucket, err := s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			AccessControl: "Private",
+ * 			LoggingConfiguration: &s3.BucketLoggingConfigurationArgs{
+ * 				DestinationBucketName: loggingBucket.ID(),
+ * 				LogFilePrefix:         pulumi.String("testing-logs"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("bucketName", s3Bucket.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const loggingBucket = new aws_native.s3.Bucket("loggingBucket", {accessControl: "LogDeliveryWrite"});
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     accessControl: "Private",
+ *     loggingConfiguration: {
+ *         destinationBucketName: loggingBucket.id,
+ *         logFilePrefix: "testing-logs",
+ *     },
+ * });
+ * export const bucketName = s3Bucket.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * logging_bucket = aws_native.s3.Bucket("loggingBucket", access_control="LogDeliveryWrite")
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     access_control="Private",
+ *     logging_configuration=aws_native.s3.BucketLoggingConfigurationArgs(
+ *         destination_bucket_name=logging_bucket.id,
+ *         log_file_prefix="testing-logs",
+ *     ))
+ * pulumi.export("bucketName", s3_bucket.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AccessControl = "Private",
+ *             NotificationConfiguration = new AwsNative.S3.Inputs.BucketNotificationConfigurationArgs
+ *             {
+ *                 TopicConfigurations = 
+ *                 {
+ *                     new AwsNative.S3.Inputs.BucketTopicConfigurationArgs
+ *                     {
+ *                         Topic = "arn:aws:sns:us-east-1:123456789012:TestTopic",
+ *                         Event = "s3:ReducedRedundancyLostObject",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         this.BucketName = s3Bucket.Id;
+ *     }
+ * 
+ *     [Output("bucketName")]
+ *     public Output<string> BucketName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		s3Bucket, err := s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			AccessControl: "Private",
+ * 			NotificationConfiguration: &s3.BucketNotificationConfigurationArgs{
+ * 				TopicConfigurations: s3.BucketTopicConfigurationArray{
+ * 					&s3.BucketTopicConfigurationArgs{
+ * 						Topic: pulumi.String("arn:aws:sns:us-east-1:123456789012:TestTopic"),
+ * 						Event: pulumi.String("s3:ReducedRedundancyLostObject"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("bucketName", s3Bucket.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     accessControl: "Private",
+ *     notificationConfiguration: {
+ *         topicConfigurations: [{
+ *             topic: "arn:aws:sns:us-east-1:123456789012:TestTopic",
+ *             event: "s3:ReducedRedundancyLostObject",
+ *         }],
+ *     },
+ * });
+ * export const bucketName = s3Bucket.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     access_control="Private",
+ *     notification_configuration=aws_native.s3.BucketNotificationConfigurationArgs(
+ *         topic_configurations=[aws_native.s3.BucketTopicConfigurationArgs(
+ *             topic="arn:aws:sns:us-east-1:123456789012:TestTopic",
+ *             event="s3:ReducedRedundancyLostObject",
+ *         )],
+ *     ))
+ * pulumi.export("bucketName", s3_bucket.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AccessControl = "Private",
+ *             NotificationConfiguration = new AwsNative.S3.Inputs.BucketNotificationConfigurationArgs
+ *             {
+ *                 TopicConfigurations = 
+ *                 {
+ *                     new AwsNative.S3.Inputs.BucketTopicConfigurationArgs
+ *                     {
+ *                         Topic = "arn:aws:sns:us-east-1:123456789012:TestTopic",
+ *                         Event = "s3:ReducedRedundancyLostObject",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         this.BucketName = s3Bucket.Id;
+ *     }
+ * 
+ *     [Output("bucketName")]
+ *     public Output<string> BucketName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		s3Bucket, err := s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			AccessControl: "Private",
+ * 			NotificationConfiguration: &s3.BucketNotificationConfigurationArgs{
+ * 				TopicConfigurations: s3.BucketTopicConfigurationArray{
+ * 					&s3.BucketTopicConfigurationArgs{
+ * 						Topic: pulumi.String("arn:aws:sns:us-east-1:123456789012:TestTopic"),
+ * 						Event: pulumi.String("s3:ReducedRedundancyLostObject"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("bucketName", s3Bucket.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     accessControl: "Private",
+ *     notificationConfiguration: {
+ *         topicConfigurations: [{
+ *             topic: "arn:aws:sns:us-east-1:123456789012:TestTopic",
+ *             event: "s3:ReducedRedundancyLostObject",
+ *         }],
+ *     },
+ * });
+ * export const bucketName = s3Bucket.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     access_control="Private",
+ *     notification_configuration=aws_native.s3.BucketNotificationConfigurationArgs(
+ *         topic_configurations=[aws_native.s3.BucketTopicConfigurationArgs(
+ *             topic="arn:aws:sns:us-east-1:123456789012:TestTopic",
+ *             event="s3:ReducedRedundancyLostObject",
+ *         )],
+ *     ))
+ * pulumi.export("bucketName", s3_bucket.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             VersioningConfiguration = new AwsNative.S3.Inputs.BucketVersioningConfigurationArgs
+ *             {
+ *                 Status = "Enabled",
+ *             },
+ *             ReplicationConfiguration = new AwsNative.S3.Inputs.BucketReplicationConfigurationArgs
+ *             {
+ *                 Role = "arn:aws:iam::123456789012:role/replication_role",
+ *                 Rules = 
+ *                 {
+ *                     new AwsNative.S3.Inputs.BucketReplicationRuleArgs
+ *                     {
+ *                         Id = "MyRule1",
+ *                         Status = "Enabled",
+ *                         Prefix = "MyPrefix",
+ *                         Destination = new AwsNative.S3.Inputs.BucketReplicationDestinationArgs
+ *                         {
+ *                             Bucket = "arn:aws:s3:::my-replication-bucket",
+ *                             StorageClass = "STANDARD",
+ *                         },
+ *                     },
+ *                     new AwsNative.S3.Inputs.BucketReplicationRuleArgs
+ *                     {
+ *                         Status = "Enabled",
+ *                         Prefix = "MyOtherPrefix",
+ *                         Destination = new AwsNative.S3.Inputs.BucketReplicationDestinationArgs
+ *                         {
+ *                             Bucket = "arn:aws:s3:::my-replication-bucket",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			VersioningConfiguration: &s3.BucketVersioningConfigurationArgs{
+ * 				Status: "Enabled",
+ * 			},
+ * 			ReplicationConfiguration: &s3.BucketReplicationConfigurationArgs{
+ * 				Role: pulumi.String("arn:aws:iam::123456789012:role/replication_role"),
+ * 				Rules: []s3.BucketReplicationRuleArgs{
+ * 					&s3.BucketReplicationRuleArgs{
+ * 						Id:     pulumi.String("MyRule1"),
+ * 						Status: "Enabled",
+ * 						Prefix: pulumi.String("MyPrefix"),
+ * 						Destination: &s3.BucketReplicationDestinationArgs{
+ * 							Bucket:       pulumi.String("arn:aws:s3:::my-replication-bucket"),
+ * 							StorageClass: "STANDARD",
+ * 						},
+ * 					},
+ * 					&s3.BucketReplicationRuleArgs{
+ * 						Status: "Enabled",
+ * 						Prefix: pulumi.String("MyOtherPrefix"),
+ * 						Destination: &s3.BucketReplicationDestinationArgs{
+ * 							Bucket: pulumi.String("arn:aws:s3:::my-replication-bucket"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     versioningConfiguration: {
+ *         status: "Enabled",
+ *     },
+ *     replicationConfiguration: {
+ *         role: "arn:aws:iam::123456789012:role/replication_role",
+ *         rules: [
+ *             {
+ *                 id: "MyRule1",
+ *                 status: "Enabled",
+ *                 prefix: "MyPrefix",
+ *                 destination: {
+ *                     bucket: "arn:aws:s3:::my-replication-bucket",
+ *                     storageClass: "STANDARD",
+ *                 },
+ *             },
+ *             {
+ *                 status: "Enabled",
+ *                 prefix: "MyOtherPrefix",
+ *                 destination: {
+ *                     bucket: "arn:aws:s3:::my-replication-bucket",
+ *                 },
+ *             },
+ *         ],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     versioning_configuration=aws_native.s3.BucketVersioningConfigurationArgs(
+ *         status="Enabled",
+ *     ),
+ *     replication_configuration=aws_native.s3.BucketReplicationConfigurationArgs(
+ *         role="arn:aws:iam::123456789012:role/replication_role",
+ *         rules=[
+ *             aws_native.s3.BucketReplicationRuleArgs(
+ *                 id="MyRule1",
+ *                 status="Enabled",
+ *                 prefix="MyPrefix",
+ *                 destination=aws_native.s3.BucketReplicationDestinationArgs(
+ *                     bucket="arn:aws:s3:::my-replication-bucket",
+ *                     storage_class="STANDARD",
+ *                 ),
+ *             ),
+ *             aws_native.s3.BucketReplicationRuleArgs(
+ *                 status="Enabled",
+ *                 prefix="MyOtherPrefix",
+ *                 destination=aws_native.s3.BucketReplicationDestinationArgs(
+ *                     bucket="arn:aws:s3:::my-replication-bucket",
+ *                 ),
+ *             ),
+ *         ],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             VersioningConfiguration = new AwsNative.S3.Inputs.BucketVersioningConfigurationArgs
+ *             {
+ *                 Status = "Enabled",
+ *             },
+ *             ReplicationConfiguration = new AwsNative.S3.Inputs.BucketReplicationConfigurationArgs
+ *             {
+ *                 Role = "arn:aws:iam::123456789012:role/replication_role",
+ *                 Rules = 
+ *                 {
+ *                     new AwsNative.S3.Inputs.BucketReplicationRuleArgs
+ *                     {
+ *                         Id = "MyRule1",
+ *                         Status = "Enabled",
+ *                         Prefix = "MyPrefix",
+ *                         Destination = new AwsNative.S3.Inputs.BucketReplicationDestinationArgs
+ *                         {
+ *                             Bucket = "arn:aws:s3:::my-replication-bucket",
+ *                             StorageClass = "STANDARD",
+ *                         },
+ *                     },
+ *                     new AwsNative.S3.Inputs.BucketReplicationRuleArgs
+ *                     {
+ *                         Status = "Enabled",
+ *                         Prefix = "MyOtherPrefix",
+ *                         Destination = new AwsNative.S3.Inputs.BucketReplicationDestinationArgs
+ *                         {
+ *                             Bucket = "arn:aws:s3:::my-replication-bucket",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			VersioningConfiguration: &s3.BucketVersioningConfigurationArgs{
+ * 				Status: "Enabled",
+ * 			},
+ * 			ReplicationConfiguration: &s3.BucketReplicationConfigurationArgs{
+ * 				Role: pulumi.String("arn:aws:iam::123456789012:role/replication_role"),
+ * 				Rules: []s3.BucketReplicationRuleArgs{
+ * 					&s3.BucketReplicationRuleArgs{
+ * 						Id:     pulumi.String("MyRule1"),
+ * 						Status: "Enabled",
+ * 						Prefix: pulumi.String("MyPrefix"),
+ * 						Destination: &s3.BucketReplicationDestinationArgs{
+ * 							Bucket:       pulumi.String("arn:aws:s3:::my-replication-bucket"),
+ * 							StorageClass: "STANDARD",
+ * 						},
+ * 					},
+ * 					&s3.BucketReplicationRuleArgs{
+ * 						Status: "Enabled",
+ * 						Prefix: pulumi.String("MyOtherPrefix"),
+ * 						Destination: &s3.BucketReplicationDestinationArgs{
+ * 							Bucket: pulumi.String("arn:aws:s3:::my-replication-bucket"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     versioningConfiguration: {
+ *         status: "Enabled",
+ *     },
+ *     replicationConfiguration: {
+ *         role: "arn:aws:iam::123456789012:role/replication_role",
+ *         rules: [
+ *             {
+ *                 id: "MyRule1",
+ *                 status: "Enabled",
+ *                 prefix: "MyPrefix",
+ *                 destination: {
+ *                     bucket: "arn:aws:s3:::my-replication-bucket",
+ *                     storageClass: "STANDARD",
+ *                 },
+ *             },
+ *             {
+ *                 status: "Enabled",
+ *                 prefix: "MyOtherPrefix",
+ *                 destination: {
+ *                     bucket: "arn:aws:s3:::my-replication-bucket",
+ *                 },
+ *             },
+ *         ],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     versioning_configuration=aws_native.s3.BucketVersioningConfigurationArgs(
+ *         status="Enabled",
+ *     ),
+ *     replication_configuration=aws_native.s3.BucketReplicationConfigurationArgs(
+ *         role="arn:aws:iam::123456789012:role/replication_role",
+ *         rules=[
+ *             aws_native.s3.BucketReplicationRuleArgs(
+ *                 id="MyRule1",
+ *                 status="Enabled",
+ *                 prefix="MyPrefix",
+ *                 destination=aws_native.s3.BucketReplicationDestinationArgs(
+ *                     bucket="arn:aws:s3:::my-replication-bucket",
+ *                     storage_class="STANDARD",
+ *                 ),
+ *             ),
+ *             aws_native.s3.BucketReplicationRuleArgs(
+ *                 status="Enabled",
+ *                 prefix="MyOtherPrefix",
+ *                 destination=aws_native.s3.BucketReplicationDestinationArgs(
+ *                     bucket="arn:aws:s3:::my-replication-bucket",
+ *                 ),
+ *             ),
+ *         ],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var helper = new AwsNative.S3.Bucket("helper", new AwsNative.S3.BucketArgs
+ *         {
+ *         });
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AnalyticsConfigurations = 
+ *             {
+ *                 new AwsNative.S3.Inputs.BucketAnalyticsConfigurationArgs
+ *                 {
+ *                     Id = "AnalyticsConfigurationId",
+ *                     StorageClassAnalysis = new AwsNative.S3.Inputs.BucketStorageClassAnalysisArgs
+ *                     {
+ *                         DataExport = new AwsNative.S3.Inputs.BucketDataExportArgs
+ *                         {
+ *                             Destination = new AwsNative.S3.Inputs.BucketDestinationArgs
+ *                             {
+ *                                 BucketArn = helper.Arn,
+ *                                 Format = "CSV",
+ *                                 Prefix = "AnalyticsDestinationPrefix",
+ *                             },
+ *                             OutputSchemaVersion = "V_1",
+ *                         },
+ *                     },
+ *                     Prefix = "AnalyticsConfigurationPrefix",
+ *                     TagFilters = 
+ *                     {
+ *                         new AwsNative.S3.Inputs.BucketTagFilterArgs
+ *                         {
+ *                             Key = "AnalyticsTagKey",
+ *                             Value = "AnalyticsTagValue",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             InventoryConfigurations = 
+ *             {
+ *                 new AwsNative.S3.Inputs.BucketInventoryConfigurationArgs
+ *                 {
+ *                     Id = "InventoryConfigurationId",
+ *                     Destination = new AwsNative.S3.Inputs.BucketDestinationArgs
+ *                     {
+ *                         BucketArn = helper.Arn,
+ *                         Format = "CSV",
+ *                         Prefix = "InventoryDestinationPrefix",
+ *                     },
+ *                     Enabled = true,
+ *                     IncludedObjectVersions = "Current",
+ *                     Prefix = "InventoryConfigurationPrefix",
+ *                     ScheduleFrequency = "Weekly",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		helper, err := s3.NewBucket(ctx, "helper", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			AnalyticsConfigurations: []s3.BucketAnalyticsConfigurationArgs{
+ * 				&s3.BucketAnalyticsConfigurationArgs{
+ * 					Id: pulumi.String("AnalyticsConfigurationId"),
+ * 					StorageClassAnalysis: &s3.BucketStorageClassAnalysisArgs{
+ * 						DataExport: &s3.BucketDataExportArgs{
+ * 							Destination: &s3.BucketDestinationArgs{
+ * 								BucketArn: helper.Arn,
+ * 								Format:    "CSV",
+ * 								Prefix:    pulumi.String("AnalyticsDestinationPrefix"),
+ * 							},
+ * 							OutputSchemaVersion: pulumi.String("V_1"),
+ * 						},
+ * 					},
+ * 					Prefix: pulumi.String("AnalyticsConfigurationPrefix"),
+ * 					TagFilters: s3.BucketTagFilterArray{
+ * 						&s3.BucketTagFilterArgs{
+ * 							Key:   pulumi.String("AnalyticsTagKey"),
+ * 							Value: pulumi.String("AnalyticsTagValue"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			InventoryConfigurations: []s3.BucketInventoryConfigurationArgs{
+ * 				&s3.BucketInventoryConfigurationArgs{
+ * 					Id: pulumi.String("InventoryConfigurationId"),
+ * 					Destination: &s3.BucketDestinationArgs{
+ * 						BucketArn: helper.Arn,
+ * 						Format:    "CSV",
+ * 						Prefix:    pulumi.String("InventoryDestinationPrefix"),
+ * 					},
+ * 					Enabled:                pulumi.Bool(true),
+ * 					IncludedObjectVersions: "Current",
+ * 					Prefix:                 pulumi.String("InventoryConfigurationPrefix"),
+ * 					ScheduleFrequency:      "Weekly",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const helper = new aws_native.s3.Bucket("helper", {});
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     analyticsConfigurations: [{
+ *         id: "AnalyticsConfigurationId",
+ *         storageClassAnalysis: {
+ *             dataExport: {
+ *                 destination: {
+ *                     bucketArn: helper.arn,
+ *                     format: "CSV",
+ *                     prefix: "AnalyticsDestinationPrefix",
+ *                 },
+ *                 outputSchemaVersion: "V_1",
+ *             },
+ *         },
+ *         prefix: "AnalyticsConfigurationPrefix",
+ *         tagFilters: [{
+ *             key: "AnalyticsTagKey",
+ *             value: "AnalyticsTagValue",
+ *         }],
+ *     }],
+ *     inventoryConfigurations: [{
+ *         id: "InventoryConfigurationId",
+ *         destination: {
+ *             bucketArn: helper.arn,
+ *             format: "CSV",
+ *             prefix: "InventoryDestinationPrefix",
+ *         },
+ *         enabled: true,
+ *         includedObjectVersions: "Current",
+ *         prefix: "InventoryConfigurationPrefix",
+ *         scheduleFrequency: "Weekly",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * helper = aws_native.s3.Bucket("helper")
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     analytics_configurations=[aws_native.s3.BucketAnalyticsConfigurationArgs(
+ *         id="AnalyticsConfigurationId",
+ *         storage_class_analysis=aws_native.s3.BucketStorageClassAnalysisArgs(
+ *             data_export=aws_native.s3.BucketDataExportArgs(
+ *                 destination=aws_native.s3.BucketDestinationArgs(
+ *                     bucket_arn=helper.arn,
+ *                     format="CSV",
+ *                     prefix="AnalyticsDestinationPrefix",
+ *                 ),
+ *                 output_schema_version="V_1",
+ *             ),
+ *         ),
+ *         prefix="AnalyticsConfigurationPrefix",
+ *         tag_filters=[aws_native.s3.BucketTagFilterArgs(
+ *             key="AnalyticsTagKey",
+ *             value="AnalyticsTagValue",
+ *         )],
+ *     )],
+ *     inventory_configurations=[aws_native.s3.BucketInventoryConfigurationArgs(
+ *         id="InventoryConfigurationId",
+ *         destination=aws_native.s3.BucketDestinationArgs(
+ *             bucket_arn=helper.arn,
+ *             format="CSV",
+ *             prefix="InventoryDestinationPrefix",
+ *         ),
+ *         enabled=True,
+ *         included_object_versions="Current",
+ *         prefix="InventoryConfigurationPrefix",
+ *         schedule_frequency="Weekly",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var helper = new AwsNative.S3.Bucket("helper", new AwsNative.S3.BucketArgs
+ *         {
+ *         });
+ *         var s3Bucket = new AwsNative.S3.Bucket("s3Bucket", new AwsNative.S3.BucketArgs
+ *         {
+ *             AnalyticsConfigurations = 
+ *             {
+ *                 new AwsNative.S3.Inputs.BucketAnalyticsConfigurationArgs
+ *                 {
+ *                     Id = "AnalyticsConfigurationId",
+ *                     StorageClassAnalysis = new AwsNative.S3.Inputs.BucketStorageClassAnalysisArgs
+ *                     {
+ *                         DataExport = new AwsNative.S3.Inputs.BucketDataExportArgs
+ *                         {
+ *                             Destination = new AwsNative.S3.Inputs.BucketDestinationArgs
+ *                             {
+ *                                 BucketArn = helper.Arn,
+ *                                 Format = "CSV",
+ *                                 Prefix = "AnalyticsDestinationPrefix",
+ *                             },
+ *                             OutputSchemaVersion = "V_1",
+ *                         },
+ *                     },
+ *                     Prefix = "AnalyticsConfigurationPrefix",
+ *                     TagFilters = 
+ *                     {
+ *                         new AwsNative.S3.Inputs.BucketTagFilterArgs
+ *                         {
+ *                             Key = "AnalyticsTagKey",
+ *                             Value = "AnalyticsTagValue",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             InventoryConfigurations = 
+ *             {
+ *                 new AwsNative.S3.Inputs.BucketInventoryConfigurationArgs
+ *                 {
+ *                     Id = "InventoryConfigurationId",
+ *                     Destination = new AwsNative.S3.Inputs.BucketDestinationArgs
+ *                     {
+ *                         BucketArn = helper.Arn,
+ *                         Format = "CSV",
+ *                         Prefix = "InventoryDestinationPrefix",
+ *                     },
+ *                     Enabled = true,
+ *                     IncludedObjectVersions = "Current",
+ *                     Prefix = "InventoryConfigurationPrefix",
+ *                     ScheduleFrequency = "Weekly",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/s3"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		helper, err := s3.NewBucket(ctx, "helper", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = s3.NewBucket(ctx, "s3Bucket", &s3.BucketArgs{
+ * 			AnalyticsConfigurations: []s3.BucketAnalyticsConfigurationArgs{
+ * 				&s3.BucketAnalyticsConfigurationArgs{
+ * 					Id: pulumi.String("AnalyticsConfigurationId"),
+ * 					StorageClassAnalysis: &s3.BucketStorageClassAnalysisArgs{
+ * 						DataExport: &s3.BucketDataExportArgs{
+ * 							Destination: &s3.BucketDestinationArgs{
+ * 								BucketArn: helper.Arn,
+ * 								Format:    "CSV",
+ * 								Prefix:    pulumi.String("AnalyticsDestinationPrefix"),
+ * 							},
+ * 							OutputSchemaVersion: pulumi.String("V_1"),
+ * 						},
+ * 					},
+ * 					Prefix: pulumi.String("AnalyticsConfigurationPrefix"),
+ * 					TagFilters: s3.BucketTagFilterArray{
+ * 						&s3.BucketTagFilterArgs{
+ * 							Key:   pulumi.String("AnalyticsTagKey"),
+ * 							Value: pulumi.String("AnalyticsTagValue"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			InventoryConfigurations: []s3.BucketInventoryConfigurationArgs{
+ * 				&s3.BucketInventoryConfigurationArgs{
+ * 					Id: pulumi.String("InventoryConfigurationId"),
+ * 					Destination: &s3.BucketDestinationArgs{
+ * 						BucketArn: helper.Arn,
+ * 						Format:    "CSV",
+ * 						Prefix:    pulumi.String("InventoryDestinationPrefix"),
+ * 					},
+ * 					Enabled:                pulumi.Bool(true),
+ * 					IncludedObjectVersions: "Current",
+ * 					Prefix:                 pulumi.String("InventoryConfigurationPrefix"),
+ * 					ScheduleFrequency:      "Weekly",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const helper = new aws_native.s3.Bucket("helper", {});
+ * const s3Bucket = new aws_native.s3.Bucket("s3Bucket", {
+ *     analyticsConfigurations: [{
+ *         id: "AnalyticsConfigurationId",
+ *         storageClassAnalysis: {
+ *             dataExport: {
+ *                 destination: {
+ *                     bucketArn: helper.arn,
+ *                     format: "CSV",
+ *                     prefix: "AnalyticsDestinationPrefix",
+ *                 },
+ *                 outputSchemaVersion: "V_1",
+ *             },
+ *         },
+ *         prefix: "AnalyticsConfigurationPrefix",
+ *         tagFilters: [{
+ *             key: "AnalyticsTagKey",
+ *             value: "AnalyticsTagValue",
+ *         }],
+ *     }],
+ *     inventoryConfigurations: [{
+ *         id: "InventoryConfigurationId",
+ *         destination: {
+ *             bucketArn: helper.arn,
+ *             format: "CSV",
+ *             prefix: "InventoryDestinationPrefix",
+ *         },
+ *         enabled: true,
+ *         includedObjectVersions: "Current",
+ *         prefix: "InventoryConfigurationPrefix",
+ *         scheduleFrequency: "Weekly",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * helper = aws_native.s3.Bucket("helper")
+ * s3_bucket = aws_native.s3.Bucket("s3Bucket",
+ *     analytics_configurations=[aws_native.s3.BucketAnalyticsConfigurationArgs(
+ *         id="AnalyticsConfigurationId",
+ *         storage_class_analysis=aws_native.s3.BucketStorageClassAnalysisArgs(
+ *             data_export=aws_native.s3.BucketDataExportArgs(
+ *                 destination=aws_native.s3.BucketDestinationArgs(
+ *                     bucket_arn=helper.arn,
+ *                     format="CSV",
+ *                     prefix="AnalyticsDestinationPrefix",
+ *                 ),
+ *                 output_schema_version="V_1",
+ *             ),
+ *         ),
+ *         prefix="AnalyticsConfigurationPrefix",
+ *         tag_filters=[aws_native.s3.BucketTagFilterArgs(
+ *             key="AnalyticsTagKey",
+ *             value="AnalyticsTagValue",
+ *         )],
+ *     )],
+ *     inventory_configurations=[aws_native.s3.BucketInventoryConfigurationArgs(
+ *         id="InventoryConfigurationId",
+ *         destination=aws_native.s3.BucketDestinationArgs(
+ *             bucket_arn=helper.arn,
+ *             format="CSV",
+ *             prefix="InventoryDestinationPrefix",
+ *         ),
+ *         enabled=True,
+ *         included_object_versions="Current",
+ *         prefix="InventoryConfigurationPrefix",
+ *         schedule_frequency="Weekly",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:s3:Bucket")
 public class Bucket extends io.pulumi.resources.CustomResource {
     /**
      * Configuration for the transfer acceleration state.
-     * 
      */
     @Export(name="accelerateConfiguration", type=BucketAccelerateConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketAccelerateConfiguration> accelerateConfiguration;
 
     /**
      * @return Configuration for the transfer acceleration state.
-     * 
      */
     public Output</* @Nullable */ BucketAccelerateConfiguration> getAccelerateConfiguration() {
         return this.accelerateConfiguration;
     }
     /**
      * A canned access control list (ACL) that grants predefined permissions to the bucket.
-     * 
      */
     @Export(name="accessControl", type=BucketAccessControl.class, parameters={})
     private Output</* @Nullable */ BucketAccessControl> accessControl;
 
     /**
      * @return A canned access control list (ACL) that grants predefined permissions to the bucket.
-     * 
      */
     public Output</* @Nullable */ BucketAccessControl> getAccessControl() {
         return this.accessControl;
     }
     /**
      * The configuration and any analyses for the analytics filter of an Amazon S3 bucket.
-     * 
      */
     @Export(name="analyticsConfigurations", type=List.class, parameters={BucketAnalyticsConfiguration.class})
     private Output</* @Nullable */ List<BucketAnalyticsConfiguration>> analyticsConfigurations;
 
     /**
      * @return The configuration and any analyses for the analytics filter of an Amazon S3 bucket.
-     * 
      */
     public Output</* @Nullable */ List<BucketAnalyticsConfiguration>> getAnalyticsConfigurations() {
         return this.analyticsConfigurations;
     }
     /**
      * The Amazon Resource Name (ARN) of the specified bucket.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the specified bucket.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -103,182 +2215,156 @@ public class Bucket extends io.pulumi.resources.CustomResource {
     }
     /**
      * A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
-     * 
      */
     @Export(name="bucketName", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketName;
 
     /**
      * @return A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
-     * 
      */
     public Output</* @Nullable */ String> getBucketName() {
         return this.bucketName;
     }
     /**
      * Rules that define cross-origin resource sharing of objects in this bucket.
-     * 
      */
     @Export(name="corsConfiguration", type=BucketCorsConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketCorsConfiguration> corsConfiguration;
 
     /**
      * @return Rules that define cross-origin resource sharing of objects in this bucket.
-     * 
      */
     public Output</* @Nullable */ BucketCorsConfiguration> getCorsConfiguration() {
         return this.corsConfiguration;
     }
     /**
      * The IPv4 DNS name of the specified bucket.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The IPv4 DNS name of the specified bucket.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
     }
     /**
      * The IPv6 DNS name of the specified bucket. For more information about dual-stack endpoints, see [Using Amazon S3 Dual-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html).
-     * 
      */
     @Export(name="dualStackDomainName", type=String.class, parameters={})
     private Output<String> dualStackDomainName;
 
     /**
      * @return The IPv6 DNS name of the specified bucket. For more information about dual-stack endpoints, see [Using Amazon S3 Dual-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html).
-     * 
      */
     public Output<String> getDualStackDomainName() {
         return this.dualStackDomainName;
     }
     /**
      * Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.
-     * 
      */
     @Export(name="intelligentTieringConfigurations", type=List.class, parameters={BucketIntelligentTieringConfiguration.class})
     private Output</* @Nullable */ List<BucketIntelligentTieringConfiguration>> intelligentTieringConfigurations;
 
     /**
      * @return Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.
-     * 
      */
     public Output</* @Nullable */ List<BucketIntelligentTieringConfiguration>> getIntelligentTieringConfigurations() {
         return this.intelligentTieringConfigurations;
     }
     /**
      * The inventory configuration for an Amazon S3 bucket.
-     * 
      */
     @Export(name="inventoryConfigurations", type=List.class, parameters={BucketInventoryConfiguration.class})
     private Output</* @Nullable */ List<BucketInventoryConfiguration>> inventoryConfigurations;
 
     /**
      * @return The inventory configuration for an Amazon S3 bucket.
-     * 
      */
     public Output</* @Nullable */ List<BucketInventoryConfiguration>> getInventoryConfigurations() {
         return this.inventoryConfigurations;
     }
     /**
      * Rules that define how Amazon S3 manages objects during their lifetime.
-     * 
      */
     @Export(name="lifecycleConfiguration", type=BucketLifecycleConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketLifecycleConfiguration> lifecycleConfiguration;
 
     /**
      * @return Rules that define how Amazon S3 manages objects during their lifetime.
-     * 
      */
     public Output</* @Nullable */ BucketLifecycleConfiguration> getLifecycleConfiguration() {
         return this.lifecycleConfiguration;
     }
     /**
      * Settings that define where logs are stored.
-     * 
      */
     @Export(name="loggingConfiguration", type=BucketLoggingConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketLoggingConfiguration> loggingConfiguration;
 
     /**
      * @return Settings that define where logs are stored.
-     * 
      */
     public Output</* @Nullable */ BucketLoggingConfiguration> getLoggingConfiguration() {
         return this.loggingConfiguration;
     }
     /**
      * Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.
-     * 
      */
     @Export(name="metricsConfigurations", type=List.class, parameters={BucketMetricsConfiguration.class})
     private Output</* @Nullable */ List<BucketMetricsConfiguration>> metricsConfigurations;
 
     /**
      * @return Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.
-     * 
      */
     public Output</* @Nullable */ List<BucketMetricsConfiguration>> getMetricsConfigurations() {
         return this.metricsConfigurations;
     }
     /**
      * Configuration that defines how Amazon S3 handles bucket notifications.
-     * 
      */
     @Export(name="notificationConfiguration", type=BucketNotificationConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketNotificationConfiguration> notificationConfiguration;
 
     /**
      * @return Configuration that defines how Amazon S3 handles bucket notifications.
-     * 
      */
     public Output</* @Nullable */ BucketNotificationConfiguration> getNotificationConfiguration() {
         return this.notificationConfiguration;
     }
     /**
      * Places an Object Lock configuration on the specified bucket.
-     * 
      */
     @Export(name="objectLockConfiguration", type=BucketObjectLockConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketObjectLockConfiguration> objectLockConfiguration;
 
     /**
      * @return Places an Object Lock configuration on the specified bucket.
-     * 
      */
     public Output</* @Nullable */ BucketObjectLockConfiguration> getObjectLockConfiguration() {
         return this.objectLockConfiguration;
     }
     /**
      * Indicates whether this bucket has an Object Lock configuration enabled.
-     * 
      */
     @Export(name="objectLockEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> objectLockEnabled;
 
     /**
      * @return Indicates whether this bucket has an Object Lock configuration enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getObjectLockEnabled() {
         return this.objectLockEnabled;
     }
     /**
      * Specifies the container element for object ownership rules.
-     * 
      */
     @Export(name="ownershipControls", type=BucketOwnershipControls.class, parameters={})
     private Output</* @Nullable */ BucketOwnershipControls> ownershipControls;
 
     /**
      * @return Specifies the container element for object ownership rules.
-     * 
      */
     public Output</* @Nullable */ BucketOwnershipControls> getOwnershipControls() {
         return this.ownershipControls;
@@ -291,42 +2377,36 @@ public class Bucket extends io.pulumi.resources.CustomResource {
     }
     /**
      * Returns the regional domain name of the specified bucket.
-     * 
      */
     @Export(name="regionalDomainName", type=String.class, parameters={})
     private Output<String> regionalDomainName;
 
     /**
      * @return Returns the regional domain name of the specified bucket.
-     * 
      */
     public Output<String> getRegionalDomainName() {
         return this.regionalDomainName;
     }
     /**
      * Configuration for replicating objects in an S3 bucket.
-     * 
      */
     @Export(name="replicationConfiguration", type=BucketReplicationConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketReplicationConfiguration> replicationConfiguration;
 
     /**
      * @return Configuration for replicating objects in an S3 bucket.
-     * 
      */
     public Output</* @Nullable */ BucketReplicationConfiguration> getReplicationConfiguration() {
         return this.replicationConfiguration;
     }
     /**
      * An arbitrary set of tags (key-value pairs) for this S3 bucket.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={BucketTag.class})
     private Output</* @Nullable */ List<BucketTag>> tags;
 
     /**
      * @return An arbitrary set of tags (key-value pairs) for this S3 bucket.
-     * 
      */
     public Output</* @Nullable */ List<BucketTag>> getTags() {
         return this.tags;
@@ -345,14 +2425,12 @@ public class Bucket extends io.pulumi.resources.CustomResource {
     }
     /**
      * The Amazon S3 website endpoint for the specified bucket.
-     * 
      */
     @Export(name="websiteURL", type=String.class, parameters={})
     private Output<String> websiteURL;
 
     /**
      * @return The Amazon S3 website endpoint for the specified bucket.
-     * 
      */
     public Output<String> getWebsiteURL() {
         return this.websiteURL;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A complex type that contains information about an Amazon VPC. Route 53 Resolver uses the records in the private hosted zone to route traffic in that VPC.
- * 
  */
 public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of an Amazon VPC.
-     * 
      */
     @Import(name="vPCId", required=true)
       private final Output<String> vPCId;
@@ -30,7 +28,6 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The region that an Amazon VPC was created in. See https://docs.aws.amazon.com/general/latest/gr/rande.html for a list of up to date regions.
-     * 
      */
     @Import(name="vPCRegion", required=true)
       private final Output<String> vPCRegion;

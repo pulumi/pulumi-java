@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rule of WebACL that contains condition and action.
- * 
  */
 public final class WebACLRule extends io.pulumi.resources.InvokeArgs {
 
@@ -63,7 +62,6 @@ public final class WebACLRule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Collection of Rule Labels.
-     * 
      */
     @Import(name="ruleLabels")
       private final @Nullable List<WebACLLabel> ruleLabels;

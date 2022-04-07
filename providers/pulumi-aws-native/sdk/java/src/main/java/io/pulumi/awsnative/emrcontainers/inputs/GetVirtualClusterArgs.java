@@ -14,7 +14,6 @@ public final class GetVirtualClusterArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Id of the virtual cluster.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

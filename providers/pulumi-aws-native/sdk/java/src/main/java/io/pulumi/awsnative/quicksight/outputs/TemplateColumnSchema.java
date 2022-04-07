@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class TemplateColumnSchema {
     /**
      * <p>The data type of the column schema.</p>
-     * 
      */
     private final @Nullable String dataType;
     /**
      * <p>The geographic role of the column schema.</p>
-     * 
      */
     private final @Nullable String geographicRole;
     /**
      * <p>The name of the column schema.</p>
-     * 
      */
     private final @Nullable String name;
 
@@ -39,21 +36,18 @@ public final class TemplateColumnSchema {
 
     /**
      * <p>The data type of the column schema.</p>
-     * 
     */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * <p>The geographic role of the column schema.</p>
-     * 
     */
     public Optional<String> getGeographicRole() {
         return Optional.ofNullable(this.geographicRole);
     }
     /**
      * <p>The name of the column schema.</p>
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

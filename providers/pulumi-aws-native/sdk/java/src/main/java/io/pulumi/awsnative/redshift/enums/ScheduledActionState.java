@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The state of the scheduled action.
-     * 
      */
     @EnumType
     public enum ScheduledActionState {

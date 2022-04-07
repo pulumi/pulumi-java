@@ -18,7 +18,6 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
 
     /**
      * The key of a key-value pair that identifies the location of an attachment to a document.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<DocumentAttachmentsSourceKey> key;
@@ -29,7 +28,6 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the document attachment file.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -40,7 +38,6 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
 
     /**
      * The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

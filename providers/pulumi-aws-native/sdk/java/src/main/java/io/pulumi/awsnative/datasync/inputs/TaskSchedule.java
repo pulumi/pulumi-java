@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies the schedule you want your task to use for repeated executions.
- * 
  */
 public final class TaskSchedule extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TaskSchedule extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location
-     * 
      */
     @Import(name="scheduleExpression", required=true)
       private final String scheduleExpression;

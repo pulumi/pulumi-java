@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Aggregation types supported by Fleet Indexing
- * 
  */
 public final class FleetMetricAggregationTypeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FleetMetricAggregationTypeArgs extends io.pulumi.resources.Re
 
     /**
      * Fleet Indexing aggregation type names such as Statistics, Percentiles and Cardinality
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -31,7 +29,6 @@ public final class FleetMetricAggregationTypeArgs extends io.pulumi.resources.Re
 
     /**
      * Fleet Indexing aggregation type values
-     * 
      */
     @Import(name="values", required=true)
       private final Output<List<String>> values;

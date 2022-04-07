@@ -14,7 +14,6 @@ public final class GetAgentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The DataSync Agent ARN.
-     * 
      */
     @Import(name="agentArn", required=true)
       private final String agentArn;

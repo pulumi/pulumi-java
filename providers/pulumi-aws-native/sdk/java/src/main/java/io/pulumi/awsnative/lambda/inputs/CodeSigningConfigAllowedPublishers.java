@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
- * 
  */
 public final class CodeSigningConfigAllowedPublishers extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class CodeSigningConfigAllowedPublishers extends io.pulumi.resource
 
     /**
      * List of Signing profile version Arns
-     * 
      */
     @Import(name="signingProfileVersionArns", required=true)
       private final List<String> signingProfileVersionArns;

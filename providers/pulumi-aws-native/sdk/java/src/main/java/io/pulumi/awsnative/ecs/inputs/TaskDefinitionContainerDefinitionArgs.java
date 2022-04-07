@@ -32,7 +32,6 @@ import javax.annotation.Nullable;
 
 /**
  * List of container definitions that are passed to the Docker daemon on a container instance
- * 
  */
 public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -103,7 +102,6 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
 
     /**
      * The environment variables to pass to a container
-     * 
      */
     @Import(name="environment")
       private final @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment;
@@ -114,7 +112,6 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
 
     /**
      * The list of one or more files that contain the environment variables to pass to a container
-     * 
      */
     @Import(name="environmentFiles")
       private final @Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
@@ -160,7 +157,6 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
 
     /**
      * The image used to start a container. This string is passed directly to the Docker daemon.
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<String> image;
@@ -199,7 +195,6 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
 
     /**
      * The amount (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed.
-     * 
      */
     @Import(name="memory")
       private final @Nullable Output<Integer> memory;
@@ -224,7 +219,6 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
 
     /**
      * The name of a container. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -235,7 +229,6 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
 
     /**
      * Port mappings allow containers to access ports on the host container instance to send or receive traffic.
-     * 
      */
     @Import(name="portMappings")
       private final @Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings;

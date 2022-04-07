@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The version of robot software suite.
-     * 
      */
     @EnumType
     public enum RobotApplicationRobotSoftwareSuiteVersion {

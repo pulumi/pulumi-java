@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The inspection behavior to fall back to if the JSON in the request body is invalid.
-     * 
      */
     @EnumType
     public enum WebACLBodyParsingFallbackBehavior {

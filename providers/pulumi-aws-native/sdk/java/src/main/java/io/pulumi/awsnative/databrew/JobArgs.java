@@ -44,7 +44,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dataset name
-     * 
      */
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
@@ -55,7 +54,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Encryption Key Arn
-     * 
      */
     @Import(name="encryptionKeyArn")
       private final @Nullable Output<String> encryptionKeyArn;
@@ -66,7 +64,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Encryption mode
-     * 
      */
     @Import(name="encryptionMode")
       private final @Nullable Output<JobEncryptionMode> encryptionMode;
@@ -77,7 +74,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Job Sample
-     * 
      */
     @Import(name="jobSample")
       private final @Nullable Output<JobSampleArgs> jobSample;
@@ -88,7 +84,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Log subscription
-     * 
      */
     @Import(name="logSubscription")
       private final @Nullable Output<JobLogSubscription> logSubscription;
@@ -99,7 +94,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Max capacity
-     * 
      */
     @Import(name="maxCapacity")
       private final @Nullable Output<Integer> maxCapacity;
@@ -110,7 +104,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Max retries
-     * 
      */
     @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;
@@ -121,7 +114,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Job name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -132,7 +124,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Output location
-     * 
      */
     @Import(name="outputLocation")
       private final @Nullable Output<JobOutputLocationArgs> outputLocation;
@@ -150,7 +141,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Profile Job configuration
-     * 
      */
     @Import(name="profileConfiguration")
       private final @Nullable Output<JobProfileConfigurationArgs> profileConfiguration;
@@ -161,7 +151,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Project name
-     * 
      */
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
@@ -179,7 +168,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role arn
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
@@ -197,7 +185,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Timeout
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
@@ -208,7 +195,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Job type
-     * 
      */
     @Import(name="type", required=true)
       private final Output<JobType> type;
@@ -219,7 +205,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data quality rules configuration
-     * 
      */
     @Import(name="validationConfigurations")
       private final @Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations;

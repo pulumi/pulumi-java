@@ -16,12 +16,10 @@ import javax.annotation.Nullable;
 public final class BucketAnalyticsConfiguration {
     /**
      * The ID that identifies the analytics configuration.
-     * 
      */
     private final String id;
     /**
      * The prefix that an object must have to be included in the analytics results.
-     * 
      */
     private final @Nullable String prefix;
     private final BucketStorageClassAnalysis storageClassAnalysis;
@@ -41,14 +39,12 @@ public final class BucketAnalyticsConfiguration {
 
     /**
      * The ID that identifies the analytics configuration.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The prefix that an object must have to be included in the analytics results.
-     * 
     */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);

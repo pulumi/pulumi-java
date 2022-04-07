@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class GetTypeActivationResult {
     /**
      * The Amazon Resource Name (ARN) of the extension.
-     * 
      */
     private final @Nullable String arn;
     /**
      * Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
-     * 
      */
     private final @Nullable Boolean autoUpdate;
     /**
      * The Major Version of the type you want to enable
-     * 
      */
     private final @Nullable String majorVersion;
     /**
      * Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
-     * 
      */
     private final @Nullable TypeActivationVersionBump versionBump;
 
@@ -48,28 +44,24 @@ public final class GetTypeActivationResult {
 
     /**
      * The Amazon Resource Name (ARN) of the extension.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
-     * 
     */
     public Optional<Boolean> getAutoUpdate() {
         return Optional.ofNullable(this.autoUpdate);
     }
     /**
      * The Major Version of the type you want to enable
-     * 
     */
     public Optional<String> getMajorVersion() {
         return Optional.ofNullable(this.majorVersion);
     }
     /**
      * Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
-     * 
     */
     public Optional<TypeActivationVersionBump> getVersionBump() {
         return Optional.ofNullable(this.versionBump);

@@ -14,7 +14,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the AppRunner Service.
-     * 
      */
     @Import(name="serviceArn", required=true)
       private final String serviceArn;

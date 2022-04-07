@@ -17,20 +17,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SageMaker::ModelPackageGroup
- * 
  */
 @ResourceType(type="aws-native:sagemaker:ModelPackageGroup")
 public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
     /**
      * The time at which the model package group was created.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The time at which the model package group was created.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
@@ -61,28 +58,24 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * The status of a modelpackage group job.
-     * 
      */
     @Export(name="modelPackageGroupStatus", type=ModelPackageGroupStatus.class, parameters={})
     private Output<ModelPackageGroupStatus> modelPackageGroupStatus;
 
     /**
      * @return The status of a modelpackage group job.
-     * 
      */
     public Output<ModelPackageGroupStatus> getModelPackageGroupStatus() {
         return this.modelPackageGroupStatus;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ModelPackageGroupTag.class})
     private Output</* @Nullable */ List<ModelPackageGroupTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<ModelPackageGroupTag>> getTags() {
         return this.tags;

@@ -21,7 +21,213 @@ import javax.annotation.Nullable;
 /**
  * The AWS::ECR::Repository resource specifies an Amazon Elastic Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var lifecyclePolicyText = config.Require("lifecyclePolicyText");
+ *         var repositoryName = config.Require("repositoryName");
+ *         var registryId = config.Require("registryId");
+ *         var myRepository = new AwsNative.ECR.Repository("myRepository", new AwsNative.ECR.RepositoryArgs
+ *         {
+ *             LifecyclePolicy = new AwsNative.ECR.Inputs.RepositoryLifecyclePolicyArgs
+ *             {
+ *                 LifecyclePolicyText = lifecyclePolicyText,
+ *                 RegistryId = registryId,
+ *             },
+ *             RepositoryName = repositoryName,
+ *         });
+ *         this.Arn = myRepository.Arn;
+ *     }
+ * 
+ *     [Output("arn")]
+ *     public Output<string> Arn { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		lifecyclePolicyText := cfg.Require("lifecyclePolicyText")
+ * 		repositoryName := cfg.Require("repositoryName")
+ * 		registryId := cfg.Require("registryId")
+ * 		myRepository, err := ecr.NewRepository(ctx, "myRepository", &ecr.RepositoryArgs{
+ * 			LifecyclePolicy: &ecr.RepositoryLifecyclePolicyArgs{
+ * 				LifecyclePolicyText: pulumi.String(lifecyclePolicyText),
+ * 				RegistryId:          pulumi.String(registryId),
+ * 			},
+ * 			RepositoryName: pulumi.String(repositoryName),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("arn", myRepository.Arn)
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const lifecyclePolicyText = config.require("lifecyclePolicyText");
+ * const repositoryName = config.require("repositoryName");
+ * const registryId = config.require("registryId");
+ * const myRepository = new aws_native.ecr.Repository("myRepository", {
+ *     lifecyclePolicy: {
+ *         lifecyclePolicyText: lifecyclePolicyText,
+ *         registryId: registryId,
+ *     },
+ *     repositoryName: repositoryName,
+ * });
+ * export const arn = myRepository.arn;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * lifecycle_policy_text = config.require("lifecyclePolicyText")
+ * repository_name = config.require("repositoryName")
+ * registry_id = config.require("registryId")
+ * my_repository = aws_native.ecr.Repository("myRepository",
+ *     lifecycle_policy=aws_native.ecr.RepositoryLifecyclePolicyArgs(
+ *         lifecycle_policy_text=lifecycle_policy_text,
+ *         registry_id=registry_id,
+ *     ),
+ *     repository_name=repository_name)
+ * pulumi.export("arn", my_repository.arn)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var lifecyclePolicyText = config.Require("lifecyclePolicyText");
+ *         var repositoryName = config.Require("repositoryName");
+ *         var registryId = config.Require("registryId");
+ *         var myRepository = new AwsNative.ECR.Repository("myRepository", new AwsNative.ECR.RepositoryArgs
+ *         {
+ *             LifecyclePolicy = new AwsNative.ECR.Inputs.RepositoryLifecyclePolicyArgs
+ *             {
+ *                 LifecyclePolicyText = lifecyclePolicyText,
+ *                 RegistryId = registryId,
+ *             },
+ *             RepositoryName = repositoryName,
+ *         });
+ *         this.Arn = myRepository.Arn;
+ *     }
+ * 
+ *     [Output("arn")]
+ *     public Output<string> Arn { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecr"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		lifecyclePolicyText := cfg.Require("lifecyclePolicyText")
+ * 		repositoryName := cfg.Require("repositoryName")
+ * 		registryId := cfg.Require("registryId")
+ * 		myRepository, err := ecr.NewRepository(ctx, "myRepository", &ecr.RepositoryArgs{
+ * 			LifecyclePolicy: &ecr.RepositoryLifecyclePolicyArgs{
+ * 				LifecyclePolicyText: pulumi.String(lifecyclePolicyText),
+ * 				RegistryId:          pulumi.String(registryId),
+ * 			},
+ * 			RepositoryName: pulumi.String(repositoryName),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("arn", myRepository.Arn)
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const lifecyclePolicyText = config.require("lifecyclePolicyText");
+ * const repositoryName = config.require("repositoryName");
+ * const registryId = config.require("registryId");
+ * const myRepository = new aws_native.ecr.Repository("myRepository", {
+ *     lifecyclePolicy: {
+ *         lifecyclePolicyText: lifecyclePolicyText,
+ *         registryId: registryId,
+ *     },
+ *     repositoryName: repositoryName,
+ * });
+ * export const arn = myRepository.arn;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * lifecycle_policy_text = config.require("lifecyclePolicyText")
+ * repository_name = config.require("repositoryName")
+ * registry_id = config.require("registryId")
+ * my_repository = aws_native.ecr.Repository("myRepository",
+ *     lifecycle_policy=aws_native.ecr.RepositoryLifecyclePolicyArgs(
+ *         lifecycle_policy_text=lifecycle_policy_text,
+ *         registry_id=registry_id,
+ *     ),
+ *     repository_name=repository_name)
+ * pulumi.export("arn", my_repository.arn)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ecr:Repository")
@@ -46,14 +252,12 @@ public class Repository extends io.pulumi.resources.CustomResource {
     }
     /**
      * The image tag mutability setting for the repository.
-     * 
      */
     @Export(name="imageTagMutability", type=RepositoryImageTagMutability.class, parameters={})
     private Output</* @Nullable */ RepositoryImageTagMutability> imageTagMutability;
 
     /**
      * @return The image tag mutability setting for the repository.
-     * 
      */
     public Output</* @Nullable */ RepositoryImageTagMutability> getImageTagMutability() {
         return this.imageTagMutability;
@@ -66,28 +270,24 @@ public class Repository extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name to use for the repository. The repository name may be specified on its own (such as nginx-web-app) or it can be prepended with a namespace to group the repository into a category (such as project-a/nginx-web-app). If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html.
-     * 
      */
     @Export(name="repositoryName", type=String.class, parameters={})
     private Output</* @Nullable */ String> repositoryName;
 
     /**
      * @return The name to use for the repository. The repository name may be specified on its own (such as nginx-web-app) or it can be prepended with a namespace to group the repository into a category (such as project-a/nginx-web-app). If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html.
-     * 
      */
     public Output</* @Nullable */ String> getRepositoryName() {
         return this.repositoryName;
     }
     /**
-     * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
-     * 
+     * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide. 
      */
     @Export(name="repositoryPolicyText", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> repositoryPolicyText;
 
     /**
-     * @return The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
-     * 
+     * @return The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide. 
      */
     public Output</* @Nullable */ Object> getRepositoryPolicyText() {
         return this.repositoryPolicyText;
@@ -100,14 +300,12 @@ public class Repository extends io.pulumi.resources.CustomResource {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={RepositoryTag.class})
     private Output</* @Nullable */ List<RepositoryTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<RepositoryTag>> getTags() {
         return this.tags;

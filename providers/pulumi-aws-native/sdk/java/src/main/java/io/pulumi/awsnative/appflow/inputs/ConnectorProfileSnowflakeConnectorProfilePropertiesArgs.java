@@ -16,7 +16,6 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
 
     /**
      * The name of the account.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -27,7 +26,6 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
 
     /**
      * The name of the Amazon S3 bucket associated with Snowﬂake.
-     * 
      */
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
@@ -38,7 +36,6 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
 
     /**
      * The bucket prefix that refers to the Amazon S3 bucket associated with Snowﬂake.
-     * 
      */
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
@@ -49,7 +46,6 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
 
     /**
      * The Snowﬂake Private Link service name to be used for private data transfers.
-     * 
      */
     @Import(name="privateLinkServiceName")
       private final @Nullable Output<String> privateLinkServiceName;
@@ -60,7 +56,6 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
 
     /**
      * The region of the Snowﬂake account.
-     * 
      */
     @Import(name="region")
       private final @Nullable Output<String> region;
@@ -72,7 +67,6 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     /**
      * The name of the Amazon S3 stage that was created while setting up an Amazon S3 stage in the
      * Snowﬂake account. This is written in the following format: < Database>< Schema><Stage Name>.
-     * 
      */
     @Import(name="stage", required=true)
       private final Output<String> stage;
@@ -83,7 +77,6 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
 
     /**
      * The name of the Snowﬂake warehouse.
-     * 
      */
     @Import(name="warehouse", required=true)
       private final Output<String> warehouse;

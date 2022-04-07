@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The start time or end time for an hours of operation.
- * 
  */
 public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.Res
 
     /**
      * The hours.
-     * 
      */
     @Import(name="hours", required=true)
       private final Output<Integer> hours;
@@ -30,7 +28,6 @@ public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.Res
 
     /**
      * The minutes.
-     * 
      */
     @Import(name="minutes", required=true)
       private final Output<Integer> minutes;

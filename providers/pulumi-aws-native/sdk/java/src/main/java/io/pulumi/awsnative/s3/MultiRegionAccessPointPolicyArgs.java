@@ -16,7 +16,6 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
 
     /**
      * The name of the Multi Region Access Point to apply policy
-     * 
      */
     @Import(name="mrapName", required=true)
       private final Output<String> mrapName;
@@ -27,7 +26,6 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
 
     /**
      * Policy document to apply to a Multi Region Access Point
-     * 
      */
     @Import(name="policy", required=true)
       private final Output<Object> policy;

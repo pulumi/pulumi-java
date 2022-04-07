@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input
- * 
  */
 public final class RecipeParametersInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 

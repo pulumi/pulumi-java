@@ -19,7 +19,6 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the parameter group.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the parameter group family that this parameter group is compatible with.
-     * 
      */
     @Import(name="family", required=true)
       private final Output<String> family;
@@ -41,7 +39,6 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the parameter group.
-     * 
      */
     @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
@@ -52,7 +49,6 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
@@ -63,7 +59,6 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this parameter group.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ParameterGroupTagArgs>> tags;

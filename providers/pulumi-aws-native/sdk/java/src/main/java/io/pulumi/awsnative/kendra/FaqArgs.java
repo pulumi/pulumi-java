@@ -20,7 +20,6 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FAQ description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +30,6 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FAQ file format
-     * 
      */
     @Import(name="fileFormat")
       private final @Nullable Output<FaqFileFormat> fileFormat;
@@ -42,7 +40,6 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Index ID
-     * 
      */
     @Import(name="indexId", required=true)
       private final Output<String> indexId;
@@ -53,7 +50,6 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FAQ name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -64,7 +60,6 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FAQ role ARN
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
@@ -75,7 +70,6 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FAQ S3 path
-     * 
      */
     @Import(name="s3Path", required=true)
       private final Output<FaqS3PathArgs> s3Path;
@@ -86,7 +80,6 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags for labeling the FAQ
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<FaqTagArgs>> tags;

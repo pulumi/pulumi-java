@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AssetEgressEndpoint {
     /**
      * The ID of the PackagingConfiguration being applied to the Asset.
-     * 
      */
     private final String packagingConfigurationId;
     /**
      * The URL of the parent manifest for the repackaged Asset.
-     * 
      */
     private final String url;
 
@@ -30,14 +28,12 @@ public final class AssetEgressEndpoint {
 
     /**
      * The ID of the PackagingConfiguration being applied to the Asset.
-     * 
     */
     public String getPackagingConfigurationId() {
         return this.packagingConfigurationId;
     }
     /**
      * The URL of the parent manifest for the repackaged Asset.
-     * 
     */
     public String getUrl() {
         return this.url;

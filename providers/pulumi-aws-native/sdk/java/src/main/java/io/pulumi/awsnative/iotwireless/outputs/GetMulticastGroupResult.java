@@ -16,47 +16,38 @@ import javax.annotation.Nullable;
 public final class GetMulticastGroupResult {
     /**
      * Multicast group arn. Returned after successful create.
-     * 
      */
     private final @Nullable String arn;
     /**
      * Wireless device to associate. Only for update request.
-     * 
      */
     private final @Nullable String associateWirelessDevice;
     /**
      * Multicast group description
-     * 
      */
     private final @Nullable String description;
     /**
      * Wireless device to disassociate. Only for update request.
-     * 
      */
     private final @Nullable String disassociateWirelessDevice;
     /**
      * Multicast group id. Returned after successful create.
-     * 
      */
     private final @Nullable String id;
     /**
      * Multicast group LoRaWAN
-     * 
      */
     private final @Nullable MulticastGroupLoRaWAN loRaWAN;
     /**
      * Name of Multicast group
-     * 
      */
     private final @Nullable String name;
     /**
      * Multicast group status. Returned after successful read.
-     * 
      */
     private final @Nullable String status;
     /**
      * A list of key-value pairs that contain metadata for the Multicast group.
-     * 
      */
     private final @Nullable List<MulticastGroupTag> tags;
 
@@ -84,63 +75,54 @@ public final class GetMulticastGroupResult {
 
     /**
      * Multicast group arn. Returned after successful create.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Wireless device to associate. Only for update request.
-     * 
     */
     public Optional<String> getAssociateWirelessDevice() {
         return Optional.ofNullable(this.associateWirelessDevice);
     }
     /**
      * Multicast group description
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Wireless device to disassociate. Only for update request.
-     * 
     */
     public Optional<String> getDisassociateWirelessDevice() {
         return Optional.ofNullable(this.disassociateWirelessDevice);
     }
     /**
      * Multicast group id. Returned after successful create.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Multicast group LoRaWAN
-     * 
     */
     public Optional<MulticastGroupLoRaWAN> getLoRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
      * Name of Multicast group
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Multicast group status. Returned after successful read.
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * A list of key-value pairs that contain metadata for the Multicast group.
-     * 
     */
     public List<MulticastGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

@@ -19,7 +19,6 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * CDN Authorization
-     * 
      */
     @Import(name="authorization")
       private final @Nullable Output<PackagingGroupAuthorizationArgs> authorization;
@@ -30,7 +29,6 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration parameters for egress access logging.
-     * 
      */
     @Import(name="egressAccessLogs")
       private final @Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs;
@@ -41,7 +39,6 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<PackagingGroupTagArgs>> tags;

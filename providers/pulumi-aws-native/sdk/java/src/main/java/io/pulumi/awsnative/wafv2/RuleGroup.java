@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains the Rules that identify the requests that you want to allow, block, or count. In a RuleGroup, you also specify a default action (ALLOW or BLOCK), and the action for each Rule that you add to a RuleGroup, for example, block requests from specified IP addresses or block requests from specified referrers. You also associate the RuleGroup with a CloudFront distribution to identify the requests that you want AWS WAF to filter. If you add more than one Rule to a RuleGroup, a request needs to match only one of the specifications to be allowed, blocked, or counted.
- * 
  */
 @ResourceType(type="aws-native:wafv2:RuleGroup")
 public class RuleGroup extends io.pulumi.resources.CustomResource {
@@ -33,14 +32,12 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * Collection of Available Labels.
-     * 
      */
     @Export(name="availableLabels", type=List.class, parameters={RuleGroupLabelSummary.class})
     private Output<List<RuleGroupLabelSummary>> availableLabels;
 
     /**
      * @return Collection of Available Labels.
-     * 
      */
     public Output<List<RuleGroupLabelSummary>> getAvailableLabels() {
         return this.availableLabels;
@@ -53,14 +50,12 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * Collection of Consumed Labels.
-     * 
      */
     @Export(name="consumedLabels", type=List.class, parameters={RuleGroupLabelSummary.class})
     private Output<List<RuleGroupLabelSummary>> consumedLabels;
 
     /**
      * @return Collection of Consumed Labels.
-     * 
      */
     public Output<List<RuleGroupLabelSummary>> getConsumedLabels() {
         return this.consumedLabels;
@@ -91,14 +86,12 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * Collection of Rules.
-     * 
      */
     @Export(name="rules", type=List.class, parameters={RuleGroupRule.class})
     private Output</* @Nullable */ List<RuleGroupRule>> rules;
 
     /**
      * @return Collection of Rules.
-     * 
      */
     public Output</* @Nullable */ List<RuleGroupRule>> getRules() {
         return this.rules;

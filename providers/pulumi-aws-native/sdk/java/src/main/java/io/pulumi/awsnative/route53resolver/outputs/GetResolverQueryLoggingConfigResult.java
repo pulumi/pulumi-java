@@ -16,42 +16,34 @@ import javax.annotation.Nullable;
 public final class GetResolverQueryLoggingConfigResult {
     /**
      * Arn
-     * 
      */
     private final @Nullable String arn;
     /**
      * Count
-     * 
      */
     private final @Nullable Integer associationCount;
     /**
      * Rfc3339TimeString
-     * 
      */
     private final @Nullable String creationTime;
     /**
      * The id of the creator request.
-     * 
      */
     private final @Nullable String creatorRequestId;
     /**
      * ResourceId
-     * 
      */
     private final @Nullable String id;
     /**
      * AccountId
-     * 
      */
     private final @Nullable String ownerId;
     /**
      * ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
-     * 
      */
     private final @Nullable ResolverQueryLoggingConfigShareStatus shareStatus;
     /**
      * ResolverQueryLogConfigStatus, possible values are CREATING, CREATED, DELETED AND FAILED.
-     * 
      */
     private final @Nullable ResolverQueryLoggingConfigStatus status;
 
@@ -77,56 +69,48 @@ public final class GetResolverQueryLoggingConfigResult {
 
     /**
      * Arn
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Count
-     * 
     */
     public Optional<Integer> getAssociationCount() {
         return Optional.ofNullable(this.associationCount);
     }
     /**
      * Rfc3339TimeString
-     * 
     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The id of the creator request.
-     * 
     */
     public Optional<String> getCreatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
     /**
      * ResourceId
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * AccountId
-     * 
     */
     public Optional<String> getOwnerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
-     * 
     */
     public Optional<ResolverQueryLoggingConfigShareStatus> getShareStatus() {
         return Optional.ofNullable(this.shareStatus);
     }
     /**
      * ResolverQueryLogConfigStatus, possible values are CREATING, CREATED, DELETED AND FAILED.
-     * 
     */
     public Optional<ResolverQueryLoggingConfigStatus> getStatus() {
         return Optional.ofNullable(this.status);

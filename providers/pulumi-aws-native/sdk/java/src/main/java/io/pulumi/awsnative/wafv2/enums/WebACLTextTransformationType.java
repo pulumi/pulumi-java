@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of text transformation.
-     * 
      */
     @EnumType
     public enum WebACLTextTransformationType {

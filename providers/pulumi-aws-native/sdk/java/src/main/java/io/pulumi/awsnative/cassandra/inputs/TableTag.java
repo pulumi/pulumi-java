@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to apply to the resource
- * 
  */
 public final class TableTag extends io.pulumi.resources.InvokeArgs {
 

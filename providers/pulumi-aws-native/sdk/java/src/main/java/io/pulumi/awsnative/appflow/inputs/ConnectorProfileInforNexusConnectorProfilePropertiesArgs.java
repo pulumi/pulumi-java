@@ -15,7 +15,6 @@ public final class ConnectorProfileInforNexusConnectorProfilePropertiesArgs exte
 
     /**
      * The location of the InforNexus resource
-     * 
      */
     @Import(name="instanceUrl", required=true)
       private final Output<String> instanceUrl;

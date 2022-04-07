@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BucketVersioningConfiguration {
     /**
      * The versioning state of the bucket.
-     * 
      */
     private final BucketVersioningConfigurationStatus status;
 
@@ -22,7 +21,6 @@ public final class BucketVersioningConfiguration {
 
     /**
      * The versioning state of the bucket.
-     * 
     */
     public BucketVersioningConfigurationStatus getStatus() {
         return this.status;

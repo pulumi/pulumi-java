@@ -15,47 +15,38 @@ import javax.annotation.Nullable;
 public final class GetMetricStreamResult {
     /**
      * Amazon Resource Name of the metric stream.
-     * 
      */
     private final @Nullable String arn;
     /**
      * The date of creation of the metric stream.
-     * 
      */
     private final @Nullable String creationDate;
     /**
      * Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
      */
     private final @Nullable List<MetricStreamFilter> excludeFilters;
     /**
      * The ARN of the Kinesis Firehose where to stream the data.
-     * 
      */
     private final @Nullable String firehoseArn;
     /**
      * Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
      */
     private final @Nullable List<MetricStreamFilter> includeFilters;
     /**
      * The date of the last update of the metric stream.
-     * 
      */
     private final @Nullable String lastUpdateDate;
     /**
      * The output format of the data streamed to the Kinesis Firehose.
-     * 
      */
     private final @Nullable String outputFormat;
     /**
      * The ARN of the role that provides access to the Kinesis Firehose.
-     * 
      */
     private final @Nullable String roleArn;
     /**
      * Displays the state of the Metric Stream.
-     * 
      */
     private final @Nullable String state;
 
@@ -83,63 +74,54 @@ public final class GetMetricStreamResult {
 
     /**
      * Amazon Resource Name of the metric stream.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The date of creation of the metric stream.
-     * 
     */
     public Optional<String> getCreationDate() {
         return Optional.ofNullable(this.creationDate);
     }
     /**
      * Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
     */
     public List<MetricStreamFilter> getExcludeFilters() {
         return this.excludeFilters == null ? List.of() : this.excludeFilters;
     }
     /**
      * The ARN of the Kinesis Firehose where to stream the data.
-     * 
     */
     public Optional<String> getFirehoseArn() {
         return Optional.ofNullable(this.firehoseArn);
     }
     /**
      * Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
     */
     public List<MetricStreamFilter> getIncludeFilters() {
         return this.includeFilters == null ? List.of() : this.includeFilters;
     }
     /**
      * The date of the last update of the metric stream.
-     * 
     */
     public Optional<String> getLastUpdateDate() {
         return Optional.ofNullable(this.lastUpdateDate);
     }
     /**
      * The output format of the data streamed to the Kinesis Firehose.
-     * 
     */
     public Optional<String> getOutputFormat() {
         return Optional.ofNullable(this.outputFormat);
     }
     /**
      * The ARN of the role that provides access to the Kinesis Firehose.
-     * 
     */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * Displays the state of the Metric Stream.
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);

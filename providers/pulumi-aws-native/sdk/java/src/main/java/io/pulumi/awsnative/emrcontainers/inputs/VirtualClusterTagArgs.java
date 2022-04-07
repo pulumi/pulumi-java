@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An arbitrary set of tags (key-value pairs) for this virtual cluster.
- * 
  */
 public final class VirtualClusterTagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class VirtualClusterTagArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The key name of the tag. You can specify a value that is 1 to 127 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -30,7 +28,6 @@ public final class VirtualClusterTagArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The value for the tag. You can specify a value that is 1 to 255 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

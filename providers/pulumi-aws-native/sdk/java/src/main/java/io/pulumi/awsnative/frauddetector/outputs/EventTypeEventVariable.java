@@ -20,7 +20,6 @@ public final class EventTypeEventVariable {
     private final @Nullable String arn;
     /**
      * The time when the event type was created.
-     * 
      */
     private final @Nullable String createdTime;
     private final @Nullable EventTypeEventVariableDataSource dataSource;
@@ -28,19 +27,16 @@ public final class EventTypeEventVariable {
     private final @Nullable String defaultValue;
     /**
      * The description.
-     * 
      */
     private final @Nullable String description;
     private final @Nullable Boolean inline;
     /**
      * The time when the event type was last updated.
-     * 
      */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable String name;
     /**
      * Tags associated with this event type.
-     * 
      */
     private final @Nullable List<EventTypeTag> tags;
     private final @Nullable EventTypeEventVariableVariableType variableType;
@@ -76,7 +72,6 @@ public final class EventTypeEventVariable {
     }
     /**
      * The time when the event type was created.
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
@@ -92,7 +87,6 @@ public final class EventTypeEventVariable {
     }
     /**
      * The description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
@@ -102,7 +96,6 @@ public final class EventTypeEventVariable {
     }
     /**
      * The time when the event type was last updated.
-     * 
     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
@@ -112,7 +105,6 @@ public final class EventTypeEventVariable {
     }
     /**
      * Tags associated with this event type.
-     * 
     */
     public List<EventTypeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DetectorModelOnEnter {
     /**
      * Specifies the `actions` that are performed when the state is entered and the `condition` is `TRUE`.
-     * 
      */
     private final @Nullable List<DetectorModelEvent> events;
 
@@ -24,7 +23,6 @@ public final class DetectorModelOnEnter {
 
     /**
      * Specifies the `actions` that are performed when the state is entered and the `condition` is `TRUE`.
-     * 
     */
     public List<DetectorModelEvent> getEvents() {
         return this.events == null ? List.of() : this.events;

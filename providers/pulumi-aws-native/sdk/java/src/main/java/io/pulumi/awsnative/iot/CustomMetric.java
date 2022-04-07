@@ -17,77 +17,209 @@ import javax.annotation.Nullable;
 /**
  * A custom metric published by your devices to Device Defender.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var batteryPercentageMetric = new AwsNative.IoT.CustomMetric("batteryPercentageMetric", new AwsNative.IoT.CustomMetricArgs
+ *         {
+ *             MetricName = "batteryPercentage",
+ *             DisplayName = "Remaining battery percentage",
+ *             MetricType = "number",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewCustomMetric(ctx, "batteryPercentageMetric", &iot.CustomMetricArgs{
+ * 			MetricName:  pulumi.String("batteryPercentage"),
+ * 			DisplayName: pulumi.String("Remaining battery percentage"),
+ * 			MetricType:  "number",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const batteryPercentageMetric = new aws_native.iot.CustomMetric("batteryPercentageMetric", {
+ *     metricName: "batteryPercentage",
+ *     displayName: "Remaining battery percentage",
+ *     metricType: "number",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * battery_percentage_metric = aws_native.iot.CustomMetric("batteryPercentageMetric",
+ *     metric_name="batteryPercentage",
+ *     display_name="Remaining battery percentage",
+ *     metric_type="number")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var batteryPercentageMetric = new AwsNative.IoT.CustomMetric("batteryPercentageMetric", new AwsNative.IoT.CustomMetricArgs
+ *         {
+ *             MetricName = "batteryPercentage",
+ *             DisplayName = "Remaining battery percentage",
+ *             MetricType = "number",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewCustomMetric(ctx, "batteryPercentageMetric", &iot.CustomMetricArgs{
+ * 			MetricName:  pulumi.String("batteryPercentage"),
+ * 			DisplayName: pulumi.String("Remaining battery percentage"),
+ * 			MetricType:  "number",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const batteryPercentageMetric = new aws_native.iot.CustomMetric("batteryPercentageMetric", {
+ *     metricName: "batteryPercentage",
+ *     displayName: "Remaining battery percentage",
+ *     metricType: "number",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * battery_percentage_metric = aws_native.iot.CustomMetric("batteryPercentageMetric",
+ *     metric_name="batteryPercentage",
+ *     display_name="Remaining battery percentage",
+ *     metric_type="number")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iot:CustomMetric")
 public class CustomMetric extends io.pulumi.resources.CustomResource {
     /**
      * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The Amazon Resource Number (ARN) of the custom metric.
-     * 
      */
     @Export(name="metricArn", type=String.class, parameters={})
     private Output<String> metricArn;
 
     /**
      * @return The Amazon Resource Number (ARN) of the custom metric.
-     * 
      */
     public Output<String> getMetricArn() {
         return this.metricArn;
     }
     /**
      * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't begin with aws: . Cannot be updated once defined.
-     * 
      */
     @Export(name="metricName", type=String.class, parameters={})
     private Output</* @Nullable */ String> metricName;
 
     /**
      * @return The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't begin with aws: . Cannot be updated once defined.
-     * 
      */
     public Output</* @Nullable */ String> getMetricName() {
         return this.metricName;
     }
     /**
      * The type of the custom metric. Types include string-list, ip-address-list, number-list, and number.
-     * 
      */
     @Export(name="metricType", type=CustomMetricMetricType.class, parameters={})
     private Output<CustomMetricMetricType> metricType;
 
     /**
      * @return The type of the custom metric. Types include string-list, ip-address-list, number-list, and number.
-     * 
      */
     public Output<CustomMetricMetricType> getMetricType() {
         return this.metricType;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={CustomMetricTag.class})
     private Output</* @Nullable */ List<CustomMetricTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<CustomMetricTag>> getTags() {
         return this.tags;

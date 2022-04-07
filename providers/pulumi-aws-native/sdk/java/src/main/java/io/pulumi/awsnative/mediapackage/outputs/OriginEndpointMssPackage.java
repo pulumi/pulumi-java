@@ -16,12 +16,10 @@ public final class OriginEndpointMssPackage {
     private final @Nullable OriginEndpointMssEncryption encryption;
     /**
      * The time window (in seconds) contained in each manifest.
-     * 
      */
     private final @Nullable Integer manifestWindowSeconds;
     /**
      * The duration (in seconds) of each segment.
-     * 
      */
     private final @Nullable Integer segmentDurationSeconds;
     private final @Nullable OriginEndpointStreamSelection streamSelection;
@@ -43,14 +41,12 @@ public final class OriginEndpointMssPackage {
     }
     /**
      * The time window (in seconds) contained in each manifest.
-     * 
     */
     public Optional<Integer> getManifestWindowSeconds() {
         return Optional.ofNullable(this.manifestWindowSeconds);
     }
     /**
      * The duration (in seconds) of each segment.
-     * 
     */
     public Optional<Integer> getSegmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);

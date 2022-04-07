@@ -16,7 +16,6 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
 
     /**
      * A list of lifecycle rules for individual objects in an Amazon S3Outposts bucket.
-     * 
      */
     @Import(name="rules", required=true)
       private final Output<List<BucketRuleArgs>> rules;

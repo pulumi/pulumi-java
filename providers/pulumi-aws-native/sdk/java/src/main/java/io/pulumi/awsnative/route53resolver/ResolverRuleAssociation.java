@@ -13,62 +13,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Route53Resolver::ResolverRuleAssociation
- * 
  */
 @ResourceType(type="aws-native:route53resolver:ResolverRuleAssociation")
 public class ResolverRuleAssociation extends io.pulumi.resources.CustomResource {
     /**
      * The name of an association between a Resolver rule and a VPC.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of an association between a Resolver rule and a VPC.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Primary Identifier for Resolver Rule Association
-     * 
      */
     @Export(name="resolverRuleAssociationId", type=String.class, parameters={})
     private Output<String> resolverRuleAssociationId;
 
     /**
      * @return Primary Identifier for Resolver Rule Association
-     * 
      */
     public Output<String> getResolverRuleAssociationId() {
         return this.resolverRuleAssociationId;
     }
     /**
      * The ID of the Resolver rule that you associated with the VPC that is specified by VPCId.
-     * 
      */
     @Export(name="resolverRuleId", type=String.class, parameters={})
     private Output<String> resolverRuleId;
 
     /**
      * @return The ID of the Resolver rule that you associated with the VPC that is specified by VPCId.
-     * 
      */
     public Output<String> getResolverRuleId() {
         return this.resolverRuleId;
     }
     /**
      * The ID of the VPC that you associated the Resolver rule with.
-     * 
      */
     @Export(name="vPCId", type=String.class, parameters={})
     private Output<String> vPCId;
 
     /**
      * @return The ID of the VPC that you associated the Resolver rule with.
-     * 
      */
     public Output<String> getVPCId() {
         return this.vPCId;

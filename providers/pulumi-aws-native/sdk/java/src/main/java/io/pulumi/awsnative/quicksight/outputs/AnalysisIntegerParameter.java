@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class AnalysisIntegerParameter {
     /**
      * <p>The name of the integer parameter.</p>
-     * 
      */
     private final String name;
     /**
      * <p>The values for the integer parameter.</p>
-     * 
      */
     private final List<Double> values;
 
@@ -32,14 +30,12 @@ public final class AnalysisIntegerParameter {
 
     /**
      * <p>The name of the integer parameter.</p>
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * <p>The values for the integer parameter.</p>
-     * 
     */
     public List<Double> getValues() {
         return this.values;

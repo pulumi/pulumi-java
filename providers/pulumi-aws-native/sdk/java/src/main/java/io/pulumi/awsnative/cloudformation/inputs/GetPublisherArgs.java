@@ -14,7 +14,6 @@ public final class GetPublisherArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The publisher id assigned by CloudFormation for publishing in this region.
-     * 
      */
     @Import(name="publisherId", required=true)
       private final String publisherId;

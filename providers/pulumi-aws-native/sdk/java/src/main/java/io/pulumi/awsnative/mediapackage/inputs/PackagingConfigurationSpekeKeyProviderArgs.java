@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE) service that will provide encryption keys.
- * 
  */
 public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
 
     /**
      * The system IDs to include in key requests.
-     * 
      */
     @Import(name="systemIds", required=true)
       private final Output<List<String>> systemIds;
@@ -38,7 +36,6 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
 
     /**
      * The URL of the external key provider service.
-     * 
      */
     @Import(name="url", required=true)
       private final Output<String> url;

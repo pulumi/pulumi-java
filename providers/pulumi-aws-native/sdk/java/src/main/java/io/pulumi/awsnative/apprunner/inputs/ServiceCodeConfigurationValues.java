@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Code Configuration Values
- * 
  */
 public final class ServiceCodeConfigurationValues extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
 
     /**
      * Build Command
-     * 
      */
     @Import(name="buildCommand")
       private final @Nullable String buildCommand;
@@ -34,7 +32,6 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
 
     /**
      * Port
-     * 
      */
     @Import(name="port")
       private final @Nullable String port;
@@ -45,7 +42,6 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
 
     /**
      * Runtime
-     * 
      */
     @Import(name="runtime", required=true)
       private final ServiceCodeConfigurationValuesRuntime runtime;
@@ -63,7 +59,6 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
 
     /**
      * Start Command
-     * 
      */
     @Import(name="startCommand")
       private final @Nullable String startCommand;

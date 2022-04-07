@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * When you want to forward DNS queries for specified domain name to resolvers on your network, specify FORWARD. When you have a forwarding rule to forward DNS queries for a domain to your network and you want Resolver to process queries for a subdomain of that domain, specify SYSTEM.
-     * 
      */
     @EnumType
     public enum ResolverRuleRuleType {

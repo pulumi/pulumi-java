@@ -16,14 +16,12 @@ public final class GetBotResult {
     private final @Nullable String arn;
     /**
      * Data privacy setting of the Bot.
-     * 
      */
     private final @Nullable DataPrivacyProperties dataPrivacy;
     private final @Nullable String description;
     private final @Nullable String id;
     /**
      * IdleSessionTTLInSeconds of the resource
-     * 
      */
     private final @Nullable Integer idleSessionTTLInSeconds;
     private final @Nullable String name;
@@ -52,7 +50,6 @@ public final class GetBotResult {
     }
     /**
      * Data privacy setting of the Bot.
-     * 
     */
     public Optional<DataPrivacyProperties> getDataPrivacy() {
         return Optional.ofNullable(this.dataPrivacy);
@@ -65,7 +62,6 @@ public final class GetBotResult {
     }
     /**
      * IdleSessionTTLInSeconds of the resource
-     * 
     */
     public Optional<Integer> getIdleSessionTTLInSeconds() {
         return Optional.ofNullable(this.idleSessionTTLInSeconds);

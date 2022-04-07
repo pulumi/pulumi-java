@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the custom metric. Types include string-list, ip-address-list, number-list, and number.
-     * 
      */
     @EnumType
     public enum CustomMetricMetricType {

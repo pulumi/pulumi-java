@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
-     * 
      */
     @EnumType
     public enum FlowOutputEncryptionAlgorithm {

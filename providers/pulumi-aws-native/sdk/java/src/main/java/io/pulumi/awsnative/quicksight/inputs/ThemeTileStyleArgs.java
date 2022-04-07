@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>Display options related to tiles on a sheet.</p>
- * 
  */
 public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
 

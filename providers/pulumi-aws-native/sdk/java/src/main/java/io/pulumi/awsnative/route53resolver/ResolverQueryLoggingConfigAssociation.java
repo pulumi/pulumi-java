@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
- * 
  */
 @ResourceType(type="aws-native:route53resolver:ResolverQueryLoggingConfigAssociation")
 public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.CustomResource {
     /**
      * Rfc3339TimeString
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return Rfc3339TimeString
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * ResolverQueryLogConfigAssociationError
-     * 
      */
     @Export(name="error", type=ResolverQueryLoggingConfigAssociationError.class, parameters={})
     private Output<ResolverQueryLoggingConfigAssociationError> error;
 
     /**
      * @return ResolverQueryLogConfigAssociationError
-     * 
      */
     public Output<ResolverQueryLoggingConfigAssociationError> getError() {
         return this.error;
     }
     /**
      * ResolverQueryLogConfigAssociationErrorMessage
-     * 
      */
     @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     /**
      * @return ResolverQueryLogConfigAssociationErrorMessage
-     * 
      */
     public Output<String> getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * ResolverQueryLogConfigId
-     * 
      */
     @Export(name="resolverQueryLogConfigId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resolverQueryLogConfigId;
 
     /**
      * @return ResolverQueryLogConfigId
-     * 
      */
     public Output</* @Nullable */ String> getResolverQueryLogConfigId() {
         return this.resolverQueryLogConfigId;
     }
     /**
      * ResourceId
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
      * @return ResourceId
-     * 
      */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
     /**
      * ResolverQueryLogConfigAssociationStatus
-     * 
      */
     @Export(name="status", type=ResolverQueryLoggingConfigAssociationStatus.class, parameters={})
     private Output<ResolverQueryLoggingConfigAssociationStatus> status;
 
     /**
      * @return ResolverQueryLogConfigAssociationStatus
-     * 
      */
     public Output<ResolverQueryLoggingConfigAssociationStatus> getStatus() {
         return this.status;

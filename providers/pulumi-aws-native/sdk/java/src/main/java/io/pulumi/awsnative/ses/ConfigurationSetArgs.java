@@ -16,7 +16,6 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the configuration set.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

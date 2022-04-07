@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Job Sample
- * 
  */
 public final class JobSample extends io.pulumi.resources.InvokeArgs {
 

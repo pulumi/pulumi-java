@@ -19,7 +19,224 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::OpsWorksCM::Server
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var pivotalKey = config.Require("pivotalKey");
+ *         var password = config.Require("password");
+ *         var myChefServer = new AwsNative.OpsWorksCM.Server("myChefServer", new AwsNative.OpsWorksCM.ServerArgs
+ *         {
+ *             BackupRetentionCount = 12,
+ *             CustomCertificate = "-----BEGIN CERTIFICATE----- EXAMPLEqEXAMPLE== -----END CERTIFICATE-----",
+ *             CustomDomain = "https://aws.my-company.com",
+ *             CustomPrivateKey = "-----BEGIN RSA PRIVATE KEY----- EXAMPLEqEXAMPLE= -----END RSA PRIVATE KEY-----",
+ *             DisableAutomatedBackup = false,
+ *             Engine = "ChefAutomate",
+ *             EngineVersion = "2",
+ *             EngineAttributes = 
+ *             {
+ *                 new AwsNative.OpsWorksCM.Inputs.ServerEngineAttributeArgs
+ *                 {
+ *                     Name = "CHEF_AUTOMATE_PIVOTAL_KEY",
+ *                     Value = pivotalKey,
+ *                 },
+ *                 new AwsNative.OpsWorksCM.Inputs.ServerEngineAttributeArgs
+ *                 {
+ *                     Name = "CHEF_AUTOMATE_ADMIN_PASSWORD",
+ *                     Value = password,
+ *                 },
+ *             },
+ *             EngineModel = "Single",
+ *             InstanceProfileArn = "INSTANCE-PROFILE-ARN",
+ *             InstanceType = "r5.xlarge",
+ *             PreferredBackupWindow = "08:00",
+ *             PreferredMaintenanceWindow = "Fri:08:00",
+ *             ServiceRoleArn = "SERVICE-ROLE-ARN",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.OpsWorksCM.Inputs.ServerTagArgs
+ *                 {
+ *                     Key = "Stage",
+ *                     Value = "Production",
+ *                 },
+ *                 new AwsNative.OpsWorksCM.Inputs.ServerTagArgs
+ *                 {
+ *                     Key = "Name",
+ *                     Value = "test-owcm-server",
+ *                 },
+ *             },
+ *         });
+ *         this.Endpoint = myChefServer.Endpoint;
+ *     }
+ * 
+ *     [Output("endpoint")]
+ *     public Output<string> Endpoint { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/opsworkscm"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		pivotalKey := cfg.Require("pivotalKey")
+ * 		password := cfg.Require("password")
+ * 		myChefServer, err := opsworkscm.NewServer(ctx, "myChefServer", &opsworkscm.ServerArgs{
+ * 			BackupRetentionCount:   pulumi.Int(12),
+ * 			CustomCertificate:      pulumi.String("-----BEGIN CERTIFICATE----- EXAMPLEqEXAMPLE== -----END CERTIFICATE-----"),
+ * 			CustomDomain:           pulumi.String("https://aws.my-company.com"),
+ * 			CustomPrivateKey:       pulumi.String("-----BEGIN RSA PRIVATE KEY----- EXAMPLEqEXAMPLE= -----END RSA PRIVATE KEY-----"),
+ * 			DisableAutomatedBackup: pulumi.Bool(false),
+ * 			Engine:                 pulumi.String("ChefAutomate"),
+ * 			EngineVersion:          pulumi.String("2"),
+ * 			EngineAttributes: []opsworkscm.ServerEngineAttributeArgs{
+ * 				&opsworkscm.ServerEngineAttributeArgs{
+ * 					Name:  pulumi.String("CHEF_AUTOMATE_PIVOTAL_KEY"),
+ * 					Value: pulumi.String(pivotalKey),
+ * 				},
+ * 				&opsworkscm.ServerEngineAttributeArgs{
+ * 					Name:  pulumi.String("CHEF_AUTOMATE_ADMIN_PASSWORD"),
+ * 					Value: pulumi.String(password),
+ * 				},
+ * 			},
+ * 			EngineModel:                pulumi.String("Single"),
+ * 			InstanceProfileArn:         pulumi.String("INSTANCE-PROFILE-ARN"),
+ * 			InstanceType:               pulumi.String("r5.xlarge"),
+ * 			PreferredBackupWindow:      pulumi.String("08:00"),
+ * 			PreferredMaintenanceWindow: pulumi.String("Fri:08:00"),
+ * 			ServiceRoleArn:             pulumi.String("SERVICE-ROLE-ARN"),
+ * 			Tags: []opsworkscm.ServerTagArgs{
+ * 				&opsworkscm.ServerTagArgs{
+ * 					Key:   pulumi.String("Stage"),
+ * 					Value: pulumi.String("Production"),
+ * 				},
+ * 				&opsworkscm.ServerTagArgs{
+ * 					Key:   pulumi.String("Name"),
+ * 					Value: pulumi.String("test-owcm-server"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("endpoint", myChefServer.Endpoint)
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const pivotalKey = config.require("pivotalKey");
+ * const password = config.require("password");
+ * const myChefServer = new aws_native.opsworkscm.Server("myChefServer", {
+ *     backupRetentionCount: "12",
+ *     customCertificate: "-----BEGIN CERTIFICATE----- EXAMPLEqEXAMPLE== -----END CERTIFICATE-----",
+ *     customDomain: "https://aws.my-company.com",
+ *     customPrivateKey: "-----BEGIN RSA PRIVATE KEY----- EXAMPLEqEXAMPLE= -----END RSA PRIVATE KEY-----",
+ *     disableAutomatedBackup: false,
+ *     engine: "ChefAutomate",
+ *     engineVersion: "2",
+ *     engineAttributes: [
+ *         {
+ *             name: "CHEF_AUTOMATE_PIVOTAL_KEY",
+ *             value: pivotalKey,
+ *         },
+ *         {
+ *             name: "CHEF_AUTOMATE_ADMIN_PASSWORD",
+ *             value: password,
+ *         },
+ *     ],
+ *     engineModel: "Single",
+ *     instanceProfileArn: "INSTANCE-PROFILE-ARN",
+ *     instanceType: "r5.xlarge",
+ *     preferredBackupWindow: "08:00",
+ *     preferredMaintenanceWindow: "Fri:08:00",
+ *     serviceRoleArn: "SERVICE-ROLE-ARN",
+ *     tags: [
+ *         {
+ *             key: "Stage",
+ *             value: "Production",
+ *         },
+ *         {
+ *             key: "Name",
+ *             value: "test-owcm-server",
+ *         },
+ *     ],
+ * });
+ * export const endpoint = myChefServer.endpoint;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * pivotal_key = config.require("pivotalKey")
+ * password = config.require("password")
+ * my_chef_server = aws_native.opsworkscm.Server("myChefServer",
+ *     backup_retention_count=12,
+ *     custom_certificate="-----BEGIN CERTIFICATE----- EXAMPLEqEXAMPLE== -----END CERTIFICATE-----",
+ *     custom_domain="https://aws.my-company.com",
+ *     custom_private_key="-----BEGIN RSA PRIVATE KEY----- EXAMPLEqEXAMPLE= -----END RSA PRIVATE KEY-----",
+ *     disable_automated_backup=False,
+ *     engine="ChefAutomate",
+ *     engine_version="2",
+ *     engine_attributes=[
+ *         aws_native.opsworkscm.ServerEngineAttributeArgs(
+ *             name="CHEF_AUTOMATE_PIVOTAL_KEY",
+ *             value=pivotal_key,
+ *         ),
+ *         aws_native.opsworkscm.ServerEngineAttributeArgs(
+ *             name="CHEF_AUTOMATE_ADMIN_PASSWORD",
+ *             value=password,
+ *         ),
+ *     ],
+ *     engine_model="Single",
+ *     instance_profile_arn="INSTANCE-PROFILE-ARN",
+ *     instance_type="r5.xlarge",
+ *     preferred_backup_window="08:00",
+ *     preferred_maintenance_window="Fri:08:00",
+ *     service_role_arn="SERVICE-ROLE-ARN",
+ *     tags=[
+ *         aws_native.opsworkscm.ServerTagArgs(
+ *             key="Stage",
+ *             value="Production",
+ *         ),
+ *         aws_native.opsworkscm.ServerTagArgs(
+ *             key="Name",
+ *             value="test-owcm-server",
+ *         ),
+ *     ])
+ * pulumi.export("endpoint", my_chef_server.endpoint)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:opsworkscm:Server")

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters of the first Superuser for the FinSpace Environment
- * 
  */
 public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
 
     /**
      * Email address
-     * 
      */
     @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
@@ -31,7 +29,6 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
 
     /**
      * First name
-     * 
      */
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
@@ -42,7 +39,6 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
 
     /**
      * Last name
-     * 
      */
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;

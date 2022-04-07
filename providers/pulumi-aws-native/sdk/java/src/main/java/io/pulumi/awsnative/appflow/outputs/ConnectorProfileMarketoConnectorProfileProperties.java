@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectorProfileMarketoConnectorProfileProperties {
     /**
      * The location of the Marketo resource
-     * 
      */
     private final String instanceUrl;
 
@@ -22,7 +21,6 @@ public final class ConnectorProfileMarketoConnectorProfileProperties {
 
     /**
      * The location of the Marketo resource
-     * 
     */
     public String getInstanceUrl() {
         return this.instanceUrl;

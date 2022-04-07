@@ -17,7 +17,6 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
 
     /**
      * The credentials used to access protected resources.
-     * 
      */
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
@@ -28,7 +27,6 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
 
     /**
      * The identiﬁer for the desired client.
-     * 
      */
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
@@ -39,7 +37,6 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
 
     /**
      * The client secret used by the oauth client to authenticate to the authorization server.
-     * 
      */
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
@@ -50,7 +47,6 @@ public final class ConnectorProfileMarketoConnectorProfileCredentialsArgs extend
 
     /**
      * The oauth needed to request security tokens from the connector endpoint.
-     * 
      */
     @Import(name="connectorOAuthRequest")
       private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
-     * 
      */
     @EnumType
     public enum DBProxyEndpointTargetRole {

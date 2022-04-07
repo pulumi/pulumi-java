@@ -16,32 +16,26 @@ import javax.annotation.Nullable;
 public final class DistributionConfigurationDistributionAmiDistributionConfigurationProperties {
     /**
      * The tags to apply to AMIs distributed to this Region.
-     * 
      */
     private final @Nullable Object amiTags;
     /**
      * The description of the AMI distribution configuration.
-     * 
      */
     private final @Nullable String description;
     /**
      * The KMS key identifier used to encrypt the distributed image.
-     * 
      */
     private final @Nullable String kmsKeyId;
     /**
      * Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.
-     * 
      */
     private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration;
     /**
      * The name of the AMI distribution configuration.
-     * 
      */
     private final @Nullable String name;
     /**
      * The ID of accounts to which you want to distribute an image.
-     * 
      */
     private final @Nullable List<String> targetAccountIds;
 
@@ -63,42 +57,36 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
 
     /**
      * The tags to apply to AMIs distributed to this Region.
-     * 
     */
     public Optional<Object> getAmiTags() {
         return Optional.ofNullable(this.amiTags);
     }
     /**
      * The description of the AMI distribution configuration.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The KMS key identifier used to encrypt the distributed image.
-     * 
     */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.
-     * 
     */
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties> getLaunchPermissionConfiguration() {
         return Optional.ofNullable(this.launchPermissionConfiguration);
     }
     /**
      * The name of the AMI distribution configuration.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The ID of accounts to which you want to distribute an image.
-     * 
     */
     public List<String> getTargetAccountIds() {
         return this.targetAccountIds == null ? List.of() : this.targetAccountIds;

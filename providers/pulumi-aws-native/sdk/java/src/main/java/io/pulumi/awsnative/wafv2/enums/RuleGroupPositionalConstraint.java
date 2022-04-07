@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Position of the evaluation in the FieldToMatch of request.
-     * 
      */
     @EnumType
     public enum RuleGroupPositionalConstraint {

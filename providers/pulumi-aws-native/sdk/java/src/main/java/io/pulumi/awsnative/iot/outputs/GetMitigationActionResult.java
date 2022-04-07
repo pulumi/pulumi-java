@@ -20,7 +20,6 @@ public final class GetMitigationActionResult {
     private final @Nullable String roleArn;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<MitigationActionTag> tags;
 
@@ -52,7 +51,6 @@ public final class GetMitigationActionResult {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<MitigationActionTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectorProfileInforNexusConnectorProfileProperties {
     /**
      * The location of the InforNexus resource
-     * 
      */
     private final String instanceUrl;
 
@@ -22,7 +21,6 @@ public final class ConnectorProfileInforNexusConnectorProfileProperties {
 
     /**
      * The location of the InforNexus resource
-     * 
     */
     public String getInstanceUrl() {
         return this.instanceUrl;

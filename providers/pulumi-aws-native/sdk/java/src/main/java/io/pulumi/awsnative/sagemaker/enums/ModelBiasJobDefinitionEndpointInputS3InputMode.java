@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
-     * 
      */
     @EnumType
     public enum ModelBiasJobDefinitionEndpointInputS3InputMode {

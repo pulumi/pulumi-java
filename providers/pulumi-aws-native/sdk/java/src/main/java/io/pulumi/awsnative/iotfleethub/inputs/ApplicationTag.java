@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * To add or update tag, provide both key and value. To delete tag, provide only tag key to be deleted.
- * 
  */
 public final class ApplicationTag extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApplicationTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class ApplicationTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value for the tag. You can specify a value that is 1 to 256 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

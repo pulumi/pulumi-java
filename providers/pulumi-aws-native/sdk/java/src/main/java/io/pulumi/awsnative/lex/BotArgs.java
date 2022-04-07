@@ -23,7 +23,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether to build the bot locales after bot creation completes.
-     * 
      */
     @Import(name="autoBuildBotLocales")
       private final @Nullable Output<Boolean> autoBuildBotLocales;
@@ -41,7 +40,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of bot locales
-     * 
      */
     @Import(name="botLocales")
       private final @Nullable Output<List<BotLocaleArgs>> botLocales;
@@ -52,7 +50,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of tags to add to the bot, which can only be added at bot creation.
-     * 
      */
     @Import(name="botTags")
       private final @Nullable Output<List<BotTagArgs>> botTags;
@@ -63,7 +60,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data privacy setting of the Bot.
-     * 
      */
     @Import(name="dataPrivacy", required=true)
       private final Output<DataPrivacyPropertiesArgs> dataPrivacy;
@@ -81,7 +77,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IdleSessionTTLInSeconds of the resource
-     * 
      */
     @Import(name="idleSessionTTLInSeconds", required=true)
       private final Output<Integer> idleSessionTTLInSeconds;
@@ -106,7 +101,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of tags to add to the test alias for a bot, , which can only be added at bot/bot alias creation.
-     * 
      */
     @Import(name="testBotAliasTags")
       private final @Nullable Output<List<BotTagArgs>> testBotAliasTags;

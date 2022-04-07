@@ -15,7 +15,6 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
 
     /**
      * The ID of the gateway.
-     * 
      */
     @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
@@ -26,7 +25,6 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
 
     /**
      * The ID of the route table.
-     * 
      */
     @Import(name="routeTableId", required=true)
       private final Output<String> routeTableId;

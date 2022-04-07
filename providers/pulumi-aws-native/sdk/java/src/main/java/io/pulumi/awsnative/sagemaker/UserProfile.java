@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SageMaker::UserProfile
- * 
  */
 @ResourceType(type="aws-native:sagemaker:UserProfile")
 public class UserProfile extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the associated Domain.
-     * 
      */
     @Export(name="domainId", type=String.class, parameters={})
     private Output<String> domainId;
 
     /**
      * @return The ID of the associated Domain.
-     * 
      */
     public Output<String> getDomainId() {
         return this.domainId;
     }
     /**
      * A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is "UserName". If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-     * 
      */
     @Export(name="singleSignOnUserIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> singleSignOnUserIdentifier;
 
     /**
      * @return A specifier for the type of value specified in SingleSignOnUserValue. Currently, the only supported value is "UserName". If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-     * 
      */
     public Output</* @Nullable */ String> getSingleSignOnUserIdentifier() {
         return this.singleSignOnUserIdentifier;
     }
     /**
      * The username of the associated AWS Single Sign-On User for this UserProfile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-     * 
      */
     @Export(name="singleSignOnUserValue", type=String.class, parameters={})
     private Output</* @Nullable */ String> singleSignOnUserValue;
 
     /**
      * @return The username of the associated AWS Single Sign-On User for this UserProfile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-     * 
      */
     public Output</* @Nullable */ String> getSingleSignOnUserValue() {
         return this.singleSignOnUserValue;
     }
     /**
      * A list of tags to apply to the user profile.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={UserProfileTag.class})
     private Output</* @Nullable */ List<UserProfileTag>> tags;
 
     /**
      * @return A list of tags to apply to the user profile.
-     * 
      */
     public Output</* @Nullable */ List<UserProfileTag>> getTags() {
         return this.tags;
     }
     /**
      * The user profile Amazon Resource Name (ARN).
-     * 
      */
     @Export(name="userProfileArn", type=String.class, parameters={})
     private Output<String> userProfileArn;
 
     /**
      * @return The user profile Amazon Resource Name (ARN).
-     * 
      */
     public Output<String> getUserProfileArn() {
         return this.userProfileArn;
     }
     /**
      * A name for the UserProfile.
-     * 
      */
     @Export(name="userProfileName", type=String.class, parameters={})
     private Output<String> userProfileName;
 
     /**
      * @return A name for the UserProfile.
-     * 
      */
     public Output<String> getUserProfileName() {
         return this.userProfileName;
     }
     /**
      * A collection of settings.
-     * 
      */
     @Export(name="userSettings", type=UserProfileUserSettings.class, parameters={})
     private Output</* @Nullable */ UserProfileUserSettings> userSettings;
 
     /**
      * @return A collection of settings.
-     * 
      */
     public Output</* @Nullable */ UserProfileUserSettings> getUserSettings() {
         return this.userSettings;

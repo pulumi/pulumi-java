@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Size Constraint statement.
- * 
  */
 public final class WebACLSizeConstraintStatementArgs extends io.pulumi.resources.ResourceArgs {
 

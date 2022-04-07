@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of encryption in transit to the Kafka cluster.
-     * 
      */
     @EnumType
     public enum ConnectorKafkaClusterEncryptionInTransitType {

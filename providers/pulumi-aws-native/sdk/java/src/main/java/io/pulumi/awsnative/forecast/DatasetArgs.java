@@ -22,7 +22,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
-     * 
      */
     @Import(name="dataFrequency")
       private final @Nullable Output<String> dataFrequency;
@@ -33,7 +32,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name for the dataset
-     * 
      */
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
@@ -44,7 +42,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The dataset type
-     * 
      */
     @Import(name="datasetType", required=true)
       private final Output<DatasetType> datasetType;
@@ -55,7 +52,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The domain associated with the dataset
-     * 
      */
     @Import(name="domain", required=true)
       private final Output<DatasetDomain> domain;

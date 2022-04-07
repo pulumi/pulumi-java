@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * An array of objects representing the details of a replication destination.
- * 
  */
 public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
 
     /**
      * An array of objects representing the details of a replication destination.
-     * 
      */
     @Import(name="destinations", required=true)
       private final Output<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
@@ -33,7 +31,6 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
 
     /**
      * An array of objects representing the details of a repository filter.
-     * 
      */
     @Import(name="repositoryFilters")
       private final @Nullable Output<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class AnalysisDateTimeParameter {
     /**
      * <p>A display name for the date-time parameter.</p>
-     * 
      */
     private final String name;
     /**
      * <p>The values for the date-time parameter.</p>
-     * 
      */
     private final List<String> values;
 
@@ -31,14 +29,12 @@ public final class AnalysisDateTimeParameter {
 
     /**
      * <p>A display name for the date-time parameter.</p>
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * <p>The values for the date-time parameter.</p>
-     * 
     */
     public List<String> getValues() {
         return this.values;

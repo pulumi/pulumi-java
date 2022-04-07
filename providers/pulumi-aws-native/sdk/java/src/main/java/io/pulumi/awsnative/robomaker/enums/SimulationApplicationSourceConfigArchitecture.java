@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The target processor architecture for the application.
-     * 
      */
     @EnumType
     public enum SimulationApplicationSourceConfigArchitecture {

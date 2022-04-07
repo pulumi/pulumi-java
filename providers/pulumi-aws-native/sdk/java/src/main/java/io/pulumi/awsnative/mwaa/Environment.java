@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::MWAA::Environment
- * 
  */
 @ResourceType(type="aws-native:mwaa:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
@@ -28,11 +27,10 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * 
      *     [core]
      *     dags_folder={AIRFLOW_HOME}/dags
-     *     
-     *     Would be represented as
-     *     
-     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      * 
+     *     Would be represented as
+     * 
+     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      */
     @Export(name="airflowConfigurationOptions", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> airflowConfigurationOptions;
@@ -43,11 +41,10 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * 
      *     [core]
      *     dags_folder={AIRFLOW_HOME}/dags
-     *     
-     *     Would be represented as
-     *     
-     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      * 
+     *     Would be represented as
+     * 
+     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      */
     public Output</* @Nullable */ Object> getAirflowConfigurationOptions() {
         return this.airflowConfigurationOptions;
@@ -156,14 +153,12 @@ public class Environment extends io.pulumi.resources.CustomResource {
     }
     /**
      * A map of tags for the environment.
-     * 
      */
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
      * @return A map of tags for the environment.
-     * 
      */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;

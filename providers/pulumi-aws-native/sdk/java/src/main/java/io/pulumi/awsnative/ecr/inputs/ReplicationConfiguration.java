@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An object representing the replication configuration for a registry.
- * 
  */
 public final class ReplicationConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ReplicationConfiguration extends io.pulumi.resources.InvokeAr
 
     /**
      * An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
-     * 
      */
     @Import(name="rules", required=true)
       private final List<ReplicationConfigurationReplicationRule> rules;

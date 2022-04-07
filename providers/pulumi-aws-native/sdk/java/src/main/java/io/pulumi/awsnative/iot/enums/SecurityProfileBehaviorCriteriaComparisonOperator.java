@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
-     * 
      */
     @EnumType
     public enum SecurityProfileBehaviorCriteriaComparisonOperator {

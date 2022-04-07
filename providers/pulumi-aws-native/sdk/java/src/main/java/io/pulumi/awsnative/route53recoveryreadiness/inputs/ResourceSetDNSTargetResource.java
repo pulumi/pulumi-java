@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A component for DNS/routing control readiness checks.
- * 
  */
 public final class ResourceSetDNSTargetResource extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
 
     /**
      * The domain name that acts as an ingress point to a portion of the customer application.
-     * 
      */
     @Import(name="domainName")
       private final @Nullable String domainName;
@@ -32,7 +30,6 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
 
     /**
      * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
-     * 
      */
     @Import(name="hostedZoneArn")
       private final @Nullable String hostedZoneArn;
@@ -43,7 +40,6 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
 
     /**
      * The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
-     * 
      */
     @Import(name="recordSetId")
       private final @Nullable String recordSetId;
@@ -54,7 +50,6 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
 
     /**
      * The type of DNS record of the target resource.
-     * 
      */
     @Import(name="recordType")
       private final @Nullable String recordType;

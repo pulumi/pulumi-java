@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Identifies the resources to deploy for a monitoring job.
- * 
  */
 public final class MonitoringScheduleMonitoringResourcesArgs extends io.pulumi.resources.ResourceArgs {
 

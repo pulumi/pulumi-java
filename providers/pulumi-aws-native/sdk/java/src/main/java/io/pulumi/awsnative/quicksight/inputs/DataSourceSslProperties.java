@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 /**
  * <p>Secure Socket Layer (SSL) properties that apply when QuickSight connects to your
  *             underlying data source.</p>
- * 
  */
 public final class DataSourceSslProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DataSourceSslProperties extends io.pulumi.resources.InvokeArg
 
     /**
      * <p>A Boolean option to control whether SSL should be disabled.</p>
-     * 
      */
     @Import(name="disableSsl")
       private final @Nullable Boolean disableSsl;

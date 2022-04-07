@@ -16,7 +16,6 @@ public final class LaunchMetricDefinitionObjectArgs extends io.pulumi.resources.
 
     /**
      * The JSON path to reference the entity id in the event.
-     * 
      */
     @Import(name="entityIdKey", required=true)
       private final Output<String> entityIdKey;
@@ -27,7 +26,6 @@ public final class LaunchMetricDefinitionObjectArgs extends io.pulumi.resources.
 
     /**
      * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
-     * 
      */
     @Import(name="eventPattern", required=true)
       private final Output<String> eventPattern;
@@ -52,7 +50,6 @@ public final class LaunchMetricDefinitionObjectArgs extends io.pulumi.resources.
 
     /**
      * The JSON path to reference the numerical metric value in the event.
-     * 
      */
     @Import(name="valueKey", required=true)
       private final Output<String> valueKey;

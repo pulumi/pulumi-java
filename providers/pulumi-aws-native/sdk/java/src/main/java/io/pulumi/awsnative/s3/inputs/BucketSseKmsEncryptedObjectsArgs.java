@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A container for filter information for the selection of S3 objects encrypted with AWS KMS.
- * 
  */
 public final class BucketSseKmsEncryptedObjectsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BucketSseKmsEncryptedObjectsArgs extends io.pulumi.resources.
 
     /**
      * Specifies whether Amazon S3 replicates objects created with server-side encryption using a customer master key (CMK) stored in AWS Key Management Service.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<BucketSseKmsEncryptedObjectsStatus> status;

@@ -14,7 +14,6 @@ public final class GetIntegrationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The unique name of the domain.
-     * 
      */
     @Import(name="domainName", required=true)
       private final String domainName;
@@ -25,7 +24,6 @@ public final class GetIntegrationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URI of the S3 bucket or any other type of data source.
-     * 
      */
     @Import(name="uri", required=true)
       private final String uri;

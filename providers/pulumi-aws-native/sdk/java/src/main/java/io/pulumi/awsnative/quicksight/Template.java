@@ -18,20 +18,17 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the AWS::QuickSight::Template Resource Type.
- * 
  */
 @ResourceType(type="aws-native:quicksight:Template")
 public class Template extends io.pulumi.resources.CustomResource {
     /**
      * <p>The Amazon Resource Name (ARN) of the template.</p>
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return <p>The Amazon Resource Name (ARN) of the template.</p>
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -44,56 +41,48 @@ public class Template extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>Time when this was created.</p>
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return <p>Time when this was created.</p>
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * <p>Time when this was last updated.</p>
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return <p>Time when this was last updated.</p>
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * <p>A display name for the template.</p>
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return <p>A display name for the template.</p>
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * <p>A list of resource permissions to be set on the template. </p>
-     * 
      */
     @Export(name="permissions", type=List.class, parameters={TemplateResourcePermission.class})
     private Output</* @Nullable */ List<TemplateResourcePermission>> permissions;
 
     /**
      * @return <p>A list of resource permissions to be set on the template. </p>
-     * 
      */
     public Output</* @Nullable */ List<TemplateResourcePermission>> getPermissions() {
         return this.permissions;
@@ -106,14 +95,12 @@ public class Template extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
-     * 
      */
     @Export(name="tags", type=List.class, parameters={TemplateTag.class})
     private Output</* @Nullable */ List<TemplateTag>> tags;
 
     /**
      * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
-     * 
      */
     public Output</* @Nullable */ List<TemplateTag>> getTags() {
         return this.tags;
@@ -135,7 +122,6 @@ public class Template extends io.pulumi.resources.CustomResource {
      * 			first version of the template. Every time <code>UpdateTemplate</code> is called, a new
      * 			version is created. Each version of the template maintains a description of the version
      * 			in the <code>VersionDescription</code> field.</p>
-     * 
      */
     @Export(name="versionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionDescription;
@@ -145,7 +131,6 @@ public class Template extends io.pulumi.resources.CustomResource {
      * 			first version of the template. Every time <code>UpdateTemplate</code> is called, a new
      * 			version is created. Each version of the template maintains a description of the version
      * 			in the <code>VersionDescription</code> field.</p>
-     * 
      */
     public Output</* @Nullable */ String> getVersionDescription() {
         return this.versionDescription;

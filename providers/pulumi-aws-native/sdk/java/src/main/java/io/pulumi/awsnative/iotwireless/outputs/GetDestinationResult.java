@@ -16,32 +16,26 @@ import javax.annotation.Nullable;
 public final class GetDestinationResult {
     /**
      * Destination arn. Returned after successful create.
-     * 
      */
     private final @Nullable String arn;
     /**
      * Destination description
-     * 
      */
     private final @Nullable String description;
     /**
      * Destination expression
-     * 
      */
     private final @Nullable String expression;
     /**
      * Must be RuleName
-     * 
      */
     private final @Nullable DestinationExpressionType expressionType;
     /**
      * AWS role ARN that grants access
-     * 
      */
     private final @Nullable String roleArn;
     /**
      * A list of key-value pairs that contain metadata for the destination.
-     * 
      */
     private final @Nullable List<DestinationTag> tags;
 
@@ -63,42 +57,36 @@ public final class GetDestinationResult {
 
     /**
      * Destination arn. Returned after successful create.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Destination description
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Destination expression
-     * 
     */
     public Optional<String> getExpression() {
         return Optional.ofNullable(this.expression);
     }
     /**
      * Must be RuleName
-     * 
     */
     public Optional<DestinationExpressionType> getExpressionType() {
         return Optional.ofNullable(this.expressionType);
     }
     /**
      * AWS role ARN that grants access
-     * 
     */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * A list of key-value pairs that contain metadata for the destination.
-     * 
     */
     public List<DestinationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

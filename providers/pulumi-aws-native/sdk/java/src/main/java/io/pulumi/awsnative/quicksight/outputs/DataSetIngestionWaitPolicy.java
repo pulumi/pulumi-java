@@ -15,13 +15,11 @@ public final class DataSetIngestionWaitPolicy {
     /**
      * <p>The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
      *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.</p>
-     * 
      */
     private final @Nullable Double ingestionWaitTimeInHours;
     /**
      * <p>Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
      *   Applicable only when DataSetImportMode mode is set to SPICE.</p>
-     * 
      */
     private final @Nullable Boolean waitForSpiceIngestion;
 
@@ -36,7 +34,6 @@ public final class DataSetIngestionWaitPolicy {
     /**
      * <p>The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
      *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.</p>
-     * 
     */
     public Optional<Double> getIngestionWaitTimeInHours() {
         return Optional.ofNullable(this.ingestionWaitTimeInHours);
@@ -44,7 +41,6 @@ public final class DataSetIngestionWaitPolicy {
     /**
      * <p>Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
      *   Applicable only when DataSetImportMode mode is set to SPICE.</p>
-     * 
     */
     public Optional<Boolean> getWaitForSpiceIngestion() {
         return Optional.ofNullable(this.waitForSpiceIngestion);

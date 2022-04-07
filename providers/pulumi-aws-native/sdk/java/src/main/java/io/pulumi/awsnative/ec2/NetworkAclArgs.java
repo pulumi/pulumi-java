@@ -18,7 +18,6 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags to assign to the network ACL.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<NetworkAclTagArgs>> tags;
@@ -29,7 +28,6 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the VPC.
-     * 
      */
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;

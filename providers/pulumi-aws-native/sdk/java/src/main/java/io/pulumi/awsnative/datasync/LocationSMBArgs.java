@@ -19,7 +19,6 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
-     * 
      */
     @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
@@ -30,7 +29,6 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Windows domain that the SMB server belongs to.
-     * 
      */
     @Import(name="domain")
       private final @Nullable Output<String> domain;
@@ -48,7 +46,6 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The password of the user who can mount the share and has the permissions to access files and folders in the SMB share.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -59,7 +56,6 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the SMB server. This value is the IP address or Domain Name Service (DNS) name of the SMB server.
-     * 
      */
     @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
@@ -70,7 +66,6 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subdirectory in the SMB file system that is used to read data from the SMB source location or write data to the SMB destination
-     * 
      */
     @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
@@ -81,7 +76,6 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<LocationSMBTagArgs>> tags;
@@ -92,7 +86,6 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user who can mount the share, has the permissions to access files and folders in the SMB share.
-     * 
      */
     @Import(name="user", required=true)
       private final Output<String> user;

@@ -17,7 +17,6 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The Amazon Resource Number (ARN) of the extension.
-     * 
      */
     @Import(name="arn")
       private final @Nullable Output<String> arn;
@@ -28,7 +27,6 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A url to the S3 bucket where logs for the testType run will be available
-     * 
      */
     @Import(name="logDeliveryBucket")
       private final @Nullable Output<String> logDeliveryBucket;
@@ -39,7 +37,6 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The version number of a public third-party extension
-     * 
      */
     @Import(name="publicVersionNumber")
       private final @Nullable Output<String> publicVersionNumber;
@@ -50,7 +47,6 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The kind of extension
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<PublicTypeVersionType> type;
@@ -63,7 +59,6 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;

@@ -16,90 +16,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Connect::QuickConnect
- * 
  */
 @ResourceType(type="aws-native:connect:QuickConnect")
 public class QuickConnect extends io.pulumi.resources.CustomResource {
     /**
      * The description of the quick connect.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the quick connect.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The identifier of the Amazon Connect instance.
-     * 
      */
     @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
      * @return The identifier of the Amazon Connect instance.
-     * 
      */
     public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
     /**
      * The name of the quick connect.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the quick connect.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Amazon Resource Name (ARN) for the quick connect.
-     * 
      */
     @Export(name="quickConnectArn", type=String.class, parameters={})
     private Output<String> quickConnectArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the quick connect.
-     * 
      */
     public Output<String> getQuickConnectArn() {
         return this.quickConnectArn;
     }
     /**
      * Configuration settings for the quick connect.
-     * 
      */
     @Export(name="quickConnectConfig", type=QuickConnectConfig.class, parameters={})
     private Output<QuickConnectConfig> quickConnectConfig;
 
     /**
      * @return Configuration settings for the quick connect.
-     * 
      */
     public Output<QuickConnectConfig> getQuickConnectConfig() {
         return this.quickConnectConfig;
     }
     /**
      * One or more tags.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={QuickConnectTag.class})
     private Output</* @Nullable */ List<QuickConnectTag>> tags;
 
     /**
      * @return One or more tags.
-     * 
      */
     public Output</* @Nullable */ List<QuickConnectTag>> getTags() {
         return this.tags;

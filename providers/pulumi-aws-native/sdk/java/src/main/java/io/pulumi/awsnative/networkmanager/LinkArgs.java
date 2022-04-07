@@ -19,7 +19,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Bandwidth for the link.
-     * 
      */
     @Import(name="bandwidth", required=true)
       private final Output<LinkBandwidthArgs> bandwidth;
@@ -30,7 +29,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the link.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the global network.
-     * 
      */
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
@@ -52,7 +49,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The provider of the link.
-     * 
      */
     @Import(name="provider")
       private final @Nullable Output<String> provider;
@@ -63,7 +59,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the site
-     * 
      */
     @Import(name="siteId", required=true)
       private final Output<String> siteId;
@@ -74,7 +69,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags for the link.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<LinkTagArgs>> tags;
@@ -85,7 +79,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the link.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

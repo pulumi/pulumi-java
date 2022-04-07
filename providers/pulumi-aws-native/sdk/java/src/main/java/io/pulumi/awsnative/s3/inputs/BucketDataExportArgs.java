@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Specifies how data related to the storage class analysis for an Amazon S3 bucket should be exported.
- * 
  */
 public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The version of the output schema to use when exporting data.
-     * 
      */
     @Import(name="outputSchemaVersion", required=true)
       private final Output<String> outputSchemaVersion;

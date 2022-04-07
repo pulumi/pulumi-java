@@ -14,7 +14,6 @@ public final class GetNamedQueryArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The unique ID of the query.
-     * 
      */
     @Import(name="namedQueryId", required=true)
       private final String namedQueryId;

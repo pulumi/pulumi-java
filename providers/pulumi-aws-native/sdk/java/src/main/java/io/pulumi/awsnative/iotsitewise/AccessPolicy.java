@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::IoTSiteWise::AccessPolicy
- * 
  */
 @ResourceType(type="aws-native:iotsitewise:AccessPolicy")
 public class AccessPolicy extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the access policy.
-     * 
      */
     @Export(name="accessPolicyArn", type=String.class, parameters={})
     private Output<String> accessPolicyArn;
 
     /**
      * @return The ARN of the access policy.
-     * 
      */
     public Output<String> getAccessPolicyArn() {
         return this.accessPolicyArn;
     }
     /**
      * The ID of the access policy.
-     * 
      */
     @Export(name="accessPolicyId", type=String.class, parameters={})
     private Output<String> accessPolicyId;
 
     /**
      * @return The ID of the access policy.
-     * 
      */
     public Output<String> getAccessPolicyId() {
         return this.accessPolicyId;
     }
     /**
      * The identity for this access policy. Choose either a user or a group but not both.
-     * 
      */
     @Export(name="accessPolicyIdentity", type=AccessPolicyIdentity.class, parameters={})
     private Output<AccessPolicyIdentity> accessPolicyIdentity;
 
     /**
      * @return The identity for this access policy. Choose either a user or a group but not both.
-     * 
      */
     public Output<AccessPolicyIdentity> getAccessPolicyIdentity() {
         return this.accessPolicyIdentity;
     }
     /**
      * The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
-     * 
      */
     @Export(name="accessPolicyPermission", type=String.class, parameters={})
     private Output<String> accessPolicyPermission;
 
     /**
      * @return The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
-     * 
      */
     public Output<String> getAccessPolicyPermission() {
         return this.accessPolicyPermission;
     }
     /**
      * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
-     * 
      */
     @Export(name="accessPolicyResource", type=AccessPolicyResource.class, parameters={})
     private Output<AccessPolicyResource> accessPolicyResource;
 
     /**
      * @return The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
-     * 
      */
     public Output<AccessPolicyResource> getAccessPolicyResource() {
         return this.accessPolicyResource;

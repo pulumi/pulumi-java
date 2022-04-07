@@ -22,7 +22,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARN(s) of the agent(s) to use for an HDFS location.
-     * 
      */
     @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
@@ -33,7 +32,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The authentication mode used to determine identity of user.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final Output<LocationHDFSAuthenticationType> authenticationType;
@@ -44,7 +42,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
-     * 
      */
     @Import(name="blockSize")
       private final @Nullable Output<Integer> blockSize;
@@ -55,7 +52,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Base64 string representation of the Keytab file.
-     * 
      */
     @Import(name="kerberosKeytab")
       private final @Nullable Output<String> kerberosKeytab;
@@ -66,7 +62,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf file within an S3 bucket.
-     * 
      */
     @Import(name="kerberosKrb5Conf")
       private final @Nullable Output<String> kerberosKrb5Conf;
@@ -77,7 +72,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique identity, or principal, to which Kerberos can assign tickets.
-     * 
      */
     @Import(name="kerberosPrincipal")
       private final @Nullable Output<String> kerberosPrincipal;
@@ -88,7 +82,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
-     * 
      */
     @Import(name="kmsKeyProviderUri")
       private final @Nullable Output<String> kmsKeyProviderUri;
@@ -99,7 +92,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of Name Node(s) of the HDFS location.
-     * 
      */
     @Import(name="nameNodes", required=true)
       private final Output<List<LocationHDFSNameNodeArgs>> nameNodes;
@@ -117,7 +109,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of copies of each block that exists inside the HDFS cluster.
-     * 
      */
     @Import(name="replicationFactor")
       private final @Nullable Output<Integer> replicationFactor;
@@ -128,7 +119,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user name that has read and write permissions on the specified HDFS cluster.
-     * 
      */
     @Import(name="simpleUser")
       private final @Nullable Output<String> simpleUser;
@@ -139,7 +129,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subdirectory in HDFS that is used to read data from the HDFS source location or write data to the HDFS destination.
-     * 
      */
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
@@ -150,7 +139,6 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<LocationHDFSTagArgs>> tags;

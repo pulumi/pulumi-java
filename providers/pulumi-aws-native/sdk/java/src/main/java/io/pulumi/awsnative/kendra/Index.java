@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Kendra index
- * 
  */
 @ResourceType(type="aws-native:kendra:Index")
 public class Index extends io.pulumi.resources.CustomResource {
@@ -33,42 +32,36 @@ public class Index extends io.pulumi.resources.CustomResource {
     }
     /**
      * Capacity units
-     * 
      */
     @Export(name="capacityUnits", type=IndexCapacityUnitsConfiguration.class, parameters={})
     private Output</* @Nullable */ IndexCapacityUnitsConfiguration> capacityUnits;
 
     /**
      * @return Capacity units
-     * 
      */
     public Output</* @Nullable */ IndexCapacityUnitsConfiguration> getCapacityUnits() {
         return this.capacityUnits;
     }
     /**
      * A description for the index
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description for the index
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Document metadata configurations
-     * 
      */
     @Export(name="documentMetadataConfigurations", type=List.class, parameters={IndexDocumentMetadataConfiguration.class})
     private Output</* @Nullable */ List<IndexDocumentMetadataConfiguration>> documentMetadataConfigurations;
 
     /**
      * @return Document metadata configurations
-     * 
      */
     public Output</* @Nullable */ List<IndexDocumentMetadataConfiguration>> getDocumentMetadataConfigurations() {
         return this.documentMetadataConfigurations;
@@ -93,28 +86,24 @@ public class Index extends io.pulumi.resources.CustomResource {
     }
     /**
      * Server side encryption configuration
-     * 
      */
     @Export(name="serverSideEncryptionConfiguration", type=IndexServerSideEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ IndexServerSideEncryptionConfiguration> serverSideEncryptionConfiguration;
 
     /**
      * @return Server side encryption configuration
-     * 
      */
     public Output</* @Nullable */ IndexServerSideEncryptionConfiguration> getServerSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
     /**
      * Tags for labeling the index
-     * 
      */
     @Export(name="tags", type=List.class, parameters={IndexTag.class})
     private Output</* @Nullable */ List<IndexTag>> tags;
 
     /**
      * @return Tags for labeling the index
-     * 
      */
     public Output</* @Nullable */ List<IndexTag>> getTags() {
         return this.tags;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::Location::Map Resource Type
- * 
  */
 @ResourceType(type="aws-native:location:Map")
 public class Map extends io.pulumi.resources.CustomResource {

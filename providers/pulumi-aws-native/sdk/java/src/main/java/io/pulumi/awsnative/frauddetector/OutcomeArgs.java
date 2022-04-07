@@ -18,7 +18,6 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The outcome description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the outcome.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -40,7 +38,6 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags associated with this outcome.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<OutcomeTagArgs>> tags;

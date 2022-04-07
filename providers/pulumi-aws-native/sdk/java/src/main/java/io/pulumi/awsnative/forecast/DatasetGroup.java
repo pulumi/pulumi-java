@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a dataset group that holds a collection of related datasets
- * 
  */
 @ResourceType(type="aws-native:forecast:DatasetGroup")
 public class DatasetGroup extends io.pulumi.resources.CustomResource {
     /**
      * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
-     * 
      */
     @Export(name="datasetArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> datasetArns;
 
     /**
      * @return An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
-     * 
      */
     public Output</* @Nullable */ List<String>> getDatasetArns() {
         return this.datasetArns;
     }
     /**
      * The Amazon Resource Name (ARN) of the dataset group to delete.
-     * 
      */
     @Export(name="datasetGroupArn", type=String.class, parameters={})
     private Output<String> datasetGroupArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the dataset group to delete.
-     * 
      */
     public Output<String> getDatasetGroupArn() {
         return this.datasetGroupArn;
     }
     /**
      * A name for the dataset group.
-     * 
      */
     @Export(name="datasetGroupName", type=String.class, parameters={})
     private Output<String> datasetGroupName;
 
     /**
      * @return A name for the dataset group.
-     * 
      */
     public Output<String> getDatasetGroupName() {
         return this.datasetGroupName;
     }
     /**
      * The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
-     * 
      */
     @Export(name="domain", type=DatasetGroupDomain.class, parameters={})
     private Output<DatasetGroupDomain> domain;
 
     /**
      * @return The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
-     * 
      */
     public Output<DatasetGroupDomain> getDomain() {
         return this.domain;
     }
     /**
      * The tags of Application Insights application.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DatasetGroupTag.class})
     private Output</* @Nullable */ List<DatasetGroupTag>> tags;
 
     /**
      * @return The tags of Application Insights application.
-     * 
      */
     public Output</* @Nullable */ List<DatasetGroupTag>> getTags() {
         return this.tags;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Provides information for updating the user on the progress of fulfilling an intent.
- * 
  */
 public final class BotPostFulfillmentStatusSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 

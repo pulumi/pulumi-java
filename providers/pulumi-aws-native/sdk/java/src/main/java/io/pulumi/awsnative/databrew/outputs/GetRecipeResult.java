@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 public final class GetRecipeResult {
     /**
      * Description of the recipe
-     * 
      */
     private final @Nullable String description;
     private final @Nullable List<RecipeStep> steps;
@@ -30,7 +29,6 @@ public final class GetRecipeResult {
 
     /**
      * Description of the recipe
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);

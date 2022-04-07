@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      *  Specifies which types of information are logged.
-     * 
      */
     @EnumType
     public enum MitigationActionEnableIoTLoggingParamsLogLevel {

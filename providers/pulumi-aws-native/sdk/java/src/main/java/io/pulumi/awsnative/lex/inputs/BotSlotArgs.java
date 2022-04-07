@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A slot is a variable needed to fulfill an intent, where an intent can require zero or more slots.
- * 
  */
 public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
 

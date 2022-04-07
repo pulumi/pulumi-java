@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the component.
- * 
  */
 public final class ApplicationComponentConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
 
     /**
      * The configuration settings
-     * 
      */
     @Import(name="configurationDetails")
       private final @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails;
@@ -33,7 +31,6 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
 
     /**
      * Sub component configurations of the component.
-     * 
      */
     @Import(name="subComponentTypeConfigurations")
       private final @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;

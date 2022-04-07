@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The architecture of robot application.
-     * 
      */
     @EnumType
     public enum RobotApplicationSourceConfigArchitecture {

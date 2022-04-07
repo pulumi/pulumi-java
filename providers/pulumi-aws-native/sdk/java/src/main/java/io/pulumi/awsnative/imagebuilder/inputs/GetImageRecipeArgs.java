@@ -14,7 +14,6 @@ public final class GetImageRecipeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the image recipe.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

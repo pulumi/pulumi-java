@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A collection of settings that apply to users of Amazon SageMaker Studio. These settings are specified when the CreateUserProfile API is called, and as DefaultUserSettings when the CreateDomain API is called.
- * 
  */
 public final class UserProfileUserSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * The user profile Amazon Resource Name (ARN).
-     * 
      */
     @Import(name="executionRole")
       private final @Nullable Output<String> executionRole;
@@ -35,7 +33,6 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * The Jupyter server's app settings.
-     * 
      */
     @Import(name="jupyterServerAppSettings")
       private final @Nullable Output<UserProfileJupyterServerAppSettingsArgs> jupyterServerAppSettings;
@@ -46,7 +43,6 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * The kernel gateway app settings.
-     * 
      */
     @Import(name="kernelGatewayAppSettings")
       private final @Nullable Output<UserProfileKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
@@ -57,7 +53,6 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
-     * 
      */
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
@@ -68,7 +63,6 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * The sharing settings.
-     * 
      */
     @Import(name="sharingSettings")
       private final @Nullable Output<UserProfileSharingSettingsArgs> sharingSettings;

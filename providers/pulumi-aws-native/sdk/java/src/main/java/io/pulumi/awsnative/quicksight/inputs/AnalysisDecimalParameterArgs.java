@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * <p>A decimal parameter.</p>
- * 
  */
 public final class AnalysisDecimalParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AnalysisDecimalParameterArgs extends io.pulumi.resources.Reso
 
     /**
      * <p>A display name for the decimal parameter.</p>
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class AnalysisDecimalParameterArgs extends io.pulumi.resources.Reso
 
     /**
      * <p>The values for the decimal parameter.</p>
-     * 
      */
     @Import(name="values", required=true)
       private final Output<List<Double>> values;

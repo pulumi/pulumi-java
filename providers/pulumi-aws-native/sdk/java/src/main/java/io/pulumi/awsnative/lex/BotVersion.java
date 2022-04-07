@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A version is a numbered snapshot of your work that you can publish for use in different parts of your workflow, such as development, beta deployment, and production.
- * 
  */
 @ResourceType(type="aws-native:lex:BotVersion")
 public class BotVersion extends io.pulumi.resources.CustomResource {

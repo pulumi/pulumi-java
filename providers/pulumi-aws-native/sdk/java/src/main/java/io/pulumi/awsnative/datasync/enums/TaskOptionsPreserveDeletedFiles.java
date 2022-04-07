@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value that specifies whether files in the destination that don't exist in the source file system should be preserved.
-     * 
      */
     @EnumType
     public enum TaskOptionsPreserveDeletedFiles {

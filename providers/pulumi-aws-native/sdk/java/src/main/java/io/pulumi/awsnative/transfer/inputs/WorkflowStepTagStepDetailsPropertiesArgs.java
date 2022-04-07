@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details for a step that creates one or more tags.
- * 
  */
 public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
 
     /**
      * The name of the step, used as an identifier.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -33,7 +31,6 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
 
     /**
      * Array that contains from 1 to 10 key/value pairs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<WorkflowS3TagArgs>> tags;

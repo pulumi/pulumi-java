@@ -16,105 +16,233 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::Config::OrganizationConformancePack.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var organizationConformancePack = new AwsNative.Configuration.OrganizationConformancePack("organizationConformancePack", new AwsNative.Configuration.OrganizationConformancePackArgs
+ *         {
+ *             OrganizationConformancePackName = "OrganizationConformancePackName",
+ *             DeliveryS3Bucket = "DeliveryS3Bucket",
+ *             TemplateS3Uri = "s3://bucketname/prefix",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/configuration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := configuration.NewOrganizationConformancePack(ctx, "organizationConformancePack", &configuration.OrganizationConformancePackArgs{
+ * 			OrganizationConformancePackName: pulumi.String("OrganizationConformancePackName"),
+ * 			DeliveryS3Bucket:                pulumi.String("DeliveryS3Bucket"),
+ * 			TemplateS3Uri:                   pulumi.String("s3://bucketname/prefix"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const organizationConformancePack = new aws_native.configuration.OrganizationConformancePack("organizationConformancePack", {
+ *     organizationConformancePackName: "OrganizationConformancePackName",
+ *     deliveryS3Bucket: "DeliveryS3Bucket",
+ *     templateS3Uri: "s3://bucketname/prefix",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * organization_conformance_pack = aws_native.configuration.OrganizationConformancePack("organizationConformancePack",
+ *     organization_conformance_pack_name="OrganizationConformancePackName",
+ *     delivery_s3_bucket="DeliveryS3Bucket",
+ *     template_s3_uri="s3://bucketname/prefix")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var organizationConformancePack = new AwsNative.Configuration.OrganizationConformancePack("organizationConformancePack", new AwsNative.Configuration.OrganizationConformancePackArgs
+ *         {
+ *             OrganizationConformancePackName = "OrganizationConformancePackName",
+ *             DeliveryS3Bucket = "DeliveryS3Bucket",
+ *             TemplateS3Uri = "s3://bucketname/prefix",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/configuration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := configuration.NewOrganizationConformancePack(ctx, "organizationConformancePack", &configuration.OrganizationConformancePackArgs{
+ * 			OrganizationConformancePackName: pulumi.String("OrganizationConformancePackName"),
+ * 			DeliveryS3Bucket:                pulumi.String("DeliveryS3Bucket"),
+ * 			TemplateS3Uri:                   pulumi.String("s3://bucketname/prefix"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const organizationConformancePack = new aws_native.configuration.OrganizationConformancePack("organizationConformancePack", {
+ *     organizationConformancePackName: "OrganizationConformancePackName",
+ *     deliveryS3Bucket: "DeliveryS3Bucket",
+ *     templateS3Uri: "s3://bucketname/prefix",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * organization_conformance_pack = aws_native.configuration.OrganizationConformancePack("organizationConformancePack",
+ *     organization_conformance_pack_name="OrganizationConformancePackName",
+ *     delivery_s3_bucket="DeliveryS3Bucket",
+ *     template_s3_uri="s3://bucketname/prefix")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:configuration:OrganizationConformancePack")
 public class OrganizationConformancePack extends io.pulumi.resources.CustomResource {
     /**
      * A list of ConformancePackInputParameter objects.
-     * 
      */
     @Export(name="conformancePackInputParameters", type=List.class, parameters={OrganizationConformancePackConformancePackInputParameter.class})
     private Output</* @Nullable */ List<OrganizationConformancePackConformancePackInputParameter>> conformancePackInputParameters;
 
     /**
      * @return A list of ConformancePackInputParameter objects.
-     * 
      */
     public Output</* @Nullable */ List<OrganizationConformancePackConformancePackInputParameter>> getConformancePackInputParameters() {
         return this.conformancePackInputParameters;
     }
     /**
      * AWS Config stores intermediate files while processing conformance pack template.
-     * 
      */
     @Export(name="deliveryS3Bucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3Bucket;
 
     /**
      * @return AWS Config stores intermediate files while processing conformance pack template.
-     * 
      */
     public Output</* @Nullable */ String> getDeliveryS3Bucket() {
         return this.deliveryS3Bucket;
     }
     /**
      * The prefix for the delivery S3 bucket.
-     * 
      */
     @Export(name="deliveryS3KeyPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3KeyPrefix;
 
     /**
      * @return The prefix for the delivery S3 bucket.
-     * 
      */
     public Output</* @Nullable */ String> getDeliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix;
     }
     /**
      * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
-     * 
      */
     @Export(name="excludedAccounts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> excludedAccounts;
 
     /**
      * @return A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
-     * 
      */
     public Output</* @Nullable */ List<String>> getExcludedAccounts() {
         return this.excludedAccounts;
     }
     /**
      * The name of the organization conformance pack.
-     * 
      */
     @Export(name="organizationConformancePackName", type=String.class, parameters={})
     private Output<String> organizationConformancePackName;
 
     /**
      * @return The name of the organization conformance pack.
-     * 
      */
     public Output<String> getOrganizationConformancePackName() {
         return this.organizationConformancePackName;
     }
     /**
      * A string containing full conformance pack template body.
-     * 
      */
     @Export(name="templateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateBody;
 
     /**
      * @return A string containing full conformance pack template body.
-     * 
      */
     public Output</* @Nullable */ String> getTemplateBody() {
         return this.templateBody;
     }
     /**
      * Location of file containing the template body.
-     * 
      */
     @Export(name="templateS3Uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateS3Uri;
 
     /**
      * @return Location of file containing the template body.
-     * 
      */
     public Output</* @Nullable */ String> getTemplateS3Uri() {
         return this.templateS3Uri;

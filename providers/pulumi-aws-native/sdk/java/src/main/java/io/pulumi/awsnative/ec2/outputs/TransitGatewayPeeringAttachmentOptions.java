@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class TransitGatewayPeeringAttachmentOptions {
     /**
      * Whether to enable dynamic routing. (enable/disable)
-     * 
      */
     private final @Nullable String dynamicRouting;
 
@@ -24,7 +23,6 @@ public final class TransitGatewayPeeringAttachmentOptions {
 
     /**
      * Whether to enable dynamic routing. (enable/disable)
-     * 
     */
     public Optional<String> getDynamicRouting() {
         return Optional.ofNullable(this.dynamicRouting);

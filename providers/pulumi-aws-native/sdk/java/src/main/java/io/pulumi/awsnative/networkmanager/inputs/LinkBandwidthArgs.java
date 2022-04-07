@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The bandwidth for the link.
- * 
  */
 public final class LinkBandwidthArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LinkBandwidthArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Download speed in Mbps.
-     * 
      */
     @Import(name="downloadSpeed")
       private final @Nullable Output<Integer> downloadSpeed;
@@ -31,7 +29,6 @@ public final class LinkBandwidthArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Upload speed in Mbps.
-     * 
      */
     @Import(name="uploadSpeed")
       private final @Nullable Output<Integer> uploadSpeed;

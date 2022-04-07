@@ -19,7 +19,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of hours till which Kinesis Video will retain the data in the stream
-     * 
      */
     @Import(name="dataRetentionInHours")
       private final @Nullable Output<Integer> dataRetentionInHours;
@@ -30,7 +29,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the device that is writing to the stream.
-     * 
      */
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
@@ -41,7 +39,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
-     * 
      */
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
@@ -52,7 +49,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The media type of the stream. Consumers of the stream can use this information when processing the stream.
-     * 
      */
     @Import(name="mediaType")
       private final @Nullable Output<String> mediaType;
@@ -63,7 +59,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Kinesis Video stream.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -74,7 +69,6 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs associated with the Kinesis Video Stream.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<StreamTagArgs>> tags;

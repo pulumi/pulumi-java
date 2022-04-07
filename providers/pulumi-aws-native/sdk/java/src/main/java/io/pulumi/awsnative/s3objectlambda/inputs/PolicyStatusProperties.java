@@ -16,7 +16,6 @@ public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.
-     * 
      */
     @Import(name="isPublic")
       private final @Nullable Boolean isPublic;

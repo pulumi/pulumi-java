@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Default Action WebACL will take against ingress traffic when there is no matching Rule.
- * 
  */
 public final class WebACLDefaultActionArgs extends io.pulumi.resources.ResourceArgs {
 

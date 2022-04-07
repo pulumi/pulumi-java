@@ -15,7 +15,6 @@ public final class GetResourceCollectionResult {
     private final @Nullable ResourceCollectionFilter resourceCollectionFilter;
     /**
      * The type of ResourceCollection
-     * 
      */
     private final @Nullable ResourceCollectionType resourceCollectionType;
 
@@ -32,7 +31,6 @@ public final class GetResourceCollectionResult {
     }
     /**
      * The type of ResourceCollection
-     * 
     */
     public Optional<ResourceCollectionType> getResourceCollectionType() {
         return Optional.ofNullable(this.resourceCollectionType);

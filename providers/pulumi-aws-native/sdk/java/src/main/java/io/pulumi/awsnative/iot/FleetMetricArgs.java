@@ -20,7 +20,6 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The aggregation field to perform aggregation and metric emission
-     * 
      */
     @Import(name="aggregationField")
       private final @Nullable Output<String> aggregationField;
@@ -38,7 +37,6 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of a fleet metric
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -49,7 +47,6 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The index name of a fleet metric
-     * 
      */
     @Import(name="indexName")
       private final @Nullable Output<String> indexName;
@@ -60,7 +57,6 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the fleet metric
-     * 
      */
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
@@ -71,7 +67,6 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The period of metric emission in seconds
-     * 
      */
     @Import(name="period")
       private final @Nullable Output<Integer> period;
@@ -82,7 +77,6 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Fleet Indexing query used by a fleet metric
-     * 
      */
     @Import(name="queryString")
       private final @Nullable Output<String> queryString;
@@ -93,7 +87,6 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of a Fleet Indexing query used by a fleet metric
-     * 
      */
     @Import(name="queryVersion")
       private final @Nullable Output<String> queryVersion;
@@ -104,7 +97,6 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<FleetMetricTagArgs>> tags;
@@ -115,7 +107,6 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unit of data points emitted by a fleet metric
-     * 
      */
     @Import(name="unit")
       private final @Nullable Output<String> unit;

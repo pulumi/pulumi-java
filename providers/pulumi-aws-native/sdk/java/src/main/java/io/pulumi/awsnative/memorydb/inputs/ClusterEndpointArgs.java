@@ -17,7 +17,6 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The DNS address of the primary read-write node.
-     * 
      */
     @Import(name="address")
       private final @Nullable Output<String> address;
@@ -27,8 +26,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The port number that the engine is listening on.
-     * 
+     * The port number that the engine is listening on. 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;

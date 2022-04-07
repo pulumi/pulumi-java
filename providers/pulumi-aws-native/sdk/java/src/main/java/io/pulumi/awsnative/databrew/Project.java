@@ -17,77 +17,273 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataBrew::Project.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testDataBrewProject = new AwsNative.DataBrew.Project("testDataBrewProject", new AwsNative.DataBrew.ProjectArgs
+ *         {
+ *             Name = "project-name",
+ *             RecipeName = "recipe-name",
+ *             DatasetName = "dataset-name",
+ *             RoleArn = "arn:aws:iam::12345678910:role/PassRoleAdmin",
+ *             Sample = new AwsNative.DataBrew.Inputs.ProjectSampleArgs
+ *             {
+ *                 Size = 500,
+ *                 Type = "LAST_N",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/databrew"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databrew.NewProject(ctx, "testDataBrewProject", &databrew.ProjectArgs{
+ * 			Name:        pulumi.String("project-name"),
+ * 			RecipeName:  pulumi.String("recipe-name"),
+ * 			DatasetName: pulumi.String("dataset-name"),
+ * 			RoleArn:     pulumi.String("arn:aws:iam::12345678910:role/PassRoleAdmin"),
+ * 			Sample: &databrew.ProjectSampleArgs{
+ * 				Size: pulumi.Int(500),
+ * 				Type: "LAST_N",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testDataBrewProject = new aws_native.databrew.Project("testDataBrewProject", {
+ *     name: "project-name",
+ *     recipeName: "recipe-name",
+ *     datasetName: "dataset-name",
+ *     roleArn: "arn:aws:iam::12345678910:role/PassRoleAdmin",
+ *     sample: {
+ *         size: 500,
+ *         type: "LAST_N",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_data_brew_project = aws_native.databrew.Project("testDataBrewProject",
+ *     name="project-name",
+ *     recipe_name="recipe-name",
+ *     dataset_name="dataset-name",
+ *     role_arn="arn:aws:iam::12345678910:role/PassRoleAdmin",
+ *     sample=aws_native.databrew.ProjectSampleArgs(
+ *         size=500,
+ *         type="LAST_N",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myDataBrewProject = new AwsNative.DataBrew.Project("myDataBrewProject", new AwsNative.DataBrew.ProjectArgs
+ *         {
+ *             Name = "test-project",
+ *             RecipeName = "test-project-recipe",
+ *             DatasetName = "test-dataset",
+ *             RoleArn = "arn:aws:iam::1234567891011:role/PassRoleAdmin",
+ *             Sample = new AwsNative.DataBrew.Inputs.ProjectSampleArgs
+ *             {
+ *                 Size = 500,
+ *                 Type = "LAST_N",
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.DataBrew.Inputs.ProjectTagArgs
+ *                 {
+ *                     Key = "key00AtCreate",
+ *                     Value = "value001AtCreate",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/databrew"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databrew.NewProject(ctx, "myDataBrewProject", &databrew.ProjectArgs{
+ * 			Name:        pulumi.String("test-project"),
+ * 			RecipeName:  pulumi.String("test-project-recipe"),
+ * 			DatasetName: pulumi.String("test-dataset"),
+ * 			RoleArn:     pulumi.String("arn:aws:iam::1234567891011:role/PassRoleAdmin"),
+ * 			Sample: &databrew.ProjectSampleArgs{
+ * 				Size: pulumi.Int(500),
+ * 				Type: "LAST_N",
+ * 			},
+ * 			Tags: []databrew.ProjectTagArgs{
+ * 				&databrew.ProjectTagArgs{
+ * 					Key:   pulumi.String("key00AtCreate"),
+ * 					Value: pulumi.String("value001AtCreate"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myDataBrewProject = new aws_native.databrew.Project("myDataBrewProject", {
+ *     name: "test-project",
+ *     recipeName: "test-project-recipe",
+ *     datasetName: "test-dataset",
+ *     roleArn: "arn:aws:iam::1234567891011:role/PassRoleAdmin",
+ *     sample: {
+ *         size: 500,
+ *         type: "LAST_N",
+ *     },
+ *     tags: [{
+ *         key: "key00AtCreate",
+ *         value: "value001AtCreate",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_data_brew_project = aws_native.databrew.Project("myDataBrewProject",
+ *     name="test-project",
+ *     recipe_name="test-project-recipe",
+ *     dataset_name="test-dataset",
+ *     role_arn="arn:aws:iam::1234567891011:role/PassRoleAdmin",
+ *     sample=aws_native.databrew.ProjectSampleArgs(
+ *         size=500,
+ *         type="LAST_N",
+ *     ),
+ *     tags=[aws_native.databrew.ProjectTagArgs(
+ *         key="key00AtCreate",
+ *         value="value001AtCreate",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:databrew:Project")
 public class Project extends io.pulumi.resources.CustomResource {
     /**
      * Dataset name
-     * 
      */
     @Export(name="datasetName", type=String.class, parameters={})
     private Output<String> datasetName;
 
     /**
      * @return Dataset name
-     * 
      */
     public Output<String> getDatasetName() {
         return this.datasetName;
     }
     /**
      * Project name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Project name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Recipe name
-     * 
      */
     @Export(name="recipeName", type=String.class, parameters={})
     private Output<String> recipeName;
 
     /**
      * @return Recipe name
-     * 
      */
     public Output<String> getRecipeName() {
         return this.recipeName;
     }
     /**
      * Role arn
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return Role arn
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
     /**
      * Sample
-     * 
      */
     @Export(name="sample", type=ProjectSample.class, parameters={})
     private Output</* @Nullable */ ProjectSample> sample;
 
     /**
      * @return Sample
-     * 
      */
     public Output</* @Nullable */ ProjectSample> getSample() {
         return this.sample;

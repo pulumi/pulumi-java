@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource type definition for AWS::NetworkFirewall::Firewall
- * 
  */
 @ResourceType(type="aws-native:networkfirewall:Firewall")
 public class Firewall extends io.pulumi.resources.CustomResource {

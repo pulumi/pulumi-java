@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
-     * 
      */
     @EnumType
     public enum LoggingDefaultLogLevel {

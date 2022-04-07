@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
  * <p>Groupings of columns that work together in certain Amazon QuickSight features. This is
  *             a variant type structure. For this structure to be valid, only one of the attributes can
  *             be non-null.</p>
- * 
  */
 public final class DataSetColumnGroup extends io.pulumi.resources.InvokeArgs {
 

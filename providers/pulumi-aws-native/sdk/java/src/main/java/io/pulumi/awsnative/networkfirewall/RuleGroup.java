@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource type definition for AWS::NetworkFirewall::RuleGroup
- * 
  */
 @ResourceType(type="aws-native:networkfirewall:RuleGroup")
 public class RuleGroup extends io.pulumi.resources.CustomResource {

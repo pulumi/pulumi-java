@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema for AWS::ServiceCatalog::ServiceActionAssociation
- * 
  */
 @ResourceType(type="aws-native:servicecatalog:ServiceActionAssociation")
 public class ServiceActionAssociation extends io.pulumi.resources.CustomResource {

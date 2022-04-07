@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Secondary input
- * 
  */
 public final class RecipeSecondaryInputArgs extends io.pulumi.resources.ResourceArgs {
 

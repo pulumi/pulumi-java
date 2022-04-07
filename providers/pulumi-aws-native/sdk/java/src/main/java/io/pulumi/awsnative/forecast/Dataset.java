@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type Definition for AWS::Forecast::Dataset
- * 
  */
 @ResourceType(type="aws-native:forecast:Dataset")
 public class Dataset extends io.pulumi.resources.CustomResource {
@@ -31,56 +30,48 @@ public class Dataset extends io.pulumi.resources.CustomResource {
     }
     /**
      * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
-     * 
      */
     @Export(name="dataFrequency", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataFrequency;
 
     /**
      * @return Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
-     * 
      */
     public Output</* @Nullable */ String> getDataFrequency() {
         return this.dataFrequency;
     }
     /**
      * A name for the dataset
-     * 
      */
     @Export(name="datasetName", type=String.class, parameters={})
     private Output<String> datasetName;
 
     /**
      * @return A name for the dataset
-     * 
      */
     public Output<String> getDatasetName() {
         return this.datasetName;
     }
     /**
      * The dataset type
-     * 
      */
     @Export(name="datasetType", type=DatasetType.class, parameters={})
     private Output<DatasetType> datasetType;
 
     /**
      * @return The dataset type
-     * 
      */
     public Output<DatasetType> getDatasetType() {
         return this.datasetType;
     }
     /**
      * The domain associated with the dataset
-     * 
      */
     @Export(name="domain", type=DatasetDomain.class, parameters={})
     private Output<DatasetDomain> domain;
 
     /**
      * @return The domain associated with the dataset
-     * 
      */
     public Output<DatasetDomain> getDomain() {
         return this.domain;

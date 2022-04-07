@@ -27,7 +27,6 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * Recording Configuration Name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -38,7 +37,6 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<RecordingConfigurationTagArgs>> tags;

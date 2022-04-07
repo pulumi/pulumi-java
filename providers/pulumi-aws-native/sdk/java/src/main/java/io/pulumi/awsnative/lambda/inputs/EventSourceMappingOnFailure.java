@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A destination for events that failed processing.
- * 
  */
 public final class EventSourceMappingOnFailure extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EventSourceMappingOnFailure extends io.pulumi.resources.Invok
 
     /**
      * The Amazon Resource Name (ARN) of the destination resource.
-     * 
      */
     @Import(name="destination")
       private final @Nullable String destination;

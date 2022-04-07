@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Prefix-level metrics configurations.
- * 
  */
 public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.ResourceArgs {
 

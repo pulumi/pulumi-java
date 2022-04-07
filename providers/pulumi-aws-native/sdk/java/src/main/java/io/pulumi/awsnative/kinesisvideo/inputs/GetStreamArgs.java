@@ -14,7 +14,6 @@ public final class GetStreamArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Kinesis Video stream.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ResourceSetNLBResource {
     /**
      * A Network Load Balancer resource Amazon Resource Name (ARN).
-     * 
      */
     private final @Nullable String arn;
 
@@ -24,7 +23,6 @@ public final class ResourceSetNLBResource {
 
     /**
      * A Network Load Balancer resource Amazon Resource Name (ARN).
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);

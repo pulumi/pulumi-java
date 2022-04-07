@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * BlockResponse
-     * 
      */
     @EnumType
     public enum FirewallRuleGroupFirewallRuleBlockResponse {

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource mapping is used to map logical resources from template to physical resource
- * 
  */
 public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceArgs {
 

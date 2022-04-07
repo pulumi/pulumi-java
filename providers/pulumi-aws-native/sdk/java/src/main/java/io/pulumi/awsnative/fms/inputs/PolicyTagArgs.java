@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A policy tag.
- * 
  */
 public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
 

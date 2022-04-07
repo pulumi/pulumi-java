@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The primary message that Amazon Lex should send to the user.
- * 
  */
 public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
 

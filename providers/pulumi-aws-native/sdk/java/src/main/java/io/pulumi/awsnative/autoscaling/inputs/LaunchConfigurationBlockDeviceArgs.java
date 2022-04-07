@@ -14,15 +14,13 @@ import javax.annotation.Nullable;
 
 /**
  * BlockDevice is a subproperty of BlockDeviceMapping that describes an Amazon EBS volume.
- * 
  */
 public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LaunchConfigurationBlockDeviceArgs Empty = new LaunchConfigurationBlockDeviceArgs();
 
     /**
-     * Indicates whether the volume is deleted on instance termination.
-     * 
+     * Indicates whether the volume is deleted on instance termination. 
      */
     @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
@@ -32,8 +30,7 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
     }
 
     /**
-     * Specifies whether the volume should be encrypted.
-     * 
+     * Specifies whether the volume should be encrypted. 
      */
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
@@ -43,8 +40,7 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
     }
 
     /**
-     * The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
-     * 
+     * The number of input/output (I/O) operations per second (IOPS) to provision for the volume. 
      */
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
@@ -55,7 +51,6 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
 
     /**
      * The snapshot ID of the volume to use.
-     * 
      */
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
@@ -66,7 +61,6 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
 
     /**
      * The throughput (MiBps) to provision for a gp3 volume.
-     * 
      */
     @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
@@ -77,7 +71,6 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
 
     /**
      * The volume size, in GiBs.
-     * 
      */
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
@@ -88,7 +81,6 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
 
     /**
      * The volume type.
-     * 
      */
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;

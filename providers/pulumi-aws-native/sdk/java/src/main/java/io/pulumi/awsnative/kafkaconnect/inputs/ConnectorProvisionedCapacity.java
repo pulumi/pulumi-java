@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details about a fixed capacity allocated to a connector.
- * 
  */
 public final class ConnectorProvisionedCapacity extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectorProvisionedCapacity extends io.pulumi.resources.Invo
 
     /**
      * Specifies how many MSK Connect Units (MCU) are allocated to the connector.
-     * 
      */
     @Import(name="mcuCount")
       private final @Nullable Integer mcuCount;
@@ -31,7 +29,6 @@ public final class ConnectorProvisionedCapacity extends io.pulumi.resources.Invo
 
     /**
      * Number of workers for a connector.
-     * 
      */
     @Import(name="workerCount", required=true)
       private final Integer workerCount;

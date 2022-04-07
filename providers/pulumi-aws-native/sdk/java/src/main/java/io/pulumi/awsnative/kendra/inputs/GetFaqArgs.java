@@ -21,7 +21,6 @@ public final class GetFaqArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Index ID
-     * 
      */
     @Import(name="indexId", required=true)
       private final String indexId;

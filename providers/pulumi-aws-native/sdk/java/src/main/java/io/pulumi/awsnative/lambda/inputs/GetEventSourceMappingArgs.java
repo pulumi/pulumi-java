@@ -14,7 +14,6 @@ public final class GetEventSourceMappingArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Event Source Mapping Identifier UUID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

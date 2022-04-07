@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Size Constraint statement.
- * 
  */
 public final class RuleGroupSizeConstraintStatement extends io.pulumi.resources.InvokeArgs {
 

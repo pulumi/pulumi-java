@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::AppIntegrations::DataIntegration
- * 
  */
 @ResourceType(type="aws-native:appintegrations:DataIntegration")
 public class DataIntegration extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the data integration.
-     * 
      */
     @Export(name="dataIntegrationArn", type=String.class, parameters={})
     private Output<String> dataIntegrationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the data integration.
-     * 
      */
     public Output<String> getDataIntegrationArn() {
         return this.dataIntegrationArn;
     }
     /**
      * The data integration description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The data integration description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The KMS key of the data integration.
-     * 
      */
     @Export(name="kmsKey", type=String.class, parameters={})
     private Output<String> kmsKey;
 
     /**
      * @return The KMS key of the data integration.
-     * 
      */
     public Output<String> getKmsKey() {
         return this.kmsKey;
     }
     /**
      * The name of the data integration.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the data integration.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The name of the data and how often it should be pulled from the source.
-     * 
      */
     @Export(name="scheduleConfig", type=DataIntegrationScheduleConfig.class, parameters={})
     private Output<DataIntegrationScheduleConfig> scheduleConfig;
 
     /**
      * @return The name of the data and how often it should be pulled from the source.
-     * 
      */
     public Output<DataIntegrationScheduleConfig> getScheduleConfig() {
         return this.scheduleConfig;
     }
     /**
      * The URI of the data source.
-     * 
      */
     @Export(name="sourceURI", type=String.class, parameters={})
     private Output<String> sourceURI;
 
     /**
      * @return The URI of the data source.
-     * 
      */
     public Output<String> getSourceURI() {
         return this.sourceURI;
     }
     /**
      * The tags (keys and values) associated with the data integration.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DataIntegrationTag.class})
     private Output</* @Nullable */ List<DataIntegrationTag>> tags;
 
     /**
      * @return The tags (keys and values) associated with the data integration.
-     * 
      */
     public Output</* @Nullable */ List<DataIntegrationTag>> getTags() {
         return this.tags;

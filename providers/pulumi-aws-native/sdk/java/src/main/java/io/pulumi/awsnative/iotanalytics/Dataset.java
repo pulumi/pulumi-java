@@ -22,7 +22,1583 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::IoTAnalytics::Dataset
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new AwsNative.IoTAnalytics.Dataset("dataset", new AwsNative.IoTAnalytics.DatasetArgs
+ *         {
+ *             DatasetName = "SimpleSQLDataset",
+ *             Actions = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetActionArgs
+ *                 {
+ *                     ActionName = "SqlAction",
+ *                     QueryAction = new AwsNative.IoTAnalytics.Inputs.DatasetQueryActionArgs
+ *                     {
+ *                         SqlQuery = "select * from Datastore",
+ *                     },
+ *                 },
+ *             },
+ *             Triggers = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTriggerArgs
+ *                 {
+ *                     Schedule = new AwsNative.IoTAnalytics.Inputs.DatasetScheduleArgs
+ *                     {
+ *                         ScheduleExpression = "cron(0 12 * * ? *)",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewDataset(ctx, "dataset", &iotanalytics.DatasetArgs{
+ * 			DatasetName: pulumi.String("SimpleSQLDataset"),
+ * 			Actions: iotanalytics.DatasetActionArray{
+ * 				&iotanalytics.DatasetActionArgs{
+ * 					ActionName: pulumi.String("SqlAction"),
+ * 					QueryAction: &iotanalytics.DatasetQueryActionArgs{
+ * 						SqlQuery: pulumi.String("select * from Datastore"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Triggers: []iotanalytics.DatasetTriggerArgs{
+ * 				&iotanalytics.DatasetTriggerArgs{
+ * 					Schedule: &iotanalytics.DatasetScheduleArgs{
+ * 						ScheduleExpression: pulumi.String("cron(0 12 * * ? *)"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const dataset = new aws_native.iotanalytics.Dataset("dataset", {
+ *     datasetName: "SimpleSQLDataset",
+ *     actions: [{
+ *         actionName: "SqlAction",
+ *         queryAction: {
+ *             sqlQuery: "select * from Datastore",
+ *         },
+ *     }],
+ *     triggers: [{
+ *         schedule: {
+ *             scheduleExpression: "cron(0 12 * * ? *)",
+ *         },
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * dataset = aws_native.iotanalytics.Dataset("dataset",
+ *     dataset_name="SimpleSQLDataset",
+ *     actions=[aws_native.iotanalytics.DatasetActionArgs(
+ *         action_name="SqlAction",
+ *         query_action=aws_native.iotanalytics.DatasetQueryActionArgs(
+ *             sql_query="select * from Datastore",
+ *         ),
+ *     )],
+ *     triggers=[aws_native.iotanalytics.DatasetTriggerArgs(
+ *         schedule=aws_native.iotanalytics.DatasetScheduleArgs(
+ *             schedule_expression="cron(0 12 * * ? *)",
+ *         ),
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new AwsNative.IoTAnalytics.Dataset("dataset", new AwsNative.IoTAnalytics.DatasetArgs
+ *         {
+ *             DatasetName = "SimpleSQLDataset",
+ *             Actions = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetActionArgs
+ *                 {
+ *                     ActionName = "SqlAction",
+ *                     QueryAction = new AwsNative.IoTAnalytics.Inputs.DatasetQueryActionArgs
+ *                     {
+ *                         SqlQuery = "select * from Datastore",
+ *                     },
+ *                 },
+ *             },
+ *             Triggers = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTriggerArgs
+ *                 {
+ *                     Schedule = new AwsNative.IoTAnalytics.Inputs.DatasetScheduleArgs
+ *                     {
+ *                         ScheduleExpression = "cron(0 12 * * ? *)",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewDataset(ctx, "dataset", &iotanalytics.DatasetArgs{
+ * 			DatasetName: pulumi.String("SimpleSQLDataset"),
+ * 			Actions: iotanalytics.DatasetActionArray{
+ * 				&iotanalytics.DatasetActionArgs{
+ * 					ActionName: pulumi.String("SqlAction"),
+ * 					QueryAction: &iotanalytics.DatasetQueryActionArgs{
+ * 						SqlQuery: pulumi.String("select * from Datastore"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Triggers: []iotanalytics.DatasetTriggerArgs{
+ * 				&iotanalytics.DatasetTriggerArgs{
+ * 					Schedule: &iotanalytics.DatasetScheduleArgs{
+ * 						ScheduleExpression: pulumi.String("cron(0 12 * * ? *)"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const dataset = new aws_native.iotanalytics.Dataset("dataset", {
+ *     datasetName: "SimpleSQLDataset",
+ *     actions: [{
+ *         actionName: "SqlAction",
+ *         queryAction: {
+ *             sqlQuery: "select * from Datastore",
+ *         },
+ *     }],
+ *     triggers: [{
+ *         schedule: {
+ *             scheduleExpression: "cron(0 12 * * ? *)",
+ *         },
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * dataset = aws_native.iotanalytics.Dataset("dataset",
+ *     dataset_name="SimpleSQLDataset",
+ *     actions=[aws_native.iotanalytics.DatasetActionArgs(
+ *         action_name="SqlAction",
+ *         query_action=aws_native.iotanalytics.DatasetQueryActionArgs(
+ *             sql_query="select * from Datastore",
+ *         ),
+ *     )],
+ *     triggers=[aws_native.iotanalytics.DatasetTriggerArgs(
+ *         schedule=aws_native.iotanalytics.DatasetScheduleArgs(
+ *             schedule_expression="cron(0 12 * * ? *)",
+ *         ),
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new AwsNative.IoTAnalytics.Dataset("dataset", new AwsNative.IoTAnalytics.DatasetArgs
+ *         {
+ *             DatasetName = "ComplexSQLDataset",
+ *             Actions = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetActionArgs
+ *                 {
+ *                     ActionName = "SqlAction",
+ *                     QueryAction = new AwsNative.IoTAnalytics.Inputs.DatasetQueryActionArgs
+ *                     {
+ *                         SqlQuery = "select * from Datastore",
+ *                         Filters = 
+ *                         {
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetFilterArgs
+ *                             {
+ *                                 DeltaTime = new AwsNative.IoTAnalytics.Inputs.DatasetDeltaTimeArgs
+ *                                 {
+ *                                     OffsetSeconds = 1,
+ *                                     TimeExpression = "timestamp",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Triggers = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTriggerArgs
+ *                 {
+ *                     Schedule = new AwsNative.IoTAnalytics.Inputs.DatasetScheduleArgs
+ *                     {
+ *                         ScheduleExpression = "cron(0 12 * * ? *)",
+ *                     },
+ *                 },
+ *             },
+ *             RetentionPeriod = new AwsNative.IoTAnalytics.Inputs.DatasetRetentionPeriodArgs
+ *             {
+ *                 Unlimited = false,
+ *                 NumberOfDays = 10,
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTagArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTagArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewDataset(ctx, "dataset", &iotanalytics.DatasetArgs{
+ * 			DatasetName: pulumi.String("ComplexSQLDataset"),
+ * 			Actions: iotanalytics.DatasetActionArray{
+ * 				&iotanalytics.DatasetActionArgs{
+ * 					ActionName: pulumi.String("SqlAction"),
+ * 					QueryAction: &iotanalytics.DatasetQueryActionArgs{
+ * 						SqlQuery: pulumi.String("select * from Datastore"),
+ * 						Filters: iotanalytics.DatasetFilterArray{
+ * 							&iotanalytics.DatasetFilterArgs{
+ * 								DeltaTime: &iotanalytics.DatasetDeltaTimeArgs{
+ * 									OffsetSeconds:  pulumi.Int(1),
+ * 									TimeExpression: pulumi.String("timestamp"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Triggers: []iotanalytics.DatasetTriggerArgs{
+ * 				&iotanalytics.DatasetTriggerArgs{
+ * 					Schedule: &iotanalytics.DatasetScheduleArgs{
+ * 						ScheduleExpression: pulumi.String("cron(0 12 * * ? *)"),
+ * 					},
+ * 				},
+ * 			},
+ * 			RetentionPeriod: &iotanalytics.DatasetRetentionPeriodArgs{
+ * 				Unlimited:    pulumi.Bool(false),
+ * 				NumberOfDays: pulumi.Int(10),
+ * 			},
+ * 			Tags: []iotanalytics.DatasetTagArgs{
+ * 				&iotanalytics.DatasetTagArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&iotanalytics.DatasetTagArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const dataset = new aws_native.iotanalytics.Dataset("dataset", {
+ *     datasetName: "ComplexSQLDataset",
+ *     actions: [{
+ *         actionName: "SqlAction",
+ *         queryAction: {
+ *             sqlQuery: "select * from Datastore",
+ *             filters: [{
+ *                 deltaTime: {
+ *                     offsetSeconds: 1,
+ *                     timeExpression: "timestamp",
+ *                 },
+ *             }],
+ *         },
+ *     }],
+ *     triggers: [{
+ *         schedule: {
+ *             scheduleExpression: "cron(0 12 * * ? *)",
+ *         },
+ *     }],
+ *     retentionPeriod: {
+ *         unlimited: false,
+ *         numberOfDays: 10,
+ *     },
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * dataset = aws_native.iotanalytics.Dataset("dataset",
+ *     dataset_name="ComplexSQLDataset",
+ *     actions=[aws_native.iotanalytics.DatasetActionArgs(
+ *         action_name="SqlAction",
+ *         query_action=aws_native.iotanalytics.DatasetQueryActionArgs(
+ *             sql_query="select * from Datastore",
+ *             filters=[aws_native.iotanalytics.DatasetFilterArgs(
+ *                 delta_time=aws_native.iotanalytics.DatasetDeltaTimeArgs(
+ *                     offset_seconds=1,
+ *                     time_expression="timestamp",
+ *                 ),
+ *             )],
+ *         ),
+ *     )],
+ *     triggers=[aws_native.iotanalytics.DatasetTriggerArgs(
+ *         schedule=aws_native.iotanalytics.DatasetScheduleArgs(
+ *             schedule_expression="cron(0 12 * * ? *)",
+ *         ),
+ *     )],
+ *     retention_period=aws_native.iotanalytics.DatasetRetentionPeriodArgs(
+ *         unlimited=False,
+ *         number_of_days=10,
+ *     ),
+ *     tags=[
+ *         aws_native.iotanalytics.DatasetTagArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.iotanalytics.DatasetTagArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataset = new AwsNative.IoTAnalytics.Dataset("dataset", new AwsNative.IoTAnalytics.DatasetArgs
+ *         {
+ *             DatasetName = "ComplexSQLDataset",
+ *             Actions = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetActionArgs
+ *                 {
+ *                     ActionName = "SqlAction",
+ *                     QueryAction = new AwsNative.IoTAnalytics.Inputs.DatasetQueryActionArgs
+ *                     {
+ *                         SqlQuery = "select * from Datastore",
+ *                         Filters = 
+ *                         {
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetFilterArgs
+ *                             {
+ *                                 DeltaTime = new AwsNative.IoTAnalytics.Inputs.DatasetDeltaTimeArgs
+ *                                 {
+ *                                     OffsetSeconds = 1,
+ *                                     TimeExpression = "timestamp",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Triggers = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTriggerArgs
+ *                 {
+ *                     Schedule = new AwsNative.IoTAnalytics.Inputs.DatasetScheduleArgs
+ *                     {
+ *                         ScheduleExpression = "cron(0 12 * * ? *)",
+ *                     },
+ *                 },
+ *             },
+ *             RetentionPeriod = new AwsNative.IoTAnalytics.Inputs.DatasetRetentionPeriodArgs
+ *             {
+ *                 Unlimited = false,
+ *                 NumberOfDays = 10,
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTagArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTagArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewDataset(ctx, "dataset", &iotanalytics.DatasetArgs{
+ * 			DatasetName: pulumi.String("ComplexSQLDataset"),
+ * 			Actions: iotanalytics.DatasetActionArray{
+ * 				&iotanalytics.DatasetActionArgs{
+ * 					ActionName: pulumi.String("SqlAction"),
+ * 					QueryAction: &iotanalytics.DatasetQueryActionArgs{
+ * 						SqlQuery: pulumi.String("select * from Datastore"),
+ * 						Filters: iotanalytics.DatasetFilterArray{
+ * 							&iotanalytics.DatasetFilterArgs{
+ * 								DeltaTime: &iotanalytics.DatasetDeltaTimeArgs{
+ * 									OffsetSeconds:  pulumi.Int(1),
+ * 									TimeExpression: pulumi.String("timestamp"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Triggers: []iotanalytics.DatasetTriggerArgs{
+ * 				&iotanalytics.DatasetTriggerArgs{
+ * 					Schedule: &iotanalytics.DatasetScheduleArgs{
+ * 						ScheduleExpression: pulumi.String("cron(0 12 * * ? *)"),
+ * 					},
+ * 				},
+ * 			},
+ * 			RetentionPeriod: &iotanalytics.DatasetRetentionPeriodArgs{
+ * 				Unlimited:    pulumi.Bool(false),
+ * 				NumberOfDays: pulumi.Int(10),
+ * 			},
+ * 			Tags: []iotanalytics.DatasetTagArgs{
+ * 				&iotanalytics.DatasetTagArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&iotanalytics.DatasetTagArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const dataset = new aws_native.iotanalytics.Dataset("dataset", {
+ *     datasetName: "ComplexSQLDataset",
+ *     actions: [{
+ *         actionName: "SqlAction",
+ *         queryAction: {
+ *             sqlQuery: "select * from Datastore",
+ *             filters: [{
+ *                 deltaTime: {
+ *                     offsetSeconds: 1,
+ *                     timeExpression: "timestamp",
+ *                 },
+ *             }],
+ *         },
+ *     }],
+ *     triggers: [{
+ *         schedule: {
+ *             scheduleExpression: "cron(0 12 * * ? *)",
+ *         },
+ *     }],
+ *     retentionPeriod: {
+ *         unlimited: false,
+ *         numberOfDays: 10,
+ *     },
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * dataset = aws_native.iotanalytics.Dataset("dataset",
+ *     dataset_name="ComplexSQLDataset",
+ *     actions=[aws_native.iotanalytics.DatasetActionArgs(
+ *         action_name="SqlAction",
+ *         query_action=aws_native.iotanalytics.DatasetQueryActionArgs(
+ *             sql_query="select * from Datastore",
+ *             filters=[aws_native.iotanalytics.DatasetFilterArgs(
+ *                 delta_time=aws_native.iotanalytics.DatasetDeltaTimeArgs(
+ *                     offset_seconds=1,
+ *                     time_expression="timestamp",
+ *                 ),
+ *             )],
+ *         ),
+ *     )],
+ *     triggers=[aws_native.iotanalytics.DatasetTriggerArgs(
+ *         schedule=aws_native.iotanalytics.DatasetScheduleArgs(
+ *             schedule_expression="cron(0 12 * * ? *)",
+ *         ),
+ *     )],
+ *     retention_period=aws_native.iotanalytics.DatasetRetentionPeriodArgs(
+ *         unlimited=False,
+ *         number_of_days=10,
+ *     ),
+ *     tags=[
+ *         aws_native.iotanalytics.DatasetTagArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.iotanalytics.DatasetTagArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var containerDataset = new AwsNative.IoTAnalytics.Dataset("containerDataset", new AwsNative.IoTAnalytics.DatasetArgs
+ *         {
+ *             DatasetName = "SimpleContainerDataset",
+ *             Actions = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetActionArgs
+ *                 {
+ *                     ActionName = "ContainerAction",
+ *                     ContainerAction = new AwsNative.IoTAnalytics.Inputs.DatasetContainerActionArgs
+ *                     {
+ *                         Image = "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *                         ExecutionRoleArn = "arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *                         ResourceConfiguration = new AwsNative.IoTAnalytics.Inputs.DatasetResourceConfigurationArgs
+ *                         {
+ *                             ComputeType = "ACU_1",
+ *                             VolumeSizeInGB = 10,
+ *                         },
+ *                         Variables = 
+ *                         {
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetVariableArgs
+ *                             {
+ *                                 VariableName = "Variable1",
+ *                                 StringValue = "StringValue",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Triggers = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTriggerArgs
+ *                 {
+ *                     Schedule = new AwsNative.IoTAnalytics.Inputs.DatasetScheduleArgs
+ *                     {
+ *                         ScheduleExpression = "cron(0 12 * * ? *)",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewDataset(ctx, "containerDataset", &iotanalytics.DatasetArgs{
+ * 			DatasetName: pulumi.String("SimpleContainerDataset"),
+ * 			Actions: iotanalytics.DatasetActionArray{
+ * 				&iotanalytics.DatasetActionArgs{
+ * 					ActionName: pulumi.String("ContainerAction"),
+ * 					ContainerAction: &iotanalytics.DatasetContainerActionArgs{
+ * 						Image:            pulumi.String("<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage"),
+ * 						ExecutionRoleArn: pulumi.String("arn:aws:iam::<your_Account_Id>:role/ExecutionRole"),
+ * 						ResourceConfiguration: &iotanalytics.DatasetResourceConfigurationArgs{
+ * 							ComputeType:    "ACU_1",
+ * 							VolumeSizeInGB: pulumi.Int(10),
+ * 						},
+ * 						Variables: iotanalytics.DatasetVariableArray{
+ * 							&iotanalytics.DatasetVariableArgs{
+ * 								VariableName: pulumi.String("Variable1"),
+ * 								StringValue:  pulumi.String("StringValue"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Triggers: []iotanalytics.DatasetTriggerArgs{
+ * 				&iotanalytics.DatasetTriggerArgs{
+ * 					Schedule: &iotanalytics.DatasetScheduleArgs{
+ * 						ScheduleExpression: pulumi.String("cron(0 12 * * ? *)"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const containerDataset = new aws_native.iotanalytics.Dataset("containerDataset", {
+ *     datasetName: "SimpleContainerDataset",
+ *     actions: [{
+ *         actionName: "ContainerAction",
+ *         containerAction: {
+ *             image: "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *             executionRoleArn: "arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *             resourceConfiguration: {
+ *                 computeType: "ACU_1",
+ *                 volumeSizeInGB: 10,
+ *             },
+ *             variables: [{
+ *                 variableName: "Variable1",
+ *                 stringValue: "StringValue",
+ *             }],
+ *         },
+ *     }],
+ *     triggers: [{
+ *         schedule: {
+ *             scheduleExpression: "cron(0 12 * * ? *)",
+ *         },
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * container_dataset = aws_native.iotanalytics.Dataset("containerDataset",
+ *     dataset_name="SimpleContainerDataset",
+ *     actions=[aws_native.iotanalytics.DatasetActionArgs(
+ *         action_name="ContainerAction",
+ *         container_action=aws_native.iotanalytics.DatasetContainerActionArgs(
+ *             image="<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *             execution_role_arn="arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *             resource_configuration=aws_native.iotanalytics.DatasetResourceConfigurationArgs(
+ *                 compute_type="ACU_1",
+ *                 volume_size_in_gb=10,
+ *             ),
+ *             variables=[aws_native.iotanalytics.DatasetVariableArgs(
+ *                 variable_name="Variable1",
+ *                 string_value="StringValue",
+ *             )],
+ *         ),
+ *     )],
+ *     triggers=[aws_native.iotanalytics.DatasetTriggerArgs(
+ *         schedule=aws_native.iotanalytics.DatasetScheduleArgs(
+ *             schedule_expression="cron(0 12 * * ? *)",
+ *         ),
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var containerDataset = new AwsNative.IoTAnalytics.Dataset("containerDataset", new AwsNative.IoTAnalytics.DatasetArgs
+ *         {
+ *             DatasetName = "SimpleContainerDataset",
+ *             Actions = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetActionArgs
+ *                 {
+ *                     ActionName = "ContainerAction",
+ *                     ContainerAction = new AwsNative.IoTAnalytics.Inputs.DatasetContainerActionArgs
+ *                     {
+ *                         Image = "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *                         ExecutionRoleArn = "arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *                         ResourceConfiguration = new AwsNative.IoTAnalytics.Inputs.DatasetResourceConfigurationArgs
+ *                         {
+ *                             ComputeType = "ACU_1",
+ *                             VolumeSizeInGB = 10,
+ *                         },
+ *                         Variables = 
+ *                         {
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetVariableArgs
+ *                             {
+ *                                 VariableName = "Variable1",
+ *                                 StringValue = "StringValue",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Triggers = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTriggerArgs
+ *                 {
+ *                     Schedule = new AwsNative.IoTAnalytics.Inputs.DatasetScheduleArgs
+ *                     {
+ *                         ScheduleExpression = "cron(0 12 * * ? *)",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewDataset(ctx, "containerDataset", &iotanalytics.DatasetArgs{
+ * 			DatasetName: pulumi.String("SimpleContainerDataset"),
+ * 			Actions: iotanalytics.DatasetActionArray{
+ * 				&iotanalytics.DatasetActionArgs{
+ * 					ActionName: pulumi.String("ContainerAction"),
+ * 					ContainerAction: &iotanalytics.DatasetContainerActionArgs{
+ * 						Image:            pulumi.String("<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage"),
+ * 						ExecutionRoleArn: pulumi.String("arn:aws:iam::<your_Account_Id>:role/ExecutionRole"),
+ * 						ResourceConfiguration: &iotanalytics.DatasetResourceConfigurationArgs{
+ * 							ComputeType:    "ACU_1",
+ * 							VolumeSizeInGB: pulumi.Int(10),
+ * 						},
+ * 						Variables: iotanalytics.DatasetVariableArray{
+ * 							&iotanalytics.DatasetVariableArgs{
+ * 								VariableName: pulumi.String("Variable1"),
+ * 								StringValue:  pulumi.String("StringValue"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Triggers: []iotanalytics.DatasetTriggerArgs{
+ * 				&iotanalytics.DatasetTriggerArgs{
+ * 					Schedule: &iotanalytics.DatasetScheduleArgs{
+ * 						ScheduleExpression: pulumi.String("cron(0 12 * * ? *)"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const containerDataset = new aws_native.iotanalytics.Dataset("containerDataset", {
+ *     datasetName: "SimpleContainerDataset",
+ *     actions: [{
+ *         actionName: "ContainerAction",
+ *         containerAction: {
+ *             image: "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *             executionRoleArn: "arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *             resourceConfiguration: {
+ *                 computeType: "ACU_1",
+ *                 volumeSizeInGB: 10,
+ *             },
+ *             variables: [{
+ *                 variableName: "Variable1",
+ *                 stringValue: "StringValue",
+ *             }],
+ *         },
+ *     }],
+ *     triggers: [{
+ *         schedule: {
+ *             scheduleExpression: "cron(0 12 * * ? *)",
+ *         },
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * container_dataset = aws_native.iotanalytics.Dataset("containerDataset",
+ *     dataset_name="SimpleContainerDataset",
+ *     actions=[aws_native.iotanalytics.DatasetActionArgs(
+ *         action_name="ContainerAction",
+ *         container_action=aws_native.iotanalytics.DatasetContainerActionArgs(
+ *             image="<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *             execution_role_arn="arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *             resource_configuration=aws_native.iotanalytics.DatasetResourceConfigurationArgs(
+ *                 compute_type="ACU_1",
+ *                 volume_size_in_gb=10,
+ *             ),
+ *             variables=[aws_native.iotanalytics.DatasetVariableArgs(
+ *                 variable_name="Variable1",
+ *                 string_value="StringValue",
+ *             )],
+ *         ),
+ *     )],
+ *     triggers=[aws_native.iotanalytics.DatasetTriggerArgs(
+ *         schedule=aws_native.iotanalytics.DatasetScheduleArgs(
+ *             schedule_expression="cron(0 12 * * ? *)",
+ *         ),
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var triggeringDataset = new AwsNative.IoTAnalytics.Dataset("triggeringDataset", new AwsNative.IoTAnalytics.DatasetArgs
+ *         {
+ *             DatasetName = "TriggeringDataset",
+ *             Actions = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetActionArgs
+ *                 {
+ *                     ActionName = "SqlAction",
+ *                     QueryAction = new AwsNative.IoTAnalytics.Inputs.DatasetQueryActionArgs
+ *                     {
+ *                         SqlQuery = "select * from Datastore",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var containerDataset = new AwsNative.IoTAnalytics.Dataset("containerDataset", new AwsNative.IoTAnalytics.DatasetArgs
+ *         {
+ *             DatasetName = "ComplexContainerDataset",
+ *             Actions = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetActionArgs
+ *                 {
+ *                     ActionName = "ContainerAction",
+ *                     ContainerAction = new AwsNative.IoTAnalytics.Inputs.DatasetContainerActionArgs
+ *                     {
+ *                         Image = "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *                         ExecutionRoleArn = "arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *                         ResourceConfiguration = new AwsNative.IoTAnalytics.Inputs.DatasetResourceConfigurationArgs
+ *                         {
+ *                             ComputeType = "ACU_1",
+ *                             VolumeSizeInGB = 10,
+ *                         },
+ *                         Variables = 
+ *                         {
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetVariableArgs
+ *                             {
+ *                                 VariableName = "Variable1",
+ *                                 StringValue = "StringValue",
+ *                             },
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetVariableArgs
+ *                             {
+ *                                 VariableName = "Variable2",
+ *                                 DoubleValue = 1,
+ *                             },
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetVariableArgs
+ *                             {
+ *                                 VariableName = "Variable3",
+ *                                 DatasetContentVersionValue = new AwsNative.IoTAnalytics.Inputs.DatasetContentVersionValueArgs
+ *                                 {
+ *                                     DatasetName = "BasicDataset",
+ *                                 },
+ *                             },
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetVariableArgs
+ *                             {
+ *                                 VariableName = "Variable4",
+ *                                 OutputFileUriValue = new AwsNative.IoTAnalytics.Inputs.DatasetOutputFileUriValueArgs
+ *                                 {
+ *                                     FileName = "fileName",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Triggers = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTriggerArgs
+ *                 {
+ *                     TriggeringDataset = new AwsNative.IoTAnalytics.Inputs.DatasetTriggeringDatasetArgs
+ *                     {
+ *                         DatasetName = "TriggeringDataset",
+ *                     },
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 triggeringDataset,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		triggeringDataset, err := iotanalytics.NewDataset(ctx, "triggeringDataset", &iotanalytics.DatasetArgs{
+ * 			DatasetName: pulumi.String("TriggeringDataset"),
+ * 			Actions: iotanalytics.DatasetActionArray{
+ * 				&iotanalytics.DatasetActionArgs{
+ * 					ActionName: pulumi.String("SqlAction"),
+ * 					QueryAction: &iotanalytics.DatasetQueryActionArgs{
+ * 						SqlQuery: pulumi.String("select * from Datastore"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iotanalytics.NewDataset(ctx, "containerDataset", &iotanalytics.DatasetArgs{
+ * 			DatasetName: pulumi.String("ComplexContainerDataset"),
+ * 			Actions: iotanalytics.DatasetActionArray{
+ * 				&iotanalytics.DatasetActionArgs{
+ * 					ActionName: pulumi.String("ContainerAction"),
+ * 					ContainerAction: &iotanalytics.DatasetContainerActionArgs{
+ * 						Image:            pulumi.String("<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage"),
+ * 						ExecutionRoleArn: pulumi.String("arn:aws:iam::<your_Account_Id>:role/ExecutionRole"),
+ * 						ResourceConfiguration: &iotanalytics.DatasetResourceConfigurationArgs{
+ * 							ComputeType:    "ACU_1",
+ * 							VolumeSizeInGB: pulumi.Int(10),
+ * 						},
+ * 						Variables: iotanalytics.DatasetVariableArray{
+ * 							&iotanalytics.DatasetVariableArgs{
+ * 								VariableName: pulumi.String("Variable1"),
+ * 								StringValue:  pulumi.String("StringValue"),
+ * 							},
+ * 							&iotanalytics.DatasetVariableArgs{
+ * 								VariableName: pulumi.String("Variable2"),
+ * 								DoubleValue:  pulumi.Float64(1),
+ * 							},
+ * 							&iotanalytics.DatasetVariableArgs{
+ * 								VariableName: pulumi.String("Variable3"),
+ * 								DatasetContentVersionValue: &iotanalytics.DatasetContentVersionValueArgs{
+ * 									DatasetName: pulumi.String("BasicDataset"),
+ * 								},
+ * 							},
+ * 							&iotanalytics.DatasetVariableArgs{
+ * 								VariableName: pulumi.String("Variable4"),
+ * 								OutputFileUriValue: &iotanalytics.DatasetOutputFileUriValueArgs{
+ * 									FileName: pulumi.String("fileName"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Triggers: []iotanalytics.DatasetTriggerArgs{
+ * 				&iotanalytics.DatasetTriggerArgs{
+ * 					TriggeringDataset: &iotanalytics.DatasetTriggeringDatasetArgs{
+ * 						DatasetName: pulumi.String("TriggeringDataset"),
+ * 					},
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			triggeringDataset,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const triggeringDataset = new aws_native.iotanalytics.Dataset("triggeringDataset", {
+ *     datasetName: "TriggeringDataset",
+ *     actions: [{
+ *         actionName: "SqlAction",
+ *         queryAction: {
+ *             sqlQuery: "select * from Datastore",
+ *         },
+ *     }],
+ * });
+ * const containerDataset = new aws_native.iotanalytics.Dataset("containerDataset", {
+ *     datasetName: "ComplexContainerDataset",
+ *     actions: [{
+ *         actionName: "ContainerAction",
+ *         containerAction: {
+ *             image: "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *             executionRoleArn: "arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *             resourceConfiguration: {
+ *                 computeType: "ACU_1",
+ *                 volumeSizeInGB: 10,
+ *             },
+ *             variables: [
+ *                 {
+ *                     variableName: "Variable1",
+ *                     stringValue: "StringValue",
+ *                 },
+ *                 {
+ *                     variableName: "Variable2",
+ *                     doubleValue: 1,
+ *                 },
+ *                 {
+ *                     variableName: "Variable3",
+ *                     datasetContentVersionValue: {
+ *                         datasetName: "BasicDataset",
+ *                     },
+ *                 },
+ *                 {
+ *                     variableName: "Variable4",
+ *                     outputFileUriValue: {
+ *                         fileName: "fileName",
+ *                     },
+ *                 },
+ *             ],
+ *         },
+ *     }],
+ *     triggers: [{
+ *         triggeringDataset: {
+ *             datasetName: "TriggeringDataset",
+ *         },
+ *     }],
+ * }, {
+ *     dependsOn: [triggeringDataset],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * triggering_dataset = aws_native.iotanalytics.Dataset("triggeringDataset",
+ *     dataset_name="TriggeringDataset",
+ *     actions=[aws_native.iotanalytics.DatasetActionArgs(
+ *         action_name="SqlAction",
+ *         query_action=aws_native.iotanalytics.DatasetQueryActionArgs(
+ *             sql_query="select * from Datastore",
+ *         ),
+ *     )])
+ * container_dataset = aws_native.iotanalytics.Dataset("containerDataset",
+ *     dataset_name="ComplexContainerDataset",
+ *     actions=[aws_native.iotanalytics.DatasetActionArgs(
+ *         action_name="ContainerAction",
+ *         container_action=aws_native.iotanalytics.DatasetContainerActionArgs(
+ *             image="<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *             execution_role_arn="arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *             resource_configuration=aws_native.iotanalytics.DatasetResourceConfigurationArgs(
+ *                 compute_type="ACU_1",
+ *                 volume_size_in_gb=10,
+ *             ),
+ *             variables=[
+ *                 aws_native.iotanalytics.DatasetVariableArgs(
+ *                     variable_name="Variable1",
+ *                     string_value="StringValue",
+ *                 ),
+ *                 aws_native.iotanalytics.DatasetVariableArgs(
+ *                     variable_name="Variable2",
+ *                     double_value=1,
+ *                 ),
+ *                 aws_native.iotanalytics.DatasetVariableArgs(
+ *                     variable_name="Variable3",
+ *                     dataset_content_version_value=aws_native.iotanalytics.DatasetContentVersionValueArgs(
+ *                         dataset_name="BasicDataset",
+ *                     ),
+ *                 ),
+ *                 aws_native.iotanalytics.DatasetVariableArgs(
+ *                     variable_name="Variable4",
+ *                     output_file_uri_value=aws_native.iotanalytics.DatasetOutputFileUriValueArgs(
+ *                         file_name="fileName",
+ *                     ),
+ *                 ),
+ *             ],
+ *         ),
+ *     )],
+ *     triggers=[aws_native.iotanalytics.DatasetTriggerArgs(
+ *         triggering_dataset=aws_native.iotanalytics.DatasetTriggeringDatasetArgs(
+ *             dataset_name="TriggeringDataset",
+ *         ),
+ *     )],
+ *     opts=pulumi.ResourceOptions(depends_on=[triggering_dataset]))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var triggeringDataset = new AwsNative.IoTAnalytics.Dataset("triggeringDataset", new AwsNative.IoTAnalytics.DatasetArgs
+ *         {
+ *             DatasetName = "TriggeringDataset",
+ *             Actions = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetActionArgs
+ *                 {
+ *                     ActionName = "SqlAction",
+ *                     QueryAction = new AwsNative.IoTAnalytics.Inputs.DatasetQueryActionArgs
+ *                     {
+ *                         SqlQuery = "select * from Datastore",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *         var containerDataset = new AwsNative.IoTAnalytics.Dataset("containerDataset", new AwsNative.IoTAnalytics.DatasetArgs
+ *         {
+ *             DatasetName = "ComplexContainerDataset",
+ *             Actions = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetActionArgs
+ *                 {
+ *                     ActionName = "ContainerAction",
+ *                     ContainerAction = new AwsNative.IoTAnalytics.Inputs.DatasetContainerActionArgs
+ *                     {
+ *                         Image = "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *                         ExecutionRoleArn = "arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *                         ResourceConfiguration = new AwsNative.IoTAnalytics.Inputs.DatasetResourceConfigurationArgs
+ *                         {
+ *                             ComputeType = "ACU_1",
+ *                             VolumeSizeInGB = 10,
+ *                         },
+ *                         Variables = 
+ *                         {
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetVariableArgs
+ *                             {
+ *                                 VariableName = "Variable1",
+ *                                 StringValue = "StringValue",
+ *                             },
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetVariableArgs
+ *                             {
+ *                                 VariableName = "Variable2",
+ *                                 DoubleValue = 1,
+ *                             },
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetVariableArgs
+ *                             {
+ *                                 VariableName = "Variable3",
+ *                                 DatasetContentVersionValue = new AwsNative.IoTAnalytics.Inputs.DatasetContentVersionValueArgs
+ *                                 {
+ *                                     DatasetName = "BasicDataset",
+ *                                 },
+ *                             },
+ *                             new AwsNative.IoTAnalytics.Inputs.DatasetVariableArgs
+ *                             {
+ *                                 VariableName = "Variable4",
+ *                                 OutputFileUriValue = new AwsNative.IoTAnalytics.Inputs.DatasetOutputFileUriValueArgs
+ *                                 {
+ *                                     FileName = "fileName",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Triggers = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.DatasetTriggerArgs
+ *                 {
+ *                     TriggeringDataset = new AwsNative.IoTAnalytics.Inputs.DatasetTriggeringDatasetArgs
+ *                     {
+ *                         DatasetName = "TriggeringDataset",
+ *                     },
+ *                 },
+ *             },
+ *         }, new CustomResourceOptions
+ *         {
+ *             DependsOn = 
+ *             {
+ *                 triggeringDataset,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		triggeringDataset, err := iotanalytics.NewDataset(ctx, "triggeringDataset", &iotanalytics.DatasetArgs{
+ * 			DatasetName: pulumi.String("TriggeringDataset"),
+ * 			Actions: iotanalytics.DatasetActionArray{
+ * 				&iotanalytics.DatasetActionArgs{
+ * 					ActionName: pulumi.String("SqlAction"),
+ * 					QueryAction: &iotanalytics.DatasetQueryActionArgs{
+ * 						SqlQuery: pulumi.String("select * from Datastore"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = iotanalytics.NewDataset(ctx, "containerDataset", &iotanalytics.DatasetArgs{
+ * 			DatasetName: pulumi.String("ComplexContainerDataset"),
+ * 			Actions: iotanalytics.DatasetActionArray{
+ * 				&iotanalytics.DatasetActionArgs{
+ * 					ActionName: pulumi.String("ContainerAction"),
+ * 					ContainerAction: &iotanalytics.DatasetContainerActionArgs{
+ * 						Image:            pulumi.String("<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage"),
+ * 						ExecutionRoleArn: pulumi.String("arn:aws:iam::<your_Account_Id>:role/ExecutionRole"),
+ * 						ResourceConfiguration: &iotanalytics.DatasetResourceConfigurationArgs{
+ * 							ComputeType:    "ACU_1",
+ * 							VolumeSizeInGB: pulumi.Int(10),
+ * 						},
+ * 						Variables: iotanalytics.DatasetVariableArray{
+ * 							&iotanalytics.DatasetVariableArgs{
+ * 								VariableName: pulumi.String("Variable1"),
+ * 								StringValue:  pulumi.String("StringValue"),
+ * 							},
+ * 							&iotanalytics.DatasetVariableArgs{
+ * 								VariableName: pulumi.String("Variable2"),
+ * 								DoubleValue:  pulumi.Float64(1),
+ * 							},
+ * 							&iotanalytics.DatasetVariableArgs{
+ * 								VariableName: pulumi.String("Variable3"),
+ * 								DatasetContentVersionValue: &iotanalytics.DatasetContentVersionValueArgs{
+ * 									DatasetName: pulumi.String("BasicDataset"),
+ * 								},
+ * 							},
+ * 							&iotanalytics.DatasetVariableArgs{
+ * 								VariableName: pulumi.String("Variable4"),
+ * 								OutputFileUriValue: &iotanalytics.DatasetOutputFileUriValueArgs{
+ * 									FileName: pulumi.String("fileName"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Triggers: []iotanalytics.DatasetTriggerArgs{
+ * 				&iotanalytics.DatasetTriggerArgs{
+ * 					TriggeringDataset: &iotanalytics.DatasetTriggeringDatasetArgs{
+ * 						DatasetName: pulumi.String("TriggeringDataset"),
+ * 					},
+ * 				},
+ * 			},
+ * 		}, pulumi.DependsOn([]pulumi.Resource{
+ * 			triggeringDataset,
+ * 		}))
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const triggeringDataset = new aws_native.iotanalytics.Dataset("triggeringDataset", {
+ *     datasetName: "TriggeringDataset",
+ *     actions: [{
+ *         actionName: "SqlAction",
+ *         queryAction: {
+ *             sqlQuery: "select * from Datastore",
+ *         },
+ *     }],
+ * });
+ * const containerDataset = new aws_native.iotanalytics.Dataset("containerDataset", {
+ *     datasetName: "ComplexContainerDataset",
+ *     actions: [{
+ *         actionName: "ContainerAction",
+ *         containerAction: {
+ *             image: "<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *             executionRoleArn: "arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *             resourceConfiguration: {
+ *                 computeType: "ACU_1",
+ *                 volumeSizeInGB: 10,
+ *             },
+ *             variables: [
+ *                 {
+ *                     variableName: "Variable1",
+ *                     stringValue: "StringValue",
+ *                 },
+ *                 {
+ *                     variableName: "Variable2",
+ *                     doubleValue: 1,
+ *                 },
+ *                 {
+ *                     variableName: "Variable3",
+ *                     datasetContentVersionValue: {
+ *                         datasetName: "BasicDataset",
+ *                     },
+ *                 },
+ *                 {
+ *                     variableName: "Variable4",
+ *                     outputFileUriValue: {
+ *                         fileName: "fileName",
+ *                     },
+ *                 },
+ *             ],
+ *         },
+ *     }],
+ *     triggers: [{
+ *         triggeringDataset: {
+ *             datasetName: "TriggeringDataset",
+ *         },
+ *     }],
+ * }, {
+ *     dependsOn: [triggeringDataset],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * triggering_dataset = aws_native.iotanalytics.Dataset("triggeringDataset",
+ *     dataset_name="TriggeringDataset",
+ *     actions=[aws_native.iotanalytics.DatasetActionArgs(
+ *         action_name="SqlAction",
+ *         query_action=aws_native.iotanalytics.DatasetQueryActionArgs(
+ *             sql_query="select * from Datastore",
+ *         ),
+ *     )])
+ * container_dataset = aws_native.iotanalytics.Dataset("containerDataset",
+ *     dataset_name="ComplexContainerDataset",
+ *     actions=[aws_native.iotanalytics.DatasetActionArgs(
+ *         action_name="ContainerAction",
+ *         container_action=aws_native.iotanalytics.DatasetContainerActionArgs(
+ *             image="<your_Account_Id>.dkr.ecr.us-east-1.amazonaws.com/sampleimage",
+ *             execution_role_arn="arn:aws:iam::<your_Account_Id>:role/ExecutionRole",
+ *             resource_configuration=aws_native.iotanalytics.DatasetResourceConfigurationArgs(
+ *                 compute_type="ACU_1",
+ *                 volume_size_in_gb=10,
+ *             ),
+ *             variables=[
+ *                 aws_native.iotanalytics.DatasetVariableArgs(
+ *                     variable_name="Variable1",
+ *                     string_value="StringValue",
+ *                 ),
+ *                 aws_native.iotanalytics.DatasetVariableArgs(
+ *                     variable_name="Variable2",
+ *                     double_value=1,
+ *                 ),
+ *                 aws_native.iotanalytics.DatasetVariableArgs(
+ *                     variable_name="Variable3",
+ *                     dataset_content_version_value=aws_native.iotanalytics.DatasetContentVersionValueArgs(
+ *                         dataset_name="BasicDataset",
+ *                     ),
+ *                 ),
+ *                 aws_native.iotanalytics.DatasetVariableArgs(
+ *                     variable_name="Variable4",
+ *                     output_file_uri_value=aws_native.iotanalytics.DatasetOutputFileUriValueArgs(
+ *                         file_name="fileName",
+ *                     ),
+ *                 ),
+ *             ],
+ *         ),
+ *     )],
+ *     triggers=[aws_native.iotanalytics.DatasetTriggerArgs(
+ *         triggering_dataset=aws_native.iotanalytics.DatasetTriggeringDatasetArgs(
+ *             dataset_name="TriggeringDataset",
+ *         ),
+ *     )],
+ *     opts=pulumi.ResourceOptions(depends_on=[triggering_dataset]))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iotanalytics:Dataset")

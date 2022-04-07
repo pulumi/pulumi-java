@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE) service that will provide encryption keys.
- * 
  */
 public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
 
     /**
      * An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
-     * 
      */
     @Import(name="certificateArn")
       private final @Nullable String certificateArn;
@@ -32,7 +30,6 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
 
     /**
      * The resource ID to include in key requests.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;
@@ -43,7 +40,6 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
 
     /**
      * An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
-     * 
      */
     @Import(name="roleArn", required=true)
       private final String roleArn;
@@ -54,7 +50,6 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
 
     /**
      * The system IDs to include in key requests.
-     * 
      */
     @Import(name="systemIds", required=true)
       private final List<String> systemIds;
@@ -65,7 +60,6 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
 
     /**
      * The URL of the external key provider service.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

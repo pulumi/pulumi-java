@@ -14,7 +14,6 @@ public final class GetServiceProfileArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Service profile Id. Returned after successful create.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

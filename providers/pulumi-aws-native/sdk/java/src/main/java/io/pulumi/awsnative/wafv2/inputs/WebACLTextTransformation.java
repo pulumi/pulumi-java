@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Text Transformation on the Search String before match.
- * 
  */
 public final class WebACLTextTransformation extends io.pulumi.resources.InvokeArgs {
 

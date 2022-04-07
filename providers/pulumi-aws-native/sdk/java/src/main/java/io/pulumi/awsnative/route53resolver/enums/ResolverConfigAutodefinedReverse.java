@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
-     * 
      */
     @EnumType
     public enum ResolverConfigAutodefinedReverse {

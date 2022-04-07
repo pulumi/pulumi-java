@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Resolve parameter value conflicts
-     * 
      */
     @EnumType
     public enum AddonResolveConflicts {

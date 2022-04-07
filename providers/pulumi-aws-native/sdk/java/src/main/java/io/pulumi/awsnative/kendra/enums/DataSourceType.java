@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Data source type
-     * 
      */
     @EnumType
     public enum DataSourceType {

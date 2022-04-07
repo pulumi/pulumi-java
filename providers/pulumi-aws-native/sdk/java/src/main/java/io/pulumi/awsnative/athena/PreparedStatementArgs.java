@@ -16,7 +16,6 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The description of the prepared statement.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The query string for the prepared statement.
-     * 
      */
     @Import(name="queryStatement", required=true)
       private final Output<String> queryStatement;
@@ -38,7 +36,6 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the prepared statement.
-     * 
      */
     @Import(name="statementName", required=true)
       private final Output<String> statementName;
@@ -49,7 +46,6 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the workgroup to which the prepared statement belongs.
-     * 
      */
     @Import(name="workGroup", required=true)
       private final Output<String> workGroup;

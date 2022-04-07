@@ -14,21 +14,157 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::SES::ConfigurationSet.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var configSetName = config.Require("configSetName");
+ *         var configSet = new AwsNative.SES.ConfigurationSet("configSet", new AwsNative.SES.ConfigurationSetArgs
+ *         {
+ *             Name = configSetName,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		configSetName := cfg.Require("configSetName")
+ * 		_, err := ses.NewConfigurationSet(ctx, "configSet", &ses.ConfigurationSetArgs{
+ * 			Name: pulumi.String(configSetName),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const configSetName = config.require("configSetName");
+ * const configSet = new aws_native.ses.ConfigurationSet("configSet", {name: configSetName});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * config_set_name = config.require("configSetName")
+ * config_set = aws_native.ses.ConfigurationSet("configSet", name=config_set_name)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var configSetName = config.Require("configSetName");
+ *         var configSet = new AwsNative.SES.ConfigurationSet("configSet", new AwsNative.SES.ConfigurationSetArgs
+ *         {
+ *             Name = configSetName,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ses"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		configSetName := cfg.Require("configSetName")
+ * 		_, err := ses.NewConfigurationSet(ctx, "configSet", &ses.ConfigurationSetArgs{
+ * 			Name: pulumi.String(configSetName),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const configSetName = config.require("configSetName");
+ * const configSet = new aws_native.ses.ConfigurationSet("configSet", {name: configSetName});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * config_set_name = config.require("configSetName")
+ * config_set = aws_native.ses.ConfigurationSet("configSet", name=config_set_name)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ses:ConfigurationSet")
 public class ConfigurationSet extends io.pulumi.resources.CustomResource {
     /**
      * The name of the configuration set.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the configuration set.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;

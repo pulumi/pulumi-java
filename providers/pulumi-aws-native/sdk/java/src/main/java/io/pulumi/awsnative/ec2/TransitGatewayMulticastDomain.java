@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::EC2::TransitGatewayMulticastDomain type
- * 
  */
 @ResourceType(type="aws-native:ec2:TransitGatewayMulticastDomain")
 public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomResource {
     /**
      * The time the transit gateway multicast domain was created.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The time the transit gateway multicast domain was created.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * The options for the transit gateway multicast domain.
-     * 
      */
     @Export(name="options", type=OptionsProperties.class, parameters={})
     private Output</* @Nullable */ OptionsProperties> options;
 
     /**
      * @return The options for the transit gateway multicast domain.
-     * 
      */
     public Output</* @Nullable */ OptionsProperties> getOptions() {
         return this.options;
     }
     /**
      * The state of the transit gateway multicast domain.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the transit gateway multicast domain.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The tags for the transit gateway multicast domain.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={TransitGatewayMulticastDomainTag.class})
     private Output</* @Nullable */ List<TransitGatewayMulticastDomainTag>> tags;
 
     /**
      * @return The tags for the transit gateway multicast domain.
-     * 
      */
     public Output</* @Nullable */ List<TransitGatewayMulticastDomainTag>> getTags() {
         return this.tags;
     }
     /**
      * The ID of the transit gateway.
-     * 
      */
     @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output<String> transitGatewayId;
 
     /**
      * @return The ID of the transit gateway.
-     * 
      */
     public Output<String> getTransitGatewayId() {
         return this.transitGatewayId;
     }
     /**
      * The Amazon Resource Name (ARN) of the transit gateway multicast domain.
-     * 
      */
     @Export(name="transitGatewayMulticastDomainArn", type=String.class, parameters={})
     private Output<String> transitGatewayMulticastDomainArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the transit gateway multicast domain.
-     * 
      */
     public Output<String> getTransitGatewayMulticastDomainArn() {
         return this.transitGatewayMulticastDomainArn;
     }
     /**
      * The ID of the transit gateway multicast domain.
-     * 
      */
     @Export(name="transitGatewayMulticastDomainId", type=String.class, parameters={})
     private Output<String> transitGatewayMulticastDomainId;
 
     /**
      * @return The ID of the transit gateway multicast domain.
-     * 
      */
     public Output<String> getTransitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains information about code hooks that Amazon Lex calls during a conversation.
- * 
  */
 public final class BotAliasConversationLogSettings extends io.pulumi.resources.InvokeArgs {
 

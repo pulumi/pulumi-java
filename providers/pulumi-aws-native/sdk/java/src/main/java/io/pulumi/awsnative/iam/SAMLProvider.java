@@ -15,20 +15,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::IAM::SAMLProvider
- * 
  */
 @ResourceType(type="aws-native:iam:SAMLProvider")
 public class SAMLProvider extends io.pulumi.resources.CustomResource {
     /**
      * Amazon Resource Name (ARN) of the SAML provider
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the SAML provider
-     * 
      */
     public Output<String> getArn() {
         return this.arn;

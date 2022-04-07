@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Visibility Metric of the RuleGroup.
- * 
  */
 public final class RuleGroupVisibilityConfig extends io.pulumi.resources.InvokeArgs {
 

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:robomaker:RobotApplicationVersion")
 public class RobotApplicationVersion extends io.pulumi.resources.CustomResource {
@@ -37,14 +36,12 @@ public class RobotApplicationVersion extends io.pulumi.resources.CustomResource 
     }
     /**
      * The revision ID of robot application.
-     * 
      */
     @Export(name="currentRevisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> currentRevisionId;
 
     /**
      * @return The revision ID of robot application.
-     * 
      */
     public Output</* @Nullable */ String> getCurrentRevisionId() {
         return this.currentRevisionId;

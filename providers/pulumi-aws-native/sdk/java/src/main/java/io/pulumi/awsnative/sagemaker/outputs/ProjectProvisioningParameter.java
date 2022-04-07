@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ProjectProvisioningParameter {
     /**
      * The parameter key.
-     * 
      */
     private final String key;
     /**
      * The parameter value.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class ProjectProvisioningParameter {
 
     /**
      * The parameter key.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The parameter value.
-     * 
     */
     public String getValue() {
         return this.value;

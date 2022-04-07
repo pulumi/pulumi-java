@@ -16,7 +16,6 @@ import java.util.StringJoiner;
      * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
      * 
      * PUBLIC: The type is publically visible and usable within any Amazon account.
-     * 
      */
     @EnumType
     public enum HookVersionVisibility {

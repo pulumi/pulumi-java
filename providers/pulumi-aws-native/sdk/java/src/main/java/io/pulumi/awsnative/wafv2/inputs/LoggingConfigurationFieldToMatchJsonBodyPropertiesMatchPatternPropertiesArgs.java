@@ -13,8 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
- * 
+ * The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria. 
  */
 public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
 
     /**
      * Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
-     * 
      */
     @Import(name="all")
       private final @Nullable Output<Object> all;
@@ -33,7 +31,6 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
 
     /**
      * Match only the specified include paths. See also MatchScope in JsonBody.
-     * 
      */
     @Import(name="includedPaths")
       private final @Nullable Output<List<String>> includedPaths;

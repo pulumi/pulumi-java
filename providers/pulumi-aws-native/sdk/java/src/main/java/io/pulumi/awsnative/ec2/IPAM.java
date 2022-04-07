@@ -17,20 +17,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema of AWS::EC2::IPAM Type
- * 
  */
 @ResourceType(type="aws-native:ec2:IPAM")
 public class IPAM extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the IPAM.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the IPAM.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -43,84 +40,72 @@ public class IPAM extends io.pulumi.resources.CustomResource {
     }
     /**
      * Id of the IPAM.
-     * 
      */
     @Export(name="ipamId", type=String.class, parameters={})
     private Output<String> ipamId;
 
     /**
      * @return Id of the IPAM.
-     * 
      */
     public Output<String> getIpamId() {
         return this.ipamId;
     }
     /**
      * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
-     * 
      */
     @Export(name="operatingRegions", type=List.class, parameters={IPAMIpamOperatingRegion.class})
     private Output</* @Nullable */ List<IPAMIpamOperatingRegion>> operatingRegions;
 
     /**
      * @return The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
-     * 
      */
     public Output</* @Nullable */ List<IPAMIpamOperatingRegion>> getOperatingRegions() {
         return this.operatingRegions;
     }
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
-     * 
      */
     @Export(name="privateDefaultScopeId", type=String.class, parameters={})
     private Output<String> privateDefaultScopeId;
 
     /**
      * @return The Id of the default scope for publicly routable IP space, created with this IPAM.
-     * 
      */
     public Output<String> getPrivateDefaultScopeId() {
         return this.privateDefaultScopeId;
     }
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
-     * 
      */
     @Export(name="publicDefaultScopeId", type=String.class, parameters={})
     private Output<String> publicDefaultScopeId;
 
     /**
      * @return The Id of the default scope for publicly routable IP space, created with this IPAM.
-     * 
      */
     public Output<String> getPublicDefaultScopeId() {
         return this.publicDefaultScopeId;
     }
     /**
      * The number of scopes that currently exist in this IPAM.
-     * 
      */
     @Export(name="scopeCount", type=Integer.class, parameters={})
     private Output<Integer> scopeCount;
 
     /**
      * @return The number of scopes that currently exist in this IPAM.
-     * 
      */
     public Output<Integer> getScopeCount() {
         return this.scopeCount;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={IPAMTag.class})
     private Output</* @Nullable */ List<IPAMTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<IPAMTag>> getTags() {
         return this.tags;

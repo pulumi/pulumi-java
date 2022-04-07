@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies whether the rule is enabled.
-     * 
      */
     @EnumType
     public enum BucketReplicationRuleStatus {

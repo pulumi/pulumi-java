@@ -14,7 +14,6 @@ public final class GetCarrierGatewayArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The ID of the carrier gateway.
-     * 
      */
     @Import(name="carrierGatewayId", required=true)
       private final String carrierGatewayId;

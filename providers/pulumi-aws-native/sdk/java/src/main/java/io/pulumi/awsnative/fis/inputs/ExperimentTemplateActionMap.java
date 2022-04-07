@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * The actions for the experiment.
- * 
  */
 public final class ExperimentTemplateActionMap extends io.pulumi.resources.InvokeArgs {
 

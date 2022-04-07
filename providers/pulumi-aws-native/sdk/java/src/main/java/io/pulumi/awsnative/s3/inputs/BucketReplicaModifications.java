@@ -14,7 +14,6 @@ public final class BucketReplicaModifications extends io.pulumi.resources.Invoke
 
     /**
      * Specifies whether Amazon S3 replicates modifications on replicas.
-     * 
      */
     @Import(name="status", required=true)
       private final BucketReplicaModificationsStatus status;

@@ -17,77 +17,263 @@ import javax.annotation.Nullable;
 /**
  * A dimension can be used to limit the scope of a metric used in a security profile for AWS IoT Device Defender.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var topicFilterForAuthMessagesDimension = new AwsNative.IoT.Dimension("topicFilterForAuthMessagesDimension", new AwsNative.IoT.DimensionArgs
+ *         {
+ *             Name = "TopicFilterForAuthMessages",
+ *             Type = "TOPIC_FILTER",
+ *             StringValues = 
+ *             {
+ *                 "device/+/auth",
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IoT.Inputs.DimensionTagArgs
+ *                 {
+ *                     Key = "Application",
+ *                     Value = "SmartHome",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewDimension(ctx, "topicFilterForAuthMessagesDimension", &iot.DimensionArgs{
+ * 			Name: pulumi.String("TopicFilterForAuthMessages"),
+ * 			Type: "TOPIC_FILTER",
+ * 			StringValues: pulumi.StringArray{
+ * 				pulumi.String("device/+/auth"),
+ * 			},
+ * 			Tags: []iot.DimensionTagArgs{
+ * 				&iot.DimensionTagArgs{
+ * 					Key:   pulumi.String("Application"),
+ * 					Value: pulumi.String("SmartHome"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const topicFilterForAuthMessagesDimension = new aws_native.iot.Dimension("topicFilterForAuthMessagesDimension", {
+ *     name: "TopicFilterForAuthMessages",
+ *     type: "TOPIC_FILTER",
+ *     stringValues: ["device/+/auth"],
+ *     tags: [{
+ *         key: "Application",
+ *         value: "SmartHome",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * topic_filter_for_auth_messages_dimension = aws_native.iot.Dimension("topicFilterForAuthMessagesDimension",
+ *     name="TopicFilterForAuthMessages",
+ *     type="TOPIC_FILTER",
+ *     string_values=["device/+/auth"],
+ *     tags=[aws_native.iot.DimensionTagArgs(
+ *         key="Application",
+ *         value="SmartHome",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var topicFilterForAuthMessagesDimension = new AwsNative.IoT.Dimension("topicFilterForAuthMessagesDimension", new AwsNative.IoT.DimensionArgs
+ *         {
+ *             Name = "TopicFilterForAuthMessages",
+ *             Type = "TOPIC_FILTER",
+ *             StringValues = 
+ *             {
+ *                 "device/+/auth",
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IoT.Inputs.DimensionTagArgs
+ *                 {
+ *                     Key = "Application",
+ *                     Value = "SmartHome",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewDimension(ctx, "topicFilterForAuthMessagesDimension", &iot.DimensionArgs{
+ * 			Name: pulumi.String("TopicFilterForAuthMessages"),
+ * 			Type: "TOPIC_FILTER",
+ * 			StringValues: pulumi.StringArray{
+ * 				pulumi.String("device/+/auth"),
+ * 			},
+ * 			Tags: []iot.DimensionTagArgs{
+ * 				&iot.DimensionTagArgs{
+ * 					Key:   pulumi.String("Application"),
+ * 					Value: pulumi.String("SmartHome"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const topicFilterForAuthMessagesDimension = new aws_native.iot.Dimension("topicFilterForAuthMessagesDimension", {
+ *     name: "TopicFilterForAuthMessages",
+ *     type: "TOPIC_FILTER",
+ *     stringValues: ["device/+/auth"],
+ *     tags: [{
+ *         key: "Application",
+ *         value: "SmartHome",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * topic_filter_for_auth_messages_dimension = aws_native.iot.Dimension("topicFilterForAuthMessagesDimension",
+ *     name="TopicFilterForAuthMessages",
+ *     type="TOPIC_FILTER",
+ *     string_values=["device/+/auth"],
+ *     tags=[aws_native.iot.DimensionTagArgs(
+ *         key="Application",
+ *         value="SmartHome",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iot:Dimension")
 public class Dimension extends io.pulumi.resources.CustomResource {
     /**
      * The ARN (Amazon resource name) of the created dimension.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The ARN (Amazon resource name) of the created dimension.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * A unique identifier for the dimension.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return A unique identifier for the dimension.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Specifies the value or list of values for the dimension.
-     * 
      */
     @Export(name="stringValues", type=List.class, parameters={String.class})
     private Output<List<String>> stringValues;
 
     /**
      * @return Specifies the value or list of values for the dimension.
-     * 
      */
     public Output<List<String>> getStringValues() {
         return this.stringValues;
     }
     /**
      * Metadata that can be used to manage the dimension.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DimensionTag.class})
     private Output</* @Nullable */ List<DimensionTag>> tags;
 
     /**
      * @return Metadata that can be used to manage the dimension.
-     * 
      */
     public Output</* @Nullable */ List<DimensionTag>> getTags() {
         return this.tags;
     }
     /**
      * Specifies the type of the dimension.
-     * 
      */
     @Export(name="type", type=DimensionType.class, parameters={})
     private Output<DimensionType> type;
 
     /**
      * @return Specifies the type of the dimension.
-     * 
      */
     public Output<DimensionType> getType() {
         return this.type;

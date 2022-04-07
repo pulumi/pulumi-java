@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Dataset format
-     * 
      */
     @EnumType
     public enum DatasetFormat {

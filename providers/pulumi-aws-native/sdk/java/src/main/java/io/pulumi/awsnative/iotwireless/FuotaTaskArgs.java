@@ -19,7 +19,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Multicast group to associate. Only for update request.
-     * 
      */
     @Import(name="associateMulticastGroup")
       private final @Nullable Output<String> associateMulticastGroup;
@@ -30,7 +29,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Wireless device to associate. Only for update request.
-     * 
      */
     @Import(name="associateWirelessDevice")
       private final @Nullable Output<String> associateWirelessDevice;
@@ -41,7 +39,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FUOTA task description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -52,7 +49,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Multicast group to disassociate. Only for update request.
-     * 
      */
     @Import(name="disassociateMulticastGroup")
       private final @Nullable Output<String> disassociateMulticastGroup;
@@ -63,7 +59,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Wireless device to disassociate. Only for update request.
-     * 
      */
     @Import(name="disassociateWirelessDevice")
       private final @Nullable Output<String> disassociateWirelessDevice;
@@ -74,7 +69,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FUOTA task firmware update image binary S3 link
-     * 
      */
     @Import(name="firmwareUpdateImage", required=true)
       private final Output<String> firmwareUpdateImage;
@@ -85,7 +79,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FUOTA task firmware IAM role for reading S3
-     * 
      */
     @Import(name="firmwareUpdateRole", required=true)
       private final Output<String> firmwareUpdateRole;
@@ -96,7 +89,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FUOTA task LoRaWAN
-     * 
      */
     @Import(name="loRaWAN", required=true)
       private final Output<FuotaTaskLoRaWANArgs> loRaWAN;
@@ -107,7 +99,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of FUOTA task
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -118,7 +109,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the FUOTA task.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<FuotaTaskTagArgs>> tags;

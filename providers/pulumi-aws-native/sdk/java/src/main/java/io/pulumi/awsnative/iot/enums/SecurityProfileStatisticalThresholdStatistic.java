@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The percentile which resolves to a threshold value by which compliance with a behavior is determined
-     * 
      */
     @EnumType
     public enum SecurityProfileStatisticalThresholdStatistic {

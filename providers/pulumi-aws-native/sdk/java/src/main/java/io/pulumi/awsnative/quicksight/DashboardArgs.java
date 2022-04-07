@@ -43,7 +43,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>The display name of the dashboard.</p>
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -65,7 +64,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      *             principal ARN. </p>
      * 
      *         <p>To specify no permissions, omit the permissions list.</p>
-     * 
      */
     @Import(name="permissions")
       private final @Nullable Output<List<DashboardResourcePermissionArgs>> permissions;
@@ -84,7 +82,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             dashboard.</p>
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DashboardTagArgs>> tags;
@@ -98,7 +95,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      *             you add a value for this field, it overrides the value that is used in the source
      *             entity. The theme ARN must exist in the same AWS account where you create the
      *             dashboard.</p>
-     * 
      */
     @Import(name="themeArn")
       private final @Nullable Output<String> themeArn;
@@ -109,7 +105,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>A description for the first version of the dashboard being created.</p>
-     * 
      */
     @Import(name="versionDescription")
       private final @Nullable Output<String> versionDescription;

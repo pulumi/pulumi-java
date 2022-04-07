@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status of a project.
-     * 
      */
     @EnumType
     public enum ProjectStatus {

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
     /**
      * The name of the query header to inspect.
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
 
     /**
      * The name of the query header to inspect.
-     * 
     */
     public String getName() {
         return this.name;

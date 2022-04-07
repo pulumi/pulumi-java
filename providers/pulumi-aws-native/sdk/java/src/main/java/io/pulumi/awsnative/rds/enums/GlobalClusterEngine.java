@@ -11,7 +11,6 @@ import java.util.StringJoiner;
     /**
      * The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora).
      * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
-     * 
      */
     @EnumType
     public enum GlobalClusterEngine {

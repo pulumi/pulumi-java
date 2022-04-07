@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * StillWaitingResponseSpecification.
- * 
  */
 public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
 
     /**
      * Indicates whether the user can interrupt a speech prompt from the bot.
-     * 
      */
     @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;

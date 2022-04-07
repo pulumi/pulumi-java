@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Excluded Rule in the RuleGroup or ManagedRuleGroup will not be evaluated.
- * 
  */
 public final class WebACLExcludedRule extends io.pulumi.resources.InvokeArgs {
 

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Default handling for logs that don't match any of the specified filtering conditions.
-     * 
      */
     @EnumType
     public enum LoggingConfigurationLoggingFilterPropertiesDefaultBehavior {

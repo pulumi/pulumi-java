@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class ModelExplainabilityJobDefinitionMonitoringOutputConfig {
     /**
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
-     * 
      */
     private final @Nullable String kmsKeyId;
     /**
      * Monitoring outputs for monitoring jobs. This is where the output of the periodic monitoring jobs is uploaded.
-     * 
      */
     private final List<ModelExplainabilityJobDefinitionMonitoringOutput> monitoringOutputs;
 
@@ -34,14 +32,12 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfig {
 
     /**
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
-     * 
     */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * Monitoring outputs for monitoring jobs. This is where the output of the periodic monitoring jobs is uploaded.
-     * 
     */
     public List<ModelExplainabilityJobDefinitionMonitoringOutput> getMonitoringOutputs() {
         return this.monitoringOutputs;

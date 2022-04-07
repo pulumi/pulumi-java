@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Must be RuleName
-     * 
      */
     @EnumType
     public enum DestinationExpressionType {

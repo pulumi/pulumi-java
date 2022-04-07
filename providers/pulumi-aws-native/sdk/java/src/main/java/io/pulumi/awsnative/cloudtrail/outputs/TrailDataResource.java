@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class TrailDataResource {
     /**
      * The resource type in which you want to log data events. You can specify AWS::S3::Object or AWS::Lambda::Function resources.
-     * 
      */
     private final String type;
     /**
      * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
-     * 
      */
     private final @Nullable List<String> values;
 
@@ -32,14 +30,12 @@ public final class TrailDataResource {
 
     /**
      * The resource type in which you want to log data events. You can specify AWS::S3::Object or AWS::Lambda::Function resources.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
-     * 
     */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The destination repository for the container image.
- * 
  */
 public final class DistributionConfigurationTargetContainerRepository extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DistributionConfigurationTargetContainerRepository extends io
 
     /**
      * The repository name of target container repository.
-     * 
      */
     @Import(name="repositoryName")
       private final @Nullable String repositoryName;
@@ -32,7 +30,6 @@ public final class DistributionConfigurationTargetContainerRepository extends io
 
     /**
      * The service of target container repository.
-     * 
      */
     @Import(name="service")
       private final @Nullable DistributionConfigurationTargetContainerRepositoryService service;

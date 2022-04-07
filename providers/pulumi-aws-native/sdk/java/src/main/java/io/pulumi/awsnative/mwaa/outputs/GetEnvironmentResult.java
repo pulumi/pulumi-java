@@ -22,11 +22,10 @@ public final class GetEnvironmentResult {
      * 
      *     [core]
      *     dags_folder={AIRFLOW_HOME}/dags
-     *     
-     *     Would be represented as
-     *     
-     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      * 
+     *     Would be represented as
+     * 
+     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      */
     private final @Nullable Object airflowConfigurationOptions;
     private final @Nullable String airflowVersion;
@@ -46,7 +45,6 @@ public final class GetEnvironmentResult {
     private final @Nullable String sourceBucketArn;
     /**
      * A map of tags for the environment.
-     * 
      */
     private final @Nullable Object tags;
     private final @Nullable EnvironmentWebserverAccessMode webserverAccessMode;
@@ -103,11 +101,10 @@ public final class GetEnvironmentResult {
      * 
      *     [core]
      *     dags_folder={AIRFLOW_HOME}/dags
-     *     
-     *     Would be represented as
-     *     
-     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      * 
+     *     Would be represented as
+     * 
+     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
     */
     public Optional<Object> getAirflowConfigurationOptions() {
         return Optional.ofNullable(this.airflowConfigurationOptions);
@@ -159,7 +156,6 @@ public final class GetEnvironmentResult {
     }
     /**
      * A map of tags for the environment.
-     * 
     */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);

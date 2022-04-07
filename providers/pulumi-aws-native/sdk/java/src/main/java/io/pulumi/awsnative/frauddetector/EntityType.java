@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 
 /**
  * An entity type for fraud detector.
- * 
  */
 @ResourceType(type="aws-native:frauddetector:EntityType")
 public class EntityType extends io.pulumi.resources.CustomResource {
     /**
      * The entity type ARN.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The entity type ARN.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The timestamp when the entity type was created.
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return The timestamp when the entity type was created.
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The entity type description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The entity type description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The timestamp when the entity type was last updated.
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return The timestamp when the entity type was last updated.
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * The name of the entity type.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the entity type.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Tags associated with this entity type.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={EntityTypeTag.class})
     private Output</* @Nullable */ List<EntityTypeTag>> tags;
 
     /**
      * @return Tags associated with this entity type.
-     * 
      */
     public Output</* @Nullable */ List<EntityTypeTag>> getTags() {
         return this.tags;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A CMAF encryption configuration.
- * 
  */
 public final class PackagingConfigurationCmafEncryption extends io.pulumi.resources.InvokeArgs {
 

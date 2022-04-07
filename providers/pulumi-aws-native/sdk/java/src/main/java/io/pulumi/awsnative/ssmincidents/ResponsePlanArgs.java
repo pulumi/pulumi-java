@@ -21,7 +21,6 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of actions.
-     * 
      */
     @Import(name="actions")
       private final @Nullable Output<List<ResponsePlanActionArgs>> actions;
@@ -39,7 +38,6 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the response plan.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -50,7 +48,6 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of engagements to use.
-     * 
      */
     @Import(name="engagements")
       private final @Nullable Output<List<String>> engagements;
@@ -68,7 +65,6 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the response plan.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -79,7 +75,6 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags to apply to the response plan.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ResponsePlanTagArgs>> tags;

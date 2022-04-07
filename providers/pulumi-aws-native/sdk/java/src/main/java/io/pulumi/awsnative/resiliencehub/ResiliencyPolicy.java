@@ -17,20 +17,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type Definition for Resiliency Policy.
- * 
  */
 @ResourceType(type="aws-native:resiliencehub:ResiliencyPolicy")
 public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Data Location Constraint of the Policy.
-     * 
      */
     @Export(name="dataLocationConstraint", type=ResiliencyPolicyDataLocationConstraint.class, parameters={})
     private Output</* @Nullable */ ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
     /**
      * @return Data Location Constraint of the Policy.
-     * 
      */
     public Output</* @Nullable */ ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
         return this.dataLocationConstraint;
@@ -43,42 +40,36 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
     }
     /**
      * Amazon Resource Name (ARN) of the Resiliency Policy.
-     * 
      */
     @Export(name="policyArn", type=String.class, parameters={})
     private Output<String> policyArn;
 
     /**
      * @return Amazon Resource Name (ARN) of the Resiliency Policy.
-     * 
      */
     public Output<String> getPolicyArn() {
         return this.policyArn;
     }
     /**
      * Description of Resiliency Policy.
-     * 
      */
     @Export(name="policyDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyDescription;
 
     /**
      * @return Description of Resiliency Policy.
-     * 
      */
     public Output</* @Nullable */ String> getPolicyDescription() {
         return this.policyDescription;
     }
     /**
      * Name of Resiliency Policy.
-     * 
      */
     @Export(name="policyName", type=String.class, parameters={})
     private Output<String> policyName;
 
     /**
      * @return Name of Resiliency Policy.
-     * 
      */
     public Output<String> getPolicyName() {
         return this.policyName;
@@ -91,14 +82,12 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resiliency Policy Tier.
-     * 
      */
     @Export(name="tier", type=ResiliencyPolicyTier.class, parameters={})
     private Output<ResiliencyPolicyTier> tier;
 
     /**
      * @return Resiliency Policy Tier.
-     * 
      */
     public Output<ResiliencyPolicyTier> getTier() {
         return this.tier;

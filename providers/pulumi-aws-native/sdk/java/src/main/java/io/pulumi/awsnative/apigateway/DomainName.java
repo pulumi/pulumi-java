@@ -18,7 +18,161 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::ApiGateway::DomainName.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var cfnDomainName = config.Require("cfnDomainName");
+ *         var certificateArn = config.Require("certificateArn");
+ *         var type = config.Require("type");
+ *         var myDomainName = new AwsNative.ApiGateway.DomainName("myDomainName", new AwsNative.ApiGateway.DomainNameArgs
+ *         {
+ *             CertificateArn = certificateArn,
+ *             DomainName = cfnDomainName,
+ *             EndpointConfiguration = new AwsNative.ApiGateway.Inputs.DomainNameEndpointConfigurationArgs
+ *             {
+ *                 Types = 
+ *                 {
+ *                     type,
+ *                 },
+ *             },
+ *             RegionalCertificateArn = certificateArn,
+ *         });
+ *         this.DomainName = myDomainName.Id;
+ *     }
+ * 
+ *     [Output("domainName")]
+ *     public Output<string> DomainName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const cfnDomainName = config.require("cfnDomainName");
+ * const certificateArn = config.require("certificateArn");
+ * const type = config.require("type");
+ * const myDomainName = new aws_native.apigateway.DomainName("myDomainName", {
+ *     certificateArn: certificateArn,
+ *     domainName: cfnDomainName,
+ *     endpointConfiguration: {
+ *         types: [type],
+ *     },
+ *     regionalCertificateArn: certificateArn,
+ * });
+ * export const domainName = myDomainName.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * cfn_domain_name = config.require("cfnDomainName")
+ * certificate_arn = config.require("certificateArn")
+ * type = config.require("type")
+ * my_domain_name = aws_native.apigateway.DomainName("myDomainName",
+ *     certificate_arn=certificate_arn,
+ *     domain_name=cfn_domain_name,
+ *     endpoint_configuration=aws_native.apigateway.DomainNameEndpointConfigurationArgs(
+ *         types=[type],
+ *     ),
+ *     regional_certificate_arn=certificate_arn)
+ * pulumi.export("domainName", my_domain_name.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var cfnDomainName = config.Require("cfnDomainName");
+ *         var certificateArn = config.Require("certificateArn");
+ *         var type = config.Require("type");
+ *         var myDomainName = new AwsNative.ApiGateway.DomainName("myDomainName", new AwsNative.ApiGateway.DomainNameArgs
+ *         {
+ *             CertificateArn = certificateArn,
+ *             DomainName = cfnDomainName,
+ *             EndpointConfiguration = new AwsNative.ApiGateway.Inputs.DomainNameEndpointConfigurationArgs
+ *             {
+ *                 Types = 
+ *                 {
+ *                     type,
+ *                 },
+ *             },
+ *             RegionalCertificateArn = certificateArn,
+ *         });
+ *         this.DomainName = myDomainName.Id;
+ *     }
+ * 
+ *     [Output("domainName")]
+ *     public Output<string> DomainName { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const cfnDomainName = config.require("cfnDomainName");
+ * const certificateArn = config.require("certificateArn");
+ * const type = config.require("type");
+ * const myDomainName = new aws_native.apigateway.DomainName("myDomainName", {
+ *     certificateArn: certificateArn,
+ *     domainName: cfnDomainName,
+ *     endpointConfiguration: {
+ *         types: [type],
+ *     },
+ *     regionalCertificateArn: certificateArn,
+ * });
+ * export const domainName = myDomainName.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * cfn_domain_name = config.require("cfnDomainName")
+ * certificate_arn = config.require("certificateArn")
+ * type = config.require("type")
+ * my_domain_name = aws_native.apigateway.DomainName("myDomainName",
+ *     certificate_arn=certificate_arn,
+ *     domain_name=cfn_domain_name,
+ *     endpoint_configuration=aws_native.apigateway.DomainNameEndpointConfigurationArgs(
+ *         types=[type],
+ *     ),
+ *     regional_certificate_arn=certificate_arn)
+ * pulumi.export("domainName", my_domain_name.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:apigateway:DomainName")

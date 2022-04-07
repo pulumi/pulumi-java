@@ -18,133 +18,291 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::ApiGateway::ApiKey
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var apiKeyName = config.Require("apiKeyName");
+ *         var customerId = config.Require("customerId");
+ *         var generateDistinctId = config.Require("generateDistinctId");
+ *         var apiKey = new AwsNative.ApiGateway.ApiKey("apiKey", new AwsNative.ApiGateway.ApiKeyArgs
+ *         {
+ *             CustomerId = customerId,
+ *             GenerateDistinctId = generateDistinctId,
+ *             Name = apiKeyName,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		apiKeyName := cfg.Require("apiKeyName")
+ * 		customerId := cfg.Require("customerId")
+ * 		generateDistinctId := cfg.Require("generateDistinctId")
+ * 		_, err := apigateway.NewApiKey(ctx, "apiKey", &apigateway.ApiKeyArgs{
+ * 			CustomerId:         pulumi.String(customerId),
+ * 			GenerateDistinctId: pulumi.String(generateDistinctId),
+ * 			Name:               pulumi.String(apiKeyName),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const apiKeyName = config.require("apiKeyName");
+ * const customerId = config.require("customerId");
+ * const generateDistinctId = config.require("generateDistinctId");
+ * const apiKey = new aws_native.apigateway.ApiKey("apiKey", {
+ *     customerId: customerId,
+ *     generateDistinctId: generateDistinctId,
+ *     name: apiKeyName,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * api_key_name = config.require("apiKeyName")
+ * customer_id = config.require("customerId")
+ * generate_distinct_id = config.require("generateDistinctId")
+ * api_key = aws_native.apigateway.ApiKey("apiKey",
+ *     customer_id=customer_id,
+ *     generate_distinct_id=generate_distinct_id,
+ *     name=api_key_name)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var apiKeyName = config.Require("apiKeyName");
+ *         var customerId = config.Require("customerId");
+ *         var generateDistinctId = config.Require("generateDistinctId");
+ *         var apiKey = new AwsNative.ApiGateway.ApiKey("apiKey", new AwsNative.ApiGateway.ApiKeyArgs
+ *         {
+ *             CustomerId = customerId,
+ *             GenerateDistinctId = generateDistinctId,
+ *             Name = apiKeyName,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/apigateway"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		apiKeyName := cfg.Require("apiKeyName")
+ * 		customerId := cfg.Require("customerId")
+ * 		generateDistinctId := cfg.Require("generateDistinctId")
+ * 		_, err := apigateway.NewApiKey(ctx, "apiKey", &apigateway.ApiKeyArgs{
+ * 			CustomerId:         pulumi.String(customerId),
+ * 			GenerateDistinctId: pulumi.String(generateDistinctId),
+ * 			Name:               pulumi.String(apiKeyName),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const apiKeyName = config.require("apiKeyName");
+ * const customerId = config.require("customerId");
+ * const generateDistinctId = config.require("generateDistinctId");
+ * const apiKey = new aws_native.apigateway.ApiKey("apiKey", {
+ *     customerId: customerId,
+ *     generateDistinctId: generateDistinctId,
+ *     name: apiKeyName,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * api_key_name = config.require("apiKeyName")
+ * customer_id = config.require("customerId")
+ * generate_distinct_id = config.require("generateDistinctId")
+ * api_key = aws_native.apigateway.ApiKey("apiKey",
+ *     customer_id=customer_id,
+ *     generate_distinct_id=generate_distinct_id,
+ *     name=api_key_name)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:apigateway:ApiKey")
 public class ApiKey extends io.pulumi.resources.CustomResource {
     /**
-     * A Unique Key ID which identifies the API Key. Generated by the Create API and returned by the Read and List APIs
-     * 
+     * A Unique Key ID which identifies the API Key. Generated by the Create API and returned by the Read and List APIs 
      */
     @Export(name="aPIKeyId", type=String.class, parameters={})
     private Output<String> aPIKeyId;
 
     /**
-     * @return A Unique Key ID which identifies the API Key. Generated by the Create API and returned by the Read and List APIs
-     * 
+     * @return A Unique Key ID which identifies the API Key. Generated by the Create API and returned by the Read and List APIs 
      */
     public Output<String> getAPIKeyId() {
         return this.aPIKeyId;
     }
     /**
      * An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace.
-     * 
      */
     @Export(name="customerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> customerId;
 
     /**
      * @return An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace.
-     * 
      */
     public Output</* @Nullable */ String> getCustomerId() {
         return this.customerId;
     }
     /**
      * A description of the purpose of the API key.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the purpose of the API key.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Indicates whether the API key can be used by clients.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return Indicates whether the API key can be used by clients.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * Specifies whether the key identifier is distinct from the created API key value. This parameter is deprecated and should not be used.
-     * 
      */
     @Export(name="generateDistinctId", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> generateDistinctId;
 
     /**
      * @return Specifies whether the key identifier is distinct from the created API key value. This parameter is deprecated and should not be used.
-     * 
      */
     public Output</* @Nullable */ Boolean> getGenerateDistinctId() {
         return this.generateDistinctId;
     }
     /**
      * A name for the API key. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return A name for the API key. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A list of stages to associate with this API key.
-     * 
      */
     @Export(name="stageKeys", type=List.class, parameters={ApiKeyStageKey.class})
     private Output</* @Nullable */ List<ApiKeyStageKey>> stageKeys;
 
     /**
      * @return A list of stages to associate with this API key.
-     * 
      */
     public Output</* @Nullable */ List<ApiKeyStageKey>> getStageKeys() {
         return this.stageKeys;
     }
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the API key.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ApiKeyTag.class})
     private Output</* @Nullable */ List<ApiKeyTag>> tags;
 
     /**
      * @return An array of arbitrary tags (key-value pairs) to associate with the API key.
-     * 
      */
     public Output</* @Nullable */ List<ApiKeyTag>> getTags() {
         return this.tags;
     }
     /**
      * The value of the API key. Must be at least 20 characters long.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**
      * @return The value of the API key. Must be at least 20 characters long.
-     * 
      */
     public Output</* @Nullable */ String> getValue() {
         return this.value;

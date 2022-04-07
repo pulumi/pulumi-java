@@ -16,90 +16,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type Definition for AWS::ResilienceHub::App.
- * 
  */
 @ResourceType(type="aws-native:resiliencehub:App")
 public class App extends io.pulumi.resources.CustomResource {
     /**
      * Amazon Resource Name (ARN) of the App.
-     * 
      */
     @Export(name="appArn", type=String.class, parameters={})
     private Output<String> appArn;
 
     /**
      * @return Amazon Resource Name (ARN) of the App.
-     * 
      */
     public Output<String> getAppArn() {
         return this.appArn;
     }
     /**
      * A string containing full ResilienceHub app template body.
-     * 
      */
     @Export(name="appTemplateBody", type=String.class, parameters={})
     private Output<String> appTemplateBody;
 
     /**
      * @return A string containing full ResilienceHub app template body.
-     * 
      */
     public Output<String> getAppTemplateBody() {
         return this.appTemplateBody;
     }
     /**
      * App description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return App description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Name of the app.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the app.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Amazon Resource Name (ARN) of the Resiliency Policy.
-     * 
      */
     @Export(name="resiliencyPolicyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> resiliencyPolicyArn;
 
     /**
      * @return Amazon Resource Name (ARN) of the Resiliency Policy.
-     * 
      */
     public Output</* @Nullable */ String> getResiliencyPolicyArn() {
         return this.resiliencyPolicyArn;
     }
     /**
      * An array of ResourceMapping objects.
-     * 
      */
     @Export(name="resourceMappings", type=List.class, parameters={AppResourceMapping.class})
     private Output<List<AppResourceMapping>> resourceMappings;
 
     /**
      * @return An array of ResourceMapping objects.
-     * 
      */
     public Output<List<AppResourceMapping>> getResourceMappings() {
         return this.resourceMappings;

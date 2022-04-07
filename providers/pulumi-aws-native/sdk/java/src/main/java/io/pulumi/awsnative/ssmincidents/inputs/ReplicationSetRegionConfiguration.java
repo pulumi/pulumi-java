@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The ReplicationSet regional configuration.
- * 
  */
 public final class ReplicationSetRegionConfiguration extends io.pulumi.resources.InvokeArgs {
 

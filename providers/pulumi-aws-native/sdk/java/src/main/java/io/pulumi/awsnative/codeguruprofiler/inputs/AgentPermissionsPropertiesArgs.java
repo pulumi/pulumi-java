@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The agent permissions attached to this profiling group.
- * 
  */
 public final class AgentPermissionsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AgentPermissionsPropertiesArgs extends io.pulumi.resources.Re
 
     /**
      * The principals for the agent permissions.
-     * 
      */
     @Import(name="principals", required=true)
       private final Output<List<String>> principals;

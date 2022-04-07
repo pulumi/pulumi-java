@@ -17,76 +17,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::MediaPackage::PackagingGroup
- * 
  */
 @ResourceType(type="aws-native:mediapackage:PackagingGroup")
 public class PackagingGroup extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the PackagingGroup.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The ARN of the PackagingGroup.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * CDN Authorization
-     * 
      */
     @Export(name="authorization", type=PackagingGroupAuthorization.class, parameters={})
     private Output</* @Nullable */ PackagingGroupAuthorization> authorization;
 
     /**
      * @return CDN Authorization
-     * 
      */
     public Output</* @Nullable */ PackagingGroupAuthorization> getAuthorization() {
         return this.authorization;
     }
     /**
      * The fully qualified domain name for Assets in the PackagingGroup.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The fully qualified domain name for Assets in the PackagingGroup.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
     }
     /**
      * The configuration parameters for egress access logging.
-     * 
      */
     @Export(name="egressAccessLogs", type=PackagingGroupLogConfiguration.class, parameters={})
     private Output</* @Nullable */ PackagingGroupLogConfiguration> egressAccessLogs;
 
     /**
      * @return The configuration parameters for egress access logging.
-     * 
      */
     public Output</* @Nullable */ PackagingGroupLogConfiguration> getEgressAccessLogs() {
         return this.egressAccessLogs;
     }
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Export(name="tags", type=List.class, parameters={PackagingGroupTag.class})
     private Output</* @Nullable */ List<PackagingGroupTag>> tags;
 
     /**
      * @return A collection of tags associated with a resource
-     * 
      */
     public Output</* @Nullable */ List<PackagingGroupTag>> getTags() {
         return this.tags;

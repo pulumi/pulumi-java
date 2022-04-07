@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties {
     /**
      * The password that corresponds to the username.
-     * 
      */
     private final @Nullable String password;
     /**
      * The name of the user.
-     * 
      */
     private final @Nullable String username;
 
@@ -32,14 +30,12 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
 
     /**
      * The password that corresponds to the username.
-     * 
     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The name of the user.
-     * 
     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);

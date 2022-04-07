@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Firewall Rule associating the Rule Group to a Domain List
- * 
  */
 public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
 
     /**
      * Rule Action
-     * 
      */
     @Import(name="action", required=true)
       private final FirewallRuleGroupFirewallRuleAction action;
@@ -35,7 +33,6 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
 
     /**
      * BlockOverrideDnsType
-     * 
      */
     @Import(name="blockOverrideDnsType")
       private final @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType;
@@ -46,7 +43,6 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
 
     /**
      * BlockOverrideDomain
-     * 
      */
     @Import(name="blockOverrideDomain")
       private final @Nullable String blockOverrideDomain;
@@ -57,7 +53,6 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
 
     /**
      * BlockOverrideTtl
-     * 
      */
     @Import(name="blockOverrideTtl")
       private final @Nullable Integer blockOverrideTtl;
@@ -68,7 +63,6 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
 
     /**
      * BlockResponse
-     * 
      */
     @Import(name="blockResponse")
       private final @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse;
@@ -79,7 +73,6 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
 
     /**
      * ResourceId
-     * 
      */
     @Import(name="firewallDomainListId", required=true)
       private final String firewallDomainListId;
@@ -90,7 +83,6 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
 
     /**
      * Rule Priority
-     * 
      */
     @Import(name="priority", required=true)
       private final Integer priority;

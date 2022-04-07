@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
-     * 
      */
     @EnumType
     public enum FirewallDomainListStatus {

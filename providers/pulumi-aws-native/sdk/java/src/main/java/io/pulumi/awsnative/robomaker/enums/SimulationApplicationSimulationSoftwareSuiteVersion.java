@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The version of the simulation software suite.
-     * 
      */
     @EnumType
     public enum SimulationApplicationSimulationSoftwareSuiteVersion {

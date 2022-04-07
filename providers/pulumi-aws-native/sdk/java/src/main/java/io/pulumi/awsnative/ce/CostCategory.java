@@ -14,34 +14,29 @@ import javax.annotation.Nullable;
 
 /**
  * Cost Category enables you to map your cost and usage into meaningful categories. You can use Cost Category to organize your costs using a rule-based engine.
- * 
  */
 @ResourceType(type="aws-native:ce:CostCategory")
 public class CostCategory extends io.pulumi.resources.CustomResource {
     /**
      * Cost category ARN
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Cost category ARN
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The default value for the cost category
-     * 
      */
     @Export(name="defaultValue", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultValue;
 
     /**
      * @return The default value for the cost category
-     * 
      */
     public Output</* @Nullable */ String> getDefaultValue() {
         return this.defaultValue;
@@ -66,28 +61,24 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
     }
     /**
      * JSON array format of Expression in Billing and Cost Management API
-     * 
      */
     @Export(name="rules", type=String.class, parameters={})
     private Output<String> rules;
 
     /**
      * @return JSON array format of Expression in Billing and Cost Management API
-     * 
      */
     public Output<String> getRules() {
         return this.rules;
     }
     /**
      * Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
-     * 
      */
     @Export(name="splitChargeRules", type=String.class, parameters={})
     private Output</* @Nullable */ String> splitChargeRules;
 
     /**
      * @return Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
-     * 
      */
     public Output</* @Nullable */ String> getSplitChargeRules() {
         return this.splitChargeRules;

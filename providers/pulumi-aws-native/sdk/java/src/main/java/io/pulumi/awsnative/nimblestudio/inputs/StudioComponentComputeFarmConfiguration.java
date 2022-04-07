@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>The configuration for a render farm that is associated with a studio resource.</p>
- * 
  */
 public final class StudioComponentComputeFarmConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
 
     /**
      * <p>The name of an Active Directory user that is used on ComputeFarm worker instances.</p>
-     * 
      */
     @Import(name="activeDirectoryUser")
       private final @Nullable String activeDirectoryUser;
@@ -31,7 +29,6 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
 
     /**
      * <p>The endpoint of the ComputeFarm that is accessed by the studio component resource.</p>
-     * 
      */
     @Import(name="endpoint")
       private final @Nullable String endpoint;

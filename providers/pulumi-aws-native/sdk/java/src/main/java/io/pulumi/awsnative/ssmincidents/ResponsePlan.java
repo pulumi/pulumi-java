@@ -18,34 +18,29 @@ import javax.annotation.Nullable;
 
 /**
  * Resource type definition for AWS::SSMIncidents::ResponsePlan
- * 
  */
 @ResourceType(type="aws-native:ssmincidents:ResponsePlan")
 public class ResponsePlan extends io.pulumi.resources.CustomResource {
     /**
      * The list of actions.
-     * 
      */
     @Export(name="actions", type=List.class, parameters={ResponsePlanAction.class})
     private Output</* @Nullable */ List<ResponsePlanAction>> actions;
 
     /**
      * @return The list of actions.
-     * 
      */
     public Output</* @Nullable */ List<ResponsePlanAction>> getActions() {
         return this.actions;
     }
     /**
      * The ARN of the response plan.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The ARN of the response plan.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -58,28 +53,24 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
     }
     /**
      * The display name of the response plan.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The display name of the response plan.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The list of engagements to use.
-     * 
      */
     @Export(name="engagements", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> engagements;
 
     /**
      * @return The list of engagements to use.
-     * 
      */
     public Output</* @Nullable */ List<String>> getEngagements() {
         return this.engagements;
@@ -92,28 +83,24 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name of the response plan.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the response plan.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The tags to apply to the response plan.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ResponsePlanTag.class})
     private Output</* @Nullable */ List<ResponsePlanTag>> tags;
 
     /**
      * @return The tags to apply to the response plan.
-     * 
      */
     public Output</* @Nullable */ List<ResponsePlanTag>> getTags() {
         return this.tags;

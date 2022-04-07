@@ -29,7 +29,6 @@ public final class GetWebACLResult {
     private final @Nullable String labelNamespace;
     /**
      * Collection of Rules.
-     * 
      */
     private final @Nullable List<WebACLRule> rules;
     private final @Nullable List<WebACLTag> tags;
@@ -87,7 +86,6 @@ public final class GetWebACLResult {
     }
     /**
      * Collection of Rules.
-     * 
     */
     public List<WebACLRule> getRules() {
         return this.rules == null ? List.of() : this.rules;

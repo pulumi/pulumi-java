@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The value to be compared with the metric.
- * 
  */
 public final class SecurityProfileMetricValue extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
 
     /**
      * If the ComparisonOperator calls for a set of CIDRs, use this to specify that set to be compared with the metric.
-     * 
      */
     @Import(name="cidrs")
       private final @Nullable List<String> cidrs;
@@ -34,7 +32,6 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
 
     /**
      * If the ComparisonOperator calls for a numeric value, use this to specify that (integer) numeric value to be compared with the metric.
-     * 
      */
     @Import(name="count")
       private final @Nullable String count;
@@ -45,7 +42,6 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
 
     /**
      * The numeral value of a metric.
-     * 
      */
     @Import(name="number")
       private final @Nullable Double number;
@@ -56,7 +52,6 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
 
     /**
      * The numeral values of a metric.
-     * 
      */
     @Import(name="numbers")
       private final @Nullable List<Double> numbers;
@@ -67,7 +62,6 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
 
     /**
      * If the ComparisonOperator calls for a set of ports, use this to specify that set to be compared with the metric.
-     * 
      */
     @Import(name="ports")
       private final @Nullable List<Integer> ports;
@@ -78,7 +72,6 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
 
     /**
      * The string values of a metric.
-     * 
      */
     @Import(name="strings")
       private final @Nullable List<String> strings;

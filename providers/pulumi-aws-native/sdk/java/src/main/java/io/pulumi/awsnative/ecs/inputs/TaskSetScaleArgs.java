@@ -17,7 +17,6 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unit of measure for the scale value.
-     * 
      */
     @Import(name="unit")
       private final @Nullable Output<TaskSetScaleUnit> unit;
@@ -28,7 +27,6 @@ public final class TaskSetScaleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value, specified as a percent total of a service's desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<Double> value;

@@ -14,7 +14,6 @@ public final class GetOriginEndpointArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The ID of the OriginEndpoint.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

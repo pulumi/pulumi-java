@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a studio component which connects a non-Nimble Studio resource in your account to your studio
- * 
  */
 @ResourceType(type="aws-native:nimblestudio:StudioComponent")
 public class StudioComponent extends io.pulumi.resources.CustomResource {
@@ -32,70 +31,60 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The description.</p>
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return <p>The description.</p>
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * <p>The EC2 security groups that control access to the studio component.</p>
-     * 
      */
     @Export(name="ec2SecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ec2SecurityGroupIds;
 
     /**
      * @return <p>The EC2 security groups that control access to the studio component.</p>
-     * 
      */
     public Output</* @Nullable */ List<String>> getEc2SecurityGroupIds() {
         return this.ec2SecurityGroupIds;
     }
     /**
      * <p>Initialization scripts for studio components.</p>
-     * 
      */
     @Export(name="initializationScripts", type=List.class, parameters={StudioComponentInitializationScript.class})
     private Output</* @Nullable */ List<StudioComponentInitializationScript>> initializationScripts;
 
     /**
      * @return <p>Initialization scripts for studio components.</p>
-     * 
      */
     public Output</* @Nullable */ List<StudioComponentInitializationScript>> getInitializationScripts() {
         return this.initializationScripts;
     }
     /**
      * <p>The name for the studio component.</p>
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return <p>The name for the studio component.</p>
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * <p>Parameters for the studio component scripts.</p>
-     * 
      */
     @Export(name="scriptParameters", type=List.class, parameters={StudioComponentScriptParameterKeyValue.class})
     private Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> scriptParameters;
 
     /**
      * @return <p>Parameters for the studio component scripts.</p>
-     * 
      */
     public Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> getScriptParameters() {
         return this.scriptParameters;
@@ -108,14 +97,12 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The studioId. </p>
-     * 
      */
     @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**
      * @return <p>The studioId. </p>
-     * 
      */
     public Output<String> getStudioId() {
         return this.studioId;

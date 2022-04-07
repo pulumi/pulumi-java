@@ -16,7 +16,6 @@ public final class GroupInsightsConfiguration extends io.pulumi.resources.Invoke
 
     /**
      * Set the InsightsEnabled value to true to enable insights or false to disable insights.
-     * 
      */
     @Import(name="insightsEnabled")
       private final @Nullable Boolean insightsEnabled;
@@ -27,7 +26,6 @@ public final class GroupInsightsConfiguration extends io.pulumi.resources.Invoke
 
     /**
      * Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
-     * 
      */
     @Import(name="notificationsEnabled")
       private final @Nullable Boolean notificationsEnabled;

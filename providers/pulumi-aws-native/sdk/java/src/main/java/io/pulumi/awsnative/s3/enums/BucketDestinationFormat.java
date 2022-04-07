@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the file format used when exporting data to Amazon S3.
-     * 
      */
     @EnumType
     public enum BucketDestinationFormat {

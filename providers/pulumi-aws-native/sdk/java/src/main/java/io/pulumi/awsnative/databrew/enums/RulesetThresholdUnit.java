@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Threshold unit for a rule
-     * 
      */
     @EnumType
     public enum RulesetThresholdUnit {

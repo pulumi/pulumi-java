@@ -17,7 +17,6 @@ public final class StorageLensPrefixLevelStorageMetricsArgs extends io.pulumi.re
 
     /**
      * Specifies whether prefix-level storage metrics are enabled or disabled.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;

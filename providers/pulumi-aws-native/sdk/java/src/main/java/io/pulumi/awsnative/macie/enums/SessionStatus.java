@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A enumeration value that specifies the status of the Macie Session.
-     * 
      */
     @EnumType
     public enum SessionStatus {

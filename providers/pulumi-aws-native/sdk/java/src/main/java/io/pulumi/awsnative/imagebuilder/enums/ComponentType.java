@@ -9,8 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The type of the component denotes whether the component is used to build the image or only to test it.
-     * 
+     * The type of the component denotes whether the component is used to build the image or only to test it. 
      */
     @EnumType
     public enum ComponentType {

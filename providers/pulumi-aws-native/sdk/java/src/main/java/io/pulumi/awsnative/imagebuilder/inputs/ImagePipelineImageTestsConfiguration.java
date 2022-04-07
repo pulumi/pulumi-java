@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Image tests configuration.
- * 
  */
 public final class ImagePipelineImageTestsConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ImagePipelineImageTestsConfiguration extends io.pulumi.resour
 
     /**
      * Defines if tests should be executed when building this image.
-     * 
      */
     @Import(name="imageTestsEnabled")
       private final @Nullable Boolean imageTestsEnabled;
@@ -32,7 +30,6 @@ public final class ImagePipelineImageTestsConfiguration extends io.pulumi.resour
 
     /**
      * The maximum time in minutes that tests are permitted to run.
-     * 
      */
     @Import(name="timeoutMinutes")
       private final @Nullable Integer timeoutMinutes;

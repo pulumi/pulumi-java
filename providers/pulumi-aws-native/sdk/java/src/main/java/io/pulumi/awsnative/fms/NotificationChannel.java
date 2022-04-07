@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS logs.
- * 
  */
 @ResourceType(type="aws-native:fms:NotificationChannel")
 public class NotificationChannel extends io.pulumi.resources.CustomResource {

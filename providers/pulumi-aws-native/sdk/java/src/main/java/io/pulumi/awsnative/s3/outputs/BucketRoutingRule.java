@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class BucketRoutingRule {
     /**
      * Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.
-     * 
      */
     private final BucketRedirectRule redirectRule;
     private final @Nullable BucketRoutingRuleCondition routingRuleCondition;
@@ -29,7 +28,6 @@ public final class BucketRoutingRule {
 
     /**
      * Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.
-     * 
     */
     public BucketRedirectRule getRedirectRule() {
         return this.redirectRule;

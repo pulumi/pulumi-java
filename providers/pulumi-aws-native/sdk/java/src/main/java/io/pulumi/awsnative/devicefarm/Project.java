@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * AWS::DeviceFarm::Project creates a new Device Farm Project
- * 
  */
 @ResourceType(type="aws-native:devicefarm:Project")
 public class Project extends io.pulumi.resources.CustomResource {

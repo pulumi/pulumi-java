@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The start time or end time for an hours of operation.
- * 
  */
 public final class HoursOfOperationTimeSlice extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class HoursOfOperationTimeSlice extends io.pulumi.resources.InvokeA
 
     /**
      * The hours.
-     * 
      */
     @Import(name="hours", required=true)
       private final Integer hours;
@@ -29,7 +27,6 @@ public final class HoursOfOperationTimeSlice extends io.pulumi.resources.InvokeA
 
     /**
      * The minutes.
-     * 
      */
     @Import(name="minutes", required=true)
       private final Integer minutes;

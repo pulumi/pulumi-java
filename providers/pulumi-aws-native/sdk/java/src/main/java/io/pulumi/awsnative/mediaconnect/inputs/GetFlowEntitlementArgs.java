@@ -14,7 +14,6 @@ public final class GetFlowEntitlementArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The ARN of the entitlement.
-     * 
      */
     @Import(name="entitlementArn", required=true)
       private final String entitlementArn;

@@ -16,49 +16,505 @@ import javax.annotation.Nullable;
 /**
  * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user's account
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var globalNetwork = new AwsNative.NetworkManager.GlobalNetwork("globalNetwork", new AwsNative.NetworkManager.GlobalNetworkArgs
+ *         {
+ *         });
+ *         var site = new AwsNative.NetworkManager.Site("site", new AwsNative.NetworkManager.SiteArgs
+ *         {
+ *             GlobalNetworkId = globalNetwork.Id,
+ *             Location = new AwsNative.NetworkManager.Inputs.SiteLocationArgs
+ *             {
+ *                 Address = "227 W Monroe St, Chicago, IL 60606",
+ *                 Latitude = "41.8",
+ *                 Longitude = "-87.6",
+ *             },
+ *         });
+ *         var link = new AwsNative.NetworkManager.Link("link", new AwsNative.NetworkManager.LinkArgs
+ *         {
+ *             Description = "Broadband link",
+ *             GlobalNetworkId = globalNetwork.Id,
+ *             SiteId = site.Site_id,
+ *             Bandwidth = new AwsNative.NetworkManager.Inputs.LinkBandwidthArgs
+ *             {
+ *                 DownloadSpeed = 20,
+ *                 UploadSpeed = 20,
+ *             },
+ *             Provider = "AnyCompany",
+ *             Type = "Broadband",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.NetworkManager.Inputs.LinkTagArgs
+ *                 {
+ *                     Key = "Name",
+ *                     Value = "broadband-link-1",
+ *                 },
+ *             },
+ *         });
+ *         var device = new AwsNative.NetworkManager.Device("device", new AwsNative.NetworkManager.DeviceArgs
+ *         {
+ *             Description = "Chicago office device",
+ *             GlobalNetworkId = globalNetwork.Id,
+ *             SiteId = site.Site_id,
+ *             Tags = 
+ *             {
+ *                 new AwsNative.NetworkManager.Inputs.DeviceTagArgs
+ *                 {
+ *                     Key = "Network",
+ *                     Value = "north-america",
+ *                 },
+ *             },
+ *         });
+ *         var linkAssociation = new AwsNative.NetworkManager.LinkAssociation("linkAssociation", new AwsNative.NetworkManager.LinkAssociationArgs
+ *         {
+ *             GlobalNetworkId = globalNetwork.Id,
+ *             LinkId = link.Link_id,
+ *             DeviceId = device.Device_id,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/networkmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		globalNetwork, err := networkmanager.NewGlobalNetwork(ctx, "globalNetwork", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		site, err := networkmanager.NewSite(ctx, "site", &networkmanager.SiteArgs{
+ * 			GlobalNetworkId: globalNetwork.ID(),
+ * 			Location: &networkmanager.SiteLocationArgs{
+ * 				Address:   pulumi.String("227 W Monroe St, Chicago, IL 60606"),
+ * 				Latitude:  pulumi.String("41.8"),
+ * 				Longitude: pulumi.String("-87.6"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		link, err := networkmanager.NewLink(ctx, "link", &networkmanager.LinkArgs{
+ * 			Description:     pulumi.String("Broadband link"),
+ * 			GlobalNetworkId: globalNetwork.ID(),
+ * 			SiteId:          site.Site_id,
+ * 			Bandwidth: &networkmanager.LinkBandwidthArgs{
+ * 				DownloadSpeed: pulumi.Int(20),
+ * 				UploadSpeed:   pulumi.Int(20),
+ * 			},
+ * 			Provider: pulumi.String("AnyCompany"),
+ * 			Type:     pulumi.String("Broadband"),
+ * 			Tags: []networkmanager.LinkTagArgs{
+ * 				&networkmanager.LinkTagArgs{
+ * 					Key:   pulumi.String("Name"),
+ * 					Value: pulumi.String("broadband-link-1"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		device, err := networkmanager.NewDevice(ctx, "device", &networkmanager.DeviceArgs{
+ * 			Description:     pulumi.String("Chicago office device"),
+ * 			GlobalNetworkId: globalNetwork.ID(),
+ * 			SiteId:          site.Site_id,
+ * 			Tags: []networkmanager.DeviceTagArgs{
+ * 				&networkmanager.DeviceTagArgs{
+ * 					Key:   pulumi.String("Network"),
+ * 					Value: pulumi.String("north-america"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = networkmanager.NewLinkAssociation(ctx, "linkAssociation", &networkmanager.LinkAssociationArgs{
+ * 			GlobalNetworkId: globalNetwork.ID(),
+ * 			LinkId:          link.Link_id,
+ * 			DeviceId:        device.Device_id,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const globalNetwork = new aws_native.networkmanager.GlobalNetwork("globalNetwork", {});
+ * const site = new aws_native.networkmanager.Site("site", {
+ *     globalNetworkId: globalNetwork.id,
+ *     location: {
+ *         address: "227 W Monroe St, Chicago, IL 60606",
+ *         latitude: "41.8",
+ *         longitude: "-87.6",
+ *     },
+ * });
+ * const link = new aws_native.networkmanager.Link("link", {
+ *     description: "Broadband link",
+ *     globalNetworkId: globalNetwork.id,
+ *     siteId: site.siteId,
+ *     bandwidth: {
+ *         downloadSpeed: 20,
+ *         uploadSpeed: 20,
+ *     },
+ *     provider: "AnyCompany",
+ *     type: "Broadband",
+ *     tags: [{
+ *         key: "Name",
+ *         value: "broadband-link-1",
+ *     }],
+ * });
+ * const device = new aws_native.networkmanager.Device("device", {
+ *     description: "Chicago office device",
+ *     globalNetworkId: globalNetwork.id,
+ *     siteId: site.siteId,
+ *     tags: [{
+ *         key: "Network",
+ *         value: "north-america",
+ *     }],
+ * });
+ * const linkAssociation = new aws_native.networkmanager.LinkAssociation("linkAssociation", {
+ *     globalNetworkId: globalNetwork.id,
+ *     linkId: link.linkId,
+ *     deviceId: device.deviceId,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * global_network = aws_native.networkmanager.GlobalNetwork("globalNetwork")
+ * site = aws_native.networkmanager.Site("site",
+ *     global_network_id=global_network.id,
+ *     location=aws_native.networkmanager.SiteLocationArgs(
+ *         address="227 W Monroe St, Chicago, IL 60606",
+ *         latitude="41.8",
+ *         longitude="-87.6",
+ *     ))
+ * link = aws_native.networkmanager.Link("link",
+ *     description="Broadband link",
+ *     global_network_id=global_network.id,
+ *     site_id=site.site_id,
+ *     bandwidth=aws_native.networkmanager.LinkBandwidthArgs(
+ *         download_speed=20,
+ *         upload_speed=20,
+ *     ),
+ *     provider="AnyCompany",
+ *     type="Broadband",
+ *     tags=[aws_native.networkmanager.LinkTagArgs(
+ *         key="Name",
+ *         value="broadband-link-1",
+ *     )])
+ * device = aws_native.networkmanager.Device("device",
+ *     description="Chicago office device",
+ *     global_network_id=global_network.id,
+ *     site_id=site.site_id,
+ *     tags=[aws_native.networkmanager.DeviceTagArgs(
+ *         key="Network",
+ *         value="north-america",
+ *     )])
+ * link_association = aws_native.networkmanager.LinkAssociation("linkAssociation",
+ *     global_network_id=global_network.id,
+ *     link_id=link.link_id,
+ *     device_id=device.device_id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var globalNetwork = new AwsNative.NetworkManager.GlobalNetwork("globalNetwork", new AwsNative.NetworkManager.GlobalNetworkArgs
+ *         {
+ *         });
+ *         var site = new AwsNative.NetworkManager.Site("site", new AwsNative.NetworkManager.SiteArgs
+ *         {
+ *             GlobalNetworkId = globalNetwork.Id,
+ *             Location = new AwsNative.NetworkManager.Inputs.SiteLocationArgs
+ *             {
+ *                 Address = "227 W Monroe St, Chicago, IL 60606",
+ *                 Latitude = "41.8",
+ *                 Longitude = "-87.6",
+ *             },
+ *         });
+ *         var link = new AwsNative.NetworkManager.Link("link", new AwsNative.NetworkManager.LinkArgs
+ *         {
+ *             Description = "Broadband link",
+ *             GlobalNetworkId = globalNetwork.Id,
+ *             SiteId = site.Site_id,
+ *             Bandwidth = new AwsNative.NetworkManager.Inputs.LinkBandwidthArgs
+ *             {
+ *                 DownloadSpeed = 20,
+ *                 UploadSpeed = 20,
+ *             },
+ *             Provider = "AnyCompany",
+ *             Type = "Broadband",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.NetworkManager.Inputs.LinkTagArgs
+ *                 {
+ *                     Key = "Name",
+ *                     Value = "broadband-link-1",
+ *                 },
+ *             },
+ *         });
+ *         var device = new AwsNative.NetworkManager.Device("device", new AwsNative.NetworkManager.DeviceArgs
+ *         {
+ *             Description = "Chicago office device",
+ *             GlobalNetworkId = globalNetwork.Id,
+ *             SiteId = site.Site_id,
+ *             Tags = 
+ *             {
+ *                 new AwsNative.NetworkManager.Inputs.DeviceTagArgs
+ *                 {
+ *                     Key = "Network",
+ *                     Value = "north-america",
+ *                 },
+ *             },
+ *         });
+ *         var linkAssociation = new AwsNative.NetworkManager.LinkAssociation("linkAssociation", new AwsNative.NetworkManager.LinkAssociationArgs
+ *         {
+ *             GlobalNetworkId = globalNetwork.Id,
+ *             LinkId = link.Link_id,
+ *             DeviceId = device.Device_id,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/networkmanager"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		globalNetwork, err := networkmanager.NewGlobalNetwork(ctx, "globalNetwork", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		site, err := networkmanager.NewSite(ctx, "site", &networkmanager.SiteArgs{
+ * 			GlobalNetworkId: globalNetwork.ID(),
+ * 			Location: &networkmanager.SiteLocationArgs{
+ * 				Address:   pulumi.String("227 W Monroe St, Chicago, IL 60606"),
+ * 				Latitude:  pulumi.String("41.8"),
+ * 				Longitude: pulumi.String("-87.6"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		link, err := networkmanager.NewLink(ctx, "link", &networkmanager.LinkArgs{
+ * 			Description:     pulumi.String("Broadband link"),
+ * 			GlobalNetworkId: globalNetwork.ID(),
+ * 			SiteId:          site.Site_id,
+ * 			Bandwidth: &networkmanager.LinkBandwidthArgs{
+ * 				DownloadSpeed: pulumi.Int(20),
+ * 				UploadSpeed:   pulumi.Int(20),
+ * 			},
+ * 			Provider: pulumi.String("AnyCompany"),
+ * 			Type:     pulumi.String("Broadband"),
+ * 			Tags: []networkmanager.LinkTagArgs{
+ * 				&networkmanager.LinkTagArgs{
+ * 					Key:   pulumi.String("Name"),
+ * 					Value: pulumi.String("broadband-link-1"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		device, err := networkmanager.NewDevice(ctx, "device", &networkmanager.DeviceArgs{
+ * 			Description:     pulumi.String("Chicago office device"),
+ * 			GlobalNetworkId: globalNetwork.ID(),
+ * 			SiteId:          site.Site_id,
+ * 			Tags: []networkmanager.DeviceTagArgs{
+ * 				&networkmanager.DeviceTagArgs{
+ * 					Key:   pulumi.String("Network"),
+ * 					Value: pulumi.String("north-america"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = networkmanager.NewLinkAssociation(ctx, "linkAssociation", &networkmanager.LinkAssociationArgs{
+ * 			GlobalNetworkId: globalNetwork.ID(),
+ * 			LinkId:          link.Link_id,
+ * 			DeviceId:        device.Device_id,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const globalNetwork = new aws_native.networkmanager.GlobalNetwork("globalNetwork", {});
+ * const site = new aws_native.networkmanager.Site("site", {
+ *     globalNetworkId: globalNetwork.id,
+ *     location: {
+ *         address: "227 W Monroe St, Chicago, IL 60606",
+ *         latitude: "41.8",
+ *         longitude: "-87.6",
+ *     },
+ * });
+ * const link = new aws_native.networkmanager.Link("link", {
+ *     description: "Broadband link",
+ *     globalNetworkId: globalNetwork.id,
+ *     siteId: site.siteId,
+ *     bandwidth: {
+ *         downloadSpeed: 20,
+ *         uploadSpeed: 20,
+ *     },
+ *     provider: "AnyCompany",
+ *     type: "Broadband",
+ *     tags: [{
+ *         key: "Name",
+ *         value: "broadband-link-1",
+ *     }],
+ * });
+ * const device = new aws_native.networkmanager.Device("device", {
+ *     description: "Chicago office device",
+ *     globalNetworkId: globalNetwork.id,
+ *     siteId: site.siteId,
+ *     tags: [{
+ *         key: "Network",
+ *         value: "north-america",
+ *     }],
+ * });
+ * const linkAssociation = new aws_native.networkmanager.LinkAssociation("linkAssociation", {
+ *     globalNetworkId: globalNetwork.id,
+ *     linkId: link.linkId,
+ *     deviceId: device.deviceId,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * global_network = aws_native.networkmanager.GlobalNetwork("globalNetwork")
+ * site = aws_native.networkmanager.Site("site",
+ *     global_network_id=global_network.id,
+ *     location=aws_native.networkmanager.SiteLocationArgs(
+ *         address="227 W Monroe St, Chicago, IL 60606",
+ *         latitude="41.8",
+ *         longitude="-87.6",
+ *     ))
+ * link = aws_native.networkmanager.Link("link",
+ *     description="Broadband link",
+ *     global_network_id=global_network.id,
+ *     site_id=site.site_id,
+ *     bandwidth=aws_native.networkmanager.LinkBandwidthArgs(
+ *         download_speed=20,
+ *         upload_speed=20,
+ *     ),
+ *     provider="AnyCompany",
+ *     type="Broadband",
+ *     tags=[aws_native.networkmanager.LinkTagArgs(
+ *         key="Name",
+ *         value="broadband-link-1",
+ *     )])
+ * device = aws_native.networkmanager.Device("device",
+ *     description="Chicago office device",
+ *     global_network_id=global_network.id,
+ *     site_id=site.site_id,
+ *     tags=[aws_native.networkmanager.DeviceTagArgs(
+ *         key="Network",
+ *         value="north-america",
+ *     )])
+ * link_association = aws_native.networkmanager.LinkAssociation("linkAssociation",
+ *     global_network_id=global_network.id,
+ *     link_id=link.link_id,
+ *     device_id=device.device_id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:networkmanager:GlobalNetwork")
 public class GlobalNetwork extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the global network.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the global network.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The description of the global network.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the global network.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The tags for the global network.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={GlobalNetworkTag.class})
     private Output</* @Nullable */ List<GlobalNetworkTag>> tags;
 
     /**
      * @return The tags for the global network.
-     * 
      */
     public Output</* @Nullable */ List<GlobalNetworkTag>> getTags() {
         return this.tags;

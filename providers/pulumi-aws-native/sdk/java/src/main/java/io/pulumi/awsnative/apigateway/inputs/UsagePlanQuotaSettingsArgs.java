@@ -17,7 +17,6 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
 
     /**
      * The maximum number of requests that users can make within the specified time period.
-     * 
      */
     @Import(name="limit")
       private final @Nullable Output<Integer> limit;
@@ -28,7 +27,6 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
 
     /**
      * For the initial time period, the number of requests to subtract from the specified limit. When you first implement a usage plan, the plan might start in the middle of the week or month. With this property, you can decrease the limit for this initial time period.
-     * 
      */
     @Import(name="offset")
       private final @Nullable Output<Integer> offset;
@@ -39,7 +37,6 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
 
     /**
      * The time period for which the maximum limit of requests applies, such as DAY or WEEK. For valid values, see the period property for the UsagePlan resource in the Amazon API Gateway REST API Reference.
-     * 
      */
     @Import(name="period")
       private final @Nullable Output<String> period;

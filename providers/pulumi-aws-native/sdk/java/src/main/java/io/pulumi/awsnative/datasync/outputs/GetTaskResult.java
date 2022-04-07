@@ -19,25 +19,21 @@ import javax.annotation.Nullable;
 public final class GetTaskResult {
     /**
      * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
-     * 
      */
     private final @Nullable String cloudWatchLogGroupArn;
     private final @Nullable List<String> destinationNetworkInterfaceArns;
     /**
      * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help troubleshoot issues.
-     * 
      */
     private final @Nullable String errorCode;
     /**
      * Detailed description of an error that was encountered during the task execution.
-     * 
      */
     private final @Nullable String errorDetail;
     private final @Nullable List<TaskFilterRule> excludes;
     private final @Nullable List<TaskFilterRule> includes;
     /**
      * The name of a task. This value is a text reference that is used to identify the task in the console.
-     * 
      */
     private final @Nullable String name;
     private final @Nullable TaskOptions options;
@@ -45,17 +41,14 @@ public final class GetTaskResult {
     private final @Nullable List<String> sourceNetworkInterfaceArns;
     /**
      * The status of the task that was described.
-     * 
      */
     private final @Nullable TaskStatus status;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<TaskTag> tags;
     /**
      * The ARN of the task.
-     * 
      */
     private final @Nullable String taskArn;
 
@@ -91,7 +84,6 @@ public final class GetTaskResult {
 
     /**
      * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
-     * 
     */
     public Optional<String> getCloudWatchLogGroupArn() {
         return Optional.ofNullable(this.cloudWatchLogGroupArn);
@@ -101,14 +93,12 @@ public final class GetTaskResult {
     }
     /**
      * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help troubleshoot issues.
-     * 
     */
     public Optional<String> getErrorCode() {
         return Optional.ofNullable(this.errorCode);
     }
     /**
      * Detailed description of an error that was encountered during the task execution.
-     * 
     */
     public Optional<String> getErrorDetail() {
         return Optional.ofNullable(this.errorDetail);
@@ -121,7 +111,6 @@ public final class GetTaskResult {
     }
     /**
      * The name of a task. This value is a text reference that is used to identify the task in the console.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
@@ -137,21 +126,18 @@ public final class GetTaskResult {
     }
     /**
      * The status of the task that was described.
-     * 
     */
     public Optional<TaskStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<TaskTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The ARN of the task.
-     * 
     */
     public Optional<String> getTaskArn() {
         return Optional.ofNullable(this.taskArn);

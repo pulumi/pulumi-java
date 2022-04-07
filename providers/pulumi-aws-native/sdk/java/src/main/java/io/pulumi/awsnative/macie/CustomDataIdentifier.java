@@ -15,104 +15,89 @@ import javax.annotation.Nullable;
 
 /**
  * Macie CustomDataIdentifier resource schema
- * 
  */
 @ResourceType(type="aws-native:macie:CustomDataIdentifier")
 public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
     /**
      * Custom data identifier ARN.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Custom data identifier ARN.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Description of custom data identifier.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of custom data identifier.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Words to be ignored.
-     * 
      */
     @Export(name="ignoreWords", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ignoreWords;
 
     /**
      * @return Words to be ignored.
-     * 
      */
     public Output</* @Nullable */ List<String>> getIgnoreWords() {
         return this.ignoreWords;
     }
     /**
      * Keywords to be matched against.
-     * 
      */
     @Export(name="keywords", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> keywords;
 
     /**
      * @return Keywords to be matched against.
-     * 
      */
     public Output</* @Nullable */ List<String>> getKeywords() {
         return this.keywords;
     }
     /**
      * Maximum match distance.
-     * 
      */
     @Export(name="maximumMatchDistance", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumMatchDistance;
 
     /**
      * @return Maximum match distance.
-     * 
      */
     public Output</* @Nullable */ Integer> getMaximumMatchDistance() {
         return this.maximumMatchDistance;
     }
     /**
      * Name of custom data identifier.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of custom data identifier.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Regular expression for custom data identifier.
-     * 
      */
     @Export(name="regex", type=String.class, parameters={})
     private Output<String> regex;
 
     /**
      * @return Regular expression for custom data identifier.
-     * 
      */
     public Output<String> getRegex() {
         return this.regex;

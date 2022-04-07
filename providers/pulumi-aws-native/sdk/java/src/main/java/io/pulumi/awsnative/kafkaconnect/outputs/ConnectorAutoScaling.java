@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class ConnectorAutoScaling {
     /**
      * The maximum number of workers for a connector.
-     * 
      */
     private final Integer maxWorkerCount;
     /**
      * Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
-     * 
      */
     private final Integer mcuCount;
     /**
      * The minimum number of workers for a connector.
-     * 
      */
     private final Integer minWorkerCount;
     private final ConnectorScaleInPolicy scaleInPolicy;
@@ -45,21 +42,18 @@ public final class ConnectorAutoScaling {
 
     /**
      * The maximum number of workers for a connector.
-     * 
     */
     public Integer getMaxWorkerCount() {
         return this.maxWorkerCount;
     }
     /**
      * Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
-     * 
     */
     public Integer getMcuCount() {
         return this.mcuCount;
     }
     /**
      * The minimum number of workers for a connector.
-     * 
     */
     public Integer getMinWorkerCount() {
         return this.minWorkerCount;

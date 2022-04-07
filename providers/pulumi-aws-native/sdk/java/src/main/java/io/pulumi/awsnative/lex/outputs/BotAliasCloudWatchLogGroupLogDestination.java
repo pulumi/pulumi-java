@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class BotAliasCloudWatchLogGroupLogDestination {
     /**
      * A string used to identify this tag
-     * 
      */
     private final String cloudWatchLogGroupArn;
     /**
      * A string containing the value for the tag
-     * 
      */
     private final String logPrefix;
 
@@ -30,14 +28,12 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
 
     /**
      * A string used to identify this tag
-     * 
     */
     public String getCloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
     /**
      * A string containing the value for the tag
-     * 
     */
     public String getLogPrefix() {
         return this.logPrefix;

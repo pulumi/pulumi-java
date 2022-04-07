@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The filter criteria to control event filtering.
- * 
  */
 public final class FilterCriteriaProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class FilterCriteriaProperties extends io.pulumi.resources.InvokeAr
 
     /**
      * List of filters of this FilterCriteria
-     * 
      */
     @Import(name="filters")
       private final @Nullable List<EventSourceMappingFilter> filters;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The preloaded data configuration for the Data Store. Only data preloaded from Synthea is supported.
- * 
  */
 public final class FHIRDatastorePreloadDataConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class FHIRDatastorePreloadDataConfigArgs extends io.pulumi.resource
 
     /**
      * The type of preloaded data. Only Synthea preloaded data is supported.
-     * 
      */
     @Import(name="preloadDataType", required=true)
       private final Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType;

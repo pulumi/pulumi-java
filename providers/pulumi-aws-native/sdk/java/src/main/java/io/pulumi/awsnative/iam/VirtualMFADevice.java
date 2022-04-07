@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::IAM::VirtualMFADevice
- * 
  */
 @ResourceType(type="aws-native:iam:VirtualMFADevice")
 public class VirtualMFADevice extends io.pulumi.resources.CustomResource {

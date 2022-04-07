@@ -13,62 +13,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Connect::UserHierarchyGroup
- * 
  */
 @ResourceType(type="aws-native:connect:UserHierarchyGroup")
 public class UserHierarchyGroup extends io.pulumi.resources.CustomResource {
     /**
      * The identifier of the Amazon Connect instance.
-     * 
      */
     @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
      * @return The identifier of the Amazon Connect instance.
-     * 
      */
     public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
     /**
      * The name of the user hierarchy group.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the user hierarchy group.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Amazon Resource Name (ARN) for the parent user hierarchy group.
-     * 
      */
     @Export(name="parentGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> parentGroupArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the parent user hierarchy group.
-     * 
      */
     public Output</* @Nullable */ String> getParentGroupArn() {
         return this.parentGroupArn;
     }
     /**
      * The Amazon Resource Name (ARN) for the user hierarchy group.
-     * 
      */
     @Export(name="userHierarchyGroupArn", type=String.class, parameters={})
     private Output<String> userHierarchyGroupArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the user hierarchy group.
-     * 
      */
     public Output<String> getUserHierarchyGroupArn() {
         return this.userHierarchyGroupArn;

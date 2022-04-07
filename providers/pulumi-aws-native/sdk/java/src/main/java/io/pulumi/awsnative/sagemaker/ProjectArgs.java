@@ -33,7 +33,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input ServiceCatalog Provisioning Details
-     * 
      */
     @Import(name="serviceCatalogProvisioningDetails", required=true)
       private final Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
@@ -44,7 +43,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;

@@ -15,7 +15,6 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
-     * 
      */
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
@@ -26,7 +25,6 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
-     * 
      */
     @Import(name="service", required=true)
       private final Output<String> service;
@@ -37,7 +35,6 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID or full Amazon Resource Name (ARN) of the task set.
-     * 
      */
     @Import(name="taskSetId", required=true)
       private final Output<String> taskSetId;

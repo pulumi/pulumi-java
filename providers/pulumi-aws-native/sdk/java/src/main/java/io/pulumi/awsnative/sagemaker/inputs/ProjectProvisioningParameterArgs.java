@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Information about a parameter used to provision a product.
- * 
  */
 public final class ProjectProvisioningParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ProjectProvisioningParameterArgs extends io.pulumi.resources.
 
     /**
      * The parameter key.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -30,7 +28,6 @@ public final class ProjectProvisioningParameterArgs extends io.pulumi.resources.
 
     /**
      * The parameter value.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

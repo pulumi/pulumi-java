@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies the amount of time each device has to finish its execution of the job.
- * 
  */
 public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 

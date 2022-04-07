@@ -14,7 +14,6 @@ public final class GetUserProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the associated Domain.
-     * 
      */
     @Import(name="domainId", required=true)
       private final String domainId;
@@ -25,7 +24,6 @@ public final class GetUserProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A name for the UserProfile.
-     * 
      */
     @Import(name="userProfileName", required=true)
       private final String userProfileName;

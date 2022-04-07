@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A key-value pair to associate with a device resource.
- * 
  */
 public final class DeviceTag extends io.pulumi.resources.InvokeArgs {
 

@@ -17,7 +17,6 @@ public final class DetectorModelLambda extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ARN of the Lambda function that is executed.
-     * 
      */
     @Import(name="functionArn", required=true)
       private final String functionArn;

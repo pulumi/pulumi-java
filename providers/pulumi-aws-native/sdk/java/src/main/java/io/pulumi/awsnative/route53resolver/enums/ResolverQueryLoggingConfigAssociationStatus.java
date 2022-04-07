@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * ResolverQueryLogConfigAssociationStatus
-     * 
      */
     @EnumType
     public enum ResolverQueryLoggingConfigAssociationStatus {

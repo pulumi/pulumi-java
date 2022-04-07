@@ -19,7 +19,6 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Description of the entity.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the RegexPatternSet.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -48,7 +46,6 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<RegexPatternSetScope> scope;

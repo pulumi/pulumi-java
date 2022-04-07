@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details for a step that deletes the file.
- * 
  */
 public final class WorkflowStepDeleteStepDetailsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WorkflowStepDeleteStepDetailsPropertiesArgs extends io.pulumi
 
     /**
      * The name of the step, used as an identifier.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

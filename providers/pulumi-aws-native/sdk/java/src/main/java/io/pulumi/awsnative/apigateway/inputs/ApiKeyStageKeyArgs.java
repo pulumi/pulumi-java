@@ -16,7 +16,6 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of a RestApi resource that includes the stage with which you want to associate the API key.
-     * 
      */
     @Import(name="restApiId")
       private final @Nullable Output<String> restApiId;
@@ -26,8 +25,7 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
-     * 
+     * The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property. 
      */
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;

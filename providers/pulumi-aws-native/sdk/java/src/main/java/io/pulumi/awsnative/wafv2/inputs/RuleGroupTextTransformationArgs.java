@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Text Transformation on the Search String before match.
- * 
  */
 public final class RuleGroupTextTransformationArgs extends io.pulumi.resources.ResourceArgs {
 

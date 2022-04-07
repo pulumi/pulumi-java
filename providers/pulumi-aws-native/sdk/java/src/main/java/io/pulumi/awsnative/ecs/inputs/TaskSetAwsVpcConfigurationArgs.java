@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The VPC subnets and security groups associated with a task. All specified subnets and security groups must be from the same VPC.
- * 
  */
 public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Whether the task's elastic network interface receives a public IP address. The default value is DISABLED.
-     * 
      */
     @Import(name="assignPublicIp")
       private final @Nullable Output<TaskSetAwsVpcConfigurationAssignPublicIp> assignPublicIp;
@@ -33,7 +31,6 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used. There is a limit of 5 security groups that can be specified per AwsVpcConfiguration.
-     * 
      */
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
@@ -44,7 +41,6 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * The subnets associated with the task or service. There is a limit of 16 subnets that can be specified per AwsVpcConfiguration.
-     * 
      */
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;

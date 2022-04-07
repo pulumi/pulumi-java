@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EFS::MountTarget
- * 
  */
 @ResourceType(type="aws-native:efs:MountTarget")
 public class MountTarget extends io.pulumi.resources.CustomResource {

@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class GetParameterGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the parameter group.
-     * 
      */
     private final @Nullable String aRN;
     /**
      * An array of key-value pairs to apply to this parameter group.
-     * 
      */
     private final @Nullable List<ParameterGroupTag> tags;
 
@@ -34,14 +32,12 @@ public final class GetParameterGroupResult {
 
     /**
      * The Amazon Resource Name (ARN) of the parameter group.
-     * 
     */
     public Optional<String> getARN() {
         return Optional.ofNullable(this.aRN);
     }
     /**
      * An array of key-value pairs to apply to this parameter group.
-     * 
     */
     public List<ParameterGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

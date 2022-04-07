@@ -18,7 +18,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
-     * 
      */
     @Import(name="apiPassthrough")
       private final @Nullable Output<CertificateApiPassthroughArgs> apiPassthrough;
@@ -29,7 +28,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) for the private CA to issue the certificate.
-     * 
      */
     @Import(name="certificateAuthorityArn", required=true)
       private final Output<String> certificateAuthorityArn;
@@ -40,7 +38,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The certificate signing request (CSR) for the Certificate.
-     * 
      */
     @Import(name="certificateSigningRequest", required=true)
       private final Output<String> certificateSigningRequest;
@@ -51,7 +48,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the algorithm that will be used to sign the Certificate.
-     * 
      */
     @Import(name="signingAlgorithm", required=true)
       private final Output<String> signingAlgorithm;
@@ -62,7 +58,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
-     * 
      */
     @Import(name="templateArn")
       private final @Nullable Output<String> templateArn;
@@ -73,7 +68,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time before which the Certificate will be valid.
-     * 
      */
     @Import(name="validity", required=true)
       private final Output<CertificateValidityArgs> validity;
@@ -84,7 +78,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time after which the Certificate will be valid.
-     * 
      */
     @Import(name="validityNotBefore")
       private final @Nullable Output<CertificateValidityArgs> validityNotBefore;

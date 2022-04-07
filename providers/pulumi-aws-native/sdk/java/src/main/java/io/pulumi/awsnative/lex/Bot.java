@@ -21,7 +21,270 @@ import javax.annotation.Nullable;
 /**
  * Amazon Lex conversational bot performing automated tasks such as ordering a pizza, booking a hotel, and so on.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var firstBotWithCFN = new AwsNative.Lex.Bot("firstBotWithCFN", new AwsNative.Lex.BotArgs
+ *         {
+ *             Name = "FirstBotWithCFN",
+ *             RoleArn = "arn:aws:iam::123456789012:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_5JSRXSE3QDQ",
+ *             DataPrivacy = new AwsNative.Lex.Inputs.DataPrivacyPropertiesArgs
+ *             {
+ *                 ChildDirected = false,
+ *             },
+ *             IdleSessionTTLInSeconds = 300,
+ *             AutoBuildBotLocales = true,
+ *             BotLocales = 
+ *             {
+ *                 new AwsNative.Lex.Inputs.BotLocaleArgs
+ *                 {
+ *                     LocaleId = "en_US",
+ *                     Description = "Simple test bot for the en_US locale",
+ *                     NluConfidenceThreshold = 0.5,
+ *                     VoiceSettings = new AwsNative.Lex.Inputs.BotVoiceSettingsArgs
+ *                     {
+ *                         VoiceId = "Ivy",
+ *                     },
+ *                     Intents = 
+ *                     {
+ *                         new AwsNative.Lex.Inputs.BotIntentArgs
+ *                         {
+ *                             Name = "SimpleIntent",
+ *                             SampleUtterances = 
+ *                             {
+ *                                 new AwsNative.Lex.Inputs.BotSampleUtteranceArgs
+ *                                 {
+ *                                     Utterance = "Book a car",
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSampleUtteranceArgs
+ *                                 {
+ *                                     Utterance = "Reserve a car",
+ *                                 },
+ *                                 new AwsNative.Lex.Inputs.BotSampleUtteranceArgs
+ *                                 {
+ *                                     Utterance = "Make a car reservation",
+ *                                 },
+ *                             },
+ *                         },
+ *                         new AwsNative.Lex.Inputs.BotIntentArgs
+ *                         {
+ *                             Name = "FallbackIntent",
+ *                             Description = "Default intent when no other intent matches",
+ *                             ParentIntentSignature = "AMAZON.FallbackIntent",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             BotTags = 
+ *             {
+ *                 new AwsNative.Lex.Inputs.BotTagArgs
+ *                 {
+ *                     Key = "TestTagKey1",
+ *                     Value = "TestTagValue1",
+ *                 },
+ *             },
+ *             TestBotAliasTags = 
+ *             {
+ *                 new AwsNative.Lex.Inputs.BotTagArgs
+ *                 {
+ *                     Key = "TestAliasTagKey1",
+ *                     Value = "TestAliasTagValue1",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/lex"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := lex.NewBot(ctx, "firstBotWithCFN", &lex.BotArgs{
+ * 			Name:    pulumi.String("FirstBotWithCFN"),
+ * 			RoleArn: pulumi.String("arn:aws:iam::123456789012:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_5JSRXSE3QDQ"),
+ * 			DataPrivacy: &lex.DataPrivacyPropertiesArgs{
+ * 				ChildDirected: pulumi.Bool(false),
+ * 			},
+ * 			IdleSessionTTLInSeconds: pulumi.Int(300),
+ * 			AutoBuildBotLocales:     pulumi.Bool(true),
+ * 			BotLocales: []lex.BotLocaleArgs{
+ * 				&lex.BotLocaleArgs{
+ * 					LocaleId:               pulumi.String("en_US"),
+ * 					Description:            pulumi.String("Simple test bot for the en_US locale"),
+ * 					NluConfidenceThreshold: pulumi.Float64(0.5),
+ * 					VoiceSettings: &lex.BotVoiceSettingsArgs{
+ * 						VoiceId: pulumi.String("Ivy"),
+ * 					},
+ * 					Intents: lex.BotIntentArray{
+ * 						&lex.BotIntentArgs{
+ * 							Name: pulumi.String("SimpleIntent"),
+ * 							SampleUtterances: lex.BotSampleUtteranceArray{
+ * 								&lex.BotSampleUtteranceArgs{
+ * 									Utterance: pulumi.String("Book a car"),
+ * 								},
+ * 								&lex.BotSampleUtteranceArgs{
+ * 									Utterance: pulumi.String("Reserve a car"),
+ * 								},
+ * 								&lex.BotSampleUtteranceArgs{
+ * 									Utterance: pulumi.String("Make a car reservation"),
+ * 								},
+ * 							},
+ * 						},
+ * 						&lex.BotIntentArgs{
+ * 							Name:                  pulumi.String("FallbackIntent"),
+ * 							Description:           pulumi.String("Default intent when no other intent matches"),
+ * 							ParentIntentSignature: pulumi.String("AMAZON.FallbackIntent"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			BotTags: []lex.BotTagArgs{
+ * 				&lex.BotTagArgs{
+ * 					Key:   pulumi.String("TestTagKey1"),
+ * 					Value: pulumi.String("TestTagValue1"),
+ * 				},
+ * 			},
+ * 			TestBotAliasTags: []lex.BotTagArgs{
+ * 				&lex.BotTagArgs{
+ * 					Key:   pulumi.String("TestAliasTagKey1"),
+ * 					Value: pulumi.String("TestAliasTagValue1"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const firstBotWithCFN = new aws_native.lex.Bot("firstBotWithCFN", {
+ *     name: "FirstBotWithCFN",
+ *     roleArn: "arn:aws:iam::123456789012:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_5JSRXSE3QDQ",
+ *     dataPrivacy: {
+ *         childDirected: false,
+ *     },
+ *     idleSessionTTLInSeconds: 300,
+ *     autoBuildBotLocales: true,
+ *     botLocales: [{
+ *         localeId: "en_US",
+ *         description: "Simple test bot for the en_US locale",
+ *         nluConfidenceThreshold: 0.5,
+ *         voiceSettings: {
+ *             voiceId: "Ivy",
+ *         },
+ *         intents: [
+ *             {
+ *                 name: "SimpleIntent",
+ *                 sampleUtterances: [
+ *                     {
+ *                         utterance: "Book a car",
+ *                     },
+ *                     {
+ *                         utterance: "Reserve a car",
+ *                     },
+ *                     {
+ *                         utterance: "Make a car reservation",
+ *                     },
+ *                 ],
+ *             },
+ *             {
+ *                 name: "FallbackIntent",
+ *                 description: "Default intent when no other intent matches",
+ *                 parentIntentSignature: "AMAZON.FallbackIntent",
+ *             },
+ *         ],
+ *     }],
+ *     botTags: [{
+ *         key: "TestTagKey1",
+ *         value: "TestTagValue1",
+ *     }],
+ *     testBotAliasTags: [{
+ *         key: "TestAliasTagKey1",
+ *         value: "TestAliasTagValue1",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * first_bot_with_cfn = aws_native.lex.Bot("firstBotWithCFN",
+ *     name="FirstBotWithCFN",
+ *     role_arn="arn:aws:iam::123456789012:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_5JSRXSE3QDQ",
+ *     data_privacy=aws_native.lex.DataPrivacyPropertiesArgs(
+ *         child_directed=False,
+ *     ),
+ *     idle_session_ttl_in_seconds=300,
+ *     auto_build_bot_locales=True,
+ *     bot_locales=[aws_native.lex.BotLocaleArgs(
+ *         locale_id="en_US",
+ *         description="Simple test bot for the en_US locale",
+ *         nlu_confidence_threshold=0.5,
+ *         voice_settings=aws_native.lex.BotVoiceSettingsArgs(
+ *             voice_id="Ivy",
+ *         ),
+ *         intents=[
+ *             aws_native.lex.BotIntentArgs(
+ *                 name="SimpleIntent",
+ *                 sample_utterances=[
+ *                     aws_native.lex.BotSampleUtteranceArgs(
+ *                         utterance="Book a car",
+ *                     ),
+ *                     aws_native.lex.BotSampleUtteranceArgs(
+ *                         utterance="Reserve a car",
+ *                     ),
+ *                     aws_native.lex.BotSampleUtteranceArgs(
+ *                         utterance="Make a car reservation",
+ *                     ),
+ *                 ],
+ *             ),
+ *             aws_native.lex.BotIntentArgs(
+ *                 name="FallbackIntent",
+ *                 description="Default intent when no other intent matches",
+ *                 parent_intent_signature="AMAZON.FallbackIntent",
+ *             ),
+ *         ],
+ *     )],
+ *     bot_tags=[aws_native.lex.BotTagArgs(
+ *         key="TestTagKey1",
+ *         value="TestTagValue1",
+ *     )],
+ *     test_bot_alias_tags=[aws_native.lex.BotTagArgs(
+ *         key="TestAliasTagKey1",
+ *         value="TestAliasTagValue1",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:lex:Bot")
@@ -34,14 +297,12 @@ public class Bot extends io.pulumi.resources.CustomResource {
     }
     /**
      * Specifies whether to build the bot locales after bot creation completes.
-     * 
      */
     @Export(name="autoBuildBotLocales", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoBuildBotLocales;
 
     /**
      * @return Specifies whether to build the bot locales after bot creation completes.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAutoBuildBotLocales() {
         return this.autoBuildBotLocales;
@@ -54,42 +315,36 @@ public class Bot extends io.pulumi.resources.CustomResource {
     }
     /**
      * List of bot locales
-     * 
      */
     @Export(name="botLocales", type=List.class, parameters={BotLocale.class})
     private Output</* @Nullable */ List<BotLocale>> botLocales;
 
     /**
      * @return List of bot locales
-     * 
      */
     public Output</* @Nullable */ List<BotLocale>> getBotLocales() {
         return this.botLocales;
     }
     /**
      * A list of tags to add to the bot, which can only be added at bot creation.
-     * 
      */
     @Export(name="botTags", type=List.class, parameters={BotTag.class})
     private Output</* @Nullable */ List<BotTag>> botTags;
 
     /**
      * @return A list of tags to add to the bot, which can only be added at bot creation.
-     * 
      */
     public Output</* @Nullable */ List<BotTag>> getBotTags() {
         return this.botTags;
     }
     /**
      * Data privacy setting of the Bot.
-     * 
      */
     @Export(name="dataPrivacy", type=DataPrivacyProperties.class, parameters={})
     private Output<DataPrivacyProperties> dataPrivacy;
 
     /**
      * @return Data privacy setting of the Bot.
-     * 
      */
     public Output<DataPrivacyProperties> getDataPrivacy() {
         return this.dataPrivacy;
@@ -102,14 +357,12 @@ public class Bot extends io.pulumi.resources.CustomResource {
     }
     /**
      * IdleSessionTTLInSeconds of the resource
-     * 
      */
     @Export(name="idleSessionTTLInSeconds", type=Integer.class, parameters={})
     private Output<Integer> idleSessionTTLInSeconds;
 
     /**
      * @return IdleSessionTTLInSeconds of the resource
-     * 
      */
     public Output<Integer> getIdleSessionTTLInSeconds() {
         return this.idleSessionTTLInSeconds;
@@ -128,14 +381,12 @@ public class Bot extends io.pulumi.resources.CustomResource {
     }
     /**
      * A list of tags to add to the test alias for a bot, , which can only be added at bot/bot alias creation.
-     * 
      */
     @Export(name="testBotAliasTags", type=List.class, parameters={BotTag.class})
     private Output</* @Nullable */ List<BotTag>> testBotAliasTags;
 
     /**
      * @return A list of tags to add to the test alias for a bot, , which can only be added at bot/bot alias creation.
-     * 
      */
     public Output</* @Nullable */ List<BotTag>> getTestBotAliasTags() {
         return this.testBotAliasTags;

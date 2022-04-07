@@ -19,7 +19,6 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Step action operation
-     * 
      */
     @Import(name="operation", required=true)
       private final Output<String> operation;

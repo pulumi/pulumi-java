@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DimensionTag {
     /**
      * The tag's key.
-     * 
      */
     private final String key;
     /**
      * The tag's value.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class DimensionTag {
 
     /**
      * The tag's key.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The tag's value.
-     * 
     */
     public String getValue() {
         return this.value;

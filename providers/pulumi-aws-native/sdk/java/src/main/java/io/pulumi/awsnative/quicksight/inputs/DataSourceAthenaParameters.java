@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>Amazon Athena parameters.</p>
- * 
  */
 public final class DataSourceAthenaParameters extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DataSourceAthenaParameters extends io.pulumi.resources.Invoke
 
     /**
      * <p>The workgroup that Amazon Athena uses.</p>
-     * 
      */
     @Import(name="workGroup")
       private final @Nullable String workGroup;

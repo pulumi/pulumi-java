@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * RuleGroupsNamespace schema for cloudformation.
- * 
  */
 @ResourceType(type="aws-native:aps:RuleGroupsNamespace")
 public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
     /**
      * The RuleGroupsNamespace ARN.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The RuleGroupsNamespace ARN.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The RuleGroupsNamespace data.
-     * 
      */
     @Export(name="data", type=String.class, parameters={})
     private Output<String> data;
 
     /**
      * @return The RuleGroupsNamespace data.
-     * 
      */
     public Output<String> getData() {
         return this.data;
     }
     /**
      * The RuleGroupsNamespace name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The RuleGroupsNamespace name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={RuleGroupsNamespaceTag.class})
     private Output</* @Nullable */ List<RuleGroupsNamespaceTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<RuleGroupsNamespaceTag>> getTags() {
         return this.tags;
     }
     /**
      * Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
-     * 
      */
     @Export(name="workspace", type=String.class, parameters={})
     private Output<String> workspace;
 
     /**
      * @return Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
-     * 
      */
     public Output<String> getWorkspace() {
         return this.workspace;

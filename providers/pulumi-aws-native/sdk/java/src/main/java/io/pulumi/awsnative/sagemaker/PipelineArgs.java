@@ -34,7 +34,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the Pipeline.
-     * 
      */
     @Import(name="pipelineDescription")
       private final @Nullable Output<String> pipelineDescription;
@@ -45,7 +44,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the Pipeline.
-     * 
      */
     @Import(name="pipelineDisplayName")
       private final @Nullable Output<String> pipelineDisplayName;
@@ -56,7 +54,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Pipeline.
-     * 
      */
     @Import(name="pipelineName")
       private final @Nullable Output<String> pipelineName;
@@ -67,7 +64,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role Arn
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;

@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class CodeSigningConfigAllowedPublishers {
     /**
      * List of Signing profile version Arns
-     * 
      */
     private final List<String> signingProfileVersionArns;
 
@@ -23,7 +22,6 @@ public final class CodeSigningConfigAllowedPublishers {
 
     /**
      * List of Signing profile version Arns
-     * 
     */
     public List<String> getSigningProfileVersionArns() {
         return this.signingProfileVersionArns;

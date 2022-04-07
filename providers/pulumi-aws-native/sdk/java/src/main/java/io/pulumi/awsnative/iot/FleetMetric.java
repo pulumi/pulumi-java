@@ -18,20 +18,17 @@ import javax.annotation.Nullable;
 
 /**
  * An aggregated metric of certain devices in your fleet
- * 
  */
 @ResourceType(type="aws-native:iot:FleetMetric")
 public class FleetMetric extends io.pulumi.resources.CustomResource {
     /**
      * The aggregation field to perform aggregation and metric emission
-     * 
      */
     @Export(name="aggregationField", type=String.class, parameters={})
     private Output</* @Nullable */ String> aggregationField;
 
     /**
      * @return The aggregation field to perform aggregation and metric emission
-     * 
      */
     public Output</* @Nullable */ String> getAggregationField() {
         return this.aggregationField;
@@ -44,168 +41,144 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
     }
     /**
      * The creation date of a fleet metric
-     * 
      */
     @Export(name="creationDate", type=Double.class, parameters={})
     private Output<Double> creationDate;
 
     /**
      * @return The creation date of a fleet metric
-     * 
      */
     public Output<Double> getCreationDate() {
         return this.creationDate;
     }
     /**
      * The description of a fleet metric
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of a fleet metric
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The index name of a fleet metric
-     * 
      */
     @Export(name="indexName", type=String.class, parameters={})
     private Output</* @Nullable */ String> indexName;
 
     /**
      * @return The index name of a fleet metric
-     * 
      */
     public Output</* @Nullable */ String> getIndexName() {
         return this.indexName;
     }
     /**
      * The last modified date of a fleet metric
-     * 
      */
     @Export(name="lastModifiedDate", type=Double.class, parameters={})
     private Output<Double> lastModifiedDate;
 
     /**
      * @return The last modified date of a fleet metric
-     * 
      */
     public Output<Double> getLastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
      * The Amazon Resource Number (ARN) of a fleet metric metric
-     * 
      */
     @Export(name="metricArn", type=String.class, parameters={})
     private Output<String> metricArn;
 
     /**
      * @return The Amazon Resource Number (ARN) of a fleet metric metric
-     * 
      */
     public Output<String> getMetricArn() {
         return this.metricArn;
     }
     /**
      * The name of the fleet metric
-     * 
      */
     @Export(name="metricName", type=String.class, parameters={})
     private Output<String> metricName;
 
     /**
      * @return The name of the fleet metric
-     * 
      */
     public Output<String> getMetricName() {
         return this.metricName;
     }
     /**
      * The period of metric emission in seconds
-     * 
      */
     @Export(name="period", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> period;
 
     /**
      * @return The period of metric emission in seconds
-     * 
      */
     public Output</* @Nullable */ Integer> getPeriod() {
         return this.period;
     }
     /**
      * The Fleet Indexing query used by a fleet metric
-     * 
      */
     @Export(name="queryString", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryString;
 
     /**
      * @return The Fleet Indexing query used by a fleet metric
-     * 
      */
     public Output</* @Nullable */ String> getQueryString() {
         return this.queryString;
     }
     /**
      * The version of a Fleet Indexing query used by a fleet metric
-     * 
      */
     @Export(name="queryVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryVersion;
 
     /**
      * @return The version of a Fleet Indexing query used by a fleet metric
-     * 
      */
     public Output</* @Nullable */ String> getQueryVersion() {
         return this.queryVersion;
     }
     /**
      * An array of key-value pairs to apply to this resource
-     * 
      */
     @Export(name="tags", type=List.class, parameters={FleetMetricTag.class})
     private Output</* @Nullable */ List<FleetMetricTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource
-     * 
      */
     public Output</* @Nullable */ List<FleetMetricTag>> getTags() {
         return this.tags;
     }
     /**
      * The unit of data points emitted by a fleet metric
-     * 
      */
     @Export(name="unit", type=String.class, parameters={})
     private Output</* @Nullable */ String> unit;
 
     /**
      * @return The unit of data points emitted by a fleet metric
-     * 
      */
     public Output</* @Nullable */ String> getUnit() {
         return this.unit;
     }
     /**
      * The version of a fleet metric
-     * 
      */
     @Export(name="version", type=Double.class, parameters={})
     private Output<Double> version;
 
     /**
      * @return The version of a fleet metric
-     * 
      */
     public Output<Double> getVersion() {
         return this.version;

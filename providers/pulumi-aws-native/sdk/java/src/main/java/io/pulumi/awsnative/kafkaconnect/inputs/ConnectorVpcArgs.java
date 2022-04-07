@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Information about a VPC used with the connector.
- * 
  */
 public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
-     * 
      */
     @Import(name="securityGroups", required=true)
       private final Output<List<String>> securityGroups;
@@ -31,7 +29,6 @@ public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
-     * 
      */
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;

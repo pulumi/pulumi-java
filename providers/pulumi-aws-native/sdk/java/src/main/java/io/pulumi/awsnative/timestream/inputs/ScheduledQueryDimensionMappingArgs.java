@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * This type is used to map column(s) from the query result to a dimension in the destination table.
- * 
  */
 public final class ScheduledQueryDimensionMappingArgs extends io.pulumi.resources.ResourceArgs {
 

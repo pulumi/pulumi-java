@@ -13,7 +13,6 @@ import java.util.Objects;
 public final class DatasetFilterExpression {
     /**
      * Filtering expression for a parameter
-     * 
      */
     private final String expression;
     private final List<DatasetFilterValue> valuesMap;
@@ -28,7 +27,6 @@ public final class DatasetFilterExpression {
 
     /**
      * Filtering expression for a parameter
-     * 
     */
     public String getExpression() {
         return this.expression;

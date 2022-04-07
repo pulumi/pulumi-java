@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Status of the Addon
-     * 
      */
     @EnumType
     public enum DiskAddOnStatus {

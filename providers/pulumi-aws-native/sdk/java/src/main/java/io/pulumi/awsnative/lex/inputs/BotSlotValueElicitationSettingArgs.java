@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings that you can use for eliciting a slot value.
- * 
  */
 public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
 
     /**
      * A list of default values for a slot.
-     * 
      */
     @Import(name="defaultValueSpecification")
       private final @Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
@@ -36,7 +34,6 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
 
     /**
      * The prompt that Amazon Lex uses to elicit the slot value from the user.
-     * 
      */
     @Import(name="promptSpecification")
       private final @Nullable Output<BotPromptSpecificationArgs> promptSpecification;
@@ -47,7 +44,6 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
 
     /**
      * If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy.
-     * 
      */
     @Import(name="sampleUtterances")
       private final @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
@@ -58,7 +54,6 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
 
     /**
      * Specifies whether the slot is required or optional.
-     * 
      */
     @Import(name="slotConstraint", required=true)
       private final Output<BotSlotConstraint> slotConstraint;
@@ -69,7 +64,6 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
 
     /**
      * Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input.
-     * 
      */
     @Import(name="waitAndContinueSpecification")
       private final @Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;

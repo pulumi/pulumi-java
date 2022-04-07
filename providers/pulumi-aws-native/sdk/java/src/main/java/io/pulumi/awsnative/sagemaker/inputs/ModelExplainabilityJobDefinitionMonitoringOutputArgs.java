@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The output object for a monitoring job.
- * 
  */
 public final class ModelExplainabilityJobDefinitionMonitoringOutputArgs extends io.pulumi.resources.ResourceArgs {
 

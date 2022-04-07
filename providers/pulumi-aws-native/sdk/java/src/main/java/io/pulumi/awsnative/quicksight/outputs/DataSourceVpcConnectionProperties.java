@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DataSourceVpcConnectionProperties {
     /**
      * <p>The Amazon Resource Name (ARN) for the VPC connection.</p>
-     * 
      */
     private final String vpcConnectionArn;
 
@@ -22,7 +21,6 @@ public final class DataSourceVpcConnectionProperties {
 
     /**
      * <p>The Amazon Resource Name (ARN) for the VPC connection.</p>
-     * 
     */
     public String getVpcConnectionArn() {
         return this.vpcConnectionArn;

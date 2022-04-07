@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The Policy Status associated with this Multi Region Access Point
- * 
  */
 public final class PolicyStatusPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class PolicyStatusPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies whether the policy is public or not.
-     * 
      */
     @Import(name="isPublic", required=true)
       private final Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;

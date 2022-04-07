@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The image tests configuration used when creating this image.
- * 
  */
 public final class ImageTestsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ImageTestsConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * ImageTestsEnabled
-     * 
      */
     @Import(name="imageTestsEnabled")
       private final @Nullable Output<Boolean> imageTestsEnabled;
@@ -32,7 +30,6 @@ public final class ImageTestsConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * TimeoutMinutes
-     * 
      */
     @Import(name="timeoutMinutes")
       private final @Nullable Output<Integer> timeoutMinutes;

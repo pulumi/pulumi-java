@@ -14,7 +14,6 @@ public final class GetConnectorProfileArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The maximum number of items to retrieve in a single batch.
-     * 
      */
     @Import(name="connectorProfileName", required=true)
       private final String connectorProfileName;

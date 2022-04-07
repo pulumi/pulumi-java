@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Custom request handling.
- * 
  */
 public final class RuleGroupCustomRequestHandlingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RuleGroupCustomRequestHandlingArgs extends io.pulumi.resource
 
     /**
      * Collection of HTTP headers.
-     * 
      */
     @Import(name="insertHeaders", required=true)
       private final Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders;

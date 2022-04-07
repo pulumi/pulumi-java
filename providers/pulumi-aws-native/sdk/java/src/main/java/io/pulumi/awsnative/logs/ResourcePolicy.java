@@ -13,34 +13,29 @@ import javax.annotation.Nullable;
 
 /**
  * The resource schema for AWSLogs ResourcePolicy
- * 
  */
 @ResourceType(type="aws-native:logs:ResourcePolicy")
 public class ResourcePolicy extends io.pulumi.resources.CustomResource {
     /**
      * The policy document
-     * 
      */
     @Export(name="policyDocument", type=String.class, parameters={})
     private Output<String> policyDocument;
 
     /**
      * @return The policy document
-     * 
      */
     public Output<String> getPolicyDocument() {
         return this.policyDocument;
     }
     /**
      * A name for resource policy
-     * 
      */
     @Export(name="policyName", type=String.class, parameters={})
     private Output<String> policyName;
 
     /**
      * @return A name for resource policy
-     * 
      */
     public Output<String> getPolicyName() {
         return this.policyName;

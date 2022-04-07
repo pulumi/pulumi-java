@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class AnalysisResourcePermission {
     /**
      * <p>The IAM action to grant or revoke permissions on.</p>
-     * 
      */
     private final List<String> actions;
     /**
@@ -31,7 +30,6 @@ public final class AnalysisResourcePermission {
      *                     (This is less common.) </p>
      *             </li>
      *          </ul>
-     * 
      */
     private final String principal;
 
@@ -45,7 +43,6 @@ public final class AnalysisResourcePermission {
 
     /**
      * <p>The IAM action to grant or revoke permissions on.</p>
-     * 
     */
     public List<String> getActions() {
         return this.actions;
@@ -66,7 +63,6 @@ public final class AnalysisResourcePermission {
      *                     (This is less common.) </p>
      *             </li>
      *          </ul>
-     * 
     */
     public String getPrincipal() {
         return this.principal;

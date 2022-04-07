@@ -18,7 +18,6 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
-     * 
      */
     @Import(name="allowedPublishers", required=true)
       private final Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
@@ -29,7 +28,6 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Policies to control how to act if a signature is invalid
-     * 
      */
     @Import(name="codeSigningPolicies")
       private final @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
@@ -40,7 +38,6 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A description of the CodeSigningConfig
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;

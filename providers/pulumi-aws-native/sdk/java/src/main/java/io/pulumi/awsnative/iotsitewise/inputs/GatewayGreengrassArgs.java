@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains the ARN of AWS IoT Greengrass Group V1 that the gateway runs on.
- * 
  */
 public final class GatewayGreengrassArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GatewayGreengrassArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The ARN of the Greengrass group.
-     * 
      */
     @Import(name="groupArn", required=true)
       private final Output<String> groupArn;

@@ -19,119 +19,245 @@ import javax.annotation.Nullable;
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var finSpaceEnvironment = new AwsNative.FinSpace.Environment("finSpaceEnvironment", new AwsNative.FinSpace.EnvironmentArgs
+ *         {
+ *             Name = "MyEnvironment",
+ *             KmsKeyId = "arn:aws:kms:us-east-1:123456789012:key/44efed01-30d0-4b39-80e7-165d5ed34524",
+ *             FederationMode = "LOCAL",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/finspace"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := finspace.NewEnvironment(ctx, "finSpaceEnvironment", &finspace.EnvironmentArgs{
+ * 			Name:           pulumi.String("MyEnvironment"),
+ * 			KmsKeyId:       pulumi.String("arn:aws:kms:us-east-1:123456789012:key/44efed01-30d0-4b39-80e7-165d5ed34524"),
+ * 			FederationMode: "LOCAL",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const finSpaceEnvironment = new aws_native.finspace.Environment("finSpaceEnvironment", {
+ *     name: "MyEnvironment",
+ *     kmsKeyId: "arn:aws:kms:us-east-1:123456789012:key/44efed01-30d0-4b39-80e7-165d5ed34524",
+ *     federationMode: "LOCAL",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * fin_space_environment = aws_native.finspace.Environment("finSpaceEnvironment",
+ *     name="MyEnvironment",
+ *     kms_key_id="arn:aws:kms:us-east-1:123456789012:key/44efed01-30d0-4b39-80e7-165d5ed34524",
+ *     federation_mode="LOCAL")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var finSpaceEnvironment = new AwsNative.FinSpace.Environment("finSpaceEnvironment", new AwsNative.FinSpace.EnvironmentArgs
+ *         {
+ *             Name = "MyEnvironment",
+ *             KmsKeyId = "arn:aws:kms:us-east-1:123456789012:key/44efed01-30d0-4b39-80e7-165d5ed34524",
+ *             FederationMode = "LOCAL",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/finspace"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := finspace.NewEnvironment(ctx, "finSpaceEnvironment", &finspace.EnvironmentArgs{
+ * 			Name:           pulumi.String("MyEnvironment"),
+ * 			KmsKeyId:       pulumi.String("arn:aws:kms:us-east-1:123456789012:key/44efed01-30d0-4b39-80e7-165d5ed34524"),
+ * 			FederationMode: "LOCAL",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const finSpaceEnvironment = new aws_native.finspace.Environment("finSpaceEnvironment", {
+ *     name: "MyEnvironment",
+ *     kmsKeyId: "arn:aws:kms:us-east-1:123456789012:key/44efed01-30d0-4b39-80e7-165d5ed34524",
+ *     federationMode: "LOCAL",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * fin_space_environment = aws_native.finspace.Environment("finSpaceEnvironment",
+ *     name="MyEnvironment",
+ *     kms_key_id="arn:aws:kms:us-east-1:123456789012:key/44efed01-30d0-4b39-80e7-165d5ed34524",
+ *     federation_mode="LOCAL")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:finspace:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
     /**
      * AWS account ID associated with the Environment
-     * 
      */
     @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
     /**
      * @return AWS account ID associated with the Environment
-     * 
      */
     public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
     /**
      * ARNs of FinSpace Data Bundles to install
-     * 
      */
     @Export(name="dataBundles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dataBundles;
 
     /**
      * @return ARNs of FinSpace Data Bundles to install
-     * 
      */
     public Output</* @Nullable */ List<String>> getDataBundles() {
         return this.dataBundles;
     }
     /**
      * ID for FinSpace created account used to store Environment artifacts
-     * 
      */
     @Export(name="dedicatedServiceAccountId", type=String.class, parameters={})
     private Output<String> dedicatedServiceAccountId;
 
     /**
      * @return ID for FinSpace created account used to store Environment artifacts
-     * 
      */
     public Output<String> getDedicatedServiceAccountId() {
         return this.dedicatedServiceAccountId;
     }
     /**
      * Description of the Environment
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the Environment
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * ARN of the Environment
-     * 
      */
     @Export(name="environmentArn", type=String.class, parameters={})
     private Output<String> environmentArn;
 
     /**
      * @return ARN of the Environment
-     * 
      */
     public Output<String> getEnvironmentArn() {
         return this.environmentArn;
     }
     /**
      * Unique identifier for representing FinSpace Environment
-     * 
      */
     @Export(name="environmentId", type=String.class, parameters={})
     private Output<String> environmentId;
 
     /**
      * @return Unique identifier for representing FinSpace Environment
-     * 
      */
     public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
     /**
      * URL used to login to the Environment
-     * 
      */
     @Export(name="environmentUrl", type=String.class, parameters={})
     private Output<String> environmentUrl;
 
     /**
      * @return URL used to login to the Environment
-     * 
      */
     public Output<String> getEnvironmentUrl() {
         return this.environmentUrl;
     }
     /**
      * Federation mode used with the Environment
-     * 
      */
     @Export(name="federationMode", type=EnvironmentFederationMode.class, parameters={})
     private Output</* @Nullable */ EnvironmentFederationMode> federationMode;
 
     /**
      * @return Federation mode used with the Environment
-     * 
      */
     public Output</* @Nullable */ EnvironmentFederationMode> getFederationMode() {
         return this.federationMode;
@@ -144,56 +270,48 @@ public class Environment extends io.pulumi.resources.CustomResource {
     }
     /**
      * KMS key used to encrypt customer data within FinSpace Environment infrastructure
-     * 
      */
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
      * @return KMS key used to encrypt customer data within FinSpace Environment infrastructure
-     * 
      */
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * Name of the Environment
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the Environment
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * SageMaker Studio Domain URL associated with the Environment
-     * 
      */
     @Export(name="sageMakerStudioDomainUrl", type=String.class, parameters={})
     private Output<String> sageMakerStudioDomainUrl;
 
     /**
      * @return SageMaker Studio Domain URL associated with the Environment
-     * 
      */
     public Output<String> getSageMakerStudioDomainUrl() {
         return this.sageMakerStudioDomainUrl;
     }
     /**
      * State of the Environment
-     * 
      */
     @Export(name="status", type=EnvironmentStatus.class, parameters={})
     private Output<EnvironmentStatus> status;
 
     /**
      * @return State of the Environment
-     * 
      */
     public Output<EnvironmentStatus> getStatus() {
         return this.status;

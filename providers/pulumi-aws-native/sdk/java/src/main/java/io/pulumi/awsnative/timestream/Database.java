@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::Timestream::Database resource creates a Timestream database.
- * 
  */
 @ResourceType(type="aws-native:timestream:Database")
 public class Database extends io.pulumi.resources.CustomResource {
@@ -27,42 +26,36 @@ public class Database extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
-     * 
      */
     @Export(name="databaseName", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseName;
 
     /**
      * @return The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
-     * 
      */
     public Output</* @Nullable */ String> getDatabaseName() {
         return this.databaseName;
     }
     /**
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
-     * 
      */
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
      * @return The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
-     * 
      */
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DatabaseTag.class})
     private Output</* @Nullable */ List<DatabaseTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<DatabaseTag>> getTags() {
         return this.tags;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A structure that contains an asset property value. For more information, see [Variant](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_Variant.html) in the *AWS IoT SiteWise API Reference*.
- * 
  */
 public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
 
     /**
      * The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
-     * 
      */
     @Import(name="booleanValue")
       private final @Nullable Output<String> booleanValue;
@@ -31,7 +29,6 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
 
     /**
      * The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
-     * 
      */
     @Import(name="doubleValue")
       private final @Nullable Output<String> doubleValue;
@@ -42,7 +39,6 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
 
     /**
      * The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
-     * 
      */
     @Import(name="integerValue")
       private final @Nullable Output<String> integerValue;
@@ -53,7 +49,6 @@ public final class DetectorModelAssetPropertyVariantArgs extends io.pulumi.resou
 
     /**
      * The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
-     * 
      */
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;

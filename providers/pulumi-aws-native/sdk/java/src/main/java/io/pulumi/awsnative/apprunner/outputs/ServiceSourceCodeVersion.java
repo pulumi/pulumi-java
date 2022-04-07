@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ServiceSourceCodeVersion {
     /**
      * Source Code Version Type
-     * 
      */
     private final ServiceSourceCodeVersionType type;
     /**
      * Source Code Version Value
-     * 
      */
     private final String value;
 
@@ -31,14 +29,12 @@ public final class ServiceSourceCodeVersion {
 
     /**
      * Source Code Version Type
-     * 
     */
     public ServiceSourceCodeVersionType getType() {
         return this.type;
     }
     /**
      * Source Code Version Value
-     * 
     */
     public String getValue() {
         return this.value;

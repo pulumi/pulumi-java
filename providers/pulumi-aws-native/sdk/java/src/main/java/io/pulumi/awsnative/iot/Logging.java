@@ -14,48 +14,41 @@ import javax.annotation.Nullable;
 
 /**
  * Logging Options enable you to configure your IoT V2 logging role and default logging level so that you can monitor progress events logs as it passes from your devices through Iot core service.
- * 
  */
 @ResourceType(type="aws-native:iot:Logging")
 public class Logging extends io.pulumi.resources.CustomResource {
     /**
      * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
-     * 
      */
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
      * @return Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
-     * 
      */
     public Output<String> getAccountId() {
         return this.accountId;
     }
     /**
      * The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
-     * 
      */
     @Export(name="defaultLogLevel", type=LoggingDefaultLogLevel.class, parameters={})
     private Output<LoggingDefaultLogLevel> defaultLogLevel;
 
     /**
      * @return The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
-     * 
      */
     public Output<LoggingDefaultLogLevel> getDefaultLogLevel() {
         return this.defaultLogLevel;
     }
     /**
      * The ARN of the role that allows IoT to write to Cloudwatch logs.
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return The ARN of the role that allows IoT to write to Cloudwatch logs.
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;

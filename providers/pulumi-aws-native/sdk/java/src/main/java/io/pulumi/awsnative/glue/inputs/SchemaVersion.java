@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specify checkpoint version for update. This is only required to update the Compatibility.
- * 
  */
 public final class SchemaVersion extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SchemaVersion extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates if the latest version needs to be updated.
-     * 
      */
     @Import(name="isLatest")
       private final @Nullable Boolean isLatest;
@@ -32,7 +30,6 @@ public final class SchemaVersion extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates the version number in the schema to update.
-     * 
      */
     @Import(name="versionNumber")
       private final @Nullable Integer versionNumber;

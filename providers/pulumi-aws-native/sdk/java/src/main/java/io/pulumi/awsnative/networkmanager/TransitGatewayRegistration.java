@@ -13,34 +13,29 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
- * 
  */
 @ResourceType(type="aws-native:networkmanager:TransitGatewayRegistration")
 public class TransitGatewayRegistration extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the global network.
-     * 
      */
     @Export(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
-     * 
      */
     public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
     /**
      * The Amazon Resource Name (ARN) of the transit gateway.
-     * 
      */
     @Export(name="transitGatewayArn", type=String.class, parameters={})
     private Output<String> transitGatewayArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the transit gateway.
-     * 
      */
     public Output<String> getTransitGatewayArn() {
         return this.transitGatewayArn;

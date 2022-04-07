@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for SSO assignmet
- * 
  */
 @ResourceType(type="aws-native:sso:Assignment")
 public class Assignment extends io.pulumi.resources.CustomResource {
     /**
      * The sso instance that the permission set is owned.
-     * 
      */
     @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
      * @return The sso instance that the permission set is owned.
-     * 
      */
     public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
     /**
      * The permission set that the assignemt will be assigned
-     * 
      */
     @Export(name="permissionSetArn", type=String.class, parameters={})
     private Output<String> permissionSetArn;
 
     /**
      * @return The permission set that the assignemt will be assigned
-     * 
      */
     public Output<String> getPermissionSetArn() {
         return this.permissionSetArn;
     }
     /**
      * The assignee's identifier, user id/group id
-     * 
      */
     @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
      * @return The assignee's identifier, user id/group id
-     * 
      */
     public Output<String> getPrincipalId() {
         return this.principalId;
     }
     /**
      * The assignee's type, user/group
-     * 
      */
     @Export(name="principalType", type=AssignmentPrincipalType.class, parameters={})
     private Output<AssignmentPrincipalType> principalType;
 
     /**
      * @return The assignee's type, user/group
-     * 
      */
     public Output<AssignmentPrincipalType> getPrincipalType() {
         return this.principalType;
     }
     /**
      * The account id to be provisioned.
-     * 
      */
     @Export(name="targetId", type=String.class, parameters={})
     private Output<String> targetId;
 
     /**
      * @return The account id to be provisioned.
-     * 
      */
     public Output<String> getTargetId() {
         return this.targetId;
     }
     /**
      * The type of resource to be provsioned to, only aws account now
-     * 
      */
     @Export(name="targetType", type=AssignmentTargetType.class, parameters={})
     private Output<AssignmentTargetType> targetType;
 
     /**
      * @return The type of resource to be provsioned to, only aws account now
-     * 
      */
     public Output<AssignmentTargetType> getTargetType() {
         return this.targetType;

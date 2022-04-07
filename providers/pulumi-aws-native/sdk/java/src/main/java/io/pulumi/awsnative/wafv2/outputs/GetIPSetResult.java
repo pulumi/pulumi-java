@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 public final class GetIPSetResult {
     /**
      * List of IPAddresses.
-     * 
      */
     private final @Nullable List<String> addresses;
     private final @Nullable String arn;
@@ -43,7 +42,6 @@ public final class GetIPSetResult {
 
     /**
      * List of IPAddresses.
-     * 
     */
     public List<String> getAddresses() {
         return this.addresses == null ? List.of() : this.addresses;

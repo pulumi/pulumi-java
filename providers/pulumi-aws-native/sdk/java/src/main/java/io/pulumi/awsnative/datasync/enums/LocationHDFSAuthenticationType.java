@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The authentication mode used to determine identity of user.
-     * 
      */
     @EnumType
     public enum LocationHDFSAuthenticationType {

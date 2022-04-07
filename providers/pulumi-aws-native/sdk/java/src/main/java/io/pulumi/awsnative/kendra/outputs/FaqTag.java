@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class FaqTag {
     /**
      * A string used to identify this tag
-     * 
      */
     private final String key;
     /**
      * A string containing the value for the tag
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class FaqTag {
 
     /**
      * A string used to identify this tag
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * A string containing the value for the tag
-     * 
     */
     public String getValue() {
         return this.value;

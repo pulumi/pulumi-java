@@ -22,20 +22,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::MediaPackage::OriginEndpoint
- * 
  */
 @ResourceType(type="aws-native:mediapackage:OriginEndpoint")
 public class OriginEndpoint extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) assigned to the OriginEndpoint.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) assigned to the OriginEndpoint.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -48,14 +45,12 @@ public class OriginEndpoint extends io.pulumi.resources.CustomResource {
     }
     /**
      * The ID of the Channel the OriginEndpoint is associated with.
-     * 
      */
     @Export(name="channelId", type=String.class, parameters={})
     private Output<String> channelId;
 
     /**
      * @return The ID of the Channel the OriginEndpoint is associated with.
-     * 
      */
     public Output<String> getChannelId() {
         return this.channelId;
@@ -74,14 +69,12 @@ public class OriginEndpoint extends io.pulumi.resources.CustomResource {
     }
     /**
      * A short text description of the OriginEndpoint.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A short text description of the OriginEndpoint.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
@@ -94,14 +87,12 @@ public class OriginEndpoint extends io.pulumi.resources.CustomResource {
     }
     /**
      * A short string appended to the end of the OriginEndpoint URL.
-     * 
      */
     @Export(name="manifestName", type=String.class, parameters={})
     private Output</* @Nullable */ String> manifestName;
 
     /**
      * @return A short string appended to the end of the OriginEndpoint URL.
-     * 
      */
     public Output</* @Nullable */ String> getManifestName() {
         return this.manifestName;
@@ -114,84 +105,72 @@ public class OriginEndpoint extends io.pulumi.resources.CustomResource {
     }
     /**
      * Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
-     * 
      */
     @Export(name="origination", type=OriginEndpointOrigination.class, parameters={})
     private Output</* @Nullable */ OriginEndpointOrigination> origination;
 
     /**
      * @return Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
-     * 
      */
     public Output</* @Nullable */ OriginEndpointOrigination> getOrigination() {
         return this.origination;
     }
     /**
      * Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
-     * 
      */
     @Export(name="startoverWindowSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> startoverWindowSeconds;
 
     /**
      * @return Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
-     * 
      */
     public Output</* @Nullable */ Integer> getStartoverWindowSeconds() {
         return this.startoverWindowSeconds;
     }
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Export(name="tags", type=List.class, parameters={OriginEndpointTag.class})
     private Output</* @Nullable */ List<OriginEndpointTag>> tags;
 
     /**
      * @return A collection of tags associated with a resource
-     * 
      */
     public Output</* @Nullable */ List<OriginEndpointTag>> getTags() {
         return this.tags;
     }
     /**
      * Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
-     * 
      */
     @Export(name="timeDelaySeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeDelaySeconds;
 
     /**
      * @return Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
-     * 
      */
     public Output</* @Nullable */ Integer> getTimeDelaySeconds() {
         return this.timeDelaySeconds;
     }
     /**
      * The URL of the packaged OriginEndpoint for consumption.
-     * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
      * @return The URL of the packaged OriginEndpoint for consumption.
-     * 
      */
     public Output<String> getUrl() {
         return this.url;
     }
     /**
      * A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
-     * 
      */
     @Export(name="whitelist", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> whitelist;
 
     /**
      * @return A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
-     * 
      */
     public Output</* @Nullable */ List<String>> getWhitelist() {
         return this.whitelist;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Current State of the Instance.
- * 
  */
 public final class InstanceState extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class InstanceState extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Status code of the Instance.
-     * 
      */
     @Import(name="code")
       private final @Nullable Integer code;
@@ -32,7 +30,6 @@ public final class InstanceState extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Status code of the Instance.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

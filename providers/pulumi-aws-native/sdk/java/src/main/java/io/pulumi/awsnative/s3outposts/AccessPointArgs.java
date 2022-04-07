@@ -18,7 +18,6 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.
-     * 
      */
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
@@ -29,7 +28,6 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name for the AccessPoint.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -40,7 +38,6 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The access point policy associated with this access point.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<Object> policy;
@@ -51,7 +48,6 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.
-     * 
      */
     @Import(name="vpcConfiguration", required=true)
       private final Output<AccessPointVpcConfigurationArgs> vpcConfiguration;

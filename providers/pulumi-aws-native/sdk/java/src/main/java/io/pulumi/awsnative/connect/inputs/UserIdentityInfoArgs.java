@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains information about the identity of a user.
- * 
  */
 public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
 

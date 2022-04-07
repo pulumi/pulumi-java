@@ -16,27 +16,22 @@ import javax.annotation.Nullable;
 public final class GetResourceVersionResult {
     /**
      * The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
-     * 
      */
     private final @Nullable String arn;
     /**
      * Indicates if this type version is the current default version
-     * 
      */
     private final @Nullable Boolean isDefaultVersion;
     /**
      * The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
-     * 
      */
     private final @Nullable ResourceVersionProvisioningType provisioningType;
     /**
      * The Amazon Resource Name (ARN) of the type without the versionID.
-     * 
      */
     private final @Nullable String typeArn;
     /**
      * The ID of the version of the type represented by this resource instance.
-     * 
      */
     private final @Nullable String versionId;
     /**
@@ -47,7 +42,6 @@ public final class GetResourceVersionResult {
      * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
      * 
      * PUBLIC: The type is publically visible and usable within any Amazon account.
-     * 
      */
     private final @Nullable ResourceVersionVisibility visibility;
 
@@ -69,35 +63,30 @@ public final class GetResourceVersionResult {
 
     /**
      * The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates if this type version is the current default version
-     * 
     */
     public Optional<Boolean> getIsDefaultVersion() {
         return Optional.ofNullable(this.isDefaultVersion);
     }
     /**
      * The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
-     * 
     */
     public Optional<ResourceVersionProvisioningType> getProvisioningType() {
         return Optional.ofNullable(this.provisioningType);
     }
     /**
      * The Amazon Resource Name (ARN) of the type without the versionID.
-     * 
     */
     public Optional<String> getTypeArn() {
         return Optional.ofNullable(this.typeArn);
     }
     /**
      * The ID of the version of the type represented by this resource instance.
-     * 
     */
     public Optional<String> getVersionId() {
         return Optional.ofNullable(this.versionId);
@@ -110,7 +99,6 @@ public final class GetResourceVersionResult {
      * PRIVATE: The type is only visible and usable within the account in which it is registered. Currently, AWS CloudFormation marks any types you register as PRIVATE.
      * 
      * PUBLIC: The type is publically visible and usable within any Amazon account.
-     * 
     */
     public Optional<ResourceVersionVisibility> getVisibility() {
         return Optional.ofNullable(this.visibility);

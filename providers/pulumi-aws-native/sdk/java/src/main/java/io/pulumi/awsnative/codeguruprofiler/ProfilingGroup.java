@@ -18,90 +18,77 @@ import javax.annotation.Nullable;
 
 /**
  * This resource schema represents the Profiling Group resource in the Amazon CodeGuru Profiler service.
- * 
  */
 @ResourceType(type="aws-native:codeguruprofiler:ProfilingGroup")
 public class ProfilingGroup extends io.pulumi.resources.CustomResource {
     /**
      * The agent permissions attached to this profiling group.
-     * 
      */
     @Export(name="agentPermissions", type=AgentPermissionsProperties.class, parameters={})
     private Output</* @Nullable */ AgentPermissionsProperties> agentPermissions;
 
     /**
      * @return The agent permissions attached to this profiling group.
-     * 
      */
     public Output</* @Nullable */ AgentPermissionsProperties> getAgentPermissions() {
         return this.agentPermissions;
     }
     /**
      * Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
-     * 
      */
     @Export(name="anomalyDetectionNotificationConfiguration", type=List.class, parameters={ProfilingGroupChannel.class})
     private Output</* @Nullable */ List<ProfilingGroupChannel>> anomalyDetectionNotificationConfiguration;
 
     /**
      * @return Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
-     * 
      */
     public Output</* @Nullable */ List<ProfilingGroupChannel>> getAnomalyDetectionNotificationConfiguration() {
         return this.anomalyDetectionNotificationConfiguration;
     }
     /**
      * The Amazon Resource Name (ARN) of the specified profiling group.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the specified profiling group.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The compute platform of the profiling group.
-     * 
      */
     @Export(name="computePlatform", type=ProfilingGroupComputePlatform.class, parameters={})
     private Output</* @Nullable */ ProfilingGroupComputePlatform> computePlatform;
 
     /**
      * @return The compute platform of the profiling group.
-     * 
      */
     public Output</* @Nullable */ ProfilingGroupComputePlatform> getComputePlatform() {
         return this.computePlatform;
     }
     /**
      * The name of the profiling group.
-     * 
      */
     @Export(name="profilingGroupName", type=String.class, parameters={})
     private Output<String> profilingGroupName;
 
     /**
      * @return The name of the profiling group.
-     * 
      */
     public Output<String> getProfilingGroupName() {
         return this.profilingGroupName;
     }
     /**
      * The tags associated with a profiling group.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ProfilingGroupTag.class})
     private Output</* @Nullable */ List<ProfilingGroupTag>> tags;
 
     /**
      * @return The tags associated with a profiling group.
-     * 
      */
     public Output</* @Nullable */ List<ProfilingGroupTag>> getTags() {
         return this.tags;

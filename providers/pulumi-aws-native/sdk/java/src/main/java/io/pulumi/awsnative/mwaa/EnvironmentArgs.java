@@ -25,11 +25,10 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      *     [core]
      *     dags_folder={AIRFLOW_HOME}/dags
-     *     
-     *     Would be represented as
-     *     
-     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      * 
+     *     Would be represented as
+     * 
+     *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      */
     @Import(name="airflowConfigurationOptions")
       private final @Nullable Output<Object> airflowConfigurationOptions;
@@ -152,7 +151,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A map of tags for the environment.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Object> tags;

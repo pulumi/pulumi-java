@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The data type.
-     * 
      */
     @EnumType
     public enum VariableDataType {

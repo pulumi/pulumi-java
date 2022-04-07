@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ConnectorProfileMarketoConnectorProfileCredentials {
     /**
      * The credentials used to access protected resources.
-     * 
      */
     private final @Nullable String accessToken;
     /**
      * The identiﬁer for the desired client.
-     * 
      */
     private final String clientId;
     /**
      * The client secret used by the oauth client to authenticate to the authorization server.
-     * 
      */
     private final String clientSecret;
     /**
      * The oauth needed to request security tokens from the connector endpoint.
-     * 
      */
     private final @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest;
 
@@ -47,28 +43,24 @@ public final class ConnectorProfileMarketoConnectorProfileCredentials {
 
     /**
      * The credentials used to access protected resources.
-     * 
     */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * The identiﬁer for the desired client.
-     * 
     */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The client secret used by the oauth client to authenticate to the authorization server.
-     * 
     */
     public String getClientSecret() {
         return this.clientSecret;
     }
     /**
      * The oauth needed to request security tokens from the connector endpoint.
-     * 
     */
     public Optional<ConnectorProfileConnectorOAuthRequest> getConnectorOAuthRequest() {
         return Optional.ofNullable(this.connectorOAuthRequest);

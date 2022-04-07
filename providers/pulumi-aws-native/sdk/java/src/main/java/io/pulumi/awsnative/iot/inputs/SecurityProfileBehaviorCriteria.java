@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The criteria by which the behavior is determined to be normal.
- * 
  */
 public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
 
     /**
      * The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
-     * 
      */
     @Import(name="comparisonOperator")
       private final @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator;
@@ -35,7 +33,6 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
 
     /**
      * If a device is in violation of the behavior for the specified number of consecutive datapoints, an alarm occurs. If not specified, the default is 1.
-     * 
      */
     @Import(name="consecutiveDatapointsToAlarm")
       private final @Nullable Integer consecutiveDatapointsToAlarm;
@@ -46,7 +43,6 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
 
     /**
      * If an alarm has occurred and the offending device is no longer in violation of the behavior for the specified number of consecutive datapoints, the alarm is cleared. If not specified, the default is 1.
-     * 
      */
     @Import(name="consecutiveDatapointsToClear")
       private final @Nullable Integer consecutiveDatapointsToClear;
@@ -57,7 +53,6 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
 
     /**
      * Use this to specify the time duration over which the behavior is evaluated.
-     * 
      */
     @Import(name="durationSeconds")
       private final @Nullable Integer durationSeconds;

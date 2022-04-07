@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings.
- * 
  */
 public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
 
     /**
      * A list of metrics to monitor for the component.
-     * 
      */
     @Import(name="alarmMetrics")
       private final @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics;
@@ -38,7 +36,6 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
 
     /**
      * A list of alarms to monitor for the component.
-     * 
      */
     @Import(name="alarms")
       private final @Nullable Output<List<ApplicationAlarmArgs>> alarms;
@@ -49,7 +46,6 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
 
     /**
      * The HA cluster Prometheus Exporter settings.
-     * 
      */
     @Import(name="hAClusterPrometheusExporter")
       private final @Nullable Output<ApplicationHAClusterPrometheusExporterArgs> hAClusterPrometheusExporter;
@@ -60,7 +56,6 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
 
     /**
      * The HANA DB Prometheus Exporter settings.
-     * 
      */
     @Import(name="hANAPrometheusExporter")
       private final @Nullable Output<ApplicationHANAPrometheusExporterArgs> hANAPrometheusExporter;
@@ -71,7 +66,6 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
 
     /**
      * The JMX Prometheus Exporter settings.
-     * 
      */
     @Import(name="jMXPrometheusExporter")
       private final @Nullable Output<ApplicationJMXPrometheusExporterArgs> jMXPrometheusExporter;
@@ -82,7 +76,6 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
 
     /**
      * A list of logs to monitor for the component.
-     * 
      */
     @Import(name="logs")
       private final @Nullable Output<List<ApplicationLogArgs>> logs;
@@ -93,7 +86,6 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
 
     /**
      * A list of Windows Events to log.
-     * 
      */
     @Import(name="windowsEvents")
       private final @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents;

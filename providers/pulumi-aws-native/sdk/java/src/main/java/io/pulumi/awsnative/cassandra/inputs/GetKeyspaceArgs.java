@@ -14,7 +14,6 @@ public final class GetKeyspaceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name for Cassandra keyspace
-     * 
      */
     @Import(name="keyspaceName", required=true)
       private final String keyspaceName;

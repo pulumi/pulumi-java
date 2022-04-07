@@ -15,7 +15,6 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The ID of the device
-     * 
      */
     @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
@@ -26,7 +25,6 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The ID of the global network.
-     * 
      */
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
@@ -37,7 +35,6 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The ID of the link
-     * 
      */
     @Import(name="linkId", required=true)
       private final Output<String> linkId;

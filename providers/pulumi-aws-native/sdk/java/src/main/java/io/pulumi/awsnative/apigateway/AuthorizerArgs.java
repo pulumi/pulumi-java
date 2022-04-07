@@ -18,7 +18,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
-     * 
      */
     @Import(name="authType")
       private final @Nullable Output<String> authType;
@@ -29,7 +28,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
-     * 
      */
     @Import(name="authorizerCredentials")
       private final @Nullable Output<String> authorizerCredentials;
@@ -40,7 +38,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The TTL in seconds of cached authorizer results.
-     * 
      */
     @Import(name="authorizerResultTtlInSeconds")
       private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
@@ -51,7 +48,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the authorizer's Uniform Resource Identifier (URI).
-     * 
      */
     @Import(name="authorizerUri")
       private final @Nullable Output<String> authorizerUri;
@@ -62,7 +58,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity source for which authorization is requested.
-     * 
      */
     @Import(name="identitySource")
       private final @Nullable Output<String> identitySource;
@@ -73,7 +68,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A validation expression for the incoming identity token.
-     * 
      */
     @Import(name="identityValidationExpression")
       private final @Nullable Output<String> identityValidationExpression;
@@ -84,7 +78,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the authorizer.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -95,7 +88,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
-     * 
      */
     @Import(name="providerARNs")
       private final @Nullable Output<List<String>> providerARNs;
@@ -106,7 +98,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the API.
-     * 
      */
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
@@ -117,7 +108,6 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The authorizer type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

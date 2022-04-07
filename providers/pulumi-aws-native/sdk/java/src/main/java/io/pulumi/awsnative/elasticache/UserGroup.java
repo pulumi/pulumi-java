@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ElastiCache::UserGroup
- * 
  */
 @ResourceType(type="aws-native:elasticache:UserGroup")
 public class UserGroup extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the user account.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the user account.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Must be redis.
-     * 
      */
     @Export(name="engine", type=UserGroupEngine.class, parameters={})
     private Output<UserGroupEngine> engine;
 
     /**
      * @return Must be redis.
-     * 
      */
     public Output<UserGroupEngine> getEngine() {
         return this.engine;
     }
     /**
      * Indicates user group status. Can be "creating", "active", "modifying", "deleting".
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Indicates user group status. Can be "creating", "active", "modifying", "deleting".
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The ID of the user group.
-     * 
      */
     @Export(name="userGroupId", type=String.class, parameters={})
     private Output<String> userGroupId;
 
     /**
      * @return The ID of the user group.
-     * 
      */
     public Output<String> getUserGroupId() {
         return this.userGroupId;
     }
     /**
      * List of users associated to this user group.
-     * 
      */
     @Export(name="userIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> userIds;
 
     /**
      * @return List of users associated to this user group.
-     * 
      */
     public Output</* @Nullable */ List<String>> getUserIds() {
         return this.userIds;

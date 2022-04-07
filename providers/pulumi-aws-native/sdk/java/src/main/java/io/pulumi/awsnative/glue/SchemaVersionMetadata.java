@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * This resource adds Key-Value metadata to a Schema version of Glue Schema Registry.
- * 
  */
 @ResourceType(type="aws-native:glue:SchemaVersionMetadata")
 public class SchemaVersionMetadata extends io.pulumi.resources.CustomResource {
     /**
      * Metadata key
-     * 
      */
     @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
 
     /**
      * @return Metadata key
-     * 
      */
     public Output<String> getKey() {
         return this.key;
     }
     /**
      * Represents the version ID associated with the schema version.
-     * 
      */
     @Export(name="schemaVersionId", type=String.class, parameters={})
     private Output<String> schemaVersionId;
 
     /**
      * @return Represents the version ID associated with the schema version.
-     * 
      */
     public Output<String> getSchemaVersionId() {
         return this.schemaVersionId;
     }
     /**
      * Metadata value
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**
      * @return Metadata value
-     * 
      */
     public Output<String> getValue() {
         return this.value;

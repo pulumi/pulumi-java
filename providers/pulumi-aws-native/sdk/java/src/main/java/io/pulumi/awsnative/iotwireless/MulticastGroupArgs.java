@@ -19,7 +19,6 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Wireless device to associate. Only for update request.
-     * 
      */
     @Import(name="associateWirelessDevice")
       private final @Nullable Output<String> associateWirelessDevice;
@@ -30,7 +29,6 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Multicast group description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Wireless device to disassociate. Only for update request.
-     * 
      */
     @Import(name="disassociateWirelessDevice")
       private final @Nullable Output<String> disassociateWirelessDevice;
@@ -52,7 +49,6 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Multicast group LoRaWAN
-     * 
      */
     @Import(name="loRaWAN", required=true)
       private final Output<MulticastGroupLoRaWANArgs> loRaWAN;
@@ -63,7 +59,6 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Multicast group
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -74,7 +69,6 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the Multicast group.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<MulticastGroupTagArgs>> tags;

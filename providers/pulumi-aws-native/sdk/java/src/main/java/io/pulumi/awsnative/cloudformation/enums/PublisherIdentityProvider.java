@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of account used as the identity provider when registering this publisher with CloudFormation.
-     * 
      */
     @EnumType
     public enum PublisherIdentityProvider {

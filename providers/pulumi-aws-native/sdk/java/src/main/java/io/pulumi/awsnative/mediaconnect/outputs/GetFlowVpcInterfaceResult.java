@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class GetFlowVpcInterfaceResult {
     /**
      * IDs of the network interfaces created in customer's account by MediaConnect.
-     * 
      */
     private final @Nullable List<String> networkInterfaceIds;
     /**
      * Role Arn MediaConnect can assumes to create ENIs in customer's account.
-     * 
      */
     private final @Nullable String roleArn;
     /**
      * Security Group IDs to be used on ENI.
-     * 
      */
     private final @Nullable List<String> securityGroupIds;
     /**
      * Subnet must be in the AZ of the Flow
-     * 
      */
     private final @Nullable String subnetId;
 
@@ -47,28 +43,24 @@ public final class GetFlowVpcInterfaceResult {
 
     /**
      * IDs of the network interfaces created in customer's account by MediaConnect.
-     * 
     */
     public List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds == null ? List.of() : this.networkInterfaceIds;
     }
     /**
      * Role Arn MediaConnect can assumes to create ENIs in customer's account.
-     * 
     */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * Security Group IDs to be used on ENI.
-     * 
     */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * Subnet must be in the AZ of the Flow
-     * 
     */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);

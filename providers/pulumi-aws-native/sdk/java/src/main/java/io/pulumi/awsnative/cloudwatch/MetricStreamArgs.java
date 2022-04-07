@@ -19,7 +19,6 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
      */
     @Import(name="excludeFilters")
       private final @Nullable Output<List<MetricStreamFilterArgs>> excludeFilters;
@@ -30,7 +29,6 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN of the Kinesis Firehose where to stream the data.
-     * 
      */
     @Import(name="firehoseArn", required=true)
       private final Output<String> firehoseArn;
@@ -41,7 +39,6 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
-     * 
      */
     @Import(name="includeFilters")
       private final @Nullable Output<List<MetricStreamFilterArgs>> includeFilters;
@@ -52,7 +49,6 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the metric stream.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -63,7 +59,6 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The output format of the data streamed to the Kinesis Firehose.
-     * 
      */
     @Import(name="outputFormat", required=true)
       private final Output<String> outputFormat;
@@ -74,7 +69,6 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN of the role that provides access to the Kinesis Firehose.
-     * 
      */
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
@@ -85,7 +79,6 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A set of tags to assign to the delivery stream.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<MetricStreamTagArgs>> tags;

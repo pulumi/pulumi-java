@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ConnectorCustomPlugin {
     /**
      * The Amazon Resource Name (ARN) of the custom plugin to use.
-     * 
      */
     private final String customPluginArn;
     /**
      * The revision of the custom plugin to use.
-     * 
      */
     private final Integer revision;
 
@@ -31,14 +29,12 @@ public final class ConnectorCustomPlugin {
 
     /**
      * The Amazon Resource Name (ARN) of the custom plugin to use.
-     * 
     */
     public String getCustomPluginArn() {
         return this.customPluginArn;
     }
     /**
      * The revision of the custom plugin to use.
-     * 
     */
     public Integer getRevision() {
         return this.revision;

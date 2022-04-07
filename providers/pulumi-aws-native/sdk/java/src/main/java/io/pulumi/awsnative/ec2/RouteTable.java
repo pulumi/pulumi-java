@@ -15,48 +15,41 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::RouteTable
- * 
  */
 @ResourceType(type="aws-native:ec2:RouteTable")
 public class RouteTable extends io.pulumi.resources.CustomResource {
     /**
      * The route table ID.
-     * 
      */
     @Export(name="routeTableId", type=String.class, parameters={})
     private Output<String> routeTableId;
 
     /**
      * @return The route table ID.
-     * 
      */
     public Output<String> getRouteTableId() {
         return this.routeTableId;
     }
     /**
      * Any tags assigned to the route table.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={RouteTableTag.class})
     private Output</* @Nullable */ List<RouteTableTag>> tags;
 
     /**
      * @return Any tags assigned to the route table.
-     * 
      */
     public Output</* @Nullable */ List<RouteTableTag>> getTags() {
         return this.tags;
     }
     /**
      * The ID of the VPC.
-     * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
      * @return The ID of the VPC.
-     * 
      */
     public Output<String> getVpcId() {
         return this.vpcId;

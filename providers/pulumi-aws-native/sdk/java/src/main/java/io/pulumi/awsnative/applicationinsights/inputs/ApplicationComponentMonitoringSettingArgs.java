@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The monitoring setting of the component.
- * 
  */
 public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
 
     /**
      * The ARN of the compnonent.
-     * 
      */
     @Import(name="componentARN")
       private final @Nullable Output<String> componentARN;
@@ -33,7 +31,6 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
 
     /**
      * The component monitoring configuration mode.
-     * 
      */
     @Import(name="componentConfigurationMode", required=true)
       private final Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode;
@@ -44,7 +41,6 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
 
     /**
      * The name of the component.
-     * 
      */
     @Import(name="componentName")
       private final @Nullable Output<String> componentName;
@@ -55,7 +51,6 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
 
     /**
      * The monitoring configuration of the component.
-     * 
      */
     @Import(name="customComponentConfiguration")
       private final @Nullable Output<ApplicationComponentConfigurationArgs> customComponentConfiguration;
@@ -66,7 +61,6 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
 
     /**
      * The overwritten settings on default component monitoring configuration.
-     * 
      */
     @Import(name="defaultOverwriteComponentConfiguration")
       private final @Nullable Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration;
@@ -77,7 +71,6 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
 
     /**
      * The tier of the application component.
-     * 
      */
     @Import(name="tier", required=true)
       private final Output<String> tier;

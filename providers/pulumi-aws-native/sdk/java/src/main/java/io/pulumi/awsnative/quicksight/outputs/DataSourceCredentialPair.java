@@ -22,17 +22,14 @@ public final class DataSourceCredentialPair {
      *             the existing credentials. If the <code>AlternateDataSourceParameters</code> list is
      *             null, the <code>DataSourceParameters</code> originally used with these
      *                 <code>Credentials</code> is automatically allowed.</p>
-     * 
      */
     private final @Nullable List<DataSourceParameters> alternateDataSourceParameters;
     /**
      * <p>Password.</p>
-     * 
      */
     private final String password;
     /**
      * <p>User name.</p>
-     * 
      */
     private final String username;
 
@@ -56,21 +53,18 @@ public final class DataSourceCredentialPair {
      *             the existing credentials. If the <code>AlternateDataSourceParameters</code> list is
      *             null, the <code>DataSourceParameters</code> originally used with these
      *                 <code>Credentials</code> is automatically allowed.</p>
-     * 
     */
     public List<DataSourceParameters> getAlternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? List.of() : this.alternateDataSourceParameters;
     }
     /**
      * <p>Password.</p>
-     * 
     */
     public String getPassword() {
         return this.password;
     }
     /**
      * <p>User name.</p>
-     * 
     */
     public String getUsername() {
         return this.username;

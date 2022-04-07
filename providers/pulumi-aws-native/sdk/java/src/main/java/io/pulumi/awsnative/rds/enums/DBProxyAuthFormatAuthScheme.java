@@ -9,8 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The type of authentication that the proxy uses for connections from the proxy to the underlying database.
-     * 
+     * The type of authentication that the proxy uses for connections from the proxy to the underlying database. 
      */
     @EnumType
     public enum DBProxyAuthFormatAuthScheme {

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class AnomalyDetectorMetric {
     /**
      * Operator used to aggregate metric values
-     * 
      */
     private final AnomalyDetectorMetricAggregationFunction aggregationFunction;
     private final String metricName;
@@ -32,7 +31,6 @@ public final class AnomalyDetectorMetric {
 
     /**
      * Operator used to aggregate metric values
-     * 
     */
     public AnomalyDetectorMetricAggregationFunction getAggregationFunction() {
         return this.aggregationFunction;

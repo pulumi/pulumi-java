@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * HDFS Name Node IP and port information.
- * 
  */
 public final class LocationHDFSNameNodeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LocationHDFSNameNodeArgs extends io.pulumi.resources.Resource
 
     /**
      * The DNS name or IP address of the Name Node in the customer's on premises HDFS cluster.
-     * 
      */
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
@@ -31,7 +29,6 @@ public final class LocationHDFSNameNodeArgs extends io.pulumi.resources.Resource
 
     /**
      * The port on which the Name Node is listening on for client requests.
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Integer> port;

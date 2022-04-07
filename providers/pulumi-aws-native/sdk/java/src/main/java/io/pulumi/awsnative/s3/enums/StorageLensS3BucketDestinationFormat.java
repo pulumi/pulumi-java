@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
-     * 
      */
     @EnumType
     public enum StorageLensS3BucketDestinationFormat {

@@ -17,146 +17,125 @@ import javax.annotation.Nullable;
 
 /**
  * Create and manage wireless gateways, including LoRa gateways.
- * 
  */
 @ResourceType(type="aws-native:iotwireless:WirelessDevice")
 public class WirelessDevice extends io.pulumi.resources.CustomResource {
     /**
      * Wireless device arn. Returned after successful create.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Wireless device arn. Returned after successful create.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Wireless device description
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Wireless device description
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Wireless device destination name
-     * 
      */
     @Export(name="destinationName", type=String.class, parameters={})
     private Output<String> destinationName;
 
     /**
      * @return Wireless device destination name
-     * 
      */
     public Output<String> getDestinationName() {
         return this.destinationName;
     }
     /**
      * The date and time when the most recent uplink was received.
-     * 
      */
     @Export(name="lastUplinkReceivedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastUplinkReceivedAt;
 
     /**
      * @return The date and time when the most recent uplink was received.
-     * 
      */
     public Output</* @Nullable */ String> getLastUplinkReceivedAt() {
         return this.lastUplinkReceivedAt;
     }
     /**
      * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
-     * 
      */
     @Export(name="loRaWAN", type=WirelessDeviceLoRaWANDevice.class, parameters={})
     private Output</* @Nullable */ WirelessDeviceLoRaWANDevice> loRaWAN;
 
     /**
      * @return The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
-     * 
      */
     public Output</* @Nullable */ WirelessDeviceLoRaWANDevice> getLoRaWAN() {
         return this.loRaWAN;
     }
     /**
      * Wireless device name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Wireless device name
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={WirelessDeviceTag.class})
     private Output</* @Nullable */ List<WirelessDeviceTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
-     * 
      */
     public Output</* @Nullable */ List<WirelessDeviceTag>> getTags() {
         return this.tags;
     }
     /**
      * Thing arn. Passed into update to associate Thing with Wireless device.
-     * 
      */
     @Export(name="thingArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> thingArn;
 
     /**
      * @return Thing arn. Passed into update to associate Thing with Wireless device.
-     * 
      */
     public Output</* @Nullable */ String> getThingArn() {
         return this.thingArn;
     }
     /**
      * Thing Arn. If there is a Thing created, this can be returned with a Get call.
-     * 
      */
     @Export(name="thingName", type=String.class, parameters={})
     private Output<String> thingName;
 
     /**
      * @return Thing Arn. If there is a Thing created, this can be returned with a Get call.
-     * 
      */
     public Output<String> getThingName() {
         return this.thingName;
     }
     /**
      * Wireless device type, currently only Sidewalk and LoRa
-     * 
      */
     @Export(name="type", type=WirelessDeviceType.class, parameters={})
     private Output<WirelessDeviceType> type;
 
     /**
      * @return Wireless device type, currently only Sidewalk and LoRa
-     * 
      */
     public Output<WirelessDeviceType> getType() {
         return this.type;

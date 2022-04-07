@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Source Code Version
- * 
  */
 public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
 
     /**
      * Source Code Version Type
-     * 
      */
     @Import(name="type", required=true)
       private final Output<ServiceSourceCodeVersionType> type;
@@ -31,7 +29,6 @@ public final class ServiceSourceCodeVersionArgs extends io.pulumi.resources.Reso
 
     /**
      * Source Code Version Value
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

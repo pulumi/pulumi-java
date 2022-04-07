@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The baseline constraints resource for a monitoring job.
- * 
  */
 public final class ModelQualityJobDefinitionConstraintsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ModelQualityJobDefinitionConstraintsResourceArgs extends io.p
 
     /**
      * The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
-     * 
      */
     @Import(name="s3Uri")
       private final @Nullable Output<String> s3Uri;

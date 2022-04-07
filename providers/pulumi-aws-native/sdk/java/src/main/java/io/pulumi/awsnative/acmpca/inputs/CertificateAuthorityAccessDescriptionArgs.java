@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Structure that contains X.509 AccessDescription information.
- * 
  */
 public final class CertificateAuthorityAccessDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 

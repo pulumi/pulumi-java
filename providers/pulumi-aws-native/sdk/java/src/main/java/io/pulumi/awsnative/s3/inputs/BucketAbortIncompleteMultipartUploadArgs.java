@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload.
- * 
  */
 public final class BucketAbortIncompleteMultipartUploadArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BucketAbortIncompleteMultipartUploadArgs extends io.pulumi.re
 
     /**
      * Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload.
-     * 
      */
     @Import(name="daysAfterInitiation", required=true)
       private final Output<Integer> daysAfterInitiation;

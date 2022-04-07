@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines one of the values for a slot type.
- * 
  */
 public final class BotSampleValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BotSampleValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value that can be used for a slot type.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

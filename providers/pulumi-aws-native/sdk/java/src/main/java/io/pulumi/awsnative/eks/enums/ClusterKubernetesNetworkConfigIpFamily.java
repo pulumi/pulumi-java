@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Ipv4 or Ipv6. You can only specify ipv6 for 1.21 and later clusters that use version 1.10.1 or later of the Amazon VPC CNI add-on
-     * 
      */
     @EnumType
     public enum ClusterKubernetesNetworkConfigIpFamily {

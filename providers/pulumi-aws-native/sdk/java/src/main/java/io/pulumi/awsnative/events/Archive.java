@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Events::Archive
- * 
  */
 @ResourceType(type="aws-native:events:Archive")
 public class Archive extends io.pulumi.resources.CustomResource {

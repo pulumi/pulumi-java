@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class EventSourceMappingDestinationConfig {
     /**
      * The destination configuration for failed invocations.
-     * 
      */
     private final @Nullable EventSourceMappingOnFailure onFailure;
 
@@ -24,7 +23,6 @@ public final class EventSourceMappingDestinationConfig {
 
     /**
      * The destination configuration for failed invocations.
-     * 
     */
     public Optional<EventSourceMappingOnFailure> getOnFailure() {
         return Optional.ofNullable(this.onFailure);

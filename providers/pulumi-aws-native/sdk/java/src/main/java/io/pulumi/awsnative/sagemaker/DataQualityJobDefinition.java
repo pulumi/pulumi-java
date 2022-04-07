@@ -22,20 +22,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SageMaker::DataQualityJobDefinition
- * 
  */
 @ResourceType(type="aws-native:sagemaker:DataQualityJobDefinition")
 public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource {
     /**
      * The time at which the job definition was created.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The time at which the job definition was created.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
@@ -66,14 +63,12 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
     }
     /**
      * The Amazon Resource Name (ARN) of job definition.
-     * 
      */
     @Export(name="jobDefinitionArn", type=String.class, parameters={})
     private Output<String> jobDefinitionArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of job definition.
-     * 
      */
     public Output<String> getJobDefinitionArn() {
         return this.jobDefinitionArn;
@@ -98,14 +93,12 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
     }
     /**
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;
@@ -118,14 +111,12 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DataQualityJobDefinitionTag.class})
     private Output</* @Nullable */ List<DataQualityJobDefinitionTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<DataQualityJobDefinitionTag>> getTags() {
         return this.tags;

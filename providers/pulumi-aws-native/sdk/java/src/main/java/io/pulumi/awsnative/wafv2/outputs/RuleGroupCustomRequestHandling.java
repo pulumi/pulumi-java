@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class RuleGroupCustomRequestHandling {
     /**
      * Collection of HTTP headers.
-     * 
      */
     private final List<RuleGroupCustomHTTPHeader> insertHeaders;
 
@@ -23,7 +22,6 @@ public final class RuleGroupCustomRequestHandling {
 
     /**
      * Collection of HTTP headers.
-     * 
     */
     public List<RuleGroupCustomHTTPHeader> getInsertHeaders() {
         return this.insertHeaders;

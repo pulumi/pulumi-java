@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Client affinity lets you direct all requests from a user to the same endpoint.
-     * 
      */
     @EnumType
     public enum ListenerClientAffinity {

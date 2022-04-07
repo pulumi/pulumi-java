@@ -18,7 +18,525 @@ import javax.annotation.Nullable;
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicRobotApplication = new AwsNative.RoboMaker.RobotApplication("basicRobotApplication", new AwsNative.RoboMaker.RobotApplicationArgs
+ *         {
+ *             Name = "MyRobotApplication",
+ *             Sources = 
+ *             {
+ *                 new AwsNative.RoboMaker.Inputs.RobotApplicationSourceConfigArgs
+ *                 {
+ *                     S3Bucket = "my-bucket",
+ *                     S3Key = "robot_bundle_x86.tar.gz",
+ *                     Architecture = "ARMHF",
+ *                 },
+ *             },
+ *             RobotSoftwareSuite = new AwsNative.RoboMaker.Inputs.RobotApplicationRobotSoftwareSuiteArgs
+ *             {
+ *                 Name = "ROS",
+ *                 Version = "Kinetic",
+ *             },
+ *             Tags = new AwsNative.RoboMaker.Inputs.RobotApplicationTagsArgs
+ *             {
+ *                 Name = "BasicRobotApplication",
+ *                 Type = "CFN",
+ *             },
+ *         });
+ *         this.RobotApplication = "BasicRobotApplication";
+ *     }
+ * 
+ *     [Output("robotApplication")]
+ *     public Output<string> RobotApplication { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := robomaker.NewRobotApplication(ctx, "basicRobotApplication", &robomaker.RobotApplicationArgs{
+ * 			Name: pulumi.String("MyRobotApplication"),
+ * 			Sources: []robomaker.RobotApplicationSourceConfigArgs{
+ * 				&robomaker.RobotApplicationSourceConfigArgs{
+ * 					S3Bucket:     pulumi.String("my-bucket"),
+ * 					S3Key:        pulumi.String("robot_bundle_x86.tar.gz"),
+ * 					Architecture: "ARMHF",
+ * 				},
+ * 			},
+ * 			RobotSoftwareSuite: &robomaker.RobotApplicationRobotSoftwareSuiteArgs{
+ * 				Name:    "ROS",
+ * 				Version: "Kinetic",
+ * 			},
+ * 			Tags: &robomaker.RobotApplicationTagsArgs{
+ * 				Name: "BasicRobotApplication",
+ * 				Type: "CFN",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("robotApplication", "BasicRobotApplication")
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicRobotApplication = new aws_native.robomaker.RobotApplication("basicRobotApplication", {
+ *     name: "MyRobotApplication",
+ *     sources: [{
+ *         s3Bucket: "my-bucket",
+ *         s3Key: "robot_bundle_x86.tar.gz",
+ *         architecture: "ARMHF",
+ *     }],
+ *     robotSoftwareSuite: {
+ *         name: "ROS",
+ *         version: "Kinetic",
+ *     },
+ *     tags: {
+ *         name: "BasicRobotApplication",
+ *         type: "CFN",
+ *     },
+ * });
+ * export const robotApplication = "BasicRobotApplication";
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_robot_application = aws_native.robomaker.RobotApplication("basicRobotApplication",
+ *     name="MyRobotApplication",
+ *     sources=[aws_native.robomaker.RobotApplicationSourceConfigArgs(
+ *         s3_bucket="my-bucket",
+ *         s3_key="robot_bundle_x86.tar.gz",
+ *         architecture="ARMHF",
+ *     )],
+ *     robot_software_suite=aws_native.robomaker.RobotApplicationRobotSoftwareSuiteArgs(
+ *         name="ROS",
+ *         version="Kinetic",
+ *     ),
+ *     tags=aws_native.robomaker.RobotApplicationTagsArgs(
+ *         name="BasicRobotApplication",
+ *         type="CFN",
+ *     ))
+ * pulumi.export("robotApplication", "BasicRobotApplication")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicRobotApplication = new AwsNative.RoboMaker.RobotApplication("basicRobotApplication", new AwsNative.RoboMaker.RobotApplicationArgs
+ *         {
+ *             Name = "MyRobotApplication",
+ *             Sources = 
+ *             {
+ *                 new AwsNative.RoboMaker.Inputs.RobotApplicationSourceConfigArgs
+ *                 {
+ *                     S3Bucket = "my-bucket",
+ *                     S3Key = "robot_bundle_x86.tar.gz",
+ *                     Architecture = "ARMHF",
+ *                 },
+ *             },
+ *             RobotSoftwareSuite = new AwsNative.RoboMaker.Inputs.RobotApplicationRobotSoftwareSuiteArgs
+ *             {
+ *                 Name = "ROS",
+ *                 Version = "Kinetic",
+ *             },
+ *             Tags = new AwsNative.RoboMaker.Inputs.RobotApplicationTagsArgs
+ *             {
+ *                 Name = "BasicRobotApplication",
+ *                 Type = "CFN",
+ *             },
+ *         });
+ *         this.RobotApplication = basicRobotApplication.Id;
+ *     }
+ * 
+ *     [Output("robotApplication")]
+ *     public Output<string> RobotApplication { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicRobotApplication, err := robomaker.NewRobotApplication(ctx, "basicRobotApplication", &robomaker.RobotApplicationArgs{
+ * 			Name: pulumi.String("MyRobotApplication"),
+ * 			Sources: []robomaker.RobotApplicationSourceConfigArgs{
+ * 				&robomaker.RobotApplicationSourceConfigArgs{
+ * 					S3Bucket:     pulumi.String("my-bucket"),
+ * 					S3Key:        pulumi.String("robot_bundle_x86.tar.gz"),
+ * 					Architecture: "ARMHF",
+ * 				},
+ * 			},
+ * 			RobotSoftwareSuite: &robomaker.RobotApplicationRobotSoftwareSuiteArgs{
+ * 				Name:    "ROS",
+ * 				Version: "Kinetic",
+ * 			},
+ * 			Tags: &robomaker.RobotApplicationTagsArgs{
+ * 				Name: "BasicRobotApplication",
+ * 				Type: "CFN",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("robotApplication", basicRobotApplication.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicRobotApplication = new aws_native.robomaker.RobotApplication("basicRobotApplication", {
+ *     name: "MyRobotApplication",
+ *     sources: [{
+ *         s3Bucket: "my-bucket",
+ *         s3Key: "robot_bundle_x86.tar.gz",
+ *         architecture: "ARMHF",
+ *     }],
+ *     robotSoftwareSuite: {
+ *         name: "ROS",
+ *         version: "Kinetic",
+ *     },
+ *     tags: {
+ *         name: "BasicRobotApplication",
+ *         type: "CFN",
+ *     },
+ * });
+ * export const robotApplication = basicRobotApplication.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_robot_application = aws_native.robomaker.RobotApplication("basicRobotApplication",
+ *     name="MyRobotApplication",
+ *     sources=[aws_native.robomaker.RobotApplicationSourceConfigArgs(
+ *         s3_bucket="my-bucket",
+ *         s3_key="robot_bundle_x86.tar.gz",
+ *         architecture="ARMHF",
+ *     )],
+ *     robot_software_suite=aws_native.robomaker.RobotApplicationRobotSoftwareSuiteArgs(
+ *         name="ROS",
+ *         version="Kinetic",
+ *     ),
+ *     tags=aws_native.robomaker.RobotApplicationTagsArgs(
+ *         name="BasicRobotApplication",
+ *         type="CFN",
+ *     ))
+ * pulumi.export("robotApplication", basic_robot_application.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicRobotApplication = new AwsNative.RoboMaker.RobotApplication("basicRobotApplication", new AwsNative.RoboMaker.RobotApplicationArgs
+ *         {
+ *             Name = "MyRobotApplication",
+ *             Sources = 
+ *             {
+ *                 new AwsNative.RoboMaker.Inputs.RobotApplicationSourceConfigArgs
+ *                 {
+ *                     S3Bucket = "my-bucket",
+ *                     S3Key = "robot_bundle_x86.tar.gz",
+ *                     Architecture = "ARMHF",
+ *                 },
+ *             },
+ *             RobotSoftwareSuite = new AwsNative.RoboMaker.Inputs.RobotApplicationRobotSoftwareSuiteArgs
+ *             {
+ *                 Name = "ROS",
+ *                 Version = "Kinetic",
+ *             },
+ *         });
+ *         var basicRobotApplicationVersion = new AwsNative.RoboMaker.RobotApplicationVersion("basicRobotApplicationVersion", new AwsNative.RoboMaker.RobotApplicationVersionArgs
+ *         {
+ *             Application = basicRobotApplication.Arn,
+ *             CurrentRevisionId = basicRobotApplication.Current_revision_id,
+ *         });
+ *         this.RobotApplicationVersion = "BasicRobotApplicationVersion";
+ *     }
+ * 
+ *     [Output("robotApplicationVersion")]
+ *     public Output<string> RobotApplicationVersion { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicRobotApplication, err := robomaker.NewRobotApplication(ctx, "basicRobotApplication", &robomaker.RobotApplicationArgs{
+ * 			Name: pulumi.String("MyRobotApplication"),
+ * 			Sources: []robomaker.RobotApplicationSourceConfigArgs{
+ * 				&robomaker.RobotApplicationSourceConfigArgs{
+ * 					S3Bucket:     pulumi.String("my-bucket"),
+ * 					S3Key:        pulumi.String("robot_bundle_x86.tar.gz"),
+ * 					Architecture: "ARMHF",
+ * 				},
+ * 			},
+ * 			RobotSoftwareSuite: &robomaker.RobotApplicationRobotSoftwareSuiteArgs{
+ * 				Name:    "ROS",
+ * 				Version: "Kinetic",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = robomaker.NewRobotApplicationVersion(ctx, "basicRobotApplicationVersion", &robomaker.RobotApplicationVersionArgs{
+ * 			Application:       basicRobotApplication.Arn,
+ * 			CurrentRevisionId: basicRobotApplication.Current_revision_id,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("robotApplicationVersion", "BasicRobotApplicationVersion")
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicRobotApplication = new aws_native.robomaker.RobotApplication("basicRobotApplication", {
+ *     name: "MyRobotApplication",
+ *     sources: [{
+ *         s3Bucket: "my-bucket",
+ *         s3Key: "robot_bundle_x86.tar.gz",
+ *         architecture: "ARMHF",
+ *     }],
+ *     robotSoftwareSuite: {
+ *         name: "ROS",
+ *         version: "Kinetic",
+ *     },
+ * });
+ * const basicRobotApplicationVersion = new aws_native.robomaker.RobotApplicationVersion("basicRobotApplicationVersion", {
+ *     application: basicRobotApplication.arn,
+ *     currentRevisionId: basicRobotApplication.currentRevisionId,
+ * });
+ * export const robotApplicationVersion = "BasicRobotApplicationVersion";
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_robot_application = aws_native.robomaker.RobotApplication("basicRobotApplication",
+ *     name="MyRobotApplication",
+ *     sources=[aws_native.robomaker.RobotApplicationSourceConfigArgs(
+ *         s3_bucket="my-bucket",
+ *         s3_key="robot_bundle_x86.tar.gz",
+ *         architecture="ARMHF",
+ *     )],
+ *     robot_software_suite=aws_native.robomaker.RobotApplicationRobotSoftwareSuiteArgs(
+ *         name="ROS",
+ *         version="Kinetic",
+ *     ))
+ * basic_robot_application_version = aws_native.robomaker.RobotApplicationVersion("basicRobotApplicationVersion",
+ *     application=basic_robot_application.arn,
+ *     current_revision_id=basic_robot_application.current_revision_id)
+ * pulumi.export("robotApplicationVersion", "BasicRobotApplicationVersion")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicRobotApplication = new AwsNative.RoboMaker.RobotApplication("basicRobotApplication", new AwsNative.RoboMaker.RobotApplicationArgs
+ *         {
+ *             Name = "MyRobotApplication",
+ *             Sources = 
+ *             {
+ *                 new AwsNative.RoboMaker.Inputs.RobotApplicationSourceConfigArgs
+ *                 {
+ *                     S3Bucket = "my-bucket",
+ *                     S3Key = "robot_bundle_x86.tar.gz",
+ *                     Architecture = "ARMHF",
+ *                 },
+ *             },
+ *             RobotSoftwareSuite = new AwsNative.RoboMaker.Inputs.RobotApplicationRobotSoftwareSuiteArgs
+ *             {
+ *                 Name = "ROS",
+ *                 Version = "Kinetic",
+ *             },
+ *         });
+ *         var basicRobotApplicationVersion = new AwsNative.RoboMaker.RobotApplicationVersion("basicRobotApplicationVersion", new AwsNative.RoboMaker.RobotApplicationVersionArgs
+ *         {
+ *             Application = basicRobotApplication.Arn,
+ *             CurrentRevisionId = basicRobotApplication.Current_revision_id,
+ *         });
+ *         this.RobotApplicationVersion = basicRobotApplicationVersion.Id;
+ *     }
+ * 
+ *     [Output("robotApplicationVersion")]
+ *     public Output<string> RobotApplicationVersion { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicRobotApplication, err := robomaker.NewRobotApplication(ctx, "basicRobotApplication", &robomaker.RobotApplicationArgs{
+ * 			Name: pulumi.String("MyRobotApplication"),
+ * 			Sources: []robomaker.RobotApplicationSourceConfigArgs{
+ * 				&robomaker.RobotApplicationSourceConfigArgs{
+ * 					S3Bucket:     pulumi.String("my-bucket"),
+ * 					S3Key:        pulumi.String("robot_bundle_x86.tar.gz"),
+ * 					Architecture: "ARMHF",
+ * 				},
+ * 			},
+ * 			RobotSoftwareSuite: &robomaker.RobotApplicationRobotSoftwareSuiteArgs{
+ * 				Name:    "ROS",
+ * 				Version: "Kinetic",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		basicRobotApplicationVersion, err := robomaker.NewRobotApplicationVersion(ctx, "basicRobotApplicationVersion", &robomaker.RobotApplicationVersionArgs{
+ * 			Application:       basicRobotApplication.Arn,
+ * 			CurrentRevisionId: basicRobotApplication.Current_revision_id,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("robotApplicationVersion", basicRobotApplicationVersion.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicRobotApplication = new aws_native.robomaker.RobotApplication("basicRobotApplication", {
+ *     name: "MyRobotApplication",
+ *     sources: [{
+ *         s3Bucket: "my-bucket",
+ *         s3Key: "robot_bundle_x86.tar.gz",
+ *         architecture: "ARMHF",
+ *     }],
+ *     robotSoftwareSuite: {
+ *         name: "ROS",
+ *         version: "Kinetic",
+ *     },
+ * });
+ * const basicRobotApplicationVersion = new aws_native.robomaker.RobotApplicationVersion("basicRobotApplicationVersion", {
+ *     application: basicRobotApplication.arn,
+ *     currentRevisionId: basicRobotApplication.currentRevisionId,
+ * });
+ * export const robotApplicationVersion = basicRobotApplicationVersion.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_robot_application = aws_native.robomaker.RobotApplication("basicRobotApplication",
+ *     name="MyRobotApplication",
+ *     sources=[aws_native.robomaker.RobotApplicationSourceConfigArgs(
+ *         s3_bucket="my-bucket",
+ *         s3_key="robot_bundle_x86.tar.gz",
+ *         architecture="ARMHF",
+ *     )],
+ *     robot_software_suite=aws_native.robomaker.RobotApplicationRobotSoftwareSuiteArgs(
+ *         name="ROS",
+ *         version="Kinetic",
+ *     ))
+ * basic_robot_application_version = aws_native.robomaker.RobotApplicationVersion("basicRobotApplicationVersion",
+ *     application=basic_robot_application.arn,
+ *     current_revision_id=basic_robot_application.current_revision_id)
+ * pulumi.export("robotApplicationVersion", basic_robot_application_version.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:robomaker:RobotApplication")
@@ -31,42 +549,36 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
     }
     /**
      * The revision ID of robot application.
-     * 
      */
     @Export(name="currentRevisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> currentRevisionId;
 
     /**
      * @return The revision ID of robot application.
-     * 
      */
     public Output</* @Nullable */ String> getCurrentRevisionId() {
         return this.currentRevisionId;
     }
     /**
      * The URI of the Docker image for the robot application.
-     * 
      */
     @Export(name="environment", type=String.class, parameters={})
     private Output</* @Nullable */ String> environment;
 
     /**
      * @return The URI of the Docker image for the robot application.
-     * 
      */
     public Output</* @Nullable */ String> getEnvironment() {
         return this.environment;
     }
     /**
      * The name of the robot application.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the robot application.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
@@ -79,14 +591,12 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
     }
     /**
      * The sources of the robot application.
-     * 
      */
     @Export(name="sources", type=List.class, parameters={RobotApplicationSourceConfig.class})
     private Output</* @Nullable */ List<RobotApplicationSourceConfig>> sources;
 
     /**
      * @return The sources of the robot application.
-     * 
      */
     public Output</* @Nullable */ List<RobotApplicationSourceConfig>> getSources() {
         return this.sources;

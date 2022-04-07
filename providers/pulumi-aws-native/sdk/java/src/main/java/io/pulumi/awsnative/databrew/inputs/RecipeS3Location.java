@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input location
- * 
  */
 public final class RecipeS3Location extends io.pulumi.resources.InvokeArgs {
 

@@ -22,19 +22,16 @@ public final class BucketReplicationRule {
     private final @Nullable BucketReplicationRuleFilter filter;
     /**
      * A unique identifier for the rule.
-     * 
      */
     private final @Nullable String id;
     /**
      * An object key name prefix that identifies the object or objects to which the rule applies.
-     * 
      */
     private final @Nullable String prefix;
     private final @Nullable Integer priority;
     private final @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria;
     /**
      * Specifies whether the rule is enabled.
-     * 
      */
     private final BucketReplicationRuleStatus status;
 
@@ -69,14 +66,12 @@ public final class BucketReplicationRule {
     }
     /**
      * A unique identifier for the rule.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An object key name prefix that identifies the object or objects to which the rule applies.
-     * 
     */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
@@ -89,7 +84,6 @@ public final class BucketReplicationRule {
     }
     /**
      * Specifies whether the rule is enabled.
-     * 
     */
     public BucketReplicationRuleStatus getStatus() {
         return this.status;

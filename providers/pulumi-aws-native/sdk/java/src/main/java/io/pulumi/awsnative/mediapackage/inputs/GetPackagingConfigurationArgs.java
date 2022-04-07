@@ -14,7 +14,6 @@ public final class GetPackagingConfigurationArgs extends io.pulumi.resources.Inv
 
     /**
      * The ID of the PackagingConfiguration.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

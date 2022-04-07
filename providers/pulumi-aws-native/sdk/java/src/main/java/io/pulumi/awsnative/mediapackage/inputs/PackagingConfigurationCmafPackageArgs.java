@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A CMAF packaging configuration.
- * 
  */
 public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
 
     /**
      * A list of HLS manifest configurations.
-     * 
      */
     @Import(name="hlsManifests", required=true)
       private final Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
@@ -42,7 +40,6 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
 
     /**
      * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
-     * 
      */
     @Import(name="includeEncoderConfigurationInSegments")
       private final @Nullable Output<Boolean> includeEncoderConfigurationInSegments;

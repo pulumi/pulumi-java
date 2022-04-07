@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::AppStream::Application
- * 
  */
 @ResourceType(type="aws-native:appstream:Application")
 public class Application extends io.pulumi.resources.CustomResource {

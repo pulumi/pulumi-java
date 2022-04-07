@@ -18,7 +18,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Alias of the contact. String value with 20 to 256 characters. Only alphabetical, numeric characters, dash, or underscore allowed.
-     * 
      */
     @Import(name="alias", required=true)
       private final Output<String> alias;
@@ -29,7 +28,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -40,7 +38,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The stages that an escalation plan or engagement plan engages contacts and contact methods in.
-     * 
      */
     @Import(name="plan", required=true)
       private final Output<List<ContactStageArgs>> plan;
@@ -51,7 +48,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contact type, which specify type of contact. Currently supported values: “PERSONAL”, “SHARED”, “OTHER“.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<ContactType> type;

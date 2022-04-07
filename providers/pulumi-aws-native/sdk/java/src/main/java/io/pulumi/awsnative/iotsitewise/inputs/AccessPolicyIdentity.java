@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The identity for this access policy. Choose either an SSO user or group or an IAM user or role.
- * 
  */
 public final class AccessPolicyIdentity extends io.pulumi.resources.InvokeArgs {
 

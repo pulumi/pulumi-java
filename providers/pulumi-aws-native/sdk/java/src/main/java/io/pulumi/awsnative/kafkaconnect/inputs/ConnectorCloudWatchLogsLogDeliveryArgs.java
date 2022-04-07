@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details about delivering logs to Amazon CloudWatch Logs.
- * 
  */
 public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.reso
 
     /**
      * Specifies whether the logs get sent to the specified CloudWatch Logs destination.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
@@ -32,7 +30,6 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.reso
 
     /**
      * The CloudWatch log group that is the destination for log delivery.
-     * 
      */
     @Import(name="logGroup")
       private final @Nullable Output<String> logGroup;

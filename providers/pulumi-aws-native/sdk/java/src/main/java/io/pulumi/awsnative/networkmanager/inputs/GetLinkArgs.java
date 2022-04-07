@@ -14,7 +14,6 @@ public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the global network.
-     * 
      */
     @Import(name="globalNetworkId", required=true)
       private final String globalNetworkId;
@@ -25,7 +24,6 @@ public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the link.
-     * 
      */
     @Import(name="linkId", required=true)
       private final String linkId;

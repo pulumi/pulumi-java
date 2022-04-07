@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Encryption mode
-     * 
      */
     @EnumType
     public enum JobEncryptionMode {

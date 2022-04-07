@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The component monitoring configuration mode.
-     * 
      */
     @EnumType
     public enum ApplicationComponentMonitoringSettingComponentConfigurationMode {

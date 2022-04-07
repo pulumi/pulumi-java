@@ -16,7 +16,6 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
 
     /**
      * The Amazon Resource Name (ARN) of the module version to set as the default version.
-     * 
      */
     @Import(name="arn")
       private final @Nullable Output<String> arn;
@@ -27,7 +26,6 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of a module existing in the registry.
-     * 
      */
     @Import(name="moduleName")
       private final @Nullable Output<String> moduleName;
@@ -38,7 +36,6 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
 
     /**
      * The ID of an existing version of the named module to set as the default.
-     * 
      */
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;

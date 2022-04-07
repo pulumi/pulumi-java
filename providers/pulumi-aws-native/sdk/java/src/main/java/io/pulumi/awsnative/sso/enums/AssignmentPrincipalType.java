@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The assignee's type, user/group
-     * 
      */
     @EnumType
     public enum AssignmentPrincipalType {

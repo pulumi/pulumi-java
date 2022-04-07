@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class WebACLCustomRequestHandling {
     /**
      * Collection of HTTP headers.
-     * 
      */
     private final List<WebACLCustomHTTPHeader> insertHeaders;
 
@@ -23,7 +22,6 @@ public final class WebACLCustomRequestHandling {
 
     /**
      * Collection of HTTP headers.
-     * 
     */
     public List<WebACLCustomHTTPHeader> getInsertHeaders() {
         return this.insertHeaders;

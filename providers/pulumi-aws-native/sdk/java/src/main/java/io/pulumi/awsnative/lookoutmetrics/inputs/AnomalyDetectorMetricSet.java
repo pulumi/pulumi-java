@@ -22,7 +22,6 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
 
     /**
      * Dimensions for this MetricSet.
-     * 
      */
     @Import(name="dimensionList")
       private final @Nullable List<String> dimensionList;
@@ -33,7 +32,6 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
 
     /**
      * Metrics captured by this MetricSet.
-     * 
      */
     @Import(name="metricList", required=true)
       private final List<AnomalyDetectorMetric> metricList;
@@ -44,7 +42,6 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
 
     /**
      * A description for the MetricSet.
-     * 
      */
     @Import(name="metricSetDescription")
       private final @Nullable String metricSetDescription;
@@ -55,7 +52,6 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
 
     /**
      * A frequency period to aggregate the data
-     * 
      */
     @Import(name="metricSetFrequency")
       private final @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency;
@@ -66,7 +62,6 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the MetricSet.
-     * 
      */
     @Import(name="metricSetName", required=true)
       private final String metricSetName;
@@ -84,7 +79,6 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
 
     /**
      * Offset, in seconds, between the frequency interval and the time at which the metrics are available.
-     * 
      */
     @Import(name="offset")
       private final @Nullable Integer offset;

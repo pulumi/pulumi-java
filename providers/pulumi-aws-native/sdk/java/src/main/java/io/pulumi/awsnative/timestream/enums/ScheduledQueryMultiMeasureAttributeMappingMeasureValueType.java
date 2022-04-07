@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Value type of the measure value column to be read from the query result.
-     * 
      */
     @EnumType
     public enum ScheduledQueryMultiMeasureAttributeMappingMeasureValueType {

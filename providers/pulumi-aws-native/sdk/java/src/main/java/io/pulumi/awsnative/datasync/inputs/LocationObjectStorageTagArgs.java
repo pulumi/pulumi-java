@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to associate with a resource.
- * 
  */
 public final class LocationObjectStorageTagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class LocationObjectStorageTagArgs extends io.pulumi.resources.Reso
 
     /**
      * The key for an AWS resource tag.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -30,7 +28,6 @@ public final class LocationObjectStorageTagArgs extends io.pulumi.resources.Reso
 
     /**
      * The value for an AWS resource tag.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

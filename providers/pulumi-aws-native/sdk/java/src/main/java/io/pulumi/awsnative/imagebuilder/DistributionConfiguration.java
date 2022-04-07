@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::ImageBuilder::DistributionConfiguration
- * 
  */
 @ResourceType(type="aws-native:imagebuilder:DistributionConfiguration")
 public class DistributionConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the distribution configuration.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the distribution configuration.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The description of the distribution configuration.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the distribution configuration.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The distributions of the distribution configuration.
-     * 
      */
     @Export(name="distributions", type=List.class, parameters={DistributionConfigurationDistribution.class})
     private Output<List<DistributionConfigurationDistribution>> distributions;
 
     /**
      * @return The distributions of the distribution configuration.
-     * 
      */
     public Output<List<DistributionConfigurationDistribution>> getDistributions() {
         return this.distributions;
     }
     /**
      * The name of the distribution configuration.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the distribution configuration.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The tags associated with the component.
-     * 
      */
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
      * @return The tags associated with the component.
-     * 
      */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;

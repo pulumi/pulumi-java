@@ -17,21 +17,197 @@ import javax.annotation.Nullable;
 /**
  * Mitigation actions can be used to take actions to mitigate issues that were found in an Audit finding or Detect violation.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var publishToSnsMitigationAction = new AwsNative.IoT.MitigationAction("publishToSnsMitigationAction", new AwsNative.IoT.MitigationActionArgs
+ *         {
+ *             ActionName = "PublishToSns",
+ *             RoleArn = "arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions",
+ *             ActionParams = new AwsNative.IoT.Inputs.MitigationActionActionParamsArgs
+ *             {
+ *                 PublishFindingToSnsParams = new AwsNative.IoT.Inputs.MitigationActionPublishFindingToSnsParamsArgs
+ *                 {
+ *                     TopicArn = "arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewMitigationAction(ctx, "publishToSnsMitigationAction", &iot.MitigationActionArgs{
+ * 			ActionName: pulumi.String("PublishToSns"),
+ * 			RoleArn:    pulumi.String("arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions"),
+ * 			ActionParams: &iot.MitigationActionActionParamsArgs{
+ * 				PublishFindingToSnsParams: &iot.MitigationActionPublishFindingToSnsParamsArgs{
+ * 					TopicArn: pulumi.String("arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const publishToSnsMitigationAction = new aws_native.iot.MitigationAction("publishToSnsMitigationAction", {
+ *     actionName: "PublishToSns",
+ *     roleArn: "arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions",
+ *     actionParams: {
+ *         publishFindingToSnsParams: {
+ *             topicArn: "arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * publish_to_sns_mitigation_action = aws_native.iot.MitigationAction("publishToSnsMitigationAction",
+ *     action_name="PublishToSns",
+ *     role_arn="arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions",
+ *     action_params=aws_native.iot.MitigationActionActionParamsArgs(
+ *         publish_finding_to_sns_params=aws_native.iot.MitigationActionPublishFindingToSnsParamsArgs(
+ *             topic_arn="arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var publishToSnsMitigationAction = new AwsNative.IoT.MitigationAction("publishToSnsMitigationAction", new AwsNative.IoT.MitigationActionArgs
+ *         {
+ *             ActionName = "PublishToSns",
+ *             RoleArn = "arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions",
+ *             ActionParams = new AwsNative.IoT.Inputs.MitigationActionActionParamsArgs
+ *             {
+ *                 PublishFindingToSnsParams = new AwsNative.IoT.Inputs.MitigationActionPublishFindingToSnsParamsArgs
+ *                 {
+ *                     TopicArn = "arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewMitigationAction(ctx, "publishToSnsMitigationAction", &iot.MitigationActionArgs{
+ * 			ActionName: pulumi.String("PublishToSns"),
+ * 			RoleArn:    pulumi.String("arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions"),
+ * 			ActionParams: &iot.MitigationActionActionParamsArgs{
+ * 				PublishFindingToSnsParams: &iot.MitigationActionPublishFindingToSnsParamsArgs{
+ * 					TopicArn: pulumi.String("arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const publishToSnsMitigationAction = new aws_native.iot.MitigationAction("publishToSnsMitigationAction", {
+ *     actionName: "PublishToSns",
+ *     roleArn: "arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions",
+ *     actionParams: {
+ *         publishFindingToSnsParams: {
+ *             topicArn: "arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * publish_to_sns_mitigation_action = aws_native.iot.MitigationAction("publishToSnsMitigationAction",
+ *     action_name="PublishToSns",
+ *     role_arn="arn:aws:us-east-1:123456789012:iam:role/RoleForIoTMitigationActions",
+ *     action_params=aws_native.iot.MitigationActionActionParamsArgs(
+ *         publish_finding_to_sns_params=aws_native.iot.MitigationActionPublishFindingToSnsParamsArgs(
+ *             topic_arn="arn:aws:sns:us-east-1:123456789012:IoTFindingNotifications",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iot:MitigationAction")
 public class MitigationAction extends io.pulumi.resources.CustomResource {
     /**
      * A unique identifier for the mitigation action.
-     * 
      */
     @Export(name="actionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> actionName;
 
     /**
      * @return A unique identifier for the mitigation action.
-     * 
      */
     public Output</* @Nullable */ String> getActionName() {
         return this.actionName;
@@ -62,14 +238,12 @@ public class MitigationAction extends io.pulumi.resources.CustomResource {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={MitigationActionTag.class})
     private Output</* @Nullable */ List<MitigationActionTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<MitigationActionTag>> getTags() {
         return this.tags;

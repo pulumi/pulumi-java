@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A custom SageMaker image.
- * 
  */
 public final class UserProfileCustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
 
     /**
      * The Name of the AppImageConfig.
-     * 
      */
     @Import(name="appImageConfigName", required=true)
       private final Output<String> appImageConfigName;
@@ -32,7 +30,6 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the CustomImage. Must be unique to your account.
-     * 
      */
     @Import(name="imageName", required=true)
       private final Output<String> imageName;
@@ -43,7 +40,6 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
 
     /**
      * The version number of the CustomImage.
-     * 
      */
     @Import(name="imageVersionNumber")
       private final @Nullable Output<Integer> imageVersionNumber;

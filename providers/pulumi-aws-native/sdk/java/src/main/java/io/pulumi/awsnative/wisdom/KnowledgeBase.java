@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::Wisdom::KnowledgeBase Resource Type
- * 
  */
 @ResourceType(type="aws-native:wisdom:KnowledgeBase")
 public class KnowledgeBase extends io.pulumi.resources.CustomResource {

@@ -19,7 +19,6 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the quick connect.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the Amazon Connect instance.
-     * 
      */
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
@@ -41,7 +39,6 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the quick connect.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +49,6 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration settings for the quick connect.
-     * 
      */
     @Import(name="quickConnectConfig", required=true)
       private final Output<QuickConnectConfigArgs> quickConnectConfig;
@@ -63,7 +59,6 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * One or more tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<QuickConnectTagArgs>> tags;

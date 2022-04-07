@@ -36,7 +36,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for the transfer acceleration state.
-     * 
      */
     @Import(name="accelerateConfiguration")
       private final @Nullable Output<BucketAccelerateConfigurationArgs> accelerateConfiguration;
@@ -47,7 +46,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A canned access control list (ACL) that grants predefined permissions to the bucket.
-     * 
      */
     @Import(name="accessControl")
       private final @Nullable Output<BucketAccessControl> accessControl;
@@ -58,7 +56,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration and any analyses for the analytics filter of an Amazon S3 bucket.
-     * 
      */
     @Import(name="analyticsConfigurations")
       private final @Nullable Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations;
@@ -76,7 +73,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
-     * 
      */
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
@@ -87,7 +83,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Rules that define cross-origin resource sharing of objects in this bucket.
-     * 
      */
     @Import(name="corsConfiguration")
       private final @Nullable Output<BucketCorsConfigurationArgs> corsConfiguration;
@@ -98,7 +93,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.
-     * 
      */
     @Import(name="intelligentTieringConfigurations")
       private final @Nullable Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations;
@@ -109,7 +103,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The inventory configuration for an Amazon S3 bucket.
-     * 
      */
     @Import(name="inventoryConfigurations")
       private final @Nullable Output<List<BucketInventoryConfigurationArgs>> inventoryConfigurations;
@@ -120,7 +113,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Rules that define how Amazon S3 manages objects during their lifetime.
-     * 
      */
     @Import(name="lifecycleConfiguration")
       private final @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
@@ -131,7 +123,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings that define where logs are stored.
-     * 
      */
     @Import(name="loggingConfiguration")
       private final @Nullable Output<BucketLoggingConfigurationArgs> loggingConfiguration;
@@ -142,7 +133,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.
-     * 
      */
     @Import(name="metricsConfigurations")
       private final @Nullable Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations;
@@ -153,7 +143,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration that defines how Amazon S3 handles bucket notifications.
-     * 
      */
     @Import(name="notificationConfiguration")
       private final @Nullable Output<BucketNotificationConfigurationArgs> notificationConfiguration;
@@ -164,7 +153,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Places an Object Lock configuration on the specified bucket.
-     * 
      */
     @Import(name="objectLockConfiguration")
       private final @Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration;
@@ -175,7 +163,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether this bucket has an Object Lock configuration enabled.
-     * 
      */
     @Import(name="objectLockEnabled")
       private final @Nullable Output<Boolean> objectLockEnabled;
@@ -186,7 +173,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the container element for object ownership rules.
-     * 
      */
     @Import(name="ownershipControls")
       private final @Nullable Output<BucketOwnershipControlsArgs> ownershipControls;
@@ -204,7 +190,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for replicating objects in an S3 bucket.
-     * 
      */
     @Import(name="replicationConfiguration")
       private final @Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration;
@@ -215,7 +200,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An arbitrary set of tags (key-value pairs) for this S3 bucket.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<BucketTagArgs>> tags;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
-     * 
      */
     @EnumType
     public enum AliasRoutingStrategyType {

@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type Definition for AWS::KinesisVideo::Stream
- * 
  */
 @ResourceType(type="aws-native:kinesisvideo:Stream")
 public class Stream extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the Kinesis Video stream.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Kinesis Video stream.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The number of hours till which Kinesis Video will retain the data in the stream
-     * 
      */
     @Export(name="dataRetentionInHours", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dataRetentionInHours;
 
     /**
      * @return The number of hours till which Kinesis Video will retain the data in the stream
-     * 
      */
     public Output</* @Nullable */ Integer> getDataRetentionInHours() {
         return this.dataRetentionInHours;
     }
     /**
      * The name of the device that is writing to the stream.
-     * 
      */
     @Export(name="deviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> deviceName;
 
     /**
      * @return The name of the device that is writing to the stream.
-     * 
      */
     public Output</* @Nullable */ String> getDeviceName() {
         return this.deviceName;
     }
     /**
      * AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
-     * 
      */
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
      * @return AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
-     * 
      */
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * The media type of the stream. Consumers of the stream can use this information when processing the stream.
-     * 
      */
     @Export(name="mediaType", type=String.class, parameters={})
     private Output</* @Nullable */ String> mediaType;
 
     /**
      * @return The media type of the stream. Consumers of the stream can use this information when processing the stream.
-     * 
      */
     public Output</* @Nullable */ String> getMediaType() {
         return this.mediaType;
     }
     /**
      * The name of the Kinesis Video stream.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the Kinesis Video stream.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * An array of key-value pairs associated with the Kinesis Video Stream.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={StreamTag.class})
     private Output</* @Nullable */ List<StreamTag>> tags;
 
     /**
      * @return An array of key-value pairs associated with the Kinesis Video Stream.
-     * 
      */
     public Output</* @Nullable */ List<StreamTag>> getTags() {
         return this.tags;

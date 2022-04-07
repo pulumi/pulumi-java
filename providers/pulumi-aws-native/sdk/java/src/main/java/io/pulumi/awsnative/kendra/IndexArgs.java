@@ -24,7 +24,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Capacity units
-     * 
      */
     @Import(name="capacityUnits")
       private final @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits;
@@ -35,7 +34,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description for the index
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -46,7 +44,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Document metadata configurations
-     * 
      */
     @Import(name="documentMetadataConfigurations")
       private final @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
@@ -78,7 +75,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Server side encryption configuration
-     * 
      */
     @Import(name="serverSideEncryptionConfiguration")
       private final @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
@@ -89,7 +85,6 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags for labeling the index
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<IndexTagArgs>> tags;

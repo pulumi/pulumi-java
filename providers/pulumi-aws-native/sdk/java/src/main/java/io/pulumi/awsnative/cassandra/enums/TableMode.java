@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Capacity mode for the specified table
-     * 
      */
     @EnumType
     public enum TableMode {

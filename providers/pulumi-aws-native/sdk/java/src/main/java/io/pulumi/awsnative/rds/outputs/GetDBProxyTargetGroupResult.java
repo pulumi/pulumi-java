@@ -18,7 +18,6 @@ public final class GetDBProxyTargetGroupResult {
     private final @Nullable List<String> dBInstanceIdentifiers;
     /**
      * The Amazon Resource Name (ARN) representing the target group.
-     * 
      */
     private final @Nullable String targetGroupArn;
 
@@ -45,7 +44,6 @@ public final class GetDBProxyTargetGroupResult {
     }
     /**
      * The Amazon Resource Name (ARN) representing the target group.
-     * 
     */
     public Optional<String> getTargetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);

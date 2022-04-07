@@ -16,7 +16,6 @@ public final class DocumentTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the tag.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -27,7 +26,6 @@ public final class DocumentTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value of the tag.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

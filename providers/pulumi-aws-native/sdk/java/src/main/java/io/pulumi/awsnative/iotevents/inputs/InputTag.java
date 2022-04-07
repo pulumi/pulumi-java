@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Tags to be applied to Input.
- * 
  */
 public final class InputTag extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class InputTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Key of the Tag.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class InputTag extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value of the Tag.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

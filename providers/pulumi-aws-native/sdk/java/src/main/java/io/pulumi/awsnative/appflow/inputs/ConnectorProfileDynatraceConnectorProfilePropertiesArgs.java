@@ -15,7 +15,6 @@ public final class ConnectorProfileDynatraceConnectorProfilePropertiesArgs exten
 
     /**
      * The location of the Dynatrace resource
-     * 
      */
     @Import(name="instanceUrl", required=true)
       private final Output<String> instanceUrl;

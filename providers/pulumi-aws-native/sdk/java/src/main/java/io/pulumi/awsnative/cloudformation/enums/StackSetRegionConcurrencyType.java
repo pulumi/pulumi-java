@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at a time
-     * 
      */
     @EnumType
     public enum StackSetRegionConcurrencyType {

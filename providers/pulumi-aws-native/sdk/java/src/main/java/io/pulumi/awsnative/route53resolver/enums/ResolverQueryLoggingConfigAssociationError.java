@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * ResolverQueryLogConfigAssociationError
-     * 
      */
     @EnumType
     public enum ResolverQueryLoggingConfigAssociationError {

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * AWS::DeviceFarm::TestGridProject creates a new TestGrid Project
- * 
  */
 @ResourceType(type="aws-native:devicefarm:TestGridProject")
 public class TestGridProject extends io.pulumi.resources.CustomResource {

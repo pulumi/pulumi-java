@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class DeviceFleetEdgeOutputConfig {
     /**
      * The KMS key id used for encryption on the S3 bucket
-     * 
      */
     private final @Nullable String kmsKeyId;
     /**
      * The Amazon Simple Storage (S3) bucket URI
-     * 
      */
     private final String s3OutputLocation;
 
@@ -32,14 +30,12 @@ public final class DeviceFleetEdgeOutputConfig {
 
     /**
      * The KMS key id used for encryption on the S3 bucket
-     * 
     */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * The Amazon Simple Storage (S3) bucket URI
-     * 
     */
     public String getS3OutputLocation() {
         return this.s3OutputLocation;

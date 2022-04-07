@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Field of the request to match.
- * 
  */
 public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
 
     /**
      * All query arguments of a web request.
-     * 
      */
     @Import(name="allQueryArguments")
       private final @Nullable Object allQueryArguments;
@@ -34,7 +32,6 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The body of a web request. This immediately follows the request headers.
-     * 
      */
     @Import(name="body")
       private final @Nullable Object body;
@@ -52,7 +49,6 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
-     * 
      */
     @Import(name="method")
       private final @Nullable Object method;
@@ -63,7 +59,6 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
-     * 
      */
     @Import(name="queryString")
       private final @Nullable Object queryString;
@@ -81,7 +76,6 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
 
     /**
      * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.
-     * 
      */
     @Import(name="singleQueryArgument")
       private final @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument;
@@ -92,7 +86,6 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
-     * 
      */
     @Import(name="uriPath")
       private final @Nullable Object uriPath;

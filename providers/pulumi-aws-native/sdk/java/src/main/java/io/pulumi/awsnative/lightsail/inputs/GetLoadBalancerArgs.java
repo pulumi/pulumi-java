@@ -14,7 +14,6 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of your load balancer.
-     * 
      */
     @Import(name="loadBalancerName", required=true)
       private final String loadBalancerName;

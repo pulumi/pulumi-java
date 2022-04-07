@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings that determine if a Lambda function should be invoked to fulfill a specific intent.
- * 
  */
 public final class BotFulfillmentCodeHookSettingArgs extends io.pulumi.resources.ResourceArgs {
 

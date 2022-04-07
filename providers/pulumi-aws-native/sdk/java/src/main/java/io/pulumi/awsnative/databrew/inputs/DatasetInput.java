@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input
- * 
  */
 public final class DatasetInput extends io.pulumi.resources.InvokeArgs {
 

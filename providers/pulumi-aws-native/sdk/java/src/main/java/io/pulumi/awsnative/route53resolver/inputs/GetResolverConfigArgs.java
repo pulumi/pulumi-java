@@ -14,7 +14,6 @@ public final class GetResolverConfigArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

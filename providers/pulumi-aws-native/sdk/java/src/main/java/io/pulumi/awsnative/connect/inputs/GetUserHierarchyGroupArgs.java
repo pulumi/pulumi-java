@@ -14,7 +14,6 @@ public final class GetUserHierarchyGroupArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The Amazon Resource Name (ARN) for the user hierarchy group.
-     * 
      */
     @Import(name="userHierarchyGroupArn", required=true)
       private final String userHierarchyGroupArn;

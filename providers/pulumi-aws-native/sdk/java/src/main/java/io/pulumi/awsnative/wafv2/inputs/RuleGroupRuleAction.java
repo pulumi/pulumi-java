@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Action taken when Rule matches its condition.
- * 
  */
 public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Allow traffic towards application.
-     * 
      */
     @Import(name="allow")
       private final @Nullable RuleGroupRuleActionAllowProperties allow;
@@ -34,7 +32,6 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Block traffic towards application.
-     * 
      */
     @Import(name="block")
       private final @Nullable RuleGroupRuleActionBlockProperties block;
@@ -45,7 +42,6 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Checks valid token exists with request.
-     * 
      */
     @Import(name="captcha")
       private final @Nullable RuleGroupRuleActionCaptchaProperties captcha;
@@ -56,7 +52,6 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Count traffic towards application.
-     * 
      */
     @Import(name="count")
       private final @Nullable RuleGroupRuleActionCountProperties count;

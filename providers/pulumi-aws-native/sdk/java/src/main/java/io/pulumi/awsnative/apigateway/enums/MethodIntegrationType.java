@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of backend that your method is running.
-     * 
      */
     @EnumType
     public enum MethodIntegrationType {

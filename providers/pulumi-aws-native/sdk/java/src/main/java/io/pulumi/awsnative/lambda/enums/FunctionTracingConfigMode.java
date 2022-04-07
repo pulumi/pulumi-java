@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The tracing mode.
-     * 
      */
     @EnumType
     public enum FunctionTracingConfigMode {

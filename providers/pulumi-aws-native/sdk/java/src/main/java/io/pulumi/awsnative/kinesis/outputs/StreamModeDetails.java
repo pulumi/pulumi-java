@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class StreamModeDetails {
     /**
      * The mode of the stream
-     * 
      */
     private final StreamModeDetailsStreamMode streamMode;
 
@@ -22,7 +21,6 @@ public final class StreamModeDetails {
 
     /**
      * The mode of the stream
-     * 
     */
     public StreamModeDetailsStreamMode getStreamMode() {
         return this.streamMode;

@@ -16,90 +16,77 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::MemoryDB::ParameterGroup resource creates an Amazon MemoryDB ParameterGroup.
- * 
  */
 @ResourceType(type="aws-native:memorydb:ParameterGroup")
 public class ParameterGroup extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the parameter group.
-     * 
      */
     @Export(name="aRN", type=String.class, parameters={})
     private Output<String> aRN;
 
     /**
      * @return The Amazon Resource Name (ARN) of the parameter group.
-     * 
      */
     public Output<String> getARN() {
         return this.aRN;
     }
     /**
      * A description of the parameter group.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the parameter group.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The name of the parameter group family that this parameter group is compatible with.
-     * 
      */
     @Export(name="family", type=String.class, parameters={})
     private Output<String> family;
 
     /**
      * @return The name of the parameter group family that this parameter group is compatible with.
-     * 
      */
     public Output<String> getFamily() {
         return this.family;
     }
     /**
      * The name of the parameter group.
-     * 
      */
     @Export(name="parameterGroupName", type=String.class, parameters={})
     private Output<String> parameterGroupName;
 
     /**
      * @return The name of the parameter group.
-     * 
      */
     public Output<String> getParameterGroupName() {
         return this.parameterGroupName;
     }
     /**
      * An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
-     * 
      */
     @Export(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
     /**
      * @return An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
-     * 
      */
     public Output</* @Nullable */ Object> getParameters() {
         return this.parameters;
     }
     /**
      * An array of key-value pairs to apply to this parameter group.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ParameterGroupTag.class})
     private Output</* @Nullable */ List<ParameterGroupTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this parameter group.
-     * 
      */
     public Output</* @Nullable */ List<ParameterGroupTag>> getTags() {
         return this.tags;

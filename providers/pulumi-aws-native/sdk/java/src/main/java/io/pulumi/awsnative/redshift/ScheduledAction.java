@@ -17,146 +17,125 @@ import javax.annotation.Nullable;
 
 /**
  * The `AWS::Redshift::ScheduledAction` resource creates an Amazon Redshift Scheduled Action.
- * 
  */
 @ResourceType(type="aws-native:redshift:ScheduledAction")
 public class ScheduledAction extends io.pulumi.resources.CustomResource {
     /**
      * If true, the schedule is enabled. If false, the scheduled action does not trigger.
-     * 
      */
     @Export(name="enable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enable;
 
     /**
      * @return If true, the schedule is enabled. If false, the scheduled action does not trigger.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnable() {
         return this.enable;
     }
     /**
      * The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
     /**
      * @return The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
-     * 
      */
     public Output</* @Nullable */ String> getEndTime() {
         return this.endTime;
     }
     /**
      * The IAM role to assume to run the target action.
-     * 
      */
     @Export(name="iamRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> iamRole;
 
     /**
      * @return The IAM role to assume to run the target action.
-     * 
      */
     public Output</* @Nullable */ String> getIamRole() {
         return this.iamRole;
     }
     /**
      * List of times when the scheduled action will run.
-     * 
      */
     @Export(name="nextInvocations", type=List.class, parameters={String.class})
     private Output<List<String>> nextInvocations;
 
     /**
      * @return List of times when the scheduled action will run.
-     * 
      */
     public Output<List<String>> getNextInvocations() {
         return this.nextInvocations;
     }
     /**
      * The schedule in `at( )` or `cron( )` format.
-     * 
      */
     @Export(name="schedule", type=String.class, parameters={})
     private Output</* @Nullable */ String> schedule;
 
     /**
      * @return The schedule in `at( )` or `cron( )` format.
-     * 
      */
     public Output</* @Nullable */ String> getSchedule() {
         return this.schedule;
     }
     /**
      * The description of the scheduled action.
-     * 
      */
     @Export(name="scheduledActionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduledActionDescription;
 
     /**
      * @return The description of the scheduled action.
-     * 
      */
     public Output</* @Nullable */ String> getScheduledActionDescription() {
         return this.scheduledActionDescription;
     }
     /**
      * The name of the scheduled action. The name must be unique within an account.
-     * 
      */
     @Export(name="scheduledActionName", type=String.class, parameters={})
     private Output<String> scheduledActionName;
 
     /**
      * @return The name of the scheduled action. The name must be unique within an account.
-     * 
      */
     public Output<String> getScheduledActionName() {
         return this.scheduledActionName;
     }
     /**
      * The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
     /**
      * @return The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
-     * 
      */
     public Output</* @Nullable */ String> getStartTime() {
         return this.startTime;
     }
     /**
      * The state of the scheduled action.
-     * 
      */
     @Export(name="state", type=ScheduledActionState.class, parameters={})
     private Output<ScheduledActionState> state;
 
     /**
      * @return The state of the scheduled action.
-     * 
      */
     public Output<ScheduledActionState> getState() {
         return this.state;
     }
     /**
      * A JSON format string of the Amazon Redshift API operation with input parameters.
-     * 
      */
     @Export(name="targetAction", type=ScheduledActionType.class, parameters={})
     private Output</* @Nullable */ ScheduledActionType> targetAction;
 
     /**
      * @return A JSON format string of the Amazon Redshift API operation with input parameters.
-     * 
      */
     public Output</* @Nullable */ ScheduledActionType> getTargetAction() {
         return this.targetAction;

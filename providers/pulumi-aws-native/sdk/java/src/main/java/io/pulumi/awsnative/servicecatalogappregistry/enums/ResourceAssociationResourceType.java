@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the CFN Resource for now it's enum CFN_STACK.
-     * 
      */
     @EnumType
     public enum ResourceAssociationResourceType {

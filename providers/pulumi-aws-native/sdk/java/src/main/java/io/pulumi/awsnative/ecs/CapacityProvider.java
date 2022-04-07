@@ -17,7 +17,709 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::ECS::CapacityProvider.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myCapacityProvider = new AwsNative.ECS.CapacityProvider("myCapacityProvider", new AwsNative.ECS.CapacityProviderArgs
+ *         {
+ *             AutoScalingGroupProvider = new AwsNative.ECS.Inputs.CapacityProviderAutoScalingGroupProviderArgs
+ *             {
+ *                 AutoScalingGroupArn = "arn:aws:autoscaling:us-west-2:123456789012:autoScalingGroup:a1b2c3d4-5678-90ab-cdef-EXAMPLE11111:autoScalingGroupName/MyAutoScalingGroup",
+ *                 ManagedScaling = new AwsNative.ECS.Inputs.CapacityProviderManagedScalingArgs
+ *                 {
+ *                     MaximumScalingStepSize = 10,
+ *                     MinimumScalingStepSize = 1,
+ *                     Status = "ENABLED",
+ *                     TargetCapacity = 100,
+ *                 },
+ *                 ManagedTerminationProtection = "ENABLED",
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.ECS.Inputs.CapacityProviderTagArgs
+ *                 {
+ *                     Key = "environment",
+ *                     Value = "production",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ecs.NewCapacityProvider(ctx, "myCapacityProvider", &ecs.CapacityProviderArgs{
+ * 			AutoScalingGroupProvider: &ecs.CapacityProviderAutoScalingGroupProviderArgs{
+ * 				AutoScalingGroupArn: pulumi.String("arn:aws:autoscaling:us-west-2:123456789012:autoScalingGroup:a1b2c3d4-5678-90ab-cdef-EXAMPLE11111:autoScalingGroupName/MyAutoScalingGroup"),
+ * 				ManagedScaling: &ecs.CapacityProviderManagedScalingArgs{
+ * 					MaximumScalingStepSize: pulumi.Int(10),
+ * 					MinimumScalingStepSize: pulumi.Int(1),
+ * 					Status:                 "ENABLED",
+ * 					TargetCapacity:         pulumi.Int(100),
+ * 				},
+ * 				ManagedTerminationProtection: "ENABLED",
+ * 			},
+ * 			Tags: []ecs.CapacityProviderTagArgs{
+ * 				&ecs.CapacityProviderTagArgs{
+ * 					Key:   pulumi.String("environment"),
+ * 					Value: pulumi.String("production"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myCapacityProvider = new aws_native.ecs.CapacityProvider("myCapacityProvider", {
+ *     autoScalingGroupProvider: {
+ *         autoScalingGroupArn: "arn:aws:autoscaling:us-west-2:123456789012:autoScalingGroup:a1b2c3d4-5678-90ab-cdef-EXAMPLE11111:autoScalingGroupName/MyAutoScalingGroup",
+ *         managedScaling: {
+ *             maximumScalingStepSize: 10,
+ *             minimumScalingStepSize: 1,
+ *             status: "ENABLED",
+ *             targetCapacity: 100,
+ *         },
+ *         managedTerminationProtection: "ENABLED",
+ *     },
+ *     tags: [{
+ *         key: "environment",
+ *         value: "production",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_capacity_provider = aws_native.ecs.CapacityProvider("myCapacityProvider",
+ *     auto_scaling_group_provider=aws_native.ecs.CapacityProviderAutoScalingGroupProviderArgs(
+ *         auto_scaling_group_arn="arn:aws:autoscaling:us-west-2:123456789012:autoScalingGroup:a1b2c3d4-5678-90ab-cdef-EXAMPLE11111:autoScalingGroupName/MyAutoScalingGroup",
+ *         managed_scaling=aws_native.ecs.CapacityProviderManagedScalingArgs(
+ *             maximum_scaling_step_size=10,
+ *             minimum_scaling_step_size=1,
+ *             status="ENABLED",
+ *             target_capacity=100,
+ *         ),
+ *         managed_termination_protection="ENABLED",
+ *     ),
+ *     tags=[aws_native.ecs.CapacityProviderTagArgs(
+ *         key="environment",
+ *         value="production",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myCapacityProvider = new AwsNative.ECS.CapacityProvider("myCapacityProvider", new AwsNative.ECS.CapacityProviderArgs
+ *         {
+ *             AutoScalingGroupProvider = new AwsNative.ECS.Inputs.CapacityProviderAutoScalingGroupProviderArgs
+ *             {
+ *                 AutoScalingGroupArn = "arn:aws:autoscaling:us-west-2:123456789012:autoScalingGroup:a1b2c3d4-5678-90ab-cdef-EXAMPLE11111:autoScalingGroupName/MyAutoScalingGroup",
+ *                 ManagedScaling = new AwsNative.ECS.Inputs.CapacityProviderManagedScalingArgs
+ *                 {
+ *                     MaximumScalingStepSize = 10,
+ *                     MinimumScalingStepSize = 1,
+ *                     Status = "ENABLED",
+ *                     TargetCapacity = 100,
+ *                 },
+ *                 ManagedTerminationProtection = "ENABLED",
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.ECS.Inputs.CapacityProviderTagArgs
+ *                 {
+ *                     Key = "environment",
+ *                     Value = "production",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ecs.NewCapacityProvider(ctx, "myCapacityProvider", &ecs.CapacityProviderArgs{
+ * 			AutoScalingGroupProvider: &ecs.CapacityProviderAutoScalingGroupProviderArgs{
+ * 				AutoScalingGroupArn: pulumi.String("arn:aws:autoscaling:us-west-2:123456789012:autoScalingGroup:a1b2c3d4-5678-90ab-cdef-EXAMPLE11111:autoScalingGroupName/MyAutoScalingGroup"),
+ * 				ManagedScaling: &ecs.CapacityProviderManagedScalingArgs{
+ * 					MaximumScalingStepSize: pulumi.Int(10),
+ * 					MinimumScalingStepSize: pulumi.Int(1),
+ * 					Status:                 "ENABLED",
+ * 					TargetCapacity:         pulumi.Int(100),
+ * 				},
+ * 				ManagedTerminationProtection: "ENABLED",
+ * 			},
+ * 			Tags: []ecs.CapacityProviderTagArgs{
+ * 				&ecs.CapacityProviderTagArgs{
+ * 					Key:   pulumi.String("environment"),
+ * 					Value: pulumi.String("production"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myCapacityProvider = new aws_native.ecs.CapacityProvider("myCapacityProvider", {
+ *     autoScalingGroupProvider: {
+ *         autoScalingGroupArn: "arn:aws:autoscaling:us-west-2:123456789012:autoScalingGroup:a1b2c3d4-5678-90ab-cdef-EXAMPLE11111:autoScalingGroupName/MyAutoScalingGroup",
+ *         managedScaling: {
+ *             maximumScalingStepSize: 10,
+ *             minimumScalingStepSize: 1,
+ *             status: "ENABLED",
+ *             targetCapacity: 100,
+ *         },
+ *         managedTerminationProtection: "ENABLED",
+ *     },
+ *     tags: [{
+ *         key: "environment",
+ *         value: "production",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_capacity_provider = aws_native.ecs.CapacityProvider("myCapacityProvider",
+ *     auto_scaling_group_provider=aws_native.ecs.CapacityProviderAutoScalingGroupProviderArgs(
+ *         auto_scaling_group_arn="arn:aws:autoscaling:us-west-2:123456789012:autoScalingGroup:a1b2c3d4-5678-90ab-cdef-EXAMPLE11111:autoScalingGroupName/MyAutoScalingGroup",
+ *         managed_scaling=aws_native.ecs.CapacityProviderManagedScalingArgs(
+ *             maximum_scaling_step_size=10,
+ *             minimum_scaling_step_size=1,
+ *             status="ENABLED",
+ *             target_capacity=100,
+ *         ),
+ *         managed_termination_protection="ENABLED",
+ *     ),
+ *     tags=[aws_native.ecs.CapacityProviderTagArgs(
+ *         key="environment",
+ *         value="production",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var autoScalingGroupArn1 = config.Require("autoScalingGroupArn1");
+ *         var autoScalingGroupArn2 = config.Require("autoScalingGroupArn2");
+ *         var capacityProvider1 = new AwsNative.ECS.CapacityProvider("capacityProvider1", new AwsNative.ECS.CapacityProviderArgs
+ *         {
+ *             AutoScalingGroupProvider = new AwsNative.ECS.Inputs.CapacityProviderAutoScalingGroupProviderArgs
+ *             {
+ *                 AutoScalingGroupArn = autoScalingGroupArn1,
+ *                 ManagedScaling = new AwsNative.ECS.Inputs.CapacityProviderManagedScalingArgs
+ *                 {
+ *                     Status = "ENABLED",
+ *                 },
+ *                 ManagedTerminationProtection = "DISABLED",
+ *             },
+ *         });
+ *         var capacityProvider2 = new AwsNative.ECS.CapacityProvider("capacityProvider2", new AwsNative.ECS.CapacityProviderArgs
+ *         {
+ *             AutoScalingGroupProvider = new AwsNative.ECS.Inputs.CapacityProviderAutoScalingGroupProviderArgs
+ *             {
+ *                 AutoScalingGroupArn = autoScalingGroupArn2,
+ *                 ManagedScaling = new AwsNative.ECS.Inputs.CapacityProviderManagedScalingArgs
+ *                 {
+ *                     Status = "ENABLED",
+ *                 },
+ *                 ManagedTerminationProtection = "DISABLED",
+ *             },
+ *         });
+ *         var cluster = new AwsNative.ECS.Cluster("cluster", new AwsNative.ECS.ClusterArgs
+ *         {
+ *         });
+ *         var clusterCPAssociation = new AwsNative.ECS.ClusterCapacityProviderAssociations("clusterCPAssociation", new AwsNative.ECS.ClusterCapacityProviderAssociationsArgs
+ *         {
+ *             Cluster = cluster.Id,
+ *             CapacityProviders = 
+ *             {
+ *                 capacityProvider1.Id,
+ *                 capacityProvider2.Id,
+ *             },
+ *             DefaultCapacityProviderStrategy = 
+ *             {
+ *                 new AwsNative.ECS.Inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs
+ *                 {
+ *                     Base = 2,
+ *                     Weight = 6,
+ *                     CapacityProvider = capacityProvider1.Id,
+ *                 },
+ *                 new AwsNative.ECS.Inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs
+ *                 {
+ *                     Base = 0,
+ *                     Weight = 10,
+ *                     CapacityProvider = capacityProvider2.Id,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		autoScalingGroupArn1 := cfg.Require("autoScalingGroupArn1")
+ * 		autoScalingGroupArn2 := cfg.Require("autoScalingGroupArn2")
+ * 		capacityProvider1, err := ecs.NewCapacityProvider(ctx, "capacityProvider1", &ecs.CapacityProviderArgs{
+ * 			AutoScalingGroupProvider: &ecs.CapacityProviderAutoScalingGroupProviderArgs{
+ * 				AutoScalingGroupArn: pulumi.String(autoScalingGroupArn1),
+ * 				ManagedScaling: &ecs.CapacityProviderManagedScalingArgs{
+ * 					Status: "ENABLED",
+ * 				},
+ * 				ManagedTerminationProtection: "DISABLED",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		capacityProvider2, err := ecs.NewCapacityProvider(ctx, "capacityProvider2", &ecs.CapacityProviderArgs{
+ * 			AutoScalingGroupProvider: &ecs.CapacityProviderAutoScalingGroupProviderArgs{
+ * 				AutoScalingGroupArn: pulumi.String(autoScalingGroupArn2),
+ * 				ManagedScaling: &ecs.CapacityProviderManagedScalingArgs{
+ * 					Status: "ENABLED",
+ * 				},
+ * 				ManagedTerminationProtection: "DISABLED",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		cluster, err := ecs.NewCluster(ctx, "cluster", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ecs.NewClusterCapacityProviderAssociations(ctx, "clusterCPAssociation", &ecs.ClusterCapacityProviderAssociationsArgs{
+ * 			Cluster: cluster.ID(),
+ * 			CapacityProviders: pulumi.StringArray{
+ * 				capacityProvider1.ID(),
+ * 				capacityProvider2.ID(),
+ * 			},
+ * 			DefaultCapacityProviderStrategy: ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArray{
+ * 				&ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs{
+ * 					Base:             pulumi.Int(2),
+ * 					Weight:           pulumi.Int(6),
+ * 					CapacityProvider: capacityProvider1.ID(),
+ * 				},
+ * 				&ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs{
+ * 					Base:             pulumi.Int(0),
+ * 					Weight:           pulumi.Int(10),
+ * 					CapacityProvider: capacityProvider2.ID(),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const autoScalingGroupArn1 = config.require("autoScalingGroupArn1");
+ * const autoScalingGroupArn2 = config.require("autoScalingGroupArn2");
+ * const capacityProvider1 = new aws_native.ecs.CapacityProvider("capacityProvider1", {autoScalingGroupProvider: {
+ *     autoScalingGroupArn: autoScalingGroupArn1,
+ *     managedScaling: {
+ *         status: "ENABLED",
+ *     },
+ *     managedTerminationProtection: "DISABLED",
+ * }});
+ * const capacityProvider2 = new aws_native.ecs.CapacityProvider("capacityProvider2", {autoScalingGroupProvider: {
+ *     autoScalingGroupArn: autoScalingGroupArn2,
+ *     managedScaling: {
+ *         status: "ENABLED",
+ *     },
+ *     managedTerminationProtection: "DISABLED",
+ * }});
+ * const cluster = new aws_native.ecs.Cluster("cluster", {});
+ * const clusterCPAssociation = new aws_native.ecs.ClusterCapacityProviderAssociations("clusterCPAssociation", {
+ *     cluster: cluster.id,
+ *     capacityProviders: [
+ *         capacityProvider1.id,
+ *         capacityProvider2.id,
+ *     ],
+ *     defaultCapacityProviderStrategy: [
+ *         {
+ *             base: 2,
+ *             weight: 6,
+ *             capacityProvider: capacityProvider1.id,
+ *         },
+ *         {
+ *             base: 0,
+ *             weight: 10,
+ *             capacityProvider: capacityProvider2.id,
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * auto_scaling_group_arn1 = config.require("autoScalingGroupArn1")
+ * auto_scaling_group_arn2 = config.require("autoScalingGroupArn2")
+ * capacity_provider1 = aws_native.ecs.CapacityProvider("capacityProvider1", auto_scaling_group_provider=aws_native.ecs.CapacityProviderAutoScalingGroupProviderArgs(
+ *     auto_scaling_group_arn=auto_scaling_group_arn1,
+ *     managed_scaling=aws_native.ecs.CapacityProviderManagedScalingArgs(
+ *         status="ENABLED",
+ *     ),
+ *     managed_termination_protection="DISABLED",
+ * ))
+ * capacity_provider2 = aws_native.ecs.CapacityProvider("capacityProvider2", auto_scaling_group_provider=aws_native.ecs.CapacityProviderAutoScalingGroupProviderArgs(
+ *     auto_scaling_group_arn=auto_scaling_group_arn2,
+ *     managed_scaling=aws_native.ecs.CapacityProviderManagedScalingArgs(
+ *         status="ENABLED",
+ *     ),
+ *     managed_termination_protection="DISABLED",
+ * ))
+ * cluster = aws_native.ecs.Cluster("cluster")
+ * cluster_cpassociation = aws_native.ecs.ClusterCapacityProviderAssociations("clusterCPAssociation",
+ *     cluster=cluster.id,
+ *     capacity_providers=[
+ *         capacity_provider1.id,
+ *         capacity_provider2.id,
+ *     ],
+ *     default_capacity_provider_strategy=[
+ *         aws_native.ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(
+ *             base=2,
+ *             weight=6,
+ *             capacity_provider=capacity_provider1.id,
+ *         ),
+ *         aws_native.ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(
+ *             base=0,
+ *             weight=10,
+ *             capacity_provider=capacity_provider2.id,
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var autoScalingGroupArn1 = config.Require("autoScalingGroupArn1");
+ *         var autoScalingGroupArn2 = config.Require("autoScalingGroupArn2");
+ *         var capacityProvider1 = new AwsNative.ECS.CapacityProvider("capacityProvider1", new AwsNative.ECS.CapacityProviderArgs
+ *         {
+ *             AutoScalingGroupProvider = new AwsNative.ECS.Inputs.CapacityProviderAutoScalingGroupProviderArgs
+ *             {
+ *                 AutoScalingGroupArn = autoScalingGroupArn1,
+ *                 ManagedScaling = new AwsNative.ECS.Inputs.CapacityProviderManagedScalingArgs
+ *                 {
+ *                     Status = "ENABLED",
+ *                 },
+ *                 ManagedTerminationProtection = "DISABLED",
+ *             },
+ *         });
+ *         var capacityProvider2 = new AwsNative.ECS.CapacityProvider("capacityProvider2", new AwsNative.ECS.CapacityProviderArgs
+ *         {
+ *             AutoScalingGroupProvider = new AwsNative.ECS.Inputs.CapacityProviderAutoScalingGroupProviderArgs
+ *             {
+ *                 AutoScalingGroupArn = autoScalingGroupArn2,
+ *                 ManagedScaling = new AwsNative.ECS.Inputs.CapacityProviderManagedScalingArgs
+ *                 {
+ *                     Status = "ENABLED",
+ *                 },
+ *                 ManagedTerminationProtection = "DISABLED",
+ *             },
+ *         });
+ *         var cluster = new AwsNative.ECS.Cluster("cluster", new AwsNative.ECS.ClusterArgs
+ *         {
+ *         });
+ *         var clusterCPAssociation = new AwsNative.ECS.ClusterCapacityProviderAssociations("clusterCPAssociation", new AwsNative.ECS.ClusterCapacityProviderAssociationsArgs
+ *         {
+ *             Cluster = cluster.Id,
+ *             CapacityProviders = 
+ *             {
+ *                 capacityProvider1.Id,
+ *                 capacityProvider2.Id,
+ *             },
+ *             DefaultCapacityProviderStrategy = 
+ *             {
+ *                 new AwsNative.ECS.Inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs
+ *                 {
+ *                     Base = 2,
+ *                     Weight = 6,
+ *                     CapacityProvider = capacityProvider1.Id,
+ *                 },
+ *                 new AwsNative.ECS.Inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs
+ *                 {
+ *                     Base = 0,
+ *                     Weight = 10,
+ *                     CapacityProvider = capacityProvider2.Id,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		autoScalingGroupArn1 := cfg.Require("autoScalingGroupArn1")
+ * 		autoScalingGroupArn2 := cfg.Require("autoScalingGroupArn2")
+ * 		capacityProvider1, err := ecs.NewCapacityProvider(ctx, "capacityProvider1", &ecs.CapacityProviderArgs{
+ * 			AutoScalingGroupProvider: &ecs.CapacityProviderAutoScalingGroupProviderArgs{
+ * 				AutoScalingGroupArn: pulumi.String(autoScalingGroupArn1),
+ * 				ManagedScaling: &ecs.CapacityProviderManagedScalingArgs{
+ * 					Status: "ENABLED",
+ * 				},
+ * 				ManagedTerminationProtection: "DISABLED",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		capacityProvider2, err := ecs.NewCapacityProvider(ctx, "capacityProvider2", &ecs.CapacityProviderArgs{
+ * 			AutoScalingGroupProvider: &ecs.CapacityProviderAutoScalingGroupProviderArgs{
+ * 				AutoScalingGroupArn: pulumi.String(autoScalingGroupArn2),
+ * 				ManagedScaling: &ecs.CapacityProviderManagedScalingArgs{
+ * 					Status: "ENABLED",
+ * 				},
+ * 				ManagedTerminationProtection: "DISABLED",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		cluster, err := ecs.NewCluster(ctx, "cluster", nil)
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = ecs.NewClusterCapacityProviderAssociations(ctx, "clusterCPAssociation", &ecs.ClusterCapacityProviderAssociationsArgs{
+ * 			Cluster: cluster.ID(),
+ * 			CapacityProviders: pulumi.StringArray{
+ * 				capacityProvider1.ID(),
+ * 				capacityProvider2.ID(),
+ * 			},
+ * 			DefaultCapacityProviderStrategy: ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArray{
+ * 				&ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs{
+ * 					Base:             pulumi.Int(2),
+ * 					Weight:           pulumi.Int(6),
+ * 					CapacityProvider: capacityProvider1.ID(),
+ * 				},
+ * 				&ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs{
+ * 					Base:             pulumi.Int(0),
+ * 					Weight:           pulumi.Int(10),
+ * 					CapacityProvider: capacityProvider2.ID(),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const autoScalingGroupArn1 = config.require("autoScalingGroupArn1");
+ * const autoScalingGroupArn2 = config.require("autoScalingGroupArn2");
+ * const capacityProvider1 = new aws_native.ecs.CapacityProvider("capacityProvider1", {autoScalingGroupProvider: {
+ *     autoScalingGroupArn: autoScalingGroupArn1,
+ *     managedScaling: {
+ *         status: "ENABLED",
+ *     },
+ *     managedTerminationProtection: "DISABLED",
+ * }});
+ * const capacityProvider2 = new aws_native.ecs.CapacityProvider("capacityProvider2", {autoScalingGroupProvider: {
+ *     autoScalingGroupArn: autoScalingGroupArn2,
+ *     managedScaling: {
+ *         status: "ENABLED",
+ *     },
+ *     managedTerminationProtection: "DISABLED",
+ * }});
+ * const cluster = new aws_native.ecs.Cluster("cluster", {});
+ * const clusterCPAssociation = new aws_native.ecs.ClusterCapacityProviderAssociations("clusterCPAssociation", {
+ *     cluster: cluster.id,
+ *     capacityProviders: [
+ *         capacityProvider1.id,
+ *         capacityProvider2.id,
+ *     ],
+ *     defaultCapacityProviderStrategy: [
+ *         {
+ *             base: 2,
+ *             weight: 6,
+ *             capacityProvider: capacityProvider1.id,
+ *         },
+ *         {
+ *             base: 0,
+ *             weight: 10,
+ *             capacityProvider: capacityProvider2.id,
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * auto_scaling_group_arn1 = config.require("autoScalingGroupArn1")
+ * auto_scaling_group_arn2 = config.require("autoScalingGroupArn2")
+ * capacity_provider1 = aws_native.ecs.CapacityProvider("capacityProvider1", auto_scaling_group_provider=aws_native.ecs.CapacityProviderAutoScalingGroupProviderArgs(
+ *     auto_scaling_group_arn=auto_scaling_group_arn1,
+ *     managed_scaling=aws_native.ecs.CapacityProviderManagedScalingArgs(
+ *         status="ENABLED",
+ *     ),
+ *     managed_termination_protection="DISABLED",
+ * ))
+ * capacity_provider2 = aws_native.ecs.CapacityProvider("capacityProvider2", auto_scaling_group_provider=aws_native.ecs.CapacityProviderAutoScalingGroupProviderArgs(
+ *     auto_scaling_group_arn=auto_scaling_group_arn2,
+ *     managed_scaling=aws_native.ecs.CapacityProviderManagedScalingArgs(
+ *         status="ENABLED",
+ *     ),
+ *     managed_termination_protection="DISABLED",
+ * ))
+ * cluster = aws_native.ecs.Cluster("cluster")
+ * cluster_cpassociation = aws_native.ecs.ClusterCapacityProviderAssociations("clusterCPAssociation",
+ *     cluster=cluster.id,
+ *     capacity_providers=[
+ *         capacity_provider1.id,
+ *         capacity_provider2.id,
+ *     ],
+ *     default_capacity_provider_strategy=[
+ *         aws_native.ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(
+ *             base=2,
+ *             weight=6,
+ *             capacity_provider=capacity_provider1.id,
+ *         ),
+ *         aws_native.ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(
+ *             base=0,
+ *             weight=10,
+ *             capacity_provider=capacity_provider2.id,
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ecs:CapacityProvider")

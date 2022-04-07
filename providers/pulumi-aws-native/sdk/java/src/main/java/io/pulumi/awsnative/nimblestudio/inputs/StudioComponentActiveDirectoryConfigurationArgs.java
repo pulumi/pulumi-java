@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>The configuration for a Microsoft Active Directory (Microsoft AD) studio resource.</p>
- * 
  */
 public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
 
     /**
      * <p>A collection of custom attributes for an Active Directory computer.</p>
-     * 
      */
     @Import(name="computerAttributes")
       private final @Nullable Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes;
@@ -33,7 +31,6 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
 
     /**
      * <p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>
-     * 
      */
     @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
@@ -44,7 +41,6 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
 
     /**
      * <p>The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.</p>
-     * 
      */
     @Import(name="organizationalUnitDistinguishedName")
       private final @Nullable Output<String> organizationalUnitDistinguishedName;

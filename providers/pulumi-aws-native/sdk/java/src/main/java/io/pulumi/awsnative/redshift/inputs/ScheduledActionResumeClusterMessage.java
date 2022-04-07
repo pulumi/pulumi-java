@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes a resume cluster operation. For example, a scheduled action to run the `ResumeCluster` API operation.
- * 
  */
 public final class ScheduledActionResumeClusterMessage extends io.pulumi.resources.InvokeArgs {
 

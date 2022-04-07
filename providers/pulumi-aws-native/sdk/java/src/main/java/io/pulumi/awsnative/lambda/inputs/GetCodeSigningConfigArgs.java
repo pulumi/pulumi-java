@@ -14,7 +14,6 @@ public final class GetCodeSigningConfigArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * A unique Arn for CodeSigningConfig resource
-     * 
      */
     @Import(name="codeSigningConfigArn", required=true)
       private final String codeSigningConfigArn;

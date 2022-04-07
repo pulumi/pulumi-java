@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A policy tag.
- * 
  */
 public final class PolicyTag extends io.pulumi.resources.InvokeArgs {
 

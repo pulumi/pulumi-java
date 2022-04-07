@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class FHIRDatastoreTag {
     /**
      * The key of the tag.
-     * 
      */
     private final String key;
     /**
      * The value of the tag.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class FHIRDatastoreTag {
 
     /**
      * The key of the tag.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The value of the tag.
-     * 
     */
     public String getValue() {
         return this.value;

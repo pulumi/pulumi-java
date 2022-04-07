@@ -17,38 +17,31 @@ import javax.annotation.Nullable;
 public final class GetIPAMResult {
     /**
      * The Amazon Resource Name (ARN) of the IPAM.
-     * 
      */
     private final @Nullable String arn;
     private final @Nullable String description;
     /**
      * Id of the IPAM.
-     * 
      */
     private final @Nullable String ipamId;
     /**
      * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
-     * 
      */
     private final @Nullable List<IPAMIpamOperatingRegion> operatingRegions;
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
-     * 
      */
     private final @Nullable String privateDefaultScopeId;
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
-     * 
      */
     private final @Nullable String publicDefaultScopeId;
     /**
      * The number of scopes that currently exist in this IPAM.
-     * 
      */
     private final @Nullable Integer scopeCount;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<IPAMTag> tags;
 
@@ -74,7 +67,6 @@ public final class GetIPAMResult {
 
     /**
      * The Amazon Resource Name (ARN) of the IPAM.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
@@ -84,42 +76,36 @@ public final class GetIPAMResult {
     }
     /**
      * Id of the IPAM.
-     * 
     */
     public Optional<String> getIpamId() {
         return Optional.ofNullable(this.ipamId);
     }
     /**
      * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
-     * 
     */
     public List<IPAMIpamOperatingRegion> getOperatingRegions() {
         return this.operatingRegions == null ? List.of() : this.operatingRegions;
     }
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
-     * 
     */
     public Optional<String> getPrivateDefaultScopeId() {
         return Optional.ofNullable(this.privateDefaultScopeId);
     }
     /**
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
-     * 
     */
     public Optional<String> getPublicDefaultScopeId() {
         return Optional.ofNullable(this.publicDefaultScopeId);
     }
     /**
      * The number of scopes that currently exist in this IPAM.
-     * 
     */
     public Optional<Integer> getScopeCount() {
         return Optional.ofNullable(this.scopeCount);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<IPAMTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

@@ -28,7 +28,6 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the control panel.
-     * 
      */
     @Import(name="controlPanelArn")
       private final @Nullable Output<String> controlPanelArn;
@@ -60,7 +59,6 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<SafetyRuleTagArgs>> tags;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A message that defines a response card that the client application can show to the user.
- * 
  */
 public final class BotImageResponseCardArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
 
     /**
      * A list of buttons that should be displayed on the response card.
-     * 
      */
     @Import(name="buttons")
       private final @Nullable Output<List<BotButtonArgs>> buttons;
@@ -33,7 +31,6 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
 
     /**
      * The URL of an image to display on the response card.
-     * 
      */
     @Import(name="imageUrl")
       private final @Nullable Output<String> imageUrl;
@@ -44,7 +41,6 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
 
     /**
      * The subtitle to display on the response card.
-     * 
      */
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
@@ -55,7 +51,6 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
 
     /**
      * The title to display on the response card.
-     * 
      */
     @Import(name="title", required=true)
       private final Output<String> title;

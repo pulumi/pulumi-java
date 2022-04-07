@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * AWS Ground Station config resource type for CloudFormation.
- * 
  */
 @ResourceType(type="aws-native:groundstation:Config")
 public class Config extends io.pulumi.resources.CustomResource {

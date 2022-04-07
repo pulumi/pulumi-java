@@ -16,37 +16,30 @@ import javax.annotation.Nullable;
 public final class GetLinkResult {
     /**
      * The Bandwidth for the link.
-     * 
      */
     private final @Nullable LinkBandwidth bandwidth;
     /**
      * The description of the link.
-     * 
      */
     private final @Nullable String description;
     /**
      * The Amazon Resource Name (ARN) of the link.
-     * 
      */
     private final @Nullable String linkArn;
     /**
      * The ID of the link.
-     * 
      */
     private final @Nullable String linkId;
     /**
      * The provider of the link.
-     * 
      */
     private final @Nullable String provider;
     /**
      * The tags for the link.
-     * 
      */
     private final @Nullable List<LinkTag> tags;
     /**
      * The type of the link.
-     * 
      */
     private final @Nullable String type;
 
@@ -70,49 +63,42 @@ public final class GetLinkResult {
 
     /**
      * The Bandwidth for the link.
-     * 
     */
     public Optional<LinkBandwidth> getBandwidth() {
         return Optional.ofNullable(this.bandwidth);
     }
     /**
      * The description of the link.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the link.
-     * 
     */
     public Optional<String> getLinkArn() {
         return Optional.ofNullable(this.linkArn);
     }
     /**
      * The ID of the link.
-     * 
     */
     public Optional<String> getLinkId() {
         return Optional.ofNullable(this.linkId);
     }
     /**
      * The provider of the link.
-     * 
     */
     public Optional<String> getProvider() {
         return Optional.ofNullable(this.provider);
     }
     /**
      * The tags for the link.
-     * 
     */
     public List<LinkTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The type of the link.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

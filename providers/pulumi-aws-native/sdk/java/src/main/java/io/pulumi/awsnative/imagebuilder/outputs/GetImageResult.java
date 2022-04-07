@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class GetImageResult {
     /**
      * The Amazon Resource Name (ARN) of the image.
-     * 
      */
     private final @Nullable String arn;
     /**
      * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
-     * 
      */
     private final @Nullable String containerRecipeArn;
     /**
      * The AMI ID of the EC2 AMI in current region.
-     * 
      */
     private final @Nullable String imageId;
     /**
      * The name of the image.
-     * 
      */
     private final @Nullable String name;
 
@@ -46,28 +42,24 @@ public final class GetImageResult {
 
     /**
      * The Amazon Resource Name (ARN) of the image.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
-     * 
     */
     public Optional<String> getContainerRecipeArn() {
         return Optional.ofNullable(this.containerRecipeArn);
     }
     /**
      * The AMI ID of the EC2 AMI in current region.
-     * 
     */
     public Optional<String> getImageId() {
         return Optional.ofNullable(this.imageId);
     }
     /**
      * The name of the image.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

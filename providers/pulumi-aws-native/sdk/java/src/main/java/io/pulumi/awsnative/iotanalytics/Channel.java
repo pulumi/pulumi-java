@@ -18,7 +18,371 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::IoTAnalytics::Channel
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var channel = new AwsNative.IoTAnalytics.Channel("channel", new AwsNative.IoTAnalytics.ChannelArgs
+ *         {
+ *             ChannelName = "SimpleChannel",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewChannel(ctx, "channel", &iotanalytics.ChannelArgs{
+ * 			ChannelName: pulumi.String("SimpleChannel"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const channel = new aws_native.iotanalytics.Channel("channel", {channelName: "SimpleChannel"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * channel = aws_native.iotanalytics.Channel("channel", channel_name="SimpleChannel")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var channel = new AwsNative.IoTAnalytics.Channel("channel", new AwsNative.IoTAnalytics.ChannelArgs
+ *         {
+ *             ChannelName = "SimpleChannel",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewChannel(ctx, "channel", &iotanalytics.ChannelArgs{
+ * 			ChannelName: pulumi.String("SimpleChannel"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const channel = new aws_native.iotanalytics.Channel("channel", {channelName: "SimpleChannel"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * channel = aws_native.iotanalytics.Channel("channel", channel_name="SimpleChannel")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var channel = new AwsNative.IoTAnalytics.Channel("channel", new AwsNative.IoTAnalytics.ChannelArgs
+ *         {
+ *             ChannelName = "ComplexChannel",
+ *             RetentionPeriod = new AwsNative.IoTAnalytics.Inputs.ChannelRetentionPeriodArgs
+ *             {
+ *                 Unlimited = false,
+ *                 NumberOfDays = 10,
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.ChannelTagArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.IoTAnalytics.Inputs.ChannelTagArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewChannel(ctx, "channel", &iotanalytics.ChannelArgs{
+ * 			ChannelName: pulumi.String("ComplexChannel"),
+ * 			RetentionPeriod: &iotanalytics.ChannelRetentionPeriodArgs{
+ * 				Unlimited:    pulumi.Bool(false),
+ * 				NumberOfDays: pulumi.Int(10),
+ * 			},
+ * 			Tags: []iotanalytics.ChannelTagArgs{
+ * 				&iotanalytics.ChannelTagArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&iotanalytics.ChannelTagArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const channel = new aws_native.iotanalytics.Channel("channel", {
+ *     channelName: "ComplexChannel",
+ *     retentionPeriod: {
+ *         unlimited: false,
+ *         numberOfDays: 10,
+ *     },
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * channel = aws_native.iotanalytics.Channel("channel",
+ *     channel_name="ComplexChannel",
+ *     retention_period=aws_native.iotanalytics.ChannelRetentionPeriodArgs(
+ *         unlimited=False,
+ *         number_of_days=10,
+ *     ),
+ *     tags=[
+ *         aws_native.iotanalytics.ChannelTagArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.iotanalytics.ChannelTagArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var channel = new AwsNative.IoTAnalytics.Channel("channel", new AwsNative.IoTAnalytics.ChannelArgs
+ *         {
+ *             ChannelName = "ComplexChannel",
+ *             RetentionPeriod = new AwsNative.IoTAnalytics.Inputs.ChannelRetentionPeriodArgs
+ *             {
+ *                 Unlimited = false,
+ *                 NumberOfDays = 10,
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IoTAnalytics.Inputs.ChannelTagArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.IoTAnalytics.Inputs.ChannelTagArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iotanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotanalytics.NewChannel(ctx, "channel", &iotanalytics.ChannelArgs{
+ * 			ChannelName: pulumi.String("ComplexChannel"),
+ * 			RetentionPeriod: &iotanalytics.ChannelRetentionPeriodArgs{
+ * 				Unlimited:    pulumi.Bool(false),
+ * 				NumberOfDays: pulumi.Int(10),
+ * 			},
+ * 			Tags: []iotanalytics.ChannelTagArgs{
+ * 				&iotanalytics.ChannelTagArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&iotanalytics.ChannelTagArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const channel = new aws_native.iotanalytics.Channel("channel", {
+ *     channelName: "ComplexChannel",
+ *     retentionPeriod: {
+ *         unlimited: false,
+ *         numberOfDays: 10,
+ *     },
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * channel = aws_native.iotanalytics.Channel("channel",
+ *     channel_name="ComplexChannel",
+ *     retention_period=aws_native.iotanalytics.ChannelRetentionPeriodArgs(
+ *         unlimited=False,
+ *         number_of_days=10,
+ *     ),
+ *     tags=[
+ *         aws_native.iotanalytics.ChannelTagArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.iotanalytics.ChannelTagArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iotanalytics:Channel")

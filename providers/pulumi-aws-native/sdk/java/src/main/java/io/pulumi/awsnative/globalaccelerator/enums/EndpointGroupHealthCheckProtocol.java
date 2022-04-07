@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
-     * 
      */
     @EnumType
     public enum EndpointGroupHealthCheckProtocol {

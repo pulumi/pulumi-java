@@ -19,119 +19,729 @@ import javax.annotation.Nullable;
 /**
  * A security profile defines a set of expected behaviors for devices in your account.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mySecurityProfile = new AwsNative.IoT.SecurityProfile("mySecurityProfile", new AwsNative.IoT.SecurityProfileArgs
+ *         {
+ *             AdditionalMetricsToRetainV2 = 
+ *             {
+ *                 new AwsNative.IoT.Inputs.SecurityProfileMetricToRetainArgs
+ *                 {
+ *                     Metric = "aws:num-messages-received",
+ *                 },
+ *                 new AwsNative.IoT.Inputs.SecurityProfileMetricToRetainArgs
+ *                 {
+ *                     Metric = "aws:num-disconnects",
+ *                 },
+ *             },
+ *             AlertTargets = 
+ *             {
+ *                 { "sns", 
+ *                 {
+ *                     { "alertTargetArn", "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts" },
+ *                     { "roleArn", "arn:aws:iam::123456789012:role/RoleForDefenderAlerts" },
+ *                 } },
+ *             },
+ *             Behaviors = 
+ *             {
+ *                 new AwsNative.IoT.Inputs.SecurityProfileBehaviorArgs
+ *                 {
+ *                     Name = "MaxMessageSize",
+ *                     Metric = "aws:message-byte-size",
+ *                     Criteria = new AwsNative.IoT.Inputs.SecurityProfileBehaviorCriteriaArgs
+ *                     {
+ *                         ConsecutiveDatapointsToAlarm = 1,
+ *                         ConsecutiveDatapointsToClear = 1,
+ *                         ComparisonOperator = "less-than-equals",
+ *                         Value = new AwsNative.IoT.Inputs.SecurityProfileMetricValueArgs
+ *                         {
+ *                             Count = "5",
+ *                         },
+ *                     },
+ *                 },
+ *                 new AwsNative.IoT.Inputs.SecurityProfileBehaviorArgs
+ *                 {
+ *                     Name = "OutboundMessageCount",
+ *                     Metric = "aws:num-messages-sent",
+ *                     Criteria = new AwsNative.IoT.Inputs.SecurityProfileBehaviorCriteriaArgs
+ *                     {
+ *                         DurationSeconds = 300,
+ *                         ComparisonOperator = "less-than-equals",
+ *                         Value = new AwsNative.IoT.Inputs.SecurityProfileMetricValueArgs
+ *                         {
+ *                             Count = "50",
+ *                         },
+ *                     },
+ *                 },
+ *                 new AwsNative.IoT.Inputs.SecurityProfileBehaviorArgs
+ *                 {
+ *                     Name = "AuthFailuresStatThreshold",
+ *                     Metric = "aws:num-authorization-failures",
+ *                     Criteria = new AwsNative.IoT.Inputs.SecurityProfileBehaviorCriteriaArgs
+ *                     {
+ *                         ComparisonOperator = "less-than-equals",
+ *                         DurationSeconds = 300,
+ *                         StatisticalThreshold = new AwsNative.IoT.Inputs.SecurityProfileStatisticalThresholdArgs
+ *                         {
+ *                             Statistic = "p90",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             SecurityProfileDescription = "Contains expected behaviors for connected devices",
+ *             SecurityProfileName = "ProfileForConnectedDevices",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IoT.Inputs.SecurityProfileTagArgs
+ *                 {
+ *                     Key = "Application",
+ *                     Value = "SmartHome",
+ *                 },
+ *             },
+ *             TargetArns = 
+ *             {
+ *                 "arn:aws:iot:us-east-1:123456789012:all/things",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewSecurityProfile(ctx, "mySecurityProfile", &iot.SecurityProfileArgs{
+ * 			AdditionalMetricsToRetainV2: []iot.SecurityProfileMetricToRetainArgs{
+ * 				&iot.SecurityProfileMetricToRetainArgs{
+ * 					Metric: pulumi.String("aws:num-messages-received"),
+ * 				},
+ * 				&iot.SecurityProfileMetricToRetainArgs{
+ * 					Metric: pulumi.String("aws:num-disconnects"),
+ * 				},
+ * 			},
+ * 			AlertTargets: pulumi.Any{
+ * 				Sns: map[string]interface{}{
+ * 					"alertTargetArn": "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts",
+ * 					"roleArn":        "arn:aws:iam::123456789012:role/RoleForDefenderAlerts",
+ * 				},
+ * 			},
+ * 			Behaviors: []iot.SecurityProfileBehaviorArgs{
+ * 				&iot.SecurityProfileBehaviorArgs{
+ * 					Name:   pulumi.String("MaxMessageSize"),
+ * 					Metric: pulumi.String("aws:message-byte-size"),
+ * 					Criteria: &iot.SecurityProfileBehaviorCriteriaArgs{
+ * 						ConsecutiveDatapointsToAlarm: pulumi.Int(1),
+ * 						ConsecutiveDatapointsToClear: pulumi.Int(1),
+ * 						ComparisonOperator:           "less-than-equals",
+ * 						Value: &iot.SecurityProfileMetricValueArgs{
+ * 							Count: pulumi.String("5"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&iot.SecurityProfileBehaviorArgs{
+ * 					Name:   pulumi.String("OutboundMessageCount"),
+ * 					Metric: pulumi.String("aws:num-messages-sent"),
+ * 					Criteria: &iot.SecurityProfileBehaviorCriteriaArgs{
+ * 						DurationSeconds:    pulumi.Int(300),
+ * 						ComparisonOperator: "less-than-equals",
+ * 						Value: &iot.SecurityProfileMetricValueArgs{
+ * 							Count: pulumi.String("50"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&iot.SecurityProfileBehaviorArgs{
+ * 					Name:   pulumi.String("AuthFailuresStatThreshold"),
+ * 					Metric: pulumi.String("aws:num-authorization-failures"),
+ * 					Criteria: &iot.SecurityProfileBehaviorCriteriaArgs{
+ * 						ComparisonOperator: "less-than-equals",
+ * 						DurationSeconds:    pulumi.Int(300),
+ * 						StatisticalThreshold: &iot.SecurityProfileStatisticalThresholdArgs{
+ * 							Statistic: "p90",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			SecurityProfileDescription: pulumi.String("Contains expected behaviors for connected devices"),
+ * 			SecurityProfileName:        pulumi.String("ProfileForConnectedDevices"),
+ * 			Tags: []iot.SecurityProfileTagArgs{
+ * 				&iot.SecurityProfileTagArgs{
+ * 					Key:   pulumi.String("Application"),
+ * 					Value: pulumi.String("SmartHome"),
+ * 				},
+ * 			},
+ * 			TargetArns: pulumi.StringArray{
+ * 				pulumi.String("arn:aws:iot:us-east-1:123456789012:all/things"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const mySecurityProfile = new aws_native.iot.SecurityProfile("mySecurityProfile", {
+ *     additionalMetricsToRetainV2: [
+ *         {
+ *             metric: "aws:num-messages-received",
+ *         },
+ *         {
+ *             metric: "aws:num-disconnects",
+ *         },
+ *     ],
+ *     alertTargets: {
+ *         sns: {
+ *             alertTargetArn: "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts",
+ *             roleArn: "arn:aws:iam::123456789012:role/RoleForDefenderAlerts",
+ *         },
+ *     },
+ *     behaviors: [
+ *         {
+ *             name: "MaxMessageSize",
+ *             metric: "aws:message-byte-size",
+ *             criteria: {
+ *                 consecutiveDatapointsToAlarm: 1,
+ *                 consecutiveDatapointsToClear: 1,
+ *                 comparisonOperator: "less-than-equals",
+ *                 value: {
+ *                     count: 5,
+ *                 },
+ *             },
+ *         },
+ *         {
+ *             name: "OutboundMessageCount",
+ *             metric: "aws:num-messages-sent",
+ *             criteria: {
+ *                 durationSeconds: 300,
+ *                 comparisonOperator: "less-than-equals",
+ *                 value: {
+ *                     count: 50,
+ *                 },
+ *             },
+ *         },
+ *         {
+ *             name: "AuthFailuresStatThreshold",
+ *             metric: "aws:num-authorization-failures",
+ *             criteria: {
+ *                 comparisonOperator: "less-than-equals",
+ *                 durationSeconds: 300,
+ *                 statisticalThreshold: {
+ *                     statistic: "p90",
+ *                 },
+ *             },
+ *         },
+ *     ],
+ *     securityProfileDescription: "Contains expected behaviors for connected devices",
+ *     securityProfileName: "ProfileForConnectedDevices",
+ *     tags: [{
+ *         key: "Application",
+ *         value: "SmartHome",
+ *     }],
+ *     targetArns: ["arn:aws:iot:us-east-1:123456789012:all/things"],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_security_profile = aws_native.iot.SecurityProfile("mySecurityProfile",
+ *     additional_metrics_to_retain_v2=[
+ *         aws_native.iot.SecurityProfileMetricToRetainArgs(
+ *             metric="aws:num-messages-received",
+ *         ),
+ *         aws_native.iot.SecurityProfileMetricToRetainArgs(
+ *             metric="aws:num-disconnects",
+ *         ),
+ *     ],
+ *     alert_targets={
+ *         "sns": {
+ *             "alertTargetArn": "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts",
+ *             "roleArn": "arn:aws:iam::123456789012:role/RoleForDefenderAlerts",
+ *         },
+ *     },
+ *     behaviors=[
+ *         aws_native.iot.SecurityProfileBehaviorArgs(
+ *             name="MaxMessageSize",
+ *             metric="aws:message-byte-size",
+ *             criteria=aws_native.iot.SecurityProfileBehaviorCriteriaArgs(
+ *                 consecutive_datapoints_to_alarm=1,
+ *                 consecutive_datapoints_to_clear=1,
+ *                 comparison_operator="less-than-equals",
+ *                 value=aws_native.iot.SecurityProfileMetricValueArgs(
+ *                     count="5",
+ *                 ),
+ *             ),
+ *         ),
+ *         aws_native.iot.SecurityProfileBehaviorArgs(
+ *             name="OutboundMessageCount",
+ *             metric="aws:num-messages-sent",
+ *             criteria=aws_native.iot.SecurityProfileBehaviorCriteriaArgs(
+ *                 duration_seconds=300,
+ *                 comparison_operator="less-than-equals",
+ *                 value=aws_native.iot.SecurityProfileMetricValueArgs(
+ *                     count="50",
+ *                 ),
+ *             ),
+ *         ),
+ *         aws_native.iot.SecurityProfileBehaviorArgs(
+ *             name="AuthFailuresStatThreshold",
+ *             metric="aws:num-authorization-failures",
+ *             criteria=aws_native.iot.SecurityProfileBehaviorCriteriaArgs(
+ *                 comparison_operator="less-than-equals",
+ *                 duration_seconds=300,
+ *                 statistical_threshold=aws_native.iot.SecurityProfileStatisticalThresholdArgs(
+ *                     statistic="p90",
+ *                 ),
+ *             ),
+ *         ),
+ *     ],
+ *     security_profile_description="Contains expected behaviors for connected devices",
+ *     security_profile_name="ProfileForConnectedDevices",
+ *     tags=[aws_native.iot.SecurityProfileTagArgs(
+ *         key="Application",
+ *         value="SmartHome",
+ *     )],
+ *     target_arns=["arn:aws:iot:us-east-1:123456789012:all/things"])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mySecurityProfile = new AwsNative.IoT.SecurityProfile("mySecurityProfile", new AwsNative.IoT.SecurityProfileArgs
+ *         {
+ *             AdditionalMetricsToRetainV2 = 
+ *             {
+ *                 new AwsNative.IoT.Inputs.SecurityProfileMetricToRetainArgs
+ *                 {
+ *                     Metric = "aws:num-messages-received",
+ *                 },
+ *                 new AwsNative.IoT.Inputs.SecurityProfileMetricToRetainArgs
+ *                 {
+ *                     Metric = "aws:num-disconnects",
+ *                 },
+ *             },
+ *             AlertTargets = 
+ *             {
+ *                 { "sns", 
+ *                 {
+ *                     { "alertTargetArn", "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts" },
+ *                     { "roleArn", "arn:aws:iam::123456789012:role/RoleForDefenderAlerts" },
+ *                 } },
+ *             },
+ *             Behaviors = 
+ *             {
+ *                 new AwsNative.IoT.Inputs.SecurityProfileBehaviorArgs
+ *                 {
+ *                     Name = "MaxMessageSize",
+ *                     Metric = "aws:message-byte-size",
+ *                     Criteria = new AwsNative.IoT.Inputs.SecurityProfileBehaviorCriteriaArgs
+ *                     {
+ *                         ConsecutiveDatapointsToAlarm = 1,
+ *                         ConsecutiveDatapointsToClear = 1,
+ *                         ComparisonOperator = "less-than-equals",
+ *                         Value = new AwsNative.IoT.Inputs.SecurityProfileMetricValueArgs
+ *                         {
+ *                             Count = "5",
+ *                         },
+ *                     },
+ *                 },
+ *                 new AwsNative.IoT.Inputs.SecurityProfileBehaviorArgs
+ *                 {
+ *                     Name = "OutboundMessageCount",
+ *                     Metric = "aws:num-messages-sent",
+ *                     Criteria = new AwsNative.IoT.Inputs.SecurityProfileBehaviorCriteriaArgs
+ *                     {
+ *                         DurationSeconds = 300,
+ *                         ComparisonOperator = "less-than-equals",
+ *                         Value = new AwsNative.IoT.Inputs.SecurityProfileMetricValueArgs
+ *                         {
+ *                             Count = "50",
+ *                         },
+ *                     },
+ *                 },
+ *                 new AwsNative.IoT.Inputs.SecurityProfileBehaviorArgs
+ *                 {
+ *                     Name = "AuthFailuresStatThreshold",
+ *                     Metric = "aws:num-authorization-failures",
+ *                     Criteria = new AwsNative.IoT.Inputs.SecurityProfileBehaviorCriteriaArgs
+ *                     {
+ *                         ComparisonOperator = "less-than-equals",
+ *                         DurationSeconds = 300,
+ *                         StatisticalThreshold = new AwsNative.IoT.Inputs.SecurityProfileStatisticalThresholdArgs
+ *                         {
+ *                             Statistic = "p90",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             SecurityProfileDescription = "Contains expected behaviors for connected devices",
+ *             SecurityProfileName = "ProfileForConnectedDevices",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.IoT.Inputs.SecurityProfileTagArgs
+ *                 {
+ *                     Key = "Application",
+ *                     Value = "SmartHome",
+ *                 },
+ *             },
+ *             TargetArns = 
+ *             {
+ *                 "arn:aws:iot:us-east-1:123456789012:all/things",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/iot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iot.NewSecurityProfile(ctx, "mySecurityProfile", &iot.SecurityProfileArgs{
+ * 			AdditionalMetricsToRetainV2: []iot.SecurityProfileMetricToRetainArgs{
+ * 				&iot.SecurityProfileMetricToRetainArgs{
+ * 					Metric: pulumi.String("aws:num-messages-received"),
+ * 				},
+ * 				&iot.SecurityProfileMetricToRetainArgs{
+ * 					Metric: pulumi.String("aws:num-disconnects"),
+ * 				},
+ * 			},
+ * 			AlertTargets: pulumi.Any{
+ * 				Sns: map[string]interface{}{
+ * 					"alertTargetArn": "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts",
+ * 					"roleArn":        "arn:aws:iam::123456789012:role/RoleForDefenderAlerts",
+ * 				},
+ * 			},
+ * 			Behaviors: []iot.SecurityProfileBehaviorArgs{
+ * 				&iot.SecurityProfileBehaviorArgs{
+ * 					Name:   pulumi.String("MaxMessageSize"),
+ * 					Metric: pulumi.String("aws:message-byte-size"),
+ * 					Criteria: &iot.SecurityProfileBehaviorCriteriaArgs{
+ * 						ConsecutiveDatapointsToAlarm: pulumi.Int(1),
+ * 						ConsecutiveDatapointsToClear: pulumi.Int(1),
+ * 						ComparisonOperator:           "less-than-equals",
+ * 						Value: &iot.SecurityProfileMetricValueArgs{
+ * 							Count: pulumi.String("5"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&iot.SecurityProfileBehaviorArgs{
+ * 					Name:   pulumi.String("OutboundMessageCount"),
+ * 					Metric: pulumi.String("aws:num-messages-sent"),
+ * 					Criteria: &iot.SecurityProfileBehaviorCriteriaArgs{
+ * 						DurationSeconds:    pulumi.Int(300),
+ * 						ComparisonOperator: "less-than-equals",
+ * 						Value: &iot.SecurityProfileMetricValueArgs{
+ * 							Count: pulumi.String("50"),
+ * 						},
+ * 					},
+ * 				},
+ * 				&iot.SecurityProfileBehaviorArgs{
+ * 					Name:   pulumi.String("AuthFailuresStatThreshold"),
+ * 					Metric: pulumi.String("aws:num-authorization-failures"),
+ * 					Criteria: &iot.SecurityProfileBehaviorCriteriaArgs{
+ * 						ComparisonOperator: "less-than-equals",
+ * 						DurationSeconds:    pulumi.Int(300),
+ * 						StatisticalThreshold: &iot.SecurityProfileStatisticalThresholdArgs{
+ * 							Statistic: "p90",
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			SecurityProfileDescription: pulumi.String("Contains expected behaviors for connected devices"),
+ * 			SecurityProfileName:        pulumi.String("ProfileForConnectedDevices"),
+ * 			Tags: []iot.SecurityProfileTagArgs{
+ * 				&iot.SecurityProfileTagArgs{
+ * 					Key:   pulumi.String("Application"),
+ * 					Value: pulumi.String("SmartHome"),
+ * 				},
+ * 			},
+ * 			TargetArns: pulumi.StringArray{
+ * 				pulumi.String("arn:aws:iot:us-east-1:123456789012:all/things"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const mySecurityProfile = new aws_native.iot.SecurityProfile("mySecurityProfile", {
+ *     additionalMetricsToRetainV2: [
+ *         {
+ *             metric: "aws:num-messages-received",
+ *         },
+ *         {
+ *             metric: "aws:num-disconnects",
+ *         },
+ *     ],
+ *     alertTargets: {
+ *         sns: {
+ *             alertTargetArn: "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts",
+ *             roleArn: "arn:aws:iam::123456789012:role/RoleForDefenderAlerts",
+ *         },
+ *     },
+ *     behaviors: [
+ *         {
+ *             name: "MaxMessageSize",
+ *             metric: "aws:message-byte-size",
+ *             criteria: {
+ *                 consecutiveDatapointsToAlarm: 1,
+ *                 consecutiveDatapointsToClear: 1,
+ *                 comparisonOperator: "less-than-equals",
+ *                 value: {
+ *                     count: 5,
+ *                 },
+ *             },
+ *         },
+ *         {
+ *             name: "OutboundMessageCount",
+ *             metric: "aws:num-messages-sent",
+ *             criteria: {
+ *                 durationSeconds: 300,
+ *                 comparisonOperator: "less-than-equals",
+ *                 value: {
+ *                     count: 50,
+ *                 },
+ *             },
+ *         },
+ *         {
+ *             name: "AuthFailuresStatThreshold",
+ *             metric: "aws:num-authorization-failures",
+ *             criteria: {
+ *                 comparisonOperator: "less-than-equals",
+ *                 durationSeconds: 300,
+ *                 statisticalThreshold: {
+ *                     statistic: "p90",
+ *                 },
+ *             },
+ *         },
+ *     ],
+ *     securityProfileDescription: "Contains expected behaviors for connected devices",
+ *     securityProfileName: "ProfileForConnectedDevices",
+ *     tags: [{
+ *         key: "Application",
+ *         value: "SmartHome",
+ *     }],
+ *     targetArns: ["arn:aws:iot:us-east-1:123456789012:all/things"],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_security_profile = aws_native.iot.SecurityProfile("mySecurityProfile",
+ *     additional_metrics_to_retain_v2=[
+ *         aws_native.iot.SecurityProfileMetricToRetainArgs(
+ *             metric="aws:num-messages-received",
+ *         ),
+ *         aws_native.iot.SecurityProfileMetricToRetainArgs(
+ *             metric="aws:num-disconnects",
+ *         ),
+ *     ],
+ *     alert_targets={
+ *         "sns": {
+ *             "alertTargetArn": "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts",
+ *             "roleArn": "arn:aws:iam::123456789012:role/RoleForDefenderAlerts",
+ *         },
+ *     },
+ *     behaviors=[
+ *         aws_native.iot.SecurityProfileBehaviorArgs(
+ *             name="MaxMessageSize",
+ *             metric="aws:message-byte-size",
+ *             criteria=aws_native.iot.SecurityProfileBehaviorCriteriaArgs(
+ *                 consecutive_datapoints_to_alarm=1,
+ *                 consecutive_datapoints_to_clear=1,
+ *                 comparison_operator="less-than-equals",
+ *                 value=aws_native.iot.SecurityProfileMetricValueArgs(
+ *                     count="5",
+ *                 ),
+ *             ),
+ *         ),
+ *         aws_native.iot.SecurityProfileBehaviorArgs(
+ *             name="OutboundMessageCount",
+ *             metric="aws:num-messages-sent",
+ *             criteria=aws_native.iot.SecurityProfileBehaviorCriteriaArgs(
+ *                 duration_seconds=300,
+ *                 comparison_operator="less-than-equals",
+ *                 value=aws_native.iot.SecurityProfileMetricValueArgs(
+ *                     count="50",
+ *                 ),
+ *             ),
+ *         ),
+ *         aws_native.iot.SecurityProfileBehaviorArgs(
+ *             name="AuthFailuresStatThreshold",
+ *             metric="aws:num-authorization-failures",
+ *             criteria=aws_native.iot.SecurityProfileBehaviorCriteriaArgs(
+ *                 comparison_operator="less-than-equals",
+ *                 duration_seconds=300,
+ *                 statistical_threshold=aws_native.iot.SecurityProfileStatisticalThresholdArgs(
+ *                     statistic="p90",
+ *                 ),
+ *             ),
+ *         ),
+ *     ],
+ *     security_profile_description="Contains expected behaviors for connected devices",
+ *     security_profile_name="ProfileForConnectedDevices",
+ *     tags=[aws_native.iot.SecurityProfileTagArgs(
+ *         key="Application",
+ *         value="SmartHome",
+ *     )],
+ *     target_arns=["arn:aws:iot:us-east-1:123456789012:all/things"])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:iot:SecurityProfile")
 public class SecurityProfile extends io.pulumi.resources.CustomResource {
     /**
      * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
-     * 
      */
     @Export(name="additionalMetricsToRetainV2", type=List.class, parameters={SecurityProfileMetricToRetain.class})
     private Output</* @Nullable */ List<SecurityProfileMetricToRetain>> additionalMetricsToRetainV2;
 
     /**
      * @return A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
-     * 
      */
     public Output</* @Nullable */ List<SecurityProfileMetricToRetain>> getAdditionalMetricsToRetainV2() {
         return this.additionalMetricsToRetainV2;
     }
     /**
      * Specifies the destinations to which alerts are sent.
-     * 
      */
     @Export(name="alertTargets", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> alertTargets;
 
     /**
      * @return Specifies the destinations to which alerts are sent.
-     * 
      */
     public Output</* @Nullable */ Object> getAlertTargets() {
         return this.alertTargets;
     }
     /**
      * Specifies the behaviors that, when violated by a device (thing), cause an alert.
-     * 
      */
     @Export(name="behaviors", type=List.class, parameters={SecurityProfileBehavior.class})
     private Output</* @Nullable */ List<SecurityProfileBehavior>> behaviors;
 
     /**
      * @return Specifies the behaviors that, when violated by a device (thing), cause an alert.
-     * 
      */
     public Output</* @Nullable */ List<SecurityProfileBehavior>> getBehaviors() {
         return this.behaviors;
     }
     /**
      * The ARN (Amazon resource name) of the created security profile.
-     * 
      */
     @Export(name="securityProfileArn", type=String.class, parameters={})
     private Output<String> securityProfileArn;
 
     /**
      * @return The ARN (Amazon resource name) of the created security profile.
-     * 
      */
     public Output<String> getSecurityProfileArn() {
         return this.securityProfileArn;
     }
     /**
      * A description of the security profile.
-     * 
      */
     @Export(name="securityProfileDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityProfileDescription;
 
     /**
      * @return A description of the security profile.
-     * 
      */
     public Output</* @Nullable */ String> getSecurityProfileDescription() {
         return this.securityProfileDescription;
     }
     /**
      * A unique identifier for the security profile.
-     * 
      */
     @Export(name="securityProfileName", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityProfileName;
 
     /**
      * @return A unique identifier for the security profile.
-     * 
      */
     public Output</* @Nullable */ String> getSecurityProfileName() {
         return this.securityProfileName;
     }
     /**
      * Metadata that can be used to manage the security profile.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={SecurityProfileTag.class})
     private Output</* @Nullable */ List<SecurityProfileTag>> tags;
 
     /**
      * @return Metadata that can be used to manage the security profile.
-     * 
      */
     public Output</* @Nullable */ List<SecurityProfileTag>> getTags() {
         return this.tags;
     }
     /**
      * A set of target ARNs that the security profile is attached to.
-     * 
      */
     @Export(name="targetArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> targetArns;
 
     /**
      * @return A set of target ARNs that the security profile is attached to.
-     * 
      */
     public Output</* @Nullable */ List<String>> getTargetArns() {
         return this.targetArns;

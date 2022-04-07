@@ -51,7 +51,6 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of Rules.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<RuleGroupRuleArgs>> rules;

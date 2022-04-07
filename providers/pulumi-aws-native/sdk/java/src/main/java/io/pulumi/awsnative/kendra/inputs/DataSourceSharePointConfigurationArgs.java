@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * SharePoint configuration
- * 
  */
 public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

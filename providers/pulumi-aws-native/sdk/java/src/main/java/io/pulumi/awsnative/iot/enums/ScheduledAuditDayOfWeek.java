@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
-     * 
      */
     @EnumType
     public enum ScheduledAuditDayOfWeek {

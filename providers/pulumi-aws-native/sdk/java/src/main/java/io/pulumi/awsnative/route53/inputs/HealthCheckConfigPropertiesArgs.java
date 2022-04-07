@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * A complex type that contains information about the health check.
- * 
  */
 public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 

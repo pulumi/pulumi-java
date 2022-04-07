@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A label for tagging DataIntegration resources
- * 
  */
 public final class DataIntegrationTagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DataIntegrationTagArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A key to identify the tag.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -30,7 +28,6 @@ public final class DataIntegrationTagArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Corresponding tag value for the key.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

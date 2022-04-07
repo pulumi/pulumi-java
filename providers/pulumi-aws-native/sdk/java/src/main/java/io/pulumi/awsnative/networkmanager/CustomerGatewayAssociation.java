@@ -13,62 +13,53 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::NetworkManager::CustomerGatewayAssociation type associates a customer gateway with a device and optionally, with a link.
- * 
  */
 @ResourceType(type="aws-native:networkmanager:CustomerGatewayAssociation")
 public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the customer gateway.
-     * 
      */
     @Export(name="customerGatewayArn", type=String.class, parameters={})
     private Output<String> customerGatewayArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the customer gateway.
-     * 
      */
     public Output<String> getCustomerGatewayArn() {
         return this.customerGatewayArn;
     }
     /**
      * The ID of the device
-     * 
      */
     @Export(name="deviceId", type=String.class, parameters={})
     private Output<String> deviceId;
 
     /**
      * @return The ID of the device
-     * 
      */
     public Output<String> getDeviceId() {
         return this.deviceId;
     }
     /**
      * The ID of the global network.
-     * 
      */
     @Export(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
-     * 
      */
     public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
     /**
      * The ID of the link
-     * 
      */
     @Export(name="linkId", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkId;
 
     /**
      * @return The ID of the link
-     * 
      */
     public Output</* @Nullable */ String> getLinkId() {
         return this.linkId;

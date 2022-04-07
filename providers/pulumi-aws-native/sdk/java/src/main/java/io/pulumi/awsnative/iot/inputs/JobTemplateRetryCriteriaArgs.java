@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies how many times a failure type should be retried.
- * 
  */
 public final class JobTemplateRetryCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 

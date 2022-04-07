@@ -16,27 +16,22 @@ import javax.annotation.Nullable;
 public final class GetServiceProfileResult {
     /**
      * Service profile Arn. Returned after successful create.
-     * 
      */
     private final @Nullable String arn;
     /**
      * Service profile Id. Returned after successful create.
-     * 
      */
     private final @Nullable String id;
     /**
      * LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
-     * 
      */
     private final @Nullable ServiceProfileLoRaWANServiceProfile loRaWAN;
     /**
      * Name of service profile
-     * 
      */
     private final @Nullable String name;
     /**
      * A list of key-value pairs that contain metadata for the service profile.
-     * 
      */
     private final @Nullable List<ServiceProfileTag> tags;
 
@@ -56,35 +51,30 @@ public final class GetServiceProfileResult {
 
     /**
      * Service profile Arn. Returned after successful create.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Service profile Id. Returned after successful create.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
-     * 
     */
     public Optional<ServiceProfileLoRaWANServiceProfile> getLoRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
      * Name of service profile
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the service profile.
-     * 
     */
     public List<ServiceProfileTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

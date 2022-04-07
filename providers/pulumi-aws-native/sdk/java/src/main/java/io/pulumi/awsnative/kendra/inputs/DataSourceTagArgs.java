@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A label for tagging Kendra resources
- * 
  */
 public final class DataSourceTagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DataSourceTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A string used to identify this tag
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -30,7 +28,6 @@ public final class DataSourceTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A string containing the value for the tag
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

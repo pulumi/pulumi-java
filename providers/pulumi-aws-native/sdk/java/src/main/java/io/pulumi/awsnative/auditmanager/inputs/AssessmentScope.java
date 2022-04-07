@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The wrapper that contains the AWS accounts and AWS services in scope for the assessment.
- * 
  */
 public final class AssessmentScope extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AssessmentScope extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The AWS accounts included in scope.
-     * 
      */
     @Import(name="awsAccounts")
       private final @Nullable List<AssessmentAWSAccount> awsAccounts;
@@ -33,7 +31,6 @@ public final class AssessmentScope extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The AWS services included in scope.
-     * 
      */
     @Import(name="awsServices")
       private final @Nullable List<AssessmentAWSService> awsServices;

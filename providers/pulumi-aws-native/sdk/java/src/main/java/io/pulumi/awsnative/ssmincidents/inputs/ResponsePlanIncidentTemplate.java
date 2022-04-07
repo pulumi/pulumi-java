@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The incident template configuration.
- * 
  */
 public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
 
     /**
      * The deduplication string.
-     * 
      */
     @Import(name="dedupeString")
       private final @Nullable String dedupeString;
@@ -34,7 +32,6 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
 
     /**
      * The impact value.
-     * 
      */
     @Import(name="impact", required=true)
       private final Integer impact;
@@ -45,7 +42,6 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
 
     /**
      * The list of notification targets.
-     * 
      */
     @Import(name="notificationTargets")
       private final @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
@@ -56,7 +52,6 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
 
     /**
      * The summary string.
-     * 
      */
     @Import(name="summary")
       private final @Nullable String summary;
@@ -67,7 +62,6 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
 
     /**
      * The title string.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

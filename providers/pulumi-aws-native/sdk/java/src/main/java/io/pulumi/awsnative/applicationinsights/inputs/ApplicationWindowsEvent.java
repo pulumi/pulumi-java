@@ -14,15 +14,13 @@ import javax.annotation.Nullable;
 
 /**
  * A Windows Event to be monitored for the component.
- * 
  */
 public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationWindowsEvent Empty = new ApplicationWindowsEvent();
 
     /**
-     * The levels of event to log.
-     * 
+     * The levels of event to log. 
      */
     @Import(name="eventLevels", required=true)
       private final List<ApplicationEventLevel> eventLevels;
@@ -33,7 +31,6 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
 
     /**
      * The type of Windows Events to log.
-     * 
      */
     @Import(name="eventName", required=true)
       private final String eventName;
@@ -44,7 +41,6 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
 
     /**
      * The CloudWatch log group name to be associated to the monitored log.
-     * 
      */
     @Import(name="logGroupName", required=true)
       private final String logGroupName;
@@ -55,7 +51,6 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the log pattern set.
-     * 
      */
     @Import(name="patternSet")
       private final @Nullable String patternSet;

@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class GetCertificateResult {
     /**
      * The ARN of the issued certificate.
-     * 
      */
     private final @Nullable String arn;
     /**
      * The issued certificate in base 64 PEM-encoded format.
-     * 
      */
     private final @Nullable String certificate;
 
@@ -32,14 +30,12 @@ public final class GetCertificateResult {
 
     /**
      * The ARN of the issued certificate.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The issued certificate in base 64 PEM-encoded format.
-     * 
     */
     public Optional<String> getCertificate() {
         return Optional.ofNullable(this.certificate);

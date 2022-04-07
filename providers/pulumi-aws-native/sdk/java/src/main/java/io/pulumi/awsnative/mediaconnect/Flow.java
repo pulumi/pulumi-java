@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::MediaConnect::Flow
- * 
  */
 @ResourceType(type="aws-native:mediaconnect:Flow")
 public class Flow extends io.pulumi.resources.CustomResource {
     /**
      * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
-     * 
      */
     @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
     /**
      * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
-     * 
      */
     public Output</* @Nullable */ String> getAvailabilityZone() {
         return this.availabilityZone;
     }
     /**
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
-     * 
      */
     @Export(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
     /**
      * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
-     * 
      */
     public Output<String> getFlowArn() {
         return this.flowArn;
     }
     /**
      * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
-     * 
      */
     @Export(name="flowAvailabilityZone", type=String.class, parameters={})
     private Output<String> flowAvailabilityZone;
 
     /**
      * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
-     * 
      */
     public Output<String> getFlowAvailabilityZone() {
         return this.flowAvailabilityZone;
     }
     /**
      * The name of the flow.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the flow.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The source of the flow.
-     * 
      */
     @Export(name="source", type=FlowSource.class, parameters={})
     private Output<FlowSource> source;
 
     /**
      * @return The source of the flow.
-     * 
      */
     public Output<FlowSource> getSource() {
         return this.source;
     }
     /**
      * The source failover config of the flow.
-     * 
      */
     @Export(name="sourceFailoverConfig", type=FlowFailoverConfig.class, parameters={})
     private Output</* @Nullable */ FlowFailoverConfig> sourceFailoverConfig;
 
     /**
      * @return The source failover config of the flow.
-     * 
      */
     public Output</* @Nullable */ FlowFailoverConfig> getSourceFailoverConfig() {
         return this.sourceFailoverConfig;

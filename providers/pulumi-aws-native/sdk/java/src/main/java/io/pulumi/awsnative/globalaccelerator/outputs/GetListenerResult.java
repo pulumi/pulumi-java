@@ -17,18 +17,15 @@ import javax.annotation.Nullable;
 public final class GetListenerResult {
     /**
      * Client affinity lets you direct all requests from a user to the same endpoint.
-     * 
      */
     private final @Nullable ListenerClientAffinity clientAffinity;
     /**
      * The Amazon Resource Name (ARN) of the listener.
-     * 
      */
     private final @Nullable String listenerArn;
     private final @Nullable List<ListenerPortRange> portRanges;
     /**
      * The protocol for the listener.
-     * 
      */
     private final @Nullable ListenerProtocol protocol;
 
@@ -46,14 +43,12 @@ public final class GetListenerResult {
 
     /**
      * Client affinity lets you direct all requests from a user to the same endpoint.
-     * 
     */
     public Optional<ListenerClientAffinity> getClientAffinity() {
         return Optional.ofNullable(this.clientAffinity);
     }
     /**
      * The Amazon Resource Name (ARN) of the listener.
-     * 
     */
     public Optional<String> getListenerArn() {
         return Optional.ofNullable(this.listenerArn);
@@ -63,7 +58,6 @@ public final class GetListenerResult {
     }
     /**
      * The protocol for the listener.
-     * 
     */
     public Optional<ListenerProtocol> getProtocol() {
         return Optional.ofNullable(this.protocol);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A model to associate with a detector.
- * 
  */
 public final class DetectorModel extends io.pulumi.resources.InvokeArgs {
 

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Use to override the device's volume type.
-     * 
      */
     @EnumType
     public enum ContainerRecipeEbsInstanceBlockDeviceSpecificationVolumeType {

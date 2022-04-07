@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A portal resource.
- * 
  */
 public final class AccessPolicyPortal extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AccessPolicyPortal extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the portal.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

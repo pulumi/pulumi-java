@@ -17,7 +17,6 @@ public final class FlowZendeskDestinationProperties {
     private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
     /**
      * List of fields used as ID when performing a write operation.
-     * 
      */
     private final @Nullable List<String> idFieldNames;
     private final String object;
@@ -40,7 +39,6 @@ public final class FlowZendeskDestinationProperties {
     }
     /**
      * List of fields used as ID when performing a write operation.
-     * 
     */
     public List<String> getIdFieldNames() {
         return this.idFieldNames == null ? List.of() : this.idFieldNames;

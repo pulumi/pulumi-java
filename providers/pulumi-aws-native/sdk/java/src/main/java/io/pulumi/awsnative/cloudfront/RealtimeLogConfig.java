@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
- * 
  */
 @ResourceType(type="aws-native:cloudfront:RealtimeLogConfig")
 public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {

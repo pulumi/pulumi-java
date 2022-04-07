@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Kubernetes network configuration for the cluster.
- * 
  */
 public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
 
     /**
      * Ipv4 or Ipv6. You can only specify ipv6 for 1.21 and later clusters that use version 1.10.1 or later of the Amazon VPC CNI add-on
-     * 
      */
     @Import(name="ipFamily")
       private final @Nullable Output<ClusterKubernetesNetworkConfigIpFamily> ipFamily;
@@ -31,8 +29,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
     }
 
     /**
-     * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC.
-     * 
+     * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC. 
      */
     @Import(name="serviceIpv4Cidr")
       private final @Nullable Output<String> serviceIpv4Cidr;
@@ -43,7 +40,6 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
 
     /**
      * The CIDR block to assign Kubernetes service IP addresses from.
-     * 
      */
     @Import(name="serviceIpv6Cidr")
       private final @Nullable Output<String> serviceIpv6Cidr;

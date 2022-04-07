@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
-     * 
      */
     @EnumType
     public enum FirewallRuleGroupStatus {

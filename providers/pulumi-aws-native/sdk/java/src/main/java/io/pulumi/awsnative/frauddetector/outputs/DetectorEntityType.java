@@ -17,24 +17,20 @@ public final class DetectorEntityType {
     private final @Nullable String arn;
     /**
      * The time when the entity type was created.
-     * 
      */
     private final @Nullable String createdTime;
     /**
      * The description.
-     * 
      */
     private final @Nullable String description;
     private final @Nullable Boolean inline;
     /**
      * The time when the entity type was last updated.
-     * 
      */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable String name;
     /**
      * Tags associated with this entity type.
-     * 
      */
     private final @Nullable List<DetectorTag> tags;
 
@@ -61,14 +57,12 @@ public final class DetectorEntityType {
     }
     /**
      * The time when the entity type was created.
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
@@ -78,7 +72,6 @@ public final class DetectorEntityType {
     }
     /**
      * The time when the entity type was last updated.
-     * 
     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
@@ -88,7 +81,6 @@ public final class DetectorEntityType {
     }
     /**
      * Tags associated with this entity type.
-     * 
     */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

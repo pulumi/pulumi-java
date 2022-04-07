@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies how to handle request payload content type conversions.
-     * 
      */
     @EnumType
     public enum MethodIntegrationResponseContentHandling {

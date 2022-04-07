@@ -14,7 +14,6 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * AWS account ID of customer
-     * 
      */
     @Import(name="awsAccountId", required=true)
       private final String awsAccountId;

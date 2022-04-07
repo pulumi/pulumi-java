@@ -26,7 +26,6 @@ public final class WebACLRule {
     private final Integer priority;
     /**
      * Collection of Rule Labels.
-     * 
      */
     private final @Nullable List<WebACLLabel> ruleLabels;
     private final WebACLStatement statement;
@@ -69,7 +68,6 @@ public final class WebACLRule {
     }
     /**
      * Collection of Rule Labels.
-     * 
     */
     public List<WebACLLabel> getRuleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;

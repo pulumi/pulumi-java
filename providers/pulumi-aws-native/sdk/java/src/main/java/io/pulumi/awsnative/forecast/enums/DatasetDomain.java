@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The domain associated with the dataset
-     * 
      */
     @EnumType
     public enum DatasetDomain {

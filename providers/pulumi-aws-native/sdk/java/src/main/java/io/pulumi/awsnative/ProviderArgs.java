@@ -24,7 +24,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The access key for API operations. You can retrieve this from the ‘Security & Credentials’ section of the AWS console.
-     * 
      */
     @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
@@ -35,7 +34,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of allowed AWS account IDs to prevent you from mistakenly using an incorrect one. Conflicts with `forbiddenAccountIds`.
-     * 
      */
     @Import(name="allowedAccountIds", json=true)
       private final @Nullable Output<List<String>> allowedAccountIds;
@@ -46,7 +44,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for retrieving temporary credentials from the STS service.
-     * 
      */
     @Import(name="assumeRole", json=true)
       private final @Nullable Output<ProviderAssumeRoleArgs> assumeRole;
@@ -57,7 +54,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration block with resource tag settings to apply across all resources handled by this provider. This is designed to replace redundant per-resource `tags` configurations. Provider tags can be overridden with new values, but not excluded from specific resources. To override provider tag values, use the `tags` argument within a resource to configure new tag values for matching keys.
-     * 
      */
     @Import(name="defaultTags", json=true)
       private final @Nullable Output<ProviderDefaultTagsArgs> defaultTags;
@@ -68,7 +64,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration block for customizing service endpoints.
-     * 
      */
     @Import(name="endpoints", json=true)
       private final @Nullable Output<List<ProviderEndpointArgs>> endpoints;
@@ -79,7 +74,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of forbidden AWS account IDs to prevent you from mistakenly using the wrong one (and potentially end up destroying a live environment). Conflicts with `allowedAccountIds`.
-     * 
      */
     @Import(name="forbiddenAccountIds", json=true)
       private final @Nullable Output<List<String>> forbiddenAccountIds;
@@ -90,7 +84,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration block with resource tag settings to ignore across all resources handled by this provider (except any individual service tag resources such as `ec2.Tag`) for situations where external systems are managing certain resource tags.
-     * 
      */
     @Import(name="ignoreTags", json=true)
       private final @Nullable Output<ProviderIgnoreTagsArgs> ignoreTags;
@@ -101,7 +94,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Explicitly allow the provider to perform "insecure" SSL requests. If omitted,default value is `false`.
-     * 
      */
     @Import(name="insecure", json=true)
       private final @Nullable Output<Boolean> insecure;
@@ -112,7 +104,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum number of times an AWS API request is being executed. If the API request still fails, an error is thrown.
-     * 
      */
     @Import(name="maxRetries", json=true)
       private final @Nullable Output<Integer> maxRetries;
@@ -123,7 +114,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The profile for API operations. If not set, the default profile created with `aws configure` will be used.
-     * 
      */
     @Import(name="profile")
       private final @Nullable Output<String> profile;
@@ -134,7 +124,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The region where AWS operations will take place. Examples are `us-east-1`, `us-west-2`, etc.
-     * 
      */
     @Import(name="region", required=true)
       private final Output<String> region;
@@ -145,7 +134,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Set this to true to force the request to use path-style addressing, i.e., `http://s3.amazonaws.com/BUCKET/KEY`. By default, the S3 client will use virtual hosted bucket addressing when possible (`http://BUCKET.s3.amazonaws.com/KEY`). Specific to the Amazon S3 service.
-     * 
      */
     @Import(name="s3ForcePathStyle", json=true)
       private final @Nullable Output<Boolean> s3ForcePathStyle;
@@ -156,7 +144,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
-     * 
      */
     @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
@@ -167,7 +154,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path to the shared credentials file. If not set this defaults to `~/.aws/credentials`.
-     * 
      */
     @Import(name="sharedCredentialsFile")
       private final @Nullable Output<String> sharedCredentialsFile;
@@ -178,7 +164,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Skip the credentials validation via STS API. Used for AWS API implementations that do not have STS available/implemented.
-     * 
      */
     @Import(name="skipCredentialsValidation", json=true)
       private final @Nullable Output<Boolean> skipCredentialsValidation;
@@ -189,7 +174,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Skip getting the supported EC2 platforms. Used by users that don't have `ec2:DescribeAccountAttributes` permissions.
-     * 
      */
     @Import(name="skipGetEc2Platforms", json=true)
       private final @Nullable Output<Boolean> skipGetEc2Platforms;
@@ -200,7 +184,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Skip the AWS Metadata API check. Useful for AWS API implementations that do not have a metadata API endpoint. Setting to true prevents Pulumi from authenticating via the Metadata API. You may need to use other authentication methods like static credentials, configuration variables, or environment variables.
-     * 
      */
     @Import(name="skipMetadataApiCheck", json=true)
       private final @Nullable Output<Boolean> skipMetadataApiCheck;
@@ -211,7 +194,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Skip static validation of region name. Used by users of alternative AWS-like APIs or users with access to regions that are not public.
-     * 
      */
     @Import(name="skipRegionValidation", json=true)
       private final @Nullable Output<Boolean> skipRegionValidation;
@@ -222,7 +204,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.
-     * 
      */
     @Import(name="skipRequestingAccountId", json=true)
       private final @Nullable Output<Boolean> skipRequestingAccountId;
@@ -233,7 +214,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Session token for validating temporary credentials. Typically provided after successful identity federation or Multi-Factor Authentication (MFA) login. With MFA login, this is the session token provided afterward, not the 6 digit MFA code used to get temporary credentials.
-     * 
      */
     @Import(name="token")
       private final @Nullable Output<String> token;

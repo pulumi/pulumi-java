@@ -20,7 +20,6 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace.
-     * 
      */
     @Import(name="customerId")
       private final @Nullable Output<String> customerId;
@@ -31,7 +30,6 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the purpose of the API key.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -42,7 +40,6 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the API key can be used by clients.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -53,7 +50,6 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether the key identifier is distinct from the created API key value. This parameter is deprecated and should not be used.
-     * 
      */
     @Import(name="generateDistinctId")
       private final @Nullable Output<Boolean> generateDistinctId;
@@ -64,7 +60,6 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name for the API key. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -75,7 +70,6 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of stages to associate with this API key.
-     * 
      */
     @Import(name="stageKeys")
       private final @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys;
@@ -86,7 +80,6 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the API key.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ApiKeyTagArgs>> tags;
@@ -97,7 +90,6 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value of the API key. Must be at least 20 characters long.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

@@ -15,7 +15,6 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
 
     /**
      * The IP address assigned to the transit gateway multicast group.
-     * 
      */
     @Import(name="groupIpAddress", required=true)
       private final Output<String> groupIpAddress;
@@ -26,7 +25,6 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
 
     /**
      * The ID of the transit gateway attachment.
-     * 
      */
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
@@ -37,7 +35,6 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
 
     /**
      * The ID of the transit gateway multicast domain.
-     * 
      */
     @Import(name="transitGatewayMulticastDomainId", required=true)
       private final Output<String> transitGatewayMulticastDomainId;

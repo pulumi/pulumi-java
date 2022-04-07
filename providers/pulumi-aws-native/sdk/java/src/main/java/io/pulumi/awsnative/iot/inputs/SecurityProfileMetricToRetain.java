@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The metric you want to retain. Dimensions are optional.
- * 
  */
 public final class SecurityProfileMetricToRetain extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SecurityProfileMetricToRetain extends io.pulumi.resources.Inv
 
     /**
      * What is measured by the behavior.
-     * 
      */
     @Import(name="metric", required=true)
       private final String metric;

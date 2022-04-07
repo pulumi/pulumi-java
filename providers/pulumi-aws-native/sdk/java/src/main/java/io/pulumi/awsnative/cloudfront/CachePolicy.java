@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::CloudFront::CachePolicy
- * 
  */
 @ResourceType(type="aws-native:cloudfront:CachePolicy")
 public class CachePolicy extends io.pulumi.resources.CustomResource {

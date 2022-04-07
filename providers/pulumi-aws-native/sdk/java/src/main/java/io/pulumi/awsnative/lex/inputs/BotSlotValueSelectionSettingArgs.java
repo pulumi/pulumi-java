@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains settings used by Amazon Lex to select a slot value.
- * 
  */
 public final class BotSlotValueSelectionSettingArgs extends io.pulumi.resources.ResourceArgs {
 

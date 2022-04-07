@@ -15,132 +15,113 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::DataSync::LocationFSxWindows.
- * 
  */
 @ResourceType(type="aws-native:datasync:LocationFSxWindows")
 public class LocationFSxWindows extends io.pulumi.resources.CustomResource {
     /**
      * The name of the Windows domain that the FSx for Windows server belongs to.
-     * 
      */
     @Export(name="domain", type=String.class, parameters={})
     private Output</* @Nullable */ String> domain;
 
     /**
      * @return The name of the Windows domain that the FSx for Windows server belongs to.
-     * 
      */
     public Output</* @Nullable */ String> getDomain() {
         return this.domain;
     }
     /**
      * The Amazon Resource Name (ARN) for the FSx for Windows file system.
-     * 
      */
     @Export(name="fsxFilesystemArn", type=String.class, parameters={})
     private Output<String> fsxFilesystemArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the FSx for Windows file system.
-     * 
      */
     public Output<String> getFsxFilesystemArn() {
         return this.fsxFilesystemArn;
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon FSx for Windows file system location that is created.
-     * 
      */
     @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Amazon FSx for Windows file system location that is created.
-     * 
      */
     public Output<String> getLocationArn() {
         return this.locationArn;
     }
     /**
      * The URL of the FSx for Windows location that was described.
-     * 
      */
     @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
      * @return The URL of the FSx for Windows location that was described.
-     * 
      */
     public Output<String> getLocationUri() {
         return this.locationUri;
     }
     /**
      * The password of the user who has the permissions to access files and folders in the FSx for Windows file system.
-     * 
      */
     @Export(name="password", type=String.class, parameters={})
     private Output<String> password;
 
     /**
      * @return The password of the user who has the permissions to access files and folders in the FSx for Windows file system.
-     * 
      */
     public Output<String> getPassword() {
         return this.password;
     }
     /**
      * The ARNs of the security groups that are to use to configure the FSx for Windows file system.
-     * 
      */
     @Export(name="securityGroupArns", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroupArns;
 
     /**
      * @return The ARNs of the security groups that are to use to configure the FSx for Windows file system.
-     * 
      */
     public Output<List<String>> getSecurityGroupArns() {
         return this.securityGroupArns;
     }
     /**
      * A subdirectory in the location's path.
-     * 
      */
     @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
      * @return A subdirectory in the location's path.
-     * 
      */
     public Output</* @Nullable */ String> getSubdirectory() {
         return this.subdirectory;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={LocationFSxWindowsTag.class})
     private Output</* @Nullable */ List<LocationFSxWindowsTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<LocationFSxWindowsTag>> getTags() {
         return this.tags;
     }
     /**
      * The user who has the permissions to access files and folders in the FSx for Windows file system.
-     * 
      */
     @Export(name="user", type=String.class, parameters={})
     private Output<String> user;
 
     /**
      * @return The user who has the permissions to access files and folders in the FSx for Windows file system.
-     * 
      */
     public Output<String> getUser() {
         return this.user;

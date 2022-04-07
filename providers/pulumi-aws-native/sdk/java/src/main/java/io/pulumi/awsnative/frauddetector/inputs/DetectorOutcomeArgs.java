@@ -26,7 +26,6 @@ public final class DetectorOutcomeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The time when the outcome was created.
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
@@ -37,7 +36,6 @@ public final class DetectorOutcomeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -55,7 +53,6 @@ public final class DetectorOutcomeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The time when the outcome was last updated.
-     * 
      */
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
@@ -73,7 +70,6 @@ public final class DetectorOutcomeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Tags associated with this outcome.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;

@@ -14,7 +14,6 @@ public final class GetIPAMScopeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Id of the IPAM scope.
-     * 
      */
     @Import(name="ipamScopeId", required=true)
       private final String ipamScopeId;

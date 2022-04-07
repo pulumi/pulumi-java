@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class WorkflowTag {
     /**
      * The name assigned to the tag that you create.
-     * 
      */
     private final String key;
     /**
      * Contains one or more values that you assigned to the key name you create.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class WorkflowTag {
 
     /**
      * The name assigned to the tag that you create.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * Contains one or more values that you assigned to the key name you create.
-     * 
     */
     public String getValue() {
         return this.value;

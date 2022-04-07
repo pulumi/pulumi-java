@@ -22,7 +22,6 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * A CMAF packaging configuration.
-     * 
      */
     @Import(name="cmafPackage")
       private final @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage;
@@ -33,7 +32,6 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
-     * 
      */
     @Import(name="dashPackage")
       private final @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage;
@@ -44,7 +42,6 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * An HTTP Live Streaming (HLS) packaging configuration.
-     * 
      */
     @Import(name="hlsPackage")
       private final @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage;
@@ -55,7 +52,6 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
-     * 
      */
     @Import(name="mssPackage")
       private final @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage;
@@ -66,7 +62,6 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The ID of a PackagingGroup.
-     * 
      */
     @Import(name="packagingGroupId", required=true)
       private final Output<String> packagingGroupId;
@@ -77,7 +72,6 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<PackagingConfigurationTagArgs>> tags;

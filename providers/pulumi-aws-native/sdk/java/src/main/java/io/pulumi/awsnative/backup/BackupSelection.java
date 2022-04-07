@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Backup::BackupSelection
- * 
  */
 @ResourceType(type="aws-native:backup:BackupSelection")
 public class BackupSelection extends io.pulumi.resources.CustomResource {

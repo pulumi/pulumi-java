@@ -18,7 +18,6 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
 
     /**
      * A list of ConformancePackInputParameter objects.
-     * 
      */
     @Import(name="conformancePackInputParameters")
       private final @Nullable Output<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters;
@@ -29,7 +28,6 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
 
     /**
      * AWS Config stores intermediate files while processing conformance pack template.
-     * 
      */
     @Import(name="deliveryS3Bucket")
       private final @Nullable Output<String> deliveryS3Bucket;
@@ -40,7 +38,6 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
 
     /**
      * The prefix for the delivery S3 bucket.
-     * 
      */
     @Import(name="deliveryS3KeyPrefix")
       private final @Nullable Output<String> deliveryS3KeyPrefix;
@@ -51,7 +48,6 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
 
     /**
      * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
-     * 
      */
     @Import(name="excludedAccounts")
       private final @Nullable Output<List<String>> excludedAccounts;
@@ -62,7 +58,6 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
 
     /**
      * The name of the organization conformance pack.
-     * 
      */
     @Import(name="organizationConformancePackName")
       private final @Nullable Output<String> organizationConformancePackName;
@@ -73,7 +68,6 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
 
     /**
      * A string containing full conformance pack template body.
-     * 
      */
     @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
@@ -84,7 +78,6 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
 
     /**
      * Location of file containing the template body.
-     * 
      */
     @Import(name="templateS3Uri")
       private final @Nullable Output<String> templateS3Uri;

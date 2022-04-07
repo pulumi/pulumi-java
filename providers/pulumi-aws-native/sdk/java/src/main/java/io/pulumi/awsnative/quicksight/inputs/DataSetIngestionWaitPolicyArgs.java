@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>Wait policy to use when creating/updating dataset. Default is to wait for SPICE ingestion to finish with timeout of 36 hours.</p>
- * 
  */
 public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
     /**
      * <p>The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
      *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.</p>
-     * 
      */
     @Import(name="ingestionWaitTimeInHours")
       private final @Nullable Output<Double> ingestionWaitTimeInHours;
@@ -34,7 +32,6 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
     /**
      * <p>Wait for SPICE ingestion to finish to mark dataset creation/update successful. Default (true).
      *   Applicable only when DataSetImportMode mode is set to SPICE.</p>
-     * 
      */
     @Import(name="waitForSpiceIngestion")
       private final @Nullable Output<Boolean> waitForSpiceIngestion;

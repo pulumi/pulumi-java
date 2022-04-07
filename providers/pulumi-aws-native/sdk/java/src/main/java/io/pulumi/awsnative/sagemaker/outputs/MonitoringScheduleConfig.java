@@ -17,7 +17,6 @@ public final class MonitoringScheduleConfig {
     private final @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition;
     /**
      * Name of the job definition
-     * 
      */
     private final @Nullable String monitoringJobDefinitionName;
     private final @Nullable MonitoringScheduleMonitoringType monitoringType;
@@ -40,7 +39,6 @@ public final class MonitoringScheduleConfig {
     }
     /**
      * Name of the job definition
-     * 
     */
     public Optional<String> getMonitoringJobDefinitionName() {
         return Optional.ofNullable(this.monitoringJobDefinitionName);

@@ -14,7 +14,6 @@ public final class GetLocationFSxWindowsArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The Amazon Resource Name (ARN) of the Amazon FSx for Windows file system location that is created.
-     * 
      */
     @Import(name="locationArn", required=true)
       private final String locationArn;

@@ -26,7 +26,6 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
-     * 
      */
     @Import(name="operatingRegions")
       private final @Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions;
@@ -37,7 +36,6 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<IPAMTagArgs>> tags;

@@ -15,7 +15,6 @@ public final class ConnectorProfileDatadogConnectorProfilePropertiesArgs extends
 
     /**
      * The location of the Datadog resource
-     * 
      */
     @Import(name="instanceUrl", required=true)
       private final Output<String> instanceUrl;

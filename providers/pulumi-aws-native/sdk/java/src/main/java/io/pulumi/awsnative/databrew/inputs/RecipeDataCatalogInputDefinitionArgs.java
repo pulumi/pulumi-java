@@ -17,7 +17,6 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
 
     /**
      * Catalog id
-     * 
      */
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
@@ -28,7 +27,6 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
 
     /**
      * Database name
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
@@ -39,7 +37,6 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
 
     /**
      * Table name
-     * 
      */
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::AppStream::AppBlock
- * 
  */
 @ResourceType(type="aws-native:appstream:AppBlock")
 public class AppBlock extends io.pulumi.resources.CustomResource {

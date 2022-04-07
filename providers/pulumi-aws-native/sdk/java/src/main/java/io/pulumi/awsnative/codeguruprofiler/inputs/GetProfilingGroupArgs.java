@@ -14,7 +14,6 @@ public final class GetProfilingGroupArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the profiling group.
-     * 
      */
     @Import(name="profilingGroupName", required=true)
       private final String profilingGroupName;

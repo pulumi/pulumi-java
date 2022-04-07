@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies which Amazon S3 bucket to store replicated objects in and their storage class.
- * 
  */
 public final class BucketReplicationDestination extends io.pulumi.resources.InvokeArgs {
 
@@ -67,7 +66,6 @@ public final class BucketReplicationDestination extends io.pulumi.resources.Invo
 
     /**
      * The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
-     * 
      */
     @Import(name="storageClass")
       private final @Nullable BucketReplicationDestinationStorageClass storageClass;

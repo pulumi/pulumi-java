@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type for the dimension.
-     * 
      */
     @EnumType
     public enum ScheduledQueryDimensionValueType {

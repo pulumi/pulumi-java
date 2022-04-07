@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the degree of outage when the alarm goes off.
-     * 
      */
     @EnumType
     public enum ApplicationAlarmSeverity {

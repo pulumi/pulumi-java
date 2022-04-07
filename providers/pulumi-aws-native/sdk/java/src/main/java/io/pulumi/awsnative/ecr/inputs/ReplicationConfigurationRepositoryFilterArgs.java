@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * An array of objects representing the details of a repository filter.
- * 
  */
 public final class ReplicationConfigurationRepositoryFilterArgs extends io.pulumi.resources.ResourceArgs {
 

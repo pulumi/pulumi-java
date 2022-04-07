@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
-     * 
      */
     @EnumType
     public enum TrailEventSelectorReadWriteType {

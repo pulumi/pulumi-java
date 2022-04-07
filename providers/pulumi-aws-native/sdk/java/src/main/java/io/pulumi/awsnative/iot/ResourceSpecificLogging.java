@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource-specific logging allows you to specify a logging level for a specific thing group.
- * 
  */
 @ResourceType(type="aws-native:iot:ResourceSpecificLogging")
 public class ResourceSpecificLogging extends io.pulumi.resources.CustomResource {
     /**
      * The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
-     * 
      */
     @Export(name="logLevel", type=ResourceSpecificLoggingLogLevel.class, parameters={})
     private Output<ResourceSpecificLoggingLogLevel> logLevel;
 
     /**
      * @return The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
-     * 
      */
     public Output<ResourceSpecificLoggingLogLevel> getLogLevel() {
         return this.logLevel;
     }
     /**
      * Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
-     * 
      */
     @Export(name="targetId", type=String.class, parameters={})
     private Output<String> targetId;
 
     /**
      * @return Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
-     * 
      */
     public Output<String> getTargetId() {
         return this.targetId;
     }
     /**
      * The target name.
-     * 
      */
     @Export(name="targetName", type=String.class, parameters={})
     private Output<String> targetName;
 
     /**
      * @return The target name.
-     * 
      */
     public Output<String> getTargetName() {
         return this.targetName;
     }
     /**
      * The target type. Value must be THING_GROUP.
-     * 
      */
     @Export(name="targetType", type=ResourceSpecificLoggingTargetType.class, parameters={})
     private Output<ResourceSpecificLoggingTargetType> targetType;
 
     /**
      * @return The target type. Value must be THING_GROUP.
-     * 
      */
     public Output<ResourceSpecificLoggingTargetType> getTargetType() {
         return this.targetType;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of monitoring job.
-     * 
      */
     @EnumType
     public enum MonitoringScheduleMonitoringType {

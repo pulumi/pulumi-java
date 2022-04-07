@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status of the image pipeline.
-     * 
      */
     @EnumType
     public enum ImagePipelineStatus {

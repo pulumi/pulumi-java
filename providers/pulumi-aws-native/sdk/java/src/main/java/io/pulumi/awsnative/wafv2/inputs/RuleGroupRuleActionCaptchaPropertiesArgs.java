@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Checks valid token exists with request.
- * 
  */
 public final class RuleGroupRuleActionCaptchaPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 

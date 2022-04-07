@@ -21,7 +21,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The description of the infrastructure configuration.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +31,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The instance metadata option settings for the infrastructure configuration.
-     * 
      */
     @Import(name="instanceMetadataOptions")
       private final @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsArgs> instanceMetadataOptions;
@@ -43,7 +41,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The instance profile of the infrastructure configuration.
-     * 
      */
     @Import(name="instanceProfileName", required=true)
       private final Output<String> instanceProfileName;
@@ -54,7 +51,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The instance types of the infrastructure configuration.
-     * 
      */
     @Import(name="instanceTypes")
       private final @Nullable Output<List<String>> instanceTypes;
@@ -65,7 +61,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The EC2 key pair of the infrastructure configuration..
-     * 
      */
     @Import(name="keyPair")
       private final @Nullable Output<String> keyPair;
@@ -76,7 +71,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The logging configuration of the infrastructure configuration.
-     * 
      */
     @Import(name="logging")
       private final @Nullable Output<InfrastructureConfigurationLoggingArgs> logging;
@@ -87,7 +81,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The name of the infrastructure configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -98,7 +91,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The tags attached to the resource created by Image Builder.
-     * 
      */
     @Import(name="resourceTags")
       private final @Nullable Output<Object> resourceTags;
@@ -109,7 +101,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The security group IDs of the infrastructure configuration.
-     * 
      */
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
@@ -120,7 +111,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
-     * 
      */
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
@@ -131,7 +121,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The subnet ID of the infrastructure configuration.
-     * 
      */
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
@@ -142,7 +131,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The tags associated with the component.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
@@ -153,7 +141,6 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The terminate instance on failure configuration of the infrastructure configuration.
-     * 
      */
     @Import(name="terminateInstanceOnFailure")
       private final @Nullable Output<Boolean> terminateInstanceOnFailure;

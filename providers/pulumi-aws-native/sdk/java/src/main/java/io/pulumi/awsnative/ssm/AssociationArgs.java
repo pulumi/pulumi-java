@@ -31,7 +31,6 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the association.
-     * 
      */
     @Import(name="associationName")
       private final @Nullable Output<String> associationName;
@@ -63,7 +62,6 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the SSM document to associate with the target.
-     * 
      */
     @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
@@ -74,7 +72,6 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the instance that the SSM document is associated with.
-     * 
      */
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
@@ -99,7 +96,6 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the SSM document.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -117,7 +113,6 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameter values that the SSM document uses at runtime.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
@@ -128,7 +123,6 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A Cron or Rate expression that specifies when the association is applied to the target.
-     * 
      */
     @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;
@@ -146,7 +140,6 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The targets that the SSM document sends commands to.
-     * 
      */
     @Import(name="targets")
       private final @Nullable Output<List<AssociationTargetArgs>> targets;

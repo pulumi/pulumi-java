@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ThemeBorderStyle {
     /**
      * <p>The option to enable display of borders for visuals.</p>
-     * 
      */
     private final @Nullable Boolean show;
 
@@ -24,7 +23,6 @@ public final class ThemeBorderStyle {
 
     /**
      * <p>The option to enable display of borders for visuals.</p>
-     * 
     */
     public Optional<Boolean> getShow() {
         return Optional.ofNullable(this.show);

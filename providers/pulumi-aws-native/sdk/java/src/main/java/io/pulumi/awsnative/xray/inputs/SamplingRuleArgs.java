@@ -19,7 +19,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Matches attributes derived from the request.
-     * 
      */
     @Import(name="attributes")
       private final @Nullable Output<Object> attributes;
@@ -30,7 +29,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The percentage of matching requests to instrument, after the reservoir is exhausted.
-     * 
      */
     @Import(name="fixedRate")
       private final @Nullable Output<Double> fixedRate;
@@ -41,7 +39,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Matches the HTTP method from a request URL.
-     * 
      */
     @Import(name="hTTPMethod")
       private final @Nullable Output<String> hTTPMethod;
@@ -52,7 +49,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Matches the hostname from a request URL.
-     * 
      */
     @Import(name="host")
       private final @Nullable Output<String> host;
@@ -63,7 +59,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The priority of the sampling rule.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -74,7 +69,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
-     * 
      */
     @Import(name="reservoirSize")
       private final @Nullable Output<Integer> reservoirSize;
@@ -85,7 +79,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Matches the ARN of the AWS resource on which the service runs.
-     * 
      */
     @Import(name="resourceARN")
       private final @Nullable Output<String> resourceARN;
@@ -110,7 +103,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Matches the name that the service uses to identify itself in segments.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -121,7 +113,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Matches the origin that the service uses to identify its type in segments.
-     * 
      */
     @Import(name="serviceType")
       private final @Nullable Output<String> serviceType;
@@ -132,7 +123,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Matches the path from a request URL.
-     * 
      */
     @Import(name="uRLPath")
       private final @Nullable Output<String> uRLPath;
@@ -143,7 +133,6 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the sampling rule format (1)
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Integer> version;

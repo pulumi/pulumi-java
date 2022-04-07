@@ -15,7 +15,6 @@ public final class DetectorModelSns {
     private final @Nullable DetectorModelPayload payload;
     /**
      * The ARN of the Amazon SNS target where the message is sent.
-     * 
      */
     private final String targetArn;
 
@@ -32,7 +31,6 @@ public final class DetectorModelSns {
     }
     /**
      * The ARN of the Amazon SNS target where the message is sent.
-     * 
     */
     public String getTargetArn() {
         return this.targetArn;

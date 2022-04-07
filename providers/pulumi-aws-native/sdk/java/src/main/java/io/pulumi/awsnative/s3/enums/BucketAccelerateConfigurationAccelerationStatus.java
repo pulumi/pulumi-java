@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Configures the transfer acceleration state for an Amazon S3 bucket.
-     * 
      */
     @EnumType
     public enum BucketAccelerateConfigurationAccelerationStatus {

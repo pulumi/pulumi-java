@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.
- * 
  */
 public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs 
 
     /**
      * One or more network interfaces of the endpoint. Also known as an interface endpoint.
-     * 
      */
     @Import(name="networkInterfaces")
       private final @Nullable List<EndpointAccessNetworkInterface> networkInterfaces;
@@ -33,7 +31,6 @@ public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The connection endpoint ID for connecting an Amazon Redshift cluster through the proxy.
-     * 
      */
     @Import(name="vpcEndpointId")
       private final @Nullable String vpcEndpointId;
@@ -44,7 +41,6 @@ public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The VPC identifier that the endpoint is associated.
-     * 
      */
     @Import(name="vpcId")
       private final @Nullable String vpcId;

@@ -18,7 +18,6 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
 
     /**
      * The replication group id of the Global Datastore member.
-     * 
      */
     @Import(name="replicationGroupId")
       private final @Nullable Output<String> replicationGroupId;
@@ -29,7 +28,6 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
 
     /**
      * The AWS region of the Global Datastore member.
-     * 
      */
     @Import(name="replicationGroupRegion")
       private final @Nullable Output<String> replicationGroupRegion;
@@ -39,8 +37,7 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
     }
 
     /**
-     * A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
-     * 
+     * A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster. 
      */
     @Import(name="reshardingConfigurations")
       private final @Nullable Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;

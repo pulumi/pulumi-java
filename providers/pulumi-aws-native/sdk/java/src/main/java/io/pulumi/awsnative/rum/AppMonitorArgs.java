@@ -27,7 +27,6 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to CWLlong in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur CWLlong charges. If you omit this parameter, the default is false
-     * 
      */
     @Import(name="cwLogEnabled")
       private final @Nullable Output<Boolean> cwLogEnabled;
@@ -38,7 +37,6 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The top-level internet domain name for which your application has administrative authority.
-     * 
      */
     @Import(name="domain", required=true)
       private final Output<String> domain;
@@ -49,7 +47,6 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name for the app monitor
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the redirect behavior of all requests to a website endpoint of an Amazon S3 bucket.
- * 
  */
 public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
 
     /**
      * Name of the host where requests are redirected.
-     * 
      */
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
@@ -32,7 +30,6 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
 
     /**
      * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<BucketRedirectAllRequestsToProtocol> protocol;

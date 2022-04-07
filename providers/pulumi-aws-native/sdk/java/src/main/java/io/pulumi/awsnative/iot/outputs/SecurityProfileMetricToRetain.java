@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class SecurityProfileMetricToRetain {
     /**
      * What is measured by the behavior.
-     * 
      */
     private final String metric;
     private final @Nullable SecurityProfileMetricDimension metricDimension;
@@ -29,7 +28,6 @@ public final class SecurityProfileMetricToRetain {
 
     /**
      * What is measured by the behavior.
-     * 
     */
     public String getMetric() {
         return this.metric;

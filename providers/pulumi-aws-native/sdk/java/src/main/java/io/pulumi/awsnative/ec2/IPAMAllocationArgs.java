@@ -31,7 +31,6 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Id of the IPAM Pool.
-     * 
      */
     @Import(name="ipamPoolId", required=true)
       private final Output<String> ipamPoolId;
@@ -42,7 +41,6 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
-     * 
      */
     @Import(name="netmaskLength")
       private final @Nullable Output<Integer> netmaskLength;

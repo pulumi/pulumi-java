@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * IP Address type.
-     * 
      */
     @EnumType
     public enum AcceleratorIpAddressType {

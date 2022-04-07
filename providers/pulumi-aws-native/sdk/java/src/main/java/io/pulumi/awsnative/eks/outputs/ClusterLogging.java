@@ -11,8 +11,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterLogging {
     /**
-     * The cluster control plane logging configuration for your cluster.
-     * 
+     * The cluster control plane logging configuration for your cluster. 
      */
     private final @Nullable ClusterLogging clusterLogging;
 
@@ -22,8 +21,7 @@ public final class ClusterLogging {
     }
 
     /**
-     * The cluster control plane logging configuration for your cluster.
-     * 
+     * The cluster control plane logging configuration for your cluster. 
     */
     public Optional<ClusterLogging> getClusterLogging() {
         return Optional.ofNullable(this.clusterLogging);

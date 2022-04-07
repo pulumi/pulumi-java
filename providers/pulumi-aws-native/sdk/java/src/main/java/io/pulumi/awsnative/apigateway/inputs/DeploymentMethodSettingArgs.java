@@ -19,7 +19,6 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * Indicates whether the cached responses are encrypted
-     * 
      */
     @Import(name="cacheDataEncrypted")
       private final @Nullable Output<Boolean> cacheDataEncrypted;
@@ -29,8 +28,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
-     * 
+     * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses. 
      */
     @Import(name="cacheTtlInSeconds")
       private final @Nullable Output<Integer> cacheTtlInSeconds;
@@ -41,7 +39,6 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
-     * 
      */
     @Import(name="cachingEnabled")
       private final @Nullable Output<Boolean> cachingEnabled;
@@ -51,8 +48,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
-     * 
+     * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs. 
      */
     @Import(name="dataTraceEnabled")
       private final @Nullable Output<Boolean> dataTraceEnabled;
@@ -63,7 +59,6 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * The HTTP method.
-     * 
      */
     @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
@@ -73,8 +68,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
-     * 
+     * The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference. 
      */
     @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
@@ -85,7 +79,6 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
-     * 
      */
     @Import(name="metricsEnabled")
       private final @Nullable Output<Boolean> metricsEnabled;
@@ -95,8 +88,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash.
-     * 
+     * The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash. 
      */
     @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
@@ -107,7 +99,6 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
-     * 
      */
     @Import(name="throttlingBurstLimit")
       private final @Nullable Output<Integer> throttlingBurstLimit;
@@ -118,7 +109,6 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
 
     /**
      * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
-     * 
      */
     @Import(name="throttlingRateLimit")
       private final @Nullable Output<Double> throttlingRateLimit;

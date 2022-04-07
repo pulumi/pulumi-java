@@ -22,7 +22,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Autoscaling configuration ARN
-     * 
      */
     @Import(name="autoScalingConfigurationArn")
       private final @Nullable Output<String> autoScalingConfigurationArn;
@@ -54,7 +53,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The AppRunner Service Name.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;

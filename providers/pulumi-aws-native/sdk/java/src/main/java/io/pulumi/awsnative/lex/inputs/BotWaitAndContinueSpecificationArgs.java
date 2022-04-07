@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The prompts that Amazon Lex uses while a bot is waiting for customer input.
- * 
  */
 public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
 
     /**
      * The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation.
-     * 
      */
     @Import(name="continueResponse", required=true)
       private final Output<BotResponseSpecificationArgs> continueResponse;
@@ -33,7 +31,6 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
 
     /**
      * Specifies whether the bot will wait for a user to respond.
-     * 
      */
     @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
@@ -44,7 +41,6 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
 
     /**
      * The response that Amazon Lex sends periodically to the user to indicate that the bot is still waiting for input from the user.
-     * 
      */
     @Import(name="stillWaitingResponse")
       private final @Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
@@ -55,7 +51,6 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
 
     /**
      * The response that Amazon Lex sends to indicate that the bot is waiting for the conversation to continue.
-     * 
      */
     @Import(name="waitingResponse", required=true)
       private final Output<BotResponseSpecificationArgs> waitingResponse;

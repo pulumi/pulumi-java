@@ -16,23 +16,19 @@ import javax.annotation.Nullable;
 public final class GetAnomalyDetectorResult {
     /**
      * Configuration options for the AnomalyDetector
-     * 
      */
     private final @Nullable AnomalyDetectorConfig anomalyDetectorConfig;
     /**
      * A description for the AnomalyDetector.
-     * 
      */
     private final @Nullable String anomalyDetectorDescription;
     private final @Nullable String arn;
     /**
      * KMS key used to encrypt the AnomalyDetector data
-     * 
      */
     private final @Nullable String kmsKeyArn;
     /**
      * List of metric sets for anomaly detection
-     * 
      */
     private final @Nullable List<AnomalyDetectorMetricSet> metricSetList;
 
@@ -52,14 +48,12 @@ public final class GetAnomalyDetectorResult {
 
     /**
      * Configuration options for the AnomalyDetector
-     * 
     */
     public Optional<AnomalyDetectorConfig> getAnomalyDetectorConfig() {
         return Optional.ofNullable(this.anomalyDetectorConfig);
     }
     /**
      * A description for the AnomalyDetector.
-     * 
     */
     public Optional<String> getAnomalyDetectorDescription() {
         return Optional.ofNullable(this.anomalyDetectorDescription);
@@ -69,14 +63,12 @@ public final class GetAnomalyDetectorResult {
     }
     /**
      * KMS key used to encrypt the AnomalyDetector data
-     * 
     */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * List of metric sets for anomaly detection
-     * 
     */
     public List<AnomalyDetectorMetricSet> getMetricSetList() {
         return this.metricSetList == null ? List.of() : this.metricSetList;

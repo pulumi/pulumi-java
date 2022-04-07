@@ -17,76 +17,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
- * 
  */
 @ResourceType(type="aws-native:kinesisvideo:SignalingChannel")
 public class SignalingChannel extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the Kinesis Video Signaling Channel.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Kinesis Video Signaling Channel.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The period of time a signaling channel retains undelivered messages before they are discarded.
-     * 
      */
     @Export(name="messageTtlSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> messageTtlSeconds;
 
     /**
      * @return The period of time a signaling channel retains undelivered messages before they are discarded.
-     * 
      */
     public Output</* @Nullable */ Integer> getMessageTtlSeconds() {
         return this.messageTtlSeconds;
     }
     /**
      * The name of the Kinesis Video Signaling Channel.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the Kinesis Video Signaling Channel.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={SignalingChannelTag.class})
     private Output</* @Nullable */ List<SignalingChannelTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<SignalingChannelTag>> getTags() {
         return this.tags;
     }
     /**
      * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
-     * 
      */
     @Export(name="type", type=SignalingChannelType.class, parameters={})
     private Output</* @Nullable */ SignalingChannelType> type;
 
     /**
      * @return The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
-     * 
      */
     public Output</* @Nullable */ SignalingChannelType> getType() {
         return this.type;

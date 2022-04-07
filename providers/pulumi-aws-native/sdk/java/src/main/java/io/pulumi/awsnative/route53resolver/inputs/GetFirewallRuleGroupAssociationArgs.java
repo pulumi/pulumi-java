@@ -14,7 +14,6 @@ public final class GetFirewallRuleGroupAssociationArgs extends io.pulumi.resourc
 
     /**
      * Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

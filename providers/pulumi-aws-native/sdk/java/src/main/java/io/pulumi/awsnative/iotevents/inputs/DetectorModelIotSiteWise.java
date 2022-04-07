@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sends information about the detector model instance and the event that triggered the action to a specified asset property in AWS IoT SiteWise.
- * 
  */
 public final class DetectorModelIotSiteWise extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DetectorModelIotSiteWise extends io.pulumi.resources.InvokeAr
 
     /**
      * The ID of the asset that has the specified property. You can specify an expression.
-     * 
      */
     @Import(name="assetId")
       private final @Nullable String assetId;
@@ -32,7 +30,6 @@ public final class DetectorModelIotSiteWise extends io.pulumi.resources.InvokeAr
 
     /**
      * A unique identifier for this entry. You can use the entry ID to track which data entry causes an error in case of failure. The default is a new unique identifier. You can also specify an expression.
-     * 
      */
     @Import(name="entryId")
       private final @Nullable String entryId;
@@ -43,7 +40,6 @@ public final class DetectorModelIotSiteWise extends io.pulumi.resources.InvokeAr
 
     /**
      * The alias of the asset property. You can also specify an expression.
-     * 
      */
     @Import(name="propertyAlias")
       private final @Nullable String propertyAlias;
@@ -54,7 +50,6 @@ public final class DetectorModelIotSiteWise extends io.pulumi.resources.InvokeAr
 
     /**
      * The ID of the asset property. You can specify an expression.
-     * 
      */
     @Import(name="propertyId")
       private final @Nullable String propertyId;

@@ -15,7 +15,6 @@ public final class ConnectorProfileServiceNowConnectorProfilePropertiesArgs exte
 
     /**
      * The location of the ServiceNow resource
-     * 
      */
     @Import(name="instanceUrl", required=true)
       private final Output<String> instanceUrl;

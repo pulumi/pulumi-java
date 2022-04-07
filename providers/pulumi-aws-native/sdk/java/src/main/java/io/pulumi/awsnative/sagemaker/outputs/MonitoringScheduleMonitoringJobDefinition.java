@@ -23,7 +23,6 @@ public final class MonitoringScheduleMonitoringJobDefinition {
     private final @Nullable MonitoringScheduleBaselineConfig baselineConfig;
     /**
      * Sets the environment variables in the Docker container
-     * 
      */
     private final @Nullable Object environment;
     private final MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification;
@@ -33,7 +32,6 @@ public final class MonitoringScheduleMonitoringJobDefinition {
     private final @Nullable MonitoringScheduleNetworkConfig networkConfig;
     /**
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
-     * 
      */
     private final String roleArn;
     private final @Nullable MonitoringScheduleStoppingCondition stoppingCondition;
@@ -65,7 +63,6 @@ public final class MonitoringScheduleMonitoringJobDefinition {
     }
     /**
      * Sets the environment variables in the Docker container
-     * 
     */
     public Optional<Object> getEnvironment() {
         return Optional.ofNullable(this.environment);
@@ -87,7 +84,6 @@ public final class MonitoringScheduleMonitoringJobDefinition {
     }
     /**
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
-     * 
     */
     public String getRoleArn() {
         return this.roleArn;

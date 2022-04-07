@@ -17,7 +17,6 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default value for the cost category
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
@@ -42,7 +41,6 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * JSON array format of Expression in Billing and Cost Management API
-     * 
      */
     @Import(name="rules", required=true)
       private final Output<String> rules;
@@ -53,7 +51,6 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
-     * 
      */
     @Import(name="splitChargeRules")
       private final @Nullable Output<String> splitChargeRules;

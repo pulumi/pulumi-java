@@ -15,20 +15,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Detective::Graph
- * 
  */
 @ResourceType(type="aws-native:detective:Graph")
 public class Graph extends io.pulumi.resources.CustomResource {
     /**
      * The Detective graph ARN
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Detective graph ARN
-     * 
      */
     public Output<String> getArn() {
         return this.arn;

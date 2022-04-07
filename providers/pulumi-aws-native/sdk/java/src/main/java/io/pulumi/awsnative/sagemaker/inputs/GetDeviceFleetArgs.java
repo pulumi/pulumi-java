@@ -14,7 +14,6 @@ public final class GetDeviceFleetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the edge device fleet
-     * 
      */
     @Import(name="deviceFleetName", required=true)
       private final String deviceFleetName;

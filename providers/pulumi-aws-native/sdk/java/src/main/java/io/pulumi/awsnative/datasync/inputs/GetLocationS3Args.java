@@ -14,7 +14,6 @@ public final class GetLocationS3Args extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
-     * 
      */
     @Import(name="locationArn", required=true)
       private final String locationArn;

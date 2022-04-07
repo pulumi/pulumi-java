@@ -18,62 +18,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SageMaker::FeatureGroup
- * 
  */
 @ResourceType(type="aws-native:sagemaker:FeatureGroup")
 public class FeatureGroup extends io.pulumi.resources.CustomResource {
     /**
      * Description about the FeatureGroup.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description about the FeatureGroup.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The Event Time Feature Name.
-     * 
      */
     @Export(name="eventTimeFeatureName", type=String.class, parameters={})
     private Output<String> eventTimeFeatureName;
 
     /**
      * @return The Event Time Feature Name.
-     * 
      */
     public Output<String> getEventTimeFeatureName() {
         return this.eventTimeFeatureName;
     }
     /**
      * An Array of Feature Definition
-     * 
      */
     @Export(name="featureDefinitions", type=List.class, parameters={FeatureGroupFeatureDefinition.class})
     private Output<List<FeatureGroupFeatureDefinition>> featureDefinitions;
 
     /**
      * @return An Array of Feature Definition
-     * 
      */
     public Output<List<FeatureGroupFeatureDefinition>> getFeatureDefinitions() {
         return this.featureDefinitions;
     }
     /**
      * The Name of the FeatureGroup.
-     * 
      */
     @Export(name="featureGroupName", type=String.class, parameters={})
     private Output<String> featureGroupName;
 
     /**
      * @return The Name of the FeatureGroup.
-     * 
      */
     public Output<String> getFeatureGroupName() {
         return this.featureGroupName;
@@ -92,42 +83,36 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
     }
     /**
      * The Record Identifier Feature Name.
-     * 
      */
     @Export(name="recordIdentifierFeatureName", type=String.class, parameters={})
     private Output<String> recordIdentifierFeatureName;
 
     /**
      * @return The Record Identifier Feature Name.
-     * 
      */
     public Output<String> getRecordIdentifierFeatureName() {
         return this.recordIdentifierFeatureName;
     }
     /**
      * Role Arn
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
     /**
      * @return Role Arn
-     * 
      */
     public Output</* @Nullable */ String> getRoleArn() {
         return this.roleArn;
     }
     /**
      * An array of key-value pair to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={FeatureGroupTag.class})
     private Output</* @Nullable */ List<FeatureGroupTag>> tags;
 
     /**
      * @return An array of key-value pair to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<FeatureGroupTag>> getTags() {
         return this.tags;

@@ -16,7 +16,6 @@ public final class JobRecipe extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Recipe name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -27,7 +26,6 @@ public final class JobRecipe extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Recipe version
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

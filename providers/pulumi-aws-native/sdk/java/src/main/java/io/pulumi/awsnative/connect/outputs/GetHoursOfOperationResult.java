@@ -16,37 +16,30 @@ import javax.annotation.Nullable;
 public final class GetHoursOfOperationResult {
     /**
      * Configuration information for the hours of operation: day, start time, and end time.
-     * 
      */
     private final @Nullable List<HoursOfOperationConfig> config;
     /**
      * The description of the hours of operation.
-     * 
      */
     private final @Nullable String description;
     /**
      * The Amazon Resource Name (ARN) for the hours of operation.
-     * 
      */
     private final @Nullable String hoursOfOperationArn;
     /**
      * The identifier of the Amazon Connect instance.
-     * 
      */
     private final @Nullable String instanceArn;
     /**
      * The name of the hours of operation.
-     * 
      */
     private final @Nullable String name;
     /**
      * One or more tags.
-     * 
      */
     private final @Nullable List<HoursOfOperationTag> tags;
     /**
      * The time zone of the hours of operation.
-     * 
      */
     private final @Nullable String timeZone;
 
@@ -70,49 +63,42 @@ public final class GetHoursOfOperationResult {
 
     /**
      * Configuration information for the hours of operation: day, start time, and end time.
-     * 
     */
     public List<HoursOfOperationConfig> getConfig() {
         return this.config == null ? List.of() : this.config;
     }
     /**
      * The description of the hours of operation.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) for the hours of operation.
-     * 
     */
     public Optional<String> getHoursOfOperationArn() {
         return Optional.ofNullable(this.hoursOfOperationArn);
     }
     /**
      * The identifier of the Amazon Connect instance.
-     * 
     */
     public Optional<String> getInstanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * The name of the hours of operation.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * One or more tags.
-     * 
     */
     public List<HoursOfOperationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The time zone of the hours of operation.
-     * 
     */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);

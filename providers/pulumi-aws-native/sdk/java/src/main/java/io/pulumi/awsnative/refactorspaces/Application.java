@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::RefactorSpaces::Application Resource Type
- * 
  */
 @ResourceType(type="aws-native:refactorspaces:Application")
 public class Application extends io.pulumi.resources.CustomResource {
@@ -89,14 +88,12 @@ public class Application extends io.pulumi.resources.CustomResource {
     }
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ApplicationTag.class})
     private Output</* @Nullable */ List<ApplicationTag>> tags;
 
     /**
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
-     * 
      */
     public Output</* @Nullable */ List<ApplicationTag>> getTags() {
         return this.tags;

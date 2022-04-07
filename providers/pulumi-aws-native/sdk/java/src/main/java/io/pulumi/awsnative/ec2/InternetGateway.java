@@ -16,35 +16,110 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::EC2::InternetGateway
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myInternetGateway = new AwsNative.EC2.InternetGateway("myInternetGateway", new AwsNative.EC2.InternetGatewayArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 new AwsNative.EC2.Inputs.InternetGatewayTagArgs
+ *                 {
+ *                     Key = "stack",
+ *                     Value = "production",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewInternetGateway(ctx, "myInternetGateway", &ec2.InternetGatewayArgs{
+ * 			Tags: []ec2.InternetGatewayTagArgs{
+ * 				&ec2.InternetGatewayTagArgs{
+ * 					Key:   pulumi.String("stack"),
+ * 					Value: pulumi.String("production"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myInternetGateway = new aws_native.ec2.InternetGateway("myInternetGateway", {tags: [{
+ *     key: "stack",
+ *     value: "production",
+ * }]});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_internet_gateway = aws_native.ec2.InternetGateway("myInternetGateway", tags=[aws_native.ec2.InternetGatewayTagArgs(
+ *     key="stack",
+ *     value="production",
+ * )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ec2:InternetGateway")
 public class InternetGateway extends io.pulumi.resources.CustomResource {
     /**
      * ID of internet gateway.
-     * 
      */
     @Export(name="internetGatewayId", type=String.class, parameters={})
     private Output<String> internetGatewayId;
 
     /**
      * @return ID of internet gateway.
-     * 
      */
     public Output<String> getInternetGatewayId() {
         return this.internetGatewayId;
     }
     /**
      * Any tags to assign to the internet gateway.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={InternetGatewayTag.class})
     private Output</* @Nullable */ List<InternetGatewayTag>> tags;
 
     /**
      * @return Any tags to assign to the internet gateway.
-     * 
      */
     public Output</* @Nullable */ List<InternetGatewayTag>> getTags() {
         return this.tags;

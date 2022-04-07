@@ -14,8 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Amazon EBS-specific block device mapping specifications.
- * 
+ * Amazon EBS-specific block device mapping specifications. 
  */
 public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
 
     /**
      * Use to configure delete on termination of the associated device.
-     * 
      */
     @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
@@ -34,7 +32,6 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
 
     /**
      * Use to configure device encryption.
-     * 
      */
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
@@ -45,7 +42,6 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
 
     /**
      * Use to configure device IOPS.
-     * 
      */
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
@@ -56,7 +52,6 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
 
     /**
      * Use to configure the KMS key to use when encrypting the device.
-     * 
      */
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
@@ -67,7 +62,6 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
 
     /**
      * The snapshot that defines the device contents.
-     * 
      */
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
@@ -78,7 +72,6 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
 
     /**
      * For GP3 volumes only – The throughput in MiB/s that the volume supports.
-     * 
      */
     @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
@@ -89,7 +82,6 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
 
     /**
      * Use to override the device's volume size.
-     * 
      */
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
@@ -100,7 +92,6 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
 
     /**
      * Use to override the device's volume type.
-     * 
      */
     @Import(name="volumeType")
       private final @Nullable Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationVolumeType> volumeType;

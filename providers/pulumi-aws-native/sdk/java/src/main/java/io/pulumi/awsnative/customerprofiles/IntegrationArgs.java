@@ -20,7 +20,6 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique name of the domain.
-     * 
      */
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
@@ -38,7 +37,6 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the ObjectType defined for the 3rd party data in Profile Service
-     * 
      */
     @Import(name="objectTypeName")
       private final @Nullable Output<String> objectTypeName;
@@ -49,7 +47,6 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The mapping between 3rd party event types and ObjectType names
-     * 
      */
     @Import(name="objectTypeNames")
       private final @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
@@ -60,7 +57,6 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags (keys and values) associated with the integration
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<IntegrationTagArgs>> tags;
@@ -71,7 +67,6 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of the S3 bucket or any other type of data source.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

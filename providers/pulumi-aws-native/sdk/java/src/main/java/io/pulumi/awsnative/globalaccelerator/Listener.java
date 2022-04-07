@@ -17,48 +17,41 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::GlobalAccelerator::Listener
- * 
  */
 @ResourceType(type="aws-native:globalaccelerator:Listener")
 public class Listener extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the accelerator.
-     * 
      */
     @Export(name="acceleratorArn", type=String.class, parameters={})
     private Output<String> acceleratorArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the accelerator.
-     * 
      */
     public Output<String> getAcceleratorArn() {
         return this.acceleratorArn;
     }
     /**
      * Client affinity lets you direct all requests from a user to the same endpoint.
-     * 
      */
     @Export(name="clientAffinity", type=ListenerClientAffinity.class, parameters={})
     private Output</* @Nullable */ ListenerClientAffinity> clientAffinity;
 
     /**
      * @return Client affinity lets you direct all requests from a user to the same endpoint.
-     * 
      */
     public Output</* @Nullable */ ListenerClientAffinity> getClientAffinity() {
         return this.clientAffinity;
     }
     /**
      * The Amazon Resource Name (ARN) of the listener.
-     * 
      */
     @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the listener.
-     * 
      */
     public Output<String> getListenerArn() {
         return this.listenerArn;
@@ -71,14 +64,12 @@ public class Listener extends io.pulumi.resources.CustomResource {
     }
     /**
      * The protocol for the listener.
-     * 
      */
     @Export(name="protocol", type=ListenerProtocol.class, parameters={})
     private Output<ListenerProtocol> protocol;
 
     /**
      * @return The protocol for the listener.
-     * 
      */
     public Output<ListenerProtocol> getProtocol() {
         return this.protocol;

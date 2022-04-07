@@ -22,7 +22,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether a profile should be created when data is received.
-     * 
      */
     @Import(name="allowProfileCreation")
       private final @Nullable Output<Boolean> allowProfileCreation;
@@ -33,7 +32,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the profile object type.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -44,7 +42,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique name of the domain.
-     * 
      */
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
@@ -55,7 +52,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default encryption key
-     * 
      */
     @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
@@ -66,7 +62,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default number of days until the data within the domain expires.
-     * 
      */
     @Import(name="expirationDays")
       private final @Nullable Output<Integer> expirationDays;
@@ -77,7 +72,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of the name and ObjectType field.
-     * 
      */
     @Import(name="fields")
       private final @Nullable Output<List<ObjectTypeFieldMapArgs>> fields;
@@ -88,7 +82,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of unique keys that can be used to map data to the profile.
-     * 
      */
     @Import(name="keys")
       private final @Nullable Output<List<ObjectTypeKeyMapArgs>> keys;
@@ -99,7 +92,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the profile object type.
-     * 
      */
     @Import(name="objectTypeName")
       private final @Nullable Output<String> objectTypeName;
@@ -110,7 +102,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags (keys and values) associated with the integration.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ObjectTypeTagArgs>> tags;
@@ -121,7 +112,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique identifier for the object template.
-     * 
      */
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;

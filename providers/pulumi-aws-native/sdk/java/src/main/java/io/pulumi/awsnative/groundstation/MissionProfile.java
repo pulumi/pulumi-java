@@ -18,7 +18,251 @@ import javax.annotation.Nullable;
 /**
  * AWS Ground Station Mission Profile resource type for CloudFormation.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myMissionProfile = new AwsNative.GroundStation.MissionProfile("myMissionProfile", new AwsNative.GroundStation.MissionProfileArgs
+ *         {
+ *             Name = "My Mission Profile",
+ *             ContactPrePassDurationSeconds = 120,
+ *             ContactPostPassDurationSeconds = 180,
+ *             MinimumViableContactDurationSeconds = 300,
+ *             TrackingConfigArn = "arn:aws:groundstation:us-east-2:1234567890:config/tracking/00000000-0000-0000-0000-000000000000",
+ *             DataflowEdges = 
+ *             {
+ *                 new AwsNative.GroundStation.Inputs.MissionProfileDataflowEdgeArgs
+ *                 {
+ *                     Source = "arn:aws:groundstation:us-east-2:1234567890:config/antenna-downlink/11111111-1111-1111-1111-111111111111",
+ *                     Destination = "arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/22222222-2222-2222-2222-222222222222",
+ *                 },
+ *                 new AwsNative.GroundStation.Inputs.MissionProfileDataflowEdgeArgs
+ *                 {
+ *                     Source = "arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/33333333-3333-3333-3333-333333333333",
+ *                     Destination = "arn:aws:groundstation:us-east-2:1234567890:config/antenna-uplink/44444444-4444-4444-4444-444444444444",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/groundstation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := groundstation.NewMissionProfile(ctx, "myMissionProfile", &groundstation.MissionProfileArgs{
+ * 			Name:                                pulumi.String("My Mission Profile"),
+ * 			ContactPrePassDurationSeconds:       pulumi.Int(120),
+ * 			ContactPostPassDurationSeconds:      pulumi.Int(180),
+ * 			MinimumViableContactDurationSeconds: pulumi.Int(300),
+ * 			TrackingConfigArn:                   pulumi.String("arn:aws:groundstation:us-east-2:1234567890:config/tracking/00000000-0000-0000-0000-000000000000"),
+ * 			DataflowEdges: groundstation.MissionProfileDataflowEdgeArray{
+ * 				&groundstation.MissionProfileDataflowEdgeArgs{
+ * 					Source:      pulumi.String("arn:aws:groundstation:us-east-2:1234567890:config/antenna-downlink/11111111-1111-1111-1111-111111111111"),
+ * 					Destination: pulumi.String("arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/22222222-2222-2222-2222-222222222222"),
+ * 				},
+ * 				&groundstation.MissionProfileDataflowEdgeArgs{
+ * 					Source:      pulumi.String("arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/33333333-3333-3333-3333-333333333333"),
+ * 					Destination: pulumi.String("arn:aws:groundstation:us-east-2:1234567890:config/antenna-uplink/44444444-4444-4444-4444-444444444444"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myMissionProfile = new aws_native.groundstation.MissionProfile("myMissionProfile", {
+ *     name: "My Mission Profile",
+ *     contactPrePassDurationSeconds: 120,
+ *     contactPostPassDurationSeconds: 180,
+ *     minimumViableContactDurationSeconds: 300,
+ *     trackingConfigArn: "arn:aws:groundstation:us-east-2:1234567890:config/tracking/00000000-0000-0000-0000-000000000000",
+ *     dataflowEdges: [
+ *         {
+ *             source: "arn:aws:groundstation:us-east-2:1234567890:config/antenna-downlink/11111111-1111-1111-1111-111111111111",
+ *             destination: "arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/22222222-2222-2222-2222-222222222222",
+ *         },
+ *         {
+ *             source: "arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/33333333-3333-3333-3333-333333333333",
+ *             destination: "arn:aws:groundstation:us-east-2:1234567890:config/antenna-uplink/44444444-4444-4444-4444-444444444444",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_mission_profile = aws_native.groundstation.MissionProfile("myMissionProfile",
+ *     name="My Mission Profile",
+ *     contact_pre_pass_duration_seconds=120,
+ *     contact_post_pass_duration_seconds=180,
+ *     minimum_viable_contact_duration_seconds=300,
+ *     tracking_config_arn="arn:aws:groundstation:us-east-2:1234567890:config/tracking/00000000-0000-0000-0000-000000000000",
+ *     dataflow_edges=[
+ *         aws_native.groundstation.MissionProfileDataflowEdgeArgs(
+ *             source="arn:aws:groundstation:us-east-2:1234567890:config/antenna-downlink/11111111-1111-1111-1111-111111111111",
+ *             destination="arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/22222222-2222-2222-2222-222222222222",
+ *         ),
+ *         aws_native.groundstation.MissionProfileDataflowEdgeArgs(
+ *             source="arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/33333333-3333-3333-3333-333333333333",
+ *             destination="arn:aws:groundstation:us-east-2:1234567890:config/antenna-uplink/44444444-4444-4444-4444-444444444444",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myMissionProfile = new AwsNative.GroundStation.MissionProfile("myMissionProfile", new AwsNative.GroundStation.MissionProfileArgs
+ *         {
+ *             Name = "Mission Profile",
+ *             ContactPrePassDurationSeconds = 120,
+ *             ContactPostPassDurationSeconds = 180,
+ *             MinimumViableContactDurationSeconds = 300,
+ *             TrackingConfigArn = "arn:aws:groundstation:us-east-2:1234567890:config/tracking/00000000-0000-0000-0000-000000000000",
+ *             DataflowEdges = 
+ *             {
+ *                 new AwsNative.GroundStation.Inputs.MissionProfileDataflowEdgeArgs
+ *                 {
+ *                     Source = "arn:aws:groundstation:us-east-2:1234567890:config/antenna-downlink/11111111-1111-1111-1111-111111111111",
+ *                     Destination = "arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/22222222-2222-2222-2222-222222222222",
+ *                 },
+ *                 new AwsNative.GroundStation.Inputs.MissionProfileDataflowEdgeArgs
+ *                 {
+ *                     Source = "arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/33333333-3333-3333-3333-333333333333",
+ *                     Destination = "arn:aws:groundstation:us-east-2:1234567890:config/antenna-uplink/44444444-4444-4444-4444-444444444444",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/groundstation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := groundstation.NewMissionProfile(ctx, "myMissionProfile", &groundstation.MissionProfileArgs{
+ * 			Name:                                pulumi.String("Mission Profile"),
+ * 			ContactPrePassDurationSeconds:       pulumi.Int(120),
+ * 			ContactPostPassDurationSeconds:      pulumi.Int(180),
+ * 			MinimumViableContactDurationSeconds: pulumi.Int(300),
+ * 			TrackingConfigArn:                   pulumi.String("arn:aws:groundstation:us-east-2:1234567890:config/tracking/00000000-0000-0000-0000-000000000000"),
+ * 			DataflowEdges: groundstation.MissionProfileDataflowEdgeArray{
+ * 				&groundstation.MissionProfileDataflowEdgeArgs{
+ * 					Source:      pulumi.String("arn:aws:groundstation:us-east-2:1234567890:config/antenna-downlink/11111111-1111-1111-1111-111111111111"),
+ * 					Destination: pulumi.String("arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/22222222-2222-2222-2222-222222222222"),
+ * 				},
+ * 				&groundstation.MissionProfileDataflowEdgeArgs{
+ * 					Source:      pulumi.String("arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/33333333-3333-3333-3333-333333333333"),
+ * 					Destination: pulumi.String("arn:aws:groundstation:us-east-2:1234567890:config/antenna-uplink/44444444-4444-4444-4444-444444444444"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myMissionProfile = new aws_native.groundstation.MissionProfile("myMissionProfile", {
+ *     name: "Mission Profile",
+ *     contactPrePassDurationSeconds: 120,
+ *     contactPostPassDurationSeconds: 180,
+ *     minimumViableContactDurationSeconds: 300,
+ *     trackingConfigArn: "arn:aws:groundstation:us-east-2:1234567890:config/tracking/00000000-0000-0000-0000-000000000000",
+ *     dataflowEdges: [
+ *         {
+ *             source: "arn:aws:groundstation:us-east-2:1234567890:config/antenna-downlink/11111111-1111-1111-1111-111111111111",
+ *             destination: "arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/22222222-2222-2222-2222-222222222222",
+ *         },
+ *         {
+ *             source: "arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/33333333-3333-3333-3333-333333333333",
+ *             destination: "arn:aws:groundstation:us-east-2:1234567890:config/antenna-uplink/44444444-4444-4444-4444-444444444444",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_mission_profile = aws_native.groundstation.MissionProfile("myMissionProfile",
+ *     name="Mission Profile",
+ *     contact_pre_pass_duration_seconds=120,
+ *     contact_post_pass_duration_seconds=180,
+ *     minimum_viable_contact_duration_seconds=300,
+ *     tracking_config_arn="arn:aws:groundstation:us-east-2:1234567890:config/tracking/00000000-0000-0000-0000-000000000000",
+ *     dataflow_edges=[
+ *         aws_native.groundstation.MissionProfileDataflowEdgeArgs(
+ *             source="arn:aws:groundstation:us-east-2:1234567890:config/antenna-downlink/11111111-1111-1111-1111-111111111111",
+ *             destination="arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/22222222-2222-2222-2222-222222222222",
+ *         ),
+ *         aws_native.groundstation.MissionProfileDataflowEdgeArgs(
+ *             source="arn:aws:groundstation:us-east-2:1234567890:config/dataflow-endpoint/33333333-3333-3333-3333-333333333333",
+ *             destination="arn:aws:groundstation:us-east-2:1234567890:config/antenna-uplink/44444444-4444-4444-4444-444444444444",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:groundstation:MissionProfile")
@@ -31,28 +275,24 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
     }
     /**
      * Post-pass time needed after the contact.
-     * 
      */
     @Export(name="contactPostPassDurationSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> contactPostPassDurationSeconds;
 
     /**
      * @return Post-pass time needed after the contact.
-     * 
      */
     public Output</* @Nullable */ Integer> getContactPostPassDurationSeconds() {
         return this.contactPostPassDurationSeconds;
     }
     /**
      * Pre-pass time needed before the contact.
-     * 
      */
     @Export(name="contactPrePassDurationSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> contactPrePassDurationSeconds;
 
     /**
      * @return Pre-pass time needed before the contact.
-     * 
      */
     public Output</* @Nullable */ Integer> getContactPrePassDurationSeconds() {
         return this.contactPrePassDurationSeconds;
@@ -65,28 +305,24 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
     }
     /**
      * Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
-     * 
      */
     @Export(name="minimumViableContactDurationSeconds", type=Integer.class, parameters={})
     private Output<Integer> minimumViableContactDurationSeconds;
 
     /**
      * @return Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
-     * 
      */
     public Output<Integer> getMinimumViableContactDurationSeconds() {
         return this.minimumViableContactDurationSeconds;
     }
     /**
      * A name used to identify a mission profile.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return A name used to identify a mission profile.
-     * 
      */
     public Output<String> getName() {
         return this.name;

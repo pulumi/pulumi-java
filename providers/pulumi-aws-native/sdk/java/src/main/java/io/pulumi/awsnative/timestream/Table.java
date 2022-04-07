@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::Timestream::Table resource creates a Timestream Table.
- * 
  */
 @ResourceType(type="aws-native:timestream:Table")
 public class Table extends io.pulumi.resources.CustomResource {
@@ -29,84 +28,72 @@ public class Table extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name for the database which the table to be created belongs to.
-     * 
      */
     @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
      * @return The name for the database which the table to be created belongs to.
-     * 
      */
     public Output<String> getDatabaseName() {
         return this.databaseName;
     }
     /**
      * The properties that determine whether magnetic store writes are enabled.
-     * 
      */
     @Export(name="magneticStoreWriteProperties", type=MagneticStoreWritePropertiesProperties.class, parameters={})
     private Output</* @Nullable */ MagneticStoreWritePropertiesProperties> magneticStoreWriteProperties;
 
     /**
      * @return The properties that determine whether magnetic store writes are enabled.
-     * 
      */
     public Output</* @Nullable */ MagneticStoreWritePropertiesProperties> getMagneticStoreWriteProperties() {
         return this.magneticStoreWriteProperties;
     }
     /**
      * The table name exposed as a read-only attribute.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The table name exposed as a read-only attribute.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The retention duration of the memory store and the magnetic store.
-     * 
      */
     @Export(name="retentionProperties", type=RetentionPropertiesProperties.class, parameters={})
     private Output</* @Nullable */ RetentionPropertiesProperties> retentionProperties;
 
     /**
      * @return The retention duration of the memory store and the magnetic store.
-     * 
      */
     public Output</* @Nullable */ RetentionPropertiesProperties> getRetentionProperties() {
         return this.retentionProperties;
     }
     /**
      * The name for the table. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
-     * 
      */
     @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
     /**
      * @return The name for the table. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
-     * 
      */
     public Output</* @Nullable */ String> getTableName() {
         return this.tableName;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={TableTag.class})
     private Output</* @Nullable */ List<TableTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<TableTag>> getTags() {
         return this.tags;

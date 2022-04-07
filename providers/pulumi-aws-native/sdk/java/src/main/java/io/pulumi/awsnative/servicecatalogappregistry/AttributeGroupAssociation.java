@@ -13,20 +13,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema for AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation.
- * 
  */
 @ResourceType(type="aws-native:servicecatalogappregistry:AttributeGroupAssociation")
 public class AttributeGroupAssociation extends io.pulumi.resources.CustomResource {
     /**
      * The name or the Id of the Application.
-     * 
      */
     @Export(name="application", type=String.class, parameters={})
     private Output<String> application;
 
     /**
      * @return The name or the Id of the Application.
-     * 
      */
     public Output<String> getApplication() {
         return this.application;
@@ -39,14 +36,12 @@ public class AttributeGroupAssociation extends io.pulumi.resources.CustomResourc
     }
     /**
      * The name or the Id of the AttributeGroup.
-     * 
      */
     @Export(name="attributeGroup", type=String.class, parameters={})
     private Output<String> attributeGroup;
 
     /**
      * @return The name or the Id of the AttributeGroup.
-     * 
      */
     public Output<String> getAttributeGroup() {
         return this.attributeGroup;

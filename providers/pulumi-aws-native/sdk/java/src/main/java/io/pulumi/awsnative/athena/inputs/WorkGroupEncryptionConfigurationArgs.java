@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * If query results are encrypted in Amazon S3, indicates the encryption option used (for example, SSE-KMS or CSE-KMS) and key information.
- * 
  */
 public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -18,7 +18,6 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Findings filter description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Findings filter action.
-     * 
      */
     @Import(name="filterAction", required=true)
       private final Output<FilterAction> filterAction;
@@ -40,7 +38,6 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Findings filter criteria.
-     * 
      */
     @Import(name="filterCriteria", required=true)
       private final Output<FilterCriteriaArgs> filterCriteria;
@@ -51,7 +48,6 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Findings filter name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

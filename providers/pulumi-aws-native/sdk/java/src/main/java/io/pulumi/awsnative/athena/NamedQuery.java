@@ -14,91 +14,229 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::Athena::NamedQuery
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var athenaNamedQuery = new AwsNative.Athena.NamedQuery("athenaNamedQuery", new AwsNative.Athena.NamedQueryArgs
+ *         {
+ *             Database = "swfnetadata",
+ *             Description = "A query that selects all aggregated data",
+ *             Name = "MostExpensiveWorkflow",
+ *             QueryString = "SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/athena"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := athena.NewNamedQuery(ctx, "athenaNamedQuery", &athena.NamedQueryArgs{
+ * 			Database:    pulumi.String("swfnetadata"),
+ * 			Description: pulumi.String("A query that selects all aggregated data"),
+ * 			Name:        pulumi.String("MostExpensiveWorkflow"),
+ * 			QueryString: pulumi.String("SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const athenaNamedQuery = new aws_native.athena.NamedQuery("athenaNamedQuery", {
+ *     database: "swfnetadata",
+ *     description: "A query that selects all aggregated data",
+ *     name: "MostExpensiveWorkflow",
+ *     queryString: "SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * athena_named_query = aws_native.athena.NamedQuery("athenaNamedQuery",
+ *     database="swfnetadata",
+ *     description="A query that selects all aggregated data",
+ *     name="MostExpensiveWorkflow",
+ *     query_string="SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var athenaNamedQuery = new AwsNative.Athena.NamedQuery("athenaNamedQuery", new AwsNative.Athena.NamedQueryArgs
+ *         {
+ *             Database = "swfnetadata",
+ *             Description = "A query that selects all aggregated data",
+ *             Name = "MostExpensiveWorkflow",
+ *             QueryString = "SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/athena"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := athena.NewNamedQuery(ctx, "athenaNamedQuery", &athena.NamedQueryArgs{
+ * 			Database:    pulumi.String("swfnetadata"),
+ * 			Description: pulumi.String("A query that selects all aggregated data"),
+ * 			Name:        pulumi.String("MostExpensiveWorkflow"),
+ * 			QueryString: pulumi.String("SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const athenaNamedQuery = new aws_native.athena.NamedQuery("athenaNamedQuery", {
+ *     database: "swfnetadata",
+ *     description: "A query that selects all aggregated data",
+ *     name: "MostExpensiveWorkflow",
+ *     queryString: "SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * athena_named_query = aws_native.athena.NamedQuery("athenaNamedQuery",
+ *     database="swfnetadata",
+ *     description="A query that selects all aggregated data",
+ *     name="MostExpensiveWorkflow",
+ *     query_string="SELECT workflowname, AVG(activitytaskstarted) AS AverageWorkflow FROM swfmetadata WHERE year='17' AND GROUP BY workflowname ORDER BY AverageWorkflow DESC LIMIT 10")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:athena:NamedQuery")
 public class NamedQuery extends io.pulumi.resources.CustomResource {
     /**
      * The database to which the query belongs.
-     * 
      */
     @Export(name="database", type=String.class, parameters={})
     private Output<String> database;
 
     /**
      * @return The database to which the query belongs.
-     * 
      */
     public Output<String> getDatabase() {
         return this.database;
     }
     /**
      * The query description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The query description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The query name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The query name.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The unique ID of the query.
-     * 
      */
     @Export(name="namedQueryId", type=String.class, parameters={})
     private Output<String> namedQueryId;
 
     /**
      * @return The unique ID of the query.
-     * 
      */
     public Output<String> getNamedQueryId() {
         return this.namedQueryId;
     }
     /**
      * The contents of the query with all query statements.
-     * 
      */
     @Export(name="queryString", type=String.class, parameters={})
     private Output<String> queryString;
 
     /**
      * @return The contents of the query with all query statements.
-     * 
      */
     public Output<String> getQueryString() {
         return this.queryString;
     }
     /**
      * The name of the workgroup that contains the named query.
-     * 
      */
     @Export(name="workGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> workGroup;
 
     /**
      * @return The name of the workgroup that contains the named query.
-     * 
      */
     public Output</* @Nullable */ String> getWorkGroup() {
         return this.workGroup;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectorProfileDatadogConnectorProfileProperties {
     /**
      * The location of the Datadog resource
-     * 
      */
     private final String instanceUrl;
 
@@ -22,7 +21,6 @@ public final class ConnectorProfileDatadogConnectorProfileProperties {
 
     /**
      * The location of the Datadog resource
-     * 
     */
     public String getInstanceUrl() {
         return this.instanceUrl;

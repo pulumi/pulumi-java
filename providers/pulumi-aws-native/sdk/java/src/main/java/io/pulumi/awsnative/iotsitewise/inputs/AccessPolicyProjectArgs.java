@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A project resource.
- * 
  */
 public final class AccessPolicyProjectArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AccessPolicyProjectArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ID of the project.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

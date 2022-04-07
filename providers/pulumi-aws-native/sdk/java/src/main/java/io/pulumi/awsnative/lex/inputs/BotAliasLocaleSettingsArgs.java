@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * You can use this parameter to specify a specific Lambda function to run different functions in different locales.
- * 
  */
 public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class BotAliasLocaleSettingsArgs extends io.pulumi.resources.Resour
 
     /**
      * Whether the Lambda code hook is enabled
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;

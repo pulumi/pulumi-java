@@ -15,7 +15,6 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
 
     /**
      * The API tokens used by Dynatrace API to authenticate various API calls.
-     * 
      */
     @Import(name="apiToken", required=true)
       private final Output<String> apiToken;

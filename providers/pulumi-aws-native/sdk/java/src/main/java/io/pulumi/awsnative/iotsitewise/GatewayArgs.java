@@ -20,7 +20,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of gateway capability summaries that each contain a namespace and status.
-     * 
      */
     @Import(name="gatewayCapabilitySummaries")
       private final @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
@@ -31,7 +30,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique, friendly name for the gateway.
-     * 
      */
     @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
@@ -42,7 +40,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The gateway's platform. You can only specify one platform in a gateway.
-     * 
      */
     @Import(name="gatewayPlatform", required=true)
       private final Output<GatewayPlatformArgs> gatewayPlatform;
@@ -53,7 +50,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the gateway.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<GatewayTagArgs>> tags;

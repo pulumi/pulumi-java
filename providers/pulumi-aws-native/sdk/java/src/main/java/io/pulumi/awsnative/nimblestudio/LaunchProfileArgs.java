@@ -19,7 +19,6 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>The description.</p>
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +30,6 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * <p>Specifies the IDs of the EC2 subnets where streaming sessions will be accessible from.
      *             These subnets must support the specified instance types. </p>
-     * 
      */
     @Import(name="ec2SubnetIds", required=true)
       private final Output<List<String>> ec2SubnetIds;
@@ -43,7 +41,6 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * <p>The version number of the protocol that is used by the launch profile. The only valid
      *             version is "2021-03-31".</p>
-     * 
      */
     @Import(name="launchProfileProtocolVersions", required=true)
       private final Output<List<String>> launchProfileProtocolVersions;
@@ -54,7 +51,6 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>The name for the launch profile.</p>
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -73,7 +69,6 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * <p>Unique identifiers for a collection of studio components that can be used with this
      *             launch profile.</p>
-     * 
      */
     @Import(name="studioComponentIds", required=true)
       private final Output<List<String>> studioComponentIds;
@@ -84,7 +79,6 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>The studio ID. </p>
-     * 
      */
     @Import(name="studioId", required=true)
       private final Output<String> studioId;

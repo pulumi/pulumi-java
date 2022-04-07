@@ -17,35 +17,382 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataBrew::Recipe.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testDataBrewRecipe = new AwsNative.DataBrew.Recipe("testDataBrewRecipe", new AwsNative.DataBrew.RecipeArgs
+ *         {
+ *             Name = "recipe-name",
+ *             Description = "This is the recipe description.",
+ *             Steps = 
+ *             {
+ *                 new AwsNative.DataBrew.Inputs.RecipeStepArgs
+ *                 {
+ *                     Action = new AwsNative.DataBrew.Inputs.RecipeActionArgs
+ *                     {
+ *                         Operation = "EXTRACT_PATTERN",
+ *                         Parameters = 
+ *                         {
+ *                             { "sourceColumn", "Consulate" },
+ *                             { "pattern", "A" },
+ *                             { "targetColumn", "extract_pattern" },
+ *                         },
+ *                     },
+ *                     ConditionExpressions = 
+ *                     {
+ *                         new AwsNative.DataBrew.Inputs.RecipeConditionExpressionArgs
+ *                         {
+ *                             Condition = "LESS_THAN_EQUAL",
+ *                             Value = "5",
+ *                             TargetColumn = "Target",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.DataBrew.Inputs.RecipeTagArgs
+ *                 {
+ *                     Key = "key00AtCreate",
+ *                     Value = "value001AtCreate",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/databrew"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databrew.NewRecipe(ctx, "testDataBrewRecipe", &databrew.RecipeArgs{
+ * 			Name:        pulumi.String("recipe-name"),
+ * 			Description: pulumi.String("This is the recipe description."),
+ * 			Steps: databrew.RecipeStepArray{
+ * 				&databrew.RecipeStepArgs{
+ * 					Action: &databrew.RecipeActionArgs{
+ * 						Operation: pulumi.String("EXTRACT_PATTERN"),
+ * 						Parameters: pulumi.Any{
+ * 							SourceColumn: pulumi.String("Consulate"),
+ * 							Pattern:      pulumi.String("A"),
+ * 							TargetColumn: pulumi.String("extract_pattern"),
+ * 						},
+ * 					},
+ * 					ConditionExpressions: databrew.RecipeConditionExpressionArray{
+ * 						&databrew.RecipeConditionExpressionArgs{
+ * 							Condition:    pulumi.String("LESS_THAN_EQUAL"),
+ * 							Value:        pulumi.String("5"),
+ * 							TargetColumn: pulumi.String("Target"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: []databrew.RecipeTagArgs{
+ * 				&databrew.RecipeTagArgs{
+ * 					Key:   pulumi.String("key00AtCreate"),
+ * 					Value: pulumi.String("value001AtCreate"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testDataBrewRecipe = new aws_native.databrew.Recipe("testDataBrewRecipe", {
+ *     name: "recipe-name",
+ *     description: "This is the recipe description.",
+ *     steps: [{
+ *         action: {
+ *             operation: "EXTRACT_PATTERN",
+ *             parameters: {
+ *                 sourceColumn: "Consulate",
+ *                 pattern: "A",
+ *                 targetColumn: "extract_pattern",
+ *             },
+ *         },
+ *         conditionExpressions: [{
+ *             condition: "LESS_THAN_EQUAL",
+ *             value: 5,
+ *             targetColumn: "Target",
+ *         }],
+ *     }],
+ *     tags: [{
+ *         key: "key00AtCreate",
+ *         value: "value001AtCreate",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_data_brew_recipe = aws_native.databrew.Recipe("testDataBrewRecipe",
+ *     name="recipe-name",
+ *     description="This is the recipe description.",
+ *     steps=[aws_native.databrew.RecipeStepArgs(
+ *         action=aws_native.databrew.RecipeActionArgs(
+ *             operation="EXTRACT_PATTERN",
+ *             parameters={
+ *                 "sourceColumn": "Consulate",
+ *                 "pattern": "A",
+ *                 "targetColumn": "extract_pattern",
+ *             },
+ *         ),
+ *         condition_expressions=[aws_native.databrew.RecipeConditionExpressionArgs(
+ *             condition="LESS_THAN_EQUAL",
+ *             value="5",
+ *             target_column="Target",
+ *         )],
+ *     )],
+ *     tags=[aws_native.databrew.RecipeTagArgs(
+ *         key="key00AtCreate",
+ *         value="value001AtCreate",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myDataBrewRecipe = new AwsNative.DataBrew.Recipe("myDataBrewRecipe", new AwsNative.DataBrew.RecipeArgs
+ *         {
+ *             Name = "na-recipe-cf-test",
+ *             Description = "This is the recipe description.",
+ *             Steps = 
+ *             {
+ *                 new AwsNative.DataBrew.Inputs.RecipeStepArgs
+ *                 {
+ *                     Action = new AwsNative.DataBrew.Inputs.RecipeActionArgs
+ *                     {
+ *                         Operation = "EXTRACT_PATTERN",
+ *                         Parameters = 
+ *                         {
+ *                             { "sourceColumn", "Consulate" },
+ *                             { "pattern", "A" },
+ *                             { "targetColumn", "extract_pattern" },
+ *                         },
+ *                     },
+ *                     ConditionExpressions = 
+ *                     {
+ *                         new AwsNative.DataBrew.Inputs.RecipeConditionExpressionArgs
+ *                         {
+ *                             Condition = "LESS_THAN",
+ *                             ConditionValue = "2",
+ *                             TargetColumn = "target",
+ *                         },
+ *                         new AwsNative.DataBrew.Inputs.RecipeConditionExpressionArgs
+ *                         {
+ *                             Condition = "GREATER_THAN",
+ *                             Value = "0",
+ *                             TargetColumn = "target",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.DataBrew.Inputs.RecipeTagArgs
+ *                 {
+ *                     Key = "key00AtCreate",
+ *                     Value = "value001AtCreate",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/databrew"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databrew.NewRecipe(ctx, "myDataBrewRecipe", &databrew.RecipeArgs{
+ * 			Name:        pulumi.String("na-recipe-cf-test"),
+ * 			Description: pulumi.String("This is the recipe description."),
+ * 			Steps: databrew.RecipeStepArray{
+ * 				&databrew.RecipeStepArgs{
+ * 					Action: &databrew.RecipeActionArgs{
+ * 						Operation: pulumi.String("EXTRACT_PATTERN"),
+ * 						Parameters: pulumi.Any{
+ * 							SourceColumn: pulumi.String("Consulate"),
+ * 							Pattern:      pulumi.String("A"),
+ * 							TargetColumn: pulumi.String("extract_pattern"),
+ * 						},
+ * 					},
+ * 					ConditionExpressions: databrew.RecipeConditionExpressionArray{
+ * 						&databrew.RecipeConditionExpressionArgs{
+ * 							Condition:      pulumi.String("LESS_THAN"),
+ * 							ConditionValue: "2",
+ * 							TargetColumn:   pulumi.String("target"),
+ * 						},
+ * 						&databrew.RecipeConditionExpressionArgs{
+ * 							Condition:    pulumi.String("GREATER_THAN"),
+ * 							Value:        pulumi.String("0"),
+ * 							TargetColumn: pulumi.String("target"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: []databrew.RecipeTagArgs{
+ * 				&databrew.RecipeTagArgs{
+ * 					Key:   pulumi.String("key00AtCreate"),
+ * 					Value: pulumi.String("value001AtCreate"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myDataBrewRecipe = new aws_native.databrew.Recipe("myDataBrewRecipe", {
+ *     name: "na-recipe-cf-test",
+ *     description: "This is the recipe description.",
+ *     steps: [{
+ *         action: {
+ *             operation: "EXTRACT_PATTERN",
+ *             parameters: {
+ *                 sourceColumn: "Consulate",
+ *                 pattern: "A",
+ *                 targetColumn: "extract_pattern",
+ *             },
+ *         },
+ *         conditionExpressions: [
+ *             {
+ *                 condition: "LESS_THAN",
+ *                 conditionValue: "2",
+ *                 targetColumn: "target",
+ *             },
+ *             {
+ *                 condition: "GREATER_THAN",
+ *                 value: "0",
+ *                 targetColumn: "target",
+ *             },
+ *         ],
+ *     }],
+ *     tags: [{
+ *         key: "key00AtCreate",
+ *         value: "value001AtCreate",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_data_brew_recipe = aws_native.databrew.Recipe("myDataBrewRecipe",
+ *     name="na-recipe-cf-test",
+ *     description="This is the recipe description.",
+ *     steps=[aws_native.databrew.RecipeStepArgs(
+ *         action=aws_native.databrew.RecipeActionArgs(
+ *             operation="EXTRACT_PATTERN",
+ *             parameters={
+ *                 "sourceColumn": "Consulate",
+ *                 "pattern": "A",
+ *                 "targetColumn": "extract_pattern",
+ *             },
+ *         ),
+ *         condition_expressions=[
+ *             aws_native.databrew.RecipeConditionExpressionArgs(
+ *                 condition="LESS_THAN",
+ *                 condition_value="2",
+ *                 target_column="target",
+ *             ),
+ *             aws_native.databrew.RecipeConditionExpressionArgs(
+ *                 condition="GREATER_THAN",
+ *                 value="0",
+ *                 target_column="target",
+ *             ),
+ *         ],
+ *     )],
+ *     tags=[aws_native.databrew.RecipeTagArgs(
+ *         key="key00AtCreate",
+ *         value="value001AtCreate",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:databrew:Recipe")
 public class Recipe extends io.pulumi.resources.CustomResource {
     /**
      * Description of the recipe
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the recipe
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Recipe name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Recipe name
-     * 
      */
     public Output<String> getName() {
         return this.name;

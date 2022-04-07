@@ -14,7 +14,6 @@ public final class GetTopicRuleDestinationArgs extends io.pulumi.resources.Invok
 
     /**
      * Amazon Resource Name (ARN).
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

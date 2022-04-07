@@ -20,7 +20,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
-     * 
      */
     @Import(name="alarmName")
       private final @Nullable Output<String> alarmName;
@@ -31,7 +30,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
-     * 
      */
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
@@ -42,7 +40,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
-     * 
      */
     @Import(name="contactProtocols")
       private final @Nullable Output<List<String>> contactProtocols;
@@ -53,7 +50,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
-     * 
      */
     @Import(name="datapointsToAlarm")
       private final @Nullable Output<Integer> datapointsToAlarm;
@@ -64,7 +60,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
-     * 
      */
     @Import(name="evaluationPeriods", required=true)
       private final Output<Integer> evaluationPeriods;
@@ -75,7 +70,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the metric to associate with the alarm.
-     * 
      */
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
@@ -86,7 +80,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The validation status of the SSL/TLS certificate.
-     * 
      */
     @Import(name="monitoredResourceName", required=true)
       private final Output<String> monitoredResourceName;
@@ -97,7 +90,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
-     * 
      */
     @Import(name="notificationEnabled")
       private final @Nullable Output<Boolean> notificationEnabled;
@@ -108,7 +100,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The alarm states that trigger a notification.
-     * 
      */
     @Import(name="notificationTriggers")
       private final @Nullable Output<List<String>> notificationTriggers;
@@ -119,7 +110,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value against which the specified statistic is compared.
-     * 
      */
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
@@ -130,7 +120,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sets how this alarm will handle missing data points.
-     * 
      */
     @Import(name="treatMissingData")
       private final @Nullable Output<String> treatMissingData;

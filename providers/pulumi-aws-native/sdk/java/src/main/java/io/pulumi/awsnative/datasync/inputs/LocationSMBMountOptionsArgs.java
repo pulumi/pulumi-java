@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The mount options used by DataSync to access the SMB server.
- * 
  */
 public final class LocationSMBMountOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LocationSMBMountOptionsArgs extends io.pulumi.resources.Resou
 
     /**
      * The specific SMB version that you want DataSync to use to mount your SMB share.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<LocationSMBMountOptionsVersion> version;

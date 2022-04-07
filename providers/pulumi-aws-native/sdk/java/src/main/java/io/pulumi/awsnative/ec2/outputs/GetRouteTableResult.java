@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class GetRouteTableResult {
     /**
      * The route table ID.
-     * 
      */
     private final @Nullable String routeTableId;
     /**
      * Any tags assigned to the route table.
-     * 
      */
     private final @Nullable List<RouteTableTag> tags;
 
@@ -34,14 +32,12 @@ public final class GetRouteTableResult {
 
     /**
      * The route table ID.
-     * 
     */
     public Optional<String> getRouteTableId() {
         return Optional.ofNullable(this.routeTableId);
     }
     /**
      * Any tags assigned to the route table.
-     * 
     */
     public List<RouteTableTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

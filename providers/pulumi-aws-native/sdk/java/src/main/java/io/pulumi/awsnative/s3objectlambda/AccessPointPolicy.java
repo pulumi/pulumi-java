@@ -14,34 +14,29 @@ import javax.annotation.Nullable;
 
 /**
  * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
- * 
  */
 @ResourceType(type="aws-native:s3objectlambda:AccessPointPolicy")
 public class AccessPointPolicy extends io.pulumi.resources.CustomResource {
     /**
      * The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
-     * 
      */
     @Export(name="objectLambdaAccessPoint", type=String.class, parameters={})
     private Output<String> objectLambdaAccessPoint;
 
     /**
      * @return The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
-     * 
      */
     public Output<String> getObjectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;
     }
     /**
-     * A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
-     * 
+     * A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide. 
      */
     @Export(name="policyDocument", type=Object.class, parameters={})
     private Output<Object> policyDocument;
 
     /**
-     * @return A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
-     * 
+     * @return A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide. 
      */
     public Output<Object> getPolicyDocument() {
         return this.policyDocument;

@@ -19,7 +19,6 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
-     * 
      */
     @Import(name="connectionMode", required=true)
       private final Output<ConnectorProfileConnectionMode> connectionMode;
@@ -30,7 +29,6 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Connector specific configurations needed to create connector profile
-     * 
      */
     @Import(name="connectorProfileConfig")
       private final @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig;
@@ -41,7 +39,6 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The maximum number of items to retrieve in a single batch.
-     * 
      */
     @Import(name="connectorProfileName")
       private final @Nullable Output<String> connectorProfileName;
@@ -52,7 +49,6 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * List of Saas providers that need connector profile to be created
-     * 
      */
     @Import(name="connectorType", required=true)
       private final Output<ConnectorProfileConnectorType> connectorType;
@@ -63,7 +59,6 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
-     * 
      */
     @Import(name="kMSArn")
       private final @Nullable Output<String> kMSArn;

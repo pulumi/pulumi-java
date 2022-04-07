@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of client authentication used to connect to the Kafka cluster. Value NONE means that no client authentication is used.
-     * 
      */
     @EnumType
     public enum ConnectorKafkaClusterClientAuthenticationType {

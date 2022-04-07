@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies settings for the canary deployment in this stage.
- * 
  */
 public final class StageCanarySetting extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class StageCanarySetting extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identifier of the deployment that the stage points to.
-     * 
      */
     @Import(name="deploymentId")
       private final @Nullable String deploymentId;
@@ -34,7 +32,6 @@ public final class StageCanarySetting extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The percentage (0-100) of traffic diverted to a canary deployment.
-     * 
      */
     @Import(name="percentTraffic")
       private final @Nullable Double percentTraffic;
@@ -45,7 +42,6 @@ public final class StageCanarySetting extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values.
-     * 
      */
     @Import(name="stageVariableOverrides")
       private final @Nullable Object stageVariableOverrides;
@@ -56,7 +52,6 @@ public final class StageCanarySetting extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether the canary deployment uses the stage cache or not.
-     * 
      */
     @Import(name="useStageCache")
       private final @Nullable Boolean useStageCache;

@@ -19,7 +19,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A text description of the repository.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of external connections associated with the repository.
-     * 
      */
     @Import(name="externalConnections")
       private final @Nullable Output<List<String>> externalConnections;
@@ -41,7 +39,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The access control resource policy on the provided repository.
-     * 
      */
     @Import(name="permissionsPolicyDocument")
       private final @Nullable Output<Object> permissionsPolicyDocument;
@@ -52,7 +49,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the repository.
-     * 
      */
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
@@ -63,7 +59,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<RepositoryTagArgs>> tags;
@@ -74,7 +69,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of upstream repositories associated with the repository.
-     * 
      */
     @Import(name="upstreams")
       private final @Nullable Output<List<String>> upstreams;

@@ -25,7 +25,6 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<StorageLensTagArgs>> tags;

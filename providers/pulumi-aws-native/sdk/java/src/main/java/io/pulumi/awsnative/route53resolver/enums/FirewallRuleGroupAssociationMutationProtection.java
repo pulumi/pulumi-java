@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * MutationProtectionStatus
-     * 
      */
     @EnumType
     public enum FirewallRuleGroupAssociationMutationProtection {

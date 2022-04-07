@@ -17,20 +17,17 @@ import javax.annotation.Nullable;
 
 /**
  * Contains a list of IP addresses. This can be either IPV4 or IPV6. The list will be mutually
- * 
  */
 @ResourceType(type="aws-native:wafv2:IPSet")
 public class IPSet extends io.pulumi.resources.CustomResource {
     /**
      * List of IPAddresses.
-     * 
      */
     @Export(name="addresses", type=List.class, parameters={String.class})
     private Output<List<String>> addresses;
 
     /**
      * @return List of IPAddresses.
-     * 
      */
     public Output<List<String>> getAddresses() {
         return this.addresses;

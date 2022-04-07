@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details about delivering logs to Amazon S3.
- * 
  */
 public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the S3 bucket that is the destination for log delivery.
-     * 
      */
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
@@ -32,7 +30,6 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies whether the logs get sent to the specified Amazon S3 destination.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
@@ -43,7 +40,6 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
 
     /**
      * The S3 prefix that is the destination for log delivery.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;

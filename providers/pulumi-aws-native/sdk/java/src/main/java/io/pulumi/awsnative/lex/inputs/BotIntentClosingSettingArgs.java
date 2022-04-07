@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Response that Amazon Lex sends to the user when the intent is closed.
- * 
  */
 public final class BotIntentClosingSettingArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -17,7 +17,6 @@ public final class SamplingRuleRecord extends io.pulumi.resources.InvokeArgs {
 
     /**
      * When the rule was created, in Unix time seconds.
-     * 
      */
     @Import(name="createdAt")
       private final @Nullable String createdAt;
@@ -28,7 +27,6 @@ public final class SamplingRuleRecord extends io.pulumi.resources.InvokeArgs {
 
     /**
      * When the rule was modified, in Unix time seconds.
-     * 
      */
     @Import(name="modifiedAt")
       private final @Nullable String modifiedAt;

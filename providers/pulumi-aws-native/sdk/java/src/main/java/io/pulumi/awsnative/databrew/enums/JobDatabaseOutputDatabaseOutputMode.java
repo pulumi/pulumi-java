@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Database table name
-     * 
      */
     @EnumType
     public enum JobDatabaseOutputDatabaseOutputMode {

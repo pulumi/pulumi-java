@@ -15,19 +15,16 @@ import javax.annotation.Nullable;
 public final class GetConnectionResult {
     /**
      * The arn of the connection resource.
-     * 
      */
     private final @Nullable String arn;
     private final @Nullable AuthParametersProperties authParameters;
     private final @Nullable ConnectionAuthorizationType authorizationType;
     /**
      * Description of the connection.
-     * 
      */
     private final @Nullable String description;
     /**
      * The arn of the secrets manager secret created in the customer account.
-     * 
      */
     private final @Nullable String secretArn;
 
@@ -47,7 +44,6 @@ public final class GetConnectionResult {
 
     /**
      * The arn of the connection resource.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
@@ -60,14 +56,12 @@ public final class GetConnectionResult {
     }
     /**
      * Description of the connection.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The arn of the secrets manager secret created in the customer account.
-     * 
     */
     public Optional<String> getSecretArn() {
         return Optional.ofNullable(this.secretArn);

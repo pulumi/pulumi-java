@@ -23,7 +23,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The criteria that determine when and how a job abort takes place.
-     * 
      */
     @Import(name="abortConfig")
       private final @Nullable Output<AbortConfigPropertiesArgs> abortConfig;
@@ -34,7 +33,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the Job Template.
-     * 
      */
     @Import(name="description", required=true)
       private final Output<String> description;
@@ -45,7 +43,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The job document. Required if you don't specify a value for documentSource.
-     * 
      */
     @Import(name="document")
       private final @Nullable Output<String> document;
@@ -56,7 +53,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An S3 link to the job document to use in the template. Required if you don't specify a value for document.
-     * 
      */
     @Import(name="documentSource")
       private final @Nullable Output<String> documentSource;
@@ -67,7 +63,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional for copying a JobTemplate from a pre-existing Job configuration.
-     * 
      */
     @Import(name="jobArn")
       private final @Nullable Output<String> jobArn;
@@ -85,7 +80,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allows you to create a staged rollout of a job.
-     * 
      */
     @Import(name="jobExecutionsRolloutConfig")
       private final @Nullable Output<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig;
@@ -103,7 +97,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration for pre-signed S3 URLs.
-     * 
      */
     @Import(name="presignedUrlConfig")
       private final @Nullable Output<PresignedUrlConfigPropertiesArgs> presignedUrlConfig;
@@ -114,7 +107,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata that can be used to manage the JobTemplate.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<JobTemplateTagArgs>> tags;
@@ -125,7 +117,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the amount of time each device has to finish its execution of the job.
-     * 
      */
     @Import(name="timeoutConfig")
       private final @Nullable Output<TimeoutConfigPropertiesArgs> timeoutConfig;

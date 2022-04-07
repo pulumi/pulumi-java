@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Federation mode used with the Environment
-     * 
      */
     @EnumType
     public enum EnvironmentFederationMode {

@@ -19,8 +19,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     public static final DataCatalogArgs Empty = new DataCatalogArgs();
 
     /**
-     * A description of the data catalog to be created.
-     * 
+     * A description of the data catalog to be created. 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,8 +29,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
-     * 
+     * The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters. 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,8 +39,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
-     * 
+     * Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type. 
      */
     @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
@@ -52,8 +49,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A list of comma separated tags to add to the data catalog that is created.
-     * 
+     * A list of comma separated tags to add to the data catalog that is created. 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DataCatalogTagArgs>> tags;
@@ -63,8 +59,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
-     * 
+     * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore. 
      */
     @Import(name="type", required=true)
       private final Output<DataCatalogType> type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Operator used to aggregate metric values
-     * 
      */
     @EnumType
     public enum AnomalyDetectorMetricAggregationFunction {

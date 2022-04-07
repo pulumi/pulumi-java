@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies the key-value pair that are assigned to a file during the execution of a Tagging step.
- * 
  */
 public final class WorkflowS3TagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class WorkflowS3TagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name assigned to the tag that you create.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -30,7 +28,6 @@ public final class WorkflowS3TagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value that corresponds to the key.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

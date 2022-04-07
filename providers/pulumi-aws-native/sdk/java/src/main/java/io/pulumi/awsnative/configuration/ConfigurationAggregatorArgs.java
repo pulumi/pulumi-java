@@ -27,7 +27,6 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the aggregator.
-     * 
      */
     @Import(name="configurationAggregatorName")
       private final @Nullable Output<String> configurationAggregatorName;
@@ -45,7 +44,6 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
 
     /**
      * The tags for the configuration aggregator.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ConfigurationAggregatorTagArgs>> tags;

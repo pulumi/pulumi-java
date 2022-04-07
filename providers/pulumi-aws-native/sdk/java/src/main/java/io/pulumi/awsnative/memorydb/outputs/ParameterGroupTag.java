@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ParameterGroupTag {
     /**
      * The key for the tag. May not be null.
-     * 
      */
     private final String key;
     /**
      * The tag's value. May be null.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class ParameterGroupTag {
 
     /**
      * The key for the tag. May not be null.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The tag's value. May be null.
-     * 
     */
     public String getValue() {
         return this.value;

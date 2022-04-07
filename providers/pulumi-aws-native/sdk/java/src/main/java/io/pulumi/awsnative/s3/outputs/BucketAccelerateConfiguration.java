@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BucketAccelerateConfiguration {
     /**
      * Configures the transfer acceleration state for an Amazon S3 bucket.
-     * 
      */
     private final BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
 
@@ -22,7 +21,6 @@ public final class BucketAccelerateConfiguration {
 
     /**
      * Configures the transfer acceleration state for an Amazon S3 bucket.
-     * 
     */
     public BucketAccelerateConfigurationAccelerationStatus getAccelerationStatus() {
         return this.accelerationStatus;

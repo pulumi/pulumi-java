@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class AttributesItemProperties {
     /**
      * Name of the dataset field
-     * 
      */
     private final @Nullable String attributeName;
     /**
      * Data type of the field
-     * 
      */
     private final @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
 
@@ -33,14 +31,12 @@ public final class AttributesItemProperties {
 
     /**
      * Name of the dataset field
-     * 
     */
     public Optional<String> getAttributeName() {
         return Optional.ofNullable(this.attributeName);
     }
     /**
      * Data type of the field
-     * 
     */
     public Optional<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
         return Optional.ofNullable(this.attributeType);

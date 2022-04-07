@@ -17,8 +17,7 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
     public static final LoggingConfigurationFilterArgs Empty = new LoggingConfigurationFilterArgs();
 
     /**
-     * How to handle logs that satisfy the filter's conditions and requirement.
-     * 
+     * How to handle logs that satisfy the filter's conditions and requirement. 
      */
     @Import(name="behavior", required=true)
       private final Output<LoggingConfigurationFilterBehavior> behavior;
@@ -29,7 +28,6 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
 
     /**
      * Match conditions for the filter.
-     * 
      */
     @Import(name="conditions", required=true)
       private final Output<List<LoggingConfigurationConditionArgs>> conditions;
@@ -40,7 +38,6 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
 
     /**
      * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
-     * 
      */
     @Import(name="requirement", required=true)
       private final Output<LoggingConfigurationFilterRequirement> requirement;

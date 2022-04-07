@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Bot Alias enables you to change the version of a bot without updating applications that use the bot
- * 
  */
 @ResourceType(type="aws-native:lex:BotAlias")
 public class BotAlias extends io.pulumi.resources.CustomResource {
@@ -55,14 +54,12 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
     }
     /**
      * A list of tags to add to the bot alias.
-     * 
      */
     @Export(name="botAliasTags", type=List.class, parameters={BotAliasTag.class})
     private Output</* @Nullable */ List<BotAliasTag>> botAliasTags;
 
     /**
      * @return A list of tags to add to the bot alias.
-     * 
      */
     public Output</* @Nullable */ List<BotAliasTag>> getBotAliasTags() {
         return this.botAliasTags;
@@ -93,14 +90,12 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
     }
     /**
      * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
-     * 
      */
     @Export(name="sentimentAnalysisSettings", type=SentimentAnalysisSettingsProperties.class, parameters={})
     private Output</* @Nullable */ SentimentAnalysisSettingsProperties> sentimentAnalysisSettings;
 
     /**
      * @return Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
-     * 
      */
     public Output</* @Nullable */ SentimentAnalysisSettingsProperties> getSentimentAnalysisSettings() {
         return this.sentimentAnalysisSettings;

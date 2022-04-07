@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::Amplify::Branch resource creates a new branch within an app.
- * 
  */
 @ResourceType(type="aws-native:amplify:Branch")
 public class Branch extends io.pulumi.resources.CustomResource {

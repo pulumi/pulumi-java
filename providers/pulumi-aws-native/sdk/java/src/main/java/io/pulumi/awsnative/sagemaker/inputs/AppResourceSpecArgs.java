@@ -17,7 +17,6 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The instance type that the image version runs on.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<AppResourceSpecInstanceType> instanceType;
@@ -28,7 +27,6 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The ARN of the SageMaker image that the image version belongs to.
-     * 
      */
     @Import(name="sageMakerImageArn")
       private final @Nullable Output<String> sageMakerImageArn;
@@ -39,7 +37,6 @@ public final class AppResourceSpecArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The ARN of the image version created on the instance.
-     * 
      */
     @Import(name="sageMakerImageVersionArn")
       private final @Nullable Output<String> sageMakerImageVersionArn;

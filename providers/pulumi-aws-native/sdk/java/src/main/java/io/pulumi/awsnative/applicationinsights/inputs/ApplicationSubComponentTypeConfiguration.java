@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * One type sub component configurations for the component.
- * 
  */
 public final class ApplicationSubComponentTypeConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ApplicationSubComponentTypeConfiguration extends io.pulumi.re
 
     /**
      * The configuration settings of sub components.
-     * 
      */
     @Import(name="subComponentConfigurationDetails", required=true)
       private final ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails;
@@ -30,7 +28,6 @@ public final class ApplicationSubComponentTypeConfiguration extends io.pulumi.re
 
     /**
      * The sub component type.
-     * 
      */
     @Import(name="subComponentType", required=true)
       private final ApplicationSubComponentTypeConfigurationSubComponentType subComponentType;

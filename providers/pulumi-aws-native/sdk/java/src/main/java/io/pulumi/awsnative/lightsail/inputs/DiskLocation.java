@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Location of a resource.
- * 
  */
 public final class DiskLocation extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DiskLocation extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Availability Zone in which to create your disk. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
-     * 
      */
     @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
@@ -31,7 +29,6 @@ public final class DiskLocation extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Region Name in which to create your disk.
-     * 
      */
     @Import(name="regionName")
       private final @Nullable String regionName;

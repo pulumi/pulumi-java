@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The rule's stringified attribute.
-     * 
      */
     @EnumType
     public enum DevicePoolRuleAttribute {

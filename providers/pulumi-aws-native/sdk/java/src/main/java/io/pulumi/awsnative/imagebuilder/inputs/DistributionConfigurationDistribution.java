@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The distributions of the distribution configuration.
- * 
  */
 public final class DistributionConfigurationDistribution extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
 
     /**
      * The specific AMI settings (for example, launch permissions, AMI tags).
-     * 
      */
     @Import(name="amiDistributionConfiguration")
       private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration;
@@ -35,7 +33,6 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
 
     /**
      * Container distribution settings for encryption, licensing, and sharing in a specific Region.
-     * 
      */
     @Import(name="containerDistributionConfiguration")
       private final @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration;
@@ -46,7 +43,6 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
 
     /**
      * A group of launchTemplateConfiguration settings that apply to image distribution.
-     * 
      */
     @Import(name="launchTemplateConfigurations")
       private final @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations;
@@ -57,7 +53,6 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
 
     /**
      * The License Manager Configuration to associate with the AMI in the specified Region.
-     * 
      */
     @Import(name="licenseConfigurationArns")
       private final @Nullable List<String> licenseConfigurationArns;
@@ -68,7 +63,6 @@ public final class DistributionConfigurationDistribution extends io.pulumi.resou
 
     /**
      * region
-     * 
      */
     @Import(name="region", required=true)
       private final String region;

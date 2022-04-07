@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class GetAliasResult {
     /**
      * Unique alias ID
-     * 
      */
     private final @Nullable String aliasId;
     /**
      * A human-readable description of the alias.
-     * 
      */
     private final @Nullable String description;
     /**
      * A descriptive label that is associated with an alias. Alias names do not need to be unique.
-     * 
      */
     private final @Nullable String name;
     /**
      * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
-     * 
      */
     private final @Nullable AliasRoutingStrategy routingStrategy;
 
@@ -47,28 +43,24 @@ public final class GetAliasResult {
 
     /**
      * Unique alias ID
-     * 
     */
     public Optional<String> getAliasId() {
         return Optional.ofNullable(this.aliasId);
     }
     /**
      * A human-readable description of the alias.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A descriptive label that is associated with an alias. Alias names do not need to be unique.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
-     * 
     */
     public Optional<AliasRoutingStrategy> getRoutingStrategy() {
         return Optional.ofNullable(this.routingStrategy);

@@ -14,7 +14,6 @@ public final class GetContactListArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the contact list.
-     * 
      */
     @Import(name="contactListName", required=true)
       private final String contactListName;

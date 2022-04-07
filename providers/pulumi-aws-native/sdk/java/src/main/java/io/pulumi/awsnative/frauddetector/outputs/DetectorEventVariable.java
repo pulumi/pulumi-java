@@ -20,7 +20,6 @@ public final class DetectorEventVariable {
     private final @Nullable String arn;
     /**
      * The time when the event variable was created.
-     * 
      */
     private final @Nullable String createdTime;
     private final @Nullable DetectorEventVariableDataSource dataSource;
@@ -28,19 +27,16 @@ public final class DetectorEventVariable {
     private final @Nullable String defaultValue;
     /**
      * The description.
-     * 
      */
     private final @Nullable String description;
     private final @Nullable Boolean inline;
     /**
      * The time when the event variable was last updated.
-     * 
      */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable String name;
     /**
      * Tags associated with this event variable.
-     * 
      */
     private final @Nullable List<DetectorTag> tags;
     private final @Nullable DetectorEventVariableVariableType variableType;
@@ -76,7 +72,6 @@ public final class DetectorEventVariable {
     }
     /**
      * The time when the event variable was created.
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
@@ -92,7 +87,6 @@ public final class DetectorEventVariable {
     }
     /**
      * The description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
@@ -102,7 +96,6 @@ public final class DetectorEventVariable {
     }
     /**
      * The time when the event variable was last updated.
-     * 
     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
@@ -112,7 +105,6 @@ public final class DetectorEventVariable {
     }
     /**
      * Tags associated with this event variable.
-     * 
     */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

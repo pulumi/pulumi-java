@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details for a step that performs a file copy.
- * 
  */
 public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
 
     /**
      * The name of the step, used as an identifier.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -40,7 +38,6 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
 
     /**
      * A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
-     * 
      */
     @Import(name="overwriteExisting")
       private final @Nullable Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting;

@@ -16,174 +16,149 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::IoTSiteWise::Portal
- * 
  */
 @ResourceType(type="aws-native:iotsitewise:Portal")
 public class Portal extends io.pulumi.resources.CustomResource {
     /**
      * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
-     * 
      */
     @Export(name="alarms", type=AlarmsProperties.class, parameters={})
     private Output</* @Nullable */ AlarmsProperties> alarms;
 
     /**
      * @return Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
-     * 
      */
     public Output</* @Nullable */ AlarmsProperties> getAlarms() {
         return this.alarms;
     }
     /**
      * The email address that sends alarm notifications.
-     * 
      */
     @Export(name="notificationSenderEmail", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationSenderEmail;
 
     /**
      * @return The email address that sends alarm notifications.
-     * 
      */
     public Output</* @Nullable */ String> getNotificationSenderEmail() {
         return this.notificationSenderEmail;
     }
     /**
      * The ARN of the portal, which has the following format.
-     * 
      */
     @Export(name="portalArn", type=String.class, parameters={})
     private Output<String> portalArn;
 
     /**
      * @return The ARN of the portal, which has the following format.
-     * 
      */
     public Output<String> getPortalArn() {
         return this.portalArn;
     }
     /**
      * The service to use to authenticate users to the portal. Choose from SSO or IAM. You can't change this value after you create a portal.
-     * 
      */
     @Export(name="portalAuthMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> portalAuthMode;
 
     /**
      * @return The service to use to authenticate users to the portal. Choose from SSO or IAM. You can't change this value after you create a portal.
-     * 
      */
     public Output</* @Nullable */ String> getPortalAuthMode() {
         return this.portalAuthMode;
     }
     /**
      * The AWS SSO application generated client ID (used with AWS SSO APIs).
-     * 
      */
     @Export(name="portalClientId", type=String.class, parameters={})
     private Output<String> portalClientId;
 
     /**
      * @return The AWS SSO application generated client ID (used with AWS SSO APIs).
-     * 
      */
     public Output<String> getPortalClientId() {
         return this.portalClientId;
     }
     /**
      * The AWS administrator's contact email address.
-     * 
      */
     @Export(name="portalContactEmail", type=String.class, parameters={})
     private Output<String> portalContactEmail;
 
     /**
      * @return The AWS administrator's contact email address.
-     * 
      */
     public Output<String> getPortalContactEmail() {
         return this.portalContactEmail;
     }
     /**
      * A description for the portal.
-     * 
      */
     @Export(name="portalDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> portalDescription;
 
     /**
      * @return A description for the portal.
-     * 
      */
     public Output</* @Nullable */ String> getPortalDescription() {
         return this.portalDescription;
     }
     /**
      * The ID of the portal.
-     * 
      */
     @Export(name="portalId", type=String.class, parameters={})
     private Output<String> portalId;
 
     /**
      * @return The ID of the portal.
-     * 
      */
     public Output<String> getPortalId() {
         return this.portalId;
     }
     /**
      * A friendly name for the portal.
-     * 
      */
     @Export(name="portalName", type=String.class, parameters={})
     private Output<String> portalName;
 
     /**
      * @return A friendly name for the portal.
-     * 
      */
     public Output<String> getPortalName() {
         return this.portalName;
     }
     /**
      * The public root URL for the AWS IoT AWS IoT SiteWise Monitor application portal.
-     * 
      */
     @Export(name="portalStartUrl", type=String.class, parameters={})
     private Output<String> portalStartUrl;
 
     /**
      * @return The public root URL for the AWS IoT AWS IoT SiteWise Monitor application portal.
-     * 
      */
     public Output<String> getPortalStartUrl() {
         return this.portalStartUrl;
     }
     /**
      * The ARN of a service role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf.
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return The ARN of a service role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf.
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
     /**
      * A list of key-value pairs that contain metadata for the portal.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={PortalTag.class})
     private Output</* @Nullable */ List<PortalTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the portal.
-     * 
      */
     public Output</* @Nullable */ List<PortalTag>> getTags() {
         return this.tags;

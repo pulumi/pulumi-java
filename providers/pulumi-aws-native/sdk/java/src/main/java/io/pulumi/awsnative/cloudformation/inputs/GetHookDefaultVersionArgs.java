@@ -14,7 +14,6 @@ public final class GetHookDefaultVersionArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a HookDefaultVersion
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

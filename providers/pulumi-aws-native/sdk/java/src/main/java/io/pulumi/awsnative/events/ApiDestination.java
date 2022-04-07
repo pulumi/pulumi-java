@@ -15,34 +15,29 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Events::ApiDestination.
- * 
  */
 @ResourceType(type="aws-native:events:ApiDestination")
 public class ApiDestination extends io.pulumi.resources.CustomResource {
     /**
      * The arn of the api destination.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The arn of the api destination.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The arn of the connection.
-     * 
      */
     @Export(name="connectionArn", type=String.class, parameters={})
     private Output<String> connectionArn;
 
     /**
      * @return The arn of the connection.
-     * 
      */
     public Output<String> getConnectionArn() {
         return this.connectionArn;
@@ -61,14 +56,12 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
     }
     /**
      * Url endpoint to invoke.
-     * 
      */
     @Export(name="invocationEndpoint", type=String.class, parameters={})
     private Output<String> invocationEndpoint;
 
     /**
      * @return Url endpoint to invoke.
-     * 
      */
     public Output<String> getInvocationEndpoint() {
         return this.invocationEndpoint;
@@ -81,14 +74,12 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
     }
     /**
      * Name of the apiDestination.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the apiDestination.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;

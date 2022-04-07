@@ -15,76 +15,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Lightsail::LoadBalancerTlsCertificate
- * 
  */
 @ResourceType(type="aws-native:lightsail:LoadBalancerTlsCertificate")
 public class LoadBalancerTlsCertificate extends io.pulumi.resources.CustomResource {
     /**
      * An array of strings listing alternative domains and subdomains for your SSL/TLS certificate.
-     * 
      */
     @Export(name="certificateAlternativeNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> certificateAlternativeNames;
 
     /**
      * @return An array of strings listing alternative domains and subdomains for your SSL/TLS certificate.
-     * 
      */
     public Output</* @Nullable */ List<String>> getCertificateAlternativeNames() {
         return this.certificateAlternativeNames;
     }
     /**
      * The domain name (e.g., example.com ) for your SSL/TLS certificate.
-     * 
      */
     @Export(name="certificateDomainName", type=String.class, parameters={})
     private Output<String> certificateDomainName;
 
     /**
      * @return The domain name (e.g., example.com ) for your SSL/TLS certificate.
-     * 
      */
     public Output<String> getCertificateDomainName() {
         return this.certificateDomainName;
     }
     /**
      * The SSL/TLS certificate name.
-     * 
      */
     @Export(name="certificateName", type=String.class, parameters={})
     private Output<String> certificateName;
 
     /**
      * @return The SSL/TLS certificate name.
-     * 
      */
     public Output<String> getCertificateName() {
         return this.certificateName;
     }
     /**
      * When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
-     * 
      */
     @Export(name="isAttached", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isAttached;
 
     /**
      * @return When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsAttached() {
         return this.isAttached;
     }
     /**
      * The name of your load balancer.
-     * 
      */
     @Export(name="loadBalancerName", type=String.class, parameters={})
     private Output<String> loadBalancerName;
 
     /**
      * @return The name of your load balancer.
-     * 
      */
     public Output<String> getLoadBalancerName() {
         return this.loadBalancerName;
@@ -97,14 +86,12 @@ public class LoadBalancerTlsCertificate extends io.pulumi.resources.CustomResour
     }
     /**
      * The validation status of the SSL/TLS certificate.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The validation status of the SSL/TLS certificate.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;

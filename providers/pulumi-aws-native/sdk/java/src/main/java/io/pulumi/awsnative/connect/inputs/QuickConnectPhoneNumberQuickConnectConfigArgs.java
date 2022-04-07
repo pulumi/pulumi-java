@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The phone configuration. This is required only if QuickConnectType is PHONE_NUMBER.
- * 
  */
 public final class QuickConnectPhoneNumberQuickConnectConfigArgs extends io.pulumi.resources.ResourceArgs {
 

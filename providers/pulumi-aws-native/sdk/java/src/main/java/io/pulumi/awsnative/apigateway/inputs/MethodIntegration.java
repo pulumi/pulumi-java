@@ -24,7 +24,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of request parameters whose values API Gateway caches.
-     * 
      */
     @Import(name="cacheKeyParameters")
       private final @Nullable List<String> cacheKeyParameters;
@@ -35,7 +34,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An API-specific tag group of related cached parameters.
-     * 
      */
     @Import(name="cacheNamespace")
       private final @Nullable String cacheNamespace;
@@ -46,7 +44,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
-     * 
      */
     @Import(name="connectionId")
       private final @Nullable String connectionId;
@@ -57,7 +54,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the network connection to the integration endpoint.
-     * 
      */
     @Import(name="connectionType")
       private final @Nullable MethodIntegrationConnectionType connectionType;
@@ -68,7 +64,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies how to handle request payload content type conversions.
-     * 
      */
     @Import(name="contentHandling")
       private final @Nullable MethodIntegrationContentHandling contentHandling;
@@ -79,7 +74,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The credentials that are required for the integration.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable String credentials;
@@ -90,7 +84,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The integration's HTTP method type.
-     * 
      */
     @Import(name="integrationHttpMethod")
       private final @Nullable String integrationHttpMethod;
@@ -101,7 +94,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The response that API Gateway provides after a method's backend completes processing a request.
-     * 
      */
     @Import(name="integrationResponses")
       private final @Nullable List<MethodIntegrationResponse> integrationResponses;
@@ -112,7 +104,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates when API Gateway passes requests to the targeted backend.
-     * 
      */
     @Import(name="passthroughBehavior")
       private final @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior;
@@ -123,7 +114,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The request parameters that API Gateway sends with the backend request.
-     * 
      */
     @Import(name="requestParameters")
       private final @Nullable Object requestParameters;
@@ -134,7 +124,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A map of Apache Velocity templates that are applied on the request payload.
-     * 
      */
     @Import(name="requestTemplates")
       private final @Nullable Object requestTemplates;
@@ -145,7 +134,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Custom timeout between 50 and 29,000 milliseconds.
-     * 
      */
     @Import(name="timeoutInMillis")
       private final @Nullable Integer timeoutInMillis;
@@ -156,7 +144,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of backend that your method is running.
-     * 
      */
     @Import(name="type", required=true)
       private final MethodIntegrationType type;
@@ -167,7 +154,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Uniform Resource Identifier (URI) for the integration.
-     * 
      */
     @Import(name="uri")
       private final @Nullable String uri;

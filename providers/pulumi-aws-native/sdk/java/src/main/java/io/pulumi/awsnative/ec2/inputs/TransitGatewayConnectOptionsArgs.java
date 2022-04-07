@@ -16,7 +16,6 @@ public final class TransitGatewayConnectOptionsArgs extends io.pulumi.resources.
 
     /**
      * The tunnel protocol.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;

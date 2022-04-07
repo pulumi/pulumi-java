@@ -19,104 +19,89 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a gateway task definition.
- * 
  */
 @ResourceType(type="aws-native:iotwireless:TaskDefinition")
 public class TaskDefinition extends io.pulumi.resources.CustomResource {
     /**
      * TaskDefinition arn. Returned after successful create.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return TaskDefinition arn. Returned after successful create.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
-     * 
      */
     @Export(name="autoCreateTasks", type=Boolean.class, parameters={})
     private Output<Boolean> autoCreateTasks;
 
     /**
      * @return Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
-     * 
      */
     public Output<Boolean> getAutoCreateTasks() {
         return this.autoCreateTasks;
     }
     /**
      * The list of task definitions.
-     * 
      */
     @Export(name="loRaWANUpdateGatewayTaskEntry", type=TaskDefinitionLoRaWANUpdateGatewayTaskEntry.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionLoRaWANUpdateGatewayTaskEntry> loRaWANUpdateGatewayTaskEntry;
 
     /**
      * @return The list of task definitions.
-     * 
      */
     public Output</* @Nullable */ TaskDefinitionLoRaWANUpdateGatewayTaskEntry> getLoRaWANUpdateGatewayTaskEntry() {
         return this.loRaWANUpdateGatewayTaskEntry;
     }
     /**
      * The name of the new resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the new resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A list of key-value pairs that contain metadata for the destination.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={TaskDefinitionTag.class})
     private Output</* @Nullable */ List<TaskDefinitionTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the destination.
-     * 
      */
     public Output</* @Nullable */ List<TaskDefinitionTag>> getTags() {
         return this.tags;
     }
     /**
      * A filter to list only the wireless gateway task definitions that use this task definition type
-     * 
      */
     @Export(name="taskDefinitionType", type=TaskDefinitionType.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionType> taskDefinitionType;
 
     /**
      * @return A filter to list only the wireless gateway task definitions that use this task definition type
-     * 
      */
     public Output</* @Nullable */ TaskDefinitionType> getTaskDefinitionType() {
         return this.taskDefinitionType;
     }
     /**
      * Information about the gateways to update.
-     * 
      */
     @Export(name="update", type=TaskDefinitionUpdateWirelessGatewayTaskCreate.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionUpdateWirelessGatewayTaskCreate> update;
 
     /**
      * @return Information about the gateways to update.
-     * 
      */
     public Output</* @Nullable */ TaskDefinitionUpdateWirelessGatewayTaskCreate> getUpdate() {
         return this.update;

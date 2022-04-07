@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class StorageLensPrefixLevelStorageMetrics {
     /**
      * Specifies whether prefix-level storage metrics are enabled or disabled.
-     * 
      */
     private final @Nullable Boolean isEnabled;
     private final @Nullable StorageLensSelectionCriteria selectionCriteria;
@@ -29,7 +28,6 @@ public final class StorageLensPrefixLevelStorageMetrics {
 
     /**
      * Specifies whether prefix-level storage metrics are enabled or disabled.
-     * 
     */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);

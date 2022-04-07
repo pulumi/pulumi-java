@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The kernel gateway app settings.
- * 
  */
 public final class UserProfileKernelGatewayAppSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends io.pulumi.res
 
     /**
      * A list of custom SageMaker images that are configured to run as a KernelGateway app.
-     * 
      */
     @Import(name="customImages")
       private final @Nullable Output<List<UserProfileCustomImageArgs>> customImages;
@@ -33,7 +31,6 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends io.pulumi.res
 
     /**
      * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
-     * 
      */
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;

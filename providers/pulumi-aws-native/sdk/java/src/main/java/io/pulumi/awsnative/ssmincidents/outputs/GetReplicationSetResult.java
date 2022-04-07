@@ -16,13 +16,11 @@ import javax.annotation.Nullable;
 public final class GetReplicationSetResult {
     /**
      * The ARN of the ReplicationSet.
-     * 
      */
     private final @Nullable String arn;
     private final @Nullable Boolean deletionProtected;
     /**
      * The ReplicationSet configuration.
-     * 
      */
     private final @Nullable List<ReplicationSetReplicationRegion> regions;
 
@@ -38,7 +36,6 @@ public final class GetReplicationSetResult {
 
     /**
      * The ARN of the ReplicationSet.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
@@ -48,7 +45,6 @@ public final class GetReplicationSetResult {
     }
     /**
      * The ReplicationSet configuration.
-     * 
     */
     public List<ReplicationSetReplicationRegion> getRegions() {
         return this.regions == null ? List.of() : this.regions;

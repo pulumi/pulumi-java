@@ -14,7 +14,6 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

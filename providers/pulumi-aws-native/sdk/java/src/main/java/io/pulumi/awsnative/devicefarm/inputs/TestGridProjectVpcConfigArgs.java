@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The VPC security groups and subnets that are attached to a TestGrid project.
- * 
  */
 public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * A list of VPC security group IDs in your Amazon VPC.
-     * 
      */
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
@@ -31,7 +29,6 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
 
     /**
      * A list of VPC subnet IDs in your Amazon VPC.
-     * 
      */
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Xss Match Statement.
- * 
  */
 public final class WebACLXssMatchStatement extends io.pulumi.resources.InvokeArgs {
 

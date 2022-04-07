@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class FunctionDeadLetterConfig {
     /**
      * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
-     * 
      */
     private final @Nullable String targetArn;
 
@@ -24,7 +23,6 @@ public final class FunctionDeadLetterConfig {
 
     /**
      * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
-     * 
     */
     public Optional<String> getTargetArn() {
         return Optional.ofNullable(this.targetArn);

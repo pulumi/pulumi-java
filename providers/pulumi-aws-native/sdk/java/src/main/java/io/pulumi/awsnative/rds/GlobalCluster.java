@@ -15,20 +15,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::RDS::GlobalCluster
- * 
  */
 @ResourceType(type="aws-native:rds:GlobalCluster")
 public class GlobalCluster extends io.pulumi.resources.CustomResource {
     /**
      * The deletion protection setting for the new global database. The global database can't be deleted when deletion protection is enabled.
-     * 
      */
     @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
      * @return The deletion protection setting for the new global database. The global database can't be deleted when deletion protection is enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getDeletionProtection() {
         return this.deletionProtection;
@@ -36,7 +33,6 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
     /**
      * The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora).
      * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
-     * 
      */
     @Export(name="engine", type=GlobalClusterEngine.class, parameters={})
     private Output</* @Nullable */ GlobalClusterEngine> engine;
@@ -44,49 +40,42 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
     /**
      * @return The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora).
      * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
-     * 
      */
     public Output</* @Nullable */ GlobalClusterEngine> getEngine() {
         return this.engine;
     }
     /**
      * The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
-     * 
      */
     @Export(name="engineVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineVersion;
 
     /**
      * @return The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
-     * 
      */
     public Output</* @Nullable */ String> getEngineVersion() {
         return this.engineVersion;
     }
     /**
      * The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
-     * 
      */
     @Export(name="globalClusterIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> globalClusterIdentifier;
 
     /**
      * @return The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
-     * 
      */
     public Output</* @Nullable */ String> getGlobalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
     /**
      * The Amazon Resource Name (ARN) to use as the primary cluster of the global database. This parameter is optional. This parameter is stored as a lowercase string.
-     * 
      */
     @Export(name="sourceDBClusterIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceDBClusterIdentifier;
 
     /**
      * @return The Amazon Resource Name (ARN) to use as the primary cluster of the global database. This parameter is optional. This parameter is stored as a lowercase string.
-     * 
      */
     public Output</* @Nullable */ String> getSourceDBClusterIdentifier() {
         return this.sourceDBClusterIdentifier;
@@ -94,7 +83,6 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
     /**
      *  The storage encryption setting for the new global database cluster.
      * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
-     * 
      */
     @Export(name="storageEncrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> storageEncrypted;
@@ -102,7 +90,6 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
     /**
      * @return  The storage encryption setting for the new global database cluster.
      * If you specify the SourceDBClusterIdentifier property, don't specify this property. The value is inherited from the cluster.
-     * 
      */
     public Output</* @Nullable */ Boolean> getStorageEncrypted() {
         return this.storageEncrypted;

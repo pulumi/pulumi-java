@@ -17,7 +17,6 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Any tags to assign to the internet gateway.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<InternetGatewayTagArgs>> tags;

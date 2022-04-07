@@ -14,7 +14,6 @@ public final class GetAggregationAuthorizationArgs extends io.pulumi.resources.I
 
     /**
      * The ARN of the AggregationAuthorization.
-     * 
      */
     @Import(name="aggregationAuthorizationArn", required=true)
       private final String aggregationAuthorizationArn;

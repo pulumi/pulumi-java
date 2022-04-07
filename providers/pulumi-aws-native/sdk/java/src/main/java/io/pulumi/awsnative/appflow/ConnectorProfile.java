@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::AppFlow::ConnectorProfile
- * 
  */
 @ResourceType(type="aws-native:appflow:ConnectorProfile")
 public class ConnectorProfile extends io.pulumi.resources.CustomResource {
     /**
      * Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
-     * 
      */
     @Export(name="connectionMode", type=ConnectorProfileConnectionMode.class, parameters={})
     private Output<ConnectorProfileConnectionMode> connectionMode;
 
     /**
      * @return Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
-     * 
      */
     public Output<ConnectorProfileConnectionMode> getConnectionMode() {
         return this.connectionMode;
     }
     /**
      * Unique identifier for connector profile resources
-     * 
      */
     @Export(name="connectorProfileArn", type=String.class, parameters={})
     private Output<String> connectorProfileArn;
 
     /**
      * @return Unique identifier for connector profile resources
-     * 
      */
     public Output<String> getConnectorProfileArn() {
         return this.connectorProfileArn;
     }
     /**
      * Connector specific configurations needed to create connector profile
-     * 
      */
     @Export(name="connectorProfileConfig", type=ConnectorProfileConfig.class, parameters={})
     private Output</* @Nullable */ ConnectorProfileConfig> connectorProfileConfig;
 
     /**
      * @return Connector specific configurations needed to create connector profile
-     * 
      */
     public Output</* @Nullable */ ConnectorProfileConfig> getConnectorProfileConfig() {
         return this.connectorProfileConfig;
     }
     /**
      * The maximum number of items to retrieve in a single batch.
-     * 
      */
     @Export(name="connectorProfileName", type=String.class, parameters={})
     private Output<String> connectorProfileName;
 
     /**
      * @return The maximum number of items to retrieve in a single batch.
-     * 
      */
     public Output<String> getConnectorProfileName() {
         return this.connectorProfileName;
     }
     /**
      * List of Saas providers that need connector profile to be created
-     * 
      */
     @Export(name="connectorType", type=ConnectorProfileConnectorType.class, parameters={})
     private Output<ConnectorProfileConnectorType> connectorType;
 
     /**
      * @return List of Saas providers that need connector profile to be created
-     * 
      */
     public Output<ConnectorProfileConnectorType> getConnectorType() {
         return this.connectorType;
     }
     /**
      * A unique Arn for Connector-Profile resource
-     * 
      */
     @Export(name="credentialsArn", type=String.class, parameters={})
     private Output<String> credentialsArn;
 
     /**
      * @return A unique Arn for Connector-Profile resource
-     * 
      */
     public Output<String> getCredentialsArn() {
         return this.credentialsArn;
     }
     /**
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
-     * 
      */
     @Export(name="kMSArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSArn;
 
     /**
      * @return The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
-     * 
      */
     public Output</* @Nullable */ String> getKMSArn() {
         return this.kMSArn;

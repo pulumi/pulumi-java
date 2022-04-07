@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Structure that contains X.509 OtherName information.
- * 
  */
 public final class CertificateAuthorityOtherNameArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * An HTTP Live Streaming (HLS) packaging configuration.
- * 
  */
 public final class PackagingConfigurationHlsPackage extends io.pulumi.resources.InvokeArgs {
 
@@ -31,7 +30,6 @@ public final class PackagingConfigurationHlsPackage extends io.pulumi.resources.
 
     /**
      * A list of HLS manifest configurations.
-     * 
      */
     @Import(name="hlsManifests", required=true)
       private final List<PackagingConfigurationHlsManifest> hlsManifests;
@@ -49,7 +47,6 @@ public final class PackagingConfigurationHlsPackage extends io.pulumi.resources.
 
     /**
      * When enabled, audio streams will be placed in rendition groups in the output.
-     * 
      */
     @Import(name="useAudioRenditionGroup")
       private final @Nullable Boolean useAudioRenditionGroup;

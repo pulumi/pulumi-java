@@ -19,7 +19,6 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the contact list.
-     * 
      */
     @Import(name="contactListName")
       private final @Nullable Output<String> contactListName;
@@ -30,7 +29,6 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the contact list.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags (keys and values) associated with the contact list.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ContactListTagArgs>> tags;
@@ -52,7 +49,6 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The topics associated with the contact list.
-     * 
      */
     @Import(name="topics")
       private final @Nullable Output<List<ContactListTopicArgs>> topics;

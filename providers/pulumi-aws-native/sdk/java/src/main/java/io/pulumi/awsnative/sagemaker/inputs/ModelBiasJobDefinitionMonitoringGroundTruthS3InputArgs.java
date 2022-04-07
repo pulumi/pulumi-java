@@ -10,8 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Ground truth input provided in S3
- * 
+ * Ground truth input provided in S3 
  */
 public final class ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs extend
 
     /**
      * A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
-     * 
      */
     @Import(name="s3Uri", required=true)
       private final Output<String> s3Uri;

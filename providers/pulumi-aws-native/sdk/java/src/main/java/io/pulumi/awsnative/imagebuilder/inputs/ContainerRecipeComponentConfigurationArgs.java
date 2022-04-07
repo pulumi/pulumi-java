@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration details of the component.
- * 
  */
 public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
 
     /**
      * The Amazon Resource Name (ARN) of the component.
-     * 
      */
     @Import(name="componentArn")
       private final @Nullable Output<String> componentArn;

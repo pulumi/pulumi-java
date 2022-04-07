@@ -15,7 +15,6 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
 
     /**
      * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
-     * 
      */
     @Import(name="apiKey", required=true)
       private final Output<String> apiKey;

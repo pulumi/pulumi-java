@@ -32,7 +32,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the connection.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +42,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the connection.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

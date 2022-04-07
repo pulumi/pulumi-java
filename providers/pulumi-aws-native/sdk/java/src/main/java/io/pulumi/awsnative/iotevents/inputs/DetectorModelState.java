@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information that defines a state of a detector.
- * 
  */
 public final class DetectorModelState extends io.pulumi.resources.InvokeArgs {
 
@@ -44,7 +43,6 @@ public final class DetectorModelState extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the state.
-     * 
      */
     @Import(name="stateName", required=true)
       private final String stateName;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::CloudFront::OriginRequestPolicy
- * 
  */
 @ResourceType(type="aws-native:cloudfront:OriginRequestPolicy")
 public class OriginRequestPolicy extends io.pulumi.resources.CustomResource {

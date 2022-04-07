@@ -19,7 +19,6 @@ public final class DetectorModelState {
     private final @Nullable DetectorModelOnInput onInput;
     /**
      * The name of the state.
-     * 
      */
     private final String stateName;
 
@@ -46,7 +45,6 @@ public final class DetectorModelState {
     }
     /**
      * The name of the state.
-     * 
     */
     public String getStateName() {
         return this.stateName;

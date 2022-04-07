@@ -16,21 +16,126 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::Cassandra::Keyspace
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myNewKeyspace = new AwsNative.Cassandra.Keyspace("myNewKeyspace", new AwsNative.Cassandra.KeyspaceArgs
+ *         {
+ *             KeyspaceName = "MyNewKeyspace",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.KeyspaceTagArgs
+ *                 {
+ *                     Key = "tag1",
+ *                     Value = "val1",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.KeyspaceTagArgs
+ *                 {
+ *                     Key = "tag2",
+ *                     Value = "val2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cassandra"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cassandra.NewKeyspace(ctx, "myNewKeyspace", &cassandra.KeyspaceArgs{
+ * 			KeyspaceName: pulumi.String("MyNewKeyspace"),
+ * 			Tags: []cassandra.KeyspaceTagArgs{
+ * 				&cassandra.KeyspaceTagArgs{
+ * 					Key:   pulumi.String("tag1"),
+ * 					Value: pulumi.String("val1"),
+ * 				},
+ * 				&cassandra.KeyspaceTagArgs{
+ * 					Key:   pulumi.String("tag2"),
+ * 					Value: pulumi.String("val2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myNewKeyspace = new aws_native.cassandra.Keyspace("myNewKeyspace", {
+ *     keyspaceName: "MyNewKeyspace",
+ *     tags: [
+ *         {
+ *             key: "tag1",
+ *             value: "val1",
+ *         },
+ *         {
+ *             key: "tag2",
+ *             value: "val2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_new_keyspace = aws_native.cassandra.Keyspace("myNewKeyspace",
+ *     keyspace_name="MyNewKeyspace",
+ *     tags=[
+ *         aws_native.cassandra.KeyspaceTagArgs(
+ *             key="tag1",
+ *             value="val1",
+ *         ),
+ *         aws_native.cassandra.KeyspaceTagArgs(
+ *             key="tag2",
+ *             value="val2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:cassandra:Keyspace")
 public class Keyspace extends io.pulumi.resources.CustomResource {
     /**
      * Name for Cassandra keyspace
-     * 
      */
     @Export(name="keyspaceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyspaceName;
 
     /**
      * @return Name for Cassandra keyspace
-     * 
      */
     public Output</* @Nullable */ String> getKeyspaceName() {
         return this.keyspaceName;

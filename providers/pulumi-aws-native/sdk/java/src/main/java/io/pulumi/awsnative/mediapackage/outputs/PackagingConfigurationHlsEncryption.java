@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class PackagingConfigurationHlsEncryption {
     /**
      * An HTTP Live Streaming (HLS) encryption configuration.
-     * 
      */
     private final @Nullable String constantInitializationVector;
     /**
      * The encryption method to use.
-     * 
      */
     private final @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod;
     private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
@@ -37,14 +35,12 @@ public final class PackagingConfigurationHlsEncryption {
 
     /**
      * An HTTP Live Streaming (HLS) encryption configuration.
-     * 
     */
     public Optional<String> getConstantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
      * The encryption method to use.
-     * 
     */
     public Optional<PackagingConfigurationHlsEncryptionEncryptionMethod> getEncryptionMethod() {
         return Optional.ofNullable(this.encryptionMethod);

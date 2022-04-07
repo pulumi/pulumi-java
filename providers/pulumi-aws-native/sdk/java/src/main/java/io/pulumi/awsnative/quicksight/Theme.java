@@ -19,20 +19,17 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the AWS::QuickSight::Theme Resource Type.
- * 
  */
 @ResourceType(type="aws-native:quicksight:Theme")
 public class Theme extends io.pulumi.resources.CustomResource {
     /**
      * <p>The Amazon Resource Name (ARN) of the theme.</p>
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return <p>The Amazon Resource Name (ARN) of the theme.</p>
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -48,7 +45,6 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * 			the starting themes defined by Amazon QuickSight. For a list of the starting themes, use
      * 				<code>ListThemes</code> or choose <b>Themes</b> from
      * 			within a QuickSight analysis. </p>
-     * 
      */
     @Export(name="baseThemeId", type=String.class, parameters={})
     private Output</* @Nullable */ String> baseThemeId;
@@ -58,7 +54,6 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * 			the starting themes defined by Amazon QuickSight. For a list of the starting themes, use
      * 				<code>ListThemes</code> or choose <b>Themes</b> from
      * 			within a QuickSight analysis. </p>
-     * 
      */
     public Output</* @Nullable */ String> getBaseThemeId() {
         return this.baseThemeId;
@@ -71,42 +66,36 @@ public class Theme extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The date and time that the theme was created.</p>
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return <p>The date and time that the theme was created.</p>
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * <p>The date and time that the theme was last updated.</p>
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return <p>The date and time that the theme was last updated.</p>
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * <p>A display name for the theme.</p>
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return <p>A display name for the theme.</p>
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
@@ -114,7 +103,6 @@ public class Theme extends io.pulumi.resources.CustomResource {
     /**
      * <p>A valid grouping of resource permissions to apply to the new theme.
      * 			</p>
-     * 
      */
     @Export(name="permissions", type=List.class, parameters={ThemeResourcePermission.class})
     private Output</* @Nullable */ List<ThemeResourcePermission>> permissions;
@@ -122,7 +110,6 @@ public class Theme extends io.pulumi.resources.CustomResource {
     /**
      * @return <p>A valid grouping of resource permissions to apply to the new theme.
      * 			</p>
-     * 
      */
     public Output</* @Nullable */ List<ThemeResourcePermission>> getPermissions() {
         return this.permissions;
@@ -130,7 +117,6 @@ public class Theme extends io.pulumi.resources.CustomResource {
     /**
      * <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
      * 			resource.</p>
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ThemeTag.class})
     private Output</* @Nullable */ List<ThemeTag>> tags;
@@ -138,7 +124,6 @@ public class Theme extends io.pulumi.resources.CustomResource {
     /**
      * @return <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
      * 			resource.</p>
-     * 
      */
     public Output</* @Nullable */ List<ThemeTag>> getTags() {
         return this.tags;
@@ -166,7 +151,6 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * 				<code>UpdateTheme</code> is called, a new version is created. Each version of the
      * 			theme has a description of the version in the <code>VersionDescription</code>
      * 			field.</p>
-     * 
      */
     @Export(name="versionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionDescription;
@@ -176,7 +160,6 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * 				<code>UpdateTheme</code> is called, a new version is created. Each version of the
      * 			theme has a description of the version in the <code>VersionDescription</code>
      * 			field.</p>
-     * 
      */
     public Output</* @Nullable */ String> getVersionDescription() {
         return this.versionDescription;

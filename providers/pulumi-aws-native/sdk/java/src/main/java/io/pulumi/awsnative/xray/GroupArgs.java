@@ -19,7 +19,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The filter expression defining criteria by which to group traces.
-     * 
      */
     @Import(name="filterExpression")
       private final @Nullable Output<String> filterExpression;
@@ -30,7 +29,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The case-sensitive name of the new group. Names must be unique.
-     * 
      */
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;

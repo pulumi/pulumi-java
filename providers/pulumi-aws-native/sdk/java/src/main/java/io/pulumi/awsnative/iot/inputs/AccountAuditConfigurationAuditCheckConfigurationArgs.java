@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration for a specific audit check.
- * 
  */
 public final class AccountAuditConfigurationAuditCheckConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AccountAuditConfigurationAuditCheckConfigurationArgs extends 
 
     /**
      * True if the check is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;

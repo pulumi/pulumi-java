@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Lightsail::Container
- * 
  */
 @ResourceType(type="aws-native:lightsail:Container")
 public class Container extends io.pulumi.resources.CustomResource {
@@ -31,112 +30,96 @@ public class Container extends io.pulumi.resources.CustomResource {
     }
     /**
      * Describes a container deployment configuration of an Amazon Lightsail container service.
-     * 
      */
     @Export(name="containerServiceDeployment", type=ContainerServiceDeployment.class, parameters={})
     private Output</* @Nullable */ ContainerServiceDeployment> containerServiceDeployment;
 
     /**
      * @return Describes a container deployment configuration of an Amazon Lightsail container service.
-     * 
      */
     public Output</* @Nullable */ ContainerServiceDeployment> getContainerServiceDeployment() {
         return this.containerServiceDeployment;
     }
     /**
      * A Boolean value to indicate whether the container service is disabled.
-     * 
      */
     @Export(name="isDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDisabled;
 
     /**
      * @return A Boolean value to indicate whether the container service is disabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsDisabled() {
         return this.isDisabled;
     }
     /**
      * The power specification for the container service.
-     * 
      */
     @Export(name="power", type=String.class, parameters={})
     private Output<String> power;
 
     /**
      * @return The power specification for the container service.
-     * 
      */
     public Output<String> getPower() {
         return this.power;
     }
     /**
      * The public domain names to use with the container service, such as example.com and www.example.com.
-     * 
      */
     @Export(name="publicDomainNames", type=List.class, parameters={ContainerPublicDomainName.class})
     private Output</* @Nullable */ List<ContainerPublicDomainName>> publicDomainNames;
 
     /**
      * @return The public domain names to use with the container service, such as example.com and www.example.com.
-     * 
      */
     public Output</* @Nullable */ List<ContainerPublicDomainName>> getPublicDomainNames() {
         return this.publicDomainNames;
     }
     /**
      * The scale specification for the container service.
-     * 
      */
     @Export(name="scale", type=Integer.class, parameters={})
     private Output<Integer> scale;
 
     /**
      * @return The scale specification for the container service.
-     * 
      */
     public Output<Integer> getScale() {
         return this.scale;
     }
     /**
      * The name for the container service.
-     * 
      */
     @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**
      * @return The name for the container service.
-     * 
      */
     public Output<String> getServiceName() {
         return this.serviceName;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ContainerTag.class})
     private Output</* @Nullable */ List<ContainerTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<ContainerTag>> getTags() {
         return this.tags;
     }
     /**
      * The publicly accessible URL of the container service.
-     * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
      * @return The publicly accessible URL of the container service.
-     * 
      */
     public Output<String> getUrl() {
         return this.url;

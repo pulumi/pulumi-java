@@ -16,12 +16,10 @@ import javax.annotation.Nullable;
 public final class BucketWebsiteConfiguration {
     /**
      * The name of the error document for the website.
-     * 
      */
     private final @Nullable String errorDocument;
     /**
      * The name of the index document for the website.
-     * 
      */
     private final @Nullable String indexDocument;
     private final @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo;
@@ -41,14 +39,12 @@ public final class BucketWebsiteConfiguration {
 
     /**
      * The name of the error document for the website.
-     * 
     */
     public Optional<String> getErrorDocument() {
         return Optional.ofNullable(this.errorDocument);
     }
     /**
      * The name of the index document for the website.
-     * 
     */
     public Optional<String> getIndexDocument() {
         return Optional.ofNullable(this.indexDocument);

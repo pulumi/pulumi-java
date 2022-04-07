@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class GetPackagingGroupResult {
     /**
      * The ARN of the PackagingGroup.
-     * 
      */
     private final @Nullable String arn;
     /**
      * CDN Authorization
-     * 
      */
     private final @Nullable PackagingGroupAuthorization authorization;
     /**
      * The fully qualified domain name for Assets in the PackagingGroup.
-     * 
      */
     private final @Nullable String domainName;
     /**
      * The configuration parameters for egress access logging.
-     * 
      */
     private final @Nullable PackagingGroupLogConfiguration egressAccessLogs;
 
@@ -48,28 +44,24 @@ public final class GetPackagingGroupResult {
 
     /**
      * The ARN of the PackagingGroup.
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * CDN Authorization
-     * 
     */
     public Optional<PackagingGroupAuthorization> getAuthorization() {
         return Optional.ofNullable(this.authorization);
     }
     /**
      * The fully qualified domain name for Assets in the PackagingGroup.
-     * 
     */
     public Optional<String> getDomainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
      * The configuration parameters for egress access logging.
-     * 
     */
     public Optional<PackagingGroupLogConfiguration> getEgressAccessLogs() {
         return Optional.ofNullable(this.egressAccessLogs);

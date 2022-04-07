@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains a gateway's platform information.
- * 
  */
 public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A gateway that runs on AWS IoT Greengrass V1.
-     * 
      */
     @Import(name="greengrass")
       private final @Nullable Output<GatewayGreengrassArgs> greengrass;
@@ -32,7 +30,6 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A gateway that runs on AWS IoT Greengrass V2.
-     * 
      */
     @Import(name="greengrassV2")
       private final @Nullable Output<GatewayGreengrassV2Args> greengrassV2;

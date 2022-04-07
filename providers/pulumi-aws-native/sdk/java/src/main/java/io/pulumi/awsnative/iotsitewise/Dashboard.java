@@ -15,104 +15,89 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::IoTSiteWise::Dashboard
- * 
  */
 @ResourceType(type="aws-native:iotsitewise:Dashboard")
 public class Dashboard extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the dashboard.
-     * 
      */
     @Export(name="dashboardArn", type=String.class, parameters={})
     private Output<String> dashboardArn;
 
     /**
      * @return The ARN of the dashboard.
-     * 
      */
     public Output<String> getDashboardArn() {
         return this.dashboardArn;
     }
     /**
      * The dashboard definition specified in a JSON literal.
-     * 
      */
     @Export(name="dashboardDefinition", type=String.class, parameters={})
     private Output<String> dashboardDefinition;
 
     /**
      * @return The dashboard definition specified in a JSON literal.
-     * 
      */
     public Output<String> getDashboardDefinition() {
         return this.dashboardDefinition;
     }
     /**
      * A description for the dashboard.
-     * 
      */
     @Export(name="dashboardDescription", type=String.class, parameters={})
     private Output<String> dashboardDescription;
 
     /**
      * @return A description for the dashboard.
-     * 
      */
     public Output<String> getDashboardDescription() {
         return this.dashboardDescription;
     }
     /**
      * The ID of the dashboard.
-     * 
      */
     @Export(name="dashboardId", type=String.class, parameters={})
     private Output<String> dashboardId;
 
     /**
      * @return The ID of the dashboard.
-     * 
      */
     public Output<String> getDashboardId() {
         return this.dashboardId;
     }
     /**
      * A friendly name for the dashboard.
-     * 
      */
     @Export(name="dashboardName", type=String.class, parameters={})
     private Output<String> dashboardName;
 
     /**
      * @return A friendly name for the dashboard.
-     * 
      */
     public Output<String> getDashboardName() {
         return this.dashboardName;
     }
     /**
      * The ID of the project in which to create the dashboard.
-     * 
      */
     @Export(name="projectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectId;
 
     /**
      * @return The ID of the project in which to create the dashboard.
-     * 
      */
     public Output</* @Nullable */ String> getProjectId() {
         return this.projectId;
     }
     /**
      * A list of key-value pairs that contain metadata for the dashboard.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DashboardTag.class})
     private Output</* @Nullable */ List<DashboardTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the dashboard.
-     * 
      */
     public Output</* @Nullable */ List<DashboardTag>> getTags() {
         return this.tags;

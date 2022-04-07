@@ -19,7 +19,6 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
-     * 
      */
     @Import(name="loRaWAN")
       private final @Nullable Output<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN;
@@ -30,7 +29,6 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of service profile
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,7 +39,6 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the device profile.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DeviceProfileTagArgs>> tags;

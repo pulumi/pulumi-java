@@ -16,7 +16,6 @@ public final class GameServerGroupTagArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The key for a developer-defined key:value pair for tagging an AWS resource.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -27,7 +26,6 @@ public final class GameServerGroupTagArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The value for a developer-defined key:value pair for tagging an AWS resource.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

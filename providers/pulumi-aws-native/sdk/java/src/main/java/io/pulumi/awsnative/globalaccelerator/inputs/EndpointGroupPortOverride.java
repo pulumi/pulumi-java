@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * listener to endpoint port mapping.
- * 
  */
 public final class EndpointGroupPortOverride extends io.pulumi.resources.InvokeArgs {
 

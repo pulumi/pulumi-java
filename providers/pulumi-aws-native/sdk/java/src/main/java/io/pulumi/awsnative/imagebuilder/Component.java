@@ -19,189 +19,785 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::ImageBuilder::Component
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var componentAllParameters = new AwsNative.ImageBuilder.Component("componentAllParameters", new AwsNative.ImageBuilder.ComponentArgs
+ *         {
+ *             Name = "component-name",
+ *             Platform = "Linux",
+ *             Version = "1.0.0",
+ *             Description = "description",
+ *             ChangeDescription = "change-description",
+ *             KmsKeyId = "customer-kms-key-id",
+ *             SupportedOsVersions = 
+ *             {
+ *                 "Amazon Linux 2",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "customerComponentTagKey1", "CustomerComponentTagValue1" },
+ *                 { "customerComponentTagKey2", "CustomerComponentTagValue2" },
+ *             },
+ *             Data = @"name: HelloWorldTestingLinuxDoc - InlineData
+ *  description: This is hello world testing doc
+ * schemaVersion: 1.0
+ * 
+ * phases:
+ *   - name: build
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo ""Hello World! Build.""
+ *   - name: validate
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo ""Hello World! Validate.""
+ *   - name: test
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo ""Hello World! Test.""
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/imagebuilder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := imagebuilder.NewComponent(ctx, "componentAllParameters", &imagebuilder.ComponentArgs{
+ * 			Name:              pulumi.String("component-name"),
+ * 			Platform:          "Linux",
+ * 			Version:           pulumi.String("1.0.0"),
+ * 			Description:       pulumi.String("description"),
+ * 			ChangeDescription: pulumi.String("change-description"),
+ * 			KmsKeyId:          pulumi.String("customer-kms-key-id"),
+ * 			SupportedOsVersions: pulumi.StringArray{
+ * 				pulumi.String("Amazon Linux 2"),
+ * 			},
+ * 			Tags: pulumi.Any{
+ * 				CustomerComponentTagKey1: "CustomerComponentTagValue1",
+ * 				CustomerComponentTagKey2: "CustomerComponentTagValue2",
+ * 			},
+ * 			Data: pulumi.String("name: HelloWorldTestingLinuxDoc - InlineData\n description: This is hello world testing doc\nschemaVersion: 1.0\n\nphases:\n  - name: build\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Build.\"\n  - name: validate\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Validate.\"\n  - name: test\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Test.\"\n"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const componentAllParameters = new aws_native.imagebuilder.Component("componentAllParameters", {
+ *     name: "component-name",
+ *     platform: "Linux",
+ *     version: "1.0.0",
+ *     description: "description",
+ *     changeDescription: "change-description",
+ *     kmsKeyId: "customer-kms-key-id",
+ *     supportedOsVersions: ["Amazon Linux 2"],
+ *     tags: {
+ *         customerComponentTagKey1: "CustomerComponentTagValue1",
+ *         customerComponentTagKey2: "CustomerComponentTagValue2",
+ *     },
+ *     data: `name: HelloWorldTestingLinuxDoc - InlineData
+ *  description: This is hello world testing doc
+ * schemaVersion: 1.0
+ * 
+ * phases:
+ *   - name: build
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Build."
+ *   - name: validate
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Validate."
+ *   - name: test
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Test."
+ * `,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * component_all_parameters = aws_native.imagebuilder.Component("componentAllParameters",
+ *     name="component-name",
+ *     platform="Linux",
+ *     version="1.0.0",
+ *     description="description",
+ *     change_description="change-description",
+ *     kms_key_id="customer-kms-key-id",
+ *     supported_os_versions=["Amazon Linux 2"],
+ *     tags={
+ *         "customerComponentTagKey1": "CustomerComponentTagValue1",
+ *         "customerComponentTagKey2": "CustomerComponentTagValue2",
+ *     },
+ *     data="""name: HelloWorldTestingLinuxDoc - InlineData
+ *  description: This is hello world testing doc
+ * schemaVersion: 1.0
+ * 
+ * phases:
+ *   - name: build
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Build."
+ *   - name: validate
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Validate."
+ *   - name: test
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Test."
+ * """)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var componentAllParameters = new AwsNative.ImageBuilder.Component("componentAllParameters", new AwsNative.ImageBuilder.ComponentArgs
+ *         {
+ *             Name = "component-name",
+ *             Platform = "Linux",
+ *             Version = "1.0.0",
+ *             Description = "description",
+ *             ChangeDescription = "change-description",
+ *             KmsKeyId = "customer-kms-key-id",
+ *             SupportedOsVersions = 
+ *             {
+ *                 "Amazon Linux 2",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "customerComponentTagKey1", "CustomerComponentTagValue1" },
+ *                 { "customerComponentTagKey2", "CustomerComponentTagValue2" },
+ *             },
+ *             Data = @"name: HelloWorldTestingLinuxDoc - InlineData
+ * description: This is hello world testing doc
+ * schemaVersion: 1.0
+ * 
+ * phases:
+ *   - name: build
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo ""Hello World! Build.""
+ *   - name: validate
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo ""Hello World! Validate.""
+ *   - name: test
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo ""Hello World! Test.""
+ * ",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/imagebuilder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := imagebuilder.NewComponent(ctx, "componentAllParameters", &imagebuilder.ComponentArgs{
+ * 			Name:              pulumi.String("component-name"),
+ * 			Platform:          "Linux",
+ * 			Version:           pulumi.String("1.0.0"),
+ * 			Description:       pulumi.String("description"),
+ * 			ChangeDescription: pulumi.String("change-description"),
+ * 			KmsKeyId:          pulumi.String("customer-kms-key-id"),
+ * 			SupportedOsVersions: pulumi.StringArray{
+ * 				pulumi.String("Amazon Linux 2"),
+ * 			},
+ * 			Tags: pulumi.Any{
+ * 				CustomerComponentTagKey1: "CustomerComponentTagValue1",
+ * 				CustomerComponentTagKey2: "CustomerComponentTagValue2",
+ * 			},
+ * 			Data: pulumi.String("name: HelloWorldTestingLinuxDoc - InlineData\ndescription: This is hello world testing doc\nschemaVersion: 1.0\n\nphases:\n  - name: build\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Build.\"\n  - name: validate\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Validate.\"\n  - name: test\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Test.\"\n"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const componentAllParameters = new aws_native.imagebuilder.Component("componentAllParameters", {
+ *     name: "component-name",
+ *     platform: "Linux",
+ *     version: "1.0.0",
+ *     description: "description",
+ *     changeDescription: "change-description",
+ *     kmsKeyId: "customer-kms-key-id",
+ *     supportedOsVersions: ["Amazon Linux 2"],
+ *     tags: {
+ *         customerComponentTagKey1: "CustomerComponentTagValue1",
+ *         customerComponentTagKey2: "CustomerComponentTagValue2",
+ *     },
+ *     data: `name: HelloWorldTestingLinuxDoc - InlineData
+ * description: This is hello world testing doc
+ * schemaVersion: 1.0
+ * 
+ * phases:
+ *   - name: build
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Build."
+ *   - name: validate
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Validate."
+ *   - name: test
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Test."
+ * `,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * component_all_parameters = aws_native.imagebuilder.Component("componentAllParameters",
+ *     name="component-name",
+ *     platform="Linux",
+ *     version="1.0.0",
+ *     description="description",
+ *     change_description="change-description",
+ *     kms_key_id="customer-kms-key-id",
+ *     supported_os_versions=["Amazon Linux 2"],
+ *     tags={
+ *         "customerComponentTagKey1": "CustomerComponentTagValue1",
+ *         "customerComponentTagKey2": "CustomerComponentTagValue2",
+ *     },
+ *     data="""name: HelloWorldTestingLinuxDoc - InlineData
+ * description: This is hello world testing doc
+ * schemaVersion: 1.0
+ * 
+ * phases:
+ *   - name: build
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Build."
+ *   - name: validate
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Validate."
+ *   - name: test
+ *     steps:
+ *       - name: HelloWorldStep
+ *         action: ExecuteBash
+ *         inputs:
+ *           commands:
+ *             - echo "Hello World! Test."
+ * """)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var componentAllParameters = new AwsNative.ImageBuilder.Component("componentAllParameters", new AwsNative.ImageBuilder.ComponentArgs
+ *         {
+ *             Name = "component-name",
+ *             Platform = "Linux",
+ *             Version = "1.0.0",
+ *             Uri = "s3://imagebuilder/component_document.yml",
+ *             Description = "description",
+ *             ChangeDescription = "change-description",
+ *             KmsKeyId = "customer-kms-key-id",
+ *             SupportedOsVersions = 
+ *             {
+ *                 "CentOS",
+ *                 "Red Hat Enterprise Linux",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "customerComponentTagKey1", "CustomerComponentTagValue1" },
+ *                 { "customerComponentTagKey2", "CustomerComponentTagValue2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/imagebuilder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := imagebuilder.NewComponent(ctx, "componentAllParameters", &imagebuilder.ComponentArgs{
+ * 			Name:              pulumi.String("component-name"),
+ * 			Platform:          "Linux",
+ * 			Version:           pulumi.String("1.0.0"),
+ * 			Uri:               pulumi.String("s3://imagebuilder/component_document.yml"),
+ * 			Description:       pulumi.String("description"),
+ * 			ChangeDescription: pulumi.String("change-description"),
+ * 			KmsKeyId:          pulumi.String("customer-kms-key-id"),
+ * 			SupportedOsVersions: pulumi.StringArray{
+ * 				pulumi.String("CentOS"),
+ * 				pulumi.String("Red Hat Enterprise Linux"),
+ * 			},
+ * 			Tags: pulumi.Any{
+ * 				CustomerComponentTagKey1: "CustomerComponentTagValue1",
+ * 				CustomerComponentTagKey2: "CustomerComponentTagValue2",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const componentAllParameters = new aws_native.imagebuilder.Component("componentAllParameters", {
+ *     name: "component-name",
+ *     platform: "Linux",
+ *     version: "1.0.0",
+ *     uri: "s3://imagebuilder/component_document.yml",
+ *     description: "description",
+ *     changeDescription: "change-description",
+ *     kmsKeyId: "customer-kms-key-id",
+ *     supportedOsVersions: [
+ *         "CentOS",
+ *         "Red Hat Enterprise Linux",
+ *     ],
+ *     tags: {
+ *         customerComponentTagKey1: "CustomerComponentTagValue1",
+ *         customerComponentTagKey2: "CustomerComponentTagValue2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * component_all_parameters = aws_native.imagebuilder.Component("componentAllParameters",
+ *     name="component-name",
+ *     platform="Linux",
+ *     version="1.0.0",
+ *     uri="s3://imagebuilder/component_document.yml",
+ *     description="description",
+ *     change_description="change-description",
+ *     kms_key_id="customer-kms-key-id",
+ *     supported_os_versions=[
+ *         "CentOS",
+ *         "Red Hat Enterprise Linux",
+ *     ],
+ *     tags={
+ *         "customerComponentTagKey1": "CustomerComponentTagValue1",
+ *         "customerComponentTagKey2": "CustomerComponentTagValue2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var componentAllParameters = new AwsNative.ImageBuilder.Component("componentAllParameters", new AwsNative.ImageBuilder.ComponentArgs
+ *         {
+ *             Name = "component-name",
+ *             Platform = "Linux",
+ *             Version = "1.0.0",
+ *             Uri = "s3://imagebuilder/component_document.yml",
+ *             Description = "description",
+ *             ChangeDescription = "change-description",
+ *             KmsKeyId = "customer-kms-key-id",
+ *             SupportedOsVersions = 
+ *             {
+ *                 "CentOS",
+ *                 "Red Hat Enterprise Linux",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "customerComponentTagKey1", "CustomerComponentTagValue1" },
+ *                 { "customerComponentTagKey2", "CustomerComponentTagValue2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/imagebuilder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := imagebuilder.NewComponent(ctx, "componentAllParameters", &imagebuilder.ComponentArgs{
+ * 			Name:              pulumi.String("component-name"),
+ * 			Platform:          "Linux",
+ * 			Version:           pulumi.String("1.0.0"),
+ * 			Uri:               pulumi.String("s3://imagebuilder/component_document.yml"),
+ * 			Description:       pulumi.String("description"),
+ * 			ChangeDescription: pulumi.String("change-description"),
+ * 			KmsKeyId:          pulumi.String("customer-kms-key-id"),
+ * 			SupportedOsVersions: pulumi.StringArray{
+ * 				pulumi.String("CentOS"),
+ * 				pulumi.String("Red Hat Enterprise Linux"),
+ * 			},
+ * 			Tags: pulumi.Any{
+ * 				CustomerComponentTagKey1: "CustomerComponentTagValue1",
+ * 				CustomerComponentTagKey2: "CustomerComponentTagValue2",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const componentAllParameters = new aws_native.imagebuilder.Component("componentAllParameters", {
+ *     name: "component-name",
+ *     platform: "Linux",
+ *     version: "1.0.0",
+ *     uri: "s3://imagebuilder/component_document.yml",
+ *     description: "description",
+ *     changeDescription: "change-description",
+ *     kmsKeyId: "customer-kms-key-id",
+ *     supportedOsVersions: [
+ *         "CentOS",
+ *         "Red Hat Enterprise Linux",
+ *     ],
+ *     tags: {
+ *         customerComponentTagKey1: "CustomerComponentTagValue1",
+ *         customerComponentTagKey2: "CustomerComponentTagValue2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * component_all_parameters = aws_native.imagebuilder.Component("componentAllParameters",
+ *     name="component-name",
+ *     platform="Linux",
+ *     version="1.0.0",
+ *     uri="s3://imagebuilder/component_document.yml",
+ *     description="description",
+ *     change_description="change-description",
+ *     kms_key_id="customer-kms-key-id",
+ *     supported_os_versions=[
+ *         "CentOS",
+ *         "Red Hat Enterprise Linux",
+ *     ],
+ *     tags={
+ *         "customerComponentTagKey1": "CustomerComponentTagValue1",
+ *         "customerComponentTagKey2": "CustomerComponentTagValue2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:imagebuilder:Component")
 public class Component extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the component.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the component.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The change description of the component.
-     * 
      */
     @Export(name="changeDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> changeDescription;
 
     /**
      * @return The change description of the component.
-     * 
      */
     public Output</* @Nullable */ String> getChangeDescription() {
         return this.changeDescription;
     }
     /**
      * The data of the component.
-     * 
      */
     @Export(name="data", type=String.class, parameters={})
     private Output</* @Nullable */ String> data;
 
     /**
      * @return The data of the component.
-     * 
      */
     public Output</* @Nullable */ String> getData() {
         return this.data;
     }
     /**
      * The description of the component.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the component.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The encryption status of the component.
-     * 
      */
     @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output<Boolean> encrypted;
 
     /**
      * @return The encryption status of the component.
-     * 
      */
     public Output<Boolean> getEncrypted() {
         return this.encrypted;
     }
     /**
      * The KMS key identifier used to encrypt the component.
-     * 
      */
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
      * @return The KMS key identifier used to encrypt the component.
-     * 
      */
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * The name of the component.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the component.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The platform of the component.
-     * 
      */
     @Export(name="platform", type=ComponentPlatform.class, parameters={})
     private Output<ComponentPlatform> platform;
 
     /**
      * @return The platform of the component.
-     * 
      */
     public Output<ComponentPlatform> getPlatform() {
         return this.platform;
     }
     /**
      * The operating system (OS) version supported by the component.
-     * 
      */
     @Export(name="supportedOsVersions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> supportedOsVersions;
 
     /**
      * @return The operating system (OS) version supported by the component.
-     * 
      */
     public Output</* @Nullable */ List<String>> getSupportedOsVersions() {
         return this.supportedOsVersions;
     }
     /**
      * The tags associated with the component.
-     * 
      */
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
      * @return The tags associated with the component.
-     * 
      */
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;
     }
     /**
-     * The type of the component denotes whether the component is used to build the image or only to test it.
-     * 
+     * The type of the component denotes whether the component is used to build the image or only to test it. 
      */
     @Export(name="type", type=ComponentType.class, parameters={})
     private Output<ComponentType> type;
 
     /**
-     * @return The type of the component denotes whether the component is used to build the image or only to test it.
-     * 
+     * @return The type of the component denotes whether the component is used to build the image or only to test it. 
      */
     public Output<ComponentType> getType() {
         return this.type;
     }
     /**
      * The uri of the component.
-     * 
      */
     @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**
      * @return The uri of the component.
-     * 
      */
     public Output</* @Nullable */ String> getUri() {
         return this.uri;
     }
     /**
      * The version of the component.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return The version of the component.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

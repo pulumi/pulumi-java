@@ -19,7 +19,6 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * FirewallRules
-     * 
      */
     @Import(name="firewallRules")
       private final @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
@@ -30,7 +29,6 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * FirewallRuleGroupName
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,7 +39,6 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<FirewallRuleGroupTagArgs>> tags;

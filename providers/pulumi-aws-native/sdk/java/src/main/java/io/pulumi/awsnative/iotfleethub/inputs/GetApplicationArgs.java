@@ -14,7 +14,6 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the application.
-     * 
      */
     @Import(name="applicationId", required=true)
       private final String applicationId;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::AppSync::DomainNameApiAssociation
- * 
  */
 @ResourceType(type="aws-native:appsync:DomainNameApiAssociation")
 public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource {

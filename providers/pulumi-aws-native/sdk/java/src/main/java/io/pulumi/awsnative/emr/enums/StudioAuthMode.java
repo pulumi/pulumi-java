@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio currently only supports SSO authentication.
-     * 
      */
     @EnumType
     public enum StudioAuthMode {

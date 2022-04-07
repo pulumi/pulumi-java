@@ -16,21 +16,118 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataBrew::Schedule.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testDataBrewSchedule = new AwsNative.DataBrew.Schedule("testDataBrewSchedule", new AwsNative.DataBrew.ScheduleArgs
+ *         {
+ *             JobNames = 
+ *             {
+ *                 "job-name",
+ *             },
+ *             Name = "schedule-name",
+ *             CronExpression = "cron(0 0/1 ? * * *)",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.DataBrew.Inputs.ScheduleTagArgs
+ *                 {
+ *                     Key = "key00AtCreate",
+ *                     Value = "value001AtCreate",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/databrew"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databrew.NewSchedule(ctx, "testDataBrewSchedule", &databrew.ScheduleArgs{
+ * 			JobNames: pulumi.StringArray{
+ * 				pulumi.String("job-name"),
+ * 			},
+ * 			Name:           pulumi.String("schedule-name"),
+ * 			CronExpression: pulumi.String("cron(0 0/1 ? * * *)"),
+ * 			Tags: []databrew.ScheduleTagArgs{
+ * 				&databrew.ScheduleTagArgs{
+ * 					Key:   pulumi.String("key00AtCreate"),
+ * 					Value: pulumi.String("value001AtCreate"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testDataBrewSchedule = new aws_native.databrew.Schedule("testDataBrewSchedule", {
+ *     jobNames: ["job-name"],
+ *     name: "schedule-name",
+ *     cronExpression: "cron(0 0/1 ? * * *)",
+ *     tags: [{
+ *         key: "key00AtCreate",
+ *         value: "value001AtCreate",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_data_brew_schedule = aws_native.databrew.Schedule("testDataBrewSchedule",
+ *     job_names=["job-name"],
+ *     name="schedule-name",
+ *     cron_expression="cron(0 0/1 ? * * *)",
+ *     tags=[aws_native.databrew.ScheduleTagArgs(
+ *         key="key00AtCreate",
+ *         value="value001AtCreate",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:databrew:Schedule")
 public class Schedule extends io.pulumi.resources.CustomResource {
     /**
      * Schedule cron
-     * 
      */
     @Export(name="cronExpression", type=String.class, parameters={})
     private Output<String> cronExpression;
 
     /**
      * @return Schedule cron
-     * 
      */
     public Output<String> getCronExpression() {
         return this.cronExpression;
@@ -43,14 +140,12 @@ public class Schedule extends io.pulumi.resources.CustomResource {
     }
     /**
      * Schedule Name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Schedule Name
-     * 
      */
     public Output<String> getName() {
         return this.name;

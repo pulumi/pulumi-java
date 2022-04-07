@@ -14,7 +14,6 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Schedule Name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

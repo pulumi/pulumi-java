@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket. A maximum of five trails can exist in a region, irrespective of the region in which they were created.
- * 
  */
 @ResourceType(type="aws-native:cloudtrail:Trail")
 public class Trail extends io.pulumi.resources.CustomResource {
@@ -30,168 +29,144 @@ public class Trail extends io.pulumi.resources.CustomResource {
     }
     /**
      * Specifies a log group name using an Amazon Resource Name (ARN), a unique identifier that represents the log group to which CloudTrail logs will be delivered. Not required unless you specify CloudWatchLogsRoleArn.
-     * 
      */
     @Export(name="cloudWatchLogsLogGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudWatchLogsLogGroupArn;
 
     /**
      * @return Specifies a log group name using an Amazon Resource Name (ARN), a unique identifier that represents the log group to which CloudTrail logs will be delivered. Not required unless you specify CloudWatchLogsRoleArn.
-     * 
      */
     public Output</* @Nullable */ String> getCloudWatchLogsLogGroupArn() {
         return this.cloudWatchLogsLogGroupArn;
     }
     /**
      * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.
-     * 
      */
     @Export(name="cloudWatchLogsRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudWatchLogsRoleArn;
 
     /**
      * @return Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.
-     * 
      */
     public Output</* @Nullable */ String> getCloudWatchLogsRoleArn() {
         return this.cloudWatchLogsRoleArn;
     }
     /**
      * Specifies whether log file validation is enabled. The default is false.
-     * 
      */
     @Export(name="enableLogFileValidation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableLogFileValidation;
 
     /**
      * @return Specifies whether log file validation is enabled. The default is false.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableLogFileValidation() {
         return this.enableLogFileValidation;
     }
     /**
      * Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn't match any event selector, the trail doesn't log the event. You can configure up to five event selectors for a trail.
-     * 
      */
     @Export(name="eventSelectors", type=List.class, parameters={TrailEventSelector.class})
     private Output</* @Nullable */ List<TrailEventSelector>> eventSelectors;
 
     /**
      * @return Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn't match any event selector, the trail doesn't log the event. You can configure up to five event selectors for a trail.
-     * 
      */
     public Output</* @Nullable */ List<TrailEventSelector>> getEventSelectors() {
         return this.eventSelectors;
     }
     /**
      * Specifies whether the trail is publishing events from global services such as IAM to the log files.
-     * 
      */
     @Export(name="includeGlobalServiceEvents", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> includeGlobalServiceEvents;
 
     /**
      * @return Specifies whether the trail is publishing events from global services such as IAM to the log files.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIncludeGlobalServiceEvents() {
         return this.includeGlobalServiceEvents;
     }
     /**
      * Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an existing trail.
-     * 
      */
     @Export(name="insightSelectors", type=List.class, parameters={TrailInsightSelector.class})
     private Output</* @Nullable */ List<TrailInsightSelector>> insightSelectors;
 
     /**
      * @return Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an existing trail.
-     * 
      */
     public Output</* @Nullable */ List<TrailInsightSelector>> getInsightSelectors() {
         return this.insightSelectors;
     }
     /**
      * Whether the CloudTrail is currently logging AWS API calls.
-     * 
      */
     @Export(name="isLogging", type=Boolean.class, parameters={})
     private Output<Boolean> isLogging;
 
     /**
      * @return Whether the CloudTrail is currently logging AWS API calls.
-     * 
      */
     public Output<Boolean> getIsLogging() {
         return this.isLogging;
     }
     /**
      * Specifies whether the trail applies only to the current region or to all regions. The default is false. If the trail exists only in the current region and this value is set to true, shadow trails (replications of the trail) will be created in the other regions. If the trail exists in all regions and this value is set to false, the trail will remain in the region where it was created, and its shadow trails in other regions will be deleted. As a best practice, consider using trails that log events in all regions.
-     * 
      */
     @Export(name="isMultiRegionTrail", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isMultiRegionTrail;
 
     /**
      * @return Specifies whether the trail applies only to the current region or to all regions. The default is false. If the trail exists only in the current region and this value is set to true, shadow trails (replications of the trail) will be created in the other regions. If the trail exists in all regions and this value is set to false, the trail will remain in the region where it was created, and its shadow trails in other regions will be deleted. As a best practice, consider using trails that log events in all regions.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsMultiRegionTrail() {
         return this.isMultiRegionTrail;
     }
     /**
      * Specifies whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current AWS account. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the master account for an organization in AWS Organizations.
-     * 
      */
     @Export(name="isOrganizationTrail", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isOrganizationTrail;
 
     /**
      * @return Specifies whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current AWS account. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the master account for an organization in AWS Organizations.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsOrganizationTrail() {
         return this.isOrganizationTrail;
     }
     /**
      * Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by 'alias/', a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
-     * 
      */
     @Export(name="kMSKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSKeyId;
 
     /**
      * @return Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by 'alias/', a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
-     * 
      */
     public Output</* @Nullable */ String> getKMSKeyId() {
         return this.kMSKeyId;
     }
     /**
      * Specifies the name of the Amazon S3 bucket designated for publishing log files. See Amazon S3 Bucket Naming Requirements.
-     * 
      */
     @Export(name="s3BucketName", type=String.class, parameters={})
     private Output<String> s3BucketName;
 
     /**
      * @return Specifies the name of the Amazon S3 bucket designated for publishing log files. See Amazon S3 Bucket Naming Requirements.
-     * 
      */
     public Output<String> getS3BucketName() {
         return this.s3BucketName;
     }
     /**
      * Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file delivery. For more information, see Finding Your CloudTrail Log Files. The maximum length is 200 characters.
-     * 
      */
     @Export(name="s3KeyPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3KeyPrefix;
 
     /**
      * @return Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file delivery. For more information, see Finding Your CloudTrail Log Files. The maximum length is 200 characters.
-     * 
      */
     public Output</* @Nullable */ String> getS3KeyPrefix() {
         return this.s3KeyPrefix;
@@ -204,14 +179,12 @@ public class Trail extends io.pulumi.resources.CustomResource {
     }
     /**
      * Specifies the name of the Amazon SNS topic defined for notification of log file delivery. The maximum length is 256 characters.
-     * 
      */
     @Export(name="snsTopicName", type=String.class, parameters={})
     private Output</* @Nullable */ String> snsTopicName;
 
     /**
      * @return Specifies the name of the Amazon SNS topic defined for notification of log file delivery. The maximum length is 256 characters.
-     * 
      */
     public Output</* @Nullable */ String> getSnsTopicName() {
         return this.snsTopicName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The destination in which evidence reports are stored for the specified assessment.
- * 
  */
 public final class AssessmentReportsDestination extends io.pulumi.resources.InvokeArgs {
 

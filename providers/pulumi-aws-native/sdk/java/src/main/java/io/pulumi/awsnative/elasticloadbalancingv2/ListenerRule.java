@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ElasticLoadBalancingV2::ListenerRule
- * 
  */
 @ResourceType(type="aws-native:elasticloadbalancingv2:ListenerRule")
 public class ListenerRule extends io.pulumi.resources.CustomResource {

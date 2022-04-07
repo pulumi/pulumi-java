@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class SignalingChannelTag {
     /**
      * The key name of the tag. Specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. The following characters can be used: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
      */
     private final String key;
     /**
      * The value for the tag. Specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:.  The following characters can be used: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class SignalingChannelTag {
 
     /**
      * The key name of the tag. Specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. The following characters can be used: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The value for the tag. Specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:.  The following characters can be used: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
-     * 
     */
     public String getValue() {
         return this.value;

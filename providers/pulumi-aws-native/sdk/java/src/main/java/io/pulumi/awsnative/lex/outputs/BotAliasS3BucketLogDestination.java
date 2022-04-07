@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class BotAliasS3BucketLogDestination {
     /**
      * The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key for encrypting audio log files stored in an S3 bucket.
-     * 
      */
     private final @Nullable String kmsKeyArn;
     /**
      * The Amazon S3 key of the deployment package.
-     * 
      */
     private final String logPrefix;
     /**
      * The Amazon Resource Name (ARN) of an Amazon S3 bucket where audio log files are stored.
-     * 
      */
     private final String s3BucketArn;
 
@@ -39,21 +36,18 @@ public final class BotAliasS3BucketLogDestination {
 
     /**
      * The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key for encrypting audio log files stored in an S3 bucket.
-     * 
     */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * The Amazon S3 key of the deployment package.
-     * 
     */
     public String getLogPrefix() {
         return this.logPrefix;
     }
     /**
      * The Amazon Resource Name (ARN) of an Amazon S3 bucket where audio log files are stored.
-     * 
     */
     public String getS3BucketArn() {
         return this.s3BucketArn;

@@ -16,7 +16,287 @@ import javax.annotation.Nullable;
 /**
  * Associate a set of ECS Capacity Providers with a specified ECS Cluster
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var clusterName = config.Require("clusterName");
+ *         var clusterCPAssociation = new AwsNative.ECS.ClusterCapacityProviderAssociations("clusterCPAssociation", new AwsNative.ECS.ClusterCapacityProviderAssociationsArgs
+ *         {
+ *             Cluster = clusterName,
+ *             CapacityProviders = 
+ *             {
+ *                 "FARGATE",
+ *                 "FARGATE_SPOT",
+ *             },
+ *             DefaultCapacityProviderStrategy = 
+ *             {
+ *                 new AwsNative.ECS.Inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs
+ *                 {
+ *                     Base = 2,
+ *                     Weight = 1,
+ *                     CapacityProvider = "FARGATE",
+ *                 },
+ *                 new AwsNative.ECS.Inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs
+ *                 {
+ *                     Base = 0,
+ *                     Weight = 1,
+ *                     CapacityProvider = "FARGATE_SPOT",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		clusterName := cfg.Require("clusterName")
+ * 		_, err := ecs.NewClusterCapacityProviderAssociations(ctx, "clusterCPAssociation", &ecs.ClusterCapacityProviderAssociationsArgs{
+ * 			Cluster: pulumi.String(clusterName),
+ * 			CapacityProviders: pulumi.StringArray{
+ * 				pulumi.String("FARGATE"),
+ * 				pulumi.String("FARGATE_SPOT"),
+ * 			},
+ * 			DefaultCapacityProviderStrategy: ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArray{
+ * 				&ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs{
+ * 					Base:             pulumi.Int(2),
+ * 					Weight:           pulumi.Int(1),
+ * 					CapacityProvider: pulumi.String("FARGATE"),
+ * 				},
+ * 				&ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs{
+ * 					Base:             pulumi.Int(0),
+ * 					Weight:           pulumi.Int(1),
+ * 					CapacityProvider: pulumi.String("FARGATE_SPOT"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const clusterName = config.require("clusterName");
+ * const clusterCPAssociation = new aws_native.ecs.ClusterCapacityProviderAssociations("clusterCPAssociation", {
+ *     cluster: clusterName,
+ *     capacityProviders: [
+ *         "FARGATE",
+ *         "FARGATE_SPOT",
+ *     ],
+ *     defaultCapacityProviderStrategy: [
+ *         {
+ *             base: 2,
+ *             weight: 1,
+ *             capacityProvider: "FARGATE",
+ *         },
+ *         {
+ *             base: 0,
+ *             weight: 1,
+ *             capacityProvider: "FARGATE_SPOT",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * cluster_name = config.require("clusterName")
+ * cluster_cpassociation = aws_native.ecs.ClusterCapacityProviderAssociations("clusterCPAssociation",
+ *     cluster=cluster_name,
+ *     capacity_providers=[
+ *         "FARGATE",
+ *         "FARGATE_SPOT",
+ *     ],
+ *     default_capacity_provider_strategy=[
+ *         aws_native.ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(
+ *             base=2,
+ *             weight=1,
+ *             capacity_provider="FARGATE",
+ *         ),
+ *         aws_native.ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(
+ *             base=0,
+ *             weight=1,
+ *             capacity_provider="FARGATE_SPOT",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var clusterName = config.Require("clusterName");
+ *         var clusterCPAssociation = new AwsNative.ECS.ClusterCapacityProviderAssociations("clusterCPAssociation", new AwsNative.ECS.ClusterCapacityProviderAssociationsArgs
+ *         {
+ *             Cluster = clusterName,
+ *             CapacityProviders = 
+ *             {
+ *                 "FARGATE",
+ *                 "FARGATE_SPOT",
+ *             },
+ *             DefaultCapacityProviderStrategy = 
+ *             {
+ *                 new AwsNative.ECS.Inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs
+ *                 {
+ *                     Base = 2,
+ *                     Weight = 1,
+ *                     CapacityProvider = "FARGATE",
+ *                 },
+ *                 new AwsNative.ECS.Inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs
+ *                 {
+ *                     Base = 0,
+ *                     Weight = 1,
+ *                     CapacityProvider = "FARGATE_SPOT",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		clusterName := cfg.Require("clusterName")
+ * 		_, err := ecs.NewClusterCapacityProviderAssociations(ctx, "clusterCPAssociation", &ecs.ClusterCapacityProviderAssociationsArgs{
+ * 			Cluster: pulumi.String(clusterName),
+ * 			CapacityProviders: pulumi.StringArray{
+ * 				pulumi.String("FARGATE"),
+ * 				pulumi.String("FARGATE_SPOT"),
+ * 			},
+ * 			DefaultCapacityProviderStrategy: ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArray{
+ * 				&ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs{
+ * 					Base:             pulumi.Int(2),
+ * 					Weight:           pulumi.Int(1),
+ * 					CapacityProvider: pulumi.String("FARGATE"),
+ * 				},
+ * 				&ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs{
+ * 					Base:             pulumi.Int(0),
+ * 					Weight:           pulumi.Int(1),
+ * 					CapacityProvider: pulumi.String("FARGATE_SPOT"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const clusterName = config.require("clusterName");
+ * const clusterCPAssociation = new aws_native.ecs.ClusterCapacityProviderAssociations("clusterCPAssociation", {
+ *     cluster: clusterName,
+ *     capacityProviders: [
+ *         "FARGATE",
+ *         "FARGATE_SPOT",
+ *     ],
+ *     defaultCapacityProviderStrategy: [
+ *         {
+ *             base: 2,
+ *             weight: 1,
+ *             capacityProvider: "FARGATE",
+ *         },
+ *         {
+ *             base: 0,
+ *             weight: 1,
+ *             capacityProvider: "FARGATE_SPOT",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * cluster_name = config.require("clusterName")
+ * cluster_cpassociation = aws_native.ecs.ClusterCapacityProviderAssociations("clusterCPAssociation",
+ *     cluster=cluster_name,
+ *     capacity_providers=[
+ *         "FARGATE",
+ *         "FARGATE_SPOT",
+ *     ],
+ *     default_capacity_provider_strategy=[
+ *         aws_native.ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(
+ *             base=2,
+ *             weight=1,
+ *             capacity_provider="FARGATE",
+ *         ),
+ *         aws_native.ecs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(
+ *             base=0,
+ *             weight=1,
+ *             capacity_provider="FARGATE_SPOT",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ecs:ClusterCapacityProviderAssociations")

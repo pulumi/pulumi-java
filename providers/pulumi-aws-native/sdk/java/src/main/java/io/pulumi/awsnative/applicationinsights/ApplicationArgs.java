@@ -22,7 +22,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If set to true, application will be configured with recommended monitoring configuration.
-     * 
      */
     @Import(name="autoConfigurationEnabled")
       private final @Nullable Output<Boolean> autoConfigurationEnabled;
@@ -33,7 +32,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether Application Insights can listen to CloudWatch events for the application resources.
-     * 
      */
     @Import(name="cWEMonitorEnabled")
       private final @Nullable Output<Boolean> cWEMonitorEnabled;
@@ -44,7 +42,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The monitoring settings of the components.
-     * 
      */
     @Import(name="componentMonitoringSettings")
       private final @Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
@@ -55,7 +52,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The custom grouped components.
-     * 
      */
     @Import(name="customComponents")
       private final @Nullable Output<List<ApplicationCustomComponentArgs>> customComponents;
@@ -66,7 +62,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The log pattern sets.
-     * 
      */
     @Import(name="logPatternSets")
       private final @Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets;
@@ -77,7 +72,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When set to true, creates opsItems for any problems detected on an application.
-     * 
      */
     @Import(name="opsCenterEnabled")
       private final @Nullable Output<Boolean> opsCenterEnabled;
@@ -88,7 +82,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SNS topic provided to Application Insights that is associated to the created opsItem.
-     * 
      */
     @Import(name="opsItemSNSTopicArn")
       private final @Nullable Output<String> opsItemSNSTopicArn;
@@ -99,7 +92,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -110,7 +102,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of Application Insights application.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;

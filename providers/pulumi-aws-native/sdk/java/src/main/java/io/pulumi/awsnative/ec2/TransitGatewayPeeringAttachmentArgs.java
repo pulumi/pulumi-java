@@ -19,7 +19,6 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
 
     /**
      * Options for transit gateway peering attachment
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options;
@@ -30,7 +29,6 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
 
     /**
      * The ID of the peer account
-     * 
      */
     @Import(name="peerAccountId", required=true)
       private final Output<String> peerAccountId;
@@ -41,7 +39,6 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
 
     /**
      * Peer Region
-     * 
      */
     @Import(name="peerRegion", required=true)
       private final Output<String> peerRegion;
@@ -52,7 +49,6 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
 
     /**
      * The ID of the peer transit gateway.
-     * 
      */
     @Import(name="peerTransitGatewayId", required=true)
       private final Output<String> peerTransitGatewayId;
@@ -63,7 +59,6 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
 
     /**
      * The tags for the transit gateway peering attachment.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags;
@@ -74,7 +69,6 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
 
     /**
      * The ID of the transit gateway.
-     * 
      */
     @Import(name="transitGatewayId", required=true)
       private final Output<String> transitGatewayId;

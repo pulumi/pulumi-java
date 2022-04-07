@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Structure that contains X.500 distinguished name information.
- * 
  */
 public final class CertificateSubjectArgs extends io.pulumi.resources.ResourceArgs {
 

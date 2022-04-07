@@ -17,7 +17,263 @@ import javax.annotation.Nullable;
 /**
  * Resource Schema for AWS::EKS::FargateProfile
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var eksFargateProfile = new AwsNative.EKS.FargateProfile("eksFargateProfile", new AwsNative.EKS.FargateProfileArgs
+ *         {
+ *             FargateProfileName = "my-fargate-profile",
+ *             ClusterName = "my-cluster",
+ *             PodExecutionRoleArn = "arn:aws:iam::012345678910:role/AmazonEKSFargatePodExecutionRole",
+ *             Subnets = 
+ *             {
+ *                 "subnet-6782e71e",
+ *                 "subnet-e7e761ac",
+ *             },
+ *             Selectors = 
+ *             {
+ *                 new AwsNative.EKS.Inputs.FargateProfileSelectorArgs
+ *                 {
+ *                     Namespace = "my-namespace",
+ *                     Labels = 
+ *                     {
+ *                         new AwsNative.EKS.Inputs.FargateProfileLabelArgs
+ *                         {
+ *                             Key = "my-key",
+ *                             Value = "my-value",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/eks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eks.NewFargateProfile(ctx, "eksFargateProfile", &eks.FargateProfileArgs{
+ * 			FargateProfileName:  pulumi.String("my-fargate-profile"),
+ * 			ClusterName:         pulumi.String("my-cluster"),
+ * 			PodExecutionRoleArn: pulumi.String("arn:aws:iam::012345678910:role/AmazonEKSFargatePodExecutionRole"),
+ * 			Subnets: pulumi.StringArray{
+ * 				pulumi.String("subnet-6782e71e"),
+ * 				pulumi.String("subnet-e7e761ac"),
+ * 			},
+ * 			Selectors: eks.FargateProfileSelectorArray{
+ * 				&eks.FargateProfileSelectorArgs{
+ * 					Namespace: pulumi.String("my-namespace"),
+ * 					Labels: eks.FargateProfileLabelArray{
+ * 						&eks.FargateProfileLabelArgs{
+ * 							Key:   pulumi.String("my-key"),
+ * 							Value: pulumi.String("my-value"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const eksFargateProfile = new aws_native.eks.FargateProfile("eksFargateProfile", {
+ *     fargateProfileName: "my-fargate-profile",
+ *     clusterName: "my-cluster",
+ *     podExecutionRoleArn: "arn:aws:iam::012345678910:role/AmazonEKSFargatePodExecutionRole",
+ *     subnets: [
+ *         "subnet-6782e71e",
+ *         "subnet-e7e761ac",
+ *     ],
+ *     selectors: [{
+ *         namespace: "my-namespace",
+ *         labels: [{
+ *             key: "my-key",
+ *             value: "my-value",
+ *         }],
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * eks_fargate_profile = aws_native.eks.FargateProfile("eksFargateProfile",
+ *     fargate_profile_name="my-fargate-profile",
+ *     cluster_name="my-cluster",
+ *     pod_execution_role_arn="arn:aws:iam::012345678910:role/AmazonEKSFargatePodExecutionRole",
+ *     subnets=[
+ *         "subnet-6782e71e",
+ *         "subnet-e7e761ac",
+ *     ],
+ *     selectors=[aws_native.eks.FargateProfileSelectorArgs(
+ *         namespace="my-namespace",
+ *         labels=[aws_native.eks.FargateProfileLabelArgs(
+ *             key="my-key",
+ *             value="my-value",
+ *         )],
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var eksFargateProfile = new AwsNative.EKS.FargateProfile("eksFargateProfile", new AwsNative.EKS.FargateProfileArgs
+ *         {
+ *             FargateProfileName = "my-fargate-profile",
+ *             ClusterName = "my-cluster",
+ *             PodExecutionRoleArn = "arn:aws:iam::012345678910:role/AmazonEKSFargatePodExecutionRole",
+ *             Subnets = 
+ *             {
+ *                 "subnet-6782e71e",
+ *                 "subnet-e7e761ac",
+ *             },
+ *             Selectors = 
+ *             {
+ *                 new AwsNative.EKS.Inputs.FargateProfileSelectorArgs
+ *                 {
+ *                     Namespace = "my-namespace",
+ *                     Labels = 
+ *                     {
+ *                         new AwsNative.EKS.Inputs.FargateProfileLabelArgs
+ *                         {
+ *                             Key = "my-key",
+ *                             Value = "my-value",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/eks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eks.NewFargateProfile(ctx, "eksFargateProfile", &eks.FargateProfileArgs{
+ * 			FargateProfileName:  pulumi.String("my-fargate-profile"),
+ * 			ClusterName:         pulumi.String("my-cluster"),
+ * 			PodExecutionRoleArn: pulumi.String("arn:aws:iam::012345678910:role/AmazonEKSFargatePodExecutionRole"),
+ * 			Subnets: pulumi.StringArray{
+ * 				pulumi.String("subnet-6782e71e"),
+ * 				pulumi.String("subnet-e7e761ac"),
+ * 			},
+ * 			Selectors: eks.FargateProfileSelectorArray{
+ * 				&eks.FargateProfileSelectorArgs{
+ * 					Namespace: pulumi.String("my-namespace"),
+ * 					Labels: eks.FargateProfileLabelArray{
+ * 						&eks.FargateProfileLabelArgs{
+ * 							Key:   pulumi.String("my-key"),
+ * 							Value: pulumi.String("my-value"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const eksFargateProfile = new aws_native.eks.FargateProfile("eksFargateProfile", {
+ *     fargateProfileName: "my-fargate-profile",
+ *     clusterName: "my-cluster",
+ *     podExecutionRoleArn: "arn:aws:iam::012345678910:role/AmazonEKSFargatePodExecutionRole",
+ *     subnets: [
+ *         "subnet-6782e71e",
+ *         "subnet-e7e761ac",
+ *     ],
+ *     selectors: [{
+ *         namespace: "my-namespace",
+ *         labels: [{
+ *             key: "my-key",
+ *             value: "my-value",
+ *         }],
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * eks_fargate_profile = aws_native.eks.FargateProfile("eksFargateProfile",
+ *     fargate_profile_name="my-fargate-profile",
+ *     cluster_name="my-cluster",
+ *     pod_execution_role_arn="arn:aws:iam::012345678910:role/AmazonEKSFargatePodExecutionRole",
+ *     subnets=[
+ *         "subnet-6782e71e",
+ *         "subnet-e7e761ac",
+ *     ],
+ *     selectors=[aws_native.eks.FargateProfileSelectorArgs(
+ *         namespace="my-namespace",
+ *         labels=[aws_native.eks.FargateProfileLabelArgs(
+ *             key="my-key",
+ *             value="my-value",
+ *         )],
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:eks:FargateProfile")
@@ -30,42 +286,36 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
     }
     /**
      * Name of the Cluster
-     * 
      */
     @Export(name="clusterName", type=String.class, parameters={})
     private Output<String> clusterName;
 
     /**
      * @return Name of the Cluster
-     * 
      */
     public Output<String> getClusterName() {
         return this.clusterName;
     }
     /**
      * Name of FargateProfile
-     * 
      */
     @Export(name="fargateProfileName", type=String.class, parameters={})
     private Output</* @Nullable */ String> fargateProfileName;
 
     /**
      * @return Name of FargateProfile
-     * 
      */
     public Output</* @Nullable */ String> getFargateProfileName() {
         return this.fargateProfileName;
     }
     /**
      * The IAM policy arn for pods
-     * 
      */
     @Export(name="podExecutionRoleArn", type=String.class, parameters={})
     private Output<String> podExecutionRoleArn;
 
     /**
      * @return The IAM policy arn for pods
-     * 
      */
     public Output<String> getPodExecutionRoleArn() {
         return this.podExecutionRoleArn;
@@ -84,14 +334,12 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={FargateProfileTag.class})
     private Output</* @Nullable */ List<FargateProfileTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<FargateProfileTag>> getTags() {
         return this.tags;

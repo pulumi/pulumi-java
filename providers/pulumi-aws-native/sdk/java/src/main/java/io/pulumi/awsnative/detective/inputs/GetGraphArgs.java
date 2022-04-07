@@ -14,7 +14,6 @@ public final class GetGraphArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Detective graph ARN
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

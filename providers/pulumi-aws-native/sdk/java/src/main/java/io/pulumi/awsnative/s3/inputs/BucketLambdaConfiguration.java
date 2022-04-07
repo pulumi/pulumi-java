@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the AWS Lambda functions to invoke and the events for which to invoke them.
- * 
  */
 public final class BucketLambdaConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BucketLambdaConfiguration extends io.pulumi.resources.InvokeA
 
     /**
      * The Amazon S3 bucket event for which to invoke the AWS Lambda function.
-     * 
      */
     @Import(name="event", required=true)
       private final String event;
@@ -32,7 +30,6 @@ public final class BucketLambdaConfiguration extends io.pulumi.resources.InvokeA
 
     /**
      * The filtering rules that determine which objects invoke the AWS Lambda function.
-     * 
      */
     @Import(name="filter")
       private final @Nullable BucketNotificationFilter filter;
@@ -43,7 +40,6 @@ public final class BucketLambdaConfiguration extends io.pulumi.resources.InvokeA
 
     /**
      * The Amazon Resource Name (ARN) of the AWS Lambda function that Amazon S3 invokes when the specified event type occurs.
-     * 
      */
     @Import(name="function", required=true)
       private final String function;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The EC2 launch template that contains configuration settings and game server code to be deployed to all instances in the game server group.
- * 
  */
 public final class GameServerGroupLaunchTemplate extends io.pulumi.resources.InvokeArgs {
 

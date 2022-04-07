@@ -11,13 +11,11 @@ import java.util.Objects;
 @CustomType
 public final class StreamEncryption {
     /**
-     * The encryption type to use. The only valid value is KMS.
-     * 
+     * The encryption type to use. The only valid value is KMS. 
      */
     private final StreamEncryptionEncryptionType encryptionType;
     /**
      * The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by "alias/".You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
-     * 
      */
     private final String keyId;
 
@@ -30,15 +28,13 @@ public final class StreamEncryption {
     }
 
     /**
-     * The encryption type to use. The only valid value is KMS.
-     * 
+     * The encryption type to use. The only valid value is KMS. 
     */
     public StreamEncryptionEncryptionType getEncryptionType() {
         return this.encryptionType;
     }
     /**
      * The GUID for the customer-managed AWS KMS key to use for encryption. This value can be a globally unique identifier, a fully specified Amazon Resource Name (ARN) to either an alias or a key, or an alias name prefixed by "alias/".You can also use a master key owned by Kinesis Data Streams by specifying the alias aws/kinesis.
-     * 
     */
     public String getKeyId() {
         return this.keyId;

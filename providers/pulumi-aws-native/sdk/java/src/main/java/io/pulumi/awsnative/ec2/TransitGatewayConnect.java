@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::EC2::TransitGatewayConnect type
- * 
  */
 @ResourceType(type="aws-native:ec2:TransitGatewayConnect")
 public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
     /**
      * The creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The creation time.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * The Connect attachment options.
-     * 
      */
     @Export(name="options", type=TransitGatewayConnectOptions.class, parameters={})
     private Output<TransitGatewayConnectOptions> options;
 
     /**
      * @return The Connect attachment options.
-     * 
      */
     public Output<TransitGatewayConnectOptions> getOptions() {
         return this.options;
     }
     /**
      * The state of the attachment.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the attachment.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The tags for the attachment.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={TransitGatewayConnectTag.class})
     private Output</* @Nullable */ List<TransitGatewayConnectTag>> tags;
 
     /**
      * @return The tags for the attachment.
-     * 
      */
     public Output</* @Nullable */ List<TransitGatewayConnectTag>> getTags() {
         return this.tags;
     }
     /**
      * The ID of the Connect attachment.
-     * 
      */
     @Export(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transitGatewayAttachmentId;
 
     /**
      * @return The ID of the Connect attachment.
-     * 
      */
     public Output<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
      * The ID of the transit gateway.
-     * 
      */
     @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output<String> transitGatewayId;
 
     /**
      * @return The ID of the transit gateway.
-     * 
      */
     public Output<String> getTransitGatewayId() {
         return this.transitGatewayId;
     }
     /**
      * The ID of the attachment from which the Connect attachment was created.
-     * 
      */
     @Export(name="transportTransitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transportTransitGatewayAttachmentId;
 
     /**
      * @return The ID of the attachment from which the Connect attachment was created.
-     * 
      */
     public Output<String> getTransportTransitGatewayAttachmentId() {
         return this.transportTransitGatewayAttachmentId;

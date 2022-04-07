@@ -17,7 +17,6 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
 
     /**
      * The credentials used to access protected resources.
-     * 
      */
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
@@ -28,7 +27,6 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
 
     /**
      * The client credentials to fetch access token and refresh token.
-     * 
      */
     @Import(name="clientCredentialsArn")
       private final @Nullable Output<String> clientCredentialsArn;
@@ -39,7 +37,6 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
 
     /**
      * The oauth needed to request security tokens from the connector endpoint.
-     * 
      */
     @Import(name="connectorOAuthRequest")
       private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
@@ -50,7 +47,6 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
 
     /**
      * The credentials used to acquire new access tokens.
-     * 
      */
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;

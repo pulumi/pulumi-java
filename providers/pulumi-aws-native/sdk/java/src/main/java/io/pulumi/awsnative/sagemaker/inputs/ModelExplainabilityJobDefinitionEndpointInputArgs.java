@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The endpoint for a monitoring job.
- * 
  */
 public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
 
     /**
      * JSONpath to locate features in JSONlines dataset
-     * 
      */
     @Import(name="featuresAttribute")
       private final @Nullable Output<String> featuresAttribute;
@@ -40,7 +38,6 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
 
     /**
      * Index or JSONpath to locate predicted label(s)
-     * 
      */
     @Import(name="inferenceAttribute")
       private final @Nullable Output<String> inferenceAttribute;
@@ -51,7 +48,6 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
 
     /**
      * Path to the filesystem where the endpoint data is available to the container.
-     * 
      */
     @Import(name="localPath", required=true)
       private final Output<String> localPath;
@@ -62,7 +58,6 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
 
     /**
      * Index or JSONpath to locate probabilities
-     * 
      */
     @Import(name="probabilityAttribute")
       private final @Nullable Output<String> probabilityAttribute;
@@ -73,7 +68,6 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
 
     /**
      * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
-     * 
      */
     @Import(name="s3DataDistributionType")
       private final @Nullable Output<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
@@ -84,7 +78,6 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
 
     /**
      * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
-     * 
      */
     @Import(name="s3InputMode")
       private final @Nullable Output<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode;

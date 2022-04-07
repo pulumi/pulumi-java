@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates when API Gateway passes requests to the targeted backend.
-     * 
      */
     @EnumType
     public enum MethodIntegrationPassthroughBehavior {

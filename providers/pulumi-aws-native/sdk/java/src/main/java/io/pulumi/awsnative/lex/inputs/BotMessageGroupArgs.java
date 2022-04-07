@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * One or more messages that Amazon Lex can send to the user.
- * 
  */
 public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Message variations to send to the user.
-     * 
      */
     @Import(name="variations")
       private final @Nullable Output<List<BotMessageArgs>> variations;

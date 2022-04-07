@@ -16,42 +16,34 @@ import javax.annotation.Nullable;
 public final class ContainerRecipeEbsInstanceBlockDeviceSpecification {
     /**
      * Use to configure delete on termination of the associated device.
-     * 
      */
     private final @Nullable Boolean deleteOnTermination;
     /**
      * Use to configure device encryption.
-     * 
      */
     private final @Nullable Boolean encrypted;
     /**
      * Use to configure device IOPS.
-     * 
      */
     private final @Nullable Integer iops;
     /**
      * Use to configure the KMS key to use when encrypting the device.
-     * 
      */
     private final @Nullable String kmsKeyId;
     /**
      * The snapshot that defines the device contents.
-     * 
      */
     private final @Nullable String snapshotId;
     /**
      * For GP3 volumes only – The throughput in MiB/s that the volume supports.
-     * 
      */
     private final @Nullable Integer throughput;
     /**
      * Use to override the device's volume size.
-     * 
      */
     private final @Nullable Integer volumeSize;
     /**
      * Use to override the device's volume type.
-     * 
      */
     private final @Nullable ContainerRecipeEbsInstanceBlockDeviceSpecificationVolumeType volumeType;
 
@@ -77,56 +69,48 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecification {
 
     /**
      * Use to configure delete on termination of the associated device.
-     * 
     */
     public Optional<Boolean> getDeleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
      * Use to configure device encryption.
-     * 
     */
     public Optional<Boolean> getEncrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
      * Use to configure device IOPS.
-     * 
     */
     public Optional<Integer> getIops() {
         return Optional.ofNullable(this.iops);
     }
     /**
      * Use to configure the KMS key to use when encrypting the device.
-     * 
     */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * The snapshot that defines the device contents.
-     * 
     */
     public Optional<String> getSnapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
      * For GP3 volumes only – The throughput in MiB/s that the volume supports.
-     * 
     */
     public Optional<Integer> getThroughput() {
         return Optional.ofNullable(this.throughput);
     }
     /**
      * Use to override the device's volume size.
-     * 
     */
     public Optional<Integer> getVolumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
      * Use to override the device's volume type.
-     * 
     */
     public Optional<ContainerRecipeEbsInstanceBlockDeviceSpecificationVolumeType> getVolumeType() {
         return Optional.ofNullable(this.volumeType);

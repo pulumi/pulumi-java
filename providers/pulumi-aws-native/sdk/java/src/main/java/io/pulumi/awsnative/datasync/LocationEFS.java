@@ -17,7 +17,97 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::DataSync::LocationEFS.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var locationEFS = new AwsNative.DataSync.LocationEFS("locationEFS", new AwsNative.DataSync.LocationEFSArgs
+ *         {
+ *             Ec2Config = new AwsNative.DataSync.Inputs.LocationEFSEc2ConfigArgs
+ *             {
+ *                 SecurityGroupArns = 
+ *                 {
+ *                     "arn:aws:ec2:us-east-2:11122233344:security-group/sg-0117195988293d62f",
+ *                 },
+ *                 SubnetArn = "arn:aws:ec2:us-east-2:11122233344:subnet/subnet-f45a0e678",
+ *             },
+ *             EfsFilesystemArn = "arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-12345efs",
+ *             Subdirectory = "/MySubdirectory",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/datasync"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datasync.NewLocationEFS(ctx, "locationEFS", &datasync.LocationEFSArgs{
+ * 			Ec2Config: &datasync.LocationEFSEc2ConfigArgs{
+ * 				SecurityGroupArns: pulumi.StringArray{
+ * 					pulumi.String("arn:aws:ec2:us-east-2:11122233344:security-group/sg-0117195988293d62f"),
+ * 				},
+ * 				SubnetArn: pulumi.String("arn:aws:ec2:us-east-2:11122233344:subnet/subnet-f45a0e678"),
+ * 			},
+ * 			EfsFilesystemArn: pulumi.String("arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-12345efs"),
+ * 			Subdirectory:     pulumi.String("/MySubdirectory"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const locationEFS = new aws_native.datasync.LocationEFS("locationEFS", {
+ *     ec2Config: {
+ *         securityGroupArns: ["arn:aws:ec2:us-east-2:11122233344:security-group/sg-0117195988293d62f"],
+ *         subnetArn: "arn:aws:ec2:us-east-2:11122233344:subnet/subnet-f45a0e678",
+ *     },
+ *     efsFilesystemArn: "arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-12345efs",
+ *     subdirectory: "/MySubdirectory",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * location_efs = aws_native.datasync.LocationEFS("locationEFS",
+ *     ec2_config=aws_native.datasync.LocationEFSEc2ConfigArgs(
+ *         security_group_arns=["arn:aws:ec2:us-east-2:11122233344:security-group/sg-0117195988293d62f"],
+ *         subnet_arn="arn:aws:ec2:us-east-2:11122233344:subnet/subnet-f45a0e678",
+ *     ),
+ *     efs_filesystem_arn="arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-12345efs",
+ *     subdirectory="/MySubdirectory")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:datasync:LocationEFS")
@@ -30,70 +120,60 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
     }
     /**
      * The Amazon Resource Name (ARN) for the Amazon EFS file system.
-     * 
      */
     @Export(name="efsFilesystemArn", type=String.class, parameters={})
     private Output<String> efsFilesystemArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the Amazon EFS file system.
-     * 
      */
     public Output<String> getEfsFilesystemArn() {
         return this.efsFilesystemArn;
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
-     * 
      */
     @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
-     * 
      */
     public Output<String> getLocationArn() {
         return this.locationArn;
     }
     /**
      * The URL of the EFS location that was described.
-     * 
      */
     @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
      * @return The URL of the EFS location that was described.
-     * 
      */
     public Output<String> getLocationUri() {
         return this.locationUri;
     }
     /**
      * A subdirectory in the location's path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
-     * 
      */
     @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
      * @return A subdirectory in the location's path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
-     * 
      */
     public Output</* @Nullable */ String> getSubdirectory() {
         return this.subdirectory;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={LocationEFSTag.class})
     private Output</* @Nullable */ List<LocationEFSTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<LocationEFSTag>> getTags() {
         return this.tags;

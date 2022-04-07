@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains the CoreDeviceThingName of AWS IoT Greengrass Group V2 that the gateway runs on.
- * 
  */
 public final class GatewayGreengrassV2Args extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GatewayGreengrassV2Args extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the CoreDevice in GreenGrass V2.
-     * 
      */
     @Import(name="coreDeviceThingName", required=true)
       private final Output<String> coreDeviceThingName;

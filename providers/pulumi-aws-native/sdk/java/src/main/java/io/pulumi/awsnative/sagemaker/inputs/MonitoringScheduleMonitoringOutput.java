@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The output object for a monitoring job.
- * 
  */
 public final class MonitoringScheduleMonitoringOutput extends io.pulumi.resources.InvokeArgs {
 

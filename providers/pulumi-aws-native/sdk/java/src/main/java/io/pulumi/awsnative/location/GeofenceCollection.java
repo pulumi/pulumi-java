@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::Location::GeofenceCollection Resource Type
- * 
  */
 @ResourceType(type="aws-native:location:GeofenceCollection")
 public class GeofenceCollection extends io.pulumi.resources.CustomResource {

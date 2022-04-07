@@ -23,7 +23,557 @@ import javax.annotation.Nullable;
 /**
  * Resource Schema describing various properties for ECS TaskDefinition
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var taskdefinition = new AwsNative.ECS.TaskDefinition("taskdefinition", new AwsNative.ECS.TaskDefinitionArgs
+ *         {
+ *             RequiresCompatibilities = 
+ *             {
+ *                 "EC2",
+ *             },
+ *             ContainerDefinitions = 
+ *             {
+ *                 new AwsNative.ECS.Inputs.TaskDefinitionContainerDefinitionArgs
+ *                 {
+ *                     Name = "my-app",
+ *                     MountPoints = 
+ *                     {
+ *                         new AwsNative.ECS.Inputs.TaskDefinitionMountPointArgs
+ *                         {
+ *                             SourceVolume = "my-vol",
+ *                             ContainerPath = "/var/www/my-vol",
+ *                         },
+ *                     },
+ *                     Image = "amazon/amazon-ecs-sample",
+ *                     Cpu = 256,
+ *                     EntryPoint = 
+ *                     {
+ *                         "/usr/sbin/apache2",
+ *                         "-D",
+ *                         "FOREGROUND",
+ *                     },
+ *                     Memory = 512,
+ *                     Essential = true,
+ *                 },
+ *                 new AwsNative.ECS.Inputs.TaskDefinitionContainerDefinitionArgs
+ *                 {
+ *                     Name = "busybox",
+ *                     Image = "busybox",
+ *                     Cpu = 256,
+ *                     EntryPoint = 
+ *                     {
+ *                         "sh",
+ *                         "-c",
+ *                     },
+ *                     Memory = 512,
+ *                     Command = 
+ *                     {
+ *                         "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\"",
+ *                     },
+ *                     Essential = false,
+ *                     DependsOn = 
+ *                     {
+ *                         new AwsNative.ECS.Inputs.TaskDefinitionContainerDependencyArgs
+ *                         {
+ *                             ContainerName = "my-app",
+ *                             Condition = "START",
+ *                         },
+ *                     },
+ *                     VolumesFrom = 
+ *                     {
+ *                         new AwsNative.ECS.Inputs.TaskDefinitionVolumeFromArgs
+ *                         {
+ *                             SourceContainer = "my-app",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Volumes = 
+ *             {
+ *                 new AwsNative.ECS.Inputs.TaskDefinitionVolumeArgs
+ *                 {
+ *                     Host = new AwsNative.ECS.Inputs.TaskDefinitionHostVolumePropertiesArgs
+ *                     {
+ *                         SourcePath = "/var/lib/docker/vfs/dir/",
+ *                     },
+ *                     Name = "my-vol",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ecs.NewTaskDefinition(ctx, "taskdefinition", &ecs.TaskDefinitionArgs{
+ * 			RequiresCompatibilities: pulumi.StringArray{
+ * 				pulumi.String("EC2"),
+ * 			},
+ * 			ContainerDefinitions: []ecs.TaskDefinitionContainerDefinitionArgs{
+ * 				&ecs.TaskDefinitionContainerDefinitionArgs{
+ * 					Name: pulumi.String("my-app"),
+ * 					MountPoints: ecs.TaskDefinitionMountPointArray{
+ * 						&ecs.TaskDefinitionMountPointArgs{
+ * 							SourceVolume:  pulumi.String("my-vol"),
+ * 							ContainerPath: pulumi.String("/var/www/my-vol"),
+ * 						},
+ * 					},
+ * 					Image: pulumi.String("amazon/amazon-ecs-sample"),
+ * 					Cpu:   pulumi.Int(256),
+ * 					EntryPoint: pulumi.StringArray{
+ * 						pulumi.String("/usr/sbin/apache2"),
+ * 						pulumi.String("-D"),
+ * 						pulumi.String("FOREGROUND"),
+ * 					},
+ * 					Memory:    pulumi.Int(512),
+ * 					Essential: pulumi.Bool(true),
+ * 				},
+ * 				&ecs.TaskDefinitionContainerDefinitionArgs{
+ * 					Name:  pulumi.String("busybox"),
+ * 					Image: pulumi.String("busybox"),
+ * 					Cpu:   pulumi.Int(256),
+ * 					EntryPoint: pulumi.StringArray{
+ * 						pulumi.String("sh"),
+ * 						pulumi.String("-c"),
+ * 					},
+ * 					Memory: pulumi.Int(512),
+ * 					Command: pulumi.StringArray{
+ * 						pulumi.String("/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""),
+ * 					},
+ * 					Essential: pulumi.Bool(false),
+ * 					DependsOn: ecs.TaskDefinitionContainerDependencyArray{
+ * 						&ecs.TaskDefinitionContainerDependencyArgs{
+ * 							ContainerName: pulumi.String("my-app"),
+ * 							Condition:     pulumi.String("START"),
+ * 						},
+ * 					},
+ * 					VolumesFrom: ecs.TaskDefinitionVolumeFromArray{
+ * 						&ecs.TaskDefinitionVolumeFromArgs{
+ * 							SourceContainer: pulumi.String("my-app"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Volumes: []ecs.TaskDefinitionVolumeArgs{
+ * 				&ecs.TaskDefinitionVolumeArgs{
+ * 					Host: &ecs.TaskDefinitionHostVolumePropertiesArgs{
+ * 						SourcePath: pulumi.String("/var/lib/docker/vfs/dir/"),
+ * 					},
+ * 					Name: pulumi.String("my-vol"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const taskdefinition = new aws_native.ecs.TaskDefinition("taskdefinition", {
+ *     requiresCompatibilities: ["EC2"],
+ *     containerDefinitions: [
+ *         {
+ *             name: "my-app",
+ *             mountPoints: [{
+ *                 sourceVolume: "my-vol",
+ *                 containerPath: "/var/www/my-vol",
+ *             }],
+ *             image: "amazon/amazon-ecs-sample",
+ *             cpu: 256,
+ *             entryPoint: [
+ *                 "/usr/sbin/apache2",
+ *                 "-D",
+ *                 "FOREGROUND",
+ *             ],
+ *             memory: 512,
+ *             essential: true,
+ *         },
+ *         {
+ *             name: "busybox",
+ *             image: "busybox",
+ *             cpu: 256,
+ *             entryPoint: [
+ *                 "sh",
+ *                 "-c",
+ *             ],
+ *             memory: 512,
+ *             command: ["/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""],
+ *             essential: false,
+ *             dependsOn: [{
+ *                 containerName: "my-app",
+ *                 condition: "START",
+ *             }],
+ *             volumesFrom: [{
+ *                 sourceContainer: "my-app",
+ *             }],
+ *         },
+ *     ],
+ *     volumes: [{
+ *         host: {
+ *             sourcePath: "/var/lib/docker/vfs/dir/",
+ *         },
+ *         name: "my-vol",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * taskdefinition = aws_native.ecs.TaskDefinition("taskdefinition",
+ *     requires_compatibilities=["EC2"],
+ *     container_definitions=[
+ *         aws_native.ecs.TaskDefinitionContainerDefinitionArgs(
+ *             name="my-app",
+ *             mount_points=[aws_native.ecs.TaskDefinitionMountPointArgs(
+ *                 source_volume="my-vol",
+ *                 container_path="/var/www/my-vol",
+ *             )],
+ *             image="amazon/amazon-ecs-sample",
+ *             cpu=256,
+ *             entry_point=[
+ *                 "/usr/sbin/apache2",
+ *                 "-D",
+ *                 "FOREGROUND",
+ *             ],
+ *             memory=512,
+ *             essential=True,
+ *         ),
+ *         aws_native.ecs.TaskDefinitionContainerDefinitionArgs(
+ *             name="busybox",
+ *             image="busybox",
+ *             cpu=256,
+ *             entry_point=[
+ *                 "sh",
+ *                 "-c",
+ *             ],
+ *             memory=512,
+ *             command=["/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""],
+ *             essential=False,
+ *             depends_on=[aws_native.ecs.TaskDefinitionContainerDependencyArgs(
+ *                 container_name="my-app",
+ *                 condition="START",
+ *             )],
+ *             volumes_from=[aws_native.ecs.TaskDefinitionVolumeFromArgs(
+ *                 source_container="my-app",
+ *             )],
+ *         ),
+ *     ],
+ *     volumes=[aws_native.ecs.TaskDefinitionVolumeArgs(
+ *         host=aws_native.ecs.TaskDefinitionHostVolumePropertiesArgs(
+ *             source_path="/var/lib/docker/vfs/dir/",
+ *         ),
+ *         name="my-vol",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var taskdefinition = new AwsNative.ECS.TaskDefinition("taskdefinition", new AwsNative.ECS.TaskDefinitionArgs
+ *         {
+ *             RequiresCompatibilities = 
+ *             {
+ *                 "EC2",
+ *             },
+ *             ContainerDefinitions = 
+ *             {
+ *                 new AwsNative.ECS.Inputs.TaskDefinitionContainerDefinitionArgs
+ *                 {
+ *                     Name = "my-app",
+ *                     MountPoints = 
+ *                     {
+ *                         new AwsNative.ECS.Inputs.TaskDefinitionMountPointArgs
+ *                         {
+ *                             SourceVolume = "my-vol",
+ *                             ContainerPath = "/var/www/my-vol",
+ *                         },
+ *                     },
+ *                     Image = "amazon/amazon-ecs-sample",
+ *                     Cpu = 256,
+ *                     EntryPoint = 
+ *                     {
+ *                         "/usr/sbin/apache2",
+ *                         "-D",
+ *                         "FOREGROUND",
+ *                     },
+ *                     Memory = 512,
+ *                     Essential = true,
+ *                 },
+ *                 new AwsNative.ECS.Inputs.TaskDefinitionContainerDefinitionArgs
+ *                 {
+ *                     Name = "busybox",
+ *                     Image = "busybox",
+ *                     Cpu = 256,
+ *                     EntryPoint = 
+ *                     {
+ *                         "sh",
+ *                         "-c",
+ *                     },
+ *                     Memory = 512,
+ *                     Command = 
+ *                     {
+ *                         "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\"",
+ *                     },
+ *                     Essential = false,
+ *                     DependsOn = 
+ *                     {
+ *                         new AwsNative.ECS.Inputs.TaskDefinitionContainerDependencyArgs
+ *                         {
+ *                             ContainerName = "my-app",
+ *                             Condition = "START",
+ *                         },
+ *                     },
+ *                     VolumesFrom = 
+ *                     {
+ *                         new AwsNative.ECS.Inputs.TaskDefinitionVolumeFromArgs
+ *                         {
+ *                             SourceContainer = "my-app",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Volumes = 
+ *             {
+ *                 new AwsNative.ECS.Inputs.TaskDefinitionVolumeArgs
+ *                 {
+ *                     Host = new AwsNative.ECS.Inputs.TaskDefinitionHostVolumePropertiesArgs
+ *                     {
+ *                         SourcePath = "/var/lib/docker/vfs/dir/",
+ *                     },
+ *                     Name = "my-vol",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ecs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ecs.NewTaskDefinition(ctx, "taskdefinition", &ecs.TaskDefinitionArgs{
+ * 			RequiresCompatibilities: pulumi.StringArray{
+ * 				pulumi.String("EC2"),
+ * 			},
+ * 			ContainerDefinitions: []ecs.TaskDefinitionContainerDefinitionArgs{
+ * 				&ecs.TaskDefinitionContainerDefinitionArgs{
+ * 					Name: pulumi.String("my-app"),
+ * 					MountPoints: ecs.TaskDefinitionMountPointArray{
+ * 						&ecs.TaskDefinitionMountPointArgs{
+ * 							SourceVolume:  pulumi.String("my-vol"),
+ * 							ContainerPath: pulumi.String("/var/www/my-vol"),
+ * 						},
+ * 					},
+ * 					Image: pulumi.String("amazon/amazon-ecs-sample"),
+ * 					Cpu:   pulumi.Int(256),
+ * 					EntryPoint: pulumi.StringArray{
+ * 						pulumi.String("/usr/sbin/apache2"),
+ * 						pulumi.String("-D"),
+ * 						pulumi.String("FOREGROUND"),
+ * 					},
+ * 					Memory:    pulumi.Int(512),
+ * 					Essential: pulumi.Bool(true),
+ * 				},
+ * 				&ecs.TaskDefinitionContainerDefinitionArgs{
+ * 					Name:  pulumi.String("busybox"),
+ * 					Image: pulumi.String("busybox"),
+ * 					Cpu:   pulumi.Int(256),
+ * 					EntryPoint: pulumi.StringArray{
+ * 						pulumi.String("sh"),
+ * 						pulumi.String("-c"),
+ * 					},
+ * 					Memory: pulumi.Int(512),
+ * 					Command: pulumi.StringArray{
+ * 						pulumi.String("/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""),
+ * 					},
+ * 					Essential: pulumi.Bool(false),
+ * 					DependsOn: ecs.TaskDefinitionContainerDependencyArray{
+ * 						&ecs.TaskDefinitionContainerDependencyArgs{
+ * 							ContainerName: pulumi.String("my-app"),
+ * 							Condition:     pulumi.String("START"),
+ * 						},
+ * 					},
+ * 					VolumesFrom: ecs.TaskDefinitionVolumeFromArray{
+ * 						&ecs.TaskDefinitionVolumeFromArgs{
+ * 							SourceContainer: pulumi.String("my-app"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Volumes: []ecs.TaskDefinitionVolumeArgs{
+ * 				&ecs.TaskDefinitionVolumeArgs{
+ * 					Host: &ecs.TaskDefinitionHostVolumePropertiesArgs{
+ * 						SourcePath: pulumi.String("/var/lib/docker/vfs/dir/"),
+ * 					},
+ * 					Name: pulumi.String("my-vol"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const taskdefinition = new aws_native.ecs.TaskDefinition("taskdefinition", {
+ *     requiresCompatibilities: ["EC2"],
+ *     containerDefinitions: [
+ *         {
+ *             name: "my-app",
+ *             mountPoints: [{
+ *                 sourceVolume: "my-vol",
+ *                 containerPath: "/var/www/my-vol",
+ *             }],
+ *             image: "amazon/amazon-ecs-sample",
+ *             cpu: 256,
+ *             entryPoint: [
+ *                 "/usr/sbin/apache2",
+ *                 "-D",
+ *                 "FOREGROUND",
+ *             ],
+ *             memory: 512,
+ *             essential: true,
+ *         },
+ *         {
+ *             name: "busybox",
+ *             image: "busybox",
+ *             cpu: 256,
+ *             entryPoint: [
+ *                 "sh",
+ *                 "-c",
+ *             ],
+ *             memory: 512,
+ *             command: ["/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""],
+ *             essential: false,
+ *             dependsOn: [{
+ *                 containerName: "my-app",
+ *                 condition: "START",
+ *             }],
+ *             volumesFrom: [{
+ *                 sourceContainer: "my-app",
+ *             }],
+ *         },
+ *     ],
+ *     volumes: [{
+ *         host: {
+ *             sourcePath: "/var/lib/docker/vfs/dir/",
+ *         },
+ *         name: "my-vol",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * taskdefinition = aws_native.ecs.TaskDefinition("taskdefinition",
+ *     requires_compatibilities=["EC2"],
+ *     container_definitions=[
+ *         aws_native.ecs.TaskDefinitionContainerDefinitionArgs(
+ *             name="my-app",
+ *             mount_points=[aws_native.ecs.TaskDefinitionMountPointArgs(
+ *                 source_volume="my-vol",
+ *                 container_path="/var/www/my-vol",
+ *             )],
+ *             image="amazon/amazon-ecs-sample",
+ *             cpu=256,
+ *             entry_point=[
+ *                 "/usr/sbin/apache2",
+ *                 "-D",
+ *                 "FOREGROUND",
+ *             ],
+ *             memory=512,
+ *             essential=True,
+ *         ),
+ *         aws_native.ecs.TaskDefinitionContainerDefinitionArgs(
+ *             name="busybox",
+ *             image="busybox",
+ *             cpu=256,
+ *             entry_point=[
+ *                 "sh",
+ *                 "-c",
+ *             ],
+ *             memory=512,
+ *             command=["/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""],
+ *             essential=False,
+ *             depends_on=[aws_native.ecs.TaskDefinitionContainerDependencyArgs(
+ *                 container_name="my-app",
+ *                 condition="START",
+ *             )],
+ *             volumes_from=[aws_native.ecs.TaskDefinitionVolumeFromArgs(
+ *                 source_container="my-app",
+ *             )],
+ *         ),
+ *     ],
+ *     volumes=[aws_native.ecs.TaskDefinitionVolumeArgs(
+ *         host=aws_native.ecs.TaskDefinitionHostVolumePropertiesArgs(
+ *             source_path="/var/lib/docker/vfs/dir/",
+ *         ),
+ *         name="my-vol",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ecs:TaskDefinition")
@@ -120,14 +670,12 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon ECS task definition
-     * 
      */
     @Export(name="taskDefinitionArn", type=String.class, parameters={})
     private Output<String> taskDefinitionArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Amazon ECS task definition
-     * 
      */
     public Output<String> getTaskDefinitionArn() {
         return this.taskDefinitionArn;

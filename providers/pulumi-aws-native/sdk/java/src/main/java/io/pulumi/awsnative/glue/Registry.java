@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * This resource creates a Registry for authoring schemas as part of Glue Schema Registry.
- * 
  */
 @ResourceType(type="aws-native:glue:Registry")
 public class Registry extends io.pulumi.resources.CustomResource {
     /**
      * Amazon Resource Name for the created Registry.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Amazon Resource Name for the created Registry.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * A description of the registry. If description is not provided, there will not be any default value for this.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the registry. If description is not provided, there will not be any default value for this.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of tags to tag the Registry
-     * 
      */
     @Export(name="tags", type=List.class, parameters={RegistryTag.class})
     private Output</* @Nullable */ List<RegistryTag>> tags;
 
     /**
      * @return List of tags to tag the Registry
-     * 
      */
     public Output</* @Nullable */ List<RegistryTag>> getTags() {
         return this.tags;

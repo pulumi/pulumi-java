@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::S3::StorageLens resource is an Amazon S3 resource type that you can use to create Storage Lens configurations.
- * 
  */
 @ResourceType(type="aws-native:s3:StorageLens")
 public class StorageLens extends io.pulumi.resources.CustomResource {
@@ -27,14 +26,12 @@ public class StorageLens extends io.pulumi.resources.CustomResource {
     }
     /**
      * A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={StorageLensTag.class})
     private Output</* @Nullable */ List<StorageLensTag>> tags;
 
     /**
      * @return A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
-     * 
      */
     public Output</* @Nullable */ List<StorageLensTag>> getTags() {
         return this.tags;

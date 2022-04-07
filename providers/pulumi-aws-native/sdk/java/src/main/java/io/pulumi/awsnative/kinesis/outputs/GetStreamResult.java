@@ -18,32 +18,26 @@ import javax.annotation.Nullable;
 public final class GetStreamResult {
     /**
      * The Amazon resource name (ARN) of the Kinesis stream
-     * 
      */
     private final @Nullable String arn;
     /**
      * The number of hours for the data records that are stored in shards to remain accessible.
-     * 
      */
     private final @Nullable Integer retentionPeriodHours;
     /**
      * The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
-     * 
      */
     private final @Nullable Integer shardCount;
     /**
      * When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
-     * 
      */
     private final @Nullable StreamEncryption streamEncryption;
     /**
      * The mode in which the stream is running.
-     * 
      */
     private final @Nullable StreamModeDetails streamModeDetails;
     /**
      * An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
-     * 
      */
     private final @Nullable List<StreamTag> tags;
 
@@ -65,42 +59,36 @@ public final class GetStreamResult {
 
     /**
      * The Amazon resource name (ARN) of the Kinesis stream
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The number of hours for the data records that are stored in shards to remain accessible.
-     * 
     */
     public Optional<Integer> getRetentionPeriodHours() {
         return Optional.ofNullable(this.retentionPeriodHours);
     }
     /**
      * The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
-     * 
     */
     public Optional<Integer> getShardCount() {
         return Optional.ofNullable(this.shardCount);
     }
     /**
      * When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
-     * 
     */
     public Optional<StreamEncryption> getStreamEncryption() {
         return Optional.ofNullable(this.streamEncryption);
     }
     /**
      * The mode in which the stream is running.
-     * 
     */
     public Optional<StreamModeDetails> getStreamModeDetails() {
         return Optional.ofNullable(this.streamModeDetails);
     }
     /**
      * An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
-     * 
     */
     public List<StreamTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

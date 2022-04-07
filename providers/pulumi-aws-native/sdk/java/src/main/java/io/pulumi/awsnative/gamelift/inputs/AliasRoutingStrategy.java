@@ -17,7 +17,6 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
-     * 
      */
     @Import(name="fleetId")
       private final @Nullable String fleetId;
@@ -28,7 +27,6 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The message text to be used with a terminal routing strategy. If you specify TERMINAL for the Type property, you must specify this property.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -39,7 +37,6 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
-     * 
      */
     @Import(name="type", required=true)
       private final AliasRoutingStrategyType type;

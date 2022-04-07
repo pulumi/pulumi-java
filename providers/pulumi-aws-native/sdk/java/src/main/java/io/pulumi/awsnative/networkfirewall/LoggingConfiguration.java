@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
- * 
  */
 @ResourceType(type="aws-native:networkfirewall:LoggingConfiguration")
 public class LoggingConfiguration extends io.pulumi.resources.CustomResource {

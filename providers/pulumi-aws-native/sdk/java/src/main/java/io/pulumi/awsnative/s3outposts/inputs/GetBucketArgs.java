@@ -14,7 +14,6 @@ public final class GetBucketArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the specified bucket.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

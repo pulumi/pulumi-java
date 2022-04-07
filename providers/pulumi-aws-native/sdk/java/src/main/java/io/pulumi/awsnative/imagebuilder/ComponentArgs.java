@@ -19,7 +19,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The change description of the component.
-     * 
      */
     @Import(name="changeDescription")
       private final @Nullable Output<String> changeDescription;
@@ -30,7 +29,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data of the component.
-     * 
      */
     @Import(name="data")
       private final @Nullable Output<String> data;
@@ -41,7 +39,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the component.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -52,7 +49,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The KMS key identifier used to encrypt the component.
-     * 
      */
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
@@ -63,7 +59,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the component.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -74,7 +69,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The platform of the component.
-     * 
      */
     @Import(name="platform", required=true)
       private final Output<ComponentPlatform> platform;
@@ -85,7 +79,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The operating system (OS) version supported by the component.
-     * 
      */
     @Import(name="supportedOsVersions")
       private final @Nullable Output<List<String>> supportedOsVersions;
@@ -96,7 +89,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags associated with the component.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
@@ -107,7 +99,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The uri of the component.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;
@@ -118,7 +109,6 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the component.
-     * 
      */
     @Import(name="version", required=true)
       private final Output<String> version;

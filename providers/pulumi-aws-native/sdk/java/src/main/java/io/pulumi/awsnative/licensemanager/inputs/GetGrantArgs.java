@@ -14,7 +14,6 @@ public final class GetGrantArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Arn of the grant.
-     * 
      */
     @Import(name="grantArn", required=true)
       private final String grantArn;

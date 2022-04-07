@@ -15,34 +15,29 @@ import javax.annotation.Nullable;
 
 /**
  * Represents an authorization layer for methods. If enabled on a method, API Gateway will activate the authorizer when a client calls the method.
- * 
  */
 @ResourceType(type="aws-native:apigateway:Authorizer")
 public class Authorizer extends io.pulumi.resources.CustomResource {
     /**
      * Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
-     * 
      */
     @Export(name="authType", type=String.class, parameters={})
     private Output</* @Nullable */ String> authType;
 
     /**
      * @return Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
-     * 
      */
     public Output</* @Nullable */ String> getAuthType() {
         return this.authType;
     }
     /**
      * Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
-     * 
      */
     @Export(name="authorizerCredentials", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerCredentials;
 
     /**
      * @return Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
-     * 
      */
     public Output</* @Nullable */ String> getAuthorizerCredentials() {
         return this.authorizerCredentials;
@@ -55,112 +50,96 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
     }
     /**
      * The TTL in seconds of cached authorizer results.
-     * 
      */
     @Export(name="authorizerResultTtlInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> authorizerResultTtlInSeconds;
 
     /**
      * @return The TTL in seconds of cached authorizer results.
-     * 
      */
     public Output</* @Nullable */ Integer> getAuthorizerResultTtlInSeconds() {
         return this.authorizerResultTtlInSeconds;
     }
     /**
      * Specifies the authorizer's Uniform Resource Identifier (URI).
-     * 
      */
     @Export(name="authorizerUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerUri;
 
     /**
      * @return Specifies the authorizer's Uniform Resource Identifier (URI).
-     * 
      */
     public Output</* @Nullable */ String> getAuthorizerUri() {
         return this.authorizerUri;
     }
     /**
      * The identity source for which authorization is requested.
-     * 
      */
     @Export(name="identitySource", type=String.class, parameters={})
     private Output</* @Nullable */ String> identitySource;
 
     /**
      * @return The identity source for which authorization is requested.
-     * 
      */
     public Output</* @Nullable */ String> getIdentitySource() {
         return this.identitySource;
     }
     /**
      * A validation expression for the incoming identity token.
-     * 
      */
     @Export(name="identityValidationExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> identityValidationExpression;
 
     /**
      * @return A validation expression for the incoming identity token.
-     * 
      */
     public Output</* @Nullable */ String> getIdentityValidationExpression() {
         return this.identityValidationExpression;
     }
     /**
      * The name of the authorizer.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the authorizer.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
-     * 
      */
     @Export(name="providerARNs", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> providerARNs;
 
     /**
      * @return A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
-     * 
      */
     public Output</* @Nullable */ List<String>> getProviderARNs() {
         return this.providerARNs;
     }
     /**
      * The identifier of the API.
-     * 
      */
     @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
      * @return The identifier of the API.
-     * 
      */
     public Output<String> getRestApiId() {
         return this.restApiId;
     }
     /**
      * The authorizer type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The authorizer type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

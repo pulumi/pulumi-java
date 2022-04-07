@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The inline policy document that is embedded in the specified IAM role.
- * 
  */
 public final class RolePolicy extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RolePolicy extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The policy document.
-     * 
      */
     @Import(name="policyDocument", required=true)
       private final String policyDocument;
@@ -29,7 +27,6 @@ public final class RolePolicy extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The friendly name (not ARN) identifying the policy.
-     * 
      */
     @Import(name="policyName", required=true)
       private final String policyName;

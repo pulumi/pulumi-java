@@ -14,7 +14,6 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the project.
-     * 
      */
     @Import(name="projectId", required=true)
       private final String projectId;

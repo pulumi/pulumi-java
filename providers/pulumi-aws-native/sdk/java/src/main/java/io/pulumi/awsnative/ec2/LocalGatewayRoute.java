@@ -13,76 +13,65 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a route for a local gateway route table.
- * 
  */
 @ResourceType(type="aws-native:ec2:LocalGatewayRoute")
 public class LocalGatewayRoute extends io.pulumi.resources.CustomResource {
     /**
      * The CIDR block used for destination matches.
-     * 
      */
     @Export(name="destinationCidrBlock", type=String.class, parameters={})
     private Output<String> destinationCidrBlock;
 
     /**
      * @return The CIDR block used for destination matches.
-     * 
      */
     public Output<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock;
     }
     /**
      * The ID of the local gateway route table.
-     * 
      */
     @Export(name="localGatewayRouteTableId", type=String.class, parameters={})
     private Output<String> localGatewayRouteTableId;
 
     /**
      * @return The ID of the local gateway route table.
-     * 
      */
     public Output<String> getLocalGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
     /**
      * The ID of the virtual interface group.
-     * 
      */
     @Export(name="localGatewayVirtualInterfaceGroupId", type=String.class, parameters={})
     private Output<String> localGatewayVirtualInterfaceGroupId;
 
     /**
      * @return The ID of the virtual interface group.
-     * 
      */
     public Output<String> getLocalGatewayVirtualInterfaceGroupId() {
         return this.localGatewayVirtualInterfaceGroupId;
     }
     /**
      * The state of the route.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the route.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The route type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The route type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

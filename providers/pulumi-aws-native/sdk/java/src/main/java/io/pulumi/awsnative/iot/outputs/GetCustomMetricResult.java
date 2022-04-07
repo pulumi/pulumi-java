@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class GetCustomMetricResult {
     /**
      * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * The Amazon Resource Number (ARN) of the custom metric.
-     * 
      */
     private final @Nullable String metricArn;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<CustomMetricTag> tags;
 
@@ -41,21 +38,18 @@ public final class GetCustomMetricResult {
 
     /**
      * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The Amazon Resource Number (ARN) of the custom metric.
-     * 
     */
     public Optional<String> getMetricArn() {
         return Optional.ofNullable(this.metricArn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<CustomMetricTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

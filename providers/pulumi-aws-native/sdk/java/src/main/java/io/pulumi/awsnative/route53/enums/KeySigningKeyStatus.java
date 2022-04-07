@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
-     * 
      */
     @EnumType
     public enum KeySigningKeyStatus {

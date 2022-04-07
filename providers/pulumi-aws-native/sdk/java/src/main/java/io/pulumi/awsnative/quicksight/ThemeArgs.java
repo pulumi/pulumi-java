@@ -30,7 +30,6 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 			the starting themes defined by Amazon QuickSight. For a list of the starting themes, use
      * 				<code>ListThemes</code> or choose <b>Themes</b> from
      * 			within a QuickSight analysis. </p>
-     * 
      */
     @Import(name="baseThemeId")
       private final @Nullable Output<String> baseThemeId;
@@ -48,7 +47,6 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <p>A display name for the theme.</p>
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -60,7 +58,6 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * <p>A valid grouping of resource permissions to apply to the new theme.
      * 			</p>
-     * 
      */
     @Import(name="permissions")
       private final @Nullable Output<List<ThemeResourcePermissionArgs>> permissions;
@@ -72,7 +69,6 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
      * 			resource.</p>
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ThemeTagArgs>> tags;
@@ -93,7 +89,6 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 				<code>UpdateTheme</code> is called, a new version is created. Each version of the
      * 			theme has a description of the version in the <code>VersionDescription</code>
      * 			field.</p>
-     * 
      */
     @Import(name="versionDescription")
       private final @Nullable Output<String> versionDescription;

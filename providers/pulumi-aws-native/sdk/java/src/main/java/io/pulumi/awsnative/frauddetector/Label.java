@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 
 /**
  * An label for fraud detector.
- * 
  */
 @ResourceType(type="aws-native:frauddetector:Label")
 public class Label extends io.pulumi.resources.CustomResource {
     /**
      * The label ARN.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The label ARN.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The timestamp when the label was created.
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return The timestamp when the label was created.
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The label description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The label description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The timestamp when the label was last updated.
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return The timestamp when the label was last updated.
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * The name of the label.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the label.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Tags associated with this label.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={LabelTag.class})
     private Output</* @Nullable */ List<LabelTag>> tags;
 
     /**
      * @return Tags associated with this label.
-     * 
      */
     public Output</* @Nullable */ List<LabelTag>> getTags() {
         return this.tags;

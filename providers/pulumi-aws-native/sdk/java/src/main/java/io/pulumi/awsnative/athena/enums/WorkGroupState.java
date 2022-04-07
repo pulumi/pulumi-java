@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The state of the workgroup: ENABLED or DISABLED.
-     * 
      */
     @EnumType
     public enum WorkGroupState {

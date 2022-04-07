@@ -23,7 +23,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies settings for logging access in this stage.
-     * 
      */
     @Import(name="accessLogSetting")
       private final @Nullable Output<StageAccessLogSettingArgs> accessLogSetting;
@@ -34,7 +33,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether cache clustering is enabled for the stage.
-     * 
      */
     @Import(name="cacheClusterEnabled")
       private final @Nullable Output<Boolean> cacheClusterEnabled;
@@ -45,7 +43,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The stage's cache cluster size.
-     * 
      */
     @Import(name="cacheClusterSize")
       private final @Nullable Output<String> cacheClusterSize;
@@ -56,7 +53,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies settings for the canary deployment in this stage.
-     * 
      */
     @Import(name="canarySetting")
       private final @Nullable Output<StageCanarySettingArgs> canarySetting;
@@ -66,8 +62,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
-     * 
+     * The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage. 
      */
     @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
@@ -77,8 +72,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
-     * 
+     * The ID of the deployment that the stage is associated with. This parameter is required to create a stage. 
      */
     @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
@@ -89,7 +83,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the stage.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -100,7 +93,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version ID of the API documentation snapshot.
-     * 
      */
     @Import(name="documentationVersion")
       private final @Nullable Output<String> documentationVersion;
@@ -111,7 +103,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for all methods in the stage.
-     * 
      */
     @Import(name="methodSettings")
       private final @Nullable Output<List<StageMethodSettingArgs>> methodSettings;
@@ -122,7 +113,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the RestApi resource that you're deploying with this stage.
-     * 
      */
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
@@ -133,7 +123,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
-     * 
      */
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
@@ -144,7 +133,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the stage.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<StageTagArgs>> tags;
@@ -155,7 +143,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether active X-Ray tracing is enabled for this stage.
-     * 
      */
     @Import(name="tracingEnabled")
       private final @Nullable Output<Boolean> tracingEnabled;
@@ -166,7 +153,6 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
-     * 
      */
     @Import(name="variables")
       private final @Nullable Output<Object> variables;

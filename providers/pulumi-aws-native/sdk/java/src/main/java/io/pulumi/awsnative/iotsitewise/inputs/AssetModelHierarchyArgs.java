@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains information about an asset model hierarchy.
- * 
  */
 public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
-     * 
      */
     @Import(name="childAssetModelId", required=true)
       private final Output<String> childAssetModelId;
@@ -30,7 +28,6 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Customer provided ID for hierarchy.
-     * 
      */
     @Import(name="logicalId", required=true)
       private final Output<String> logicalId;
@@ -41,7 +38,6 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the asset model hierarchy.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

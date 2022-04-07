@@ -14,7 +14,6 @@ public final class GetEgressOnlyInternetGatewayArgs extends io.pulumi.resources.
 
     /**
      * Service Generated ID of the EgressOnlyInternetGateway
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

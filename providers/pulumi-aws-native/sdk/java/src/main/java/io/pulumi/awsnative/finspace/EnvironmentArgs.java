@@ -20,7 +20,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARNs of FinSpace Data Bundles to install
-     * 
      */
     @Import(name="dataBundles")
       private final @Nullable Output<List<String>> dataBundles;
@@ -31,7 +30,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the Environment
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -42,7 +40,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Federation mode used with the Environment
-     * 
      */
     @Import(name="federationMode")
       private final @Nullable Output<EnvironmentFederationMode> federationMode;
@@ -60,7 +57,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * KMS key used to encrypt customer data within FinSpace Environment infrastructure
-     * 
      */
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
@@ -71,7 +67,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Environment
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

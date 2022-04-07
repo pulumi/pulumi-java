@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class GetAddonResult {
     /**
      * Version of Addon
-     * 
      */
     private final @Nullable String addonVersion;
     /**
      * Amazon Resource Name (ARN) of the add-on
-     * 
      */
     private final @Nullable String arn;
     /**
      * IAM role to bind to the add-on's service account
-     * 
      */
     private final @Nullable String serviceAccountRoleArn;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<AddonTag> tags;
 
@@ -48,28 +44,24 @@ public final class GetAddonResult {
 
     /**
      * Version of Addon
-     * 
     */
     public Optional<String> getAddonVersion() {
         return Optional.ofNullable(this.addonVersion);
     }
     /**
      * Amazon Resource Name (ARN) of the add-on
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * IAM role to bind to the add-on's service account
-     * 
     */
     public Optional<String> getServiceAccountRoleArn() {
         return Optional.ofNullable(this.serviceAccountRoleArn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<AddonTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

@@ -16,7 +16,6 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
 
     /**
      * Certificate Authority certificate that will be installed in the Certificate Authority.
-     * 
      */
     @Import(name="certificate", required=true)
       private final Output<String> certificate;
@@ -27,7 +26,6 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
 
     /**
      * Arn of the Certificate Authority.
-     * 
      */
     @Import(name="certificateAuthorityArn", required=true)
       private final Output<String> certificateAuthorityArn;
@@ -38,7 +36,6 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
 
     /**
      * Certificate chain for the Certificate Authority certificate.
-     * 
      */
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
@@ -49,7 +46,6 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
 
     /**
      * The status of the Certificate Authority.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<String> status;

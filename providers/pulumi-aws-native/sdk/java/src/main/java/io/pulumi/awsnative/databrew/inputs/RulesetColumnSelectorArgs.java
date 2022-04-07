@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Selector of a column from a dataset for profile job configuration. One selector includes either a column name or a regular expression
- * 
  */
 public final class RulesetColumnSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of a column from a dataset
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
 
     /**
      * A regular expression for selecting a column from a dataset
-     * 
      */
     @Import(name="regex")
       private final @Nullable Output<String> regex;

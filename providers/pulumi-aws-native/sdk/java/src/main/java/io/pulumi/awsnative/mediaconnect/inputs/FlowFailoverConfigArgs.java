@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings for source failover
- * 
  */
 public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FlowFailoverConfigArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Search window time to look for dash-7 packets
-     * 
      */
     @Import(name="recoveryWindow")
       private final @Nullable Output<Integer> recoveryWindow;

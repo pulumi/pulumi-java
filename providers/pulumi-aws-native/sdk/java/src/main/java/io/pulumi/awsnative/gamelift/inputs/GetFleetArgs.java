@@ -14,7 +14,6 @@ public final class GetFleetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unique fleet ID
-     * 
      */
     @Import(name="fleetId", required=true)
       private final String fleetId;

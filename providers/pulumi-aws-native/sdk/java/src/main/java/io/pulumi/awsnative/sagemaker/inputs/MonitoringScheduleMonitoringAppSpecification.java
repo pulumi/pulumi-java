@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container image configuration object for the monitoring job.
- * 
  */
 public final class MonitoringScheduleMonitoringAppSpecification extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
 
     /**
      * An array of arguments for the container used to run the monitoring job.
-     * 
      */
     @Import(name="containerArguments")
       private final @Nullable List<String> containerArguments;
@@ -32,7 +30,6 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
 
     /**
      * Specifies the entrypoint for a container used to run the monitoring job.
-     * 
      */
     @Import(name="containerEntrypoint")
       private final @Nullable List<String> containerEntrypoint;
@@ -43,7 +40,6 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
 
     /**
      * The container image to be run by the monitoring job.
-     * 
      */
     @Import(name="imageUri", required=true)
       private final String imageUri;
@@ -54,7 +50,6 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
 
     /**
      * An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
-     * 
      */
     @Import(name="postAnalyticsProcessorSourceUri")
       private final @Nullable String postAnalyticsProcessorSourceUri;
@@ -65,7 +60,6 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
 
     /**
      * An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
-     * 
      */
     @Import(name="recordPreprocessorSourceUri")
       private final @Nullable String recordPreprocessorSourceUri;

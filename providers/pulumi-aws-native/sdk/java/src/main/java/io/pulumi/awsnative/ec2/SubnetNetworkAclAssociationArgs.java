@@ -15,7 +15,6 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
 
     /**
      * The ID of the network ACL
-     * 
      */
     @Import(name="networkAclId", required=true)
       private final Output<String> networkAclId;
@@ -26,7 +25,6 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
 
     /**
      * The ID of the subnet
-     * 
      */
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;

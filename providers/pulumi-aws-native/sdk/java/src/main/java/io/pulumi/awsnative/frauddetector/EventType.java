@@ -18,48 +18,41 @@ import javax.annotation.Nullable;
 
 /**
  * A resource schema for an EventType in Amazon Fraud Detector.
- * 
  */
 @ResourceType(type="aws-native:frauddetector:EventType")
 public class EventType extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the event type.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The ARN of the event type.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The time when the event type was created.
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return The time when the event type was created.
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The description of the event type.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the event type.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
@@ -84,42 +77,36 @@ public class EventType extends io.pulumi.resources.CustomResource {
     }
     /**
      * The time when the event type was last updated.
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return The time when the event type was last updated.
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * The name for the event type
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name for the event type
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Tags associated with this event type.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={EventTypeTag.class})
     private Output</* @Nullable */ List<EventTypeTag>> tags;
 
     /**
      * @return Tags associated with this event type.
-     * 
      */
     public Output</* @Nullable */ List<EventTypeTag>> getTags() {
         return this.tags;

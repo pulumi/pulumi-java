@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ModelExplainabilityJobDefinitionConstraintsResource {
     /**
      * The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
-     * 
      */
     private final @Nullable String s3Uri;
 
@@ -24,7 +23,6 @@ public final class ModelExplainabilityJobDefinitionConstraintsResource {
 
     /**
      * The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
-     * 
     */
     public Optional<String> getS3Uri() {
         return Optional.ofNullable(this.s3Uri);

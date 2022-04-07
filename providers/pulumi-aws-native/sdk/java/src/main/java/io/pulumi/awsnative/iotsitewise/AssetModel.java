@@ -18,118 +18,101 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::IoTSiteWise::AssetModel
- * 
  */
 @ResourceType(type="aws-native:iotsitewise:AssetModel")
 public class AssetModel extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the asset model, which has the following format.
-     * 
      */
     @Export(name="assetModelArn", type=String.class, parameters={})
     private Output<String> assetModelArn;
 
     /**
      * @return The ARN of the asset model, which has the following format.
-     * 
      */
     public Output<String> getAssetModelArn() {
         return this.assetModelArn;
     }
     /**
      * The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
-     * 
      */
     @Export(name="assetModelCompositeModels", type=List.class, parameters={AssetModelCompositeModel.class})
     private Output</* @Nullable */ List<AssetModelCompositeModel>> assetModelCompositeModels;
 
     /**
      * @return The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
-     * 
      */
     public Output</* @Nullable */ List<AssetModelCompositeModel>> getAssetModelCompositeModels() {
         return this.assetModelCompositeModels;
     }
     /**
      * A description for the asset model.
-     * 
      */
     @Export(name="assetModelDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> assetModelDescription;
 
     /**
      * @return A description for the asset model.
-     * 
      */
     public Output</* @Nullable */ String> getAssetModelDescription() {
         return this.assetModelDescription;
     }
     /**
      * The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
-     * 
      */
     @Export(name="assetModelHierarchies", type=List.class, parameters={AssetModelHierarchy.class})
     private Output</* @Nullable */ List<AssetModelHierarchy>> assetModelHierarchies;
 
     /**
      * @return The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
-     * 
      */
     public Output</* @Nullable */ List<AssetModelHierarchy>> getAssetModelHierarchies() {
         return this.assetModelHierarchies;
     }
     /**
      * The ID of the asset model.
-     * 
      */
     @Export(name="assetModelId", type=String.class, parameters={})
     private Output<String> assetModelId;
 
     /**
      * @return The ID of the asset model.
-     * 
      */
     public Output<String> getAssetModelId() {
         return this.assetModelId;
     }
     /**
      * A unique, friendly name for the asset model.
-     * 
      */
     @Export(name="assetModelName", type=String.class, parameters={})
     private Output<String> assetModelName;
 
     /**
      * @return A unique, friendly name for the asset model.
-     * 
      */
     public Output<String> getAssetModelName() {
         return this.assetModelName;
     }
     /**
      * The property definitions of the asset model. You can specify up to 200 properties per asset model.
-     * 
      */
     @Export(name="assetModelProperties", type=List.class, parameters={AssetModelProperty.class})
     private Output</* @Nullable */ List<AssetModelProperty>> assetModelProperties;
 
     /**
      * @return The property definitions of the asset model. You can specify up to 200 properties per asset model.
-     * 
      */
     public Output</* @Nullable */ List<AssetModelProperty>> getAssetModelProperties() {
         return this.assetModelProperties;
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={AssetModelTag.class})
     private Output</* @Nullable */ List<AssetModelTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     public Output</* @Nullable */ List<AssetModelTag>> getTags() {
         return this.tags;

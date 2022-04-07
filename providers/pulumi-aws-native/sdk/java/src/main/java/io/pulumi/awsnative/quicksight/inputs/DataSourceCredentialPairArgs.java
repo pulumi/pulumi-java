@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>The combination of user name and password that are used as credentials.</p>
- * 
  */
 public final class DataSourceCredentialPairArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
      *             the existing credentials. If the <code>AlternateDataSourceParameters</code> list is
      *             null, the <code>DataSourceParameters</code> originally used with these
      *                 <code>Credentials</code> is automatically allowed.</p>
-     * 
      */
     @Import(name="alternateDataSourceParameters")
       private final @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
@@ -41,7 +39,6 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
 
     /**
      * <p>Password.</p>
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -52,7 +49,6 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
 
     /**
      * <p>User name.</p>
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

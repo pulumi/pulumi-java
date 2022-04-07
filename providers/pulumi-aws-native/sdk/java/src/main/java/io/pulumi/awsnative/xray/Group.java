@@ -17,49 +17,211 @@ import javax.annotation.Nullable;
 /**
  * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testGrpResource = new AwsNative.XRay.Group("testGrpResource", new AwsNative.XRay.GroupArgs
+ *         {
+ *             GroupName = "MyGroup",
+ *             FilterExpression = "duration > 10",
+ *             InsightsConfiguration = new AwsNative.XRay.Inputs.GroupInsightsConfigurationArgs
+ *             {
+ *                 InsightsEnabled = false,
+ *                 NotificationsEnabled = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/xray"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := xray.NewGroup(ctx, "testGrpResource", &xray.GroupArgs{
+ * 			GroupName:        pulumi.String("MyGroup"),
+ * 			FilterExpression: pulumi.String("duration > 10"),
+ * 			InsightsConfiguration: &xray.GroupInsightsConfigurationArgs{
+ * 				InsightsEnabled:      pulumi.Bool(false),
+ * 				NotificationsEnabled: pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testGrpResource = new aws_native.xray.Group("testGrpResource", {
+ *     groupName: "MyGroup",
+ *     filterExpression: "duration > 10",
+ *     insightsConfiguration: {
+ *         insightsEnabled: "false",
+ *         notificationsEnabled: "false",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_grp_resource = aws_native.xray.Group("testGrpResource",
+ *     group_name="MyGroup",
+ *     filter_expression="duration > 10",
+ *     insights_configuration=aws_native.xray.GroupInsightsConfigurationArgs(
+ *         insights_enabled=False,
+ *         notifications_enabled=False,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @group = new AwsNative.XRay.Group("group", new AwsNative.XRay.GroupArgs
+ *         {
+ *             GroupName = "MyGroup",
+ *             FilterExpression = "duration > 10",
+ *             InsightsConfiguration = new AwsNative.XRay.Inputs.GroupInsightsConfigurationArgs
+ *             {
+ *                 InsightsEnabled = false,
+ *                 NotificationsEnabled = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/xray"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := xray.NewGroup(ctx, "group", &xray.GroupArgs{
+ * 			GroupName:        pulumi.String("MyGroup"),
+ * 			FilterExpression: pulumi.String("duration > 10"),
+ * 			InsightsConfiguration: &xray.GroupInsightsConfigurationArgs{
+ * 				InsightsEnabled:      pulumi.Bool(false),
+ * 				NotificationsEnabled: pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const group = new aws_native.xray.Group("group", {
+ *     groupName: "MyGroup",
+ *     filterExpression: "duration > 10",
+ *     insightsConfiguration: {
+ *         insightsEnabled: false,
+ *         notificationsEnabled: false,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * group = aws_native.xray.Group("group",
+ *     group_name="MyGroup",
+ *     filter_expression="duration > 10",
+ *     insights_configuration=aws_native.xray.GroupInsightsConfigurationArgs(
+ *         insights_enabled=False,
+ *         notifications_enabled=False,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:xray:Group")
 public class Group extends io.pulumi.resources.CustomResource {
     /**
      * The filter expression defining criteria by which to group traces.
-     * 
      */
     @Export(name="filterExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> filterExpression;
 
     /**
      * @return The filter expression defining criteria by which to group traces.
-     * 
      */
     public Output</* @Nullable */ String> getFilterExpression() {
         return this.filterExpression;
     }
     /**
      * The ARN of the group that was generated on creation.
-     * 
      */
     @Export(name="groupARN", type=String.class, parameters={})
     private Output<String> groupARN;
 
     /**
      * @return The ARN of the group that was generated on creation.
-     * 
      */
     public Output<String> getGroupARN() {
         return this.groupARN;
     }
     /**
      * The case-sensitive name of the new group. Names must be unique.
-     * 
      */
     @Export(name="groupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> groupName;
 
     /**
      * @return The case-sensitive name of the new group. Names must be unique.
-     * 
      */
     public Output</* @Nullable */ String> getGroupName() {
         return this.groupName;

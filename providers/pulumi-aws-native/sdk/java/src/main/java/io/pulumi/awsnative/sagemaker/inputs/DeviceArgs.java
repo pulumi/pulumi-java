@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Edge device you want to create
- * 
  */
 public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the device
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +29,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the device
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -42,7 +39,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * AWS Internet of Things (IoT) object name.
-     * 
      */
     @Import(name="iotThingName")
       private final @Nullable Output<String> iotThingName;

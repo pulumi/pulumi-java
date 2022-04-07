@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The group ID (GID) of the file's owners.
-     * 
      */
     @EnumType
     public enum TaskOptionsGid {

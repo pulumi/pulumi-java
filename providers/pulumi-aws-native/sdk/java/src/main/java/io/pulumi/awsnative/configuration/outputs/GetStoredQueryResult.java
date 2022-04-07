@@ -19,7 +19,6 @@ public final class GetStoredQueryResult {
     private final @Nullable String queryId;
     /**
      * The tags for the stored query.
-     * 
      */
     private final @Nullable List<StoredQueryTag> tags;
 
@@ -51,7 +50,6 @@ public final class GetStoredQueryResult {
     }
     /**
      * The tags for the stored query.
-     * 
     */
     public List<StoredQueryTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

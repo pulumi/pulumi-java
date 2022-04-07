@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ServiceAuthenticationConfiguration {
     /**
      * Access Role Arn
-     * 
      */
     private final @Nullable String accessRoleArn;
     /**
      * Connection Arn
-     * 
      */
     private final @Nullable String connectionArn;
 
@@ -32,14 +30,12 @@ public final class ServiceAuthenticationConfiguration {
 
     /**
      * Access Role Arn
-     * 
     */
     public Optional<String> getAccessRoleArn() {
         return Optional.ofNullable(this.accessRoleArn);
     }
     /**
      * Connection Arn
-     * 
     */
     public Optional<String> getConnectionArn() {
         return Optional.ofNullable(this.connectionArn);

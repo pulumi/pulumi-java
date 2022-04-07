@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A notification target.
- * 
  */
 public final class ResponsePlanNotificationTargetItemArgs extends io.pulumi.resources.ResourceArgs {
 

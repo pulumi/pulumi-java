@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the Amazon S3 bucket name and location for the grammar that is the source for the slot type.
- * 
  */
 public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The Amazon KMS key required to decrypt the contents of the grammar, if any.
-     * 
      */
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
@@ -31,7 +29,6 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the S3 bucket that contains the grammar source.
-     * 
      */
     @Import(name="s3BucketName", required=true)
       private final Output<String> s3BucketName;
@@ -42,7 +39,6 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The path to the grammar in the S3 bucket.
-     * 
      */
     @Import(name="s3ObjectKey", required=true)
       private final Output<String> s3ObjectKey;

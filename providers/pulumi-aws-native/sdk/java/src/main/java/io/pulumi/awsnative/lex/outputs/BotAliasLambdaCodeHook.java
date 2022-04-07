@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class BotAliasLambdaCodeHook {
     /**
      * The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
-     * 
      */
     private final String codeHookInterfaceVersion;
     /**
      * The Amazon Resource Name (ARN) of the Lambda function.
-     * 
      */
     private final String lambdaArn;
 
@@ -30,14 +28,12 @@ public final class BotAliasLambdaCodeHook {
 
     /**
      * The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
-     * 
     */
     public String getCodeHookInterfaceVersion() {
         return this.codeHookInterfaceVersion;
     }
     /**
      * The Amazon Resource Name (ARN) of the Lambda function.
-     * 
     */
     public String getLambdaArn() {
         return this.lambdaArn;

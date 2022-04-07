@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value that determines the types of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide.
-     * 
      */
     @EnumType
     public enum TaskOptionsLogLevel {

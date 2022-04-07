@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Evidently::Feature.
- * 
  */
 @ResourceType(type="aws-native:evidently:Feature")
 public class Feature extends io.pulumi.resources.CustomResource {
@@ -66,14 +65,12 @@ public class Feature extends io.pulumi.resources.CustomResource {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={FeatureTag.class})
     private Output</* @Nullable */ List<FeatureTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<FeatureTag>> getTags() {
         return this.tags;

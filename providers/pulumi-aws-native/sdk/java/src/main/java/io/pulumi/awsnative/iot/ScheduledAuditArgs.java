@@ -20,7 +20,6 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
-     * 
      */
     @Import(name="dayOfMonth")
       private final @Nullable Output<String> dayOfMonth;
@@ -31,7 +30,6 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
-     * 
      */
     @Import(name="dayOfWeek")
       private final @Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek;
@@ -42,7 +40,6 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How often the scheduled audit takes place. Can be one of DAILY, WEEKLY, BIWEEKLY, or MONTHLY.
-     * 
      */
     @Import(name="frequency", required=true)
       private final Output<ScheduledAuditFrequency> frequency;
@@ -53,7 +50,6 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name you want to give to the scheduled audit.
-     * 
      */
     @Import(name="scheduledAuditName")
       private final @Nullable Output<String> scheduledAuditName;
@@ -64,7 +60,6 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ScheduledAuditTagArgs>> tags;
@@ -75,7 +70,6 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Which checks are performed during the scheduled audit. Checks must be enabled for your account.
-     * 
      */
     @Import(name="targetCheckNames", required=true)
       private final Output<List<String>> targetCheckNames;

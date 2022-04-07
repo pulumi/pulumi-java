@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * A module that has been registered in the CloudFormation registry as the default version
- * 
  */
 @ResourceType(type="aws-native:cloudformation:ModuleDefaultVersion")
 public class ModuleDefaultVersion extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the module version to set as the default version.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output</* @Nullable */ String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the module version to set as the default version.
-     * 
      */
     public Output</* @Nullable */ String> getArn() {
         return this.arn;
     }
     /**
      * The name of a module existing in the registry.
-     * 
      */
     @Export(name="moduleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> moduleName;
 
     /**
      * @return The name of a module existing in the registry.
-     * 
      */
     public Output</* @Nullable */ String> getModuleName() {
         return this.moduleName;
     }
     /**
      * The ID of an existing version of the named module to set as the default.
-     * 
      */
     @Export(name="versionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionId;
 
     /**
      * @return The ID of an existing version of the named module to set as the default.
-     * 
      */
     public Output</* @Nullable */ String> getVersionId() {
         return this.versionId;

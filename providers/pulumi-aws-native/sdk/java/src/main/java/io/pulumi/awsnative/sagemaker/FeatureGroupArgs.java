@@ -21,7 +21,6 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description about the FeatureGroup.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +31,6 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Event Time Feature Name.
-     * 
      */
     @Import(name="eventTimeFeatureName", required=true)
       private final Output<String> eventTimeFeatureName;
@@ -43,7 +41,6 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An Array of Feature Definition
-     * 
      */
     @Import(name="featureDefinitions", required=true)
       private final Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
@@ -54,7 +51,6 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Name of the FeatureGroup.
-     * 
      */
     @Import(name="featureGroupName")
       private final @Nullable Output<String> featureGroupName;
@@ -79,7 +75,6 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Record Identifier Feature Name.
-     * 
      */
     @Import(name="recordIdentifierFeatureName", required=true)
       private final Output<String> recordIdentifierFeatureName;
@@ -90,7 +85,6 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role Arn
-     * 
      */
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
@@ -101,7 +95,6 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pair to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<FeatureGroupTagArgs>> tags;

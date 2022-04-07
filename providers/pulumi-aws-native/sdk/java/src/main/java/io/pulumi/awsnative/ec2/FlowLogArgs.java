@@ -23,7 +23,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
-     * 
      */
     @Import(name="deliverLogsPermissionArn")
       private final @Nullable Output<String> deliverLogsPermissionArn;
@@ -41,7 +40,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for LogDestinationType.
-     * 
      */
     @Import(name="logDestination")
       private final @Nullable Output<String> logDestination;
@@ -52,7 +50,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the type of destination to which the flow log data is to be published. Flow log data can be published to CloudWatch Logs or Amazon S3.
-     * 
      */
     @Import(name="logDestinationType")
       private final @Nullable Output<FlowLogLogDestinationType> logDestinationType;
@@ -63,7 +60,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fields to include in the flow log record, in the order in which they should appear.
-     * 
      */
     @Import(name="logFormat")
       private final @Nullable Output<String> logFormat;
@@ -74,7 +70,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
-     * 
      */
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
@@ -85,7 +80,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. You can specify 60 seconds (1 minute) or 600 seconds (10 minutes).
-     * 
      */
     @Import(name="maxAggregationInterval")
       private final @Nullable Output<Integer> maxAggregationInterval;
@@ -96,7 +90,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the subnet, network interface, or VPC for which you want to create a flow log.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
@@ -107,7 +100,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of resource for which to create the flow log. For example, if you specified a VPC ID for the ResourceId property, specify VPC for this property.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<FlowLogResourceType> resourceType;
@@ -118,7 +110,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags to apply to the flow logs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<FlowLogTagArgs>> tags;
@@ -129,7 +120,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of traffic to log. You can log traffic that the resource accepts or rejects, or all traffic.
-     * 
      */
     @Import(name="trafficType", required=true)
       private final Output<FlowLogTrafficType> trafficType;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>A version of a theme.</p>
- * 
  */
 public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
 
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
      */
     @Import(name="arn")
       private final @Nullable String arn;
@@ -37,7 +35,6 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
     /**
      * <p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
      *             themes initially inherit from a default QuickSight theme.</p>
-     * 
      */
     @Import(name="baseThemeId")
       private final @Nullable String baseThemeId;
@@ -55,7 +52,6 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
 
     /**
      * <p>The date and time that this theme version was created.</p>
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable String createdTime;
@@ -66,7 +62,6 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
 
     /**
      * <p>The description of the theme.</p>
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -77,7 +72,6 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
 
     /**
      * <p>Errors associated with the theme.</p>
-     * 
      */
     @Import(name="errors")
       private final @Nullable List<ThemeError> errors;
@@ -95,7 +89,6 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
 
     /**
      * <p>The version number of the theme.</p>
-     * 
      */
     @Import(name="versionNumber")
       private final @Nullable Double versionNumber;

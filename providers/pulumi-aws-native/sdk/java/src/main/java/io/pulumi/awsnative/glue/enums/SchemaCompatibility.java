@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Compatibility setting for the schema.
-     * 
      */
     @EnumType
     public enum SchemaCompatibility {

@@ -20,20 +20,17 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the AWS::QuickSight::Dashboard Resource Type.
- * 
  */
 @ResourceType(type="aws-native:quicksight:Dashboard")
 public class Dashboard extends io.pulumi.resources.CustomResource {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -46,14 +43,12 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The time that this dataset was created.</p>
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return <p>The time that this dataset was created.</p>
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
@@ -72,42 +67,36 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>The last time that this dataset was published.</p>
-     * 
      */
     @Export(name="lastPublishedTime", type=String.class, parameters={})
     private Output<String> lastPublishedTime;
 
     /**
      * @return <p>The last time that this dataset was published.</p>
-     * 
      */
     public Output<String> getLastPublishedTime() {
         return this.lastPublishedTime;
     }
     /**
      * <p>The last time that this dataset was updated.</p>
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return <p>The last time that this dataset was updated.</p>
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * <p>The display name of the dashboard.</p>
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return <p>The display name of the dashboard.</p>
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
@@ -124,7 +113,6 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      *             principal ARN. </p>
      * 
      *         <p>To specify no permissions, omit the permissions list.</p>
-     * 
      */
     @Export(name="permissions", type=List.class, parameters={DashboardResourcePermission.class})
     private Output</* @Nullable */ List<DashboardResourcePermission>> permissions;
@@ -135,7 +123,6 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      *             principal ARN. </p>
      * 
      *         <p>To specify no permissions, omit the permissions list.</p>
-     * 
      */
     public Output</* @Nullable */ List<DashboardResourcePermission>> getPermissions() {
         return this.permissions;
@@ -149,7 +136,6 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             dashboard.</p>
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DashboardTag.class})
     private Output</* @Nullable */ List<DashboardTag>> tags;
@@ -157,7 +143,6 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
     /**
      * @return <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             dashboard.</p>
-     * 
      */
     public Output</* @Nullable */ List<DashboardTag>> getTags() {
         return this.tags;
@@ -167,7 +152,6 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      *             you add a value for this field, it overrides the value that is used in the source
      *             entity. The theme ARN must exist in the same AWS account where you create the
      *             dashboard.</p>
-     * 
      */
     @Export(name="themeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> themeArn;
@@ -177,7 +161,6 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      *             you add a value for this field, it overrides the value that is used in the source
      *             entity. The theme ARN must exist in the same AWS account where you create the
      *             dashboard.</p>
-     * 
      */
     public Output</* @Nullable */ String> getThemeArn() {
         return this.themeArn;
@@ -190,14 +173,12 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
     }
     /**
      * <p>A description for the first version of the dashboard being created.</p>
-     * 
      */
     @Export(name="versionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionDescription;
 
     /**
      * @return <p>A description for the first version of the dashboard being created.</p>
-     * 
      */
     public Output</* @Nullable */ String> getVersionDescription() {
         return this.versionDescription;

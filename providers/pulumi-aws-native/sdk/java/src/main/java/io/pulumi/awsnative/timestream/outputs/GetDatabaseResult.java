@@ -16,12 +16,10 @@ public final class GetDatabaseResult {
     private final @Nullable String arn;
     /**
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
-     * 
      */
     private final @Nullable String kmsKeyId;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<DatabaseTag> tags;
 
@@ -40,14 +38,12 @@ public final class GetDatabaseResult {
     }
     /**
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
-     * 
     */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<DatabaseTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

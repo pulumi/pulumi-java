@@ -14,7 +14,6 @@ public final class GetStaticIpArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the static IP address.
-     * 
      */
     @Import(name="staticIpName", required=true)
       private final String staticIpName;

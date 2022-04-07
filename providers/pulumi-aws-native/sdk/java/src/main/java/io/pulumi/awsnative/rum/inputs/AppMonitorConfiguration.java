@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * AppMonitor configuration
- * 
  */
 public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
 
     /**
      * If you set this to true, the RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
-     * 
      */
     @Import(name="allowCookies")
       private final @Nullable Boolean allowCookies;
@@ -35,7 +33,6 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
 
     /**
      * If you set this to true, RUM enables xray tracing for the user sessions that RUM samples. RUM adds an xray trace header to allowed HTTP requests. It also records an xray segment for allowed HTTP requests. You can see traces and segments from these user sessions in the xray console and the CW ServiceLens console.
-     * 
      */
     @Import(name="enableXRay")
       private final @Nullable Boolean enableXRay;
@@ -46,7 +43,6 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
 
     /**
      * A list of URLs in your website or application to exclude from RUM data collection. You can't include both ExcludedPages and IncludedPages in the same operation.
-     * 
      */
     @Import(name="excludedPages")
       private final @Nullable List<String> excludedPages;
@@ -57,7 +53,6 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
 
     /**
      * A list of pages in the RUM console that are to be displayed with a favorite icon.
-     * 
      */
     @Import(name="favoritePages")
       private final @Nullable List<String> favoritePages;
@@ -68,7 +63,6 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
 
     /**
      * The ARN of the guest IAM role that is attached to the identity pool that is used to authorize the sending of data to RUM.
-     * 
      */
     @Import(name="guestRoleArn")
       private final @Nullable String guestRoleArn;
@@ -79,7 +73,6 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
 
     /**
      * The ID of the identity pool that is used to authorize the sending of data to RUM.
-     * 
      */
     @Import(name="identityPoolId")
       private final @Nullable String identityPoolId;
@@ -90,7 +83,6 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
 
     /**
      * If this app monitor is to collect data from only certain pages in your application, this structure lists those pages. You can't include both ExcludedPages and IncludedPages in the same operation.
-     * 
      */
     @Import(name="includedPages")
       private final @Nullable List<String> includedPages;
@@ -101,7 +93,6 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. If you omit this parameter, the default of 10 is used.
-     * 
      */
     @Import(name="sessionSampleRate")
       private final @Nullable Double sessionSampleRate;
@@ -112,7 +103,6 @@ public final class AppMonitorConfiguration extends io.pulumi.resources.InvokeArg
 
     /**
      * An array that lists the types of telemetry data that this app monitor is to collect.
-     * 
      */
     @Import(name="telemetries")
       private final @Nullable List<AppMonitorTelemetry> telemetries;

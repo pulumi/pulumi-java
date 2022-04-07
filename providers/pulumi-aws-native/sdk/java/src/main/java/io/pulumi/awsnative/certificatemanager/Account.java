@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::CertificateManager::Account.
- * 
  */
 @ResourceType(type="aws-native:certificatemanager:Account")
 public class Account extends io.pulumi.resources.CustomResource {

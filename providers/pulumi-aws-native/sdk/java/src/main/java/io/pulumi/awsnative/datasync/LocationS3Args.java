@@ -20,7 +20,6 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the Amazon S3 bucket.
-     * 
      */
     @Import(name="s3BucketArn", required=true)
       private final Output<String> s3BucketArn;
@@ -38,7 +37,6 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Amazon S3 storage class you want to store your files in when this location is used as a task destination.
-     * 
      */
     @Import(name="s3StorageClass")
       private final @Nullable Output<LocationS3S3StorageClass> s3StorageClass;
@@ -49,7 +47,6 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to read data from the S3 source location or write data to the S3 destination.
-     * 
      */
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
@@ -60,7 +57,6 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<LocationS3TagArgs>> tags;

@@ -20,7 +20,6 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
-     * 
      */
     @Import(name="dataTransferSubscriberFeePercent")
       private final @Nullable Output<Integer> dataTransferSubscriberFeePercent;
@@ -31,7 +30,6 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A description of the entitlement.
-     * 
      */
     @Import(name="description", required=true)
       private final Output<String> description;
@@ -42,7 +40,6 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The type of encryption that will be used on the output that is associated with this entitlement.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<FlowEntitlementEncryptionArgs> encryption;
@@ -53,7 +50,6 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      *  An indication of whether the entitlement is enabled.
-     * 
      */
     @Import(name="entitlementStatus")
       private final @Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus;
@@ -64,7 +60,6 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The ARN of the flow.
-     * 
      */
     @Import(name="flowArn", required=true)
       private final Output<String> flowArn;
@@ -75,7 +70,6 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the entitlement.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -86,7 +80,6 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
-     * 
      */
     @Import(name="subscribers", required=true)
       private final Output<List<String>> subscribers;

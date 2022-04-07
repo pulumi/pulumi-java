@@ -17,7 +17,267 @@ import javax.annotation.Nullable;
 /**
  * Resource Schema of AWS::EMRContainers::VirtualCluster Type
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testVirtualCluster = new AwsNative.EMRContainers.VirtualCluster("testVirtualCluster", new AwsNative.EMRContainers.VirtualClusterArgs
+ *         {
+ *             Name = "VirtualClusterName",
+ *             ContainerProvider = new AwsNative.EMRContainers.Inputs.VirtualClusterContainerProviderArgs
+ *             {
+ *                 Type = "EKS",
+ *                 Id = "EKSClusterName",
+ *                 Info = new AwsNative.EMRContainers.Inputs.VirtualClusterContainerInfoArgs
+ *                 {
+ *                     EksInfo = new AwsNative.EMRContainers.Inputs.VirtualClusterEksInfoArgs
+ *                     {
+ *                         Namespace = "EKSNamespace",
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.EMRContainers.Inputs.VirtualClusterTagArgs
+ *                 {
+ *                     Key = "Key1",
+ *                     Value = "Value1",
+ *                 },
+ *             },
+ *         });
+ *         this.PrimaryId = null;
+ *     }
+ * 
+ *     [Output("primaryId")]
+ *     public Output<string> PrimaryId { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/emrcontainers"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := emrcontainers.NewVirtualCluster(ctx, "testVirtualCluster", &emrcontainers.VirtualClusterArgs{
+ * 			Name: pulumi.String("VirtualClusterName"),
+ * 			ContainerProvider: &emrcontainers.VirtualClusterContainerProviderArgs{
+ * 				Type: pulumi.String("EKS"),
+ * 				Id:   pulumi.String("EKSClusterName"),
+ * 				Info: &emrcontainers.VirtualClusterContainerInfoArgs{
+ * 					EksInfo: &emrcontainers.VirtualClusterEksInfoArgs{
+ * 						Namespace: pulumi.String("EKSNamespace"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: []emrcontainers.VirtualClusterTagArgs{
+ * 				&emrcontainers.VirtualClusterTagArgs{
+ * 					Key:   pulumi.String("Key1"),
+ * 					Value: pulumi.String("Value1"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("primaryId", nil)
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testVirtualCluster = new aws_native.emrcontainers.VirtualCluster("testVirtualCluster", {
+ *     name: "VirtualClusterName",
+ *     containerProvider: {
+ *         type: "EKS",
+ *         id: "EKSClusterName",
+ *         info: {
+ *             eksInfo: {
+ *                 namespace: "EKSNamespace",
+ *             },
+ *         },
+ *     },
+ *     tags: [{
+ *         key: "Key1",
+ *         value: "Value1",
+ *     }],
+ * });
+ * export const primaryId = undefined;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_virtual_cluster = aws_native.emrcontainers.VirtualCluster("testVirtualCluster",
+ *     name="VirtualClusterName",
+ *     container_provider=aws_native.emrcontainers.VirtualClusterContainerProviderArgs(
+ *         type="EKS",
+ *         id="EKSClusterName",
+ *         info=aws_native.emrcontainers.VirtualClusterContainerInfoArgs(
+ *             eks_info=aws_native.emrcontainers.VirtualClusterEksInfoArgs(
+ *                 namespace="EKSNamespace",
+ *             ),
+ *         ),
+ *     ),
+ *     tags=[aws_native.emrcontainers.VirtualClusterTagArgs(
+ *         key="Key1",
+ *         value="Value1",
+ *     )])
+ * pulumi.export("primaryId", None)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testVirtualCluster = new AwsNative.EMRContainers.VirtualCluster("testVirtualCluster", new AwsNative.EMRContainers.VirtualClusterArgs
+ *         {
+ *             Name = "VirtualClusterName",
+ *             ContainerProvider = new AwsNative.EMRContainers.Inputs.VirtualClusterContainerProviderArgs
+ *             {
+ *                 Type = "EKS",
+ *                 Id = "EKSClusterName",
+ *                 Info = new AwsNative.EMRContainers.Inputs.VirtualClusterContainerInfoArgs
+ *                 {
+ *                     EksInfo = new AwsNative.EMRContainers.Inputs.VirtualClusterEksInfoArgs
+ *                     {
+ *                         Namespace = "EKSNamespace",
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 new AwsNative.EMRContainers.Inputs.VirtualClusterTagArgs
+ *                 {
+ *                     Key = "Key1",
+ *                     Value = "Value1",
+ *                 },
+ *             },
+ *         });
+ *         this.PrimaryId = testVirtualCluster.Id;
+ *     }
+ * 
+ *     [Output("primaryId")]
+ *     public Output<string> PrimaryId { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/emrcontainers"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		testVirtualCluster, err := emrcontainers.NewVirtualCluster(ctx, "testVirtualCluster", &emrcontainers.VirtualClusterArgs{
+ * 			Name: pulumi.String("VirtualClusterName"),
+ * 			ContainerProvider: &emrcontainers.VirtualClusterContainerProviderArgs{
+ * 				Type: pulumi.String("EKS"),
+ * 				Id:   pulumi.String("EKSClusterName"),
+ * 				Info: &emrcontainers.VirtualClusterContainerInfoArgs{
+ * 					EksInfo: &emrcontainers.VirtualClusterEksInfoArgs{
+ * 						Namespace: pulumi.String("EKSNamespace"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: []emrcontainers.VirtualClusterTagArgs{
+ * 				&emrcontainers.VirtualClusterTagArgs{
+ * 					Key:   pulumi.String("Key1"),
+ * 					Value: pulumi.String("Value1"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("primaryId", testVirtualCluster.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const testVirtualCluster = new aws_native.emrcontainers.VirtualCluster("testVirtualCluster", {
+ *     name: "VirtualClusterName",
+ *     containerProvider: {
+ *         type: "EKS",
+ *         id: "EKSClusterName",
+ *         info: {
+ *             eksInfo: {
+ *                 namespace: "EKSNamespace",
+ *             },
+ *         },
+ *     },
+ *     tags: [{
+ *         key: "Key1",
+ *         value: "Value1",
+ *     }],
+ * });
+ * export const primaryId = testVirtualCluster.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * test_virtual_cluster = aws_native.emrcontainers.VirtualCluster("testVirtualCluster",
+ *     name="VirtualClusterName",
+ *     container_provider=aws_native.emrcontainers.VirtualClusterContainerProviderArgs(
+ *         type="EKS",
+ *         id="EKSClusterName",
+ *         info=aws_native.emrcontainers.VirtualClusterContainerInfoArgs(
+ *             eks_info=aws_native.emrcontainers.VirtualClusterEksInfoArgs(
+ *                 namespace="EKSNamespace",
+ *             ),
+ *         ),
+ *     ),
+ *     tags=[aws_native.emrcontainers.VirtualClusterTagArgs(
+ *         key="Key1",
+ *         value="Value1",
+ *     )])
+ * pulumi.export("primaryId", test_virtual_cluster.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:emrcontainers:VirtualCluster")
@@ -30,42 +290,36 @@ public class VirtualCluster extends io.pulumi.resources.CustomResource {
     }
     /**
      * Container provider of the virtual cluster.
-     * 
      */
     @Export(name="containerProvider", type=VirtualClusterContainerProvider.class, parameters={})
     private Output<VirtualClusterContainerProvider> containerProvider;
 
     /**
      * @return Container provider of the virtual cluster.
-     * 
      */
     public Output<VirtualClusterContainerProvider> getContainerProvider() {
         return this.containerProvider;
     }
     /**
      * Name of the virtual cluster.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the virtual cluster.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * An array of key-value pairs to apply to this virtual cluster.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={VirtualClusterTag.class})
     private Output</* @Nullable */ List<VirtualClusterTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this virtual cluster.
-     * 
      */
     public Output</* @Nullable */ List<VirtualClusterTag>> getTags() {
         return this.tags;

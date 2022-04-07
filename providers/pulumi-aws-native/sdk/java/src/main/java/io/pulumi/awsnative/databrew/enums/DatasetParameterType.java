@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Parameter type
-     * 
      */
     @EnumType
     public enum DatasetParameterType {

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to associate with a resource.
- * 
  */
 public final class LocationFSxWindowsTag extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class LocationFSxWindowsTag extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The key for an AWS resource tag.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -29,7 +27,6 @@ public final class LocationFSxWindowsTag extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The value for an AWS resource tag.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

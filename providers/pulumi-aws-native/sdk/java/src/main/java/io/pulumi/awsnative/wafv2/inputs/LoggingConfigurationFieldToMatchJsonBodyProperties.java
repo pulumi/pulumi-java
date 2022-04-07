@@ -13,8 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form.
- * 
+ * Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. 
  */
 public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends io
 
     /**
      * What AWS WAF should do if it fails to completely parse the JSON body.
-     * 
      */
     @Import(name="invalidFallbackBehavior")
       private final @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior;
@@ -32,8 +30,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends io
     }
 
     /**
-     * The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
-     * 
+     * The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria. 
      */
     @Import(name="matchPattern", required=true)
       private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern;
@@ -43,8 +40,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends io
     }
 
     /**
-     * The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values.
-     * 
+     * The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values. 
      */
     @Import(name="matchScope", required=true)
       private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope;

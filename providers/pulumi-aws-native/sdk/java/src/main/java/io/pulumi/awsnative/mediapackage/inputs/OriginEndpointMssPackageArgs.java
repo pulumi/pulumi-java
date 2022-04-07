@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Microsoft Smooth Streaming (MSS) packaging configuration.
- * 
  */
 public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
 
     /**
      * The time window (in seconds) contained in each manifest.
-     * 
      */
     @Import(name="manifestWindowSeconds")
       private final @Nullable Output<Integer> manifestWindowSeconds;
@@ -40,7 +38,6 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
 
     /**
      * The duration (in seconds) of each segment.
-     * 
      */
     @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;

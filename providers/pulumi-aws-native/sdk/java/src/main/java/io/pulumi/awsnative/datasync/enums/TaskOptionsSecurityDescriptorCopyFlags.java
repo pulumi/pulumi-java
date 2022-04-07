@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value that determines which components of the SMB security descriptor are copied during transfer.
-     * 
      */
     @EnumType
     public enum TaskOptionsSecurityDescriptorCopyFlags {

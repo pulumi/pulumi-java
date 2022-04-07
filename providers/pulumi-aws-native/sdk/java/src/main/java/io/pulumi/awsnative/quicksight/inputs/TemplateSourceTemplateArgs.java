@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * <p>The source template of the template.</p>
- * 
  */
 public final class TemplateSourceTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class TemplateSourceTemplateArgs extends io.pulumi.resources.Resour
 
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
-     * 
      */
     @Import(name="arn", required=true)
       private final Output<String> arn;

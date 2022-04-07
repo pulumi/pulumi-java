@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Action taken when Rule matches its condition.
- * 
  */
 public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs {
 

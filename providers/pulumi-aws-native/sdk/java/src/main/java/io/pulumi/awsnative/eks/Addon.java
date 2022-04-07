@@ -16,104 +16,89 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema for AWS::EKS::Addon
- * 
  */
 @ResourceType(type="aws-native:eks:Addon")
 public class Addon extends io.pulumi.resources.CustomResource {
     /**
      * Name of Addon
-     * 
      */
     @Export(name="addonName", type=String.class, parameters={})
     private Output<String> addonName;
 
     /**
      * @return Name of Addon
-     * 
      */
     public Output<String> getAddonName() {
         return this.addonName;
     }
     /**
      * Version of Addon
-     * 
      */
     @Export(name="addonVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> addonVersion;
 
     /**
      * @return Version of Addon
-     * 
      */
     public Output</* @Nullable */ String> getAddonVersion() {
         return this.addonVersion;
     }
     /**
      * Amazon Resource Name (ARN) of the add-on
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the add-on
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Name of Cluster
-     * 
      */
     @Export(name="clusterName", type=String.class, parameters={})
     private Output<String> clusterName;
 
     /**
      * @return Name of Cluster
-     * 
      */
     public Output<String> getClusterName() {
         return this.clusterName;
     }
     /**
      * Resolve parameter value conflicts
-     * 
      */
     @Export(name="resolveConflicts", type=AddonResolveConflicts.class, parameters={})
     private Output</* @Nullable */ AddonResolveConflicts> resolveConflicts;
 
     /**
      * @return Resolve parameter value conflicts
-     * 
      */
     public Output</* @Nullable */ AddonResolveConflicts> getResolveConflicts() {
         return this.resolveConflicts;
     }
     /**
      * IAM role to bind to the add-on's service account
-     * 
      */
     @Export(name="serviceAccountRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceAccountRoleArn;
 
     /**
      * @return IAM role to bind to the add-on's service account
-     * 
      */
     public Output</* @Nullable */ String> getServiceAccountRoleArn() {
         return this.serviceAccountRoleArn;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={AddonTag.class})
     private Output</* @Nullable */ List<AddonTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<AddonTag>> getTags() {
         return this.tags;

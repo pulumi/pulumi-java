@@ -14,7 +14,6 @@ public final class GetDatasetGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Amazon Resource Name (ARN) of the dataset group to delete.
-     * 
      */
     @Import(name="datasetGroupArn", required=true)
       private final String datasetGroupArn;

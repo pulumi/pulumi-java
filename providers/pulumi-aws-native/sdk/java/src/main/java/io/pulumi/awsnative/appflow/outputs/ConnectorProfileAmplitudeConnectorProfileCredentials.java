@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectorProfileAmplitudeConnectorProfileCredentials {
     /**
      * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
-     * 
      */
     private final String apiKey;
     private final String secretKey;
@@ -26,7 +25,6 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentials {
 
     /**
      * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
-     * 
     */
     public String getApiKey() {
         return this.apiKey;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BotPlainTextMessage {
     /**
      * The message to send to the user.
-     * 
      */
     private final String value;
 
@@ -22,7 +21,6 @@ public final class BotPlainTextMessage {
 
     /**
      * The message to send to the user.
-     * 
     */
     public String getValue() {
         return this.value;

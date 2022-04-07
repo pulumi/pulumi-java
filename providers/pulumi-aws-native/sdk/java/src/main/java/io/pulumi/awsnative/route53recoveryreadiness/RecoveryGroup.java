@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * AWS Route53 Recovery Readiness Recovery Group Schema and API specifications.
- * 
  */
 @ResourceType(type="aws-native:route53recoveryreadiness:RecoveryGroup")
 public class RecoveryGroup extends io.pulumi.resources.CustomResource {
     /**
      * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
-     * 
      */
     @Export(name="cells", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> cells;
 
     /**
      * @return A list of the cell Amazon Resource Names (ARNs) in the recovery group.
-     * 
      */
     public Output</* @Nullable */ List<String>> getCells() {
         return this.cells;
     }
     /**
      * A collection of tags associated with a resource.
-     * 
      */
     @Export(name="recoveryGroupArn", type=String.class, parameters={})
     private Output<String> recoveryGroupArn;
 
     /**
      * @return A collection of tags associated with a resource.
-     * 
      */
     public Output<String> getRecoveryGroupArn() {
         return this.recoveryGroupArn;
     }
     /**
      * The name of the recovery group to create.
-     * 
      */
     @Export(name="recoveryGroupName", type=String.class, parameters={})
     private Output<String> recoveryGroupName;
 
     /**
      * @return The name of the recovery group to create.
-     * 
      */
     public Output<String> getRecoveryGroupName() {
         return this.recoveryGroupName;
     }
     /**
      * A collection of tags associated with a resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={RecoveryGroupTag.class})
     private Output</* @Nullable */ List<RecoveryGroupTag>> tags;
 
     /**
      * @return A collection of tags associated with a resource.
-     * 
      */
     public Output</* @Nullable */ List<RecoveryGroupTag>> getTags() {
         return this.tags;

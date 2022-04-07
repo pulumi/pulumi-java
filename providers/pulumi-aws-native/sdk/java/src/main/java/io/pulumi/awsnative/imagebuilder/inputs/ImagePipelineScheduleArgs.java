@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The schedule of the image pipeline.
- * 
  */
 public final class ImagePipelineScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ImagePipelineScheduleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The condition configures when the pipeline should trigger a new image build.
-     * 
      */
     @Import(name="pipelineExecutionStartCondition")
       private final @Nullable Output<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition;
@@ -32,7 +30,6 @@ public final class ImagePipelineScheduleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
-     * 
      */
     @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;

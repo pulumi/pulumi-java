@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the targets to which audit notifications are sent.
- * 
  */
 public final class AccountAuditConfigurationAuditNotificationTargetConfigurations extends io.pulumi.resources.InvokeArgs {
 

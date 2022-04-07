@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value that determines whether files at the destination should be overwritten or preserved when copying files.
-     * 
      */
     @EnumType
     public enum TaskOptionsOverwriteMode {

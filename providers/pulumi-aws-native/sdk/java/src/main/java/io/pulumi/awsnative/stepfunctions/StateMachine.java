@@ -22,7 +22,463 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for StateMachine
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myStateMachine = new AwsNative.StepFunctions.StateMachine("myStateMachine", new AwsNative.StepFunctions.StateMachineArgs
+ *         {
+ *             StateMachineName = "HelloWorld-StateMachine",
+ *             StateMachineType = "STANDARD",
+ *             DefinitionString = "{\"StartAt\": \"HelloWorld\",  \"States\": {\"HelloWorld\": {\"Type\": \"Task\", \"Resource\":  \"arn:aws:lambda:us-east-1:111122223333;:function:HelloFunction\", \"End\": true}}}",
+ *             RoleArn = "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1;",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/stepfunctions"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := stepfunctions.NewStateMachine(ctx, "myStateMachine", &stepfunctions.StateMachineArgs{
+ * 			StateMachineName: pulumi.String("HelloWorld-StateMachine"),
+ * 			StateMachineType: "STANDARD",
+ * 			DefinitionString: pulumi.String("{\"StartAt\": \"HelloWorld\",  \"States\": {\"HelloWorld\": {\"Type\": \"Task\", \"Resource\":  \"arn:aws:lambda:us-east-1:111122223333;:function:HelloFunction\", \"End\": true}}}"),
+ * 			RoleArn:          pulumi.String("arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1;"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myStateMachine = new aws_native.stepfunctions.StateMachine("myStateMachine", {
+ *     stateMachineName: "HelloWorld-StateMachine",
+ *     stateMachineType: "STANDARD",
+ *     definitionString: "{\"StartAt\": \"HelloWorld\",  \"States\": {\"HelloWorld\": {\"Type\": \"Task\", \"Resource\":  \"arn:aws:lambda:us-east-1:111122223333;:function:HelloFunction\", \"End\": true}}}",
+ *     roleArn: "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1;",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_state_machine = aws_native.stepfunctions.StateMachine("myStateMachine",
+ *     state_machine_name="HelloWorld-StateMachine",
+ *     state_machine_type="STANDARD",
+ *     definition_string="{\"StartAt\": \"HelloWorld\",  \"States\": {\"HelloWorld\": {\"Type\": \"Task\", \"Resource\":  \"arn:aws:lambda:us-east-1:111122223333;:function:HelloFunction\", \"End\": true}}}",
+ *     role_arn="arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1;")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myStateMachine = new AwsNative.StepFunctions.StateMachine("myStateMachine", new AwsNative.StepFunctions.StateMachineArgs
+ *         {
+ *             StateMachineName = "HelloWorld-StateMachine",
+ *             StateMachineType = "STANDARD",
+ *             DefinitionString = @"{
+ *     ""StartAt"": ""HelloWorld"",
+ *     ""States"" : {
+ *         ""HelloWorld"" : {
+ *             ""Type"" : ""Task"", 
+ *             ""Resource"" : ""arn:aws:lambda:us-east-1:111122223333:function:HelloFunction"",
+ *             ""End"" : true
+ *         }
+ *     }
+ * }",
+ *             RoleArn = "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.StepFunctions.Inputs.StateMachineTagsEntryArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.StepFunctions.Inputs.StateMachineTagsEntryArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/stepfunctions"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := stepfunctions.NewStateMachine(ctx, "myStateMachine", &stepfunctions.StateMachineArgs{
+ * 			StateMachineName: pulumi.String("HelloWorld-StateMachine"),
+ * 			StateMachineType: "STANDARD",
+ * 			DefinitionString: pulumi.String("{\n    \"StartAt\": \"HelloWorld\",\n    \"States\" : {\n        \"HelloWorld\" : {\n            \"Type\" : \"Task\", \n            \"Resource\" : \"arn:aws:lambda:us-east-1:111122223333:function:HelloFunction\",\n            \"End\" : true\n        }\n    }\n}"),
+ * 			RoleArn:          pulumi.String("arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1"),
+ * 			Tags: []stepfunctions.StateMachineTagsEntryArgs{
+ * 				&stepfunctions.StateMachineTagsEntryArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&stepfunctions.StateMachineTagsEntryArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myStateMachine = new aws_native.stepfunctions.StateMachine("myStateMachine", {
+ *     stateMachineName: "HelloWorld-StateMachine",
+ *     stateMachineType: "STANDARD",
+ *     definitionString: `{
+ *     "StartAt": "HelloWorld",
+ *     "States" : {
+ *         "HelloWorld" : {
+ *             "Type" : "Task", 
+ *             "Resource" : "arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
+ *             "End" : true
+ *         }
+ *     }
+ * }`,
+ *     roleArn: "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_state_machine = aws_native.stepfunctions.StateMachine("myStateMachine",
+ *     state_machine_name="HelloWorld-StateMachine",
+ *     state_machine_type="STANDARD",
+ *     definition_string="""{
+ *     "StartAt": "HelloWorld",
+ *     "States" : {
+ *         "HelloWorld" : {
+ *             "Type" : "Task", 
+ *             "Resource" : "arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
+ *             "End" : true
+ *         }
+ *     }
+ * }""",
+ *     role_arn="arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+ *     tags=[
+ *         aws_native.stepfunctions.StateMachineTagsEntryArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.stepfunctions.StateMachineTagsEntryArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myStateMachine = new AwsNative.StepFunctions.StateMachine("myStateMachine", new AwsNative.StepFunctions.StateMachineArgs
+ *         {
+ *             StateMachineName = "HelloWorld-StateMachine",
+ *             DefinitionString = @"{
+ *   ""StartAt"": ""HelloWorld"",
+ *   ""States"": {
+ *     ""HelloWorld"": {
+ *       ""Type"": ""Task"",
+ *       ""Resource"": ""arn:aws:lambda:us-east-1:111122223333:function:HelloFunction"",
+ *       ""End"": true
+ *     }
+ *   }
+ * }",
+ *             RoleArn = "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.StepFunctions.Inputs.StateMachineTagsEntryArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.StepFunctions.Inputs.StateMachineTagsEntryArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/stepfunctions"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := stepfunctions.NewStateMachine(ctx, "myStateMachine", &stepfunctions.StateMachineArgs{
+ * 			StateMachineName: pulumi.String("HelloWorld-StateMachine"),
+ * 			DefinitionString: pulumi.String("{\n  \"StartAt\": \"HelloWorld\",\n  \"States\": {\n    \"HelloWorld\": {\n      \"Type\": \"Task\",\n      \"Resource\": \"arn:aws:lambda:us-east-1:111122223333:function:HelloFunction\",\n      \"End\": true\n    }\n  }\n}"),
+ * 			RoleArn:          pulumi.String("arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1"),
+ * 			Tags: []stepfunctions.StateMachineTagsEntryArgs{
+ * 				&stepfunctions.StateMachineTagsEntryArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&stepfunctions.StateMachineTagsEntryArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myStateMachine = new aws_native.stepfunctions.StateMachine("myStateMachine", {
+ *     stateMachineName: "HelloWorld-StateMachine",
+ *     definitionString: `{
+ *   "StartAt": "HelloWorld",
+ *   "States": {
+ *     "HelloWorld": {
+ *       "Type": "Task",
+ *       "Resource": "arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
+ *       "End": true
+ *     }
+ *   }
+ * }`,
+ *     roleArn: "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_state_machine = aws_native.stepfunctions.StateMachine("myStateMachine",
+ *     state_machine_name="HelloWorld-StateMachine",
+ *     definition_string="""{
+ *   "StartAt": "HelloWorld",
+ *   "States": {
+ *     "HelloWorld": {
+ *       "Type": "Task",
+ *       "Resource": "arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
+ *       "End": true
+ *     }
+ *   }
+ * }""",
+ *     role_arn="arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+ *     tags=[
+ *         aws_native.stepfunctions.StateMachineTagsEntryArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.stepfunctions.StateMachineTagsEntryArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myStateMachine = new AwsNative.StepFunctions.StateMachine("myStateMachine", new AwsNative.StepFunctions.StateMachineArgs
+ *         {
+ *             StateMachineName = "HelloWorld-StateMachine",
+ *             DefinitionS3Location = new AwsNative.StepFunctions.Inputs.StateMachineS3LocationArgs
+ *             {
+ *                 Bucket = "example_bucket",
+ *                 Key = "hello_world.json",
+ *             },
+ *             DefinitionSubstitutions = new AwsNative.StepFunctions.Inputs.StateMachineDefinitionSubstitutionsArgs
+ *             {
+ *                 HelloFunction = "arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
+ *             },
+ *             RoleArn = "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/stepfunctions"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := stepfunctions.NewStateMachine(ctx, "myStateMachine", &stepfunctions.StateMachineArgs{
+ * 			StateMachineName: pulumi.String("HelloWorld-StateMachine"),
+ * 			DefinitionS3Location: &stepfunctions.StateMachineS3LocationArgs{
+ * 				Bucket: pulumi.String("example_bucket"),
+ * 				Key:    pulumi.String("hello_world.json"),
+ * 			},
+ * 			DefinitionSubstitutions: &stepfunctions.StateMachineDefinitionSubstitutionsArgs{
+ * 				HelloFunction: "arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
+ * 			},
+ * 			RoleArn: pulumi.String("arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myStateMachine = new aws_native.stepfunctions.StateMachine("myStateMachine", {
+ *     stateMachineName: "HelloWorld-StateMachine",
+ *     definitionS3Location: {
+ *         bucket: "example_bucket",
+ *         key: "hello_world.json",
+ *     },
+ *     definitionSubstitutions: {
+ *         helloFunction: "arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
+ *     },
+ *     roleArn: "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_state_machine = aws_native.stepfunctions.StateMachine("myStateMachine",
+ *     state_machine_name="HelloWorld-StateMachine",
+ *     definition_s3_location=aws_native.stepfunctions.StateMachineS3LocationArgs(
+ *         bucket="example_bucket",
+ *         key="hello_world.json",
+ *     ),
+ *     definition_substitutions=aws_native.stepfunctions.StateMachineDefinitionSubstitutionsArgs(
+ *         hello_function="arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
+ *     ),
+ *     role_arn="arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:stepfunctions:StateMachine")

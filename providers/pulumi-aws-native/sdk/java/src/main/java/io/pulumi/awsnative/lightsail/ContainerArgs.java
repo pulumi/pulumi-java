@@ -22,7 +22,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a container deployment configuration of an Amazon Lightsail container service.
-     * 
      */
     @Import(name="containerServiceDeployment")
       private final @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment;
@@ -33,7 +32,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A Boolean value to indicate whether the container service is disabled.
-     * 
      */
     @Import(name="isDisabled")
       private final @Nullable Output<Boolean> isDisabled;
@@ -44,7 +42,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The power specification for the container service.
-     * 
      */
     @Import(name="power", required=true)
       private final Output<String> power;
@@ -55,7 +52,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The public domain names to use with the container service, such as example.com and www.example.com.
-     * 
      */
     @Import(name="publicDomainNames")
       private final @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames;
@@ -66,7 +62,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scale specification for the container service.
-     * 
      */
     @Import(name="scale", required=true)
       private final Output<Integer> scale;
@@ -77,7 +72,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name for the container service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -88,7 +82,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ContainerTagArgs>> tags;

@@ -18,13 +18,11 @@ public final class GetConfigurationAggregatorResult {
     private final @Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources;
     /**
      * The Amazon Resource Name (ARN) of the aggregator.
-     * 
      */
     private final @Nullable String configurationAggregatorArn;
     private final @Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource;
     /**
      * The tags for the configuration aggregator.
-     * 
      */
     private final @Nullable List<ConfigurationAggregatorTag> tags;
 
@@ -45,7 +43,6 @@ public final class GetConfigurationAggregatorResult {
     }
     /**
      * The Amazon Resource Name (ARN) of the aggregator.
-     * 
     */
     public Optional<String> getConfigurationAggregatorArn() {
         return Optional.ofNullable(this.configurationAggregatorArn);
@@ -55,7 +52,6 @@ public final class GetConfigurationAggregatorResult {
     }
     /**
      * The tags for the configuration aggregator.
-     * 
     */
     public List<ConfigurationAggregatorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

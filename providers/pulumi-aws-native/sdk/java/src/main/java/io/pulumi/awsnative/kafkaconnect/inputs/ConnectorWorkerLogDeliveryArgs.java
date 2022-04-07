@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies where worker logs are delivered.
- * 
  */
 public final class ConnectorWorkerLogDeliveryArgs extends io.pulumi.resources.ResourceArgs {
 

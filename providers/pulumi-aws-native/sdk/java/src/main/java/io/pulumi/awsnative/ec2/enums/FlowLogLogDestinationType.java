@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the type of destination to which the flow log data is to be published. Flow log data can be published to CloudWatch Logs or Amazon S3.
-     * 
      */
     @EnumType
     public enum FlowLogLogDestinationType {

@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Configures the server-side encryption for Amazon S3 Storage Lens report files with either S3-managed keys (SSE-S3) or KMS-managed keys (SSE-KMS).
- * 
  */
 public final class StorageLensEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 

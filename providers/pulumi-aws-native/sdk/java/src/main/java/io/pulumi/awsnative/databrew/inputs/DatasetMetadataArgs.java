@@ -16,7 +16,6 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Arn of the source of the dataset. For e.g.: AppFlow Flow ARN.
-     * 
      */
     @Import(name="sourceArn")
       private final @Nullable Output<String> sourceArn;

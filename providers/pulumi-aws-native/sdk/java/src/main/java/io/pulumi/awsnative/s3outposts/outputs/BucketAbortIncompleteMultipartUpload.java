@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BucketAbortIncompleteMultipartUpload {
     /**
      * Specifies the number of days after which Amazon S3Outposts aborts an incomplete multipart upload.
-     * 
      */
     private final Integer daysAfterInitiation;
 
@@ -22,7 +21,6 @@ public final class BucketAbortIncompleteMultipartUpload {
 
     /**
      * Specifies the number of days after which Amazon S3Outposts aborts an incomplete multipart upload.
-     * 
     */
     public Integer getDaysAfterInitiation() {
         return this.daysAfterInitiation;

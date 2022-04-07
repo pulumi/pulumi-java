@@ -15,7 +15,6 @@ public final class DeploymentTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The key name of the tag
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -26,7 +25,6 @@ public final class DeploymentTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value for the tag
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A addon associate with a resource.
- * 
  */
 public final class DiskAddOn extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DiskAddOn extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The add-on type
-     * 
      */
     @Import(name="addOnType", required=true)
       private final String addOnType;
@@ -40,7 +38,6 @@ public final class DiskAddOn extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Status of the Addon
-     * 
      */
     @Import(name="status")
       private final @Nullable DiskAddOnStatus status;

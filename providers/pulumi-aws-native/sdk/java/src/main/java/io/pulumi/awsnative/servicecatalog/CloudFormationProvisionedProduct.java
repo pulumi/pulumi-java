@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Schema for AWS::ServiceCatalog::CloudFormationProvisionedProduct
- * 
  */
 @ResourceType(type="aws-native:servicecatalog:CloudFormationProvisionedProduct")
 public class CloudFormationProvisionedProduct extends io.pulumi.resources.CustomResource {
@@ -43,14 +42,12 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
     }
     /**
      * List of key-value pair outputs.
-     * 
      */
     @Export(name="outputs", type=Object.class, parameters={})
     private Output<Object> outputs;
 
     /**
      * @return List of key-value pair outputs.
-     * 
      */
     public Output<Object> getOutputs() {
         return this.outputs;

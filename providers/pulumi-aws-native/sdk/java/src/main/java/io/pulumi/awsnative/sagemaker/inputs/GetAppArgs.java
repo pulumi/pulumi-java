@@ -15,7 +15,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the app.
-     * 
      */
     @Import(name="appName", required=true)
       private final String appName;
@@ -26,7 +25,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of app.
-     * 
      */
     @Import(name="appType", required=true)
       private final AppType appType;
@@ -37,7 +35,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The domain ID.
-     * 
      */
     @Import(name="domainId", required=true)
       private final String domainId;
@@ -48,7 +45,6 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The user profile name.
-     * 
      */
     @Import(name="userProfileName", required=true)
       private final String userProfileName;

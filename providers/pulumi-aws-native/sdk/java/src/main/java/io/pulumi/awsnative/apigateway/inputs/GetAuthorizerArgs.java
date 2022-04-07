@@ -21,7 +21,6 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identifier of the API.
-     * 
      */
     @Import(name="restApiId", required=true)
       private final String restApiId;

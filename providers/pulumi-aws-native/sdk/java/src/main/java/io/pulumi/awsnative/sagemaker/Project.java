@@ -19,21 +19,187 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::SageMaker::Project
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sampleProject = new AwsNative.SageMaker.Project("sampleProject", new AwsNative.SageMaker.ProjectArgs
+ *         {
+ *             ProjectName = "project1",
+ *             ProjectDescription = "Project Description",
+ *             ServiceCatalogProvisioningDetails = new AwsNative.SageMaker.Inputs.ServiceCatalogProvisioningDetailsPropertiesArgs
+ *             {
+ *                 ProductId = "prod-53ibyqbj2cgmo",
+ *                 ProvisioningArtifactId = "pa-sm4pjfuzictpe",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewProject(ctx, "sampleProject", &sagemaker.ProjectArgs{
+ * 			ProjectName:        pulumi.String("project1"),
+ * 			ProjectDescription: pulumi.String("Project Description"),
+ * 			ServiceCatalogProvisioningDetails: &sagemaker.ServiceCatalogProvisioningDetailsPropertiesArgs{
+ * 				ProductId:              pulumi.String("prod-53ibyqbj2cgmo"),
+ * 				ProvisioningArtifactId: pulumi.String("pa-sm4pjfuzictpe"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const sampleProject = new aws_native.sagemaker.Project("sampleProject", {
+ *     projectName: "project1",
+ *     projectDescription: "Project Description",
+ *     serviceCatalogProvisioningDetails: {
+ *         productId: "prod-53ibyqbj2cgmo",
+ *         provisioningArtifactId: "pa-sm4pjfuzictpe",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * sample_project = aws_native.sagemaker.Project("sampleProject",
+ *     project_name="project1",
+ *     project_description="Project Description",
+ *     service_catalog_provisioning_details=aws_native.sagemaker.ServiceCatalogProvisioningDetailsPropertiesArgs(
+ *         product_id="prod-53ibyqbj2cgmo",
+ *         provisioning_artifact_id="pa-sm4pjfuzictpe",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sampleProject = new AwsNative.SageMaker.Project("sampleProject", new AwsNative.SageMaker.ProjectArgs
+ *         {
+ *             ProjectName = "SampleProject",
+ *             ProjectDescription = "Project Description",
+ *             ServiceCatalogProvisioningDetails = new AwsNative.SageMaker.Inputs.ServiceCatalogProvisioningDetailsPropertiesArgs
+ *             {
+ *                 ProductId = "prod-53ibyqbj2cgmo",
+ *                 ProvisioningArtifactId = "pa-sm4pjfuzictpe",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/sagemaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sagemaker.NewProject(ctx, "sampleProject", &sagemaker.ProjectArgs{
+ * 			ProjectName:        pulumi.String("SampleProject"),
+ * 			ProjectDescription: pulumi.String("Project Description"),
+ * 			ServiceCatalogProvisioningDetails: &sagemaker.ServiceCatalogProvisioningDetailsPropertiesArgs{
+ * 				ProductId:              pulumi.String("prod-53ibyqbj2cgmo"),
+ * 				ProvisioningArtifactId: pulumi.String("pa-sm4pjfuzictpe"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const sampleProject = new aws_native.sagemaker.Project("sampleProject", {
+ *     projectName: "SampleProject",
+ *     projectDescription: "Project Description",
+ *     serviceCatalogProvisioningDetails: {
+ *         productId: "prod-53ibyqbj2cgmo",
+ *         provisioningArtifactId: "pa-sm4pjfuzictpe",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * sample_project = aws_native.sagemaker.Project("sampleProject",
+ *     project_name="SampleProject",
+ *     project_description="Project Description",
+ *     service_catalog_provisioning_details=aws_native.sagemaker.ServiceCatalogProvisioningDetailsPropertiesArgs(
+ *         product_id="prod-53ibyqbj2cgmo",
+ *         provisioning_artifact_id="pa-sm4pjfuzictpe",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:sagemaker:Project")
 public class Project extends io.pulumi.resources.CustomResource {
     /**
      * The time at which the project was created.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The time at which the project was created.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
@@ -64,56 +230,48 @@ public class Project extends io.pulumi.resources.CustomResource {
     }
     /**
      * The status of a project.
-     * 
      */
     @Export(name="projectStatus", type=ProjectStatus.class, parameters={})
     private Output<ProjectStatus> projectStatus;
 
     /**
      * @return The status of a project.
-     * 
      */
     public Output<ProjectStatus> getProjectStatus() {
         return this.projectStatus;
     }
     /**
      * Provisioned ServiceCatalog  Details
-     * 
      */
     @Export(name="serviceCatalogProvisionedProductDetails", type=ServiceCatalogProvisionedProductDetailsProperties.class, parameters={})
     private Output<ServiceCatalogProvisionedProductDetailsProperties> serviceCatalogProvisionedProductDetails;
 
     /**
      * @return Provisioned ServiceCatalog  Details
-     * 
      */
     public Output<ServiceCatalogProvisionedProductDetailsProperties> getServiceCatalogProvisionedProductDetails() {
         return this.serviceCatalogProvisionedProductDetails;
     }
     /**
      * Input ServiceCatalog Provisioning Details
-     * 
      */
     @Export(name="serviceCatalogProvisioningDetails", type=ServiceCatalogProvisioningDetailsProperties.class, parameters={})
     private Output<ServiceCatalogProvisioningDetailsProperties> serviceCatalogProvisioningDetails;
 
     /**
      * @return Input ServiceCatalog Provisioning Details
-     * 
      */
     public Output<ServiceCatalogProvisioningDetailsProperties> getServiceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<ProjectTag>> getTags() {
         return this.tags;

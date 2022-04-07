@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::IVS::StreamKey
- * 
  */
 @ResourceType(type="aws-native:ivs:StreamKey")
 public class StreamKey extends io.pulumi.resources.CustomResource {
     /**
      * Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Channel ARN for the stream.
-     * 
      */
     @Export(name="channelArn", type=String.class, parameters={})
     private Output<String> channelArn;
 
     /**
      * @return Channel ARN for the stream.
-     * 
      */
     public Output<String> getChannelArn() {
         return this.channelArn;
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={StreamKeyTag.class})
     private Output</* @Nullable */ List<StreamKeyTag>> tags;
 
     /**
      * @return A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     public Output</* @Nullable */ List<StreamKeyTag>> getTags() {
         return this.tags;
     }
     /**
      * Stream-key value.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**
      * @return Stream-key value.
-     * 
      */
     public Output<String> getValue() {
         return this.value;

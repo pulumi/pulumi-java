@@ -23,7 +23,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key and value pairs that describe attachments to a version of a document.
-     * 
      */
     @Import(name="attachments")
       private final @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments;
@@ -34,7 +33,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The content for the Systems Manager document in JSON, YAML or String format.
-     * 
      */
     @Import(name="content", required=true)
       private final Output<Object> content;
@@ -45,7 +43,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.
-     * 
      */
     @Import(name="documentFormat")
       private final @Nullable Output<DocumentFormat> documentFormat;
@@ -56,7 +53,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of document to create.
-     * 
      */
     @Import(name="documentType")
       private final @Nullable Output<DocumentType> documentType;
@@ -67,7 +63,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name for the Systems Manager document.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -78,7 +73,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.
-     * 
      */
     @Import(name="requires")
       private final @Nullable Output<List<DocumentRequiresArgs>> requires;
@@ -89,7 +83,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DocumentTagArgs>> tags;
@@ -100,7 +93,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specify a target type to define the kinds of resources the document can run on.
-     * 
      */
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
@@ -111,7 +103,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.
-     * 
      */
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;

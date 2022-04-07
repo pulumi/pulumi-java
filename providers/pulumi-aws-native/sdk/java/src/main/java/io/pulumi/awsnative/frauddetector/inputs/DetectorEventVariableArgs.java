@@ -29,7 +29,6 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
 
     /**
      * The time when the event variable was created.
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
@@ -61,7 +60,6 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -79,7 +77,6 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
 
     /**
      * The time when the event variable was last updated.
-     * 
      */
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
@@ -97,7 +94,6 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
 
     /**
      * Tags associated with this event variable.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;

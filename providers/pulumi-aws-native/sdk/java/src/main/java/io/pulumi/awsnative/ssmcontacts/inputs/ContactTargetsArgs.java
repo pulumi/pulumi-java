@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The contacts or contact methods that the escalation plan or engagement plan is engaging.
- * 
  */
 public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
 

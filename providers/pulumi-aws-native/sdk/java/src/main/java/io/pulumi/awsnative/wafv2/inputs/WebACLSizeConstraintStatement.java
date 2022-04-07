@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Size Constraint statement.
- * 
  */
 public final class WebACLSizeConstraintStatement extends io.pulumi.resources.InvokeArgs {
 

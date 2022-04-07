@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class FirewallSubnetMapping {
     /**
      * A SubnetId.
-     * 
      */
     private final String subnetId;
 
@@ -22,7 +21,6 @@ public final class FirewallSubnetMapping {
 
     /**
      * A SubnetId.
-     * 
     */
     public String getSubnetId() {
         return this.subnetId;

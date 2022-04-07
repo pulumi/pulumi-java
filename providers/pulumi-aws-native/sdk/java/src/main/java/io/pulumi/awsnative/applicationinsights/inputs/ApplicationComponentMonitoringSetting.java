@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The monitoring setting of the component.
- * 
  */
 public final class ApplicationComponentMonitoringSetting extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationComponentMonitoringSetting extends io.pulumi.resou
 
     /**
      * The ARN of the compnonent.
-     * 
      */
     @Import(name="componentARN")
       private final @Nullable String componentARN;
@@ -33,7 +31,6 @@ public final class ApplicationComponentMonitoringSetting extends io.pulumi.resou
 
     /**
      * The component monitoring configuration mode.
-     * 
      */
     @Import(name="componentConfigurationMode", required=true)
       private final ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode;
@@ -44,7 +41,6 @@ public final class ApplicationComponentMonitoringSetting extends io.pulumi.resou
 
     /**
      * The name of the component.
-     * 
      */
     @Import(name="componentName")
       private final @Nullable String componentName;
@@ -55,7 +51,6 @@ public final class ApplicationComponentMonitoringSetting extends io.pulumi.resou
 
     /**
      * The monitoring configuration of the component.
-     * 
      */
     @Import(name="customComponentConfiguration")
       private final @Nullable ApplicationComponentConfiguration customComponentConfiguration;
@@ -66,7 +61,6 @@ public final class ApplicationComponentMonitoringSetting extends io.pulumi.resou
 
     /**
      * The overwritten settings on default component monitoring configuration.
-     * 
      */
     @Import(name="defaultOverwriteComponentConfiguration")
       private final @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration;
@@ -77,7 +71,6 @@ public final class ApplicationComponentMonitoringSetting extends io.pulumi.resou
 
     /**
      * The tier of the application component.
-     * 
      */
     @Import(name="tier", required=true)
       private final String tier;

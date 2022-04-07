@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * The resource schema for AWSLogs QueryDefinition
- * 
  */
 @ResourceType(type="aws-native:logs:QueryDefinition")
 public class QueryDefinition extends io.pulumi.resources.CustomResource {
     /**
      * Optionally define specific log groups as part of your query definition
-     * 
      */
     @Export(name="logGroupNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> logGroupNames;
 
     /**
      * @return Optionally define specific log groups as part of your query definition
-     * 
      */
     public Output</* @Nullable */ List<String>> getLogGroupNames() {
         return this.logGroupNames;
     }
     /**
      * A name for the saved query definition
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return A name for the saved query definition
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Unique identifier of a query definition
-     * 
      */
     @Export(name="queryDefinitionId", type=String.class, parameters={})
     private Output<String> queryDefinitionId;
 
     /**
      * @return Unique identifier of a query definition
-     * 
      */
     public Output<String> getQueryDefinitionId() {
         return this.queryDefinitionId;
     }
     /**
      * The query string to use for this definition
-     * 
      */
     @Export(name="queryString", type=String.class, parameters={})
     private Output<String> queryString;
 
     /**
      * @return The query string to use for this definition
-     * 
      */
     public Output<String> getQueryString() {
         return this.queryString;

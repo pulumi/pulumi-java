@@ -17,7 +17,6 @@ public final class GetStreamResult {
     private final @Nullable String id;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<StreamTag> tags;
 
@@ -39,7 +38,6 @@ public final class GetStreamResult {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<StreamTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

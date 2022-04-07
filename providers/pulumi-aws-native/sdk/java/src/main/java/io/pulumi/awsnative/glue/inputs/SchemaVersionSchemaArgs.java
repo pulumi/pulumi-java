@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identifier for the schema where the schema version will be created.
- * 
  */
 public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the registry to identify where the Schema is located.
-     * 
      */
     @Import(name="registryName")
       private final @Nullable Output<String> registryName;
@@ -31,7 +29,6 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Amazon Resource Name for the Schema. This attribute can be used to uniquely represent the Schema.
-     * 
      */
     @Import(name="schemaArn")
       private final @Nullable Output<String> schemaArn;
@@ -42,7 +39,6 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the schema. This parameter requires RegistryName to be provided.
-     * 
      */
     @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;

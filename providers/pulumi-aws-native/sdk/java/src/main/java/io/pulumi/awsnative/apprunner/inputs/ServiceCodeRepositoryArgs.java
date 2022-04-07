@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Source Code Repository
- * 
  */
 public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.Resourc
 
     /**
      * Repository Url
-     * 
      */
     @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;

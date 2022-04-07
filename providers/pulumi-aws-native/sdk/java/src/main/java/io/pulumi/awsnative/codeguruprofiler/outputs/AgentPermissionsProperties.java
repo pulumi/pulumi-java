@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class AgentPermissionsProperties {
     /**
      * The principals for the agent permissions.
-     * 
      */
     private final List<String> principals;
 
@@ -23,7 +22,6 @@ public final class AgentPermissionsProperties {
 
     /**
      * The principals for the agent permissions.
-     * 
     */
     public List<String> getPrincipals() {
         return this.principals;

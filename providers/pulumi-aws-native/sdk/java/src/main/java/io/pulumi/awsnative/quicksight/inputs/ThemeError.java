@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>Theme error.</p>
- * 
  */
 public final class ThemeError extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ThemeError extends io.pulumi.resources.InvokeArgs {
 
     /**
      * <p>The error message.</p>
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;

@@ -14,48 +14,41 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ApiGateway::UsagePlanKey
- * 
  */
 @ResourceType(type="aws-native:apigateway:UsagePlanKey")
 public class UsagePlanKey extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the usage plan key.
-     * 
      */
     @Export(name="keyId", type=String.class, parameters={})
     private Output<String> keyId;
 
     /**
      * @return The ID of the usage plan key.
-     * 
      */
     public Output<String> getKeyId() {
         return this.keyId;
     }
     /**
      * The type of usage plan key. Currently, the only valid key type is API_KEY.
-     * 
      */
     @Export(name="keyType", type=UsagePlanKeyKeyType.class, parameters={})
     private Output<UsagePlanKeyKeyType> keyType;
 
     /**
      * @return The type of usage plan key. Currently, the only valid key type is API_KEY.
-     * 
      */
     public Output<UsagePlanKeyKeyType> getKeyType() {
         return this.keyType;
     }
     /**
      * The ID of the usage plan.
-     * 
      */
     @Export(name="usagePlanId", type=String.class, parameters={})
     private Output<String> usagePlanId;
 
     /**
      * @return The ID of the usage plan.
-     * 
      */
     public Output<String> getUsagePlanId() {
         return this.usagePlanId;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value that determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location.
-     * 
      */
     @EnumType
     public enum TaskOptionsTransferMode {

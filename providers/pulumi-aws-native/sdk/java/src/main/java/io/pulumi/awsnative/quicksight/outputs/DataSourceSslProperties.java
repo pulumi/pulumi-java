@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DataSourceSslProperties {
     /**
      * <p>A Boolean option to control whether SSL should be disabled.</p>
-     * 
      */
     private final @Nullable Boolean disableSsl;
 
@@ -24,7 +23,6 @@ public final class DataSourceSslProperties {
 
     /**
      * <p>A Boolean option to control whether SSL should be disabled.</p>
-     * 
     */
     public Optional<Boolean> getDisableSsl() {
         return Optional.ofNullable(this.disableSsl);

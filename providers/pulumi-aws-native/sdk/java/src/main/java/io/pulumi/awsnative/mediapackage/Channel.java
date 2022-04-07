@@ -17,90 +17,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::MediaPackage::Channel
- * 
  */
 @ResourceType(type="aws-native:mediapackage:Channel")
 public class Channel extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) assigned to the Channel.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) assigned to the Channel.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * A short text description of the Channel.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A short text description of the Channel.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The configuration parameters for egress access logging.
-     * 
      */
     @Export(name="egressAccessLogs", type=ChannelLogConfiguration.class, parameters={})
     private Output</* @Nullable */ ChannelLogConfiguration> egressAccessLogs;
 
     /**
      * @return The configuration parameters for egress access logging.
-     * 
      */
     public Output</* @Nullable */ ChannelLogConfiguration> getEgressAccessLogs() {
         return this.egressAccessLogs;
     }
     /**
      * A short text description of the Channel.
-     * 
      */
     @Export(name="hlsIngest", type=ChannelHlsIngest.class, parameters={})
     private Output<ChannelHlsIngest> hlsIngest;
 
     /**
      * @return A short text description of the Channel.
-     * 
      */
     public Output<ChannelHlsIngest> getHlsIngest() {
         return this.hlsIngest;
     }
     /**
      * The configuration parameters for egress access logging.
-     * 
      */
     @Export(name="ingressAccessLogs", type=ChannelLogConfiguration.class, parameters={})
     private Output</* @Nullable */ ChannelLogConfiguration> ingressAccessLogs;
 
     /**
      * @return The configuration parameters for egress access logging.
-     * 
      */
     public Output</* @Nullable */ ChannelLogConfiguration> getIngressAccessLogs() {
         return this.ingressAccessLogs;
     }
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ChannelTag.class})
     private Output</* @Nullable */ List<ChannelTag>> tags;
 
     /**
      * @return A collection of tags associated with a resource
-     * 
      */
     public Output</* @Nullable */ List<ChannelTag>> getTags() {
         return this.tags;

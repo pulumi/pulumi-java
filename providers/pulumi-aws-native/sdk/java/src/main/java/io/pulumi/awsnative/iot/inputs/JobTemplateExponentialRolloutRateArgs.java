@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Allows you to create an exponential rate of rollout for a job.
- * 
  */
 public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
 
     /**
      * The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
-     * 
      */
     @Import(name="baseRatePerMinute", required=true)
       private final Output<Integer> baseRatePerMinute;
@@ -32,7 +30,6 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
 
     /**
      * The exponential factor to increase the rate of rollout for a job.
-     * 
      */
     @Import(name="incrementFactor", required=true)
       private final Output<Double> incrementFactor;
@@ -43,7 +40,6 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
 
     /**
      * The criteria to initiate the increase in rate of rollout for a job.
-     * 
      */
     @Import(name="rateIncreaseCriteria", required=true)
       private final Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria;

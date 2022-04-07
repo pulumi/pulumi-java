@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Networking options for a job, such as network traffic encryption between containers, whether to allow inbound and outbound network calls to and from containers, and the VPC subnets and security groups to use for VPC-enabled jobs.
- * 
  */
 public final class ModelExplainabilityJobDefinitionNetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ModelExplainabilityJobDefinitionNetworkConfigArgs extends io.
 
     /**
      * Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
-     * 
      */
     @Import(name="enableInterContainerTrafficEncryption")
       private final @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
@@ -32,7 +30,6 @@ public final class ModelExplainabilityJobDefinitionNetworkConfigArgs extends io.
 
     /**
      * Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
-     * 
      */
     @Import(name="enableNetworkIsolation")
       private final @Nullable Output<Boolean> enableNetworkIsolation;

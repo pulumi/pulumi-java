@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * launchTemplateConfiguration settings that apply to image distribution.
- * 
  */
 public final class DistributionConfigurationLaunchTemplateConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
 
     /**
      * The account ID that this configuration applies to.
-     * 
      */
     @Import(name="accountId")
       private final @Nullable String accountId;
@@ -32,7 +30,6 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
 
     /**
      * Identifies the EC2 launch template to use.
-     * 
      */
     @Import(name="launchTemplateId")
       private final @Nullable String launchTemplateId;
@@ -43,7 +40,6 @@ public final class DistributionConfigurationLaunchTemplateConfiguration extends 
 
     /**
      * Set the specified EC2 launch template as the default launch template for the specified account.
-     * 
      */
     @Import(name="setDefaultVersion")
       private final @Nullable Boolean setDefaultVersion;

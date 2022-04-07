@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class BucketQueueConfiguration {
     /**
      * The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
-     * 
      */
     private final String event;
     /**
      * The filtering rules that determine which objects trigger notifications.
-     * 
      */
     private final @Nullable BucketNotificationFilter filter;
     /**
      * The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.
-     * 
      */
     private final String queue;
 
@@ -40,21 +37,18 @@ public final class BucketQueueConfiguration {
 
     /**
      * The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
-     * 
     */
     public String getEvent() {
         return this.event;
     }
     /**
      * The filtering rules that determine which objects trigger notifications.
-     * 
     */
     public Optional<BucketNotificationFilter> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.
-     * 
     */
     public String getQueue() {
         return this.queue;

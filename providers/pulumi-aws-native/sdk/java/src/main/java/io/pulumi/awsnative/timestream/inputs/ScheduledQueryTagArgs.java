@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A key-value pair to label the scheduled query.
- * 
  */
 public final class ScheduledQueryTagArgs extends io.pulumi.resources.ResourceArgs {
 

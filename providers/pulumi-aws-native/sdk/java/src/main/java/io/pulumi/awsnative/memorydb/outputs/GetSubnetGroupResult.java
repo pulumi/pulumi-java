@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class GetSubnetGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the subnet group.
-     * 
      */
     private final @Nullable String aRN;
     /**
      * An optional description of the subnet group.
-     * 
      */
     private final @Nullable String description;
     /**
      * A list of VPC subnet IDs for the subnet group.
-     * 
      */
     private final @Nullable List<String> subnetIds;
     /**
      * An array of key-value pairs to apply to this subnet group.
-     * 
      */
     private final @Nullable List<SubnetGroupTag> tags;
 
@@ -48,28 +44,24 @@ public final class GetSubnetGroupResult {
 
     /**
      * The Amazon Resource Name (ARN) of the subnet group.
-     * 
     */
     public Optional<String> getARN() {
         return Optional.ofNullable(this.aRN);
     }
     /**
      * An optional description of the subnet group.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of VPC subnet IDs for the subnet group.
-     * 
     */
     public List<String> getSubnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
     /**
      * An array of key-value pairs to apply to this subnet group.
-     * 
     */
     public List<SubnetGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

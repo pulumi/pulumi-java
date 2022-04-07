@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies an Amazon S3 bucket for logging audio conversations
- * 
  */
 public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
 
     /**
      * The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key for encrypting audio log files stored in an S3 bucket.
-     * 
      */
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
@@ -31,7 +29,6 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
 
     /**
      * The Amazon S3 key of the deployment package.
-     * 
      */
     @Import(name="logPrefix", required=true)
       private final Output<String> logPrefix;
@@ -42,7 +39,6 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
 
     /**
      * The Amazon Resource Name (ARN) of an Amazon S3 bucket where audio log files are stored.
-     * 
      */
     @Import(name="s3BucketArn", required=true)
       private final Output<String> s3BucketArn;

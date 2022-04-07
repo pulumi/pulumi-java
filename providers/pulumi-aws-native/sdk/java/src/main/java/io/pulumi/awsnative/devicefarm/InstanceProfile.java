@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * AWS::DeviceFarm::InstanceProfile creates a new Device Farm Instance Profile
- * 
  */
 @ResourceType(type="aws-native:devicefarm:InstanceProfile")
 public class InstanceProfile extends io.pulumi.resources.CustomResource {

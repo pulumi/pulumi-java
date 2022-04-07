@@ -21,7 +21,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the channel is authorized.
-     * 
      */
     @Import(name="authorized")
       private final @Nullable Output<Boolean> authorized;
@@ -32,7 +31,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Channel latency mode.
-     * 
      */
     @Import(name="latencyMode")
       private final @Nullable Output<ChannelLatencyMode> latencyMode;
@@ -43,7 +41,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Channel
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -54,7 +51,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
-     * 
      */
     @Import(name="recordingConfigurationArn")
       private final @Nullable Output<String> recordingConfigurationArn;
@@ -65,7 +61,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the asset model.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ChannelTagArgs>> tags;
@@ -76,7 +71,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ChannelType> type;

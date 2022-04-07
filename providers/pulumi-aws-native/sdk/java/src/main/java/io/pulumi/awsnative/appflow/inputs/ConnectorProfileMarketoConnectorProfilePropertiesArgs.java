@@ -15,7 +15,6 @@ public final class ConnectorProfileMarketoConnectorProfilePropertiesArgs extends
 
     /**
      * The location of the Marketo resource
-     * 
      */
     @Import(name="instanceUrl", required=true)
       private final Output<String> instanceUrl;

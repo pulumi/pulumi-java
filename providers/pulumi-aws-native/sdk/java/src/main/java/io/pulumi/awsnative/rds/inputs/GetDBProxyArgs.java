@@ -14,7 +14,6 @@ public final class GetDBProxyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
-     * 
      */
     @Import(name="dBProxyName", required=true)
       private final String dBProxyName;

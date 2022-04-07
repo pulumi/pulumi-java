@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * State of the Environment
-     * 
      */
     @EnumType
     public enum EnvironmentStatus {

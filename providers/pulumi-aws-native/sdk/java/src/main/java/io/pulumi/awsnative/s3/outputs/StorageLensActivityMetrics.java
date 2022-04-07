@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class StorageLensActivityMetrics {
     /**
      * Specifies whether activity metrics are enabled or disabled.
-     * 
      */
     private final @Nullable Boolean isEnabled;
 
@@ -24,7 +23,6 @@ public final class StorageLensActivityMetrics {
 
     /**
      * Specifies whether activity metrics are enabled or disabled.
-     * 
     */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);

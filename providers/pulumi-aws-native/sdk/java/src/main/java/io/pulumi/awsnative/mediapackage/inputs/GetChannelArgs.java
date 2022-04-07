@@ -14,7 +14,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the Channel.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

@@ -16,7 +16,6 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
 
     /**
      * destination arn
-     * 
      */
     @Import(name="destinationArn")
       private final @Nullable Output<String> destinationArn;
@@ -27,7 +26,6 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
 
     /**
      * ResolverQueryLogConfigName
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

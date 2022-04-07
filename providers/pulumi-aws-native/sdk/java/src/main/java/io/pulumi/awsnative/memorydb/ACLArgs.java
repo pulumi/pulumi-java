@@ -18,7 +18,6 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the acl.
-     * 
      */
     @Import(name="aCLName")
       private final @Nullable Output<String> aCLName;
@@ -29,7 +28,6 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this cluster.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ACLTagArgs>> tags;
@@ -40,7 +38,6 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of users associated to this acl.
-     * 
      */
     @Import(name="userNames")
       private final @Nullable Output<List<String>> userNames;

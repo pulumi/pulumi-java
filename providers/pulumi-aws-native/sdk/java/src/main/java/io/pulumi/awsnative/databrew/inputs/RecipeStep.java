@@ -25,7 +25,6 @@ public final class RecipeStep extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Condition expressions applied to the step action
-     * 
      */
     @Import(name="conditionExpressions")
       private final @Nullable List<RecipeConditionExpression> conditionExpressions;

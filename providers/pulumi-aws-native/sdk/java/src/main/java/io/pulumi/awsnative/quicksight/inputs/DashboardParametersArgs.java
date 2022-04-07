@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>A list of QuickSight parameters and the list's override values.</p>
- * 
  */
 public final class DashboardParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>Date-time parameters.</p>
-     * 
      */
     @Import(name="dateTimeParameters")
       private final @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
@@ -35,7 +33,6 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>Decimal parameters.</p>
-     * 
      */
     @Import(name="decimalParameters")
       private final @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters;
@@ -46,7 +43,6 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>Integer parameters.</p>
-     * 
      */
     @Import(name="integerParameters")
       private final @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters;
@@ -57,7 +53,6 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
 
     /**
      * <p>String parameters.</p>
-     * 
      */
     @Import(name="stringParameters")
       private final @Nullable Output<List<DashboardStringParameterArgs>> stringParameters;

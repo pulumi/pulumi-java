@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A metric to be monitored for the component.
- * 
  */
 public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the metric to be monitored for the component.
-     * 
      */
     @Import(name="alarmMetricName", required=true)
       private final Output<String> alarmMetricName;

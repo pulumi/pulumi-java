@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Information about the variable and its new value.
- * 
  */
 public final class DetectorModelSetVariableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DetectorModelSetVariableArgs extends io.pulumi.resources.Reso
 
     /**
      * The new value of the variable.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;
@@ -30,7 +28,6 @@ public final class DetectorModelSetVariableArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the variable.
-     * 
      */
     @Import(name="variableName", required=true)
       private final Output<String> variableName;

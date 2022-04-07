@@ -15,37 +15,30 @@ import javax.annotation.Nullable;
 public final class InstanceDisk {
     /**
      * Instance attached to the disk.
-     * 
      */
     private final @Nullable String attachedTo;
     /**
      * Attachment state of the disk.
-     * 
      */
     private final @Nullable String attachmentState;
     /**
      * The names to use for your new Lightsail disk.
-     * 
      */
     private final String diskName;
     /**
      * IOPS of disk.
-     * 
      */
     private final @Nullable Integer iOPS;
     /**
      * Is the Attached disk is the system disk of the Instance.
-     * 
      */
     private final @Nullable Boolean isSystemDisk;
     /**
      * Path of the disk attached to the instance.
-     * 
      */
     private final String path;
     /**
      * Size of the disk attached to the Instance.
-     * 
      */
     private final @Nullable String sizeInGb;
 
@@ -69,49 +62,42 @@ public final class InstanceDisk {
 
     /**
      * Instance attached to the disk.
-     * 
     */
     public Optional<String> getAttachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
     /**
      * Attachment state of the disk.
-     * 
     */
     public Optional<String> getAttachmentState() {
         return Optional.ofNullable(this.attachmentState);
     }
     /**
      * The names to use for your new Lightsail disk.
-     * 
     */
     public String getDiskName() {
         return this.diskName;
     }
     /**
      * IOPS of disk.
-     * 
     */
     public Optional<Integer> getIOPS() {
         return Optional.ofNullable(this.iOPS);
     }
     /**
      * Is the Attached disk is the system disk of the Instance.
-     * 
     */
     public Optional<Boolean> getIsSystemDisk() {
         return Optional.ofNullable(this.isSystemDisk);
     }
     /**
      * Path of the disk attached to the instance.
-     * 
     */
     public String getPath() {
         return this.path;
     }
     /**
      * Size of the disk attached to the Instance.
-     * 
     */
     public Optional<String> getSizeInGb() {
         return Optional.ofNullable(this.sizeInGb);

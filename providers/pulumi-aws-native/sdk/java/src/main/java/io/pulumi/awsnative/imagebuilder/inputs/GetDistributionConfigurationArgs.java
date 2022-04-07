@@ -14,7 +14,6 @@ public final class GetDistributionConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The Amazon Resource Name (ARN) of the distribution configuration.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

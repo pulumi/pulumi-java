@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>Output column.</p>
- * 
  */
 public final class DataSetOutputColumn extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DataSetOutputColumn extends io.pulumi.resources.InvokeArgs {
 
     /**
      * <p>A description for a column.</p>
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class DataSetOutputColumn extends io.pulumi.resources.InvokeArgs {
 
     /**
      * <p>A display name for the dataset.</p>
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

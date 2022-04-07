@@ -18,63 +18,51 @@ import javax.annotation.Nullable;
 public final class GetFleetMetricResult {
     /**
      * The aggregation field to perform aggregation and metric emission
-     * 
      */
     private final @Nullable String aggregationField;
     private final @Nullable FleetMetricAggregationType aggregationType;
     /**
      * The creation date of a fleet metric
-     * 
      */
     private final @Nullable Double creationDate;
     /**
      * The description of a fleet metric
-     * 
      */
     private final @Nullable String description;
     /**
      * The index name of a fleet metric
-     * 
      */
     private final @Nullable String indexName;
     /**
      * The last modified date of a fleet metric
-     * 
      */
     private final @Nullable Double lastModifiedDate;
     /**
      * The Amazon Resource Number (ARN) of a fleet metric metric
-     * 
      */
     private final @Nullable String metricArn;
     /**
      * The period of metric emission in seconds
-     * 
      */
     private final @Nullable Integer period;
     /**
      * The Fleet Indexing query used by a fleet metric
-     * 
      */
     private final @Nullable String queryString;
     /**
      * The version of a Fleet Indexing query used by a fleet metric
-     * 
      */
     private final @Nullable String queryVersion;
     /**
      * An array of key-value pairs to apply to this resource
-     * 
      */
     private final @Nullable List<FleetMetricTag> tags;
     /**
      * The unit of data points emitted by a fleet metric
-     * 
      */
     private final @Nullable String unit;
     /**
      * The version of a fleet metric
-     * 
      */
     private final @Nullable Double version;
 
@@ -110,7 +98,6 @@ public final class GetFleetMetricResult {
 
     /**
      * The aggregation field to perform aggregation and metric emission
-     * 
     */
     public Optional<String> getAggregationField() {
         return Optional.ofNullable(this.aggregationField);
@@ -120,77 +107,66 @@ public final class GetFleetMetricResult {
     }
     /**
      * The creation date of a fleet metric
-     * 
     */
     public Optional<Double> getCreationDate() {
         return Optional.ofNullable(this.creationDate);
     }
     /**
      * The description of a fleet metric
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The index name of a fleet metric
-     * 
     */
     public Optional<String> getIndexName() {
         return Optional.ofNullable(this.indexName);
     }
     /**
      * The last modified date of a fleet metric
-     * 
     */
     public Optional<Double> getLastModifiedDate() {
         return Optional.ofNullable(this.lastModifiedDate);
     }
     /**
      * The Amazon Resource Number (ARN) of a fleet metric metric
-     * 
     */
     public Optional<String> getMetricArn() {
         return Optional.ofNullable(this.metricArn);
     }
     /**
      * The period of metric emission in seconds
-     * 
     */
     public Optional<Integer> getPeriod() {
         return Optional.ofNullable(this.period);
     }
     /**
      * The Fleet Indexing query used by a fleet metric
-     * 
     */
     public Optional<String> getQueryString() {
         return Optional.ofNullable(this.queryString);
     }
     /**
      * The version of a Fleet Indexing query used by a fleet metric
-     * 
     */
     public Optional<String> getQueryVersion() {
         return Optional.ofNullable(this.queryVersion);
     }
     /**
      * An array of key-value pairs to apply to this resource
-     * 
     */
     public List<FleetMetricTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The unit of data points emitted by a fleet metric
-     * 
     */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);
     }
     /**
      * The version of a fleet metric
-     * 
     */
     public Optional<Double> getVersion() {
         return Optional.ofNullable(this.version);

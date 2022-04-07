@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::TransitGateway
- * 
  */
 @ResourceType(type="aws-native:ec2:TransitGateway")
 public class TransitGateway extends io.pulumi.resources.CustomResource {

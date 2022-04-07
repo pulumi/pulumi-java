@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS account associated with the assessment.
- * 
  */
 public final class AssessmentAWSAccount extends io.pulumi.resources.InvokeArgs {
 

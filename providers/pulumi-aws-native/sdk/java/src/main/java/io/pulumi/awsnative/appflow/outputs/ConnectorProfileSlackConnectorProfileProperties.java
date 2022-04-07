@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectorProfileSlackConnectorProfileProperties {
     /**
      * The location of the Slack resource
-     * 
      */
     private final String instanceUrl;
 
@@ -22,7 +21,6 @@ public final class ConnectorProfileSlackConnectorProfileProperties {
 
     /**
      * The location of the Slack resource
-     * 
     */
     public String getInstanceUrl() {
         return this.instanceUrl;

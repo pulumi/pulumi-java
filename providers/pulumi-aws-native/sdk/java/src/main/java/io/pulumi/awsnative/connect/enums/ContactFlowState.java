@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The state of the contact flow.
-     * 
      */
     @EnumType
     public enum ContactFlowState {

@@ -17,7 +17,6 @@ public final class DataSourceCredentials {
      *             want to use. When <code>CopySourceArn</code> is not null, the credential pair from the
      *             data source in the ARN is used as the credentials for the
      *             <code>DataSourceCredentials</code> structure.</p>
-     * 
      */
     private final @Nullable String copySourceArn;
     private final @Nullable DataSourceCredentialPair credentialPair;
@@ -35,7 +34,6 @@ public final class DataSourceCredentials {
      *             want to use. When <code>CopySourceArn</code> is not null, the credential pair from the
      *             data source in the ARN is used as the credentials for the
      *             <code>DataSourceCredentials</code> structure.</p>
-     * 
     */
     public Optional<String> getCopySourceArn() {
         return Optional.ofNullable(this.copySourceArn);

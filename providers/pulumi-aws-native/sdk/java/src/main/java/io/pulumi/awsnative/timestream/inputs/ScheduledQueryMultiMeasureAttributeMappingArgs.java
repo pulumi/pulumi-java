@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An attribute mapping to be used for mapping query results to ingest data for multi-measure attributes.
- * 
  */
 public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends io.pulumi.resources.ResourceArgs {
 

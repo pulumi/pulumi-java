@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Details about a Kafka Connect plugin which will be used with the connector.
- * 
  */
 public final class ConnectorPluginArgs extends io.pulumi.resources.ResourceArgs {
 

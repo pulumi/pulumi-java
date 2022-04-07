@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of AWS::AmplifyUIBuilder::Component Resource Type
- * 
  */
 @ResourceType(type="aws-native:amplifyuibuilder:Component")
 public class Component extends io.pulumi.resources.CustomResource {

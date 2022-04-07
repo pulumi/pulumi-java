@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ModelQualityJobDefinitionStoppingCondition {
     /**
      * The maximum runtime allowed in seconds.
-     * 
      */
     private final Integer maxRuntimeInSeconds;
 
@@ -22,7 +21,6 @@ public final class ModelQualityJobDefinitionStoppingCondition {
 
     /**
      * The maximum runtime allowed in seconds.
-     * 
     */
     public Integer getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;

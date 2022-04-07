@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Recording Configuration State.
-     * 
      */
     @EnumType
     public enum RecordingConfigurationState {

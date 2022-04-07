@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Hardware of the Instance.
- * 
  */
 public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
 
     /**
      * CPU count of the Instance.
-     * 
      */
     @Import(name="cpuCount")
       private final @Nullable Integer cpuCount;
@@ -33,7 +31,6 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Disks attached to the Instance.
-     * 
      */
     @Import(name="disks")
       private final @Nullable List<InstanceDisk> disks;
@@ -44,7 +41,6 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
 
     /**
      * RAM Size of the Instance.
-     * 
      */
     @Import(name="ramSizeInGb")
       private final @Nullable Integer ramSizeInGb;

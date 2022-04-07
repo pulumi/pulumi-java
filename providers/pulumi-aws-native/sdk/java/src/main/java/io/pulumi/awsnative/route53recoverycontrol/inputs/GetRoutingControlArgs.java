@@ -14,7 +14,6 @@ public final class GetRoutingControlArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The Amazon Resource Name (ARN) of the routing control.
-     * 
      */
     @Import(name="routingControlArn", required=true)
       private final String routingControlArn;

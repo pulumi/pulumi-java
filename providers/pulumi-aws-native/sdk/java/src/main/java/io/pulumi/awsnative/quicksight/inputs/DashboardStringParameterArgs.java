@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * <p>A string parameter.</p>
- * 
  */
 public final class DashboardStringParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DashboardStringParameterArgs extends io.pulumi.resources.Reso
 
     /**
      * <p>A display name for a string parameter.</p>
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -31,7 +29,6 @@ public final class DashboardStringParameterArgs extends io.pulumi.resources.Reso
 
     /**
      * <p>The values of a string parameter.</p>
-     * 
      */
     @Import(name="values", required=true)
       private final Output<List<String>> values;

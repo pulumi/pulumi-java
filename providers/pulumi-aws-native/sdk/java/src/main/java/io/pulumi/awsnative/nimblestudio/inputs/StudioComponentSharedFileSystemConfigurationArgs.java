@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * <p>The configuration for a shared file storage system that is associated with a studio resource.</p>
- * 
  */
 public final class StudioComponentSharedFileSystemConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
 
     /**
      * <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
-     * 
      */
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
@@ -31,7 +29,6 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
 
     /**
      * <p>The unique identifier for a file system.</p>
-     * 
      */
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
@@ -42,7 +39,6 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
 
     /**
      * <p>The mount location for a shared file system on a Linux virtual workstation.</p>
-     * 
      */
     @Import(name="linuxMountPoint")
       private final @Nullable Output<String> linuxMountPoint;
@@ -53,7 +49,6 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
 
     /**
      * <p>The name of the file share.</p>
-     * 
      */
     @Import(name="shareName")
       private final @Nullable Output<String> shareName;
@@ -64,7 +59,6 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
 
     /**
      * <p>The mount location for a shared file system on a Windows virtual workstation.</p>
-     * 
      */
     @Import(name="windowsMountDrive")
       private final @Nullable Output<String> windowsMountDrive;

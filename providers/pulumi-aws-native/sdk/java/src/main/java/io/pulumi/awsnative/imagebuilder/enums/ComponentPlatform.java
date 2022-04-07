@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The platform of the component.
-     * 
      */
     @EnumType
     public enum ComponentPlatform {

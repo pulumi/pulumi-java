@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Structure that specifies fields to be overridden in a certificate at the time of issuance. These requires an API Passthrough template be used or they will be ignored.
- * 
  */
 public final class CertificateApiPassthroughArgs extends io.pulumi.resources.ResourceArgs {
 

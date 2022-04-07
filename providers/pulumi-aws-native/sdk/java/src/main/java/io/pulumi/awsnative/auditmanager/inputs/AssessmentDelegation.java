@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The assignment of a control set to a delegate for review.
- * 
  */
 public final class AssessmentDelegation extends io.pulumi.resources.InvokeArgs {
 

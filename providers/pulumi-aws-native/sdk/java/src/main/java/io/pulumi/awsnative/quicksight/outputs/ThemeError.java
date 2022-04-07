@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class ThemeError {
     /**
      * <p>The error message.</p>
-     * 
      */
     private final @Nullable String message;
     private final @Nullable ThemeErrorType type;
@@ -29,7 +28,6 @@ public final class ThemeError {
 
     /**
      * <p>The error message.</p>
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);

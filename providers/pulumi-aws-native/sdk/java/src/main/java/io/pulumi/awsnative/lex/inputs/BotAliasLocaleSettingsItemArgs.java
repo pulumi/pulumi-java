@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A locale setting in alias
- * 
  */
 public final class BotAliasLocaleSettingsItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class BotAliasLocaleSettingsItemArgs extends io.pulumi.resources.Re
 
     /**
      * A string used to identify the locale
-     * 
      */
     @Import(name="localeId", required=true)
       private final Output<String> localeId;

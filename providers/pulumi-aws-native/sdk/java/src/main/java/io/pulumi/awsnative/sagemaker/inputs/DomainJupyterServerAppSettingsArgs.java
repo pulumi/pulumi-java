@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The JupyterServer app settings.
- * 
  */
 public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resources.ResourceArgs {
 

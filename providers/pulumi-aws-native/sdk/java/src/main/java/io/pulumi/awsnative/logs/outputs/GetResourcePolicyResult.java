@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetResourcePolicyResult {
     /**
      * The policy document
-     * 
      */
     private final @Nullable String policyDocument;
 
@@ -24,7 +23,6 @@ public final class GetResourcePolicyResult {
 
     /**
      * The policy document
-     * 
     */
     public Optional<String> getPolicyDocument() {
         return Optional.ofNullable(this.policyDocument);

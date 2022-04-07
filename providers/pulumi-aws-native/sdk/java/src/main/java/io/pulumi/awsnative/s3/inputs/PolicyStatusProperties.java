@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Policy Status associated with this Multi Region Access Point
- * 
  */
 public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies whether the policy is public or not.
-     * 
      */
     @Import(name="isPublic", required=true)
       private final MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;

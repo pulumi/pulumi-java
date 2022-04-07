@@ -20,202 +20,173 @@ import javax.annotation.Nullable;
 
 /**
  * The `AWS::Redshift::EventSubscription` resource creates an Amazon Redshift Event Subscription.
- * 
  */
 @ResourceType(type="aws-native:redshift:EventSubscription")
 public class EventSubscription extends io.pulumi.resources.CustomResource {
     /**
      * The name of the Amazon Redshift event notification subscription.
-     * 
      */
     @Export(name="custSubscriptionId", type=String.class, parameters={})
     private Output<String> custSubscriptionId;
 
     /**
      * @return The name of the Amazon Redshift event notification subscription.
-     * 
      */
     public Output<String> getCustSubscriptionId() {
         return this.custSubscriptionId;
     }
     /**
      * The AWS account associated with the Amazon Redshift event notification subscription.
-     * 
      */
     @Export(name="customerAwsId", type=String.class, parameters={})
     private Output<String> customerAwsId;
 
     /**
      * @return The AWS account associated with the Amazon Redshift event notification subscription.
-     * 
      */
     public Output<String> getCustomerAwsId() {
         return this.customerAwsId;
     }
     /**
      * A boolean value; set to true to activate the subscription, and set to false to create the subscription but not activate it.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return A boolean value; set to true to activate the subscription, and set to false to create the subscription but not activate it.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * Specifies the Amazon Redshift event categories to be published by the event notification subscription.
-     * 
      */
     @Export(name="eventCategories", type=List.class, parameters={EventSubscriptionEventCategoriesItem.class})
     private Output</* @Nullable */ List<EventSubscriptionEventCategoriesItem>> eventCategories;
 
     /**
      * @return Specifies the Amazon Redshift event categories to be published by the event notification subscription.
-     * 
      */
     public Output</* @Nullable */ List<EventSubscriptionEventCategoriesItem>> getEventCategories() {
         return this.eventCategories;
     }
     /**
      * The list of Amazon Redshift event categories specified in the event notification subscription.
-     * 
      */
     @Export(name="eventCategoriesList", type=List.class, parameters={String.class})
     private Output<List<String>> eventCategoriesList;
 
     /**
      * @return The list of Amazon Redshift event categories specified in the event notification subscription.
-     * 
      */
     public Output<List<String>> getEventCategoriesList() {
         return this.eventCategoriesList;
     }
     /**
      * Specifies the Amazon Redshift event severity to be published by the event notification subscription.
-     * 
      */
     @Export(name="severity", type=EventSubscriptionSeverity.class, parameters={})
     private Output</* @Nullable */ EventSubscriptionSeverity> severity;
 
     /**
      * @return Specifies the Amazon Redshift event severity to be published by the event notification subscription.
-     * 
      */
     public Output</* @Nullable */ EventSubscriptionSeverity> getSeverity() {
         return this.severity;
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit the event notifications.
-     * 
      */
     @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> snsTopicArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit the event notifications.
-     * 
      */
     public Output</* @Nullable */ String> getSnsTopicArn() {
         return this.snsTopicArn;
     }
     /**
      * A list of one or more identifiers of Amazon Redshift source objects.
-     * 
      */
     @Export(name="sourceIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> sourceIds;
 
     /**
      * @return A list of one or more identifiers of Amazon Redshift source objects.
-     * 
      */
     public Output</* @Nullable */ List<String>> getSourceIds() {
         return this.sourceIds;
     }
     /**
      * A list of the sources that publish events to the Amazon Redshift event notification subscription.
-     * 
      */
     @Export(name="sourceIdsList", type=List.class, parameters={String.class})
     private Output<List<String>> sourceIdsList;
 
     /**
      * @return A list of the sources that publish events to the Amazon Redshift event notification subscription.
-     * 
      */
     public Output<List<String>> getSourceIdsList() {
         return this.sourceIdsList;
     }
     /**
      * The type of source that will be generating the events.
-     * 
      */
     @Export(name="sourceType", type=EventSubscriptionSourceType.class, parameters={})
     private Output</* @Nullable */ EventSubscriptionSourceType> sourceType;
 
     /**
      * @return The type of source that will be generating the events.
-     * 
      */
     public Output</* @Nullable */ EventSubscriptionSourceType> getSourceType() {
         return this.sourceType;
     }
     /**
      * The status of the Amazon Redshift event notification subscription.
-     * 
      */
     @Export(name="status", type=EventSubscriptionStatus.class, parameters={})
     private Output<EventSubscriptionStatus> status;
 
     /**
      * @return The status of the Amazon Redshift event notification subscription.
-     * 
      */
     public Output<EventSubscriptionStatus> getStatus() {
         return this.status;
     }
     /**
      * The date and time the Amazon Redshift event notification subscription was created.
-     * 
      */
     @Export(name="subscriptionCreationTime", type=String.class, parameters={})
     private Output<String> subscriptionCreationTime;
 
     /**
      * @return The date and time the Amazon Redshift event notification subscription was created.
-     * 
      */
     public Output<String> getSubscriptionCreationTime() {
         return this.subscriptionCreationTime;
     }
     /**
      * The name of the Amazon Redshift event notification subscription
-     * 
      */
     @Export(name="subscriptionName", type=String.class, parameters={})
     private Output<String> subscriptionName;
 
     /**
      * @return The name of the Amazon Redshift event notification subscription
-     * 
      */
     public Output<String> getSubscriptionName() {
         return this.subscriptionName;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={EventSubscriptionTag.class})
     private Output</* @Nullable */ List<EventSubscriptionTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<EventSubscriptionTag>> getTags() {
         return this.tags;

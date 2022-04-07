@@ -19,7 +19,6 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Analyzer name
-     * 
      */
     @Import(name="analyzerName")
       private final @Nullable Output<String> analyzerName;
@@ -37,7 +36,6 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<AnalyzerTagArgs>> tags;
@@ -48,7 +46,6 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the analyzer, must be ACCOUNT or ORGANIZATION
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

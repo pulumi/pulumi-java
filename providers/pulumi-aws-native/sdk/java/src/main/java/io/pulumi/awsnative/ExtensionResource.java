@@ -15,20 +15,17 @@ import javax.annotation.Nullable;
 
 /**
  * A special resource that enables deploying CloudFormation Extensions (third-party resources). An extension has to be pre-registered in your AWS account in order to use this resource.
- * 
  */
 @ResourceType(type="aws-native:index:ExtensionResource")
 public class ExtensionResource extends io.pulumi.resources.CustomResource {
     /**
      * Dictionary of the extension resource attributes.
-     * 
      */
     @Export(name="outputs", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> outputs;
 
     /**
      * @return Dictionary of the extension resource attributes.
-     * 
      */
     public Output<Map<String,Object>> getOutputs() {
         return this.outputs;

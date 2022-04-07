@@ -14,7 +14,6 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the alias name. This value must begin with alias/ followed by a name, such as alias/ExampleAlias. The alias name cannot begin with alias/aws/. The alias/aws/ prefix is reserved for AWS managed CMKs.
-     * 
      */
     @Import(name="aliasName", required=true)
       private final String aliasName;

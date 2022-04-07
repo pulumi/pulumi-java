@@ -29,7 +29,6 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
 
     /**
      * The time when the event type was created.
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
@@ -61,7 +60,6 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -79,7 +77,6 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
 
     /**
      * The time when the event type was last updated.
-     * 
      */
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
@@ -97,7 +94,6 @@ public final class EventTypeEventVariableArgs extends io.pulumi.resources.Resour
 
     /**
      * Tags associated with this event type.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<EventTypeTagArgs>> tags;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Recording S3 Destination Configuration.
- * 
  */
 public final class RecordingConfigurationS3DestinationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

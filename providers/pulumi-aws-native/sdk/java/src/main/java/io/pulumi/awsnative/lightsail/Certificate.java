@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:lightsail:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {
@@ -27,70 +26,60 @@ public class Certificate extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name for the certificate.
-     * 
      */
     @Export(name="certificateName", type=String.class, parameters={})
     private Output<String> certificateName;
 
     /**
      * @return The name for the certificate.
-     * 
      */
     public Output<String> getCertificateName() {
         return this.certificateName;
     }
     /**
      * The domain name (e.g., example.com ) for the certificate.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The domain name (e.g., example.com ) for the certificate.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
     }
     /**
      * The validation status of the certificate.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The validation status of the certificate.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
-     * 
      */
     @Export(name="subjectAlternativeNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subjectAlternativeNames;
 
     /**
      * @return An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
-     * 
      */
     public Output</* @Nullable */ List<String>> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={CertificateTag.class})
     private Output</* @Nullable */ List<CertificateTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<CertificateTag>> getTags() {
         return this.tags;

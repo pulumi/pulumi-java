@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class FleetRuntimeConfiguration {
     /**
      * The maximum amount of time (in seconds) that a game session can remain in status ACTIVATING. If the game session is not active before the timeout, activation is terminated and the game session status is changed to TERMINATED.
-     * 
      */
     private final @Nullable Integer gameSessionActivationTimeoutSeconds;
     /**
      * The maximum number of game sessions with status ACTIVATING to allow on an instance simultaneously. This setting limits the amount of instance resources that can be used for new game activations at any one time.
-     * 
      */
     private final @Nullable Integer maxConcurrentGameSessionActivations;
     /**
      * A collection of server process configurations that describe which server processes to run on each instance in a fleet.
-     * 
      */
     private final @Nullable List<FleetServerProcess> serverProcesses;
 
@@ -41,21 +38,18 @@ public final class FleetRuntimeConfiguration {
 
     /**
      * The maximum amount of time (in seconds) that a game session can remain in status ACTIVATING. If the game session is not active before the timeout, activation is terminated and the game session status is changed to TERMINATED.
-     * 
     */
     public Optional<Integer> getGameSessionActivationTimeoutSeconds() {
         return Optional.ofNullable(this.gameSessionActivationTimeoutSeconds);
     }
     /**
      * The maximum number of game sessions with status ACTIVATING to allow on an instance simultaneously. This setting limits the amount of instance resources that can be used for new game activations at any one time.
-     * 
     */
     public Optional<Integer> getMaxConcurrentGameSessionActivations() {
         return Optional.ofNullable(this.maxConcurrentGameSessionActivations);
     }
     /**
      * A collection of server process configurations that describe which server processes to run on each instance in a fleet.
-     * 
     */
     public List<FleetServerProcess> getServerProcesses() {
         return this.serverProcesses == null ? List.of() : this.serverProcesses;

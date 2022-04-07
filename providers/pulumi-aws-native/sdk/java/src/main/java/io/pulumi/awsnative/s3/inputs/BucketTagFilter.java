@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Tags to use to identify a subset of objects for an Amazon S3 bucket.
- * 
  */
 public final class BucketTagFilter extends io.pulumi.resources.InvokeArgs {
 

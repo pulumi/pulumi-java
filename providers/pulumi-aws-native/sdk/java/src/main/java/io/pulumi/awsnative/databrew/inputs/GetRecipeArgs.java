@@ -14,7 +14,6 @@ public final class GetRecipeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Recipe name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

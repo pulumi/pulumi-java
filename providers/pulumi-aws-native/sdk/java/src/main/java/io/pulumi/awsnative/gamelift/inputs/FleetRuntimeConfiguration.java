@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
  * The runtime configuration enables the instances in a fleet to run multiple processes simultaneously. Potential scenarios are as follows: (1) Run multiple processes of a single game server executable to maximize usage of your hosting resources. (2) Run one or more processes of different executables, such as your game server and a metrics tracking program. (3) Run multiple processes of a single game server but with different launch parameters, for example to run one process on each instance in debug mode.
  * 
  * An Amazon GameLift instance is limited to 50 processes running simultaneously. A runtime configuration must specify fewer than this limit. To calculate the total number of processes specified in a runtime configuration, add the values of the ConcurrentExecutions parameter for each ServerProcess object in the runtime configuration.
- * 
  */
 public final class FleetRuntimeConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class FleetRuntimeConfiguration extends io.pulumi.resources.InvokeA
 
     /**
      * The maximum amount of time (in seconds) that a game session can remain in status ACTIVATING. If the game session is not active before the timeout, activation is terminated and the game session status is changed to TERMINATED.
-     * 
      */
     @Import(name="gameSessionActivationTimeoutSeconds")
       private final @Nullable Integer gameSessionActivationTimeoutSeconds;
@@ -37,7 +35,6 @@ public final class FleetRuntimeConfiguration extends io.pulumi.resources.InvokeA
 
     /**
      * The maximum number of game sessions with status ACTIVATING to allow on an instance simultaneously. This setting limits the amount of instance resources that can be used for new game activations at any one time.
-     * 
      */
     @Import(name="maxConcurrentGameSessionActivations")
       private final @Nullable Integer maxConcurrentGameSessionActivations;
@@ -48,7 +45,6 @@ public final class FleetRuntimeConfiguration extends io.pulumi.resources.InvokeA
 
     /**
      * A collection of server process configurations that describe which server processes to run on each instance in a fleet.
-     * 
      */
     @Import(name="serverProcesses")
       private final @Nullable List<FleetServerProcess> serverProcesses;

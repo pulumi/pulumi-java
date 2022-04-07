@@ -14,7 +14,6 @@ public final class GetResourceVersionArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

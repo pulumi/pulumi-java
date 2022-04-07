@@ -19,174 +19,149 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Route53Resolver::FirewallRuleGroup.
- * 
  */
 @ResourceType(type="aws-native:route53resolver:FirewallRuleGroup")
 public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
     /**
      * Arn
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Arn
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Rfc3339TimeString
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return Rfc3339TimeString
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * The id of the creator request.
-     * 
      */
     @Export(name="creatorRequestId", type=String.class, parameters={})
     private Output<String> creatorRequestId;
 
     /**
      * @return The id of the creator request.
-     * 
      */
     public Output<String> getCreatorRequestId() {
         return this.creatorRequestId;
     }
     /**
      * FirewallRules
-     * 
      */
     @Export(name="firewallRules", type=List.class, parameters={FirewallRuleGroupFirewallRule.class})
     private Output</* @Nullable */ List<FirewallRuleGroupFirewallRule>> firewallRules;
 
     /**
      * @return FirewallRules
-     * 
      */
     public Output</* @Nullable */ List<FirewallRuleGroupFirewallRule>> getFirewallRules() {
         return this.firewallRules;
     }
     /**
      * Rfc3339TimeString
-     * 
      */
     @Export(name="modificationTime", type=String.class, parameters={})
     private Output<String> modificationTime;
 
     /**
      * @return Rfc3339TimeString
-     * 
      */
     public Output<String> getModificationTime() {
         return this.modificationTime;
     }
     /**
      * FirewallRuleGroupName
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return FirewallRuleGroupName
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * AccountId
-     * 
      */
     @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
      * @return AccountId
-     * 
      */
     public Output<String> getOwnerId() {
         return this.ownerId;
     }
     /**
      * Count
-     * 
      */
     @Export(name="ruleCount", type=Integer.class, parameters={})
     private Output<Integer> ruleCount;
 
     /**
      * @return Count
-     * 
      */
     public Output<Integer> getRuleCount() {
         return this.ruleCount;
     }
     /**
      * ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
-     * 
      */
     @Export(name="shareStatus", type=FirewallRuleGroupShareStatus.class, parameters={})
     private Output<FirewallRuleGroupShareStatus> shareStatus;
 
     /**
      * @return ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
-     * 
      */
     public Output<FirewallRuleGroupShareStatus> getShareStatus() {
         return this.shareStatus;
     }
     /**
      * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
-     * 
      */
     @Export(name="status", type=FirewallRuleGroupStatus.class, parameters={})
     private Output<FirewallRuleGroupStatus> status;
 
     /**
      * @return ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
-     * 
      */
     public Output<FirewallRuleGroupStatus> getStatus() {
         return this.status;
     }
     /**
      * FirewallRuleGroupStatus
-     * 
      */
     @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
      * @return FirewallRuleGroupStatus
-     * 
      */
     public Output<String> getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * Tags
-     * 
      */
     @Export(name="tags", type=List.class, parameters={FirewallRuleGroupTag.class})
     private Output</* @Nullable */ List<FirewallRuleGroupTag>> tags;
 
     /**
      * @return Tags
-     * 
      */
     public Output</* @Nullable */ List<FirewallRuleGroupTag>> getTags() {
         return this.tags;

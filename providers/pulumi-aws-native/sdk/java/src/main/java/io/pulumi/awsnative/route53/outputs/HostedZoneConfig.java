@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class HostedZoneConfig {
     /**
      * Any comments that you want to include about the hosted zone.
-     * 
      */
     private final @Nullable String comment;
 
@@ -24,7 +23,6 @@ public final class HostedZoneConfig {
 
     /**
      * Any comments that you want to include about the hosted zone.
-     * 
     */
     public Optional<String> getComment() {
         return Optional.ofNullable(this.comment);

@@ -14,7 +14,6 @@ public final class GetBasePathMappingArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The base path name that callers of the API must provide in the URL after the domain name.
-     * 
      */
     @Import(name="basePath", required=true)
       private final String basePath;
@@ -25,7 +24,6 @@ public final class GetBasePathMappingArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The DomainName of an AWS::ApiGateway::DomainName resource.
-     * 
      */
     @Import(name="domainName", required=true)
       private final String domainName;

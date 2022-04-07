@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether to upload the results of the monitoring job continuously or after the job completes.
-     * 
      */
     @EnumType
     public enum ModelQualityJobDefinitionS3OutputS3UploadMode {

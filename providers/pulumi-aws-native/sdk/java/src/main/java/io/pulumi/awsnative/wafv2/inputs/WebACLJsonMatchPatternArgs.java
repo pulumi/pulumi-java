@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The pattern to look for in the JSON body.
- * 
  */
 public final class WebACLJsonMatchPatternArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class WebACLJsonMatchPatternArgs extends io.pulumi.resources.Resour
 
     /**
      * Inspect all parts of the web request's JSON body.
-     * 
      */
     @Import(name="all")
       private final @Nullable Output<Object> all;

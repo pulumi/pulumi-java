@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the status of the configuration.
-     * 
      */
     @EnumType
     public enum BucketIntelligentTieringConfigurationStatus {

@@ -22,7 +22,1228 @@ import javax.annotation.Nullable;
 /**
  * Resource schema for AWS::Cassandra::Table
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myNewTable = new AwsNative.Cassandra.Table("myNewTable", new AwsNative.Cassandra.TableArgs
+ *         {
+ *             KeyspaceName = "my_keyspace",
+ *             TableName = "my_table",
+ *             PartitionKeyColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "Message",
+ *                     ColumnType = "ASCII",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cassandra"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cassandra.NewTable(ctx, "myNewTable", &cassandra.TableArgs{
+ * 			KeyspaceName: pulumi.String("my_keyspace"),
+ * 			TableName:    pulumi.String("my_table"),
+ * 			PartitionKeyColumns: cassandra.TableColumnArray{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("Message"),
+ * 					ColumnType: pulumi.String("ASCII"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myNewTable = new aws_native.cassandra.Table("myNewTable", {
+ *     keyspaceName: "my_keyspace",
+ *     tableName: "my_table",
+ *     partitionKeyColumns: [{
+ *         columnName: "Message",
+ *         columnType: "ASCII",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_new_table = aws_native.cassandra.Table("myNewTable",
+ *     keyspace_name="my_keyspace",
+ *     table_name="my_table",
+ *     partition_key_columns=[aws_native.cassandra.TableColumnArgs(
+ *         column_name="Message",
+ *         column_type="ASCII",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myNewTable = new AwsNative.Cassandra.Table("myNewTable", new AwsNative.Cassandra.TableArgs
+ *         {
+ *             KeyspaceName = "my_keyspace",
+ *             TableName = "my_table",
+ *             PartitionKeyColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "Message",
+ *                     ColumnType = "ASCII",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cassandra"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cassandra.NewTable(ctx, "myNewTable", &cassandra.TableArgs{
+ * 			KeyspaceName: pulumi.String("my_keyspace"),
+ * 			TableName:    pulumi.String("my_table"),
+ * 			PartitionKeyColumns: cassandra.TableColumnArray{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("Message"),
+ * 					ColumnType: pulumi.String("ASCII"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myNewTable = new aws_native.cassandra.Table("myNewTable", {
+ *     keyspaceName: "my_keyspace",
+ *     tableName: "my_table",
+ *     partitionKeyColumns: [{
+ *         columnName: "Message",
+ *         columnType: "ASCII",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_new_table = aws_native.cassandra.Table("myNewTable",
+ *     keyspace_name="my_keyspace",
+ *     table_name="my_table",
+ *     partition_key_columns=[aws_native.cassandra.TableColumnArgs(
+ *         column_name="Message",
+ *         column_type="ASCII",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myNewTable = new AwsNative.Cassandra.Table("myNewTable", new AwsNative.Cassandra.TableArgs
+ *         {
+ *             KeyspaceName = "my_keyspace",
+ *             TableName = "my_table",
+ *             PartitionKeyColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "id",
+ *                     ColumnType = "ASCII",
+ *                 },
+ *             },
+ *             ClusteringKeyColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableClusteringKeyColumnArgs
+ *                 {
+ *                     Column = new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                     {
+ *                         ColumnName = "division",
+ *                         ColumnType = "ASCII",
+ *                     },
+ *                     OrderBy = "ASC",
+ *                 },
+ *             },
+ *             RegularColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "name",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "region",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "project",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "role",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "pay_scale",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "vacation_hrs",
+ *                     ColumnType = "FLOAT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "manager_id",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *             },
+ *             BillingMode = new AwsNative.Cassandra.Inputs.TableBillingModeArgs
+ *             {
+ *                 Mode = "PROVISIONED",
+ *                 ProvisionedThroughput = new AwsNative.Cassandra.Inputs.TableProvisionedThroughputArgs
+ *                 {
+ *                     ReadCapacityUnits = 5,
+ *                     WriteCapacityUnits = 5,
+ *                 },
+ *             },
+ *             DefaultTimeToLive = 63072000,
+ *             EncryptionSpecification = new AwsNative.Cassandra.Inputs.TableEncryptionSpecificationArgs
+ *             {
+ *                 EncryptionType = "CUSTOMER_MANAGED_KMS_KEY",
+ *                 KmsKeyIdentifier = "arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111",
+ *             },
+ *             PointInTimeRecoveryEnabled = true,
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableTagArgs
+ *                 {
+ *                     Key = "tag1",
+ *                     Value = "val1",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableTagArgs
+ *                 {
+ *                     Key = "tag2",
+ *                     Value = "val2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cassandra"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cassandra.NewTable(ctx, "myNewTable", &cassandra.TableArgs{
+ * 			KeyspaceName: pulumi.String("my_keyspace"),
+ * 			TableName:    pulumi.String("my_table"),
+ * 			PartitionKeyColumns: cassandra.TableColumnArray{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("id"),
+ * 					ColumnType: pulumi.String("ASCII"),
+ * 				},
+ * 			},
+ * 			ClusteringKeyColumns: []cassandra.TableClusteringKeyColumnArgs{
+ * 				&cassandra.TableClusteringKeyColumnArgs{
+ * 					Column: &cassandra.TableColumnArgs{
+ * 						ColumnName: pulumi.String("division"),
+ * 						ColumnType: pulumi.String("ASCII"),
+ * 					},
+ * 					OrderBy: "ASC",
+ * 				},
+ * 			},
+ * 			RegularColumns: []cassandra.TableColumnArgs{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("name"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("region"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("project"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("role"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("pay_scale"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("vacation_hrs"),
+ * 					ColumnType: pulumi.String("FLOAT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("manager_id"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 			},
+ * 			BillingMode: &cassandra.TableBillingModeArgs{
+ * 				Mode: "PROVISIONED",
+ * 				ProvisionedThroughput: &cassandra.TableProvisionedThroughputArgs{
+ * 					ReadCapacityUnits:  pulumi.Int(5),
+ * 					WriteCapacityUnits: pulumi.Int(5),
+ * 				},
+ * 			},
+ * 			DefaultTimeToLive: pulumi.Int(63072000),
+ * 			EncryptionSpecification: &cassandra.TableEncryptionSpecificationArgs{
+ * 				EncryptionType:   "CUSTOMER_MANAGED_KMS_KEY",
+ * 				KmsKeyIdentifier: pulumi.String("arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111"),
+ * 			},
+ * 			PointInTimeRecoveryEnabled: pulumi.Bool(true),
+ * 			Tags: []cassandra.TableTagArgs{
+ * 				&cassandra.TableTagArgs{
+ * 					Key:   pulumi.String("tag1"),
+ * 					Value: pulumi.String("val1"),
+ * 				},
+ * 				&cassandra.TableTagArgs{
+ * 					Key:   pulumi.String("tag2"),
+ * 					Value: pulumi.String("val2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myNewTable = new aws_native.cassandra.Table("myNewTable", {
+ *     keyspaceName: "my_keyspace",
+ *     tableName: "my_table",
+ *     partitionKeyColumns: [{
+ *         columnName: "id",
+ *         columnType: "ASCII",
+ *     }],
+ *     clusteringKeyColumns: [{
+ *         column: {
+ *             columnName: "division",
+ *             columnType: "ASCII",
+ *         },
+ *         orderBy: "ASC",
+ *     }],
+ *     regularColumns: [
+ *         {
+ *             columnName: "name",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "region",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "project",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "role",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "pay_scale",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "vacation_hrs",
+ *             columnType: "FLOAT",
+ *         },
+ *         {
+ *             columnName: "manager_id",
+ *             columnType: "TEXT",
+ *         },
+ *     ],
+ *     billingMode: {
+ *         mode: "PROVISIONED",
+ *         provisionedThroughput: {
+ *             readCapacityUnits: 5,
+ *             writeCapacityUnits: 5,
+ *         },
+ *     },
+ *     defaultTimeToLive: 63072000,
+ *     encryptionSpecification: {
+ *         encryptionType: "CUSTOMER_MANAGED_KMS_KEY",
+ *         kmsKeyIdentifier: "arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111",
+ *     },
+ *     pointInTimeRecoveryEnabled: true,
+ *     tags: [
+ *         {
+ *             key: "tag1",
+ *             value: "val1",
+ *         },
+ *         {
+ *             key: "tag2",
+ *             value: "val2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_new_table = aws_native.cassandra.Table("myNewTable",
+ *     keyspace_name="my_keyspace",
+ *     table_name="my_table",
+ *     partition_key_columns=[aws_native.cassandra.TableColumnArgs(
+ *         column_name="id",
+ *         column_type="ASCII",
+ *     )],
+ *     clustering_key_columns=[aws_native.cassandra.TableClusteringKeyColumnArgs(
+ *         column=aws_native.cassandra.TableColumnArgs(
+ *             column_name="division",
+ *             column_type="ASCII",
+ *         ),
+ *         order_by="ASC",
+ *     )],
+ *     regular_columns=[
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="name",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="region",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="project",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="role",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="pay_scale",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="vacation_hrs",
+ *             column_type="FLOAT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="manager_id",
+ *             column_type="TEXT",
+ *         ),
+ *     ],
+ *     billing_mode=aws_native.cassandra.TableBillingModeArgs(
+ *         mode="PROVISIONED",
+ *         provisioned_throughput=aws_native.cassandra.TableProvisionedThroughputArgs(
+ *             read_capacity_units=5,
+ *             write_capacity_units=5,
+ *         ),
+ *     ),
+ *     default_time_to_live=63072000,
+ *     encryption_specification=aws_native.cassandra.TableEncryptionSpecificationArgs(
+ *         encryption_type="CUSTOMER_MANAGED_KMS_KEY",
+ *         kms_key_identifier="arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111",
+ *     ),
+ *     point_in_time_recovery_enabled=True,
+ *     tags=[
+ *         aws_native.cassandra.TableTagArgs(
+ *             key="tag1",
+ *             value="val1",
+ *         ),
+ *         aws_native.cassandra.TableTagArgs(
+ *             key="tag2",
+ *             value="val2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myTable = new AwsNative.Cassandra.Table("myTable", new AwsNative.Cassandra.TableArgs
+ *         {
+ *             KeyspaceName = "my_keyspace",
+ *             TableName = "my_table",
+ *             PartitionKeyColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "Message",
+ *                     ColumnType = "ASCII",
+ *                 },
+ *             },
+ *             RegularColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "name",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "region",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cassandra"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cassandra.NewTable(ctx, "myTable", &cassandra.TableArgs{
+ * 			KeyspaceName: pulumi.String("my_keyspace"),
+ * 			TableName:    pulumi.String("my_table"),
+ * 			PartitionKeyColumns: cassandra.TableColumnArray{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("Message"),
+ * 					ColumnType: pulumi.String("ASCII"),
+ * 				},
+ * 			},
+ * 			RegularColumns: []cassandra.TableColumnArgs{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("name"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("region"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myTable = new aws_native.cassandra.Table("myTable", {
+ *     keyspaceName: "my_keyspace",
+ *     tableName: "my_table",
+ *     partitionKeyColumns: [{
+ *         columnName: "Message",
+ *         columnType: "ASCII",
+ *     }],
+ *     regularColumns: [
+ *         {
+ *             columnName: "name",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "region",
+ *             columnType: "TEXT",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_table = aws_native.cassandra.Table("myTable",
+ *     keyspace_name="my_keyspace",
+ *     table_name="my_table",
+ *     partition_key_columns=[aws_native.cassandra.TableColumnArgs(
+ *         column_name="Message",
+ *         column_type="ASCII",
+ *     )],
+ *     regular_columns=[
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="name",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="region",
+ *             column_type="TEXT",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myTable = new AwsNative.Cassandra.Table("myTable", new AwsNative.Cassandra.TableArgs
+ *         {
+ *             KeyspaceName = "my_keyspace",
+ *             TableName = "my_table",
+ *             PartitionKeyColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "Message",
+ *                     ColumnType = "ASCII",
+ *                 },
+ *             },
+ *             RegularColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "name",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "region",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "project",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "role",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "pay_scale",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "vacation_hrs",
+ *                     ColumnType = "FLOAT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "manager_id",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cassandra"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cassandra.NewTable(ctx, "myTable", &cassandra.TableArgs{
+ * 			KeyspaceName: pulumi.String("my_keyspace"),
+ * 			TableName:    pulumi.String("my_table"),
+ * 			PartitionKeyColumns: cassandra.TableColumnArray{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("Message"),
+ * 					ColumnType: pulumi.String("ASCII"),
+ * 				},
+ * 			},
+ * 			RegularColumns: []cassandra.TableColumnArgs{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("name"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("region"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("project"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("role"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("pay_scale"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("vacation_hrs"),
+ * 					ColumnType: pulumi.String("FLOAT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("manager_id"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myTable = new aws_native.cassandra.Table("myTable", {
+ *     keyspaceName: "my_keyspace",
+ *     tableName: "my_table",
+ *     partitionKeyColumns: [{
+ *         columnName: "Message",
+ *         columnType: "ASCII",
+ *     }],
+ *     regularColumns: [
+ *         {
+ *             columnName: "name",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "region",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "project",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "role",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "pay_scale",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "vacation_hrs",
+ *             columnType: "FLOAT",
+ *         },
+ *         {
+ *             columnName: "manager_id",
+ *             columnType: "TEXT",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_table = aws_native.cassandra.Table("myTable",
+ *     keyspace_name="my_keyspace",
+ *     table_name="my_table",
+ *     partition_key_columns=[aws_native.cassandra.TableColumnArgs(
+ *         column_name="Message",
+ *         column_type="ASCII",
+ *     )],
+ *     regular_columns=[
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="name",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="region",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="project",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="role",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="pay_scale",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="vacation_hrs",
+ *             column_type="FLOAT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="manager_id",
+ *             column_type="TEXT",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myTable = new AwsNative.Cassandra.Table("myTable", new AwsNative.Cassandra.TableArgs
+ *         {
+ *             KeyspaceName = "my_keyspace",
+ *             TableName = "my_table",
+ *             PartitionKeyColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "Message",
+ *                     ColumnType = "ASCII",
+ *                 },
+ *             },
+ *             RegularColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "name",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "region",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cassandra"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cassandra.NewTable(ctx, "myTable", &cassandra.TableArgs{
+ * 			KeyspaceName: pulumi.String("my_keyspace"),
+ * 			TableName:    pulumi.String("my_table"),
+ * 			PartitionKeyColumns: cassandra.TableColumnArray{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("Message"),
+ * 					ColumnType: pulumi.String("ASCII"),
+ * 				},
+ * 			},
+ * 			RegularColumns: []cassandra.TableColumnArgs{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("name"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("region"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myTable = new aws_native.cassandra.Table("myTable", {
+ *     keyspaceName: "my_keyspace",
+ *     tableName: "my_table",
+ *     partitionKeyColumns: [{
+ *         columnName: "Message",
+ *         columnType: "ASCII",
+ *     }],
+ *     regularColumns: [
+ *         {
+ *             columnName: "name",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "region",
+ *             columnType: "TEXT",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_table = aws_native.cassandra.Table("myTable",
+ *     keyspace_name="my_keyspace",
+ *     table_name="my_table",
+ *     partition_key_columns=[aws_native.cassandra.TableColumnArgs(
+ *         column_name="Message",
+ *         column_type="ASCII",
+ *     )],
+ *     regular_columns=[
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="name",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="region",
+ *             column_type="TEXT",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myTable = new AwsNative.Cassandra.Table("myTable", new AwsNative.Cassandra.TableArgs
+ *         {
+ *             KeyspaceName = "my_keyspace",
+ *             TableName = "my_table",
+ *             PartitionKeyColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "Message",
+ *                     ColumnType = "ASCII",
+ *                 },
+ *             },
+ *             RegularColumns = 
+ *             {
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "name",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "region",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "project",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "role",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "pay_scale",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "vacation_hrs",
+ *                     ColumnType = "FLOAT",
+ *                 },
+ *                 new AwsNative.Cassandra.Inputs.TableColumnArgs
+ *                 {
+ *                     ColumnName = "manager_id",
+ *                     ColumnType = "TEXT",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/cassandra"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cassandra.NewTable(ctx, "myTable", &cassandra.TableArgs{
+ * 			KeyspaceName: pulumi.String("my_keyspace"),
+ * 			TableName:    pulumi.String("my_table"),
+ * 			PartitionKeyColumns: cassandra.TableColumnArray{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("Message"),
+ * 					ColumnType: pulumi.String("ASCII"),
+ * 				},
+ * 			},
+ * 			RegularColumns: []cassandra.TableColumnArgs{
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("name"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("region"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("project"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("role"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("pay_scale"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("vacation_hrs"),
+ * 					ColumnType: pulumi.String("FLOAT"),
+ * 				},
+ * 				&cassandra.TableColumnArgs{
+ * 					ColumnName: pulumi.String("manager_id"),
+ * 					ColumnType: pulumi.String("TEXT"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myTable = new aws_native.cassandra.Table("myTable", {
+ *     keyspaceName: "my_keyspace",
+ *     tableName: "my_table",
+ *     partitionKeyColumns: [{
+ *         columnName: "Message",
+ *         columnType: "ASCII",
+ *     }],
+ *     regularColumns: [
+ *         {
+ *             columnName: "name",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "region",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "project",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "role",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "pay_scale",
+ *             columnType: "TEXT",
+ *         },
+ *         {
+ *             columnName: "vacation_hrs",
+ *             columnType: "FLOAT",
+ *         },
+ *         {
+ *             columnName: "manager_id",
+ *             columnType: "TEXT",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_table = aws_native.cassandra.Table("myTable",
+ *     keyspace_name="my_keyspace",
+ *     table_name="my_table",
+ *     partition_key_columns=[aws_native.cassandra.TableColumnArgs(
+ *         column_name="Message",
+ *         column_type="ASCII",
+ *     )],
+ *     regular_columns=[
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="name",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="region",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="project",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="role",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="pay_scale",
+ *             column_type="TEXT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="vacation_hrs",
+ *             column_type="FLOAT",
+ *         ),
+ *         aws_native.cassandra.TableColumnArgs(
+ *             column_name="manager_id",
+ *             column_type="TEXT",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:cassandra:Table")
@@ -35,28 +1256,24 @@ public class Table extends io.pulumi.resources.CustomResource {
     }
     /**
      * Clustering key columns of the table
-     * 
      */
     @Export(name="clusteringKeyColumns", type=List.class, parameters={TableClusteringKeyColumn.class})
     private Output</* @Nullable */ List<TableClusteringKeyColumn>> clusteringKeyColumns;
 
     /**
      * @return Clustering key columns of the table
-     * 
      */
     public Output</* @Nullable */ List<TableClusteringKeyColumn>> getClusteringKeyColumns() {
         return this.clusteringKeyColumns;
     }
     /**
      * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
-     * 
      */
     @Export(name="defaultTimeToLive", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultTimeToLive;
 
     /**
      * @return Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
-     * 
      */
     public Output</* @Nullable */ Integer> getDefaultTimeToLive() {
         return this.defaultTimeToLive;
@@ -69,84 +1286,72 @@ public class Table extends io.pulumi.resources.CustomResource {
     }
     /**
      * Name for Cassandra keyspace
-     * 
      */
     @Export(name="keyspaceName", type=String.class, parameters={})
     private Output<String> keyspaceName;
 
     /**
      * @return Name for Cassandra keyspace
-     * 
      */
     public Output<String> getKeyspaceName() {
         return this.keyspaceName;
     }
     /**
      * Partition key columns of the table
-     * 
      */
     @Export(name="partitionKeyColumns", type=List.class, parameters={TableColumn.class})
     private Output<List<TableColumn>> partitionKeyColumns;
 
     /**
      * @return Partition key columns of the table
-     * 
      */
     public Output<List<TableColumn>> getPartitionKeyColumns() {
         return this.partitionKeyColumns;
     }
     /**
      * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
-     * 
      */
     @Export(name="pointInTimeRecoveryEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> pointInTimeRecoveryEnabled;
 
     /**
      * @return Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
-     * 
      */
     public Output</* @Nullable */ Boolean> getPointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
     /**
      * Non-key columns of the table
-     * 
      */
     @Export(name="regularColumns", type=List.class, parameters={TableColumn.class})
     private Output</* @Nullable */ List<TableColumn>> regularColumns;
 
     /**
      * @return Non-key columns of the table
-     * 
      */
     public Output</* @Nullable */ List<TableColumn>> getRegularColumns() {
         return this.regularColumns;
     }
     /**
      * Name for Cassandra table
-     * 
      */
     @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
     /**
      * @return Name for Cassandra table
-     * 
      */
     public Output</* @Nullable */ String> getTableName() {
         return this.tableName;
     }
     /**
      * An array of key-value pairs to apply to this resource
-     * 
      */
     @Export(name="tags", type=List.class, parameters={TableTag.class})
     private Output</* @Nullable */ List<TableTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource
-     * 
      */
     public Output</* @Nullable */ List<TableTag>> getTags() {
         return this.tags;

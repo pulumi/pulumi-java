@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Image Repository Type
-     * 
      */
     @EnumType
     public enum ServiceImageRepositoryImageRepositoryType {

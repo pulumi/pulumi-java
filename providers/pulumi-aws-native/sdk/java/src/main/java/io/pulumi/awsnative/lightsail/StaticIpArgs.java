@@ -16,7 +16,6 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The instance where the static IP is attached.
-     * 
      */
     @Import(name="attachedTo")
       private final @Nullable Output<String> attachedTo;
@@ -27,7 +26,6 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the static IP address.
-     * 
      */
     @Import(name="staticIpName")
       private final @Nullable Output<String> staticIpName;

@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::SageMaker::DeviceFleet
- * 
  */
 @ResourceType(type="aws-native:sagemaker:DeviceFleet")
 public class DeviceFleet extends io.pulumi.resources.CustomResource {
     /**
      * Description for the edge device fleet
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description for the edge device fleet
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The name of the edge device fleet
-     * 
      */
     @Export(name="deviceFleetName", type=String.class, parameters={})
     private Output<String> deviceFleetName;
 
     /**
      * @return The name of the edge device fleet
-     * 
      */
     public Output<String> getDeviceFleetName() {
         return this.deviceFleetName;
     }
     /**
      * S3 bucket and an ecryption key id (if available) to store outputs for the fleet
-     * 
      */
     @Export(name="outputConfig", type=DeviceFleetEdgeOutputConfig.class, parameters={})
     private Output<DeviceFleetEdgeOutputConfig> outputConfig;
 
     /**
      * @return S3 bucket and an ecryption key id (if available) to store outputs for the fleet
-     * 
      */
     public Output<DeviceFleetEdgeOutputConfig> getOutputConfig() {
         return this.outputConfig;
     }
     /**
      * Role associated with the device fleet
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return Role associated with the device fleet
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
     /**
      * Associate tags with the resource
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DeviceFleetTag.class})
     private Output</* @Nullable */ List<DeviceFleetTag>> tags;
 
     /**
      * @return Associate tags with the resource
-     * 
      */
     public Output</* @Nullable */ List<DeviceFleetTag>> getTags() {
         return this.tags;

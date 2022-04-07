@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Config::ConfigurationAggregator
- * 
  */
 @ResourceType(type="aws-native:configuration:ConfigurationAggregator")
 public class ConfigurationAggregator extends io.pulumi.resources.CustomResource {
@@ -29,28 +28,24 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
     }
     /**
      * The Amazon Resource Name (ARN) of the aggregator.
-     * 
      */
     @Export(name="configurationAggregatorArn", type=String.class, parameters={})
     private Output<String> configurationAggregatorArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the aggregator.
-     * 
      */
     public Output<String> getConfigurationAggregatorArn() {
         return this.configurationAggregatorArn;
     }
     /**
      * The name of the aggregator.
-     * 
      */
     @Export(name="configurationAggregatorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationAggregatorName;
 
     /**
      * @return The name of the aggregator.
-     * 
      */
     public Output</* @Nullable */ String> getConfigurationAggregatorName() {
         return this.configurationAggregatorName;
@@ -63,14 +58,12 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
     }
     /**
      * The tags for the configuration aggregator.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ConfigurationAggregatorTag.class})
     private Output</* @Nullable */ List<ConfigurationAggregatorTag>> tags;
 
     /**
      * @return The tags for the configuration aggregator.
-     * 
      */
     public Output</* @Nullable */ List<ConfigurationAggregatorTag>> getTags() {
         return this.tags;

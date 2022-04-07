@@ -15,7 +15,6 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
 
     /**
      * The Secret Access Key portion of the credentials.
-     * 
      */
     @Import(name="apiSecretKey", required=true)
       private final Output<String> apiSecretKey;

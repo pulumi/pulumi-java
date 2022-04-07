@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies an object ownership rule.
-     * 
      */
     @EnumType
     public enum BucketOwnershipControlsRuleObjectOwnership {

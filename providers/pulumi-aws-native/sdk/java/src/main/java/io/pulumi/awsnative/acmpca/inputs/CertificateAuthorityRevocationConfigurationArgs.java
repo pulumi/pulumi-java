@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Certificate Authority revocation information.
- * 
  */
 public final class CertificateAuthorityRevocationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 

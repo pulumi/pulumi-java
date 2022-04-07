@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * MixedMeasureMappings are mappings that can be used to ingest data into a mixture of narrow and multi measures in the derived table.
- * 
  */
 public final class ScheduledQueryMixedMeasureMappingArgs extends io.pulumi.resources.ResourceArgs {
 

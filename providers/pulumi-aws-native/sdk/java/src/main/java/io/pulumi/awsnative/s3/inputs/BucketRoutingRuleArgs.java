@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the redirect behavior and when a redirect is applied.
- * 
  */
 public final class BucketRoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BucketRoutingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.
-     * 
      */
     @Import(name="redirectRule", required=true)
       private final Output<BucketRedirectRuleArgs> redirectRule;

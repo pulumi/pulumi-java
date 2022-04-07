@@ -18,7 +18,6 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A description of the client certificate.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * An array of arbitrary tags (key-value pairs) to associate with the client certificate.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<ClientCertificateTagArgs>> tags;

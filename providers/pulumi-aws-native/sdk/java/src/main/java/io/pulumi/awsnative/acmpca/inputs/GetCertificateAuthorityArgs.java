@@ -14,7 +14,6 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
 
     /**
      * The Amazon Resource Name (ARN) of the certificate authority.
-     * 
      */
     @Import(name="arn", required=true)
       private final String arn;

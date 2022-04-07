@@ -26,7 +26,6 @@ import javax.annotation.Nullable;
 
 /**
  * Operation to be performed on provided source fields
- * 
  */
 public final class FlowConnectorOperatorArgs extends io.pulumi.resources.ResourceArgs {
 

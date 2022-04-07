@@ -15,7 +15,6 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
 
     /**
      * The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
-     * 
      */
     @Import(name="firstExecutionFrom", required=true)
       private final Output<String> firstExecutionFrom;
@@ -26,7 +25,6 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
 
     /**
      * The name of the object to pull from the data source.
-     * 
      */
     @Import(name="object", required=true)
       private final Output<String> object;
@@ -37,7 +35,6 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
 
     /**
      * How often the data should be pulled from data source.
-     * 
      */
     @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;

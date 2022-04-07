@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class HoursOfOperationConfig {
     /**
      * The day that the hours of operation applies to.
-     * 
      */
     private final HoursOfOperationConfigDay day;
     /**
      * The end time that your contact center closes.
-     * 
      */
     private final HoursOfOperationTimeSlice endTime;
     /**
      * The start time that your contact center opens.
-     * 
      */
     private final HoursOfOperationTimeSlice startTime;
 
@@ -38,21 +35,18 @@ public final class HoursOfOperationConfig {
 
     /**
      * The day that the hours of operation applies to.
-     * 
     */
     public HoursOfOperationConfigDay getDay() {
         return this.day;
     }
     /**
      * The end time that your contact center closes.
-     * 
     */
     public HoursOfOperationTimeSlice getEndTime() {
         return this.endTime;
     }
     /**
      * The start time that your contact center opens.
-     * 
     */
     public HoursOfOperationTimeSlice getStartTime() {
         return this.startTime;

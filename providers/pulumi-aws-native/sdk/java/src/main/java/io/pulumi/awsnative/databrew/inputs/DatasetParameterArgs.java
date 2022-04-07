@@ -20,7 +20,6 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Add the value of this parameter as a column in a dataset.
-     * 
      */
     @Import(name="createColumn")
       private final @Nullable Output<Boolean> createColumn;
@@ -52,7 +51,6 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Parameter type
-     * 
      */
     @Import(name="type", required=true)
       private final Output<DatasetParameterType> type;

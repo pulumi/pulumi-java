@@ -16,7 +16,6 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends io.pulumi.r
 
     /**
      * ResolverQueryLogConfigId
-     * 
      */
     @Import(name="resolverQueryLogConfigId")
       private final @Nullable Output<String> resolverQueryLogConfigId;
@@ -27,7 +26,6 @@ public final class ResolverQueryLoggingConfigAssociationArgs extends io.pulumi.r
 
     /**
      * ResourceId
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class TemplateError {
     /**
      * <p>Description of the error type.</p>
-     * 
      */
     private final @Nullable String message;
     private final @Nullable TemplateErrorType type;
@@ -29,7 +28,6 @@ public final class TemplateError {
 
     /**
      * <p>Description of the error type.</p>
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);

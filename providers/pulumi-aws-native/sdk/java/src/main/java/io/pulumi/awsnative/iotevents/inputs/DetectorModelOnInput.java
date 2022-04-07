@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * When an input is received and the `condition` is `TRUE`, perform the specified `actions`.
- * 
  */
 public final class DetectorModelOnInput extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DetectorModelOnInput extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the `actions` performed when the `condition` evaluates to `TRUE`.
-     * 
      */
     @Import(name="events")
       private final @Nullable List<DetectorModelEvent> events;
@@ -33,7 +31,6 @@ public final class DetectorModelOnInput extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the `actions` performed, and the next `state` entered, when a `condition` evaluates to `TRUE`.
-     * 
      */
     @Import(name="transitionEvents")
       private final @Nullable List<DetectorModelTransitionEvent> transitionEvents;

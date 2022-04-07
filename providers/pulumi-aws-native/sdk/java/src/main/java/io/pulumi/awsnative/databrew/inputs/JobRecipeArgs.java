@@ -16,7 +16,6 @@ public final class JobRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Recipe name
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -27,7 +26,6 @@ public final class JobRecipeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Recipe version
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

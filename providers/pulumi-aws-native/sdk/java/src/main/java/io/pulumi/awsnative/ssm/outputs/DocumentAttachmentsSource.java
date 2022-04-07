@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class DocumentAttachmentsSource {
     /**
      * The key of a key-value pair that identifies the location of an attachment to a document.
-     * 
      */
     private final @Nullable DocumentAttachmentsSourceKey key;
     /**
      * The name of the document attachment file.
-     * 
      */
     private final @Nullable String name;
     /**
      * The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
-     * 
      */
     private final @Nullable List<String> values;
 
@@ -41,21 +38,18 @@ public final class DocumentAttachmentsSource {
 
     /**
      * The key of a key-value pair that identifies the location of an attachment to a document.
-     * 
     */
     public Optional<DocumentAttachmentsSourceKey> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The name of the document attachment file.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
-     * 
     */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;

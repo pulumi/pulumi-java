@@ -9,8 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values.
-     * 
+     * The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values. 
      */
     @EnumType
     public enum LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope {

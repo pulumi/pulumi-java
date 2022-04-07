@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The filter object that defines parameters for ESM filtering.
- * 
  */
 public final class EventSourceMappingFilter extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EventSourceMappingFilter extends io.pulumi.resources.InvokeAr
 
     /**
      * The filter pattern that defines which events should be passed for invocations.
-     * 
      */
     @Import(name="pattern")
       private final @Nullable String pattern;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The log pattern.
- * 
  */
 public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The log pattern.
-     * 
      */
     @Import(name="pattern", required=true)
       private final String pattern;
@@ -30,7 +28,6 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the log pattern.
-     * 
      */
     @Import(name="patternName", required=true)
       private final String patternName;
@@ -41,7 +38,6 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Rank of the log pattern.
-     * 
      */
     @Import(name="rank", required=true)
       private final Integer rank;

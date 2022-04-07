@@ -17,7 +17,6 @@ public final class LoggingConfigurationConditionArgs extends io.pulumi.resources
 
     /**
      * A single action condition.
-     * 
      */
     @Import(name="actionCondition")
       private final @Nullable Output<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition;
@@ -28,7 +27,6 @@ public final class LoggingConfigurationConditionArgs extends io.pulumi.resources
 
     /**
      * A single label name condition.
-     * 
      */
     @Import(name="labelNameCondition")
       private final @Nullable Output<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition;

@@ -14,7 +14,6 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
-     * 
      */
     @Import(name="cluster", required=true)
       private final String cluster;
@@ -25,7 +24,6 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the task set.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -36,7 +34,6 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
-     * 
      */
     @Import(name="service", required=true)
       private final String service;

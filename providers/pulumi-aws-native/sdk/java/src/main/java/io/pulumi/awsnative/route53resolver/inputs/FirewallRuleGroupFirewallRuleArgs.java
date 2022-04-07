@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Firewall Rule associating the Rule Group to a Domain List
- * 
  */
 public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
 
     /**
      * Rule Action
-     * 
      */
     @Import(name="action", required=true)
       private final Output<FirewallRuleGroupFirewallRuleAction> action;
@@ -35,7 +33,6 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
 
     /**
      * BlockOverrideDnsType
-     * 
      */
     @Import(name="blockOverrideDnsType")
       private final @Nullable Output<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> blockOverrideDnsType;
@@ -46,7 +43,6 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
 
     /**
      * BlockOverrideDomain
-     * 
      */
     @Import(name="blockOverrideDomain")
       private final @Nullable Output<String> blockOverrideDomain;
@@ -57,7 +53,6 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
 
     /**
      * BlockOverrideTtl
-     * 
      */
     @Import(name="blockOverrideTtl")
       private final @Nullable Output<Integer> blockOverrideTtl;
@@ -68,7 +63,6 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
 
     /**
      * BlockResponse
-     * 
      */
     @Import(name="blockResponse")
       private final @Nullable Output<FirewallRuleGroupFirewallRuleBlockResponse> blockResponse;
@@ -79,7 +73,6 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
 
     /**
      * ResourceId
-     * 
      */
     @Import(name="firewallDomainListId", required=true)
       private final Output<String> firewallDomainListId;
@@ -90,7 +83,6 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
 
     /**
      * Rule Priority
-     * 
      */
     @Import(name="priority", required=true)
       private final Output<Integer> priority;

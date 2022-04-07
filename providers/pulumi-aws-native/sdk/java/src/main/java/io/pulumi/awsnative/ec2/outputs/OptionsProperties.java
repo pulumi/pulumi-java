@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class OptionsProperties {
     /**
      * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
-     * 
      */
     private final @Nullable String applianceModeSupport;
     /**
      * Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable
-     * 
      */
     private final @Nullable String dnsSupport;
     /**
      * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
-     * 
      */
     private final @Nullable String ipv6Support;
 
@@ -39,21 +36,18 @@ public final class OptionsProperties {
 
     /**
      * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
-     * 
     */
     public Optional<String> getApplianceModeSupport() {
         return Optional.ofNullable(this.applianceModeSupport);
     }
     /**
      * Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable
-     * 
     */
     public Optional<String> getDnsSupport() {
         return Optional.ofNullable(this.dnsSupport);
     }
     /**
      * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
-     * 
     */
     public Optional<String> getIpv6Support() {
         return Optional.ofNullable(this.ipv6Support);

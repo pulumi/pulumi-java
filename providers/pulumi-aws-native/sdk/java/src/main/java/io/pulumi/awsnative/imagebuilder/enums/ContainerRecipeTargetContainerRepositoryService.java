@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the service in which this image was registered.
-     * 
      */
     @EnumType
     public enum ContainerRecipeTargetContainerRepositoryService {

@@ -17,105 +17,421 @@ import javax.annotation.Nullable;
 /**
  * The resource schema to create a CodeArtifact domain.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myCodeArtifactDomain = new AwsNative.CodeArtifact.Domain("myCodeArtifactDomain", new AwsNative.CodeArtifact.DomainArgs
+ *         {
+ *             DomainName = "my-domain",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codeartifact"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codeartifact.NewDomain(ctx, "myCodeArtifactDomain", &codeartifact.DomainArgs{
+ * 			DomainName: pulumi.String("my-domain"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myCodeArtifactDomain = new aws_native.codeartifact.Domain("myCodeArtifactDomain", {domainName: "my-domain"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_code_artifact_domain = aws_native.codeartifact.Domain("myCodeArtifactDomain", domain_name="my-domain")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myCodeArtifactDomain = new AwsNative.CodeArtifact.Domain("myCodeArtifactDomain", new AwsNative.CodeArtifact.DomainArgs
+ *         {
+ *             DomainName = "my-domain",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codeartifact"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codeartifact.NewDomain(ctx, "myCodeArtifactDomain", &codeartifact.DomainArgs{
+ * 			DomainName: pulumi.String("my-domain"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myCodeArtifactDomain = new aws_native.codeartifact.Domain("myCodeArtifactDomain", {domainName: "my-domain"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_code_artifact_domain = aws_native.codeartifact.Domain("myCodeArtifactDomain", domain_name="my-domain")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myCodeArtifactDomain = new AwsNative.CodeArtifact.Domain("myCodeArtifactDomain", new AwsNative.CodeArtifact.DomainArgs
+ *         {
+ *             DomainName = "my-domain",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.CodeArtifact.Inputs.DomainTagArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.CodeArtifact.Inputs.DomainTagArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codeartifact"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codeartifact.NewDomain(ctx, "myCodeArtifactDomain", &codeartifact.DomainArgs{
+ * 			DomainName: pulumi.String("my-domain"),
+ * 			Tags: []codeartifact.DomainTagArgs{
+ * 				&codeartifact.DomainTagArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&codeartifact.DomainTagArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myCodeArtifactDomain = new aws_native.codeartifact.Domain("myCodeArtifactDomain", {
+ *     domainName: "my-domain",
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_code_artifact_domain = aws_native.codeartifact.Domain("myCodeArtifactDomain",
+ *     domain_name="my-domain",
+ *     tags=[
+ *         aws_native.codeartifact.DomainTagArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.codeartifact.DomainTagArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myCodeArtifactDomain = new AwsNative.CodeArtifact.Domain("myCodeArtifactDomain", new AwsNative.CodeArtifact.DomainArgs
+ *         {
+ *             DomainName = "my-domain",
+ *             Tags = 
+ *             {
+ *                 new AwsNative.CodeArtifact.Inputs.DomainTagArgs
+ *                 {
+ *                     Key = "keyname1",
+ *                     Value = "value1",
+ *                 },
+ *                 new AwsNative.CodeArtifact.Inputs.DomainTagArgs
+ *                 {
+ *                     Key = "keyname2",
+ *                     Value = "value2",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/codeartifact"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := codeartifact.NewDomain(ctx, "myCodeArtifactDomain", &codeartifact.DomainArgs{
+ * 			DomainName: pulumi.String("my-domain"),
+ * 			Tags: []codeartifact.DomainTagArgs{
+ * 				&codeartifact.DomainTagArgs{
+ * 					Key:   pulumi.String("keyname1"),
+ * 					Value: pulumi.String("value1"),
+ * 				},
+ * 				&codeartifact.DomainTagArgs{
+ * 					Key:   pulumi.String("keyname2"),
+ * 					Value: pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myCodeArtifactDomain = new aws_native.codeartifact.Domain("myCodeArtifactDomain", {
+ *     domainName: "my-domain",
+ *     tags: [
+ *         {
+ *             key: "keyname1",
+ *             value: "value1",
+ *         },
+ *         {
+ *             key: "keyname2",
+ *             value: "value2",
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_code_artifact_domain = aws_native.codeartifact.Domain("myCodeArtifactDomain",
+ *     domain_name="my-domain",
+ *     tags=[
+ *         aws_native.codeartifact.DomainTagArgs(
+ *             key="keyname1",
+ *             value="value1",
+ *         ),
+ *         aws_native.codeartifact.DomainTagArgs(
+ *             key="keyname2",
+ *             value="value2",
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:codeartifact:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the domain.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The ARN of the domain.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The name of the domain.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The name of the domain.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
     }
     /**
      * The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
-     * 
      */
     @Export(name="encryptionKey", type=String.class, parameters={})
     private Output<String> encryptionKey;
 
     /**
      * @return The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
-     * 
      */
     public Output<String> getEncryptionKey() {
         return this.encryptionKey;
     }
     /**
      * The name of the domain. This field is used for GetAtt
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the domain. This field is used for GetAtt
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The 12-digit account ID of the AWS account that owns the domain. This field is used for GetAtt
-     * 
      */
     @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     /**
      * @return The 12-digit account ID of the AWS account that owns the domain. This field is used for GetAtt
-     * 
      */
     public Output<String> getOwner() {
         return this.owner;
     }
     /**
      * The access control resource policy on the provided domain.
-     * 
      */
     @Export(name="permissionsPolicyDocument", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> permissionsPolicyDocument;
 
     /**
      * @return The access control resource policy on the provided domain.
-     * 
      */
     public Output</* @Nullable */ Object> getPermissionsPolicyDocument() {
         return this.permissionsPolicyDocument;
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={DomainTag.class})
     private Output</* @Nullable */ List<DomainTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<DomainTag>> getTags() {
         return this.tags;

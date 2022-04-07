@@ -15,20 +15,17 @@ import javax.annotation.Nullable;
 
 /**
  * AWS::RoboMaker::Robot resource creates an AWS RoboMaker fleet.
- * 
  */
 @ResourceType(type="aws-native:robomaker:Robot")
 public class Robot extends io.pulumi.resources.CustomResource {
     /**
      * The target architecture of the robot.
-     * 
      */
     @Export(name="architecture", type=RobotArchitecture.class, parameters={})
     private Output<RobotArchitecture> architecture;
 
     /**
      * @return The target architecture of the robot.
-     * 
      */
     public Output<RobotArchitecture> getArchitecture() {
         return this.architecture;
@@ -41,42 +38,36 @@ public class Robot extends io.pulumi.resources.CustomResource {
     }
     /**
      * The Amazon Resource Name (ARN) of the fleet.
-     * 
      */
     @Export(name="fleet", type=String.class, parameters={})
     private Output</* @Nullable */ String> fleet;
 
     /**
      * @return The Amazon Resource Name (ARN) of the fleet.
-     * 
      */
     public Output</* @Nullable */ String> getFleet() {
         return this.fleet;
     }
     /**
      * The Greengrass group id.
-     * 
      */
     @Export(name="greengrassGroupId", type=String.class, parameters={})
     private Output<String> greengrassGroupId;
 
     /**
      * @return The Greengrass group id.
-     * 
      */
     public Output<String> getGreengrassGroupId() {
         return this.greengrassGroupId;
     }
     /**
      * The name for the robot.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name for the robot.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;

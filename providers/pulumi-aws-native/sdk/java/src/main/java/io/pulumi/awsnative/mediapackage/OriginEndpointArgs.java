@@ -32,7 +32,6 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the Channel the OriginEndpoint is associated with.
-     * 
      */
     @Import(name="channelId", required=true)
       private final Output<String> channelId;
@@ -57,7 +56,6 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A short text description of the OriginEndpoint.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -75,7 +73,6 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A short string appended to the end of the OriginEndpoint URL.
-     * 
      */
     @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
@@ -93,7 +90,6 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
-     * 
      */
     @Import(name="origination")
       private final @Nullable Output<OriginEndpointOrigination> origination;
@@ -104,7 +100,6 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
-     * 
      */
     @Import(name="startoverWindowSeconds")
       private final @Nullable Output<Integer> startoverWindowSeconds;
@@ -115,7 +110,6 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of tags associated with a resource
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<OriginEndpointTagArgs>> tags;
@@ -126,7 +120,6 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
-     * 
      */
     @Import(name="timeDelaySeconds")
       private final @Nullable Output<Integer> timeDelaySeconds;
@@ -137,7 +130,6 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
-     * 
      */
     @Import(name="whitelist")
       private final @Nullable Output<List<String>> whitelist;

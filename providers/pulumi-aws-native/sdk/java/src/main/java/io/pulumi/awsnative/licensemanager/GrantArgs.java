@@ -24,7 +24,6 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name for the created Grant.
-     * 
      */
     @Import(name="grantName")
       private final @Nullable Output<String> grantName;
@@ -35,7 +34,6 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Home region for the created grant.
-     * 
      */
     @Import(name="homeRegion")
       private final @Nullable Output<String> homeRegion;
@@ -46,7 +44,6 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * License Arn for the grant.
-     * 
      */
     @Import(name="licenseArn")
       private final @Nullable Output<String> licenseArn;

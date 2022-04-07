@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Output Csv options
- * 
  */
 public final class JobCsvOutputOptions extends io.pulumi.resources.InvokeArgs {
 

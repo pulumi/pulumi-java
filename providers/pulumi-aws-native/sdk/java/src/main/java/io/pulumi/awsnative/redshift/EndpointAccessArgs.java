@@ -17,7 +17,6 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
-     * 
      */
     @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
@@ -28,7 +27,6 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the endpoint.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
@@ -39,7 +37,6 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The AWS account ID of the owner of the cluster.
-     * 
      */
     @Import(name="resourceOwner")
       private final @Nullable Output<String> resourceOwner;
@@ -50,7 +47,6 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subnet group name where Amazon Redshift chooses to deploy the endpoint.
-     * 
      */
     @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
@@ -61,7 +57,6 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of vpc security group ids to apply to the created endpoint access.
-     * 
      */
     @Import(name="vpcSecurityGroupIds", required=true)
       private final Output<List<String>> vpcSecurityGroupIds;

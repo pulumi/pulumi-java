@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * Aws Route53 Recovery Readiness Check Schema and API specification.
- * 
  */
 @ResourceType(type="aws-native:route53recoveryreadiness:ReadinessCheck")
 public class ReadinessCheck extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the readiness check.
-     * 
      */
     @Export(name="readinessCheckArn", type=String.class, parameters={})
     private Output<String> readinessCheckArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the readiness check.
-     * 
      */
     public Output<String> getReadinessCheckArn() {
         return this.readinessCheckArn;
     }
     /**
      * Name of the ReadinessCheck to create.
-     * 
      */
     @Export(name="readinessCheckName", type=String.class, parameters={})
     private Output<String> readinessCheckName;
 
     /**
      * @return Name of the ReadinessCheck to create.
-     * 
      */
     public Output<String> getReadinessCheckName() {
         return this.readinessCheckName;
     }
     /**
      * The name of the resource set to check.
-     * 
      */
     @Export(name="resourceSetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceSetName;
 
     /**
      * @return The name of the resource set to check.
-     * 
      */
     public Output</* @Nullable */ String> getResourceSetName() {
         return this.resourceSetName;
     }
     /**
      * A collection of tags associated with a resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ReadinessCheckTag.class})
     private Output</* @Nullable */ List<ReadinessCheckTag>> tags;
 
     /**
      * @return A collection of tags associated with a resource.
-     * 
      */
     public Output</* @Nullable */ List<ReadinessCheckTag>> getTags() {
         return this.tags;

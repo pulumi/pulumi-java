@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the value that is to be read from SourceColumn. If the mapping is for MULTI, use MeasureValueType.MULTI.
-     * 
      */
     @EnumType
     public enum ScheduledQueryMixedMeasureMappingMeasureValueType {

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::Amplify::Domain resource allows you to connect a custom domain to your app.
- * 
  */
 @ResourceType(type="aws-native:amplify:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {

@@ -26,7 +26,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provide artifact configuration
-     * 
      */
     @Import(name="artifactConfig")
       private final @Nullable Output<CanaryArtifactConfigArgs> artifactConfig;
@@ -37,7 +36,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provide the s3 bucket output location for test results
-     * 
      */
     @Import(name="artifactS3Location", required=true)
       private final Output<String> artifactS3Location;
@@ -48,7 +46,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provide the canary script source
-     * 
      */
     @Import(name="code", required=true)
       private final Output<CanaryCodeArgs> code;
@@ -59,7 +56,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Lambda Execution role used to run your canaries
-     * 
      */
     @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
@@ -70,7 +66,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Retention period of failed canary runs represented in number of days
-     * 
      */
     @Import(name="failureRetentionPeriod")
       private final @Nullable Output<Integer> failureRetentionPeriod;
@@ -81,7 +76,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the canary.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -92,7 +86,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provide canary run configuration
-     * 
      */
     @Import(name="runConfig")
       private final @Nullable Output<CanaryRunConfigArgs> runConfig;
@@ -103,7 +96,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Runtime version of Synthetics Library
-     * 
      */
     @Import(name="runtimeVersion", required=true)
       private final Output<String> runtimeVersion;
@@ -114,7 +106,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Frequency to run your canaries
-     * 
      */
     @Import(name="schedule", required=true)
       private final Output<CanaryScheduleArgs> schedule;
@@ -125,7 +116,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Runs canary if set to True. Default is False
-     * 
      */
     @Import(name="startCanaryAfterCreation", required=true)
       private final Output<Boolean> startCanaryAfterCreation;
@@ -136,7 +126,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Retention period of successful canary runs represented in number of days
-     * 
      */
     @Import(name="successRetentionPeriod")
       private final @Nullable Output<Integer> successRetentionPeriod;
@@ -154,7 +143,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Provide VPC Configuration if enabled.
-     * 
      */
     @Import(name="vPCConfig")
       private final @Nullable Output<CanaryVPCConfigArgs> vPCConfig;
@@ -165,7 +153,6 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Visual reference configuration for visual testing
-     * 
      */
     @Import(name="visualReference")
       private final @Nullable Output<CanaryVisualReferenceArgs> visualReference;

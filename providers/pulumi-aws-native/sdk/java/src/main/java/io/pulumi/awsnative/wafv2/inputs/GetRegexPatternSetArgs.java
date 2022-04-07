@@ -15,7 +15,6 @@ public final class GetRegexPatternSetArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Id of the RegexPatternSet
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -26,7 +25,6 @@ public final class GetRegexPatternSetArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the RegexPatternSet.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -37,7 +35,6 @@ public final class GetRegexPatternSetArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
-     * 
      */
     @Import(name="scope", required=true)
       private final RegexPatternSetScope scope;

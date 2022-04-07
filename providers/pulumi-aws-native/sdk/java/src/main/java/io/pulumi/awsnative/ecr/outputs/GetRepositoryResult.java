@@ -21,19 +21,16 @@ public final class GetRepositoryResult {
     private final @Nullable RepositoryImageScanningConfiguration imageScanningConfiguration;
     /**
      * The image tag mutability setting for the repository.
-     * 
      */
     private final @Nullable RepositoryImageTagMutability imageTagMutability;
     private final @Nullable RepositoryLifecyclePolicy lifecyclePolicy;
     /**
-     * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
-     * 
+     * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide. 
      */
     private final @Nullable Object repositoryPolicyText;
     private final @Nullable String repositoryUri;
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     private final @Nullable List<RepositoryTag> tags;
 
@@ -63,7 +60,6 @@ public final class GetRepositoryResult {
     }
     /**
      * The image tag mutability setting for the repository.
-     * 
     */
     public Optional<RepositoryImageTagMutability> getImageTagMutability() {
         return Optional.ofNullable(this.imageTagMutability);
@@ -72,8 +68,7 @@ public final class GetRepositoryResult {
         return Optional.ofNullable(this.lifecyclePolicy);
     }
     /**
-     * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
-     * 
+     * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide. 
     */
     public Optional<Object> getRepositoryPolicyText() {
         return Optional.ofNullable(this.repositoryPolicyText);
@@ -83,7 +78,6 @@ public final class GetRepositoryResult {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
     */
     public List<RepositoryTag> getTags() {
         return this.tags == null ? List.of() : this.tags;

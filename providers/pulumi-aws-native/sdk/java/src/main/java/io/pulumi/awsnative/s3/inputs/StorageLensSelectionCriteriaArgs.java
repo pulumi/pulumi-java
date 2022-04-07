@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Selection criteria for prefix-level metrics.
- * 
  */
 public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
 
     /**
      * Delimiter to divide S3 key into hierarchy of prefixes.
-     * 
      */
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
@@ -33,7 +31,6 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
 
     /**
      * Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
-     * 
      */
     @Import(name="maxDepth")
       private final @Nullable Output<Integer> maxDepth;
@@ -44,7 +41,6 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
 
     /**
      * The minimum storage bytes threshold for the prefixes to be included in the analysis.
-     * 
      */
     @Import(name="minStorageBytesPercentage")
       private final @Nullable Output<Double> minStorageBytesPercentage;

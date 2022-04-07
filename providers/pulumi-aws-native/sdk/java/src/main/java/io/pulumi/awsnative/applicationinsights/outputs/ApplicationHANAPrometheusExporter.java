@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ApplicationHANAPrometheusExporter {
     /**
      * A flag which indicates agreeing to install SAP HANA DB client.
-     * 
      */
     private final Boolean agreeToInstallHANADBClient;
     /**
      * The HANA DB port.
-     * 
      */
     private final String hANAPort;
     /**
      * HANA DB SID.
-     * 
      */
     private final String hANASID;
     /**
@@ -32,12 +29,10 @@ public final class ApplicationHANAPrometheusExporter {
      *   "username": "<>",
      *   "password": "<>"
      * }.
-     * 
      */
     private final String hANASecretName;
     /**
      * Prometheus exporter port.
-     * 
      */
     private final @Nullable String prometheusPort;
 
@@ -57,21 +52,18 @@ public final class ApplicationHANAPrometheusExporter {
 
     /**
      * A flag which indicates agreeing to install SAP HANA DB client.
-     * 
     */
     public Boolean getAgreeToInstallHANADBClient() {
         return this.agreeToInstallHANADBClient;
     }
     /**
      * The HANA DB port.
-     * 
     */
     public String getHANAPort() {
         return this.hANAPort;
     }
     /**
      * HANA DB SID.
-     * 
     */
     public String getHANASID() {
         return this.hANASID;
@@ -81,14 +73,12 @@ public final class ApplicationHANAPrometheusExporter {
      *   "username": "<>",
      *   "password": "<>"
      * }.
-     * 
     */
     public String getHANASecretName() {
         return this.hANASecretName;
     }
     /**
      * Prometheus exporter port.
-     * 
     */
     public Optional<String> getPrometheusPort() {
         return Optional.ofNullable(this.prometheusPort);

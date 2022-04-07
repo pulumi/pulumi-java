@@ -15,34 +15,29 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::NetworkAcl
- * 
  */
 @ResourceType(type="aws-native:ec2:NetworkAcl")
 public class NetworkAcl extends io.pulumi.resources.CustomResource {
     /**
      * The tags to assign to the network ACL.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={NetworkAclTag.class})
     private Output</* @Nullable */ List<NetworkAclTag>> tags;
 
     /**
      * @return The tags to assign to the network ACL.
-     * 
      */
     public Output</* @Nullable */ List<NetworkAclTag>> getTags() {
         return this.tags;
     }
     /**
      * The ID of the VPC.
-     * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
      * @return The ID of the VPC.
-     * 
      */
     public Output<String> getVpcId() {
         return this.vpcId;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A structure that contains value information. For more information, see [AssetPropertyValue](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssetPropertyValue.html) in the *AWS IoT SiteWise API Reference*.
- * 
  */
 public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
 
     /**
      * The quality of the asset property value. The value must be `GOOD`, `BAD`, or `UNCERTAIN`. You can also specify an expression.
-     * 
      */
     @Import(name="quality")
       private final @Nullable Output<String> quality;

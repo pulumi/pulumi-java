@@ -18,7 +18,6 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the global network.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags for the global network.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<GlobalNetworkTagArgs>> tags;

@@ -15,132 +15,113 @@ import javax.annotation.Nullable;
 
 /**
  * A certificate issued via a private certificate authority
- * 
  */
 @ResourceType(type="aws-native:acmpca:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {
     /**
      * These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
-     * 
      */
     @Export(name="apiPassthrough", type=CertificateApiPassthrough.class, parameters={})
     private Output</* @Nullable */ CertificateApiPassthrough> apiPassthrough;
 
     /**
      * @return These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
-     * 
      */
     public Output</* @Nullable */ CertificateApiPassthrough> getApiPassthrough() {
         return this.apiPassthrough;
     }
     /**
      * The ARN of the issued certificate.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The ARN of the issued certificate.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * The issued certificate in base 64 PEM-encoded format.
-     * 
      */
     @Export(name="certificate", type=String.class, parameters={})
     private Output<String> certificate;
 
     /**
      * @return The issued certificate in base 64 PEM-encoded format.
-     * 
      */
     public Output<String> getCertificate() {
         return this.certificate;
     }
     /**
      * The Amazon Resource Name (ARN) for the private CA to issue the certificate.
-     * 
      */
     @Export(name="certificateAuthorityArn", type=String.class, parameters={})
     private Output<String> certificateAuthorityArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the private CA to issue the certificate.
-     * 
      */
     public Output<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
      * The certificate signing request (CSR) for the Certificate.
-     * 
      */
     @Export(name="certificateSigningRequest", type=String.class, parameters={})
     private Output<String> certificateSigningRequest;
 
     /**
      * @return The certificate signing request (CSR) for the Certificate.
-     * 
      */
     public Output<String> getCertificateSigningRequest() {
         return this.certificateSigningRequest;
     }
     /**
      * The name of the algorithm that will be used to sign the Certificate.
-     * 
      */
     @Export(name="signingAlgorithm", type=String.class, parameters={})
     private Output<String> signingAlgorithm;
 
     /**
      * @return The name of the algorithm that will be used to sign the Certificate.
-     * 
      */
     public Output<String> getSigningAlgorithm() {
         return this.signingAlgorithm;
     }
     /**
      * Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
-     * 
      */
     @Export(name="templateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateArn;
 
     /**
      * @return Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
-     * 
      */
     public Output</* @Nullable */ String> getTemplateArn() {
         return this.templateArn;
     }
     /**
      * The time before which the Certificate will be valid.
-     * 
      */
     @Export(name="validity", type=CertificateValidity.class, parameters={})
     private Output<CertificateValidity> validity;
 
     /**
      * @return The time before which the Certificate will be valid.
-     * 
      */
     public Output<CertificateValidity> getValidity() {
         return this.validity;
     }
     /**
      * The time after which the Certificate will be valid.
-     * 
      */
     @Export(name="validityNotBefore", type=CertificateValidity.class, parameters={})
     private Output</* @Nullable */ CertificateValidity> validityNotBefore;
 
     /**
      * @return The time after which the Certificate will be valid.
-     * 
      */
     public Output</* @Nullable */ CertificateValidity> getValidityNotBefore() {
         return this.validityNotBefore;

@@ -13,7 +13,6 @@ public final class BotSlotPriority {
     private final Integer priority;
     /**
      * The name of the slot.
-     * 
      */
     private final String slotName;
 
@@ -30,7 +29,6 @@ public final class BotSlotPriority {
     }
     /**
      * The name of the slot.
-     * 
     */
     public String getSlotName() {
         return this.slotName;

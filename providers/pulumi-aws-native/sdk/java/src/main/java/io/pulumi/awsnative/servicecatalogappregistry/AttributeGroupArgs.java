@@ -24,8 +24,7 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The description of the attribute group.
-     * 
+     * The description of the attribute group. 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -35,8 +34,7 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the attribute group.
-     * 
+     * The name of the attribute group. 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

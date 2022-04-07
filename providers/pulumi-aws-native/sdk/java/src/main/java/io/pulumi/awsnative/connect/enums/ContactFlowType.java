@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the contact flow.
-     * 
      */
     @EnumType
     public enum ContactFlowType {

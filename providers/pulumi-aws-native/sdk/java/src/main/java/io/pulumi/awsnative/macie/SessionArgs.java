@@ -17,7 +17,6 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A enumeration value that specifies how frequently finding updates are published.
-     * 
      */
     @Import(name="findingPublishingFrequency")
       private final @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency;
@@ -28,7 +27,6 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A enumeration value that specifies the status of the Macie Session.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<SessionStatus> status;

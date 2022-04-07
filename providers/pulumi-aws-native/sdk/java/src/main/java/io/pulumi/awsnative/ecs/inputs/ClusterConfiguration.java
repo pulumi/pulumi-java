@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configurations to be set at cluster level.
- * 
  */
 public final class ClusterConfiguration extends io.pulumi.resources.InvokeArgs {
 

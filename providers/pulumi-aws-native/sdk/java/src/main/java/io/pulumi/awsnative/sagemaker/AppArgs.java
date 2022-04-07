@@ -20,7 +20,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the app.
-     * 
      */
     @Import(name="appName")
       private final @Nullable Output<String> appName;
@@ -31,7 +30,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of app.
-     * 
      */
     @Import(name="appType", required=true)
       private final Output<AppType> appType;
@@ -42,7 +40,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The domain ID.
-     * 
      */
     @Import(name="domainId", required=true)
       private final Output<String> domainId;
@@ -53,7 +50,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-     * 
      */
     @Import(name="resourceSpec")
       private final @Nullable Output<AppResourceSpecArgs> resourceSpec;
@@ -64,7 +60,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of tags to apply to the app.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<AppTagArgs>> tags;
@@ -75,7 +70,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user profile name.
-     * 
      */
     @Import(name="userProfileName", required=true)
       private final Output<String> userProfileName;

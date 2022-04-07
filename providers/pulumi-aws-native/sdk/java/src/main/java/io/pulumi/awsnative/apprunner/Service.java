@@ -19,20 +19,17 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::AppRunner::Service resource specifies an AppRunner Service.
- * 
  */
 @ResourceType(type="aws-native:apprunner:Service")
 public class Service extends io.pulumi.resources.CustomResource {
     /**
      * Autoscaling configuration ARN
-     * 
      */
     @Export(name="autoScalingConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoScalingConfigurationArn;
 
     /**
      * @return Autoscaling configuration ARN
-     * 
      */
     public Output</* @Nullable */ String> getAutoScalingConfigurationArn() {
         return this.autoScalingConfigurationArn;
@@ -57,56 +54,48 @@ public class Service extends io.pulumi.resources.CustomResource {
     }
     /**
      * The Amazon Resource Name (ARN) of the AppRunner Service.
-     * 
      */
     @Export(name="serviceArn", type=String.class, parameters={})
     private Output<String> serviceArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the AppRunner Service.
-     * 
      */
     public Output<String> getServiceArn() {
         return this.serviceArn;
     }
     /**
      * The AppRunner Service Id
-     * 
      */
     @Export(name="serviceId", type=String.class, parameters={})
     private Output<String> serviceId;
 
     /**
      * @return The AppRunner Service Id
-     * 
      */
     public Output<String> getServiceId() {
         return this.serviceId;
     }
     /**
      * The AppRunner Service Name.
-     * 
      */
     @Export(name="serviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceName;
 
     /**
      * @return The AppRunner Service Name.
-     * 
      */
     public Output</* @Nullable */ String> getServiceName() {
         return this.serviceName;
     }
     /**
      * The Service Url of the AppRunner Service.
-     * 
      */
     @Export(name="serviceUrl", type=String.class, parameters={})
     private Output<String> serviceUrl;
 
     /**
      * @return The Service Url of the AppRunner Service.
-     * 
      */
     public Output<String> getServiceUrl() {
         return this.serviceUrl;
@@ -119,14 +108,12 @@ public class Service extends io.pulumi.resources.CustomResource {
     }
     /**
      * AppRunner Service status.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return AppRunner Service status.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;

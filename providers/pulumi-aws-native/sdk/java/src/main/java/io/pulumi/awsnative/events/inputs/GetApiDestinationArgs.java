@@ -14,7 +14,6 @@ public final class GetApiDestinationArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the apiDestination.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

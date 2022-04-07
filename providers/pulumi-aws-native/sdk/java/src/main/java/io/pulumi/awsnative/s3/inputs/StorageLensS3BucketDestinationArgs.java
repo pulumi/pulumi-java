@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * S3 bucket destination settings for the Amazon S3 Storage Lens metrics export.
- * 
  */
 public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
 
     /**
      * The AWS account ID that owns the destination S3 bucket.
-     * 
      */
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
@@ -34,7 +32,6 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
 
     /**
      * The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
-     * 
      */
     @Import(name="arn", required=true)
       private final Output<String> arn;
@@ -52,7 +49,6 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
 
     /**
      * Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
-     * 
      */
     @Import(name="format", required=true)
       private final Output<StorageLensS3BucketDestinationFormat> format;
@@ -63,7 +59,6 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
 
     /**
      * The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
-     * 
      */
     @Import(name="outputSchemaVersion", required=true)
       private final Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
@@ -74,7 +69,6 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
 
     /**
      * The prefix to use for Amazon S3 Storage Lens export.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;

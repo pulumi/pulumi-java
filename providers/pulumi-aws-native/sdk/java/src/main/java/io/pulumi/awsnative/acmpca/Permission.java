@@ -14,62 +14,53 @@ import javax.annotation.Nullable;
 
 /**
  * Permission set on private certificate authority
- * 
  */
 @ResourceType(type="aws-native:acmpca:Permission")
 public class Permission extends io.pulumi.resources.CustomResource {
     /**
      * The actions that the specified AWS service principal can use. Actions IssueCertificate, GetCertificate and ListPermissions must be provided.
-     * 
      */
     @Export(name="actions", type=List.class, parameters={String.class})
     private Output<List<String>> actions;
 
     /**
      * @return The actions that the specified AWS service principal can use. Actions IssueCertificate, GetCertificate and ListPermissions must be provided.
-     * 
      */
     public Output<List<String>> getActions() {
         return this.actions;
     }
     /**
      * The Amazon Resource Name (ARN) of the Private Certificate Authority that grants the permission.
-     * 
      */
     @Export(name="certificateAuthorityArn", type=String.class, parameters={})
     private Output<String> certificateAuthorityArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the Private Certificate Authority that grants the permission.
-     * 
      */
     public Output<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
      * The AWS service or identity that receives the permission. At this time, the only valid principal is acm.amazonaws.com.
-     * 
      */
     @Export(name="principal", type=String.class, parameters={})
     private Output<String> principal;
 
     /**
      * @return The AWS service or identity that receives the permission. At this time, the only valid principal is acm.amazonaws.com.
-     * 
      */
     public Output<String> getPrincipal() {
         return this.principal;
     }
     /**
      * The ID of the calling account.
-     * 
      */
     @Export(name="sourceAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceAccount;
 
     /**
      * @return The ID of the calling account.
-     * 
      */
     public Output</* @Nullable */ String> getSourceAccount() {
         return this.sourceAccount;

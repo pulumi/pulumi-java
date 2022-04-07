@@ -26,7 +26,815 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::KinesisFirehose::DeliveryStream
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var firehose = new AwsNative.KinesisFirehose.DeliveryStream("firehose", new AwsNative.KinesisFirehose.DeliveryStreamArgs
+ *         {
+ *             DeliveryStreamName = "tester-partitioning-delimiter",
+ *             DeliveryStreamType = "DirectPut",
+ *             ExtendedS3DestinationConfiguration = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamExtendedS3DestinationConfigurationArgs
+ *             {
+ *                 BucketARN = "arn:aws:s3:::dp-firehose-test",
+ *                 BufferingHints = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamBufferingHintsArgs
+ *                 {
+ *                     SizeInMBs = 128,
+ *                     IntervalInSeconds = 900,
+ *                 },
+ *                 CompressionFormat = "UNCOMPRESSED",
+ *                 ErrorOutputPrefix = "table/error/!{firehose:error-output-type}/dt=!{timestamp:yyyy'-'MM'-'dd}/h=!{timestamp:HH}/",
+ *                 Prefix = "YYYY=!{partitionKeyFromQuery:YYYY}/MM=!{partitionKeyFromQuery:MM}//DD=!{partitionKeyFromQuery:DD}/HH=!{partitionKeyFromQuery:HH}/REGION=!{partitionKeyFromQuery:REGION}/SITEID=!{partitionKeyFromQuery:SITEID}/",
+ *                 RoleARN = "arn:aws:iam::012345678912:role/service-role/KinesisFirehoseServiceRole-dp-kinesis-f-us-east-1-012345678912",
+ *                 DynamicPartitioningConfiguration = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamDynamicPartitioningConfigurationArgs
+ *                 {
+ *                     Enabled = true,
+ *                     RetryOptions = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamRetryOptionsArgs
+ *                     {
+ *                         DurationInSeconds = 300,
+ *                     },
+ *                 },
+ *                 ProcessingConfiguration = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessingConfigurationArgs
+ *                 {
+ *                     Enabled = true,
+ *                     Processors = 
+ *                     {
+ *                         new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessorArgs
+ *                         {
+ *                             Type = "MetadataExtraction",
+ *                             Parameters = 
+ *                             {
+ *                                 new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessorParameterArgs
+ *                                 {
+ *                                     ParameterName = "MetadataExtractionQuery",
+ *                                     ParameterValue = "{YYYY : (.ts/1000) | strftime(\"%Y\"), MM : (.ts/1000) | strftime(\"%m\"), DD : (.ts/1000) | strftime(\"%d\"), HH: (.ts/1000) | strftime(\"%H\")}",
+ *                                 },
+ *                                 new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessorParameterArgs
+ *                                 {
+ *                                     ParameterName = "JsonParsingEngine",
+ *                                     ParameterValue = "JQ-1.6",
+ *                                 },
+ *                             },
+ *                         },
+ *                         new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessorArgs
+ *                         {
+ *                             Type = "AppendDelimiterToRecord",
+ *                             Parameters = 
+ *                             {
+ *                                 new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessorParameterArgs
+ *                                 {
+ *                                     ParameterName = "Delimiter",
+ *                                     ParameterValue = "\\n",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/kinesisfirehose"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kinesisfirehose.NewDeliveryStream(ctx, "firehose", &kinesisfirehose.DeliveryStreamArgs{
+ * 			DeliveryStreamName: pulumi.String("tester-partitioning-delimiter"),
+ * 			DeliveryStreamType: "DirectPut",
+ * 			ExtendedS3DestinationConfiguration: &kinesisfirehose.DeliveryStreamExtendedS3DestinationConfigurationArgs{
+ * 				BucketARN: pulumi.String("arn:aws:s3:::dp-firehose-test"),
+ * 				BufferingHints: &kinesisfirehose.DeliveryStreamBufferingHintsArgs{
+ * 					SizeInMBs:         pulumi.Int(128),
+ * 					IntervalInSeconds: pulumi.Int(900),
+ * 				},
+ * 				CompressionFormat: "UNCOMPRESSED",
+ * 				ErrorOutputPrefix: pulumi.String("table/error/!{firehose:error-output-type}/dt=!{timestamp:yyyy'-'MM'-'dd}/h=!{timestamp:HH}/"),
+ * 				Prefix:            pulumi.String("YYYY=!{partitionKeyFromQuery:YYYY}/MM=!{partitionKeyFromQuery:MM}//DD=!{partitionKeyFromQuery:DD}/HH=!{partitionKeyFromQuery:HH}/REGION=!{partitionKeyFromQuery:REGION}/SITEID=!{partitionKeyFromQuery:SITEID}/"),
+ * 				RoleARN:           pulumi.String("arn:aws:iam::012345678912:role/service-role/KinesisFirehoseServiceRole-dp-kinesis-f-us-east-1-012345678912"),
+ * 				DynamicPartitioningConfiguration: &kinesisfirehose.DeliveryStreamDynamicPartitioningConfigurationArgs{
+ * 					Enabled: pulumi.Bool(true),
+ * 					RetryOptions: &kinesisfirehose.DeliveryStreamRetryOptionsArgs{
+ * 						DurationInSeconds: pulumi.Int(300),
+ * 					},
+ * 				},
+ * 				ProcessingConfiguration: &kinesisfirehose.DeliveryStreamProcessingConfigurationArgs{
+ * 					Enabled: pulumi.Bool(true),
+ * 					Processors: kinesisfirehose.DeliveryStreamProcessorArray{
+ * 						&kinesisfirehose.DeliveryStreamProcessorArgs{
+ * 							Type: "MetadataExtraction",
+ * 							Parameters: kinesisfirehose.DeliveryStreamProcessorParameterArray{
+ * 								&kinesisfirehose.DeliveryStreamProcessorParameterArgs{
+ * 									ParameterName:  pulumi.String("MetadataExtractionQuery"),
+ * 									ParameterValue: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v", "{YYYY : (.ts/1000) | strftime(\"", "%", "Y\"), MM : (.ts/1000) | strftime(\"", "%", "m\"), DD : (.ts/1000) | strftime(\"", "%", "d\"), HH: (.ts/1000) | strftime(\"", "%", "H\")}")),
+ * 								},
+ * 								&kinesisfirehose.DeliveryStreamProcessorParameterArgs{
+ * 									ParameterName:  pulumi.String("JsonParsingEngine"),
+ * 									ParameterValue: pulumi.String("JQ-1.6"),
+ * 								},
+ * 							},
+ * 						},
+ * 						&kinesisfirehose.DeliveryStreamProcessorArgs{
+ * 							Type: "AppendDelimiterToRecord",
+ * 							Parameters: kinesisfirehose.DeliveryStreamProcessorParameterArray{
+ * 								&kinesisfirehose.DeliveryStreamProcessorParameterArgs{
+ * 									ParameterName:  pulumi.String("Delimiter"),
+ * 									ParameterValue: pulumi.String("\\n"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const firehose = new aws_native.kinesisfirehose.DeliveryStream("firehose", {
+ *     deliveryStreamName: "tester-partitioning-delimiter",
+ *     deliveryStreamType: "DirectPut",
+ *     extendedS3DestinationConfiguration: {
+ *         bucketARN: "arn:aws:s3:::dp-firehose-test",
+ *         bufferingHints: {
+ *             sizeInMBs: 128,
+ *             intervalInSeconds: 900,
+ *         },
+ *         compressionFormat: "UNCOMPRESSED",
+ *         errorOutputPrefix: "table/error/!{firehose:error-output-type}/dt=!{timestamp:yyyy'-'MM'-'dd}/h=!{timestamp:HH}/",
+ *         prefix: "YYYY=!{partitionKeyFromQuery:YYYY}/MM=!{partitionKeyFromQuery:MM}//DD=!{partitionKeyFromQuery:DD}/HH=!{partitionKeyFromQuery:HH}/REGION=!{partitionKeyFromQuery:REGION}/SITEID=!{partitionKeyFromQuery:SITEID}/",
+ *         roleARN: "arn:aws:iam::012345678912:role/service-role/KinesisFirehoseServiceRole-dp-kinesis-f-us-east-1-012345678912",
+ *         dynamicPartitioningConfiguration: {
+ *             enabled: true,
+ *             retryOptions: {
+ *                 durationInSeconds: 300,
+ *             },
+ *         },
+ *         processingConfiguration: {
+ *             enabled: true,
+ *             processors: [
+ *                 {
+ *                     type: "MetadataExtraction",
+ *                     parameters: [
+ *                         {
+ *                             parameterName: "MetadataExtractionQuery",
+ *                             parameterValue: `{YYYY : (.ts/1000) | strftime("%Y"), MM : (.ts/1000) | strftime("%m"), DD : (.ts/1000) | strftime("%d"), HH: (.ts/1000) | strftime("%H")}`,
+ *                         },
+ *                         {
+ *                             parameterName: "JsonParsingEngine",
+ *                             parameterValue: "JQ-1.6",
+ *                         },
+ *                     ],
+ *                 },
+ *                 {
+ *                     type: "AppendDelimiterToRecord",
+ *                     parameters: [{
+ *                         parameterName: "Delimiter",
+ *                         parameterValue: "\\n",
+ *                     }],
+ *                 },
+ *             ],
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * firehose = aws_native.kinesisfirehose.DeliveryStream("firehose",
+ *     delivery_stream_name="tester-partitioning-delimiter",
+ *     delivery_stream_type="DirectPut",
+ *     extended_s3_destination_configuration=aws_native.kinesisfirehose.DeliveryStreamExtendedS3DestinationConfigurationArgs(
+ *         bucket_arn="arn:aws:s3:::dp-firehose-test",
+ *         buffering_hints=aws_native.kinesisfirehose.DeliveryStreamBufferingHintsArgs(
+ *             size_in_mbs=128,
+ *             interval_in_seconds=900,
+ *         ),
+ *         compression_format="UNCOMPRESSED",
+ *         error_output_prefix="table/error/!{firehose:error-output-type}/dt=!{timestamp:yyyy'-'MM'-'dd}/h=!{timestamp:HH}/",
+ *         prefix="YYYY=!{partitionKeyFromQuery:YYYY}/MM=!{partitionKeyFromQuery:MM}//DD=!{partitionKeyFromQuery:DD}/HH=!{partitionKeyFromQuery:HH}/REGION=!{partitionKeyFromQuery:REGION}/SITEID=!{partitionKeyFromQuery:SITEID}/",
+ *         role_arn="arn:aws:iam::012345678912:role/service-role/KinesisFirehoseServiceRole-dp-kinesis-f-us-east-1-012345678912",
+ *         dynamic_partitioning_configuration=aws_native.kinesisfirehose.DeliveryStreamDynamicPartitioningConfigurationArgs(
+ *             enabled=True,
+ *             retry_options=aws_native.kinesisfirehose.DeliveryStreamRetryOptionsArgs(
+ *                 duration_in_seconds=300,
+ *             ),
+ *         ),
+ *         processing_configuration=aws_native.kinesisfirehose.DeliveryStreamProcessingConfigurationArgs(
+ *             enabled=True,
+ *             processors=[
+ *                 aws_native.kinesisfirehose.DeliveryStreamProcessorArgs(
+ *                     type="MetadataExtraction",
+ *                     parameters=[
+ *                         aws_native.kinesisfirehose.DeliveryStreamProcessorParameterArgs(
+ *                             parameter_name="MetadataExtractionQuery",
+ *                             parameter_value="{YYYY : (.ts/1000) | strftime(\"%Y\"), MM : (.ts/1000) | strftime(\"%m\"), DD : (.ts/1000) | strftime(\"%d\"), HH: (.ts/1000) | strftime(\"%H\")}",
+ *                         ),
+ *                         aws_native.kinesisfirehose.DeliveryStreamProcessorParameterArgs(
+ *                             parameter_name="JsonParsingEngine",
+ *                             parameter_value="JQ-1.6",
+ *                         ),
+ *                     ],
+ *                 ),
+ *                 aws_native.kinesisfirehose.DeliveryStreamProcessorArgs(
+ *                     type="AppendDelimiterToRecord",
+ *                     parameters=[aws_native.kinesisfirehose.DeliveryStreamProcessorParameterArgs(
+ *                         parameter_name="Delimiter",
+ *                         parameter_value="\\n",
+ *                     )],
+ *                 ),
+ *             ],
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var firehose = new AwsNative.KinesisFirehose.DeliveryStream("firehose", new AwsNative.KinesisFirehose.DeliveryStreamArgs
+ *         {
+ *             DeliveryStreamName = "tester-partitioning-delimiter",
+ *             DeliveryStreamType = "DirectPut",
+ *             ExtendedS3DestinationConfiguration = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamExtendedS3DestinationConfigurationArgs
+ *             {
+ *                 BucketARN = "arn:aws:s3:::dp-firehose-test",
+ *                 BufferingHints = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamBufferingHintsArgs
+ *                 {
+ *                     SizeInMBs = 128,
+ *                     IntervalInSeconds = 900,
+ *                 },
+ *                 CompressionFormat = "UNCOMPRESSED",
+ *                 ErrorOutputPrefix = "table/error/!{firehose:error-output-type}/dt=!{timestamp:yyyy'-'MM'-'dd}/h=!{timestamp:HH}/",
+ *                 Prefix = "YYYY=!{partitionKeyFromQuery:YYYY}/MM=!{partitionKeyFromQuery:MM}//DD=!{partitionKeyFromQuery:DD}/HH=!{partitionKeyFromQuery:HH}/REGION=!{partitionKeyFromQuery:REGION}/SITEID=!{partitionKeyFromQuery:SITEID}/",
+ *                 RoleARN = "arn:aws:iam::012345678912:role/service-role/KinesisFirehoseServiceRole-dp-kinesis-f-us-east-1-012345678912",
+ *                 DynamicPartitioningConfiguration = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamDynamicPartitioningConfigurationArgs
+ *                 {
+ *                     Enabled = true,
+ *                     RetryOptions = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamRetryOptionsArgs
+ *                     {
+ *                         DurationInSeconds = 300,
+ *                     },
+ *                 },
+ *                 ProcessingConfiguration = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessingConfigurationArgs
+ *                 {
+ *                     Enabled = true,
+ *                     Processors = 
+ *                     {
+ *                         new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessorArgs
+ *                         {
+ *                             Type = "MetadataExtraction",
+ *                             Parameters = 
+ *                             {
+ *                                 new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessorParameterArgs
+ *                                 {
+ *                                     ParameterName = "MetadataExtractionQuery",
+ *                                     ParameterValue = "{YYYY : (.ts/1000) | strftime(\"%Y\"), MM : (.ts/1000) | strftime(\"%m\"), DD : (.ts/1000) | strftime(\"%d\"), HH: (.ts/1000) | strftime(\"%H\")}",
+ *                                 },
+ *                                 new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessorParameterArgs
+ *                                 {
+ *                                     ParameterName = "JsonParsingEngine",
+ *                                     ParameterValue = "JQ-1.6",
+ *                                 },
+ *                             },
+ *                         },
+ *                         new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessorArgs
+ *                         {
+ *                             Type = "AppendDelimiterToRecord",
+ *                             Parameters = 
+ *                             {
+ *                                 new AwsNative.KinesisFirehose.Inputs.DeliveryStreamProcessorParameterArgs
+ *                                 {
+ *                                     ParameterName = "Delimiter",
+ *                                     ParameterValue = "\\n",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/kinesisfirehose"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kinesisfirehose.NewDeliveryStream(ctx, "firehose", &kinesisfirehose.DeliveryStreamArgs{
+ * 			DeliveryStreamName: pulumi.String("tester-partitioning-delimiter"),
+ * 			DeliveryStreamType: "DirectPut",
+ * 			ExtendedS3DestinationConfiguration: &kinesisfirehose.DeliveryStreamExtendedS3DestinationConfigurationArgs{
+ * 				BucketARN: pulumi.String("arn:aws:s3:::dp-firehose-test"),
+ * 				BufferingHints: &kinesisfirehose.DeliveryStreamBufferingHintsArgs{
+ * 					SizeInMBs:         pulumi.Int(128),
+ * 					IntervalInSeconds: pulumi.Int(900),
+ * 				},
+ * 				CompressionFormat: "UNCOMPRESSED",
+ * 				ErrorOutputPrefix: pulumi.String("table/error/!{firehose:error-output-type}/dt=!{timestamp:yyyy'-'MM'-'dd}/h=!{timestamp:HH}/"),
+ * 				Prefix:            pulumi.String("YYYY=!{partitionKeyFromQuery:YYYY}/MM=!{partitionKeyFromQuery:MM}//DD=!{partitionKeyFromQuery:DD}/HH=!{partitionKeyFromQuery:HH}/REGION=!{partitionKeyFromQuery:REGION}/SITEID=!{partitionKeyFromQuery:SITEID}/"),
+ * 				RoleARN:           pulumi.String("arn:aws:iam::012345678912:role/service-role/KinesisFirehoseServiceRole-dp-kinesis-f-us-east-1-012345678912"),
+ * 				DynamicPartitioningConfiguration: &kinesisfirehose.DeliveryStreamDynamicPartitioningConfigurationArgs{
+ * 					Enabled: pulumi.Bool(true),
+ * 					RetryOptions: &kinesisfirehose.DeliveryStreamRetryOptionsArgs{
+ * 						DurationInSeconds: pulumi.Int(300),
+ * 					},
+ * 				},
+ * 				ProcessingConfiguration: &kinesisfirehose.DeliveryStreamProcessingConfigurationArgs{
+ * 					Enabled: pulumi.Bool(true),
+ * 					Processors: kinesisfirehose.DeliveryStreamProcessorArray{
+ * 						&kinesisfirehose.DeliveryStreamProcessorArgs{
+ * 							Type: "MetadataExtraction",
+ * 							Parameters: kinesisfirehose.DeliveryStreamProcessorParameterArray{
+ * 								&kinesisfirehose.DeliveryStreamProcessorParameterArgs{
+ * 									ParameterName:  pulumi.String("MetadataExtractionQuery"),
+ * 									ParameterValue: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v", "{YYYY : (.ts/1000) | strftime(\"", "%", "Y\"), MM : (.ts/1000) | strftime(\"", "%", "m\"), DD : (.ts/1000) | strftime(\"", "%", "d\"), HH: (.ts/1000) | strftime(\"", "%", "H\")}")),
+ * 								},
+ * 								&kinesisfirehose.DeliveryStreamProcessorParameterArgs{
+ * 									ParameterName:  pulumi.String("JsonParsingEngine"),
+ * 									ParameterValue: pulumi.String("JQ-1.6"),
+ * 								},
+ * 							},
+ * 						},
+ * 						&kinesisfirehose.DeliveryStreamProcessorArgs{
+ * 							Type: "AppendDelimiterToRecord",
+ * 							Parameters: kinesisfirehose.DeliveryStreamProcessorParameterArray{
+ * 								&kinesisfirehose.DeliveryStreamProcessorParameterArgs{
+ * 									ParameterName:  pulumi.String("Delimiter"),
+ * 									ParameterValue: pulumi.String("\\n"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const firehose = new aws_native.kinesisfirehose.DeliveryStream("firehose", {
+ *     deliveryStreamName: "tester-partitioning-delimiter",
+ *     deliveryStreamType: "DirectPut",
+ *     extendedS3DestinationConfiguration: {
+ *         bucketARN: "arn:aws:s3:::dp-firehose-test",
+ *         bufferingHints: {
+ *             sizeInMBs: 128,
+ *             intervalInSeconds: 900,
+ *         },
+ *         compressionFormat: "UNCOMPRESSED",
+ *         errorOutputPrefix: "table/error/!{firehose:error-output-type}/dt=!{timestamp:yyyy'-'MM'-'dd}/h=!{timestamp:HH}/",
+ *         prefix: "YYYY=!{partitionKeyFromQuery:YYYY}/MM=!{partitionKeyFromQuery:MM}//DD=!{partitionKeyFromQuery:DD}/HH=!{partitionKeyFromQuery:HH}/REGION=!{partitionKeyFromQuery:REGION}/SITEID=!{partitionKeyFromQuery:SITEID}/",
+ *         roleARN: "arn:aws:iam::012345678912:role/service-role/KinesisFirehoseServiceRole-dp-kinesis-f-us-east-1-012345678912",
+ *         dynamicPartitioningConfiguration: {
+ *             enabled: true,
+ *             retryOptions: {
+ *                 durationInSeconds: 300,
+ *             },
+ *         },
+ *         processingConfiguration: {
+ *             enabled: true,
+ *             processors: [
+ *                 {
+ *                     type: "MetadataExtraction",
+ *                     parameters: [
+ *                         {
+ *                             parameterName: "MetadataExtractionQuery",
+ *                             parameterValue: `{YYYY : (.ts/1000) | strftime("%Y"), MM : (.ts/1000) | strftime("%m"), DD : (.ts/1000) | strftime("%d"), HH: (.ts/1000) | strftime("%H")}`,
+ *                         },
+ *                         {
+ *                             parameterName: "JsonParsingEngine",
+ *                             parameterValue: "JQ-1.6",
+ *                         },
+ *                     ],
+ *                 },
+ *                 {
+ *                     type: "AppendDelimiterToRecord",
+ *                     parameters: [{
+ *                         parameterName: "Delimiter",
+ *                         parameterValue: "\\n",
+ *                     }],
+ *                 },
+ *             ],
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * firehose = aws_native.kinesisfirehose.DeliveryStream("firehose",
+ *     delivery_stream_name="tester-partitioning-delimiter",
+ *     delivery_stream_type="DirectPut",
+ *     extended_s3_destination_configuration=aws_native.kinesisfirehose.DeliveryStreamExtendedS3DestinationConfigurationArgs(
+ *         bucket_arn="arn:aws:s3:::dp-firehose-test",
+ *         buffering_hints=aws_native.kinesisfirehose.DeliveryStreamBufferingHintsArgs(
+ *             size_in_mbs=128,
+ *             interval_in_seconds=900,
+ *         ),
+ *         compression_format="UNCOMPRESSED",
+ *         error_output_prefix="table/error/!{firehose:error-output-type}/dt=!{timestamp:yyyy'-'MM'-'dd}/h=!{timestamp:HH}/",
+ *         prefix="YYYY=!{partitionKeyFromQuery:YYYY}/MM=!{partitionKeyFromQuery:MM}//DD=!{partitionKeyFromQuery:DD}/HH=!{partitionKeyFromQuery:HH}/REGION=!{partitionKeyFromQuery:REGION}/SITEID=!{partitionKeyFromQuery:SITEID}/",
+ *         role_arn="arn:aws:iam::012345678912:role/service-role/KinesisFirehoseServiceRole-dp-kinesis-f-us-east-1-012345678912",
+ *         dynamic_partitioning_configuration=aws_native.kinesisfirehose.DeliveryStreamDynamicPartitioningConfigurationArgs(
+ *             enabled=True,
+ *             retry_options=aws_native.kinesisfirehose.DeliveryStreamRetryOptionsArgs(
+ *                 duration_in_seconds=300,
+ *             ),
+ *         ),
+ *         processing_configuration=aws_native.kinesisfirehose.DeliveryStreamProcessingConfigurationArgs(
+ *             enabled=True,
+ *             processors=[
+ *                 aws_native.kinesisfirehose.DeliveryStreamProcessorArgs(
+ *                     type="MetadataExtraction",
+ *                     parameters=[
+ *                         aws_native.kinesisfirehose.DeliveryStreamProcessorParameterArgs(
+ *                             parameter_name="MetadataExtractionQuery",
+ *                             parameter_value="{YYYY : (.ts/1000) | strftime(\"%Y\"), MM : (.ts/1000) | strftime(\"%m\"), DD : (.ts/1000) | strftime(\"%d\"), HH: (.ts/1000) | strftime(\"%H\")}",
+ *                         ),
+ *                         aws_native.kinesisfirehose.DeliveryStreamProcessorParameterArgs(
+ *                             parameter_name="JsonParsingEngine",
+ *                             parameter_value="JQ-1.6",
+ *                         ),
+ *                     ],
+ *                 ),
+ *                 aws_native.kinesisfirehose.DeliveryStreamProcessorArgs(
+ *                     type="AppendDelimiterToRecord",
+ *                     parameters=[aws_native.kinesisfirehose.DeliveryStreamProcessorParameterArgs(
+ *                         parameter_name="Delimiter",
+ *                         parameter_value="\\n",
+ *                     )],
+ *                 ),
+ *             ],
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var deliveryRoleArn = config.Require("deliveryRoleArn");
+ *         var deliveryStreamName = config.Require("deliveryStreamName");
+ *         var kinesisStreamARN = config.Require("kinesisStreamARN");
+ *         var kinesisStreamRoleArn = config.Require("kinesisStreamRoleArn");
+ *         var s3bucketArn = config.Require("s3bucketArn");
+ *         var deliverystream = new AwsNative.KinesisFirehose.DeliveryStream("deliverystream", new AwsNative.KinesisFirehose.DeliveryStreamArgs
+ *         {
+ *             DeliveryStreamName = deliveryStreamName,
+ *             DeliveryStreamType = "KinesisStreamAsSource",
+ *             KinesisStreamSourceConfiguration = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamKinesisStreamSourceConfigurationArgs
+ *             {
+ *                 KinesisStreamARN = kinesisStreamARN,
+ *                 RoleARN = kinesisStreamRoleArn,
+ *             },
+ *             ExtendedS3DestinationConfiguration = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamExtendedS3DestinationConfigurationArgs
+ *             {
+ *                 BucketARN = s3bucketArn,
+ *                 BufferingHints = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamBufferingHintsArgs
+ *                 {
+ *                     IntervalInSeconds = 60,
+ *                     SizeInMBs = 50,
+ *                 },
+ *                 CompressionFormat = "UNCOMPRESSED",
+ *                 Prefix = "firehose/",
+ *                 RoleARN = deliveryRoleArn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/kinesisfirehose"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		deliveryRoleArn := cfg.Require("deliveryRoleArn")
+ * 		deliveryStreamName := cfg.Require("deliveryStreamName")
+ * 		kinesisStreamARN := cfg.Require("kinesisStreamARN")
+ * 		kinesisStreamRoleArn := cfg.Require("kinesisStreamRoleArn")
+ * 		s3bucketArn := cfg.Require("s3bucketArn")
+ * 		_, err := kinesisfirehose.NewDeliveryStream(ctx, "deliverystream", &kinesisfirehose.DeliveryStreamArgs{
+ * 			DeliveryStreamName: pulumi.String(deliveryStreamName),
+ * 			DeliveryStreamType: "KinesisStreamAsSource",
+ * 			KinesisStreamSourceConfiguration: &kinesisfirehose.DeliveryStreamKinesisStreamSourceConfigurationArgs{
+ * 				KinesisStreamARN: pulumi.String(kinesisStreamARN),
+ * 				RoleARN:          pulumi.String(kinesisStreamRoleArn),
+ * 			},
+ * 			ExtendedS3DestinationConfiguration: &kinesisfirehose.DeliveryStreamExtendedS3DestinationConfigurationArgs{
+ * 				BucketARN: pulumi.String(s3bucketArn),
+ * 				BufferingHints: &kinesisfirehose.DeliveryStreamBufferingHintsArgs{
+ * 					IntervalInSeconds: pulumi.Int(60),
+ * 					SizeInMBs:         pulumi.Int(50),
+ * 				},
+ * 				CompressionFormat: "UNCOMPRESSED",
+ * 				Prefix:            pulumi.String("firehose/"),
+ * 				RoleARN:           pulumi.String(deliveryRoleArn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const deliveryRoleArn = config.require("deliveryRoleArn");
+ * const deliveryStreamName = config.require("deliveryStreamName");
+ * const kinesisStreamARN = config.require("kinesisStreamARN");
+ * const kinesisStreamRoleArn = config.require("kinesisStreamRoleArn");
+ * const s3bucketArn = config.require("s3bucketArn");
+ * const deliverystream = new aws_native.kinesisfirehose.DeliveryStream("deliverystream", {
+ *     deliveryStreamName: deliveryStreamName,
+ *     deliveryStreamType: "KinesisStreamAsSource",
+ *     kinesisStreamSourceConfiguration: {
+ *         kinesisStreamARN: kinesisStreamARN,
+ *         roleARN: kinesisStreamRoleArn,
+ *     },
+ *     extendedS3DestinationConfiguration: {
+ *         bucketARN: s3bucketArn,
+ *         bufferingHints: {
+ *             intervalInSeconds: 60,
+ *             sizeInMBs: 50,
+ *         },
+ *         compressionFormat: "UNCOMPRESSED",
+ *         prefix: "firehose/",
+ *         roleARN: deliveryRoleArn,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * delivery_role_arn = config.require("deliveryRoleArn")
+ * delivery_stream_name = config.require("deliveryStreamName")
+ * kinesis_stream_arn = config.require("kinesisStreamARN")
+ * kinesis_stream_role_arn = config.require("kinesisStreamRoleArn")
+ * s3bucket_arn = config.require("s3bucketArn")
+ * deliverystream = aws_native.kinesisfirehose.DeliveryStream("deliverystream",
+ *     delivery_stream_name=delivery_stream_name,
+ *     delivery_stream_type="KinesisStreamAsSource",
+ *     kinesis_stream_source_configuration=aws_native.kinesisfirehose.DeliveryStreamKinesisStreamSourceConfigurationArgs(
+ *         kinesis_stream_arn=kinesis_stream_arn,
+ *         role_arn=kinesis_stream_role_arn,
+ *     ),
+ *     extended_s3_destination_configuration=aws_native.kinesisfirehose.DeliveryStreamExtendedS3DestinationConfigurationArgs(
+ *         bucket_arn=s3bucket_arn,
+ *         buffering_hints=aws_native.kinesisfirehose.DeliveryStreamBufferingHintsArgs(
+ *             interval_in_seconds=60,
+ *             size_in_mbs=50,
+ *         ),
+ *         compression_format="UNCOMPRESSED",
+ *         prefix="firehose/",
+ *         role_arn=delivery_role_arn,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var deliveryRoleArn = config.Require("deliveryRoleArn");
+ *         var deliveryStreamName = config.Require("deliveryStreamName");
+ *         var kinesisStreamARN = config.Require("kinesisStreamARN");
+ *         var kinesisStreamRoleArn = config.Require("kinesisStreamRoleArn");
+ *         var s3bucketArn = config.Require("s3bucketArn");
+ *         var deliverystream = new AwsNative.KinesisFirehose.DeliveryStream("deliverystream", new AwsNative.KinesisFirehose.DeliveryStreamArgs
+ *         {
+ *             DeliveryStreamName = deliveryStreamName,
+ *             DeliveryStreamType = "KinesisStreamAsSource",
+ *             KinesisStreamSourceConfiguration = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamKinesisStreamSourceConfigurationArgs
+ *             {
+ *                 KinesisStreamARN = kinesisStreamARN,
+ *                 RoleARN = kinesisStreamRoleArn,
+ *             },
+ *             ExtendedS3DestinationConfiguration = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamExtendedS3DestinationConfigurationArgs
+ *             {
+ *                 BucketARN = s3bucketArn,
+ *                 BufferingHints = new AwsNative.KinesisFirehose.Inputs.DeliveryStreamBufferingHintsArgs
+ *                 {
+ *                     IntervalInSeconds = 60,
+ *                     SizeInMBs = 50,
+ *                 },
+ *                 CompressionFormat = "UNCOMPRESSED",
+ *                 Prefix = "firehose/",
+ *                 RoleARN = deliveryRoleArn,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/kinesisfirehose"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		deliveryRoleArn := cfg.Require("deliveryRoleArn")
+ * 		deliveryStreamName := cfg.Require("deliveryStreamName")
+ * 		kinesisStreamARN := cfg.Require("kinesisStreamARN")
+ * 		kinesisStreamRoleArn := cfg.Require("kinesisStreamRoleArn")
+ * 		s3bucketArn := cfg.Require("s3bucketArn")
+ * 		_, err := kinesisfirehose.NewDeliveryStream(ctx, "deliverystream", &kinesisfirehose.DeliveryStreamArgs{
+ * 			DeliveryStreamName: pulumi.String(deliveryStreamName),
+ * 			DeliveryStreamType: "KinesisStreamAsSource",
+ * 			KinesisStreamSourceConfiguration: &kinesisfirehose.DeliveryStreamKinesisStreamSourceConfigurationArgs{
+ * 				KinesisStreamARN: pulumi.String(kinesisStreamARN),
+ * 				RoleARN:          pulumi.String(kinesisStreamRoleArn),
+ * 			},
+ * 			ExtendedS3DestinationConfiguration: &kinesisfirehose.DeliveryStreamExtendedS3DestinationConfigurationArgs{
+ * 				BucketARN: pulumi.String(s3bucketArn),
+ * 				BufferingHints: &kinesisfirehose.DeliveryStreamBufferingHintsArgs{
+ * 					IntervalInSeconds: pulumi.Int(60),
+ * 					SizeInMBs:         pulumi.Int(50),
+ * 				},
+ * 				CompressionFormat: "UNCOMPRESSED",
+ * 				Prefix:            pulumi.String("firehose/"),
+ * 				RoleARN:           pulumi.String(deliveryRoleArn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const deliveryRoleArn = config.require("deliveryRoleArn");
+ * const deliveryStreamName = config.require("deliveryStreamName");
+ * const kinesisStreamARN = config.require("kinesisStreamARN");
+ * const kinesisStreamRoleArn = config.require("kinesisStreamRoleArn");
+ * const s3bucketArn = config.require("s3bucketArn");
+ * const deliverystream = new aws_native.kinesisfirehose.DeliveryStream("deliverystream", {
+ *     deliveryStreamName: deliveryStreamName,
+ *     deliveryStreamType: "KinesisStreamAsSource",
+ *     kinesisStreamSourceConfiguration: {
+ *         kinesisStreamARN: kinesisStreamARN,
+ *         roleARN: kinesisStreamRoleArn,
+ *     },
+ *     extendedS3DestinationConfiguration: {
+ *         bucketARN: s3bucketArn,
+ *         bufferingHints: {
+ *             intervalInSeconds: 60,
+ *             sizeInMBs: 50,
+ *         },
+ *         compressionFormat: "UNCOMPRESSED",
+ *         prefix: "firehose/",
+ *         roleARN: deliveryRoleArn,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * delivery_role_arn = config.require("deliveryRoleArn")
+ * delivery_stream_name = config.require("deliveryStreamName")
+ * kinesis_stream_arn = config.require("kinesisStreamARN")
+ * kinesis_stream_role_arn = config.require("kinesisStreamRoleArn")
+ * s3bucket_arn = config.require("s3bucketArn")
+ * deliverystream = aws_native.kinesisfirehose.DeliveryStream("deliverystream",
+ *     delivery_stream_name=delivery_stream_name,
+ *     delivery_stream_type="KinesisStreamAsSource",
+ *     kinesis_stream_source_configuration=aws_native.kinesisfirehose.DeliveryStreamKinesisStreamSourceConfigurationArgs(
+ *         kinesis_stream_arn=kinesis_stream_arn,
+ *         role_arn=kinesis_stream_role_arn,
+ *     ),
+ *     extended_s3_destination_configuration=aws_native.kinesisfirehose.DeliveryStreamExtendedS3DestinationConfigurationArgs(
+ *         bucket_arn=s3bucket_arn,
+ *         buffering_hints=aws_native.kinesisfirehose.DeliveryStreamBufferingHintsArgs(
+ *             interval_in_seconds=60,
+ *             size_in_mbs=50,
+ *         ),
+ *         compression_format="UNCOMPRESSED",
+ *         prefix="firehose/",
+ *         role_arn=delivery_role_arn,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:kinesisfirehose:DeliveryStream")

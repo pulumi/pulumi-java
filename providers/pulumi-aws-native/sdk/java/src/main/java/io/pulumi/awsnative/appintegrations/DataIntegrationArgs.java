@@ -19,7 +19,6 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The data integration description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The KMS key of the data integration.
-     * 
      */
     @Import(name="kmsKey", required=true)
       private final Output<String> kmsKey;
@@ -41,7 +39,6 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the data integration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +49,6 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the data and how often it should be pulled from the source.
-     * 
      */
     @Import(name="scheduleConfig", required=true)
       private final Output<DataIntegrationScheduleConfigArgs> scheduleConfig;
@@ -63,7 +59,6 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The URI of the data source.
-     * 
      */
     @Import(name="sourceURI", required=true)
       private final Output<String> sourceURI;
@@ -74,7 +69,6 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The tags (keys and values) associated with the data integration.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<DataIntegrationTagArgs>> tags;

@@ -9,8 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The status of the specified assessment.
-     * 
+     * The status of the specified assessment. 
      */
     @EnumType
     public enum AssessmentStatus {

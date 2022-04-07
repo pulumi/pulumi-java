@@ -16,7 +16,6 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
 
     /**
      * The status code.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -27,7 +26,6 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
 
     /**
      * The status message, if applicable.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a resize cluster operation. For example, a scheduled action to run the `ResizeCluster` API operation.
- * 
  */
 public final class ScheduledActionResizeClusterMessageArgs extends io.pulumi.resources.ResourceArgs {
 

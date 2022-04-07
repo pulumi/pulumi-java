@@ -15,7 +15,6 @@ public final class RegistryTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A key to identify the tag.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -26,7 +25,6 @@ public final class RegistryTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Corresponding tag value for the key.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

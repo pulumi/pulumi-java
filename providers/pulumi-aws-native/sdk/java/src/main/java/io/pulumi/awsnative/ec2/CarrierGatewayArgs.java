@@ -18,7 +18,6 @@ public final class CarrierGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags for the carrier gateway.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<CarrierGatewayTagArgs>> tags;
@@ -29,7 +28,6 @@ public final class CarrierGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the VPC.
-     * 
      */
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;

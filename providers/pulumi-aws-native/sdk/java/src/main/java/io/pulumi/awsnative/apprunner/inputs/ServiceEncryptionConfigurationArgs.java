@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Encryption configuration (KMS key)
- * 
  */
 public final class ServiceEncryptionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ServiceEncryptionConfigurationArgs extends io.pulumi.resource
 
     /**
      * The KMS Key
-     * 
      */
     @Import(name="kmsKey", required=true)
       private final Output<String> kmsKey;

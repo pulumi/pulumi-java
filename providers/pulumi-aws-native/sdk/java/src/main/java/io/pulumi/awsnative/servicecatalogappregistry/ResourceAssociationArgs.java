@@ -16,7 +16,6 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name or the Id of the Application.
-     * 
      */
     @Import(name="application", required=true)
       private final Output<String> application;
@@ -27,7 +26,6 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name or the Id of the Resource.
-     * 
      */
     @Import(name="resource", required=true)
       private final Output<String> resource;
@@ -38,7 +36,6 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The type of the CFN Resource for now it's enum CFN_STACK.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<ResourceAssociationResourceType> resourceType;

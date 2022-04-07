@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of source access configuration.
-     * 
      */
     @EnumType
     public enum EventSourceMappingSourceAccessConfigurationType {

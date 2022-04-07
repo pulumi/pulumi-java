@@ -20,7 +20,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name for the database which the table to be created belongs to.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -31,7 +30,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties that determine whether magnetic store writes are enabled.
-     * 
      */
     @Import(name="magneticStoreWriteProperties")
       private final @Nullable Output<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties;
@@ -42,7 +40,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The retention duration of the memory store and the magnetic store.
-     * 
      */
     @Import(name="retentionProperties")
       private final @Nullable Output<RetentionPropertiesPropertiesArgs> retentionProperties;
@@ -53,7 +50,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name for the table. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
-     * 
      */
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
@@ -64,7 +60,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<TableTagArgs>> tags;

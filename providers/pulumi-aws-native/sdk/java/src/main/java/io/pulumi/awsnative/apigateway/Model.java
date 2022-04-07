@@ -14,76 +14,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::ApiGateway::Model
- * 
  */
 @ResourceType(type="aws-native:apigateway:Model")
 public class Model extends io.pulumi.resources.CustomResource {
     /**
      * The content type for the model.
-     * 
      */
     @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
     /**
      * @return The content type for the model.
-     * 
      */
     public Output</* @Nullable */ String> getContentType() {
         return this.contentType;
     }
     /**
      * A description that identifies this model.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description that identifies this model.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The ID of a REST API with which to associate this model.
-     * 
      */
     @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
      * @return The ID of a REST API with which to associate this model.
-     * 
      */
     public Output<String> getRestApiId() {
         return this.restApiId;
     }
     /**
      * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
-     * 
      */
     @Export(name="schema", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> schema;
 
     /**
      * @return The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
-     * 
      */
     public Output</* @Nullable */ Object> getSchema() {
         return this.schema;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Authentication Configuration
- * 
  */
 public final class ServiceAuthenticationConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ServiceAuthenticationConfiguration extends io.pulumi.resource
 
     /**
      * Access Role Arn
-     * 
      */
     @Import(name="accessRoleArn")
       private final @Nullable String accessRoleArn;
@@ -31,7 +29,6 @@ public final class ServiceAuthenticationConfiguration extends io.pulumi.resource
 
     /**
      * Connection Arn
-     * 
      */
     @Import(name="connectionArn")
       private final @Nullable String connectionArn;

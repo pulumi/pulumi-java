@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BotVoiceSettings {
     /**
      * The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
-     * 
      */
     private final String voiceId;
 
@@ -22,7 +21,6 @@ public final class BotVoiceSettings {
 
     /**
      * The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
-     * 
     */
     public String getVoiceId() {
         return this.voiceId;

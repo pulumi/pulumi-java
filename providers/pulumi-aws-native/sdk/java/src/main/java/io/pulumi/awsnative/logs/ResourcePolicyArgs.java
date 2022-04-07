@@ -15,7 +15,6 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The policy document
-     * 
      */
     @Import(name="policyDocument", required=true)
       private final Output<String> policyDocument;
@@ -26,7 +25,6 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name for resource policy
-     * 
      */
     @Import(name="policyName", required=true)
       private final Output<String> policyName;

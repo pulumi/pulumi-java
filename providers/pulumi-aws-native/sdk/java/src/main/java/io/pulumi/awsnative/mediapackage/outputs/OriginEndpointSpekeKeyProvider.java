@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class OriginEndpointSpekeKeyProvider {
     /**
      * An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
-     * 
      */
     private final @Nullable String certificateArn;
     /**
      * The resource ID to include in key requests.
-     * 
      */
     private final String resourceId;
     /**
      * An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
-     * 
      */
     private final String roleArn;
     /**
      * The system IDs to include in key requests.
-     * 
      */
     private final List<String> systemIds;
     /**
      * The URL of the external key provider service.
-     * 
      */
     private final String url;
 
@@ -54,35 +49,30 @@ public final class OriginEndpointSpekeKeyProvider {
 
     /**
      * An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
-     * 
     */
     public Optional<String> getCertificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
     /**
      * The resource ID to include in key requests.
-     * 
     */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
-     * 
     */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The system IDs to include in key requests.
-     * 
     */
     public List<String> getSystemIds() {
         return this.systemIds;
     }
     /**
      * The URL of the external key provider service.
-     * 
     */
     public String getUrl() {
         return this.url;

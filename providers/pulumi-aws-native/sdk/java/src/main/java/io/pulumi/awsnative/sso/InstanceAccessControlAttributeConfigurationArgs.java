@@ -26,7 +26,6 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
 
     /**
      * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
-     * 
      */
     @Import(name="instanceAccessControlAttributeConfiguration")
       private final @Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
@@ -37,7 +36,6 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
 
     /**
      * The ARN of the AWS SSO instance under which the operation will be executed.
-     * 
      */
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;

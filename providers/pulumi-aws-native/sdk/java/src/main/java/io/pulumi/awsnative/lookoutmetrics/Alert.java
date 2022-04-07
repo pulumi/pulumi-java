@@ -15,90 +15,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::LookoutMetrics::Alert
- * 
  */
 @ResourceType(type="aws-native:lookoutmetrics:Alert")
 public class Alert extends io.pulumi.resources.CustomResource {
     /**
      * The action to be taken by the alert when an anomaly is detected.
-     * 
      */
     @Export(name="action", type=AlertAction.class, parameters={})
     private Output<AlertAction> action;
 
     /**
      * @return The action to be taken by the alert when an anomaly is detected.
-     * 
      */
     public Output<AlertAction> getAction() {
         return this.action;
     }
     /**
      * A description for the alert.
-     * 
      */
     @Export(name="alertDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertDescription;
 
     /**
      * @return A description for the alert.
-     * 
      */
     public Output</* @Nullable */ String> getAlertDescription() {
         return this.alertDescription;
     }
     /**
      * The name of the alert. If not provided, a name is generated automatically.
-     * 
      */
     @Export(name="alertName", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertName;
 
     /**
      * @return The name of the alert. If not provided, a name is generated automatically.
-     * 
      */
     public Output</* @Nullable */ String> getAlertName() {
         return this.alertName;
     }
     /**
      * A number between 0 and 100 (inclusive) that tunes the sensitivity of the alert.
-     * 
      */
     @Export(name="alertSensitivityThreshold", type=Integer.class, parameters={})
     private Output<Integer> alertSensitivityThreshold;
 
     /**
      * @return A number between 0 and 100 (inclusive) that tunes the sensitivity of the alert.
-     * 
      */
     public Output<Integer> getAlertSensitivityThreshold() {
         return this.alertSensitivityThreshold;
     }
     /**
      * The Amazon resource name (ARN) of the Anomaly Detector to alert.
-     * 
      */
     @Export(name="anomalyDetectorArn", type=String.class, parameters={})
     private Output<String> anomalyDetectorArn;
 
     /**
      * @return The Amazon resource name (ARN) of the Anomaly Detector to alert.
-     * 
      */
     public Output<String> getAnomalyDetectorArn() {
         return this.anomalyDetectorArn;
     }
     /**
      * ARN assigned to the alert.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return ARN assigned to the alert.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;

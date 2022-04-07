@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The name of the robot software suite.
-     * 
      */
     @EnumType
     public enum SimulationApplicationRobotSoftwareSuiteName {

@@ -19,7 +19,6 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The description of the distribution configuration.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The distributions of the distribution configuration.
-     * 
      */
     @Import(name="distributions", required=true)
       private final Output<List<DistributionConfigurationDistributionArgs>> distributions;
@@ -41,7 +39,6 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the distribution configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +49,6 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The tags associated with the component.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Object> tags;

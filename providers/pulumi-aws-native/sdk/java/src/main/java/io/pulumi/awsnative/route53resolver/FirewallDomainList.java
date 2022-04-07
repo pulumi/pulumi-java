@@ -17,76 +17,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::Route53Resolver::FirewallDomainList.
- * 
  */
 @ResourceType(type="aws-native:route53resolver:FirewallDomainList")
 public class FirewallDomainList extends io.pulumi.resources.CustomResource {
     /**
      * Arn
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Arn
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Rfc3339TimeString
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return Rfc3339TimeString
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * The id of the creator request.
-     * 
      */
     @Export(name="creatorRequestId", type=String.class, parameters={})
     private Output<String> creatorRequestId;
 
     /**
      * @return The id of the creator request.
-     * 
      */
     public Output<String> getCreatorRequestId() {
         return this.creatorRequestId;
     }
     /**
      * Count
-     * 
      */
     @Export(name="domainCount", type=Integer.class, parameters={})
     private Output<Integer> domainCount;
 
     /**
      * @return Count
-     * 
      */
     public Output<Integer> getDomainCount() {
         return this.domainCount;
     }
     /**
      * S3 URL to import domains from.
-     * 
      */
     @Export(name="domainFileUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainFileUrl;
 
     /**
      * @return S3 URL to import domains from.
-     * 
      */
     public Output</* @Nullable */ String> getDomainFileUrl() {
         return this.domainFileUrl;
@@ -99,84 +88,72 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
     }
     /**
      * ServicePrincipal
-     * 
      */
     @Export(name="managedOwnerName", type=String.class, parameters={})
     private Output<String> managedOwnerName;
 
     /**
      * @return ServicePrincipal
-     * 
      */
     public Output<String> getManagedOwnerName() {
         return this.managedOwnerName;
     }
     /**
      * Rfc3339TimeString
-     * 
      */
     @Export(name="modificationTime", type=String.class, parameters={})
     private Output<String> modificationTime;
 
     /**
      * @return Rfc3339TimeString
-     * 
      */
     public Output<String> getModificationTime() {
         return this.modificationTime;
     }
     /**
      * FirewallDomainListName
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return FirewallDomainListName
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
-     * 
      */
     @Export(name="status", type=FirewallDomainListStatus.class, parameters={})
     private Output<FirewallDomainListStatus> status;
 
     /**
      * @return ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
-     * 
      */
     public Output<FirewallDomainListStatus> getStatus() {
         return this.status;
     }
     /**
      * FirewallDomainListAssociationStatus
-     * 
      */
     @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
      * @return FirewallDomainListAssociationStatus
-     * 
      */
     public Output<String> getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * Tags
-     * 
      */
     @Export(name="tags", type=List.class, parameters={FirewallDomainListTag.class})
     private Output</* @Nullable */ List<FirewallDomainListTag>> tags;
 
     /**
      * @return Tags
-     * 
      */
     public Output</* @Nullable */ List<FirewallDomainListTag>> getTags() {
         return this.tags;

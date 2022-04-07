@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a container deployment configuration of an Amazon Lightsail container service.
- * 
  */
 public final class ContainerServiceDeployment extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ContainerServiceDeployment extends io.pulumi.resources.Invoke
 
     /**
      * An object that describes the configuration for the containers of the deployment.
-     * 
      */
     @Import(name="containers")
       private final @Nullable List<Container> containers;
@@ -33,7 +31,6 @@ public final class ContainerServiceDeployment extends io.pulumi.resources.Invoke
 
     /**
      * An object that describes the endpoint of the deployment.
-     * 
      */
     @Import(name="publicEndpoint")
       private final @Nullable ContainerPublicEndpoint publicEndpoint;

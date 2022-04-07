@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class EnvironmentFederationParameters {
     /**
      * SAML metadata URL to link with the Environment
-     * 
      */
     private final @Nullable String applicationCallBackURL;
     /**
      * Attribute map for SAML configuration
-     * 
      */
     private final @Nullable Object attributeMap;
     /**
      * Federation provider name to link with the Environment
-     * 
      */
     private final @Nullable String federationProviderName;
     /**
      * SAML metadata URL to link with the Environment
-     * 
      */
     private final @Nullable String federationURN;
     /**
      * SAML metadata document to link the federation provider to the Environment
-     * 
      */
     private final @Nullable String samlMetadataDocument;
     /**
      * SAML metadata URL to link with the Environment
-     * 
      */
     private final @Nullable String samlMetadataURL;
 
@@ -61,42 +55,36 @@ public final class EnvironmentFederationParameters {
 
     /**
      * SAML metadata URL to link with the Environment
-     * 
     */
     public Optional<String> getApplicationCallBackURL() {
         return Optional.ofNullable(this.applicationCallBackURL);
     }
     /**
      * Attribute map for SAML configuration
-     * 
     */
     public Optional<Object> getAttributeMap() {
         return Optional.ofNullable(this.attributeMap);
     }
     /**
      * Federation provider name to link with the Environment
-     * 
     */
     public Optional<String> getFederationProviderName() {
         return Optional.ofNullable(this.federationProviderName);
     }
     /**
      * SAML metadata URL to link with the Environment
-     * 
     */
     public Optional<String> getFederationURN() {
         return Optional.ofNullable(this.federationURN);
     }
     /**
      * SAML metadata document to link the federation provider to the Environment
-     * 
     */
     public Optional<String> getSamlMetadataDocument() {
         return Optional.ofNullable(this.samlMetadataDocument);
     }
     /**
      * SAML metadata URL to link with the Environment
-     * 
     */
     public Optional<String> getSamlMetadataURL() {
         return Optional.ofNullable(this.samlMetadataURL);

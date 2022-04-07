@@ -16,76 +16,65 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::SSMContacts::Contact
- * 
  */
 @ResourceType(type="aws-native:ssmcontacts:Contact")
 public class Contact extends io.pulumi.resources.CustomResource {
     /**
      * Alias of the contact. String value with 20 to 256 characters. Only alphabetical, numeric characters, dash, or underscore allowed.
-     * 
      */
     @Export(name="alias", type=String.class, parameters={})
     private Output<String> alias;
 
     /**
      * @return Alias of the contact. String value with 20 to 256 characters. Only alphabetical, numeric characters, dash, or underscore allowed.
-     * 
      */
     public Output<String> getAlias() {
         return this.alias;
     }
     /**
      * The Amazon Resource Name (ARN) of the contact.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the contact.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
     }
     /**
      * Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The stages that an escalation plan or engagement plan engages contacts and contact methods in.
-     * 
      */
     @Export(name="plan", type=List.class, parameters={ContactStage.class})
     private Output<List<ContactStage>> plan;
 
     /**
      * @return The stages that an escalation plan or engagement plan engages contacts and contact methods in.
-     * 
      */
     public Output<List<ContactStage>> getPlan() {
         return this.plan;
     }
     /**
      * Contact type, which specify type of contact. Currently supported values: “PERSONAL”, “SHARED”, “OTHER“.
-     * 
      */
     @Export(name="type", type=ContactType.class, parameters={})
     private Output<ContactType> type;
 
     /**
      * @return Contact type, which specify type of contact. Currently supported values: “PERSONAL”, “SHARED”, “OTHER“.
-     * 
      */
     public Output<ContactType> getType() {
         return this.type;

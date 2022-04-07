@@ -8,7 +8,6 @@ import java.util.Objects;
 
 /**
  * Custom response key and body map.
- * 
  */
 public final class RuleGroupCustomResponseBodies extends io.pulumi.resources.InvokeArgs {
 

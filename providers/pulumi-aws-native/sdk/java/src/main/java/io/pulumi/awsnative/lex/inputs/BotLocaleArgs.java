@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A locale in the bot, which contains the intents and slot types that the bot uses in conversations with users in the specified language and locale.
- * 
  */
 public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -32,7 +31,6 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of intents
-     * 
      */
     @Import(name="intents")
       private final @Nullable Output<List<BotIntentArgs>> intents;
@@ -57,7 +55,6 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of SlotTypes
-     * 
      */
     @Import(name="slotTypes")
       private final @Nullable Output<List<BotSlotTypeArgs>> slotTypes;

@@ -15,13 +15,11 @@ import javax.annotation.Nullable;
 public final class DataSetGeoSpatialColumnGroup {
     /**
      * <p>Columns in this hierarchy.</p>
-     * 
      */
     private final List<String> columns;
     private final @Nullable DataSetGeoSpatialCountryCode countryCode;
     /**
      * <p>A display name for the hierarchy.</p>
-     * 
      */
     private final String name;
 
@@ -37,7 +35,6 @@ public final class DataSetGeoSpatialColumnGroup {
 
     /**
      * <p>Columns in this hierarchy.</p>
-     * 
     */
     public List<String> getColumns() {
         return this.columns;
@@ -47,7 +44,6 @@ public final class DataSetGeoSpatialColumnGroup {
     }
     /**
      * <p>A display name for the hierarchy.</p>
-     * 
     */
     public String getName() {
         return this.name;

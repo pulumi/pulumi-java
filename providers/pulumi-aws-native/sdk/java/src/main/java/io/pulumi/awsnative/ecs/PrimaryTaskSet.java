@@ -13,48 +13,41 @@ import javax.annotation.Nullable;
 
 /**
  * A pseudo-resource that manages which of your ECS task sets is primary.
- * 
  */
 @ResourceType(type="aws-native:ecs:PrimaryTaskSet")
 public class PrimaryTaskSet extends io.pulumi.resources.CustomResource {
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
-     * 
      */
     @Export(name="cluster", type=String.class, parameters={})
     private Output<String> cluster;
 
     /**
      * @return The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
-     * 
      */
     public Output<String> getCluster() {
         return this.cluster;
     }
     /**
      * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
-     * 
      */
     @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
      * @return The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
-     * 
      */
     public Output<String> getService() {
         return this.service;
     }
     /**
      * The ID or full Amazon Resource Name (ARN) of the task set.
-     * 
      */
     @Export(name="taskSetId", type=String.class, parameters={})
     private Output<String> taskSetId;
 
     /**
      * @return The ID or full Amazon Resource Name (ARN) of the task set.
-     * 
      */
     public Output<String> getTaskSetId() {
         return this.taskSetId;

@@ -17,27 +17,22 @@ import javax.annotation.Nullable;
 public final class GetAnalysisResult {
     /**
      * <p>The Amazon Resource Name (ARN) of the analysis.</p>
-     * 
      */
     private final @Nullable String arn;
     /**
      * <p>The time that the analysis was created.</p>
-     * 
      */
     private final @Nullable String createdTime;
     /**
      * <p>The ARNs of the datasets of the analysis.</p>
-     * 
      */
     private final @Nullable List<String> dataSetArns;
     /**
      * <p>Errors associated with the analysis.</p>
-     * 
      */
     private final @Nullable List<AnalysisError> errors;
     /**
      * <p>The descriptive name of the analysis.</p>
-     * 
      */
     private final @Nullable String name;
     /**
@@ -47,18 +42,15 @@ public final class GetAnalysisResult {
      *             principal listed by Amazon Resource Name (ARN). </p>
      * 
      *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
-     * 
      */
     private final @Nullable List<AnalysisResourcePermission> permissions;
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             analysis.</p>
-     * 
      */
     private final @Nullable List<AnalysisTag> tags;
     /**
      * <p>The ARN of the theme of the analysis.</p>
-     * 
      */
     private final @Nullable String themeArn;
 
@@ -84,35 +76,30 @@ public final class GetAnalysisResult {
 
     /**
      * <p>The Amazon Resource Name (ARN) of the analysis.</p>
-     * 
     */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>The time that the analysis was created.</p>
-     * 
     */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * <p>The ARNs of the datasets of the analysis.</p>
-     * 
     */
     public List<String> getDataSetArns() {
         return this.dataSetArns == null ? List.of() : this.dataSetArns;
     }
     /**
      * <p>Errors associated with the analysis.</p>
-     * 
     */
     public List<AnalysisError> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * <p>The descriptive name of the analysis.</p>
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
@@ -124,7 +111,6 @@ public final class GetAnalysisResult {
      *             principal listed by Amazon Resource Name (ARN). </p>
      * 
      *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
-     * 
     */
     public List<AnalysisResourcePermission> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
@@ -132,14 +118,12 @@ public final class GetAnalysisResult {
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the
      *             analysis.</p>
-     * 
     */
     public List<AnalysisTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * <p>The ARN of the theme of the analysis.</p>
-     * 
     */
     public Optional<String> getThemeArn() {
         return Optional.ofNullable(this.themeArn);

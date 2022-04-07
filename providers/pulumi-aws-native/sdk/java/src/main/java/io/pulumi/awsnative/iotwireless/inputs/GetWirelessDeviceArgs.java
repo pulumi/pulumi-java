@@ -14,7 +14,6 @@ public final class GetWirelessDeviceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Wireless device Id. Returned after successful create.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

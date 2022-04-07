@@ -15,7 +15,397 @@ import javax.annotation.Nullable;
 /**
  * AWS::RoboMaker::Fleet resource creates an AWS RoboMaker fleet. Fleets contain robots and can receive deployments.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicFleet = new AwsNative.RoboMaker.Fleet("basicFleet", new AwsNative.RoboMaker.FleetArgs
+ *         {
+ *             Name = "MyFleet",
+ *             Tags = new AwsNative.RoboMaker.Inputs.FleetTagsArgs
+ *             {
+ *                 Name = "BasicFleet",
+ *                 Type = "CFN",
+ *             },
+ *         });
+ *         this.Fleet = "BasicFleet";
+ *     }
+ * 
+ *     [Output("fleet")]
+ *     public Output<string> Fleet { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := robomaker.NewFleet(ctx, "basicFleet", &robomaker.FleetArgs{
+ * 			Name: pulumi.String("MyFleet"),
+ * 			Tags: &robomaker.FleetTagsArgs{
+ * 				Name: "BasicFleet",
+ * 				Type: "CFN",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("fleet", "BasicFleet")
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicFleet = new aws_native.robomaker.Fleet("basicFleet", {
+ *     name: "MyFleet",
+ *     tags: {
+ *         name: "BasicFleet",
+ *         type: "CFN",
+ *     },
+ * });
+ * export const fleet = "BasicFleet";
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_fleet = aws_native.robomaker.Fleet("basicFleet",
+ *     name="MyFleet",
+ *     tags=aws_native.robomaker.FleetTagsArgs(
+ *         name="BasicFleet",
+ *         type="CFN",
+ *     ))
+ * pulumi.export("fleet", "BasicFleet")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicFleet = new AwsNative.RoboMaker.Fleet("basicFleet", new AwsNative.RoboMaker.FleetArgs
+ *         {
+ *             Name = "MyFleet",
+ *             Tags = new AwsNative.RoboMaker.Inputs.FleetTagsArgs
+ *             {
+ *                 Name = "BasicFleet",
+ *                 Type = "CFN",
+ *             },
+ *         });
+ *         this.Fleet = basicFleet.Id;
+ *     }
+ * 
+ *     [Output("fleet")]
+ *     public Output<string> Fleet { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicFleet, err := robomaker.NewFleet(ctx, "basicFleet", &robomaker.FleetArgs{
+ * 			Name: pulumi.String("MyFleet"),
+ * 			Tags: &robomaker.FleetTagsArgs{
+ * 				Name: "BasicFleet",
+ * 				Type: "CFN",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("fleet", basicFleet.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicFleet = new aws_native.robomaker.Fleet("basicFleet", {
+ *     name: "MyFleet",
+ *     tags: {
+ *         name: "BasicFleet",
+ *         type: "CFN",
+ *     },
+ * });
+ * export const fleet = basicFleet.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_fleet = aws_native.robomaker.Fleet("basicFleet",
+ *     name="MyFleet",
+ *     tags=aws_native.robomaker.FleetTagsArgs(
+ *         name="BasicFleet",
+ *         type="CFN",
+ *     ))
+ * pulumi.export("fleet", basic_fleet.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicFleet = new AwsNative.RoboMaker.Fleet("basicFleet", new AwsNative.RoboMaker.FleetArgs
+ *         {
+ *             Name = "MyFleet",
+ *         });
+ *         var basicRobot = new AwsNative.RoboMaker.Robot("basicRobot", new AwsNative.RoboMaker.RobotArgs
+ *         {
+ *             Name = "MyRobot",
+ *             GreengrassGroupId = "51229986-abdc-4ca6-94f8-04735a0c9f07",
+ *             Architecture = "ARMHF",
+ *             Fleet = basicFleet.Arn,
+ *             Tags = new AwsNative.RoboMaker.Inputs.RobotTagsArgs
+ *             {
+ *                 Name = "BasicRobot",
+ *                 Type = "CFN",
+ *             },
+ *         });
+ *         this.Robot = "BasicRobot";
+ *     }
+ * 
+ *     [Output("robot")]
+ *     public Output<string> Robot { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicFleet, err := robomaker.NewFleet(ctx, "basicFleet", &robomaker.FleetArgs{
+ * 			Name: pulumi.String("MyFleet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = robomaker.NewRobot(ctx, "basicRobot", &robomaker.RobotArgs{
+ * 			Name:              pulumi.String("MyRobot"),
+ * 			GreengrassGroupId: pulumi.String("51229986-abdc-4ca6-94f8-04735a0c9f07"),
+ * 			Architecture:      "ARMHF",
+ * 			Fleet:             basicFleet.Arn,
+ * 			Tags: &robomaker.RobotTagsArgs{
+ * 				Name: "BasicRobot",
+ * 				Type: "CFN",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("robot", "BasicRobot")
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicFleet = new aws_native.robomaker.Fleet("basicFleet", {name: "MyFleet"});
+ * const basicRobot = new aws_native.robomaker.Robot("basicRobot", {
+ *     name: "MyRobot",
+ *     greengrassGroupId: "51229986-abdc-4ca6-94f8-04735a0c9f07",
+ *     architecture: "ARMHF",
+ *     fleet: basicFleet.arn,
+ *     tags: {
+ *         name: "BasicRobot",
+ *         type: "CFN",
+ *     },
+ * });
+ * export const robot = "BasicRobot";
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_fleet = aws_native.robomaker.Fleet("basicFleet", name="MyFleet")
+ * basic_robot = aws_native.robomaker.Robot("basicRobot",
+ *     name="MyRobot",
+ *     greengrass_group_id="51229986-abdc-4ca6-94f8-04735a0c9f07",
+ *     architecture="ARMHF",
+ *     fleet=basic_fleet.arn,
+ *     tags=aws_native.robomaker.RobotTagsArgs(
+ *         name="BasicRobot",
+ *         type="CFN",
+ *     ))
+ * pulumi.export("robot", "BasicRobot")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicFleet = new AwsNative.RoboMaker.Fleet("basicFleet", new AwsNative.RoboMaker.FleetArgs
+ *         {
+ *             Name = "MyFleet",
+ *         });
+ *         var basicRobot = new AwsNative.RoboMaker.Robot("basicRobot", new AwsNative.RoboMaker.RobotArgs
+ *         {
+ *             Name = "MyRobot",
+ *             GreengrassGroupId = "51229986-abdc-4ca6-94f8-04735a0c9f07",
+ *             Architecture = "ARMHF",
+ *             Fleet = basicFleet.Arn,
+ *             Tags = new AwsNative.RoboMaker.Inputs.RobotTagsArgs
+ *             {
+ *                 Name = "BasicRobot",
+ *                 Type = "CFN",
+ *             },
+ *         });
+ *         this.Robot = basicRobot.Id;
+ *     }
+ * 
+ *     [Output("robot")]
+ *     public Output<string> Robot { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicFleet, err := robomaker.NewFleet(ctx, "basicFleet", &robomaker.FleetArgs{
+ * 			Name: pulumi.String("MyFleet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		basicRobot, err := robomaker.NewRobot(ctx, "basicRobot", &robomaker.RobotArgs{
+ * 			Name:              pulumi.String("MyRobot"),
+ * 			GreengrassGroupId: pulumi.String("51229986-abdc-4ca6-94f8-04735a0c9f07"),
+ * 			Architecture:      "ARMHF",
+ * 			Fleet:             basicFleet.Arn,
+ * 			Tags: &robomaker.RobotTagsArgs{
+ * 				Name: "BasicRobot",
+ * 				Type: "CFN",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("robot", basicRobot.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicFleet = new aws_native.robomaker.Fleet("basicFleet", {name: "MyFleet"});
+ * const basicRobot = new aws_native.robomaker.Robot("basicRobot", {
+ *     name: "MyRobot",
+ *     greengrassGroupId: "51229986-abdc-4ca6-94f8-04735a0c9f07",
+ *     architecture: "ARMHF",
+ *     fleet: basicFleet.arn,
+ *     tags: {
+ *         name: "BasicRobot",
+ *         type: "CFN",
+ *     },
+ * });
+ * export const robot = basicRobot.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_fleet = aws_native.robomaker.Fleet("basicFleet", name="MyFleet")
+ * basic_robot = aws_native.robomaker.Robot("basicRobot",
+ *     name="MyRobot",
+ *     greengrass_group_id="51229986-abdc-4ca6-94f8-04735a0c9f07",
+ *     architecture="ARMHF",
+ *     fleet=basic_fleet.arn,
+ *     tags=aws_native.robomaker.RobotTagsArgs(
+ *         name="BasicRobot",
+ *         type="CFN",
+ *     ))
+ * pulumi.export("robot", basic_robot.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:robomaker:Fleet")
@@ -28,14 +418,12 @@ public class Fleet extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name of the fleet.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the fleet.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;

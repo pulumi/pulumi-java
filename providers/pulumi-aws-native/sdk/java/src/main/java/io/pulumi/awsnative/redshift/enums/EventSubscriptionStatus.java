@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status of the Amazon Redshift event notification subscription.
-     * 
      */
     @EnumType
     public enum EventSubscriptionStatus {

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::Rekognition::Collection type creates an Amazon Rekognition Collection. A collection is a logical grouping of information about detected faces which can later be referenced for searches on the group
- * 
  */
 @ResourceType(type="aws-native:rekognition:Collection")
 public class Collection extends io.pulumi.resources.CustomResource {
@@ -33,14 +32,12 @@ public class Collection extends io.pulumi.resources.CustomResource {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={CollectionTag.class})
     private Output</* @Nullable */ List<CollectionTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<CollectionTag>> getTags() {
         return this.tags;

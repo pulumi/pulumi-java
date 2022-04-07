@@ -14,7 +14,6 @@ public final class GetInstanceAccessControlAttributeConfigurationArgs extends io
 
     /**
      * The ARN of the AWS SSO instance under which the operation will be executed.
-     * 
      */
     @Import(name="instanceArn", required=true)
       private final String instanceArn;

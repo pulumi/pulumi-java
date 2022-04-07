@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The inputs for a monitoring job.
- * 
  */
 public final class ModelBiasJobDefinitionModelBiasJobInputArgs extends io.pulumi.resources.ResourceArgs {
 

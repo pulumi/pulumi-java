@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
- * 
  */
 public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeArgs {
 
@@ -31,7 +30,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
-     * 
      */
     @Import(name="adTriggers")
       private final @Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers;
@@ -56,7 +54,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * Determines the position of some tags in the Media Presentation Description (MPD).  When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation.  When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
-     * 
      */
     @Import(name="manifestLayout")
       private final @Nullable OriginEndpointDashPackageManifestLayout manifestLayout;
@@ -67,7 +64,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * Time window (in seconds) contained in each manifest.
-     * 
      */
     @Import(name="manifestWindowSeconds")
       private final @Nullable Integer manifestWindowSeconds;
@@ -78,7 +74,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * Minimum duration (in seconds) that a player will buffer media before starting the presentation.
-     * 
      */
     @Import(name="minBufferTimeSeconds")
       private final @Nullable Integer minBufferTimeSeconds;
@@ -89,7 +84,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * Minimum duration (in seconds) between potential changes to the Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD).
-     * 
      */
     @Import(name="minUpdatePeriodSeconds")
       private final @Nullable Integer minUpdatePeriodSeconds;
@@ -100,7 +94,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Channel source contains SCTE-35 ad markers.
-     * 
      */
     @Import(name="periodTriggers")
       private final @Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers;
@@ -111,7 +104,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * The Dynamic Adaptive Streaming over HTTP (DASH) profile type.  When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
-     * 
      */
     @Import(name="profile")
       private final @Nullable OriginEndpointDashPackageProfile profile;
@@ -122,7 +114,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
-     * 
      */
     @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
@@ -133,7 +124,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * Determines the type of SegmentTemplate included in the Media Presentation Description (MPD).  When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs.  When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
-     * 
      */
     @Import(name="segmentTemplateFormat")
       private final @Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat;
@@ -151,7 +141,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * Duration (in seconds) to delay live content before presentation.
-     * 
      */
     @Import(name="suggestedPresentationDelaySeconds")
       private final @Nullable Integer suggestedPresentationDelaySeconds;
@@ -162,7 +151,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * Determines the type of UTCTiming included in the Media Presentation Description (MPD)
-     * 
      */
     @Import(name="utcTiming")
       private final @Nullable OriginEndpointDashPackageUtcTiming utcTiming;
@@ -173,7 +161,6 @@ public final class OriginEndpointDashPackage extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
-     * 
      */
     @Import(name="utcTimingUri")
       private final @Nullable String utcTimingUri;

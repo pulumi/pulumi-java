@@ -19,20 +19,17 @@ import javax.annotation.Nullable;
 
 /**
  * This resource represents a schema of Glue Schema Registry.
- * 
  */
 @ResourceType(type="aws-native:glue:Schema")
 public class Schema extends io.pulumi.resources.CustomResource {
     /**
      * Amazon Resource Name for the Schema.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return Amazon Resource Name for the Schema.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -45,70 +42,60 @@ public class Schema extends io.pulumi.resources.CustomResource {
     }
     /**
      * Compatibility setting for the schema.
-     * 
      */
     @Export(name="compatibility", type=SchemaCompatibility.class, parameters={})
     private Output<SchemaCompatibility> compatibility;
 
     /**
      * @return Compatibility setting for the schema.
-     * 
      */
     public Output<SchemaCompatibility> getCompatibility() {
         return this.compatibility;
     }
     /**
      * Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
-     * 
      */
     @Export(name="dataFormat", type=SchemaDataFormat.class, parameters={})
     private Output<SchemaDataFormat> dataFormat;
 
     /**
      * @return Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
-     * 
      */
     public Output<SchemaDataFormat> getDataFormat() {
         return this.dataFormat;
     }
     /**
      * A description of the schema. If description is not provided, there will not be any default value for this.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the schema. If description is not provided, there will not be any default value for this.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Represents the version ID associated with the initial schema version.
-     * 
      */
     @Export(name="initialSchemaVersionId", type=String.class, parameters={})
     private Output<String> initialSchemaVersionId;
 
     /**
      * @return Represents the version ID associated with the initial schema version.
-     * 
      */
     public Output<String> getInitialSchemaVersionId() {
         return this.initialSchemaVersionId;
     }
     /**
      * Name of the schema.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the schema.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -121,28 +108,24 @@ public class Schema extends io.pulumi.resources.CustomResource {
     }
     /**
      * Definition for the initial schema version in plain-text.
-     * 
      */
     @Export(name="schemaDefinition", type=String.class, parameters={})
     private Output<String> schemaDefinition;
 
     /**
      * @return Definition for the initial schema version in plain-text.
-     * 
      */
     public Output<String> getSchemaDefinition() {
         return this.schemaDefinition;
     }
     /**
      * List of tags to tag the schema
-     * 
      */
     @Export(name="tags", type=List.class, parameters={SchemaTag.class})
     private Output</* @Nullable */ List<SchemaTag>> tags;
 
     /**
      * @return List of tags to tag the schema
-     * 
      */
     public Output</* @Nullable */ List<SchemaTag>> getTags() {
         return this.tags;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource schema for AWS::FIS::ExperimentTemplate
- * 
  */
 @ResourceType(type="aws-native:fis:ExperimentTemplate")
 public class ExperimentTemplate extends io.pulumi.resources.CustomResource {

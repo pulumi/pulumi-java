@@ -13,20 +13,17 @@ import javax.annotation.Nullable;
 
 /**
  * The default version of a resource that has been registered in the CloudFormation Registry.
- * 
  */
 @ResourceType(type="aws-native:cloudformation:ResourceDefaultVersion")
 public class ResourceDefaultVersion extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -35,7 +32,6 @@ public class ResourceDefaultVersion extends io.pulumi.resources.CustomResource {
      * The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     @Export(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
@@ -44,35 +40,30 @@ public class ResourceDefaultVersion extends io.pulumi.resources.CustomResource {
      * @return The name of the type being registered.
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
-     * 
      */
     public Output</* @Nullable */ String> getTypeName() {
         return this.typeName;
     }
     /**
      * The Amazon Resource Name (ARN) of the type version.
-     * 
      */
     @Export(name="typeVersionArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeVersionArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the type version.
-     * 
      */
     public Output</* @Nullable */ String> getTypeVersionArn() {
         return this.typeVersionArn;
     }
     /**
      * The ID of an existing version of the resource to set as the default.
-     * 
      */
     @Export(name="versionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionId;
 
     /**
      * @return The ID of an existing version of the resource to set as the default.
-     * 
      */
     public Output</* @Nullable */ String> getVersionId() {
         return this.versionId;

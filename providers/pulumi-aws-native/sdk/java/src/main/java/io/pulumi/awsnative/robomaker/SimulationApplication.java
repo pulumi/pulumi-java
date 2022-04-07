@@ -20,7 +20,661 @@ import javax.annotation.Nullable;
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicSimulationApplication = new AwsNative.RoboMaker.SimulationApplication("basicSimulationApplication", new AwsNative.RoboMaker.SimulationApplicationArgs
+ *         {
+ *             Name = "MySimulationApplication",
+ *             Sources = 
+ *             {
+ *                 new AwsNative.RoboMaker.Inputs.SimulationApplicationSourceConfigArgs
+ *                 {
+ *                     S3Bucket = "my-bucket",
+ *                     S3Key = "robot_bundle_x86.tar.gz",
+ *                     Architecture = "X86_64",
+ *                 },
+ *             },
+ *             RobotSoftwareSuite = new AwsNative.RoboMaker.Inputs.SimulationApplicationRobotSoftwareSuiteArgs
+ *             {
+ *                 Name = "ROS",
+ *                 Version = "Kinetic",
+ *             },
+ *             SimulationSoftwareSuite = new AwsNative.RoboMaker.Inputs.SimulationApplicationSimulationSoftwareSuiteArgs
+ *             {
+ *                 Name = "Gazebo",
+ *                 Version = "7",
+ *             },
+ *             RenderingEngine = new AwsNative.RoboMaker.Inputs.SimulationApplicationRenderingEngineArgs
+ *             {
+ *                 Name = "OGRE",
+ *                 Version = "1.x",
+ *             },
+ *             Tags = new AwsNative.RoboMaker.Inputs.SimulationApplicationTagsArgs
+ *             {
+ *                 Name = "BasicSimulationApplication",
+ *                 Type = "CFN",
+ *             },
+ *         });
+ *         this.SimulationApplication = "BasicSimulationApplication";
+ *     }
+ * 
+ *     [Output("simulationApplication")]
+ *     public Output<string> SimulationApplication { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := robomaker.NewSimulationApplication(ctx, "basicSimulationApplication", &robomaker.SimulationApplicationArgs{
+ * 			Name: pulumi.String("MySimulationApplication"),
+ * 			Sources: []robomaker.SimulationApplicationSourceConfigArgs{
+ * 				&robomaker.SimulationApplicationSourceConfigArgs{
+ * 					S3Bucket:     pulumi.String("my-bucket"),
+ * 					S3Key:        pulumi.String("robot_bundle_x86.tar.gz"),
+ * 					Architecture: "X86_64",
+ * 				},
+ * 			},
+ * 			RobotSoftwareSuite: &robomaker.SimulationApplicationRobotSoftwareSuiteArgs{
+ * 				Name:    "ROS",
+ * 				Version: "Kinetic",
+ * 			},
+ * 			SimulationSoftwareSuite: &robomaker.SimulationApplicationSimulationSoftwareSuiteArgs{
+ * 				Name:    "Gazebo",
+ * 				Version: "7",
+ * 			},
+ * 			RenderingEngine: &robomaker.SimulationApplicationRenderingEngineArgs{
+ * 				Name:    "OGRE",
+ * 				Version: pulumi.String("1.x"),
+ * 			},
+ * 			Tags: &robomaker.SimulationApplicationTagsArgs{
+ * 				Name: "BasicSimulationApplication",
+ * 				Type: "CFN",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("simulationApplication", "BasicSimulationApplication")
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicSimulationApplication = new aws_native.robomaker.SimulationApplication("basicSimulationApplication", {
+ *     name: "MySimulationApplication",
+ *     sources: [{
+ *         s3Bucket: "my-bucket",
+ *         s3Key: "robot_bundle_x86.tar.gz",
+ *         architecture: "X86_64",
+ *     }],
+ *     robotSoftwareSuite: {
+ *         name: "ROS",
+ *         version: "Kinetic",
+ *     },
+ *     simulationSoftwareSuite: {
+ *         name: "Gazebo",
+ *         version: "7",
+ *     },
+ *     renderingEngine: {
+ *         name: "OGRE",
+ *         version: "1.x",
+ *     },
+ *     tags: {
+ *         name: "BasicSimulationApplication",
+ *         type: "CFN",
+ *     },
+ * });
+ * export const simulationApplication = "BasicSimulationApplication";
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_simulation_application = aws_native.robomaker.SimulationApplication("basicSimulationApplication",
+ *     name="MySimulationApplication",
+ *     sources=[aws_native.robomaker.SimulationApplicationSourceConfigArgs(
+ *         s3_bucket="my-bucket",
+ *         s3_key="robot_bundle_x86.tar.gz",
+ *         architecture="X86_64",
+ *     )],
+ *     robot_software_suite=aws_native.robomaker.SimulationApplicationRobotSoftwareSuiteArgs(
+ *         name="ROS",
+ *         version="Kinetic",
+ *     ),
+ *     simulation_software_suite=aws_native.robomaker.SimulationApplicationSimulationSoftwareSuiteArgs(
+ *         name="Gazebo",
+ *         version="7",
+ *     ),
+ *     rendering_engine=aws_native.robomaker.SimulationApplicationRenderingEngineArgs(
+ *         name="OGRE",
+ *         version="1.x",
+ *     ),
+ *     tags=aws_native.robomaker.SimulationApplicationTagsArgs(
+ *         name="BasicSimulationApplication",
+ *         type="CFN",
+ *     ))
+ * pulumi.export("simulationApplication", "BasicSimulationApplication")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicSimulationApplication = new AwsNative.RoboMaker.SimulationApplication("basicSimulationApplication", new AwsNative.RoboMaker.SimulationApplicationArgs
+ *         {
+ *             Name = "MySimulationApplication",
+ *             Sources = 
+ *             {
+ *                 new AwsNative.RoboMaker.Inputs.SimulationApplicationSourceConfigArgs
+ *                 {
+ *                     S3Bucket = "my-bucket",
+ *                     S3Key = "robot_bundle_x86.tar.gz",
+ *                     Architecture = "X86_64",
+ *                 },
+ *             },
+ *             RobotSoftwareSuite = new AwsNative.RoboMaker.Inputs.SimulationApplicationRobotSoftwareSuiteArgs
+ *             {
+ *                 Name = "ROS",
+ *                 Version = "Kinetic",
+ *             },
+ *             SimulationSoftwareSuite = new AwsNative.RoboMaker.Inputs.SimulationApplicationSimulationSoftwareSuiteArgs
+ *             {
+ *                 Name = "Gazebo",
+ *                 Version = "7",
+ *             },
+ *             RenderingEngine = new AwsNative.RoboMaker.Inputs.SimulationApplicationRenderingEngineArgs
+ *             {
+ *                 Name = "OGRE",
+ *                 Version = "1.x",
+ *             },
+ *             Tags = new AwsNative.RoboMaker.Inputs.SimulationApplicationTagsArgs
+ *             {
+ *                 Name = "BasicSimulationApplication",
+ *                 Type = "CFN",
+ *             },
+ *         });
+ *         this.SimulationApplication = basicSimulationApplication.Id;
+ *     }
+ * 
+ *     [Output("simulationApplication")]
+ *     public Output<string> SimulationApplication { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicSimulationApplication, err := robomaker.NewSimulationApplication(ctx, "basicSimulationApplication", &robomaker.SimulationApplicationArgs{
+ * 			Name: pulumi.String("MySimulationApplication"),
+ * 			Sources: []robomaker.SimulationApplicationSourceConfigArgs{
+ * 				&robomaker.SimulationApplicationSourceConfigArgs{
+ * 					S3Bucket:     pulumi.String("my-bucket"),
+ * 					S3Key:        pulumi.String("robot_bundle_x86.tar.gz"),
+ * 					Architecture: "X86_64",
+ * 				},
+ * 			},
+ * 			RobotSoftwareSuite: &robomaker.SimulationApplicationRobotSoftwareSuiteArgs{
+ * 				Name:    "ROS",
+ * 				Version: "Kinetic",
+ * 			},
+ * 			SimulationSoftwareSuite: &robomaker.SimulationApplicationSimulationSoftwareSuiteArgs{
+ * 				Name:    "Gazebo",
+ * 				Version: "7",
+ * 			},
+ * 			RenderingEngine: &robomaker.SimulationApplicationRenderingEngineArgs{
+ * 				Name:    "OGRE",
+ * 				Version: pulumi.String("1.x"),
+ * 			},
+ * 			Tags: &robomaker.SimulationApplicationTagsArgs{
+ * 				Name: "BasicSimulationApplication",
+ * 				Type: "CFN",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("simulationApplication", basicSimulationApplication.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicSimulationApplication = new aws_native.robomaker.SimulationApplication("basicSimulationApplication", {
+ *     name: "MySimulationApplication",
+ *     sources: [{
+ *         s3Bucket: "my-bucket",
+ *         s3Key: "robot_bundle_x86.tar.gz",
+ *         architecture: "X86_64",
+ *     }],
+ *     robotSoftwareSuite: {
+ *         name: "ROS",
+ *         version: "Kinetic",
+ *     },
+ *     simulationSoftwareSuite: {
+ *         name: "Gazebo",
+ *         version: "7",
+ *     },
+ *     renderingEngine: {
+ *         name: "OGRE",
+ *         version: "1.x",
+ *     },
+ *     tags: {
+ *         name: "BasicSimulationApplication",
+ *         type: "CFN",
+ *     },
+ * });
+ * export const simulationApplication = basicSimulationApplication.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_simulation_application = aws_native.robomaker.SimulationApplication("basicSimulationApplication",
+ *     name="MySimulationApplication",
+ *     sources=[aws_native.robomaker.SimulationApplicationSourceConfigArgs(
+ *         s3_bucket="my-bucket",
+ *         s3_key="robot_bundle_x86.tar.gz",
+ *         architecture="X86_64",
+ *     )],
+ *     robot_software_suite=aws_native.robomaker.SimulationApplicationRobotSoftwareSuiteArgs(
+ *         name="ROS",
+ *         version="Kinetic",
+ *     ),
+ *     simulation_software_suite=aws_native.robomaker.SimulationApplicationSimulationSoftwareSuiteArgs(
+ *         name="Gazebo",
+ *         version="7",
+ *     ),
+ *     rendering_engine=aws_native.robomaker.SimulationApplicationRenderingEngineArgs(
+ *         name="OGRE",
+ *         version="1.x",
+ *     ),
+ *     tags=aws_native.robomaker.SimulationApplicationTagsArgs(
+ *         name="BasicSimulationApplication",
+ *         type="CFN",
+ *     ))
+ * pulumi.export("simulationApplication", basic_simulation_application.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicSimulationApplication = new AwsNative.RoboMaker.SimulationApplication("basicSimulationApplication", new AwsNative.RoboMaker.SimulationApplicationArgs
+ *         {
+ *             Name = "MySimulationApplication",
+ *             Sources = 
+ *             {
+ *                 new AwsNative.RoboMaker.Inputs.SimulationApplicationSourceConfigArgs
+ *                 {
+ *                     S3Bucket = "my-bucket",
+ *                     S3Key = "my_simulation_bundle_x86.tar.gz",
+ *                     Architecture = "X86_64",
+ *                 },
+ *             },
+ *             RobotSoftwareSuite = new AwsNative.RoboMaker.Inputs.SimulationApplicationRobotSoftwareSuiteArgs
+ *             {
+ *                 Name = "ROS",
+ *                 Version = "Kinetic",
+ *             },
+ *             SimulationSoftwareSuite = new AwsNative.RoboMaker.Inputs.SimulationApplicationSimulationSoftwareSuiteArgs
+ *             {
+ *                 Name = "Gazebo",
+ *                 Version = "7",
+ *             },
+ *             RenderingEngine = new AwsNative.RoboMaker.Inputs.SimulationApplicationRenderingEngineArgs
+ *             {
+ *                 Name = "OGRE",
+ *                 Version = "1.x",
+ *             },
+ *         });
+ *         var basicSimulationApplicationVersion = new AwsNative.RoboMaker.SimulationApplicationVersion("basicSimulationApplicationVersion", new AwsNative.RoboMaker.SimulationApplicationVersionArgs
+ *         {
+ *             Application = basicSimulationApplication.Arn,
+ *             CurrentRevisionId = basicSimulationApplication.Current_revision_id,
+ *         });
+ *         this.SimulationApplicationVersion = "BasicSimulationApplicationVersion";
+ *     }
+ * 
+ *     [Output("simulationApplicationVersion")]
+ *     public Output<string> SimulationApplicationVersion { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicSimulationApplication, err := robomaker.NewSimulationApplication(ctx, "basicSimulationApplication", &robomaker.SimulationApplicationArgs{
+ * 			Name: pulumi.String("MySimulationApplication"),
+ * 			Sources: []robomaker.SimulationApplicationSourceConfigArgs{
+ * 				&robomaker.SimulationApplicationSourceConfigArgs{
+ * 					S3Bucket:     pulumi.String("my-bucket"),
+ * 					S3Key:        pulumi.String("my_simulation_bundle_x86.tar.gz"),
+ * 					Architecture: "X86_64",
+ * 				},
+ * 			},
+ * 			RobotSoftwareSuite: &robomaker.SimulationApplicationRobotSoftwareSuiteArgs{
+ * 				Name:    "ROS",
+ * 				Version: "Kinetic",
+ * 			},
+ * 			SimulationSoftwareSuite: &robomaker.SimulationApplicationSimulationSoftwareSuiteArgs{
+ * 				Name:    "Gazebo",
+ * 				Version: "7",
+ * 			},
+ * 			RenderingEngine: &robomaker.SimulationApplicationRenderingEngineArgs{
+ * 				Name:    "OGRE",
+ * 				Version: pulumi.String("1.x"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = robomaker.NewSimulationApplicationVersion(ctx, "basicSimulationApplicationVersion", &robomaker.SimulationApplicationVersionArgs{
+ * 			Application:       basicSimulationApplication.Arn,
+ * 			CurrentRevisionId: basicSimulationApplication.Current_revision_id,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("simulationApplicationVersion", "BasicSimulationApplicationVersion")
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicSimulationApplication = new aws_native.robomaker.SimulationApplication("basicSimulationApplication", {
+ *     name: "MySimulationApplication",
+ *     sources: [{
+ *         s3Bucket: "my-bucket",
+ *         s3Key: "my_simulation_bundle_x86.tar.gz",
+ *         architecture: "X86_64",
+ *     }],
+ *     robotSoftwareSuite: {
+ *         name: "ROS",
+ *         version: "Kinetic",
+ *     },
+ *     simulationSoftwareSuite: {
+ *         name: "Gazebo",
+ *         version: "7",
+ *     },
+ *     renderingEngine: {
+ *         name: "OGRE",
+ *         version: "1.x",
+ *     },
+ * });
+ * const basicSimulationApplicationVersion = new aws_native.robomaker.SimulationApplicationVersion("basicSimulationApplicationVersion", {
+ *     application: basicSimulationApplication.arn,
+ *     currentRevisionId: basicSimulationApplication.currentRevisionId,
+ * });
+ * export const simulationApplicationVersion = "BasicSimulationApplicationVersion";
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_simulation_application = aws_native.robomaker.SimulationApplication("basicSimulationApplication",
+ *     name="MySimulationApplication",
+ *     sources=[aws_native.robomaker.SimulationApplicationSourceConfigArgs(
+ *         s3_bucket="my-bucket",
+ *         s3_key="my_simulation_bundle_x86.tar.gz",
+ *         architecture="X86_64",
+ *     )],
+ *     robot_software_suite=aws_native.robomaker.SimulationApplicationRobotSoftwareSuiteArgs(
+ *         name="ROS",
+ *         version="Kinetic",
+ *     ),
+ *     simulation_software_suite=aws_native.robomaker.SimulationApplicationSimulationSoftwareSuiteArgs(
+ *         name="Gazebo",
+ *         version="7",
+ *     ),
+ *     rendering_engine=aws_native.robomaker.SimulationApplicationRenderingEngineArgs(
+ *         name="OGRE",
+ *         version="1.x",
+ *     ))
+ * basic_simulation_application_version = aws_native.robomaker.SimulationApplicationVersion("basicSimulationApplicationVersion",
+ *     application=basic_simulation_application.arn,
+ *     current_revision_id=basic_simulation_application.current_revision_id)
+ * pulumi.export("simulationApplicationVersion", "BasicSimulationApplicationVersion")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var basicSimulationApplication = new AwsNative.RoboMaker.SimulationApplication("basicSimulationApplication", new AwsNative.RoboMaker.SimulationApplicationArgs
+ *         {
+ *             Name = "MySimulationApplication",
+ *             Sources = 
+ *             {
+ *                 new AwsNative.RoboMaker.Inputs.SimulationApplicationSourceConfigArgs
+ *                 {
+ *                     S3Bucket = "my-bucket",
+ *                     S3Key = "my_simulation_bundle_x86.tar.gz",
+ *                     Architecture = "X86_64",
+ *                 },
+ *             },
+ *             RobotSoftwareSuite = new AwsNative.RoboMaker.Inputs.SimulationApplicationRobotSoftwareSuiteArgs
+ *             {
+ *                 Name = "ROS",
+ *                 Version = "Kinetic",
+ *             },
+ *             SimulationSoftwareSuite = new AwsNative.RoboMaker.Inputs.SimulationApplicationSimulationSoftwareSuiteArgs
+ *             {
+ *                 Name = "Gazebo",
+ *                 Version = "7",
+ *             },
+ *             RenderingEngine = new AwsNative.RoboMaker.Inputs.SimulationApplicationRenderingEngineArgs
+ *             {
+ *                 Name = "OGRE",
+ *                 Version = "1.x",
+ *             },
+ *         });
+ *         var basicSimulationApplicationVersion = new AwsNative.RoboMaker.SimulationApplicationVersion("basicSimulationApplicationVersion", new AwsNative.RoboMaker.SimulationApplicationVersionArgs
+ *         {
+ *             Application = basicSimulationApplication.Arn,
+ *             CurrentRevisionId = basicSimulationApplication.Current_revision_id,
+ *         });
+ *         this.SimulationApplicationVersion = basicSimulationApplicationVersion.Id;
+ *     }
+ * 
+ *     [Output("simulationApplicationVersion")]
+ *     public Output<string> SimulationApplicationVersion { get; set; }
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/robomaker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		basicSimulationApplication, err := robomaker.NewSimulationApplication(ctx, "basicSimulationApplication", &robomaker.SimulationApplicationArgs{
+ * 			Name: pulumi.String("MySimulationApplication"),
+ * 			Sources: []robomaker.SimulationApplicationSourceConfigArgs{
+ * 				&robomaker.SimulationApplicationSourceConfigArgs{
+ * 					S3Bucket:     pulumi.String("my-bucket"),
+ * 					S3Key:        pulumi.String("my_simulation_bundle_x86.tar.gz"),
+ * 					Architecture: "X86_64",
+ * 				},
+ * 			},
+ * 			RobotSoftwareSuite: &robomaker.SimulationApplicationRobotSoftwareSuiteArgs{
+ * 				Name:    "ROS",
+ * 				Version: "Kinetic",
+ * 			},
+ * 			SimulationSoftwareSuite: &robomaker.SimulationApplicationSimulationSoftwareSuiteArgs{
+ * 				Name:    "Gazebo",
+ * 				Version: "7",
+ * 			},
+ * 			RenderingEngine: &robomaker.SimulationApplicationRenderingEngineArgs{
+ * 				Name:    "OGRE",
+ * 				Version: pulumi.String("1.x"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		basicSimulationApplicationVersion, err := robomaker.NewSimulationApplicationVersion(ctx, "basicSimulationApplicationVersion", &robomaker.SimulationApplicationVersionArgs{
+ * 			Application:       basicSimulationApplication.Arn,
+ * 			CurrentRevisionId: basicSimulationApplication.Current_revision_id,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		ctx.Export("simulationApplicationVersion", basicSimulationApplicationVersion.ID())
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const basicSimulationApplication = new aws_native.robomaker.SimulationApplication("basicSimulationApplication", {
+ *     name: "MySimulationApplication",
+ *     sources: [{
+ *         s3Bucket: "my-bucket",
+ *         s3Key: "my_simulation_bundle_x86.tar.gz",
+ *         architecture: "X86_64",
+ *     }],
+ *     robotSoftwareSuite: {
+ *         name: "ROS",
+ *         version: "Kinetic",
+ *     },
+ *     simulationSoftwareSuite: {
+ *         name: "Gazebo",
+ *         version: "7",
+ *     },
+ *     renderingEngine: {
+ *         name: "OGRE",
+ *         version: "1.x",
+ *     },
+ * });
+ * const basicSimulationApplicationVersion = new aws_native.robomaker.SimulationApplicationVersion("basicSimulationApplicationVersion", {
+ *     application: basicSimulationApplication.arn,
+ *     currentRevisionId: basicSimulationApplication.currentRevisionId,
+ * });
+ * export const simulationApplicationVersion = basicSimulationApplicationVersion.id;
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * basic_simulation_application = aws_native.robomaker.SimulationApplication("basicSimulationApplication",
+ *     name="MySimulationApplication",
+ *     sources=[aws_native.robomaker.SimulationApplicationSourceConfigArgs(
+ *         s3_bucket="my-bucket",
+ *         s3_key="my_simulation_bundle_x86.tar.gz",
+ *         architecture="X86_64",
+ *     )],
+ *     robot_software_suite=aws_native.robomaker.SimulationApplicationRobotSoftwareSuiteArgs(
+ *         name="ROS",
+ *         version="Kinetic",
+ *     ),
+ *     simulation_software_suite=aws_native.robomaker.SimulationApplicationSimulationSoftwareSuiteArgs(
+ *         name="Gazebo",
+ *         version="7",
+ *     ),
+ *     rendering_engine=aws_native.robomaker.SimulationApplicationRenderingEngineArgs(
+ *         name="OGRE",
+ *         version="1.x",
+ *     ))
+ * basic_simulation_application_version = aws_native.robomaker.SimulationApplicationVersion("basicSimulationApplicationVersion",
+ *     application=basic_simulation_application.arn,
+ *     current_revision_id=basic_simulation_application.current_revision_id)
+ * pulumi.export("simulationApplicationVersion", basic_simulation_application_version.id)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:robomaker:SimulationApplication")
@@ -33,98 +687,84 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
     }
     /**
      * The current revision id.
-     * 
      */
     @Export(name="currentRevisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> currentRevisionId;
 
     /**
      * @return The current revision id.
-     * 
      */
     public Output</* @Nullable */ String> getCurrentRevisionId() {
         return this.currentRevisionId;
     }
     /**
      * The URI of the Docker image for the robot application.
-     * 
      */
     @Export(name="environment", type=String.class, parameters={})
     private Output</* @Nullable */ String> environment;
 
     /**
      * @return The URI of the Docker image for the robot application.
-     * 
      */
     public Output</* @Nullable */ String> getEnvironment() {
         return this.environment;
     }
     /**
      * The name of the simulation application.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the simulation application.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The rendering engine for the simulation application.
-     * 
      */
     @Export(name="renderingEngine", type=SimulationApplicationRenderingEngine.class, parameters={})
     private Output</* @Nullable */ SimulationApplicationRenderingEngine> renderingEngine;
 
     /**
      * @return The rendering engine for the simulation application.
-     * 
      */
     public Output</* @Nullable */ SimulationApplicationRenderingEngine> getRenderingEngine() {
         return this.renderingEngine;
     }
     /**
      * The robot software suite used by the simulation application.
-     * 
      */
     @Export(name="robotSoftwareSuite", type=SimulationApplicationRobotSoftwareSuite.class, parameters={})
     private Output<SimulationApplicationRobotSoftwareSuite> robotSoftwareSuite;
 
     /**
      * @return The robot software suite used by the simulation application.
-     * 
      */
     public Output<SimulationApplicationRobotSoftwareSuite> getRobotSoftwareSuite() {
         return this.robotSoftwareSuite;
     }
     /**
      * The simulation software suite used by the simulation application.
-     * 
      */
     @Export(name="simulationSoftwareSuite", type=SimulationApplicationSimulationSoftwareSuite.class, parameters={})
     private Output<SimulationApplicationSimulationSoftwareSuite> simulationSoftwareSuite;
 
     /**
      * @return The simulation software suite used by the simulation application.
-     * 
      */
     public Output<SimulationApplicationSimulationSoftwareSuite> getSimulationSoftwareSuite() {
         return this.simulationSoftwareSuite;
     }
     /**
      * The sources of the simulation application.
-     * 
      */
     @Export(name="sources", type=List.class, parameters={SimulationApplicationSourceConfig.class})
     private Output</* @Nullable */ List<SimulationApplicationSourceConfig>> sources;
 
     /**
      * @return The sources of the simulation application.
-     * 
      */
     public Output</* @Nullable */ List<SimulationApplicationSourceConfig>> getSources() {
         return this.sources;

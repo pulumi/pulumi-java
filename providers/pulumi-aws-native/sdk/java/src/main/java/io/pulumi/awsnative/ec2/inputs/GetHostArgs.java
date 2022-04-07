@@ -14,7 +14,6 @@ public final class GetHostArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Id of the host created.
-     * 
      */
     @Import(name="hostId", required=true)
       private final String hostId;

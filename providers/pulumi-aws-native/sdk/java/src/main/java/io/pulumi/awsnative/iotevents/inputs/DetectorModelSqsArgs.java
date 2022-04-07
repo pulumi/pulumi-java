@@ -25,7 +25,6 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The URL of the SQS queue where the data is written.
-     * 
      */
     @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
@@ -36,7 +35,6 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
-     * 
      */
     @Import(name="useBase64")
       private final @Nullable Output<Boolean> useBase64;

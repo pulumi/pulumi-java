@@ -19,7 +19,6 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Configuration information for the hours of operation: day, start time, and end time.
-     * 
      */
     @Import(name="config", required=true)
       private final Output<List<HoursOfOperationConfigArgs>> config;
@@ -30,7 +29,6 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The description of the hours of operation.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The identifier of the Amazon Connect instance.
-     * 
      */
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
@@ -52,7 +49,6 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the hours of operation.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -63,7 +59,6 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * One or more tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<HoursOfOperationTagArgs>> tags;
@@ -74,7 +69,6 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The time zone of the hours of operation.
-     * 
      */
     @Import(name="timeZone", required=true)
       private final Output<String> timeZone;

@@ -14,76 +14,65 @@ import javax.annotation.Nullable;
 
 /**
  * AWS Route53 Recovery Control Routing Control resource schema .
- * 
  */
 @ResourceType(type="aws-native:route53recoverycontrol:RoutingControl")
 public class RoutingControl extends io.pulumi.resources.CustomResource {
     /**
      * Arn associated with Control Panel
-     * 
      */
     @Export(name="clusterArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterArn;
 
     /**
      * @return Arn associated with Control Panel
-     * 
      */
     public Output</* @Nullable */ String> getClusterArn() {
         return this.clusterArn;
     }
     /**
      * The Amazon Resource Name (ARN) of the control panel.
-     * 
      */
     @Export(name="controlPanelArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> controlPanelArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the control panel.
-     * 
      */
     public Output</* @Nullable */ String> getControlPanelArn() {
         return this.controlPanelArn;
     }
     /**
      * The name of the routing control. You can use any non-white space character in the name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the routing control. You can use any non-white space character in the name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Amazon Resource Name (ARN) of the routing control.
-     * 
      */
     @Export(name="routingControlArn", type=String.class, parameters={})
     private Output<String> routingControlArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the routing control.
-     * 
      */
     public Output<String> getRoutingControlArn() {
         return this.routingControlArn;
     }
     /**
      * The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
-     * 
      */
     @Export(name="status", type=RoutingControlStatus.class, parameters={})
     private Output<RoutingControlStatus> status;
 
     /**
      * @return The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
-     * 
      */
     public Output<RoutingControlStatus> getStatus() {
         return this.status;

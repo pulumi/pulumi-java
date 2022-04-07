@@ -17,37 +17,30 @@ import javax.annotation.Nullable;
 public final class FirewallRuleGroupFirewallRule {
     /**
      * Rule Action
-     * 
      */
     private final FirewallRuleGroupFirewallRuleAction action;
     /**
      * BlockOverrideDnsType
-     * 
      */
     private final @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType;
     /**
      * BlockOverrideDomain
-     * 
      */
     private final @Nullable String blockOverrideDomain;
     /**
      * BlockOverrideTtl
-     * 
      */
     private final @Nullable Integer blockOverrideTtl;
     /**
      * BlockResponse
-     * 
      */
     private final @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse;
     /**
      * ResourceId
-     * 
      */
     private final String firewallDomainListId;
     /**
      * Rule Priority
-     * 
      */
     private final Integer priority;
 
@@ -71,49 +64,42 @@ public final class FirewallRuleGroupFirewallRule {
 
     /**
      * Rule Action
-     * 
     */
     public FirewallRuleGroupFirewallRuleAction getAction() {
         return this.action;
     }
     /**
      * BlockOverrideDnsType
-     * 
     */
     public Optional<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> getBlockOverrideDnsType() {
         return Optional.ofNullable(this.blockOverrideDnsType);
     }
     /**
      * BlockOverrideDomain
-     * 
     */
     public Optional<String> getBlockOverrideDomain() {
         return Optional.ofNullable(this.blockOverrideDomain);
     }
     /**
      * BlockOverrideTtl
-     * 
     */
     public Optional<Integer> getBlockOverrideTtl() {
         return Optional.ofNullable(this.blockOverrideTtl);
     }
     /**
      * BlockResponse
-     * 
     */
     public Optional<FirewallRuleGroupFirewallRuleBlockResponse> getBlockResponse() {
         return Optional.ofNullable(this.blockResponse);
     }
     /**
      * ResourceId
-     * 
     */
     public String getFirewallDomainListId() {
         return this.firewallDomainListId;
     }
     /**
      * Rule Priority
-     * 
     */
     public Integer getPriority() {
         return this.priority;

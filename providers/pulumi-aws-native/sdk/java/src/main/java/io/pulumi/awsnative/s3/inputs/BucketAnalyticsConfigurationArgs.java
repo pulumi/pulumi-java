@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket.
- * 
  */
 public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The ID that identifies the analytics configuration.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -34,7 +32,6 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The prefix that an object must have to be included in the analytics results.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;

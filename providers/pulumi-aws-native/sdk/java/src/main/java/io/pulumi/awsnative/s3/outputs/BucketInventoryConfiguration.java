@@ -20,32 +20,26 @@ public final class BucketInventoryConfiguration {
     private final BucketDestination destination;
     /**
      * Specifies whether the inventory is enabled or disabled.
-     * 
      */
     private final Boolean enabled;
     /**
      * The ID used to identify the inventory configuration.
-     * 
      */
     private final String id;
     /**
      * Object versions to include in the inventory list.
-     * 
      */
     private final BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions;
     /**
      * Contains the optional fields that are included in the inventory results.
-     * 
      */
     private final @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields;
     /**
      * The prefix that is prepended to all inventory results.
-     * 
      */
     private final @Nullable String prefix;
     /**
      * Specifies the schedule for generating inventory results.
-     * 
      */
     private final BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
 
@@ -72,42 +66,36 @@ public final class BucketInventoryConfiguration {
     }
     /**
      * Specifies whether the inventory is enabled or disabled.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The ID used to identify the inventory configuration.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Object versions to include in the inventory list.
-     * 
     */
     public BucketInventoryConfigurationIncludedObjectVersions getIncludedObjectVersions() {
         return this.includedObjectVersions;
     }
     /**
      * Contains the optional fields that are included in the inventory results.
-     * 
     */
     public List<BucketInventoryConfigurationOptionalFieldsItem> getOptionalFields() {
         return this.optionalFields == null ? List.of() : this.optionalFields;
     }
     /**
      * The prefix that is prepended to all inventory results.
-     * 
     */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * Specifies the schedule for generating inventory results.
-     * 
     */
     public BucketInventoryConfigurationScheduleFrequency getScheduleFrequency() {
         return this.scheduleFrequency;

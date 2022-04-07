@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Information needed to clear the timer.
- * 
  */
 public final class DetectorModelClearTimerArgs extends io.pulumi.resources.ResourceArgs {
 

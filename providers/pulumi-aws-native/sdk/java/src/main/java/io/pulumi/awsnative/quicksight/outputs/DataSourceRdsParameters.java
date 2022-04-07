@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DataSourceRdsParameters {
     /**
      * <p>Database.</p>
-     * 
      */
     private final String database;
     /**
      * <p>Instance ID.</p>
-     * 
      */
     private final String instanceId;
 
@@ -30,14 +28,12 @@ public final class DataSourceRdsParameters {
 
     /**
      * <p>Database.</p>
-     * 
     */
     public String getDatabase() {
         return this.database;
     }
     /**
      * <p>Instance ID.</p>
-     * 
     */
     public String getInstanceId() {
         return this.instanceId;

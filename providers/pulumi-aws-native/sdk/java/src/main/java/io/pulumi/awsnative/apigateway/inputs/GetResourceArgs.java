@@ -14,7 +14,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique primary identifier for a Resource
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;
@@ -25,7 +24,6 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the RestApi resource in which you want to create this resource..
-     * 
      */
     @Import(name="restApiId", required=true)
       private final String restApiId;

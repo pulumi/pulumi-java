@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Xss Match Statement.
- * 
  */
 public final class RuleGroupXssMatchStatementArgs extends io.pulumi.resources.ResourceArgs {
 

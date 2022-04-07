@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Validity for a certificate.
- * 
  */
 public final class CertificateValidityArgs extends io.pulumi.resources.ResourceArgs {
 

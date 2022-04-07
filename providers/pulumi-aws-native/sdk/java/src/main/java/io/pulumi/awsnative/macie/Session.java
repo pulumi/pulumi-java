@@ -15,62 +15,53 @@ import javax.annotation.Nullable;
 
 /**
  * The AWS::Macie::Session resource specifies a new Amazon Macie session. A session is an object that represents the Amazon Macie service. A session is required for Amazon Macie to become operational.
- * 
  */
 @ResourceType(type="aws-native:macie:Session")
 public class Session extends io.pulumi.resources.CustomResource {
     /**
      * AWS account ID of customer
-     * 
      */
     @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
     /**
      * @return AWS account ID of customer
-     * 
      */
     public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
     /**
      * A enumeration value that specifies how frequently finding updates are published.
-     * 
      */
     @Export(name="findingPublishingFrequency", type=SessionFindingPublishingFrequency.class, parameters={})
     private Output</* @Nullable */ SessionFindingPublishingFrequency> findingPublishingFrequency;
 
     /**
      * @return A enumeration value that specifies how frequently finding updates are published.
-     * 
      */
     public Output</* @Nullable */ SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
         return this.findingPublishingFrequency;
     }
     /**
      * Service role used by Macie
-     * 
      */
     @Export(name="serviceRole", type=String.class, parameters={})
     private Output<String> serviceRole;
 
     /**
      * @return Service role used by Macie
-     * 
      */
     public Output<String> getServiceRole() {
         return this.serviceRole;
     }
     /**
      * A enumeration value that specifies the status of the Macie Session.
-     * 
      */
     @Export(name="status", type=SessionStatus.class, parameters={})
     private Output</* @Nullable */ SessionStatus> status;
 
     /**
      * @return A enumeration value that specifies the status of the Macie Session.
-     * 
      */
     public Output</* @Nullable */ SessionStatus> getStatus() {
         return this.status;

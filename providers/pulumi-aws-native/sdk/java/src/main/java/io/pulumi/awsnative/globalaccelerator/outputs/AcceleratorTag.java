@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AcceleratorTag {
     /**
      * Key of the tag. Value can be 1 to 127 characters.
-     * 
      */
     private final String key;
     /**
      * Value for the tag. Value can be 1 to 255 characters.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class AcceleratorTag {
 
     /**
      * Key of the tag. Value can be 1 to 127 characters.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * Value for the tag. Value can be 1 to 255 characters.
-     * 
     */
     public String getValue() {
         return this.value;

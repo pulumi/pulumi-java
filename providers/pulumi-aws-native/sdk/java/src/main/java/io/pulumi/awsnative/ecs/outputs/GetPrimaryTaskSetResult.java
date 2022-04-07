@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetPrimaryTaskSetResult {
     /**
      * The ID or full Amazon Resource Name (ARN) of the task set.
-     * 
      */
     private final @Nullable String taskSetId;
 
@@ -24,7 +23,6 @@ public final class GetPrimaryTaskSetResult {
 
     /**
      * The ID or full Amazon Resource Name (ARN) of the task set.
-     * 
     */
     public Optional<String> getTaskSetId() {
         return Optional.ofNullable(this.taskSetId);

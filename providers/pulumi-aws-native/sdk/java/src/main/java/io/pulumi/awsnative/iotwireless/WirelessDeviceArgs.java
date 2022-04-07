@@ -20,7 +20,6 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Wireless device description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +30,6 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Wireless device destination name
-     * 
      */
     @Import(name="destinationName", required=true)
       private final Output<String> destinationName;
@@ -42,7 +40,6 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The date and time when the most recent uplink was received.
-     * 
      */
     @Import(name="lastUplinkReceivedAt")
       private final @Nullable Output<String> lastUplinkReceivedAt;
@@ -53,7 +50,6 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
-     * 
      */
     @Import(name="loRaWAN")
       private final @Nullable Output<WirelessDeviceLoRaWANDeviceArgs> loRaWAN;
@@ -64,7 +60,6 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Wireless device name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -75,7 +70,6 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<WirelessDeviceTagArgs>> tags;
@@ -86,7 +80,6 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Thing arn. Passed into update to associate Thing with Wireless device.
-     * 
      */
     @Import(name="thingArn")
       private final @Nullable Output<String> thingArn;
@@ -97,7 +90,6 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Wireless device type, currently only Sidewalk and LoRa
-     * 
      */
     @Import(name="type", required=true)
       private final Output<WirelessDeviceType> type;

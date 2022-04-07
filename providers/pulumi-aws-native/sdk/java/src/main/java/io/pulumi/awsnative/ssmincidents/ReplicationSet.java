@@ -16,20 +16,17 @@ import javax.annotation.Nullable;
 
 /**
  * Resource type definition for AWS::SSMIncidents::ReplicationSet
- * 
  */
 @ResourceType(type="aws-native:ssmincidents:ReplicationSet")
 public class ReplicationSet extends io.pulumi.resources.CustomResource {
     /**
      * The ARN of the ReplicationSet.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The ARN of the ReplicationSet.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -42,14 +39,12 @@ public class ReplicationSet extends io.pulumi.resources.CustomResource {
     }
     /**
      * The ReplicationSet configuration.
-     * 
      */
     @Export(name="regions", type=List.class, parameters={ReplicationSetReplicationRegion.class})
     private Output<List<ReplicationSetReplicationRegion>> regions;
 
     /**
      * @return The ReplicationSet configuration.
-     * 
      */
     public Output<List<ReplicationSetReplicationRegion>> getRegions() {
         return this.regions;

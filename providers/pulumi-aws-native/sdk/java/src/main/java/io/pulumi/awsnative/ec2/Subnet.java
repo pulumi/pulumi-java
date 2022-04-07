@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::EC2::Subnet
- * 
  */
 @ResourceType(type="aws-native:ec2:Subnet")
 public class Subnet extends io.pulumi.resources.CustomResource {

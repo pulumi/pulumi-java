@@ -25,7 +25,6 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of Scheduling Policy.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -36,7 +35,6 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A key-value pair to associate with a resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Object> tags;

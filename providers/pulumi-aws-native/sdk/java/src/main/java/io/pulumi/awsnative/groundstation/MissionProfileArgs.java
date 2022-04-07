@@ -20,7 +20,6 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Post-pass time needed after the contact.
-     * 
      */
     @Import(name="contactPostPassDurationSeconds")
       private final @Nullable Output<Integer> contactPostPassDurationSeconds;
@@ -31,7 +30,6 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Pre-pass time needed before the contact.
-     * 
      */
     @Import(name="contactPrePassDurationSeconds")
       private final @Nullable Output<Integer> contactPrePassDurationSeconds;
@@ -49,7 +47,6 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
-     * 
      */
     @Import(name="minimumViableContactDurationSeconds", required=true)
       private final Output<Integer> minimumViableContactDurationSeconds;
@@ -60,7 +57,6 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A name used to identify a mission profile.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

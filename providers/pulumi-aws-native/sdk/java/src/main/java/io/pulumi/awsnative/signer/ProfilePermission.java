@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
- * 
  */
 @ResourceType(type="aws-native:signer:ProfilePermission")
 public class ProfilePermission extends io.pulumi.resources.CustomResource {

@@ -24,175 +24,533 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::Synthetics::Canary
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var syntheticsCanary = new AwsNative.Synthetics.Canary("syntheticsCanary", new AwsNative.Synthetics.CanaryArgs
+ *         {
+ *             Name = "samplecanary",
+ *             ExecutionRoleArn = "arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary",
+ *             Code = new AwsNative.Synthetics.Inputs.CanaryCodeArgs
+ *             {
+ *                 Handler = "pageLoadBlueprint.handler",
+ *                 S3Bucket = "aws-synthetics-code-myaccount-canary1",
+ *                 S3Key = "my-script-location",
+ *             },
+ *             ArtifactS3Location = "s3://my-results-bucket",
+ *             RuntimeVersion = "syn-1.0",
+ *             Schedule = new AwsNative.Synthetics.Inputs.CanaryScheduleArgs
+ *             {
+ *                 Expression = "rate(1 minute)",
+ *                 DurationInSeconds = "3600",
+ *             },
+ *             RunConfig = new AwsNative.Synthetics.Inputs.CanaryRunConfigArgs
+ *             {
+ *                 TimeoutInSeconds = 60,
+ *             },
+ *             FailureRetentionPeriod = 30,
+ *             SuccessRetentionPeriod = 30,
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Synthetics.Inputs.CanaryTagArgs
+ *                 {
+ *                     Key = "key00AtCreate",
+ *                     Value = "value001AtCreate",
+ *                 },
+ *             },
+ *             StartCanaryAfterCreation = true,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/synthetics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synthetics.NewCanary(ctx, "syntheticsCanary", &synthetics.CanaryArgs{
+ * 			Name:             pulumi.String("samplecanary"),
+ * 			ExecutionRoleArn: pulumi.String("arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary"),
+ * 			Code: &synthetics.CanaryCodeArgs{
+ * 				Handler:  pulumi.String("pageLoadBlueprint.handler"),
+ * 				S3Bucket: pulumi.String("aws-synthetics-code-myaccount-canary1"),
+ * 				S3Key:    pulumi.String("my-script-location"),
+ * 			},
+ * 			ArtifactS3Location: pulumi.String("s3://my-results-bucket"),
+ * 			RuntimeVersion:     pulumi.String("syn-1.0"),
+ * 			Schedule: &synthetics.CanaryScheduleArgs{
+ * 				Expression:        pulumi.String("rate(1 minute)"),
+ * 				DurationInSeconds: pulumi.String("3600"),
+ * 			},
+ * 			RunConfig: &synthetics.CanaryRunConfigArgs{
+ * 				TimeoutInSeconds: pulumi.Int(60),
+ * 			},
+ * 			FailureRetentionPeriod: pulumi.Int(30),
+ * 			SuccessRetentionPeriod: pulumi.Int(30),
+ * 			Tags: []synthetics.CanaryTagArgs{
+ * 				&synthetics.CanaryTagArgs{
+ * 					Key:   pulumi.String("key00AtCreate"),
+ * 					Value: pulumi.String("value001AtCreate"),
+ * 				},
+ * 			},
+ * 			StartCanaryAfterCreation: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const syntheticsCanary = new aws_native.synthetics.Canary("syntheticsCanary", {
+ *     name: "samplecanary",
+ *     executionRoleArn: "arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary",
+ *     code: {
+ *         handler: "pageLoadBlueprint.handler",
+ *         s3Bucket: "aws-synthetics-code-myaccount-canary1",
+ *         s3Key: "my-script-location",
+ *     },
+ *     artifactS3Location: "s3://my-results-bucket",
+ *     runtimeVersion: "syn-1.0",
+ *     schedule: {
+ *         expression: "rate(1 minute)",
+ *         durationInSeconds: 3600,
+ *     },
+ *     runConfig: {
+ *         timeoutInSeconds: 60,
+ *     },
+ *     failureRetentionPeriod: 30,
+ *     successRetentionPeriod: 30,
+ *     tags: [{
+ *         key: "key00AtCreate",
+ *         value: "value001AtCreate",
+ *     }],
+ *     startCanaryAfterCreation: true,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * synthetics_canary = aws_native.synthetics.Canary("syntheticsCanary",
+ *     name="samplecanary",
+ *     execution_role_arn="arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary",
+ *     code=aws_native.synthetics.CanaryCodeArgs(
+ *         handler="pageLoadBlueprint.handler",
+ *         s3_bucket="aws-synthetics-code-myaccount-canary1",
+ *         s3_key="my-script-location",
+ *     ),
+ *     artifact_s3_location="s3://my-results-bucket",
+ *     runtime_version="syn-1.0",
+ *     schedule=aws_native.synthetics.CanaryScheduleArgs(
+ *         expression="rate(1 minute)",
+ *         duration_in_seconds="3600",
+ *     ),
+ *     run_config=aws_native.synthetics.CanaryRunConfigArgs(
+ *         timeout_in_seconds=60,
+ *     ),
+ *     failure_retention_period=30,
+ *     success_retention_period=30,
+ *     tags=[aws_native.synthetics.CanaryTagArgs(
+ *         key="key00AtCreate",
+ *         value="value001AtCreate",
+ *     )],
+ *     start_canary_after_creation=True)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var syntheticsCanary = new AwsNative.Synthetics.Canary("syntheticsCanary", new AwsNative.Synthetics.CanaryArgs
+ *         {
+ *             Name = "samplecanary",
+ *             ExecutionRoleArn = "arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary",
+ *             Code = new AwsNative.Synthetics.Inputs.CanaryCodeArgs
+ *             {
+ *                 Handler = "pageLoadBlueprint.handler",
+ *                 Script = @"var synthetics = require('Synthetics');
+ * const log = require('SyntheticsLogger');
+ * const pageLoadBlueprint = async function () {
+ * // INSERT URL here
+ * const URL = ""https://amazon.com"";
+ * 
+ * let page = await synthetics.getPage();
+ * const response = await page.goto(URL, {waitUntil: 'domcontentloaded', timeout: 30000});
+ * //Wait for page to render.
+ * //Increase or decrease wait time based on endpoint being monitored.
+ * await page.waitFor(15000);
+ * await synthetics.takeScreenshot('loaded', 'loaded');
+ * let pageTitle = await page.title();
+ * log.info('Page title: ' + pageTitle);
+ * if (response.status() !== 200) {
+ *      throw ""Failed to load page!"";
+ * }
+ * };
+ * 
+ * exports.handler = async () => {
+ * return await pageLoadBlueprint();
+ * };
+ * ",
+ *             },
+ *             ArtifactS3Location = "s3://my-results-bucket",
+ *             RuntimeVersion = "syn-1.0",
+ *             Schedule = new AwsNative.Synthetics.Inputs.CanaryScheduleArgs
+ *             {
+ *                 Expression = "rate(1 minute)",
+ *                 DurationInSeconds = "3600",
+ *             },
+ *             RunConfig = new AwsNative.Synthetics.Inputs.CanaryRunConfigArgs
+ *             {
+ *                 TimeoutInSeconds = 60,
+ *             },
+ *             FailureRetentionPeriod = 30,
+ *             SuccessRetentionPeriod = 30,
+ *             Tags = 
+ *             {
+ *                 new AwsNative.Synthetics.Inputs.CanaryTagArgs
+ *                 {
+ *                     Key = "key00AtCreate",
+ *                     Value = "value001AtCreate",
+ *                 },
+ *             },
+ *             StartCanaryAfterCreation = false,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/synthetics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synthetics.NewCanary(ctx, "syntheticsCanary", &synthetics.CanaryArgs{
+ * 			Name:             pulumi.String("samplecanary"),
+ * 			ExecutionRoleArn: pulumi.String("arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary"),
+ * 			Code: &synthetics.CanaryCodeArgs{
+ * 				Handler: pulumi.String("pageLoadBlueprint.handler"),
+ * 				Script:  pulumi.String("var synthetics = require('Synthetics');\nconst log = require('SyntheticsLogger');\nconst pageLoadBlueprint = async function () {\n// INSERT URL here\nconst URL = \"https://amazon.com\";\n\nlet page = await synthetics.getPage();\nconst response = await page.goto(URL, {waitUntil: 'domcontentloaded', timeout: 30000});\n//Wait for page to render.\n//Increase or decrease wait time based on endpoint being monitored.\nawait page.waitFor(15000);\nawait synthetics.takeScreenshot('loaded', 'loaded');\nlet pageTitle = await page.title();\nlog.info('Page title: ' + pageTitle);\nif (response.status() !== 200) {\n     throw \"Failed to load page!\";\n}\n};\n\nexports.handler = async () => {\nreturn await pageLoadBlueprint();\n};\n"),
+ * 			},
+ * 			ArtifactS3Location: pulumi.String("s3://my-results-bucket"),
+ * 			RuntimeVersion:     pulumi.String("syn-1.0"),
+ * 			Schedule: &synthetics.CanaryScheduleArgs{
+ * 				Expression:        pulumi.String("rate(1 minute)"),
+ * 				DurationInSeconds: pulumi.String("3600"),
+ * 			},
+ * 			RunConfig: &synthetics.CanaryRunConfigArgs{
+ * 				TimeoutInSeconds: pulumi.Int(60),
+ * 			},
+ * 			FailureRetentionPeriod: pulumi.Int(30),
+ * 			SuccessRetentionPeriod: pulumi.Int(30),
+ * 			Tags: []synthetics.CanaryTagArgs{
+ * 				&synthetics.CanaryTagArgs{
+ * 					Key:   pulumi.String("key00AtCreate"),
+ * 					Value: pulumi.String("value001AtCreate"),
+ * 				},
+ * 			},
+ * 			StartCanaryAfterCreation: pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const syntheticsCanary = new aws_native.synthetics.Canary("syntheticsCanary", {
+ *     name: "samplecanary",
+ *     executionRoleArn: "arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary",
+ *     code: {
+ *         handler: "pageLoadBlueprint.handler",
+ *         script: `var synthetics = require('Synthetics');
+ * const log = require('SyntheticsLogger');
+ * const pageLoadBlueprint = async function () {
+ * // INSERT URL here
+ * const URL = "https://amazon.com";
+ * 
+ * let page = await synthetics.getPage();
+ * const response = await page.goto(URL, {waitUntil: 'domcontentloaded', timeout: 30000});
+ * //Wait for page to render.
+ * //Increase or decrease wait time based on endpoint being monitored.
+ * await page.waitFor(15000);
+ * await synthetics.takeScreenshot('loaded', 'loaded');
+ * let pageTitle = await page.title();
+ * log.info('Page title: ' + pageTitle);
+ * if (response.status() !== 200) {
+ *      throw "Failed to load page!";
+ * }
+ * };
+ * 
+ * exports.handler = async () => {
+ * return await pageLoadBlueprint();
+ * };
+ * `,
+ *     },
+ *     artifactS3Location: "s3://my-results-bucket",
+ *     runtimeVersion: "syn-1.0",
+ *     schedule: {
+ *         expression: "rate(1 minute)",
+ *         durationInSeconds: 3600,
+ *     },
+ *     runConfig: {
+ *         timeoutInSeconds: 60,
+ *     },
+ *     failureRetentionPeriod: 30,
+ *     successRetentionPeriod: 30,
+ *     tags: [{
+ *         key: "key00AtCreate",
+ *         value: "value001AtCreate",
+ *     }],
+ *     startCanaryAfterCreation: false,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * synthetics_canary = aws_native.synthetics.Canary("syntheticsCanary",
+ *     name="samplecanary",
+ *     execution_role_arn="arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary",
+ *     code=aws_native.synthetics.CanaryCodeArgs(
+ *         handler="pageLoadBlueprint.handler",
+ *         script="""var synthetics = require('Synthetics');
+ * const log = require('SyntheticsLogger');
+ * const pageLoadBlueprint = async function () {
+ * // INSERT URL here
+ * const URL = "https://amazon.com";
+ * 
+ * let page = await synthetics.getPage();
+ * const response = await page.goto(URL, {waitUntil: 'domcontentloaded', timeout: 30000});
+ * //Wait for page to render.
+ * //Increase or decrease wait time based on endpoint being monitored.
+ * await page.waitFor(15000);
+ * await synthetics.takeScreenshot('loaded', 'loaded');
+ * let pageTitle = await page.title();
+ * log.info('Page title: ' + pageTitle);
+ * if (response.status() !== 200) {
+ *      throw "Failed to load page!";
+ * }
+ * };
+ * 
+ * exports.handler = async () => {
+ * return await pageLoadBlueprint();
+ * };
+ * """,
+ *     ),
+ *     artifact_s3_location="s3://my-results-bucket",
+ *     runtime_version="syn-1.0",
+ *     schedule=aws_native.synthetics.CanaryScheduleArgs(
+ *         expression="rate(1 minute)",
+ *         duration_in_seconds="3600",
+ *     ),
+ *     run_config=aws_native.synthetics.CanaryRunConfigArgs(
+ *         timeout_in_seconds=60,
+ *     ),
+ *     failure_retention_period=30,
+ *     success_retention_period=30,
+ *     tags=[aws_native.synthetics.CanaryTagArgs(
+ *         key="key00AtCreate",
+ *         value="value001AtCreate",
+ *     )],
+ *     start_canary_after_creation=False)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:synthetics:Canary")
 public class Canary extends io.pulumi.resources.CustomResource {
     /**
      * Provide artifact configuration
-     * 
      */
     @Export(name="artifactConfig", type=CanaryArtifactConfig.class, parameters={})
     private Output</* @Nullable */ CanaryArtifactConfig> artifactConfig;
 
     /**
      * @return Provide artifact configuration
-     * 
      */
     public Output</* @Nullable */ CanaryArtifactConfig> getArtifactConfig() {
         return this.artifactConfig;
     }
     /**
      * Provide the s3 bucket output location for test results
-     * 
      */
     @Export(name="artifactS3Location", type=String.class, parameters={})
     private Output<String> artifactS3Location;
 
     /**
      * @return Provide the s3 bucket output location for test results
-     * 
      */
     public Output<String> getArtifactS3Location() {
         return this.artifactS3Location;
     }
     /**
      * Provide the canary script source
-     * 
      */
     @Export(name="code", type=CanaryCode.class, parameters={})
     private Output<CanaryCode> code;
 
     /**
      * @return Provide the canary script source
-     * 
      */
     public Output<CanaryCode> getCode() {
         return this.code;
     }
     /**
      * Lambda Execution role used to run your canaries
-     * 
      */
     @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output<String> executionRoleArn;
 
     /**
      * @return Lambda Execution role used to run your canaries
-     * 
      */
     public Output<String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
     /**
      * Retention period of failed canary runs represented in number of days
-     * 
      */
     @Export(name="failureRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> failureRetentionPeriod;
 
     /**
      * @return Retention period of failed canary runs represented in number of days
-     * 
      */
     public Output</* @Nullable */ Integer> getFailureRetentionPeriod() {
         return this.failureRetentionPeriod;
     }
     /**
      * Name of the canary.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the canary.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provide canary run configuration
-     * 
      */
     @Export(name="runConfig", type=CanaryRunConfig.class, parameters={})
     private Output</* @Nullable */ CanaryRunConfig> runConfig;
 
     /**
      * @return Provide canary run configuration
-     * 
      */
     public Output</* @Nullable */ CanaryRunConfig> getRunConfig() {
         return this.runConfig;
     }
     /**
      * Runtime version of Synthetics Library
-     * 
      */
     @Export(name="runtimeVersion", type=String.class, parameters={})
     private Output<String> runtimeVersion;
 
     /**
      * @return Runtime version of Synthetics Library
-     * 
      */
     public Output<String> getRuntimeVersion() {
         return this.runtimeVersion;
     }
     /**
      * Frequency to run your canaries
-     * 
      */
     @Export(name="schedule", type=CanarySchedule.class, parameters={})
     private Output<CanarySchedule> schedule;
 
     /**
      * @return Frequency to run your canaries
-     * 
      */
     public Output<CanarySchedule> getSchedule() {
         return this.schedule;
     }
     /**
      * Runs canary if set to True. Default is False
-     * 
      */
     @Export(name="startCanaryAfterCreation", type=Boolean.class, parameters={})
     private Output<Boolean> startCanaryAfterCreation;
 
     /**
      * @return Runs canary if set to True. Default is False
-     * 
      */
     public Output<Boolean> getStartCanaryAfterCreation() {
         return this.startCanaryAfterCreation;
     }
     /**
      * State of the canary
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the canary
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Retention period of successful canary runs represented in number of days
-     * 
      */
     @Export(name="successRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> successRetentionPeriod;
 
     /**
      * @return Retention period of successful canary runs represented in number of days
-     * 
      */
     public Output</* @Nullable */ Integer> getSuccessRetentionPeriod() {
         return this.successRetentionPeriod;
@@ -205,28 +563,24 @@ public class Canary extends io.pulumi.resources.CustomResource {
     }
     /**
      * Provide VPC Configuration if enabled.
-     * 
      */
     @Export(name="vPCConfig", type=CanaryVPCConfig.class, parameters={})
     private Output</* @Nullable */ CanaryVPCConfig> vPCConfig;
 
     /**
      * @return Provide VPC Configuration if enabled.
-     * 
      */
     public Output</* @Nullable */ CanaryVPCConfig> getVPCConfig() {
         return this.vPCConfig;
     }
     /**
      * Visual reference configuration for visual testing
-     * 
      */
     @Export(name="visualReference", type=CanaryVisualReference.class, parameters={})
     private Output</* @Nullable */ CanaryVisualReference> visualReference;
 
     /**
      * @return Visual reference configuration for visual testing
-     * 
      */
     public Output</* @Nullable */ CanaryVisualReference> getVisualReference() {
         return this.visualReference;

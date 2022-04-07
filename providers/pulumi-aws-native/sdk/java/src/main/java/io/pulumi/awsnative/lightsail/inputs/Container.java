@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the settings of a container that will be launched, or that is launched, to an Amazon Lightsail container service.
- * 
  */
 public final class Container extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The launch command for the container.
-     * 
      */
     @Import(name="command")
       private final @Nullable List<String> command;
@@ -34,7 +32,6 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the container.
-     * 
      */
     @Import(name="containerName")
       private final @Nullable String containerName;
@@ -45,7 +42,6 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The environment variables of the container.
-     * 
      */
     @Import(name="environment")
       private final @Nullable List<ContainerEnvironmentVariable> environment;
@@ -56,7 +52,6 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the image used for the container.
-     * 
      */
     @Import(name="image")
       private final @Nullable String image;
@@ -67,7 +62,6 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The open firewall ports of the container.
-     * 
      */
     @Import(name="ports")
       private final @Nullable List<ContainerPortInfo> ports;

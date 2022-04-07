@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::Evidently::Project
- * 
  */
 @ResourceType(type="aws-native:evidently:Project")
 public class Project extends io.pulumi.resources.CustomResource {
@@ -46,14 +45,12 @@ public class Project extends io.pulumi.resources.CustomResource {
     }
     /**
      * An array of key-value pairs to apply to this resource.
-     * 
      */
     @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
     /**
      * @return An array of key-value pairs to apply to this resource.
-     * 
      */
     public Output</* @Nullable */ List<ProjectTag>> getTags() {
         return this.tags;

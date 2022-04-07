@@ -14,77 +14,201 @@ import javax.annotation.Nullable;
 /**
  * Associates an AWS Identity and Access Management (IAM) role with an AWS Certificate Manager (ACM) certificate. This association is based on Amazon Resource Names and it enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myEnclaveCertificateIamRoleAssociation = new AwsNative.EC2.EnclaveCertificateIamRoleAssociation("myEnclaveCertificateIamRoleAssociation", new AwsNative.EC2.EnclaveCertificateIamRoleAssociationArgs
+ *         {
+ *             CertificateArn = "arn:aws:acm:us-east-1:123456789012:certificate/123abcde-cdef-abcd-1234-123abEXAMPLE",
+ *             RoleArn = "arn:aws:iam::123456789012:role/my-acm-role",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewEnclaveCertificateIamRoleAssociation(ctx, "myEnclaveCertificateIamRoleAssociation", &ec2.EnclaveCertificateIamRoleAssociationArgs{
+ * 			CertificateArn: pulumi.String("arn:aws:acm:us-east-1:123456789012:certificate/123abcde-cdef-abcd-1234-123abEXAMPLE"),
+ * 			RoleArn:        pulumi.String("arn:aws:iam::123456789012:role/my-acm-role"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myEnclaveCertificateIamRoleAssociation = new aws_native.ec2.EnclaveCertificateIamRoleAssociation("myEnclaveCertificateIamRoleAssociation", {
+ *     certificateArn: "arn:aws:acm:us-east-1:123456789012:certificate/123abcde-cdef-abcd-1234-123abEXAMPLE",
+ *     roleArn: "arn:aws:iam::123456789012:role/my-acm-role",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_enclave_certificate_iam_role_association = aws_native.ec2.EnclaveCertificateIamRoleAssociation("myEnclaveCertificateIamRoleAssociation",
+ *     certificate_arn="arn:aws:acm:us-east-1:123456789012:certificate/123abcde-cdef-abcd-1234-123abEXAMPLE",
+ *     role_arn="arn:aws:iam::123456789012:role/my-acm-role")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var myCertAssociation = new AwsNative.EC2.EnclaveCertificateIamRoleAssociation("myCertAssociation", new AwsNative.EC2.EnclaveCertificateIamRoleAssociationArgs
+ *         {
+ *             CertificateArn = "arn:aws:acm:us-east-1:123456789012:certificate/123abcde-cdef-abcd-1234-123abEXAMPLE",
+ *             RoleArn = "arn:aws:iam::123456789012:role/my-acm-role",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/ec2"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := ec2.NewEnclaveCertificateIamRoleAssociation(ctx, "myCertAssociation", &ec2.EnclaveCertificateIamRoleAssociationArgs{
+ * 			CertificateArn: pulumi.String("arn:aws:acm:us-east-1:123456789012:certificate/123abcde-cdef-abcd-1234-123abEXAMPLE"),
+ * 			RoleArn:        pulumi.String("arn:aws:iam::123456789012:role/my-acm-role"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const myCertAssociation = new aws_native.ec2.EnclaveCertificateIamRoleAssociation("myCertAssociation", {
+ *     certificateArn: "arn:aws:acm:us-east-1:123456789012:certificate/123abcde-cdef-abcd-1234-123abEXAMPLE",
+ *     roleArn: "arn:aws:iam::123456789012:role/my-acm-role",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * my_cert_association = aws_native.ec2.EnclaveCertificateIamRoleAssociation("myCertAssociation",
+ *     certificate_arn="arn:aws:acm:us-east-1:123456789012:certificate/123abcde-cdef-abcd-1234-123abEXAMPLE",
+ *     role_arn="arn:aws:iam::123456789012:role/my-acm-role")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:ec2:EnclaveCertificateIamRoleAssociation")
 public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the ACM certificate with which to associate the IAM role.
-     * 
      */
     @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the ACM certificate with which to associate the IAM role.
-     * 
      */
     public Output<String> getCertificateArn() {
         return this.certificateArn;
     }
     /**
      * The name of the Amazon S3 bucket to which the certificate was uploaded.
-     * 
      */
     @Export(name="certificateS3BucketName", type=String.class, parameters={})
     private Output<String> certificateS3BucketName;
 
     /**
      * @return The name of the Amazon S3 bucket to which the certificate was uploaded.
-     * 
      */
     public Output<String> getCertificateS3BucketName() {
         return this.certificateS3BucketName;
     }
     /**
      * The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
-     * 
      */
     @Export(name="certificateS3ObjectKey", type=String.class, parameters={})
     private Output<String> certificateS3ObjectKey;
 
     /**
      * @return The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
-     * 
      */
     public Output<String> getCertificateS3ObjectKey() {
         return this.certificateS3ObjectKey;
     }
     /**
      * The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
-     * 
      */
     @Export(name="encryptionKmsKeyId", type=String.class, parameters={})
     private Output<String> encryptionKmsKeyId;
 
     /**
      * @return The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
-     * 
      */
     public Output<String> getEncryptionKmsKeyId() {
         return this.encryptionKmsKeyId;
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM role to associate with the ACM certificate. You can associate up to 16 IAM roles with an ACM certificate.
-     * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the IAM role to associate with the ACM certificate. You can associate up to 16 IAM roles with an ACM certificate.
-     * 
      */
     public Output<String> getRoleArn() {
         return this.roleArn;

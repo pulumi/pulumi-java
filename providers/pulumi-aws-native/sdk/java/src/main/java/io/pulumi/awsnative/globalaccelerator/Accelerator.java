@@ -17,90 +17,77 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Type definition for AWS::GlobalAccelerator::Accelerator
- * 
  */
 @ResourceType(type="aws-native:globalaccelerator:Accelerator")
 public class Accelerator extends io.pulumi.resources.CustomResource {
     /**
      * The Amazon Resource Name (ARN) of the accelerator.
-     * 
      */
     @Export(name="acceleratorArn", type=String.class, parameters={})
     private Output<String> acceleratorArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the accelerator.
-     * 
      */
     public Output<String> getAcceleratorArn() {
         return this.acceleratorArn;
     }
     /**
      * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator's static IP addresses.
-     * 
      */
     @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
      * @return The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator's static IP addresses.
-     * 
      */
     public Output<String> getDnsName() {
         return this.dnsName;
     }
     /**
      * Indicates whether an accelerator is enabled. The value is true or false.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return Indicates whether an accelerator is enabled. The value is true or false.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * IP Address type.
-     * 
      */
     @Export(name="ipAddressType", type=AcceleratorIpAddressType.class, parameters={})
     private Output</* @Nullable */ AcceleratorIpAddressType> ipAddressType;
 
     /**
      * @return IP Address type.
-     * 
      */
     public Output</* @Nullable */ AcceleratorIpAddressType> getIpAddressType() {
         return this.ipAddressType;
     }
     /**
      * The IP addresses from BYOIP Prefix pool.
-     * 
      */
     @Export(name="ipAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ipAddresses;
 
     /**
      * @return The IP addresses from BYOIP Prefix pool.
-     * 
      */
     public Output</* @Nullable */ List<String>> getIpAddresses() {
         return this.ipAddresses;
     }
     /**
      * Name of accelerator.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of accelerator.
-     * 
      */
     public Output<String> getName() {
         return this.name;

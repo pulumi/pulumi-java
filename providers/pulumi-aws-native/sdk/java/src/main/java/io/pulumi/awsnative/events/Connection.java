@@ -16,21 +16,149 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::Events::Connection.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Example
+ * ```csharp
+ * using Pulumi;
+ * using AwsNative = Pulumi.AwsNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var config = new Config();
+ *         var pagerDutyAPIKeyParam = config.Require("pagerDutyAPIKeyParam");
+ *         var myConnection = new AwsNative.Events.Connection("myConnection", new AwsNative.Events.ConnectionArgs
+ *         {
+ *             AuthorizationType = "API_KEY",
+ *             Description = "Connection to PagerDuty API",
+ *             AuthParameters = new AwsNative.Events.Inputs.AuthParametersPropertiesArgs
+ *             {
+ *                 ApiKeyAuthParameters = new AwsNative.Events.Inputs.ConnectionApiKeyAuthParametersArgs
+ *                 {
+ *                     ApiKeyName = "PagerDuty Authorization",
+ *                     ApiKeyValue = pagerDutyAPIKeyParam,
+ *                 },
+ *             },
+ *         });
+ *         var myApiDestination = new AwsNative.Events.ApiDestination("myApiDestination", new AwsNative.Events.ApiDestinationArgs
+ *         {
+ *             ConnectionArn = myConnection.Arn,
+ *             Description = "API Destination to send events to PagerDuty",
+ *             HttpMethod = "POST",
+ *             InvocationEndpoint = "https://events.pagerduty.com/v2/enqueue",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws-native/sdk/go/aws/events"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		cfg := config.New(ctx, "")
+ * 		pagerDutyAPIKeyParam := cfg.Require("pagerDutyAPIKeyParam")
+ * 		myConnection, err := events.NewConnection(ctx, "myConnection", &events.ConnectionArgs{
+ * 			AuthorizationType: "API_KEY",
+ * 			Description:       pulumi.String("Connection to PagerDuty API"),
+ * 			AuthParameters: &events.AuthParametersPropertiesArgs{
+ * 				ApiKeyAuthParameters: &events.ConnectionApiKeyAuthParametersArgs{
+ * 					ApiKeyName:  pulumi.String("PagerDuty Authorization"),
+ * 					ApiKeyValue: pulumi.String(pagerDutyAPIKeyParam),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = events.NewApiDestination(ctx, "myApiDestination", &events.ApiDestinationArgs{
+ * 			ConnectionArn:      myConnection.Arn,
+ * 			Description:        pulumi.String("API Destination to send events to PagerDuty"),
+ * 			HttpMethod:         "POST",
+ * 			InvocationEndpoint: pulumi.String("https://events.pagerduty.com/v2/enqueue"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws_native from "@pulumi/aws-native";
+ * 
+ * const config = new pulumi.Config();
+ * const pagerDutyAPIKeyParam = config.require("pagerDutyAPIKeyParam");
+ * const myConnection = new aws_native.events.Connection("myConnection", {
+ *     authorizationType: "API_KEY",
+ *     description: "Connection to PagerDuty API",
+ *     authParameters: {
+ *         apiKeyAuthParameters: {
+ *             apiKeyName: "PagerDuty Authorization",
+ *             apiKeyValue: pagerDutyAPIKeyParam,
+ *         },
+ *     },
+ * });
+ * const myApiDestination = new aws_native.events.ApiDestination("myApiDestination", {
+ *     connectionArn: myConnection.arn,
+ *     description: "API Destination to send events to PagerDuty",
+ *     httpMethod: "POST",
+ *     invocationEndpoint: "https://events.pagerduty.com/v2/enqueue",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_aws_native as aws_native
+ * 
+ * config = pulumi.Config()
+ * pager_duty_api_key_param = config.require("pagerDutyAPIKeyParam")
+ * my_connection = aws_native.events.Connection("myConnection",
+ *     authorization_type="API_KEY",
+ *     description="Connection to PagerDuty API",
+ *     auth_parameters=aws_native.events.AuthParametersPropertiesArgs(
+ *         api_key_auth_parameters=aws_native.events.ConnectionApiKeyAuthParametersArgs(
+ *             api_key_name="PagerDuty Authorization",
+ *             api_key_value=pager_duty_api_key_param,
+ *         ),
+ *     ))
+ * my_api_destination = aws_native.events.ApiDestination("myApiDestination",
+ *     connection_arn=my_connection.arn,
+ *     description="API Destination to send events to PagerDuty",
+ *     http_method="POST",
+ *     invocation_endpoint="https://events.pagerduty.com/v2/enqueue")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  */
 @ResourceType(type="aws-native:events:Connection")
 public class Connection extends io.pulumi.resources.CustomResource {
     /**
      * The arn of the connection resource.
-     * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
      * @return The arn of the connection resource.
-     * 
      */
     public Output<String> getArn() {
         return this.arn;
@@ -49,42 +177,36 @@ public class Connection extends io.pulumi.resources.CustomResource {
     }
     /**
      * Description of the connection.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the connection.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Name of the connection.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the connection.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The arn of the secrets manager secret created in the customer account.
-     * 
      */
     @Export(name="secretArn", type=String.class, parameters={})
     private Output<String> secretArn;
 
     /**
      * @return The arn of the secrets manager secret created in the customer account.
-     * 
      */
     public Output<String> getSecretArn() {
         return this.secretArn;
