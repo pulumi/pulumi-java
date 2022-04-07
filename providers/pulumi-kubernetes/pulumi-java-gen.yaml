@@ -1,13 +1,8 @@
+artifactID: kubernetes
 version: 3.15.1
 schema: https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/v3.15.1/provider/cmd/pulumi-resource-kubernetes/schema.json
 out: sdk/java
 versionFile: src/main/resources/io/pulumi/kubernetes/version.txt
 pluginFile: src/main/resources/io/pulumi/kubernetes/plugin.json
-
-packageInfo:
-  packageReferences:
-    "io.pulumi:pulumi": "0.0.1-SNAPSHOT"
-  gprPublishSettings:
-    groupId: io.pulumi
-    artifactId: kubernetes
-    repositoryUrl: https://maven.pkg.github.com/pulumi/pulumi-jvm
+overlays:
+  - "../build-templates"

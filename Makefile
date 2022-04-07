@@ -42,8 +42,6 @@ providers_generate_all: provider.random.generate provider.aws.generate provider.
 
 providers_all: provider.random.install provider.aws.install provider.aws-native.install provider.docker.install provider.kubernetes.install provider.azure-native.install provider.google-native.install provider.gcp.install provider.eks.install
 
-provider.eks.build: provider.kubernetes.install provider.aws.install
-
 # Example: make provider.random.build
 provider.%.build:	provider.%.generate
 	cd providers/pulumi-$*/sdk/java && gradle build

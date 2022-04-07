@@ -1,9 +1,11 @@
+/* {{ .TemplateComment }} */
+
 plugins {
     id("java-library")
     id("maven-publish")
 }
 
-version = project.findProperty("version") == "unspecified" ? "3.1.0" : project.findProperty("version");
+version = project.findProperty("version") == "unspecified" ? "{{ .DefaultVersion }}" : project.findProperty("version");
 
 java {
     toolchain {
@@ -21,17 +23,6 @@ repositories {
         url("https://maven-central.storage-download.googleapis.com/maven2/")
     }
     mavenCentral()
-    mavenLocal()
-    if (project.findProperty("gpr.user") ?: System.getenv("GPR_USER")) {
-      maven {
-        name = "GitHubPackages"
-        url = uri("https://maven.pkg.github.com/pulumi/pulumi-jvm")
-        credentials {
-          username = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
-          password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
-        }
-     }
-   }
 }
 
 dependencies {
@@ -42,6 +33,8 @@ dependencies {
     implementation("com.google.protobuf:protobuf-java:3.12.0") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java-util:3.12.0") // make sure we don't clash with grpc deps
     implementation("io.pulumi:pulumi:0.0.1-SNAPSHOT")
+    implementation("io.pulumi:aws:4.37.3-SNAPSHOT")
+    implementation("io.pulumi:kubernetes:3.15.1-SNAPSHOT")
 
     def junitVersion = "5.7.2"
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
@@ -79,7 +72,7 @@ publishing {
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
             groupId = "io.pulumi"
-            artifactId = "docker"
+            artifactId = "{{ .ArtifactID }}"
             version = project.findProperty("version") + (project.findProperty("snapshot") ? "-SNAPSHOT": "");
             from components.java
         }

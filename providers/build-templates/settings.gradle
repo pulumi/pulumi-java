@@ -1,3 +1,5 @@
+/* {{ .TemplateComment }} */
+
 pluginManagement {
   repositories {
     maven { // The google mirror is less flaky than mavenCentral()
@@ -13,5 +15,5 @@ includeBuild('../../../../sdk/jvm') {
   }
 }
 
-rootProject.name = "io.pulumi.aws-native"
+rootProject.name = "io.pulumi.{{ .ArtifactID }}"
 include("lib")

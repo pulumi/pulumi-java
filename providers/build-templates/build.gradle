@@ -1,9 +1,11 @@
+/* {{ .TemplateComment }} */
+
 plugins {
     id("java-library")
     id("maven-publish")
 }
 
-version = project.findProperty("version") == "unspecified" ? "4.37.3" : project.findProperty("version");
+version = project.findProperty("version") == "unspecified" ? "{{ .DefaultVersion }}" : project.findProperty("version");
 
 java {
     toolchain {
@@ -68,7 +70,7 @@ publishing {
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
             groupId = "io.pulumi"
-            artifactId = "aws"
+            artifactId = "{{ .ArtifactID }}"
             version = project.findProperty("version") + (project.findProperty("snapshot") ? "-SNAPSHOT": "");
             from components.java
         }
