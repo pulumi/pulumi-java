@@ -3,13 +3,15 @@
 // When the example code moves to a separate repository these can be
 // removed.
 
-includeBuild('../../../sdk/jvm') {
+var root = System.getenv("PULUMI_REPO_ROOT") ?: "../../..";
+
+includeBuild(root + '/sdk/jvm') {
   dependencySubstitution {
     substitute module('io.pulumi:pulumi') using project(':pulumi')
   }
 }
 
-includeBuild('../../../providers/pulumi-aws/sdk/java') {
+includeBuild(root + '/providers/pulumi-aws/sdk/java') {
   name = ':aws'
   dependencySubstitution {
     substitute module('io.pulumi:aws') using project(':')
