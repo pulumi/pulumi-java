@@ -21,11 +21,6 @@ public class OutputTests {
     }
 
     @CanIgnoreReturnValue
-    static <T> T waitForValue(Output<T> io) {
-        return waitFor(io).getValueNullable();
-    }
-
-    @CanIgnoreReturnValue
     public static <T1, T2>
     Tuple2<OutputData<T1>, OutputData<T2>>
     waitFor(Output<T1> io1, Output<T2> io2) {

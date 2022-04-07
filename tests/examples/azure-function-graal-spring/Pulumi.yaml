@@ -1,0 +1,4 @@
+name: azure-function-graal-spring
+description: Deploys Spring Boot application packaged with GraalVM using Pulumi on Azure from Java definitions
+runtime:
+  name: jvm

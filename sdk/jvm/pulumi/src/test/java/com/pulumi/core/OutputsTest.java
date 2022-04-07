@@ -2,8 +2,8 @@ package com.pulumi.core;
 
 import org.junit.jupiter.api.Test;
 
-import static io.pulumi.core.OutputTests.waitFor;
-import static io.pulumi.core.OutputTests.waitForValue;
+import static com.pulumi.core.OutputTests.waitFor;
+import static com.pulumi.core.OutputTests.waitForValue;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class OutputsTest {
