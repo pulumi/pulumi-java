@@ -18,7 +18,131 @@ import javax.annotation.Nullable;
  * A server trust group.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create server trust group
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverTrustGroup = new AzureNative.Sql.ServerTrustGroup("serverTrustGroup", new AzureNative.Sql.ServerTrustGroupArgs
+ *         {
+ *             GroupMembers = 
+ *             {
+ *                 new AzureNative.Sql.Inputs.ServerInfoArgs
+ *                 {
+ *                     ServerId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
+ *                 },
+ *                 new AzureNative.Sql.Inputs.ServerInfoArgs
+ *                 {
+ *                     ServerId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2",
+ *                 },
+ *             },
+ *             LocationName = "Japan East",
+ *             ResourceGroupName = "Default",
+ *             ServerTrustGroupName = "server-trust-group-test",
+ *             TrustScopes = 
+ *             {
+ *                 "GlobalTransactions",
+ *                 "ServiceBroker",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewServerTrustGroup(ctx, "serverTrustGroup", &sql.ServerTrustGroupArgs{
+ * 			GroupMembers: sql.ServerInfoArray{
+ * 				&sql.ServerInfoArgs{
+ * 					ServerId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1"),
+ * 				},
+ * 				&sql.ServerInfoArgs{
+ * 					ServerId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2"),
+ * 				},
+ * 			},
+ * 			LocationName:         pulumi.String("Japan East"),
+ * 			ResourceGroupName:    pulumi.String("Default"),
+ * 			ServerTrustGroupName: pulumi.String("server-trust-group-test"),
+ * 			TrustScopes: pulumi.StringArray{
+ * 				pulumi.String("GlobalTransactions"),
+ * 				pulumi.String("ServiceBroker"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverTrustGroup = new azure_native.sql.ServerTrustGroup("serverTrustGroup", {
+ *     groupMembers: [
+ *         {
+ *             serverId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
+ *         },
+ *         {
+ *             serverId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2",
+ *         },
+ *     ],
+ *     locationName: "Japan East",
+ *     resourceGroupName: "Default",
+ *     serverTrustGroupName: "server-trust-group-test",
+ *     trustScopes: [
+ *         "GlobalTransactions",
+ *         "ServiceBroker",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_trust_group = azure_native.sql.ServerTrustGroup("serverTrustGroup",
+ *     group_members=[
+ *         azure_native.sql.ServerInfoArgs(
+ *             server_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-1",
+ *         ),
+ *         azure_native.sql.ServerInfoArgs(
+ *             server_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/managedInstance-2",
+ *         ),
+ *     ],
+ *     location_name="Japan East",
+ *     resource_group_name="Default",
+ *     server_trust_group_name="server-trust-group-test",
+ *     trust_scopes=[
+ *         "GlobalTransactions",
+ *         "ServiceBroker",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +157,48 @@ import javax.annotation.Nullable;
 public class ServerTrustGroup extends io.pulumi.resources.CustomResource {
     /**
      * Group members information for the server trust group.
-     * 
      */
     @Export(name="groupMembers", type=List.class, parameters={ServerInfoResponse.class})
     private Output<List<ServerInfoResponse>> groupMembers;
 
     /**
      * @return Group members information for the server trust group.
-     * 
      */
     public Output<List<ServerInfoResponse>> getGroupMembers() {
         return this.groupMembers;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Trust scope of the server trust group.
-     * 
      */
     @Export(name="trustScopes", type=List.class, parameters={String.class})
     private Output<List<String>> trustScopes;
 
     /**
      * @return Trust scope of the server trust group.
-     * 
      */
     public Output<List<String>> getTrustScopes() {
         return this.trustScopes;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

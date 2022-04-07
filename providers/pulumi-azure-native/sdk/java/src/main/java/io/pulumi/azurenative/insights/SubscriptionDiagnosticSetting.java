@@ -18,7 +18,109 @@ import javax.annotation.Nullable;
  * The subscription diagnostic setting resource.
  * API Version: 2017-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or Updates the subscription diagnostic setting
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var subscriptionDiagnosticSetting = new AzureNative.Insights.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", new AzureNative.Insights.SubscriptionDiagnosticSettingArgs
+ *         {
+ *             EventHubAuthorizationRuleId = "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+ *             EventHubName = "myeventhub",
+ *             Logs = 
+ *             {
+ *                 new AzureNative.Insights.Inputs.SubscriptionLogSettingsArgs
+ *                 {
+ *                     Category = "Security",
+ *                     Enabled = true,
+ *                 },
+ *             },
+ *             Name = "ds4",
+ *             StorageAccountId = "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
+ *             WorkspaceId = "",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewSubscriptionDiagnosticSetting(ctx, "subscriptionDiagnosticSetting", &insights.SubscriptionDiagnosticSettingArgs{
+ * 			EventHubAuthorizationRuleId: pulumi.String("/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule"),
+ * 			EventHubName:                pulumi.String("myeventhub"),
+ * 			Logs: []insights.SubscriptionLogSettingsArgs{
+ * 				&insights.SubscriptionLogSettingsArgs{
+ * 					Category: pulumi.String("Security"),
+ * 					Enabled:  pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			Name:             pulumi.String("ds4"),
+ * 			StorageAccountId: pulumi.String("/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1"),
+ * 			WorkspaceId:      pulumi.String(""),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const subscriptionDiagnosticSetting = new azure_native.insights.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting", {
+ *     eventHubAuthorizationRuleId: "/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+ *     eventHubName: "myeventhub",
+ *     logs: [{
+ *         category: "Security",
+ *         enabled: true,
+ *     }],
+ *     name: "ds4",
+ *     storageAccountId: "/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
+ *     workspaceId: "",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * subscription_diagnostic_setting = azure_native.insights.SubscriptionDiagnosticSetting("subscriptionDiagnosticSetting",
+ *     event_hub_authorization_rule_id="/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule",
+ *     event_hub_name="myeventhub",
+ *     logs=[azure_native.insights.SubscriptionLogSettingsArgs(
+ *         category="Security",
+ *         enabled=True,
+ *     )],
+ *     name="ds4",
+ *     storage_account_id="/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1",
+ *     workspace_id="")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +135,108 @@ import javax.annotation.Nullable;
 public class SubscriptionDiagnosticSetting extends io.pulumi.resources.CustomResource {
     /**
      * The resource Id for the event hub authorization rule.
-     * 
      */
     @Export(name="eventHubAuthorizationRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubAuthorizationRuleId;
 
     /**
      * @return The resource Id for the event hub authorization rule.
-     * 
      */
     public Output</* @Nullable */ String> getEventHubAuthorizationRuleId() {
         return this.eventHubAuthorizationRuleId;
     }
     /**
      * The name of the event hub. If none is specified, the default event hub will be selected.
-     * 
      */
     @Export(name="eventHubName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubName;
 
     /**
      * @return The name of the event hub. If none is specified, the default event hub will be selected.
-     * 
      */
     public Output</* @Nullable */ String> getEventHubName() {
         return this.eventHubName;
     }
     /**
      * Location of the resource
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Location of the resource
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The list of logs settings.
-     * 
      */
     @Export(name="logs", type=List.class, parameters={SubscriptionLogSettingsResponse.class})
     private Output</* @Nullable */ List<SubscriptionLogSettingsResponse>> logs;
 
     /**
      * @return The list of logs settings.
-     * 
      */
     public Output</* @Nullable */ List<SubscriptionLogSettingsResponse>> getLogs() {
         return this.logs;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
-     * 
      */
     @Export(name="serviceBusRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusRuleId;
 
     /**
      * @return The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
-     * 
      */
     public Output</* @Nullable */ String> getServiceBusRuleId() {
         return this.serviceBusRuleId;
     }
     /**
      * The resource ID of the storage account to which you would like to send Diagnostic Logs.
-     * 
      */
     @Export(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
     /**
      * @return The resource ID of the storage account to which you would like to send Diagnostic Logs.
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccountId() {
         return this.storageAccountId;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
-     * 
      */
     @Export(name="workspaceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> workspaceId;
 
     /**
      * @return The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
-     * 
      */
     public Output</* @Nullable */ String> getWorkspaceId() {
         return this.workspaceId;

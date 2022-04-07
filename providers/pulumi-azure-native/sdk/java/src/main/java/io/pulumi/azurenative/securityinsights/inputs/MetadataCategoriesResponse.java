@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ies for the solution content item
- * 
  */
 public final class MetadataCategoriesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MetadataCategoriesResponse extends io.pulumi.resources.Invoke
 
     /**
      * domain for the solution content item
-     * 
      */
     @Import(name="domains")
       private final @Nullable List<String> domains;
@@ -32,7 +30,6 @@ public final class MetadataCategoriesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Industry verticals for the solution content item
-     * 
      */
     @Import(name="verticals")
       private final @Nullable List<String> verticals;

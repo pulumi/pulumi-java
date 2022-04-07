@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ReturnShippingResponse {
     /**
      * The customer's account number with the carrier.
-     * 
      */
     private final String carrierAccountNumber;
     /**
      * The carrier's name.
-     * 
      */
     private final String carrierName;
 
@@ -30,14 +28,12 @@ public final class ReturnShippingResponse {
 
     /**
      * The customer's account number with the carrier.
-     * 
     */
     public String getCarrierAccountNumber() {
         return this.carrierAccountNumber;
     }
     /**
      * The carrier's name.
-     * 
     */
     public String getCarrierName() {
         return this.carrierName;

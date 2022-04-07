@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class KeyVaultPropertiesResponse {
     /**
      * Uri of KeyVault
-     * 
      */
     private final @Nullable String id;
     /**
      * Identity of the secret that includes name and version.
-     * 
      */
     private final @Nullable KeyPropertiesResponse key;
 
@@ -33,14 +31,12 @@ public final class KeyVaultPropertiesResponse {
 
     /**
      * Uri of KeyVault
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Identity of the secret that includes name and version.
-     * 
     */
     public Optional<KeyPropertiesResponse> getKey() {
         return Optional.ofNullable(this.key);

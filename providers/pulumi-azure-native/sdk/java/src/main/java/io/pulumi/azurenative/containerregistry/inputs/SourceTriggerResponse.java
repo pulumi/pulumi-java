@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a source based trigger.
- * 
  */
 public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the trigger.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -33,7 +31,6 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The properties that describes the source(code) for the task.
-     * 
      */
     @Import(name="sourceRepository", required=true)
       private final SourcePropertiesResponse sourceRepository;
@@ -44,7 +41,6 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The source event corresponding to the trigger.
-     * 
      */
     @Import(name="sourceTriggerEvents", required=true)
       private final List<String> sourceTriggerEvents;
@@ -55,7 +51,6 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The current status of trigger.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

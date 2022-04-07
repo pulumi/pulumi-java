@@ -18,7 +18,103 @@ import javax.annotation.Nullable;
  * Specifies information about the gallery Application Definition that you want to create or update.
  * API Version: 2020-09-30.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a simple gallery Application.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var galleryApplication = new AzureNative.Compute.GalleryApplication("galleryApplication", new AzureNative.Compute.GalleryApplicationArgs
+ *         {
+ *             Description = "This is the gallery application description.",
+ *             Eula = "This is the gallery application EULA.",
+ *             GalleryApplicationName = "myGalleryApplicationName",
+ *             GalleryName = "myGalleryName",
+ *             Location = "West US",
+ *             PrivacyStatementUri = "myPrivacyStatementUri}",
+ *             ReleaseNoteUri = "myReleaseNoteUri",
+ *             ResourceGroupName = "myResourceGroup",
+ *             SupportedOSType = "Windows",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewGalleryApplication(ctx, "galleryApplication", &compute.GalleryApplicationArgs{
+ * 			Description:            pulumi.String("This is the gallery application description."),
+ * 			Eula:                   pulumi.String("This is the gallery application EULA."),
+ * 			GalleryApplicationName: pulumi.String("myGalleryApplicationName"),
+ * 			GalleryName:            pulumi.String("myGalleryName"),
+ * 			Location:               pulumi.String("West US"),
+ * 			PrivacyStatementUri:    pulumi.String("myPrivacyStatementUri}"),
+ * 			ReleaseNoteUri:         pulumi.String("myReleaseNoteUri"),
+ * 			ResourceGroupName:      pulumi.String("myResourceGroup"),
+ * 			SupportedOSType:        "Windows",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const galleryApplication = new azure_native.compute.GalleryApplication("galleryApplication", {
+ *     description: "This is the gallery application description.",
+ *     eula: "This is the gallery application EULA.",
+ *     galleryApplicationName: "myGalleryApplicationName",
+ *     galleryName: "myGalleryName",
+ *     location: "West US",
+ *     privacyStatementUri: "myPrivacyStatementUri}",
+ *     releaseNoteUri: "myReleaseNoteUri",
+ *     resourceGroupName: "myResourceGroup",
+ *     supportedOSType: "Windows",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * gallery_application = azure_native.compute.GalleryApplication("galleryApplication",
+ *     description="This is the gallery application description.",
+ *     eula="This is the gallery application EULA.",
+ *     gallery_application_name="myGalleryApplicationName",
+ *     gallery_name="myGalleryName",
+ *     location="West US",
+ *     privacy_statement_uri="myPrivacyStatementUri}",
+ *     release_note_uri="myReleaseNoteUri",
+ *     resource_group_name="myResourceGroup",
+ *     supported_os_type="Windows")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,140 +129,120 @@ import javax.annotation.Nullable;
 public class GalleryApplication extends io.pulumi.resources.CustomResource {
     /**
      * The description of this gallery Application Definition resource. This property is updatable.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of this gallery Application Definition resource. This property is updatable.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
-     * 
      */
     @Export(name="endOfLifeDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endOfLifeDate;
 
     /**
      * @return The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
-     * 
      */
     public Output</* @Nullable */ String> getEndOfLifeDate() {
         return this.endOfLifeDate;
     }
     /**
      * The Eula agreement for the gallery Application Definition.
-     * 
      */
     @Export(name="eula", type=String.class, parameters={})
     private Output</* @Nullable */ String> eula;
 
     /**
      * @return The Eula agreement for the gallery Application Definition.
-     * 
      */
     public Output</* @Nullable */ String> getEula() {
         return this.eula;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The privacy statement uri.
-     * 
      */
     @Export(name="privacyStatementUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> privacyStatementUri;
 
     /**
      * @return The privacy statement uri.
-     * 
      */
     public Output</* @Nullable */ String> getPrivacyStatementUri() {
         return this.privacyStatementUri;
     }
     /**
      * The release note uri.
-     * 
      */
     @Export(name="releaseNoteUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> releaseNoteUri;
 
     /**
      * @return The release note uri.
-     * 
      */
     public Output</* @Nullable */ String> getReleaseNoteUri() {
         return this.releaseNoteUri;
     }
     /**
      * This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
-     * 
      */
     @Export(name="supportedOSType", type=String.class, parameters={})
     private Output<String> supportedOSType;
 
     /**
      * @return This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
-     * 
      */
     public Output<String> getSupportedOSType() {
         return this.supportedOSType;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Describes the average load trigger used for auto scaling.
- * 
  */
 public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     /**
      * Enumerates the triggers for auto scaling.
      * Expected value is 'AverageLoad'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -34,7 +32,6 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
 
     /**
      * Lower load threshold (if average load is below this threshold, service will scale down).
-     * 
      */
     @Import(name="lowerLoadThreshold", required=true)
       private final Output<Double> lowerLoadThreshold;
@@ -45,7 +42,6 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
 
     /**
      * Description of the metric that is used for scaling.
-     * 
      */
     @Import(name="metric", required=true)
       private final Output<AutoScalingResourceMetricArgs> metric;
@@ -56,7 +52,6 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
 
     /**
      * Scale interval that indicates how often will this trigger be checked.
-     * 
      */
     @Import(name="scaleIntervalInSeconds", required=true)
       private final Output<Integer> scaleIntervalInSeconds;
@@ -67,7 +62,6 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
 
     /**
      * Upper load threshold (if average load is above this threshold, service will scale up).
-     * 
      */
     @Import(name="upperLoadThreshold", required=true)
       private final Output<Double> upperLoadThreshold;

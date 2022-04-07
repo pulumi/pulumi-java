@@ -20,7 +20,92 @@ import javax.annotation.Nullable;
  * A FluidRelay Server.
  * API Version: 2021-03-12-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a Fluid Relay server
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fluidRelayServer = new AzureNative.FluidRelay.FluidRelayServer("fluidRelayServer", new AzureNative.FluidRelay.FluidRelayServerArgs
+ *         {
+ *             Location = "west-us",
+ *             Name = "myFluidRelayServer",
+ *             ResourceGroup = "myResourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "Category", "sales" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	fluidrelay "github.com/pulumi/pulumi-azure-native/sdk/go/azure/fluidrelay"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := fluidrelay.NewFluidRelayServer(ctx, "fluidRelayServer", &fluidrelay.FluidRelayServerArgs{
+ * 			Location:      pulumi.String("west-us"),
+ * 			Name:          pulumi.String("myFluidRelayServer"),
+ * 			ResourceGroup: pulumi.String("myResourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Category": pulumi.String("sales"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fluidRelayServer = new azure_native.fluidrelay.FluidRelayServer("fluidRelayServer", {
+ *     location: "west-us",
+ *     name: "myFluidRelayServer",
+ *     resourceGroup: "myResourceGroup",
+ *     tags: {
+ *         Category: "sales",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * fluid_relay_server = azure_native.fluidrelay.FluidRelayServer("fluidRelayServer",
+ *     location="west-us",
+ *     name="myFluidRelayServer",
+ *     resource_group="myResourceGroup",
+ *     tags={
+ *         "Category": "sales",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +120,96 @@ import javax.annotation.Nullable;
 public class FluidRelayServer extends io.pulumi.resources.CustomResource {
     /**
      * The Fluid Relay Service endpoints for this server.
-     * 
      */
     @Export(name="fluidRelayEndpoints", type=FluidRelayEndpointsResponse.class, parameters={})
     private Output<FluidRelayEndpointsResponse> fluidRelayEndpoints;
 
     /**
      * @return The Fluid Relay Service endpoints for this server.
-     * 
      */
     public Output<FluidRelayEndpointsResponse> getFluidRelayEndpoints() {
         return this.fluidRelayEndpoints;
     }
     /**
      * The Fluid tenantId for this server
-     * 
      */
     @Export(name="frsTenantId", type=String.class, parameters={})
     private Output<String> frsTenantId;
 
     /**
      * @return The Fluid tenantId for this server
-     * 
      */
     public Output<String> getFrsTenantId() {
         return this.frsTenantId;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provision states for FluidRelay RP
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return Provision states for FluidRelay RP
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * System meta data for this resource, including creation and modification information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System meta data for this resource, including creation and modification information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

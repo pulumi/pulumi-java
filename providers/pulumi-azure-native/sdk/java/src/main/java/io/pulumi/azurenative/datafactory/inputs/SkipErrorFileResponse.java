@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Skip error file.
- * 
  */
 public final class SkipErrorFileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SkipErrorFileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="dataInconsistency")
       private final @Nullable Object dataInconsistency;
@@ -31,7 +29,6 @@ public final class SkipErrorFileResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="fileMissing")
       private final @Nullable Object fileMissing;

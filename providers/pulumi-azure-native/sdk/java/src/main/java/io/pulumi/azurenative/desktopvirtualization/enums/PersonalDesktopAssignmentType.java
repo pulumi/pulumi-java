@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * PersonalDesktopAssignment type for HostPool.
-     * 
      */
     @EnumType
     public enum PersonalDesktopAssignmentType {

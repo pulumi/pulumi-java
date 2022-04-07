@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the nonce used in the login flow.
- * 
  */
 public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time after the request is made when the nonce should expire.
-     * 
      */
     @Import(name="nonceExpirationInterval")
       private final @Nullable Output<String> nonceExpirationInterval;
@@ -32,7 +30,6 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
-     * 
      */
     @Import(name="validateNonce")
       private final @Nullable Output<Boolean> validateNonce;

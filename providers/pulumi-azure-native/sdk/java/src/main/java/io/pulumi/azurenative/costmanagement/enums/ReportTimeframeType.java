@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-     * 
      */
     @EnumType
     public enum ReportTimeframeType {

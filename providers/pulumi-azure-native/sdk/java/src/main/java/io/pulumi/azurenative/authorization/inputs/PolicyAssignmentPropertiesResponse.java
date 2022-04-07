@@ -18,7 +18,6 @@ public final class PolicyAssignmentPropertiesResponse extends io.pulumi.resource
 
     /**
      * Details of the policy
-     * 
      */
     @Import(name="policy")
       private final @Nullable PolicyAssignmentPropertiesResponsePolicy policy;
@@ -29,7 +28,6 @@ public final class PolicyAssignmentPropertiesResponse extends io.pulumi.resource
 
     /**
      * Details of role definition
-     * 
      */
     @Import(name="roleDefinition")
       private final @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition;
@@ -40,7 +38,6 @@ public final class PolicyAssignmentPropertiesResponse extends io.pulumi.resource
 
     /**
      * Details of the resource scope
-     * 
      */
     @Import(name="scope")
       private final @Nullable PolicyAssignmentPropertiesResponseScope scope;

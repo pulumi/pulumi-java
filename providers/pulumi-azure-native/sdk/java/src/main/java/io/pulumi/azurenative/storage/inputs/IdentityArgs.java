@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity for the resource.
- * 
  */
 public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,IdentityType>> type;
@@ -35,7 +33,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;

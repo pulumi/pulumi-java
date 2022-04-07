@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that are associated with a SKU.
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the SKU. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

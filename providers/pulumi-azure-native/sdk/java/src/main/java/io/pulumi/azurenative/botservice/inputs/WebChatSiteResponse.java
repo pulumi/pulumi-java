@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A site for the Webchat channel
- * 
  */
 public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether this site is enabled for DirectLine channel
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
@@ -30,7 +28,6 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether this site is enabled for preview versions of Webchat
-     * 
      */
     @Import(name="isWebchatPreviewEnabled", required=true)
       private final Boolean isWebchatPreviewEnabled;
@@ -41,7 +38,6 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -52,7 +48,6 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
      */
     @Import(name="key2", required=true)
       private final String key2;
@@ -63,7 +58,6 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Site Id
-     * 
      */
     @Import(name="siteId", required=true)
       private final String siteId;
@@ -74,7 +68,6 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Site name
-     * 
      */
     @Import(name="siteName", required=true)
       private final String siteName;

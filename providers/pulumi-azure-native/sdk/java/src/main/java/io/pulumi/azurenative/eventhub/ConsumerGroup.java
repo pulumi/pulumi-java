@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * Single item in List or Get Consumer group operation
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ConsumerGroupCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var consumerGroup = new AzureNative.EventHub.ConsumerGroup("consumerGroup", new AzureNative.EventHub.ConsumerGroupArgs
+ *         {
+ *             ConsumerGroupName = "sdk-ConsumerGroup-5563",
+ *             EventHubName = "sdk-EventHub-6681",
+ *             NamespaceName = "sdk-Namespace-2661",
+ *             ResourceGroupName = "ArunMonocle",
+ *             UserMetadata = "New consumergroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventhub.NewConsumerGroup(ctx, "consumerGroup", &eventhub.ConsumerGroupArgs{
+ * 			ConsumerGroupName: pulumi.String("sdk-ConsumerGroup-5563"),
+ * 			EventHubName:      pulumi.String("sdk-EventHub-6681"),
+ * 			NamespaceName:     pulumi.String("sdk-Namespace-2661"),
+ * 			ResourceGroupName: pulumi.String("ArunMonocle"),
+ * 			UserMetadata:      pulumi.String("New consumergroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const consumerGroup = new azure_native.eventhub.ConsumerGroup("consumerGroup", {
+ *     consumerGroupName: "sdk-ConsumerGroup-5563",
+ *     eventHubName: "sdk-EventHub-6681",
+ *     namespaceName: "sdk-Namespace-2661",
+ *     resourceGroupName: "ArunMonocle",
+ *     userMetadata: "New consumergroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * consumer_group = azure_native.eventhub.ConsumerGroup("consumerGroup",
+ *     consumer_group_name="sdk-ConsumerGroup-5563",
+ *     event_hub_name="sdk-EventHub-6681",
+ *     namespace_name="sdk-Namespace-2661",
+ *     resource_group_name="ArunMonocle",
+ *     user_metadata="New consumergroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,70 +112,60 @@ import javax.annotation.Nullable;
 public class ConsumerGroup extends io.pulumi.resources.CustomResource {
     /**
      * Exact time the message was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Exact time the message was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The exact time the message was updated.
-     * 
      */
     @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**
      * @return The exact time the message was updated.
-     * 
      */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;
     }
     /**
      * User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
-     * 
      */
     @Export(name="userMetadata", type=String.class, parameters={})
     private Output</* @Nullable */ String> userMetadata;
 
     /**
      * @return User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
-     * 
      */
     public Output</* @Nullable */ String> getUserMetadata() {
         return this.userMetadata;

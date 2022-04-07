@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The URIs that are the public endpoints of the account.
- * 
  */
 public final class AccountPropertiesResponseEndpoints extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AccountPropertiesResponseEndpoints extends io.pulumi.resource
 
     /**
      * Gets the catalog endpoint.
-     * 
      */
     @Import(name="catalog", required=true)
       private final String catalog;
@@ -29,7 +27,6 @@ public final class AccountPropertiesResponseEndpoints extends io.pulumi.resource
 
     /**
      * Gets the guardian endpoint.
-     * 
      */
     @Import(name="guardian", required=true)
       private final String guardian;
@@ -40,7 +37,6 @@ public final class AccountPropertiesResponseEndpoints extends io.pulumi.resource
 
     /**
      * Gets the scan endpoint.
-     * 
      */
     @Import(name="scan", required=true)
       private final String scan;

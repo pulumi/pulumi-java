@@ -19,7 +19,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Key auto rotation opt-in flag. Either true or false.
-     * 
      */
     @Import(name="autoRotationEnabled")
       private final @Nullable Output<Boolean> autoRotationEnabled;
@@ -30,7 +29,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the encryption protector to be updated.
-     * 
      */
     @Import(name="encryptionProtectorName")
       private final @Nullable Output<String> encryptionProtectorName;
@@ -41,7 +39,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the server key.
-     * 
      */
     @Import(name="serverKeyName")
       private final @Nullable Output<String> serverKeyName;
@@ -63,7 +59,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
-     * 
      */
     @Import(name="serverKeyType", required=true)
       private final Output<Either<String,ServerKeyType>> serverKeyType;
@@ -74,7 +69,6 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;

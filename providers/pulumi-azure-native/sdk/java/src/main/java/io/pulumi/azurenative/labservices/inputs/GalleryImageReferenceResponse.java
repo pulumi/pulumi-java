@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The reference information for an Azure Marketplace image.
- * 
  */
 public final class GalleryImageReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GalleryImageReferenceResponse extends io.pulumi.resources.Inv
 
     /**
      * The offer of the gallery image.
-     * 
      */
     @Import(name="offer")
       private final @Nullable String offer;
@@ -31,7 +29,6 @@ public final class GalleryImageReferenceResponse extends io.pulumi.resources.Inv
 
     /**
      * The OS type of the gallery image.
-     * 
      */
     @Import(name="osType")
       private final @Nullable String osType;
@@ -42,7 +39,6 @@ public final class GalleryImageReferenceResponse extends io.pulumi.resources.Inv
 
     /**
      * The publisher of the gallery image.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable String publisher;
@@ -53,7 +49,6 @@ public final class GalleryImageReferenceResponse extends io.pulumi.resources.Inv
 
     /**
      * The SKU of the gallery image.
-     * 
      */
     @Import(name="sku")
       private final @Nullable String sku;
@@ -64,7 +59,6 @@ public final class GalleryImageReferenceResponse extends io.pulumi.resources.Inv
 
     /**
      * The version of the gallery image.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

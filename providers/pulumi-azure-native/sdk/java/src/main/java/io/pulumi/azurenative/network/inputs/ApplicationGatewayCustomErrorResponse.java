@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Customer error of an application gateway.
- * 
  */
 public final class ApplicationGatewayCustomErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationGatewayCustomErrorResponse extends io.pulumi.resou
 
     /**
      * Error page URL of the application gateway customer error.
-     * 
      */
     @Import(name="customErrorPageUrl")
       private final @Nullable String customErrorPageUrl;
@@ -31,7 +29,6 @@ public final class ApplicationGatewayCustomErrorResponse extends io.pulumi.resou
 
     /**
      * Status code of the application gateway customer error.
-     * 
      */
     @Import(name="statusCode")
       private final @Nullable String statusCode;

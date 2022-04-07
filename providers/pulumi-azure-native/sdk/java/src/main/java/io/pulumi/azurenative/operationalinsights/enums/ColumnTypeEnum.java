@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Column data type.
-     * 
      */
     @EnumType
     public enum ColumnTypeEnum {

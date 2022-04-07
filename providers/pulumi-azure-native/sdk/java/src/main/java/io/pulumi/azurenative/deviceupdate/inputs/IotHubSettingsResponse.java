@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Device Update account integration with IoT Hub settings.
- * 
  */
 public final class IotHubSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IotHubSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * EventHub connection string.
-     * 
      */
     @Import(name="eventHubConnectionString")
       private final @Nullable String eventHubConnectionString;
@@ -31,7 +29,6 @@ public final class IotHubSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * IoTHub connection string.
-     * 
      */
     @Import(name="ioTHubConnectionString")
       private final @Nullable String ioTHubConnectionString;
@@ -42,7 +39,6 @@ public final class IotHubSettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * IoTHub resource ID
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;

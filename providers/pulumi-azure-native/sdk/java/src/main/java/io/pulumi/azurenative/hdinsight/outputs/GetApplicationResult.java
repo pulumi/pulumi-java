@@ -15,32 +15,26 @@ import javax.annotation.Nullable;
 public final class GetApplicationResult {
     /**
      * The ETag for the application
-     * 
      */
     private final @Nullable String etag;
     /**
      * Fully qualified resource Id for the resource.
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The properties of the application.
-     * 
      */
     private final ApplicationPropertiesResponse properties;
     /**
      * The tags for the application.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -62,42 +56,36 @@ public final class GetApplicationResult {
 
     /**
      * The ETag for the application
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of the application.
-     * 
     */
     public ApplicationPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The tags for the application.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

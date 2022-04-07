@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Oracle Cloud Storage read settings.
- * 
  */
 public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="deleteFilesAfterCompletion")
       private final @Nullable Output<Object> deleteFilesAfterCompletion;
@@ -33,7 +31,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -44,7 +41,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * Indicates whether to enable partition discovery.
-     * 
      */
     @Import(name="enablePartitionDiscovery")
       private final @Nullable Output<Boolean> enablePartitionDiscovery;
@@ -55,7 +51,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileListPath")
       private final @Nullable Output<Object> fileListPath;
@@ -66,7 +61,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -77,7 +71,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * The end of file's modified datetime. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="modifiedDatetimeEnd")
       private final @Nullable Output<Object> modifiedDatetimeEnd;
@@ -88,7 +81,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * The start of file's modified datetime. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="modifiedDatetimeStart")
       private final @Nullable Output<Object> modifiedDatetimeStart;
@@ -99,7 +91,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionRootPath")
       private final @Nullable Output<Object> partitionRootPath;
@@ -110,7 +101,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * The prefix filter for the Oracle Cloud Storage object name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Output<Object> prefix;
@@ -121,7 +111,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="recursive")
       private final @Nullable Output<Object> recursive;
@@ -133,7 +122,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
     /**
      * The read setting type.
      * Expected value is 'OracleCloudStorageReadSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -144,7 +132,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * Oracle Cloud Storage wildcardFileName. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="wildcardFileName")
       private final @Nullable Output<Object> wildcardFileName;
@@ -155,7 +142,6 @@ public final class OracleCloudStorageReadSettingsArgs extends io.pulumi.resource
 
     /**
      * Oracle Cloud Storage wildcardFolderPath. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="wildcardFolderPath")
       private final @Nullable Output<Object> wildcardFolderPath;

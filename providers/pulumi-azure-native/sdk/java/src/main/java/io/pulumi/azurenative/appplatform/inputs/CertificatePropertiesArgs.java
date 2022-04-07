@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Certificate resource payload.
- * 
  */
 public final class CertificatePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The certificate version of key vault.
-     * 
      */
     @Import(name="certVersion")
       private final @Nullable Output<String> certVersion;
@@ -31,7 +29,6 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The certificate name of key vault.
-     * 
      */
     @Import(name="keyVaultCertName", required=true)
       private final Output<String> keyVaultCertName;
@@ -42,7 +39,6 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The vault uri of user key vault.
-     * 
      */
     @Import(name="vaultUri", required=true)
       private final Output<String> vaultUri;

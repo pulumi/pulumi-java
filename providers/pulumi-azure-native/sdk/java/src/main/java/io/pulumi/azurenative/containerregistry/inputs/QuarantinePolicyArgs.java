@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The quarantine policy for a container registry.
- * 
  */
 public final class QuarantinePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class QuarantinePolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The value that indicates whether the policy is enabled or not.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;

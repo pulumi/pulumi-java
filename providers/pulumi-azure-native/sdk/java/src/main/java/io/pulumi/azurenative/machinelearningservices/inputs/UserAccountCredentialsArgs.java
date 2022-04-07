@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for user account that gets created on each on the nodes of a compute.
- * 
  */
 public final class UserAccountCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the administrator user account which can be used to SSH to nodes.
-     * 
      */
     @Import(name="adminUserName", required=true)
       private final Output<String> adminUserName;
@@ -31,7 +29,6 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
 
     /**
      * Password of the administrator user account.
-     * 
      */
     @Import(name="adminUserPassword")
       private final @Nullable Output<String> adminUserPassword;
@@ -42,7 +39,6 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
 
     /**
      * SSH public key of the administrator user account.
-     * 
      */
     @Import(name="adminUserSshPublicKey")
       private final @Nullable Output<String> adminUserSshPublicKey;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the properties for a TagRules resource.
- * 
  */
 public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
 
     /**
      * Set of rules for sending logs for the Monitor resource.
-     * 
      */
     @Import(name="logRules")
       private final @Nullable LogRulesResponse logRules;
@@ -33,7 +31,6 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
 
     /**
      * Flag specifying if the resource provisioning state as tracked by ARM.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -44,7 +41,6 @@ public final class MonitoringTagRulesPropertiesResponse extends io.pulumi.resour
 
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;

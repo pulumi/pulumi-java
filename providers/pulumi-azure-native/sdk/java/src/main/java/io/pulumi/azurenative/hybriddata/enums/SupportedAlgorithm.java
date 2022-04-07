@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The encryption algorithm used to encrypt data.
-     * 
      */
     @EnumType
     public enum SupportedAlgorithm {

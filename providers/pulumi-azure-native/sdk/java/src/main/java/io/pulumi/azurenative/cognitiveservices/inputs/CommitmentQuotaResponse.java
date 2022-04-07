@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cognitive Services account commitment quota.
- * 
  */
 public final class CommitmentQuotaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CommitmentQuotaResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Commitment quota quantity.
-     * 
      */
     @Import(name="quantity")
       private final @Nullable Double quantity;
@@ -32,7 +30,6 @@ public final class CommitmentQuotaResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Commitment quota unit.
-     * 
      */
     @Import(name="unit")
       private final @Nullable String unit;

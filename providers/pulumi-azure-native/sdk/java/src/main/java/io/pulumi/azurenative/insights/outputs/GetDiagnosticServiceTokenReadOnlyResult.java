@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetDiagnosticServiceTokenReadOnlyResult {
     /**
      * JWT token for accessing application insights diagnostic service data.
-     * 
      */
     private final @Nullable String token;
 
@@ -24,7 +23,6 @@ public final class GetDiagnosticServiceTokenReadOnlyResult {
 
     /**
      * JWT token for accessing application insights diagnostic service data.
-     * 
     */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);

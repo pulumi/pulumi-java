@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ServerAdministratorsResponse {
     /**
      * An array of administrator user identities.
-     * 
      */
     private final @Nullable List<String> members;
 
@@ -24,7 +23,6 @@ public final class ServerAdministratorsResponse {
 
     /**
      * An array of administrator user identities.
-     * 
     */
     public List<String> getMembers() {
         return this.members == null ? List.of() : this.members;

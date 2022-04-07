@@ -19,7 +19,6 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
 
     /**
      * Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
-     * 
      */
     @Import(name="allowNetworkPluginKubenet")
       private final @Nullable Output<Boolean> allowNetworkPluginKubenet;
@@ -30,7 +29,6 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
 
     /**
      * Whether the pod identity addon is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -41,7 +39,6 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
 
     /**
      * User assigned pod identity settings.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<List<ManagedClusterPodIdentityArgs>> userAssignedIdentities;
@@ -52,7 +49,6 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
 
     /**
      * User assigned pod identity exception settings.
-     * 
      */
     @Import(name="userAssignedIdentityExceptions")
       private final @Nullable Output<List<ManagedClusterPodIdentityExceptionArgs>> userAssignedIdentityExceptions;

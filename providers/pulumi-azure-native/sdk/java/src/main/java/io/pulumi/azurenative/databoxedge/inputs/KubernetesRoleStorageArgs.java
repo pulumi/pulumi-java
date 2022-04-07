@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Kubernetes role storage resource
- * 
  */
 public final class KubernetesRoleStorageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class KubernetesRoleStorageArgs extends io.pulumi.resources.Resourc
 
     /**
      * Mount points of shares in role(s).
-     * 
      */
     @Import(name="endpoints")
       private final @Nullable Output<List<MountPointMapArgs>> endpoints;

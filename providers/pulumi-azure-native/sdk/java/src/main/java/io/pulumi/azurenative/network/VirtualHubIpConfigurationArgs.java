@@ -20,7 +20,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -31,7 +30,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the ipconfig.
-     * 
      */
     @Import(name="ipConfigName")
       private final @Nullable Output<String> ipConfigName;
@@ -42,7 +40,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the Ip Configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -53,7 +50,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The private IP address of the IP configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
@@ -64,7 +60,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
@@ -75,7 +70,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The reference to the public IP resource.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
@@ -86,7 +80,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The resource group name of the VirtualHub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -97,7 +90,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
@@ -108,7 +100,6 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the VirtualHub.
-     * 
      */
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;

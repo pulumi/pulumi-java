@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The virtual network configuration.
- * 
  */
 public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
 
     /**
      * The name of the virtual network subnet.
-     * 
      */
     @Import(name="subnetName")
       private final @Nullable Output<String> subnetName;
@@ -31,7 +29,6 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends io.pulum
 
     /**
      * The name of the virtual network.
-     * 
      */
     @Import(name="vnetName")
       private final @Nullable Output<String> vnetName;

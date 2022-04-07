@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Maintenance Operation Status.
- * 
  */
 public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
 
     /**
      * True, if customer is allowed to perform Maintenance.
-     * 
      */
     @Import(name="isCustomerInitiatedMaintenanceAllowed")
       private final @Nullable Boolean isCustomerInitiatedMaintenanceAllowed;
@@ -32,7 +30,6 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
 
     /**
      * Message returned for the last Maintenance Operation.
-     * 
      */
     @Import(name="lastOperationMessage")
       private final @Nullable String lastOperationMessage;
@@ -43,7 +40,6 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
 
     /**
      * The Last Maintenance Operation Result Code.
-     * 
      */
     @Import(name="lastOperationResultCode")
       private final @Nullable String lastOperationResultCode;
@@ -54,7 +50,6 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
 
     /**
      * End Time for the Maintenance Window.
-     * 
      */
     @Import(name="maintenanceWindowEndTime")
       private final @Nullable String maintenanceWindowEndTime;
@@ -65,7 +60,6 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
 
     /**
      * Start Time for the Maintenance Window.
-     * 
      */
     @Import(name="maintenanceWindowStartTime")
       private final @Nullable String maintenanceWindowStartTime;
@@ -76,7 +70,6 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
 
     /**
      * End Time for the Pre Maintenance Window.
-     * 
      */
     @Import(name="preMaintenanceWindowEndTime")
       private final @Nullable String preMaintenanceWindowEndTime;
@@ -87,7 +80,6 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
 
     /**
      * Start Time for the Pre Maintenance Window.
-     * 
      */
     @Import(name="preMaintenanceWindowStartTime")
       private final @Nullable String preMaintenanceWindowStartTime;

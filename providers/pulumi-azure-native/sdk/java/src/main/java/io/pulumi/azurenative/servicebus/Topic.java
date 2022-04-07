@@ -21,7 +21,83 @@ import javax.annotation.Nullable;
  * Description of topic resource.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TopicCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var topic = new AzureNative.ServiceBus.Topic("topic", new AzureNative.ServiceBus.TopicArgs
+ *         {
+ *             EnableExpress = true,
+ *             NamespaceName = "sdk-Namespace-1617",
+ *             ResourceGroupName = "ArunMonocle",
+ *             TopicName = "sdk-Topics-5488",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewTopic(ctx, "topic", &servicebus.TopicArgs{
+ * 			EnableExpress:     pulumi.Bool(true),
+ * 			NamespaceName:     pulumi.String("sdk-Namespace-1617"),
+ * 			ResourceGroupName: pulumi.String("ArunMonocle"),
+ * 			TopicName:         pulumi.String("sdk-Topics-5488"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const topic = new azure_native.servicebus.Topic("topic", {
+ *     enableExpress: true,
+ *     namespaceName: "sdk-Namespace-1617",
+ *     resourceGroupName: "ArunMonocle",
+ *     topicName: "sdk-Topics-5488",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * topic = azure_native.servicebus.Topic("topic",
+ *     enable_express=True,
+ *     namespace_name="sdk-Namespace-1617",
+ *     resource_group_name="ArunMonocle",
+ *     topic_name="sdk-Topics-5488")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,252 +112,216 @@ import javax.annotation.Nullable;
 public class Topic extends io.pulumi.resources.CustomResource {
     /**
      * Last time the message was sent, or a request was received, for this topic.
-     * 
      */
     @Export(name="accessedAt", type=String.class, parameters={})
     private Output<String> accessedAt;
 
     /**
      * @return Last time the message was sent, or a request was received, for this topic.
-     * 
      */
     public Output<String> getAccessedAt() {
         return this.accessedAt;
     }
     /**
      * ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
-     * 
      */
     @Export(name="autoDeleteOnIdle", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoDeleteOnIdle;
 
     /**
      * @return ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
-     * 
      */
     public Output</* @Nullable */ String> getAutoDeleteOnIdle() {
         return this.autoDeleteOnIdle;
     }
     /**
      * Message count details
-     * 
      */
     @Export(name="countDetails", type=MessageCountDetailsResponse.class, parameters={})
     private Output<MessageCountDetailsResponse> countDetails;
 
     /**
      * @return Message count details
-     * 
      */
     public Output<MessageCountDetailsResponse> getCountDetails() {
         return this.countDetails;
     }
     /**
      * Exact time the message was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Exact time the message was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
-     * 
      */
     @Export(name="defaultMessageTimeToLive", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultMessageTimeToLive;
 
     /**
      * @return ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
-     * 
      */
     public Output</* @Nullable */ String> getDefaultMessageTimeToLive() {
         return this.defaultMessageTimeToLive;
     }
     /**
      * ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
-     * 
      */
     @Export(name="duplicateDetectionHistoryTimeWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> duplicateDetectionHistoryTimeWindow;
 
     /**
      * @return ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
-     * 
      */
     public Output</* @Nullable */ String> getDuplicateDetectionHistoryTimeWindow() {
         return this.duplicateDetectionHistoryTimeWindow;
     }
     /**
      * Value that indicates whether server-side batched operations are enabled.
-     * 
      */
     @Export(name="enableBatchedOperations", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBatchedOperations;
 
     /**
      * @return Value that indicates whether server-side batched operations are enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableBatchedOperations() {
         return this.enableBatchedOperations;
     }
     /**
      * Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
-     * 
      */
     @Export(name="enableExpress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableExpress;
 
     /**
      * @return Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableExpress() {
         return this.enableExpress;
     }
     /**
      * Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
-     * 
      */
     @Export(name="enablePartitioning", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePartitioning;
 
     /**
      * @return Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnablePartitioning() {
         return this.enablePartitioning;
     }
     /**
      * Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
-     * 
      */
     @Export(name="maxSizeInMegabytes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxSizeInMegabytes;
 
     /**
      * @return Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
-     * 
      */
     public Output</* @Nullable */ Integer> getMaxSizeInMegabytes() {
         return this.maxSizeInMegabytes;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Value indicating if this topic requires duplicate detection.
-     * 
      */
     @Export(name="requiresDuplicateDetection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresDuplicateDetection;
 
     /**
      * @return Value indicating if this topic requires duplicate detection.
-     * 
      */
     public Output</* @Nullable */ Boolean> getRequiresDuplicateDetection() {
         return this.requiresDuplicateDetection;
     }
     /**
      * Size of the topic, in bytes.
-     * 
      */
     @Export(name="sizeInBytes", type=Double.class, parameters={})
     private Output<Double> sizeInBytes;
 
     /**
      * @return Size of the topic, in bytes.
-     * 
      */
     public Output<Double> getSizeInBytes() {
         return this.sizeInBytes;
     }
     /**
      * Enumerates the possible values for the status of a messaging entity.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return Enumerates the possible values for the status of a messaging entity.
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * Number of subscriptions.
-     * 
      */
     @Export(name="subscriptionCount", type=Integer.class, parameters={})
     private Output<Integer> subscriptionCount;
 
     /**
      * @return Number of subscriptions.
-     * 
      */
     public Output<Integer> getSubscriptionCount() {
         return this.subscriptionCount;
     }
     /**
      * Value that indicates whether the topic supports ordering.
-     * 
      */
     @Export(name="supportOrdering", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> supportOrdering;
 
     /**
      * @return Value that indicates whether the topic supports ordering.
-     * 
      */
     public Output</* @Nullable */ Boolean> getSupportOrdering() {
         return this.supportOrdering;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The exact time the message was updated.
-     * 
      */
     @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**
      * @return The exact time the message was updated.
-     * 
      */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;

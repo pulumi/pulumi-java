@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a cost allocation rule
- * 
  */
 public final class CostAllocationRulePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
 
     /**
      * Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
-     * 
      */
     @Import(name="createdDate", required=true)
       private final String createdDate;
@@ -32,7 +30,6 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
 
     /**
      * Description of a cost allocation rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -43,7 +40,6 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
 
     /**
      * Resource information for the cost allocation rule
-     * 
      */
     @Import(name="details", required=true)
       private final CostAllocationRuleDetailsResponse details;
@@ -54,7 +50,6 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
 
     /**
      * Status of the rule
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -65,7 +60,6 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
 
     /**
      * Time at which the rule was last updated.
-     * 
      */
     @Import(name="updatedDate", required=true)
       private final String updatedDate;

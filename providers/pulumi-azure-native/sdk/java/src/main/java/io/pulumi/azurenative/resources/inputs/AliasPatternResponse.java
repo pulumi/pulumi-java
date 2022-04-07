@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The type of the pattern for an alias path.
- * 
  */
 public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The alias pattern phrase.
-     * 
      */
     @Import(name="phrase")
       private final @Nullable String phrase;
@@ -31,7 +29,6 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of alias pattern
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -42,7 +39,6 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The alias pattern variable.
-     * 
      */
     @Import(name="variable")
       private final @Nullable String variable;

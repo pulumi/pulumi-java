@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The name of the SKU. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @EnumType
     public enum SkuName {

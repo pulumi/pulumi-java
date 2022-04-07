@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Each pivot must contain a 'type' and 'name'.
- * 
  */
 public final class PivotPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PivotPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Data field to show in view.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class PivotPropertiesResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Data type to show in view.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

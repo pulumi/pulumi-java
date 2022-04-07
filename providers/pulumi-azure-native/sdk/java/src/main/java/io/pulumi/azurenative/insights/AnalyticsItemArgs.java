@@ -21,7 +21,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The content of this item
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;
@@ -32,7 +31,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Internally assigned unique id of the item definition.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -43,7 +41,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-defined name of the item.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -54,7 +51,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Flag indicating whether or not to force save an item. This allows overriding an item if it already exists.
-     * 
      */
     @Import(name="overrideItem")
       private final @Nullable Output<Boolean> overrideItem;
@@ -65,7 +61,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
@@ -76,7 +71,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -98,7 +91,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<Either<String,ItemScope>> scope;
@@ -109,7 +101,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
-     * 
      */
     @Import(name="scopePath", required=true)
       private final Output<String> scopePath;
@@ -120,7 +111,6 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enum indicating the type of the Analytics item.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ItemType>> type;

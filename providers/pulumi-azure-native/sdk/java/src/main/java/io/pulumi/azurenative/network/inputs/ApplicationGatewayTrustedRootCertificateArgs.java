@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trusted Root certificates of an application gateway.
- * 
  */
 public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
 
     /**
      * Certificate public data.
-     * 
      */
     @Import(name="data")
       private final @Nullable Output<String> data;
@@ -31,7 +29,6 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -42,7 +39,6 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
 
     /**
      * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
-     * 
      */
     @Import(name="keyVaultSecretId")
       private final @Nullable Output<String> keyVaultSecretId;
@@ -53,7 +49,6 @@ public final class ApplicationGatewayTrustedRootCertificateArgs extends io.pulum
 
     /**
      * Name of the trusted root certificate that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

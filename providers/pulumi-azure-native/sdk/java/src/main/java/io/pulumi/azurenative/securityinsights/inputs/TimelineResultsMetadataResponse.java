@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Expansion result metadata.
- * 
  */
 public final class TimelineResultsMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
 
     /**
      * timeline aggregation per kind
-     * 
      */
     @Import(name="aggregations", required=true)
       private final List<TimelineAggregationResponse> aggregations;
@@ -34,7 +32,6 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
 
     /**
      * information about the failure queries
-     * 
      */
     @Import(name="errors")
       private final @Nullable List<TimelineErrorResponse> errors;
@@ -45,7 +42,6 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
 
     /**
      * the total items found for the timeline request
-     * 
      */
     @Import(name="totalCount", required=true)
       private final Integer totalCount;

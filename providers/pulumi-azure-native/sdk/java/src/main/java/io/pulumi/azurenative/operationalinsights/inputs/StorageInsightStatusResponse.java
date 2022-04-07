@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The status of the storage insight.
- * 
  */
 public final class StorageInsightStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class StorageInsightStatusResponse extends io.pulumi.resources.Invo
 
     /**
      * Description of the state of the storage insight.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -31,7 +29,6 @@ public final class StorageInsightStatusResponse extends io.pulumi.resources.Invo
 
     /**
      * The state of the storage insight connection to the workspace
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies a certificate for token validation.
- * 
  */
 public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -31,7 +29,6 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
 
     /**
      * The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
-     * 
      */
     @Import(name="rawBody", required=true)
       private final Output<String> rawBody;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Resource Type of ApplicationGroup.
-     * 
      */
     @EnumType
     public enum ApplicationGroupType {

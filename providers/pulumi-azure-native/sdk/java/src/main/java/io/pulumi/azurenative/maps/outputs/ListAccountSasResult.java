@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ListAccountSasResult {
     /**
      * The shared access signature access token.
-     * 
      */
     private final String accountSasToken;
 
@@ -22,7 +21,6 @@ public final class ListAccountSasResult {
 
     /**
      * The shared access signature access token.
-     * 
     */
     public String getAccountSasToken() {
         return this.accountSasToken;

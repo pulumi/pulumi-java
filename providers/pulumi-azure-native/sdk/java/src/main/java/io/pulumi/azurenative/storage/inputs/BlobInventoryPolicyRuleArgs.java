@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * An object that wraps the blob inventory rule. Each rule is uniquely defined by name.
- * 
  */
 public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
 
     /**
      * An object that defines the blob inventory policy rule.
-     * 
      */
     @Import(name="definition", required=true)
       private final Output<BlobInventoryPolicyDefinitionArgs> definition;
@@ -32,7 +30,6 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
 
     /**
      * Rule is enabled when set to true.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
@@ -43,7 +40,6 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
 
     /**
      * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * SSL profile of an application gateway.
- * 
  */
 public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
 
     /**
      * Client authentication configuration of the application gateway resource.
-     * 
      */
     @Import(name="clientAuthConfiguration")
       private final @Nullable Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
@@ -35,7 +33,6 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -46,7 +43,6 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
 
     /**
      * Name of the SSL profile that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -57,7 +53,6 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
 
     /**
      * SSL policy of the application gateway resource.
-     * 
      */
     @Import(name="sslPolicy")
       private final @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy;
@@ -68,7 +63,6 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
 
     /**
      * Array of references to application gateway trusted client certificates.
-     * 
      */
     @Import(name="trustedClientCertificates")
       private final @Nullable Output<List<SubResourceArgs>> trustedClientCertificates;

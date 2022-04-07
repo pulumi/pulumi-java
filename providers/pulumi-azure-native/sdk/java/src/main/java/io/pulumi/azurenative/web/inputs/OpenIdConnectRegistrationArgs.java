@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the app registration for the custom Open ID Connect provider.
- * 
  */
 public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
 
     /**
      * The authentication credentials of the custom Open ID Connect provider.
-     * 
      */
     @Import(name="clientCredential")
       private final @Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential;
@@ -33,7 +31,6 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
 
     /**
      * The client id of the custom Open ID Connect provider.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
@@ -44,7 +41,6 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
 
     /**
      * The configuration settings of the endpoints used for the custom Open ID Connect provider.
-     * 
      */
     @Import(name="openIdConnectConfiguration")
       private final @Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration;

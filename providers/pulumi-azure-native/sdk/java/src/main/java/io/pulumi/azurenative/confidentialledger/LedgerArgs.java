@@ -18,7 +18,6 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Confidential Ledger
-     * 
      */
     @Import(name="ledgerName")
       private final @Nullable Output<String> ledgerName;
@@ -29,7 +28,6 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure location where the Confidential Ledger is running.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of Confidential Ledger Resource.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<LedgerPropertiesArgs> properties;
@@ -51,7 +48,6 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional tags for Confidential Ledger
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

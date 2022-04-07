@@ -16,7 +16,6 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Preview subscription ID.
-     * 
      */
     @Import(name="previewSubscription")
       private final @Nullable Output<String> previewSubscription;
@@ -27,7 +26,6 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the vendor sku.
-     * 
      */
     @Import(name="skuName", required=true)
       private final Output<String> skuName;
@@ -38,7 +36,6 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the vendor.
-     * 
      */
     @Import(name="vendorName", required=true)
       private final Output<String> vendorName;

@@ -14,7 +14,6 @@ public final class GetVirtualHubBgpConnectionArgs extends io.pulumi.resources.In
 
     /**
      * The name of the connection.
-     * 
      */
     @Import(name="connectionName", required=true)
       private final String connectionName;
@@ -25,7 +24,6 @@ public final class GetVirtualHubBgpConnectionArgs extends io.pulumi.resources.In
 
     /**
      * The resource group name of the VirtualHub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetVirtualHubBgpConnectionArgs extends io.pulumi.resources.In
 
     /**
      * The name of the VirtualHub.
-     * 
      */
     @Import(name="virtualHubName", required=true)
       private final String virtualHubName;

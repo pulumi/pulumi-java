@@ -17,7 +17,6 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
 
     /**
      * Recovery plan creation properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<CreateRecoveryPlanInputPropertiesArgs> properties;
@@ -28,7 +27,6 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
 
     /**
      * Recovery plan name.
-     * 
      */
     @Import(name="recoveryPlanName")
       private final @Nullable Output<String> recoveryPlanName;
@@ -39,7 +37,6 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

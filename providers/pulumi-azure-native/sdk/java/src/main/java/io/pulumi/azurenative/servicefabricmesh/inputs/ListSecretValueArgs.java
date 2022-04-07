@@ -14,7 +14,6 @@ public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Azure resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the secret resource.
-     * 
      */
     @Import(name="secretResourceName", required=true)
       private final String secretResourceName;
@@ -36,7 +34,6 @@ public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the secret resource value which is typically the version identifier for the value.
-     * 
      */
     @Import(name="secretValueResourceName", required=true)
       private final String secretValueResourceName;

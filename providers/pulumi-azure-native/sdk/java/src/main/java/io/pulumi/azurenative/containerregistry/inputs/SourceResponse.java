@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
- * 
  */
 public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
-     * 
      */
     @Import(name="addr")
       private final @Nullable String addr;
@@ -31,7 +29,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The running instance of an application. Changes after each restart.
-     * 
      */
     @Import(name="instanceID")
       private final @Nullable String instanceID;

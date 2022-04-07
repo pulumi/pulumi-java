@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * a plain text value execution parameter
- * 
  */
 public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
 
     /**
      * The parameter name
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -31,7 +29,6 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
 
     /**
      * A secure value for the passed parameter, not to be stored in logs
-     * 
      */
     @Import(name="secureValue")
       private final @Nullable Output<String> secureValue;
@@ -43,7 +40,6 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     /**
      * The type of execution parameter
      * Expected value is 'SecureValue'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

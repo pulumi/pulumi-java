@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The message filter type.
-     * 
      */
     @EnumType
     public enum MessageFilterType {

@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class CopyActivityLogSettingsResponse {
     /**
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object enableReliableLogging;
     /**
      * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object logLevel;
 
@@ -32,14 +30,12 @@ public final class CopyActivityLogSettingsResponse {
 
     /**
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getEnableReliableLogging() {
         return Optional.ofNullable(this.enableReliableLogging);
     }
     /**
      * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getLogLevel() {
         return Optional.ofNullable(this.logLevel);

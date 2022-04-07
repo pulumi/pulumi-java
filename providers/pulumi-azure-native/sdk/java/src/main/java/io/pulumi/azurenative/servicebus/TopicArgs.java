@@ -19,7 +19,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
-     * 
      */
     @Import(name="autoDeleteOnIdle")
       private final @Nullable Output<String> autoDeleteOnIdle;
@@ -30,7 +29,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
-     * 
      */
     @Import(name="defaultMessageTimeToLive")
       private final @Nullable Output<String> defaultMessageTimeToLive;
@@ -41,7 +39,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
-     * 
      */
     @Import(name="duplicateDetectionHistoryTimeWindow")
       private final @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
@@ -52,7 +49,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value that indicates whether server-side batched operations are enabled.
-     * 
      */
     @Import(name="enableBatchedOperations")
       private final @Nullable Output<Boolean> enableBatchedOperations;
@@ -63,7 +59,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
-     * 
      */
     @Import(name="enableExpress")
       private final @Nullable Output<Boolean> enableExpress;
@@ -74,7 +69,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
-     * 
      */
     @Import(name="enablePartitioning")
       private final @Nullable Output<Boolean> enablePartitioning;
@@ -85,7 +79,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
-     * 
      */
     @Import(name="maxSizeInMegabytes")
       private final @Nullable Output<Integer> maxSizeInMegabytes;
@@ -96,7 +89,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -107,7 +99,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value indicating if this topic requires duplicate detection.
-     * 
      */
     @Import(name="requiresDuplicateDetection")
       private final @Nullable Output<Boolean> requiresDuplicateDetection;
@@ -118,7 +109,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -129,7 +119,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enumerates the possible values for the status of a messaging entity.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<EntityStatus> status;
@@ -140,7 +129,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value that indicates whether the topic supports ordering.
-     * 
      */
     @Import(name="supportOrdering")
       private final @Nullable Output<Boolean> supportOrdering;
@@ -151,7 +139,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The topic name.
-     * 
      */
     @Import(name="topicName")
       private final @Nullable Output<String> topicName;

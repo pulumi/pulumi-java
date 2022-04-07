@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Criterion to filter metrics.
- * 
  */
 public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
     /**
      * Specifies the type of threshold criteria
      * Expected value is 'StaticThresholdCriterion'.
-     * 
      */
     @Import(name="criterionType", required=true)
       private final String criterionType;
@@ -36,7 +34,6 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * List of dimension conditions.
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable List<MetricDimensionResponse> dimensions;
@@ -47,7 +44,6 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the metric.
-     * 
      */
     @Import(name="metricName", required=true)
       private final String metricName;
@@ -58,7 +54,6 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Namespace of the metric.
-     * 
      */
     @Import(name="metricNamespace")
       private final @Nullable String metricNamespace;
@@ -69,7 +64,6 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the criteria.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -80,7 +74,6 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * the criteria operator.
-     * 
      */
     @Import(name="operator", required=true)
       private final String operator;
@@ -91,7 +84,6 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
-     * 
      */
     @Import(name="skipMetricValidation")
       private final @Nullable Boolean skipMetricValidation;
@@ -102,7 +94,6 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * the criteria threshold value that activates the alert.
-     * 
      */
     @Import(name="threshold", required=true)
       private final Double threshold;
@@ -113,7 +104,6 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * the criteria time aggregation types.
-     * 
      */
     @Import(name="timeAggregation", required=true)
       private final String timeAggregation;

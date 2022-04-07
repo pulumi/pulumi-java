@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Hubspot Service linked service.
- * 
  */
 public final class HubspotLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The access token obtained when initially authenticating your OAuth integration.
-     * 
      */
     @Import(name="accessToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
@@ -39,7 +37,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -50,7 +47,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The client ID associated with your Hubspot application.
-     * 
      */
     @Import(name="clientId", required=true)
       private final Output<Object> clientId;
@@ -61,7 +57,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The client secret associated with your Hubspot application.
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
@@ -72,7 +67,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -83,7 +77,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -94,7 +87,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -105,7 +97,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -116,7 +107,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The refresh token obtained when initially authenticating your OAuth integration.
-     * 
      */
     @Import(name="refreshToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
@@ -128,7 +118,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
     /**
      * Type of linked service.
      * Expected value is 'Hubspot'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -139,7 +128,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     * 
      */
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
@@ -150,7 +138,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="useHostVerification")
       private final @Nullable Output<Object> useHostVerification;
@@ -161,7 +148,6 @@ public final class HubspotLinkedServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="usePeerVerification")
       private final @Nullable Output<Object> usePeerVerification;

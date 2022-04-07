@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class APIServerProfileResponse {
     /**
      * The IP of the cluster API server (immutable).
-     * 
      */
     private final @Nullable String ip;
     /**
      * The URL to access the cluster API server (immutable).
-     * 
      */
     private final @Nullable String url;
     /**
      * API server visibility (immutable).
-     * 
      */
     private final @Nullable String visibility;
 
@@ -39,21 +36,18 @@ public final class APIServerProfileResponse {
 
     /**
      * The IP of the cluster API server (immutable).
-     * 
     */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * The URL to access the cluster API server (immutable).
-     * 
     */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
     /**
      * API server visibility (immutable).
-     * 
     */
     public Optional<String> getVisibility() {
         return Optional.ofNullable(this.visibility);

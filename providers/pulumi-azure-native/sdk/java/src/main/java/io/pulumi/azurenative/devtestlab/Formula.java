@@ -20,7 +20,227 @@ import javax.annotation.Nullable;
  * A formula for creating a VM, specifying an image base and other parameters
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Formulas_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var formula = new AzureNative.DevTestLab.Formula("formula", new AzureNative.DevTestLab.FormulaArgs
+ *         {
+ *             Description = "Formula using a Linux base",
+ *             FormulaContent = new AzureNative.DevTestLab.Inputs.LabVirtualMachineCreationParameterArgs
+ *             {
+ *                 AllowClaim = false,
+ *                 Artifacts = 
+ *                 {
+ *                     new AzureNative.DevTestLab.Inputs.ArtifactInstallPropertiesArgs
+ *                     {
+ *                         ArtifactId = "/artifactsources/{artifactSourceName}/artifacts/linux-install-nodejs",
+ *                         Parameters = {},
+ *                     },
+ *                 },
+ *                 DisallowPublicIpAddress = true,
+ *                 GalleryImageReference = new AzureNative.DevTestLab.Inputs.GalleryImageReferenceArgs
+ *                 {
+ *                     Offer = "0001-com-ubuntu-server-groovy",
+ *                     OsType = "Linux",
+ *                     Publisher = "canonical",
+ *                     Sku = "20_10",
+ *                     Version = "latest",
+ *                 },
+ *                 IsAuthenticationWithSshKey = false,
+ *                 LabSubnetName = "Dtl{labName}Subnet",
+ *                 LabVirtualNetworkId = "/virtualnetworks/dtl{labName}",
+ *                 Location = "{location}",
+ *                 NetworkInterface = new AzureNative.DevTestLab.Inputs.NetworkInterfacePropertiesArgs
+ *                 {
+ *                     SharedPublicIpAddressConfiguration = new AzureNative.DevTestLab.Inputs.SharedPublicIpAddressConfigurationArgs
+ *                     {
+ *                         InboundNatRules = 
+ *                         {
+ *                             new AzureNative.DevTestLab.Inputs.InboundNatRuleArgs
+ *                             {
+ *                                 BackendPort = 22,
+ *                                 TransportProtocol = "Tcp",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 Notes = "Ubuntu Server 20.10",
+ *                 Size = "Standard_B1ms",
+ *                 StorageType = "Standard",
+ *                 UserName = "user",
+ *             },
+ *             LabName = "{labName}",
+ *             Location = "{location}",
+ *             Name = "{formulaName}",
+ *             ResourceGroupName = "resourceGroupName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewFormula(ctx, "formula", &devtestlab.FormulaArgs{
+ * 			Description: pulumi.String("Formula using a Linux base"),
+ * 			FormulaContent: &devtestlab.LabVirtualMachineCreationParameterArgs{
+ * 				AllowClaim: pulumi.Bool(false),
+ * 				Artifacts: devtestlab.ArtifactInstallPropertiesArray{
+ * 					&devtestlab.ArtifactInstallPropertiesArgs{
+ * 						ArtifactId: pulumi.String("/artifactsources/{artifactSourceName}/artifacts/linux-install-nodejs"),
+ * 						Parameters: devtestlab.ArtifactParameterPropertiesArray{},
+ * 					},
+ * 				},
+ * 				DisallowPublicIpAddress: pulumi.Bool(true),
+ * 				GalleryImageReference: &devtestlab.GalleryImageReferenceArgs{
+ * 					Offer:     pulumi.String("0001-com-ubuntu-server-groovy"),
+ * 					OsType:    pulumi.String("Linux"),
+ * 					Publisher: pulumi.String("canonical"),
+ * 					Sku:       pulumi.String("20_10"),
+ * 					Version:   pulumi.String("latest"),
+ * 				},
+ * 				IsAuthenticationWithSshKey: pulumi.Bool(false),
+ * 				LabSubnetName:              pulumi.String("Dtl{labName}Subnet"),
+ * 				LabVirtualNetworkId:        pulumi.String("/virtualnetworks/dtl{labName}"),
+ * 				Location:                   pulumi.String("{location}"),
+ * 				NetworkInterface: &devtestlab.NetworkInterfacePropertiesArgs{
+ * 					SharedPublicIpAddressConfiguration: &devtestlab.SharedPublicIpAddressConfigurationArgs{
+ * 						InboundNatRules: devtestlab.InboundNatRuleArray{
+ * 							&devtestlab.InboundNatRuleArgs{
+ * 								BackendPort:       pulumi.Int(22),
+ * 								TransportProtocol: pulumi.String("Tcp"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				Notes:       pulumi.String("Ubuntu Server 20.10"),
+ * 				Size:        pulumi.String("Standard_B1ms"),
+ * 				StorageType: pulumi.String("Standard"),
+ * 				UserName:    pulumi.String("user"),
+ * 			},
+ * 			LabName:           pulumi.String("{labName}"),
+ * 			Location:          pulumi.String("{location}"),
+ * 			Name:              pulumi.String("{formulaName}"),
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const formula = new azure_native.devtestlab.Formula("formula", {
+ *     description: "Formula using a Linux base",
+ *     formulaContent: {
+ *         allowClaim: false,
+ *         artifacts: [{
+ *             artifactId: "/artifactsources/{artifactSourceName}/artifacts/linux-install-nodejs",
+ *             parameters: [],
+ *         }],
+ *         disallowPublicIpAddress: true,
+ *         galleryImageReference: {
+ *             offer: "0001-com-ubuntu-server-groovy",
+ *             osType: "Linux",
+ *             publisher: "canonical",
+ *             sku: "20_10",
+ *             version: "latest",
+ *         },
+ *         isAuthenticationWithSshKey: false,
+ *         labSubnetName: "Dtl{labName}Subnet",
+ *         labVirtualNetworkId: "/virtualnetworks/dtl{labName}",
+ *         location: "{location}",
+ *         networkInterface: {
+ *             sharedPublicIpAddressConfiguration: {
+ *                 inboundNatRules: [{
+ *                     backendPort: 22,
+ *                     transportProtocol: "Tcp",
+ *                 }],
+ *             },
+ *         },
+ *         notes: "Ubuntu Server 20.10",
+ *         size: "Standard_B1ms",
+ *         storageType: "Standard",
+ *         userName: "user",
+ *     },
+ *     labName: "{labName}",
+ *     location: "{location}",
+ *     name: "{formulaName}",
+ *     resourceGroupName: "resourceGroupName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * formula = azure_native.devtestlab.Formula("formula",
+ *     description="Formula using a Linux base",
+ *     formula_content=azure_native.devtestlab.LabVirtualMachineCreationParameterArgs(
+ *         allow_claim=False,
+ *         artifacts=[azure_native.devtestlab.ArtifactInstallPropertiesArgs(
+ *             artifact_id="/artifactsources/{artifactSourceName}/artifacts/linux-install-nodejs",
+ *             parameters=[],
+ *         )],
+ *         disallow_public_ip_address=True,
+ *         gallery_image_reference=azure_native.devtestlab.GalleryImageReferenceArgs(
+ *             offer="0001-com-ubuntu-server-groovy",
+ *             os_type="Linux",
+ *             publisher="canonical",
+ *             sku="20_10",
+ *             version="latest",
+ *         ),
+ *         is_authentication_with_ssh_key=False,
+ *         lab_subnet_name="Dtl{labName}Subnet",
+ *         lab_virtual_network_id="/virtualnetworks/dtl{labName}",
+ *         location="{location}",
+ *         network_interface=azure_native.devtestlab.NetworkInterfacePropertiesArgs(
+ *             shared_public_ip_address_configuration=azure_native.devtestlab.SharedPublicIpAddressConfigurationArgs(
+ *                 inbound_nat_rules=[azure_native.devtestlab.InboundNatRuleArgs(
+ *                     backend_port=22,
+ *                     transport_protocol="Tcp",
+ *                 )],
+ *             ),
+ *         ),
+ *         notes="Ubuntu Server 20.10",
+ *         size="Standard_B1ms",
+ *         storage_type="Standard",
+ *         user_name="user",
+ *     ),
+ *     lab_name="{labName}",
+ *     location="{location}",
+ *     name="{formulaName}",
+ *     resource_group_name="resourceGroupName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,168 +255,144 @@ import javax.annotation.Nullable;
 public class Formula extends io.pulumi.resources.CustomResource {
     /**
      * The author of the formula.
-     * 
      */
     @Export(name="author", type=String.class, parameters={})
     private Output<String> author;
 
     /**
      * @return The author of the formula.
-     * 
      */
     public Output<String> getAuthor() {
         return this.author;
     }
     /**
      * The creation date of the formula.
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
      * @return The creation date of the formula.
-     * 
      */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * The description of the formula.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the formula.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The content of the formula.
-     * 
      */
     @Export(name="formulaContent", type=LabVirtualMachineCreationParameterResponse.class, parameters={})
     private Output</* @Nullable */ LabVirtualMachineCreationParameterResponse> formulaContent;
 
     /**
      * @return The content of the formula.
-     * 
      */
     public Output</* @Nullable */ LabVirtualMachineCreationParameterResponse> getFormulaContent() {
         return this.formulaContent;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The OS type of the formula.
-     * 
      */
     @Export(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
     /**
      * @return The OS type of the formula.
-     * 
      */
     public Output</* @Nullable */ String> getOsType() {
         return this.osType;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * Information about a VM from which a formula is to be created.
-     * 
      */
     @Export(name="vm", type=FormulaPropertiesFromVmResponse.class, parameters={})
     private Output</* @Nullable */ FormulaPropertiesFromVmResponse> vm;
 
     /**
      * @return Information about a VM from which a formula is to be created.
-     * 
      */
     public Output</* @Nullable */ FormulaPropertiesFromVmResponse> getVm() {
         return this.vm;

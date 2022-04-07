@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters that describes a set of credentials that will be used when a run is invoked.
- * 
  */
 public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the credential parameters for accessing other custom registries. The key
      * for the dictionary item will be the registry login server (myregistry.azurecr.io) and
      * the value of the item will be the registry credentials for accessing the registry.
-     * 
      */
     @Import(name="customRegistries")
       private final @Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
@@ -36,7 +34,6 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the credential parameters for accessing the source registry.
-     * 
      */
     @Import(name="sourceRegistry")
       private final @Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry;

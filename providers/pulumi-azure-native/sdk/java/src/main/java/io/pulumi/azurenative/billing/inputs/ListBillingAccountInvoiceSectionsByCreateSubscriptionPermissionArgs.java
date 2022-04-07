@@ -14,7 +14,6 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
 
     /**
      * The ID that uniquely identifies a billing account.
-     * 
      */
     @Import(name="billingAccountName", required=true)
       private final String billingAccountName;

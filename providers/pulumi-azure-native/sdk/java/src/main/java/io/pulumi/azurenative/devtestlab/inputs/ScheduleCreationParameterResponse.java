@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for creating a schedule.
- * 
  */
 public final class ScheduleCreationParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * If the schedule will occur once each day of the week, specify the daily recurrence.
-     * 
      */
     @Import(name="dailyRecurrence")
       private final @Nullable DayDetailsResponse dailyRecurrence;
@@ -36,7 +34,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
-     * 
      */
     @Import(name="hourlyRecurrence")
       private final @Nullable HourDetailsResponse hourlyRecurrence;
@@ -47,7 +44,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * The location of the new virtual machine or environment
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -58,7 +54,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * The name of the virtual machine or environment
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -69,7 +64,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * Notification settings.
-     * 
      */
     @Import(name="notificationSettings")
       private final @Nullable NotificationSettingsResponse notificationSettings;
@@ -80,7 +74,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * The status of the schedule (i.e. Enabled, Disabled)
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -91,7 +84,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -102,7 +94,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * The resource ID to which the schedule belongs
-     * 
      */
     @Import(name="targetResourceId")
       private final @Nullable String targetResourceId;
@@ -113,7 +104,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     * 
      */
     @Import(name="taskType")
       private final @Nullable String taskType;
@@ -124,7 +114,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * The time zone ID (e.g. Pacific Standard time).
-     * 
      */
     @Import(name="timeZoneId")
       private final @Nullable String timeZoneId;
@@ -135,7 +124,6 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
 
     /**
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
-     * 
      */
     @Import(name="weeklyRecurrence")
       private final @Nullable WeekDetailsResponse weeklyRecurrence;

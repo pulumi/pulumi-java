@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity SQL Data Warehouse sink.
- * 
  */
 public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="allowCopyCommand")
       private final @Nullable Output<Object> allowCopyCommand;
@@ -35,7 +33,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="allowPolyBase")
       private final @Nullable Output<Object> allowPolyBase;
@@ -46,7 +43,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies Copy Command related settings when allowCopyCommand is true.
-     * 
      */
     @Import(name="copyCommandSettings")
       private final @Nullable Output<DWCopyCommandSettingsArgs> copyCommandSettings;
@@ -57,7 +53,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -68,7 +63,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -79,7 +73,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies PolyBase-related settings when allowPolyBase is true.
-     * 
      */
     @Import(name="polyBaseSettings")
       private final @Nullable Output<PolybaseSettingsArgs> polyBaseSettings;
@@ -90,7 +83,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SQL pre-copy script. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="preCopyScript")
       private final @Nullable Output<Object> preCopyScript;
@@ -101,7 +93,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
@@ -112,7 +103,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
@@ -123,7 +113,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="sqlWriterUseTableLock")
       private final @Nullable Output<Object> sqlWriterUseTableLock;
@@ -134,7 +123,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="tableOption")
       private final @Nullable Output<Object> tableOption;
@@ -146,7 +134,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Copy sink type.
      * Expected value is 'SqlDWSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -157,7 +144,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SQL DW upsert settings.
-     * 
      */
     @Import(name="upsertSettings")
       private final @Nullable Output<SqlDWUpsertSettingsArgs> upsertSettings;
@@ -168,7 +154,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
@@ -179,7 +164,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
@@ -190,7 +174,6 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
-     * 
      */
     @Import(name="writeBehavior")
       private final @Nullable Output<Object> writeBehavior;

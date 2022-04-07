@@ -14,7 +14,6 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -25,7 +24,6 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The rule name.
-     * 
      */
     @Import(name="ruleName", required=true)
       private final String ruleName;
@@ -47,7 +44,6 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The subscription name.
-     * 
      */
     @Import(name="subscriptionName", required=true)
       private final String subscriptionName;
@@ -58,7 +54,6 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The topic name.
-     * 
      */
     @Import(name="topicName", required=true)
       private final String topicName;

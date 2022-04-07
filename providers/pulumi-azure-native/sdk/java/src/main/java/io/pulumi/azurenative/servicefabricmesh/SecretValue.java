@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
  * API Version: 2018-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateSecretValue
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var secretValue = new AzureNative.ServiceFabricMesh.SecretValue("secretValue", new AzureNative.ServiceFabricMesh.SecretValueArgs
+ *         {
+ *             ResourceGroupName = "sbz_demo",
+ *             SecretResourceName = "dbConnectionString",
+ *             SecretValueResourceName = "v1",
+ *             Value = "mongodb://contoso123:0Fc3IolnL12312asdfawejunASDF@asdfYXX2t8a97kghVcUzcDv98hawelufhawefafnoQRGwNj2nMPL1Y9qsIr9Srdw==@contoso123.documents.azure.com:10255/mydatabase?ssl=true",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicefabricmesh "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabricmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicefabricmesh.NewSecretValue(ctx, "secretValue", &servicefabricmesh.SecretValueArgs{
+ * 			ResourceGroupName:       pulumi.String("sbz_demo"),
+ * 			SecretResourceName:      pulumi.String("dbConnectionString"),
+ * 			SecretValueResourceName: pulumi.String("v1"),
+ * 			Value:                   pulumi.String("mongodb://contoso123:0Fc3IolnL12312asdfawejunASDF@asdfYXX2t8a97kghVcUzcDv98hawelufhawefafnoQRGwNj2nMPL1Y9qsIr9Srdw==@contoso123.documents.azure.com:10255/mydatabase?ssl=true"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const secretValue = new azure_native.servicefabricmesh.SecretValue("secretValue", {
+ *     resourceGroupName: "sbz_demo",
+ *     secretResourceName: "dbConnectionString",
+ *     secretValueResourceName: "v1",
+ *     value: "mongodb://contoso123:0Fc3IolnL12312asdfawejunASDF@asdfYXX2t8a97kghVcUzcDv98hawelufhawefafnoQRGwNj2nMPL1Y9qsIr9Srdw==@contoso123.documents.azure.com:10255/mydatabase?ssl=true",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * secret_value = azure_native.servicefabricmesh.SecretValue("secretValue",
+ *     resource_group_name="sbz_demo",
+ *     secret_resource_name="dbConnectionString",
+ *     secret_value_resource_name="v1",
+ *     value="mongodb://contoso123:0Fc3IolnL12312asdfawejunASDF@asdfYXX2t8a97kghVcUzcDv98hawelufhawefafnoQRGwNj2nMPL1Y9qsIr9Srdw==@contoso123.documents.azure.com:10255/mydatabase?ssl=true")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +109,72 @@ import javax.annotation.Nullable;
 public class SecretValue extends io.pulumi.resources.CustomResource {
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return State of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The actual value of the secret.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**
      * @return The actual value of the secret.
-     * 
      */
     public Output</* @Nullable */ String> getValue() {
         return this.value;

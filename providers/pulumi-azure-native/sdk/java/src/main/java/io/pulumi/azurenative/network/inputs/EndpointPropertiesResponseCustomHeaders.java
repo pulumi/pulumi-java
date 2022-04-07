@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom header name and value.
- * 
  */
 public final class EndpointPropertiesResponseCustomHeaders extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EndpointPropertiesResponseCustomHeaders extends io.pulumi.res
 
     /**
      * Header name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class EndpointPropertiesResponseCustomHeaders extends io.pulumi.res
 
     /**
      * Header value.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

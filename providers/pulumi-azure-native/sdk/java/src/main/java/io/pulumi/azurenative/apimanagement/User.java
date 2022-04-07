@@ -19,7 +19,95 @@ import javax.annotation.Nullable;
  * User details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateUser
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var user = new AzureNative.ApiManagement.User("user", new AzureNative.ApiManagement.UserArgs
+ *         {
+ *             Confirmation = "signup",
+ *             Email = "foobar@outlook.com",
+ *             FirstName = "foo",
+ *             LastName = "bar",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             UserId = "5931a75ae4bbd512288c680b",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewUser(ctx, "user", &apimanagement.UserArgs{
+ * 			Confirmation:      pulumi.String("signup"),
+ * 			Email:             pulumi.String("foobar@outlook.com"),
+ * 			FirstName:         pulumi.String("foo"),
+ * 			LastName:          pulumi.String("bar"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			UserId:            pulumi.String("5931a75ae4bbd512288c680b"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const user = new azure_native.apimanagement.User("user", {
+ *     confirmation: "signup",
+ *     email: "foobar@outlook.com",
+ *     firstName: "foo",
+ *     lastName: "bar",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     userId: "5931a75ae4bbd512288c680b",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * user = azure_native.apimanagement.User("user",
+ *     confirmation="signup",
+ *     email="foobar@outlook.com",
+ *     first_name="foo",
+ *     last_name="bar",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     user_id="5931a75ae4bbd512288c680b")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +122,84 @@ import javax.annotation.Nullable;
 public class User extends io.pulumi.resources.CustomResource {
     /**
      * Email address.
-     * 
      */
     @Export(name="email", type=String.class, parameters={})
     private Output</* @Nullable */ String> email;
 
     /**
      * @return Email address.
-     * 
      */
     public Output</* @Nullable */ String> getEmail() {
         return this.email;
     }
     /**
      * First name.
-     * 
      */
     @Export(name="firstName", type=String.class, parameters={})
     private Output</* @Nullable */ String> firstName;
 
     /**
      * @return First name.
-     * 
      */
     public Output</* @Nullable */ String> getFirstName() {
         return this.firstName;
     }
     /**
      * Collection of groups user is part of.
-     * 
      */
     @Export(name="groups", type=List.class, parameters={GroupContractPropertiesResponse.class})
     private Output<List<GroupContractPropertiesResponse>> groups;
 
     /**
      * @return Collection of groups user is part of.
-     * 
      */
     public Output<List<GroupContractPropertiesResponse>> getGroups() {
         return this.groups;
     }
     /**
      * Collection of user identities.
-     * 
      */
     @Export(name="identities", type=List.class, parameters={UserIdentityContractResponse.class})
     private Output</* @Nullable */ List<UserIdentityContractResponse>> identities;
 
     /**
      * @return Collection of user identities.
-     * 
      */
     public Output</* @Nullable */ List<UserIdentityContractResponse>> getIdentities() {
         return this.identities;
     }
     /**
      * Last name.
-     * 
      */
     @Export(name="lastName", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastName;
 
     /**
      * @return Last name.
-     * 
      */
     public Output</* @Nullable */ String> getLastName() {
         return this.lastName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Optional note about a user set by the administrator.
-     * 
      */
     @Export(name="note", type=String.class, parameters={})
     private Output</* @Nullable */ String> note;
 
     /**
      * @return Optional note about a user set by the administrator.
-     * 
      */
     public Output</* @Nullable */ String> getNote() {
         return this.note;
@@ -146,28 +220,24 @@ public class User extends io.pulumi.resources.CustomResource {
     }
     /**
      * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
      * @return Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
-     * 
      */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

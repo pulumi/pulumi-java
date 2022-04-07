@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class IpRuleResponse {
     /**
      * Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24) to be allowed.
-     * 
      */
     private final @Nullable String value;
 
@@ -24,7 +23,6 @@ public final class IpRuleResponse {
 
     /**
      * Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24) to be allowed.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

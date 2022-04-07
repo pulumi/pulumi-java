@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Weekly Schedule properties, make a snapshot every week at a specific day or days
- * 
  */
 public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english
-     * 
      */
     @Import(name="day")
       private final @Nullable Output<String> day;
@@ -33,7 +31,6 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates which hour in UTC timezone a snapshot should be taken
-     * 
      */
     @Import(name="hour")
       private final @Nullable Output<Integer> hour;
@@ -44,7 +41,6 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates which minute snapshot should be taken
-     * 
      */
     @Import(name="minute")
       private final @Nullable Output<Integer> minute;
@@ -55,7 +51,6 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Weekly snapshot count to keep
-     * 
      */
     @Import(name="snapshotsToKeep")
       private final @Nullable Output<Integer> snapshotsToKeep;
@@ -66,7 +61,6 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource size in bytes, current storage usage for the volume in bytes
-     * 
      */
     @Import(name="usedBytes")
       private final @Nullable Output<Double> usedBytes;

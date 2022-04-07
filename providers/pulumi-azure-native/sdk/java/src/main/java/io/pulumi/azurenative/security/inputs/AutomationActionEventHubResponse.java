@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The target Event Hub to which event data will be exported. To learn more about Security Center continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
- * 
  */
 public final class AutomationActionEventHubResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
     /**
      * The type of the action that will be triggered by the Automation
      * Expected value is 'EventHub'.
-     * 
      */
     @Import(name="actionType", required=true)
       private final String actionType;
@@ -32,7 +30,6 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
 
     /**
      * The target Event Hub connection string (it will not be included in any response).
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable String connectionString;
@@ -43,7 +40,6 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
 
     /**
      * The target Event Hub Azure Resource ID.
-     * 
      */
     @Import(name="eventHubResourceId")
       private final @Nullable String eventHubResourceId;
@@ -54,7 +50,6 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
 
     /**
      * The target Event Hub SAS policy name.
-     * 
      */
     @Import(name="sasPolicyName", required=true)
       private final String sasPolicyName;

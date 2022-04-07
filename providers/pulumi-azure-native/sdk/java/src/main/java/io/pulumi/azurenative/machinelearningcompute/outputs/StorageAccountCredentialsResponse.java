@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class StorageAccountCredentialsResponse {
     /**
      * The primary key of the storage account.
-     * 
      */
     private final String primaryKey;
     /**
      * The ARM resource ID of the storage account.
-     * 
      */
     private final String resourceId;
     /**
      * The secondary key of the storage account.
-     * 
      */
     private final String secondaryKey;
 
@@ -37,21 +34,18 @@ public final class StorageAccountCredentialsResponse {
 
     /**
      * The primary key of the storage account.
-     * 
     */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * The ARM resource ID of the storage account.
-     * 
     */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * The secondary key of the storage account.
-     * 
     */
     public String getSecondaryKey() {
         return this.secondaryKey;

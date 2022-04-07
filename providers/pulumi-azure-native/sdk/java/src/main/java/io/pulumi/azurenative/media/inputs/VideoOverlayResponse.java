@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the properties of a video overlay.
- * 
  */
 public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
-     * 
      */
     @Import(name="audioGainLevel")
       private final @Nullable Double audioGainLevel;
@@ -33,7 +31,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An optional rectangular window used to crop the overlay image or video.
-     * 
      */
     @Import(name="cropRectangle")
       private final @Nullable RectangleResponse cropRectangle;
@@ -44,7 +41,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
-     * 
      */
     @Import(name="end")
       private final @Nullable String end;
@@ -55,7 +51,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
-     * 
      */
     @Import(name="fadeInDuration")
       private final @Nullable String fadeInDuration;
@@ -66,7 +61,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
-     * 
      */
     @Import(name="fadeOutDuration")
       private final @Nullable String fadeOutDuration;
@@ -77,7 +71,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
-     * 
      */
     @Import(name="inputLabel", required=true)
       private final String inputLabel;
@@ -89,7 +82,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.VideoOverlay'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -100,7 +92,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.
-     * 
      */
     @Import(name="opacity")
       private final @Nullable Double opacity;
@@ -111,7 +102,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The location in the input video where the overlay is applied.
-     * 
      */
     @Import(name="position")
       private final @Nullable RectangleResponse position;
@@ -122,7 +112,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
-     * 
      */
     @Import(name="start")
       private final @Nullable String start;

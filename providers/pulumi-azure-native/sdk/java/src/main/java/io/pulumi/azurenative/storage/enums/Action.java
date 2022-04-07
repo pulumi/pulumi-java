@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The action of virtual network rule.
-     * 
      */
     @EnumType
     public enum Action {

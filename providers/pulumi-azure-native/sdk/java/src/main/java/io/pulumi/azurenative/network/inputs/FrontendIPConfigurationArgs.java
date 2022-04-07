@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Frontend IP address of the load balancer.
- * 
  */
 public final class FrontendIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -38,7 +36,6 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -49,7 +46,6 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The private IP address of the IP configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
@@ -60,7 +56,6 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
-     * 
      */
     @Import(name="privateIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
@@ -71,7 +66,6 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The Private IP allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
@@ -82,7 +76,6 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The reference to the Public IP resource.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
@@ -93,7 +86,6 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The reference to the Public IP Prefix resource.
-     * 
      */
     @Import(name="publicIPPrefix")
       private final @Nullable Output<SubResourceArgs> publicIPPrefix;
@@ -104,7 +96,6 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * The reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
@@ -115,7 +106,6 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
 
     /**
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

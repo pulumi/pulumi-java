@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class AzureQueryPropertiesResponse {
     /**
      * List of locations to scope the query to.
-     * 
      */
     private final @Nullable List<String> locations;
     /**
      * List of Subscription or Resource Group ARM Ids.
-     * 
      */
     private final @Nullable List<String> scope;
     /**
      * Tag settings for the VM.
-     * 
      */
     private final @Nullable TagSettingsPropertiesResponse tagSettings;
 
@@ -41,21 +38,18 @@ public final class AzureQueryPropertiesResponse {
 
     /**
      * List of locations to scope the query to.
-     * 
     */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * List of Subscription or Resource Group ARM Ids.
-     * 
     */
     public List<String> getScope() {
         return this.scope == null ? List.of() : this.scope;
     }
     /**
      * Tag settings for the VM.
-     * 
     */
     public Optional<TagSettingsPropertiesResponse> getTagSettings() {
         return Optional.ofNullable(this.tagSettings);

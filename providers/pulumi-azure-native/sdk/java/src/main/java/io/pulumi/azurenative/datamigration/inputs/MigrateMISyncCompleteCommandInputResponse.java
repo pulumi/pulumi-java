@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Input for command that completes online migration for an Azure SQL Database Managed Instance.
- * 
  */
 public final class MigrateMISyncCompleteCommandInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MigrateMISyncCompleteCommandInputResponse extends io.pulumi.r
 
     /**
      * Name of managed instance database
-     * 
      */
     @Import(name="sourceDatabaseName", required=true)
       private final String sourceDatabaseName;

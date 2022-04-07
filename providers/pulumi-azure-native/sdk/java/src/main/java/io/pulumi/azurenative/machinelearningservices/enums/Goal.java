@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Defines supported metric goals for hyperparameter tuning
-     * 
      */
     @EnumType
     public enum Goal {

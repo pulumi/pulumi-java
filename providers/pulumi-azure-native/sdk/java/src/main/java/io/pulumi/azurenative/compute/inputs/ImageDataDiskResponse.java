@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a data disk.
- * 
  */
 public final class ImageDataDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ImageDataDiskResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The Virtual Hard Disk.
-     * 
      */
     @Import(name="blobUri")
       private final @Nullable String blobUri;
@@ -34,7 +32,6 @@ public final class ImageDataDiskResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
-     * 
      */
     @Import(name="caching")
       private final @Nullable String caching;
@@ -45,7 +42,6 @@ public final class ImageDataDiskResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specifies the customer managed disk encryption set resource id for the managed image disk.
-     * 
      */
     @Import(name="diskEncryptionSet")
       private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
@@ -56,7 +52,6 @@ public final class ImageDataDiskResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
@@ -67,7 +62,6 @@ public final class ImageDataDiskResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-     * 
      */
     @Import(name="lun", required=true)
       private final Integer lun;
@@ -78,7 +72,6 @@ public final class ImageDataDiskResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The managedDisk.
-     * 
      */
     @Import(name="managedDisk")
       private final @Nullable SubResourceResponse managedDisk;
@@ -89,7 +82,6 @@ public final class ImageDataDiskResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The snapshot.
-     * 
      */
     @Import(name="snapshot")
       private final @Nullable SubResourceResponse snapshot;
@@ -100,7 +92,6 @@ public final class ImageDataDiskResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
-     * 
      */
     @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;

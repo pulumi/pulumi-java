@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A TrackSelection to select video tracks.
- * 
  */
 public final class VideoTrackDescriptorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VideoTrackDescriptorArgs extends io.pulumi.resources.Resource
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.VideoTrackDescriptor'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;

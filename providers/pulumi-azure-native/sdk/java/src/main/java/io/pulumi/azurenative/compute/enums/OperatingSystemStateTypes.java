@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The OS State.
-     * 
      */
     @EnumType
     public enum OperatingSystemStateTypes {
         /**
          * Generalized image. Needs to be provisioned during deployment time.
-         * 
          */
         Generalized("Generalized"),
         /**
          * Specialized image. Contains already provisioned OS Disk.
-         * 
          */
         Specialized("Specialized");
 

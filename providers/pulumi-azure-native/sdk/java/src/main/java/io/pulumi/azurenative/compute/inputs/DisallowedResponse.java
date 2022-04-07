@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the disallowed disk types.
- * 
  */
 public final class DisallowedResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DisallowedResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of disk types.
-     * 
      */
     @Import(name="diskTypes")
       private final @Nullable List<String> diskTypes;

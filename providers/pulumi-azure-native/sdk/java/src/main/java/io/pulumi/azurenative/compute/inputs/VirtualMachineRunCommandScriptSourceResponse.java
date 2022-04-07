@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the script sources for run command.
- * 
  */
 public final class VirtualMachineRunCommandScriptSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends io.pulum
 
     /**
      * Specifies a commandId of predefined built-in script.
-     * 
      */
     @Import(name="commandId")
       private final @Nullable String commandId;
@@ -31,7 +29,6 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends io.pulum
 
     /**
      * Specifies the script content to be executed on the VM.
-     * 
      */
     @Import(name="script")
       private final @Nullable String script;
@@ -42,7 +39,6 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends io.pulum
 
     /**
      * Specifies the script download location.
-     * 
      */
     @Import(name="scriptUri")
       private final @Nullable String scriptUri;

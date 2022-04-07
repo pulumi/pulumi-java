@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 /**
  * Definition of which performance counters will be collected and how they will be collected by this data collection rule.
  * Collected from both Windows and Linux machines where the counter is present.
- * 
  */
 public final class PerfCounterDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * A list of specifier names of the performance counters you want to collect.
      * Use a wildcard (*) to collect a counter for all instances.
      * To get a list of performance counters on Windows, run the command 'typeperf'.
-     * 
      */
     @Import(name="counterSpecifiers")
       private final @Nullable Output<List<String>> counterSpecifiers;
@@ -37,9 +35,8 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
     }
 
     /**
-     * A friendly name for the data source.
+     * A friendly name for the data source. 
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -50,7 +47,6 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
 
     /**
      * The number of seconds between consecutive counter measurements (samples).
-     * 
      */
     @Import(name="samplingFrequencyInSeconds")
       private final @Nullable Output<Integer> samplingFrequencyInSeconds;
@@ -62,7 +58,6 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
     /**
      * List of streams that this data source will be sent to.
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
-     * 
      */
     @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams;

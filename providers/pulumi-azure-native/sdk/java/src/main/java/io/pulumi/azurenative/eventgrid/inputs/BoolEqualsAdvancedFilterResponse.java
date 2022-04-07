@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * BoolEquals Advanced Filter.
- * 
  */
 public final class BoolEqualsAdvancedFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BoolEqualsAdvancedFilterResponse extends io.pulumi.resources.
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     @Import(name="key")
       private final @Nullable String key;
@@ -33,7 +31,6 @@ public final class BoolEqualsAdvancedFilterResponse extends io.pulumi.resources.
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'BoolEquals'.
-     * 
      */
     @Import(name="operatorType", required=true)
       private final String operatorType;
@@ -44,7 +41,6 @@ public final class BoolEqualsAdvancedFilterResponse extends io.pulumi.resources.
 
     /**
      * The boolean filter value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Boolean value;

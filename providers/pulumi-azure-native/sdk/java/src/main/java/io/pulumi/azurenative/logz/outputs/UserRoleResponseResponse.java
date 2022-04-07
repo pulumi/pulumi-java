@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class UserRoleResponseResponse {
     /**
      * User roles on configured in Logz.io account.
-     * 
      */
     private final @Nullable String role;
 
@@ -24,7 +23,6 @@ public final class UserRoleResponseResponse {
 
     /**
      * User roles on configured in Logz.io account.
-     * 
     */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);

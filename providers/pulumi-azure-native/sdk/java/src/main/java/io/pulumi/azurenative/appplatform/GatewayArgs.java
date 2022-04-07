@@ -18,7 +18,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of Spring Cloud Gateway.
-     * 
      */
     @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
@@ -29,7 +28,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Spring Cloud Gateway properties payload
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<GatewayPropertiesArgs> properties;
@@ -40,7 +38,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Service resource.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -62,7 +58,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sku of the Spring Cloud Gateway resource
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;

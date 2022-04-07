@@ -20,7 +20,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the dashboard.
-     * 
      */
     @Import(name="dashboardName")
       private final @Nullable Output<String> dashboardName;
@@ -31,7 +30,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The dashboard lenses.
-     * 
      */
     @Import(name="lenses")
       private final @Nullable Output<List<DashboardLensArgs>> lenses;
@@ -42,7 +40,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The dashboard metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,Object>> metadata;
@@ -64,7 +60,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

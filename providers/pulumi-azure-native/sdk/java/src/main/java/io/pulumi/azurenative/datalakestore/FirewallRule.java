@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * Data Lake Store firewall rule information.
  * API Version: 2016-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates the specified firewall rule. During update, the firewall rule with the specified name will be replaced with this new firewall rule
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var firewallRule = new AzureNative.DataLakeStore.FirewallRule("firewallRule", new AzureNative.DataLakeStore.FirewallRuleArgs
+ *         {
+ *             AccountName = "contosoadla",
+ *             EndIpAddress = "2.2.2.2",
+ *             FirewallRuleName = "test_rule",
+ *             ResourceGroupName = "contosorg",
+ *             StartIpAddress = "1.1.1.1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datalakestore "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datalakestore"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datalakestore.NewFirewallRule(ctx, "firewallRule", &datalakestore.FirewallRuleArgs{
+ * 			AccountName:       pulumi.String("contosoadla"),
+ * 			EndIpAddress:      pulumi.String("2.2.2.2"),
+ * 			FirewallRuleName:  pulumi.String("test_rule"),
+ * 			ResourceGroupName: pulumi.String("contosorg"),
+ * 			StartIpAddress:    pulumi.String("1.1.1.1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule", {
+ *     accountName: "contosoadla",
+ *     endIpAddress: "2.2.2.2",
+ *     firewallRuleName: "test_rule",
+ *     resourceGroupName: "contosorg",
+ *     startIpAddress: "1.1.1.1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * firewall_rule = azure_native.datalakestore.FirewallRule("firewallRule",
+ *     account_name="contosoadla",
+ *     end_ip_address="2.2.2.2",
+ *     firewall_rule_name="test_rule",
+ *     resource_group_name="contosorg",
+ *     start_ip_address="1.1.1.1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +112,48 @@ import javax.annotation.Nullable;
 public class FirewallRule extends io.pulumi.resources.CustomResource {
     /**
      * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     * 
      */
     @Export(name="endIpAddress", type=String.class, parameters={})
     private Output<String> endIpAddress;
 
     /**
      * @return The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     * 
      */
     public Output<String> getEndIpAddress() {
         return this.endIpAddress;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     * 
      */
     @Export(name="startIpAddress", type=String.class, parameters={})
     private Output<String> startIpAddress;
 
     /**
      * @return The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     * 
      */
     public Output<String> getStartIpAddress() {
         return this.startIpAddress;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

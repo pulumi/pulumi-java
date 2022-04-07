@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Describes a built-in preset for encoding the input content using the encoder processor.
- * 
  */
 public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the built-in encoding preset.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,EncoderSystemPresetType>> name;
@@ -33,7 +31,6 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

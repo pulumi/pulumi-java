@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
- * 
  */
 public final class SourceVaultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SourceVaultResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

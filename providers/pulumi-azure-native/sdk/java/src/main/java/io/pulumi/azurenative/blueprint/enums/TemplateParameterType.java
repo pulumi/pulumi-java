@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Allowed data types for Resource Manager template parameters.
-     * 
      */
     @EnumType
     public enum TemplateParameterType {

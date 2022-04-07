@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class for envelope encryption scheme
- * 
  */
 public final class CommonEncryptionCencArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
 
     /**
      * Representing which tracks should not be encrypted
-     * 
      */
     @Import(name="clearTracks")
       private final @Nullable Output<List<TrackSelectionArgs>> clearTracks;
@@ -35,7 +33,6 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
 
     /**
      * Representing default content key for each encryption scheme and separate content keys for specific tracks
-     * 
      */
     @Import(name="contentKeys")
       private final @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
@@ -46,7 +43,6 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
 
     /**
      * Configuration of DRMs for CommonEncryptionCenc encryption scheme
-     * 
      */
     @Import(name="drm")
       private final @Nullable Output<CencDrmConfigurationArgs> drm;
@@ -57,7 +53,6 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
 
     /**
      * Representing supported protocols
-     * 
      */
     @Import(name="enabledProtocols")
       private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;

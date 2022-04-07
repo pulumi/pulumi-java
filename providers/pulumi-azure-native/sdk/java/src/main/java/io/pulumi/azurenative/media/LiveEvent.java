@@ -25,7 +25,218 @@ import javax.annotation.Nullable;
  * The live event.
  * API Version: 2020-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a LiveEvent
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var liveEvent = new AzureNative.Media.LiveEvent("liveEvent", new AzureNative.Media.LiveEventArgs
+ *         {
+ *             AccountName = "slitestmedia10",
+ *             Description = "test event 1",
+ *             Input = new AzureNative.Media.Inputs.LiveEventInputArgs
+ *             {
+ *                 AccessControl = new AzureNative.Media.Inputs.LiveEventInputAccessControlArgs
+ *                 {
+ *                     Ip = new AzureNative.Media.Inputs.IPAccessControlArgs
+ *                     {
+ *                         Allow = 
+ *                         {
+ *                             new AzureNative.Media.Inputs.IPRangeArgs
+ *                             {
+ *                                 Address = "0.0.0.0",
+ *                                 Name = "AllowAll",
+ *                                 SubnetPrefixLength = 0,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 KeyFrameIntervalDuration = "PT6S",
+ *                 StreamingProtocol = "RTMP",
+ *             },
+ *             LiveEventName = "myLiveEvent1",
+ *             Location = "West US",
+ *             Preview = new AzureNative.Media.Inputs.LiveEventPreviewArgs
+ *             {
+ *                 AccessControl = new AzureNative.Media.Inputs.LiveEventPreviewAccessControlArgs
+ *                 {
+ *                     Ip = new AzureNative.Media.Inputs.IPAccessControlArgs
+ *                     {
+ *                         Allow = 
+ *                         {
+ *                             new AzureNative.Media.Inputs.IPRangeArgs
+ *                             {
+ *                                 Address = "0.0.0.0",
+ *                                 Name = "AllowAll",
+ *                                 SubnetPrefixLength = 0,
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "mediaresources",
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := media.NewLiveEvent(ctx, "liveEvent", &media.LiveEventArgs{
+ * 			AccountName: pulumi.String("slitestmedia10"),
+ * 			Description: pulumi.String("test event 1"),
+ * 			Input: &media.LiveEventInputArgs{
+ * 				AccessControl: &media.LiveEventInputAccessControlArgs{
+ * 					Ip: &media.IPAccessControlArgs{
+ * 						Allow: media.IPRangeArray{
+ * 							&media.IPRangeArgs{
+ * 								Address:            pulumi.String("0.0.0.0"),
+ * 								Name:               pulumi.String("AllowAll"),
+ * 								SubnetPrefixLength: pulumi.Int(0),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				KeyFrameIntervalDuration: pulumi.String("PT6S"),
+ * 				StreamingProtocol:        pulumi.String("RTMP"),
+ * 			},
+ * 			LiveEventName: pulumi.String("myLiveEvent1"),
+ * 			Location:      pulumi.String("West US"),
+ * 			Preview: &media.LiveEventPreviewArgs{
+ * 				AccessControl: &media.LiveEventPreviewAccessControlArgs{
+ * 					Ip: &media.IPAccessControlArgs{
+ * 						Allow: media.IPRangeArray{
+ * 							&media.IPRangeArgs{
+ * 								Address:            pulumi.String("0.0.0.0"),
+ * 								Name:               pulumi.String("AllowAll"),
+ * 								SubnetPrefixLength: pulumi.Int(0),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("mediaresources"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const liveEvent = new azure_native.media.LiveEvent("liveEvent", {
+ *     accountName: "slitestmedia10",
+ *     description: "test event 1",
+ *     input: {
+ *         accessControl: {
+ *             ip: {
+ *                 allow: [{
+ *                     address: "0.0.0.0",
+ *                     name: "AllowAll",
+ *                     subnetPrefixLength: 0,
+ *                 }],
+ *             },
+ *         },
+ *         keyFrameIntervalDuration: "PT6S",
+ *         streamingProtocol: "RTMP",
+ *     },
+ *     liveEventName: "myLiveEvent1",
+ *     location: "West US",
+ *     preview: {
+ *         accessControl: {
+ *             ip: {
+ *                 allow: [{
+ *                     address: "0.0.0.0",
+ *                     name: "AllowAll",
+ *                     subnetPrefixLength: 0,
+ *                 }],
+ *             },
+ *         },
+ *     },
+ *     resourceGroupName: "mediaresources",
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * live_event = azure_native.media.LiveEvent("liveEvent",
+ *     account_name="slitestmedia10",
+ *     description="test event 1",
+ *     input=azure_native.media.LiveEventInputArgs(
+ *         access_control=azure_native.media.LiveEventInputAccessControlArgs(
+ *             ip=azure_native.media.IPAccessControlArgs(
+ *                 allow=[azure_native.media.IPRangeArgs(
+ *                     address="0.0.0.0",
+ *                     name="AllowAll",
+ *                     subnet_prefix_length=0,
+ *                 )],
+ *             ),
+ *         ),
+ *         key_frame_interval_duration="PT6S",
+ *         streaming_protocol="RTMP",
+ *     ),
+ *     live_event_name="myLiveEvent1",
+ *     location="West US",
+ *     preview=azure_native.media.LiveEventPreviewArgs(
+ *         access_control=azure_native.media.LiveEventPreviewAccessControlArgs(
+ *             ip=azure_native.media.IPAccessControlArgs(
+ *                 allow=[azure_native.media.IPRangeArgs(
+ *                     address="0.0.0.0",
+ *                     name="AllowAll",
+ *                     subnet_prefix_length=0,
+ *                 )],
+ *             ),
+ *         ),
+ *     ),
+ *     resource_group_name="mediaresources",
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,252 +251,216 @@ import javax.annotation.Nullable;
 public class LiveEvent extends io.pulumi.resources.CustomResource {
     /**
      * The creation time for the live event
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
      * @return The creation time for the live event
-     * 
      */
     public Output<String> getCreated() {
         return this.created;
     }
     /**
      * Live event cross site access policies.
-     * 
      */
     @Export(name="crossSiteAccessPolicies", type=CrossSiteAccessPoliciesResponse.class, parameters={})
     private Output</* @Nullable */ CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies;
 
     /**
      * @return Live event cross site access policies.
-     * 
      */
     public Output</* @Nullable */ CrossSiteAccessPoliciesResponse> getCrossSiteAccessPolicies() {
         return this.crossSiteAccessPolicies;
     }
     /**
      * A description for the live event.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description for the live event.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
-     * 
      */
     @Export(name="encoding", type=LiveEventEncodingResponse.class, parameters={})
     private Output</* @Nullable */ LiveEventEncodingResponse> encoding;
 
     /**
      * @return Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
-     * 
      */
     public Output</* @Nullable */ LiveEventEncodingResponse> getEncoding() {
         return this.encoding;
     }
     /**
      * When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
-     * 
      */
     @Export(name="hostnamePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostnamePrefix;
 
     /**
      * @return When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
-     * 
      */
     public Output</* @Nullable */ String> getHostnamePrefix() {
         return this.hostnamePrefix;
     }
     /**
      * Live event input settings. It defines how the live event receives input from a contribution encoder.
-     * 
      */
     @Export(name="input", type=LiveEventInputResponse.class, parameters={})
     private Output<LiveEventInputResponse> input;
 
     /**
      * @return Live event input settings. It defines how the live event receives input from a contribution encoder.
-     * 
      */
     public Output<LiveEventInputResponse> getInput() {
         return this.input;
     }
     /**
      * The last modified time of the live event.
-     * 
      */
     @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
      * @return The last modified time of the live event.
-     * 
      */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
-     * 
      */
     @Export(name="preview", type=LiveEventPreviewResponse.class, parameters={})
     private Output</* @Nullable */ LiveEventPreviewResponse> preview;
 
     /**
      * @return Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
-     * 
      */
     public Output</* @Nullable */ LiveEventPreviewResponse> getPreview() {
         return this.preview;
     }
     /**
      * The provisioning state of the live event.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the live event.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
-     * 
      */
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
      * @return The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
-     * 
      */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
     /**
      * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
-     * 
      */
     @Export(name="streamOptions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> streamOptions;
 
     /**
      * @return The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
-     * 
      */
     public Output</* @Nullable */ List<String>> getStreamOptions() {
         return this.streamOptions;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
-     * 
      */
     @Export(name="transcriptions", type=List.class, parameters={LiveEventTranscriptionResponse.class})
     private Output</* @Nullable */ List<LiveEventTranscriptionResponse>> transcriptions;
 
     /**
      * @return Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
-     * 
      */
     public Output</* @Nullable */ List<LiveEventTranscriptionResponse>> getTranscriptions() {
         return this.transcriptions;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
-     * 
      */
     @Export(name="useStaticHostname", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useStaticHostname;
 
     /**
      * @return Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
-     * 
      */
     public Output</* @Nullable */ Boolean> getUseStaticHostname() {
         return this.useStaticHostname;

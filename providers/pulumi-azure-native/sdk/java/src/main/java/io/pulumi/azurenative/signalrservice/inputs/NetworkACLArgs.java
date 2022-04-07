@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network ACL
- * 
  */
 public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-     * 
      */
     @Import(name="allow")
       private final @Nullable Output<List<Either<String,SignalRRequestType>>> allow;
@@ -34,7 +32,6 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-     * 
      */
     @Import(name="deny")
       private final @Nullable Output<List<Either<String,SignalRRequestType>>> deny;

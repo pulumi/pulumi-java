@@ -19,7 +19,79 @@ import javax.annotation.Nullable;
  * Capture logs and metrics of Azure resources based on ARM tags.
  * API Version: 2020-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TagRules_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tagRule = new AzureNative.Elastic.TagRule("tagRule", new AzureNative.Elastic.TagRuleArgs
+ *         {
+ *             MonitorName = "myMonitor",
+ *             ResourceGroupName = "myResourceGroup",
+ *             RuleSetName = "default",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	elastic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/elastic"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := elastic.NewTagRule(ctx, "tagRule", &elastic.TagRuleArgs{
+ * 			MonitorName:       pulumi.String("myMonitor"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			RuleSetName:       pulumi.String("default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const tagRule = new azure_native.elastic.TagRule("tagRule", {
+ *     monitorName: "myMonitor",
+ *     resourceGroupName: "myResourceGroup",
+ *     ruleSetName: "default",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * tag_rule = azure_native.elastic.TagRule("tagRule",
+ *     monitor_name="myMonitor",
+ *     resource_group_name="myResourceGroup",
+ *     rule_set_name="default")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +106,48 @@ import javax.annotation.Nullable;
 public class TagRule extends io.pulumi.resources.CustomResource {
     /**
      * Name of the rule set.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the rule set.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the monitoring tag rules.
-     * 
      */
     @Export(name="properties", type=MonitoringTagRulesPropertiesResponse.class, parameters={})
     private Output<MonitoringTagRulesPropertiesResponse> properties;
 
     /**
      * @return Properties of the monitoring tag rules.
-     * 
      */
     public Output<MonitoringTagRulesPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The system metadata relating to this resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the rule set.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the rule set.
-     * 
      */
     public Output<String> getType() {
         return this.type;

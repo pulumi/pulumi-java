@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an Operating System disk.
- * 
  */
 public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Virtual Hard Disk.
-     * 
      */
     @Import(name="blobUri")
       private final @Nullable String blobUri;
@@ -34,7 +32,6 @@ public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
-     * 
      */
     @Import(name="caching")
       private final @Nullable String caching;
@@ -45,7 +42,6 @@ public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the customer managed disk encryption set resource id for the managed image disk.
-     * 
      */
     @Import(name="diskEncryptionSet")
       private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
@@ -56,7 +52,6 @@ public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
@@ -67,7 +62,6 @@ public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The managedDisk.
-     * 
      */
     @Import(name="managedDisk")
       private final @Nullable SubResourceResponse managedDisk;
@@ -78,7 +72,6 @@ public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The OS State.
-     * 
      */
     @Import(name="osState", required=true)
       private final String osState;
@@ -89,7 +82,6 @@ public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
-     * 
      */
     @Import(name="osType", required=true)
       private final String osType;
@@ -100,7 +92,6 @@ public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The snapshot.
-     * 
      */
     @Import(name="snapshot")
       private final @Nullable SubResourceResponse snapshot;
@@ -111,7 +102,6 @@ public final class ImageOSDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
-     * 
      */
     @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;

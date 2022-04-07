@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of identity used for the resource mover service.
-     * 
      */
     @EnumType
     public enum ResourceIdentityType {

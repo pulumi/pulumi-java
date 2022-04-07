@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * The Managed Network resource
  * API Version: 2019-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ScopeAssignmentsPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var scopeAssignment = new AzureNative.ManagedNetwork.ScopeAssignment("scopeAssignment", new AzureNative.ManagedNetwork.ScopeAssignmentArgs
+ *         {
+ *             AssignedManagedNetwork = "/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
+ *             Scope = "subscriptions/subscriptionC",
+ *             ScopeAssignmentName = "subscriptionCAssignment",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	managednetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/managednetwork"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := managednetwork.NewScopeAssignment(ctx, "scopeAssignment", &managednetwork.ScopeAssignmentArgs{
+ * 			AssignedManagedNetwork: pulumi.String("/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork"),
+ * 			Scope:                  pulumi.String("subscriptions/subscriptionC"),
+ * 			ScopeAssignmentName:    pulumi.String("subscriptionCAssignment"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const scopeAssignment = new azure_native.managednetwork.ScopeAssignment("scopeAssignment", {
+ *     assignedManagedNetwork: "/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
+ *     scope: "subscriptions/subscriptionC",
+ *     scopeAssignmentName: "subscriptionCAssignment",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * scope_assignment = azure_native.managednetwork.ScopeAssignment("scopeAssignment",
+ *     assigned_managed_network="/subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork",
+ *     scope="subscriptions/subscriptionC",
+ *     scope_assignment_name="subscriptionCAssignment")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +104,72 @@ import javax.annotation.Nullable;
 public class ScopeAssignment extends io.pulumi.resources.CustomResource {
     /**
      * The managed network ID with scope will be assigned to.
-     * 
      */
     @Export(name="assignedManagedNetwork", type=String.class, parameters={})
     private Output</* @Nullable */ String> assignedManagedNetwork;
 
     /**
      * @return The managed network ID with scope will be assigned to.
-     * 
      */
     public Output</* @Nullable */ String> getAssignedManagedNetwork() {
         return this.assignedManagedNetwork;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the ManagedNetwork resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the ManagedNetwork resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;

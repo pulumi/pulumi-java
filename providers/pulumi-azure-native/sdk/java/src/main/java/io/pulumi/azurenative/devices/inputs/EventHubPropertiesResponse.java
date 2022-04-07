@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of the provisioned Event Hub-compatible endpoint used by the IoT hub.
- * 
  */
 public final class EventHubPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Event Hub-compatible endpoint.
-     * 
      */
     @Import(name="endpoint", required=true)
       private final String endpoint;
@@ -34,7 +32,6 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
-     * 
      */
     @Import(name="partitionCount")
       private final @Nullable Integer partitionCount;
@@ -45,7 +42,6 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The partition ids in the Event Hub-compatible endpoint.
-     * 
      */
     @Import(name="partitionIds", required=true)
       private final List<String> partitionIds;
@@ -56,7 +52,6 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Event Hub-compatible name.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -67,7 +62,6 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
-     * 
      */
     @Import(name="retentionTimeInDays")
       private final @Nullable Double retentionTimeInDays;

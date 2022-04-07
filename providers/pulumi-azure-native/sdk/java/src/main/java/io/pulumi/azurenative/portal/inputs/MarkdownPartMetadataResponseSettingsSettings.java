@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The setting of the content of markdown part.
- * 
  */
 public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
 
     /**
      * The content of the markdown part.
-     * 
      */
     @Import(name="content")
       private final @Nullable String content;
@@ -32,7 +30,6 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
 
     /**
      * The source of the content of the markdown part.
-     * 
      */
     @Import(name="markdownSource")
       private final @Nullable Integer markdownSource;
@@ -43,7 +40,6 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
 
     /**
      * The uri of markdown content.
-     * 
      */
     @Import(name="markdownUri")
       private final @Nullable String markdownUri;
@@ -54,7 +50,6 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
 
     /**
      * The subtitle of the markdown part.
-     * 
      */
     @Import(name="subtitle")
       private final @Nullable String subtitle;
@@ -65,7 +60,6 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
 
     /**
      * The title of the markdown part.
-     * 
      */
     @Import(name="title")
       private final @Nullable String title;

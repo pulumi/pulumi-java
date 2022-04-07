@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Valid actions for a filtering tag.
-     * 
      */
     @EnumType
     public enum TagAction {

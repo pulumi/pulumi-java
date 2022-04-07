@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * File source details.
- * 
  */
 public final class FileSourceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FileSourceInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * File share ID.
-     * 
      */
     @Import(name="shareId", required=true)
       private final String shareId;

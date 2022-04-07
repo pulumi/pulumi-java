@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Key Vault secret reference.
- * 
  */
 public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
 
     /**
      * The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="secretName", required=true)
       private final Output<Object> secretName;
@@ -33,7 +31,6 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
 
     /**
      * The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="secretVersion")
       private final @Nullable Output<Object> secretVersion;
@@ -44,7 +41,6 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
 
     /**
      * The Azure Key Vault linked service reference.
-     * 
      */
     @Import(name="store", required=true)
       private final Output<LinkedServiceReferenceArgs> store;
@@ -56,7 +52,6 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
     /**
      * Type of the secret.
      * Expected value is 'AzureKeyVaultSecret'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

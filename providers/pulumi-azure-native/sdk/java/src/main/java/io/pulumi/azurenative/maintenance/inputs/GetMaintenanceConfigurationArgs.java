@@ -14,7 +14,6 @@ public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.I
 
     /**
      * Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.I
 
     /**
      * Resource Identifier
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Current scenario details of the protected entity.
- * 
  */
 public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
 
     /**
      * ARM Id of the job being executed.
-     * 
      */
     @Import(name="jobId")
       private final @Nullable String jobId;
@@ -31,7 +29,6 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Scenario name.
-     * 
      */
     @Import(name="scenarioName")
       private final @Nullable String scenarioName;
@@ -42,7 +39,6 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Start time of the workflow.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;

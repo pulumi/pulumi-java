@@ -17,7 +17,6 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
 
     /**
      * List of application settings names.
-     * 
      */
     @Import(name="appSettingNames")
       private final @Nullable Output<List<String>> appSettingNames;
@@ -28,7 +27,6 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
 
     /**
      * List of external Azure storage account identifiers.
-     * 
      */
     @Import(name="azureStorageConfigNames")
       private final @Nullable Output<List<String>> azureStorageConfigNames;
@@ -39,7 +37,6 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
 
     /**
      * List of connection string names.
-     * 
      */
     @Import(name="connectionStringNames")
       private final @Nullable Output<List<String>> connectionStringNames;
@@ -50,7 +47,6 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -61,7 +57,6 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -72,7 +67,6 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

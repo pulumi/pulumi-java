@@ -18,7 +18,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path from the location that the 'authentication' property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
-     * 
      */
     @Import(name="artifactRoot")
       private final @Nullable Output<String> artifactRoot;
@@ -29,7 +28,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the artifact source.
-     * 
      */
     @Import(name="artifactSourceName")
       private final @Nullable Output<String> artifactSourceName;
@@ -40,7 +38,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The authentication method to use to access the artifact source.
-     * 
      */
     @Import(name="authentication", required=true)
       private final Output<SasAuthenticationArgs> authentication;
@@ -51,7 +48,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -62,7 +58,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of artifact source used.
-     * 
      */
     @Import(name="sourceType", required=true)
       private final Output<String> sourceType;
@@ -84,7 +78,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

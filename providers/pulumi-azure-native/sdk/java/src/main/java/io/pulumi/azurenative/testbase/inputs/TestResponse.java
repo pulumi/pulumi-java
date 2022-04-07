@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of a Test.
- * 
  */
 public final class TestResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The commands used in the test.
-     * 
      */
     @Import(name="commands", required=true)
       private final List<CommandResponse> commands;
@@ -34,7 +32,6 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates if this test is active.It doesn't schedule test for not active Test.
-     * 
      */
     @Import(name="isActive")
       private final @Nullable Boolean isActive;
@@ -45,7 +42,6 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the test.
-     * 
      */
     @Import(name="testType", required=true)
       private final String testType;
@@ -56,7 +52,6 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The status of the validation run of the package.
-     * 
      */
     @Import(name="validationRunStatus", required=true)
       private final String validationRunStatus;

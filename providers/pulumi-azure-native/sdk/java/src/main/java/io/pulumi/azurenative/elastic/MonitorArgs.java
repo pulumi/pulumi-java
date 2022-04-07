@@ -20,7 +20,6 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity properties of the monitor resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
@@ -31,7 +30,6 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the monitor resource
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName")
       private final @Nullable Output<String> monitorName;
@@ -53,7 +50,6 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the monitor resource.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<MonitorPropertiesArgs> properties;
@@ -64,7 +60,6 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the Elastic resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SKU of the monitor resource.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
@@ -86,7 +80,6 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the monitor resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

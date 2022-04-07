@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class NetworkProfileResponse {
     /**
      * Gets or sets the list of network interfaces associated with the virtual machine.
-     * 
      */
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
@@ -24,7 +23,6 @@ public final class NetworkProfileResponse {
 
     /**
      * Gets or sets the list of network interfaces associated with the virtual machine.
-     * 
     */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;

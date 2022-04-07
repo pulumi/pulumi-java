@@ -13,53 +13,43 @@ import javax.annotation.Nullable;
 public final class SecurityAlertTimelineItemResponse {
     /**
      * The name of the alert type.
-     * 
      */
     private final String alertType;
     /**
      * The alert azure resource id.
-     * 
      */
     private final String azureResourceId;
     /**
      * The alert description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The alert name.
-     * 
      */
     private final String displayName;
     /**
      * The alert end time.
-     * 
      */
     private final String endTimeUtc;
     /**
      * The entity query kind
      * Expected value is 'SecurityAlert'.
-     * 
      */
     private final String kind;
     /**
      * The alert product name.
-     * 
      */
     private final @Nullable String productName;
     /**
      * The alert severity.
-     * 
      */
     private final String severity;
     /**
      * The alert start time.
-     * 
      */
     private final String startTimeUtc;
     /**
      * The alert generated time.
-     * 
      */
     private final String timeGenerated;
 
@@ -89,35 +79,30 @@ public final class SecurityAlertTimelineItemResponse {
 
     /**
      * The name of the alert type.
-     * 
     */
     public String getAlertType() {
         return this.alertType;
     }
     /**
      * The alert azure resource id.
-     * 
     */
     public String getAzureResourceId() {
         return this.azureResourceId;
     }
     /**
      * The alert description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The alert name.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The alert end time.
-     * 
     */
     public String getEndTimeUtc() {
         return this.endTimeUtc;
@@ -125,35 +110,30 @@ public final class SecurityAlertTimelineItemResponse {
     /**
      * The entity query kind
      * Expected value is 'SecurityAlert'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * The alert product name.
-     * 
     */
     public Optional<String> getProductName() {
         return Optional.ofNullable(this.productName);
     }
     /**
      * The alert severity.
-     * 
     */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * The alert start time.
-     * 
     */
     public String getStartTimeUtc() {
         return this.startTimeUtc;
     }
     /**
      * The alert generated time.
-     * 
     */
     public String getTimeGenerated() {
         return this.timeGenerated;

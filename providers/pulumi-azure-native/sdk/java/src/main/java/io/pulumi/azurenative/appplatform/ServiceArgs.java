@@ -19,7 +19,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The GEO location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the Service resource
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ClusterResourcePropertiesArgs> properties;
@@ -41,7 +39,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Service resource.
-     * 
      */
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
@@ -63,7 +59,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sku of the Service resource
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -74,7 +69,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

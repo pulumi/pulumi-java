@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The response for an AKS variant.
- * 
  */
 public final class AKSVariantResponseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
     /**
      * The compute environment type for the service.
      * Expected value is 'Custom'.
-     * 
      */
     @Import(name="computeType", required=true)
       private final String computeType;
@@ -36,7 +34,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The deployment type for the service.
-     * 
      */
     @Import(name="deploymentType")
       private final @Nullable String deploymentType;
@@ -47,7 +44,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -58,7 +54,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The error details.
-     * 
      */
     @Import(name="error", required=true)
       private final ServiceResponseBaseResponseError error;
@@ -69,7 +64,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Is this the default variant.
-     * 
      */
     @Import(name="isDefault")
       private final @Nullable Boolean isDefault;
@@ -80,7 +74,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The service tag dictionary. Tags are mutable.
-     * 
      */
     @Import(name="kvTags")
       private final @Nullable Map<String,String> kvTags;
@@ -91,7 +84,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The service property dictionary. Properties are immutable.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -102,7 +94,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The current state of the service.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -113,7 +104,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The amount of traffic variant receives.
-     * 
      */
     @Import(name="trafficPercentile")
       private final @Nullable Double trafficPercentile;
@@ -124,7 +114,6 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The type of the variant.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

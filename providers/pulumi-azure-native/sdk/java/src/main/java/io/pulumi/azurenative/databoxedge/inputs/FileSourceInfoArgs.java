@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * File source details.
- * 
  */
 public final class FileSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class FileSourceInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * File share ID.
-     * 
      */
     @Import(name="shareId", required=true)
       private final Output<String> shareId;

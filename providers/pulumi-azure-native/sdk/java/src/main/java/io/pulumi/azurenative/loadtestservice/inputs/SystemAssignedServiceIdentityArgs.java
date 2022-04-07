@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Managed service identity (either system assigned, or none)
- * 
  */
 public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
 
     /**
      * Type of managed service identity (either system assigned, or none).
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,SystemAssignedServiceIdentityType>> type;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Database backup settings.
- * 
  */
 public final class DatabaseBackupSettingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
@@ -34,7 +32,6 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     /**
      * Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
      * This is used during restore with overwrite connection strings options.
-     * 
      */
     @Import(name="connectionStringName")
       private final @Nullable Output<String> connectionStringName;
@@ -45,7 +42,6 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Database type (e.g. SqlAzure / MySql).
-     * 
      */
     @Import(name="databaseType", required=true)
       private final Output<Either<String,DatabaseType>> databaseType;

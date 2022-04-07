@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Provisioning state of the monitoring tag rules.
-     * 
      */
     @EnumType
     public enum ProvisioningState {

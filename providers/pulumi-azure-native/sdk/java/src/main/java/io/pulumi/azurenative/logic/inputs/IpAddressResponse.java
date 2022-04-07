@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The ip address.
- * 
  */
 public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The address.
-     * 
      */
     @Import(name="address")
       private final @Nullable String address;

@@ -19,7 +19,6 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the job action.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<JobActionArgs> action;
@@ -30,7 +29,6 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the job recurrence.
-     * 
      */
     @Import(name="recurrence")
       private final @Nullable Output<JobRecurrenceArgs> recurrence;
@@ -41,7 +39,6 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the job start time.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -52,7 +49,6 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or set the job state.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<JobState> state;

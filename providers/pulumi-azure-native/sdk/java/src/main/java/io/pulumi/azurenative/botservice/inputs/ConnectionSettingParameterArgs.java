@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Extra Parameter in a Connection Setting Properties to indicate service provider specific properties
- * 
  */
 public final class ConnectionSettingParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectionSettingParameterArgs extends io.pulumi.resources.Re
 
     /**
      * Key for the Connection Setting Parameter.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -31,7 +29,6 @@ public final class ConnectionSettingParameterArgs extends io.pulumi.resources.Re
 
     /**
      * Value associated with the Connection Setting Parameter.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

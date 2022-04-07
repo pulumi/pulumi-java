@@ -14,7 +14,6 @@ public final class GetGalleryApplicationArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the gallery Application Definition to be retrieved.
-     * 
      */
     @Import(name="galleryApplicationName", required=true)
       private final String galleryApplicationName;
@@ -25,7 +24,6 @@ public final class GetGalleryApplicationArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the Shared Application Gallery from which the Application Definitions are to be retrieved.
-     * 
      */
     @Import(name="galleryName", required=true)
       private final String galleryName;
@@ -36,7 +34,6 @@ public final class GetGalleryApplicationArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

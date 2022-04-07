@@ -19,7 +19,6 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the capacity reservation group.
-     * 
      */
     @Import(name="capacityReservationGroupName", required=true)
       private final Output<String> capacityReservationGroupName;
@@ -30,7 +29,6 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the capacity reservation.
-     * 
      */
     @Import(name="capacityReservationName")
       private final @Nullable Output<String> capacityReservationName;
@@ -41,7 +39,6 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -52,7 +49,6 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -74,7 +69,6 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -85,7 +79,6 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

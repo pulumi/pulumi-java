@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An alert action.
- * 
  */
 public final class HealthAlertActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class HealthAlertActionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * the id of the action group to use.
-     * 
      */
     @Import(name="actionGroupId")
       private final @Nullable String actionGroupId;
@@ -32,7 +30,6 @@ public final class HealthAlertActionResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The properties of a webhook object.
-     * 
      */
     @Import(name="webHookProperties")
       private final @Nullable Map<String,String> webHookProperties;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual Network configuration.
- * 
  */
 public final class VirtualNetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualNetworkConfigArgs extends io.pulumi.resources.Resource
 
     /**
      * Resource id of a pre-existing subnet.
-     * 
      */
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;

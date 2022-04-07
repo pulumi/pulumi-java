@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class RelationshipTypeFieldMappingResponse {
     /**
      * Specifies the fieldName in profile.
-     * 
      */
     private final String profileFieldName;
     /**
      * Specifies the KeyProperty (from StrongId) of the related profile.
-     * 
      */
     private final String relatedProfileKeyProperty;
 
@@ -30,14 +28,12 @@ public final class RelationshipTypeFieldMappingResponse {
 
     /**
      * Specifies the fieldName in profile.
-     * 
     */
     public String getProfileFieldName() {
         return this.profileFieldName;
     }
     /**
      * Specifies the KeyProperty (from StrongId) of the related profile.
-     * 
     */
     public String getRelatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;

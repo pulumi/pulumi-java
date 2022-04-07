@@ -14,43 +14,35 @@ import javax.annotation.Nullable;
 public final class BlobSourceResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object recursive;
     /**
      * Number of header lines to skip from each blob. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object skipHeaderLineCount;
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object sourceRetryCount;
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     private final @Nullable Object sourceRetryWait;
     /**
      * Treat empty as null. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object treatEmptyAsNull;
     /**
      * Copy source type.
      * Expected value is 'BlobSource'.
-     * 
      */
     private final String type;
 
@@ -76,49 +68,42 @@ public final class BlobSourceResponse {
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getRecursive() {
         return Optional.ofNullable(this.recursive);
     }
     /**
      * Number of header lines to skip from each blob. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getSkipHeaderLineCount() {
         return Optional.ofNullable(this.skipHeaderLineCount);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
     */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
      * Treat empty as null. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getTreatEmptyAsNull() {
         return Optional.ofNullable(this.treatEmptyAsNull);
@@ -126,7 +111,6 @@ public final class BlobSourceResponse {
     /**
      * Copy source type.
      * Expected value is 'BlobSource'.
-     * 
     */
     public String getType() {
         return this.type;

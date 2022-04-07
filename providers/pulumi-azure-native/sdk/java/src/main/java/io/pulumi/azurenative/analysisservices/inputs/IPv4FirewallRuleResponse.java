@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The detail of firewall rule.
- * 
  */
 public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The rule name.
-     * 
      */
     @Import(name="firewallRuleName")
       private final @Nullable String firewallRuleName;
@@ -31,7 +29,6 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The end range of IPv4.
-     * 
      */
     @Import(name="rangeEnd")
       private final @Nullable String rangeEnd;
@@ -42,7 +39,6 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The start range of IPv4.
-     * 
      */
     @Import(name="rangeStart")
       private final @Nullable String rangeStart;

@@ -14,7 +14,6 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The API version.
-     * 
      */
     @Import(name="apiVersion", required=true)
       private final String apiVersion;
@@ -25,7 +24,6 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The profile version.
-     * 
      */
     @Import(name="profileVersion", required=true)
       private final String profileVersion;

@@ -16,7 +16,6 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
 
     /**
      * Expands referenced resources.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the service endpoint policy.
-     * 
      */
     @Import(name="serviceEndpointPolicyName", required=true)
       private final String serviceEndpointPolicyName;

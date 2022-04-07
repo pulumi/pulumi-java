@@ -18,7 +18,6 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the data connection.
-     * 
      */
     @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
@@ -29,7 +28,6 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the database in the Kusto pool.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -40,7 +38,6 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of the endpoint for the data connection
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,DataConnectionKind>> kind;
@@ -51,7 +48,6 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Kusto pool.
-     * 
      */
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
@@ -62,7 +58,6 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -73,7 +68,6 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

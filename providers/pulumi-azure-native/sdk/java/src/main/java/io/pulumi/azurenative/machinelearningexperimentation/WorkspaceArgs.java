@@ -17,7 +17,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the machine learning team account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -28,7 +27,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of this workspace.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -39,7 +37,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
-     * 
      */
     @Import(name="friendlyName", required=true)
       private final Output<String> friendlyName;
@@ -50,7 +47,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -61,7 +57,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the machine learning team account belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -83,7 +77,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the machine learning team account workspace.
-     * 
      */
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;

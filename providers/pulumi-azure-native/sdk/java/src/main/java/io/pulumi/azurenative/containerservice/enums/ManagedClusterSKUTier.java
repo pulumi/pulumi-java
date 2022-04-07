@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Tier of a managed cluster SKU.
-     * 
      */
     @EnumType
     public enum ManagedClusterSKUTier {

@@ -18,9 +18,82 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2022-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### metricsSource_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var metricsSource = new AzureNative.Logz.MetricsSource("metricsSource", new AzureNative.Logz.MetricsSourceArgs
+ *         {
+ *             MetricsSourceName = "MetricsSource1",
+ *             MonitorName = "myMonitor",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	logz "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logz"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logz.NewMetricsSource(ctx, "metricsSource", &logz.MetricsSourceArgs{
+ * 			MetricsSourceName: pulumi.String("MetricsSource1"),
+ * 			MonitorName:       pulumi.String("myMonitor"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const metricsSource = new azure_native.logz.MetricsSource("metricsSource", {
+ *     metricsSourceName: "MetricsSource1",
+ *     monitorName: "myMonitor",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * metrics_source = azure_native.logz.MetricsSource("metricsSource",
+ *     metrics_source_name="MetricsSource1",
+ *     monitor_name="myMonitor",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -47,42 +120,36 @@ public class MetricsSource extends io.pulumi.resources.CustomResource {
     }
     /**
      * Name of the monitor resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the monitor resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties specific to the monitor resource.
-     * 
      */
     @Export(name="properties", type=MonitorPropertiesResponse.class, parameters={})
     private Output<MonitorPropertiesResponse> properties;
 
     /**
      * @return Properties specific to the monitor resource.
-     * 
      */
     public Output<MonitorPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The system metadata relating to this resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
@@ -95,14 +162,12 @@ public class MetricsSource extends io.pulumi.resources.CustomResource {
     }
     /**
      * The type of the monitor resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the monitor resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

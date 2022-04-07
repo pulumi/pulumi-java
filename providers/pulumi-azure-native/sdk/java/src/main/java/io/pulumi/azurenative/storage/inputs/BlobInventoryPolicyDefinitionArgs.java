@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An object that defines the blob inventory rule. Each definition consists of a set of filters.
- * 
  */
 public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources
 
     /**
      * An object that defines the filter set.
-     * 
      */
     @Import(name="filters", required=true)
       private final Output<BlobInventoryPolicyFilterArgs> filters;

@@ -17,17 +17,14 @@ import javax.annotation.Nullable;
 public final class NodeTypeDescriptionResponse {
     /**
      * The range of ports from which cluster assigned port to Service Fabric applications.
-     * 
      */
     private final @Nullable EndpointRangeDescriptionResponse applicationPorts;
     /**
      * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
-     * 
      */
     private final @Nullable Map<String,String> capacities;
     /**
      * The TCP cluster management endpoint port.
-     * 
      */
     private final Integer clientConnectionEndpointPort;
     /**
@@ -41,37 +38,30 @@ public final class NodeTypeDescriptionResponse {
     private final @Nullable String durabilityLevel;
     /**
      * The range of ephemeral ports that nodes in this node type should be configured with.
-     * 
      */
     private final @Nullable EndpointRangeDescriptionResponse ephemeralPorts;
     /**
      * The HTTP cluster management endpoint port.
-     * 
      */
     private final Integer httpGatewayEndpointPort;
     /**
      * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
-     * 
      */
     private final Boolean isPrimary;
     /**
      * The name of the node type.
-     * 
      */
     private final String name;
     /**
      * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-     * 
      */
     private final @Nullable Map<String,String> placementProperties;
     /**
      * The endpoint used by reverse proxy.
-     * 
      */
     private final @Nullable Integer reverseProxyEndpointPort;
     /**
      * The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
-     * 
      */
     private final Integer vmInstanceCount;
 
@@ -103,21 +93,18 @@ public final class NodeTypeDescriptionResponse {
 
     /**
      * The range of ports from which cluster assigned port to Service Fabric applications.
-     * 
     */
     public Optional<EndpointRangeDescriptionResponse> getApplicationPorts() {
         return Optional.ofNullable(this.applicationPorts);
     }
     /**
      * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
-     * 
     */
     public Map<String,String> getCapacities() {
         return this.capacities == null ? Map.of() : this.capacities;
     }
     /**
      * The TCP cluster management endpoint port.
-     * 
     */
     public Integer getClientConnectionEndpointPort() {
         return this.clientConnectionEndpointPort;
@@ -135,49 +122,42 @@ public final class NodeTypeDescriptionResponse {
     }
     /**
      * The range of ephemeral ports that nodes in this node type should be configured with.
-     * 
     */
     public Optional<EndpointRangeDescriptionResponse> getEphemeralPorts() {
         return Optional.ofNullable(this.ephemeralPorts);
     }
     /**
      * The HTTP cluster management endpoint port.
-     * 
     */
     public Integer getHttpGatewayEndpointPort() {
         return this.httpGatewayEndpointPort;
     }
     /**
      * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
-     * 
     */
     public Boolean getIsPrimary() {
         return this.isPrimary;
     }
     /**
      * The name of the node type.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-     * 
     */
     public Map<String,String> getPlacementProperties() {
         return this.placementProperties == null ? Map.of() : this.placementProperties;
     }
     /**
      * The endpoint used by reverse proxy.
-     * 
     */
     public Optional<Integer> getReverseProxyEndpointPort() {
         return Optional.ofNullable(this.reverseProxyEndpointPort);
     }
     /**
      * The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
-     * 
     */
     public Integer getVmInstanceCount() {
         return this.vmInstanceCount;

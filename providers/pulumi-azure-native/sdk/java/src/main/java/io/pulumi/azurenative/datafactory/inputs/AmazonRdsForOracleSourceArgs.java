@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity AmazonRdsForOracle source.
- * 
  */
 public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
@@ -33,7 +31,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -44,7 +41,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -55,7 +51,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * AmazonRdsForOracle reader query. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="oracleReaderQuery")
       private final @Nullable Output<Object> oracleReaderQuery;
@@ -66,7 +61,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The partition mechanism that will be used for AmazonRdsForOracle read in parallel. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionOption")
       private final @Nullable Output<Object> partitionOption;
@@ -77,7 +71,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * The settings that will be leveraged for AmazonRdsForOracle source partitioning.
-     * 
      */
     @Import(name="partitionSettings")
       private final @Nullable Output<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings;
@@ -88,7 +81,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
@@ -99,7 +91,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
@@ -110,7 +101,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
@@ -122,7 +112,6 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
     /**
      * Copy source type.
      * Expected value is 'AmazonRdsForOracleSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

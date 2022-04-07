@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the correlation filter expression.
- * 
  */
 public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Content type of the message.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable String contentType;
@@ -33,7 +31,6 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Identifier of the correlation.
-     * 
      */
     @Import(name="correlationId")
       private final @Nullable String correlationId;
@@ -44,7 +41,6 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Application specific label.
-     * 
      */
     @Import(name="label")
       private final @Nullable String label;
@@ -55,7 +51,6 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Identifier of the message.
-     * 
      */
     @Import(name="messageId")
       private final @Nullable String messageId;
@@ -66,7 +61,6 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * dictionary object for custom filters
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -77,7 +71,6 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Address of the queue to reply to.
-     * 
      */
     @Import(name="replyTo")
       private final @Nullable String replyTo;
@@ -88,7 +81,6 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Session identifier to reply to.
-     * 
      */
     @Import(name="replyToSessionId")
       private final @Nullable String replyToSessionId;
@@ -99,7 +91,6 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Value that indicates whether the rule action requires preprocessing.
-     * 
      */
     @Import(name="requiresPreprocessing")
       private final @Nullable Boolean requiresPreprocessing;
@@ -110,7 +101,6 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Session identifier.
-     * 
      */
     @Import(name="sessionId")
       private final @Nullable String sessionId;
@@ -121,7 +111,6 @@ public final class CorrelationFilterResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Address to send to.
-     * 
      */
     @Import(name="to")
       private final @Nullable String to;

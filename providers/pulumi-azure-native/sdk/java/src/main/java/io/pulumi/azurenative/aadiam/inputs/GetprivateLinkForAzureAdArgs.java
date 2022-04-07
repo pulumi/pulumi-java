@@ -14,7 +14,6 @@ public final class GetprivateLinkForAzureAdArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the private link policy in Azure AD.
-     * 
      */
     @Import(name="policyName", required=true)
       private final String policyName;
@@ -25,7 +24,6 @@ public final class GetprivateLinkForAzureAdArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of an Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * Subscription feature registration details
  * API Version: 2021-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates a feature registration
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var subscriptionFeatureRegistration = new AzureNative.Features.SubscriptionFeatureRegistration("subscriptionFeatureRegistration", new AzureNative.Features.SubscriptionFeatureRegistrationArgs
+ *         {
+ *             FeatureName = "testFeature",
+ *             Properties = ,
+ *             ProviderNamespace = "subscriptionFeatureRegistrationGroupTestRG",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	features "github.com/pulumi/pulumi-azure-native/sdk/go/azure/features"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := features.NewSubscriptionFeatureRegistration(ctx, "subscriptionFeatureRegistration", &features.SubscriptionFeatureRegistrationArgs{
+ * 			FeatureName:       pulumi.String("testFeature"),
+ * 			Properties:        nil,
+ * 			ProviderNamespace: pulumi.String("subscriptionFeatureRegistrationGroupTestRG"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const subscriptionFeatureRegistration = new azure_native.features.SubscriptionFeatureRegistration("subscriptionFeatureRegistration", {
+ *     featureName: "testFeature",
+ *     properties: {},
+ *     providerNamespace: "subscriptionFeatureRegistrationGroupTestRG",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * subscription_feature_registration = azure_native.features.SubscriptionFeatureRegistration("subscriptionFeatureRegistration",
+ *     feature_name="testFeature",
+ *     properties=azure_native.features.SubscriptionFeatureRegistrationPropertiesArgs(),
+ *     provider_namespace="subscriptionFeatureRegistrationGroupTestRG")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +105,12 @@ import javax.annotation.Nullable;
 public class SubscriptionFeatureRegistration extends io.pulumi.resources.CustomResource {
     /**
      * Azure resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -53,14 +123,12 @@ public class SubscriptionFeatureRegistration extends io.pulumi.resources.CustomR
     }
     /**
      * Azure resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

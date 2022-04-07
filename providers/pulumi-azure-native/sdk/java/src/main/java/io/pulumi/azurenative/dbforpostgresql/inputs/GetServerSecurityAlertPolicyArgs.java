@@ -14,7 +14,6 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
 
     /**
      * The name of the security alert policy.
-     * 
      */
     @Import(name="securityAlertPolicyName", required=true)
       private final String securityAlertPolicyName;
@@ -36,7 +34,6 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;

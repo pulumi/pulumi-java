@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ListDatabaseKeysResult {
     /**
      * The current primary key that clients can use to authenticate
-     * 
      */
     private final String primaryKey;
     /**
      * The current secondary key that clients can use to authenticate
-     * 
      */
     private final String secondaryKey;
 
@@ -30,14 +28,12 @@ public final class ListDatabaseKeysResult {
 
     /**
      * The current primary key that clients can use to authenticate
-     * 
     */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * The current secondary key that clients can use to authenticate
-     * 
     */
     public String getSecondaryKey() {
         return this.secondaryKey;

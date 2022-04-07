@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Backup Vault
- * 
  */
 public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage Settings
-     * 
      */
     @Import(name="storageSettings", required=true)
       private final Output<List<StorageSettingArgs>> storageSettings;

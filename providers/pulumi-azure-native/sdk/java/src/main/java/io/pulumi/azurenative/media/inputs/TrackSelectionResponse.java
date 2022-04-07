@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class to select a track
- * 
  */
 public final class TrackSelectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class TrackSelectionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * TrackSelections is a track property condition list which can specify track(s)
-     * 
      */
     @Import(name="trackSelections")
       private final @Nullable List<TrackPropertyConditionResponse> trackSelections;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The container group encryption properties.
- * 
  */
 public final class EncryptionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * The encryption key name.
-     * 
      */
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
@@ -30,7 +28,6 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * The encryption key version.
-     * 
      */
     @Import(name="keyVersion", required=true)
       private final Output<String> keyVersion;
@@ -41,7 +38,6 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * The keyvault base url.
-     * 
      */
     @Import(name="vaultBaseUrl", required=true)
       private final Output<String> vaultBaseUrl;

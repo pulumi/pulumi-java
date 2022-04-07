@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Data types sent to workspace.
-     * 
      */
     @EnumType
     public enum AdditionalWorkspaceDataType {

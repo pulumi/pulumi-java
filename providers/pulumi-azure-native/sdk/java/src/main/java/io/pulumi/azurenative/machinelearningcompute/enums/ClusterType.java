@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The cluster type.
-     * 
      */
     @EnumType
     public enum ClusterType {

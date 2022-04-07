@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies an auto scale rule metric dimension.
- * 
  */
 public final class ScaleRuleMetricDimensionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ScaleRuleMetricDimensionResponse extends io.pulumi.resources.
 
     /**
      * Name of the dimension.
-     * 
      */
     @Import(name="dimensionName", required=true)
       private final String dimensionName;
@@ -30,7 +28,6 @@ public final class ScaleRuleMetricDimensionResponse extends io.pulumi.resources.
 
     /**
      * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
-     * 
      */
     @Import(name="operator", required=true)
       private final String operator;
@@ -41,7 +38,6 @@ public final class ScaleRuleMetricDimensionResponse extends io.pulumi.resources.
 
     /**
      * list of dimension values. For example: ["App1","App2"].
-     * 
      */
     @Import(name="values", required=true)
       private final List<String> values;

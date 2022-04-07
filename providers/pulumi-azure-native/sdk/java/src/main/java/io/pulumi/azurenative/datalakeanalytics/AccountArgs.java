@@ -26,7 +26,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Data Lake Analytics account.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -37,7 +36,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of compute policies associated with this account.
-     * 
      */
     @Import(name="computePolicies")
       private final @Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
@@ -48,7 +46,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of Data Lake Store accounts associated with this account.
-     * 
      */
     @Import(name="dataLakeStoreAccounts", required=true)
       private final Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
@@ -59,7 +56,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default Data Lake Store account associated with this account.
-     * 
      */
     @Import(name="defaultDataLakeStoreAccount", required=true)
       private final Output<String> defaultDataLakeStoreAccount;
@@ -70,7 +66,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
-     * 
      */
     @Import(name="firewallAllowAzureIps")
       private final @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
@@ -81,7 +76,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of firewall rules associated with this account.
-     * 
      */
     @Import(name="firewallRules")
       private final @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
@@ -92,7 +86,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current state of the IP address firewall for this account.
-     * 
      */
     @Import(name="firewallState")
       private final @Nullable Output<FirewallState> firewallState;
@@ -103,7 +96,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -114,7 +106,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum supported degree of parallelism for this account.
-     * 
      */
     @Import(name="maxDegreeOfParallelism")
       private final @Nullable Output<Integer> maxDegreeOfParallelism;
@@ -125,7 +116,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum supported degree of parallelism per job for this account.
-     * 
      */
     @Import(name="maxDegreeOfParallelismPerJob")
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
@@ -136,7 +126,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum supported jobs running under the account at the same time.
-     * 
      */
     @Import(name="maxJobCount")
       private final @Nullable Output<Integer> maxJobCount;
@@ -147,7 +136,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum supported priority per job for this account.
-     * 
      */
     @Import(name="minPriorityPerJob")
       private final @Nullable Output<Integer> minPriorityPerJob;
@@ -158,7 +146,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The commitment tier for the next month.
-     * 
      */
     @Import(name="newTier")
       private final @Nullable Output<TierType> newTier;
@@ -169,7 +156,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of days that job metadata is retained.
-     * 
      */
     @Import(name="queryStoreRetention")
       private final @Nullable Output<Integer> queryStoreRetention;
@@ -180,7 +166,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -191,7 +176,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of Azure Blob Storage accounts associated with this account.
-     * 
      */
     @Import(name="storageAccounts")
       private final @Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
@@ -202,7 +186,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

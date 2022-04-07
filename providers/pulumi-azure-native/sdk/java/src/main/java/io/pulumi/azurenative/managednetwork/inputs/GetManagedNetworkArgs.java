@@ -14,7 +14,6 @@ public final class GetManagedNetworkArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the Managed Network.
-     * 
      */
     @Import(name="managedNetworkName", required=true)
       private final String managedNetworkName;
@@ -25,7 +24,6 @@ public final class GetManagedNetworkArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

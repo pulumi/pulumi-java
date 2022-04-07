@@ -21,7 +21,6 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the authentication method of the request.
-     * 
      */
     @Import(name="authentication")
       private final @Nullable Object authentication;
@@ -32,7 +31,6 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the request body.
-     * 
      */
     @Import(name="body")
       private final @Nullable String body;
@@ -43,7 +41,6 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the headers.
-     * 
      */
     @Import(name="headers")
       private final @Nullable Map<String,String> headers;
@@ -54,7 +51,6 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the method of the request.
-     * 
      */
     @Import(name="method")
       private final @Nullable String method;
@@ -65,7 +61,6 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the URI of the request.
-     * 
      */
     @Import(name="uri")
       private final @Nullable String uri;

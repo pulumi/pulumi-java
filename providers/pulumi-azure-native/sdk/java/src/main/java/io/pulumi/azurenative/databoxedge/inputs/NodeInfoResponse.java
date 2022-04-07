@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Kubernetes node info
- * 
  */
 public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * IP Configuration of the Kubernetes node.
-     * 
      */
     @Import(name="ipConfiguration")
       private final @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration;
@@ -33,7 +31,6 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Node name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -44,7 +41,6 @@ public final class NodeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Node type - Master/Worker
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

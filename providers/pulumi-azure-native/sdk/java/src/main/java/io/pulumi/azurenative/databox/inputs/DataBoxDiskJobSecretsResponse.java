@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * The secrets related to disk job.
- * 
  */
 public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
 
     /**
      * Dc Access Security Code for Customer Managed Shipping
-     * 
      */
     @Import(name="dcAccessSecurityCode", required=true)
       private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
@@ -34,7 +32,6 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
 
     /**
      * Contains the list of secrets object for that device.
-     * 
      */
     @Import(name="diskSecrets", required=true)
       private final List<DiskSecretResponse> diskSecrets;
@@ -45,7 +42,6 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
 
     /**
      * Error while fetching the secrets.
-     * 
      */
     @Import(name="error", required=true)
       private final CloudErrorResponse error;
@@ -56,7 +52,6 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
 
     /**
      * Whether passkey was provided by user.
-     * 
      */
     @Import(name="isPasskeyUserDefined", required=true)
       private final Boolean isPasskeyUserDefined;
@@ -68,7 +63,6 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
     /**
      * Used to indicate what type of job secrets object.
      * Expected value is 'DataBoxDisk'.
-     * 
      */
     @Import(name="jobSecretsType", required=true)
       private final String jobSecretsType;
@@ -79,7 +73,6 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
 
     /**
      * PassKey for the disk Job.
-     * 
      */
     @Import(name="passKey", required=true)
       private final String passKey;

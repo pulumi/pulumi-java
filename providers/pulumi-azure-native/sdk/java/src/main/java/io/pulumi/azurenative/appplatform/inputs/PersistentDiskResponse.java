@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Persistent disk payload
- * 
  */
 public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Mount path of the persistent disk
-     * 
      */
     @Import(name="mountPath")
       private final @Nullable String mountPath;
@@ -32,7 +30,6 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Size of the persistent disk in GB
-     * 
      */
     @Import(name="sizeInGB")
       private final @Nullable Integer sizeInGB;
@@ -43,7 +40,6 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Size of the used persistent disk in GB
-     * 
      */
     @Import(name="usedInGB", required=true)
       private final Integer usedInGB;

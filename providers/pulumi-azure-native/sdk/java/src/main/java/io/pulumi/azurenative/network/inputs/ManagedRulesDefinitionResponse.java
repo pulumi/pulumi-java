@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Allow to exclude some variable satisfy the condition for the WAF check.
- * 
  */
 public final class ManagedRulesDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedRulesDefinitionResponse extends io.pulumi.resources.In
 
     /**
      * The Exclusions that are applied on the policy.
-     * 
      */
     @Import(name="exclusions")
       private final @Nullable List<OwaspCrsExclusionEntryResponse> exclusions;
@@ -33,7 +31,6 @@ public final class ManagedRulesDefinitionResponse extends io.pulumi.resources.In
 
     /**
      * The managed rule sets that are associated with the policy.
-     * 
      */
     @Import(name="managedRuleSets", required=true)
       private final List<ManagedRuleSetResponse> managedRuleSets;

@@ -18,7 +18,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The container name.
-     * 
      */
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
@@ -29,7 +28,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * DataFormat for Container
-     * 
      */
     @Import(name="dataFormat", required=true)
       private final Output<Either<String,AzureContainerDataFormat>> dataFormat;
@@ -40,7 +38,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -51,7 +48,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Storage Account Name
-     * 
      */
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;

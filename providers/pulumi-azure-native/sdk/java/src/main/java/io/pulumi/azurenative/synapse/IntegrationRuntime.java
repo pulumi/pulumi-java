@@ -20,7 +20,96 @@ import javax.annotation.Nullable;
  * Integration runtime resource type.
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create integration runtime
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var integrationRuntime = new AzureNative.Synapse.IntegrationRuntime("integrationRuntime", new AzureNative.Synapse.IntegrationRuntimeArgs
+ *         {
+ *             IntegrationRuntimeName = "exampleIntegrationRuntime",
+ *             Properties = new AzureNative.Synapse.Inputs.SelfHostedIntegrationRuntimeArgs
+ *             {
+ *                 Description = "A selfhosted integration runtime",
+ *                 Type = "SelfHosted",
+ *             },
+ *             ResourceGroupName = "exampleResourceGroup",
+ *             WorkspaceName = "exampleWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewIntegrationRuntime(ctx, "integrationRuntime", &synapse.IntegrationRuntimeArgs{
+ * 			IntegrationRuntimeName: pulumi.String("exampleIntegrationRuntime"),
+ * 			Properties: synapse.SelfHostedIntegrationRuntime{
+ * 				Description: "A selfhosted integration runtime",
+ * 				Type:        "SelfHosted",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+ * 			WorkspaceName:     pulumi.String("exampleWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const integrationRuntime = new azure_native.synapse.IntegrationRuntime("integrationRuntime", {
+ *     integrationRuntimeName: "exampleIntegrationRuntime",
+ *     properties: {
+ *         description: "A selfhosted integration runtime",
+ *         type: "SelfHosted",
+ *     },
+ *     resourceGroupName: "exampleResourceGroup",
+ *     workspaceName: "exampleWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * integration_runtime = azure_native.synapse.IntegrationRuntime("integrationRuntime",
+ *     integration_runtime_name="exampleIntegrationRuntime",
+ *     properties=azure_native.synapse.SelfHostedIntegrationRuntimeArgs(
+ *         description="A selfhosted integration runtime",
+ *         type="SelfHosted",
+ *     ),
+ *     resource_group_name="exampleResourceGroup",
+ *     workspace_name="exampleWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,56 +124,48 @@ import javax.annotation.Nullable;
 public class IntegrationRuntime extends io.pulumi.resources.CustomResource {
     /**
      * Resource Etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Resource Etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Integration runtime properties.
-     * 
      */
     @Export(name="properties", type=Either.class, parameters={ManagedIntegrationRuntimeResponse.class, SelfHostedIntegrationRuntimeResponse.class})
     private Output<Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse>> properties;
 
     /**
      * @return Integration runtime properties.
-     * 
      */
     public Output<Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse>> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

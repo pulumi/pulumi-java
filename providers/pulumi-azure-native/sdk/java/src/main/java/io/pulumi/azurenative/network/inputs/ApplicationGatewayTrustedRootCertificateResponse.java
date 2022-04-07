@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trusted Root certificates of an application gateway.
- * 
  */
 public final class ApplicationGatewayTrustedRootCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
 
     /**
      * Certificate public data.
-     * 
      */
     @Import(name="data")
       private final @Nullable String data;
@@ -31,7 +29,6 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -42,7 +39,6 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -53,7 +49,6 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
 
     /**
      * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
-     * 
      */
     @Import(name="keyVaultSecretId")
       private final @Nullable String keyVaultSecretId;
@@ -64,7 +59,6 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
 
     /**
      * Name of the trusted root certificate that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -75,7 +69,6 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
 
     /**
      * The provisioning state of the trusted root certificate resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -86,7 +79,6 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

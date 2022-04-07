@@ -14,7 +14,6 @@ public final class GetFavoriteProcessArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The resource name of a favorite process in a package. If the process name contains characters that are not allowed in Azure Resource Name, we use 'actualProcessName' in request body to submit the name.
-     * 
      */
     @Import(name="favoriteProcessResourceName", required=true)
       private final String favoriteProcessResourceName;
@@ -25,7 +24,6 @@ public final class GetFavoriteProcessArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The resource name of the Test Base Package.
-     * 
      */
     @Import(name="packageName", required=true)
       private final String packageName;
@@ -36,7 +34,6 @@ public final class GetFavoriteProcessArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group that contains the resource.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetFavoriteProcessArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The resource name of the Test Base Account.
-     * 
      */
     @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;

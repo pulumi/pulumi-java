@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class ListPrivateCloudAdminCredentialsResult {
     /**
      * NSX-T Manager password
-     * 
      */
     private final String nsxtPassword;
     /**
      * NSX-T Manager username
-     * 
      */
     private final String nsxtUsername;
     /**
      * vCenter admin password
-     * 
      */
     private final String vcenterPassword;
     /**
      * vCenter admin username
-     * 
      */
     private final String vcenterUsername;
 
@@ -44,28 +40,24 @@ public final class ListPrivateCloudAdminCredentialsResult {
 
     /**
      * NSX-T Manager password
-     * 
     */
     public String getNsxtPassword() {
         return this.nsxtPassword;
     }
     /**
      * NSX-T Manager username
-     * 
     */
     public String getNsxtUsername() {
         return this.nsxtUsername;
     }
     /**
      * vCenter admin password
-     * 
     */
     public String getVcenterPassword() {
         return this.vcenterPassword;
     }
     /**
      * vCenter admin username
-     * 
     */
     public String getVcenterUsername() {
         return this.vcenterUsername;

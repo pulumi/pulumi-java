@@ -17,7 +17,243 @@ import javax.annotation.Nullable;
  * Role Assignments
  * API Version: 2020-08-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create role assignment for resource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var roleAssignment = new AzureNative.Authorization.RoleAssignment("roleAssignment", new AzureNative.Authorization.RoleAssignmentArgs
+ *         {
+ *             PrincipalId = "ce2ce14e-85d7-4629-bdbc-454d0519d987",
+ *             PrincipalType = "User",
+ *             RoleAssignmentName = "05c5a614-a7d6-4502-b150-c2fb455033ff",
+ *             RoleDefinitionId = "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+ *             Scope = "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg/providers/Microsoft.DocumentDb/databaseAccounts/test-db-account",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewRoleAssignment(ctx, "roleAssignment", &authorization.RoleAssignmentArgs{
+ * 			PrincipalId:        pulumi.String("ce2ce14e-85d7-4629-bdbc-454d0519d987"),
+ * 			PrincipalType:      pulumi.String("User"),
+ * 			RoleAssignmentName: pulumi.String("05c5a614-a7d6-4502-b150-c2fb455033ff"),
+ * 			RoleDefinitionId:   pulumi.String("/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d"),
+ * 			Scope:              pulumi.String("subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg/providers/Microsoft.DocumentDb/databaseAccounts/test-db-account"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssignment", {
+ *     principalId: "ce2ce14e-85d7-4629-bdbc-454d0519d987",
+ *     principalType: "User",
+ *     roleAssignmentName: "05c5a614-a7d6-4502-b150-c2fb455033ff",
+ *     roleDefinitionId: "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+ *     scope: "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg/providers/Microsoft.DocumentDb/databaseAccounts/test-db-account",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * role_assignment = azure_native.authorization.RoleAssignment("roleAssignment",
+ *     principal_id="ce2ce14e-85d7-4629-bdbc-454d0519d987",
+ *     principal_type="User",
+ *     role_assignment_name="05c5a614-a7d6-4502-b150-c2fb455033ff",
+ *     role_definition_id="/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+ *     scope="subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg/providers/Microsoft.DocumentDb/databaseAccounts/test-db-account")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create role assignment for resource group
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var roleAssignment = new AzureNative.Authorization.RoleAssignment("roleAssignment", new AzureNative.Authorization.RoleAssignmentArgs
+ *         {
+ *             PrincipalId = "ce2ce14e-85d7-4629-bdbc-454d0519d987",
+ *             PrincipalType = "User",
+ *             RoleAssignmentName = "05c5a614-a7d6-4502-b150-c2fb455033ff",
+ *             RoleDefinitionId = "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+ *             Scope = "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewRoleAssignment(ctx, "roleAssignment", &authorization.RoleAssignmentArgs{
+ * 			PrincipalId:        pulumi.String("ce2ce14e-85d7-4629-bdbc-454d0519d987"),
+ * 			PrincipalType:      pulumi.String("User"),
+ * 			RoleAssignmentName: pulumi.String("05c5a614-a7d6-4502-b150-c2fb455033ff"),
+ * 			RoleDefinitionId:   pulumi.String("/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d"),
+ * 			Scope:              pulumi.String("subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssignment", {
+ *     principalId: "ce2ce14e-85d7-4629-bdbc-454d0519d987",
+ *     principalType: "User",
+ *     roleAssignmentName: "05c5a614-a7d6-4502-b150-c2fb455033ff",
+ *     roleDefinitionId: "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+ *     scope: "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * role_assignment = azure_native.authorization.RoleAssignment("roleAssignment",
+ *     principal_id="ce2ce14e-85d7-4629-bdbc-454d0519d987",
+ *     principal_type="User",
+ *     role_assignment_name="05c5a614-a7d6-4502-b150-c2fb455033ff",
+ *     role_definition_id="/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+ *     scope="subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/resourceGroups/testrg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create role assignment for subscription
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var roleAssignment = new AzureNative.Authorization.RoleAssignment("roleAssignment", new AzureNative.Authorization.RoleAssignmentArgs
+ *         {
+ *             PrincipalId = "ce2ce14e-85d7-4629-bdbc-454d0519d987",
+ *             PrincipalType = "User",
+ *             RoleAssignmentName = "05c5a614-a7d6-4502-b150-c2fb455033ff",
+ *             RoleDefinitionId = "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+ *             Scope = "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewRoleAssignment(ctx, "roleAssignment", &authorization.RoleAssignmentArgs{
+ * 			PrincipalId:        pulumi.String("ce2ce14e-85d7-4629-bdbc-454d0519d987"),
+ * 			PrincipalType:      pulumi.String("User"),
+ * 			RoleAssignmentName: pulumi.String("05c5a614-a7d6-4502-b150-c2fb455033ff"),
+ * 			RoleDefinitionId:   pulumi.String("/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d"),
+ * 			Scope:              pulumi.String("subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssignment", {
+ *     principalId: "ce2ce14e-85d7-4629-bdbc-454d0519d987",
+ *     principalType: "User",
+ *     roleAssignmentName: "05c5a614-a7d6-4502-b150-c2fb455033ff",
+ *     roleDefinitionId: "/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+ *     scope: "subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * role_assignment = azure_native.authorization.RoleAssignment("roleAssignment",
+ *     principal_id="ce2ce14e-85d7-4629-bdbc-454d0519d987",
+ *     principal_type="User",
+ *     role_assignment_name="05c5a614-a7d6-4502-b150-c2fb455033ff",
+ *     role_definition_id="/subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2/providers/Microsoft.Authorization/roleDefinitions/0b5fe924-9a61-425c-96af-cfe6e287ca2d",
+ *     scope="subscriptions/a925f2f7-5c63-4b7b-8799-25a5f97bc3b2")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,196 +268,168 @@ import javax.annotation.Nullable;
 public class RoleAssignment extends io.pulumi.resources.CustomResource {
     /**
      * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
-     * 
      */
     @Export(name="condition", type=String.class, parameters={})
     private Output</* @Nullable */ String> condition;
 
     /**
      * @return The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
-     * 
      */
     public Output</* @Nullable */ String> getCondition() {
         return this.condition;
     }
     /**
      * Version of the condition. Currently accepted value is '2.0'
-     * 
      */
     @Export(name="conditionVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> conditionVersion;
 
     /**
      * @return Version of the condition. Currently accepted value is '2.0'
-     * 
      */
     public Output</* @Nullable */ String> getConditionVersion() {
         return this.conditionVersion;
     }
     /**
      * Id of the user who created the assignment
-     * 
      */
     @Export(name="createdBy", type=String.class, parameters={})
     private Output<String> createdBy;
 
     /**
      * @return Id of the user who created the assignment
-     * 
      */
     public Output<String> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Time it was created
-     * 
      */
     @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
      * @return Time it was created
-     * 
      */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
     /**
      * Id of the delegated managed identity resource
-     * 
      */
     @Export(name="delegatedManagedIdentityResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> delegatedManagedIdentityResourceId;
 
     /**
      * @return Id of the delegated managed identity resource
-     * 
      */
     public Output</* @Nullable */ String> getDelegatedManagedIdentityResourceId() {
         return this.delegatedManagedIdentityResourceId;
     }
     /**
      * Description of role assignment
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of role assignment
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The role assignment name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The role assignment name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The principal ID.
-     * 
      */
     @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
      * @return The principal ID.
-     * 
      */
     public Output<String> getPrincipalId() {
         return this.principalId;
     }
     /**
      * The principal type of the assigned principal ID.
-     * 
      */
     @Export(name="principalType", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalType;
 
     /**
      * @return The principal type of the assigned principal ID.
-     * 
      */
     public Output</* @Nullable */ String> getPrincipalType() {
         return this.principalType;
     }
     /**
      * The role definition ID.
-     * 
      */
     @Export(name="roleDefinitionId", type=String.class, parameters={})
     private Output<String> roleDefinitionId;
 
     /**
      * @return The role definition ID.
-     * 
      */
     public Output<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
      * The role assignment scope.
-     * 
      */
     @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**
      * @return The role assignment scope.
-     * 
      */
     public Output<String> getScope() {
         return this.scope;
     }
     /**
      * The role assignment type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The role assignment type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Id of the user who updated the assignment
-     * 
      */
     @Export(name="updatedBy", type=String.class, parameters={})
     private Output<String> updatedBy;
 
     /**
      * @return Id of the user who updated the assignment
-     * 
      */
     public Output<String> getUpdatedBy() {
         return this.updatedBy;
     }
     /**
      * Time it was updated
-     * 
      */
     @Export(name="updatedOn", type=String.class, parameters={})
     private Output<String> updatedOn;
 
     /**
      * @return Time it was updated
-     * 
      */
     public Output<String> getUpdatedOn() {
         return this.updatedOn;

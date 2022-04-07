@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * the operator that is used to compare the metric data and the threshold.
-     * 
      */
     @EnumType
     public enum ComparisonOperationType {

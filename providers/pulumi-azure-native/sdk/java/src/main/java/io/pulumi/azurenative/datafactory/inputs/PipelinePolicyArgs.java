@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Pipeline Policy.
- * 
  */
 public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Pipeline ElapsedTime Metric Policy.
-     * 
      */
     @Import(name="elapsedTimeMetric")
       private final @Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;

@@ -20,7 +20,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the details or intents of the Experiment
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +30,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The state of the Experiment
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,State>> enabledState;
@@ -42,7 +40,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The endpoint A of an experiment
-     * 
      */
     @Import(name="endpointA")
       private final @Nullable Output<ExperimentEndpointArgs> endpointA;
@@ -53,7 +50,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The endpoint B of an experiment
-     * 
      */
     @Import(name="endpointB")
       private final @Nullable Output<ExperimentEndpointArgs> endpointB;
@@ -64,7 +60,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Experiment identifier associated with the Experiment
-     * 
      */
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
@@ -75,7 +70,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -86,7 +80,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Profile identifier associated with the Tenant and Partner
-     * 
      */
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
@@ -97,7 +90,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

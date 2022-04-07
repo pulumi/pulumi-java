@@ -17,7 +17,6 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * This is a unique identifier for a plan. Should be a guid.
-     * 
      */
     @Import(name="planId")
       private final @Nullable Output<String> planId;
@@ -28,7 +27,6 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;
@@ -39,7 +37,6 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Hybrid use benefit SKU
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Ssl cipher suites enums.
-     * 
      */
     @EnumType
     public enum ApplicationGatewaySslCipherSuite {

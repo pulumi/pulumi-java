@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom activity type.
- * 
  */
 public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
-     * 
      */
     @Import(name="autoUserSpecification")
       private final @Nullable Output<Object> autoUserSpecification;
@@ -39,7 +37,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Command for custom activity Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="command", required=true)
       private final Output<Object> command;
@@ -50,7 +47,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -61,7 +57,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -72,7 +67,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
-     * 
      */
     @Import(name="extendedProperties")
       private final @Nullable Output<Map<String,Object>> extendedProperties;
@@ -83,7 +77,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Folder path for resource files Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
@@ -94,7 +87,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -105,7 +97,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -116,7 +107,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -127,7 +117,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Reference objects
-     * 
      */
     @Import(name="referenceObjects")
       private final @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects;
@@ -138,7 +127,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource linked service reference.
-     * 
      */
     @Import(name="resourceLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService;
@@ -149,7 +137,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
-     * 
      */
     @Import(name="retentionTimeInDays")
       private final @Nullable Output<Object> retentionTimeInDays;
@@ -161,7 +148,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Type of activity.
      * Expected value is 'Custom'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -172,7 +158,6 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

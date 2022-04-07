@@ -14,7 +14,6 @@ public final class GetSubscriptionDiagnosticSettingArgs extends io.pulumi.resour
 
     /**
      * The name of the diagnostic setting.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed.
- * 
  */
 public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -32,7 +30,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -43,7 +40,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
 
     /**
      * Name of the IP configuration that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -54,7 +50,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
 
     /**
      * The provisioning state of the application gateway IP configuration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -65,7 +60,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
 
     /**
      * Reference to the subnet resource. A subnet from where application gateway gets its private address.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
@@ -76,7 +70,6 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

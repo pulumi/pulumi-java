@@ -17,7 +17,6 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
 
     /**
      * The current status of the source trigger.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<Either<String,TriggerStatus>> status;

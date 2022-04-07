@@ -15,57 +15,46 @@ import javax.annotation.Nullable;
 public final class GetExpressRouteCircuitConnectionResult {
     /**
      * /29 IP address space to carve out Customer addresses for tunnels.
-     * 
      */
     private final @Nullable String addressPrefix;
     /**
      * The authorization key.
-     * 
      */
     private final @Nullable String authorizationKey;
     /**
      * Express Route Circuit connection state.
-     * 
      */
     private final String circuitConnectionStatus;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
-     * 
      */
     private final @Nullable SubResourceResponse expressRouteCircuitPeering;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * IPv6 Address PrefixProperties of the express route circuit connection.
-     * 
      */
     private final @Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig;
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     private final @Nullable String name;
     /**
      * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
-     * 
      */
     private final @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
     /**
      * The provisioning state of the express route circuit connection resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Type of the resource.
-     * 
      */
     private final String type;
 
@@ -97,77 +86,66 @@ public final class GetExpressRouteCircuitConnectionResult {
 
     /**
      * /29 IP address space to carve out Customer addresses for tunnels.
-     * 
     */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * The authorization key.
-     * 
     */
     public Optional<String> getAuthorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
      * Express Route Circuit connection state.
-     * 
     */
     public String getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
-     * 
     */
     public Optional<SubResourceResponse> getExpressRouteCircuitPeering() {
         return Optional.ofNullable(this.expressRouteCircuitPeering);
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * IPv6 Address PrefixProperties of the express route circuit connection.
-     * 
     */
     public Optional<Ipv6CircuitConnectionConfigResponse> getIpv6CircuitConnectionConfig() {
         return Optional.ofNullable(this.ipv6CircuitConnectionConfig);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
-     * 
     */
     public Optional<SubResourceResponse> getPeerExpressRouteCircuitPeering() {
         return Optional.ofNullable(this.peerExpressRouteCircuitPeering);
     }
     /**
      * The provisioning state of the express route circuit connection resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

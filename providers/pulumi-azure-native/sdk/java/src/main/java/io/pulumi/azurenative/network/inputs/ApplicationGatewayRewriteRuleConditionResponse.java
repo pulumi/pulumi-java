@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set of conditions in the Rewrite Rule in Application Gateway.
- * 
  */
 public final class ApplicationGatewayRewriteRuleConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends io.pul
 
     /**
      * Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
-     * 
      */
     @Import(name="ignoreCase")
       private final @Nullable Boolean ignoreCase;
@@ -32,7 +30,6 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends io.pul
 
     /**
      * Setting this value as truth will force to check the negation of the condition given by the user.
-     * 
      */
     @Import(name="negate")
       private final @Nullable Boolean negate;
@@ -43,7 +40,6 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends io.pul
 
     /**
      * The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.
-     * 
      */
     @Import(name="pattern")
       private final @Nullable String pattern;
@@ -54,7 +50,6 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends io.pul
 
     /**
      * The condition parameter of the RewriteRuleCondition.
-     * 
      */
     @Import(name="variable")
       private final @Nullable String variable;

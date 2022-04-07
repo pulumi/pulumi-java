@@ -19,7 +19,6 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
 
     /**
      * Properties of the controller.
-     * 
      */
     @Import(name="controllerDetails")
       private final @Nullable Output<ControllerDetailsArgs> controllerDetails;
@@ -30,7 +29,6 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
 
     /**
      * Location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
 
     /**
      * The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -63,7 +59,6 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
 
     /**
      * subnet details
-     * 
      */
     @Import(name="subnetDetails")
       private final @Nullable Output<SubnetDetailsArgs> subnetDetails;
@@ -74,7 +69,6 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

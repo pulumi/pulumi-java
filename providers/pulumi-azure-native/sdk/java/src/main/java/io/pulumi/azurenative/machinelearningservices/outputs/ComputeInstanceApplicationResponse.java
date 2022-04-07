@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ComputeInstanceApplicationResponse {
     /**
      * Name of the ComputeInstance application.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * Application' endpoint URI.
-     * 
      */
     private final @Nullable String endpointUri;
 
@@ -32,14 +30,12 @@ public final class ComputeInstanceApplicationResponse {
 
     /**
      * Name of the ComputeInstance application.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Application' endpoint URI.
-     * 
     */
     public Optional<String> getEndpointUri() {
         return Optional.ofNullable(this.endpointUri);

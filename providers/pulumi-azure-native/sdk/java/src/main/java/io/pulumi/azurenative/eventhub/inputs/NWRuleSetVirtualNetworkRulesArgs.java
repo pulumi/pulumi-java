@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of VirtualNetworkRules - NetworkRules resource.
- * 
  */
 public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
 
     /**
      * Value that indicates whether to ignore missing VNet Service Endpoint
-     * 
      */
     @Import(name="ignoreMissingVnetServiceEndpoint")
       private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
@@ -32,7 +30,6 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
 
     /**
      * Subnet properties
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;

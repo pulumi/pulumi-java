@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Custom DNS record type.
-     * 
      */
     @EnumType
     public enum CustomHostNameDnsRecordType {

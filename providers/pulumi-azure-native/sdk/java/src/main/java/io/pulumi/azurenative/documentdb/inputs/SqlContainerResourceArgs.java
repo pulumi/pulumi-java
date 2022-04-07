@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB SQL container resource object
- * 
  */
 public final class SqlContainerResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Analytical TTL.
-     * 
      */
     @Import(name="analyticalStorageTtl")
       private final @Nullable Output<Double> analyticalStorageTtl;
@@ -37,7 +35,6 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * The conflict resolution policy for the container.
-     * 
      */
     @Import(name="conflictResolutionPolicy")
       private final @Nullable Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
@@ -48,7 +45,6 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Default time to live
-     * 
      */
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
@@ -59,7 +55,6 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the Cosmos DB SQL container
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -70,7 +65,6 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
-     * 
      */
     @Import(name="indexingPolicy")
       private final @Nullable Output<IndexingPolicyArgs> indexingPolicy;
@@ -81,7 +75,6 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * The configuration of the partition key to be used for partitioning data into multiple partitions
-     * 
      */
     @Import(name="partitionKey")
       private final @Nullable Output<ContainerPartitionKeyArgs> partitionKey;
@@ -92,7 +85,6 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
 
     /**
      * The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
-     * 
      */
     @Import(name="uniqueKeyPolicy")
       private final @Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy;

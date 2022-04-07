@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the Credentials used to connect to Backend.
- * 
  */
 public final class BackendCredentialsContractResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
 
     /**
      * Authorization header authentication
-     * 
      */
     @Import(name="authorization")
       private final @Nullable BackendAuthorizationHeaderCredentialsResponse authorization;
@@ -34,7 +32,6 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
 
     /**
      * List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
-     * 
      */
     @Import(name="certificate")
       private final @Nullable List<String> certificate;
@@ -45,7 +42,6 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
 
     /**
      * List of Client Certificate Ids.
-     * 
      */
     @Import(name="certificateIds")
       private final @Nullable List<String> certificateIds;
@@ -56,7 +52,6 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
 
     /**
      * Header Parameter description.
-     * 
      */
     @Import(name="header")
       private final @Nullable Map<String,List<String>> header;
@@ -67,7 +62,6 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
 
     /**
      * Query Parameter description.
-     * 
      */
     @Import(name="query")
       private final @Nullable Map<String,List<String>> query;

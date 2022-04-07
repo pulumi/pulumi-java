@@ -14,7 +14,6 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
 
     /**
      * The name of the application gateway.
-     * 
      */
     @Import(name="applicationGatewayName", required=true)
       private final String applicationGatewayName;
@@ -25,7 +24,6 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
 
     /**
      * The name of the application gateway private endpoint connection.
-     * 
      */
     @Import(name="connectionName", required=true)
       private final String connectionName;
@@ -36,7 +34,6 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

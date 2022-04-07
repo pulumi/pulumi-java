@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * User who created.
- * 
  */
 public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
-     * 
      */
     @Import(name="userAltSecId")
       private final @Nullable String userAltSecId;
@@ -31,7 +29,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A user identity provider. Eg live.com
-     * 
      */
     @Import(name="userIdp")
       private final @Nullable String userIdp;
@@ -42,7 +39,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The issuer which issued the token for this user.
-     * 
      */
     @Import(name="userIss")
       private final @Nullable String userIss;
@@ -53,7 +49,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      *  A user's full name or a service principal's app ID.
-     * 
      */
     @Import(name="userName")
       private final @Nullable String userName;
@@ -64,7 +59,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A user or service principal's object ID..
-     * 
      */
     @Import(name="userObjectId")
       private final @Nullable String userObjectId;
@@ -75,7 +69,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A user or service principal's PuID.
-     * 
      */
     @Import(name="userPuId")
       private final @Nullable String userPuId;
@@ -86,7 +79,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A user or service principal's tenant ID.
-     * 
      */
     @Import(name="userTenantId")
       private final @Nullable String userTenantId;

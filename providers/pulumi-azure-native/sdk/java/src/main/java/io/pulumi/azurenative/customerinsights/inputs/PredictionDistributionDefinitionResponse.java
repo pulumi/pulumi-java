@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of the prediction distribution.
- * 
  */
 public final class PredictionDistributionDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
 
     /**
      * Distributions of the prediction.
-     * 
      */
     @Import(name="distributions")
       private final @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
@@ -33,7 +31,6 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
 
     /**
      * Total negatives in the distribution.
-     * 
      */
     @Import(name="totalNegatives")
       private final @Nullable Double totalNegatives;
@@ -44,7 +41,6 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
 
     /**
      * Total positive in the distribution.
-     * 
      */
     @Import(name="totalPositives")
       private final @Nullable Double totalPositives;

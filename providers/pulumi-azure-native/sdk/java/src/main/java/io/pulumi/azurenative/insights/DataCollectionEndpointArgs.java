@@ -20,7 +20,6 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the data collection endpoint. The name is case insensitive.
-     * 
      */
     @Import(name="dataCollectionEndpointName")
       private final @Nullable Output<String> dataCollectionEndpointName;
@@ -31,7 +30,6 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * Description of the data collection endpoint.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -42,7 +40,6 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
-     * 
      */
     @Import(name="immutableId")
       private final @Nullable Output<String> immutableId;
@@ -53,7 +50,6 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The kind of the resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
@@ -64,7 +60,6 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The geo-location where the resource lives.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -75,7 +70,6 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * Network access control rules for the endpoints.
-     * 
      */
     @Import(name="networkAcls")
       private final @Nullable Output<DataCollectionEndpointNetworkAclsArgs> networkAcls;
@@ -86,7 +80,6 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -97,7 +90,6 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

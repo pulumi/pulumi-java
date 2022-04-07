@@ -14,7 +14,6 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the deployment step.
-     * 
      */
     @Import(name="stepName", required=true)
       private final String stepName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Group type.
-     * 
      */
     @EnumType
     public enum GroupType {

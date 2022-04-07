@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of site details provided during the time of site creation
- * 
  */
 public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources
 
     /**
      * Fabric provider specific creation input.
-     * 
      */
     @Import(name="customDetails")
       private final @Nullable Output<Object> customDetails;

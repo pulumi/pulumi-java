@@ -16,7 +16,6 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
 
     /**
      * The name of the association. The name is case insensitive.
-     * 
      */
     @Import(name="associationName")
       private final @Nullable Output<String> associationName;
@@ -27,7 +26,6 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
 
     /**
      * The resource ID of the data collection rule that is to be associated.
-     * 
      */
     @Import(name="dataCollectionRuleId")
       private final @Nullable Output<String> dataCollectionRuleId;
@@ -38,7 +36,6 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
 
     /**
      * Description of the association.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -49,7 +46,6 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;

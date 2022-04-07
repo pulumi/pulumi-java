@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Operator used for list of dependencies in criteria array.
-     * 
      */
     @EnumType
     public enum Operator {

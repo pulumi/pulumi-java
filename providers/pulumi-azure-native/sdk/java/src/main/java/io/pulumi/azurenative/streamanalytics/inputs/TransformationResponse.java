@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A transformation object, containing all information associated with the named transformation. All transformations are contained under a streaming job.
- * 
  */
 public final class TransformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -32,7 +30,6 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -43,7 +40,6 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource name
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -54,7 +50,6 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="query")
       private final @Nullable String query;
@@ -65,7 +60,6 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the number of streaming units that the streaming job uses.
-     * 
      */
     @Import(name="streamingUnits")
       private final @Nullable Integer streamingUnits;
@@ -76,7 +70,6 @@ public final class TransformationResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource type
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

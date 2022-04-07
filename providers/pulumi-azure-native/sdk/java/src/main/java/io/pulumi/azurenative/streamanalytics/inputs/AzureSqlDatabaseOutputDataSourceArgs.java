@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an Azure SQL database output data source.
- * 
  */
 public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
 
     /**
      * The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="database")
       private final @Nullable Output<String> database;
@@ -31,7 +29,6 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
 
     /**
      * The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -42,7 +39,6 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
 
     /**
      * The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="server")
       private final @Nullable Output<String> server;
@@ -53,7 +49,6 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
 
     /**
      * The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="table")
       private final @Nullable Output<String> table;
@@ -65,7 +60,6 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.Sql/Server/Database'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -76,7 +70,6 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
 
     /**
      * The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="user")
       private final @Nullable Output<String> user;

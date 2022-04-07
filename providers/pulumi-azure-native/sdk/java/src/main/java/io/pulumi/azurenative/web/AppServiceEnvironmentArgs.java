@@ -23,7 +23,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Custom settings for changing the behavior of the App Service Environment.
-     * 
      */
     @Import(name="clusterSettings")
       private final @Nullable Output<List<NameValuePairArgs>> clusterSettings;
@@ -34,7 +33,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * DNS suffix of the App Service Environment.
-     * 
      */
     @Import(name="dnsSuffix")
       private final @Nullable Output<String> dnsSuffix;
@@ -45,7 +43,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Scale factor for front-ends.
-     * 
      */
     @Import(name="frontEndScaleFactor")
       private final @Nullable Output<Integer> frontEndScaleFactor;
@@ -56,7 +53,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
-     * 
      */
     @Import(name="internalLoadBalancingMode")
       private final @Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode;
@@ -67,7 +63,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Number of IP SSL addresses reserved for the App Service Environment.
-     * 
      */
     @Import(name="ipsslAddressCount")
       private final @Nullable Output<Integer> ipsslAddressCount;
@@ -78,7 +73,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -89,7 +83,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -100,7 +93,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Front-end VM size, e.g. "Medium", "Large".
-     * 
      */
     @Import(name="multiSize")
       private final @Nullable Output<String> multiSize;
@@ -111,7 +103,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the App Service Environment.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -122,7 +113,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -133,7 +123,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -144,7 +133,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * User added ip ranges to whitelist on ASE db
-     * 
      */
     @Import(name="userWhitelistedIpRanges")
       private final @Nullable Output<List<String>> userWhitelistedIpRanges;
@@ -155,7 +143,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
 
     /**
      * Description of the Virtual Network.
-     * 
      */
     @Import(name="virtualNetwork", required=true)
       private final Output<VirtualNetworkProfileArgs> virtualNetwork;

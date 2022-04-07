@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class GetNamespaceAuthorizationRuleResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The rights associated with the rule.
-     * 
      */
     private final List<String> rights;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -45,28 +41,24 @@ public final class GetNamespaceAuthorizationRuleResult {
 
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
-     * 
     */
     public List<String> getRights() {
         return this.rights;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

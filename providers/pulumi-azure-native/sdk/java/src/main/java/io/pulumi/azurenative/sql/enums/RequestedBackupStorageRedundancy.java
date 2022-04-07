@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The storage account type to be used to store backups for this database.
-     * 
      */
     @EnumType
     public enum RequestedBackupStorageRedundancy {

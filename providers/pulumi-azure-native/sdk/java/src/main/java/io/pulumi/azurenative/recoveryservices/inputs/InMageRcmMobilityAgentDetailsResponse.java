@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * InMageRcm mobility agent details.
- * 
  */
 public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
 
     /**
      * The agent version expiry date.
-     * 
      */
     @Import(name="agentVersionExpiryDate", required=true)
       private final String agentVersionExpiryDate;
@@ -30,7 +28,6 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
 
     /**
      * The driver version.
-     * 
      */
     @Import(name="driverVersion", required=true)
       private final String driverVersion;
@@ -41,7 +38,6 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
 
     /**
      * The driver version expiry date.
-     * 
      */
     @Import(name="driverVersionExpiryDate", required=true)
       private final String driverVersionExpiryDate;
@@ -52,7 +48,6 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
 
     /**
      * A value indicating whether agent is upgradeable or not.
-     * 
      */
     @Import(name="isUpgradeable", required=true)
       private final String isUpgradeable;
@@ -63,7 +58,6 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
 
     /**
      * The time of the last heartbeat received from the agent.
-     * 
      */
     @Import(name="lastHeartbeatUtc", required=true)
       private final String lastHeartbeatUtc;
@@ -74,7 +68,6 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
 
     /**
      * The latest upgradeable version available without reboot.
-     * 
      */
     @Import(name="latestUpgradableVersionWithoutReboot", required=true)
       private final String latestUpgradableVersionWithoutReboot;
@@ -85,7 +78,6 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
 
     /**
      * The latest agent version available.
-     * 
      */
     @Import(name="latestVersion", required=true)
       private final String latestVersion;
@@ -96,7 +88,6 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
 
     /**
      * The whether update is possible or not.
-     * 
      */
     @Import(name="reasonsBlockingUpgrade", required=true)
       private final List<String> reasonsBlockingUpgrade;
@@ -107,7 +98,6 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
 
     /**
      * The agent version.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

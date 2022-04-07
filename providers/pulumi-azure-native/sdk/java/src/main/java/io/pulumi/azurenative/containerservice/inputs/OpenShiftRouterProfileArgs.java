@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents an OpenShift router
- * 
  */
 public final class OpenShiftRouterProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class OpenShiftRouterProfileArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the router profile.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

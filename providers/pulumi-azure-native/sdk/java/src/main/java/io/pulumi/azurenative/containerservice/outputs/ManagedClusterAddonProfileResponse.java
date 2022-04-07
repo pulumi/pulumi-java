@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class ManagedClusterAddonProfileResponse {
     /**
      * Key-value pairs for configuring an add-on.
-     * 
      */
     private final @Nullable Map<String,String> config;
     /**
      * Whether the add-on is enabled or not.
-     * 
      */
     private final Boolean enabled;
     /**
      * Information of user assigned identity used by this add-on.
-     * 
      */
     private final ManagedClusterAddonProfileResponseIdentity identity;
 
@@ -41,21 +38,18 @@ public final class ManagedClusterAddonProfileResponse {
 
     /**
      * Key-value pairs for configuring an add-on.
-     * 
     */
     public Map<String,String> getConfig() {
         return this.config == null ? Map.of() : this.config;
     }
     /**
      * Whether the add-on is enabled or not.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Information of user assigned identity used by this add-on.
-     * 
     */
     public ManagedClusterAddonProfileResponseIdentity getIdentity() {
         return this.identity;

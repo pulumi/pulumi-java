@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
-     * 
      */
     @EnumType
     public enum Name {

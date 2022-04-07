@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input for task that validates migration input for SQL to Azure SQL Managed Instance
- * 
  */
 public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
 
     /**
      * SAS URI of Azure Storage Account Container to be used for storing backup files.
-     * 
      */
     @Import(name="backupBlobShare", required=true)
       private final Output<BlobShareArgs> backupBlobShare;
@@ -38,7 +36,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
 
     /**
      * Backup file share information for all selected databases.
-     * 
      */
     @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
@@ -49,7 +46,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
 
     /**
      * Backup Mode to specify whether to use existing backup or create new backup.
-     * 
      */
     @Import(name="backupMode")
       private final @Nullable Output<Either<String,BackupMode>> backupMode;
@@ -60,7 +56,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
 
     /**
      * Databases to migrate
-     * 
      */
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
@@ -71,7 +66,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
 
     /**
      * Logins to migrate
-     * 
      */
     @Import(name="selectedLogins")
       private final @Nullable Output<List<String>> selectedLogins;
@@ -82,7 +76,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
 
     /**
      * Information for connecting to source
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
@@ -93,7 +86,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputArgs extends io.
 
     /**
      * Information for connecting to target
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;

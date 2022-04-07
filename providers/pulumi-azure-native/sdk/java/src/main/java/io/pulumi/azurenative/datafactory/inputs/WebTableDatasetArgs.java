@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The dataset points to a HTML table in the web page.
- * 
  */
 public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -37,7 +35,6 @@ public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -48,7 +45,6 @@ public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
@@ -59,7 +55,6 @@ public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The zero-based index of the table in the web page. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="index", required=true)
       private final Output<Object> index;
@@ -70,7 +65,6 @@ public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -81,7 +75,6 @@ public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -92,7 +85,6 @@ public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The relative URL to the web page from the linked service URL. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<Object> path;
@@ -103,7 +95,6 @@ public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
@@ -114,7 +105,6 @@ public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
@@ -126,7 +116,6 @@ public final class WebTableDatasetArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Type of dataset.
      * Expected value is 'WebTable'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

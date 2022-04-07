@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
-     * 
      */
     @EnumType
     public enum FullBackupFrequencyType {

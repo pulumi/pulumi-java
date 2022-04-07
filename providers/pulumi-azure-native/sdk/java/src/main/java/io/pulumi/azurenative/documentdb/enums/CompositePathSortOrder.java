@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Sort order for composite paths.
-     * 
      */
     @EnumType
     public enum CompositePathSortOrder {

@@ -20,7 +20,6 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the attestation.
-     * 
      */
     @Import(name="attestationName")
       private final @Nullable Output<String> attestationName;
@@ -31,7 +30,6 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * Comments describing why this attestation was created.
-     * 
      */
     @Import(name="comments")
       private final @Nullable Output<String> comments;
@@ -42,7 +40,6 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The compliance state that should be set on the resource.
-     * 
      */
     @Import(name="complianceState")
       private final @Nullable Output<Either<String,ComplianceState>> complianceState;
@@ -53,7 +50,6 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The evidence supporting the compliance state set in this attestation.
-     * 
      */
     @Import(name="evidence")
       private final @Nullable Output<List<AttestationEvidenceArgs>> evidence;
@@ -64,7 +60,6 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The time the compliance state should expire.
-     * 
      */
     @Import(name="expiresOn")
       private final @Nullable Output<String> expiresOn;
@@ -75,7 +70,6 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
-     * 
      */
     @Import(name="owner")
       private final @Nullable Output<String> owner;
@@ -86,7 +80,6 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The resource ID of the policy assignment that the attestation is setting the state for.
-     * 
      */
     @Import(name="policyAssignmentId", required=true)
       private final Output<String> policyAssignmentId;
@@ -97,7 +90,6 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
 
     /**
      * The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
-     * 
      */
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A custom preset for encoding video with the H.264 (AVC) codec.
- * 
  */
 public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
 
     /**
      * The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
-     * 
      */
     @Import(name="bitrateKbps")
       private final @Nullable Output<String> bitrateKbps;
@@ -32,7 +30,6 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
 
     /**
      * The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
-     * 
      */
     @Import(name="frameRate")
       private final @Nullable Output<String> frameRate;
@@ -43,7 +40,6 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
 
     /**
      * Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
-     * 
      */
     @Import(name="scale")
       private final @Nullable Output<VideoScaleArgs> scale;
@@ -55,7 +51,6 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

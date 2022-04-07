@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Image registry credential.
- * 
  */
 public final class ImageRegistryCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ImageRegistryCredentialResponse extends io.pulumi.resources.I
 
     /**
      * The password for the private registry.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -31,7 +29,6 @@ public final class ImageRegistryCredentialResponse extends io.pulumi.resources.I
 
     /**
      * The Docker image registry server without a protocol such as "http" and "https".
-     * 
      */
     @Import(name="server", required=true)
       private final String server;
@@ -42,7 +39,6 @@ public final class ImageRegistryCredentialResponse extends io.pulumi.resources.I
 
     /**
      * The username for the private registry.
-     * 
      */
     @Import(name="username", required=true)
       private final String username;

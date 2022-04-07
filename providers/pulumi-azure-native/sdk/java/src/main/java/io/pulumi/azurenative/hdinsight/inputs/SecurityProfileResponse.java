@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The security profile which contains Ssh public key for the HDInsight cluster.
- * 
  */
 public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The resource ID of the user's Azure Active Directory Domain Service.
-     * 
      */
     @Import(name="aaddsResourceId")
       private final @Nullable String aaddsResourceId;
@@ -32,7 +30,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional. The Distinguished Names for cluster user groups
-     * 
      */
     @Import(name="clusterUsersGroupDNs")
       private final @Nullable List<String> clusterUsersGroupDNs;
@@ -43,7 +40,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The directory type.
-     * 
      */
     @Import(name="directoryType")
       private final @Nullable String directoryType;
@@ -54,7 +50,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The organization's active directory domain.
-     * 
      */
     @Import(name="domain")
       private final @Nullable String domain;
@@ -65,7 +60,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The domain admin password.
-     * 
      */
     @Import(name="domainUserPassword")
       private final @Nullable String domainUserPassword;
@@ -76,7 +70,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The domain user account that will have admin privileges on the cluster.
-     * 
      */
     @Import(name="domainUsername")
       private final @Nullable String domainUsername;
@@ -87,7 +80,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The LDAPS protocol URLs to communicate with the Active Directory.
-     * 
      */
     @Import(name="ldapsUrls")
       private final @Nullable List<String> ldapsUrls;
@@ -98,7 +90,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * User assigned identity that has permissions to read and create cluster-related artifacts in the user's AADDS.
-     * 
      */
     @Import(name="msiResourceId")
       private final @Nullable String msiResourceId;
@@ -109,7 +100,6 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The organizational unit within the Active Directory to place the cluster and service accounts.
-     * 
      */
     @Import(name="organizationalUnitDN")
       private final @Nullable String organizationalUnitDN;

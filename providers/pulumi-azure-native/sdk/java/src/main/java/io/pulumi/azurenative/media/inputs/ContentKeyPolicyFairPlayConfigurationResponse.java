@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies a configuration for FairPlay licenses.
- * 
  */
 public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
 
     /**
      * The key that must be used as FairPlay Application Secret key.
-     * 
      */
     @Import(name="ask", required=true)
       private final String ask;
@@ -33,7 +31,6 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
 
     /**
      * The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
-     * 
      */
     @Import(name="fairPlayPfx", required=true)
       private final String fairPlayPfx;
@@ -44,7 +41,6 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
 
     /**
      * The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-     * 
      */
     @Import(name="fairPlayPfxPassword", required=true)
       private final String fairPlayPfxPassword;
@@ -56,7 +52,6 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -67,7 +62,6 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
 
     /**
      * Offline rental policy
-     * 
      */
     @Import(name="offlineRentalConfiguration")
       private final @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
@@ -78,7 +72,6 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
 
     /**
      * The rental and lease key type.
-     * 
      */
     @Import(name="rentalAndLeaseKeyType", required=true)
       private final String rentalAndLeaseKeyType;
@@ -89,7 +82,6 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse extends io.pulu
 
     /**
      * The rental duration. Must be greater than or equal to 0.
-     * 
      */
     @Import(name="rentalDuration", required=true)
       private final Double rentalDuration;

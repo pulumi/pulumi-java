@@ -19,7 +19,83 @@ import javax.annotation.Nullable;
  * Capture logs and metrics of Azure resources based on ARM tags.
  * API Version: 2020-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SubAccountTagRules_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var subAccountTagRule = new AzureNative.Logz.SubAccountTagRule("subAccountTagRule", new AzureNative.Logz.SubAccountTagRuleArgs
+ *         {
+ *             MonitorName = "myMonitor",
+ *             ResourceGroupName = "myResourceGroup",
+ *             RuleSetName = "default",
+ *             SubAccountName = "SubAccount1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	logz "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logz"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logz.NewSubAccountTagRule(ctx, "subAccountTagRule", &logz.SubAccountTagRuleArgs{
+ * 			MonitorName:       pulumi.String("myMonitor"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			RuleSetName:       pulumi.String("default"),
+ * 			SubAccountName:    pulumi.String("SubAccount1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const subAccountTagRule = new azure_native.logz.SubAccountTagRule("subAccountTagRule", {
+ *     monitorName: "myMonitor",
+ *     resourceGroupName: "myResourceGroup",
+ *     ruleSetName: "default",
+ *     subAccountName: "SubAccount1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sub_account_tag_rule = azure_native.logz.SubAccountTagRule("subAccountTagRule",
+ *     monitor_name="myMonitor",
+ *     resource_group_name="myResourceGroup",
+ *     rule_set_name="default",
+ *     sub_account_name="SubAccount1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +110,48 @@ import javax.annotation.Nullable;
 public class SubAccountTagRule extends io.pulumi.resources.CustomResource {
     /**
      * Name of the rule set.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the rule set.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Definition of the properties for a TagRules resource.
-     * 
      */
     @Export(name="properties", type=MonitoringTagRulesPropertiesResponse.class, parameters={})
     private Output<MonitoringTagRulesPropertiesResponse> properties;
 
     /**
      * @return Definition of the properties for a TagRules resource.
-     * 
      */
     public Output<MonitoringTagRulesPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The system metadata relating to this resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the rule set.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the rule set.
-     * 
      */
     public Output<String> getType() {
         return this.type;

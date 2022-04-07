@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Base class for all control activities like IfCondition, ForEach , Until.
- * 
  */
 public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -34,7 +32,6 @@ public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +42,6 @@ public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -57,7 +53,6 @@ public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Type of activity.
      * Expected value is 'Container'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -68,7 +63,6 @@ public final class ControlActivityArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

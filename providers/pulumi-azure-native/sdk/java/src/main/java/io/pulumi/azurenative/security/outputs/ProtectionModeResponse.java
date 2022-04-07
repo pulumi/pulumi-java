@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class ProtectionModeResponse {
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
      */
     private final @Nullable String exe;
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
      */
     private final @Nullable String executable;
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
      */
     private final @Nullable String msi;
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
      */
     private final @Nullable String script;
 
@@ -46,28 +42,24 @@ public final class ProtectionModeResponse {
 
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
     */
     public Optional<String> getExe() {
         return Optional.ofNullable(this.exe);
     }
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
     */
     public Optional<String> getExecutable() {
         return Optional.ofNullable(this.executable);
     }
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
     */
     public Optional<String> getMsi() {
         return Optional.ofNullable(this.msi);
     }
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
     */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);

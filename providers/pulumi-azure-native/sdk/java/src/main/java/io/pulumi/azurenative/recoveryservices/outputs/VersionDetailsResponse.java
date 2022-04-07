@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class VersionDetailsResponse {
     /**
      * Version expiry date.
-     * 
      */
     private final @Nullable String expiryDate;
     /**
      * A value indicating whether security update required.
-     * 
      */
     private final @Nullable String status;
     /**
      * The agent version.
-     * 
      */
     private final @Nullable String version;
 
@@ -39,21 +36,18 @@ public final class VersionDetailsResponse {
 
     /**
      * Version expiry date.
-     * 
     */
     public Optional<String> getExpiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
     /**
      * A value indicating whether security update required.
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The agent version.
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

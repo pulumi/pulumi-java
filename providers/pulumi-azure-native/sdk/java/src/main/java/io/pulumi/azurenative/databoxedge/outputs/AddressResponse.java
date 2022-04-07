@@ -13,37 +13,30 @@ import javax.annotation.Nullable;
 public final class AddressResponse {
     /**
      * The address line1.
-     * 
      */
     private final @Nullable String addressLine1;
     /**
      * The address line2.
-     * 
      */
     private final @Nullable String addressLine2;
     /**
      * The address line3.
-     * 
      */
     private final @Nullable String addressLine3;
     /**
      * The city name.
-     * 
      */
     private final @Nullable String city;
     /**
      * The country name.
-     * 
      */
     private final String country;
     /**
      * The postal code.
-     * 
      */
     private final @Nullable String postalCode;
     /**
      * The state name.
-     * 
      */
     private final @Nullable String state;
 
@@ -67,49 +60,42 @@ public final class AddressResponse {
 
     /**
      * The address line1.
-     * 
     */
     public Optional<String> getAddressLine1() {
         return Optional.ofNullable(this.addressLine1);
     }
     /**
      * The address line2.
-     * 
     */
     public Optional<String> getAddressLine2() {
         return Optional.ofNullable(this.addressLine2);
     }
     /**
      * The address line3.
-     * 
     */
     public Optional<String> getAddressLine3() {
         return Optional.ofNullable(this.addressLine3);
     }
     /**
      * The city name.
-     * 
     */
     public Optional<String> getCity() {
         return Optional.ofNullable(this.city);
     }
     /**
      * The country name.
-     * 
     */
     public String getCountry() {
         return this.country;
     }
     /**
      * The postal code.
-     * 
     */
     public Optional<String> getPostalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
      * The state name.
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);

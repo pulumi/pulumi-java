@@ -18,7 +18,6 @@ public final class DataManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     * 
      */
     @Import(name="dataManagerName")
       private final @Nullable Output<String> dataManagerName;
@@ -31,7 +30,6 @@ public final class DataManagerArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
      * US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
      * region is specified on update the request will succeed.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class DataManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -53,7 +50,6 @@ public final class DataManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sku type.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -65,7 +61,6 @@ public final class DataManagerArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
      * (across resource groups).
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

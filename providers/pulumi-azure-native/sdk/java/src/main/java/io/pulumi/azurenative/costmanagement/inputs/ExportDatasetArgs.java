@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition for data in the export.
- * 
  */
 public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The export dataset configuration.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable Output<ExportDatasetConfigurationArgs> configuration;
@@ -34,7 +32,6 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The granularity of rows in the export. Currently only 'Daily' is supported.
-     * 
      */
     @Import(name="granularity")
       private final @Nullable Output<Either<String,GranularityType>> granularity;

@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machine scale set data disk.
- * 
  */
 public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
 
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
-     * 
      */
     @Import(name="caching")
       private final @Nullable Output<CachingTypes> caching;
@@ -38,7 +36,6 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
 
     /**
      * The create option.
-     * 
      */
     @Import(name="createOption", required=true)
       private final Output<Either<String,DiskCreateOptionTypes>> createOption;
@@ -49,7 +46,6 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
 
     /**
      * Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
-     * 
      */
     @Import(name="diskIOPSReadWrite")
       private final @Nullable Output<Double> diskIOPSReadWrite;
@@ -60,7 +56,6 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
 
     /**
      * Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
-     * 
      */
     @Import(name="diskMBpsReadWrite")
       private final @Nullable Output<Double> diskMBpsReadWrite;
@@ -71,7 +66,6 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
 
     /**
      * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
@@ -82,7 +76,6 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
 
     /**
      * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-     * 
      */
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
@@ -93,7 +86,6 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
 
     /**
      * The managed disk parameters.
-     * 
      */
     @Import(name="managedDisk")
       private final @Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
@@ -104,7 +96,6 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
 
     /**
      * The disk name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -115,7 +106,6 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
 
     /**
      * Specifies whether writeAccelerator should be enabled or disabled on the disk.
-     * 
      */
     @Import(name="writeAcceleratorEnabled")
       private final @Nullable Output<Boolean> writeAcceleratorEnabled;

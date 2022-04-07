@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
- * 
  */
 public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * An enum that represents the format of the local timestamp property that needs to be set.
-     * 
      */
     @Import(name="format")
       private final @Nullable String format;
@@ -32,7 +30,6 @@ public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
-     * 
      */
     @Import(name="timeZoneOffset")
       private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application gateway client authentication configuration.
- * 
  */
 public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulu
 
     /**
      * Verify client certificate issuer name on the application gateway.
-     * 
      */
     @Import(name="verifyClientCertIssuerDN")
       private final @Nullable Output<Boolean> verifyClientCertIssuerDN;

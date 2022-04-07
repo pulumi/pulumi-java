@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The list of RouteTables to advertise the routes to.
- * 
  */
 public final class PropagatedRouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
 
     /**
      * The list of resource ids of all the RouteTables.
-     * 
      */
     @Import(name="ids")
       private final @Nullable Output<List<SubResourceArgs>> ids;
@@ -33,7 +31,6 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
 
     /**
      * The list of labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;

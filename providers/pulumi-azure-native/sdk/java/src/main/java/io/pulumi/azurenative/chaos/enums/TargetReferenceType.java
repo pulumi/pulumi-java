@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enum of the Target reference type.
-     * 
      */
     @EnumType
     public enum TargetReferenceType {

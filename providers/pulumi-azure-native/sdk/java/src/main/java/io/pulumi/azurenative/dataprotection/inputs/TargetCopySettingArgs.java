@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Target copy settings
- * 
  */
 public final class TargetCopySettingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TargetCopySettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * It can be CustomCopyOption or ImmediateCopyOption.
-     * 
      */
     @Import(name="copyAfter", required=true)
       private final Output<Object> copyAfter;
@@ -34,7 +32,6 @@ public final class TargetCopySettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Info of target datastore
-     * 
      */
     @Import(name="dataStore", required=true)
       private final Output<DataStoreInfoBaseArgs> dataStore;

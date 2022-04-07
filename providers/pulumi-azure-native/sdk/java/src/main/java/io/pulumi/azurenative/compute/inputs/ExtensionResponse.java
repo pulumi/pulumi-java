@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a cloud service Extension.
- * 
  */
 public final class ExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the extension.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -32,7 +30,6 @@ public final class ExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Extension Properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable CloudServiceExtensionPropertiesResponse properties;

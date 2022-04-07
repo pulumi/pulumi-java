@@ -18,7 +18,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connector billing model
-     * 
      */
     @Import(name="billingModel")
       private final @Nullable Output<Either<String,ConnectorBillingModel>> billingModel;
@@ -29,7 +28,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connector Name.
-     * 
      */
     @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
@@ -40,7 +38,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Credentials authentication key (eg AWS ARN)
-     * 
      */
     @Import(name="credentialsKey")
       private final @Nullable Output<String> credentialsKey;
@@ -51,7 +48,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Credentials secret (eg AWS ExternalId)
-     * 
      */
     @Import(name="credentialsSecret")
       private final @Nullable Output<String> credentialsSecret;
@@ -62,7 +58,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Default ManagementGroupId
-     * 
      */
     @Import(name="defaultManagementGroupId")
       private final @Nullable Output<String> defaultManagementGroupId;
@@ -73,7 +68,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connector DisplayName
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -84,7 +78,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connector kind (eg aws)
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -95,7 +88,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-     * 
      */
     @Import(name="reportId")
       private final @Nullable Output<String> reportId;
@@ -106,7 +98,6 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Billing SubscriptionId
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;

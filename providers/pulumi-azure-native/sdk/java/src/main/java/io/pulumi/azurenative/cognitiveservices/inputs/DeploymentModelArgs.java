@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of Cognitive Services account deployment model.
- * 
  */
 public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Deployment model format.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<String> format;
@@ -31,7 +29,6 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Deployment model name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +39,6 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Deployment model version.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

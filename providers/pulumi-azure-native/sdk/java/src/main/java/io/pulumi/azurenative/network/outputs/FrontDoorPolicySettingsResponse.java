@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class FrontDoorPolicySettingsResponse {
     /**
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
-     * 
      */
     private final @Nullable String customBlockResponseBody;
     /**
      * If the action type is block, customer can override the response status code.
-     * 
      */
     private final @Nullable Integer customBlockResponseStatusCode;
     /**
      * Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
-     * 
      */
     private final @Nullable String enabledState;
     /**
      * Describes if it is in detection mode or prevention mode at policy level.
-     * 
      */
     private final @Nullable String mode;
     /**
      * If action type is redirect, this field represents redirect URL for the client.
-     * 
      */
     private final @Nullable String redirectUrl;
     /**
      * Describes if policy managed rules will inspect the request body content.
-     * 
      */
     private final @Nullable String requestBodyCheck;
 
@@ -61,42 +55,36 @@ public final class FrontDoorPolicySettingsResponse {
 
     /**
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
-     * 
     */
     public Optional<String> getCustomBlockResponseBody() {
         return Optional.ofNullable(this.customBlockResponseBody);
     }
     /**
      * If the action type is block, customer can override the response status code.
-     * 
     */
     public Optional<Integer> getCustomBlockResponseStatusCode() {
         return Optional.ofNullable(this.customBlockResponseStatusCode);
     }
     /**
      * Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
-     * 
     */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Describes if it is in detection mode or prevention mode at policy level.
-     * 
     */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * If action type is redirect, this field represents redirect URL for the client.
-     * 
     */
     public Optional<String> getRedirectUrl() {
         return Optional.ofNullable(this.redirectUrl);
     }
     /**
      * Describes if policy managed rules will inspect the request body content.
-     * 
     */
     public Optional<String> getRequestBodyCheck() {
         return Optional.ofNullable(this.requestBodyCheck);

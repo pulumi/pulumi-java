@@ -14,7 +14,6 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
 
     /**
      * The collection ID
-     * 
      */
     @Import(name="collectionId", required=true)
       private final String collectionId;
@@ -25,7 +24,6 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
 
     /**
      * The offer ID to update or delete
-     * 
      */
     @Import(name="offerId", required=true)
       private final String offerId;
@@ -36,7 +34,6 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
 
     /**
      * The store ID - must use the tenant ID
-     * 
      */
     @Import(name="privateStoreId", required=true)
       private final String privateStoreId;

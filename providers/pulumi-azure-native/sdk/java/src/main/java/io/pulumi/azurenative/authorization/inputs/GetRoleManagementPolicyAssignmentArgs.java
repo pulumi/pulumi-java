@@ -14,7 +14,6 @@ public final class GetRoleManagementPolicyAssignmentArgs extends io.pulumi.resou
 
     /**
      * The name of format {guid_guid} the role management policy assignment to get.
-     * 
      */
     @Import(name="roleManagementPolicyAssignmentName", required=true)
       private final String roleManagementPolicyAssignmentName;
@@ -25,7 +24,6 @@ public final class GetRoleManagementPolicyAssignmentArgs extends io.pulumi.resou
 
     /**
      * The scope of the role management policy.
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Extended information of the container.
- * 
  */
 public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
 
     /**
      * Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
-     * 
      */
     @Import(name="hostServerName")
       private final @Nullable Output<String> hostServerName;
@@ -34,7 +32,6 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
 
     /**
      * Inquiry Status for the container.
-     * 
      */
     @Import(name="inquiryInfo")
       private final @Nullable Output<InquiryInfoArgs> inquiryInfo;
@@ -45,7 +42,6 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
 
     /**
      * List of the nodes in case of distributed container.
-     * 
      */
     @Import(name="nodesList")
       private final @Nullable Output<List<DistributedNodesInfoArgs>> nodesList;

@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * A Synchronization Setting data transfer object.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SynchronizationSettings_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var synchronizationSetting = new AzureNative.DataShare.SynchronizationSetting("synchronizationSetting", new AzureNative.DataShare.SynchronizationSettingArgs
+ *         {
+ *             AccountName = "Account1",
+ *             Kind = "ScheduleBased",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *             SynchronizationSettingName = "Dataset1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewSynchronizationSetting(ctx, "synchronizationSetting", &datashare.SynchronizationSettingArgs{
+ * 			AccountName:                pulumi.String("Account1"),
+ * 			Kind:                       pulumi.String("ScheduleBased"),
+ * 			ResourceGroupName:          pulumi.String("SampleResourceGroup"),
+ * 			ShareName:                  pulumi.String("Share1"),
+ * 			SynchronizationSettingName: pulumi.String("Dataset1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const synchronizationSetting = new azure_native.datashare.SynchronizationSetting("synchronizationSetting", {
+ *     accountName: "Account1",
+ *     kind: "ScheduleBased",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ *     synchronizationSettingName: "Dataset1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * synchronization_setting = azure_native.datashare.SynchronizationSetting("synchronizationSetting",
+ *     account_name="Account1",
+ *     kind="ScheduleBased",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1",
+ *     synchronization_setting_name="Dataset1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,63 +110,54 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: ScheduledSynchronizationSetting.
- * 
  */
 @Deprecated /* Please use one of the variants: ScheduledSynchronizationSetting. */
 @ResourceType(type="azure-native:datashare:SynchronizationSetting")
 public class SynchronizationSetting extends io.pulumi.resources.CustomResource {
     /**
      * Kind of synchronization setting.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Kind of synchronization setting.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the azure resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * System Data of the Azure resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System Data of the Azure resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the azure resource
-     * 
      */
     public Output<String> getType() {
         return this.type;

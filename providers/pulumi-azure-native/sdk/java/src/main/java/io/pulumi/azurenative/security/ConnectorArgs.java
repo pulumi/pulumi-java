@@ -21,7 +21,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for authentication management, these settings are relevant only for the cloud connector.
-     * 
      */
     @Import(name="authenticationDetails")
       private final @Nullable Output<Object> authenticationDetails;
@@ -32,7 +31,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the cloud account connector
-     * 
      */
     @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
@@ -43,7 +41,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
-     * 
      */
     @Import(name="hybridComputeSettings")
       private final @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;

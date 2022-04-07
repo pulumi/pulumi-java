@@ -20,7 +20,6 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
 
     /**
      * Setting indicating whether the service has a managed identity associated with it.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ServicesResourceIdentityArgs> identity;
@@ -31,7 +30,6 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
 
     /**
      * The kind of the service.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Kind> kind;
@@ -42,7 +40,6 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
 
     /**
      * The common properties of a service.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ServicesPropertiesArgs> properties;
@@ -64,7 +60,6 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
 
     /**
      * The name of the resource group that contains the service instance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
 
     /**
      * The name of the service instance.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -86,7 +80,6 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

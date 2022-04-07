@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class CmkKeyVaultPropertiesResponse {
     /**
      * The key uri of the Customer Managed Key
-     * 
      */
     private final @Nullable String keyUri;
 
@@ -24,7 +23,6 @@ public final class CmkKeyVaultPropertiesResponse {
 
     /**
      * The key uri of the Customer Managed Key
-     * 
     */
     public Optional<String> getKeyUri() {
         return Optional.ofNullable(this.keyUri);

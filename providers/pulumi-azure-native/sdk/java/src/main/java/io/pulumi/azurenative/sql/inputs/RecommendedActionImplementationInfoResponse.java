@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Contains information for manual implementation for an Azure SQL Database, Server or Elastic Pool Recommended Action.
- * 
  */
 public final class RecommendedActionImplementationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RecommendedActionImplementationInfoResponse extends io.pulumi
 
     /**
      * Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
-     * 
      */
     @Import(name="method", required=true)
       private final String method;
@@ -29,7 +27,6 @@ public final class RecommendedActionImplementationInfoResponse extends io.pulumi
 
     /**
      * Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
-     * 
      */
     @Import(name="script", required=true)
       private final String script;

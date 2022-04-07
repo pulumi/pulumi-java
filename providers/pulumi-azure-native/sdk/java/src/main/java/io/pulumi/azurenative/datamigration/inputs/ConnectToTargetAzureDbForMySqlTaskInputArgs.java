@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Input for the task that validates connection to Azure Database for MySQL and target server requirements
- * 
  */
 public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends io.pulumi
 
     /**
      * Connection information for source MySQL server
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<MySqlConnectionInfoArgs> sourceConnectionInfo;
@@ -30,7 +28,6 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputArgs extends io.pulumi
 
     /**
      * Connection information for target Azure Database for MySQL server
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final Output<MySqlConnectionInfoArgs> targetConnectionInfo;

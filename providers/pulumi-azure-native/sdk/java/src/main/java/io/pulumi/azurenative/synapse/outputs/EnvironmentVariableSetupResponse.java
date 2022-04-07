@@ -12,17 +12,14 @@ public final class EnvironmentVariableSetupResponse {
     /**
      * The type of custom setup.
      * Expected value is 'EnvironmentVariableSetup'.
-     * 
      */
     private final String type;
     /**
      * The name of the environment variable.
-     * 
      */
     private final String variableName;
     /**
      * The value of the environment variable.
-     * 
      */
     private final String variableValue;
 
@@ -39,21 +36,18 @@ public final class EnvironmentVariableSetupResponse {
     /**
      * The type of custom setup.
      * Expected value is 'EnvironmentVariableSetup'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The name of the environment variable.
-     * 
     */
     public String getVariableName() {
         return this.variableName;
     }
     /**
      * The value of the environment variable.
-     * 
     */
     public String getVariableValue() {
         return this.variableValue;

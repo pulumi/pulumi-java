@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Cluster principal role.
-     * 
      */
     @EnumType
     public enum ClusterPrincipalRole {

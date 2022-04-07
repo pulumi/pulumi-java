@@ -14,7 +14,6 @@ public final class GetGraphResourceGraphArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetGraphResourceGraphArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Cosmos DB graph resource name.
-     * 
      */
     @Import(name="graphName", required=true)
       private final String graphName;
@@ -36,7 +34,6 @@ public final class GetGraphResourceGraphArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

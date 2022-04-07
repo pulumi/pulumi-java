@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A rule management event data source. The discriminator fields is always RuleManagementEventDataSource in this case.
- * 
  */
 public final class RuleManagementEventDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the claims.
-     * 
      */
     @Import(name="claims")
       private final @Nullable RuleManagementEventClaimsDataSourceResponse claims;
@@ -32,7 +30,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the event name.
-     * 
      */
     @Import(name="eventName")
       private final @Nullable String eventName;
@@ -43,7 +40,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the event source.
-     * 
      */
     @Import(name="eventSource")
       private final @Nullable String eventSource;
@@ -54,7 +50,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-     * 
      */
     @Import(name="legacyResourceId")
       private final @Nullable String legacyResourceId;
@@ -65,7 +60,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the level.
-     * 
      */
     @Import(name="level")
       private final @Nullable String level;
@@ -76,7 +70,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the namespace of the metric.
-     * 
      */
     @Import(name="metricNamespace")
       private final @Nullable String metricNamespace;
@@ -88,7 +81,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
     /**
      * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -99,7 +91,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * The name of the operation that should be checked for. If no name is provided, any operation will match.
-     * 
      */
     @Import(name="operationName")
       private final @Nullable String operationName;
@@ -110,7 +101,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the resource group name.
-     * 
      */
     @Import(name="resourceGroupName")
       private final @Nullable String resourceGroupName;
@@ -121,7 +111,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the location of the resource.
-     * 
      */
     @Import(name="resourceLocation")
       private final @Nullable String resourceLocation;
@@ -132,7 +121,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the resource provider name.
-     * 
      */
     @Import(name="resourceProviderName")
       private final @Nullable String resourceProviderName;
@@ -143,7 +131,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-     * 
      */
     @Import(name="resourceUri")
       private final @Nullable String resourceUri;
@@ -154,7 +141,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * The status of the operation that should be checked for. If no status is provided, any status will match.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -165,7 +151,6 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
 
     /**
      * the substatus.
-     * 
      */
     @Import(name="subStatus")
       private final @Nullable String subStatus;

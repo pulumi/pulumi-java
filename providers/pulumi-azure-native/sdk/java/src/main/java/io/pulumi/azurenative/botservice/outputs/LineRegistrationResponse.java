@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class LineRegistrationResponse {
     /**
      * Access token for the line channel registration
-     * 
      */
     private final @Nullable String channelAccessToken;
     /**
      * Secret for the line channel registration
-     * 
      */
     private final @Nullable String channelSecret;
     /**
      * Id generated for the line channel registration
-     * 
      */
     private final String generatedId;
 
@@ -39,21 +36,18 @@ public final class LineRegistrationResponse {
 
     /**
      * Access token for the line channel registration
-     * 
     */
     public Optional<String> getChannelAccessToken() {
         return Optional.ofNullable(this.channelAccessToken);
     }
     /**
      * Secret for the line channel registration
-     * 
     */
     public Optional<String> getChannelSecret() {
         return Optional.ofNullable(this.channelSecret);
     }
     /**
      * Id generated for the line channel registration
-     * 
     */
     public String getGeneratedId() {
         return this.generatedId;

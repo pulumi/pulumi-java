@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines whether to send email notifications about new security alerts
- * 
  */
 public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
 
     /**
      * Defines the minimal alert severity which will be sent as email notifications
-     * 
      */
     @Import(name="minimalSeverity")
       private final @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity;
@@ -34,7 +32,6 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
 
     /**
      * Defines if email notifications will be sent about new security alerts
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;

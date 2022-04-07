@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * Definition of the account.
  * API Version: 2020-10-30-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update account
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var account = new AzureNative.PowerPlatform.Account("account", new AzureNative.PowerPlatform.AccountArgs
+ *         {
+ *             AccountName = "account",
+ *             Description = "Description of the account.",
+ *             Location = "East US",
+ *             ResourceGroupName = "resourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "Organization", "Administration" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	powerplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/powerplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := powerplatform.NewAccount(ctx, "account", &powerplatform.AccountArgs{
+ * 			AccountName:       pulumi.String("account"),
+ * 			Description:       pulumi.String("Description of the account."),
+ * 			Location:          pulumi.String("East US"),
+ * 			ResourceGroupName: pulumi.String("resourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Organization": pulumi.String("Administration"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const account = new azure_native.powerplatform.Account("account", {
+ *     accountName: "account",
+ *     description: "Description of the account.",
+ *     location: "East US",
+ *     resourceGroupName: "resourceGroup",
+ *     tags: {
+ *         Organization: "Administration",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * account = azure_native.powerplatform.Account("account",
+ *     account_name="account",
+ *     description="Description of the account.",
+ *     location="East US",
+ *     resource_group_name="resourceGroup",
+ *     tags={
+ *         "Organization": "Administration",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +123,72 @@ import javax.annotation.Nullable;
 public class Account extends io.pulumi.resources.CustomResource {
     /**
      * The description of the account.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the account.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

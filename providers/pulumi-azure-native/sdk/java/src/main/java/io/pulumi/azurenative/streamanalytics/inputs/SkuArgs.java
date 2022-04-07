@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that are associated with a SKU.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the SKU. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,SkuName>> name;

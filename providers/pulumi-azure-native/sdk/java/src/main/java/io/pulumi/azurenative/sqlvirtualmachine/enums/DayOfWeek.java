@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Day of week to apply the patch on.
-     * 
      */
     @EnumType
     public enum DayOfWeek {

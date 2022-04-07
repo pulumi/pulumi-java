@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the type of database account. This can only be set at database account creation.
-     * 
      */
     @EnumType
     public enum DatabaseAccountKind {

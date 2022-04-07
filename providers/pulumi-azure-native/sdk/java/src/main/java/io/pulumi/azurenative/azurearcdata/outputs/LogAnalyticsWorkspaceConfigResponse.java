@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class LogAnalyticsWorkspaceConfigResponse {
     /**
      * Azure Log Analytics workspace ID
-     * 
      */
     private final @Nullable String workspaceId;
 
@@ -24,7 +23,6 @@ public final class LogAnalyticsWorkspaceConfigResponse {
 
     /**
      * Azure Log Analytics workspace ID
-     * 
     */
     public Optional<String> getWorkspaceId() {
         return Optional.ofNullable(this.workspaceId);

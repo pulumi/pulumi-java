@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The activation Mode of the service package
-     * 
      */
     @EnumType
     public enum ArmUpgradeFailureAction {
         /**
          * Indicates that a rollback of the upgrade will be performed by Service Fabric if the upgrade fails.
-         * 
          */
         Rollback("Rollback"),
         /**
          * Indicates that a manual repair will need to be performed by the administrator if the upgrade fails. Service Fabric will not proceed to the next upgrade domain automatically.
-         * 
          */
         Manual("Manual");
 

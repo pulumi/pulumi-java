@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class EncryptionScopeKeyVaultPropertiesResponse {
     /**
      * The object identifier of the current versioned Key Vault Key in use.
-     * 
      */
     private final String currentVersionedKeyIdentifier;
     /**
      * The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
-     * 
      */
     private final @Nullable String keyUri;
     /**
      * Timestamp of last rotation of the Key Vault Key.
-     * 
      */
     private final String lastKeyRotationTimestamp;
 
@@ -39,21 +36,18 @@ public final class EncryptionScopeKeyVaultPropertiesResponse {
 
     /**
      * The object identifier of the current versioned Key Vault Key in use.
-     * 
     */
     public String getCurrentVersionedKeyIdentifier() {
         return this.currentVersionedKeyIdentifier;
     }
     /**
      * The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
-     * 
     */
     public Optional<String> getKeyUri() {
         return Optional.ofNullable(this.keyUri);
     }
     /**
      * Timestamp of last rotation of the Key Vault Key.
-     * 
     */
     public String getLastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;

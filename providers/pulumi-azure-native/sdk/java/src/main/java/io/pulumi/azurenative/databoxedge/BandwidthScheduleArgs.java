@@ -20,7 +20,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The days of the week when this schedule is applicable.
-     * 
      */
     @Import(name="days", required=true)
       private final Output<List<Either<String,DayOfWeek>>> days;
@@ -31,7 +30,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -42,7 +40,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The bandwidth schedule name which needs to be added/updated.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -53,7 +50,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The bandwidth rate in Mbps.
-     * 
      */
     @Import(name="rateInMbps", required=true)
       private final Output<Integer> rateInMbps;
@@ -64,7 +60,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The start time of the schedule in UTC.
-     * 
      */
     @Import(name="start", required=true)
       private final Output<String> start;
@@ -86,7 +80,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The stop time of the schedule in UTC.
-     * 
      */
     @Import(name="stop", required=true)
       private final Output<String> stop;

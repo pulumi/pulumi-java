@@ -22,7 +22,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Information about the author of the workbook template.
-     * 
      */
     @Import(name="author")
       private final @Nullable Output<String> author;
@@ -33,7 +32,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Workbook galleries supported by the template.
-     * 
      */
     @Import(name="galleries", required=true)
       private final Output<List<WorkbookTemplateGalleryArgs>> galleries;
@@ -44,7 +42,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
-     * 
      */
     @Import(name="localized")
       private final @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
@@ -55,7 +52,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -66,7 +62,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -77,7 +72,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -88,7 +82,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -99,7 +92,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -110,7 +102,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Valid JSON object containing workbook template payload.
-     * 
      */
     @Import(name="templateData", required=true)
       private final Output<Object> templateData;

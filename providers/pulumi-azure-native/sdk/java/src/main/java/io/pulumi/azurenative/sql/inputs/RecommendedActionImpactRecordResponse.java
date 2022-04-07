@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains information of estimated or observed impact on various metrics for an Azure SQL Database, Server or Elastic Pool Recommended Action.
- * 
  */
 public final class RecommendedActionImpactRecordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
 
     /**
      * Gets the absolute value of this dimension if applicable. e.g., Number of Queries affected
-     * 
      */
     @Import(name="absoluteValue", required=true)
       private final Double absoluteValue;
@@ -30,7 +28,6 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
 
     /**
      * Gets the absolute change in the value of this dimension. e.g., Absolute Disk space change in Megabytes
-     * 
      */
     @Import(name="changeValueAbsolute", required=true)
       private final Double changeValueAbsolute;
@@ -41,7 +38,6 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
 
     /**
      * Gets the relative change in the value of this dimension. e.g., Relative Disk space change in Percentage
-     * 
      */
     @Import(name="changeValueRelative", required=true)
       private final Double changeValueRelative;
@@ -52,7 +48,6 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
 
     /**
      * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
-     * 
      */
     @Import(name="dimensionName", required=true)
       private final String dimensionName;
@@ -63,7 +58,6 @@ public final class RecommendedActionImpactRecordResponse extends io.pulumi.resou
 
     /**
      * Gets the name of the impact dimension. e.g., CPUChange, DiskSpaceChange, NumberOfQueriesAffected.
-     * 
      */
     @Import(name="unit", required=true)
       private final String unit;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * This data object type contains the properties of a SCSI controller device attached to a virtual machine that is reported by the controller.
- * 
  */
 public final class VirtualSCSIControllerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the bus number of the controller.
-     * 
      */
     @Import(name="busNumber")
       private final @Nullable Integer busNumber;
@@ -32,7 +30,6 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the key of the controller.
-     * 
      */
     @Import(name="controllerKey")
       private final @Nullable Integer controllerKey;
@@ -43,7 +40,6 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the SCSI controller unit number.
-     * 
      */
     @Import(name="scsiCtlrUnitNumber")
       private final @Nullable Integer scsiCtlrUnitNumber;
@@ -54,7 +50,6 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the sharing mode.
-     * 
      */
     @Import(name="sharing")
       private final @Nullable String sharing;
@@ -65,7 +60,6 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
 
     /**
      * Gets or sets the controller type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

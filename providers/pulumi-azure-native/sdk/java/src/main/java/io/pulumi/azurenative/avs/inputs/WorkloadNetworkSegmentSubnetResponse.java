@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subnet configuration for segment
- * 
  */
 public final class WorkloadNetworkSegmentSubnetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WorkloadNetworkSegmentSubnetResponse extends io.pulumi.resour
 
     /**
      * DHCP Range assigned for subnet.
-     * 
      */
     @Import(name="dhcpRanges")
       private final @Nullable List<String> dhcpRanges;
@@ -32,7 +30,6 @@ public final class WorkloadNetworkSegmentSubnetResponse extends io.pulumi.resour
 
     /**
      * Gateway address.
-     * 
      */
     @Import(name="gatewayAddress")
       private final @Nullable String gatewayAddress;

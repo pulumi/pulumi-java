@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A consent link
- * 
  */
 public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
 
     /**
      * Display name of the parameter in the connection provider's OAuth settings
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -31,7 +29,6 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
 
     /**
      * URI for first party login
-     * 
      */
     @Import(name="firstPartyLoginUri")
       private final @Nullable String firstPartyLoginUri;
@@ -42,7 +39,6 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
 
     /**
      * URI for the consent link
-     * 
      */
     @Import(name="link")
       private final @Nullable String link;
@@ -53,7 +49,6 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
 
     /**
      * Status of the link
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

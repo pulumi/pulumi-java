@@ -15,7 +15,6 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
 
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -26,7 +25,6 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
 
     /**
      * Name of the Cosmos DB Cassandra view
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -37,7 +35,6 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
 
     /**
      * A system generated property. A unique identifier.
-     * 
      */
     @Import(name="rid", required=true)
       private final String rid;
@@ -48,7 +45,6 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
 
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
-     * 
      */
     @Import(name="ts", required=true)
       private final Double ts;
@@ -59,7 +55,6 @@ public final class CassandraViewGetPropertiesResponseResource extends io.pulumi.
 
     /**
      * View Definition of the Cosmos DB Cassandra view
-     * 
      */
     @Import(name="viewDefinition", required=true)
       private final String viewDefinition;

@@ -14,7 +14,6 @@ public final class GetConfigurationProfileArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the configuration profile. The profile name should be set to 'default', all other names will be overwritten.
-     * 
      */
     @Import(name="profileName", required=true)
       private final String profileName;

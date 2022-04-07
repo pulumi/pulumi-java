@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class GetTenantConfigurationResult {
     /**
      * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
-     * 
      */
     private final @Nullable Boolean enforcePrivateMarkdownStorage;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -47,28 +43,24 @@ public final class GetTenantConfigurationResult {
 
     /**
      * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
-     * 
     */
     public Optional<Boolean> getEnforcePrivateMarkdownStorage() {
         return Optional.ofNullable(this.enforcePrivateMarkdownStorage);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

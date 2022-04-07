@@ -14,7 +14,6 @@ public final class GetAttestationAtResourceArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the attestation.
-     * 
      */
     @Import(name="attestationName", required=true)
       private final String attestationName;
@@ -25,7 +24,6 @@ public final class GetAttestationAtResourceArgs extends io.pulumi.resources.Invo
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;

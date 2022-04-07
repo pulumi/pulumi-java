@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class StorageProfileResponse {
     /**
      * Backup retention days for the server.
-     * 
      */
     private final @Nullable Integer backupRetentionDays;
     /**
      * Enable Geo-redundant or not for server backup.
-     * 
      */
     private final @Nullable String geoRedundantBackup;
     /**
      * Enable Storage Auto Grow.
-     * 
      */
     private final @Nullable String storageAutogrow;
     /**
      * Max storage allowed for a server.
-     * 
      */
     private final @Nullable Integer storageMB;
 
@@ -47,28 +43,24 @@ public final class StorageProfileResponse {
 
     /**
      * Backup retention days for the server.
-     * 
     */
     public Optional<Integer> getBackupRetentionDays() {
         return Optional.ofNullable(this.backupRetentionDays);
     }
     /**
      * Enable Geo-redundant or not for server backup.
-     * 
     */
     public Optional<String> getGeoRedundantBackup() {
         return Optional.ofNullable(this.geoRedundantBackup);
     }
     /**
      * Enable Storage Auto Grow.
-     * 
     */
     public Optional<String> getStorageAutogrow() {
         return Optional.ofNullable(this.storageAutogrow);
     }
     /**
      * Max storage allowed for a server.
-     * 
     */
     public Optional<Integer> getStorageMB() {
         return Optional.ofNullable(this.storageMB);

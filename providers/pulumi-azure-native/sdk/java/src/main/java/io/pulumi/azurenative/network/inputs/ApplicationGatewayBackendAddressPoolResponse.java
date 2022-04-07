@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Backend Address Pool of an application gateway.
- * 
  */
 public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
 
     /**
      * Backend addresses.
-     * 
      */
     @Import(name="backendAddresses")
       private final @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
@@ -34,7 +32,6 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
 
     /**
      * Collection of references to IPs defined in network interfaces.
-     * 
      */
     @Import(name="backendIPConfigurations", required=true)
       private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
@@ -45,7 +42,6 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -56,7 +52,6 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -67,7 +62,6 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
 
     /**
      * Name of the backend address pool that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -78,7 +72,6 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
 
     /**
      * The provisioning state of the backend address pool resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -89,7 +82,6 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

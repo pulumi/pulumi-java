@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the Storage Target.
-     * 
      */
     @EnumType
     public enum StorageTargetType {

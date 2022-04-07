@@ -17,7 +17,6 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cloud shell user settings properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<UserPropertiesArgs> properties;
@@ -28,7 +27,6 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the user settings
-     * 
      */
     @Import(name="userSettingsName")
       private final @Nullable Output<String> userSettingsName;

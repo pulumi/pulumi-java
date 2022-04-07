@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Description about the errors happen while performing migration validation
- * 
  */
 public final class SchemaComparisonValidationResultTypeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
 
     /**
      * Name of the object that has the difference
-     * 
      */
     @Import(name="objectName", required=true)
       private final String objectName;
@@ -29,7 +27,6 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
 
     /**
      * Type of the object that has the difference. e.g (Table/View/StoredProcedure)
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;
@@ -40,7 +37,6 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
 
     /**
      * Update action type with respect to target
-     * 
      */
     @Import(name="updateAction", required=true)
       private final String updateAction;

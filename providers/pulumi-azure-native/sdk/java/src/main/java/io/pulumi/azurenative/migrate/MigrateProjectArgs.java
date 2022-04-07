@@ -18,7 +18,6 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the eTag for concurrency control.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -29,7 +28,6 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the Azure location in which migrate project is created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Migrate project.
-     * 
      */
     @Import(name="migrateProjectName")
       private final @Nullable Output<String> migrateProjectName;
@@ -51,7 +48,6 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the nested properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<MigrateProjectPropertiesArgs> properties;
@@ -62,7 +58,6 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Resource Group that migrate project is part of.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<MigrateProjectTagsArgs> tags;

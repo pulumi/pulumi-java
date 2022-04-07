@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The object representing continuous mode backup policy.
- * 
  */
 public final class ContinuousModeBackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContinuousModeBackupPolicyArgs extends io.pulumi.resources.Re
     /**
      * Describes the mode of backups.
      * Expected value is 'Continuous'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

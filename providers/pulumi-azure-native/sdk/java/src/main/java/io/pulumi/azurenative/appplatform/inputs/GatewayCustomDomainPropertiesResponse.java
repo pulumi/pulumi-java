@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of custom domain for Spring Cloud Gateway
- * 
  */
 public final class GatewayCustomDomainPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GatewayCustomDomainPropertiesResponse extends io.pulumi.resou
 
     /**
      * The thumbprint of bound certificate.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;

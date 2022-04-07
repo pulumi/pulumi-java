@@ -14,7 +14,6 @@ public final class GetSqlManagedInstanceArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the Azure resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetSqlManagedInstanceArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Name of SQL Managed Instance
-     * 
      */
     @Import(name="sqlManagedInstanceName", required=true)
       private final String sqlManagedInstanceName;

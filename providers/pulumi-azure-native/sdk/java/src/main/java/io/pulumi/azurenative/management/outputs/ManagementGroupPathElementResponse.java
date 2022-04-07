@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ManagementGroupPathElementResponse {
     /**
      * The friendly name of the group.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * The name of the group.
-     * 
      */
     private final @Nullable String name;
 
@@ -32,14 +30,12 @@ public final class ManagementGroupPathElementResponse {
 
     /**
      * The friendly name of the group.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The name of the group.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

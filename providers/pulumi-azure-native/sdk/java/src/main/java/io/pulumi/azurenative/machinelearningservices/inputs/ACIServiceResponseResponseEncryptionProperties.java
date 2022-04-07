@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The encryption properties.
- * 
  */
 public final class ACIServiceResponseResponseEncryptionProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ACIServiceResponseResponseEncryptionProperties extends io.pul
 
     /**
      * Encryption Key name
-     * 
      */
     @Import(name="keyName", required=true)
       private final String keyName;
@@ -29,7 +27,6 @@ public final class ACIServiceResponseResponseEncryptionProperties extends io.pul
 
     /**
      * Encryption Key Version
-     * 
      */
     @Import(name="keyVersion", required=true)
       private final String keyVersion;
@@ -40,7 +37,6 @@ public final class ACIServiceResponseResponseEncryptionProperties extends io.pul
 
     /**
      * vault base Url
-     * 
      */
     @Import(name="vaultBaseUrl", required=true)
       private final String vaultBaseUrl;

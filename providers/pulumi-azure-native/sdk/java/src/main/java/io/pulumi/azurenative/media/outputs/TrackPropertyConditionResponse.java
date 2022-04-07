@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class TrackPropertyConditionResponse {
     /**
      * Track property condition operation
-     * 
      */
     private final String operation;
     /**
      * Track property type
-     * 
      */
     private final String property;
     /**
      * Track property value
-     * 
      */
     private final @Nullable String value;
 
@@ -39,21 +36,18 @@ public final class TrackPropertyConditionResponse {
 
     /**
      * Track property condition operation
-     * 
     */
     public String getOperation() {
         return this.operation;
     }
     /**
      * Track property type
-     * 
     */
     public String getProperty() {
         return this.property;
     }
     /**
      * Track property value
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Required validation properties for tokens generated with Elliptical Curve algorithm.
- * 
  */
 public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
-     * 
      */
     @Import(name="alg", required=true)
       private final String alg;
@@ -29,7 +27,6 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
-     * 
      */
     @Import(name="kid", required=true)
       private final String kid;
@@ -41,7 +38,6 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EccTokenKey'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -52,7 +48,6 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * X coordinate.
-     * 
      */
     @Import(name="x", required=true)
       private final String x;
@@ -63,7 +58,6 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Y coordinate.
-     * 
      */
     @Import(name="y", required=true)
       private final String y;

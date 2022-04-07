@@ -16,7 +16,6 @@ public final class InsightsTableResultResponseColumns extends io.pulumi.resource
 
     /**
      * the name of the colum
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -27,7 +26,6 @@ public final class InsightsTableResultResponseColumns extends io.pulumi.resource
 
     /**
      * the type of the colum
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes {
     /**
      * A list of public IP prefix resources.
-     * 
      */
     private final @Nullable List<ResourceReferenceResponse> publicIPPrefixes;
 
@@ -24,7 +23,6 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes {
 
     /**
      * A list of public IP prefix resources.
-     * 
     */
     public List<ResourceReferenceResponse> getPublicIPPrefixes() {
         return this.publicIPPrefixes == null ? List.of() : this.publicIPPrefixes;

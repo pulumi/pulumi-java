@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The cloudwatch to kinesis connection configuration
- * 
  */
 public final class DefenderForContainersAwsOfferingResponseCloudWatchToKinesis extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DefenderForContainersAwsOfferingResponseCloudWatchToKinesis e
 
     /**
      * The cloud role ARN in AWS for this feature
-     * 
      */
     @Import(name="cloudRoleArn")
       private final @Nullable String cloudRoleArn;

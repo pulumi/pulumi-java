@@ -14,7 +14,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the private endpoint connection.
-     * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
@@ -25,7 +24,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final String registryName;
@@ -36,7 +34,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

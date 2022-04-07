@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Synchronization mode
-     * 
      */
     @EnumType
     public enum SynchronizationMode {

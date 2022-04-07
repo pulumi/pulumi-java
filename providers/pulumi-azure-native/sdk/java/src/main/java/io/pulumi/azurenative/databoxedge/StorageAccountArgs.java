@@ -19,7 +19,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data policy of the storage Account.
-     * 
      */
     @Import(name="dataPolicy", required=true)
       private final Output<Either<String,DataPolicy>> dataPolicy;
@@ -30,7 +29,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description for the storage Account.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -52,7 +49,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage Account Credential Id
-     * 
      */
     @Import(name="storageAccountCredentialId")
       private final @Nullable Output<String> storageAccountCredentialId;
@@ -74,7 +69,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The StorageAccount name.
-     * 
      */
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
@@ -85,7 +79,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current status of the storage account
-     * 
      */
     @Import(name="storageAccountStatus")
       private final @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus;

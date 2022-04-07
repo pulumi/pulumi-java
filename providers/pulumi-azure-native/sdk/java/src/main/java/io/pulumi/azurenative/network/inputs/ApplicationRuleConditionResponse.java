@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rule condition of type application.
- * 
  */
 public final class ApplicationRuleConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
 
     /**
      * Description of the rule condition.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -33,7 +31,6 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
 
     /**
      * List of destination IP addresses or Service Tags.
-     * 
      */
     @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
@@ -44,7 +41,6 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
 
     /**
      * List of FQDN Tags for this rule condition.
-     * 
      */
     @Import(name="fqdnTags")
       private final @Nullable List<String> fqdnTags;
@@ -55,7 +51,6 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
 
     /**
      * Name of the rule condition.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -66,7 +61,6 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
 
     /**
      * Array of Application Protocols.
-     * 
      */
     @Import(name="protocols")
       private final @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols;
@@ -78,7 +72,6 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
     /**
      * Rule Condition Type.
      * Expected value is 'ApplicationRuleCondition'.
-     * 
      */
     @Import(name="ruleConditionType", required=true)
       private final String ruleConditionType;
@@ -89,7 +82,6 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
 
     /**
      * List of source IP addresses for this rule.
-     * 
      */
     @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
@@ -100,7 +92,6 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
 
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     @Import(name="sourceIpGroups")
       private final @Nullable List<String> sourceIpGroups;
@@ -111,7 +102,6 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
 
     /**
      * List of FQDNs for this rule condition.
-     * 
      */
     @Import(name="targetFqdns")
       private final @Nullable List<String> targetFqdns;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details about the state of the reference virtual machine.
- * 
  */
 public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Last known compute power state captured in DTL
-     * 
      */
     @Import(name="lastKnownPowerState", required=true)
       private final String lastKnownPowerState;
@@ -29,7 +27,6 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The power state of the reference virtual machine.
-     * 
      */
     @Import(name="powerState", required=true)
       private final String powerState;
@@ -40,7 +37,6 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
-     * 
      */
     @Import(name="rdpAuthority", required=true)
       private final String rdpAuthority;
@@ -51,7 +47,6 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
-     * 
      */
     @Import(name="sshAuthority", required=true)
       private final String sshAuthority;

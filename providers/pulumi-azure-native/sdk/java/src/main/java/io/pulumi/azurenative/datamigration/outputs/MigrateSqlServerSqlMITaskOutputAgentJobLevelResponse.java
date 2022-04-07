@@ -14,48 +14,39 @@ import java.util.Objects;
 public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
     /**
      * Migration end time
-     * 
      */
     private final String endedOn;
     /**
      * Migration errors and warnings per job
-     * 
      */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
     /**
      * Result identifier
-     * 
      */
     private final String id;
     /**
      * The state of the original Agent Job.
-     * 
      */
     private final Boolean isEnabled;
     /**
      * Migration progress message
-     * 
      */
     private final String message;
     /**
      * Agent Job name.
-     * 
      */
     private final String name;
     /**
      * Result type
      * Expected value is 'AgentJobLevelOutput'.
-     * 
      */
     private final String resultType;
     /**
      * Migration start time
-     * 
      */
     private final String startedOn;
     /**
      * Current state of migration
-     * 
      */
     private final String state;
 
@@ -83,42 +74,36 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
 
     /**
      * Migration end time
-     * 
     */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Migration errors and warnings per job
-     * 
     */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The state of the original Agent Job.
-     * 
     */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Migration progress message
-     * 
     */
     public String getMessage() {
         return this.message;
     }
     /**
      * Agent Job name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -126,21 +111,18 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
     /**
      * Result type
      * Expected value is 'AgentJobLevelOutput'.
-     * 
     */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Migration start time
-     * 
     */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
-     * 
     */
     public String getState() {
         return this.state;

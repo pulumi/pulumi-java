@@ -17,7 +17,6 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
 
     /**
      * Name of the configuration profile assignment. Only default is supported.
-     * 
      */
     @Import(name="configurationProfileAssignmentName")
       private final @Nullable Output<String> configurationProfileAssignmentName;
@@ -28,7 +27,6 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
 
     /**
      * Properties of the configuration profile assignment.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
 
     /**
      * The name of the virtual machine.
-     * 
      */
     @Import(name="vmName", required=true)
       private final Output<String> vmName;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for defining the transfer of data.
- * 
  */
 public final class TransferConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
-     * 
      */
     @Import(name="transferAllDetails")
       private final @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
@@ -35,7 +33,6 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Type of the configuration for transfer.
-     * 
      */
     @Import(name="transferConfigurationType", required=true)
       private final Output<Either<String,TransferConfigurationType>> transferConfigurationType;
@@ -46,7 +43,6 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
-     * 
      */
     @Import(name="transferFilterDetails")
       private final @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;

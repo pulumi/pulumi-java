@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Azure Machine Learning compute instance.
- * 
  */
 public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Location for the underlying compute
-     * 
      */
     @Import(name="computeLocation")
       private final @Nullable String computeLocation;
@@ -36,7 +34,6 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
     /**
      * The type of compute
      * Expected value is 'ComputeInstance'.
-     * 
      */
     @Import(name="computeType", required=true)
       private final String computeType;
@@ -47,7 +44,6 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The description of the Machine Learning compute.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -58,7 +54,6 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
-     * 
      */
     @Import(name="isAttachedCompute", required=true)
       private final Boolean isAttachedCompute;
@@ -69,7 +64,6 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Compute Instance properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable ComputeInstanceResponseProperties properties;
@@ -80,7 +74,6 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Errors during provisioning
-     * 
      */
     @Import(name="provisioningErrors", required=true)
       private final List<MachineLearningServiceErrorResponse> provisioningErrors;
@@ -91,7 +84,6 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -102,7 +94,6 @@ public final class ComputeInstanceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * ARM resource id of the underlying compute
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

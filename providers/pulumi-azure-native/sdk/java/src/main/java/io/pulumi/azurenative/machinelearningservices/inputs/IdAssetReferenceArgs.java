@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Reference to an asset via its ARM resource ID.
- * 
  */
 public final class IdAssetReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class IdAssetReferenceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * ARM resource ID of the asset.
-     * 
      */
     @Import(name="assetId", required=true)
       private final Output<String> assetId;
@@ -31,7 +29,6 @@ public final class IdAssetReferenceArgs extends io.pulumi.resources.ResourceArgs
     /**
      * Enum to determine which reference method to use for an asset.
      * Expected value is 'Id'.
-     * 
      */
     @Import(name="referenceType", required=true)
       private final Output<String> referenceType;

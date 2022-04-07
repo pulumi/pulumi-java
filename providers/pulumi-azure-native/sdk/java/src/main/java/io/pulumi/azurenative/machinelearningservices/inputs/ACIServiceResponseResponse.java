@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * The response for an ACI service.
- * 
  */
 public final class ACIServiceResponseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -31,7 +30,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether or not Application Insights is enabled.
-     * 
      */
     @Import(name="appInsightsEnabled")
       private final @Nullable Boolean appInsightsEnabled;
@@ -42,7 +40,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether or not authentication is enabled on the service.
-     * 
      */
     @Import(name="authEnabled")
       private final @Nullable Boolean authEnabled;
@@ -53,7 +50,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The CName for the service.
-     * 
      */
     @Import(name="cname")
       private final @Nullable String cname;
@@ -65,7 +61,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
     /**
      * The compute environment type for the service.
      * Expected value is 'ACI'.
-     * 
      */
     @Import(name="computeType", required=true)
       private final String computeType;
@@ -76,7 +71,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The container resource requirements.
-     * 
      */
     @Import(name="containerResourceRequirements")
       private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
@@ -87,7 +81,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Details of the data collection options specified.
-     * 
      */
     @Import(name="dataCollection")
       private final @Nullable ACIServiceResponseResponseDataCollection dataCollection;
@@ -98,7 +91,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The deployment type for the service.
-     * 
      */
     @Import(name="deploymentType")
       private final @Nullable String deploymentType;
@@ -109,7 +101,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -120,7 +111,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The encryption properties.
-     * 
      */
     @Import(name="encryptionProperties")
       private final @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties;
@@ -131,7 +121,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Environment, models and assets used for inferencing.
-     * 
      */
     @Import(name="environmentImageRequest")
       private final @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
@@ -142,7 +131,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The error details.
-     * 
      */
     @Import(name="error", required=true)
       private final ServiceResponseBaseResponseError error;
@@ -153,7 +141,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The service tag dictionary. Tags are mutable.
-     * 
      */
     @Import(name="kvTags")
       private final @Nullable Map<String,String> kvTags;
@@ -164,7 +151,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The name of the Azure location/region.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -175,7 +161,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Details on the models and configurations.
-     * 
      */
     @Import(name="modelConfigMap", required=true)
       private final Map<String,Object> modelConfigMap;
@@ -186,7 +171,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The list of models.
-     * 
      */
     @Import(name="models")
       private final @Nullable List<ModelResponse> models;
@@ -197,7 +181,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The service property dictionary. Properties are immutable.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -208,7 +191,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The public Fqdn for the service.
-     * 
      */
     @Import(name="publicFqdn")
       private final @Nullable String publicFqdn;
@@ -219,7 +201,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The public IP address for the service.
-     * 
      */
     @Import(name="publicIp")
       private final @Nullable String publicIp;
@@ -230,7 +211,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Uri for sending scoring requests.
-     * 
      */
     @Import(name="scoringUri", required=true)
       private final String scoringUri;
@@ -241,7 +221,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The public SSL certificate in PEM format to use if SSL is enabled.
-     * 
      */
     @Import(name="sslCertificate")
       private final @Nullable String sslCertificate;
@@ -252,7 +231,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether or not SSL is enabled.
-     * 
      */
     @Import(name="sslEnabled")
       private final @Nullable Boolean sslEnabled;
@@ -263,7 +241,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The public SSL key in PEM format for the certificate.
-     * 
      */
     @Import(name="sslKey")
       private final @Nullable String sslKey;
@@ -274,7 +251,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The current state of the service.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -285,7 +261,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Uri for sending swagger requests.
-     * 
      */
     @Import(name="swaggerUri", required=true)
       private final String swaggerUri;
@@ -296,7 +271,6 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
 
     /**
      * The virtual network configuration.
-     * 
      */
     @Import(name="vnetConfiguration")
       private final @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;

@@ -18,7 +18,104 @@ import javax.annotation.Nullable;
  * The container for solution.
  * API Version: 2015-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SolutionCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managementAssociation = new AzureNative.OperationsManagement.ManagementAssociation("managementAssociation", new AzureNative.OperationsManagement.ManagementAssociationArgs
+ *         {
+ *             Location = "East US",
+ *             ManagementAssociationName = "managementAssociation1",
+ *             Properties = new AzureNative.OperationsManagement.Inputs.ManagementAssociationPropertiesArgs
+ *             {
+ *                 ApplicationId = "/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1",
+ *             },
+ *             ProviderName = "providerName",
+ *             ResourceGroupName = "rg1",
+ *             ResourceName = "resourceName",
+ *             ResourceType = "resourceType",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationsmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationsmanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationsmanagement.NewManagementAssociation(ctx, "managementAssociation", &operationsmanagement.ManagementAssociationArgs{
+ * 			Location:                  pulumi.String("East US"),
+ * 			ManagementAssociationName: pulumi.String("managementAssociation1"),
+ * 			Properties: &operationsmanagement.ManagementAssociationPropertiesArgs{
+ * 				ApplicationId: pulumi.String("/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1"),
+ * 			},
+ * 			ProviderName:      pulumi.String("providerName"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ResourceName:      pulumi.String("resourceName"),
+ * 			ResourceType:      pulumi.String("resourceType"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managementAssociation = new azure_native.operationsmanagement.ManagementAssociation("managementAssociation", {
+ *     location: "East US",
+ *     managementAssociationName: "managementAssociation1",
+ *     properties: {
+ *         applicationId: "/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1",
+ *     },
+ *     providerName: "providerName",
+ *     resourceGroupName: "rg1",
+ *     resourceName: "resourceName",
+ *     resourceType: "resourceType",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * management_association = azure_native.operationsmanagement.ManagementAssociation("managementAssociation",
+ *     location="East US",
+ *     management_association_name="managementAssociation1",
+ *     properties=azure_native.operationsmanagement.ManagementAssociationPropertiesArgs(
+ *         application_id="/subscriptions/sub1/resourcegroups/rg1/providers/Microsoft.Appliance/Appliances/appliance1",
+ *     ),
+ *     provider_name="providerName",
+ *     resource_group_name="rg1",
+ *     resource_name="resourceName",
+ *     resource_type="resourceType")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +130,48 @@ import javax.annotation.Nullable;
 public class ManagementAssociation extends io.pulumi.resources.CustomResource {
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
-     * 
      */
     @Export(name="properties", type=ManagementAssociationPropertiesResponse.class, parameters={})
     private Output<ManagementAssociationPropertiesResponse> properties;
 
     /**
      * @return Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
-     * 
      */
     public Output<ManagementAssociationPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

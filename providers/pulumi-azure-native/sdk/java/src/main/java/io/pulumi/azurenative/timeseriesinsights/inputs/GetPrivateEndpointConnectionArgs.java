@@ -14,7 +14,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the Time Series Insights environment associated with the specified resource group.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final String environmentName;
@@ -25,7 +24,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the private endpoint connection associated with the Azure resource
-     * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
@@ -36,7 +34,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

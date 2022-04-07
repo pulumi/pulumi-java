@@ -19,7 +19,151 @@ import javax.annotation.Nullable;
  * The essential information related to the peer's ASN.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a peer ASN
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var peerAsn = new AzureNative.Peering.PeerAsn("peerAsn", new AzureNative.Peering.PeerAsnArgs
+ *         {
+ *             PeerAsn = 65000,
+ *             PeerAsnName = "peerAsnName",
+ *             PeerContactDetail = 
+ *             {
+ *                 new AzureNative.Peering.Inputs.ContactDetailArgs
+ *                 {
+ *                     Email = "noc@contoso.com",
+ *                     Phone = "+1 (234) 567-8999",
+ *                     Role = "Noc",
+ *                 },
+ *                 new AzureNative.Peering.Inputs.ContactDetailArgs
+ *                 {
+ *                     Email = "abc@contoso.com",
+ *                     Phone = "+1 (234) 567-8900",
+ *                     Role = "Policy",
+ *                 },
+ *                 new AzureNative.Peering.Inputs.ContactDetailArgs
+ *                 {
+ *                     Email = "xyz@contoso.com",
+ *                     Phone = "+1 (234) 567-8900",
+ *                     Role = "Technical",
+ *                 },
+ *             },
+ *             PeerName = "Contoso",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := peering.NewPeerAsn(ctx, "peerAsn", &peering.PeerAsnArgs{
+ * 			PeerAsn:     pulumi.Int(65000),
+ * 			PeerAsnName: pulumi.String("peerAsnName"),
+ * 			PeerContactDetail: []peering.ContactDetailArgs{
+ * 				&peering.ContactDetailArgs{
+ * 					Email: pulumi.String("noc@contoso.com"),
+ * 					Phone: pulumi.String("+1 (234) 567-8999"),
+ * 					Role:  pulumi.String("Noc"),
+ * 				},
+ * 				&peering.ContactDetailArgs{
+ * 					Email: pulumi.String("abc@contoso.com"),
+ * 					Phone: pulumi.String("+1 (234) 567-8900"),
+ * 					Role:  pulumi.String("Policy"),
+ * 				},
+ * 				&peering.ContactDetailArgs{
+ * 					Email: pulumi.String("xyz@contoso.com"),
+ * 					Phone: pulumi.String("+1 (234) 567-8900"),
+ * 					Role:  pulumi.String("Technical"),
+ * 				},
+ * 			},
+ * 			PeerName: pulumi.String("Contoso"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const peerAsn = new azure_native.peering.PeerAsn("peerAsn", {
+ *     peerAsn: 65000,
+ *     peerAsnName: "peerAsnName",
+ *     peerContactDetail: [
+ *         {
+ *             email: "noc@contoso.com",
+ *             phone: "+1 (234) 567-8999",
+ *             role: "Noc",
+ *         },
+ *         {
+ *             email: "abc@contoso.com",
+ *             phone: "+1 (234) 567-8900",
+ *             role: "Policy",
+ *         },
+ *         {
+ *             email: "xyz@contoso.com",
+ *             phone: "+1 (234) 567-8900",
+ *             role: "Technical",
+ *         },
+ *     ],
+ *     peerName: "Contoso",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * peer_asn = azure_native.peering.PeerAsn("peerAsn",
+ *     peer_asn=65000,
+ *     peer_asn_name="peerAsnName",
+ *     peer_contact_detail=[
+ *         azure_native.peering.ContactDetailArgs(
+ *             email="noc@contoso.com",
+ *             phone="+1 (234) 567-8999",
+ *             role="Noc",
+ *         ),
+ *         azure_native.peering.ContactDetailArgs(
+ *             email="abc@contoso.com",
+ *             phone="+1 (234) 567-8900",
+ *             role="Policy",
+ *         ),
+ *         azure_native.peering.ContactDetailArgs(
+ *             email="xyz@contoso.com",
+ *             phone="+1 (234) 567-8900",
+ *             role="Technical",
+ *         ),
+ *     ],
+ *     peer_name="Contoso")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +178,84 @@ import javax.annotation.Nullable;
 public class PeerAsn extends io.pulumi.resources.CustomResource {
     /**
      * The error message for the validation state
-     * 
      */
     @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     /**
      * @return The error message for the validation state
-     * 
      */
     public Output<String> getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Autonomous System Number (ASN) of the peer.
-     * 
      */
     @Export(name="peerAsn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> peerAsn;
 
     /**
      * @return The Autonomous System Number (ASN) of the peer.
-     * 
      */
     public Output</* @Nullable */ Integer> getPeerAsn() {
         return this.peerAsn;
     }
     /**
      * The contact details of the peer.
-     * 
      */
     @Export(name="peerContactDetail", type=List.class, parameters={ContactDetailResponse.class})
     private Output</* @Nullable */ List<ContactDetailResponse>> peerContactDetail;
 
     /**
      * @return The contact details of the peer.
-     * 
      */
     public Output</* @Nullable */ List<ContactDetailResponse>> getPeerContactDetail() {
         return this.peerContactDetail;
     }
     /**
      * The name of the peer.
-     * 
      */
     @Export(name="peerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerName;
 
     /**
      * @return The name of the peer.
-     * 
      */
     public Output</* @Nullable */ String> getPeerName() {
         return this.peerName;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The validation state of the ASN associated with the peer.
-     * 
      */
     @Export(name="validationState", type=String.class, parameters={})
     private Output</* @Nullable */ String> validationState;
 
     /**
      * @return The validation state of the ASN associated with the peer.
-     * 
      */
     public Output</* @Nullable */ String> getValidationState() {
         return this.validationState;

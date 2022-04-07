@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ContainerLabelResponse {
     /**
      * The name of the container label.
-     * 
      */
     private final String name;
     /**
      * The value of the container label.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class ContainerLabelResponse {
 
     /**
      * The name of the container label.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The value of the container label.
-     * 
     */
     public String getValue() {
         return this.value;

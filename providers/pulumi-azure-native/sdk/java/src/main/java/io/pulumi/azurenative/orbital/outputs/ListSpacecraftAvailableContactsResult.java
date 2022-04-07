@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ListSpacecraftAvailableContactsResult {
     /**
      * The URL to get the next set of results.
-     * 
      */
     private final String nextLink;
     /**
      * A list of available contacts
-     * 
      */
     private final @Nullable List<AvailableContactsResponse> value;
 
@@ -33,14 +31,12 @@ public final class ListSpacecraftAvailableContactsResult {
 
     /**
      * The URL to get the next set of results.
-     * 
     */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * A list of available contacts
-     * 
     */
     public List<AvailableContactsResponse> getValue() {
         return this.value == null ? List.of() : this.value;

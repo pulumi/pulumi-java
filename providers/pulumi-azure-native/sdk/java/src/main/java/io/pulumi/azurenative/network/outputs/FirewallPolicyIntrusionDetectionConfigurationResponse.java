@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class FirewallPolicyIntrusionDetectionConfigurationResponse {
     /**
      * List of rules for traffic to bypass.
-     * 
      */
     private final @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings;
     /**
      * List of specific signatures states.
-     * 
      */
     private final @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
 
@@ -33,14 +31,12 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse {
 
     /**
      * List of rules for traffic to bypass.
-     * 
     */
     public List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> getBypassTrafficSettings() {
         return this.bypassTrafficSettings == null ? List.of() : this.bypassTrafficSettings;
     }
     /**
      * List of specific signatures states.
-     * 
     */
     public List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> getSignatureOverrides() {
         return this.signatureOverrides == null ? List.of() : this.signatureOverrides;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Data Explorer command activity.
- * 
  */
 public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
 
     /**
      * A control command, according to the Azure Data Explorer command syntax. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="command", required=true)
       private final Object command;
@@ -37,7 +35,6 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
 
     /**
      * Control command timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..)
-     * 
      */
     @Import(name="commandTimeout")
       private final @Nullable Object commandTimeout;
@@ -48,7 +45,6 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -59,7 +55,6 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -70,7 +65,6 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -81,7 +75,6 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -92,7 +85,6 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -104,7 +96,6 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
     /**
      * Type of activity.
      * Expected value is 'AzureDataExplorerCommand'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -115,7 +106,6 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

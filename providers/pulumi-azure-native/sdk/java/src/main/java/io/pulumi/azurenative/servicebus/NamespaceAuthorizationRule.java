@@ -17,7 +17,96 @@ import javax.annotation.Nullable;
  * Description of a namespace authorization rule.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NameSpaceAuthorizationRuleCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var namespaceAuthorizationRule = new AzureNative.ServiceBus.NamespaceAuthorizationRule("namespaceAuthorizationRule", new AzureNative.ServiceBus.NamespaceAuthorizationRuleArgs
+ *         {
+ *             AuthorizationRuleName = "sdk-AuthRules-1788",
+ *             NamespaceName = "sdk-Namespace-6914",
+ *             ResourceGroupName = "ArunMonocle",
+ *             Rights = 
+ *             {
+ *                 "Listen",
+ *                 "Send",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewNamespaceAuthorizationRule(ctx, "namespaceAuthorizationRule", &servicebus.NamespaceAuthorizationRuleArgs{
+ * 			AuthorizationRuleName: pulumi.String("sdk-AuthRules-1788"),
+ * 			NamespaceName:         pulumi.String("sdk-Namespace-6914"),
+ * 			ResourceGroupName:     pulumi.String("ArunMonocle"),
+ * 			Rights: servicebus.AccessRightsArray{
+ * 				"Listen",
+ * 				"Send",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthorizationRule("namespaceAuthorizationRule", {
+ *     authorizationRuleName: "sdk-AuthRules-1788",
+ *     namespaceName: "sdk-Namespace-6914",
+ *     resourceGroupName: "ArunMonocle",
+ *     rights: [
+ *         "Listen",
+ *         "Send",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * namespace_authorization_rule = azure_native.servicebus.NamespaceAuthorizationRule("namespaceAuthorizationRule",
+ *     authorization_rule_name="sdk-AuthRules-1788",
+ *     namespace_name="sdk-Namespace-6914",
+ *     resource_group_name="ArunMonocle",
+ *     rights=[
+ *         "Listen",
+ *         "Send",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +121,36 @@ import javax.annotation.Nullable;
 public class NamespaceAuthorizationRule extends io.pulumi.resources.CustomResource {
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
-     * 
      */
     @Export(name="rights", type=List.class, parameters={String.class})
     private Output<List<String>> rights;
 
     /**
      * @return The rights associated with the rule.
-     * 
      */
     public Output<List<String>> getRights() {
         return this.rights;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

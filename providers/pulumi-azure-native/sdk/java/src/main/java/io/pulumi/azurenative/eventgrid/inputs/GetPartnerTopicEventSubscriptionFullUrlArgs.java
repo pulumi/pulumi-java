@@ -14,7 +14,6 @@ public final class GetPartnerTopicEventSubscriptionFullUrlArgs extends io.pulumi
 
     /**
      * Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
-     * 
      */
     @Import(name="eventSubscriptionName", required=true)
       private final String eventSubscriptionName;
@@ -25,7 +24,6 @@ public final class GetPartnerTopicEventSubscriptionFullUrlArgs extends io.pulumi
 
     /**
      * Name of the partner topic.
-     * 
      */
     @Import(name="partnerTopicName", required=true)
       private final String partnerTopicName;
@@ -36,7 +34,6 @@ public final class GetPartnerTopicEventSubscriptionFullUrlArgs extends io.pulumi
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

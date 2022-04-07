@@ -20,7 +20,105 @@ import javax.annotation.Nullable;
  * Represents an instance of a orchestrator.
  * API Version: 2021-03-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### put delegated subnet
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var delegatedSubnetServiceDetails = new AzureNative.DelegatedNetwork.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", new AzureNative.DelegatedNetwork.DelegatedSubnetServiceDetailsArgs
+ *         {
+ *             ControllerDetails = new AzureNative.DelegatedNetwork.Inputs.ControllerDetailsArgs
+ *             {
+ *                 Id = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
+ *             },
+ *             Location = "West US",
+ *             ResourceGroupName = "TestRG",
+ *             ResourceName = "delegated1",
+ *             SubnetDetails = new AzureNative.DelegatedNetwork.Inputs.SubnetDetailsArgs
+ *             {
+ *                 Id = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	delegatednetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/delegatednetwork"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := delegatednetwork.NewDelegatedSubnetServiceDetails(ctx, "delegatedSubnetServiceDetails", &delegatednetwork.DelegatedSubnetServiceDetailsArgs{
+ * 			ControllerDetails: &delegatednetwork.ControllerDetailsArgs{
+ * 				Id: pulumi.String("/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller"),
+ * 			},
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("TestRG"),
+ * 			ResourceName:      pulumi.String("delegated1"),
+ * 			SubnetDetails: &delegatednetwork.SubnetDetailsArgs{
+ * 				Id: pulumi.String("/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const delegatedSubnetServiceDetails = new azure_native.delegatednetwork.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails", {
+ *     controllerDetails: {
+ *         id: "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
+ *     },
+ *     location: "West US",
+ *     resourceGroupName: "TestRG",
+ *     resourceName: "delegated1",
+ *     subnetDetails: {
+ *         id: "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * delegated_subnet_service_details = azure_native.delegatednetwork.DelegatedSubnetServiceDetails("delegatedSubnetServiceDetails",
+ *     controller_details=azure_native.delegatednetwork.ControllerDetailsArgs(
+ *         id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/dnctestcontroller",
+ *     ),
+ *     location="West US",
+ *     resource_group_name="TestRG",
+ *     resource_name="delegated1",
+ *     subnet_details=azure_native.delegatednetwork.SubnetDetailsArgs(
+ *         id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +133,96 @@ import javax.annotation.Nullable;
 public class DelegatedSubnetServiceDetails extends io.pulumi.resources.CustomResource {
     /**
      * Properties of the controller.
-     * 
      */
     @Export(name="controllerDetails", type=ControllerDetailsResponse.class, parameters={})
     private Output</* @Nullable */ ControllerDetailsResponse> controllerDetails;
 
     /**
      * @return Properties of the controller.
-     * 
      */
     public Output</* @Nullable */ ControllerDetailsResponse> getControllerDetails() {
         return this.controllerDetails;
     }
     /**
      * Location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current state of dnc delegated subnet resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The current state of dnc delegated subnet resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource guid.
-     * 
      */
     @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
      * @return Resource guid.
-     * 
      */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * subnet details
-     * 
      */
     @Export(name="subnetDetails", type=SubnetDetailsResponse.class, parameters={})
     private Output</* @Nullable */ SubnetDetailsResponse> subnetDetails;
 
     /**
      * @return subnet details
-     * 
      */
     public Output</* @Nullable */ SubnetDetailsResponse> getSubnetDetails() {
         return this.subnetDetails;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

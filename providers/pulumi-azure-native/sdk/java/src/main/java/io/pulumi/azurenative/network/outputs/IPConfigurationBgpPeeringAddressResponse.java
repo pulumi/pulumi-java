@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class IPConfigurationBgpPeeringAddressResponse {
     /**
      * The list of custom BGP peering addresses which belong to IP configuration.
-     * 
      */
     private final @Nullable List<String> customBgpIpAddresses;
     /**
      * The list of default BGP peering addresses which belong to IP configuration.
-     * 
      */
     private final List<String> defaultBgpIpAddresses;
     /**
      * The ID of IP configuration which belongs to gateway.
-     * 
      */
     private final @Nullable String ipconfigurationId;
     /**
      * The list of tunnel public IP addresses which belong to IP configuration.
-     * 
      */
     private final List<String> tunnelIpAddresses;
 
@@ -47,28 +43,24 @@ public final class IPConfigurationBgpPeeringAddressResponse {
 
     /**
      * The list of custom BGP peering addresses which belong to IP configuration.
-     * 
     */
     public List<String> getCustomBgpIpAddresses() {
         return this.customBgpIpAddresses == null ? List.of() : this.customBgpIpAddresses;
     }
     /**
      * The list of default BGP peering addresses which belong to IP configuration.
-     * 
     */
     public List<String> getDefaultBgpIpAddresses() {
         return this.defaultBgpIpAddresses;
     }
     /**
      * The ID of IP configuration which belongs to gateway.
-     * 
     */
     public Optional<String> getIpconfigurationId() {
         return Optional.ofNullable(this.ipconfigurationId);
     }
     /**
      * The list of tunnel public IP addresses which belong to IP configuration.
-     * 
     */
     public List<String> getTunnelIpAddresses() {
         return this.tunnelIpAddresses;

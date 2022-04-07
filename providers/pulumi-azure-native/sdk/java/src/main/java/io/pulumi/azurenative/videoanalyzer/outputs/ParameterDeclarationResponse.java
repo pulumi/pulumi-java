@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class ParameterDeclarationResponse {
     /**
      * The default value for the parameter to be used if the pipeline does not specify a value.
-     * 
      */
     private final @Nullable String default_;
     /**
      * Description of the parameter.
-     * 
      */
     private final @Nullable String description;
     /**
      * Name of the parameter.
-     * 
      */
     private final String name;
     /**
      * Type of the parameter.
-     * 
      */
     private final String type;
 
@@ -46,28 +42,24 @@ public final class ParameterDeclarationResponse {
 
     /**
      * The default value for the parameter to be used if the pipeline does not specify a value.
-     * 
     */
     public Optional<String> getDefault_() {
         return Optional.ofNullable(this.default_);
     }
     /**
      * Description of the parameter.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Name of the parameter.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Type of the parameter.
-     * 
     */
     public String getType() {
         return this.type;

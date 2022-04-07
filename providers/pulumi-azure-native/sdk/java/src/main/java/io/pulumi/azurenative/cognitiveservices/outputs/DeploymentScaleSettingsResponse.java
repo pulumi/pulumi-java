@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class DeploymentScaleSettingsResponse {
     /**
      * Deployment capacity.
-     * 
      */
     private final @Nullable Integer capacity;
     /**
      * Deployment scale type.
-     * 
      */
     private final @Nullable String scaleType;
 
@@ -33,14 +31,12 @@ public final class DeploymentScaleSettingsResponse {
 
     /**
      * Deployment capacity.
-     * 
     */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Deployment scale type.
-     * 
     */
     public Optional<String> getScaleType() {
         return Optional.ofNullable(this.scaleType);

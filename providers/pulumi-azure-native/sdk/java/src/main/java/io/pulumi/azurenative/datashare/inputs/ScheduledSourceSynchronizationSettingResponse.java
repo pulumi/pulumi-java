@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A type of synchronization setting based on schedule
- * 
  */
 public final class ScheduledSourceSynchronizationSettingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
     /**
      * Kind of synchronization setting on share.
      * Expected value is 'ScheduleBased'.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -32,7 +30,6 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
 
     /**
      * Recurrence Interval
-     * 
      */
     @Import(name="recurrenceInterval")
       private final @Nullable String recurrenceInterval;
@@ -43,7 +40,6 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
 
     /**
      * Synchronization time
-     * 
      */
     @Import(name="synchronizationTime")
       private final @Nullable String synchronizationTime;

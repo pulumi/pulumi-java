@@ -17,7 +17,91 @@ import javax.annotation.Nullable;
  * Snapshot of a Volume
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Snapshots_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var snapshot = new AzureNative.NetApp.Snapshot("snapshot", new AzureNative.NetApp.SnapshotArgs
+ *         {
+ *             AccountName = "account1",
+ *             Location = "eastus",
+ *             PoolName = "pool1",
+ *             ResourceGroupName = "myRG",
+ *             SnapshotName = "snapshot1",
+ *             VolumeName = "volume1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	netapp "github.com/pulumi/pulumi-azure-native/sdk/go/azure/netapp"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := netapp.NewSnapshot(ctx, "snapshot", &netapp.SnapshotArgs{
+ * 			AccountName:       pulumi.String("account1"),
+ * 			Location:          pulumi.String("eastus"),
+ * 			PoolName:          pulumi.String("pool1"),
+ * 			ResourceGroupName: pulumi.String("myRG"),
+ * 			SnapshotName:      pulumi.String("snapshot1"),
+ * 			VolumeName:        pulumi.String("volume1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const snapshot = new azure_native.netapp.Snapshot("snapshot", {
+ *     accountName: "account1",
+ *     location: "eastus",
+ *     poolName: "pool1",
+ *     resourceGroupName: "myRG",
+ *     snapshotName: "snapshot1",
+ *     volumeName: "volume1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * snapshot = azure_native.netapp.Snapshot("snapshot",
+ *     account_name="account1",
+ *     location="eastus",
+ *     pool_name="pool1",
+ *     resource_group_name="myRG",
+ *     snapshot_name="snapshot1",
+ *     volume_name="volume1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +116,72 @@ import javax.annotation.Nullable;
 public class Snapshot extends io.pulumi.resources.CustomResource {
     /**
      * The creation date of the snapshot
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
      * @return The creation date of the snapshot
-     * 
      */
     public Output<String> getCreated() {
         return this.created;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Azure lifecycle management
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * UUID v4 used to identify the Snapshot
-     * 
      */
     @Export(name="snapshotId", type=String.class, parameters={})
     private Output<String> snapshotId;
 
     /**
      * @return UUID v4 used to identify the Snapshot
-     * 
      */
     public Output<String> getSnapshotId() {
         return this.snapshotId;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

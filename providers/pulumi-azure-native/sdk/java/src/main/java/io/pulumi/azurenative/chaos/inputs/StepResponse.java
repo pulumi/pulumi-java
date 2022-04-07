@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Model that represents a step in the Experiment resource.
- * 
  */
 public final class StepResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of branches.
-     * 
      */
     @Import(name="branches", required=true)
       private final List<BranchResponse> branches;
@@ -31,7 +29,6 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String of the step name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

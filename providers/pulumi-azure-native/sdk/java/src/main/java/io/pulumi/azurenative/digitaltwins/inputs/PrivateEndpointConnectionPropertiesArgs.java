@@ -18,7 +18,6 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
 
     /**
      * The list of group ids for the private endpoint connection.
-     * 
      */
     @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;

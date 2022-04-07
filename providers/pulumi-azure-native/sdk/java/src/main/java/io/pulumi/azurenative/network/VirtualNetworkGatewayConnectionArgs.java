@@ -29,7 +29,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The authorizationKey.
-     * 
      */
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
@@ -40,7 +39,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The connection mode for this connection.
-     * 
      */
     @Import(name="connectionMode")
       private final @Nullable Output<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode;
@@ -51,7 +49,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * Connection protocol used for this connection.
-     * 
      */
     @Import(name="connectionProtocol")
       private final @Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol;
@@ -62,7 +59,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * Gateway connection type.
-     * 
      */
     @Import(name="connectionType", required=true)
       private final Output<Either<String,VirtualNetworkGatewayConnectionType>> connectionType;
@@ -73,7 +69,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The dead peer detection timeout of this connection in seconds.
-     * 
      */
     @Import(name="dpdTimeoutSeconds")
       private final @Nullable Output<Integer> dpdTimeoutSeconds;
@@ -84,7 +79,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * EnableBgp flag.
-     * 
      */
     @Import(name="enableBgp")
       private final @Nullable Output<Boolean> enableBgp;
@@ -95,7 +89,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * Bypass ExpressRoute Gateway for data forwarding.
-     * 
      */
     @Import(name="expressRouteGatewayBypass")
       private final @Nullable Output<Boolean> expressRouteGatewayBypass;
@@ -106,7 +99,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -117,7 +109,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The IPSec Policies to be considered by this connection.
-     * 
      */
     @Import(name="ipsecPolicies")
       private final @Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies;
@@ -128,7 +119,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The reference to local network gateway resource.
-     * 
      */
     @Import(name="localNetworkGateway2")
       private final @Nullable Output<LocalNetworkGatewayArgs> localNetworkGateway2;
@@ -139,7 +129,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -150,7 +139,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The reference to peerings resource.
-     * 
      */
     @Import(name="peer")
       private final @Nullable Output<SubResourceArgs> peer;
@@ -161,7 +149,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -172,7 +159,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The routing weight.
-     * 
      */
     @Import(name="routingWeight")
       private final @Nullable Output<Integer> routingWeight;
@@ -183,7 +169,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The IPSec shared key.
-     * 
      */
     @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
@@ -194,7 +179,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -205,7 +189,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The Traffic Selector Policies to be considered by this connection.
-     * 
      */
     @Import(name="trafficSelectorPolicies")
       private final @Nullable Output<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies;
@@ -216,7 +199,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * Use private local Azure IP for the connection.
-     * 
      */
     @Import(name="useLocalAzureIpAddress")
       private final @Nullable Output<Boolean> useLocalAzureIpAddress;
@@ -227,7 +209,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * Enable policy-based traffic selectors.
-     * 
      */
     @Import(name="usePolicyBasedTrafficSelectors")
       private final @Nullable Output<Boolean> usePolicyBasedTrafficSelectors;
@@ -238,7 +219,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The reference to virtual network gateway resource.
-     * 
      */
     @Import(name="virtualNetworkGateway1", required=true)
       private final Output<VirtualNetworkGatewayArgs> virtualNetworkGateway1;
@@ -249,7 +229,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The reference to virtual network gateway resource.
-     * 
      */
     @Import(name="virtualNetworkGateway2")
       private final @Nullable Output<VirtualNetworkGatewayArgs> virtualNetworkGateway2;
@@ -260,7 +239,6 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
 
     /**
      * The name of the virtual network gateway connection.
-     * 
      */
     @Import(name="virtualNetworkGatewayConnectionName")
       private final @Nullable Output<String> virtualNetworkGatewayConnectionName;

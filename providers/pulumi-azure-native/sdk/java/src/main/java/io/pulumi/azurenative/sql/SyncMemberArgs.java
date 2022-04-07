@@ -20,7 +20,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Database name of the member database in the sync member.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -31,7 +30,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Database type of the sync member.
-     * 
      */
     @Import(name="databaseType")
       private final @Nullable Output<Either<String,SyncMemberDbType>> databaseType;
@@ -42,7 +40,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Password of the member database in the sync member.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -53,7 +50,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Server name of the member database in the sync member
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -75,7 +70,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SQL Server database id of the sync member.
-     * 
      */
     @Import(name="sqlServerDatabaseId")
       private final @Nullable Output<String> sqlServerDatabaseId;
@@ -86,7 +80,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM resource id of the sync agent in the sync member.
-     * 
      */
     @Import(name="syncAgentId")
       private final @Nullable Output<String> syncAgentId;
@@ -97,7 +90,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sync direction of the sync member.
-     * 
      */
     @Import(name="syncDirection")
       private final @Nullable Output<Either<String,SyncDirection>> syncDirection;
@@ -108,7 +100,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the sync group on which the sync member is hosted.
-     * 
      */
     @Import(name="syncGroupName", required=true)
       private final Output<String> syncGroupName;
@@ -119,7 +110,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM resource id of the sync member logical database, for sync members in Azure.
-     * 
      */
     @Import(name="syncMemberAzureDatabaseResourceId")
       private final @Nullable Output<String> syncMemberAzureDatabaseResourceId;
@@ -130,7 +120,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the sync member.
-     * 
      */
     @Import(name="syncMemberName")
       private final @Nullable Output<String> syncMemberName;
@@ -141,7 +130,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to use private link connection.
-     * 
      */
     @Import(name="usePrivateLinkConnection")
       private final @Nullable Output<Boolean> usePrivateLinkConnection;
@@ -152,7 +140,6 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User name of the member database in the sync member.
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

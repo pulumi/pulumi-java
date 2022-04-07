@@ -17,7 +17,6 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Maximum number of instances for this deployment.
-     * 
      */
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
@@ -28,7 +27,6 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Minimum number of instances for this deployment.
-     * 
      */
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
@@ -39,7 +37,6 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
-     * 
      */
     @Import(name="pollingInterval")
       private final @Nullable Output<String> pollingInterval;
@@ -49,8 +46,8 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     /**
-     * Expected value is 'Auto'.
      * 
+     * Expected value is 'Auto'.
      */
     @Import(name="scaleType", required=true)
       private final Output<String> scaleType;
@@ -61,7 +58,6 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Target CPU usage for the autoscaler.
-     * 
      */
     @Import(name="targetUtilizationPercentage")
       private final @Nullable Output<Integer> targetUtilizationPercentage;

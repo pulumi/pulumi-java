@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The rule bypass protocol.
-     * 
      */
     @EnumType
     public enum FirewallPolicyIntrusionDetectionProtocol {

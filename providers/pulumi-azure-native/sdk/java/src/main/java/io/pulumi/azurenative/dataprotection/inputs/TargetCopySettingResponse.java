@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Target copy settings
- * 
  */
 public final class TargetCopySettingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class TargetCopySettingResponse extends io.pulumi.resources.InvokeA
 
     /**
      * It can be CustomCopyOption or ImmediateCopyOption.
-     * 
      */
     @Import(name="copyAfter", required=true)
       private final Object copyAfter;
@@ -33,7 +31,6 @@ public final class TargetCopySettingResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Info of target datastore
-     * 
      */
     @Import(name="dataStore", required=true)
       private final DataStoreInfoBaseResponse dataStore;

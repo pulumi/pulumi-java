@@ -20,7 +20,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the agent pool.
-     * 
      */
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
@@ -31,7 +30,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The count of agent machine
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Integer> count;
@@ -42,7 +40,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The OS of agent machine
-     * 
      */
     @Import(name="os")
       private final @Nullable Output<Either<String,OS>> os;
@@ -64,7 +60,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
@@ -75,7 +70,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -97,7 +90,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Tier of agent machine
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;
@@ -108,7 +100,6 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Virtual Network Subnet Resource Id of the agent machine
-     * 
      */
     @Import(name="virtualNetworkSubnetResourceId")
       private final @Nullable Output<String> virtualNetworkSubnetResourceId;

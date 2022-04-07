@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Automanage configuration profile assignment properties.
- * 
  */
 public final class ConfigurationProfileAssignmentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
 
     /**
      * The Automanage account ARM Resource URI
-     * 
      */
     @Import(name="accountId")
       private final @Nullable String accountId;
@@ -32,7 +30,6 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
 
     /**
      * The configuration setting for the configuration profile.
-     * 
      */
     @Import(name="compliance")
       private final @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
@@ -43,7 +40,6 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
 
     /**
      * A value indicating configuration profile.
-     * 
      */
     @Import(name="configurationProfile")
       private final @Nullable String configurationProfile;
@@ -54,7 +50,6 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
 
     /**
      * The configuration profile custom preferences ARM resource URI
-     * 
      */
     @Import(name="configurationProfilePreferenceId")
       private final @Nullable String configurationProfilePreferenceId;
@@ -65,7 +60,6 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
 
     /**
      * The state of onboarding, which only appears in the response.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -76,7 +70,6 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
 
     /**
      * The target VM resource URI
-     * 
      */
     @Import(name="targetId")
       private final @Nullable String targetId;

@@ -13,22 +13,18 @@ import java.util.Objects;
 public final class GetUserTablesSqlSyncTaskInputResponse {
     /**
      * List of source database names to collect tables for
-     * 
      */
     private final List<String> selectedSourceDatabases;
     /**
      * List of target database names to collect tables for
-     * 
      */
     private final List<String> selectedTargetDatabases;
     /**
      * Connection information for SQL Server
-     * 
      */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
     /**
      * Connection information for SQL DB
-     * 
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
@@ -46,28 +42,24 @@ public final class GetUserTablesSqlSyncTaskInputResponse {
 
     /**
      * List of source database names to collect tables for
-     * 
     */
     public List<String> getSelectedSourceDatabases() {
         return this.selectedSourceDatabases;
     }
     /**
      * List of target database names to collect tables for
-     * 
     */
     public List<String> getSelectedTargetDatabases() {
         return this.selectedTargetDatabases;
     }
     /**
      * Connection information for SQL Server
-     * 
     */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Connection information for SQL DB
-     * 
     */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;

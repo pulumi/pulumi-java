@@ -29,168 +29,144 @@ import javax.annotation.Nullable;
 public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResource {
     /**
      * Azure resource name.
-     * 
      */
     @Export(name="azureResourceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> azureResourceName;
 
     /**
      * @return Azure resource name.
-     * 
      */
     public Output</* @Nullable */ String> getAzureResourceName() {
         return this.azureResourceName;
     }
     /**
      * Azure resource type.
-     * 
      */
     @Export(name="azureResourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> azureResourceType;
 
     /**
      * @return Azure resource type.
-     * 
      */
     public Output</* @Nullable */ String> getAzureResourceType() {
         return this.azureResourceType;
     }
     /**
      * Custom DNS record type.
-     * 
      */
     @Export(name="customHostNameDnsRecordType", type=String.class, parameters={})
     private Output</* @Nullable */ String> customHostNameDnsRecordType;
 
     /**
      * @return Custom DNS record type.
-     * 
      */
     public Output</* @Nullable */ String> getCustomHostNameDnsRecordType() {
         return this.customHostNameDnsRecordType;
     }
     /**
      * Fully qualified ARM domain resource URI.
-     * 
      */
     @Export(name="domainId", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainId;
 
     /**
      * @return Fully qualified ARM domain resource URI.
-     * 
      */
     public Output</* @Nullable */ String> getDomainId() {
         return this.domainId;
     }
     /**
      * Hostname type.
-     * 
      */
     @Export(name="hostNameType", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostNameType;
 
     /**
      * @return Hostname type.
-     * 
      */
     public Output</* @Nullable */ String> getHostNameType() {
         return this.hostNameType;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * App Service app name.
-     * 
      */
     @Export(name="siteName", type=String.class, parameters={})
     private Output</* @Nullable */ String> siteName;
 
     /**
      * @return App Service app name.
-     * 
      */
     public Output</* @Nullable */ String> getSiteName() {
         return this.siteName;
     }
     /**
      * SSL type
-     * 
      */
     @Export(name="sslState", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslState;
 
     /**
      * @return SSL type
-     * 
      */
     public Output</* @Nullable */ String> getSslState() {
         return this.sslState;
     }
     /**
      * SSL certificate thumbprint
-     * 
      */
     @Export(name="thumbprint", type=String.class, parameters={})
     private Output</* @Nullable */ String> thumbprint;
 
     /**
      * @return SSL certificate thumbprint
-     * 
      */
     public Output</* @Nullable */ String> getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Virtual IP address assigned to the hostname if IP based SSL is enabled.
-     * 
      */
     @Export(name="virtualIP", type=String.class, parameters={})
     private Output<String> virtualIP;
 
     /**
      * @return Virtual IP address assigned to the hostname if IP based SSL is enabled.
-     * 
      */
     public Output<String> getVirtualIP() {
         return this.virtualIP;

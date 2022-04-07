@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Data specific to GlusterFS.
- * 
  */
 public final class GlusterFsSectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GlusterFsSectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.
-     * 
      */
     @Import(name="serverAddress", required=true)
       private final String serverAddress;
@@ -29,7 +27,6 @@ public final class GlusterFsSectionResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the created GlusterFS volume.
-     * 
      */
     @Import(name="volumeName", required=true)
       private final String volumeName;

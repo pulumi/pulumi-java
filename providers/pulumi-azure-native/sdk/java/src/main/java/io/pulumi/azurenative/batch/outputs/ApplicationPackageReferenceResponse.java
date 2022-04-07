@@ -14,7 +14,6 @@ public final class ApplicationPackageReferenceResponse {
     private final String id;
     /**
      * If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
-     * 
      */
     private final @Nullable String version;
 
@@ -31,7 +30,6 @@ public final class ApplicationPackageReferenceResponse {
     }
     /**
      * If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

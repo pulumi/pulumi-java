@@ -16,17 +16,14 @@ import javax.annotation.Nullable;
 public final class NetworkProfileResponse {
     /**
      * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
-     * 
      */
     private final @Nullable String networkApiVersion;
     /**
      * Specifies the networking configurations that will be used to create the virtual machine networking resources.
-     * 
      */
     private final @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations;
     /**
      * Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
-     * 
      */
     private final @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces;
 
@@ -42,21 +39,18 @@ public final class NetworkProfileResponse {
 
     /**
      * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
-     * 
     */
     public Optional<String> getNetworkApiVersion() {
         return Optional.ofNullable(this.networkApiVersion);
     }
     /**
      * Specifies the networking configurations that will be used to create the virtual machine networking resources.
-     * 
     */
     public List<VirtualMachineNetworkInterfaceConfigurationResponse> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
     }
     /**
      * Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
-     * 
     */
     public List<NetworkInterfaceReferenceResponse> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;

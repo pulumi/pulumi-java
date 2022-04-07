@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * HyperV replica 2012 R2 (Blue) replication details.
- * 
  */
 public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
 
     /**
      * Initial replication details.
-     * 
      */
     @Import(name="initialReplicationDetails")
       private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
@@ -36,7 +34,6 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
     /**
      * Gets the Instance type.
      * Expected value is 'HyperVReplica2012R2'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -47,7 +44,6 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
 
     /**
      * The Last replication time.
-     * 
      */
     @Import(name="lastReplicatedTime")
       private final @Nullable String lastReplicatedTime;
@@ -58,7 +54,6 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
 
     /**
      * VM disk details.
-     * 
      */
     @Import(name="vMDiskDetails")
       private final @Nullable List<DiskDetailsResponse> vMDiskDetails;
@@ -69,7 +64,6 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
 
     /**
      * The virtual machine Id.
-     * 
      */
     @Import(name="vmId")
       private final @Nullable String vmId;
@@ -80,7 +74,6 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
 
     /**
      * The PE Network details.
-     * 
      */
     @Import(name="vmNics")
       private final @Nullable List<VMNicDetailsResponse> vmNics;
@@ -91,7 +84,6 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
 
     /**
      * The protection state for the vm.
-     * 
      */
     @Import(name="vmProtectionState")
       private final @Nullable String vmProtectionState;
@@ -102,7 +94,6 @@ public final class HyperVReplicaBlueReplicationDetailsResponse extends io.pulumi
 
     /**
      * The protection state description for the vm.
-     * 
      */
     @Import(name="vmProtectionStateDescription")
       private final @Nullable String vmProtectionStateDescription;

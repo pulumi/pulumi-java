@@ -14,7 +14,6 @@ public final class GetServerCommunicationLinkArgs extends io.pulumi.resources.In
 
     /**
      * The name of the server communication link.
-     * 
      */
     @Import(name="communicationLinkName", required=true)
       private final String communicationLinkName;
@@ -25,7 +24,6 @@ public final class GetServerCommunicationLinkArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetServerCommunicationLinkArgs extends io.pulumi.resources.In
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;

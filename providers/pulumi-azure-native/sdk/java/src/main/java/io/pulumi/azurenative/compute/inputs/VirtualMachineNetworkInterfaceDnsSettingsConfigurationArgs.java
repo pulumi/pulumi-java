@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machines network configuration's DNS settings.
- * 
  */
 public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs ex
 
     /**
      * List of DNS servers IP addresses
-     * 
      */
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;

@@ -17,7 +17,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the column.
-     * 
      */
     @Import(name="columnName", required=true)
       private final Output<String> columnName;
@@ -28,7 +27,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * The information type.
-     * 
      */
     @Import(name="informationType")
       private final @Nullable Output<String> informationType;
@@ -39,7 +37,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * The information type ID.
-     * 
      */
     @Import(name="informationTypeId")
       private final @Nullable Output<String> informationTypeId;
@@ -50,7 +47,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * The label ID.
-     * 
      */
     @Import(name="labelId")
       private final @Nullable Output<String> labelId;
@@ -61,7 +57,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * The label name.
-     * 
      */
     @Import(name="labelName")
       private final @Nullable Output<String> labelName;
@@ -79,7 +74,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -90,7 +84,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the schema.
-     * 
      */
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
@@ -101,7 +94,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * The source of the sensitivity label.
-     * 
      */
     @Import(name="sensitivityLabelSource")
       private final @Nullable Output<String> sensitivityLabelSource;
@@ -112,7 +104,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * SQL pool name
-     * 
      */
     @Import(name="sqlPoolName", required=true)
       private final Output<String> sqlPoolName;
@@ -123,7 +114,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the table.
-     * 
      */
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
@@ -134,7 +124,6 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

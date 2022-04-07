@@ -18,7 +18,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Free-form schema entity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -40,7 +38,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schema id identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="schemaId")
       private final @Nullable Output<String> schemaId;
@@ -51,7 +48,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schema Type. Immutable.
-     * 
      */
     @Import(name="schemaType", required=true)
       private final Output<Either<String,SchemaType>> schemaType;
@@ -62,7 +58,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -73,7 +68,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Json-encoded string for non json-based schema.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

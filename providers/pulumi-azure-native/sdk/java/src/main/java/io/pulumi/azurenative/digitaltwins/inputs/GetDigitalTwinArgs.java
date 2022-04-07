@@ -14,7 +14,6 @@ public final class GetDigitalTwinArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetDigitalTwinArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ResultStatisticsResponse {
     /**
      * The number of rows that were returned by the search job.
-     * 
      */
     private final Integer ingestedRecords;
     /**
      * Search job completion percentage.
-     * 
      */
     private final Double progress;
 
@@ -31,14 +29,12 @@ public final class ResultStatisticsResponse {
 
     /**
      * The number of rows that were returned by the search job.
-     * 
     */
     public Integer getIngestedRecords() {
         return this.ingestedRecords;
     }
     /**
      * Search job completion percentage.
-     * 
     */
     public Double getProgress() {
         return this.progress;

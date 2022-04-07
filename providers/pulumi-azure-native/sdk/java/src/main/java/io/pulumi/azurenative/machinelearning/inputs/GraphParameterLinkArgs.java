@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Association link for a graph global parameter to a node in the graph.
- * 
  */
 public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The graph node's identifier
-     * 
      */
     @Import(name="nodeId", required=true)
       private final Output<String> nodeId;
@@ -30,7 +28,6 @@ public final class GraphParameterLinkArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The identifier of the node parameter that the global parameter maps to.
-     * 
      */
     @Import(name="parameterKey", required=true)
       private final Output<String> parameterKey;

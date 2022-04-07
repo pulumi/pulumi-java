@@ -17,7 +17,6 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -28,7 +27,6 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
 
     /**
      * Name of the App Service Environment.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -46,7 +44,6 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
 
     /**
      * The state of a private link connection
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
@@ -57,7 +54,6 @@ public final class AppServiceEnvironmentPrivateEndpointConnectionArgs extends io
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Details of single instance of redis.
- * 
  */
 public final class RedisInstanceDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether the instance is a master node.
-     * 
      */
     @Import(name="isMaster", required=true)
       private final Boolean isMaster;
@@ -31,7 +29,6 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * If enableNonSslPort is true, provides Redis instance Non-SSL port.
-     * 
      */
     @Import(name="nonSslPort", required=true)
       private final Integer nonSslPort;
@@ -42,7 +39,6 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * If clustering is enabled, the Shard ID of Redis Instance
-     * 
      */
     @Import(name="shardId", required=true)
       private final Integer shardId;
@@ -53,7 +49,6 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * Redis instance SSL port.
-     * 
      */
     @Import(name="sslPort", required=true)
       private final Integer sslPort;
@@ -64,7 +59,6 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * If the Cache uses availability zones, specifies availability zone where this instance is located.
-     * 
      */
     @Import(name="zone", required=true)
       private final String zone;

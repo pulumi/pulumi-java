@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The cassandra connector offer type for the Cosmos DB database C* account.
-     * 
      */
     @EnumType
     public enum ConnectorOffer {

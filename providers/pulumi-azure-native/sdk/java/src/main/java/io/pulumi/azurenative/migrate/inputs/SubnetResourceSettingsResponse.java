@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the virtual network subnets resource settings.
- * 
  */
 public final class SubnetResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets address prefix for the subnet.
-     * 
      */
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
@@ -32,7 +30,6 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets the Subnet name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
 
     /**
      * Defines reference to NSG.
-     * 
      */
     @Import(name="networkSecurityGroup")
       private final @Nullable NsgReferenceResponse networkSecurityGroup;

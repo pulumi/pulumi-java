@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * Virtual Appliance Site resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### VirtualHubRouteTableV2Put
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualHubBgpConnection = new AzureNative.Network.VirtualHubBgpConnection("virtualHubBgpConnection", new AzureNative.Network.VirtualHubBgpConnectionArgs
+ *         {
+ *             ConnectionName = "conn1",
+ *             PeerAsn = 20000,
+ *             PeerIp = "192.168.1.5",
+ *             ResourceGroupName = "rg1",
+ *             VirtualHubName = "hub1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualHubBgpConnection(ctx, "virtualHubBgpConnection", &network.VirtualHubBgpConnectionArgs{
+ * 			ConnectionName:    pulumi.String("conn1"),
+ * 			PeerAsn:           pulumi.Float64(20000),
+ * 			PeerIp:            pulumi.String("192.168.1.5"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			VirtualHubName:    pulumi.String("hub1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualHubBgpConnection = new azure_native.network.VirtualHubBgpConnection("virtualHubBgpConnection", {
+ *     connectionName: "conn1",
+ *     peerAsn: 20000,
+ *     peerIp: "192.168.1.5",
+ *     resourceGroupName: "rg1",
+ *     virtualHubName: "hub1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_hub_bgp_connection = azure_native.network.VirtualHubBgpConnection("virtualHubBgpConnection",
+ *     connection_name="conn1",
+ *     peer_asn=20000,
+ *     peer_ip="192.168.1.5",
+ *     resource_group_name="rg1",
+ *     virtual_hub_name="hub1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +113,84 @@ import javax.annotation.Nullable;
 public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource {
     /**
      * The current state of the VirtualHub to Peer.
-     * 
      */
     @Export(name="connectionState", type=String.class, parameters={})
     private Output<String> connectionState;
 
     /**
      * @return The current state of the VirtualHub to Peer.
-     * 
      */
     public Output<String> getConnectionState() {
         return this.connectionState;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Name of the connection.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the connection.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Peer ASN.
-     * 
      */
     @Export(name="peerAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> peerAsn;
 
     /**
      * @return Peer ASN.
-     * 
      */
     public Output</* @Nullable */ Double> getPeerAsn() {
         return this.peerAsn;
     }
     /**
      * Peer IP.
-     * 
      */
     @Export(name="peerIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerIp;
 
     /**
      * @return Peer IP.
-     * 
      */
     public Output</* @Nullable */ String> getPeerIp() {
         return this.peerIp;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Connection type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Connection type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * A container instance.
- * 
  */
 public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The commands to execute within the container instance in exec form.
-     * 
      */
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
@@ -37,7 +35,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The environment variables to set in the container instance.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
@@ -48,7 +45,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the image used to create the container instance.
-     * 
      */
     @Import(name="image", required=true)
       private final Output<String> image;
@@ -59,7 +55,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The liveness probe.
-     * 
      */
     @Import(name="livenessProbe")
       private final @Nullable Output<ContainerProbeArgs> livenessProbe;
@@ -70,7 +65,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-provided name of the container instance.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -81,7 +75,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The exposed ports on the container instance.
-     * 
      */
     @Import(name="ports")
       private final @Nullable Output<List<ContainerPortArgs>> ports;
@@ -92,7 +85,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The readiness probe.
-     * 
      */
     @Import(name="readinessProbe")
       private final @Nullable Output<ContainerProbeArgs> readinessProbe;
@@ -103,7 +95,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource requirements of the container instance.
-     * 
      */
     @Import(name="resources", required=true)
       private final Output<ResourceRequirementsArgs> resources;
@@ -114,7 +105,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The volume mounts available to the container instance.
-     * 
      */
     @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;

@@ -16,7 +16,6 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
 
     /**
      * The name of the configuration store.
-     * 
      */
     @Import(name="configStoreName", required=true)
       private final String configStoreName;
@@ -27,7 +26,6 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
 
     /**
      * A skip token is used to continue retrieving items after an operation returns a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.
-     * 
      */
     @Import(name="skipToken")
       private final @Nullable String skipToken;

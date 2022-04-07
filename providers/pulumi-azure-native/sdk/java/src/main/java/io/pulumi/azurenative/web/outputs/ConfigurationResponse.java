@@ -18,22 +18,18 @@ public final class ConfigurationResponse {
     /**
      * ActiveRevisionsMode controls how active revisions are handled for the Container app:
      * <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
-     * 
      */
     private final @Nullable String activeRevisionsMode;
     /**
      * Ingress configurations.
-     * 
      */
     private final @Nullable IngressResponse ingress;
     /**
      * Collection of private container registry credentials for containers used by the Container app
-     * 
      */
     private final @Nullable List<RegistryCredentialsResponse> registries;
     /**
      * Collection of secrets used by a Container app
-     * 
      */
     private final @Nullable List<SecretResponse> secrets;
 
@@ -52,28 +48,24 @@ public final class ConfigurationResponse {
     /**
      * ActiveRevisionsMode controls how active revisions are handled for the Container app:
      * <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
-     * 
     */
     public Optional<String> getActiveRevisionsMode() {
         return Optional.ofNullable(this.activeRevisionsMode);
     }
     /**
      * Ingress configurations.
-     * 
     */
     public Optional<IngressResponse> getIngress() {
         return Optional.ofNullable(this.ingress);
     }
     /**
      * Collection of private container registry credentials for containers used by the Container app
-     * 
     */
     public List<RegistryCredentialsResponse> getRegistries() {
         return this.registries == null ? List.of() : this.registries;
     }
     /**
      * Collection of secrets used by a Container app
-     * 
     */
     public List<SecretResponse> getSecrets() {
         return this.secrets == null ? List.of() : this.secrets;

@@ -17,7 +17,6 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
 
     /**
      * Body of the User Defined Function
-     * 
      */
     @Import(name="body")
       private final @Nullable String body;
@@ -28,7 +27,6 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
 
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -39,7 +37,6 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
 
     /**
      * Name of the Cosmos DB SQL userDefinedFunction
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -50,7 +47,6 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
 
     /**
      * A system generated property. A unique identifier.
-     * 
      */
     @Import(name="rid", required=true)
       private final String rid;
@@ -61,7 +57,6 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
 
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
-     * 
      */
     @Import(name="ts", required=true)
       private final Double ts;

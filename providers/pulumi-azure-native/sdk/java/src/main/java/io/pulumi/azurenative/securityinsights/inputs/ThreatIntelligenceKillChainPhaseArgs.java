@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes threat kill chain phase entity
- * 
  */
 public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
 
     /**
      * Kill chainName name
-     * 
      */
     @Import(name="killChainName")
       private final @Nullable Output<String> killChainName;
@@ -31,7 +29,6 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
 
     /**
      * Phase name
-     * 
      */
     @Import(name="phaseName")
       private final @Nullable Output<String> phaseName;

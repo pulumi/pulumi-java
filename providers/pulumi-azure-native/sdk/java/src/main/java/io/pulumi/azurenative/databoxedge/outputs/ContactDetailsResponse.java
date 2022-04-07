@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class ContactDetailsResponse {
     /**
      * The name of the company.
-     * 
      */
     private final String companyName;
     /**
      * The contact person name.
-     * 
      */
     private final String contactPerson;
     /**
      * The email list.
-     * 
      */
     private final List<String> emailList;
     /**
      * The phone number.
-     * 
      */
     private final String phone;
 
@@ -45,28 +41,24 @@ public final class ContactDetailsResponse {
 
     /**
      * The name of the company.
-     * 
     */
     public String getCompanyName() {
         return this.companyName;
     }
     /**
      * The contact person name.
-     * 
     */
     public String getContactPerson() {
         return this.contactPerson;
     }
     /**
      * The email list.
-     * 
     */
     public List<String> getEmailList() {
         return this.emailList;
     }
     /**
      * The phone number.
-     * 
     */
     public String getPhone() {
         return this.phone;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents the user assigned identity that is contained within the UserAssignedIdentities dictionary on ResourceIdentity
- * 
  */
 public final class UserAssignedResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class UserAssignedResourceIdentityResponse extends io.pulumi.resour
 
     /**
      * The principal id of user assigned identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -29,7 +27,6 @@ public final class UserAssignedResourceIdentityResponse extends io.pulumi.resour
 
     /**
      * The tenant id of user assigned identity.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;

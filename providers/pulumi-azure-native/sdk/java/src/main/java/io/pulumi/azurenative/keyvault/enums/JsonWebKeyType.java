@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the key. For valid values, see JsonWebKeyType.
-     * 
      */
     @EnumType
     public enum JsonWebKeyType {

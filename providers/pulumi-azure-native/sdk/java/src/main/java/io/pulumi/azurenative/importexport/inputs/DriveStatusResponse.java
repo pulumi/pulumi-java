@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Provides information about the drive's status
- * 
  */
 public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The BitLocker key used to encrypt the drive.
-     * 
      */
     @Import(name="bitLockerKey")
       private final @Nullable String bitLockerKey;
@@ -33,7 +31,6 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Bytes successfully transferred for the drive.
-     * 
      */
     @Import(name="bytesSucceeded")
       private final @Nullable Double bytesSucceeded;
@@ -44,7 +41,6 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
-     * 
      */
     @Import(name="copyStatus")
       private final @Nullable String copyStatus;
@@ -55,7 +51,6 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The drive header hash value.
-     * 
      */
     @Import(name="driveHeaderHash")
       private final @Nullable String driveHeaderHash;
@@ -66,7 +61,6 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The drive's hardware serial number, without spaces.
-     * 
      */
     @Import(name="driveId")
       private final @Nullable String driveId;
@@ -77,7 +71,6 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A URI that points to the blob containing the error log for the data transfer operation.
-     * 
      */
     @Import(name="errorLogUri")
       private final @Nullable String errorLogUri;
@@ -87,8 +80,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The relative path of the manifest file on the drive.
-     * 
+     * The relative path of the manifest file on the drive. 
      */
     @Import(name="manifestFile")
       private final @Nullable String manifestFile;
@@ -99,7 +91,6 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Base16-encoded MD5 hash of the manifest file on the drive.
-     * 
      */
     @Import(name="manifestHash")
       private final @Nullable String manifestHash;
@@ -109,8 +100,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A URI that points to the blob containing the drive manifest file.
-     * 
+     * A URI that points to the blob containing the drive manifest file. 
      */
     @Import(name="manifestUri")
       private final @Nullable String manifestUri;
@@ -120,8 +110,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Percentage completed for the drive.
-     * 
+     * Percentage completed for the drive. 
      */
     @Import(name="percentComplete")
       private final @Nullable Integer percentComplete;
@@ -131,8 +120,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The drive's current state.
-     * 
+     * The drive's current state. 
      */
     @Import(name="state")
       private final @Nullable String state;
@@ -142,8 +130,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A URI that points to the blob containing the verbose log for the data transfer operation.
-     * 
+     * A URI that points to the blob containing the verbose log for the data transfer operation. 
      */
     @Import(name="verboseLogUri")
       private final @Nullable String verboseLogUri;

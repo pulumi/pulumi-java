@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines reference to NSG.
- * 
  */
 public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets the ARM resource ID of the tracked resource being referenced.
-     * 
      */
     @Import(name="sourceArmResourceId", required=true)
       private final Output<String> sourceArmResourceId;

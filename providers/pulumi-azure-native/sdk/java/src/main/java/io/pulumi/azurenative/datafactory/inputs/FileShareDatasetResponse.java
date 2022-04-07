@@ -24,7 +24,6 @@ import javax.annotation.Nullable;
 
 /**
  * An on-premises file system dataset.
- * 
  */
 public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -32,7 +31,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -43,7 +41,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The data compression method used for the file system.
-     * 
      */
     @Import(name="compression")
       private final @Nullable DatasetCompressionResponse compression;
@@ -54,7 +51,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -65,7 +61,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Specify a filter to be used to select a subset of files in the folderPath rather than all files. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileFilter")
       private final @Nullable Object fileFilter;
@@ -76,7 +71,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the on-premises file system. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileName")
       private final @Nullable Object fileName;
@@ -87,7 +81,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
@@ -98,7 +91,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The path of the on-premises file system. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Object folderPath;
@@ -109,7 +101,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The format of the files.
-     * 
      */
     @Import(name="format")
       private final @Nullable Object format;
@@ -120,7 +111,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
@@ -131,7 +121,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The end of file's modified datetime. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="modifiedDatetimeEnd")
       private final @Nullable Object modifiedDatetimeEnd;
@@ -142,7 +131,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The start of file's modified datetime. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="modifiedDatetimeStart")
       private final @Nullable Object modifiedDatetimeStart;
@@ -153,7 +141,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -164,7 +151,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Object schema;
@@ -175,7 +161,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Object structure;
@@ -187,7 +172,6 @@ public final class FileShareDatasetResponse extends io.pulumi.resources.InvokeAr
     /**
      * Type of dataset.
      * Expected value is 'FileShare'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -16,7 +16,6 @@ public final class GetPrivateLinkServiceArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Expands referenced resources.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetPrivateLinkServiceArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetPrivateLinkServiceArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the private link service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

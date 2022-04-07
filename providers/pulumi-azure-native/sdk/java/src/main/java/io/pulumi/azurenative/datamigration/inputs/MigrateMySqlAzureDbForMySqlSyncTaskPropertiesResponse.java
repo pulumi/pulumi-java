@@ -24,7 +24,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for the task that migrates MySQL databases to Azure Database for MySQL for online migrations
- * 
  */
 public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -32,7 +31,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
 
     /**
      * Array of command properties.
-     * 
      */
     @Import(name="commands", required=true)
       private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
@@ -43,7 +41,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
 
     /**
      * Array of errors. This is ignored if submitted.
-     * 
      */
     @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
@@ -54,7 +51,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
 
     /**
      * Task input
-     * 
      */
     @Import(name="input")
       private final @Nullable MigrateMySqlAzureDbForMySqlSyncTaskInputResponse input;
@@ -65,7 +61,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
 
     /**
      * Task output. This is ignored if submitted.
-     * 
      */
     @Import(name="output", required=true)
       private final List<Object> output;
@@ -76,7 +71,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
 
     /**
      * The state of the task. This is ignored if submitted.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -88,7 +82,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse extends
     /**
      * Task type.
      * Expected value is 'Migrate.MySql.AzureDbForMySql.Sync'.
-     * 
      */
     @Import(name="taskType", required=true)
       private final String taskType;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The GitHub action container configuration.
- * 
  */
 public final class GitHubActionContainerConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
 
     /**
      * The image name for the build.
-     * 
      */
     @Import(name="imageName")
       private final @Nullable String imageName;
@@ -31,7 +29,6 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
 
     /**
      * The password used to upload the image to the container registry.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -42,7 +39,6 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
 
     /**
      * The server URL for the container registry where the build will be hosted.
-     * 
      */
     @Import(name="serverUrl")
       private final @Nullable String serverUrl;
@@ -53,7 +49,6 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
 
     /**
      * The username used to upload the image to the container registry.
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

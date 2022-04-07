@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The claims for a rule management event data source.
- * 
  */
 public final class RuleManagementEventClaimsDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RuleManagementEventClaimsDataSourceResponse extends io.pulumi
 
     /**
      * the email address.
-     * 
      */
     @Import(name="emailAddress")
       private final @Nullable String emailAddress;

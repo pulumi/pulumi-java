@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of a hostname derived from a domain.
- * 
  */
 public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
-     * 
      */
     @Import(name="azureResourceName")
       private final @Nullable String azureResourceName;
@@ -32,7 +30,6 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of the Azure resource the hostname is assigned to.
-     * 
      */
     @Import(name="azureResourceType")
       private final @Nullable String azureResourceType;
@@ -43,7 +40,6 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of the DNS record.
-     * 
      */
     @Import(name="customHostNameDnsRecordType")
       private final @Nullable String customHostNameDnsRecordType;
@@ -54,7 +50,6 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Type of the hostname.
-     * 
      */
     @Import(name="hostNameType")
       private final @Nullable String hostNameType;
@@ -65,7 +60,6 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the hostname.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -76,7 +70,6 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
-     * 
      */
     @Import(name="siteNames")
       private final @Nullable List<String> siteNames;

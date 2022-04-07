@@ -14,7 +14,6 @@ public final class ListSqlMigrationServiceAuthKeysArgs extends io.pulumi.resourc
 
     /**
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class ListSqlMigrationServiceAuthKeysArgs extends io.pulumi.resourc
 
     /**
      * Name of the SQL Migration Service.
-     * 
      */
     @Import(name="sqlMigrationServiceName", required=true)
       private final String sqlMigrationServiceName;

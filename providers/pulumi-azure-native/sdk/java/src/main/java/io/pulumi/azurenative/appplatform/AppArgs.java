@@ -18,7 +18,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the App resource.
-     * 
      */
     @Import(name="appName")
       private final @Nullable Output<String> appName;
@@ -29,7 +28,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Managed Identity type of the app resource
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedIdentityPropertiesArgs> identity;
@@ -40,7 +38,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The GEO location of the application, always the same with its parent resource
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the App resource
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<AppResourcePropertiesArgs> properties;
@@ -62,7 +58,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Service resource.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

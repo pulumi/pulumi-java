@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information of orphaned users on the SQL server database.
- * 
  */
 public final class OrphanedUserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OrphanedUserInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Parent database of the user
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable String databaseName;
@@ -31,7 +29,6 @@ public final class OrphanedUserInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of the orphaned user
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

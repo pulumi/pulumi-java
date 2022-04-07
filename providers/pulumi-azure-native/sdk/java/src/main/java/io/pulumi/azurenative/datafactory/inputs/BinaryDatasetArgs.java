@@ -32,7 +32,6 @@ import javax.annotation.Nullable;
 
 /**
  * Binary dataset.
- * 
  */
 public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -40,7 +39,6 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -51,7 +49,6 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data compression method used for the binary dataset.
-     * 
      */
     @Import(name="compression")
       private final @Nullable Output<DatasetCompressionArgs> compression;
@@ -62,7 +59,6 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -73,7 +69,6 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
@@ -84,7 +79,6 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -95,7 +89,6 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the Binary storage.
-     * 
      */
     @Import(name="location", required=true)
       private final Output<Object> location;
@@ -106,7 +99,6 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -117,7 +109,6 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
@@ -128,7 +119,6 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
@@ -140,7 +130,6 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Type of dataset.
      * Expected value is 'Binary'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Site redundancy mode
-     * 
      */
     @EnumType
     public enum RedundancyMode {

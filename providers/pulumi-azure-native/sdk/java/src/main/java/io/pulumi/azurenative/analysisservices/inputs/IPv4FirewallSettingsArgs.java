@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * An array of firewall rules.
- * 
  */
 public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * The indicator of enabling PBI service.
-     * 
      */
     @Import(name="enablePowerBIService")
       private final @Nullable Output<Boolean> enablePowerBIService;
@@ -33,7 +31,6 @@ public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * An array of firewall rules.
-     * 
      */
     @Import(name="firewallRules")
       private final @Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules;

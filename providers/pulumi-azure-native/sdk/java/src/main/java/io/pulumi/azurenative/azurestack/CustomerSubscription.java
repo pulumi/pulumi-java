@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * Customer subscription.
  * API Version: 2017-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates a new customer subscription under a registration.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var customerSubscription = new AzureNative.AzureStack.CustomerSubscription("customerSubscription", new AzureNative.AzureStack.CustomerSubscriptionArgs
+ *         {
+ *             CustomerSubscriptionName = "E09A4E93-29A7-4EBA-A6D4-76202383F07F",
+ *             RegistrationName = "testregistration",
+ *             ResourceGroup = "azurestack",
+ *             TenantId = "dbab3982-796f-4d03-9908-044c08aef8a2",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	azurestack "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azurestack"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := azurestack.NewCustomerSubscription(ctx, "customerSubscription", &azurestack.CustomerSubscriptionArgs{
+ * 			CustomerSubscriptionName: pulumi.String("E09A4E93-29A7-4EBA-A6D4-76202383F07F"),
+ * 			RegistrationName:         pulumi.String("testregistration"),
+ * 			ResourceGroup:            pulumi.String("azurestack"),
+ * 			TenantId:                 pulumi.String("dbab3982-796f-4d03-9908-044c08aef8a2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const customerSubscription = new azure_native.azurestack.CustomerSubscription("customerSubscription", {
+ *     customerSubscriptionName: "E09A4E93-29A7-4EBA-A6D4-76202383F07F",
+ *     registrationName: "testregistration",
+ *     resourceGroup: "azurestack",
+ *     tenantId: "dbab3982-796f-4d03-9908-044c08aef8a2",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * customer_subscription = azure_native.azurestack.CustomerSubscription("customerSubscription",
+ *     customer_subscription_name="E09A4E93-29A7-4EBA-A6D4-76202383F07F",
+ *     registration_name="testregistration",
+ *     resource_group="azurestack",
+ *     tenant_id="dbab3982-796f-4d03-9908-044c08aef8a2")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +108,48 @@ import javax.annotation.Nullable;
 public class CustomerSubscription extends io.pulumi.resources.CustomResource {
     /**
      * The entity tag used for optimistic concurrency when modifying the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return The entity tag used for optimistic concurrency when modifying the resource.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Tenant Id.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return Tenant Id.
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Type of Resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of Resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

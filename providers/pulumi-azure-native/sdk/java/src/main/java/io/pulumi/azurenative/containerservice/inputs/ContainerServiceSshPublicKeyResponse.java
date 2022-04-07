@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Contains information about SSH certificate public key data.
- * 
  */
 public final class ContainerServiceSshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ContainerServiceSshPublicKeyResponse extends io.pulumi.resour
 
     /**
      * Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
-     * 
      */
     @Import(name="keyData", required=true)
       private final String keyData;

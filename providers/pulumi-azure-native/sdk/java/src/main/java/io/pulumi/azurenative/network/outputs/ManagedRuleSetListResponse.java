@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ManagedRuleSetListResponse {
     /**
      * List of rule sets.
-     * 
      */
     private final @Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets;
 
@@ -24,7 +23,6 @@ public final class ManagedRuleSetListResponse {
 
     /**
      * List of rule sets.
-     * 
     */
     public List<FrontDoorManagedRuleSetResponse> getManagedRuleSets() {
         return this.managedRuleSets == null ? List.of() : this.managedRuleSets;

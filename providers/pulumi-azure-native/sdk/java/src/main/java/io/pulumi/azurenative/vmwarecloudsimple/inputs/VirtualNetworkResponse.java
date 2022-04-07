@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Virtual network model
- * 
  */
 public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * can be used in vm creation/deletion
-     * 
      */
     @Import(name="assignable", required=true)
       private final Boolean assignable;
@@ -30,7 +28,6 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * virtual network id (privateCloudId:vsphereId)
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -41,7 +38,6 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Azure region
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -52,7 +48,6 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * {VirtualNetworkName}
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -63,7 +58,6 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The Private Cloud id
-     * 
      */
     @Import(name="privateCloudId", required=true)
       private final String privateCloudId;
@@ -74,7 +68,6 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

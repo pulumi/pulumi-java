@@ -12,18 +12,15 @@ import java.util.Objects;
 public final class GetPrivateEndpointConnectionResult {
     /**
      * The resource identifier.
-     * 
      */
     private final String id;
     /**
      * The resource name.
-     * 
      */
     private final String name;
     private final PrivateEndpointConnectionResponseProperties properties;
     /**
      * The resource type.
-     * 
      */
     private final String type;
 
@@ -41,14 +38,12 @@ public final class GetPrivateEndpointConnectionResult {
 
     /**
      * The resource identifier.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -58,7 +53,6 @@ public final class GetPrivateEndpointConnectionResult {
     }
     /**
      * The resource type.
-     * 
     */
     public String getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AssignmentPrincipal
- * 
  */
 public final class AssignmentPrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AssignmentPrincipalResponse extends io.pulumi.resources.Invok
 
     /**
      * The principal id being assigned to.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -32,7 +30,6 @@ public final class AssignmentPrincipalResponse extends io.pulumi.resources.Invok
 
     /**
      * Other metadata for the principal.
-     * 
      */
     @Import(name="principalMetadata")
       private final @Nullable Map<String,String> principalMetadata;
@@ -43,7 +40,6 @@ public final class AssignmentPrincipalResponse extends io.pulumi.resources.Invok
 
     /**
      * The Type of the principal ID.
-     * 
      */
     @Import(name="principalType", required=true)
       private final String principalType;

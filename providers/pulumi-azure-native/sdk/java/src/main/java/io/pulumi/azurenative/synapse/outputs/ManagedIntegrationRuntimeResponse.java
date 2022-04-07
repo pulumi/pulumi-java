@@ -15,28 +15,23 @@ import javax.annotation.Nullable;
 public final class ManagedIntegrationRuntimeResponse {
     /**
      * The compute resource for managed integration runtime.
-     * 
      */
     private final @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
     /**
      * Integration runtime description.
-     * 
      */
     private final @Nullable String description;
     /**
      * SSIS properties for managed integration runtime.
-     * 
      */
     private final @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
     /**
      * Integration runtime state, only valid for managed dedicated integration runtime.
-     * 
      */
     private final String state;
     /**
      * The type of integration runtime.
      * Expected value is 'Managed'.
-     * 
      */
     private final String type;
 
@@ -56,28 +51,24 @@ public final class ManagedIntegrationRuntimeResponse {
 
     /**
      * The compute resource for managed integration runtime.
-     * 
     */
     public Optional<IntegrationRuntimeComputePropertiesResponse> getComputeProperties() {
         return Optional.ofNullable(this.computeProperties);
     }
     /**
      * Integration runtime description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * SSIS properties for managed integration runtime.
-     * 
     */
     public Optional<IntegrationRuntimeSsisPropertiesResponse> getSsisProperties() {
         return Optional.ofNullable(this.ssisProperties);
     }
     /**
      * Integration runtime state, only valid for managed dedicated integration runtime.
-     * 
     */
     public String getState() {
         return this.state;
@@ -85,7 +76,6 @@ public final class ManagedIntegrationRuntimeResponse {
     /**
      * The type of integration runtime.
      * Expected value is 'Managed'.
-     * 
     */
     public String getType() {
         return this.type;

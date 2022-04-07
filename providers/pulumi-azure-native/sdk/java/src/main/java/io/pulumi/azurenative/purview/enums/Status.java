@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status.
-     * 
      */
     @EnumType
     public enum Status {

@@ -18,7 +18,109 @@ import javax.annotation.Nullable;
  * Private Endpoint Connection ARM resource.
  * API Version: 2018-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Approves or rejects a private endpoint connection for a factory.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.DataFactory.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.DataFactory.PrivateEndpointConnectionArgs
+ *         {
+ *             FactoryName = "exampleFactoryName",
+ *             PrivateEndpointConnectionName = "connection",
+ *             Properties = new AzureNative.DataFactory.Inputs.PrivateLinkConnectionApprovalRequestArgs
+ *             {
+ *                 PrivateLinkServiceConnectionState = new AzureNative.DataFactory.Inputs.PrivateLinkConnectionStateArgs
+ *                 {
+ *                     ActionsRequired = "",
+ *                     Description = "Approved by admin.",
+ *                     Status = "Approved",
+ *                 },
+ *             },
+ *             ResourceGroupName = "exampleResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datafactory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datafactory"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datafactory.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &datafactory.PrivateEndpointConnectionArgs{
+ * 			FactoryName:                   pulumi.String("exampleFactoryName"),
+ * 			PrivateEndpointConnectionName: pulumi.String("connection"),
+ * 			Properties: &datafactory.PrivateLinkConnectionApprovalRequestArgs{
+ * 				PrivateLinkServiceConnectionState: &datafactory.PrivateLinkConnectionStateArgs{
+ * 					ActionsRequired: pulumi.String(""),
+ * 					Description:     pulumi.String("Approved by admin."),
+ * 					Status:          pulumi.String("Approved"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.datafactory.PrivateEndpointConnection("privateEndpointConnection", {
+ *     factoryName: "exampleFactoryName",
+ *     privateEndpointConnectionName: "connection",
+ *     properties: {
+ *         privateLinkServiceConnectionState: {
+ *             actionsRequired: "",
+ *             description: "Approved by admin.",
+ *             status: "Approved",
+ *         },
+ *     },
+ *     resourceGroupName: "exampleResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.datafactory.PrivateEndpointConnection("privateEndpointConnection",
+ *     factory_name="exampleFactoryName",
+ *     private_endpoint_connection_name="connection",
+ *     properties=azure_native.datafactory.PrivateLinkConnectionApprovalRequestArgs(
+ *         private_link_service_connection_state=azure_native.datafactory.PrivateLinkConnectionStateArgs(
+ *             actions_required="",
+ *             description="Approved by admin.",
+ *             status="Approved",
+ *         ),
+ *     ),
+ *     resource_group_name="exampleResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +135,48 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * Etag identifies change in the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Etag identifies change in the resource.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Core resource properties
-     * 
      */
     @Export(name="properties", type=RemotePrivateEndpointConnectionResponse.class, parameters={})
     private Output<RemotePrivateEndpointConnectionResponse> properties;
 
     /**
      * @return Core resource properties
-     * 
      */
     public Output<RemotePrivateEndpointConnectionResponse> getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

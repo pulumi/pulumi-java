@@ -14,7 +14,6 @@ public final class GetIntegrationAccountAgreementArgs extends io.pulumi.resource
 
     /**
      * The integration account agreement name.
-     * 
      */
     @Import(name="agreementName", required=true)
       private final String agreementName;
@@ -25,7 +24,6 @@ public final class GetIntegrationAccountAgreementArgs extends io.pulumi.resource
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -36,7 +34,6 @@ public final class GetIntegrationAccountAgreementArgs extends io.pulumi.resource
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

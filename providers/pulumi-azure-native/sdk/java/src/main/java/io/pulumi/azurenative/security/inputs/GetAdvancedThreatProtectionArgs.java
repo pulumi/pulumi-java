@@ -14,7 +14,6 @@ public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.I
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;
@@ -25,7 +24,6 @@ public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.I
 
     /**
      * Advanced Threat Protection setting name.
-     * 
      */
     @Import(name="settingName", required=true)
       private final String settingName;

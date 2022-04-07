@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The HDInsight cluster application GET response.
- * 
  */
 public final class ApplicationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The application state.
-     * 
      */
     @Import(name="applicationState", required=true)
       private final String applicationState;
@@ -37,7 +35,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The application type.
-     * 
      */
     @Import(name="applicationType")
       private final @Nullable String applicationType;
@@ -48,7 +45,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The list of roles in the cluster.
-     * 
      */
     @Import(name="computeProfile")
       private final @Nullable ComputeProfileResponse computeProfile;
@@ -59,7 +55,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The application create date time.
-     * 
      */
     @Import(name="createdDate", required=true)
       private final String createdDate;
@@ -70,7 +65,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The list of errors.
-     * 
      */
     @Import(name="errors")
       private final @Nullable List<ErrorsResponse> errors;
@@ -81,7 +75,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The list of application HTTPS endpoints.
-     * 
      */
     @Import(name="httpsEndpoints")
       private final @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
@@ -92,7 +85,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The list of install script actions.
-     * 
      */
     @Import(name="installScriptActions")
       private final @Nullable List<RuntimeScriptActionResponse> installScriptActions;
@@ -103,7 +95,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The marketplace identifier.
-     * 
      */
     @Import(name="marketplaceIdentifier", required=true)
       private final String marketplaceIdentifier;
@@ -114,7 +105,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The provisioning state of the application.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -125,7 +115,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The list of application SSH endpoints.
-     * 
      */
     @Import(name="sshEndpoints")
       private final @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
@@ -136,7 +125,6 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The list of uninstall script actions.
-     * 
      */
     @Import(name="uninstallScriptActions")
       private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;

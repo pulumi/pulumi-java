@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Recovery plan group details.
- * 
  */
 public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The end group actions.
-     * 
      */
     @Import(name="endGroupActions")
       private final @Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions;
@@ -36,7 +34,6 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The group type.
-     * 
      */
     @Import(name="groupType", required=true)
       private final Output<Either<String,RecoveryPlanGroupType>> groupType;
@@ -47,7 +44,6 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The list of protected items.
-     * 
      */
     @Import(name="replicationProtectedItems")
       private final @Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems;
@@ -58,7 +54,6 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The start group actions.
-     * 
      */
     @Import(name="startGroupActions")
       private final @Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions;

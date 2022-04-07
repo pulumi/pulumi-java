@@ -19,38 +19,31 @@ import javax.annotation.Nullable;
 public final class FirewallPolicyNatRuleResponse {
     /**
      * The action type of a Nat rule.
-     * 
      */
     private final @Nullable FirewallPolicyNatRuleActionResponse action;
     /**
      * The name of the rule.
-     * 
      */
     private final @Nullable String name;
     /**
      * Priority of the Firewall Policy Rule resource.
-     * 
      */
     private final @Nullable Integer priority;
     /**
      * The match conditions for incoming traffic.
-     * 
      */
     private final @Nullable Object ruleCondition;
     /**
      * The type of the rule.
      * Expected value is 'FirewallPolicyNatRule'.
-     * 
      */
     private final String ruleType;
     /**
      * The translated address for this NAT rule.
-     * 
      */
     private final @Nullable String translatedAddress;
     /**
      * The translated port for this NAT rule.
-     * 
      */
     private final @Nullable String translatedPort;
 
@@ -74,28 +67,24 @@ public final class FirewallPolicyNatRuleResponse {
 
     /**
      * The action type of a Nat rule.
-     * 
     */
     public Optional<FirewallPolicyNatRuleActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The name of the rule.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule resource.
-     * 
     */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The match conditions for incoming traffic.
-     * 
     */
     public Optional<Object> getRuleCondition() {
         return Optional.ofNullable(this.ruleCondition);
@@ -103,21 +92,18 @@ public final class FirewallPolicyNatRuleResponse {
     /**
      * The type of the rule.
      * Expected value is 'FirewallPolicyNatRule'.
-     * 
     */
     public String getRuleType() {
         return this.ruleType;
     }
     /**
      * The translated address for this NAT rule.
-     * 
     */
     public Optional<String> getTranslatedAddress() {
         return Optional.ofNullable(this.translatedAddress);
     }
     /**
      * The translated port for this NAT rule.
-     * 
     */
     public Optional<String> getTranslatedPort() {
         return Optional.ofNullable(this.translatedPort);

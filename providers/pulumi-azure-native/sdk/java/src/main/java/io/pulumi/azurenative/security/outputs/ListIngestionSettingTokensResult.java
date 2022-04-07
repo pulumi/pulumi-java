@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ListIngestionSettingTokensResult {
     /**
      * The token is used for correlating security data and logs with the resources in the subscription.
-     * 
      */
     private final String token;
 
@@ -22,7 +21,6 @@ public final class ListIngestionSettingTokensResult {
 
     /**
      * The token is used for correlating security data and logs with the resources in the subscription.
-     * 
     */
     public String getToken() {
         return this.token;

@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class RosettaNetPipActivitySettingsResponse {
     /**
      * The RosettaNet ProcessConfiguration acknowledgement settings.
-     * 
      */
     private final RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings;
     /**
      * The RosettaNet ProcessConfiguration activity behavior.
-     * 
      */
     private final RosettaNetPipActivityBehaviorResponse activityBehavior;
     /**
      * The RosettaNet ProcessConfiguration activity type.
-     * 
      */
     private final String activityType;
 
@@ -39,21 +36,18 @@ public final class RosettaNetPipActivitySettingsResponse {
 
     /**
      * The RosettaNet ProcessConfiguration acknowledgement settings.
-     * 
     */
     public RosettaNetPipAcknowledgmentOfReceiptSettingsResponse getAcknowledgmentOfReceiptSettings() {
         return this.acknowledgmentOfReceiptSettings;
     }
     /**
      * The RosettaNet ProcessConfiguration activity behavior.
-     * 
     */
     public RosettaNetPipActivityBehaviorResponse getActivityBehavior() {
         return this.activityBehavior;
     }
     /**
      * The RosettaNet ProcessConfiguration activity type.
-     * 
     */
     public String getActivityType() {
         return this.activityType;

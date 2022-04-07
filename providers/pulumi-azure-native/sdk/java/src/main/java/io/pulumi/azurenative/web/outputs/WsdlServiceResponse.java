@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class WsdlServiceResponse {
     /**
      * List of the endpoints' qualified names
-     * 
      */
     private final @Nullable List<String> endpointQualifiedNames;
     /**
      * The service's qualified name
-     * 
      */
     private final String qualifiedName;
 
@@ -32,14 +30,12 @@ public final class WsdlServiceResponse {
 
     /**
      * List of the endpoints' qualified names
-     * 
     */
     public List<String> getEndpointQualifiedNames() {
         return this.endpointQualifiedNames == null ? List.of() : this.endpointQualifiedNames;
     }
     /**
      * The service's qualified name
-     * 
     */
     public String getQualifiedName() {
         return this.qualifiedName;

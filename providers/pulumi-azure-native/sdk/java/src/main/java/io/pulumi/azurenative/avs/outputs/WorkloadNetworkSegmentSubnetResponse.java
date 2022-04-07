@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class WorkloadNetworkSegmentSubnetResponse {
     /**
      * DHCP Range assigned for subnet.
-     * 
      */
     private final @Nullable List<String> dhcpRanges;
     /**
      * Gateway address.
-     * 
      */
     private final @Nullable String gatewayAddress;
 
@@ -33,14 +31,12 @@ public final class WorkloadNetworkSegmentSubnetResponse {
 
     /**
      * DHCP Range assigned for subnet.
-     * 
     */
     public List<String> getDhcpRanges() {
         return this.dhcpRanges == null ? List.of() : this.dhcpRanges;
     }
     /**
      * Gateway address.
-     * 
     */
     public Optional<String> getGatewayAddress() {
         return Optional.ofNullable(this.gatewayAddress);

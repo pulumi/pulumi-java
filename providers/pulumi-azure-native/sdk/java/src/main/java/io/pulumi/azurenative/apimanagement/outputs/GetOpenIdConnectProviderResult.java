@@ -13,42 +13,34 @@ import javax.annotation.Nullable;
 public final class GetOpenIdConnectProviderResult {
     /**
      * Client ID of developer console which is the client application.
-     * 
      */
     private final String clientId;
     /**
      * Client Secret of developer console which is the client application.
-     * 
      */
     private final @Nullable String clientSecret;
     /**
      * User-friendly description of OpenID Connect Provider.
-     * 
      */
     private final @Nullable String description;
     /**
      * User-friendly OpenID Connect Provider name.
-     * 
      */
     private final String displayName;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Metadata endpoint URI.
-     * 
      */
     private final String metadataEndpoint;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Resource type for API Management resource.
-     * 
      */
     private final String type;
 
@@ -74,56 +66,48 @@ public final class GetOpenIdConnectProviderResult {
 
     /**
      * Client ID of developer console which is the client application.
-     * 
     */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Client Secret of developer console which is the client application.
-     * 
     */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * User-friendly description of OpenID Connect Provider.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * User-friendly OpenID Connect Provider name.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Metadata endpoint URI.
-     * 
     */
     public String getMetadataEndpoint() {
         return this.metadataEndpoint;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
     */
     public String getType() {
         return this.type;

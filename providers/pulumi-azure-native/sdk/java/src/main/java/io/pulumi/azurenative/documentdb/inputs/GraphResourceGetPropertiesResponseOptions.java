@@ -17,7 +17,6 @@ public final class GraphResourceGetPropertiesResponseOptions extends io.pulumi.r
 
     /**
      * Specifies the Autoscale settings.
-     * 
      */
     @Import(name="autoscaleSettings")
       private final @Nullable AutoscaleSettingsResponse autoscaleSettings;
@@ -28,7 +27,6 @@ public final class GraphResourceGetPropertiesResponseOptions extends io.pulumi.r
 
     /**
      * Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
-     * 
      */
     @Import(name="throughput")
       private final @Nullable Integer throughput;

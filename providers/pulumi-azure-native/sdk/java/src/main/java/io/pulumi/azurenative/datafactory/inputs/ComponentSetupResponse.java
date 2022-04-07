@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The custom setup of installing 3rd party components.
- * 
  */
 public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the 3rd party component.
-     * 
      */
     @Import(name="componentName", required=true)
       private final String componentName;
@@ -34,7 +32,6 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The license key to activate the component.
-     * 
      */
     @Import(name="licenseKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey;
@@ -46,7 +43,6 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
     /**
      * The type of custom setup.
      * Expected value is 'ComponentSetup'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

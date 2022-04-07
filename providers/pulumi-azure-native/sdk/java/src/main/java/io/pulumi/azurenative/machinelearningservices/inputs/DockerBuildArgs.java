@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class to represent configuration settings for Docker Build
- * 
  */
 public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
      * The path is relative to the asset path which must contain a single Blob URI value.
      * <seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
-     * 
      */
     @Import(name="context")
       private final @Nullable Output<String> context;
@@ -35,7 +33,6 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Enum to determine docker specification type. Must be either Build or Image.
      * Expected value is 'Build'.
-     * 
      */
     @Import(name="dockerSpecificationType", required=true)
       private final Output<String> dockerSpecificationType;
@@ -47,7 +44,6 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Docker command line instructions to assemble an image.
      * <seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
-     * 
      */
     @Import(name="dockerfile", required=true)
       private final Output<String> dockerfile;
@@ -58,7 +54,6 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The platform information of the docker image.
-     * 
      */
     @Import(name="platform")
       private final @Nullable Output<DockerImagePlatformArgs> platform;

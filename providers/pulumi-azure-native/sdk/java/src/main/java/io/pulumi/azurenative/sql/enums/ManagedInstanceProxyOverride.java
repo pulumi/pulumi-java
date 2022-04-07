@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Connection type used for connecting to the instance.
-     * 
      */
     @EnumType
     public enum ManagedInstanceProxyOverride {

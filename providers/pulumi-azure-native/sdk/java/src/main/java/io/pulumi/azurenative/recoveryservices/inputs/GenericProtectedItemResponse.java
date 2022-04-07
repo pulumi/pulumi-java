@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Base class for backup items.
- * 
  */
 public final class GenericProtectedItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -34,7 +32,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Name of the backup set the backup item belongs to
-     * 
      */
     @Import(name="backupSetName")
       private final @Nullable String backupSetName;
@@ -45,7 +42,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Unique name of container
-     * 
      */
     @Import(name="containerName")
       private final @Nullable String containerName;
@@ -56,7 +52,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable String createMode;
@@ -67,7 +62,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Time for deferred deletion in UTC
-     * 
      */
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable String deferredDeleteTimeInUTC;
@@ -78,7 +72,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
-     * 
      */
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable String deferredDeleteTimeRemaining;
@@ -89,7 +82,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Name of this backup item's fabric.
-     * 
      */
     @Import(name="fabricName")
       private final @Nullable String fabricName;
@@ -100,7 +92,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -111,7 +102,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
-     * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
@@ -122,7 +112,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
-     * 
      */
     @Import(name="isRehydrate")
       private final @Nullable Boolean isRehydrate;
@@ -133,7 +122,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
-     * 
      */
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Boolean isScheduledForDeferredDelete;
@@ -144,7 +132,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
-     * 
      */
     @Import(name="lastRecoveryPoint")
       private final @Nullable String lastRecoveryPoint;
@@ -155,7 +142,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable String policyId;
@@ -166,7 +152,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Indicates consistency of policy object and policy applied to this backup item.
-     * 
      */
     @Import(name="policyState")
       private final @Nullable String policyState;
@@ -177,7 +162,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Data Plane Service ID of the protected item.
-     * 
      */
     @Import(name="protectedItemId")
       private final @Nullable Double protectedItemId;
@@ -189,7 +173,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
     /**
      * backup item type.
      * Expected value is 'GenericProtectedItem'.
-     * 
      */
     @Import(name="protectedItemType", required=true)
       private final String protectedItemType;
@@ -200,7 +183,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable String protectionState;
@@ -211,7 +193,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Loosely coupled (type, value) associations (example - parent of a protected item)
-     * 
      */
     @Import(name="sourceAssociations")
       private final @Nullable Map<String,String> sourceAssociations;
@@ -222,7 +203,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
@@ -233,7 +213,6 @@ public final class GenericProtectedItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Type of workload this item represents.
-     * 
      */
     @Import(name="workloadType")
       private final @Nullable String workloadType;

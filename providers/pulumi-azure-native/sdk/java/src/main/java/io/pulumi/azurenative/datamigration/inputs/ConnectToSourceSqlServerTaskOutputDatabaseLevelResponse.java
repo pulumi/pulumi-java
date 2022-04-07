@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Database level output for the task that validates connection to SQL Server and also validates source server requirements
- * 
  */
 public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
 
     /**
      * SQL Server compatibility level of database
-     * 
      */
     @Import(name="compatibilityLevel", required=true)
       private final String compatibilityLevel;
@@ -32,7 +30,6 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
 
     /**
      * The list of database files
-     * 
      */
     @Import(name="databaseFiles", required=true)
       private final List<DatabaseFileInfoResponse> databaseFiles;
@@ -43,7 +40,6 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
 
     /**
      * State of the database
-     * 
      */
     @Import(name="databaseState", required=true)
       private final String databaseState;
@@ -54,7 +50,6 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -65,7 +60,6 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
 
     /**
      * Database name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -77,7 +71,6 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     /**
      * Type of result - database level or task level
      * Expected value is 'DatabaseLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -88,7 +81,6 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
 
     /**
      * Size of the file in megabytes
-     * 
      */
     @Import(name="sizeMB", required=true)
       private final Double sizeMB;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of Network Interface resource.
-     * 
      */
     @EnumType
     public enum NetworkInterfaceNicType {

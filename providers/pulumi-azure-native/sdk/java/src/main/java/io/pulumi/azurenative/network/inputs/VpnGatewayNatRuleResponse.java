@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * VpnGatewayNatRule Resource.
- * 
  */
 public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * List of egress VpnSiteLinkConnections.
-     * 
      */
     @Import(name="egressVpnSiteLinkConnections", required=true)
       private final List<SubResourceResponse> egressVpnSiteLinkConnections;
@@ -34,7 +32,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -45,7 +42,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The private IP address external mapping for NAT.
-     * 
      */
     @Import(name="externalMappings")
       private final @Nullable List<VpnNatRuleMappingResponse> externalMappings;
@@ -56,7 +52,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -67,7 +62,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * List of ingress VpnSiteLinkConnections.
-     * 
      */
     @Import(name="ingressVpnSiteLinkConnections", required=true)
       private final List<SubResourceResponse> ingressVpnSiteLinkConnections;
@@ -78,7 +72,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The private IP address internal mapping for NAT.
-     * 
      */
     @Import(name="internalMappings")
       private final @Nullable List<VpnNatRuleMappingResponse> internalMappings;
@@ -89,7 +82,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The IP Configuration ID this NAT rule applies to.
-     * 
      */
     @Import(name="ipConfigurationId")
       private final @Nullable String ipConfigurationId;
@@ -100,7 +92,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The Source NAT direction of a VPN NAT.
-     * 
      */
     @Import(name="mode")
       private final @Nullable String mode;
@@ -111,7 +102,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -122,7 +112,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The provisioning state of the NAT Rule resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -133,7 +122,6 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

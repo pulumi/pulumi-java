@@ -14,7 +14,6 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the cloud account connector
-     * 
      */
     @Import(name="connectorName", required=true)
       private final String connectorName;

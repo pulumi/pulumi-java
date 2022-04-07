@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A ShareSubscriptionSynchronization data transfer object.
- * 
  */
 public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
 
     /**
      * Synchronization duration
-     * 
      */
     @Import(name="durationMs", required=true)
       private final Integer durationMs;
@@ -30,7 +28,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
 
     /**
      * End time of synchronization
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -41,7 +38,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
 
     /**
      * message of Synchronization
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -52,7 +48,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
 
     /**
      * start time of synchronization
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -63,7 +58,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
 
     /**
      * Raw Status
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -74,7 +68,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
 
     /**
      * Synchronization id
-     * 
      */
     @Import(name="synchronizationId", required=true)
       private final String synchronizationId;
@@ -85,7 +78,6 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
 
     /**
      * Synchronization Mode
-     * 
      */
     @Import(name="synchronizationMode", required=true)
       private final String synchronizationMode;

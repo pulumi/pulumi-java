@@ -20,7 +20,96 @@ import javax.annotation.Nullable;
  * LoadTest details
  * API Version: 2021-12-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### LoadTests_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var loadTest = new AzureNative.LoadTestService.LoadTest("loadTest", new AzureNative.LoadTestService.LoadTestArgs
+ *         {
+ *             Description = "This is new load test resource",
+ *             LoadTestName = "myLoadTest",
+ *             Location = "westus",
+ *             ResourceGroupName = "dummyrg",
+ *             Tags = 
+ *             {
+ *                 { "Team", "Dev Exp" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	loadtestservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/loadtestservice"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := loadtestservice.NewLoadTest(ctx, "loadTest", &loadtestservice.LoadTestArgs{
+ * 			Description:       pulumi.String("This is new load test resource"),
+ * 			LoadTestName:      pulumi.String("myLoadTest"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("dummyrg"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Team": pulumi.String("Dev Exp"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const loadTest = new azure_native.loadtestservice.LoadTest("loadTest", {
+ *     description: "This is new load test resource",
+ *     loadTestName: "myLoadTest",
+ *     location: "westus",
+ *     resourceGroupName: "dummyrg",
+ *     tags: {
+ *         Team: "Dev Exp",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * load_test = azure_native.loadtestservice.LoadTest("loadTest",
+ *     description="This is new load test resource",
+ *     load_test_name="myLoadTest",
+ *     location="westus",
+ *     resource_group_name="dummyrg",
+ *     tags={
+ *         "Team": "Dev Exp",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +124,108 @@ import javax.annotation.Nullable;
 public class LoadTest extends io.pulumi.resources.CustomResource {
     /**
      * Resource data plane URI.
-     * 
      */
     @Export(name="dataPlaneURI", type=String.class, parameters={})
     private Output<String> dataPlaneURI;
 
     /**
      * @return Resource data plane URI.
-     * 
      */
     public Output<String> getDataPlaneURI() {
         return this.dataPlaneURI;
     }
     /**
      * Description of the resource.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The type of identity used for the resource.
-     * 
      */
     @Export(name="identity", type=SystemAssignedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ SystemAssignedServiceIdentityResponse> identity;
 
     /**
      * @return The type of identity used for the resource.
-     * 
      */
     public Output</* @Nullable */ SystemAssignedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Resource provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

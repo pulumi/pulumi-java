@@ -14,7 +14,6 @@ public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
-     * 
      */
     @Import(name="cacheName", required=true)
       private final String cacheName;
@@ -25,7 +24,6 @@ public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Target resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of Storage Target.
-     * 
      */
     @Import(name="storageTargetName", required=true)
       private final String storageTargetName;

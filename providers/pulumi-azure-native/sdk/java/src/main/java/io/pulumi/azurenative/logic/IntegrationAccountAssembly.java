@@ -19,7 +19,104 @@ import javax.annotation.Nullable;
  * The assembly definition.
  * API Version: 2019-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update an account assembly
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var integrationAccountAssembly = new AzureNative.Logic.IntegrationAccountAssembly("integrationAccountAssembly", new AzureNative.Logic.IntegrationAccountAssemblyArgs
+ *         {
+ *             AssemblyArtifactName = "testAssembly",
+ *             IntegrationAccountName = "testIntegrationAccount",
+ *             Location = "westus",
+ *             Properties = new AzureNative.Logic.Inputs.AssemblyPropertiesArgs
+ *             {
+ *                 AssemblyName = "System.IdentityModel.Tokens.Jwt",
+ *                 Content = "Base64 encoded Assembly Content",
+ *                 Metadata = ,
+ *             },
+ *             ResourceGroupName = "testResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logic.NewIntegrationAccountAssembly(ctx, "integrationAccountAssembly", &logic.IntegrationAccountAssemblyArgs{
+ * 			AssemblyArtifactName:   pulumi.String("testAssembly"),
+ * 			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
+ * 			Location:               pulumi.String("westus"),
+ * 			Properties: &logic.AssemblyPropertiesArgs{
+ * 				AssemblyName: pulumi.String("System.IdentityModel.Tokens.Jwt"),
+ * 				Content:      pulumi.Any("Base64 encoded Assembly Content"),
+ * 				Metadata:     nil,
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const integrationAccountAssembly = new azure_native.logic.IntegrationAccountAssembly("integrationAccountAssembly", {
+ *     assemblyArtifactName: "testAssembly",
+ *     integrationAccountName: "testIntegrationAccount",
+ *     location: "westus",
+ *     properties: {
+ *         assemblyName: "System.IdentityModel.Tokens.Jwt",
+ *         content: "Base64 encoded Assembly Content",
+ *         metadata: {},
+ *     },
+ *     resourceGroupName: "testResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * integration_account_assembly = azure_native.logic.IntegrationAccountAssembly("integrationAccountAssembly",
+ *     assembly_artifact_name="testAssembly",
+ *     integration_account_name="testIntegrationAccount",
+ *     location="westus",
+ *     properties=azure_native.logic.AssemblyPropertiesArgs(
+ *         assembly_name="System.IdentityModel.Tokens.Jwt",
+ *         content="Base64 encoded Assembly Content",
+ *         metadata={},
+ *     ),
+ *     resource_group_name="testResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +131,60 @@ import javax.annotation.Nullable;
 public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResource {
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Gets the resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The assembly properties.
-     * 
      */
     @Export(name="properties", type=AssemblyPropertiesResponse.class, parameters={})
     private Output<AssemblyPropertiesResponse> properties;
 
     /**
      * @return The assembly properties.
-     * 
      */
     public Output<AssemblyPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets the resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets the resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

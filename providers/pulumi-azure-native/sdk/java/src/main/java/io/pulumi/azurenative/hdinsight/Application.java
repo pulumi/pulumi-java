@@ -19,7 +19,210 @@ import javax.annotation.Nullable;
  * The HDInsight cluster application
  * API Version: 2018-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Application
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var application = new AzureNative.HDInsight.Application("application", new AzureNative.HDInsight.ApplicationArgs
+ *         {
+ *             ApplicationName = "hue",
+ *             ClusterName = "cluster1",
+ *             Properties = new AzureNative.HDInsight.Inputs.ApplicationPropertiesArgs
+ *             {
+ *                 ApplicationType = "CustomApplication",
+ *                 ComputeProfile = new AzureNative.HDInsight.Inputs.ComputeProfileArgs
+ *                 {
+ *                     Roles = 
+ *                     {
+ *                         new AzureNative.HDInsight.Inputs.RoleArgs
+ *                         {
+ *                             HardwareProfile = new AzureNative.HDInsight.Inputs.HardwareProfileArgs
+ *                             {
+ *                                 VmSize = "Standard_D12_v2",
+ *                             },
+ *                             Name = "edgenode",
+ *                             TargetInstanceCount = 1,
+ *                         },
+ *                     },
+ *                 },
+ *                 Errors = {},
+ *                 HttpsEndpoints = 
+ *                 {
+ *                     new AzureNative.HDInsight.Inputs.ApplicationGetHttpsEndpointArgs
+ *                     {
+ *                         AccessModes = 
+ *                         {
+ *                             "WebPage",
+ *                         },
+ *                         DestinationPort = 20000,
+ *                         SubDomainSuffix = "dss",
+ *                     },
+ *                 },
+ *                 InstallScriptActions = 
+ *                 {
+ *                     new AzureNative.HDInsight.Inputs.RuntimeScriptActionArgs
+ *                     {
+ *                         Name = "app-install-app1",
+ *                         Parameters = "-version latest -port 20000",
+ *                         Roles = 
+ *                         {
+ *                             "edgenode",
+ *                         },
+ *                         Uri = "https://.../install.sh",
+ *                     },
+ *                 },
+ *                 UninstallScriptActions = {},
+ *             },
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hdinsight.NewApplication(ctx, "application", &hdinsight.ApplicationArgs{
+ * 			ApplicationName: pulumi.String("hue"),
+ * 			ClusterName:     pulumi.String("cluster1"),
+ * 			Properties: &hdinsight.ApplicationPropertiesArgs{
+ * 				ApplicationType: pulumi.String("CustomApplication"),
+ * 				ComputeProfile: &hdinsight.ComputeProfileArgs{
+ * 					Roles: hdinsight.RoleArray{
+ * 						&hdinsight.RoleArgs{
+ * 							HardwareProfile: &hdinsight.HardwareProfileArgs{
+ * 								VmSize: pulumi.String("Standard_D12_v2"),
+ * 							},
+ * 							Name:                pulumi.String("edgenode"),
+ * 							TargetInstanceCount: pulumi.Int(1),
+ * 						},
+ * 					},
+ * 				},
+ * 				Errors: hdinsight.ErrorsArray{},
+ * 				HttpsEndpoints: hdinsight.ApplicationGetHttpsEndpointArray{
+ * 					&hdinsight.ApplicationGetHttpsEndpointArgs{
+ * 						AccessModes: pulumi.StringArray{
+ * 							pulumi.String("WebPage"),
+ * 						},
+ * 						DestinationPort: pulumi.Int(20000),
+ * 						SubDomainSuffix: pulumi.String("dss"),
+ * 					},
+ * 				},
+ * 				InstallScriptActions: hdinsight.RuntimeScriptActionArray{
+ * 					&hdinsight.RuntimeScriptActionArgs{
+ * 						Name:       pulumi.String("app-install-app1"),
+ * 						Parameters: pulumi.String("-version latest -port 20000"),
+ * 						Roles: pulumi.StringArray{
+ * 							pulumi.String("edgenode"),
+ * 						},
+ * 						Uri: pulumi.String("https://.../install.sh"),
+ * 					},
+ * 				},
+ * 				UninstallScriptActions: hdinsight.RuntimeScriptActionArray{},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const application = new azure_native.hdinsight.Application("application", {
+ *     applicationName: "hue",
+ *     clusterName: "cluster1",
+ *     properties: {
+ *         applicationType: "CustomApplication",
+ *         computeProfile: {
+ *             roles: [{
+ *                 hardwareProfile: {
+ *                     vmSize: "Standard_D12_v2",
+ *                 },
+ *                 name: "edgenode",
+ *                 targetInstanceCount: 1,
+ *             }],
+ *         },
+ *         errors: [],
+ *         httpsEndpoints: [{
+ *             accessModes: ["WebPage"],
+ *             destinationPort: 20000,
+ *             subDomainSuffix: "dss",
+ *         }],
+ *         installScriptActions: [{
+ *             name: "app-install-app1",
+ *             parameters: "-version latest -port 20000",
+ *             roles: ["edgenode"],
+ *             uri: "https://.../install.sh",
+ *         }],
+ *         uninstallScriptActions: [],
+ *     },
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * application = azure_native.hdinsight.Application("application",
+ *     application_name="hue",
+ *     cluster_name="cluster1",
+ *     properties=azure_native.hdinsight.ApplicationPropertiesArgs(
+ *         application_type="CustomApplication",
+ *         compute_profile=azure_native.hdinsight.ComputeProfileArgs(
+ *             roles=[azure_native.hdinsight.RoleArgs(
+ *                 hardware_profile=azure_native.hdinsight.HardwareProfileArgs(
+ *                     vm_size="Standard_D12_v2",
+ *                 ),
+ *                 name="edgenode",
+ *                 target_instance_count=1,
+ *             )],
+ *         ),
+ *         errors=[],
+ *         https_endpoints=[azure_native.hdinsight.ApplicationGetHttpsEndpointArgs(
+ *             access_modes=["WebPage"],
+ *             destination_port=20000,
+ *             sub_domain_suffix="dss",
+ *         )],
+ *         install_script_actions=[azure_native.hdinsight.RuntimeScriptActionArgs(
+ *             name="app-install-app1",
+ *             parameters="-version latest -port 20000",
+ *             roles=["edgenode"],
+ *             uri="https://.../install.sh",
+ *         )],
+ *         uninstall_script_actions=[],
+ *     ),
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +237,60 @@ import javax.annotation.Nullable;
 public class Application extends io.pulumi.resources.CustomResource {
     /**
      * The ETag for the application
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return The ETag for the application
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The properties of the application.
-     * 
      */
     @Export(name="properties", type=ApplicationPropertiesResponse.class, parameters={})
     private Output<ApplicationPropertiesResponse> properties;
 
     /**
      * @return The properties of the application.
-     * 
      */
     public Output<ApplicationPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The tags for the application.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags for the application.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

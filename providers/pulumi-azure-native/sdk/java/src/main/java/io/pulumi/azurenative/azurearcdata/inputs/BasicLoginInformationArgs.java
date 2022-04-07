@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Username and password for basic login authentication.
- * 
  */
 public final class BasicLoginInformationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BasicLoginInformationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Login password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -31,7 +29,6 @@ public final class BasicLoginInformationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Login username.
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

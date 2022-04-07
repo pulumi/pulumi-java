@@ -18,43 +18,35 @@ import javax.annotation.Nullable;
 public final class CosmosDbMongoDbApiLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     private final @Nullable List<Object> annotations;
     /**
      * The integration runtime reference.
-     * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
      * The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     private final Object connectionString;
     /**
      * The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
-     * 
      */
     private final Object database;
     /**
      * Linked service description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object isServerVersionAbove32;
     /**
      * Parameters for linked service.
-     * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
      * Expected value is 'CosmosDbMongoDbApi'.
-     * 
      */
     private final String type;
 
@@ -80,49 +72,42 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse {
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
-     * 
     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
     */
     public Object getConnectionString() {
         return this.connectionString;
     }
     /**
      * The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
-     * 
     */
     public Object getDatabase() {
         return this.database;
     }
     /**
      * Linked service description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getIsServerVersionAbove32() {
         return Optional.ofNullable(this.isServerVersionAbove32);
     }
     /**
      * Parameters for linked service.
-     * 
     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -130,7 +115,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse {
     /**
      * Type of linked service.
      * Expected value is 'CosmosDbMongoDbApi'.
-     * 
     */
     public String getType() {
         return this.type;

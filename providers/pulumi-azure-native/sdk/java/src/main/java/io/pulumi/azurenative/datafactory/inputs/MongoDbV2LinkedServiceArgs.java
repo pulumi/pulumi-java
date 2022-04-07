@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for MongoDB data source.
- * 
  */
 public final class MongoDbV2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class MongoDbV2LinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -36,7 +34,6 @@ public final class MongoDbV2LinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -47,7 +44,6 @@ public final class MongoDbV2LinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The MongoDB connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString", required=true)
       private final Output<Object> connectionString;
@@ -58,7 +54,6 @@ public final class MongoDbV2LinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="database", required=true)
       private final Output<Object> database;
@@ -69,7 +64,6 @@ public final class MongoDbV2LinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -80,7 +74,6 @@ public final class MongoDbV2LinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -92,7 +85,6 @@ public final class MongoDbV2LinkedServiceArgs extends io.pulumi.resources.Resour
     /**
      * Type of linked service.
      * Expected value is 'MongoDbV2'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

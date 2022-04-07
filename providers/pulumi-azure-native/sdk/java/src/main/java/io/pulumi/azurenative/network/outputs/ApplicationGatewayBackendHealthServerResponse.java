@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ApplicationGatewayBackendHealthServerResponse {
     /**
      * IP address or FQDN of backend server.
-     * 
      */
     private final @Nullable String address;
     /**
      * Health of backend server.
-     * 
      */
     private final @Nullable String health;
     /**
      * Health Probe Log.
-     * 
      */
     private final @Nullable String healthProbeLog;
     /**
      * Reference to IP configuration of backend server.
-     * 
      */
     private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 
@@ -47,28 +43,24 @@ public final class ApplicationGatewayBackendHealthServerResponse {
 
     /**
      * IP address or FQDN of backend server.
-     * 
     */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Health of backend server.
-     * 
     */
     public Optional<String> getHealth() {
         return Optional.ofNullable(this.health);
     }
     /**
      * Health Probe Log.
-     * 
     */
     public Optional<String> getHealthProbeLog() {
         return Optional.ofNullable(this.healthProbeLog);
     }
     /**
      * Reference to IP configuration of backend server.
-     * 
     */
     public Optional<NetworkInterfaceIPConfigurationResponse> getIpConfiguration() {
         return Optional.ofNullable(this.ipConfiguration);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of a NotificationHub MpnsCredential.
- * 
  */
 public final class MpnsCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MpnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The certificate key for this credential.
-     * 
      */
     @Import(name="certificateKey")
       private final @Nullable String certificateKey;
@@ -31,7 +29,6 @@ public final class MpnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The MPNS certificate.
-     * 
      */
     @Import(name="mpnsCertificate")
       private final @Nullable String mpnsCertificate;
@@ -42,7 +39,6 @@ public final class MpnsCredentialResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The MPNS certificate Thumbprint
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;

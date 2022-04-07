@@ -18,7 +18,6 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The job collection name.
-     * 
      */
     @Import(name="jobCollectionName")
       private final @Nullable Output<String> jobCollectionName;
@@ -29,7 +28,6 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the storage account location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the job collection resource name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -51,7 +48,6 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the job collection properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<JobCollectionPropertiesArgs> properties;
@@ -62,7 +58,6 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

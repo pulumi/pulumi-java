@@ -21,7 +21,6 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
 
     /**
      * The policy definition description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +31,6 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
 
     /**
      * The display name of the policy definition.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -43,7 +41,6 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
 
     /**
      * The ID of the management group.
-     * 
      */
     @Import(name="managementGroupId", required=true)
       private final Output<String> managementGroupId;
@@ -54,7 +51,6 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
 
     /**
      * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -65,7 +61,6 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
 
     /**
      * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<String> mode;
@@ -76,7 +71,6 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
 
     /**
      * The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
@@ -87,7 +81,6 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
 
     /**
      * The name of the policy definition to create.
-     * 
      */
     @Import(name="policyDefinitionName")
       private final @Nullable Output<String> policyDefinitionName;
@@ -98,7 +91,6 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
 
     /**
      * The policy rule.
-     * 
      */
     @Import(name="policyRule")
       private final @Nullable Output<Object> policyRule;
@@ -109,7 +101,6 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
 
     /**
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
-     * 
      */
     @Import(name="policyType")
       private final @Nullable Output<Either<String,PolicyType>> policyType;

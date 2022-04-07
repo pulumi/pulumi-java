@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Keys for endpoint authentication.
- * 
  */
 public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The primary key.
-     * 
      */
     @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
@@ -31,7 +29,6 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The secondary key.
-     * 
      */
     @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;

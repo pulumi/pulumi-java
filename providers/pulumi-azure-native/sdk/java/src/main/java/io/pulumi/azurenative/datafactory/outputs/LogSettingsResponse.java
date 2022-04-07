@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class LogSettingsResponse {
     /**
      * Specifies settings for copy activity log.
-     * 
      */
     private final @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings;
     /**
      * Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object enableCopyActivityLog;
     /**
      * Log location settings customer needs to provide when enabling log.
-     * 
      */
     private final LogLocationSettingsResponse logLocationSettings;
 
@@ -41,21 +38,18 @@ public final class LogSettingsResponse {
 
     /**
      * Specifies settings for copy activity log.
-     * 
     */
     public Optional<CopyActivityLogSettingsResponse> getCopyActivityLogSettings() {
         return Optional.ofNullable(this.copyActivityLogSettings);
     }
     /**
      * Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getEnableCopyActivityLog() {
         return Optional.ofNullable(this.enableCopyActivityLog);
     }
     /**
      * Log location settings customer needs to provide when enabling log.
-     * 
     */
     public LogLocationSettingsResponse getLogLocationSettings() {
         return this.logLocationSettings;

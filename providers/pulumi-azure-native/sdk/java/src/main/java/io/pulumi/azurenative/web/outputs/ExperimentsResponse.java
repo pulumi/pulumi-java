@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ExperimentsResponse {
     /**
      * List of ramp-up rules.
-     * 
      */
     private final @Nullable List<RampUpRuleResponse> rampUpRules;
 
@@ -24,7 +23,6 @@ public final class ExperimentsResponse {
 
     /**
      * List of ramp-up rules.
-     * 
     */
     public List<RampUpRuleResponse> getRampUpRules() {
         return this.rampUpRules == null ? List.of() : this.rampUpRules;

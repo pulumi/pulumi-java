@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An update history of the ImmutabilityPolicy of a blob container.
- * 
  */
 public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
 
     /**
      * The immutability period for the blobs in the container since the policy creation, in days.
-     * 
      */
     @Import(name="immutabilityPeriodSinceCreationInDays", required=true)
       private final Integer immutabilityPeriodSinceCreationInDays;
@@ -30,7 +28,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
 
     /**
      * Returns the Object ID of the user who updated the ImmutabilityPolicy.
-     * 
      */
     @Import(name="objectIdentifier", required=true)
       private final String objectIdentifier;
@@ -41,7 +38,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
 
     /**
      * Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -52,7 +48,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
 
     /**
      * Returns the date and time the ImmutabilityPolicy was updated.
-     * 
      */
     @Import(name="timestamp", required=true)
       private final String timestamp;
@@ -63,7 +58,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
 
     /**
      * The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.
-     * 
      */
     @Import(name="update", required=true)
       private final String update;
@@ -74,7 +68,6 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
 
     /**
      * Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
-     * 
      */
     @Import(name="upn", required=true)
       private final String upn;

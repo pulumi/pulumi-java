@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The platform where the assessed resource resides
-     * 
      */
     @EnumType
     public enum Source {
         /**
          * Resource is in Azure
-         * 
          */
         Azure("Azure"),
         /**
          * Resource in an on premise machine connected to Azure cloud
-         * 
          */
         OnPremise("OnPremise"),
         /**
          * SQL Resource in an on premise machine connected to Azure cloud
-         * 
          */
         OnPremiseSql("OnPremiseSql");
 

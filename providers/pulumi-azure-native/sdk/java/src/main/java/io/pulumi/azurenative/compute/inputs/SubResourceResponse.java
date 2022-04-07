@@ -16,7 +16,6 @@ public final class SubResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

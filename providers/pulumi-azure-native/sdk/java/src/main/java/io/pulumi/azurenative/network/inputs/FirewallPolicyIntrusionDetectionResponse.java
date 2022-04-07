@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for intrusion detection mode and rules.
- * 
  */
 public final class FirewallPolicyIntrusionDetectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class FirewallPolicyIntrusionDetectionResponse extends io.pulumi.re
 
     /**
      * Intrusion detection configuration properties.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration;
@@ -32,7 +30,6 @@ public final class FirewallPolicyIntrusionDetectionResponse extends io.pulumi.re
 
     /**
      * Intrusion detection general state.
-     * 
      */
     @Import(name="mode")
       private final @Nullable String mode;

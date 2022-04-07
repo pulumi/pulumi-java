@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ApplicationNotificationEndpointResponse {
     /**
      * The managed application notification endpoint uri.
-     * 
      */
     private final String uri;
 
@@ -22,7 +21,6 @@ public final class ApplicationNotificationEndpointResponse {
 
     /**
      * The managed application notification endpoint uri.
-     * 
     */
     public String getUri() {
         return this.uri;

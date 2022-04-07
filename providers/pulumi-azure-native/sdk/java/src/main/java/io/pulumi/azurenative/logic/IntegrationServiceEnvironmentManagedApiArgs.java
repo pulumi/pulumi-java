@@ -19,7 +19,6 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
 
     /**
      * The api name.
-     * 
      */
     @Import(name="apiName")
       private final @Nullable Output<String> apiName;
@@ -30,7 +29,6 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
 
     /**
      * The integration service environment managed api deployment parameters.
-     * 
      */
     @Import(name="deploymentParameters")
       private final @Nullable Output<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
@@ -41,7 +39,6 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
 
     /**
      * The integration service environment reference.
-     * 
      */
     @Import(name="integrationServiceEnvironment")
       private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
@@ -52,7 +49,6 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
 
     /**
      * The integration service environment name.
-     * 
      */
     @Import(name="integrationServiceEnvironmentName", required=true)
       private final Output<String> integrationServiceEnvironmentName;
@@ -63,7 +59,6 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -74,7 +69,6 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
@@ -85,7 +79,6 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

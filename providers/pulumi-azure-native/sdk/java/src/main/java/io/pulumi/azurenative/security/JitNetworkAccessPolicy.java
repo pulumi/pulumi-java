@@ -16,9 +16,237 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create JIT network access policy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var jitNetworkAccessPolicy = new AzureNative.Security.JitNetworkAccessPolicy("jitNetworkAccessPolicy", new AzureNative.Security.JitNetworkAccessPolicyArgs
+ *         {
+ *             AscLocation = "westeurope",
+ *             JitNetworkAccessPolicyName = "default",
+ *             Kind = "Basic",
+ *             Requests = 
+ *             {
+ *                 new AzureNative.Security.Inputs.JitNetworkAccessRequestArgs
+ *                 {
+ *                     Requestor = "barbara@contoso.com",
+ *                     StartTimeUtc = "2018-05-17T08:06:45.5691611Z",
+ *                     VirtualMachines = 
+ *                     {
+ *                         new AzureNative.Security.Inputs.JitNetworkAccessRequestVirtualMachineArgs
+ *                         {
+ *                             Id = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+ *                             Ports = 
+ *                             {
+ *                                 new AzureNative.Security.Inputs.JitNetworkAccessRequestPortArgs
+ *                                 {
+ *                                     AllowedSourceAddressPrefix = "192.127.0.2",
+ *                                     EndTimeUtc = "2018-05-17T09:06:45.5691611Z",
+ *                                     Number = 3389,
+ *                                     Status = "Initiated",
+ *                                     StatusReason = "UserRequested",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "myRg1",
+ *             VirtualMachines = 
+ *             {
+ *                 new AzureNative.Security.Inputs.JitNetworkAccessPolicyVirtualMachineArgs
+ *                 {
+ *                     Id = "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+ *                     Ports = 
+ *                     {
+ *                         new AzureNative.Security.Inputs.JitNetworkAccessPortRuleArgs
+ *                         {
+ *                             AllowedSourceAddressPrefix = "*",
+ *                             MaxRequestAccessDuration = "PT3H",
+ *                             Number = 22,
+ *                             Protocol = "*",
+ *                         },
+ *                         new AzureNative.Security.Inputs.JitNetworkAccessPortRuleArgs
+ *                         {
+ *                             AllowedSourceAddressPrefix = "*",
+ *                             MaxRequestAccessDuration = "PT3H",
+ *                             Number = 3389,
+ *                             Protocol = "*",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewJitNetworkAccessPolicy(ctx, "jitNetworkAccessPolicy", &security.JitNetworkAccessPolicyArgs{
+ * 			AscLocation:                pulumi.String("westeurope"),
+ * 			JitNetworkAccessPolicyName: pulumi.String("default"),
+ * 			Kind:                       pulumi.String("Basic"),
+ * 			Requests: []security.JitNetworkAccessRequestArgs{
+ * 				&security.JitNetworkAccessRequestArgs{
+ * 					Requestor:    pulumi.String("barbara@contoso.com"),
+ * 					StartTimeUtc: pulumi.String("2018-05-17T08:06:45.5691611Z"),
+ * 					VirtualMachines: []security.JitNetworkAccessRequestVirtualMachineArgs{
+ * 						&security.JitNetworkAccessRequestVirtualMachineArgs{
+ * 							Id: pulumi.String("/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1"),
+ * 							Ports: []security.JitNetworkAccessRequestPortArgs{
+ * 								&security.JitNetworkAccessRequestPortArgs{
+ * 									AllowedSourceAddressPrefix: pulumi.String("192.127.0.2"),
+ * 									EndTimeUtc:                 pulumi.String("2018-05-17T09:06:45.5691611Z"),
+ * 									Number:                     pulumi.Int(3389),
+ * 									Status:                     pulumi.String("Initiated"),
+ * 									StatusReason:               pulumi.String("UserRequested"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myRg1"),
+ * 			VirtualMachines: security.JitNetworkAccessPolicyVirtualMachineArray{
+ * 				&security.JitNetworkAccessPolicyVirtualMachineArgs{
+ * 					Id: pulumi.String("/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1"),
+ * 					Ports: security.JitNetworkAccessPortRuleArray{
+ * 						&security.JitNetworkAccessPortRuleArgs{
+ * 							AllowedSourceAddressPrefix: pulumi.String("*"),
+ * 							MaxRequestAccessDuration:   pulumi.String("PT3H"),
+ * 							Number:                     pulumi.Int(22),
+ * 							Protocol:                   pulumi.String("*"),
+ * 						},
+ * 						&security.JitNetworkAccessPortRuleArgs{
+ * 							AllowedSourceAddressPrefix: pulumi.String("*"),
+ * 							MaxRequestAccessDuration:   pulumi.String("PT3H"),
+ * 							Number:                     pulumi.Int(3389),
+ * 							Protocol:                   pulumi.String("*"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const jitNetworkAccessPolicy = new azure_native.security.JitNetworkAccessPolicy("jitNetworkAccessPolicy", {
+ *     ascLocation: "westeurope",
+ *     jitNetworkAccessPolicyName: "default",
+ *     kind: "Basic",
+ *     requests: [{
+ *         requestor: "barbara@contoso.com",
+ *         startTimeUtc: "2018-05-17T08:06:45.5691611Z",
+ *         virtualMachines: [{
+ *             id: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+ *             ports: [{
+ *                 allowedSourceAddressPrefix: "192.127.0.2",
+ *                 endTimeUtc: "2018-05-17T09:06:45.5691611Z",
+ *                 number: 3389,
+ *                 status: "Initiated",
+ *                 statusReason: "UserRequested",
+ *             }],
+ *         }],
+ *     }],
+ *     resourceGroupName: "myRg1",
+ *     virtualMachines: [{
+ *         id: "/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+ *         ports: [
+ *             {
+ *                 allowedSourceAddressPrefix: "*",
+ *                 maxRequestAccessDuration: "PT3H",
+ *                 number: 22,
+ *                 protocol: "*",
+ *             },
+ *             {
+ *                 allowedSourceAddressPrefix: "*",
+ *                 maxRequestAccessDuration: "PT3H",
+ *                 number: 3389,
+ *                 protocol: "*",
+ *             },
+ *         ],
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * jit_network_access_policy = azure_native.security.JitNetworkAccessPolicy("jitNetworkAccessPolicy",
+ *     asc_location="westeurope",
+ *     jit_network_access_policy_name="default",
+ *     kind="Basic",
+ *     requests=[azure_native.security.JitNetworkAccessRequestArgs(
+ *         requestor="barbara@contoso.com",
+ *         start_time_utc="2018-05-17T08:06:45.5691611Z",
+ *         virtual_machines=[azure_native.security.JitNetworkAccessRequestVirtualMachineArgs(
+ *             id="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+ *             ports=[azure_native.security.JitNetworkAccessRequestPortArgs(
+ *                 allowed_source_address_prefix="192.127.0.2",
+ *                 end_time_utc="2018-05-17T09:06:45.5691611Z",
+ *                 number=3389,
+ *                 status="Initiated",
+ *                 status_reason="UserRequested",
+ *             )],
+ *         )],
+ *     )],
+ *     resource_group_name="myRg1",
+ *     virtual_machines=[azure_native.security.JitNetworkAccessPolicyVirtualMachineArgs(
+ *         id="/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Compute/virtualMachines/vm1",
+ *         ports=[
+ *             azure_native.security.JitNetworkAccessPortRuleArgs(
+ *                 allowed_source_address_prefix="*",
+ *                 max_request_access_duration="PT3H",
+ *                 number=22,
+ *                 protocol="*",
+ *             ),
+ *             azure_native.security.JitNetworkAccessPortRuleArgs(
+ *                 allowed_source_address_prefix="*",
+ *                 max_request_access_duration="PT3H",
+ *                 number=3389,
+ *                 protocol="*",
+ *             ),
+ *         ],
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +261,48 @@ import javax.annotation.Nullable;
 public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Kind of the resource
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of the resource
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Location where the resource is stored
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Location where the resource is stored
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets the provisioning state of the Just-in-Time policy.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets the provisioning state of the Just-in-Time policy.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
@@ -95,28 +315,24 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Configurations for Microsoft.Compute/virtualMachines resource type.
-     * 
      */
     @Export(name="virtualMachines", type=List.class, parameters={JitNetworkAccessPolicyVirtualMachineResponse.class})
     private Output<List<JitNetworkAccessPolicyVirtualMachineResponse>> virtualMachines;
 
     /**
      * @return Configurations for Microsoft.Compute/virtualMachines resource type.
-     * 
      */
     public Output<List<JitNetworkAccessPolicyVirtualMachineResponse>> getVirtualMachines() {
         return this.virtualMachines;

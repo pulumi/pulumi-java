@@ -13,37 +13,30 @@ import javax.annotation.Nullable;
 public final class ConditionsResponse {
     /**
      * filter alerts by alert context (payload)
-     * 
      */
     private final @Nullable ConditionResponse alertContext;
     /**
      * filter alerts by alert rule id
-     * 
      */
     private final @Nullable ConditionResponse alertRuleId;
     /**
      * filter alerts by alert rule description
-     * 
      */
     private final @Nullable ConditionResponse description;
     /**
      * filter alerts by monitor condition
-     * 
      */
     private final @Nullable ConditionResponse monitorCondition;
     /**
      * filter alerts by monitor service
-     * 
      */
     private final @Nullable ConditionResponse monitorService;
     /**
      * filter alerts by severity
-     * 
      */
     private final @Nullable ConditionResponse severity;
     /**
      * filter alerts by target resource type
-     * 
      */
     private final @Nullable ConditionResponse targetResourceType;
 
@@ -67,49 +60,42 @@ public final class ConditionsResponse {
 
     /**
      * filter alerts by alert context (payload)
-     * 
     */
     public Optional<ConditionResponse> getAlertContext() {
         return Optional.ofNullable(this.alertContext);
     }
     /**
      * filter alerts by alert rule id
-     * 
     */
     public Optional<ConditionResponse> getAlertRuleId() {
         return Optional.ofNullable(this.alertRuleId);
     }
     /**
      * filter alerts by alert rule description
-     * 
     */
     public Optional<ConditionResponse> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * filter alerts by monitor condition
-     * 
     */
     public Optional<ConditionResponse> getMonitorCondition() {
         return Optional.ofNullable(this.monitorCondition);
     }
     /**
      * filter alerts by monitor service
-     * 
     */
     public Optional<ConditionResponse> getMonitorService() {
         return Optional.ofNullable(this.monitorService);
     }
     /**
      * filter alerts by severity
-     * 
     */
     public Optional<ConditionResponse> getSeverity() {
         return Optional.ofNullable(this.severity);
     }
     /**
      * filter alerts by target resource type
-     * 
     */
     public Optional<ConditionResponse> getTargetResourceType() {
         return Optional.ofNullable(this.targetResourceType);

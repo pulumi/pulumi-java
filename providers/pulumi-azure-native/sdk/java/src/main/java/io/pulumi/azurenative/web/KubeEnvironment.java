@@ -22,7 +22,83 @@ import javax.annotation.Nullable;
  * A Kubernetes cluster specialized for web workloads by Azure App Service
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create kube environments
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var kubeEnvironment = new AzureNative.Web.KubeEnvironment("kubeEnvironment", new AzureNative.Web.KubeEnvironmentArgs
+ *         {
+ *             Location = "East US",
+ *             Name = "testkubeenv",
+ *             ResourceGroupName = "examplerg",
+ *             StaticIp = "1.2.3.4",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := web.NewKubeEnvironment(ctx, "kubeEnvironment", &web.KubeEnvironmentArgs{
+ * 			Location:          pulumi.String("East US"),
+ * 			Name:              pulumi.String("testkubeenv"),
+ * 			ResourceGroupName: pulumi.String("examplerg"),
+ * 			StaticIp:          pulumi.String("1.2.3.4"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const kubeEnvironment = new azure_native.web.KubeEnvironment("kubeEnvironment", {
+ *     location: "East US",
+ *     name: "testkubeenv",
+ *     resourceGroupName: "examplerg",
+ *     staticIp: "1.2.3.4",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * kube_environment = azure_native.web.KubeEnvironment("kubeEnvironment",
+ *     location="East US",
+ *     name="testkubeenv",
+ *     resource_group_name="examplerg",
+ *     static_ip="1.2.3.4")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -45,7 +121,6 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Cluster configuration which enables the log daemon to export
      * app logs to a destination. Currently only "log-analytics" is
      * supported
-     * 
      */
     @Export(name="appLogsConfiguration", type=AppLogsConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ AppLogsConfigurationResponse> appLogsConfiguration;
@@ -54,7 +129,6 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * @return Cluster configuration which enables the log daemon to export
      * app logs to a destination. Currently only "log-analytics" is
      * supported
-     * 
      */
     public Output</* @Nullable */ AppLogsConfigurationResponse> getAppLogsConfiguration() {
         return this.appLogsConfiguration;
@@ -63,7 +137,6 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Cluster configuration which determines the ARC cluster
      * components types. Eg: Choosing between BuildService kind,
      * FrontEnd Service ArtifactsStorageType etc.
-     * 
      */
     @Export(name="arcConfiguration", type=ArcConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ArcConfigurationResponse> arcConfiguration;
@@ -72,161 +145,138 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * @return Cluster configuration which determines the ARC cluster
      * components types. Eg: Choosing between BuildService kind,
      * FrontEnd Service ArtifactsStorageType etc.
-     * 
      */
     public Output</* @Nullable */ ArcConfigurationResponse> getArcConfiguration() {
         return this.arcConfiguration;
     }
     /**
      * Default Domain Name for the cluster
-     * 
      */
     @Export(name="defaultDomain", type=String.class, parameters={})
     private Output<String> defaultDomain;
 
     /**
      * @return Default Domain Name for the cluster
-     * 
      */
     public Output<String> getDefaultDomain() {
         return this.defaultDomain;
     }
     /**
      * Any errors that occurred during deployment or deployment validation
-     * 
      */
     @Export(name="deploymentErrors", type=String.class, parameters={})
     private Output<String> deploymentErrors;
 
     /**
      * @return Any errors that occurred during deployment or deployment validation
-     * 
      */
     public Output<String> getDeploymentErrors() {
         return this.deploymentErrors;
     }
     /**
      * Extended Location.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return Extended Location.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * Only visible within Vnet/Subnet
-     * 
      */
     @Export(name="internalLoadBalancerEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> internalLoadBalancerEnabled;
 
     /**
      * @return Only visible within Vnet/Subnet
-     * 
      */
     public Output</* @Nullable */ Boolean> getInternalLoadBalancerEnabled() {
         return this.internalLoadBalancerEnabled;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource Location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the Kubernetes Environment.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the Kubernetes Environment.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Static IP of the KubeEnvironment
-     * 
      */
     @Export(name="staticIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> staticIp;
 
     /**
      * @return Static IP of the KubeEnvironment
-     * 
      */
     public Output</* @Nullable */ String> getStaticIp() {
         return this.staticIp;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Defines the zone redundant resource setting.
-     * 
      */
     @EnumType
     public enum ZoneRedundant {

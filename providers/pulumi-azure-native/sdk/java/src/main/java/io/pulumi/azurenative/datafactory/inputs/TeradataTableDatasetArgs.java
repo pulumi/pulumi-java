@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Teradata database dataset.
- * 
  */
 public final class TeradataTableDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class TeradataTableDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -37,7 +35,6 @@ public final class TeradataTableDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The database name of Teradata. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="database")
       private final @Nullable Output<Object> database;
@@ -48,7 +45,6 @@ public final class TeradataTableDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -59,7 +55,6 @@ public final class TeradataTableDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
@@ -70,7 +65,6 @@ public final class TeradataTableDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -81,7 +75,6 @@ public final class TeradataTableDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -92,7 +85,6 @@ public final class TeradataTableDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
@@ -103,7 +95,6 @@ public final class TeradataTableDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
@@ -114,7 +105,6 @@ public final class TeradataTableDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The table name of Teradata. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="table")
       private final @Nullable Output<Object> table;
@@ -126,7 +116,6 @@ public final class TeradataTableDatasetArgs extends io.pulumi.resources.Resource
     /**
      * Type of dataset.
      * Expected value is 'TeradataTable'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

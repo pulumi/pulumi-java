@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the basic properties for encoding the input video.
- * 
  */
 public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
-     * 
      */
     @Import(name="keyFrameInterval")
       private final @Nullable String keyFrameInterval;
@@ -31,7 +29,6 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
-     * 
      */
     @Import(name="label")
       private final @Nullable String label;
@@ -43,7 +40,6 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.Video'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -54,7 +50,6 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
-     * 
      */
     @Import(name="stretchMode")
       private final @Nullable String stretchMode;
@@ -65,7 +60,6 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Video Sync Mode
-     * 
      */
     @Import(name="syncMode")
       private final @Nullable String syncMode;

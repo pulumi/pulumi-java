@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the managed HSM Pool
- * 
  */
 public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable String createMode;
@@ -36,7 +34,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
-     * 
      */
     @Import(name="enablePurgeProtection")
       private final @Nullable Boolean enablePurgeProtection;
@@ -47,7 +44,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
-     * 
      */
     @Import(name="enableSoftDelete")
       private final @Nullable Boolean enableSoftDelete;
@@ -58,7 +54,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The URI of the managed hsm pool for performing operations on keys.
-     * 
      */
     @Import(name="hsmUri", required=true)
       private final String hsmUri;
@@ -69,7 +64,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Array of initial administrators object ids for this managed hsm pool.
-     * 
      */
     @Import(name="initialAdminObjectIds")
       private final @Nullable List<String> initialAdminObjectIds;
@@ -80,7 +74,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Rules governing the accessibility of the key vault from specific network locations.
-     * 
      */
     @Import(name="networkAcls")
       private final @Nullable MHSMNetworkRuleSetResponse networkAcls;
@@ -91,7 +84,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * List of private endpoint connections associated with the managed hsm pool.
-     * 
      */
     @Import(name="privateEndpointConnections", required=true)
       private final List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections;
@@ -102,7 +94,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Provisioning state.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -113,7 +104,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
@@ -124,7 +114,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The scheduled purge date in UTC.
-     * 
      */
     @Import(name="scheduledPurgeDate", required=true)
       private final String scheduledPurgeDate;
@@ -135,7 +124,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * softDelete data retention days. It accepts >=7 and <=90.
-     * 
      */
     @Import(name="softDeleteRetentionInDays")
       private final @Nullable Integer softDeleteRetentionInDays;
@@ -146,7 +134,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Resource Status Message.
-     * 
      */
     @Import(name="statusMessage", required=true)
       private final String statusMessage;
@@ -157,7 +144,6 @@ public final class ManagedHsmPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;

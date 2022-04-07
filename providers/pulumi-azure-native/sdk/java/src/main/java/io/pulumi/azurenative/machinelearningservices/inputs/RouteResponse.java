@@ -15,7 +15,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The path for the route.
-     * 
      */
     @Import(name="path", required=true)
       private final String path;
@@ -26,7 +25,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The port for the route.
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;

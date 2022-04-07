@@ -15,42 +15,34 @@ import javax.annotation.Nullable;
 public final class EndpointsResponse {
     /**
      * Gets the blob endpoint.
-     * 
      */
     private final String blob;
     /**
      * Gets the dfs endpoint.
-     * 
      */
     private final String dfs;
     /**
      * Gets the file endpoint.
-     * 
      */
     private final String file;
     /**
      * Gets the internet routing storage endpoints
-     * 
      */
     private final @Nullable StorageAccountInternetEndpointsResponse internetEndpoints;
     /**
      * Gets the microsoft routing storage endpoints.
-     * 
      */
     private final @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints;
     /**
      * Gets the queue endpoint.
-     * 
      */
     private final String queue;
     /**
      * Gets the table endpoint.
-     * 
      */
     private final String table;
     /**
      * Gets the web endpoint.
-     * 
      */
     private final String web;
 
@@ -76,56 +68,48 @@ public final class EndpointsResponse {
 
     /**
      * Gets the blob endpoint.
-     * 
     */
     public String getBlob() {
         return this.blob;
     }
     /**
      * Gets the dfs endpoint.
-     * 
     */
     public String getDfs() {
         return this.dfs;
     }
     /**
      * Gets the file endpoint.
-     * 
     */
     public String getFile() {
         return this.file;
     }
     /**
      * Gets the internet routing storage endpoints
-     * 
     */
     public Optional<StorageAccountInternetEndpointsResponse> getInternetEndpoints() {
         return Optional.ofNullable(this.internetEndpoints);
     }
     /**
      * Gets the microsoft routing storage endpoints.
-     * 
     */
     public Optional<StorageAccountMicrosoftEndpointsResponse> getMicrosoftEndpoints() {
         return Optional.ofNullable(this.microsoftEndpoints);
     }
     /**
      * Gets the queue endpoint.
-     * 
     */
     public String getQueue() {
         return this.queue;
     }
     /**
      * Gets the table endpoint.
-     * 
     */
     public String getTable() {
         return this.table;
     }
     /**
      * Gets the web endpoint.
-     * 
     */
     public String getWeb() {
         return this.web;

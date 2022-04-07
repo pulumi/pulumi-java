@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed identity configuration.
- * 
  */
 public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -32,7 +30,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
     /**
      * Enum to determine identity framework.
      * Expected value is 'Managed'.
-     * 
      */
     @Import(name="identityType", required=true)
       private final String identityType;
@@ -43,7 +40,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable String objectId;
@@ -54,7 +50,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

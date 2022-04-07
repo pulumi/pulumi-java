@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GetCapabilityResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The properties of a capability resource.
-     * 
      */
     private final CapabilityPropertiesResponse properties;
     /**
      * The standard system metadata of a resource type.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -53,35 +48,30 @@ public final class GetCapabilityResult {
 
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of a capability resource.
-     * 
     */
     public CapabilityPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The standard system metadata of a resource type.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

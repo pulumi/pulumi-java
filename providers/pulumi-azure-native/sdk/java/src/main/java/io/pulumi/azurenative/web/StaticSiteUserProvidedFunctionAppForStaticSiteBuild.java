@@ -17,7 +17,95 @@ import javax.annotation.Nullable;
  * Static Site User Provided Function App ARM resource.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Register a user provided function app with a static site build
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var staticSiteUserProvidedFunctionAppForStaticSiteBuild = new AzureNative.Web.StaticSiteUserProvidedFunctionAppForStaticSiteBuild("staticSiteUserProvidedFunctionAppForStaticSiteBuild", new AzureNative.Web.StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs
+ *         {
+ *             EnvironmentName = "default",
+ *             FunctionAppName = "testFunctionApp",
+ *             FunctionAppRegion = "West US 2",
+ *             FunctionAppResourceId = "/subscription/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/functionRG/providers/Microsoft.Web/sites/testFunctionApp",
+ *             IsForced = true,
+ *             Name = "testStaticSite0",
+ *             ResourceGroupName = "rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := web.NewStaticSiteUserProvidedFunctionAppForStaticSiteBuild(ctx, "staticSiteUserProvidedFunctionAppForStaticSiteBuild", &web.StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs{
+ * 			EnvironmentName:       pulumi.String("default"),
+ * 			FunctionAppName:       pulumi.String("testFunctionApp"),
+ * 			FunctionAppRegion:     pulumi.String("West US 2"),
+ * 			FunctionAppResourceId: pulumi.String("/subscription/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/functionRG/providers/Microsoft.Web/sites/testFunctionApp"),
+ * 			IsForced:              pulumi.Bool(true),
+ * 			Name:                  pulumi.String("testStaticSite0"),
+ * 			ResourceGroupName:     pulumi.String("rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const staticSiteUserProvidedFunctionAppForStaticSiteBuild = new azure_native.web.StaticSiteUserProvidedFunctionAppForStaticSiteBuild("staticSiteUserProvidedFunctionAppForStaticSiteBuild", {
+ *     environmentName: "default",
+ *     functionAppName: "testFunctionApp",
+ *     functionAppRegion: "West US 2",
+ *     functionAppResourceId: "/subscription/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/functionRG/providers/Microsoft.Web/sites/testFunctionApp",
+ *     isForced: "true",
+ *     name: "testStaticSite0",
+ *     resourceGroupName: "rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * static_site_user_provided_function_app_for_static_site_build = azure_native.web.StaticSiteUserProvidedFunctionAppForStaticSiteBuild("staticSiteUserProvidedFunctionAppForStaticSiteBuild",
+ *     environment_name="default",
+ *     function_app_name="testFunctionApp",
+ *     function_app_region="West US 2",
+ *     function_app_resource_id="/subscription/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/functionRG/providers/Microsoft.Web/sites/testFunctionApp",
+ *     is_forced=True,
+ *     name="testStaticSite0",
+ *     resource_group_name="rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +120,72 @@ import javax.annotation.Nullable;
 public class StaticSiteUserProvidedFunctionAppForStaticSiteBuild extends io.pulumi.resources.CustomResource {
     /**
      * The date and time on which the function app was registered with the static site.
-     * 
      */
     @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
      * @return The date and time on which the function app was registered with the static site.
-     * 
      */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
     /**
      * The region of the function app registered with the static site
-     * 
      */
     @Export(name="functionAppRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionAppRegion;
 
     /**
      * @return The region of the function app registered with the static site
-     * 
      */
     public Output</* @Nullable */ String> getFunctionAppRegion() {
         return this.functionAppRegion;
     }
     /**
      * The resource id of the function app registered with the static site
-     * 
      */
     @Export(name="functionAppResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionAppResourceId;
 
     /**
      * @return The resource id of the function app registered with the static site
-     * 
      */
     public Output</* @Nullable */ String> getFunctionAppResourceId() {
         return this.functionAppResourceId;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rule of type application.
- * 
  */
 public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Description of the rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +32,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of destination IP addresses or Service Tags.
-     * 
      */
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
@@ -45,7 +42,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of FQDN Tags for this rule.
-     * 
      */
     @Import(name="fqdnTags")
       private final @Nullable Output<List<String>> fqdnTags;
@@ -56,7 +52,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -67,7 +62,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Array of Application Protocols.
-     * 
      */
     @Import(name="protocols")
       private final @Nullable Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
@@ -79,7 +73,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Rule Type.
      * Expected value is 'ApplicationRule'.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
@@ -90,7 +83,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of source IP addresses for this rule.
-     * 
      */
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
@@ -101,7 +93,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
@@ -112,7 +103,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of FQDNs for this rule.
-     * 
      */
     @Import(name="targetFqdns")
       private final @Nullable Output<List<String>> targetFqdns;
@@ -123,7 +113,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of Urls for this rule condition.
-     * 
      */
     @Import(name="targetUrls")
       private final @Nullable Output<List<String>> targetUrls;
@@ -134,7 +123,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Terminate TLS connections for this rule.
-     * 
      */
     @Import(name="terminateTLS")
       private final @Nullable Output<Boolean> terminateTLS;
@@ -145,7 +133,6 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of destination azure web categories.
-     * 
      */
     @Import(name="webCategories")
       private final @Nullable Output<List<String>> webCategories;

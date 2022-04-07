@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class EnrichmentPropertiesResponse {
     /**
      * The list of endpoints for which the enrichment is applied to the message.
-     * 
      */
     private final List<String> endpointNames;
     /**
      * The key or name for the enrichment property.
-     * 
      */
     private final String key;
     /**
      * The value for the enrichment property.
-     * 
      */
     private final String value;
 
@@ -38,21 +35,18 @@ public final class EnrichmentPropertiesResponse {
 
     /**
      * The list of endpoints for which the enrichment is applied to the message.
-     * 
     */
     public List<String> getEndpointNames() {
         return this.endpointNames;
     }
     /**
      * The key or name for the enrichment property.
-     * 
     */
     public String getKey() {
         return this.key;
     }
     /**
      * The value for the enrichment property.
-     * 
     */
     public String getValue() {
         return this.value;

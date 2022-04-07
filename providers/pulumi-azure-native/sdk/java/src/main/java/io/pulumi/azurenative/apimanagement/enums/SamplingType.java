@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * Sampling type.
-     * 
      */
     @EnumType
     public enum SamplingType {
         /**
          * Fixed-rate sampling.
-         * 
          */
         Fixed("fixed");
 

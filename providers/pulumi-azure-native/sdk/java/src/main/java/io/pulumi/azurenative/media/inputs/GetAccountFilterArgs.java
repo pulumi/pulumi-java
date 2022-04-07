@@ -14,7 +14,6 @@ public final class GetAccountFilterArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetAccountFilterArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Account Filter name
-     * 
      */
     @Import(name="filterName", required=true)
       private final String filterName;
@@ -36,7 +34,6 @@ public final class GetAccountFilterArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

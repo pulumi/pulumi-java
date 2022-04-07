@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Search job execution statistics.
- * 
  */
 public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The number of rows that were returned by the search job.
-     * 
      */
     @Import(name="ingestedRecords", required=true)
       private final Integer ingestedRecords;
@@ -30,7 +28,6 @@ public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Search job completion percentage.
-     * 
      */
     @Import(name="progress", required=true)
       private final Double progress;

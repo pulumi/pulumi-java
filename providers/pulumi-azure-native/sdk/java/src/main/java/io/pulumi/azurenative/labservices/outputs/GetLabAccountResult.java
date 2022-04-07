@@ -17,52 +17,42 @@ import javax.annotation.Nullable;
 public final class GetLabAccountResult {
     /**
      * Represents if region selection is enabled
-     * 
      */
     private final @Nullable Boolean enabledRegionSelection;
     /**
      * The identifier of the resource.
-     * 
      */
     private final String id;
     /**
      * The details of the latest operation. ex: status, error
-     * 
      */
     private final LatestOperationResultResponse latestOperationResult;
     /**
      * The location of the resource.
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The provisioning status of the resource.
-     * 
      */
     private final @Nullable String provisioningState;
     /**
      * Represents the size configuration under the lab account
-     * 
      */
     private final SizeConfigurationPropertiesResponse sizeConfiguration;
     /**
      * The tags of the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     private final @Nullable String uniqueIdentifier;
 
@@ -92,70 +82,60 @@ public final class GetLabAccountResult {
 
     /**
      * Represents if region selection is enabled
-     * 
     */
     public Optional<Boolean> getEnabledRegionSelection() {
         return Optional.ofNullable(this.enabledRegionSelection);
     }
     /**
      * The identifier of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The details of the latest operation. ex: status, error
-     * 
     */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
     */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Represents the size configuration under the lab account
-     * 
     */
     public SizeConfigurationPropertiesResponse getSizeConfiguration() {
         return this.sizeConfiguration;
     }
     /**
      * The tags of the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
     */
     public Optional<String> getUniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);

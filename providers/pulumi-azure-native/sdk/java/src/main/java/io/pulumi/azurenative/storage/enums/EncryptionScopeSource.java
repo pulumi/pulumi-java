@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
-     * 
      */
     @EnumType
     public enum EncryptionScopeSource {

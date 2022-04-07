@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The network configuration.
- * 
  */
 public final class NetworkConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * The access endpoint.
-     * 
      */
     @Import(name="accessEndpoint")
       private final @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
@@ -34,7 +32,6 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * The subnets.
-     * 
      */
     @Import(name="subnets")
       private final @Nullable Output<List<ResourceReferenceArgs>> subnets;
@@ -45,7 +42,6 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * Gets the virtual network address space.
-     * 
      */
     @Import(name="virtualNetworkAddressSpace")
       private final @Nullable Output<String> virtualNetworkAddressSpace;

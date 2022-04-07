@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ConnectionMonitorOutputResponse {
     /**
      * Connection monitor output destination type. Currently, only "Workspace" is supported.
-     * 
      */
     private final @Nullable String type;
     /**
      * Describes the settings for producing output into a log analytics workspace.
-     * 
      */
     private final @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
 
@@ -33,14 +31,12 @@ public final class ConnectionMonitorOutputResponse {
 
     /**
      * Connection monitor output destination type. Currently, only "Workspace" is supported.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Describes the settings for producing output into a log analytics workspace.
-     * 
     */
     public Optional<ConnectionMonitorWorkspaceSettingsResponse> getWorkspaceSettings() {
         return Optional.ofNullable(this.workspaceSettings);

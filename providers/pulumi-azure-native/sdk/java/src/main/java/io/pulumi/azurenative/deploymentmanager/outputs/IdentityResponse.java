@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class IdentityResponse {
     /**
      * The list of identities.
-     * 
      */
     private final List<String> identityIds;
     /**
      * The identity type.
-     * 
      */
     private final String type;
 
@@ -31,14 +29,12 @@ public final class IdentityResponse {
 
     /**
      * The list of identities.
-     * 
     */
     public List<String> getIdentityIds() {
         return this.identityIds;
     }
     /**
      * The identity type.
-     * 
     */
     public String getType() {
         return this.type;

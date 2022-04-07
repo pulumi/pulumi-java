@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class MultichannelResponse {
     /**
      * Indicates whether multichannel is enabled
-     * 
      */
     private final @Nullable Boolean enabled;
 
@@ -24,7 +23,6 @@ public final class MultichannelResponse {
 
     /**
      * Indicates whether multichannel is enabled
-     * 
     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);

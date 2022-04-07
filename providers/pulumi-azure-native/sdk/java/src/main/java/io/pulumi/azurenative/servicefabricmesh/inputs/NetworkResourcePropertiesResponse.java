@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes properties of a network resource.
- * 
  */
 public final class NetworkResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class NetworkResourcePropertiesResponse extends io.pulumi.resources
 
     /**
      * User readable description of the network.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class NetworkResourcePropertiesResponse extends io.pulumi.resources
     /**
      * The type of a Service Fabric container network.
      * Expected value is 'NetworkResourceProperties'.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -43,7 +40,6 @@ public final class NetworkResourcePropertiesResponse extends io.pulumi.resources
 
     /**
      * State of the resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -54,7 +50,6 @@ public final class NetworkResourcePropertiesResponse extends io.pulumi.resources
 
     /**
      * Status of the network.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -65,7 +60,6 @@ public final class NetworkResourcePropertiesResponse extends io.pulumi.resources
 
     /**
      * Gives additional information about the current status of the network.
-     * 
      */
     @Import(name="statusDetails", required=true)
       private final String statusDetails;

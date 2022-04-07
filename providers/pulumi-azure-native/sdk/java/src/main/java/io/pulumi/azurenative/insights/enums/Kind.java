@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The kind of workbook. Choices are user and shared.
-     * 
      */
     @EnumType
     public enum Kind {

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Group specific to the update configuration.
- * 
  */
 public final class TargetPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class TargetPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * List of Azure queries in the software update configuration.
-     * 
      */
     @Import(name="azureQueries")
       private final @Nullable List<AzureQueryPropertiesResponse> azureQueries;
@@ -33,7 +31,6 @@ public final class TargetPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * List of non Azure queries in the software update configuration.
-     * 
      */
     @Import(name="nonAzureQueries")
       private final @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;

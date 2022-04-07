@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Represents a supported Fabric/Infra. (AKSEdge etc...).
-     * 
      */
     @EnumType
     public enum Distro {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The access rights to be granted to the user when provisioning an environment
-     * 
      */
     @EnumType
     public enum EnvironmentPermission {

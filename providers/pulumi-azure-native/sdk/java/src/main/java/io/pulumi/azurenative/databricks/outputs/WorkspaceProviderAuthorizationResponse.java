@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class WorkspaceProviderAuthorizationResponse {
     /**
      * The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the workspace resources.
-     * 
      */
     private final String principalId;
     /**
      * The provider's role definition identifier. This role will define all the permissions that the provider must have on the workspace's container resource group. This role definition cannot have permission to delete the resource group.
-     * 
      */
     private final String roleDefinitionId;
 
@@ -30,14 +28,12 @@ public final class WorkspaceProviderAuthorizationResponse {
 
     /**
      * The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the workspace resources.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The provider's role definition identifier. This role will define all the permissions that the provider must have on the workspace's container resource group. This role definition cannot have permission to delete the resource group.
-     * 
     */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;

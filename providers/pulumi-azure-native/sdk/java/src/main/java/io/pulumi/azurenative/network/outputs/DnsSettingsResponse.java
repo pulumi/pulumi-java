@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class DnsSettingsResponse {
     /**
      * Enable DNS Proxy on Firewalls attached to the Firewall Policy.
-     * 
      */
     private final @Nullable Boolean enableProxy;
     /**
      * FQDNs in Network Rules are supported when set to true.
-     * 
      */
     private final @Nullable Boolean requireProxyForNetworkRules;
     /**
      * List of Custom DNS Servers.
-     * 
      */
     private final @Nullable List<String> servers;
 
@@ -41,21 +38,18 @@ public final class DnsSettingsResponse {
 
     /**
      * Enable DNS Proxy on Firewalls attached to the Firewall Policy.
-     * 
     */
     public Optional<Boolean> getEnableProxy() {
         return Optional.ofNullable(this.enableProxy);
     }
     /**
      * FQDNs in Network Rules are supported when set to true.
-     * 
     */
     public Optional<Boolean> getRequireProxyForNetworkRules() {
         return Optional.ofNullable(this.requireProxyForNetworkRules);
     }
     /**
      * List of Custom DNS Servers.
-     * 
     */
     public List<String> getServers() {
         return this.servers == null ? List.of() : this.servers;

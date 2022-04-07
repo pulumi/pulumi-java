@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the common attributes for a custom rule that can be included in a waf policy
- * 
  */
 public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes what action to be applied when rule matches
-     * 
      */
     @Import(name="action", required=true)
       private final String action;
@@ -34,7 +32,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable String enabledState;
@@ -45,7 +42,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of match conditions.
-     * 
      */
     @Import(name="matchConditions", required=true)
       private final List<MatchConditionResponse> matchConditions;
@@ -56,7 +52,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Defines the name of the custom rule
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -67,7 +62,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Defines in what order this rule be evaluated in the overall list of custom rules
-     * 
      */
     @Import(name="priority", required=true)
       private final Integer priority;

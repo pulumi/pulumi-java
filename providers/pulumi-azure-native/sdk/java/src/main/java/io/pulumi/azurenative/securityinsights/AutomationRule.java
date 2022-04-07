@@ -23,7 +23,175 @@ import javax.annotation.Nullable;
  * Represents an automation rule.
  * API Version: 2019-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates an automation rule.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var automationRule = new AzureNative.SecurityInsights.AutomationRule("automationRule", new AzureNative.SecurityInsights.AutomationRuleArgs
+ *         {
+ *             Actions = 
+ *             {
+ *                 new AzureNative.SecurityInsights.Inputs.AutomationRuleModifyPropertiesActionArgs
+ *                 {
+ *                     ActionConfiguration = new AzureNative.SecurityInsights.Inputs.AutomationRuleModifyPropertiesActionActionConfigurationArgs
+ *                     {
+ *                         Severity = "High",
+ *                     },
+ *                     ActionType = "ModifyProperties",
+ *                     Order = 1,
+ *                 },
+ *                 new AzureNative.SecurityInsights.Inputs.AutomationRuleRunPlaybookActionArgs
+ *                 {
+ *                     ActionConfiguration = new AzureNative.SecurityInsights.Inputs.AutomationRuleRunPlaybookActionActionConfigurationArgs
+ *                     {
+ *                         LogicAppResourceId = "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/IncidentPlaybook",
+ *                         TenantId = "ee48efaf-50c6-411b-9345-b2bdc3eb4abc",
+ *                     },
+ *                     ActionType = "RunPlaybook",
+ *                     Order = 2,
+ *                 },
+ *             },
+ *             AutomationRuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             DisplayName = "High severity incidents escalation",
+ *             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+ *             Order = 1,
+ *             ResourceGroupName = "myRg",
+ *             TriggeringLogic = new AzureNative.SecurityInsights.Inputs.AutomationRuleTriggeringLogicArgs
+ *             {
+ *                 Conditions = 
+ *                 {
+ *                     new AzureNative.SecurityInsights.Inputs.AutomationRulePropertyValuesConditionArgs
+ *                     {
+ *                         ConditionProperties = new AzureNative.SecurityInsights.Inputs.AutomationRulePropertyValuesConditionConditionPropertiesArgs
+ *                         {
+ *                             Operator = "Contains",
+ *                             PropertyName = "IncidentRelatedAnalyticRuleIds",
+ *                             PropertyValues = 
+ *                             {
+ *                                 "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/fab3d2d4-747f-46a7-8ef0-9c0be8112bf7",
+ *                                 "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/8deb8303-e94d-46ff-96e0-5fd94b33df1a",
+ *                             },
+ *                         },
+ *                         ConditionType = "Property",
+ *                     },
+ *                 },
+ *                 IsEnabled = true,
+ *                 TriggersOn = "Incidents",
+ *                 TriggersWhen = "Created",
+ *             },
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const automationRule = new azure_native.securityinsights.AutomationRule("automationRule", {
+ *     actions: [
+ *         {
+ *             actionConfiguration: {
+ *                 severity: "High",
+ *             },
+ *             actionType: "ModifyProperties",
+ *             order: 1,
+ *         },
+ *         {
+ *             actionConfiguration: {
+ *                 logicAppResourceId: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/IncidentPlaybook",
+ *                 tenantId: "ee48efaf-50c6-411b-9345-b2bdc3eb4abc",
+ *             },
+ *             actionType: "RunPlaybook",
+ *             order: 2,
+ *         },
+ *     ],
+ *     automationRuleId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     displayName: "High severity incidents escalation",
+ *     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+ *     order: 1,
+ *     resourceGroupName: "myRg",
+ *     triggeringLogic: {
+ *         conditions: [{
+ *             conditionProperties: {
+ *                 operator: "Contains",
+ *                 propertyName: "IncidentRelatedAnalyticRuleIds",
+ *                 propertyValues: [
+ *                     "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/fab3d2d4-747f-46a7-8ef0-9c0be8112bf7",
+ *                     "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/8deb8303-e94d-46ff-96e0-5fd94b33df1a",
+ *                 ],
+ *             },
+ *             conditionType: "Property",
+ *         }],
+ *         isEnabled: true,
+ *         triggersOn: "Incidents",
+ *         triggersWhen: "Created",
+ *     },
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * automation_rule = azure_native.securityinsights.AutomationRule("automationRule",
+ *     actions=[
+ *         azure_native.securityinsights.AutomationRuleModifyPropertiesActionArgs(
+ *             action_configuration=azure_native.securityinsights.AutomationRuleModifyPropertiesActionActionConfigurationArgs(
+ *                 severity="High",
+ *             ),
+ *             action_type="ModifyProperties",
+ *             order=1,
+ *         ),
+ *         azure_native.securityinsights.AutomationRuleRunPlaybookActionArgs(
+ *             action_configuration=azure_native.securityinsights.AutomationRuleRunPlaybookActionActionConfigurationArgs(
+ *                 logic_app_resource_id="/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/IncidentPlaybook",
+ *                 tenant_id="ee48efaf-50c6-411b-9345-b2bdc3eb4abc",
+ *             ),
+ *             action_type="RunPlaybook",
+ *             order=2,
+ *         ),
+ *     ],
+ *     automation_rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     display_name="High severity incidents escalation",
+ *     operational_insights_resource_provider="Microsoft.OperationalInsights",
+ *     order=1,
+ *     resource_group_name="myRg",
+ *     triggering_logic=azure_native.securityinsights.AutomationRuleTriggeringLogicArgs(
+ *         conditions=[{
+ *             "conditionProperties": azure_native.securityinsights.AutomationRulePropertyValuesConditionConditionPropertiesArgs(
+ *                 operator="Contains",
+ *                 property_name="IncidentRelatedAnalyticRuleIds",
+ *                 property_values=[
+ *                     "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/fab3d2d4-747f-46a7-8ef0-9c0be8112bf7",
+ *                     "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/8deb8303-e94d-46ff-96e0-5fd94b33df1a",
+ *                 ],
+ *             ),
+ *             "conditionType": "Property",
+ *         }],
+ *         is_enabled=True,
+ *         triggers_on="Incidents",
+ *         triggers_when="Created",
+ *     ),
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,154 +206,132 @@ import javax.annotation.Nullable;
 public class AutomationRule extends io.pulumi.resources.CustomResource {
     /**
      * The actions to execute when the automation rule is triggered
-     * 
      */
     @Export(name="actions", type=List.class, parameters={Either.class})
     private Output<List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>>> actions;
 
     /**
      * @return The actions to execute when the automation rule is triggered
-     * 
      */
     public Output<List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>>> getActions() {
         return this.actions;
     }
     /**
      * Describes the client that created the automation rule
-     * 
      */
     @Export(name="createdBy", type=ClientInfoResponse.class, parameters={})
     private Output<ClientInfoResponse> createdBy;
 
     /**
      * @return Describes the client that created the automation rule
-     * 
      */
     public Output<ClientInfoResponse> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The time the automation rule was created
-     * 
      */
     @Export(name="createdTimeUtc", type=String.class, parameters={})
     private Output<String> createdTimeUtc;
 
     /**
      * @return The time the automation rule was created
-     * 
      */
     public Output<String> getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * The display name of the automation  rule
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name of the automation  rule
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Describes the client that last updated the automation rule
-     * 
      */
     @Export(name="lastModifiedBy", type=ClientInfoResponse.class, parameters={})
     private Output<ClientInfoResponse> lastModifiedBy;
 
     /**
      * @return Describes the client that last updated the automation rule
-     * 
      */
     public Output<ClientInfoResponse> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The last time the automation rule was updated
-     * 
      */
     @Export(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
     /**
      * @return The last time the automation rule was updated
-     * 
      */
     public Output<String> getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The order of execution of the automation rule
-     * 
      */
     @Export(name="order", type=Integer.class, parameters={})
     private Output<Integer> order;
 
     /**
      * @return The order of execution of the automation rule
-     * 
      */
     public Output<Integer> getOrder() {
         return this.order;
     }
     /**
      * The triggering logic of the automation rule
-     * 
      */
     @Export(name="triggeringLogic", type=AutomationRuleTriggeringLogicResponse.class, parameters={})
     private Output<AutomationRuleTriggeringLogicResponse> triggeringLogic;
 
     /**
      * @return The triggering logic of the automation rule
-     * 
      */
     public Output<AutomationRuleTriggeringLogicResponse> getTriggeringLogic() {
         return this.triggeringLogic;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

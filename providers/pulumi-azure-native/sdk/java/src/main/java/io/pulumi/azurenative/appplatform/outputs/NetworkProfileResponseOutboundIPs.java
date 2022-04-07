@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class NetworkProfileResponseOutboundIPs {
     /**
      * A list of public IP addresses.
-     * 
      */
     private final List<String> publicIPs;
 
@@ -23,7 +22,6 @@ public final class NetworkProfileResponseOutboundIPs {
 
     /**
      * A list of public IP addresses.
-     * 
     */
     public List<String> getPublicIPs() {
         return this.publicIPs;

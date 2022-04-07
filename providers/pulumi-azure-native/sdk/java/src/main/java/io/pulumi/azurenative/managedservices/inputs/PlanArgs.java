@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Plan details for the managed services.
- * 
  */
 public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The plan name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -30,7 +28,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The product code.
-     * 
      */
     @Import(name="product", required=true)
       private final Output<String> product;
@@ -41,7 +38,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The publisher ID.
-     * 
      */
     @Import(name="publisher", required=true)
       private final Output<String> publisher;
@@ -52,7 +48,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The plan's version.
-     * 
      */
     @Import(name="version", required=true)
       private final Output<String> version;

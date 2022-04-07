@@ -17,7 +17,6 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Replication policy name
-     * 
      */
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
@@ -28,7 +27,6 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Policy creation properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<CreatePolicyInputPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

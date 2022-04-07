@@ -17,7 +17,6 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
 
     /**
      * Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-     * 
      */
     @Import(name="dataCollectionFrequency")
       private final @Nullable String dataCollectionFrequency;
@@ -28,7 +27,6 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
 
     /**
      * Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
-     * 
      */
     @Import(name="dataReportingFrequency")
       private final @Nullable String dataReportingFrequency;
@@ -39,7 +37,6 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
 
     /**
      * Details of Event Hub where the usage will be reported.
-     * 
      */
     @Import(name="eventHubDetails")
       private final @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
@@ -50,7 +47,6 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
 
     /**
      * Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
-     * 
      */
     @Import(name="maxAllowedUnreportedUsageDuration")
       private final @Nullable String maxAllowedUnreportedUsageDuration;

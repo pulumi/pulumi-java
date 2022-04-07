@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Property definition.
- * 
  */
 public final class PropertyDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Array value separator for properties with isArray set.
-     * 
      */
     @Import(name="arrayValueSeparator")
       private final @Nullable String arrayValueSeparator;
@@ -36,7 +34,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
-     * 
      */
     @Import(name="dataSourcePrecedenceRules", required=true)
       private final List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules;
@@ -47,7 +44,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Describes valid values for an enum property.
-     * 
      */
     @Import(name="enumValidValues")
       private final @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues;
@@ -58,7 +54,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Name of the property.
-     * 
      */
     @Import(name="fieldName", required=true)
       private final String fieldName;
@@ -69,7 +64,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Type of the property.
-     * 
      */
     @Import(name="fieldType", required=true)
       private final String fieldType;
@@ -80,7 +74,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Indicates if the property is actually an array of the fieldType above on the data api.
-     * 
      */
     @Import(name="isArray")
       private final @Nullable Boolean isArray;
@@ -91,7 +84,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether property is available in graph or not.
-     * 
      */
     @Import(name="isAvailableInGraph")
       private final @Nullable Boolean isAvailableInGraph;
@@ -102,7 +94,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Indicates if the property is an enum.
-     * 
      */
     @Import(name="isEnum")
       private final @Nullable Boolean isEnum;
@@ -113,7 +104,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Indicates if the property is an flag enum.
-     * 
      */
     @Import(name="isFlagEnum")
       private final @Nullable Boolean isFlagEnum;
@@ -124,7 +114,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether the property is an Image.
-     * 
      */
     @Import(name="isImage")
       private final @Nullable Boolean isImage;
@@ -135,7 +124,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether the property is a localized string.
-     * 
      */
     @Import(name="isLocalizedString")
       private final @Nullable Boolean isLocalizedString;
@@ -146,7 +134,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether the property is a name or a part of name.
-     * 
      */
     @Import(name="isName")
       private final @Nullable Boolean isName;
@@ -157,7 +144,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
-     * 
      */
     @Import(name="isRequired")
       private final @Nullable Boolean isRequired;
@@ -168,7 +154,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Max length of string. Used only if type is string.
-     * 
      */
     @Import(name="maxLength")
       private final @Nullable Integer maxLength;
@@ -179,7 +164,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The ID associated with the property.
-     * 
      */
     @Import(name="propertyId")
       private final @Nullable String propertyId;
@@ -190,7 +174,6 @@ public final class PropertyDefinitionResponse extends io.pulumi.resources.Invoke
 
     /**
      * URL encoded schema.org item prop link for the property.
-     * 
      */
     @Import(name="schemaItemPropLink")
       private final @Nullable String schemaItemPropLink;

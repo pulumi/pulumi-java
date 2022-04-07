@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of the Azure resource that was assessed
- * 
  */
 public final class AzureResourceDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AzureResourceDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * Azure resource Id of the assessed resource
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -30,7 +28,6 @@ public final class AzureResourceDetailsResponse extends io.pulumi.resources.Invo
     /**
      * The platform where the assessed resource resides
      * Expected value is 'Azure'.
-     * 
      */
     @Import(name="source", required=true)
       private final String source;

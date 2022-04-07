@@ -21,7 +21,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of the Data Box Edge/Gateway device.
-     * 
      */
     @Import(name="dataBoxEdgeDeviceStatus")
       private final @Nullable Output<Either<String,DataBoxEdgeDeviceStatus>> dataBoxEdgeDeviceStatus;
@@ -32,7 +31,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
@@ -43,7 +41,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Msi identity of the resource
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
@@ -54,7 +51,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -65,7 +61,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU type.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -87,7 +81,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

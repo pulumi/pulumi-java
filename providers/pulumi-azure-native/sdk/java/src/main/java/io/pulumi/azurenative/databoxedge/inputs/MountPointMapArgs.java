@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The share mount point.
- * 
  */
 public final class MountPointMapArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class MountPointMapArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the share mounted to the role VM.
-     * 
      */
     @Import(name="shareId", required=true)
       private final Output<String> shareId;

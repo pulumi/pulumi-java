@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Properties of a registration assignment.
- * 
  */
 public final class RegistrationAssignmentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class RegistrationAssignmentPropertiesArgs extends io.pulumi.resour
 
     /**
      * Fully qualified path of the registration definition.
-     * 
      */
     @Import(name="registrationDefinitionId", required=true)
       private final Output<String> registrationDefinitionId;

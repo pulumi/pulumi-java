@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network function role configuration.
- * 
  */
 public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
 
     /**
      * Specifies the custom settings for the virtual machine.
-     * 
      */
     @Import(name="customProfile")
       private final @Nullable Output<CustomProfileArgs> customProfile;
@@ -40,7 +38,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
 
     /**
      * The network interface configurations.
-     * 
      */
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
@@ -51,7 +48,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
 
     /**
      * Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
-     * 
      */
     @Import(name="osProfile")
       private final @Nullable Output<OsProfileArgs> osProfile;
@@ -62,7 +58,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
 
     /**
      * The name of the network function role.
-     * 
      */
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
@@ -73,7 +68,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
 
     /**
      * Role type.
-     * 
      */
     @Import(name="roleType")
       private final @Nullable Output<Either<String,NetworkFunctionRoleConfigurationType>> roleType;
@@ -84,7 +78,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
 
     /**
      * Specifies the storage settings for the virtual machine disks.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
@@ -95,7 +88,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
 
     /**
      * The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
-     * 
      */
     @Import(name="userDataParameters")
       private final @Nullable Output<Object> userDataParameters;
@@ -106,7 +98,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
 
     /**
      * The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
-     * 
      */
     @Import(name="userDataTemplate")
       private final @Nullable Output<Object> userDataTemplate;
@@ -117,7 +108,6 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
 
     /**
      * The size of the virtual machine.
-     * 
      */
     @Import(name="virtualMachineSize")
       private final @Nullable Output<Either<String,VirtualMachineSizeTypes>> virtualMachineSize;

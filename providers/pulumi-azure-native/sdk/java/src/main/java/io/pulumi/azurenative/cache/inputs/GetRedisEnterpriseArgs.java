@@ -14,7 +14,6 @@ public final class GetRedisEnterpriseArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the RedisEnterprise cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class GetRedisEnterpriseArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

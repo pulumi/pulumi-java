@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Update specific properties of the software update configuration.
- * 
  */
 public final class UpdateConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
 
     /**
      * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
-     * 
      */
     @Import(name="azureVirtualMachines")
       private final @Nullable List<String> azureVirtualMachines;
@@ -35,7 +33,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
 
     /**
      * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
-     * 
      */
     @Import(name="duration")
       private final @Nullable String duration;
@@ -46,7 +43,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
 
     /**
      * Linux specific update configuration.
-     * 
      */
     @Import(name="linux")
       private final @Nullable LinuxPropertiesResponse linux;
@@ -57,7 +53,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
 
     /**
      * List of names of non-azure machines targeted by the software update configuration.
-     * 
      */
     @Import(name="nonAzureComputerNames")
       private final @Nullable List<String> nonAzureComputerNames;
@@ -68,7 +63,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
 
     /**
      * operating system of target machines
-     * 
      */
     @Import(name="operatingSystem", required=true)
       private final String operatingSystem;
@@ -79,7 +73,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
 
     /**
      * Group targets for the software update configuration.
-     * 
      */
     @Import(name="targets")
       private final @Nullable TargetPropertiesResponse targets;
@@ -90,7 +83,6 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
 
     /**
      * Windows specific update configuration.
-     * 
      */
     @Import(name="windows")
       private final @Nullable WindowsPropertiesResponse windows;

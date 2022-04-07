@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the health alert criteria to alert on.
- * 
  */
 public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
 
     /**
      * Health states to alert on
-     * 
      */
     @Import(name="healthStates", required=true)
       private final Output<List<HealthStateArgs>> healthStates;
@@ -33,7 +31,6 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
 
     /**
      * Names of health monitor on which to define alert
-     * 
      */
     @Import(name="monitorNames")
       private final @Nullable Output<List<String>> monitorNames;
@@ -44,7 +41,6 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
 
     /**
      * Names of health monitor type on which to define alert
-     * 
      */
     @Import(name="monitorTypes")
       private final @Nullable Output<List<String>> monitorTypes;
@@ -56,7 +52,6 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
     /**
      * specifies the type of the alert criterion.
      * Expected value is 'GuestVmHealth'.
-     * 
      */
     @Import(name="namespace", required=true)
       private final Output<String> namespace;

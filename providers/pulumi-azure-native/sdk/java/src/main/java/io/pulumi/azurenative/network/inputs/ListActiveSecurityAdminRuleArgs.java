@@ -17,7 +17,6 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
@@ -28,7 +27,6 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
 
     /**
      * List of regions.
-     * 
      */
     @Import(name="regions")
       private final @Nullable List<String> regions;
@@ -39,7 +37,6 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -50,7 +47,6 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
 
     /**
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-     * 
      */
     @Import(name="skipToken")
       private final @Nullable String skipToken;

@@ -16,7 +16,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * Name of EnvironmentSpecificationVersion.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -27,7 +26,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentSpecificationVersionArgs> properties;
@@ -38,7 +36,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * Version of EnvironmentSpecificationVersion.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;
@@ -60,7 +56,6 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

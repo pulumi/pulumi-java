@@ -19,7 +19,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name and identifier for the Job.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -30,7 +29,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Either<CommandJobArgs,SweepJobArgs>> properties;
@@ -41,7 +39,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The offer type for the database
-     * 
      */
     @EnumType
     public enum DatabaseAccountOfferType {

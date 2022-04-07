@@ -19,7 +19,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Availability Zone id, e.g. "az1"
-     * 
      */
     @Import(name="availabilityZoneId", required=true)
       private final Output<String> availabilityZoneId;
@@ -30,7 +29,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * dedicated cloud node name
-     * 
      */
     @Import(name="dedicatedCloudNodeName")
       private final @Nullable Output<String> dedicatedCloudNodeName;
@@ -41,7 +39,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * SKU's id
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -52,7 +49,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Azure region
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -63,7 +59,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * SKU's name
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -74,7 +69,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * count of nodes to create
-     * 
      */
     @Import(name="nodesCount", required=true)
       private final Output<Integer> nodesCount;
@@ -85,7 +79,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Placement Group id, e.g. "n1"
-     * 
      */
     @Import(name="placementGroupId", required=true)
       private final Output<String> placementGroupId;
@@ -96,7 +89,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * purchase id
-     * 
      */
     @Import(name="purchaseId", required=true)
       private final Output<String> purchaseId;
@@ -107,7 +99,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -118,7 +109,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Dedicated Cloud Nodes SKU
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -129,7 +119,6 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Dedicated Cloud Nodes tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

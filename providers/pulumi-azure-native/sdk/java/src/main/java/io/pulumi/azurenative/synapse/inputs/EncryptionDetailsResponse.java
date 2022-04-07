@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the encryption associated with the workspace
- * 
  */
 public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Customer Managed Key Details
-     * 
      */
     @Import(name="cmk")
       private final @Nullable CustomerManagedKeyDetailsResponse cmk;
@@ -32,7 +30,6 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Double Encryption enabled
-     * 
      */
     @Import(name="doubleEncryptionEnabled", required=true)
       private final Boolean doubleEncryptionEnabled;

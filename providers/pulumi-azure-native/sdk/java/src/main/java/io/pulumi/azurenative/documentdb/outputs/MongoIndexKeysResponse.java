@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class MongoIndexKeysResponse {
     /**
      * List of keys for each MongoDB collection in the Azure Cosmos DB service
-     * 
      */
     private final @Nullable List<String> keys;
 
@@ -24,7 +23,6 @@ public final class MongoIndexKeysResponse {
 
     /**
      * List of keys for each MongoDB collection in the Azure Cosmos DB service
-     * 
     */
     public List<String> getKeys() {
         return this.keys == null ? List.of() : this.keys;

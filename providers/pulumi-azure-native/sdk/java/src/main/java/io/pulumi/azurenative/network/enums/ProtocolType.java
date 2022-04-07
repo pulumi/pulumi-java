@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * RNM supported protocol types.
-     * 
      */
     @EnumType
     public enum ProtocolType {

@@ -16,7 +16,6 @@ public final class RGitHubPackageResponseResponse extends io.pulumi.resources.In
 
     /**
      * Repository address in the format username/repo[/subdir][@ref|#pull].
-     * 
      */
     @Import(name="repository")
       private final @Nullable String repository;

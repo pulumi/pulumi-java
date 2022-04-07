@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Error Detail class which encapsulates Code, Message and Recommendations.
- * 
  */
 public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Error code.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -30,7 +28,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Error Message related to the Code.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -41,7 +38,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of recommendation strings.
-     * 
      */
     @Import(name="recommendations", required=true)
       private final List<String> recommendations;

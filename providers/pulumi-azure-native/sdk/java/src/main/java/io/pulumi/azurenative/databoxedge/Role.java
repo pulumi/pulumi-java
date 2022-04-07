@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * Compute role.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RolePut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var role = new AzureNative.DataBoxEdge.Role("role", new AzureNative.DataBoxEdge.RoleArgs
+ *         {
+ *             DeviceName = "testedgedevice",
+ *             Kind = "IOT",
+ *             Name = "IoTRole1",
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewRole(ctx, "role", &databoxedge.RoleArgs{
+ * 			DeviceName:        pulumi.String("testedgedevice"),
+ * 			Kind:              pulumi.String("IOT"),
+ * 			Name:              pulumi.String("IoTRole1"),
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const role = new azure_native.databoxedge.Role("role", {
+ *     deviceName: "testedgedevice",
+ *     kind: "IOT",
+ *     name: "IoTRole1",
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * role = azure_native.databoxedge.Role("role",
+ *     device_name="testedgedevice",
+ *     kind="IOT",
+ *     name="IoTRole1",
+ *     resource_group_name="GroupForEdgeAutomation")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,63 +106,54 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole.
- * 
  */
 @Deprecated /* Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole. */
 @ResourceType(type="azure-native:databoxedge:Role")
 public class Role extends io.pulumi.resources.CustomResource {
     /**
      * Role type.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Role type.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Role configured on ASE resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Role configured on ASE resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

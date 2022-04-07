@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The track property condition operation.
-     * 
      */
     @EnumType
     public enum FilterTrackPropertyCompareOperation {
         /**
          * The equal operation.
-         * 
          */
         Equal("Equal"),
         /**
          * The not equal operation.
-         * 
          */
         NotEqual("NotEqual");
 

@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GetConfigurationServiceResult {
     /**
      * Fully qualified resource Id for the resource.
-     * 
      */
     private final String id;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * Application Configuration Service properties payload
-     * 
      */
     private final ConfigurationServicePropertiesResponse properties;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -53,35 +48,30 @@ public final class GetConfigurationServiceResult {
 
     /**
      * Fully qualified resource Id for the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Application Configuration Service properties payload
-     * 
     */
     public ConfigurationServicePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

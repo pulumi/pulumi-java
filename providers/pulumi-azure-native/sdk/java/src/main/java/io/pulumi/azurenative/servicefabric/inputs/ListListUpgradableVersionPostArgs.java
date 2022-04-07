@@ -14,7 +14,6 @@ public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources
 
     /**
      * The target code version.
-     * 
      */
     @Import(name="targetVersion", required=true)
       private final String targetVersion;

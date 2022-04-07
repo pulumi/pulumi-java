@@ -18,7 +18,6 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Disk pool.
-     * 
      */
     @Import(name="diskPoolName", required=true)
       private final Output<String> diskPoolName;
@@ -29,7 +28,6 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the iSCSI target.
-     * 
      */
     @Import(name="iscsiTargetName")
       private final @Nullable Output<String> iscsiTargetName;
@@ -40,7 +38,6 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
-     * 
      */
     @Import(name="targetIqn")
       private final @Nullable Output<String> targetIqn;
@@ -62,7 +58,6 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of iSCSI target portal groups. Can have 1 portal group at most.
-     * 
      */
     @Import(name="tpgs", required=true)
       private final Output<List<TargetPortalGroupCreateArgs>> tpgs;

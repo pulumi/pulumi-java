@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties that describe a base image dependency.
- * 
  */
 public final class BaseImageDependencyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
 
     /**
      * The sha256-based digest of the image manifest.
-     * 
      */
     @Import(name="digest")
       private final @Nullable String digest;
@@ -31,7 +29,6 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
 
     /**
      * The registry login server.
-     * 
      */
     @Import(name="registry")
       private final @Nullable String registry;
@@ -42,7 +39,6 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
 
     /**
      * The repository name.
-     * 
      */
     @Import(name="repository")
       private final @Nullable String repository;
@@ -53,7 +49,6 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
 
     /**
      * The tag name.
-     * 
      */
     @Import(name="tag")
       private final @Nullable String tag;
@@ -64,7 +59,6 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
 
     /**
      * The type of the base image dependency.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

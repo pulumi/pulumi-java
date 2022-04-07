@@ -23,7 +23,109 @@ import javax.annotation.Nullable;
  * Definition of the EnterprisePolicy.
  * API Version: 2020-10-30-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update EnterprisePolicy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var enterprisePolicy = new AzureNative.PowerPlatform.EnterprisePolicy("enterprisePolicy", new AzureNative.PowerPlatform.EnterprisePolicyArgs
+ *         {
+ *             EnterprisePolicyName = "enterprisePolicy",
+ *             Identity = new AzureNative.PowerPlatform.Inputs.EnterprisePolicyIdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Kind = "Lockbox",
+ *             Location = "East US",
+ *             ResourceGroupName = "resourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "Organization", "Administration" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	powerplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/powerplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := powerplatform.NewEnterprisePolicy(ctx, "enterprisePolicy", &powerplatform.EnterprisePolicyArgs{
+ * 			EnterprisePolicyName: pulumi.String("enterprisePolicy"),
+ * 			Identity: &powerplatform.EnterprisePolicyIdentityArgs{
+ * 				Type: "SystemAssigned",
+ * 			},
+ * 			Kind:              pulumi.String("Lockbox"),
+ * 			Location:          pulumi.String("East US"),
+ * 			ResourceGroupName: pulumi.String("resourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Organization": pulumi.String("Administration"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const enterprisePolicy = new azure_native.powerplatform.EnterprisePolicy("enterprisePolicy", {
+ *     enterprisePolicyName: "enterprisePolicy",
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     kind: "Lockbox",
+ *     location: "East US",
+ *     resourceGroupName: "resourceGroup",
+ *     tags: {
+ *         Organization: "Administration",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * enterprise_policy = azure_native.powerplatform.EnterprisePolicy("enterprisePolicy",
+ *     enterprise_policy_name="enterprisePolicy",
+ *     identity=azure_native.powerplatform.EnterprisePolicyIdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     kind="Lockbox",
+ *     location="East US",
+ *     resource_group_name="resourceGroup",
+ *     tags={
+ *         "Organization": "Administration",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,140 +140,120 @@ import javax.annotation.Nullable;
 public class EnterprisePolicy extends io.pulumi.resources.CustomResource {
     /**
      * The encryption settings for a configuration store.
-     * 
      */
     @Export(name="encryption", type=PropertiesResponseEncryption.class, parameters={})
     private Output</* @Nullable */ PropertiesResponseEncryption> encryption;
 
     /**
      * @return The encryption settings for a configuration store.
-     * 
      */
     public Output</* @Nullable */ PropertiesResponseEncryption> getEncryption() {
         return this.encryption;
     }
     /**
      * The identity of the EnterprisePolicy.
-     * 
      */
     @Export(name="identity", type=EnterprisePolicyIdentityResponse.class, parameters={})
     private Output</* @Nullable */ EnterprisePolicyIdentityResponse> identity;
 
     /**
      * @return The identity of the EnterprisePolicy.
-     * 
      */
     public Output</* @Nullable */ EnterprisePolicyIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The kind (type) of Enterprise Policy.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The kind (type) of Enterprise Policy.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Settings concerning lockbox.
-     * 
      */
     @Export(name="lockbox", type=PropertiesResponseLockbox.class, parameters={})
     private Output</* @Nullable */ PropertiesResponseLockbox> lockbox;
 
     /**
      * @return Settings concerning lockbox.
-     * 
      */
     public Output</* @Nullable */ PropertiesResponseLockbox> getLockbox() {
         return this.lockbox;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Settings concerning network injection.
-     * 
      */
     @Export(name="networkInjection", type=PropertiesResponseNetworkInjection.class, parameters={})
     private Output</* @Nullable */ PropertiesResponseNetworkInjection> networkInjection;
 
     /**
      * @return Settings concerning network injection.
-     * 
      */
     public Output</* @Nullable */ PropertiesResponseNetworkInjection> getNetworkInjection() {
         return this.networkInjection;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -26,7 +26,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of cluster.
- * 
  */
 public final class ClusterGetPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -34,7 +33,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The cluster definition.
-     * 
      */
     @Import(name="clusterDefinition", required=true)
       private final ClusterDefinitionResponse clusterDefinition;
@@ -45,7 +43,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The hdp version of the cluster.
-     * 
      */
     @Import(name="clusterHdpVersion")
       private final @Nullable String clusterHdpVersion;
@@ -56,7 +53,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The cluster id.
-     * 
      */
     @Import(name="clusterId")
       private final @Nullable String clusterId;
@@ -67,7 +63,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The state of the cluster.
-     * 
      */
     @Import(name="clusterState")
       private final @Nullable String clusterState;
@@ -78,7 +73,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The version of the cluster.
-     * 
      */
     @Import(name="clusterVersion")
       private final @Nullable String clusterVersion;
@@ -89,7 +83,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The compute isolation properties.
-     * 
      */
     @Import(name="computeIsolationProperties")
       private final @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties;
@@ -100,7 +93,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The compute profile.
-     * 
      */
     @Import(name="computeProfile")
       private final @Nullable ComputeProfileResponse computeProfile;
@@ -111,7 +103,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The list of connectivity endpoints.
-     * 
      */
     @Import(name="connectivityEndpoints")
       private final @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints;
@@ -122,7 +113,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The date on which the cluster was created.
-     * 
      */
     @Import(name="createdDate")
       private final @Nullable String createdDate;
@@ -133,7 +123,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The disk encryption properties.
-     * 
      */
     @Import(name="diskEncryptionProperties")
       private final @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties;
@@ -144,7 +133,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The encryption-in-transit properties.
-     * 
      */
     @Import(name="encryptionInTransitProperties")
       private final @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties;
@@ -155,7 +143,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The list of errors.
-     * 
      */
     @Import(name="errors")
       private final @Nullable List<ErrorsResponse> errors;
@@ -166,7 +153,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The excluded services config.
-     * 
      */
     @Import(name="excludedServicesConfig")
       private final @Nullable ExcludedServicesConfigResponse excludedServicesConfig;
@@ -177,7 +163,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The cluster kafka rest proxy configuration.
-     * 
      */
     @Import(name="kafkaRestProperties")
       private final @Nullable KafkaRestPropertiesResponse kafkaRestProperties;
@@ -188,7 +173,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The minimal supported tls version.
-     * 
      */
     @Import(name="minSupportedTlsVersion")
       private final @Nullable String minSupportedTlsVersion;
@@ -199,7 +183,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The network properties.
-     * 
      */
     @Import(name="networkProperties")
       private final @Nullable NetworkPropertiesResponse networkProperties;
@@ -210,7 +193,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The type of operating system.
-     * 
      */
     @Import(name="osType")
       private final @Nullable String osType;
@@ -221,7 +203,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -232,7 +213,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The quota information.
-     * 
      */
     @Import(name="quotaInfo")
       private final @Nullable QuotaInfoResponse quotaInfo;
@@ -243,7 +223,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The security profile.
-     * 
      */
     @Import(name="securityProfile")
       private final @Nullable SecurityProfileResponse securityProfile;
@@ -254,7 +233,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The storage profile.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable StorageProfileResponse storageProfile;
@@ -265,7 +243,6 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The cluster tier.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

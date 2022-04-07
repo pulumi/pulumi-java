@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An access policy entry.
- * 
  */
 public final class FhirServiceAccessPolicyEntryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class FhirServiceAccessPolicyEntryArgs extends io.pulumi.resources.
 
     /**
      * An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
-     * 
      */
     @Import(name="objectId", required=true)
       private final Output<String> objectId;

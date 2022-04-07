@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a network port.
- * 
  */
 public final class PortResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PortResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Backend port of the target virtual machine.
-     * 
      */
     @Import(name="backendPort")
       private final @Nullable Integer backendPort;
@@ -32,7 +30,6 @@ public final class PortResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Protocol type of the port.
-     * 
      */
     @Import(name="transportProtocol")
       private final @Nullable String transportProtocol;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The multi cloud account's membership type in the organization
-     * 
      */
     @EnumType
     public enum OrganizationMembershipType {

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class DataDiskImageResponse {
     /**
      * The LUN.
-     * 
      */
     private final Integer lun;
     /**
      * SAS key for source blob.
-     * 
      */
     private final String sourceBlobSasUri;
 
@@ -31,14 +29,12 @@ public final class DataDiskImageResponse {
 
     /**
      * The LUN.
-     * 
     */
     public Integer getLun() {
         return this.lun;
     }
     /**
      * SAS key for source blob.
-     * 
     */
     public String getSourceBlobSasUri() {
         return this.sourceBlobSasUri;

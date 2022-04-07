@@ -23,87 +23,70 @@ import javax.annotation.Nullable;
 public final class PrivateLinkServiceResponse {
     /**
      * The alias of the private link service.
-     * 
      */
     private final String alias;
     /**
      * The auto-approval list of the private link service.
-     * 
      */
     private final @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval;
     /**
      * Whether the private link service is enabled for proxy protocol or not.
-     * 
      */
     private final @Nullable Boolean enableProxyProtocol;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * The extended location of the load balancer.
-     * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
      * The list of Fqdn.
-     * 
      */
     private final @Nullable List<String> fqdns;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * An array of private link service IP configurations.
-     * 
      */
     private final @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations;
     /**
      * An array of references to the load balancer IP configurations.
-     * 
      */
     private final @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * An array of references to the network interfaces created for this private link service.
-     * 
      */
     private final List<NetworkInterfaceResponse> networkInterfaces;
     /**
      * An array of list about connections to the private endpoint.
-     * 
      */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
      * The provisioning state of the private link service resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
     /**
      * The visibility list of the private link service.
-     * 
      */
     private final @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
 
@@ -147,119 +130,102 @@ public final class PrivateLinkServiceResponse {
 
     /**
      * The alias of the private link service.
-     * 
     */
     public String getAlias() {
         return this.alias;
     }
     /**
      * The auto-approval list of the private link service.
-     * 
     */
     public Optional<PrivateLinkServicePropertiesResponseAutoApproval> getAutoApproval() {
         return Optional.ofNullable(this.autoApproval);
     }
     /**
      * Whether the private link service is enabled for proxy protocol or not.
-     * 
     */
     public Optional<Boolean> getEnableProxyProtocol() {
         return Optional.ofNullable(this.enableProxyProtocol);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the load balancer.
-     * 
     */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * The list of Fqdn.
-     * 
     */
     public List<String> getFqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An array of private link service IP configurations.
-     * 
     */
     public List<PrivateLinkServiceIpConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * An array of references to the load balancer IP configurations.
-     * 
     */
     public List<FrontendIPConfigurationResponse> getLoadBalancerFrontendIpConfigurations() {
         return this.loadBalancerFrontendIpConfigurations == null ? List.of() : this.loadBalancerFrontendIpConfigurations;
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * An array of references to the network interfaces created for this private link service.
-     * 
     */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * An array of list about connections to the private endpoint.
-     * 
     */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The provisioning state of the private link service resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The visibility list of the private link service.
-     * 
     */
     public Optional<PrivateLinkServicePropertiesResponseVisibility> getVisibility() {
         return Optional.ofNullable(this.visibility);

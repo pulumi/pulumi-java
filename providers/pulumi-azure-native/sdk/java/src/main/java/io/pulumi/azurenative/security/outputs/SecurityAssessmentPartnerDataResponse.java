@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class SecurityAssessmentPartnerDataResponse {
     /**
      * Name of the company of the partner
-     * 
      */
     private final String partnerName;
     /**
      * secret to authenticate the partner - write only
-     * 
      */
     private final String secret;
 
@@ -30,14 +28,12 @@ public final class SecurityAssessmentPartnerDataResponse {
 
     /**
      * Name of the company of the partner
-     * 
     */
     public String getPartnerName() {
         return this.partnerName;
     }
     /**
      * secret to authenticate the partner - write only
-     * 
     */
     public String getSecret() {
         return this.secret;

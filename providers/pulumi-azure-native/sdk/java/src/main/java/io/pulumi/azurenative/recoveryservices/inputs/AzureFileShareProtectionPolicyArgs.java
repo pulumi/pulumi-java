@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * AzureStorage backup policy.
- * 
  */
 public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'AzureStorage'.
-     * 
      */
     @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
@@ -41,7 +39,6 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
 
     /**
      * Number of items associated with this policy.
-     * 
      */
     @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
@@ -52,7 +49,6 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
 
     /**
      * Retention policy with the details on backup copy retention ranges.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
@@ -63,7 +59,6 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
 
     /**
      * Backup schedule specified as part of backup policy.
-     * 
      */
     @Import(name="schedulePolicy")
       private final @Nullable Output<Object> schedulePolicy;
@@ -74,7 +69,6 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
 
     /**
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
@@ -85,7 +79,6 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
 
     /**
      * Type of workload for the backup management
-     * 
      */
     @Import(name="workLoadType")
       private final @Nullable Output<Either<String,WorkloadType>> workLoadType;

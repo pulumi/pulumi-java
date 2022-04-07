@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU for the Cache.
- * 
  */
 public final class CacheResponseSku extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CacheResponseSku extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SKU name for this Cache.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

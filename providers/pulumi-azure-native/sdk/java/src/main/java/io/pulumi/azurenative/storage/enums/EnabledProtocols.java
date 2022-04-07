@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The authentication protocol that is used for the file share. Can only be specified when creating a share.
-     * 
      */
     @EnumType
     public enum EnabledProtocols {

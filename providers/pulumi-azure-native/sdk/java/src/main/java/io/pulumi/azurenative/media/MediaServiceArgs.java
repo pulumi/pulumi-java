@@ -23,7 +23,6 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -34,7 +33,6 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The account encryption properties.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<AccountEncryptionArgs> encryption;
@@ -45,7 +43,6 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Managed Identity for the Media Services account.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<MediaServiceIdentityArgs> identity;
@@ -56,7 +53,6 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -67,7 +63,6 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -78,7 +73,6 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The storage accounts for this resource.
-     * 
      */
     @Import(name="storageAccounts")
       private final @Nullable Output<List<StorageAccountArgs>> storageAccounts;
@@ -96,7 +90,6 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

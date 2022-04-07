@@ -18,7 +18,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the deployment.
-     * 
      */
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
@@ -29,7 +28,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location to store the deployment data.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The deployment properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<DeploymentPropertiesArgs> properties;
@@ -51,7 +48,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to deploy the resources to. The name is case insensitive. The resource group must already exist.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Deployment tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

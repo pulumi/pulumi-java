@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class MonitoredResourceResponse {
     /**
      * The ARM id of the resource.
-     * 
      */
     private final @Nullable String id;
     /**
      * Reason for why the resource is sending logs (or why it is not sending).
-     * 
      */
     private final @Nullable String reasonForLogsStatus;
     /**
      * Flag indicating the status of the resource for sending logs operation to Elastic.
-     * 
      */
     private final @Nullable String sendingLogs;
 
@@ -39,21 +36,18 @@ public final class MonitoredResourceResponse {
 
     /**
      * The ARM id of the resource.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reason for why the resource is sending logs (or why it is not sending).
-     * 
     */
     public Optional<String> getReasonForLogsStatus() {
         return Optional.ofNullable(this.reasonForLogsStatus);
     }
     /**
      * Flag indicating the status of the resource for sending logs operation to Elastic.
-     * 
     */
     public Optional<String> getSendingLogs() {
         return Optional.ofNullable(this.sendingLogs);

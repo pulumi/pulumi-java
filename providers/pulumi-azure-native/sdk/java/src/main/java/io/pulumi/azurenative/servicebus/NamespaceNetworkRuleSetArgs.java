@@ -21,7 +21,6 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
 
     /**
      * Default Action for Network Rule Set
-     * 
      */
     @Import(name="defaultAction")
       private final @Nullable Output<Either<String,DefaultAction>> defaultAction;
@@ -32,7 +31,6 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
 
     /**
      * List of IpRules
-     * 
      */
     @Import(name="ipRules")
       private final @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules;
@@ -43,7 +41,6 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -54,7 +51,6 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -65,7 +61,6 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
 
     /**
      * List VirtualNetwork Rules
-     * 
      */
     @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;

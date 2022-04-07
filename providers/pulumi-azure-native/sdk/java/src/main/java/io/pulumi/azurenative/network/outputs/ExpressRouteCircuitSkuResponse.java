@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ExpressRouteCircuitSkuResponse {
     /**
      * The family of the SKU.
-     * 
      */
     private final @Nullable String family;
     /**
      * The name of the SKU.
-     * 
      */
     private final @Nullable String name;
     /**
      * The tier of the SKU.
-     * 
      */
     private final @Nullable String tier;
 
@@ -39,21 +36,18 @@ public final class ExpressRouteCircuitSkuResponse {
 
     /**
      * The family of the SKU.
-     * 
     */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The name of the SKU.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The tier of the SKU.
-     * 
     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);

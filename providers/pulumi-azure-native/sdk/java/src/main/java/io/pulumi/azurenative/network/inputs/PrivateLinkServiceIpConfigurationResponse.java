@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The private link service ip configuration.
- * 
  */
 public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -33,7 +31,6 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -44,7 +41,6 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
 
     /**
      * The name of private link service ip configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -55,7 +51,6 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
 
     /**
      * Whether the ip configuration is primary or not.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Boolean primary;
@@ -66,7 +61,6 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
 
     /**
      * The private IP address of the IP configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
@@ -77,7 +71,6 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
 
     /**
      * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
-     * 
      */
     @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
@@ -88,7 +81,6 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
@@ -99,7 +91,6 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
 
     /**
      * The provisioning state of the private link service IP configuration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -110,7 +101,6 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
 
     /**
      * The reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
@@ -121,7 +111,6 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

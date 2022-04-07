@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * The class to specify one track property condition.
- * 
  */
 public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
 
     /**
      * The track property condition operation.
-     * 
      */
     @Import(name="operation", required=true)
       private final Output<Either<String,FilterTrackPropertyCompareOperation>> operation;
@@ -33,7 +31,6 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
 
     /**
      * The track property type.
-     * 
      */
     @Import(name="property", required=true)
       private final Output<Either<String,FilterTrackPropertyType>> property;
@@ -44,7 +41,6 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
 
     /**
      * The track property value.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

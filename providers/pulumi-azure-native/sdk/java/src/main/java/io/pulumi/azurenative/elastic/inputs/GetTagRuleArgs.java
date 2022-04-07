@@ -14,7 +14,6 @@ public final class GetTagRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final String monitorName;
@@ -25,7 +24,6 @@ public final class GetTagRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group to which the Elastic resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetTagRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tag Rule Set resource name
-     * 
      */
     @Import(name="ruleSetName", required=true)
       private final String ruleSetName;

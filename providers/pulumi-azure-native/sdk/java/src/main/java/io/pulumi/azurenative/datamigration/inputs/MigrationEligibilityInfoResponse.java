@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Information about migration eligibility of a server object
- * 
  */
 public final class MigrationEligibilityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MigrationEligibilityInfoResponse extends io.pulumi.resources.
 
     /**
      * Whether object is eligible for migration or not.
-     * 
      */
     @Import(name="isEligibleForMigration", required=true)
       private final Boolean isEligibleForMigration;
@@ -31,7 +29,6 @@ public final class MigrationEligibilityInfoResponse extends io.pulumi.resources.
 
     /**
      * Information about eligibility failure for the server object.
-     * 
      */
     @Import(name="validationMessages", required=true)
       private final List<String> validationMessages;

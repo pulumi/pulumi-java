@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class to represent configuration settings for Docker Build
- * 
  */
 public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Image name of a custom base image.
      * <seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
-     * 
      */
     @Import(name="dockerImageUri", required=true)
       private final Output<String> dockerImageUri;
@@ -34,7 +32,6 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Enum to determine docker specification type. Must be either Build or Image.
      * Expected value is 'Image'.
-     * 
      */
     @Import(name="dockerSpecificationType", required=true)
       private final Output<String> dockerSpecificationType;
@@ -45,7 +42,6 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The platform information of the docker image.
-     * 
      */
     @Import(name="platform")
       private final @Nullable Output<DockerImagePlatformArgs> platform;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of an add vCenter request.
- * 
  */
 public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The friendly name of the vCenter.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -31,7 +29,6 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The IP address of the vCenter to be discovered.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
@@ -42,7 +39,6 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The port number for discovery.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<String> port;
@@ -53,7 +49,6 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The process server Id from where the discovery is orchestrated.
-     * 
      */
     @Import(name="processServerId")
       private final @Nullable Output<String> processServerId;
@@ -64,7 +59,6 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The account Id which has privileges to discover the vCenter.
-     * 
      */
     @Import(name="runAsAccountId")
       private final @Nullable Output<String> runAsAccountId;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Database principal role.
-     * 
      */
     @EnumType
     public enum DatabasePrincipalRole {

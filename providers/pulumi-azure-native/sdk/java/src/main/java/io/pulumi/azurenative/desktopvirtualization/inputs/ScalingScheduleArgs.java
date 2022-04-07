@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Scaling plan schedule.
- * 
  */
 public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Set of days of the week on which this schedule is active.
-     * 
      */
     @Import(name="daysOfWeek")
       private final @Nullable Output<List<String>> daysOfWeek;
@@ -37,7 +35,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the scaling schedule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -48,7 +45,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Load balancing algorithm for off-peak period.
-     * 
      */
     @Import(name="offPeakLoadBalancingAlgorithm")
       private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm;
@@ -59,7 +55,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Starting time for off-peak period.
-     * 
      */
     @Import(name="offPeakStartTime")
       private final @Nullable Output<String> offPeakStartTime;
@@ -70,7 +65,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Load balancing algorithm for peak period.
-     * 
      */
     @Import(name="peakLoadBalancingAlgorithm")
       private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm;
@@ -81,7 +75,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Starting time for peak period.
-     * 
      */
     @Import(name="peakStartTime")
       private final @Nullable Output<String> peakStartTime;
@@ -92,7 +85,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Capacity threshold for ramp down period.
-     * 
      */
     @Import(name="rampDownCapacityThresholdPct")
       private final @Nullable Output<Integer> rampDownCapacityThresholdPct;
@@ -103,7 +95,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Should users be logged off forcefully from hosts.
-     * 
      */
     @Import(name="rampDownForceLogoffUsers")
       private final @Nullable Output<Boolean> rampDownForceLogoffUsers;
@@ -114,7 +105,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Load balancing algorithm for ramp down period.
-     * 
      */
     @Import(name="rampDownLoadBalancingAlgorithm")
       private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm;
@@ -125,7 +115,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Minimum host percentage for ramp down period.
-     * 
      */
     @Import(name="rampDownMinimumHostsPct")
       private final @Nullable Output<Integer> rampDownMinimumHostsPct;
@@ -136,7 +125,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Notification message for users during ramp down period.
-     * 
      */
     @Import(name="rampDownNotificationMessage")
       private final @Nullable Output<String> rampDownNotificationMessage;
@@ -147,7 +135,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Starting time for ramp down period.
-     * 
      */
     @Import(name="rampDownStartTime")
       private final @Nullable Output<String> rampDownStartTime;
@@ -158,7 +145,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies when to stop hosts during ramp down period.
-     * 
      */
     @Import(name="rampDownStopHostsWhen")
       private final @Nullable Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen;
@@ -169,7 +155,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Number of minutes to wait to stop hosts during ramp down period.
-     * 
      */
     @Import(name="rampDownWaitTimeMinutes")
       private final @Nullable Output<Integer> rampDownWaitTimeMinutes;
@@ -180,7 +165,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Capacity threshold for ramp up period.
-     * 
      */
     @Import(name="rampUpCapacityThresholdPct")
       private final @Nullable Output<Integer> rampUpCapacityThresholdPct;
@@ -191,7 +175,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Load balancing algorithm for ramp up period.
-     * 
      */
     @Import(name="rampUpLoadBalancingAlgorithm")
       private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm;
@@ -202,7 +185,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Minimum host percentage for ramp up period.
-     * 
      */
     @Import(name="rampUpMinimumHostsPct")
       private final @Nullable Output<Integer> rampUpMinimumHostsPct;
@@ -213,7 +195,6 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Starting time for ramp up period.
-     * 
      */
     @Import(name="rampUpStartTime")
       private final @Nullable Output<String> rampUpStartTime;

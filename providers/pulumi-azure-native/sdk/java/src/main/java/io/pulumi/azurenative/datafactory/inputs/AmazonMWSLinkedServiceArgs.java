@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Amazon Marketplace Web Service linked service.
- * 
  */
 public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The access key id used to access data.
-     * 
      */
     @Import(name="accessKeyId", required=true)
       private final Output<Object> accessKeyId;
@@ -39,7 +37,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -50,7 +47,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -61,7 +57,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -72,7 +67,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -83,7 +77,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The endpoint of the Amazon MWS server, (i.e. mws.amazonservices.com)
-     * 
      */
     @Import(name="endpoint", required=true)
       private final Output<Object> endpoint;
@@ -94,7 +87,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The Amazon Marketplace ID you want to retrieve data from. To retrieve data from multiple Marketplace IDs, separate them with a comma (,). (i.e. A2EUQ1WTGCTBG2)
-     * 
      */
     @Import(name="marketplaceID", required=true)
       private final Output<Object> marketplaceID;
@@ -105,7 +97,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The Amazon MWS authentication token.
-     * 
      */
     @Import(name="mwsAuthToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> mwsAuthToken;
@@ -116,7 +107,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -127,7 +117,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The secret key used to access data.
-     * 
      */
     @Import(name="secretKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretKey;
@@ -138,7 +127,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The Amazon seller ID.
-     * 
      */
     @Import(name="sellerID", required=true)
       private final Output<Object> sellerID;
@@ -150,7 +138,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
     /**
      * Type of linked service.
      * Expected value is 'AmazonMWS'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -161,7 +148,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     * 
      */
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
@@ -172,7 +158,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="useHostVerification")
       private final @Nullable Output<Object> useHostVerification;
@@ -183,7 +168,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="usePeerVerification")
       private final @Nullable Output<Object> usePeerVerification;

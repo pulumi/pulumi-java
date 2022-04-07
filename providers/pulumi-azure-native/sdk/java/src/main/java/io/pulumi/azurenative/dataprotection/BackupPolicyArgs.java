@@ -16,7 +16,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the policy
-     * 
      */
     @Import(name="backupPolicyName")
       private final @Nullable Output<String> backupPolicyName;
@@ -27,7 +26,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * BaseBackupPolicyResource properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
@@ -38,7 +36,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group where the backup vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the backup vault.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;

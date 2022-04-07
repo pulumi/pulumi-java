@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * VPN client root certificate of P2SVpnServerConfiguration.
- * 
  */
 public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag")
       private final @Nullable String etag;
@@ -31,7 +29,6 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -42,7 +39,6 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -53,7 +49,6 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io
 
     /**
      * The provisioning state of the VPN client root certificate resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -64,7 +59,6 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io
 
     /**
      * The certificate public data.
-     * 
      */
     @Import(name="publicCertData", required=true)
       private final String publicCertData;

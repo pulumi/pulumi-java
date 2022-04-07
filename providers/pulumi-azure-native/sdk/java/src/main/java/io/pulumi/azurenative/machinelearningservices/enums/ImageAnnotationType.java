@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Annotation type of image labeling tasks.
-     * 
      */
     @EnumType
     public enum ImageAnnotationType {

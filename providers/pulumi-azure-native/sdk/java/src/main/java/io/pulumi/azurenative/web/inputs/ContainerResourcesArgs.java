@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container App container resource requirements.
- * 
  */
 public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Required CPU in cores, e.g. 0.5
-     * 
      */
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
@@ -32,7 +30,6 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Required memory, e.g. "250Mb"
-     * 
      */
     @Import(name="memory")
       private final @Nullable Output<String> memory;

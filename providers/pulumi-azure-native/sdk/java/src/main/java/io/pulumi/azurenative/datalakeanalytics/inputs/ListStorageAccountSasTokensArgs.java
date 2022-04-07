@@ -14,7 +14,6 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
 
     /**
      * The name of the Data Lake Analytics account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
 
     /**
      * The name of the Azure storage container for which the SAS token is being requested.
-     * 
      */
     @Import(name="containerName", required=true)
       private final String containerName;
@@ -36,7 +34,6 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
 
     /**
      * The name of the Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
 
     /**
      * The name of the Azure storage account for which the SAS token is being requested.
-     * 
      */
     @Import(name="storageAccountName", required=true)
       private final String storageAccountName;

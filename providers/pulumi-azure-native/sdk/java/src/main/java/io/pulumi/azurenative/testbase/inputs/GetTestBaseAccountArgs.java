@@ -14,7 +14,6 @@ public final class GetTestBaseAccountArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group that contains the resource.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetTestBaseAccountArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The resource name of the Test Base Account.
-     * 
      */
     @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;

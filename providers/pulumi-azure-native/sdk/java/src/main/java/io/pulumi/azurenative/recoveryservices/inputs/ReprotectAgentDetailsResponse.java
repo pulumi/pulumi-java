@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Reprotect agent details.
- * 
  */
 public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
 
     /**
      * The health of the reprotect agent.
-     * 
      */
     @Import(name="health", required=true)
       private final String health;
@@ -31,7 +29,6 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
 
     /**
      * The health errors.
-     * 
      */
     @Import(name="healthErrors", required=true)
       private final List<HealthErrorResponse> healthErrors;
@@ -42,7 +39,6 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
 
     /**
      * The reprotect agent Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -53,7 +49,6 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
 
     /**
      * The last heartbeat received from the reprotect agent.
-     * 
      */
     @Import(name="lastHeartbeatUtc", required=true)
       private final String lastHeartbeatUtc;
@@ -64,7 +59,6 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
 
     /**
      * The reprotect agent name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -75,7 +69,6 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
 
     /**
      * The version.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * HDInsight linked service.
- * 
  */
 public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -40,7 +38,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * HDInsight cluster URI. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="clusterUri", required=true)
       private final Output<Object> clusterUri;
@@ -51,7 +48,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -62,7 +58,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -73,7 +68,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -84,7 +78,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileSystem")
       private final @Nullable Output<Object> fileSystem;
@@ -95,7 +88,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * A reference to the Azure SQL linked service that points to the HCatalog database.
-     * 
      */
     @Import(name="hcatalogLinkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
@@ -106,7 +98,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
-     * 
      */
     @Import(name="isEspEnabled")
       private final @Nullable Output<Object> isEspEnabled;
@@ -117,7 +108,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The Azure Storage linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -128,7 +118,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -139,7 +128,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * HDInsight cluster password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -151,7 +139,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     /**
      * Type of linked service.
      * Expected value is 'HDInsight'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -162,7 +149,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * HDInsight cluster user name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<Object> userName;

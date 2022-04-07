@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The cluster's billing type.
-     * 
      */
     @EnumType
     public enum BillingType {

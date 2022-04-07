@@ -18,48 +18,39 @@ import javax.annotation.Nullable;
 public final class VirtualMachineNetworkInterfaceConfigurationResponse {
     /**
      * Specify what happens to the network interface when the VM is deleted
-     * 
      */
     private final @Nullable String deleteOption;
     /**
      * The dns settings to be applied on the network interfaces.
-     * 
      */
     private final @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings;
     private final @Nullable SubResourceResponse dscpConfiguration;
     /**
      * Specifies whether the network interface is accelerated networking-enabled.
-     * 
      */
     private final @Nullable Boolean enableAcceleratedNetworking;
     /**
      * Specifies whether the network interface is FPGA networking-enabled.
-     * 
      */
     private final @Nullable Boolean enableFpga;
     /**
      * Whether IP forwarding enabled on this NIC.
-     * 
      */
     private final @Nullable Boolean enableIPForwarding;
     /**
      * Specifies the IP configurations of the network interface.
-     * 
      */
     private final List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations;
     /**
      * The network interface configuration name.
-     * 
      */
     private final String name;
     /**
      * The network security group.
-     * 
      */
     private final @Nullable SubResourceResponse networkSecurityGroup;
     /**
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
-     * 
      */
     private final @Nullable Boolean primary;
 
@@ -89,14 +80,12 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse {
 
     /**
      * Specify what happens to the network interface when the VM is deleted
-     * 
     */
     public Optional<String> getDeleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
     /**
      * The dns settings to be applied on the network interfaces.
-     * 
     */
     public Optional<VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse> getDnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
@@ -106,49 +95,42 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse {
     }
     /**
      * Specifies whether the network interface is accelerated networking-enabled.
-     * 
     */
     public Optional<Boolean> getEnableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
     /**
      * Specifies whether the network interface is FPGA networking-enabled.
-     * 
     */
     public Optional<Boolean> getEnableFpga() {
         return Optional.ofNullable(this.enableFpga);
     }
     /**
      * Whether IP forwarding enabled on this NIC.
-     * 
     */
     public Optional<Boolean> getEnableIPForwarding() {
         return Optional.ofNullable(this.enableIPForwarding);
     }
     /**
      * Specifies the IP configurations of the network interface.
-     * 
     */
     public List<VirtualMachineNetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations;
     }
     /**
      * The network interface configuration name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The network security group.
-     * 
     */
     public Optional<SubResourceResponse> getNetworkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
     /**
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
-     * 
     */
     public Optional<Boolean> getPrimary() {
         return Optional.ofNullable(this.primary);

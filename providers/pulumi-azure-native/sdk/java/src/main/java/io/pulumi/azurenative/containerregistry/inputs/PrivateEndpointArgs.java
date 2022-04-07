@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Private Endpoint resource.
- * 
  */
 public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * This is private endpoint resource created with Microsoft.Network resource provider.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

@@ -112,7 +112,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The dataset name.
-     * 
      */
     @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
@@ -123,7 +122,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
@@ -134,7 +132,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dataset properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Object> properties;
@@ -145,7 +142,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

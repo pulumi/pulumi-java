@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Azure Cosmos DB Mongo DB Resource.
- * 
  */
 public final class PrivilegeResponseResource extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PrivilegeResponseResource extends io.pulumi.resources.InvokeA
 
     /**
      * The collection name the role is applied.
-     * 
      */
     @Import(name="collection")
       private final @Nullable String collection;
@@ -31,7 +29,6 @@ public final class PrivilegeResponseResource extends io.pulumi.resources.InvokeA
 
     /**
      * The database name the role is applied.
-     * 
      */
     @Import(name="db")
       private final @Nullable String db;

@@ -14,7 +14,6 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
 
     /**
      * The name of the database in the Kusto cluster.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -36,7 +34,6 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
 
     /**
      * The name of the Kusto principalAssignment.
-     * 
      */
     @Import(name="principalAssignmentName", required=true)
       private final String principalAssignmentName;
@@ -47,7 +44,6 @@ public final class GetDatabasePrincipalAssignmentArgs extends io.pulumi.resource
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The network interface definition.
- * 
  */
 public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Private Ip address of the interface
-     * 
      */
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;

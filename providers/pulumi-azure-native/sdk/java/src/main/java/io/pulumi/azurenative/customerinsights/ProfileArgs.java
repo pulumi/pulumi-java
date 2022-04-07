@@ -22,7 +22,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
-     * 
      */
     @Import(name="apiEntitySetName")
       private final @Nullable Output<String> apiEntitySetName;
@@ -33,7 +32,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The attributes for the Type.
-     * 
      */
     @Import(name="attributes")
       private final @Nullable Output<Map<String,List<String>>> attributes;
@@ -44,7 +42,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Localized descriptions for the property.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
@@ -55,7 +52,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Localized display names for the property.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
@@ -66,7 +62,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of entity.
-     * 
      */
     @Import(name="entityType")
       private final @Nullable Output<EntityTypes> entityType;
@@ -77,7 +72,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties of the Profile.
-     * 
      */
     @Import(name="fields")
       private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
@@ -88,7 +82,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
@@ -99,7 +92,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The instance count.
-     * 
      */
     @Import(name="instancesCount")
       private final @Nullable Output<Integer> instancesCount;
@@ -110,7 +102,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Large Image associated with the Property or EntityType.
-     * 
      */
     @Import(name="largeImage")
       private final @Nullable Output<String> largeImage;
@@ -121,7 +112,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Any custom localized attributes for the Type.
-     * 
      */
     @Import(name="localizedAttributes")
       private final @Nullable Output<Map<String,Map<String,String>>> localizedAttributes;
@@ -132,7 +122,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Medium Image associated with the Property or EntityType.
-     * 
      */
     @Import(name="mediumImage")
       private final @Nullable Output<String> mediumImage;
@@ -143,7 +132,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the profile.
-     * 
      */
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
@@ -154,7 +142,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -165,7 +152,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The schema org link. This helps ACI identify and suggest semantic models.
-     * 
      */
     @Import(name="schemaItemTypeLink")
       private final @Nullable Output<String> schemaItemTypeLink;
@@ -176,7 +162,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Small Image associated with the Property or EntityType.
-     * 
      */
     @Import(name="smallImage")
       private final @Nullable Output<String> smallImage;
@@ -187,7 +172,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The strong IDs.
-     * 
      */
     @Import(name="strongIds")
       private final @Nullable Output<List<StrongIdArgs>> strongIds;
@@ -198,7 +182,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp property name. Represents the time when the interaction or profile update happened.
-     * 
      */
     @Import(name="timestampFieldName")
       private final @Nullable Output<String> timestampFieldName;
@@ -209,7 +192,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the entity.
-     * 
      */
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;

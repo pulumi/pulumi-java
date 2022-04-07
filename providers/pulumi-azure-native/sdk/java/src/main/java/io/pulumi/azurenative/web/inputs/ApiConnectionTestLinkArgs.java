@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * API connection properties
- * 
  */
 public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * HTTP Method
-     * 
      */
     @Import(name="method")
       private final @Nullable Output<String> method;
@@ -31,7 +29,6 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * Test link request URI
-     * 
      */
     @Import(name="requestUri")
       private final @Nullable Output<String> requestUri;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * LinkedService specific properties.
- * 
  */
 public final class LinkedServicePropsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The creation time of the linked service.
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable String createdTime;
@@ -31,7 +29,6 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Type of the link target.
-     * 
      */
     @Import(name="linkType")
       private final @Nullable String linkType;
@@ -42,7 +39,6 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
 
     /**
      * ResourceId of the link target of the linked service.
-     * 
      */
     @Import(name="linkedServiceResourceId", required=true)
       private final String linkedServiceResourceId;
@@ -53,7 +49,6 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The last modified time of the linked service.
-     * 
      */
     @Import(name="modifiedTime")
       private final @Nullable String modifiedTime;

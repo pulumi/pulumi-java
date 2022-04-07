@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PipelineTriggerDescriptorResponse {
     /**
      * The source trigger that caused the pipeline run.
-     * 
      */
     private final @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
 
@@ -24,7 +23,6 @@ public final class PipelineTriggerDescriptorResponse {
 
     /**
      * The source trigger that caused the pipeline run.
-     * 
     */
     public Optional<PipelineSourceTriggerDescriptorResponse> getSourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);

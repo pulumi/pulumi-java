@@ -20,7 +20,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The auto async of the source control. Default is false.
-     * 
      */
     @Import(name="autoSync")
       private final @Nullable Output<Boolean> autoSync;
@@ -31,7 +30,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -42,7 +40,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The repo branch of the source control. Include branch as empty string for VsoTfvc.
-     * 
      */
     @Import(name="branch")
       private final @Nullable Output<String> branch;
@@ -53,7 +50,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user description of the source control.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -64,7 +60,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The folder path of the source control. Path must be relative.
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Output<String> folderPath;
@@ -75,7 +70,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The auto publish of the source control. Default is true.
-     * 
      */
     @Import(name="publishRunbook")
       private final @Nullable Output<Boolean> publishRunbook;
@@ -86,7 +80,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The repo url of the source control.
-     * 
      */
     @Import(name="repoUrl")
       private final @Nullable Output<String> repoUrl;
@@ -97,7 +90,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The authorization token for the repo of the source control.
-     * 
      */
     @Import(name="securityToken")
       private final @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken;
@@ -119,7 +110,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source control name.
-     * 
      */
     @Import(name="sourceControlName")
       private final @Nullable Output<String> sourceControlName;
@@ -130,7 +120,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source type. Must be one of VsoGit, VsoTfvc, GitHub, case sensitive.
-     * 
      */
     @Import(name="sourceType")
       private final @Nullable Output<Either<String,SourceType>> sourceType;

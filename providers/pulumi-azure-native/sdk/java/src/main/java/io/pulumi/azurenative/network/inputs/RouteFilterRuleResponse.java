@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Route Filter Rule Resource.
- * 
  */
 public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The access type of the rule.
-     * 
      */
     @Import(name="access", required=true)
       private final String access;
@@ -32,7 +30,6 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
-     * 
      */
     @Import(name="communities", required=true)
       private final List<String> communities;
@@ -43,7 +40,6 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -54,7 +50,6 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -65,7 +60,6 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -76,7 +70,6 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -87,7 +80,6 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The provisioning state of the route filter rule resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -98,7 +90,6 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The rule type of the rule.
-     * 
      */
     @Import(name="routeFilterRuleType", required=true)
       private final String routeFilterRuleType;

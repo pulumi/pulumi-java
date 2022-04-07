@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * SQL stored procedure activity type.
- * 
  */
 public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -39,7 +37,6 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -50,7 +47,6 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -61,7 +57,6 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -72,7 +67,6 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -83,7 +77,6 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
 
     /**
      * Stored procedure name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="storedProcedureName", required=true)
       private final Output<Object> storedProcedureName;
@@ -94,7 +87,6 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
 
     /**
      * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
-     * 
      */
     @Import(name="storedProcedureParameters")
       private final @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
@@ -106,7 +98,6 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     /**
      * Type of activity.
      * Expected value is 'SqlServerStoredProcedure'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -117,7 +108,6 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

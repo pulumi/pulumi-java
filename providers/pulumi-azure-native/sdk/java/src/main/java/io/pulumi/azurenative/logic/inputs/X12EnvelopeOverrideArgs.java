@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The X12 envelope override settings.
- * 
  */
 public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The date format.
-     * 
      */
     @Import(name="dateFormat", required=true)
       private final Output<Either<String,X12DateFormat>> dateFormat;
@@ -34,7 +32,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The functional identifier code.
-     * 
      */
     @Import(name="functionalIdentifierCode")
       private final @Nullable Output<String> functionalIdentifierCode;
@@ -45,7 +42,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The header version.
-     * 
      */
     @Import(name="headerVersion", required=true)
       private final Output<String> headerVersion;
@@ -56,7 +52,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The message id on which this envelope settings has to be applied.
-     * 
      */
     @Import(name="messageId", required=true)
       private final Output<String> messageId;
@@ -67,7 +62,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The protocol version on which this envelope settings has to be applied.
-     * 
      */
     @Import(name="protocolVersion", required=true)
       private final Output<String> protocolVersion;
@@ -78,7 +72,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The receiver application id.
-     * 
      */
     @Import(name="receiverApplicationId", required=true)
       private final Output<String> receiverApplicationId;
@@ -89,7 +82,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The responsible agency code.
-     * 
      */
     @Import(name="responsibleAgencyCode", required=true)
       private final Output<String> responsibleAgencyCode;
@@ -100,7 +92,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The sender application id.
-     * 
      */
     @Import(name="senderApplicationId", required=true)
       private final Output<String> senderApplicationId;
@@ -111,7 +102,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The target namespace on which this envelope settings has to be applied.
-     * 
      */
     @Import(name="targetNamespace", required=true)
       private final Output<String> targetNamespace;
@@ -122,7 +112,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The time format.
-     * 
      */
     @Import(name="timeFormat", required=true)
       private final Output<Either<String,X12TimeFormat>> timeFormat;

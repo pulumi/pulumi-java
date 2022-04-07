@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
-     * 
      */
     @EnumType
     public enum DoubleEncryptionStatus {
         /**
          * Double encryption is disabled
-         * 
          */
         Disabled("Disabled"),
         /**
          * Double encryption is enabled
-         * 
          */
         Enabled("Enabled");
 

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Volume size
-     * 
      */
     @EnumType
     public enum SizeTypes {

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the Resource ID for a Security Policy.
- * 
  */
 public final class SecurityPolicyLinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SecurityPolicyLinkResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

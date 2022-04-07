@@ -16,7 +16,6 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
 
     /**
      * Actions required for a private endpoint connection.
-     * 
      */
     @Import(name="actionsRequired")
       private final @Nullable String actionsRequired;
@@ -27,7 +26,6 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
 
     /**
      * The description for the current state of a private endpoint connection.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -38,7 +36,6 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
 
     /**
      * The status of a private endpoint connection.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

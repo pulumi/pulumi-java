@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes a storage account connection.
- * 
  */
 public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The Azure Resource Manager ID of the storage account resource.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -29,7 +27,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The storage account key.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;

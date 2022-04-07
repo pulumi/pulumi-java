@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ProductPropertiesResponse {
     /**
      * The version.
-     * 
      */
     private final @Nullable String version;
 
@@ -24,7 +23,6 @@ public final class ProductPropertiesResponse {
 
     /**
      * The version.
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

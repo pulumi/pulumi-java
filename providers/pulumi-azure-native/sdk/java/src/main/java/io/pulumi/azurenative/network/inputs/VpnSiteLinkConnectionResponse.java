@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * VpnSiteLinkConnection Resource.
- * 
  */
 public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Expected bandwidth in MBPS.
-     * 
      */
     @Import(name="connectionBandwidth")
       private final @Nullable Integer connectionBandwidth;
@@ -37,7 +35,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * The connection status.
-     * 
      */
     @Import(name="connectionStatus", required=true)
       private final String connectionStatus;
@@ -48,7 +45,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Egress bytes transferred.
-     * 
      */
     @Import(name="egressBytesTransferred", required=true)
       private final Double egressBytesTransferred;
@@ -59,7 +55,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * List of egress NatRules.
-     * 
      */
     @Import(name="egressNatRules")
       private final @Nullable List<SubResourceResponse> egressNatRules;
@@ -70,7 +65,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * EnableBgp flag.
-     * 
      */
     @Import(name="enableBgp")
       private final @Nullable Boolean enableBgp;
@@ -81,7 +75,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * EnableBgp flag.
-     * 
      */
     @Import(name="enableRateLimiting")
       private final @Nullable Boolean enableRateLimiting;
@@ -92,7 +85,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -103,7 +95,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -114,7 +105,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Ingress bytes transferred.
-     * 
      */
     @Import(name="ingressBytesTransferred", required=true)
       private final Double ingressBytesTransferred;
@@ -125,7 +115,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * List of ingress NatRules.
-     * 
      */
     @Import(name="ingressNatRules")
       private final @Nullable List<SubResourceResponse> ingressNatRules;
@@ -136,7 +125,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * The IPSec Policies to be considered by this connection.
-     * 
      */
     @Import(name="ipsecPolicies")
       private final @Nullable List<IpsecPolicyResponse> ipsecPolicies;
@@ -147,7 +135,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -158,7 +145,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * The provisioning state of the VPN site link connection resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -169,7 +155,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Routing weight for vpn connection.
-     * 
      */
     @Import(name="routingWeight")
       private final @Nullable Integer routingWeight;
@@ -180,7 +165,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * SharedKey for the vpn connection.
-     * 
      */
     @Import(name="sharedKey")
       private final @Nullable String sharedKey;
@@ -191,7 +175,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -202,7 +185,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Use local azure ip to initiate connection.
-     * 
      */
     @Import(name="useLocalAzureIpAddress")
       private final @Nullable Boolean useLocalAzureIpAddress;
@@ -213,7 +195,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Enable policy-based traffic selectors.
-     * 
      */
     @Import(name="usePolicyBasedTrafficSelectors")
       private final @Nullable Boolean usePolicyBasedTrafficSelectors;
@@ -224,7 +205,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Connection protocol used for this connection.
-     * 
      */
     @Import(name="vpnConnectionProtocolType")
       private final @Nullable String vpnConnectionProtocolType;
@@ -235,7 +215,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Vpn link connection mode.
-     * 
      */
     @Import(name="vpnLinkConnectionMode")
       private final @Nullable String vpnLinkConnectionMode;
@@ -246,7 +225,6 @@ public final class VpnSiteLinkConnectionResponse extends io.pulumi.resources.Inv
 
     /**
      * Id of the connected vpn site link.
-     * 
      */
     @Import(name="vpnSiteLink")
       private final @Nullable SubResourceResponse vpnSiteLink;

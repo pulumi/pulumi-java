@@ -32,7 +32,444 @@ import javax.annotation.Nullable;
  * An Azure Cosmos DB database account.
  * API Version: 2021-03-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CosmosDBDatabaseAccountCreateMax
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var databaseAccount = new AzureNative.DocumentDB.DatabaseAccount("databaseAccount", new AzureNative.DocumentDB.DatabaseAccountArgs
+ *         {
+ *             AccountName = "ddb1",
+ *             ApiProperties = new AzureNative.DocumentDB.Inputs.ApiPropertiesArgs
+ *             {
+ *                 ServerVersion = "3.2",
+ *             },
+ *             BackupPolicy = new AzureNative.DocumentDB.Inputs.PeriodicModeBackupPolicyArgs
+ *             {
+ *                 PeriodicModeProperties = new AzureNative.DocumentDB.Inputs.PeriodicModePropertiesArgs
+ *                 {
+ *                     BackupIntervalInMinutes = 240,
+ *                     BackupRetentionIntervalInHours = 8,
+ *                 },
+ *                 Type = "Periodic",
+ *             },
+ *             ConsistencyPolicy = new AzureNative.DocumentDB.Inputs.ConsistencyPolicyArgs
+ *             {
+ *                 DefaultConsistencyLevel = "BoundedStaleness",
+ *                 MaxIntervalInSeconds = 10,
+ *                 MaxStalenessPrefix = 200,
+ *             },
+ *             Cors = 
+ *             {
+ *                 new AzureNative.DocumentDB.Inputs.CorsPolicyArgs
+ *                 {
+ *                     AllowedOrigins = "https://test",
+ *                 },
+ *             },
+ *             DatabaseAccountOfferType = "Standard",
+ *             DefaultIdentity = "FirstPartyIdentity",
+ *             EnableAnalyticalStorage = true,
+ *             EnableFreeTier = false,
+ *             Identity = new AzureNative.DocumentDB.Inputs.ManagedServiceIdentityArgs
+ *             {
+ *                 Type = "SystemAssigned,UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1",  },
+ *                 },
+ *             },
+ *             IpRules = 
+ *             {
+ *                 new AzureNative.DocumentDB.Inputs.IpAddressOrRangeArgs
+ *                 {
+ *                     IpAddressOrRange = "23.43.230.120",
+ *                 },
+ *                 new AzureNative.DocumentDB.Inputs.IpAddressOrRangeArgs
+ *                 {
+ *                     IpAddressOrRange = "110.12.240.0/12",
+ *                 },
+ *             },
+ *             IsVirtualNetworkFilterEnabled = true,
+ *             KeyVaultKeyUri = "https://myKeyVault.vault.azure.net",
+ *             Kind = "MongoDB",
+ *             Location = "westus",
+ *             Locations = 
+ *             {
+ *                 new AzureNative.DocumentDB.Inputs.LocationArgs
+ *                 {
+ *                     FailoverPriority = 0,
+ *                     IsZoneRedundant = false,
+ *                     LocationName = "southcentralus",
+ *                 },
+ *                 new AzureNative.DocumentDB.Inputs.LocationArgs
+ *                 {
+ *                     FailoverPriority = 1,
+ *                     IsZoneRedundant = false,
+ *                     LocationName = "eastus",
+ *                 },
+ *             },
+ *             NetworkAclBypass = "AzureServices",
+ *             NetworkAclBypassResourceIds = 
+ *             {
+ *                 "/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName",
+ *             },
+ *             PublicNetworkAccess = "Enabled",
+ *             ResourceGroupName = "rg1",
+ *             Tags = ,
+ *             VirtualNetworkRules = 
+ *             {
+ *                 new AzureNative.DocumentDB.Inputs.VirtualNetworkRuleArgs
+ *                 {
+ *                     Id = "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+ *                     IgnoreMissingVNetServiceEndpoint = false,
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewDatabaseAccount(ctx, "databaseAccount", &documentdb.DatabaseAccountArgs{
+ * 			AccountName: pulumi.String("ddb1"),
+ * 			ApiProperties: &documentdb.ApiPropertiesArgs{
+ * 				ServerVersion: pulumi.String("3.2"),
+ * 			},
+ * 			BackupPolicy: documentdb.PeriodicModeBackupPolicy{
+ * 				PeriodicModeProperties: documentdb.PeriodicModeProperties{
+ * 					BackupIntervalInMinutes:        240,
+ * 					BackupRetentionIntervalInHours: 8,
+ * 				},
+ * 				Type: "Periodic",
+ * 			},
+ * 			ConsistencyPolicy: &documentdb.ConsistencyPolicyArgs{
+ * 				DefaultConsistencyLevel: "BoundedStaleness",
+ * 				MaxIntervalInSeconds:    pulumi.Int(10),
+ * 				MaxStalenessPrefix:      pulumi.Float64(200),
+ * 			},
+ * 			Cors: []documentdb.CorsPolicyArgs{
+ * 				&documentdb.CorsPolicyArgs{
+ * 					AllowedOrigins: pulumi.String("https://test"),
+ * 				},
+ * 			},
+ * 			DatabaseAccountOfferType: "Standard",
+ * 			DefaultIdentity:          pulumi.String("FirstPartyIdentity"),
+ * 			EnableAnalyticalStorage:  pulumi.Bool(true),
+ * 			EnableFreeTier:           pulumi.Bool(false),
+ * 			Identity: &documentdb.ManagedServiceIdentityArgs{
+ * 				Type: "SystemAssigned,UserAssigned",
+ * 				UserAssignedIdentities: pulumi.AnyMap{
+ * 					"/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
+ * 				},
+ * 			},
+ * 			IpRules: []documentdb.IpAddressOrRangeArgs{
+ * 				&documentdb.IpAddressOrRangeArgs{
+ * 					IpAddressOrRange: pulumi.String("23.43.230.120"),
+ * 				},
+ * 				&documentdb.IpAddressOrRangeArgs{
+ * 					IpAddressOrRange: pulumi.String("110.12.240.0/12"),
+ * 				},
+ * 			},
+ * 			IsVirtualNetworkFilterEnabled: pulumi.Bool(true),
+ * 			KeyVaultKeyUri:                pulumi.String("https://myKeyVault.vault.azure.net"),
+ * 			Kind:                          pulumi.String("MongoDB"),
+ * 			Location:                      pulumi.String("westus"),
+ * 			Locations: documentdb.LocationArray{
+ * 				&documentdb.LocationArgs{
+ * 					FailoverPriority: pulumi.Int(0),
+ * 					IsZoneRedundant:  pulumi.Bool(false),
+ * 					LocationName:     pulumi.String("southcentralus"),
+ * 				},
+ * 				&documentdb.LocationArgs{
+ * 					FailoverPriority: pulumi.Int(1),
+ * 					IsZoneRedundant:  pulumi.Bool(false),
+ * 					LocationName:     pulumi.String("eastus"),
+ * 				},
+ * 			},
+ * 			NetworkAclBypass: "AzureServices",
+ * 			NetworkAclBypassResourceIds: pulumi.StringArray{
+ * 				pulumi.String("/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName"),
+ * 			},
+ * 			PublicNetworkAccess: pulumi.String("Enabled"),
+ * 			ResourceGroupName:   pulumi.String("rg1"),
+ * 			Tags:                nil,
+ * 			VirtualNetworkRules: []documentdb.VirtualNetworkRuleArgs{
+ * 				&documentdb.VirtualNetworkRuleArgs{
+ * 					Id:                               pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"),
+ * 					IgnoreMissingVNetServiceEndpoint: pulumi.Bool(false),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAccount", {
+ *     accountName: "ddb1",
+ *     apiProperties: {
+ *         serverVersion: "3.2",
+ *     },
+ *     backupPolicy: {
+ *         periodicModeProperties: {
+ *             backupIntervalInMinutes: 240,
+ *             backupRetentionIntervalInHours: 8,
+ *         },
+ *         type: "Periodic",
+ *     },
+ *     consistencyPolicy: {
+ *         defaultConsistencyLevel: "BoundedStaleness",
+ *         maxIntervalInSeconds: 10,
+ *         maxStalenessPrefix: 200,
+ *     },
+ *     cors: [{
+ *         allowedOrigins: "https://test",
+ *     }],
+ *     databaseAccountOfferType: "Standard",
+ *     defaultIdentity: "FirstPartyIdentity",
+ *     enableAnalyticalStorage: true,
+ *     enableFreeTier: false,
+ *     identity: {
+ *         type: "SystemAssigned,UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+ *         },
+ *     },
+ *     ipRules: [
+ *         {
+ *             ipAddressOrRange: "23.43.230.120",
+ *         },
+ *         {
+ *             ipAddressOrRange: "110.12.240.0/12",
+ *         },
+ *     ],
+ *     isVirtualNetworkFilterEnabled: true,
+ *     keyVaultKeyUri: "https://myKeyVault.vault.azure.net",
+ *     kind: "MongoDB",
+ *     location: "westus",
+ *     locations: [
+ *         {
+ *             failoverPriority: 0,
+ *             isZoneRedundant: false,
+ *             locationName: "southcentralus",
+ *         },
+ *         {
+ *             failoverPriority: 1,
+ *             isZoneRedundant: false,
+ *             locationName: "eastus",
+ *         },
+ *     ],
+ *     networkAclBypass: "AzureServices",
+ *     networkAclBypassResourceIds: ["/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName"],
+ *     publicNetworkAccess: "Enabled",
+ *     resourceGroupName: "rg1",
+ *     tags: {},
+ *     virtualNetworkRules: [{
+ *         id: "/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+ *         ignoreMissingVNetServiceEndpoint: false,
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * database_account = azure_native.documentdb.DatabaseAccount("databaseAccount",
+ *     account_name="ddb1",
+ *     api_properties=azure_native.documentdb.ApiPropertiesArgs(
+ *         server_version="3.2",
+ *     ),
+ *     backup_policy=azure_native.documentdb.PeriodicModeBackupPolicyArgs(
+ *         periodic_mode_properties=azure_native.documentdb.PeriodicModePropertiesArgs(
+ *             backup_interval_in_minutes=240,
+ *             backup_retention_interval_in_hours=8,
+ *         ),
+ *         type="Periodic",
+ *     ),
+ *     consistency_policy=azure_native.documentdb.ConsistencyPolicyArgs(
+ *         default_consistency_level="BoundedStaleness",
+ *         max_interval_in_seconds=10,
+ *         max_staleness_prefix=200,
+ *     ),
+ *     cors=[azure_native.documentdb.CorsPolicyArgs(
+ *         allowed_origins="https://test",
+ *     )],
+ *     database_account_offer_type="Standard",
+ *     default_identity="FirstPartyIdentity",
+ *     enable_analytical_storage=True,
+ *     enable_free_tier=False,
+ *     identity=azure_native.documentdb.ManagedServiceIdentityArgs(
+ *         type="SystemAssigned,UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+ *         },
+ *     ),
+ *     ip_rules=[
+ *         azure_native.documentdb.IpAddressOrRangeArgs(
+ *             ip_address_or_range="23.43.230.120",
+ *         ),
+ *         azure_native.documentdb.IpAddressOrRangeArgs(
+ *             ip_address_or_range="110.12.240.0/12",
+ *         ),
+ *     ],
+ *     is_virtual_network_filter_enabled=True,
+ *     key_vault_key_uri="https://myKeyVault.vault.azure.net",
+ *     kind="MongoDB",
+ *     location="westus",
+ *     locations=[
+ *         azure_native.documentdb.LocationArgs(
+ *             failover_priority=0,
+ *             is_zone_redundant=False,
+ *             location_name="southcentralus",
+ *         ),
+ *         azure_native.documentdb.LocationArgs(
+ *             failover_priority=1,
+ *             is_zone_redundant=False,
+ *             location_name="eastus",
+ *         ),
+ *     ],
+ *     network_acl_bypass="AzureServices",
+ *     network_acl_bypass_resource_ids=["/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName"],
+ *     public_network_access="Enabled",
+ *     resource_group_name="rg1",
+ *     tags={},
+ *     virtual_network_rules=[azure_native.documentdb.VirtualNetworkRuleArgs(
+ *         id="/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1",
+ *         ignore_missing_v_net_service_endpoint=False,
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### CosmosDBDatabaseAccountCreateMin
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var databaseAccount = new AzureNative.DocumentDB.DatabaseAccount("databaseAccount", new AzureNative.DocumentDB.DatabaseAccountArgs
+ *         {
+ *             AccountName = "ddb1",
+ *             DatabaseAccountOfferType = "Standard",
+ *             Location = "westus",
+ *             Locations = 
+ *             {
+ *                 new AzureNative.DocumentDB.Inputs.LocationArgs
+ *                 {
+ *                     FailoverPriority = 0,
+ *                     IsZoneRedundant = false,
+ *                     LocationName = "southcentralus",
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewDatabaseAccount(ctx, "databaseAccount", &documentdb.DatabaseAccountArgs{
+ * 			AccountName:              pulumi.String("ddb1"),
+ * 			DatabaseAccountOfferType: "Standard",
+ * 			Location:                 pulumi.String("westus"),
+ * 			Locations: documentdb.LocationArray{
+ * 				&documentdb.LocationArgs{
+ * 					FailoverPriority: pulumi.Int(0),
+ * 					IsZoneRedundant:  pulumi.Bool(false),
+ * 					LocationName:     pulumi.String("southcentralus"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAccount", {
+ *     accountName: "ddb1",
+ *     databaseAccountOfferType: "Standard",
+ *     location: "westus",
+ *     locations: [{
+ *         failoverPriority: 0,
+ *         isZoneRedundant: false,
+ *         locationName: "southcentralus",
+ *     }],
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * database_account = azure_native.documentdb.DatabaseAccount("databaseAccount",
+ *     account_name="ddb1",
+ *     database_account_offer_type="Standard",
+ *     location="westus",
+ *     locations=[azure_native.documentdb.LocationArgs(
+ *         failover_priority=0,
+ *         is_zone_redundant=False,
+ *         location_name="southcentralus",
+ *     )],
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -47,476 +484,408 @@ import javax.annotation.Nullable;
 public class DatabaseAccount extends io.pulumi.resources.CustomResource {
     /**
      * API specific properties.
-     * 
      */
     @Export(name="apiProperties", type=ApiPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ApiPropertiesResponse> apiProperties;
 
     /**
      * @return API specific properties.
-     * 
      */
     public Output</* @Nullable */ ApiPropertiesResponse> getApiProperties() {
         return this.apiProperties;
     }
     /**
      * The object representing the policy for taking backups on an account.
-     * 
      */
     @Export(name="backupPolicy", type=Either.class, parameters={ContinuousModeBackupPolicyResponse.class, PeriodicModeBackupPolicyResponse.class})
     private Output</* @Nullable */ Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse>> backupPolicy;
 
     /**
      * @return The object representing the policy for taking backups on an account.
-     * 
      */
     public Output</* @Nullable */ Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse>> getBackupPolicy() {
         return this.backupPolicy;
     }
     /**
      * List of Cosmos DB capabilities for the account
-     * 
      */
     @Export(name="capabilities", type=List.class, parameters={CapabilityResponse.class})
     private Output</* @Nullable */ List<CapabilityResponse>> capabilities;
 
     /**
      * @return List of Cosmos DB capabilities for the account
-     * 
      */
     public Output</* @Nullable */ List<CapabilityResponse>> getCapabilities() {
         return this.capabilities;
     }
     /**
      * The cassandra connector offer type for the Cosmos DB database C* account.
-     * 
      */
     @Export(name="connectorOffer", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorOffer;
 
     /**
      * @return The cassandra connector offer type for the Cosmos DB database C* account.
-     * 
      */
     public Output</* @Nullable */ String> getConnectorOffer() {
         return this.connectorOffer;
     }
     /**
      * The consistency policy for the Cosmos DB database account.
-     * 
      */
     @Export(name="consistencyPolicy", type=ConsistencyPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ConsistencyPolicyResponse> consistencyPolicy;
 
     /**
      * @return The consistency policy for the Cosmos DB database account.
-     * 
      */
     public Output</* @Nullable */ ConsistencyPolicyResponse> getConsistencyPolicy() {
         return this.consistencyPolicy;
     }
     /**
      * The CORS policy for the Cosmos DB database account.
-     * 
      */
     @Export(name="cors", type=List.class, parameters={CorsPolicyResponse.class})
     private Output</* @Nullable */ List<CorsPolicyResponse>> cors;
 
     /**
      * @return The CORS policy for the Cosmos DB database account.
-     * 
      */
     public Output</* @Nullable */ List<CorsPolicyResponse>> getCors() {
         return this.cors;
     }
     /**
      * The offer type for the Cosmos DB database account. Default value: Standard.
-     * 
      */
     @Export(name="databaseAccountOfferType", type=String.class, parameters={})
     private Output<String> databaseAccountOfferType;
 
     /**
      * @return The offer type for the Cosmos DB database account. Default value: Standard.
-     * 
      */
     public Output<String> getDatabaseAccountOfferType() {
         return this.databaseAccountOfferType;
     }
     /**
      * The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.
-     * 
      */
     @Export(name="defaultIdentity", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultIdentity;
 
     /**
      * @return The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.
-     * 
      */
     public Output</* @Nullable */ String> getDefaultIdentity() {
         return this.defaultIdentity;
     }
     /**
      * Disable write operations on metadata resources (databases, containers, throughput) via account keys
-     * 
      */
     @Export(name="disableKeyBasedMetadataWriteAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableKeyBasedMetadataWriteAccess;
 
     /**
      * @return Disable write operations on metadata resources (databases, containers, throughput) via account keys
-     * 
      */
     public Output</* @Nullable */ Boolean> getDisableKeyBasedMetadataWriteAccess() {
         return this.disableKeyBasedMetadataWriteAccess;
     }
     /**
      * The connection endpoint for the Cosmos DB database account.
-     * 
      */
     @Export(name="documentEndpoint", type=String.class, parameters={})
     private Output<String> documentEndpoint;
 
     /**
      * @return The connection endpoint for the Cosmos DB database account.
-     * 
      */
     public Output<String> getDocumentEndpoint() {
         return this.documentEndpoint;
     }
     /**
      * Flag to indicate whether to enable storage analytics.
-     * 
      */
     @Export(name="enableAnalyticalStorage", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAnalyticalStorage;
 
     /**
      * @return Flag to indicate whether to enable storage analytics.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableAnalyticalStorage() {
         return this.enableAnalyticalStorage;
     }
     /**
      * Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
-     * 
      */
     @Export(name="enableAutomaticFailover", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutomaticFailover;
 
     /**
      * @return Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableAutomaticFailover() {
         return this.enableAutomaticFailover;
     }
     /**
      * Enables the cassandra connector on the Cosmos DB C* account
-     * 
      */
     @Export(name="enableCassandraConnector", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableCassandraConnector;
 
     /**
      * @return Enables the cassandra connector on the Cosmos DB C* account
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableCassandraConnector() {
         return this.enableCassandraConnector;
     }
     /**
      * Flag to indicate whether Free Tier is enabled.
-     * 
      */
     @Export(name="enableFreeTier", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFreeTier;
 
     /**
      * @return Flag to indicate whether Free Tier is enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableFreeTier() {
         return this.enableFreeTier;
     }
     /**
      * Enables the account to write in multiple locations
-     * 
      */
     @Export(name="enableMultipleWriteLocations", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableMultipleWriteLocations;
 
     /**
      * @return Enables the account to write in multiple locations
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableMultipleWriteLocations() {
         return this.enableMultipleWriteLocations;
     }
     /**
      * An array that contains the regions ordered by their failover priorities.
-     * 
      */
     @Export(name="failoverPolicies", type=List.class, parameters={FailoverPolicyResponse.class})
     private Output<List<FailoverPolicyResponse>> failoverPolicies;
 
     /**
      * @return An array that contains the regions ordered by their failover priorities.
-     * 
      */
     public Output<List<FailoverPolicyResponse>> getFailoverPolicies() {
         return this.failoverPolicies;
     }
     /**
      * Identity for the resource.
-     * 
      */
     @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
      * @return Identity for the resource.
-     * 
      */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * List of IpRules.
-     * 
      */
     @Export(name="ipRules", type=List.class, parameters={IpAddressOrRangeResponse.class})
     private Output</* @Nullable */ List<IpAddressOrRangeResponse>> ipRules;
 
     /**
      * @return List of IpRules.
-     * 
      */
     public Output</* @Nullable */ List<IpAddressOrRangeResponse>> getIpRules() {
         return this.ipRules;
     }
     /**
      * Flag to indicate whether to enable/disable Virtual Network ACL rules.
-     * 
      */
     @Export(name="isVirtualNetworkFilterEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isVirtualNetworkFilterEnabled;
 
     /**
      * @return Flag to indicate whether to enable/disable Virtual Network ACL rules.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsVirtualNetworkFilterEnabled() {
         return this.isVirtualNetworkFilterEnabled;
     }
     /**
      * The URI of the key vault
-     * 
      */
     @Export(name="keyVaultKeyUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultKeyUri;
 
     /**
      * @return The URI of the key vault
-     * 
      */
     public Output</* @Nullable */ String> getKeyVaultKeyUri() {
         return this.keyVaultKeyUri;
     }
     /**
      * Indicates the type of database account. This can only be set at database account creation.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Indicates the type of database account. This can only be set at database account creation.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The location of the resource group to which the resource belongs.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource group to which the resource belongs.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * An array that contains all of the locations enabled for the Cosmos DB account.
-     * 
      */
     @Export(name="locations", type=List.class, parameters={LocationResponse.class})
     private Output<List<LocationResponse>> locations;
 
     /**
      * @return An array that contains all of the locations enabled for the Cosmos DB account.
-     * 
      */
     public Output<List<LocationResponse>> getLocations() {
         return this.locations;
     }
     /**
      * The name of the ARM resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the ARM resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Indicates what services are allowed to bypass firewall checks.
-     * 
      */
     @Export(name="networkAclBypass", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkAclBypass;
 
     /**
      * @return Indicates what services are allowed to bypass firewall checks.
-     * 
      */
     public Output</* @Nullable */ String> getNetworkAclBypass() {
         return this.networkAclBypass;
     }
     /**
      * An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
-     * 
      */
     @Export(name="networkAclBypassResourceIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> networkAclBypassResourceIds;
 
     /**
      * @return An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
-     * 
      */
     public Output</* @Nullable */ List<String>> getNetworkAclBypassResourceIds() {
         return this.networkAclBypassResourceIds;
     }
     /**
      * List of Private Endpoint Connections configured for the Cosmos DB account.
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return List of Private Endpoint Connections configured for the Cosmos DB account.
-     * 
      */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether requests from Public Network are allowed
-     * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
      * @return Whether requests from Public Network are allowed
-     * 
      */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * An array that contains of the read locations enabled for the Cosmos DB account.
-     * 
      */
     @Export(name="readLocations", type=List.class, parameters={LocationResponse.class})
     private Output<List<LocationResponse>> readLocations;
 
     /**
      * @return An array that contains of the read locations enabled for the Cosmos DB account.
-     * 
      */
     public Output<List<LocationResponse>> getReadLocations() {
         return this.readLocations;
     }
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * List of Virtual Network ACL rules configured for the Cosmos DB account.
-     * 
      */
     @Export(name="virtualNetworkRules", type=List.class, parameters={VirtualNetworkRuleResponse.class})
     private Output</* @Nullable */ List<VirtualNetworkRuleResponse>> virtualNetworkRules;
 
     /**
      * @return List of Virtual Network ACL rules configured for the Cosmos DB account.
-     * 
      */
     public Output</* @Nullable */ List<VirtualNetworkRuleResponse>> getVirtualNetworkRules() {
         return this.virtualNetworkRules;
     }
     /**
      * An array that contains the write location for the Cosmos DB account.
-     * 
      */
     @Export(name="writeLocations", type=List.class, parameters={LocationResponse.class})
     private Output<List<LocationResponse>> writeLocations;
 
     /**
      * @return An array that contains the write location for the Cosmos DB account.
-     * 
      */
     public Output<List<LocationResponse>> getWriteLocations() {
         return this.writeLocations;

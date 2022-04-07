@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Information about the machine learning commitment plan associated with the web service.
- * 
  */
 public final class CommitmentPlanResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CommitmentPlanResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

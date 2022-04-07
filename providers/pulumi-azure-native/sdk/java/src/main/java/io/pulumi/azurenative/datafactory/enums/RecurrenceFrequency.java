@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The frequency.
-     * 
      */
     @EnumType
     public enum RecurrenceFrequency {

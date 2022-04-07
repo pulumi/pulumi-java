@@ -19,32 +19,26 @@ import javax.annotation.Nullable;
 public final class MigrateSqlServerSqlMISyncTaskInputResponse {
     /**
      * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
-     * 
      */
     private final AzureActiveDirectoryAppResponse azureApp;
     /**
      * Backup file share information for all selected databases.
-     * 
      */
     private final @Nullable FileShareResponse backupFileShare;
     /**
      * Databases to migrate
-     * 
      */
     private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
     /**
      * Connection information for source SQL Server
-     * 
      */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
     /**
      * Fully qualified resourceId of storage
-     * 
      */
     private final String storageResourceId;
     /**
      * Connection information for Azure SQL Database Managed Instance
-     * 
      */
     private final MiSqlConnectionInfoResponse targetConnectionInfo;
 
@@ -66,42 +60,36 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse {
 
     /**
      * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
-     * 
     */
     public AzureActiveDirectoryAppResponse getAzureApp() {
         return this.azureApp;
     }
     /**
      * Backup file share information for all selected databases.
-     * 
     */
     public Optional<FileShareResponse> getBackupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
     /**
      * Databases to migrate
-     * 
     */
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Connection information for source SQL Server
-     * 
     */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Fully qualified resourceId of storage
-     * 
     */
     public String getStorageResourceId() {
         return this.storageResourceId;
     }
     /**
      * Connection information for Azure SQL Database Managed Instance
-     * 
     */
     public MiSqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;

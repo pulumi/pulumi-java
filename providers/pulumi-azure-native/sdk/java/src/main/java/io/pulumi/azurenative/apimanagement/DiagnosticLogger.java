@@ -19,7 +19,83 @@ import javax.annotation.Nullable;
  * Logger details.
  * API Version: 2018-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateDiagnosticLogger
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var diagnosticLogger = new AzureNative.ApiManagement.DiagnosticLogger("diagnosticLogger", new AzureNative.ApiManagement.DiagnosticLoggerArgs
+ *         {
+ *             DiagnosticId = "default",
+ *             Loggerid = "applicationinsights",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewDiagnosticLogger(ctx, "diagnosticLogger", &apimanagement.DiagnosticLoggerArgs{
+ * 			DiagnosticId:      pulumi.String("default"),
+ * 			Loggerid:          pulumi.String("applicationinsights"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const diagnosticLogger = new azure_native.apimanagement.DiagnosticLogger("diagnosticLogger", {
+ *     diagnosticId: "default",
+ *     loggerid: "applicationinsights",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * diagnostic_logger = azure_native.apimanagement.DiagnosticLogger("diagnosticLogger",
+ *     diagnostic_id="default",
+ *     loggerid="applicationinsights",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,7 +111,6 @@ public class DiagnosticLogger extends io.pulumi.resources.CustomResource {
     /**
      * The name and SendRule connection string of the event hub for azureEventHub logger.
      * Instrumentation key for applicationInsights logger.
-     * 
      */
     @Export(name="credentials", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> credentials;
@@ -43,77 +118,66 @@ public class DiagnosticLogger extends io.pulumi.resources.CustomResource {
     /**
      * @return The name and SendRule connection string of the event hub for azureEventHub logger.
      * Instrumentation key for applicationInsights logger.
-     * 
      */
     public Output<Map<String,String>> getCredentials() {
         return this.credentials;
     }
     /**
      * Logger description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Logger description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Whether records are buffered in the logger before publishing. Default is assumed to be true.
-     * 
      */
     @Export(name="isBuffered", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isBuffered;
 
     /**
      * @return Whether records are buffered in the logger before publishing. Default is assumed to be true.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsBuffered() {
         return this.isBuffered;
     }
     /**
      * Logger type.
-     * 
      */
     @Export(name="loggerType", type=String.class, parameters={})
     private Output<String> loggerType;
 
     /**
      * @return Logger type.
-     * 
      */
     public Output<String> getLoggerType() {
         return this.loggerType;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

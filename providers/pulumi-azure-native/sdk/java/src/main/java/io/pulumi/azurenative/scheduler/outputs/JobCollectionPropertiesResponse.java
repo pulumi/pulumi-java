@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class JobCollectionPropertiesResponse {
     /**
      * Gets or sets the job collection quota.
-     * 
      */
     private final @Nullable JobCollectionQuotaResponse quota;
     /**
      * Gets or sets the SKU.
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * Gets or sets the state.
-     * 
      */
     private final @Nullable String state;
 
@@ -41,21 +38,18 @@ public final class JobCollectionPropertiesResponse {
 
     /**
      * Gets or sets the job collection quota.
-     * 
     */
     public Optional<JobCollectionQuotaResponse> getQuota() {
         return Optional.ofNullable(this.quota);
     }
     /**
      * Gets or sets the SKU.
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Gets or sets the state.
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);

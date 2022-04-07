@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The API entity reference.
- * 
  */
 public final class ApiEntityReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApiEntityReferenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

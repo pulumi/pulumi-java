@@ -16,7 +16,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Plan accessibility
-     * 
      */
     @Import(name="accessibility")
       private final @Nullable String accessibility;
@@ -27,7 +26,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Alternative stack type
-     * 
      */
     @Import(name="altStackReference", required=true)
       private final String altStackReference;
@@ -38,7 +36,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Friendly name for the plan for display in the marketplace
-     * 
      */
     @Import(name="planDisplayName", required=true)
       private final String planDisplayName;
@@ -49,7 +46,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Text identifier for this plan
-     * 
      */
     @Import(name="planId", required=true)
       private final String planId;
@@ -60,7 +56,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identifier for this plan
-     * 
      */
     @Import(name="skuId", required=true)
       private final String skuId;
@@ -71,7 +66,6 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Stack type (classic or arm)
-     * 
      */
     @Import(name="stackType", required=true)
       private final String stackType;

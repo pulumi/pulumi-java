@@ -19,7 +19,122 @@ import javax.annotation.Nullable;
  * The gateway definition
  * API Version: 2016-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Replace a connection gateway definition
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connectionGateway = new AzureNative.Web.ConnectionGateway("connectionGateway", new AzureNative.Web.ConnectionGatewayArgs
+ *         {
+ *             ConnectionGatewayName = "test123",
+ *             Properties = new AzureNative.Web.Inputs.ConnectionGatewayDefinitionPropertiesArgs
+ *             {
+ *                 BackendUri = "https://WABI-WEST-US-redirect.analysis.windows.net",
+ *                 ConnectionGatewayInstallation = new AzureNative.Web.Inputs.ConnectionGatewayReferenceArgs
+ *                 {
+ *                     Id = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
+ *                 },
+ *                 ContactInformation = 
+ *                 {
+ *                     "test123@microsoft.com",
+ *                 },
+ *                 DisplayName = "test123",
+ *                 MachineName = "TEST123",
+ *                 Status = "Installed",
+ *             },
+ *             ResourceGroupName = "testResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := web.NewConnectionGateway(ctx, "connectionGateway", &web.ConnectionGatewayArgs{
+ * 			ConnectionGatewayName: pulumi.String("test123"),
+ * 			Properties: &web.ConnectionGatewayDefinitionPropertiesArgs{
+ * 				BackendUri: pulumi.String("https://WABI-WEST-US-redirect.analysis.windows.net"),
+ * 				ConnectionGatewayInstallation: &web.ConnectionGatewayReferenceArgs{
+ * 					Id: pulumi.String("/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c"),
+ * 				},
+ * 				ContactInformation: pulumi.StringArray{
+ * 					pulumi.String("test123@microsoft.com"),
+ * 				},
+ * 				DisplayName: pulumi.String("test123"),
+ * 				MachineName: pulumi.String("TEST123"),
+ * 				Status:      pulumi.Any("Installed"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connectionGateway = new azure_native.web.ConnectionGateway("connectionGateway", {
+ *     connectionGatewayName: "test123",
+ *     properties: {
+ *         backendUri: "https://WABI-WEST-US-redirect.analysis.windows.net",
+ *         connectionGatewayInstallation: {
+ *             id: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
+ *         },
+ *         contactInformation: ["test123@microsoft.com"],
+ *         displayName: "test123",
+ *         machineName: "TEST123",
+ *         status: "Installed",
+ *     },
+ *     resourceGroupName: "testResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connection_gateway = azure_native.web.ConnectionGateway("connectionGateway",
+ *     connection_gateway_name="test123",
+ *     properties=azure_native.web.ConnectionGatewayDefinitionPropertiesArgs(
+ *         backend_uri="https://WABI-WEST-US-redirect.analysis.windows.net",
+ *         connection_gateway_installation=azure_native.web.ConnectionGatewayReferenceArgs(
+ *             id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c",
+ *         ),
+ *         contact_information=["test123@microsoft.com"],
+ *         display_name="test123",
+ *         machine_name="TEST123",
+ *         status="Installed",
+ *     ),
+ *     resource_group_name="testResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,42 +149,36 @@ import javax.annotation.Nullable;
 public class ConnectionGateway extends io.pulumi.resources.CustomResource {
     /**
      * Resource ETag
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Resource ETag
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -82,28 +191,24 @@ public class ConnectionGateway extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

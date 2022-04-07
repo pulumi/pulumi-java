@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual Network Tap resource.
- * 
  */
 public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The reference to the private IP address on the internal Load Balancer that will receive the tap.
-     * 
      */
     @Import(name="destinationLoadBalancerFrontEndIPConfiguration")
       private final @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration;
@@ -37,7 +35,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The reference to the private IP Address of the collector nic that will receive the tap.
-     * 
      */
     @Import(name="destinationNetworkInterfaceIPConfiguration")
       private final @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration;
@@ -48,7 +45,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The VXLAN destination port that will receive the tapped traffic.
-     * 
      */
     @Import(name="destinationPort")
       private final @Nullable Integer destinationPort;
@@ -59,7 +55,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -70,7 +65,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -81,7 +75,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -92,7 +85,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -103,7 +95,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
-     * 
      */
     @Import(name="networkInterfaceTapConfigurations", required=true)
       private final List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations;
@@ -114,7 +105,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The provisioning state of the virtual network tap resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -125,7 +115,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The resource GUID property of the virtual network tap resource.
-     * 
      */
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
@@ -136,7 +125,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -147,7 +135,6 @@ public final class VirtualNetworkTapResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

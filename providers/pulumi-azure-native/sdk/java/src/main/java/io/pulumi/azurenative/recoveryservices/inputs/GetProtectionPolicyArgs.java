@@ -14,7 +14,6 @@ public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Backup policy information to be fetched.
-     * 
      */
     @Import(name="policyName", required=true)
       private final String policyName;
@@ -25,7 +24,6 @@ public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final String vaultName;

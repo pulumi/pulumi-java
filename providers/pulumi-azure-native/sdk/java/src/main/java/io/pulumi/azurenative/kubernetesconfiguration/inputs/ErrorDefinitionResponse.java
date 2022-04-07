@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Error definition.
- * 
  */
 public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Service specific error code which serves as the substatus for the HTTP error code.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -29,7 +27,6 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Description of the error.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

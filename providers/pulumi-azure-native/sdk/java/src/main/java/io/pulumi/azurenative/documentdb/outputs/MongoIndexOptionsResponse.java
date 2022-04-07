@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class MongoIndexOptionsResponse {
     /**
      * Expire after seconds
-     * 
      */
     private final @Nullable Integer expireAfterSeconds;
     /**
      * Is unique or not
-     * 
      */
     private final @Nullable Boolean unique;
 
@@ -33,14 +31,12 @@ public final class MongoIndexOptionsResponse {
 
     /**
      * Expire after seconds
-     * 
     */
     public Optional<Integer> getExpireAfterSeconds() {
         return Optional.ofNullable(this.expireAfterSeconds);
     }
     /**
      * Is unique or not
-     * 
     */
     public Optional<Boolean> getUnique() {
         return Optional.ofNullable(this.unique);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a certificate used for authenticating a token.
- * 
  */
 public final class TokenCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TokenCertificateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
-     * 
      */
     @Import(name="encodedPemCertificate")
       private final @Nullable String encodedPemCertificate;
@@ -31,7 +29,6 @@ public final class TokenCertificateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The expiry datetime of the certificate.
-     * 
      */
     @Import(name="expiry")
       private final @Nullable String expiry;
@@ -49,7 +46,6 @@ public final class TokenCertificateResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The thumbprint of the certificate.
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;

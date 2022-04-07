@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the disk for which update is pending.
- * 
  */
 public final class PropertyUpdatesInProgressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PropertyUpdatesInProgressResponse extends io.pulumi.resources
 
     /**
      * The target performance tier of the disk if a tier change operation is in progress.
-     * 
      */
     @Import(name="targetTier")
       private final @Nullable String targetTier;

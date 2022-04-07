@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Base class for all execution activities.
- * 
  */
 public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -36,7 +34,6 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -47,7 +44,6 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -58,7 +54,6 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -69,7 +64,6 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -81,7 +75,6 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
     /**
      * Type of activity.
      * Expected value is 'Execution'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -92,7 +85,6 @@ public final class ExecutionActivityArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

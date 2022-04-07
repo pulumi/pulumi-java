@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * AgentJob level output for the task that validates connection to SQL Server and also validates source server requirements
- * 
  */
 public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -31,7 +29,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
 
     /**
      * The state of the original AgentJob.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
@@ -42,7 +39,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
 
     /**
      * The type of AgentJob.
-     * 
      */
     @Import(name="jobCategory", required=true)
       private final String jobCategory;
@@ -53,7 +49,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
 
     /**
      * The owner of the AgentJob
-     * 
      */
     @Import(name="jobOwner", required=true)
       private final String jobOwner;
@@ -64,7 +59,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
 
     /**
      * UTC Date and time when the AgentJob was last executed.
-     * 
      */
     @Import(name="lastExecutedOn", required=true)
       private final String lastExecutedOn;
@@ -75,7 +69,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
 
     /**
      * Information about eligibility of agent job for migration.
-     * 
      */
     @Import(name="migrationEligibility", required=true)
       private final MigrationEligibilityInfoResponse migrationEligibility;
@@ -86,7 +79,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
 
     /**
      * AgentJob name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -98,7 +90,6 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     /**
      * Type of result - database level or task level
      * Expected value is 'AgentJobLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;

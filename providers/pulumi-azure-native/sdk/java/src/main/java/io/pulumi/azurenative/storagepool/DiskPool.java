@@ -20,7 +20,144 @@ import javax.annotation.Nullable;
  * Response for Disk pool request.
  * API Version: 2020-03-15-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or Update Disk pool
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var diskPool = new AzureNative.StoragePool.DiskPool("diskPool", new AzureNative.StoragePool.DiskPoolArgs
+ *         {
+ *             AvailabilityZones = 
+ *             {
+ *                 "1",
+ *             },
+ *             DiskPoolName = "myDiskPool",
+ *             Disks = 
+ *             {
+ *                 new AzureNative.StoragePool.Inputs.DiskArgs
+ *                 {
+ *                     Id = "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_0",
+ *                 },
+ *                 new AzureNative.StoragePool.Inputs.DiskArgs
+ *                 {
+ *                     Id = "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
+ *                 },
+ *             },
+ *             Location = "westus",
+ *             ResourceGroupName = "myResourceGroup",
+ *             SubnetId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet",
+ *             Tags = 
+ *             {
+ *                 { "key", "value" },
+ *             },
+ *             Tier = "Basic",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storagepool "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagepool"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storagepool.NewDiskPool(ctx, "diskPool", &storagepool.DiskPoolArgs{
+ * 			AvailabilityZones: pulumi.StringArray{
+ * 				pulumi.String("1"),
+ * 			},
+ * 			DiskPoolName: pulumi.String("myDiskPool"),
+ * 			Disks: []storagepool.DiskArgs{
+ * 				&storagepool.DiskArgs{
+ * 					Id: pulumi.String("/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_0"),
+ * 				},
+ * 				&storagepool.DiskArgs{
+ * 					Id: pulumi.String("/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1"),
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			SubnetId:          pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key": pulumi.String("value"),
+ * 			},
+ * 			Tier: pulumi.String("Basic"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const diskPool = new azure_native.storagepool.DiskPool("diskPool", {
+ *     availabilityZones: ["1"],
+ *     diskPoolName: "myDiskPool",
+ *     disks: [
+ *         {
+ *             id: "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_0",
+ *         },
+ *         {
+ *             id: "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
+ *         },
+ *     ],
+ *     location: "westus",
+ *     resourceGroupName: "myResourceGroup",
+ *     subnetId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet",
+ *     tags: {
+ *         key: "value",
+ *     },
+ *     tier: "Basic",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * disk_pool = azure_native.storagepool.DiskPool("diskPool",
+ *     availability_zones=["1"],
+ *     disk_pool_name="myDiskPool",
+ *     disks=[
+ *         azure_native.storagepool.DiskArgs(
+ *             id="/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_0",
+ *         ),
+ *         azure_native.storagepool.DiskArgs(
+ *             id="/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1",
+ *         ),
+ *     ],
+ *     location="westus",
+ *     resource_group_name="myResourceGroup",
+ *     subnet_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mysubnet",
+ *     tags={
+ *         "key": "value",
+ *     },
+ *     tier="Basic")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,168 +172,144 @@ import javax.annotation.Nullable;
 public class DiskPool extends io.pulumi.resources.CustomResource {
     /**
      * List of additional capabilities for Disk pool.
-     * 
      */
     @Export(name="additionalCapabilities", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> additionalCapabilities;
 
     /**
      * @return List of additional capabilities for Disk pool.
-     * 
      */
     public Output</* @Nullable */ List<String>> getAdditionalCapabilities() {
         return this.additionalCapabilities;
     }
     /**
      * Logical zone for Disk pool resource; example: ["1"].
-     * 
      */
     @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output<List<String>> availabilityZones;
 
     /**
      * @return Logical zone for Disk pool resource; example: ["1"].
-     * 
      */
     public Output<List<String>> getAvailabilityZones() {
         return this.availabilityZones;
     }
     /**
      * List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
-     * 
      */
     @Export(name="disks", type=List.class, parameters={DiskResponse.class})
     private Output</* @Nullable */ List<DiskResponse>> disks;
 
     /**
      * @return List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
-     * 
      */
     public Output</* @Nullable */ List<DiskResponse>> getDisks() {
         return this.disks;
     }
     /**
      * The geo-location where the resource lives.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the operation on the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return State of the operation on the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Operational status of the Disk pool.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Operational status of the Disk pool.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Azure Resource ID of a Subnet for the Disk pool.
-     * 
      */
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
      * @return Azure Resource ID of a Subnet for the Disk pool.
-     * 
      */
     public Output<String> getSubnetId() {
         return this.subnetId;
     }
     /**
      * Resource metadata required by ARM RPC
-     * 
      */
     @Export(name="systemData", type=SystemMetadataResponse.class, parameters={})
     private Output<SystemMetadataResponse> systemData;
 
     /**
      * @return Resource metadata required by ARM RPC
-     * 
      */
     public Output<SystemMetadataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Determines the SKU of VM deployed for Disk pool
-     * 
      */
     @Export(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
     /**
      * @return Determines the SKU of VM deployed for Disk pool
-     * 
      */
     public Output<String> getTier() {
         return this.tier;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters for a task run request.
- * 
  */
 public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The dedicated agent pool for the run.
-     * 
      */
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
@@ -33,7 +31,6 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value that indicates whether archiving is enabled for the run or not.
-     * 
      */
     @Import(name="isArchiveEnabled")
       private final @Nullable Output<Boolean> isArchiveEnabled;
@@ -44,7 +41,6 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The template that describes the repository and tag information for run log artifact.
-     * 
      */
     @Import(name="logTemplate")
       private final @Nullable Output<String> logTemplate;
@@ -55,7 +51,6 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Set of overridable parameters that can be passed when running a Task.
-     * 
      */
     @Import(name="overrideTaskStepProperties")
       private final @Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties;
@@ -66,7 +61,6 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource ID of task against which run has to be queued.
-     * 
      */
     @Import(name="taskId", required=true)
       private final Output<String> taskId;
@@ -78,7 +72,6 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The type of the run request.
      * Expected value is 'TaskRunRequest'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

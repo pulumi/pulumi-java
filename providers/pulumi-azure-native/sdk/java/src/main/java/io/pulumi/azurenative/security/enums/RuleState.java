@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Possible states of the rule
-     * 
      */
     @EnumType
     public enum RuleState {

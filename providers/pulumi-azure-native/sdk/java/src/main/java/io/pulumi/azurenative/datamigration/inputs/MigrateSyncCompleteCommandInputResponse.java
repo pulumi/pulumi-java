@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input for command that completes sync migration for a database.
- * 
  */
 public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.res
 
     /**
      * Time stamp to complete
-     * 
      */
     @Import(name="commitTimeStamp")
       private final @Nullable String commitTimeStamp;
@@ -31,7 +29,6 @@ public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.res
 
     /**
      * Name of database
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;

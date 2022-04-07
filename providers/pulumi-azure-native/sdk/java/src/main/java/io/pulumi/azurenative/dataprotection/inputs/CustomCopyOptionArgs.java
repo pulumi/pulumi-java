@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Duration based custom options to copy
- * 
  */
 public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Data copied after given timespan
-     * 
      */
     @Import(name="duration")
       private final @Nullable Output<String> duration;
@@ -32,7 +30,6 @@ public final class CustomCopyOptionArgs extends io.pulumi.resources.ResourceArgs
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'CustomCopyOption'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final Output<String> objectType;

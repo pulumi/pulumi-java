@@ -18,27 +18,22 @@ import javax.annotation.Nullable;
 public final class MigrateProjectPropertiesResponse {
     /**
      * Gets the last time the project summary was refreshed.
-     * 
      */
     private final String lastSummaryRefreshedTime;
     /**
      * Provisioning state of the migrate project.
-     * 
      */
     private final @Nullable String provisioningState;
     /**
      * Gets the refresh summary state.
-     * 
      */
     private final String refreshSummaryState;
     /**
      * Gets or sets the list of tools registered with the migrate project.
-     * 
      */
     private final @Nullable List<String> registeredTools;
     /**
      * Gets the summary of the migrate project.
-     * 
      */
     private final Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
 
@@ -58,35 +53,30 @@ public final class MigrateProjectPropertiesResponse {
 
     /**
      * Gets the last time the project summary was refreshed.
-     * 
     */
     public String getLastSummaryRefreshedTime() {
         return this.lastSummaryRefreshedTime;
     }
     /**
      * Provisioning state of the migrate project.
-     * 
     */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Gets the refresh summary state.
-     * 
     */
     public String getRefreshSummaryState() {
         return this.refreshSummaryState;
     }
     /**
      * Gets or sets the list of tools registered with the migrate project.
-     * 
     */
     public List<String> getRegisteredTools() {
         return this.registeredTools == null ? List.of() : this.registeredTools;
     }
     /**
      * Gets the summary of the migrate project.
-     * 
     */
     public Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> getSummary() {
         return this.summary;

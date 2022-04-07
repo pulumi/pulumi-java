@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Resource pool model
- * 
  */
 public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * resource pool id (privateCloudId:vsphereId)
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class PowerQuerySinkMappingResponse {
     /**
      * List of sinks mapped to Power Query mashup query.
-     * 
      */
     private final @Nullable List<PowerQuerySinkResponse> dataflowSinks;
     /**
      * Name of the query in Power Query mashup document.
-     * 
      */
     private final @Nullable String queryName;
 
@@ -34,14 +32,12 @@ public final class PowerQuerySinkMappingResponse {
 
     /**
      * List of sinks mapped to Power Query mashup query.
-     * 
     */
     public List<PowerQuerySinkResponse> getDataflowSinks() {
         return this.dataflowSinks == null ? List.of() : this.dataflowSinks;
     }
     /**
      * Name of the query in Power Query mashup document.
-     * 
     */
     public Optional<String> getQueryName() {
         return Optional.ofNullable(this.queryName);

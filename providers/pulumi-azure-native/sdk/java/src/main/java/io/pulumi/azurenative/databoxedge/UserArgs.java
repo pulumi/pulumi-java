@@ -19,7 +19,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -30,7 +29,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The password details.
-     * 
      */
     @Import(name="encryptedPassword")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword;
@@ -41,7 +39,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +49,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the user.
-     * 
      */
     @Import(name="userType", required=true)
       private final Output<Either<String,UserType>> userType;

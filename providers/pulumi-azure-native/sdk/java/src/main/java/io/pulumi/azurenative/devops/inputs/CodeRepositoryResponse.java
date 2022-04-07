@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Repository containing the source code for a pipeline.
- * 
  */
 public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Authorization info to access the code repository.
-     * 
      */
     @Import(name="authorization")
       private final @Nullable AuthorizationResponse authorization;
@@ -33,7 +31,6 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Default branch used to configure Continuous Integration (CI) in the pipeline.
-     * 
      */
     @Import(name="defaultBranch", required=true)
       private final String defaultBranch;
@@ -44,7 +41,6 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Unique immutable identifier of the code repository.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -55,7 +51,6 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Repository-specific properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -66,7 +61,6 @@ public final class CodeRepositoryResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Type of code repository.
-     * 
      */
     @Import(name="repositoryType", required=true)
       private final String repositoryType;

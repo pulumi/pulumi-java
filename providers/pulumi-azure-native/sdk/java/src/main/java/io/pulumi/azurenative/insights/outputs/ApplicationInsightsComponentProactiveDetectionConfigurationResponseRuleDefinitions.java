@@ -14,42 +14,34 @@ import javax.annotation.Nullable;
 public final class ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions {
     /**
      * The rule description
-     * 
      */
     private final @Nullable String description;
     /**
      * The rule name as it is displayed in UI
-     * 
      */
     private final @Nullable String displayName;
     /**
      * URL which displays additional info about the proactive detection rule
-     * 
      */
     private final @Nullable String helpUrl;
     /**
      * A flag indicating whether the rule is enabled by default
-     * 
      */
     private final @Nullable Boolean isEnabledByDefault;
     /**
      * A flag indicating whether the rule is hidden (from the UI)
-     * 
      */
     private final @Nullable Boolean isHidden;
     /**
      * A flag indicating whether the rule is in preview
-     * 
      */
     private final @Nullable Boolean isInPreview;
     /**
      * The rule name
-     * 
      */
     private final @Nullable String name;
     /**
      * A flag indicating whether email notifications are supported for detections for this rule
-     * 
      */
     private final @Nullable Boolean supportsEmailNotifications;
 
@@ -75,56 +67,48 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
 
     /**
      * The rule description
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The rule name as it is displayed in UI
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * URL which displays additional info about the proactive detection rule
-     * 
     */
     public Optional<String> getHelpUrl() {
         return Optional.ofNullable(this.helpUrl);
     }
     /**
      * A flag indicating whether the rule is enabled by default
-     * 
     */
     public Optional<Boolean> getIsEnabledByDefault() {
         return Optional.ofNullable(this.isEnabledByDefault);
     }
     /**
      * A flag indicating whether the rule is hidden (from the UI)
-     * 
     */
     public Optional<Boolean> getIsHidden() {
         return Optional.ofNullable(this.isHidden);
     }
     /**
      * A flag indicating whether the rule is in preview
-     * 
     */
     public Optional<Boolean> getIsInPreview() {
         return Optional.ofNullable(this.isInPreview);
     }
     /**
      * The rule name
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A flag indicating whether email notifications are supported for detections for this rule
-     * 
     */
     public Optional<Boolean> getSupportsEmailNotifications() {
         return Optional.ofNullable(this.supportsEmailNotifications);

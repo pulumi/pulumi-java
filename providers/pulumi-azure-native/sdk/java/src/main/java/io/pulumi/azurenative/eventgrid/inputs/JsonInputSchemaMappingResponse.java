@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * This enables publishing to Event Grid using a custom input schema. This can be used to map properties from a custom input JSON schema to the Event Grid event schema.
- * 
  */
 public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
 
     /**
      * The mapping information for the DataVersion property of the Event Grid Event.
-     * 
      */
     @Import(name="dataVersion")
       private final @Nullable JsonFieldWithDefaultResponse dataVersion;
@@ -33,7 +31,6 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
 
     /**
      * The mapping information for the EventTime property of the Event Grid Event.
-     * 
      */
     @Import(name="eventTime")
       private final @Nullable JsonFieldResponse eventTime;
@@ -44,7 +41,6 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
 
     /**
      * The mapping information for the EventType property of the Event Grid Event.
-     * 
      */
     @Import(name="eventType")
       private final @Nullable JsonFieldWithDefaultResponse eventType;
@@ -55,7 +51,6 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
 
     /**
      * The mapping information for the Id property of the Event Grid Event.
-     * 
      */
     @Import(name="id")
       private final @Nullable JsonFieldResponse id;
@@ -67,7 +62,6 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
     /**
      * Type of the custom mapping
      * Expected value is 'Json'.
-     * 
      */
     @Import(name="inputSchemaMappingType", required=true)
       private final String inputSchemaMappingType;
@@ -78,7 +72,6 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
 
     /**
      * The mapping information for the Subject property of the Event Grid Event.
-     * 
      */
     @Import(name="subject")
       private final @Nullable JsonFieldWithDefaultResponse subject;
@@ -89,7 +82,6 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
 
     /**
      * The mapping information for the Topic property of the Event Grid Event.
-     * 
      */
     @Import(name="topic")
       private final @Nullable JsonFieldResponse topic;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters for a schedule-based autoscale rule, consisting of an array of days + a time and capacity
- * 
  */
 public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Days of the week for a schedule-based autoscale rule
-     * 
      */
     @Import(name="days")
       private final @Nullable List<String> days;
@@ -33,7 +31,6 @@ public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Time and capacity for a schedule-based autoscale rule
-     * 
      */
     @Import(name="timeAndCapacity")
       private final @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;

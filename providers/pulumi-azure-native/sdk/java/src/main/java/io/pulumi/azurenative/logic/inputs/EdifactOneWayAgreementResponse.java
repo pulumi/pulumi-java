@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The Edifact one way agreement.
- * 
  */
 public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.In
 
     /**
      * The EDIFACT protocol settings.
-     * 
      */
     @Import(name="protocolSettings", required=true)
       private final EdifactProtocolSettingsResponse protocolSettings;
@@ -30,7 +28,6 @@ public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.In
 
     /**
      * The receiver business identity
-     * 
      */
     @Import(name="receiverBusinessIdentity", required=true)
       private final BusinessIdentityResponse receiverBusinessIdentity;
@@ -41,7 +38,6 @@ public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.In
 
     /**
      * The sender business identity
-     * 
      */
     @Import(name="senderBusinessIdentity", required=true)
       private final BusinessIdentityResponse senderBusinessIdentity;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Policy Info in backupInstance
- * 
  */
 public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Policy parameters for the backup instance
-     * 
      */
     @Import(name="policyParameters")
       private final @Nullable Output<PolicyParametersArgs> policyParameters;

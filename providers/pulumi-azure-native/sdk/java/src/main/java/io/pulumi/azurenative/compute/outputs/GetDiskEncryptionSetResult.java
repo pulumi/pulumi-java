@@ -18,62 +18,50 @@ import javax.annotation.Nullable;
 public final class GetDiskEncryptionSetResult {
     /**
      * The key vault key which is currently used by this disk encryption set.
-     * 
      */
     private final @Nullable KeyForDiskEncryptionSetResponse activeKey;
     /**
      * The type of key used to encrypt the data of the disk.
-     * 
      */
     private final @Nullable String encryptionType;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
-     * 
      */
     private final @Nullable EncryptionSetIdentityResponse identity;
     /**
      * The time when the active key of this disk encryption set was updated.
-     * 
      */
     private final String lastKeyRotationTimestamp;
     /**
      * Resource location
-     * 
      */
     private final String location;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
-     * 
      */
     private final List<KeyForDiskEncryptionSetResponse> previousKeys;
     /**
      * The disk encryption set provisioning state.
-     * 
      */
     private final String provisioningState;
     /**
      * Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
-     * 
      */
     private final @Nullable Boolean rotationToLatestKeyVersionEnabled;
     /**
      * Resource tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -107,84 +95,72 @@ public final class GetDiskEncryptionSetResult {
 
     /**
      * The key vault key which is currently used by this disk encryption set.
-     * 
     */
     public Optional<KeyForDiskEncryptionSetResponse> getActiveKey() {
         return Optional.ofNullable(this.activeKey);
     }
     /**
      * The type of key used to encrypt the data of the disk.
-     * 
     */
     public Optional<String> getEncryptionType() {
         return Optional.ofNullable(this.encryptionType);
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
-     * 
     */
     public Optional<EncryptionSetIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The time when the active key of this disk encryption set was updated.
-     * 
     */
     public String getLastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }
     /**
      * Resource location
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
-     * 
     */
     public List<KeyForDiskEncryptionSetResponse> getPreviousKeys() {
         return this.previousKeys;
     }
     /**
      * The disk encryption set provisioning state.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
-     * 
     */
     public Optional<Boolean> getRotationToLatestKeyVersionEnabled() {
         return Optional.ofNullable(this.rotationToLatestKeyVersionEnabled);
     }
     /**
      * Resource tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

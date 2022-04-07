@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for notification
- * 
  */
 public final class NotificationSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * The list of additional recipients
-     * 
      */
     @Import(name="additionalRecipients")
       private final @Nullable Output<List<String>> additionalRecipients;
@@ -35,7 +33,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * Should domain controller admins be notified
-     * 
      */
     @Import(name="notifyDcAdmins")
       private final @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins;
@@ -46,7 +43,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * Should global admins be notified
-     * 
      */
     @Import(name="notifyGlobalAdmins")
       private final @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;

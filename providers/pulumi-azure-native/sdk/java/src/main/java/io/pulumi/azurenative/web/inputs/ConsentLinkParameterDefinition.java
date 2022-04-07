@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Consent link definition
- * 
  */
 public final class ConsentLinkParameterDefinition extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
 
     /**
      * AAD OID (user or group) if the principal type is ActiveDirectory. MSA PUID if the principal type is MicrosoftAccount
-     * 
      */
     @Import(name="objectId")
       private final @Nullable String objectId;
@@ -31,7 +29,6 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
 
     /**
      * Name of the parameter in the connection provider's OAuth settings
-     * 
      */
     @Import(name="parameterName")
       private final @Nullable String parameterName;
@@ -42,7 +39,6 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
 
     /**
      * Name of the parameter in the connection provider's OAuth settings
-     * 
      */
     @Import(name="redirectUrl")
       private final @Nullable String redirectUrl;
@@ -53,7 +49,6 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
 
     /**
      * The tenant id
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;

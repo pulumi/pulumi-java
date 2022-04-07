@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * A load balancing rule for a load balancer.
- * 
  */
 public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
-     * 
      */
     @Import(name="backendAddressPool")
       private final @Nullable Output<SubResourceArgs> backendAddressPool;
@@ -37,7 +35,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables "Any Port".
-     * 
      */
     @Import(name="backendPort")
       private final @Nullable Output<Integer> backendPort;
@@ -48,7 +45,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
-     * 
      */
     @Import(name="disableOutboundSnat")
       private final @Nullable Output<Boolean> disableOutboundSnat;
@@ -59,7 +55,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-     * 
      */
     @Import(name="enableFloatingIP")
       private final @Nullable Output<Boolean> enableFloatingIP;
@@ -70,7 +65,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
-     * 
      */
     @Import(name="enableTcpReset")
       private final @Nullable Output<Boolean> enableTcpReset;
@@ -81,7 +75,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A reference to frontend IP addresses.
-     * 
      */
     @Import(name="frontendIPConfiguration")
       private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
@@ -92,7 +85,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".
-     * 
      */
     @Import(name="frontendPort", required=true)
       private final Output<Integer> frontendPort;
@@ -103,7 +95,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -114,7 +105,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
-     * 
      */
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
@@ -125,7 +115,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The load distribution policy for this rule.
-     * 
      */
     @Import(name="loadDistribution")
       private final @Nullable Output<Either<String,LoadDistribution>> loadDistribution;
@@ -136,7 +125,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -147,7 +135,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The reference to the load balancer probe used by the load balancing rule.
-     * 
      */
     @Import(name="probe")
       private final @Nullable Output<SubResourceArgs> probe;
@@ -158,7 +145,6 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The reference to the transport protocol used by the load balancing rule.
-     * 
      */
     @Import(name="protocol", required=true)
       private final Output<Either<String,TransportProtocol>> protocol;

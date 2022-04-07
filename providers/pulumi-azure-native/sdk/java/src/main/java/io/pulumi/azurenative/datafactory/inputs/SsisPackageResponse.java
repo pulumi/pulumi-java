@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Ssis Package.
- * 
  */
 public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -34,7 +32,6 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Folder id which contains package.
-     * 
      */
     @Import(name="folderId")
       private final @Nullable Double folderId;
@@ -45,7 +42,6 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Double id;
@@ -56,7 +52,6 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -67,7 +62,6 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Parameters in package
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<SsisParameterResponse> parameters;
@@ -78,7 +72,6 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Project id which contains package.
-     * 
      */
     @Import(name="projectId")
       private final @Nullable Double projectId;
@@ -89,7 +82,6 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Project version which contains package.
-     * 
      */
     @Import(name="projectVersion")
       private final @Nullable Double projectVersion;
@@ -101,7 +93,6 @@ public final class SsisPackageResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The type of SSIS object metadata.
      * Expected value is 'Package'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

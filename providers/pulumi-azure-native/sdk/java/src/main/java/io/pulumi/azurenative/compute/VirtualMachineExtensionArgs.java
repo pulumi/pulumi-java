@@ -20,7 +20,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
@@ -31,7 +30,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
-     * 
      */
     @Import(name="enableAutomaticUpgrade")
       private final @Nullable Output<Boolean> enableAutomaticUpgrade;
@@ -42,7 +40,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -53,7 +50,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * The virtual machine extension instance view.
-     * 
      */
     @Import(name="instanceView")
       private final @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView;
@@ -64,7 +60,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -75,7 +70,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
@@ -86,7 +80,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
@@ -97,7 +90,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * Json formatted public settings for the extension.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
@@ -119,7 +110,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -130,7 +120,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -141,7 +130,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
@@ -152,7 +140,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the virtual machine extension.
-     * 
      */
     @Import(name="vmExtensionName")
       private final @Nullable Output<String> vmExtensionName;
@@ -163,7 +150,6 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the virtual machine where the extension should be created or updated.
-     * 
      */
     @Import(name="vmName", required=true)
       private final Output<String> vmName;

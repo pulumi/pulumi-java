@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection {
     /**
      * Remote private endpoint connection ID.
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnectio
 
     /**
      * Remote private endpoint connection ID.
-     * 
     */
     public String getId() {
         return this.id;

@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure ML Service linked service.
- * 
  */
 public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -50,7 +47,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -61,7 +57,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -72,7 +67,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * Azure ML Service workspace name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="mlWorkspaceName", required=true)
       private final Object mlWorkspaceName;
@@ -83,7 +77,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -94,7 +87,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * Azure ML Service workspace resource group name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Object resourceGroupName;
@@ -105,7 +97,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * The ID of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
@@ -116,7 +107,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.
-     * 
      */
     @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
@@ -127,7 +117,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * Azure ML Service workspace subscription ID. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final Object subscriptionId;
@@ -138,7 +127,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
 
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="tenant")
       private final @Nullable Object tenant;
@@ -150,7 +138,6 @@ public final class AzureMLServiceLinkedServiceResponse extends io.pulumi.resourc
     /**
      * Type of linked service.
      * Expected value is 'AzureMLService'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

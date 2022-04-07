@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The data stored in text format.
- * 
  */
 public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The column delimiter. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="columnDelimiter")
       private final @Nullable Object columnDelimiter;
@@ -32,7 +30,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Deserializer. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="deserializer")
       private final @Nullable Object deserializer;
@@ -43,7 +40,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The code page name of the preferred encoding. If miss, the default value is ΓÇ£utf-8ΓÇ¥, unless BOM denotes another Unicode encoding. Refer to the ΓÇ£NameΓÇ¥ column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encodingName")
       private final @Nullable Object encodingName;
@@ -54,7 +50,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The escape character. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="escapeChar")
       private final @Nullable Object escapeChar;
@@ -65,7 +60,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="firstRowAsHeader")
       private final @Nullable Object firstRowAsHeader;
@@ -76,7 +70,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The null value string. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="nullValue")
       private final @Nullable Object nullValue;
@@ -87,7 +80,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The quote character. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="quoteChar")
       private final @Nullable Object quoteChar;
@@ -98,7 +90,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The row delimiter. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="rowDelimiter")
       private final @Nullable Object rowDelimiter;
@@ -109,7 +100,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Serializer. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="serializer")
       private final @Nullable Object serializer;
@@ -120,7 +110,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of lines/rows to be skipped when parsing text files. The default value is 0. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="skipLineCount")
       private final @Nullable Object skipLineCount;
@@ -131,7 +120,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Treat empty column values in the text file as null. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="treatEmptyAsNull")
       private final @Nullable Object treatEmptyAsNull;
@@ -143,7 +131,6 @@ public final class TextFormatResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Type of dataset storage format.
      * Expected value is 'TextFormat'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

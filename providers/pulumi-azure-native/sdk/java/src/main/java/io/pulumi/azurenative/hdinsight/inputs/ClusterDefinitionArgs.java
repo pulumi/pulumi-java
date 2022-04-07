@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The cluster definition.
- * 
  */
 public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The link to the blueprint.
-     * 
      */
     @Import(name="blueprint")
       private final @Nullable Output<String> blueprint;
@@ -33,7 +31,6 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The versions of different services in the cluster.
-     * 
      */
     @Import(name="componentVersion")
       private final @Nullable Output<Map<String,String>> componentVersion;
@@ -44,7 +41,6 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The cluster configurations.
-     * 
      */
     @Import(name="configurations")
       private final @Nullable Output<Object> configurations;
@@ -55,7 +51,6 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The type of cluster.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;

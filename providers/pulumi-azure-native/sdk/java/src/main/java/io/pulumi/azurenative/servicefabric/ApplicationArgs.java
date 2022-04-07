@@ -24,7 +24,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the application resource.
-     * 
      */
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
@@ -35,7 +34,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -46,7 +44,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the managed identities for an Azure resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedIdentityArgs> identity;
@@ -57,7 +54,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * It will be deprecated in New API, resource location depends on the parent resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -68,7 +64,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of user assigned identities for the application, each mapped to a friendly name.
-     * 
      */
     @Import(name="managedIdentities")
       private final @Nullable Output<List<ApplicationUserAssignedIdentityArgs>> managedIdentities;
@@ -79,7 +74,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
-     * 
      */
     @Import(name="maximumNodes")
       private final @Nullable Output<Double> maximumNodes;
@@ -90,7 +84,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of application capacity metric description.
-     * 
      */
     @Import(name="metrics")
       private final @Nullable Output<List<ApplicationMetricDescriptionArgs>> metrics;
@@ -101,7 +94,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
-     * 
      */
     @Import(name="minimumNodes")
       private final @Nullable Output<Double> minimumNodes;
@@ -112,7 +104,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of application parameters with overridden values from their default values specified in the application manifest.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
@@ -123,7 +114,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Remove the current application capacity settings.
-     * 
      */
     @Import(name="removeApplicationCapacity")
       private final @Nullable Output<Boolean> removeApplicationCapacity;
@@ -134,7 +124,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -145,7 +134,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -156,7 +144,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The application type name as defined in the application manifest.
-     * 
      */
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
@@ -167,7 +154,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the application type as defined in the application manifest.
-     * 
      */
     @Import(name="typeVersion")
       private final @Nullable Output<String> typeVersion;
@@ -178,7 +164,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the policy for a monitored application upgrade.
-     * 
      */
     @Import(name="upgradePolicy")
       private final @Nullable Output<ApplicationUpgradePolicyArgs> upgradePolicy;

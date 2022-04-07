@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class BuildpackBindingPropertiesResponse {
     /**
      * Buildpack Binding Type
-     * 
      */
     private final @Nullable String bindingType;
     /**
      * The object describes the buildpack binding launch properties
-     * 
      */
     private final @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
     /**
      * State of the Buildpack Binding.
-     * 
      */
     private final String provisioningState;
 
@@ -40,21 +37,18 @@ public final class BuildpackBindingPropertiesResponse {
 
     /**
      * Buildpack Binding Type
-     * 
     */
     public Optional<String> getBindingType() {
         return Optional.ofNullable(this.bindingType);
     }
     /**
      * The object describes the buildpack binding launch properties
-     * 
     */
     public Optional<BuildpackBindingLaunchPropertiesResponse> getLaunchProperties() {
         return Optional.ofNullable(this.launchProperties);
     }
     /**
      * State of the Buildpack Binding.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;

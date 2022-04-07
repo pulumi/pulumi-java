@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Tracking courier information.
- * 
  */
 public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the carrier used in the delivery.
-     * 
      */
     @Import(name="carrierName")
       private final @Nullable String carrierName;
@@ -31,7 +29,6 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Serial number of the device being tracked.
-     * 
      */
     @Import(name="serialNumber")
       private final @Nullable String serialNumber;
@@ -42,7 +39,6 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tracking ID of the shipment.
-     * 
      */
     @Import(name="trackingId")
       private final @Nullable String trackingId;
@@ -53,7 +49,6 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tracking URL of the shipment.
-     * 
      */
     @Import(name="trackingUrl")
       private final @Nullable String trackingUrl;

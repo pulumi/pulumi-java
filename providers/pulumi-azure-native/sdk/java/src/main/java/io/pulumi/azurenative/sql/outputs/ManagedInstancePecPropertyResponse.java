@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class ManagedInstancePecPropertyResponse {
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Private endpoint connection properties
-     * 
      */
     private final ManagedInstancePrivateEndpointConnectionPropertiesResponse properties;
 
@@ -31,14 +29,12 @@ public final class ManagedInstancePecPropertyResponse {
 
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Private endpoint connection properties
-     * 
     */
     public ManagedInstancePrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;

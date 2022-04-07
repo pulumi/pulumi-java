@@ -16,7 +16,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Id of extension resource.
-     * 
      */
     @Import(name="extensionId")
       private final @Nullable Output<String> extensionId;
@@ -27,7 +26,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * FarmBeats resource name.
-     * 
      */
     @Import(name="farmBeatsResourceName", required=true)
       private final Output<String> farmBeatsResourceName;
@@ -38,7 +36,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

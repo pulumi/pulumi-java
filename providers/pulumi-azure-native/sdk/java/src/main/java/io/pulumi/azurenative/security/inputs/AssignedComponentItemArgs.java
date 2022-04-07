@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * describe the properties of a security assessment object reference (by key)
- * 
  */
 public final class AssignedComponentItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AssignedComponentItemArgs extends io.pulumi.resources.Resourc
 
     /**
      * unique key to a security assessment object
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;

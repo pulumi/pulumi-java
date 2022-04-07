@@ -14,7 +14,6 @@ public final class GetLinkedStorageAccountArgs extends io.pulumi.resources.Invok
 
     /**
      * Linked storage accounts type.
-     * 
      */
     @Import(name="dataSourceType", required=true)
       private final String dataSourceType;
@@ -25,7 +24,6 @@ public final class GetLinkedStorageAccountArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetLinkedStorageAccountArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

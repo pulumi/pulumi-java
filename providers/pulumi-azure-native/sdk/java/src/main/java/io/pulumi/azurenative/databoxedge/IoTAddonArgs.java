@@ -17,7 +17,6 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The addon name.
-     * 
      */
     @Import(name="addonName")
       private final @Nullable Output<String> addonName;
@@ -28,7 +27,6 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -39,7 +37,6 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IoT device metadata to which appliance needs to be connected.
-     * 
      */
     @Import(name="ioTDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
@@ -50,7 +47,6 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IoT edge device to which the IoT Addon needs to be configured.
-     * 
      */
     @Import(name="ioTEdgeDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
@@ -62,7 +58,6 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Addon type.
      * Expected value is 'IotEdge'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -73,7 +68,6 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role name.
-     * 
      */
     @Import(name="roleName", required=true)
       private final Output<String> roleName;

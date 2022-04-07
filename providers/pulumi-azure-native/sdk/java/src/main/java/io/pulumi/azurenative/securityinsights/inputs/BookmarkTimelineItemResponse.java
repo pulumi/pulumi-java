@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents bookmark timeline item.
- * 
  */
 public final class BookmarkTimelineItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The bookmark azure resource id.
-     * 
      */
     @Import(name="azureResourceId", required=true)
       private final String azureResourceId;
@@ -33,7 +31,6 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * Describes a user that created the bookmark
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable UserInfoResponse createdBy;
@@ -44,7 +41,6 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The bookmark display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -55,7 +51,6 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The bookmark end time.
-     * 
      */
     @Import(name="endTimeUtc")
       private final @Nullable String endTimeUtc;
@@ -66,7 +61,6 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The bookmark event time.
-     * 
      */
     @Import(name="eventTime")
       private final @Nullable String eventTime;
@@ -78,7 +72,6 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
     /**
      * The entity query kind
      * Expected value is 'Bookmark'.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -89,7 +82,6 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * List of labels relevant to this bookmark
-     * 
      */
     @Import(name="labels")
       private final @Nullable List<String> labels;
@@ -100,7 +92,6 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The notes of the bookmark
-     * 
      */
     @Import(name="notes")
       private final @Nullable String notes;
@@ -111,7 +102,6 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The bookmark start time.
-     * 
      */
     @Import(name="startTimeUtc")
       private final @Nullable String startTimeUtc;

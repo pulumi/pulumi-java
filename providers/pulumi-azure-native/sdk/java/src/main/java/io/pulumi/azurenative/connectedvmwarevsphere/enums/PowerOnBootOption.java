@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the power on boot.
-     * 
      */
     @EnumType
     public enum PowerOnBootOption {

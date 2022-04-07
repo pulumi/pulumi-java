@@ -18,7 +18,6 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulum
 
     /**
      * Resource ID of the virtual machine that is linked to this policy
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -29,7 +28,6 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulum
 
     /**
      * Port configurations for the virtual machine
-     * 
      */
     @Import(name="ports", required=true)
       private final List<JitNetworkAccessPortRuleResponse> ports;
@@ -40,7 +38,6 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulum
 
     /**
      * Public IP address of the Azure Firewall that is linked to this policy, if applicable
-     * 
      */
     @Import(name="publicIpAddress")
       private final @Nullable String publicIpAddress;

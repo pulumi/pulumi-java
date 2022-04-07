@@ -21,7 +21,121 @@ import javax.annotation.Nullable;
  * Represents an instance of an auto scale v-core resource.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create auto scale v-core
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var autoScaleVCore = new AzureNative.PowerBIDedicated.AutoScaleVCore("autoScaleVCore", new AzureNative.PowerBIDedicated.AutoScaleVCoreArgs
+ *         {
+ *             CapacityLimit = 10,
+ *             CapacityObjectId = "a28f00bd-5330-4572-88f1-fa883e074785",
+ *             Location = "West US",
+ *             ResourceGroupName = "TestRG",
+ *             Sku = new AzureNative.PowerBIDedicated.Inputs.AutoScaleVCoreSkuArgs
+ *             {
+ *                 Capacity = 0,
+ *                 Name = "AutoScale",
+ *                 Tier = "AutoScale",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "testKey", "testValue" },
+ *             },
+ *             VcoreName = "testvcore",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	powerbidedicated "github.com/pulumi/pulumi-azure-native/sdk/go/azure/powerbidedicated"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := powerbidedicated.NewAutoScaleVCore(ctx, "autoScaleVCore", &powerbidedicated.AutoScaleVCoreArgs{
+ * 			CapacityLimit:     pulumi.Int(10),
+ * 			CapacityObjectId:  pulumi.String("a28f00bd-5330-4572-88f1-fa883e074785"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("TestRG"),
+ * 			Sku: &powerbidedicated.AutoScaleVCoreSkuArgs{
+ * 				Capacity: pulumi.Int(0),
+ * 				Name:     pulumi.String("AutoScale"),
+ * 				Tier:     pulumi.String("AutoScale"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"testKey": pulumi.String("testValue"),
+ * 			},
+ * 			VcoreName: pulumi.String("testvcore"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const autoScaleVCore = new azure_native.powerbidedicated.AutoScaleVCore("autoScaleVCore", {
+ *     capacityLimit: 10,
+ *     capacityObjectId: "a28f00bd-5330-4572-88f1-fa883e074785",
+ *     location: "West US",
+ *     resourceGroupName: "TestRG",
+ *     sku: {
+ *         capacity: 0,
+ *         name: "AutoScale",
+ *         tier: "AutoScale",
+ *     },
+ *     tags: {
+ *         testKey: "testValue",
+ *     },
+ *     vcoreName: "testvcore",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * auto_scale_v_core = azure_native.powerbidedicated.AutoScaleVCore("autoScaleVCore",
+ *     capacity_limit=10,
+ *     capacity_object_id="a28f00bd-5330-4572-88f1-fa883e074785",
+ *     location="West US",
+ *     resource_group_name="TestRG",
+ *     sku=azure_native.powerbidedicated.AutoScaleVCoreSkuArgs(
+ *         capacity=0,
+ *         name="AutoScale",
+ *         tier="AutoScale",
+ *     ),
+ *     tags={
+ *         "testKey": "testValue",
+ *     },
+ *     vcore_name="testvcore")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,126 +150,108 @@ import javax.annotation.Nullable;
 public class AutoScaleVCore extends io.pulumi.resources.CustomResource {
     /**
      * The maximum capacity of an auto scale v-core resource.
-     * 
      */
     @Export(name="capacityLimit", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> capacityLimit;
 
     /**
      * @return The maximum capacity of an auto scale v-core resource.
-     * 
      */
     public Output</* @Nullable */ Integer> getCapacityLimit() {
         return this.capacityLimit;
     }
     /**
      * The object ID of the capacity resource associated with the auto scale v-core resource.
-     * 
      */
     @Export(name="capacityObjectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> capacityObjectId;
 
     /**
      * @return The object ID of the capacity resource associated with the auto scale v-core resource.
-     * 
      */
     public Output</* @Nullable */ String> getCapacityObjectId() {
         return this.capacityObjectId;
     }
     /**
      * Location of the PowerBI Dedicated resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Location of the PowerBI Dedicated resource.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the PowerBI Dedicated resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the PowerBI Dedicated resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the auto scale v-core resource.
-     * 
      */
     @Export(name="sku", type=AutoScaleVCoreSkuResponse.class, parameters={})
     private Output<AutoScaleVCoreSkuResponse> sku;
 
     /**
      * @return The SKU of the auto scale v-core resource.
-     * 
      */
     public Output<AutoScaleVCoreSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output</* @Nullable */ SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output</* @Nullable */ SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Key-value pairs of additional resource provisioning properties.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the PowerBI Dedicated resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the PowerBI Dedicated resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

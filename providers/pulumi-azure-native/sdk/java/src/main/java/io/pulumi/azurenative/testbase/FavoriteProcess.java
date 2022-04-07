@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * A favorite process identifier.
  * API Version: 2020-12-16-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### FavoriteProcessCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var favoriteProcess = new AzureNative.TestBase.FavoriteProcess("favoriteProcess", new AzureNative.TestBase.FavoriteProcessArgs
+ *         {
+ *             ActualProcessName = "testApp&.exe",
+ *             FavoriteProcessResourceName = "testAppProcess",
+ *             PackageName = "contoso-package2",
+ *             ResourceGroupName = "contoso-rg1",
+ *             TestBaseAccountName = "contoso-testBaseAccount1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	testbase "github.com/pulumi/pulumi-azure-native/sdk/go/azure/testbase"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := testbase.NewFavoriteProcess(ctx, "favoriteProcess", &testbase.FavoriteProcessArgs{
+ * 			ActualProcessName:           pulumi.String("testApp&.exe"),
+ * 			FavoriteProcessResourceName: pulumi.String("testAppProcess"),
+ * 			PackageName:                 pulumi.String("contoso-package2"),
+ * 			ResourceGroupName:           pulumi.String("contoso-rg1"),
+ * 			TestBaseAccountName:         pulumi.String("contoso-testBaseAccount1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const favoriteProcess = new azure_native.testbase.FavoriteProcess("favoriteProcess", {
+ *     actualProcessName: "testApp&.exe",
+ *     favoriteProcessResourceName: "testAppProcess",
+ *     packageName: "contoso-package2",
+ *     resourceGroupName: "contoso-rg1",
+ *     testBaseAccountName: "contoso-testBaseAccount1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * favorite_process = azure_native.testbase.FavoriteProcess("favoriteProcess",
+ *     actual_process_name="testApp&.exe",
+ *     favorite_process_resource_name="testAppProcess",
+ *     package_name="contoso-package2",
+ *     resource_group_name="contoso-rg1",
+ *     test_base_account_name="contoso-testBaseAccount1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +113,48 @@ import javax.annotation.Nullable;
 public class FavoriteProcess extends io.pulumi.resources.CustomResource {
     /**
      * The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
-     * 
      */
     @Export(name="actualProcessName", type=String.class, parameters={})
     private Output<String> actualProcessName;
 
     /**
      * @return The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
-     * 
      */
     public Output<String> getActualProcessName() {
         return this.actualProcessName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The system metadata relating to this resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

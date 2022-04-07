@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the application-scoped volume kind.
-     * 
      */
     @EnumType
     public enum ApplicationScopedVolumeKind {
         /**
          * Provides Service Fabric High Availability Volume Disk
-         * 
          */
         ServiceFabricVolumeDisk("ServiceFabricVolumeDisk");
 

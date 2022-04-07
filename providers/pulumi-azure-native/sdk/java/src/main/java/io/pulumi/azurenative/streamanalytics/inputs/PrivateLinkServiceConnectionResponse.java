@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A grouping of information about the connection to the remote resource.
- * 
  */
 public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
-     * 
      */
     @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
@@ -33,7 +31,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * A collection of read-only information about the state of the connection to the private remote resource.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
@@ -44,7 +41,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * The resource id of the private link service. Required on PUT (CreateOrUpdate) requests.
-     * 
      */
     @Import(name="privateLinkServiceId")
       private final @Nullable String privateLinkServiceId;
@@ -55,7 +51,6 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
 
     /**
      * A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
-     * 
      */
     @Import(name="requestMessage")
       private final @Nullable String requestMessage;

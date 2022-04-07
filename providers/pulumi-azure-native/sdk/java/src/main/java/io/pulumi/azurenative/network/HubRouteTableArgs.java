@@ -18,7 +18,6 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -29,7 +28,6 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of labels associated with this route table.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
@@ -40,7 +38,6 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -51,7 +48,6 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name of the VirtualHub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the RouteTable.
-     * 
      */
     @Import(name="routeTableName")
       private final @Nullable Output<String> routeTableName;
@@ -73,7 +68,6 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of all routes.
-     * 
      */
     @Import(name="routes")
       private final @Nullable Output<List<HubRouteArgs>> routes;
@@ -84,7 +78,6 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the VirtualHub.
-     * 
      */
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;

@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class SettingsSectionDescriptionResponse {
     /**
      * The section name of the fabric settings.
-     * 
      */
     private final String name;
     /**
      * The collection of parameters in the section.
-     * 
      */
     private final List<SettingsParameterDescriptionResponse> parameters;
 
@@ -32,14 +30,12 @@ public final class SettingsSectionDescriptionResponse {
 
     /**
      * The section name of the fabric settings.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The collection of parameters in the section.
-     * 
     */
     public List<SettingsParameterDescriptionResponse> getParameters() {
         return this.parameters;

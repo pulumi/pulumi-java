@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class for EnvelopeEncryption encryption scheme
- * 
  */
 public final class EnvelopeEncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Representing which tracks should not be encrypted
-     * 
      */
     @Import(name="clearTracks")
       private final @Nullable List<TrackSelectionResponse> clearTracks;
@@ -35,7 +33,6 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Representing default content key for each encryption scheme and separate content keys for specific tracks
-     * 
      */
     @Import(name="contentKeys")
       private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
@@ -46,7 +43,6 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
-     * 
      */
     @Import(name="customKeyAcquisitionUrlTemplate")
       private final @Nullable String customKeyAcquisitionUrlTemplate;
@@ -57,7 +53,6 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Representing supported protocols
-     * 
      */
     @Import(name="enabledProtocols")
       private final @Nullable EnabledProtocolsResponse enabledProtocols;

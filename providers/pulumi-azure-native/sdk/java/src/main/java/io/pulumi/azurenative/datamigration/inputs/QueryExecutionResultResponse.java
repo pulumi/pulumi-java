@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Describes query analysis results for execution in source and target
- * 
  */
 public final class QueryExecutionResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
 
     /**
      * Query text retrieved from the source server
-     * 
      */
     @Import(name="queryText", required=true)
       private final String queryText;
@@ -31,7 +29,6 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
 
     /**
      * Query analysis result from the source
-     * 
      */
     @Import(name="sourceResult", required=true)
       private final ExecutionStatisticsResponse sourceResult;
@@ -42,7 +39,6 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
 
     /**
      * Total no. of statements in the batch
-     * 
      */
     @Import(name="statementsInBatch", required=true)
       private final Double statementsInBatch;
@@ -53,7 +49,6 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
 
     /**
      * Query analysis result from the target
-     * 
      */
     @Import(name="targetResult", required=true)
       private final ExecutionStatisticsResponse targetResult;

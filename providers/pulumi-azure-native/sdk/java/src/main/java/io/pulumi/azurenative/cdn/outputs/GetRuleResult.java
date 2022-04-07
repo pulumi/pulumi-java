@@ -39,48 +39,39 @@ import javax.annotation.Nullable;
 public final class GetRuleResult {
     /**
      * A list of actions that are executed when all the conditions of a rule are satisfied.
-     * 
      */
     private final List<Object> actions;
     /**
      * A list of conditions that must be matched for the actions to be executed
-     * 
      */
     private final @Nullable List<Object> conditions;
     private final String deploymentStatus;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
-     * 
      */
     private final @Nullable String matchProcessingBehavior;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
-     * 
      */
     private final Integer order;
     /**
      * Provisioning status
-     * 
      */
     private final String provisioningState;
     /**
      * Read only system data
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -110,14 +101,12 @@ public final class GetRuleResult {
 
     /**
      * A list of actions that are executed when all the conditions of a rule are satisfied.
-     * 
     */
     public List<Object> getActions() {
         return this.actions;
     }
     /**
      * A list of conditions that must be matched for the actions to be executed
-     * 
     */
     public List<Object> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
@@ -127,49 +116,42 @@ public final class GetRuleResult {
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
-     * 
     */
     public Optional<String> getMatchProcessingBehavior() {
         return Optional.ofNullable(this.matchProcessingBehavior);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
-     * 
     */
     public Integer getOrder() {
         return this.order;
     }
     /**
      * Provisioning status
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

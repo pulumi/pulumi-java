@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PrivateEndpointResponse {
     /**
      * Gets or sets id.
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class PrivateEndpointResponse {
 
     /**
      * Gets or sets id.
-     * 
     */
     public String getId() {
         return this.id;

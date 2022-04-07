@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for the command that completes online migration for an Azure SQL Database Managed Instance.
- * 
  */
 public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pul
     /**
      * Command type.
      * Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
-     * 
      */
     @Import(name="commandType", required=true)
       private final String commandType;
@@ -36,7 +34,6 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pul
 
     /**
      * Array of errors. This is ignored if submitted.
-     * 
      */
     @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
@@ -47,7 +44,6 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pul
 
     /**
      * Command input
-     * 
      */
     @Import(name="input")
       private final @Nullable MigrateMISyncCompleteCommandInputResponse input;
@@ -58,7 +54,6 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pul
 
     /**
      * Command output. This is ignored if submitted.
-     * 
      */
     @Import(name="output", required=true)
       private final MigrateMISyncCompleteCommandOutputResponse output;
@@ -69,7 +64,6 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse extends io.pul
 
     /**
      * The state of the command. This is ignored if submitted.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

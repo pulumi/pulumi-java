@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of the filter files to be used for data transfer.
- * 
  */
 public final class FilterFileDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FilterFileDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Path of the file that contains the details of all items to transfer.
-     * 
      */
     @Import(name="filterFilePath", required=true)
       private final String filterFilePath;
@@ -29,7 +27,6 @@ public final class FilterFileDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Type of the filter file.
-     * 
      */
     @Import(name="filterFileType", required=true)
       private final String filterFileType;

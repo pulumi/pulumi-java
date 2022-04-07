@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GatewayDestinationResponse {
     /**
      * Name of the service fabric Mesh application.
-     * 
      */
     private final String applicationName;
     /**
      * name of the endpoint in the service.
-     * 
      */
     private final String endpointName;
     /**
      * service that contains the endpoint.
-     * 
      */
     private final String serviceName;
 
@@ -37,21 +34,18 @@ public final class GatewayDestinationResponse {
 
     /**
      * Name of the service fabric Mesh application.
-     * 
     */
     public String getApplicationName() {
         return this.applicationName;
     }
     /**
      * name of the endpoint in the service.
-     * 
     */
     public String getEndpointName() {
         return this.endpointName;
     }
     /**
      * service that contains the endpoint.
-     * 
     */
     public String getServiceName() {
         return this.serviceName;

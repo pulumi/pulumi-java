@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Data Lake Store firewall rule information.
- * 
  */
 public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     * 
      */
     @Import(name="endIpAddress", required=true)
       private final String endIpAddress;
@@ -29,7 +27,6 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource identifier.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -40,7 +37,6 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -51,7 +47,6 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-     * 
      */
     @Import(name="startIpAddress", required=true)
       private final String startIpAddress;
@@ -62,7 +57,6 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

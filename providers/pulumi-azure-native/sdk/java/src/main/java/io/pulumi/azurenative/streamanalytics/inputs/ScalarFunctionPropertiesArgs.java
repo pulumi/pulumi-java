@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that are associated with a scalar function.
- * 
  */
 public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
-     * 
      */
     @Import(name="binding")
       private final @Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding;
@@ -37,7 +35,6 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * A list of inputs describing the parameters of the function.
-     * 
      */
     @Import(name="inputs")
       private final @Nullable Output<List<FunctionInputArgs>> inputs;
@@ -48,7 +45,6 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * The output of the function.
-     * 
      */
     @Import(name="output")
       private final @Nullable Output<FunctionOutputArgs> output;
@@ -60,7 +56,6 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
     /**
      * Indicates the type of function.
      * Expected value is 'Scalar'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

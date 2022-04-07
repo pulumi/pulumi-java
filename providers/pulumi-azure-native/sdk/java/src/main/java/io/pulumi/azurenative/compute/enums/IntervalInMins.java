@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Interval value in minutes used to create LogAnalytics call rate logs.
-     * 
      */
     @EnumType
     public enum IntervalInMins {

@@ -18,7 +18,6 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Template Spec description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -29,7 +28,6 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Template Spec display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -40,7 +38,6 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -62,7 +58,6 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -84,7 +78,6 @@ public final class TemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Template Spec.
-     * 
      */
     @Import(name="templateSpecName")
       private final @Nullable Output<String> templateSpecName;

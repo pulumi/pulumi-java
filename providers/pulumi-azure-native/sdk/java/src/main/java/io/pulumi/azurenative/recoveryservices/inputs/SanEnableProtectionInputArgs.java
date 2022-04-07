@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * San enable protection provider specific input.
- * 
  */
 public final class SanEnableProtectionInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SanEnableProtectionInputArgs extends io.pulumi.resources.Reso
     /**
      * The class type.
      * Expected value is 'San'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;

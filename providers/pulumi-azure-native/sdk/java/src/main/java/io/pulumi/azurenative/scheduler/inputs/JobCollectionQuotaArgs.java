@@ -17,7 +17,6 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or set the maximum job count.
-     * 
      */
     @Import(name="maxJobCount")
       private final @Nullable Output<Integer> maxJobCount;
@@ -28,7 +27,6 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or sets the maximum job occurrence.
-     * 
      */
     @Import(name="maxJobOccurrence")
       private final @Nullable Output<Integer> maxJobOccurrence;
@@ -39,7 +37,6 @@ public final class JobCollectionQuotaArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or set the maximum recurrence.
-     * 
      */
     @Import(name="maxRecurrence")
       private final @Nullable Output<JobMaxRecurrenceArgs> maxRecurrence;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * An export execution.
- * 
  */
 public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable String eTag;
@@ -33,7 +31,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The details of any error.
-     * 
      */
     @Import(name="error")
       private final @Nullable ErrorDetailsResponse error;
@@ -44,7 +41,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The type of the export execution.
-     * 
      */
     @Import(name="executionType")
       private final @Nullable String executionType;
@@ -55,7 +51,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the exported file.
-     * 
      */
     @Import(name="fileName")
       private final @Nullable String fileName;
@@ -66,7 +61,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -77,7 +71,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -88,7 +81,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The time when the export execution finished.
-     * 
      */
     @Import(name="processingEndTime")
       private final @Nullable String processingEndTime;
@@ -99,7 +91,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The time when export was picked up to be executed.
-     * 
      */
     @Import(name="processingStartTime")
       private final @Nullable String processingStartTime;
@@ -110,7 +101,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The export settings that were in effect for this execution.
-     * 
      */
     @Import(name="runSettings")
       private final @Nullable CommonExportPropertiesResponse runSettings;
@@ -121,7 +111,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The last known status of the export execution.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -132,7 +121,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
-     * 
      */
     @Import(name="submittedBy")
       private final @Nullable String submittedBy;
@@ -143,7 +131,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The time when export was queued to be executed.
-     * 
      */
     @Import(name="submittedTime")
       private final @Nullable String submittedTime;
@@ -154,7 +141,6 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

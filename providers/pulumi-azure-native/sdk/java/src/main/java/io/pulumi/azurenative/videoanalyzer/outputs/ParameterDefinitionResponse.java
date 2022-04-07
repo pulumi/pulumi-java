@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ParameterDefinitionResponse {
     /**
      * Name of the parameter declared in the pipeline topology.
-     * 
      */
     private final String name;
     /**
      * Parameter value to be applied on this specific pipeline.
-     * 
      */
     private final @Nullable String value;
 
@@ -32,14 +30,12 @@ public final class ParameterDefinitionResponse {
 
     /**
      * Name of the parameter declared in the pipeline topology.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Parameter value to be applied on this specific pipeline.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

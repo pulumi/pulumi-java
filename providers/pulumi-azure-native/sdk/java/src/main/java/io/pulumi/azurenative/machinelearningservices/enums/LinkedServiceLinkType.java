@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the link target.
-     * 
      */
     @EnumType
     public enum LinkedServiceLinkType {

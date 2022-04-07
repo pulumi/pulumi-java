@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Extra Parameters specific to each Service Provider
- * 
  */
 public final class ServiceProviderParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
 
     /**
      * Default Name for the Service Provider
-     * 
      */
     @Import(name="default", required=true)
       private final String default_;
@@ -30,7 +28,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
 
     /**
      * Description of the Service Provider
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -41,7 +38,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
 
     /**
      * Display Name of the Service Provider
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -52,7 +48,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
 
     /**
      * Help Url for the  Service Provider
-     * 
      */
     @Import(name="helpUrl", required=true)
       private final String helpUrl;
@@ -63,7 +58,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
 
     /**
      * Meta data for the Service Provider
-     * 
      */
     @Import(name="metadata", required=true)
       private final ServiceProviderParameterResponseMetadata metadata;
@@ -74,7 +68,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
 
     /**
      * Name of the Service Provider
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -85,7 +78,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
 
     /**
      * Type of the Service Provider
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

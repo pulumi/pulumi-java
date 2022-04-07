@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ManagementPolicyDefinitionResponse {
     /**
      * An object that defines the action set.
-     * 
      */
     private final ManagementPolicyActionResponse actions;
     /**
      * An object that defines the filter set.
-     * 
      */
     private final @Nullable ManagementPolicyFilterResponse filters;
 
@@ -33,14 +31,12 @@ public final class ManagementPolicyDefinitionResponse {
 
     /**
      * An object that defines the action set.
-     * 
     */
     public ManagementPolicyActionResponse getActions() {
         return this.actions;
     }
     /**
      * An object that defines the filter set.
-     * 
     */
     public Optional<ManagementPolicyFilterResponse> getFilters() {
         return Optional.ofNullable(this.filters);

@@ -14,7 +14,6 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends io.pulumi.re
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
@@ -25,7 +24,6 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends io.pulumi.re
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends io.pulumi.re
 
     /**
      * The name of the software update configuration to be created.
-     * 
      */
     @Import(name="softwareUpdateConfigurationName", required=true)
       private final String softwareUpdateConfigurationName;

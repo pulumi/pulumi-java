@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class ManagedIdentityResponse {
     /**
      * The principal id of the managed identity. This property will only be provided for a system assigned identity.
-     * 
      */
     private final String principalId;
     /**
      * The tenant id of the managed identity. This property will only be provided for a system assigned identity.
-     * 
      */
     private final String tenantId;
     /**
      * The type of managed identity for the resource.
-     * 
      */
     private final @Nullable String type;
     /**
@@ -49,21 +46,18 @@ public final class ManagedIdentityResponse {
 
     /**
      * The principal id of the managed identity. This property will only be provided for a system assigned identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant id of the managed identity. This property will only be provided for a system assigned identity.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of managed identity for the resource.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

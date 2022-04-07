@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class AzureActiveDirectoryAppResponse {
     /**
      * Key used to authenticate to the Azure Active Directory Application
-     * 
      */
     private final String appKey;
     /**
      * Application ID of the Azure Active Directory Application
-     * 
      */
     private final String applicationId;
     /**
      * Tenant id of the customer
-     * 
      */
     private final String tenantId;
 
@@ -37,21 +34,18 @@ public final class AzureActiveDirectoryAppResponse {
 
     /**
      * Key used to authenticate to the Azure Active Directory Application
-     * 
     */
     public String getAppKey() {
         return this.appKey;
     }
     /**
      * Application ID of the Azure Active Directory Application
-     * 
     */
     public String getApplicationId() {
         return this.applicationId;
     }
     /**
      * Tenant id of the customer
-     * 
     */
     public String getTenantId() {
         return this.tenantId;

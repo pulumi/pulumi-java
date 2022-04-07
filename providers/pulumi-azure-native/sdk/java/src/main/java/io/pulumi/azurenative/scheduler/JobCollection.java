@@ -16,6 +16,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2016-03-01.
  * ## Import
  * 
@@ -30,70 +31,60 @@ import javax.annotation.Nullable;
 public class JobCollection extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the storage account location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Gets or sets the storage account location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Gets or sets the job collection resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Gets or sets the job collection resource name.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the job collection properties.
-     * 
      */
     @Export(name="properties", type=JobCollectionPropertiesResponse.class, parameters={})
     private Output<JobCollectionPropertiesResponse> properties;
 
     /**
      * @return Gets or sets the job collection properties.
-     * 
      */
     public Output<JobCollectionPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Gets or sets the tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Gets or sets the tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets the job collection resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets the job collection resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

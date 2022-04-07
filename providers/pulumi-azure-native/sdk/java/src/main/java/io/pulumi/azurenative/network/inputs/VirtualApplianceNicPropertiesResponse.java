@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Network Virtual Appliance NIC properties.
- * 
  */
 public final class VirtualApplianceNicPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VirtualApplianceNicPropertiesResponse extends io.pulumi.resou
 
     /**
      * NIC name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class VirtualApplianceNicPropertiesResponse extends io.pulumi.resou
 
     /**
      * Private IP address.
-     * 
      */
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
@@ -40,7 +37,6 @@ public final class VirtualApplianceNicPropertiesResponse extends io.pulumi.resou
 
     /**
      * Public IP address.
-     * 
      */
     @Import(name="publicIpAddress", required=true)
       private final String publicIpAddress;

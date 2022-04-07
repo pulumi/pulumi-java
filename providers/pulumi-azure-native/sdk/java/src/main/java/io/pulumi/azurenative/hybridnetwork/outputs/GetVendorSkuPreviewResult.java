@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GetVendorSkuPreviewResult {
     /**
      * The ARM ID of the resource.
-     * 
      */
     private final String id;
     /**
      * The preview subscription ID.
-     * 
      */
     private final String name;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -37,21 +34,18 @@ public final class GetVendorSkuPreviewResult {
 
     /**
      * The ARM ID of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The preview subscription ID.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

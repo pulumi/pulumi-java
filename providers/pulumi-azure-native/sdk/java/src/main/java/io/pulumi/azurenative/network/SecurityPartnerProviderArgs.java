@@ -20,7 +20,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -31,7 +30,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -53,7 +50,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the Security Partner Provider.
-     * 
      */
     @Import(name="securityPartnerProviderName")
       private final @Nullable Output<String> securityPartnerProviderName;
@@ -64,7 +60,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
 
     /**
      * The security provider name.
-     * 
      */
     @Import(name="securityProviderName")
       private final @Nullable Output<Either<String,SecurityProviderName>> securityProviderName;
@@ -75,7 +70,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -86,7 +80,6 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
 
     /**
      * The virtualHub to which the Security Partner Provider belongs.
-     * 
      */
     @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;

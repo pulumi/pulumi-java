@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class ModeValueInfoResponse {
     /**
      * The interface string name for the nested parameter.
-     * 
      */
     private final @Nullable String interfaceString;
     /**
      * The definition of the parameter.
-     * 
      */
     private final @Nullable List<ModuleAssetParameterResponse> parameters;
 
@@ -34,14 +32,12 @@ public final class ModeValueInfoResponse {
 
     /**
      * The interface string name for the nested parameter.
-     * 
     */
     public Optional<String> getInterfaceString() {
         return Optional.ofNullable(this.interfaceString);
     }
     /**
      * The definition of the parameter.
-     * 
     */
     public List<ModuleAssetParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;

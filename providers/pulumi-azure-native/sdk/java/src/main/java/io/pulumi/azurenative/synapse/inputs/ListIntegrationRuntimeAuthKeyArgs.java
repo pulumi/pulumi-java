@@ -14,7 +14,6 @@ public final class ListIntegrationRuntimeAuthKeyArgs extends io.pulumi.resources
 
     /**
      * Integration runtime name
-     * 
      */
     @Import(name="integrationRuntimeName", required=true)
       private final String integrationRuntimeName;
@@ -25,7 +24,6 @@ public final class ListIntegrationRuntimeAuthKeyArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListIntegrationRuntimeAuthKeyArgs extends io.pulumi.resources
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

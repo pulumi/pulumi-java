@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * A short term retention policy.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update the short term retention policy for the database.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var backupShortTermRetentionPolicy = new AzureNative.Sql.BackupShortTermRetentionPolicy("backupShortTermRetentionPolicy", new AzureNative.Sql.BackupShortTermRetentionPolicyArgs
+ *         {
+ *             DatabaseName = "testdb",
+ *             PolicyName = "default",
+ *             ResourceGroupName = "resourceGroup",
+ *             RetentionDays = 14,
+ *             ServerName = "testsvr",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewBackupShortTermRetentionPolicy(ctx, "backupShortTermRetentionPolicy", &sql.BackupShortTermRetentionPolicyArgs{
+ * 			DatabaseName:      pulumi.String("testdb"),
+ * 			PolicyName:        pulumi.String("default"),
+ * 			ResourceGroupName: pulumi.String("resourceGroup"),
+ * 			RetentionDays:     pulumi.Int(14),
+ * 			ServerName:        pulumi.String("testsvr"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const backupShortTermRetentionPolicy = new azure_native.sql.BackupShortTermRetentionPolicy("backupShortTermRetentionPolicy", {
+ *     databaseName: "testdb",
+ *     policyName: "default",
+ *     resourceGroupName: "resourceGroup",
+ *     retentionDays: 14,
+ *     serverName: "testsvr",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * backup_short_term_retention_policy = azure_native.sql.BackupShortTermRetentionPolicy("backupShortTermRetentionPolicy",
+ *     database_name="testdb",
+ *     policy_name="default",
+ *     resource_group_name="resourceGroup",
+ *     retention_days=14,
+ *     server_name="testsvr")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +113,36 @@ import javax.annotation.Nullable;
 public class BackupShortTermRetentionPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
-     * 
      */
     @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
     /**
      * @return The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
-     * 
      */
     public Output</* @Nullable */ Integer> getRetentionDays() {
         return this.retentionDays;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

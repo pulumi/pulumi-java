@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service identity associated with a resource.
- * 
  */
 public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Client ID that is used when authenticating.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -33,7 +31,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * AAD Tenant where this identity lives.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -44,7 +41,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Defines values for a ResourceIdentity's type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -55,7 +51,6 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserAssignedIdentityMetaResponse> userAssignedIdentities;

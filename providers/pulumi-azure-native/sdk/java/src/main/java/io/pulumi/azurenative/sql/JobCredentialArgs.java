@@ -16,7 +16,6 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the credential.
-     * 
      */
     @Import(name="credentialName")
       private final @Nullable Output<String> credentialName;
@@ -27,7 +26,6 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the job agent.
-     * 
      */
     @Import(name="jobAgentName", required=true)
       private final Output<String> jobAgentName;
@@ -38,7 +36,6 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The credential password.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -49,7 +46,6 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -71,7 +66,6 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The credential user name.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

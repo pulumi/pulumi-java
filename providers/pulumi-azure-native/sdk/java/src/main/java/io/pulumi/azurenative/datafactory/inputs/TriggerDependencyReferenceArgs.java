@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Trigger referenced dependency.
- * 
  */
 public final class TriggerDependencyReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TriggerDependencyReferenceArgs extends io.pulumi.resources.Re
 
     /**
      * Referenced trigger.
-     * 
      */
     @Import(name="referenceTrigger", required=true)
       private final Output<TriggerReferenceArgs> referenceTrigger;
@@ -32,7 +30,6 @@ public final class TriggerDependencyReferenceArgs extends io.pulumi.resources.Re
     /**
      * The type of dependency reference.
      * Expected value is 'TriggerDependencyReference'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

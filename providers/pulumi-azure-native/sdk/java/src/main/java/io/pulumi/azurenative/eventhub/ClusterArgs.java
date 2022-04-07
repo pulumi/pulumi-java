@@ -18,7 +18,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Event Hubs Cluster.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -29,7 +28,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group within the azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the cluster SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<ClusterSkuArgs> sku;
@@ -62,7 +58,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

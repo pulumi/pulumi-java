@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ProtocolSettingsResponse {
     /**
      * Setting for SMB protocol
-     * 
      */
     private final @Nullable SmbSettingResponse smb;
 
@@ -24,7 +23,6 @@ public final class ProtocolSettingsResponse {
 
     /**
      * Setting for SMB protocol
-     * 
     */
     public Optional<SmbSettingResponse> getSmb() {
         return Optional.ofNullable(this.smb);

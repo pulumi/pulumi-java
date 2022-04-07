@@ -19,7 +19,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the cluster in the private cloud
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -30,7 +29,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
-     * 
      */
     @Import(name="placementPolicyName")
       private final @Nullable Output<String> placementPolicyName;
@@ -41,7 +39,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -52,7 +49,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * placement policy properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
@@ -63,7 +59,6 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

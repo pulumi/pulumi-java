@@ -114,7 +114,6 @@ import javax.annotation.Nullable;
 
 /**
  * Lookup activity.
- * 
  */
 public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -122,7 +121,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Lookup activity dataset reference.
-     * 
      */
     @Import(name="dataset", required=true)
       private final Output<DatasetReferenceArgs> dataset;
@@ -133,7 +131,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -144,7 +141,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -155,7 +151,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="firstRowOnly")
       private final @Nullable Output<Object> firstRowOnly;
@@ -166,7 +161,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -177,7 +171,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -188,7 +181,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -199,7 +191,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dataset-specific source properties, same as copy activity source.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<Object> source;
@@ -211,7 +202,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Type of activity.
      * Expected value is 'Lookup'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -222,7 +212,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

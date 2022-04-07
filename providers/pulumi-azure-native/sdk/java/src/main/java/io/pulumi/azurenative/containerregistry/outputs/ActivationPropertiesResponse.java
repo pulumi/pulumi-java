@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ActivationPropertiesResponse {
     /**
      * The activation status of the connected registry.
-     * 
      */
     private final String status;
 
@@ -22,7 +21,6 @@ public final class ActivationPropertiesResponse {
 
     /**
      * The activation status of the connected registry.
-     * 
     */
     public String getStatus() {
         return this.status;

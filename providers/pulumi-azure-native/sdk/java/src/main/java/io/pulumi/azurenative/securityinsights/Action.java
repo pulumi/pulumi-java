@@ -17,7 +17,93 @@ import javax.annotation.Nullable;
  * Action for alert rule.
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates an action of alert rule.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var action = new AzureNative.SecurityInsights.Action("action", new AzureNative.SecurityInsights.ActionArgs
+ *         {
+ *             ActionId = "912bec42-cb66-4c03-ac63-1761b6898c3e",
+ *             LogicAppResourceId = "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",
+ *             ResourceGroupName = "myRg",
+ *             RuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             TriggerUri = "https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewAction(ctx, "action", &securityinsights.ActionArgs{
+ * 			ActionId:           pulumi.String("912bec42-cb66-4c03-ac63-1761b6898c3e"),
+ * 			LogicAppResourceId: pulumi.String("/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts"),
+ * 			ResourceGroupName:  pulumi.String("myRg"),
+ * 			RuleId:             pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			TriggerUri:         pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=", "%", "2Ftriggers", "%", "2Fmanual", "%", "2Frun&sv=1.0&sig=signature")),
+ * 			WorkspaceName:      pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const action = new azure_native.securityinsights.Action("action", {
+ *     actionId: "912bec42-cb66-4c03-ac63-1761b6898c3e",
+ *     logicAppResourceId: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",
+ *     resourceGroupName: "myRg",
+ *     ruleId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     triggerUri: `https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature`,
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * action = azure_native.securityinsights.Action("action",
+ *     action_id="912bec42-cb66-4c03-ac63-1761b6898c3e",
+ *     logic_app_resource_id="/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts",
+ *     resource_group_name="myRg",
+ *     rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     trigger_uri="https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=signature",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,70 +118,60 @@ import javax.annotation.Nullable;
 public class Action extends io.pulumi.resources.CustomResource {
     /**
      * Etag of the action.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the action.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-     * 
      */
     @Export(name="logicAppResourceId", type=String.class, parameters={})
     private Output<String> logicAppResourceId;
 
     /**
      * @return Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
-     * 
      */
     public Output<String> getLogicAppResourceId() {
         return this.logicAppResourceId;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The name of the logic app's workflow.
-     * 
      */
     @Export(name="workflowId", type=String.class, parameters={})
     private Output</* @Nullable */ String> workflowId;
 
     /**
      * @return The name of the logic app's workflow.
-     * 
      */
     public Output</* @Nullable */ String> getWorkflowId() {
         return this.workflowId;

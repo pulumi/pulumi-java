@@ -16,7 +16,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The expiration date of the share subscription.
-     * 
      */
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
@@ -38,7 +36,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The invitation id.
-     * 
      */
     @Import(name="invitationId", required=true)
       private final Output<String> invitationId;
@@ -49,7 +46,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the shareSubscription.
-     * 
      */
     @Import(name="shareSubscriptionName")
       private final @Nullable Output<String> shareSubscriptionName;
@@ -71,7 +66,6 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Source share location.
-     * 
      */
     @Import(name="sourceShareLocation", required=true)
       private final Output<String> sourceShareLocation;

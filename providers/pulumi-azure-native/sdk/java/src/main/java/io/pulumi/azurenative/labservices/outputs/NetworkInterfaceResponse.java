@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class NetworkInterfaceResponse {
     /**
      * PrivateIp address of the Compute VM
-     * 
      */
     private final String privateIpAddress;
     /**
      * Connection information for Windows
-     * 
      */
     private final String rdpAuthority;
     /**
      * Connection information for Linux
-     * 
      */
     private final String sshAuthority;
     /**
      * Username of the VM
-     * 
      */
     private final String username;
 
@@ -44,28 +40,24 @@ public final class NetworkInterfaceResponse {
 
     /**
      * PrivateIp address of the Compute VM
-     * 
     */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
     /**
      * Connection information for Windows
-     * 
     */
     public String getRdpAuthority() {
         return this.rdpAuthority;
     }
     /**
      * Connection information for Linux
-     * 
     */
     public String getSshAuthority() {
         return this.sshAuthority;
     }
     /**
      * Username of the VM
-     * 
     */
     public String getUsername() {
         return this.username;

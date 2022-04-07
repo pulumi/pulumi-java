@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specify the credential type (key or cert) is used for service principal.
-     * 
      */
     @EnumType
     public enum ODataAadServicePrincipalCredentialType {

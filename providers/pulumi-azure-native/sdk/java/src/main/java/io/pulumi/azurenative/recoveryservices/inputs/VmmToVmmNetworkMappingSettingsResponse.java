@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * E2E Network Mapping fabric specific settings.
- * 
  */
 public final class VmmToVmmNetworkMappingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class VmmToVmmNetworkMappingSettingsResponse extends io.pulumi.reso
     /**
      * Gets the Instance type.
      * Expected value is 'VmmToVmm'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;

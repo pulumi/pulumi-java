@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sap Business Warehouse Open Hub Destination Table properties.
- * 
  */
 public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -37,7 +35,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
 
     /**
      * The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
-     * 
      */
     @Import(name="baseRequestId")
       private final @Nullable Object baseRequestId;
@@ -48,7 +45,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -59,7 +55,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
 
     /**
      * Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="excludeLastRequest")
       private final @Nullable Object excludeLastRequest;
@@ -70,7 +65,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
@@ -81,7 +75,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
@@ -92,7 +85,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
 
     /**
      * The name of the Open Hub Destination with destination type as Database Table. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="openHubDestinationName", required=true)
       private final Object openHubDestinationName;
@@ -103,7 +95,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -114,7 +105,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Object schema;
@@ -125,7 +115,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Object structure;
@@ -137,7 +126,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
     /**
      * Type of dataset.
      * Expected value is 'SapOpenHubTable'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

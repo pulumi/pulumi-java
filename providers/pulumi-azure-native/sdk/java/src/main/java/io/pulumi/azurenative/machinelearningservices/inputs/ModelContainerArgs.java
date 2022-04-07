@@ -17,7 +17,6 @@ public final class ModelContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The asset description text.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class ModelContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The asset property dictionary.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -39,7 +37,6 @@ public final class ModelContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

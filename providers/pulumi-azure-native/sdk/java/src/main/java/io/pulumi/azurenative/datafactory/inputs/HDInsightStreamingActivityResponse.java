@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * HDInsight streaming activity type.
- * 
  */
 public final class HDInsightStreamingActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * User specified arguments to HDInsightActivity.
-     * 
      */
     @Import(name="arguments")
       private final @Nullable List<Object> arguments;
@@ -38,7 +36,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Combiner executable name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="combiner")
       private final @Nullable Object combiner;
@@ -49,7 +46,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Command line environment values.
-     * 
      */
     @Import(name="commandEnvironment")
       private final @Nullable List<Object> commandEnvironment;
@@ -60,7 +56,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Allows user to specify defines for streaming job request.
-     * 
      */
     @Import(name="defines")
       private final @Nullable Map<String,Object> defines;
@@ -71,7 +66,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -82,7 +76,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -93,7 +86,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Linked service reference where the files are located.
-     * 
      */
     @Import(name="fileLinkedService")
       private final @Nullable LinkedServiceReferenceResponse fileLinkedService;
@@ -104,7 +96,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Paths to streaming job files. Can be directories.
-     * 
      */
     @Import(name="filePaths", required=true)
       private final List<Object> filePaths;
@@ -115,7 +106,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Debug info option.
-     * 
      */
     @Import(name="getDebugInfo")
       private final @Nullable String getDebugInfo;
@@ -126,7 +116,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Input blob path. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="input", required=true)
       private final Object input;
@@ -137,7 +126,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -148,7 +136,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Mapper executable name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="mapper", required=true)
       private final Object mapper;
@@ -159,7 +146,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -170,7 +156,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Output blob path. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="output", required=true)
       private final Object output;
@@ -181,7 +166,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -192,7 +176,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Reducer executable name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="reducer", required=true)
       private final Object reducer;
@@ -203,7 +186,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Storage linked service references.
-     * 
      */
     @Import(name="storageLinkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
@@ -215,7 +197,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
     /**
      * Type of activity.
      * Expected value is 'HDInsightStreaming'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -226,7 +207,6 @@ public final class HDInsightStreamingActivityResponse extends io.pulumi.resource
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

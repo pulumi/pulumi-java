@@ -14,7 +14,6 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends io.pulumi
 
     /**
      * The batch configuration name.
-     * 
      */
     @Import(name="batchConfigurationName", required=true)
       private final String batchConfigurationName;
@@ -25,7 +24,6 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends io.pulumi
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -36,7 +34,6 @@ public final class GetIntegrationAccountBatchConfigurationArgs extends io.pulumi
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

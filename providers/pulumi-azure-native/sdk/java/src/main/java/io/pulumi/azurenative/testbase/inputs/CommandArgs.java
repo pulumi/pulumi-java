@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The command used in the test
- * 
  */
 public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The action of the command.
-     * 
      */
     @Import(name="action", required=true)
       private final Output<Either<String,Action>> action;
@@ -36,7 +34,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether to run the command even if a previous command is failed.
-     * 
      */
     @Import(name="alwaysRun")
       private final @Nullable Output<Boolean> alwaysRun;
@@ -47,7 +44,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether to apply update before the command.
-     * 
      */
     @Import(name="applyUpdateBefore")
       private final @Nullable Output<Boolean> applyUpdateBefore;
@@ -58,7 +54,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The content of the command. The content depends on source type.
-     * 
      */
     @Import(name="content", required=true)
       private final Output<String> content;
@@ -69,7 +64,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of command content.
-     * 
      */
     @Import(name="contentType", required=true)
       private final Output<Either<String,ContentType>> contentType;
@@ -80,7 +74,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the max run time of the command.
-     * 
      */
     @Import(name="maxRunTime")
       private final @Nullable Output<Integer> maxRunTime;
@@ -91,7 +84,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the command.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -102,7 +94,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether to restart the VM after the command executed.
-     * 
      */
     @Import(name="restartAfter")
       private final @Nullable Output<Boolean> restartAfter;
@@ -113,7 +104,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether to run the command in interactive mode.
-     * 
      */
     @Import(name="runAsInteractive")
       private final @Nullable Output<Boolean> runAsInteractive;
@@ -124,7 +114,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether to run the command as administrator.
-     * 
      */
     @Import(name="runElevated")
       private final @Nullable Output<Boolean> runElevated;

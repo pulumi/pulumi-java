@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class HourDetailsResponse {
     /**
      * Minutes of the hour the schedule will run.
-     * 
      */
     private final @Nullable Integer minute;
 
@@ -24,7 +23,6 @@ public final class HourDetailsResponse {
 
     /**
      * Minutes of the hour the schedule will run.
-     * 
     */
     public Optional<Integer> getMinute() {
         return Optional.ofNullable(this.minute);

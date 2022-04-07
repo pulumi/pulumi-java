@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ManagerSkuResponse {
     /**
      * Refers to the sku name which should be "Standard"
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class ManagerSkuResponse {
 
     /**
      * Refers to the sku name which should be "Standard"
-     * 
     */
     public String getName() {
         return this.name;

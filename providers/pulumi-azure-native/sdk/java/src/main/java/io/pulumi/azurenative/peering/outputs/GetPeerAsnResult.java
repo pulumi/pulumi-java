@@ -16,42 +16,34 @@ import javax.annotation.Nullable;
 public final class GetPeerAsnResult {
     /**
      * The error message for the validation state
-     * 
      */
     private final String errorMessage;
     /**
      * The ID of the resource.
-     * 
      */
     private final String id;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The Autonomous System Number (ASN) of the peer.
-     * 
      */
     private final @Nullable Integer peerAsn;
     /**
      * The contact details of the peer.
-     * 
      */
     private final @Nullable List<ContactDetailResponse> peerContactDetail;
     /**
      * The name of the peer.
-     * 
      */
     private final @Nullable String peerName;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
     /**
      * The validation state of the ASN associated with the peer.
-     * 
      */
     private final @Nullable String validationState;
 
@@ -77,56 +69,48 @@ public final class GetPeerAsnResult {
 
     /**
      * The error message for the validation state
-     * 
     */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * The ID of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The Autonomous System Number (ASN) of the peer.
-     * 
     */
     public Optional<Integer> getPeerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
     /**
      * The contact details of the peer.
-     * 
     */
     public List<ContactDetailResponse> getPeerContactDetail() {
         return this.peerContactDetail == null ? List.of() : this.peerContactDetail;
     }
     /**
      * The name of the peer.
-     * 
     */
     public Optional<String> getPeerName() {
         return Optional.ofNullable(this.peerName);
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The validation state of the ASN associated with the peer.
-     * 
     */
     public Optional<String> getValidationState() {
         return Optional.ofNullable(this.validationState);

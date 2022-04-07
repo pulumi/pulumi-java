@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Method of cost allocation for the rule
-     * 
      */
     @EnumType
     public enum CostAllocationPolicyType {

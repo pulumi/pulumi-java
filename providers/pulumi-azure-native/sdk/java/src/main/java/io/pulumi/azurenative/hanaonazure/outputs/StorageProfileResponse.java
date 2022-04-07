@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class StorageProfileResponse {
     /**
      * Specifies information related to SAP system IDs for the hana instance.
-     * 
      */
     private final @Nullable List<SAPSystemIDResponse> hanaSids;
     /**
      * IP Address to connect to storage.
-     * 
      */
     private final String nfsIpAddress;
     /**
      * Specifies information about the operating system disk used by the hana instance.
-     * 
      */
     private final @Nullable List<DiskResponse> osDisks;
 
@@ -41,21 +38,18 @@ public final class StorageProfileResponse {
 
     /**
      * Specifies information related to SAP system IDs for the hana instance.
-     * 
     */
     public List<SAPSystemIDResponse> getHanaSids() {
         return this.hanaSids == null ? List.of() : this.hanaSids;
     }
     /**
      * IP Address to connect to storage.
-     * 
     */
     public String getNfsIpAddress() {
         return this.nfsIpAddress;
     }
     /**
      * Specifies information about the operating system disk used by the hana instance.
-     * 
     */
     public List<DiskResponse> getOsDisks() {
         return this.osDisks == null ? List.of() : this.osDisks;

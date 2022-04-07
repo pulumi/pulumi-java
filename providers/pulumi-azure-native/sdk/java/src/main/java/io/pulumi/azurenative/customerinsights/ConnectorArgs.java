@@ -21,7 +21,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the connector.
-     * 
      */
     @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
@@ -32,7 +31,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The connector properties.
-     * 
      */
     @Import(name="connectorProperties", required=true)
       private final Output<Map<String,Object>> connectorProperties;
@@ -43,7 +41,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of connector.
-     * 
      */
     @Import(name="connectorType", required=true)
       private final Output<Either<String,ConnectorTypes>> connectorType;
@@ -54,7 +51,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the connector.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -65,7 +61,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name of the connector.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -76,7 +71,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
@@ -87,7 +81,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If this is an internal connector.
-     * 
      */
     @Import(name="isInternal")
       private final @Nullable Output<Boolean> isInternal;
@@ -98,7 +91,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

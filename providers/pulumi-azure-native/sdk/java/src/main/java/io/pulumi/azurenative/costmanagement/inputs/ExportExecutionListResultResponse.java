@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Result of listing the execution history of an export.
- * 
  */
 public final class ExportExecutionListResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ExportExecutionListResultResponse extends io.pulumi.resources
 
     /**
      * A list of export executions.
-     * 
      */
     @Import(name="value", required=true)
       private final List<ExportExecutionResponse> value;

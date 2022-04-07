@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of NetWorkRuleSet - IpRules resource.
- * 
  */
 public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The IP Filter Action
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
@@ -33,7 +31,6 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * IP Mask
-     * 
      */
     @Import(name="ipMask")
       private final @Nullable Output<String> ipMask;

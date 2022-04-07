@@ -17,7 +17,6 @@ public final class FlavorDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Model flavor-specific data.
-     * 
      */
     @Import(name="data")
       private final @Nullable Map<String,String> data;

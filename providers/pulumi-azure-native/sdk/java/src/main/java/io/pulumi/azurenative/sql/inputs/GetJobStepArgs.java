@@ -14,7 +14,6 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the job agent.
-     * 
      */
     @Import(name="jobAgentName", required=true)
       private final String jobAgentName;
@@ -25,7 +24,6 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the job.
-     * 
      */
     @Import(name="jobName", required=true)
       private final String jobName;
@@ -36,7 +34,6 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;
@@ -58,7 +54,6 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the job step.
-     * 
      */
     @Import(name="stepName", required=true)
       private final String stepName;

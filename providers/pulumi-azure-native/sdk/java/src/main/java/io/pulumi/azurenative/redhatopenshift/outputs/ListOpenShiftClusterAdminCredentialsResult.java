@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListOpenShiftClusterAdminCredentialsResult {
     /**
      * The base64-encoded kubeconfig file.
-     * 
      */
     private final @Nullable String kubeconfig;
 
@@ -24,7 +23,6 @@ public final class ListOpenShiftClusterAdminCredentialsResult {
 
     /**
      * The base64-encoded kubeconfig file.
-     * 
     */
     public Optional<String> getKubeconfig() {
         return Optional.ofNullable(this.kubeconfig);

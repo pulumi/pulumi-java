@@ -14,7 +14,6 @@ public final class GetManagementConfigurationArgs extends io.pulumi.resources.In
 
     /**
      * User Management Configuration Name.
-     * 
      */
     @Import(name="managementConfigurationName", required=true)
       private final String managementConfigurationName;
@@ -25,7 +24,6 @@ public final class GetManagementConfigurationArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group to get. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

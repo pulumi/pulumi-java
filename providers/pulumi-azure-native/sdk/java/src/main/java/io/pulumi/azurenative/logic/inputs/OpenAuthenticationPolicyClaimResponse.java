@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Open authentication policy claim.
- * 
  */
 public final class OpenAuthenticationPolicyClaimResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OpenAuthenticationPolicyClaimResponse extends io.pulumi.resou
 
     /**
      * The name of the claim.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class OpenAuthenticationPolicyClaimResponse extends io.pulumi.resou
 
     /**
      * The value of the claim.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

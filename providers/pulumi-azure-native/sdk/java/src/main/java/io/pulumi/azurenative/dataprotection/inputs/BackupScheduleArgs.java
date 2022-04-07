@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Schedule for backup
- * 
  */
 public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ISO 8601 repeating time interval format
-     * 
      */
     @Import(name="repeatingTimeIntervals", required=true)
       private final Output<List<String>> repeatingTimeIntervals;

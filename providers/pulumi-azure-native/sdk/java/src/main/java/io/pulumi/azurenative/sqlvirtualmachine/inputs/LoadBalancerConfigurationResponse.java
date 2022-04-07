@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A load balancer configuration for an availability group listener.
- * 
  */
 public final class LoadBalancerConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
 
     /**
      * Resource id of the load balancer.
-     * 
      */
     @Import(name="loadBalancerResourceId")
       private final @Nullable String loadBalancerResourceId;
@@ -34,7 +32,6 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
 
     /**
      * Private IP address.
-     * 
      */
     @Import(name="privateIpAddress")
       private final @Nullable PrivateIPAddressResponse privateIpAddress;
@@ -45,7 +42,6 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
 
     /**
      * Probe port.
-     * 
      */
     @Import(name="probePort")
       private final @Nullable Integer probePort;
@@ -56,7 +52,6 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
 
     /**
      * Resource id of the public IP.
-     * 
      */
     @Import(name="publicIpAddressResourceId")
       private final @Nullable String publicIpAddressResourceId;
@@ -67,7 +62,6 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
 
     /**
      * List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.
-     * 
      */
     @Import(name="sqlVirtualMachineInstances")
       private final @Nullable List<String> sqlVirtualMachineInstances;

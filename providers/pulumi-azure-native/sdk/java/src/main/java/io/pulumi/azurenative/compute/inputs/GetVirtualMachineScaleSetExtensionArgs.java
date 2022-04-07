@@ -16,7 +16,6 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
 
     /**
      * The expand expression to apply on the operation.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
 
     /**
      * The name of the VM scale set containing the extension.
-     * 
      */
     @Import(name="vmScaleSetName", required=true)
       private final String vmScaleSetName;
@@ -49,7 +46,6 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
 
     /**
      * The name of the VM scale set extension.
-     * 
      */
     @Import(name="vmssExtensionName", required=true)
       private final String vmssExtensionName;

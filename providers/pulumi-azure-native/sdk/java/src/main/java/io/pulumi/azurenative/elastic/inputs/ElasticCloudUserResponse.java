@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of the user's elastic account.
- * 
  */
 public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Elastic cloud default dashboard sso URL of the Elastic user account.
-     * 
      */
     @Import(name="elasticCloudSsoDefaultUrl", required=true)
       private final String elasticCloudSsoDefaultUrl;
@@ -29,7 +27,6 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Email of the Elastic User Account.
-     * 
      */
     @Import(name="emailAddress", required=true)
       private final String emailAddress;
@@ -40,7 +37,6 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * User Id of the elastic account of the User.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

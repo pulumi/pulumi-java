@@ -21,7 +21,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the NetApp account
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -32,7 +31,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Backup policy Name which uniquely identify backup policy.
-     * 
      */
     @Import(name="backupPolicyName")
       private final @Nullable Output<String> backupPolicyName;
@@ -43,7 +41,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Daily backups count to keep
-     * 
      */
     @Import(name="dailyBackupsToKeep")
       private final @Nullable Output<Integer> dailyBackupsToKeep;
@@ -54,7 +51,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The property to decide policy is enabled or not
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -65,7 +61,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -76,7 +71,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Monthly backups count to keep
-     * 
      */
     @Import(name="monthlyBackupsToKeep")
       private final @Nullable Output<Integer> monthlyBackupsToKeep;
@@ -87,7 +81,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -98,7 +91,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -109,7 +101,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of volumes assigned to this policy
-     * 
      */
     @Import(name="volumeBackups")
       private final @Nullable Output<List<VolumeBackupsArgs>> volumeBackups;
@@ -120,7 +111,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Volumes using current backup policy
-     * 
      */
     @Import(name="volumesAssigned")
       private final @Nullable Output<Integer> volumesAssigned;
@@ -131,7 +121,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Weekly backups count to keep
-     * 
      */
     @Import(name="weeklyBackupsToKeep")
       private final @Nullable Output<Integer> weeklyBackupsToKeep;
@@ -142,7 +131,6 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Yearly backups count to keep
-     * 
      */
     @Import(name="yearlyBackupsToKeep")
       private final @Nullable Output<Integer> yearlyBackupsToKeep;

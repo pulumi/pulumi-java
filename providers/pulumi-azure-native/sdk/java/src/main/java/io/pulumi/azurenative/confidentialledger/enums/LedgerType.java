@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of Confidential Ledger
-     * 
      */
     @EnumType
     public enum LedgerType {

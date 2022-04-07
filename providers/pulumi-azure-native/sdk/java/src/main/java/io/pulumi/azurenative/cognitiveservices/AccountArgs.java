@@ -20,7 +20,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of Cognitive Services account.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -31,7 +30,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of Cognitive Services account.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -42,7 +40,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Kind of the resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -53,7 +50,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -64,7 +60,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of Cognitive Services account.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<CognitiveServicesAccountPropertiesArgs> properties;
@@ -75,7 +70,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of Cognitive Services account.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -97,7 +90,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

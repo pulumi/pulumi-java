@@ -21,7 +21,199 @@ import javax.annotation.Nullable;
  * DigitalTwinsInstance endpoint resource.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Put a DigitalTwinsInstance resource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var digitalTwinsEndpoint = new AzureNative.DigitalTwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNative.DigitalTwins.DigitalTwinsEndpointArgs
+ *         {
+ *             EndpointName = "myServiceBus",
+ *             Properties = new AzureNative.DigitalTwins.Inputs.ServiceBusArgs
+ *             {
+ *                 AuthenticationType = "KeyBased",
+ *                 EndpointType = "ServiceBus",
+ *                 PrimaryConnectionString = "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+ *                 SecondaryConnectionString = "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+ *             },
+ *             ResourceGroupName = "resRg",
+ *             ResourceName = "myDigitalTwinsService",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	digitaltwins "github.com/pulumi/pulumi-azure-native/sdk/go/azure/digitaltwins"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
+ * 			EndpointName: pulumi.String("myServiceBus"),
+ * 			Properties: digitaltwins.ServiceBus{
+ * 				AuthenticationType:        "KeyBased",
+ * 				EndpointType:              "ServiceBus",
+ * 				PrimaryConnectionString:   "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+ * 				SecondaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resRg"),
+ * 			ResourceName:      pulumi.String("myDigitalTwinsService"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const digitalTwinsEndpoint = new azure_native.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
+ *     endpointName: "myServiceBus",
+ *     properties: {
+ *         authenticationType: "KeyBased",
+ *         endpointType: "ServiceBus",
+ *         primaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+ *         secondaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+ *     },
+ *     resourceGroupName: "resRg",
+ *     resourceName: "myDigitalTwinsService",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * digital_twins_endpoint = azure_native.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
+ *     endpoint_name="myServiceBus",
+ *     properties=azure_native.digitaltwins.ServiceBusArgs(
+ *         authentication_type="KeyBased",
+ *         endpoint_type="ServiceBus",
+ *         primary_connection_string="Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+ *         secondary_connection_string="Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+ *     ),
+ *     resource_group_name="resRg",
+ *     resource_name="myDigitalTwinsService")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Put a DigitalTwinsInstance resource with identity
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var digitalTwinsEndpoint = new AzureNative.DigitalTwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNative.DigitalTwins.DigitalTwinsEndpointArgs
+ *         {
+ *             EndpointName = "myServiceBus",
+ *             Properties = new AzureNative.DigitalTwins.Inputs.ServiceBusArgs
+ *             {
+ *                 AuthenticationType = "IdentityBased",
+ *                 EndpointType = "ServiceBus",
+ *                 EndpointUri = "sb://mysb.servicebus.windows.net/",
+ *                 EntityPath = "mysbtopic",
+ *             },
+ *             ResourceGroupName = "resRg",
+ *             ResourceName = "myDigitalTwinsService",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	digitaltwins "github.com/pulumi/pulumi-azure-native/sdk/go/azure/digitaltwins"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
+ * 			EndpointName: pulumi.String("myServiceBus"),
+ * 			Properties: digitaltwins.ServiceBus{
+ * 				AuthenticationType: "IdentityBased",
+ * 				EndpointType:       "ServiceBus",
+ * 				EndpointUri:        "sb://mysb.servicebus.windows.net/",
+ * 				EntityPath:         "mysbtopic",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resRg"),
+ * 			ResourceName:      pulumi.String("myDigitalTwinsService"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const digitalTwinsEndpoint = new azure_native.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
+ *     endpointName: "myServiceBus",
+ *     properties: {
+ *         authenticationType: "IdentityBased",
+ *         endpointType: "ServiceBus",
+ *         endpointUri: "sb://mysb.servicebus.windows.net/",
+ *         entityPath: "mysbtopic",
+ *     },
+ *     resourceGroupName: "resRg",
+ *     resourceName: "myDigitalTwinsService",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * digital_twins_endpoint = azure_native.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
+ *     endpoint_name="myServiceBus",
+ *     properties=azure_native.digitaltwins.ServiceBusArgs(
+ *         authentication_type="IdentityBased",
+ *         endpoint_type="ServiceBus",
+ *         endpoint_uri="sb://mysb.servicebus.windows.net/",
+ *         entity_path="mysbtopic",
+ *     ),
+ *     resource_group_name="resRg",
+ *     resource_name="myDigitalTwinsService")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,42 +228,36 @@ import javax.annotation.Nullable;
 public class DigitalTwinsEndpoint extends io.pulumi.resources.CustomResource {
     /**
      * Extension resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Extension resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * DigitalTwinsInstance endpoint resource properties.
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return DigitalTwinsInstance endpoint resource properties.
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

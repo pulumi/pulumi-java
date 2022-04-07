@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Details of the On Premise Sql resource that was assessed
- * 
  */
 public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
 
     /**
      * The Sql database name installed on the machine
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -30,7 +28,6 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
 
     /**
      * The name of the machine
-     * 
      */
     @Import(name="machineName", required=true)
       private final Output<String> machineName;
@@ -41,7 +38,6 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
 
     /**
      * The Sql server name installed on the machine
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -53,7 +49,6 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     /**
      * The platform where the assessed resource resides
      * Expected value is 'OnPremiseSql'.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<String> source;
@@ -64,7 +59,6 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
 
     /**
      * The oms agent Id installed on the machine
-     * 
      */
     @Import(name="sourceComputerId", required=true)
       private final Output<String> sourceComputerId;
@@ -75,7 +69,6 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
 
     /**
      * The unique Id of the machine
-     * 
      */
     @Import(name="vmuuid", required=true)
       private final Output<String> vmuuid;
@@ -86,7 +79,6 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
 
     /**
      * Azure resource Id of the workspace the machine is attached to
-     * 
      */
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;

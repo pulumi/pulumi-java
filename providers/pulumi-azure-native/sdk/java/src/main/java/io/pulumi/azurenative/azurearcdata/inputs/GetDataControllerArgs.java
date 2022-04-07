@@ -21,7 +21,6 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the Azure resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

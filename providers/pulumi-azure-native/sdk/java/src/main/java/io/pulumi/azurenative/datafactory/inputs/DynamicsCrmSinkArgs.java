@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Dynamics CRM sink.
- * 
  */
 public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="alternateKeyName")
       private final @Nullable Output<Object> alternateKeyName;
@@ -34,7 +32,6 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -45,7 +42,6 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="ignoreNullValues")
       private final @Nullable Output<Object> ignoreNullValues;
@@ -56,7 +52,6 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -67,7 +62,6 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
@@ -78,7 +72,6 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
@@ -90,7 +83,6 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * Copy sink type.
      * Expected value is 'DynamicsCrmSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -101,7 +93,6 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
@@ -112,7 +103,6 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
@@ -123,7 +113,6 @@ public final class DynamicsCrmSinkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The write behavior for the operation.
-     * 
      */
     @Import(name="writeBehavior", required=true)
       private final Output<Either<String,DynamicsSinkWriteBehavior>> writeBehavior;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The outbound (egress) routing method.
-     * 
      */
     @EnumType
     public enum OutboundType {

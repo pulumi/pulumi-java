@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specify the write behavior when upserting documents into Azure Search Index.
-     * 
      */
     @EnumType
     public enum AzureSearchIndexWriteBehaviorType {

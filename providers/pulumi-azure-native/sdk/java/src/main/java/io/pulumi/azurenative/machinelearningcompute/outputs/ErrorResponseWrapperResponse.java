@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ErrorResponseWrapperResponse {
     /**
      * The error response.
-     * 
      */
     private final @Nullable ErrorResponseResponse error;
 
@@ -24,7 +23,6 @@ public final class ErrorResponseWrapperResponse {
 
     /**
      * The error response.
-     * 
     */
     public Optional<ErrorResponseResponse> getError() {
         return Optional.ofNullable(this.error);

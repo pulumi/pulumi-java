@@ -16,7 +16,6 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
 
     /**
      * A description of the scope connection.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
 
     /**
      * The management group Id which uniquely identify the Microsoft Azure management group.
-     * 
      */
     @Import(name="managementGroupId", required=true)
       private final Output<String> managementGroupId;
@@ -38,7 +36,6 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
 
     /**
      * Name for the network manager connection.
-     * 
      */
     @Import(name="networkManagerConnectionName")
       private final @Nullable Output<String> networkManagerConnectionName;
@@ -49,7 +46,6 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
 
     /**
      * Network Manager Id.
-     * 
      */
     @Import(name="networkManagerId")
       private final @Nullable Output<String> networkManagerId;

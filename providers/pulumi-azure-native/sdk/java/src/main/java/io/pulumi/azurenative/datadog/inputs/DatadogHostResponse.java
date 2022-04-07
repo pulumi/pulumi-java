@@ -18,7 +18,6 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The aliases for the host.
-     * 
      */
     @Import(name="aliases")
       private final @Nullable List<String> aliases;
@@ -29,7 +28,6 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Datadog integrations reporting metrics for the host.
-     * 
      */
     @Import(name="apps")
       private final @Nullable List<String> apps;
@@ -47,7 +45,6 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the host.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

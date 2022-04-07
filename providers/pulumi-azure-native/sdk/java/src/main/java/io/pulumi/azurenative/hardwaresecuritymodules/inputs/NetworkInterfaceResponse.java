@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The network interface definition.
- * 
  */
 public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -31,7 +29,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Private Ip address of the interface
-     * 
      */
     @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;

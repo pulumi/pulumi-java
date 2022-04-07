@@ -22,7 +22,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The managed identity for the DigitalTwinsInstance.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<DigitalTwinsIdentityArgs> identity;
@@ -33,7 +32,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +49,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Public network access for the DigitalTwinsInstance.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -62,7 +59,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +69,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -84,7 +79,6 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

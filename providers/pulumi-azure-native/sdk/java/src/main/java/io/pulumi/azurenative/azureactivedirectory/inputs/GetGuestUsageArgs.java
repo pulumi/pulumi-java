@@ -14,7 +14,6 @@ public final class GetGuestUsageArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetGuestUsageArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The initial domain name of the AAD tenant.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

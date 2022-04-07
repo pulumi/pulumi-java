@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The HTTP method to use.
-     * 
      */
     @EnumType
     public enum HTTPConfigurationMethod {

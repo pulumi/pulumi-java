@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Container group network profile information.
- * 
  */
 public final class ContainerGroupNetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ContainerGroupNetworkProfileResponse extends io.pulumi.resour
 
     /**
      * The identifier for a network profile.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

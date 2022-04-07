@@ -18,7 +18,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -29,7 +28,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
-     * 
      */
     @Import(name="archiveWindowLength", required=true)
       private final Output<String> archiveWindowLength;
@@ -40,7 +38,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The asset that the live output will write to.
-     * 
      */
     @Import(name="assetName", required=true)
       private final Output<String> assetName;
@@ -51,7 +48,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the live output.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -62,7 +58,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * HTTP Live Streaming (HLS) packing setting for the live output.
-     * 
      */
     @Import(name="hls")
       private final @Nullable Output<HlsArgs> hls;
@@ -73,7 +68,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the live event, maximum length is 32.
-     * 
      */
     @Import(name="liveEventName", required=true)
       private final Output<String> liveEventName;
@@ -84,7 +78,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the live output.
-     * 
      */
     @Import(name="liveOutputName")
       private final @Nullable Output<String> liveOutputName;
@@ -95,7 +88,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The manifest file name. If not provided, the service will generate one automatically.
-     * 
      */
     @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
@@ -106,7 +98,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The initial timestamp that the live output will start at, any content before this value will not be archived.
-     * 
      */
     @Import(name="outputSnapTime")
       private final @Nullable Output<Double> outputSnapTime;
@@ -117,7 +108,6 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

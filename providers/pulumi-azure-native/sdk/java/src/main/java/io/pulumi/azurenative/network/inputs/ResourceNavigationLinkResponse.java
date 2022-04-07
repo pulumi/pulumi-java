@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ResourceNavigationLink resource.
- * 
  */
 public final class ResourceNavigationLinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -31,7 +29,6 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -42,7 +39,6 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
 
     /**
      * Link to the external resource.
-     * 
      */
     @Import(name="link")
       private final @Nullable String link;
@@ -53,7 +49,6 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
 
     /**
      * Resource type of the linked resource.
-     * 
      */
     @Import(name="linkedResourceType")
       private final @Nullable String linkedResourceType;
@@ -64,7 +59,6 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
 
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -75,7 +69,6 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
 
     /**
      * The provisioning state of the resource navigation link resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -86,7 +79,6 @@ public final class ResourceNavigationLinkResponse extends io.pulumi.resources.In
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

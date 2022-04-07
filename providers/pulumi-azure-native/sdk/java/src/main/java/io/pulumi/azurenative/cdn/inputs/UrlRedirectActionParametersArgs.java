@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the parameters for the url redirect action.
- * 
  */
 public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
 
     /**
      * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
-     * 
      */
     @Import(name="customFragment")
       private final @Nullable Output<String> customFragment;
@@ -34,7 +32,6 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
 
     /**
      * Host to redirect. Leave empty to use the incoming host as the destination host.
-     * 
      */
     @Import(name="customHostname")
       private final @Nullable Output<String> customHostname;
@@ -45,7 +42,6 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
 
     /**
      * The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
-     * 
      */
     @Import(name="customPath")
       private final @Nullable Output<String> customPath;
@@ -56,7 +52,6 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
 
     /**
      * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
-     * 
      */
     @Import(name="customQueryString")
       private final @Nullable Output<String> customQueryString;
@@ -67,7 +62,6 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
 
     /**
      * Protocol to use for the redirect. The default value is MatchRequest
-     * 
      */
     @Import(name="destinationProtocol")
       private final @Nullable Output<Either<String,DestinationProtocol>> destinationProtocol;
@@ -85,7 +79,6 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
 
     /**
      * The redirect type the rule will use when redirecting traffic.
-     * 
      */
     @Import(name="redirectType", required=true)
       private final Output<Either<String,RedirectType>> redirectType;

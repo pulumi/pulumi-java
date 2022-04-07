@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes an environment variable for the container.
- * 
  */
 public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the environment variable.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The value of the environment variable.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

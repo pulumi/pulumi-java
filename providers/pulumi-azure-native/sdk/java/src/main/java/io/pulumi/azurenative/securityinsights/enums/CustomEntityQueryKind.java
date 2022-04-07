@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * the entity query kind
-     * 
      */
     @EnumType
     public enum CustomEntityQueryKind {

@@ -14,7 +14,6 @@ public final class ListDomainSharedAccessKeysArgs extends io.pulumi.resources.In
 
     /**
      * Name of the domain.
-     * 
      */
     @Import(name="domainName", required=true)
       private final String domainName;
@@ -25,7 +24,6 @@ public final class ListDomainSharedAccessKeysArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of hybrid runbook worker Legacy.
- * 
  */
 public final class HybridRunbookWorkerLegacyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HybridRunbookWorkerLegacyResponse extends io.pulumi.resources
 
     /**
      * Gets or sets the assigned machine IP address.
-     * 
      */
     @Import(name="ip")
       private final @Nullable String ip;
@@ -31,7 +29,6 @@ public final class HybridRunbookWorkerLegacyResponse extends io.pulumi.resources
 
     /**
      * Last Heartbeat from the Worker
-     * 
      */
     @Import(name="lastSeenDateTime")
       private final @Nullable String lastSeenDateTime;
@@ -42,7 +39,6 @@ public final class HybridRunbookWorkerLegacyResponse extends io.pulumi.resources
 
     /**
      * Gets or sets the worker machine name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -53,7 +49,6 @@ public final class HybridRunbookWorkerLegacyResponse extends io.pulumi.resources
 
     /**
      * Gets or sets the registration time of the worker machine.
-     * 
      */
     @Import(name="registrationTime")
       private final @Nullable String registrationTime;

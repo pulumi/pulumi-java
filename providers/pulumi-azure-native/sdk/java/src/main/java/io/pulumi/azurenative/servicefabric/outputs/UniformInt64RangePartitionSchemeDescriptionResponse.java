@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class UniformInt64RangePartitionSchemeDescriptionResponse {
     /**
      * The number of partitions.
-     * 
      */
     private final Integer count;
     /**
@@ -30,7 +29,6 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
     /**
      * Enumerates the ways that a service can be partitioned.
      * Expected value is 'UniformInt64Range'.
-     * 
      */
     private final String partitionScheme;
 
@@ -48,7 +46,6 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
 
     /**
      * The number of partitions.
-     * 
     */
     public Integer getCount() {
         return this.count;
@@ -72,7 +69,6 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
     /**
      * Enumerates the ways that a service can be partitioned.
      * Expected value is 'UniformInt64Range'.
-     * 
     */
     public String getPartitionScheme() {
         return this.partitionScheme;

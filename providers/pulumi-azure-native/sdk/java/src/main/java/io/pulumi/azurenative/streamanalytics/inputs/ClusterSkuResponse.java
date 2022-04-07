@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.
- * 
  */
 public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -32,7 +30,6 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

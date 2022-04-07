@@ -17,7 +17,6 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
 
     /**
      * Binding selector to use for the AzureIdentityBinding resource.
-     * 
      */
     @Import(name="bindingSelector")
       private final @Nullable Output<String> bindingSelector;
@@ -28,7 +27,6 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
 
     /**
      * Information of the user assigned identity.
-     * 
      */
     @Import(name="identity", required=true)
       private final Output<UserAssignedIdentityArgs> identity;
@@ -39,7 +37,6 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the pod identity.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -50,7 +47,6 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
 
     /**
      * Namespace of the pod identity.
-     * 
      */
     @Import(name="namespace", required=true)
       private final Output<String> namespace;

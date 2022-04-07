@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * SQL Server linked service.
- * 
  */
 public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Sql always encrypted properties.
-     * 
      */
     @Import(name="alwaysEncryptedSettings")
       private final @Nullable Output<SqlAlwaysEncryptedPropertiesArgs> alwaysEncryptedSettings;
@@ -40,7 +38,6 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -51,7 +48,6 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -62,7 +58,6 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString", required=true)
       private final Output<Object> connectionString;
@@ -73,7 +68,6 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -84,7 +78,6 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -95,7 +88,6 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -106,7 +98,6 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The on-premises Windows authentication password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -118,7 +109,6 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
     /**
      * Type of linked service.
      * Expected value is 'SqlServer'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -129,7 +119,6 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<Object> userName;

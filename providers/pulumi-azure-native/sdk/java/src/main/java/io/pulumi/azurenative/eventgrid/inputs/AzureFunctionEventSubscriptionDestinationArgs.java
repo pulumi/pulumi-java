@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the azure function destination for an event subscription.
- * 
  */
 public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
     /**
      * Type of the endpoint for the event subscription destination.
      * Expected value is 'AzureFunction'.
-     * 
      */
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
@@ -33,7 +31,6 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
 
     /**
      * Maximum number of events per batch.
-     * 
      */
     @Import(name="maxEventsPerBatch")
       private final @Nullable Output<Integer> maxEventsPerBatch;
@@ -44,7 +41,6 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
 
     /**
      * Preferred batch size in Kilobytes.
-     * 
      */
     @Import(name="preferredBatchSizeInKilobytes")
       private final @Nullable Output<Integer> preferredBatchSizeInKilobytes;
@@ -55,7 +51,6 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
 
     /**
      * The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;

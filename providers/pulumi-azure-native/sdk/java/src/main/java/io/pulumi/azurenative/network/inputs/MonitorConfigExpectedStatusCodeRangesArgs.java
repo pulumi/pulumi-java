@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Min and max value of a status code range.
- * 
  */
 public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.r
 
     /**
      * Max status code.
-     * 
      */
     @Import(name="max")
       private final @Nullable Output<Integer> max;
@@ -31,7 +29,6 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends io.pulumi.r
 
     /**
      * Min status code.
-     * 
      */
     @Import(name="min")
       private final @Nullable Output<Integer> min;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Defines the RemoteAddress condition for the delivery rule.
- * 
  */
 public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.reso
     /**
      * The name of the condition for the delivery rule.
      * Expected value is 'RemoteAddress'.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class DeliveryRuleRemoteAddressConditionArgs extends io.pulumi.reso
 
     /**
      * Defines the parameters for the condition.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<RemoteAddressMatchConditionParametersArgs> parameters;

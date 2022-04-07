@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of JobOutput errors.
- * 
  */
 public final class JobErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class JobErrorDetailResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Code describing the error detail.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -29,7 +27,6 @@ public final class JobErrorDetailResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A human-readable representation of the error.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;

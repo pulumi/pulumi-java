@@ -23,7 +23,96 @@ import javax.annotation.Nullable;
  * The Private Endpoint Connection resource.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WorkspacePutPrivateEndpointConnection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.MachineLearningServices.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.MachineLearningServices.PrivateEndpointConnectionArgs
+ *         {
+ *             PrivateEndpointConnectionName = "{privateEndpointConnectionName}",
+ *             PrivateLinkServiceConnectionState = new AzureNative.MachineLearningServices.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 Description = "Auto-Approved",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "rg-1234",
+ *             WorkspaceName = "testworkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &machinelearningservices.PrivateEndpointConnectionArgs{
+ * 			PrivateEndpointConnectionName: pulumi.String("{privateEndpointConnectionName}"),
+ * 			PrivateLinkServiceConnectionState: &machinelearningservices.PrivateLinkServiceConnectionStateArgs{
+ * 				Description: pulumi.String("Auto-Approved"),
+ * 				Status:      pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg-1234"),
+ * 			WorkspaceName:     pulumi.String("testworkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.machinelearningservices.PrivateEndpointConnection("privateEndpointConnection", {
+ *     privateEndpointConnectionName: "{privateEndpointConnectionName}",
+ *     privateLinkServiceConnectionState: {
+ *         description: "Auto-Approved",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "rg-1234",
+ *     workspaceName: "testworkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.machinelearningservices.PrivateEndpointConnection("privateEndpointConnection",
+ *     private_endpoint_connection_name="{privateEndpointConnectionName}",
+ *     private_link_service_connection_state=azure_native.machinelearningservices.PrivateLinkServiceConnectionStateArgs(
+ *         description="Auto-Approved",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="rg-1234",
+ *     workspace_name="testworkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,140 +127,120 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * The identity of the resource.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return The identity of the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Specifies the location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Specifies the name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Specifies the name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The resource of private end point.
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the private endpoint connection resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku of the workspace.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The sku of the workspace.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Contains resource tags defined as key/value pairs.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Specifies the type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Specifies the type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

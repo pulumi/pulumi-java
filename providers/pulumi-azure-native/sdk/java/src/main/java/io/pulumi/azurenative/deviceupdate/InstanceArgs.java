@@ -21,7 +21,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -32,7 +31,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Customer-initiated diagnostic log collection storage properties
-     * 
      */
     @Import(name="diagnosticStorageProperties")
       private final @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
@@ -43,7 +41,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enables or Disables the diagnostic logs collection
-     * 
      */
     @Import(name="enableDiagnostics")
       private final @Nullable Output<Boolean> enableDiagnostics;
@@ -54,7 +51,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Instance name.
-     * 
      */
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
@@ -65,7 +61,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of IoT Hubs associated with the account.
-     * 
      */
     @Import(name="iotHubs")
       private final @Nullable Output<List<IotHubSettingsArgs>> iotHubs;
@@ -76,7 +71,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -87,7 +81,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -98,7 +91,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

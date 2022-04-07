@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes automation rule triggering logic
- * 
  */
 public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
 
     /**
      * The conditions to evaluate to determine if the automation rule should be triggered on a given object
-     * 
      */
     @Import(name="conditions")
       private final @Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions;
@@ -37,7 +35,6 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
 
     /**
      * Determines when the automation rule should automatically expire and be disabled.
-     * 
      */
     @Import(name="expirationTimeUtc")
       private final @Nullable Output<String> expirationTimeUtc;
@@ -48,7 +45,6 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
 
     /**
      * Determines whether the automation rule is enabled or disabled.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
@@ -59,7 +55,6 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
 
     /**
      * The type of object the automation rule triggers on
-     * 
      */
     @Import(name="triggersOn", required=true)
       private final Output<Either<String,TriggersOn>> triggersOn;
@@ -70,7 +65,6 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
 
     /**
      * The type of event the automation rule triggers on
-     * 
      */
     @Import(name="triggersWhen", required=true)
       private final Output<Either<String,TriggersWhen>> triggersWhen;

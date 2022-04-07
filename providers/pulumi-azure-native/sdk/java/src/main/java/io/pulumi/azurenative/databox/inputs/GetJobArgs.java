@@ -16,7 +16,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * $expand is supported on details parameter for job, which provides details on the job stages.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     * 
      */
     @Import(name="jobName", required=true)
       private final String jobName;
@@ -38,7 +36,6 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

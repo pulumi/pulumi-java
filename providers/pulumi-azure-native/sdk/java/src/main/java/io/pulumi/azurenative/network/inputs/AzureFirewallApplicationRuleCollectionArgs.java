@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application rule collection resource.
- * 
  */
 public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.
 
     /**
      * The action type of a rule collection.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<AzureFirewallRCActionArgs> action;
@@ -35,7 +33,6 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -46,7 +43,6 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.
 
     /**
      * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -57,7 +53,6 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.
 
     /**
      * Priority of the application rule collection resource.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -68,7 +63,6 @@ public final class AzureFirewallApplicationRuleCollectionArgs extends io.pulumi.
 
     /**
      * Collection of rules used by a application rule collection.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<AzureFirewallApplicationRuleArgs>> rules;

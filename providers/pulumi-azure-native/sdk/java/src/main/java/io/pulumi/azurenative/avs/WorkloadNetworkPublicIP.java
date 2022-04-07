@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * NSX Public IP Block
  * API Version: 2021-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WorkloadNetworks_CreatePublicIP
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workloadNetworkPublicIP = new AzureNative.AVS.WorkloadNetworkPublicIP("workloadNetworkPublicIP", new AzureNative.AVS.WorkloadNetworkPublicIPArgs
+ *         {
+ *             DisplayName = "publicIP1",
+ *             NumberOfPublicIPs = 32,
+ *             PrivateCloudName = "cloud1",
+ *             PublicIPId = "publicIP1",
+ *             ResourceGroupName = "group1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewWorkloadNetworkPublicIP(ctx, "workloadNetworkPublicIP", &avs.WorkloadNetworkPublicIPArgs{
+ * 			DisplayName:       pulumi.String("publicIP1"),
+ * 			NumberOfPublicIPs: pulumi.Float64(32),
+ * 			PrivateCloudName:  pulumi.String("cloud1"),
+ * 			PublicIPId:        pulumi.String("publicIP1"),
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workloadNetworkPublicIP = new azure_native.avs.WorkloadNetworkPublicIP("workloadNetworkPublicIP", {
+ *     displayName: "publicIP1",
+ *     numberOfPublicIPs: 32,
+ *     privateCloudName: "cloud1",
+ *     publicIPId: "publicIP1",
+ *     resourceGroupName: "group1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workload_network_public_ip = azure_native.avs.WorkloadNetworkPublicIP("workloadNetworkPublicIP",
+ *     display_name="publicIP1",
+ *     number_of_public_ips=32,
+ *     private_cloud_name="cloud1",
+ *     public_ip_id="publicIP1",
+ *     resource_group_name="group1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +113,72 @@ import javax.annotation.Nullable;
 public class WorkloadNetworkPublicIP extends io.pulumi.resources.CustomResource {
     /**
      * Display name of the Public IP Block.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Display name of the Public IP Block.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Number of Public IPs requested.
-     * 
      */
     @Export(name="numberOfPublicIPs", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> numberOfPublicIPs;
 
     /**
      * @return Number of Public IPs requested.
-     * 
      */
     public Output</* @Nullable */ Double> getNumberOfPublicIPs() {
         return this.numberOfPublicIPs;
     }
     /**
      * The provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * CIDR Block of the Public IP Block.
-     * 
      */
     @Export(name="publicIPBlock", type=String.class, parameters={})
     private Output<String> publicIPBlock;
 
     /**
      * @return CIDR Block of the Public IP Block.
-     * 
      */
     public Output<String> getPublicIPBlock() {
         return this.publicIPBlock;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

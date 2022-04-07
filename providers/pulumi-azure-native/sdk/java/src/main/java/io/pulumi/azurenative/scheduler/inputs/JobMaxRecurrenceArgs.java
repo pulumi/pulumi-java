@@ -17,7 +17,6 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
-     * 
      */
     @Import(name="frequency")
       private final @Nullable Output<RecurrenceFrequency> frequency;
@@ -28,7 +27,6 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the interval between retries.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;

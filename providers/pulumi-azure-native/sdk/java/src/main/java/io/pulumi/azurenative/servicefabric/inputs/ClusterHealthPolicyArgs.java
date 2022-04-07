@@ -23,7 +23,6 @@ public final class ClusterHealthPolicyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Defines the application health policy map used to evaluate the health of an application or one of its children entities.
-     * 
      */
     @Import(name="applicationHealthPolicies")
       private final @Nullable Output<Map<String,ApplicationHealthPolicyArgs>> applicationHealthPolicies;

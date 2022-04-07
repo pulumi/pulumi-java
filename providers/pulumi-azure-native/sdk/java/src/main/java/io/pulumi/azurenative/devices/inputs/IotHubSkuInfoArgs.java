@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the SKU of the IoT hub.
- * 
  */
 public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Double> capacity;
@@ -34,7 +32,6 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the SKU.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,IotHubSku>> name;

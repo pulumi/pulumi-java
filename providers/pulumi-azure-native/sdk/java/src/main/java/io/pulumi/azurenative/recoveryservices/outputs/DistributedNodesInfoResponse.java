@@ -14,18 +14,15 @@ import javax.annotation.Nullable;
 public final class DistributedNodesInfoResponse {
     /**
      * Error Details if the Status is non-success.
-     * 
      */
     private final @Nullable ErrorDetailResponse errorDetail;
     /**
      * Name of the node under a distributed container.
-     * 
      */
     private final @Nullable String nodeName;
     /**
      * Status of this Node.
      * Failed | Succeeded
-     * 
      */
     private final @Nullable String status;
 
@@ -41,14 +38,12 @@ public final class DistributedNodesInfoResponse {
 
     /**
      * Error Details if the Status is non-success.
-     * 
     */
     public Optional<ErrorDetailResponse> getErrorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
     /**
      * Name of the node under a distributed container.
-     * 
     */
     public Optional<String> getNodeName() {
         return Optional.ofNullable(this.nodeName);
@@ -56,7 +51,6 @@ public final class DistributedNodesInfoResponse {
     /**
      * Status of this Node.
      * Failed | Succeeded
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);

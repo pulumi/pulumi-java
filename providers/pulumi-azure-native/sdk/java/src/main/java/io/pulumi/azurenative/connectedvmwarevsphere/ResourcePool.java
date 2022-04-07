@@ -22,7 +22,104 @@ import javax.annotation.Nullable;
  * Define the resourcePool.
  * API Version: 2020-10-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateResourcePool
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var resourcePool = new AzureNative.ConnectedVMwarevSphere.ResourcePool("resourcePool", new AzureNative.ConnectedVMwarevSphere.ResourcePoolArgs
+ *         {
+ *             ExtendedLocation = new AzureNative.ConnectedVMwarevSphere.Inputs.ExtendedLocationArgs
+ *             {
+ *                 Name = "/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso",
+ *                 Type = "customLocation",
+ *             },
+ *             Location = "East US",
+ *             MoRefId = "aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *             ResourceGroupName = "testrg",
+ *             ResourcePoolName = "HRPool",
+ *             VCenterId = "/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	connectedvmwarevsphere "github.com/pulumi/pulumi-azure-native/sdk/go/azure/connectedvmwarevsphere"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connectedvmwarevsphere.NewResourcePool(ctx, "resourcePool", &connectedvmwarevsphere.ResourcePoolArgs{
+ * 			ExtendedLocation: &connectedvmwarevsphere.ExtendedLocationArgs{
+ * 				Name: pulumi.String("/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso"),
+ * 				Type: pulumi.String("customLocation"),
+ * 			},
+ * 			Location:          pulumi.String("East US"),
+ * 			MoRefId:           pulumi.String("aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"),
+ * 			ResourceGroupName: pulumi.String("testrg"),
+ * 			ResourcePoolName:  pulumi.String("HRPool"),
+ * 			VCenterId:         pulumi.String("/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const resourcePool = new azure_native.connectedvmwarevsphere.ResourcePool("resourcePool", {
+ *     extendedLocation: {
+ *         name: "/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso",
+ *         type: "customLocation",
+ *     },
+ *     location: "East US",
+ *     moRefId: "aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     resourceGroupName: "testrg",
+ *     resourcePoolName: "HRPool",
+ *     vCenterId: "/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * resource_pool = azure_native.connectedvmwarevsphere.ResourcePool("resourcePool",
+ *     extended_location=azure_native.connectedvmwarevsphere.ExtendedLocationArgs(
+ *         name="/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso",
+ *         type="customLocation",
+ *     ),
+ *     location="East US",
+ *     mo_ref_id="aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     resource_group_name="testrg",
+ *     resource_pool_name="HRPool",
+ *     v_center_id="/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,7 +135,6 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets CPULimitMHz which specifies a CPU usage limit in MHz.
      * Utilization will not exceed this limit even if there are available resources.
-     * 
      */
     @Export(name="cpuLimitMHz", type=Double.class, parameters={})
     private Output<Double> cpuLimitMHz;
@@ -46,7 +142,6 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * @return Gets or sets CPULimitMHz which specifies a CPU usage limit in MHz.
      * Utilization will not exceed this limit even if there are available resources.
-     * 
      */
     public Output<Double> getCpuLimitMHz() {
         return this.cpuLimitMHz;
@@ -54,7 +149,6 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets CPUReservationMHz which specifies the CPU size in MHz that is guaranteed
      * to be available.
-     * 
      */
     @Export(name="cpuReservationMHz", type=Double.class, parameters={})
     private Output<Double> cpuReservationMHz;
@@ -62,7 +156,6 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * @return Gets or sets CPUReservationMHz which specifies the CPU size in MHz that is guaranteed
      * to be available.
-     * 
      */
     public Output<Double> getCpuReservationMHz() {
         return this.cpuReservationMHz;
@@ -70,7 +163,6 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets CPUSharesLevel which specifies the CPU allocation level for this pool.
      * This property is used in relative allocation between resource consumers.
-     * 
      */
     @Export(name="cpuSharesLevel", type=String.class, parameters={})
     private Output<String> cpuSharesLevel;
@@ -78,77 +170,66 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * @return Gets or sets CPUSharesLevel which specifies the CPU allocation level for this pool.
      * This property is used in relative allocation between resource consumers.
-     * 
      */
     public Output<String> getCpuSharesLevel() {
         return this.cpuSharesLevel;
     }
     /**
      * Gets the name of the corresponding resource in Kubernetes.
-     * 
      */
     @Export(name="customResourceName", type=String.class, parameters={})
     private Output<String> customResourceName;
 
     /**
      * @return Gets the name of the corresponding resource in Kubernetes.
-     * 
      */
     public Output<String> getCustomResourceName() {
         return this.customResourceName;
     }
     /**
      * Gets or sets the extended location.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return Gets or sets the extended location.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * Gets or sets the inventory Item ID for the resource pool.
-     * 
      */
     @Export(name="inventoryItemId", type=String.class, parameters={})
     private Output</* @Nullable */ String> inventoryItemId;
 
     /**
      * @return Gets or sets the inventory Item ID for the resource pool.
-     * 
      */
     public Output</* @Nullable */ String> getInventoryItemId() {
         return this.inventoryItemId;
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Gets or sets the location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Gets or sets the location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
@@ -156,7 +237,6 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets MemLimitMB specifies a memory usage limit in megabytes.
      * Utilization will not exceed the specified limit even if there are available resources.
-     * 
      */
     @Export(name="memLimitMB", type=Double.class, parameters={})
     private Output<Double> memLimitMB;
@@ -164,7 +244,6 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * @return Gets or sets MemLimitMB specifies a memory usage limit in megabytes.
      * Utilization will not exceed the specified limit even if there are available resources.
-     * 
      */
     public Output<Double> getMemLimitMB() {
         return this.memLimitMB;
@@ -172,7 +251,6 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets MemReservationMB which specifies the guaranteed available memory in
      * megabytes.
-     * 
      */
     @Export(name="memReservationMB", type=Double.class, parameters={})
     private Output<Double> memReservationMB;
@@ -180,7 +258,6 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * @return Gets or sets MemReservationMB which specifies the guaranteed available memory in
      * megabytes.
-     * 
      */
     public Output<Double> getMemReservationMB() {
         return this.memReservationMB;
@@ -188,7 +265,6 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets CPUSharesLevel which specifies the memory allocation level for this pool.
      * This property is used in relative allocation between resource consumers.
-     * 
      */
     @Export(name="memSharesLevel", type=String.class, parameters={})
     private Output<String> memSharesLevel;
@@ -196,147 +272,126 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
     /**
      * @return Gets or sets CPUSharesLevel which specifies the memory allocation level for this pool.
      * This property is used in relative allocation between resource consumers.
-     * 
      */
     public Output<String> getMemSharesLevel() {
         return this.memSharesLevel;
     }
     /**
      * Gets or sets the vCenter Managed Object name for the resource pool.
-     * 
      */
     @Export(name="moName", type=String.class, parameters={})
     private Output<String> moName;
 
     /**
      * @return Gets or sets the vCenter Managed Object name for the resource pool.
-     * 
      */
     public Output<String> getMoName() {
         return this.moName;
     }
     /**
      * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the resource pool.
-     * 
      */
     @Export(name="moRefId", type=String.class, parameters={})
     private Output</* @Nullable */ String> moRefId;
 
     /**
      * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the resource pool.
-     * 
      */
     public Output</* @Nullable */ String> getMoRefId() {
         return this.moRefId;
     }
     /**
      * Gets or sets the name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets or sets the name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets or sets the provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource status information.
-     * 
      */
     @Export(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
     private Output<List<ResourceStatusResponse>> statuses;
 
     /**
      * @return The resource status information.
-     * 
      */
     public Output<List<ResourceStatusResponse>> getStatuses() {
         return this.statuses;
     }
     /**
      * The system data.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system data.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Gets or sets the Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Gets or sets the Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets or sets the type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets or sets the type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets or sets a unique identifier for this resource.
-     * 
      */
     @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
      * @return Gets or sets a unique identifier for this resource.
-     * 
      */
     public Output<String> getUuid() {
         return this.uuid;
     }
     /**
      * Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
-     * 
      */
     @Export(name="vCenterId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vCenterId;
 
     /**
      * @return Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
-     * 
      */
     public Output</* @Nullable */ String> getVCenterId() {
         return this.vCenterId;

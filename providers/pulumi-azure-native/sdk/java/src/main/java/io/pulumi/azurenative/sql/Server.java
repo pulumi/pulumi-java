@@ -21,7 +21,116 @@ import javax.annotation.Nullable;
  * An Azure SQL Database server.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create server
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var server = new AzureNative.Sql.Server("server", new AzureNative.Sql.ServerArgs
+ *         {
+ *             AdministratorLogin = "dummylogin",
+ *             AdministratorLoginPassword = "PLACEHOLDER",
+ *             Administrators = new AzureNative.Sql.Inputs.ServerExternalAdministratorArgs
+ *             {
+ *                 AzureADOnlyAuthentication = true,
+ *                 Login = "bob@contoso.com",
+ *                 PrincipalType = "User",
+ *                 Sid = "00000011-1111-2222-2222-123456789111",
+ *                 TenantId = "00000011-1111-2222-2222-123456789111",
+ *             },
+ *             Location = "Japan East",
+ *             ResourceGroupName = "sqlcrudtest-7398",
+ *             ServerName = "sqlcrudtest-4645",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewServer(ctx, "server", &sql.ServerArgs{
+ * 			AdministratorLogin:         pulumi.String("dummylogin"),
+ * 			AdministratorLoginPassword: pulumi.String("PLACEHOLDER"),
+ * 			Administrators: &sql.ServerExternalAdministratorArgs{
+ * 				AzureADOnlyAuthentication: pulumi.Bool(true),
+ * 				Login:                     pulumi.String("bob@contoso.com"),
+ * 				PrincipalType:             pulumi.String("User"),
+ * 				Sid:                       pulumi.String("00000011-1111-2222-2222-123456789111"),
+ * 				TenantId:                  pulumi.String("00000011-1111-2222-2222-123456789111"),
+ * 			},
+ * 			Location:          pulumi.String("Japan East"),
+ * 			ResourceGroupName: pulumi.String("sqlcrudtest-7398"),
+ * 			ServerName:        pulumi.String("sqlcrudtest-4645"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const server = new azure_native.sql.Server("server", {
+ *     administratorLogin: "dummylogin",
+ *     administratorLoginPassword: "PLACEHOLDER",
+ *     administrators: {
+ *         azureADOnlyAuthentication: true,
+ *         login: "bob@contoso.com",
+ *         principalType: "User",
+ *         sid: "00000011-1111-2222-2222-123456789111",
+ *         tenantId: "00000011-1111-2222-2222-123456789111",
+ *     },
+ *     location: "Japan East",
+ *     resourceGroupName: "sqlcrudtest-7398",
+ *     serverName: "sqlcrudtest-4645",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server = azure_native.sql.Server("server",
+ *     administrator_login="dummylogin",
+ *     administrator_login_password="PLACEHOLDER",
+ *     administrators=azure_native.sql.ServerExternalAdministratorArgs(
+ *         azure_ad_only_authentication=True,
+ *         login="bob@contoso.com",
+ *         principal_type="User",
+ *         sid="00000011-1111-2222-2222-123456789111",
+ *         tenant_id="00000011-1111-2222-2222-123456789111",
+ *     ),
+ *     location="Japan East",
+ *     resource_group_name="sqlcrudtest-7398",
+ *     server_name="sqlcrudtest-4645")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,238 +145,204 @@ import javax.annotation.Nullable;
 public class Server extends io.pulumi.resources.CustomResource {
     /**
      * Administrator username for the server. Once created it cannot be changed.
-     * 
      */
     @Export(name="administratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorLogin;
 
     /**
      * @return Administrator username for the server. Once created it cannot be changed.
-     * 
      */
     public Output</* @Nullable */ String> getAdministratorLogin() {
         return this.administratorLogin;
     }
     /**
      * The Azure Active Directory identity of the server.
-     * 
      */
     @Export(name="administrators", type=ServerExternalAdministratorResponse.class, parameters={})
     private Output</* @Nullable */ ServerExternalAdministratorResponse> administrators;
 
     /**
      * @return The Azure Active Directory identity of the server.
-     * 
      */
     public Output</* @Nullable */ ServerExternalAdministratorResponse> getAdministrators() {
         return this.administrators;
     }
     /**
      * The fully qualified domain name of the server.
-     * 
      */
     @Export(name="fullyQualifiedDomainName", type=String.class, parameters={})
     private Output<String> fullyQualifiedDomainName;
 
     /**
      * @return The fully qualified domain name of the server.
-     * 
      */
     public Output<String> getFullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
     /**
      * The Azure Active Directory identity of the server.
-     * 
      */
     @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
      * @return The Azure Active Directory identity of the server.
-     * 
      */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * A CMK URI of the key to use for encryption.
-     * 
      */
     @Export(name="keyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyId;
 
     /**
      * @return A CMK URI of the key to use for encryption.
-     * 
      */
     public Output</* @Nullable */ String> getKeyId() {
         return this.keyId;
     }
     /**
      * Kind of sql server. This is metadata used for the Azure portal experience.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Kind of sql server. This is metadata used for the Azure portal experience.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
-     * 
      */
     @Export(name="minimalTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimalTlsVersion;
 
     /**
      * @return Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
-     * 
      */
     public Output</* @Nullable */ String> getMinimalTlsVersion() {
         return this.minimalTlsVersion;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource id of a user assigned identity to be used by default.
-     * 
      */
     @Export(name="primaryUserAssignedIdentityId", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryUserAssignedIdentityId;
 
     /**
      * @return The resource id of a user assigned identity to be used by default.
-     * 
      */
     public Output</* @Nullable */ String> getPrimaryUserAssignedIdentityId() {
         return this.primaryUserAssignedIdentityId;
     }
     /**
      * List of private endpoint connections on a server
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={ServerPrivateEndpointConnectionResponse.class})
     private Output<List<ServerPrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return List of private endpoint connections on a server
-     * 
      */
     public Output<List<ServerPrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
      * @return Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * The state of the server.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the server.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The version of the server.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
      * @return The version of the server.
-     * 
      */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;
     }
     /**
      * Whether or not existing server has a workspace created and if it allows connection from workspace
-     * 
      */
     @Export(name="workspaceFeature", type=String.class, parameters={})
     private Output<String> workspaceFeature;
 
     /**
      * @return Whether or not existing server has a workspace created and if it allows connection from workspace
-     * 
      */
     public Output<String> getWorkspaceFeature() {
         return this.workspaceFeature;

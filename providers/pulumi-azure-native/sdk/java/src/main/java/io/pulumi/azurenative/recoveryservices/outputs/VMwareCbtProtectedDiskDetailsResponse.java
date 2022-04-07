@@ -14,52 +14,42 @@ import javax.annotation.Nullable;
 public final class VMwareCbtProtectedDiskDetailsResponse {
     /**
      * The disk capacity in bytes.
-     * 
      */
     private final Double capacityInBytes;
     /**
      * The disk id.
-     * 
      */
     private final String diskId;
     /**
      * The disk name.
-     * 
      */
     private final String diskName;
     /**
      * The disk path.
-     * 
      */
     private final String diskPath;
     /**
      * The disk type.
-     * 
      */
     private final @Nullable String diskType;
     /**
      * A value indicating whether the disk is the OS disk.
-     * 
      */
     private final String isOSDisk;
     /**
      * The log storage account ARM Id.
-     * 
      */
     private final String logStorageAccountId;
     /**
      * The key vault secret name of the log storage account.
-     * 
      */
     private final String logStorageAccountSasSecretName;
     /**
      * The ARM Id of the seed managed disk.
-     * 
      */
     private final String seedManagedDiskId;
     /**
      * The ARM Id of the target managed disk.
-     * 
      */
     private final String targetManagedDiskId;
 
@@ -89,70 +79,60 @@ public final class VMwareCbtProtectedDiskDetailsResponse {
 
     /**
      * The disk capacity in bytes.
-     * 
     */
     public Double getCapacityInBytes() {
         return this.capacityInBytes;
     }
     /**
      * The disk id.
-     * 
     */
     public String getDiskId() {
         return this.diskId;
     }
     /**
      * The disk name.
-     * 
     */
     public String getDiskName() {
         return this.diskName;
     }
     /**
      * The disk path.
-     * 
     */
     public String getDiskPath() {
         return this.diskPath;
     }
     /**
      * The disk type.
-     * 
     */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * A value indicating whether the disk is the OS disk.
-     * 
     */
     public String getIsOSDisk() {
         return this.isOSDisk;
     }
     /**
      * The log storage account ARM Id.
-     * 
     */
     public String getLogStorageAccountId() {
         return this.logStorageAccountId;
     }
     /**
      * The key vault secret name of the log storage account.
-     * 
     */
     public String getLogStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
     }
     /**
      * The ARM Id of the seed managed disk.
-     * 
     */
     public String getSeedManagedDiskId() {
         return this.seedManagedDiskId;
     }
     /**
      * The ARM Id of the target managed disk.
-     * 
     */
     public String getTargetManagedDiskId() {
         return this.targetManagedDiskId;

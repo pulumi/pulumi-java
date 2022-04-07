@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The SKU of the cognitive services account.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sku name
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;

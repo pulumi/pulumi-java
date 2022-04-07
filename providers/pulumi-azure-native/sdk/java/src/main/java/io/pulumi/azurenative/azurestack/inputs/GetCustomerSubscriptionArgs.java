@@ -14,7 +14,6 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
 
     /**
      * Name of the product.
-     * 
      */
     @Import(name="customerSubscriptionName", required=true)
       private final String customerSubscriptionName;
@@ -25,7 +24,6 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
 
     /**
      * Name of the Azure Stack registration.
-     * 
      */
     @Import(name="registrationName", required=true)
       private final String registrationName;
@@ -36,7 +34,6 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;

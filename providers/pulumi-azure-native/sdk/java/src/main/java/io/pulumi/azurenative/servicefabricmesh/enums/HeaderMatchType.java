@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * how to match header value
-     * 
      */
     @EnumType
     public enum HeaderMatchType {

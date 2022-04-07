@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class PolicySettingsResponse {
     /**
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
-     * 
      */
     private final @Nullable String defaultCustomBlockResponseBody;
     /**
      * If the action type is block, this field defines the default customer overridable http response status code.
-     * 
      */
     private final @Nullable Integer defaultCustomBlockResponseStatusCode;
     /**
      * If action type is redirect, this field represents the default redirect URL for the client.
-     * 
      */
     private final @Nullable String defaultRedirectUrl;
     /**
      * describes if the policy is in enabled state or disabled state
-     * 
      */
     private final @Nullable String enabledState;
     /**
      * Describes if it is in detection mode or prevention mode at policy level.
-     * 
      */
     private final @Nullable String mode;
 
@@ -54,35 +49,30 @@ public final class PolicySettingsResponse {
 
     /**
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
-     * 
     */
     public Optional<String> getDefaultCustomBlockResponseBody() {
         return Optional.ofNullable(this.defaultCustomBlockResponseBody);
     }
     /**
      * If the action type is block, this field defines the default customer overridable http response status code.
-     * 
     */
     public Optional<Integer> getDefaultCustomBlockResponseStatusCode() {
         return Optional.ofNullable(this.defaultCustomBlockResponseStatusCode);
     }
     /**
      * If action type is redirect, this field represents the default redirect URL for the client.
-     * 
     */
     public Optional<String> getDefaultRedirectUrl() {
         return Optional.ofNullable(this.defaultRedirectUrl);
     }
     /**
      * describes if the policy is in enabled state or disabled state
-     * 
     */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Describes if it is in detection mode or prevention mode at policy level.
-     * 
     */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the content link.
- * 
  */
 public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the hash.
-     * 
      */
     @Import(name="contentHash")
       private final @Nullable ContentHashResponse contentHash;
@@ -32,7 +30,6 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the uri of the runbook content.
-     * 
      */
     @Import(name="uri")
       private final @Nullable String uri;
@@ -43,7 +40,6 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the version of the content.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

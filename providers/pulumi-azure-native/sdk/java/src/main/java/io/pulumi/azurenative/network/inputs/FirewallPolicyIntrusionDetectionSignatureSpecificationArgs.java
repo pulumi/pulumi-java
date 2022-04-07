@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Intrusion detection signatures specification states.
- * 
  */
 public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
 
     /**
      * Signature id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -33,7 +31,6 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationArgs ex
 
     /**
      * The signature state.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;

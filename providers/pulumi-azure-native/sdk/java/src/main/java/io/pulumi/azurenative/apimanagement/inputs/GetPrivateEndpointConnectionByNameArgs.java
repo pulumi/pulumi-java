@@ -14,7 +14,6 @@ public final class GetPrivateEndpointConnectionByNameArgs extends io.pulumi.reso
 
     /**
      * Name of the private endpoint connection.
-     * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
@@ -25,7 +24,6 @@ public final class GetPrivateEndpointConnectionByNameArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetPrivateEndpointConnectionByNameArgs extends io.pulumi.reso
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

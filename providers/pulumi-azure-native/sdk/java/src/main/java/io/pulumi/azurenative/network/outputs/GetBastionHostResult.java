@@ -16,47 +16,38 @@ import javax.annotation.Nullable;
 public final class GetBastionHostResult {
     /**
      * FQDN for the endpoint on which bastion host is accessible.
-     * 
      */
     private final @Nullable String dnsName;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * IP configuration of the Bastion Host resource.
-     * 
      */
     private final @Nullable List<BastionHostIPConfigurationResponse> ipConfigurations;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The provisioning state of the bastion host resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -84,63 +75,54 @@ public final class GetBastionHostResult {
 
     /**
      * FQDN for the endpoint on which bastion host is accessible.
-     * 
     */
     public Optional<String> getDnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * IP configuration of the Bastion Host resource.
-     * 
     */
     public List<BastionHostIPConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the bastion host resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

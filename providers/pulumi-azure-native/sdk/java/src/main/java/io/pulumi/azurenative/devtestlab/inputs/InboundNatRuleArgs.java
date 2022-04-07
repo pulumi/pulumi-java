@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A rule for NAT - exposing a VM's port (backendPort) on the public IP address using a load balancer.
- * 
  */
 public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port to which the external traffic will be redirected.
-     * 
      */
     @Import(name="backendPort")
       private final @Nullable Output<Integer> backendPort;
@@ -34,7 +32,6 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
-     * 
      */
     @Import(name="frontendPort")
       private final @Nullable Output<Integer> frontendPort;
@@ -45,7 +42,6 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The transport protocol for the endpoint.
-     * 
      */
     @Import(name="transportProtocol")
       private final @Nullable Output<Either<String,TransportProtocol>> transportProtocol;

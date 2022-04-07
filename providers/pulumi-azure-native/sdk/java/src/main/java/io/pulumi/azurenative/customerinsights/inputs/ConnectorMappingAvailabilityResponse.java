@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connector mapping property availability.
- * 
  */
 public final class ConnectorMappingAvailabilityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectorMappingAvailabilityResponse extends io.pulumi.resour
 
     /**
      * The frequency to update.
-     * 
      */
     @Import(name="frequency")
       private final @Nullable String frequency;
@@ -32,7 +30,6 @@ public final class ConnectorMappingAvailabilityResponse extends io.pulumi.resour
 
     /**
      * The interval of the given frequency to use.
-     * 
      */
     @Import(name="interval", required=true)
       private final Integer interval;

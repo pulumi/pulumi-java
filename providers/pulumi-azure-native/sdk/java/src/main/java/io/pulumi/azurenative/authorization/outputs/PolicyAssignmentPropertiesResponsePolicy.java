@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class PolicyAssignmentPropertiesResponsePolicy {
     /**
      * Id of the policy
-     * 
      */
     private final @Nullable String id;
     /**
      * The name of the entity last modified it
-     * 
      */
     private final PrincipalResponse lastModifiedBy;
     /**
      * The last modified date time.
-     * 
      */
     private final @Nullable String lastModifiedDateTime;
 
@@ -40,21 +37,18 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
 
     /**
      * Id of the policy
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the entity last modified it
-     * 
     */
     public PrincipalResponse getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The last modified date time.
-     * 
     */
     public Optional<String> getLastModifiedDateTime() {
         return Optional.ofNullable(this.lastModifiedDateTime);

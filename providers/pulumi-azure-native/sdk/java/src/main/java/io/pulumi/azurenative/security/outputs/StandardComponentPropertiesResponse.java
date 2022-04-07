@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class StandardComponentPropertiesResponse {
     /**
      * Component Key matching componentMetadata
-     * 
      */
     private final @Nullable String key;
 
@@ -24,7 +23,6 @@ public final class StandardComponentPropertiesResponse {
 
     /**
      * Component Key matching componentMetadata
-     * 
     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);

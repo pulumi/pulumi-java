@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB Cassandra table schema
- * 
  */
 public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of cluster key.
-     * 
      */
     @Import(name="clusterKeys")
       private final @Nullable Output<List<ClusterKeyArgs>> clusterKeys;
@@ -34,7 +32,6 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of Cassandra table columns.
-     * 
      */
     @Import(name="columns")
       private final @Nullable Output<List<ColumnArgs>> columns;
@@ -45,7 +42,6 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of partition key.
-     * 
      */
     @Import(name="partitionKeys")
       private final @Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys;

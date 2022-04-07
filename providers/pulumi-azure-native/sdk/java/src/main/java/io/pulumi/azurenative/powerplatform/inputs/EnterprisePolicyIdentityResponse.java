@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The identity of the EnterprisePolicy.
- * 
  */
 public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
 
     /**
      * The principal id of EnterprisePolicy identity.
-     * 
      */
     @Import(name="systemAssignedIdentityPrincipalId", required=true)
       private final String systemAssignedIdentityPrincipalId;
@@ -31,7 +29,6 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
 
     /**
      * The tenant id associated with the EnterprisePolicy.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -42,7 +39,6 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
 
     /**
      * The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

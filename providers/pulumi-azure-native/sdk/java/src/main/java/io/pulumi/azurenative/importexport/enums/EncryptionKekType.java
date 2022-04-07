@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of kek encryption key
-     * 
      */
     @EnumType
     public enum EncryptionKekType {

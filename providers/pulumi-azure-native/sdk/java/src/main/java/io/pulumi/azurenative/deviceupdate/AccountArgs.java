@@ -22,7 +22,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Account name.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -33,7 +32,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity used for the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
@@ -44,7 +42,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -55,7 +52,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of private endpoint connections associated with the account.
-     * 
      */
     @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
@@ -66,7 +62,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not public network access is allowed for the account.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -77,7 +72,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -88,7 +82,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

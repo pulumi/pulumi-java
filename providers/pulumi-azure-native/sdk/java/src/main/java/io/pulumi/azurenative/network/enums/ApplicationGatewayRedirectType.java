@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * HTTP redirection type.
-     * 
      */
     @EnumType
     public enum ApplicationGatewayRedirectType {

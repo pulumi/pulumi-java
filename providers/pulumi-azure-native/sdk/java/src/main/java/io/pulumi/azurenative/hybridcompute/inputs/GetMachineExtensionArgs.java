@@ -14,7 +14,6 @@ public final class GetMachineExtensionArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the machine extension.
-     * 
      */
     @Import(name="extensionName", required=true)
       private final String extensionName;
@@ -25,7 +24,6 @@ public final class GetMachineExtensionArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the machine containing the extension.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetMachineExtensionArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

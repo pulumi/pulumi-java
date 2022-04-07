@@ -17,7 +17,6 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
 
     /**
      * Primary fabric name.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
@@ -28,7 +27,6 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
 
     /**
      * Network mapping name.
-     * 
      */
     @Import(name="networkMappingName")
       private final @Nullable Output<String> networkMappingName;
@@ -39,7 +37,6 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
 
     /**
      * Primary network name.
-     * 
      */
     @Import(name="networkName", required=true)
       private final Output<String> networkName;
@@ -50,7 +47,6 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
 
     /**
      * Input properties for creating network mapping.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties;
@@ -61,7 +57,6 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

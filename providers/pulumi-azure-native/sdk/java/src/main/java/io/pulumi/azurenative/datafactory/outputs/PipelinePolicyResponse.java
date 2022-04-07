@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PipelinePolicyResponse {
     /**
      * Pipeline ElapsedTime Metric Policy.
-     * 
      */
     private final @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
 
@@ -24,7 +23,6 @@ public final class PipelinePolicyResponse {
 
     /**
      * Pipeline ElapsedTime Metric Policy.
-     * 
     */
     public Optional<PipelineElapsedTimeMetricPolicyResponse> getElapsedTimeMetric() {
         return Optional.ofNullable(this.elapsedTimeMetric);

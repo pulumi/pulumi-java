@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties related to EventGrid.
- * 
  */
 public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * EventGrid secondary accesskey. Will be obfuscated during read.
-     * 
      */
     @Import(name="accessKey1", required=true)
       private final String accessKey1;
@@ -31,7 +29,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * EventGrid secondary accesskey. Will be obfuscated during read.
-     * 
      */
     @Import(name="accessKey2")
       private final @Nullable String accessKey2;
@@ -42,7 +39,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the authentication type being used for connecting to the endpoint.
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
@@ -53,7 +49,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Time when the Endpoint was added to DigitalTwinsInstance.
-     * 
      */
     @Import(name="createdTime", required=true)
       private final String createdTime;
@@ -64,7 +59,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
-     * 
      */
     @Import(name="deadLetterSecret")
       private final @Nullable String deadLetterSecret;
@@ -75,7 +69,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dead letter storage URL for identity-based authentication.
-     * 
      */
     @Import(name="deadLetterUri")
       private final @Nullable String deadLetterUri;
@@ -87,7 +80,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The type of Digital Twins endpoint
      * Expected value is 'EventGrid'.
-     * 
      */
     @Import(name="endpointType", required=true)
       private final String endpointType;
@@ -98,7 +90,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -109,7 +100,6 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * EventGrid Topic Endpoint
-     * 
      */
     @Import(name="topicEndpoint", required=true)
       private final String topicEndpoint;

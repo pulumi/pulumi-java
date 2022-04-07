@@ -16,7 +16,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The end IP address of the server firewall rule. Must be IPv4 format.
-     * 
      */
     @Import(name="endIpAddress", required=true)
       private final Output<String> endIpAddress;
@@ -27,7 +26,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server firewall rule.
-     * 
      */
     @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
@@ -38,7 +36,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -60,7 +56,6 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The start IP address of the server firewall rule. Must be IPv4 format.
-     * 
      */
     @Import(name="startIpAddress", required=true)
       private final Output<String> startIpAddress;

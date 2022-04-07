@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The vm resource properties that is currently being monitored by the Elastic monitor resource.
- * 
  */
 public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ARM id of the VM resource.
-     * 
      */
     @Import(name="vmResourceId")
       private final @Nullable String vmResourceId;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * TensorFlow distribution configuration.
- * 
  */
 public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Enum to determine the job distribution type.
      * Expected value is 'TensorFlow'.
-     * 
      */
     @Import(name="distributionType", required=true)
       private final Output<String> distributionType;
@@ -33,7 +31,6 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of parameter server tasks.
-     * 
      */
     @Import(name="parameterServerCount")
       private final @Nullable Output<Integer> parameterServerCount;
@@ -44,7 +41,6 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of workers. Overwrites the node count in compute binding.
-     * 
      */
     @Import(name="workerCount")
       private final @Nullable Output<Integer> workerCount;

@@ -16,7 +16,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Container that has the file path.
-     * 
      */
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
@@ -38,7 +36,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the dataSet.
-     * 
      */
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
@@ -50,7 +47,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
     /**
      * Kind of data set.
      * Expected value is 'BlobFolder'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -61,7 +57,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Prefix for blob folder
-     * 
      */
     @Import(name="prefix", required=true)
       private final Output<String> prefix;
@@ -72,7 +67,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource group of storage account
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
@@ -83,7 +77,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -94,7 +87,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the share to add the data set to.
-     * 
      */
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
@@ -105,7 +97,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Storage account name of the source data set
-     * 
      */
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
@@ -116,7 +107,6 @@ public final class BlobFolderDataSetArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Subscription id of storage account
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;

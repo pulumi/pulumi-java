@@ -18,7 +18,6 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -29,7 +28,6 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
 
     /**
      * Kind of synchronization setting.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,SynchronizationSettingKind>> kind;
@@ -40,7 +38,6 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the share to add the synchronization setting to.
-     * 
      */
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
@@ -62,7 +58,6 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the synchronizationSetting.
-     * 
      */
     @Import(name="synchronizationSettingName")
       private final @Nullable Output<String> synchronizationSettingName;

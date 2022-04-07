@@ -16,7 +16,6 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Expands referenced resources.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the inbound nat rule.
-     * 
      */
     @Import(name="inboundNatRuleName", required=true)
       private final String inboundNatRuleName;
@@ -38,7 +36,6 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the load balancer.
-     * 
      */
     @Import(name="loadBalancerName", required=true)
       private final String loadBalancerName;
@@ -49,7 +46,6 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

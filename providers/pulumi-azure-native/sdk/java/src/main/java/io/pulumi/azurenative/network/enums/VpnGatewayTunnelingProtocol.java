@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * VPN protocol enabled for the VpnServerConfiguration.
-     * 
      */
     @EnumType
     public enum VpnGatewayTunnelingProtocol {

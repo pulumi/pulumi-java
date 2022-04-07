@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The name of the sample schema to apply when creating this database.
-     * 
      */
     @EnumType
     public enum SampleName {

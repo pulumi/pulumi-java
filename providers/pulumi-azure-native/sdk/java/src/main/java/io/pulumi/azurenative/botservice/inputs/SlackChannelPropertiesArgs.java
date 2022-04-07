@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters to provide for the Slack channel.
- * 
  */
 public final class SlackChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The Slack client id
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
@@ -32,7 +30,6 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
@@ -43,7 +40,6 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Whether this channel is enabled for the bot
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
@@ -54,7 +50,6 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The Slack landing page Url
-     * 
      */
     @Import(name="landingPageUrl")
       private final @Nullable Output<String> landingPageUrl;
@@ -65,7 +60,6 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The Slack signing secret.
-     * 
      */
     @Import(name="signingSecret")
       private final @Nullable Output<String> signingSecret;
@@ -76,7 +70,6 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
      */
     @Import(name="verificationToken")
       private final @Nullable Output<String> verificationToken;

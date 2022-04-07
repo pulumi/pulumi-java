@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetLabAccountRegionalAvailabilityResult {
     /**
      * Availability information for different size categories per region
-     * 
      */
     private final @Nullable List<RegionalAvailabilityResponse> regionalAvailability;
 
@@ -24,7 +23,6 @@ public final class GetLabAccountRegionalAvailabilityResult {
 
     /**
      * Availability information for different size categories per region
-     * 
     */
     public List<RegionalAvailabilityResponse> getRegionalAvailability() {
         return this.regionalAvailability == null ? List.of() : this.regionalAvailability;

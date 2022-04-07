@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description about the errors happen while performing migration validation
- * 
  */
 public final class ExecutionStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
 
     /**
      * CPU Time in millisecond(s) for the query execution
-     * 
      */
     @Import(name="cpuTimeMs", required=true)
       private final Double cpuTimeMs;
@@ -36,7 +34,6 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
 
     /**
      * Time taken in millisecond(s) for executing the query
-     * 
      */
     @Import(name="elapsedTimeMs", required=true)
       private final Double elapsedTimeMs;
@@ -47,7 +44,6 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
 
     /**
      * No. of query executions
-     * 
      */
     @Import(name="executionCount", required=true)
       private final Double executionCount;
@@ -58,7 +54,6 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
 
     /**
      * Indicates whether the query resulted in an error
-     * 
      */
     @Import(name="hasErrors", required=true)
       private final Boolean hasErrors;
@@ -69,7 +64,6 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
 
     /**
      * List of sql Errors
-     * 
      */
     @Import(name="sqlErrors", required=true)
       private final List<String> sqlErrors;
@@ -80,7 +74,6 @@ public final class ExecutionStatisticsResponse extends io.pulumi.resources.Invok
 
     /**
      * Dictionary of sql query execution wait types and the respective statistics
-     * 
      */
     @Import(name="waitStats")
       private final @Nullable Map<String,WaitStatisticsResponse> waitStats;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the purpose of the parameter
-     * 
      */
     @EnumType
     public enum ParamIndicator {

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Payload of the blockchain member nodes Sku for a blockchain member.
- * 
  */
 public final class BlockchainMemberNodesSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BlockchainMemberNodesSkuResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the nodes capacity.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;

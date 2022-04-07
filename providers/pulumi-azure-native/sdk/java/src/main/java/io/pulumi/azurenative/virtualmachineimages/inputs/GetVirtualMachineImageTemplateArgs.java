@@ -14,7 +14,6 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
 
     /**
      * The name of the image Template
-     * 
      */
     @Import(name="imageTemplateName", required=true)
       private final String imageTemplateName;
@@ -25,7 +24,6 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

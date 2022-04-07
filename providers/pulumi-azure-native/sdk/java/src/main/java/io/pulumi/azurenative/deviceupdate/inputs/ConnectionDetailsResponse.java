@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Private endpoint connection proxy object properties.
- * 
  */
 public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Group ID.
-     * 
      */
     @Import(name="groupId", required=true)
       private final String groupId;
@@ -29,7 +27,6 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Connection details ID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -40,7 +37,6 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Link ID.
-     * 
      */
     @Import(name="linkIdentifier", required=true)
       private final String linkIdentifier;
@@ -51,7 +47,6 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Member name.
-     * 
      */
     @Import(name="memberName", required=true)
       private final String memberName;
@@ -62,7 +57,6 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Private IP address.
-     * 
      */
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;

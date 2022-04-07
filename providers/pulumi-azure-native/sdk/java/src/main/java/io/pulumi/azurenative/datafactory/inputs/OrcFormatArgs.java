@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The data stored in Optimized Row Columnar (ORC) format.
- * 
  */
 public final class OrcFormatArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class OrcFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Deserializer. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="deserializer")
       private final @Nullable Output<Object> deserializer;
@@ -32,7 +30,6 @@ public final class OrcFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Serializer. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="serializer")
       private final @Nullable Output<Object> serializer;
@@ -44,7 +41,6 @@ public final class OrcFormatArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Type of dataset storage format.
      * Expected value is 'OrcFormat'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Linux operation systems profile.
- * 
  */
 public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Linux OS profile.
-     * 
      */
     @Import(name="linuxOperatingSystemProfile")
       private final @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;

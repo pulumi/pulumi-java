@@ -18,7 +18,75 @@ import javax.annotation.Nullable;
  * Role definition.
  * API Version: 2018-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create role definition
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var roleDefinition = new AzureNative.Authorization.RoleDefinition("roleDefinition", new AzureNative.Authorization.RoleDefinitionArgs
+ *         {
+ *             RoleDefinitionId = "roleDefinitionId",
+ *             Scope = "scope",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewRoleDefinition(ctx, "roleDefinition", &authorization.RoleDefinitionArgs{
+ * 			RoleDefinitionId: pulumi.String("roleDefinitionId"),
+ * 			Scope:            pulumi.String("scope"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const roleDefinition = new azure_native.authorization.RoleDefinition("roleDefinition", {
+ *     roleDefinitionId: "roleDefinitionId",
+ *     scope: "scope",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * role_definition = azure_native.authorization.RoleDefinition("roleDefinition",
+ *     role_definition_id="roleDefinitionId",
+ *     scope="scope")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +101,84 @@ import javax.annotation.Nullable;
 public class RoleDefinition extends io.pulumi.resources.CustomResource {
     /**
      * Role definition assignable scopes.
-     * 
      */
     @Export(name="assignableScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assignableScopes;
 
     /**
      * @return Role definition assignable scopes.
-     * 
      */
     public Output</* @Nullable */ List<String>> getAssignableScopes() {
         return this.assignableScopes;
     }
     /**
      * The role definition description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The role definition description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The role definition name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The role definition name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Role definition permissions.
-     * 
      */
     @Export(name="permissions", type=List.class, parameters={PermissionResponse.class})
     private Output</* @Nullable */ List<PermissionResponse>> permissions;
 
     /**
      * @return Role definition permissions.
-     * 
      */
     public Output</* @Nullable */ List<PermissionResponse>> getPermissions() {
         return this.permissions;
     }
     /**
      * The role name.
-     * 
      */
     @Export(name="roleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleName;
 
     /**
      * @return The role name.
-     * 
      */
     public Output</* @Nullable */ String> getRoleName() {
         return this.roleName;
     }
     /**
      * The role type.
-     * 
      */
     @Export(name="roleType", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleType;
 
     /**
      * @return The role type.
-     * 
      */
     public Output</* @Nullable */ String> getRoleType() {
         return this.roleType;
     }
     /**
      * The role definition type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The role definition type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

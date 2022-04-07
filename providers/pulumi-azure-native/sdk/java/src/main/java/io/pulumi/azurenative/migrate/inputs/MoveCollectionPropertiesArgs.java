@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines the move collection properties.
- * 
  */
 public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Gets or sets the source region.
-     * 
      */
     @Import(name="sourceRegion", required=true)
       private final Output<String> sourceRegion;
@@ -30,7 +28,6 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Gets or sets the target region.
-     * 
      */
     @Import(name="targetRegion", required=true)
       private final Output<String> targetRegion;

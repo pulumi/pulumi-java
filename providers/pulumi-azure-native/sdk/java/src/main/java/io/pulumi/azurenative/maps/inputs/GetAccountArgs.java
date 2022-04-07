@@ -14,7 +14,6 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Maps Account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Azure Resource Group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

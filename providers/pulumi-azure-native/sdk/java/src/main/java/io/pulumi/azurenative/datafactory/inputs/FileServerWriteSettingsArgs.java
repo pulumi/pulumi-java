@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * File server write settings.
- * 
  */
 public final class FileServerWriteSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * The type of copy behavior for copy sink.
-     * 
      */
     @Import(name="copyBehavior")
       private final @Nullable Output<Object> copyBehavior;
@@ -32,7 +30,6 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -43,7 +40,6 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -55,7 +51,6 @@ public final class FileServerWriteSettingsArgs extends io.pulumi.resources.Resou
     /**
      * The write setting type.
      * Expected value is 'FileServerWriteSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

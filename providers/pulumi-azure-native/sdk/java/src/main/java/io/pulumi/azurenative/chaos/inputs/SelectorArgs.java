@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Model that represents a selector in the Experiment resource.
- * 
  */
 public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String of the selector ID.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -33,7 +31,6 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of Target references.
-     * 
      */
     @Import(name="targets", required=true)
       private final Output<List<TargetReferenceArgs>> targets;
@@ -44,7 +41,6 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enum of the selector type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<SelectorType> type;

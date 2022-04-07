@@ -25,7 +25,6 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The multi cloud resource's cloud name.
-     * 
      */
     @Import(name="cloudName")
       private final @Nullable Output<Either<String,CloudName>> cloudName;
@@ -36,7 +35,6 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The multi cloud resource identifier (account id in case of AWS connector).
-     * 
      */
     @Import(name="hierarchyIdentifier")
       private final @Nullable Output<String> hierarchyIdentifier;
@@ -47,7 +45,6 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Kind of the resource
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -58,7 +55,6 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Location where the resource is stored
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -69,7 +65,6 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A collection of offerings for the security connector.
-     * 
      */
     @Import(name="offerings")
       private final @Nullable Output<List<Object>> offerings;
@@ -80,7 +75,6 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The multi cloud account's organizational data
-     * 
      */
     @Import(name="organizationalData")
       private final @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
@@ -91,7 +85,6 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -102,7 +95,6 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The security connector name.
-     * 
      */
     @Import(name="securityConnectorName")
       private final @Nullable Output<String> securityConnectorName;
@@ -113,7 +105,6 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A list of key value pairs that describe the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

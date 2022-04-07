@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * If not specified, the default value is 'enabled'.
-     * 
      */
     @EnumType
     public enum PublicNetworkAccessType {
         /**
          * Enables connectivity to Azure Batch through public DNS.
-         * 
          */
         Enabled("Enabled"),
         /**
          * Disables public connectivity and enables private connectivity to Azure Batch Service through private endpoint resource.
-         * 
          */
         Disabled("Disabled");
 

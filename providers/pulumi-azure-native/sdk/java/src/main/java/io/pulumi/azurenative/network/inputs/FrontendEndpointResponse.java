@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A frontend endpoint used for routing.
- * 
  */
 public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The configuration specifying how to enable HTTPS
-     * 
      */
     @Import(name="customHttpsConfiguration", required=true)
       private final CustomHttpsConfigurationResponse customHttpsConfiguration;
@@ -34,7 +32,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Provisioning status of Custom Https of the frontendEndpoint.
-     * 
      */
     @Import(name="customHttpsProvisioningState", required=true)
       private final String customHttpsProvisioningState;
@@ -45,7 +42,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
-     * 
      */
     @Import(name="customHttpsProvisioningSubstate", required=true)
       private final String customHttpsProvisioningSubstate;
@@ -56,7 +52,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The host name of the frontendEndpoint. Must be a domain name.
-     * 
      */
     @Import(name="hostName")
       private final @Nullable String hostName;
@@ -67,7 +62,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -78,7 +72,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -89,7 +82,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Resource status.
-     * 
      */
     @Import(name="resourceState", required=true)
       private final String resourceState;
@@ -100,7 +92,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="sessionAffinityEnabledState")
       private final @Nullable String sessionAffinityEnabledState;
@@ -111,7 +102,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
-     * 
      */
     @Import(name="sessionAffinityTtlSeconds")
       private final @Nullable Integer sessionAffinityTtlSeconds;
@@ -122,7 +112,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -133,7 +122,6 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Defines the Web Application Firewall policy for each host (if applicable)
-     * 
      */
     @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;

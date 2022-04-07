@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class PolicyAssignmentPropertiesResponse {
     /**
      * Details of the policy
-     * 
      */
     private final @Nullable PolicyAssignmentPropertiesResponsePolicy policy;
     /**
      * Details of role definition
-     * 
      */
     private final @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition;
     /**
      * Details of the resource scope
-     * 
      */
     private final @Nullable PolicyAssignmentPropertiesResponseScope scope;
 
@@ -41,21 +38,18 @@ public final class PolicyAssignmentPropertiesResponse {
 
     /**
      * Details of the policy
-     * 
     */
     public Optional<PolicyAssignmentPropertiesResponsePolicy> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Details of role definition
-     * 
     */
     public Optional<PolicyAssignmentPropertiesResponseRoleDefinition> getRoleDefinition() {
         return Optional.ofNullable(this.roleDefinition);
     }
     /**
      * Details of the resource scope
-     * 
     */
     public Optional<PolicyAssignmentPropertiesResponseScope> getScope() {
         return Optional.ofNullable(this.scope);

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
     /**
      * Playback duration
-     * 
      */
     private final Double playbackDurationSeconds;
     /**
      * Storage duration
-     * 
      */
     private final Double storageDurationSeconds;
 
@@ -30,14 +28,12 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
 
     /**
      * Playback duration
-     * 
     */
     public Double getPlaybackDurationSeconds() {
         return this.playbackDurationSeconds;
     }
     /**
      * Storage duration
-     * 
     */
     public Double getStorageDurationSeconds() {
         return this.storageDurationSeconds;

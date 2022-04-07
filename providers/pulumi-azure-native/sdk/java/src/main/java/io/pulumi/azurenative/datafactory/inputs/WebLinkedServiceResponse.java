@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Web linked service.
- * 
  */
 public final class WebLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class WebLinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class WebLinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -50,7 +47,6 @@ public final class WebLinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -61,7 +57,6 @@ public final class WebLinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -73,7 +68,6 @@ public final class WebLinkedServiceResponse extends io.pulumi.resources.InvokeAr
     /**
      * Type of linked service.
      * Expected value is 'Web'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -84,7 +78,6 @@ public final class WebLinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Web linked service properties.
-     * 
      */
     @Import(name="typeProperties", required=true)
       private final Object typeProperties;

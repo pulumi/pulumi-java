@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Error response of an operation failure
- * 
  */
 public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Error code
-     * 
      */
     @Import(name="code")
       private final @Nullable Output<String> code;
@@ -31,7 +29,6 @@ public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Error message indicating why the operation failed.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;

@@ -21,32 +21,26 @@ public final class LoginResponse {
      * External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
      * This is an advanced setting typically only needed by Windows Store application backends.
      * Note that URLs within the current domain are always implicitly allowed.
-     * 
      */
     private final @Nullable List<String> allowedExternalRedirectUrls;
     /**
      * The configuration settings of the session cookie's expiration.
-     * 
      */
     private final @Nullable CookieExpirationResponse cookieExpiration;
     /**
      * The configuration settings of the nonce used in the login flow.
-     * 
      */
     private final @Nullable NonceResponse nonce;
     /**
      * <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
-     * 
      */
     private final @Nullable Boolean preserveUrlFragmentsForLogins;
     /**
      * The routes that specify the endpoints used for login and logout requests.
-     * 
      */
     private final @Nullable LoginRoutesResponse routes;
     /**
      * The configuration settings of the token store.
-     * 
      */
     private final @Nullable TokenStoreResponse tokenStore;
 
@@ -70,42 +64,36 @@ public final class LoginResponse {
      * External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
      * This is an advanced setting typically only needed by Windows Store application backends.
      * Note that URLs within the current domain are always implicitly allowed.
-     * 
     */
     public List<String> getAllowedExternalRedirectUrls() {
         return this.allowedExternalRedirectUrls == null ? List.of() : this.allowedExternalRedirectUrls;
     }
     /**
      * The configuration settings of the session cookie's expiration.
-     * 
     */
     public Optional<CookieExpirationResponse> getCookieExpiration() {
         return Optional.ofNullable(this.cookieExpiration);
     }
     /**
      * The configuration settings of the nonce used in the login flow.
-     * 
     */
     public Optional<NonceResponse> getNonce() {
         return Optional.ofNullable(this.nonce);
     }
     /**
      * <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
-     * 
     */
     public Optional<Boolean> getPreserveUrlFragmentsForLogins() {
         return Optional.ofNullable(this.preserveUrlFragmentsForLogins);
     }
     /**
      * The routes that specify the endpoints used for login and logout requests.
-     * 
     */
     public Optional<LoginRoutesResponse> getRoutes() {
         return Optional.ofNullable(this.routes);
     }
     /**
      * The configuration settings of the token store.
-     * 
     */
     public Optional<TokenStoreResponse> getTokenStore() {
         return Optional.ofNullable(this.tokenStore);

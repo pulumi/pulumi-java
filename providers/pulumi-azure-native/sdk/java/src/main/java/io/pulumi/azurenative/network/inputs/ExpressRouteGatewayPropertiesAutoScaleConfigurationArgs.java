@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for auto scaling.
- * 
  */
 public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
 
     /**
      * Minimum and maximum number of scale units to deploy.
-     * 
      */
     @Import(name="bounds")
       private final @Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds;

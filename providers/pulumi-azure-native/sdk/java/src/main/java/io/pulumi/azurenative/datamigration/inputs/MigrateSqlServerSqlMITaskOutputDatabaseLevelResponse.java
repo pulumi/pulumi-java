@@ -17,7 +17,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -28,7 +27,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
 
     /**
      * Migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -39,7 +37,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
 
     /**
      * Migration exceptions and warnings
-     * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
@@ -50,7 +47,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -61,7 +57,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
 
     /**
      * Migration progress message
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -73,7 +68,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     /**
      * Result type
      * Expected value is 'DatabaseLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -84,7 +78,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
 
     /**
      * Size of the database in megabytes
-     * 
      */
     @Import(name="sizeMB", required=true)
       private final Double sizeMB;
@@ -95,7 +88,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
 
     /**
      * Current stage of migration
-     * 
      */
     @Import(name="stage", required=true)
       private final String stage;
@@ -106,7 +98,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
 
     /**
      * Migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -117,7 +108,6 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
 
     /**
      * Current state of migration
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

@@ -19,7 +19,6 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Represents shipping and return address for order item
-     * 
      */
     @Import(name="addressDetails", required=true)
       private final Output<AddressDetailsArgs> addressDetails;
@@ -30,7 +29,6 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Id of the order to which order item belongs to
-     * 
      */
     @Import(name="orderId", required=true)
       private final Output<String> orderId;
@@ -52,7 +49,6 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Represents order item details.
-     * 
      */
     @Import(name="orderItemDetails", required=true)
       private final Output<OrderItemDetailsArgs> orderItemDetails;
@@ -63,7 +59,6 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the order item
-     * 
      */
     @Import(name="orderItemName")
       private final @Nullable Output<String> orderItemName;
@@ -74,7 +69,6 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

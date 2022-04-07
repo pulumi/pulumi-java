@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a list of server certificates referenced by common name that are used to secure the cluster.
- * 
  */
 public final class ServerCertificateCommonNamesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ServerCertificateCommonNamesResponse extends io.pulumi.resour
 
     /**
      * The list of server certificates referenced by common name that are used to secure the cluster.
-     * 
      */
     @Import(name="commonNames")
       private final @Nullable List<ServerCertificateCommonNameResponse> commonNames;
@@ -33,7 +31,6 @@ public final class ServerCertificateCommonNamesResponse extends io.pulumi.resour
 
     /**
      * The local certificate store location.
-     * 
      */
     @Import(name="x509StoreName")
       private final @Nullable String x509StoreName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetBuildServiceBuildResultLogResult {
     /**
      * The public download URL of this build result log
-     * 
      */
     private final @Nullable String blobUrl;
 
@@ -24,7 +23,6 @@ public final class GetBuildServiceBuildResultLogResult {
 
     /**
      * The public download URL of this build result log
-     * 
     */
     public Optional<String> getBlobUrl() {
         return Optional.ofNullable(this.blobUrl);

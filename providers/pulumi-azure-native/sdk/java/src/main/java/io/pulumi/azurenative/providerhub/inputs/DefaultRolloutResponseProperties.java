@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the rollout.
- * 
  */
 public final class DefaultRolloutResponseProperties extends io.pulumi.resources.InvokeArgs {
 

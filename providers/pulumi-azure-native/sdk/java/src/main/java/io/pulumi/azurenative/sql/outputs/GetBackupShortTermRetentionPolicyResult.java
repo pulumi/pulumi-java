@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class GetBackupShortTermRetentionPolicyResult {
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
-     * 
      */
     private final @Nullable Integer retentionDays;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -47,28 +43,24 @@ public final class GetBackupShortTermRetentionPolicyResult {
 
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
-     * 
     */
     public Optional<Integer> getRetentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

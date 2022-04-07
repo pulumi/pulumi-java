@@ -20,7 +20,476 @@ import javax.annotation.Nullable;
  * The policy definition.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a policy definition
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var policyDefinition = new AzureNative.Authorization.PolicyDefinition("policyDefinition", new AzureNative.Authorization.PolicyDefinitionArgs
+ *         {
+ *             Description = "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
+ *             DisplayName = "Enforce resource naming convention",
+ *             Metadata = 
+ *             {
+ *                 { "category", "Naming" },
+ *             },
+ *             Mode = "All",
+ *             Parameters = 
+ *             {
+ *                 { "prefix", new AzureNative.Authorization.Inputs.ParameterDefinitionsValueArgs
+ *                 {
+ *                     Metadata = new AzureNative.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
+ *                     {
+ *                         Description = "Resource name prefix",
+ *                         DisplayName = "Prefix",
+ *                     },
+ *                     Type = "String",
+ *                 } },
+ *                 { "suffix", new AzureNative.Authorization.Inputs.ParameterDefinitionsValueArgs
+ *                 {
+ *                     Metadata = new AzureNative.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
+ *                     {
+ *                         Description = "Resource name suffix",
+ *                         DisplayName = "Suffix",
+ *                     },
+ *                     Type = "String",
+ *                 } },
+ *             },
+ *             PolicyDefinitionName = "ResourceNaming",
+ *             PolicyRule = 
+ *             {
+ *                 { "if", 
+ *                 {
+ *                     { "not", 
+ *                     {
+ *                         { "field", "name" },
+ *                         { "like", "[concat(parameters('prefix'), '*', parameters('suffix'))]" },
+ *                     } },
+ *                 } },
+ *                 { "then", 
+ *                 {
+ *                     { "effect", "deny" },
+ *                 } },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewPolicyDefinition(ctx, "policyDefinition", &authorization.PolicyDefinitionArgs{
+ * 			Description: pulumi.String("Force resource names to begin with given 'prefix' and/or end with given 'suffix'"),
+ * 			DisplayName: pulumi.String("Enforce resource naming convention"),
+ * 			Metadata: pulumi.Any{
+ * 				Category: "Naming",
+ * 			},
+ * 			Mode: pulumi.String("All"),
+ * 			Parameters: authorization.ParameterDefinitionsValueMap{
+ * 				"prefix": &authorization.ParameterDefinitionsValueArgs{
+ * 					Metadata: &authorization.ParameterDefinitionsValueMetadataArgs{
+ * 						Description: pulumi.String("Resource name prefix"),
+ * 						DisplayName: pulumi.String("Prefix"),
+ * 					},
+ * 					Type: pulumi.String("String"),
+ * 				},
+ * 				"suffix": &authorization.ParameterDefinitionsValueArgs{
+ * 					Metadata: &authorization.ParameterDefinitionsValueMetadataArgs{
+ * 						Description: pulumi.String("Resource name suffix"),
+ * 						DisplayName: pulumi.String("Suffix"),
+ * 					},
+ * 					Type: pulumi.String("String"),
+ * 				},
+ * 			},
+ * 			PolicyDefinitionName: pulumi.String("ResourceNaming"),
+ * 			PolicyRule: pulumi.Any{
+ * 				If: map[string]interface{}{
+ * 					"not": map[string]interface{}{
+ * 						"field": "name",
+ * 						"like":  "[concat(parameters('prefix'), '*', parameters('suffix'))]",
+ * 					},
+ * 				},
+ * 				Then: map[string]interface{}{
+ * 					"effect": "deny",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const policyDefinition = new azure_native.authorization.PolicyDefinition("policyDefinition", {
+ *     description: "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
+ *     displayName: "Enforce resource naming convention",
+ *     metadata: {
+ *         category: "Naming",
+ *     },
+ *     mode: "All",
+ *     parameters: {
+ *         prefix: {
+ *             metadata: {
+ *                 description: "Resource name prefix",
+ *                 displayName: "Prefix",
+ *             },
+ *             type: "String",
+ *         },
+ *         suffix: {
+ *             metadata: {
+ *                 description: "Resource name suffix",
+ *                 displayName: "Suffix",
+ *             },
+ *             type: "String",
+ *         },
+ *     },
+ *     policyDefinitionName: "ResourceNaming",
+ *     policyRule: {
+ *         "if": {
+ *             not: {
+ *                 field: "name",
+ *                 like: "[concat(parameters('prefix'), '*', parameters('suffix'))]",
+ *             },
+ *         },
+ *         then: {
+ *             effect: "deny",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * policy_definition = azure_native.authorization.PolicyDefinition("policyDefinition",
+ *     description="Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
+ *     display_name="Enforce resource naming convention",
+ *     metadata={
+ *         "category": "Naming",
+ *     },
+ *     mode="All",
+ *     parameters={
+ *         "prefix": azure_native.authorization.ParameterDefinitionsValueArgs(
+ *             metadata=azure_native.authorization.ParameterDefinitionsValueMetadataArgs(
+ *                 description="Resource name prefix",
+ *                 display_name="Prefix",
+ *             ),
+ *             type="String",
+ *         ),
+ *         "suffix": azure_native.authorization.ParameterDefinitionsValueArgs(
+ *             metadata=azure_native.authorization.ParameterDefinitionsValueMetadataArgs(
+ *                 description="Resource name suffix",
+ *                 display_name="Suffix",
+ *             ),
+ *             type="String",
+ *         ),
+ *     },
+ *     policy_definition_name="ResourceNaming",
+ *     policy_rule={
+ *         "if": {
+ *             "not": {
+ *                 "field": "name",
+ *                 "like": "[concat(parameters('prefix'), '*', parameters('suffix'))]",
+ *             },
+ *         },
+ *         "then": {
+ *             "effect": "deny",
+ *         },
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create or update a policy definition with advanced parameters
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var policyDefinition = new AzureNative.Authorization.PolicyDefinition("policyDefinition", new AzureNative.Authorization.PolicyDefinitionArgs
+ *         {
+ *             Description = "Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised",
+ *             DisplayName = "Event Hubs should have diagnostic logging enabled",
+ *             Metadata = 
+ *             {
+ *                 { "category", "Event Hub" },
+ *             },
+ *             Mode = "Indexed",
+ *             Parameters = 
+ *             {
+ *                 { "requiredRetentionDays", new AzureNative.Authorization.Inputs.ParameterDefinitionsValueArgs
+ *                 {
+ *                     AllowedValues = 
+ *                     {
+ *                         0,
+ *                         30,
+ *                         90,
+ *                         180,
+ *                         365,
+ *                     },
+ *                     DefaultValue = 365,
+ *                     Metadata = new AzureNative.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
+ *                     {
+ *                         Description = "The required diagnostic logs retention in days",
+ *                         DisplayName = "Required retention (days)",
+ *                     },
+ *                     Type = "Integer",
+ *                 } },
+ *             },
+ *             PolicyDefinitionName = "EventHubDiagnosticLogs",
+ *             PolicyRule = 
+ *             {
+ *                 { "if", 
+ *                 {
+ *                     { "equals", "Microsoft.EventHub/namespaces" },
+ *                     { "field", "type" },
+ *                 } },
+ *                 { "then", 
+ *                 {
+ *                     { "details", 
+ *                     {
+ *                         { "existenceCondition", 
+ *                         {
+ *                             { "allOf", 
+ *                             {
+ *                                 
+ *                                 {
+ *                                     { "equals", "true" },
+ *                                     { "field", "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled" },
+ *                                 },
+ *                                 
+ *                                 {
+ *                                     { "equals", "[parameters('requiredRetentionDays')]" },
+ *                                     { "field", "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.days" },
+ *                                 },
+ *                             } },
+ *                         } },
+ *                         { "type", "Microsoft.Insights/diagnosticSettings" },
+ *                     } },
+ *                     { "effect", "AuditIfNotExists" },
+ *                 } },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewPolicyDefinition(ctx, "policyDefinition", &authorization.PolicyDefinitionArgs{
+ * 			Description: pulumi.String("Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised"),
+ * 			DisplayName: pulumi.String("Event Hubs should have diagnostic logging enabled"),
+ * 			Metadata: pulumi.Any{
+ * 				Category: "Event Hub",
+ * 			},
+ * 			Mode: pulumi.String("Indexed"),
+ * 			Parameters: authorization.ParameterDefinitionsValueMap{
+ * 				"requiredRetentionDays": &authorization.ParameterDefinitionsValueArgs{
+ * 					AllowedValues: pulumi.AnyArray{
+ * 						pulumi.Any(0),
+ * 						pulumi.Any(30),
+ * 						pulumi.Any(90),
+ * 						pulumi.Any(180),
+ * 						pulumi.Any(365),
+ * 					},
+ * 					DefaultValue: pulumi.Any(365),
+ * 					Metadata: &authorization.ParameterDefinitionsValueMetadataArgs{
+ * 						Description: pulumi.String("The required diagnostic logs retention in days"),
+ * 						DisplayName: pulumi.String("Required retention (days)"),
+ * 					},
+ * 					Type: pulumi.String("Integer"),
+ * 				},
+ * 			},
+ * 			PolicyDefinitionName: pulumi.String("EventHubDiagnosticLogs"),
+ * 			PolicyRule: pulumi.Any{
+ * 				If: map[string]interface{}{
+ * 					"equals": "Microsoft.EventHub/namespaces",
+ * 					"field":  "type",
+ * 				},
+ * 				Then: map[string]interface{}{
+ * 					"details": map[string]interface{}{
+ * 						"existenceCondition": map[string]interface{}{
+ * 							"allOf": []map[string]interface{}{
+ * 								map[string]interface{}{
+ * 									"equals": "true",
+ * 									"field":  "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled",
+ * 								},
+ * 								map[string]interface{}{
+ * 									"equals": "[parameters('requiredRetentionDays')]",
+ * 									"field":  "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.days",
+ * 								},
+ * 							},
+ * 						},
+ * 						"type": "Microsoft.Insights/diagnosticSettings",
+ * 					},
+ * 					"effect": "AuditIfNotExists",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const policyDefinition = new azure_native.authorization.PolicyDefinition("policyDefinition", {
+ *     description: "Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised",
+ *     displayName: "Event Hubs should have diagnostic logging enabled",
+ *     metadata: {
+ *         category: "Event Hub",
+ *     },
+ *     mode: "Indexed",
+ *     parameters: {
+ *         requiredRetentionDays: {
+ *             allowedValues: [
+ *                 0,
+ *                 30,
+ *                 90,
+ *                 180,
+ *                 365,
+ *             ],
+ *             defaultValue: 365,
+ *             metadata: {
+ *                 description: "The required diagnostic logs retention in days",
+ *                 displayName: "Required retention (days)",
+ *             },
+ *             type: "Integer",
+ *         },
+ *     },
+ *     policyDefinitionName: "EventHubDiagnosticLogs",
+ *     policyRule: {
+ *         "if": {
+ *             equals: "Microsoft.EventHub/namespaces",
+ *             field: "type",
+ *         },
+ *         then: {
+ *             details: {
+ *                 existenceCondition: {
+ *                     allOf: [
+ *                         {
+ *                             equals: "true",
+ *                             field: "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled",
+ *                         },
+ *                         {
+ *                             equals: "[parameters('requiredRetentionDays')]",
+ *                             field: "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.days",
+ *                         },
+ *                     ],
+ *                 },
+ *                 type: "Microsoft.Insights/diagnosticSettings",
+ *             },
+ *             effect: "AuditIfNotExists",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * policy_definition = azure_native.authorization.PolicyDefinition("policyDefinition",
+ *     description="Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised",
+ *     display_name="Event Hubs should have diagnostic logging enabled",
+ *     metadata={
+ *         "category": "Event Hub",
+ *     },
+ *     mode="Indexed",
+ *     parameters={
+ *         "requiredRetentionDays": azure_native.authorization.ParameterDefinitionsValueArgs(
+ *             allowed_values=[
+ *                 0,
+ *                 30,
+ *                 90,
+ *                 180,
+ *                 365,
+ *             ],
+ *             default_value=365,
+ *             metadata=azure_native.authorization.ParameterDefinitionsValueMetadataArgs(
+ *                 description="The required diagnostic logs retention in days",
+ *                 display_name="Required retention (days)",
+ *             ),
+ *             type="Integer",
+ *         ),
+ *     },
+ *     policy_definition_name="EventHubDiagnosticLogs",
+ *     policy_rule={
+ *         "if": {
+ *             "equals": "Microsoft.EventHub/namespaces",
+ *             "field": "type",
+ *         },
+ *         "then": {
+ *             "details": {
+ *                 "existenceCondition": {
+ *                     "allOf": [
+ *                         {
+ *                             "equals": "true",
+ *                             "field": "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled",
+ *                         },
+ *                         {
+ *                             "equals": "[parameters('requiredRetentionDays')]",
+ *                             "field": "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.days",
+ *                         },
+ *                     ],
+ *                 },
+ *                 "type": "Microsoft.Insights/diagnosticSettings",
+ *             },
+ *             "effect": "AuditIfNotExists",
+ *         },
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +504,108 @@ import javax.annotation.Nullable;
 public class PolicyDefinition extends io.pulumi.resources.CustomResource {
     /**
      * The policy definition description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The policy definition description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The display name of the policy definition.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The display name of the policy definition.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
      */
     @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
      * @return The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
      */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
     /**
      * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
-     * 
      */
     @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
      * @return The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
-     * 
      */
     public Output</* @Nullable */ String> getMode() {
         return this.mode;
     }
     /**
      * The name of the policy definition.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the policy definition.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
-     * 
      */
     @Export(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionsValueResponse.class})
     private Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> parameters;
 
     /**
      * @return The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
-     * 
      */
     public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> getParameters() {
         return this.parameters;
     }
     /**
      * The policy rule.
-     * 
      */
     @Export(name="policyRule", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> policyRule;
 
     /**
      * @return The policy rule.
-     * 
      */
     public Output</* @Nullable */ Object> getPolicyRule() {
         return this.policyRule;
     }
     /**
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
-     * 
      */
     @Export(name="policyType", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyType;
 
     /**
      * @return The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
-     * 
      */
     public Output</* @Nullable */ String> getPolicyType() {
         return this.policyType;
     }
     /**
      * The type of the resource (Microsoft.Authorization/policyDefinitions).
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource (Microsoft.Authorization/policyDefinitions).
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties specific to the monitor resource.
- * 
  */
 public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Datadog organization properties
-     * 
      */
     @Import(name="datadogOrganizationProperties")
       private final @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties;
@@ -41,7 +39,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The priority of the resource.
-     * 
      */
     @Import(name="liftrResourcePreference", required=true)
       private final Integer liftrResourcePreference;
@@ -52,7 +49,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
-     * 
      */
     @Import(name="marketplaceSubscriptionStatus", required=true)
       private final String marketplaceSubscriptionStatus;
@@ -63,7 +59,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Flag specifying if the resource monitoring is enabled or disabled.
-     * 
      */
     @Import(name="monitoringStatus")
       private final @Nullable String monitoringStatus;
@@ -81,7 +76,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * User info
-     * 
      */
     @Import(name="userInfo")
       private final @Nullable UserInfoResponse userInfo;

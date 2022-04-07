@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The KPI participant profile metadata.
- * 
  */
 public final class KpiParticipantProfilesMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KpiParticipantProfilesMetadataResponse extends io.pulumi.reso
 
     /**
      * Name of the type.
-     * 
      */
     @Import(name="typeName", required=true)
       private final String typeName;

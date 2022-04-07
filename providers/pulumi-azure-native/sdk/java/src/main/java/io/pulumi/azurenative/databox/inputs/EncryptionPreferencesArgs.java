@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Preferences related to the Encryption.
- * 
  */
 public final class EncryptionPreferencesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Defines secondary layer of software-based encryption enablement.
-     * 
      */
     @Import(name="doubleEncryption")
       private final @Nullable Output<Either<String,DoubleEncryption>> doubleEncryption;

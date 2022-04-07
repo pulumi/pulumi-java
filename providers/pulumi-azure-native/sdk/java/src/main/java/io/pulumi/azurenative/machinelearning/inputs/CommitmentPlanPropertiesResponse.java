@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Properties of an Azure ML commitment plan.
- * 
  */
 public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Indicates whether usage beyond the commitment plan's included quantities will be charged.
-     * 
      */
     @Import(name="chargeForOverage", required=true)
       private final Boolean chargeForOverage;
@@ -33,7 +31,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Indicates whether the commitment plan will incur a charge.
-     * 
      */
     @Import(name="chargeForPlan", required=true)
       private final Boolean chargeForPlan;
@@ -44,7 +41,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The date at which this commitment plan was created, in ISO 8601 format.
-     * 
      */
     @Import(name="creationDate", required=true)
       private final String creationDate;
@@ -55,7 +51,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The included resource quantities this plan gives you.
-     * 
      */
     @Import(name="includedQuantities", required=true)
       private final Map<String,PlanQuantityResponse> includedQuantities;
@@ -66,7 +61,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The maximum number of commitment associations that can be children of this commitment plan.
-     * 
      */
     @Import(name="maxAssociationLimit", required=true)
       private final Integer maxAssociationLimit;
@@ -77,7 +71,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The maximum scale-out capacity for this commitment plan.
-     * 
      */
     @Import(name="maxCapacityLimit", required=true)
       private final Integer maxCapacityLimit;
@@ -88,7 +81,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The minimum scale-out capacity for this commitment plan.
-     * 
      */
     @Import(name="minCapacityLimit", required=true)
       private final Integer minCapacityLimit;
@@ -99,7 +91,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The Azure meter which will be used to charge for this commitment plan.
-     * 
      */
     @Import(name="planMeter", required=true)
       private final String planMeter;
@@ -110,7 +101,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The frequency at which this commitment plan's included quantities are refilled.
-     * 
      */
     @Import(name="refillFrequencyInDays", required=true)
       private final Integer refillFrequencyInDays;
@@ -121,7 +111,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.
-     * 
      */
     @Import(name="suspendPlanOnOverage", required=true)
       private final Boolean suspendPlanOnOverage;

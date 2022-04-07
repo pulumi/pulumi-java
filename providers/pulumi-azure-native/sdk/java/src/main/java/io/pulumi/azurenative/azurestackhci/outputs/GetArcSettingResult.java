@@ -15,67 +15,54 @@ import javax.annotation.Nullable;
 public final class GetArcSettingResult {
     /**
      * Aggregate state of Arc agent across the nodes in this HCI cluster.
-     * 
      */
     private final String aggregateState;
     /**
      * The resource group that hosts the Arc agents, ie. Hybrid Compute Machine resources.
-     * 
      */
     private final String arcInstanceResourceGroup;
     /**
      * The timestamp of resource creation (UTC).
-     * 
      */
     private final @Nullable String createdAt;
     /**
      * The identity that created the resource.
-     * 
      */
     private final @Nullable String createdBy;
     /**
      * The type of identity that created the resource.
-     * 
      */
     private final @Nullable String createdByType;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     private final @Nullable String lastModifiedAt;
     /**
      * The identity that last modified the resource.
-     * 
      */
     private final @Nullable String lastModifiedBy;
     /**
      * The type of identity that last modified the resource.
-     * 
      */
     private final @Nullable String lastModifiedByType;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * State of Arc agent in each of the nodes.
-     * 
      */
     private final List<PerNodeStateResponse> perNodeDetails;
     /**
      * Provisioning state of the ArcSetting proxy resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -111,91 +98,78 @@ public final class GetArcSettingResult {
 
     /**
      * Aggregate state of Arc agent across the nodes in this HCI cluster.
-     * 
     */
     public String getAggregateState() {
         return this.aggregateState;
     }
     /**
      * The resource group that hosts the Arc agents, ie. Hybrid Compute Machine resources.
-     * 
     */
     public String getArcInstanceResourceGroup() {
         return this.arcInstanceResourceGroup;
     }
     /**
      * The timestamp of resource creation (UTC).
-     * 
     */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The identity that created the resource.
-     * 
     */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The type of identity that created the resource.
-     * 
     */
     public Optional<String> getCreatedByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The timestamp of resource last modification (UTC)
-     * 
     */
     public Optional<String> getLastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
      * The identity that last modified the resource.
-     * 
     */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource.
-     * 
     */
     public Optional<String> getLastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * State of Arc agent in each of the nodes.
-     * 
     */
     public List<PerNodeStateResponse> getPerNodeDetails() {
         return this.perNodeDetails;
     }
     /**
      * Provisioning state of the ArcSetting proxy resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

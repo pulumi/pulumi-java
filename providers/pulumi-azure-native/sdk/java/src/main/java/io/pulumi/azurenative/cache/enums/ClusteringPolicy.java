@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Clustering policy - default is OSSCluster. Specified at create time.
-     * 
      */
     @EnumType
     public enum ClusteringPolicy {

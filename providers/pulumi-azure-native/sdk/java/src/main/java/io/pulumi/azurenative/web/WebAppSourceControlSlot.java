@@ -31,140 +31,120 @@ import javax.annotation.Nullable;
 public class WebAppSourceControlSlot extends io.pulumi.resources.CustomResource {
     /**
      * Name of branch to use for deployment.
-     * 
      */
     @Export(name="branch", type=String.class, parameters={})
     private Output</* @Nullable */ String> branch;
 
     /**
      * @return Name of branch to use for deployment.
-     * 
      */
     public Output</* @Nullable */ String> getBranch() {
         return this.branch;
     }
     /**
      * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
-     * 
      */
     @Export(name="deploymentRollbackEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deploymentRollbackEnabled;
 
     /**
      * @return <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
-     * 
      */
     public Output</* @Nullable */ Boolean> getDeploymentRollbackEnabled() {
         return this.deploymentRollbackEnabled;
     }
     /**
      * If GitHub Action is selected, than the associated configuration.
-     * 
      */
     @Export(name="gitHubActionConfiguration", type=GitHubActionConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ GitHubActionConfigurationResponse> gitHubActionConfiguration;
 
     /**
      * @return If GitHub Action is selected, than the associated configuration.
-     * 
      */
     public Output</* @Nullable */ GitHubActionConfigurationResponse> getGitHubActionConfiguration() {
         return this.gitHubActionConfiguration;
     }
     /**
      * <code>true</code> if this is deployed via GitHub action.
-     * 
      */
     @Export(name="isGitHubAction", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isGitHubAction;
 
     /**
      * @return <code>true</code> if this is deployed via GitHub action.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsGitHubAction() {
         return this.isGitHubAction;
     }
     /**
      * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
-     * 
      */
     @Export(name="isManualIntegration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isManualIntegration;
 
     /**
      * @return <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsManualIntegration() {
         return this.isManualIntegration;
     }
     /**
      * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
-     * 
      */
     @Export(name="isMercurial", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isMercurial;
 
     /**
      * @return <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsMercurial() {
         return this.isMercurial;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Repository or source control URL.
-     * 
      */
     @Export(name="repoUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> repoUrl;
 
     /**
      * @return Repository or source control URL.
-     * 
      */
     public Output</* @Nullable */ String> getRepoUrl() {
         return this.repoUrl;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

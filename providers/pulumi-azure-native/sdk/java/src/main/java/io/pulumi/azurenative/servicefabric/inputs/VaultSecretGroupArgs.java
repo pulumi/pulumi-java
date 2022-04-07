@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Specifies set of certificates that should be installed onto the virtual machines.
- * 
  */
 public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
-     * 
      */
     @Import(name="sourceVault", required=true)
       private final Output<SubResourceArgs> sourceVault;
@@ -32,7 +30,6 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The list of key vault references in SourceVault which contain certificates.
-     * 
      */
     @Import(name="vaultCertificates", required=true)
       private final Output<List<VaultCertificateArgs>> vaultCertificates;

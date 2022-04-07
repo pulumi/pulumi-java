@@ -16,7 +16,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The identity ID.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -27,7 +26,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The tenant ID of resource.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -38,7 +36,6 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Identity type
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The instance view of a virtual machine boot diagnostics.
- * 
  */
 public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
 
     /**
      * The console screenshot blob URI. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
-     * 
      */
     @Import(name="consoleScreenshotBlobUri", required=true)
       private final String consoleScreenshotBlobUri;
@@ -30,7 +28,6 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
 
     /**
      * The serial console log blob Uri. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
-     * 
      */
     @Import(name="serialConsoleLogBlobUri", required=true)
       private final String serialConsoleLogBlobUri;
@@ -41,7 +38,6 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
 
     /**
      * The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
-     * 
      */
     @Import(name="status", required=true)
       private final InstanceViewStatusResponse status;

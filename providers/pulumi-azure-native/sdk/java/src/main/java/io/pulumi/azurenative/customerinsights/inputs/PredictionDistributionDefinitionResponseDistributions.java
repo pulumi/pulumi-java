@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of a prediction distribution.
- * 
  */
 public final class PredictionDistributionDefinitionResponseDistributions extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
 
     /**
      * Number of negatives.
-     * 
      */
     @Import(name="negatives")
       private final @Nullable Double negatives;
@@ -32,7 +30,6 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
 
     /**
      * Number of negatives above threshold.
-     * 
      */
     @Import(name="negativesAboveThreshold")
       private final @Nullable Double negativesAboveThreshold;
@@ -43,7 +40,6 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
 
     /**
      * Number of positives.
-     * 
      */
     @Import(name="positives")
       private final @Nullable Double positives;
@@ -54,7 +50,6 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
 
     /**
      * Number of positives above threshold.
-     * 
      */
     @Import(name="positivesAboveThreshold")
       private final @Nullable Double positivesAboveThreshold;
@@ -65,7 +60,6 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
 
     /**
      * Score threshold.
-     * 
      */
     @Import(name="scoreThreshold")
       private final @Nullable Integer scoreThreshold;

@@ -16,7 +16,6 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
 
     /**
      * ARM resource ID of the datastore where the data output will be stored.
-     * 
      */
     @Import(name="datastoreId")
       private final @Nullable String datastoreId;
@@ -27,7 +26,6 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Mechanism for data movement to datastore.
-     * 
      */
     @Import(name="mode")
       private final @Nullable String mode;
@@ -38,7 +36,6 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Location of data inside the container process.
-     * 
      */
     @Import(name="pathOnCompute")
       private final @Nullable String pathOnCompute;
@@ -49,7 +46,6 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Path within the datastore to the data.
-     * 
      */
     @Import(name="pathOnDatastore")
       private final @Nullable String pathOnDatastore;

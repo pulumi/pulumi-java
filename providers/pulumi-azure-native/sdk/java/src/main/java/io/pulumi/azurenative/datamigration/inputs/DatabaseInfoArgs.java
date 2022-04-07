@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Project Database Details
- * 
  */
 public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="sourceDatabaseName", required=true)
       private final Output<String> sourceDatabaseName;

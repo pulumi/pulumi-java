@@ -14,7 +14,6 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     * 
      */
     @Import(name="dataManagerName", required=true)
       private final String dataManagerName;
@@ -25,7 +24,6 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The data service name of the job definition
-     * 
      */
     @Import(name="dataServiceName", required=true)
       private final String dataServiceName;
@@ -36,7 +34,6 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The job definition name that is being queried.
-     * 
      */
     @Import(name="jobDefinitionName", required=true)
       private final String jobDefinitionName;
@@ -47,7 +44,6 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

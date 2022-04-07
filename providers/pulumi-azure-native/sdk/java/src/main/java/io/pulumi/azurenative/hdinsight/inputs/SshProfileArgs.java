@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The list of SSH public keys.
- * 
  */
 public final class SshProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SshProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of SSH public keys.
-     * 
      */
     @Import(name="publicKeys")
       private final @Nullable Output<List<SshPublicKeyArgs>> publicKeys;

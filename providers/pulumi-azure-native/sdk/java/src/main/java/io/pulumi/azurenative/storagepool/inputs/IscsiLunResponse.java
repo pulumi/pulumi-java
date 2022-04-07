@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * LUN to expose the Azure Managed Disk.
- * 
  */
 public final class IscsiLunResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IscsiLunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Azure Resource ID of the Managed Disk.
-     * 
      */
     @Import(name="managedDiskAzureResourceId", required=true)
       private final String managedDiskAzureResourceId;
@@ -29,7 +27,6 @@ public final class IscsiLunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * User defined name for iSCSI LUN; example: "lun0"
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

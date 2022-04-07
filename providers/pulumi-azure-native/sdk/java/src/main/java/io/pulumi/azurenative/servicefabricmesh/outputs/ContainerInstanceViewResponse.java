@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class ContainerInstanceViewResponse {
     /**
      * Current container instance state.
-     * 
      */
     private final @Nullable ContainerStateResponse currentState;
     /**
      * The events of this container instance.
-     * 
      */
     private final @Nullable List<ContainerEventResponse> events;
     /**
      * Previous container instance state.
-     * 
      */
     private final @Nullable ContainerStateResponse previousState;
     /**
      * The number of times the container has been restarted.
-     * 
      */
     private final @Nullable Integer restartCount;
 
@@ -49,28 +45,24 @@ public final class ContainerInstanceViewResponse {
 
     /**
      * Current container instance state.
-     * 
     */
     public Optional<ContainerStateResponse> getCurrentState() {
         return Optional.ofNullable(this.currentState);
     }
     /**
      * The events of this container instance.
-     * 
     */
     public List<ContainerEventResponse> getEvents() {
         return this.events == null ? List.of() : this.events;
     }
     /**
      * Previous container instance state.
-     * 
     */
     public Optional<ContainerStateResponse> getPreviousState() {
         return Optional.ofNullable(this.previousState);
     }
     /**
      * The number of times the container has been restarted.
-     * 
     */
     public Optional<Integer> getRestartCount() {
         return Optional.ofNullable(this.restartCount);

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * NumberNotInRange Advanced Filter.
- * 
  */
 public final class NumberNotInRangeAdvancedFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class NumberNotInRangeAdvancedFilterArgs extends io.pulumi.resource
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -34,7 +32,6 @@ public final class NumberNotInRangeAdvancedFilterArgs extends io.pulumi.resource
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'NumberNotInRange'.
-     * 
      */
     @Import(name="operatorType", required=true)
       private final Output<String> operatorType;
@@ -45,7 +42,6 @@ public final class NumberNotInRangeAdvancedFilterArgs extends io.pulumi.resource
 
     /**
      * The set of filter values.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<List<Double>>> values;

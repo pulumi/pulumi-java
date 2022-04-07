@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Scheduling properties of a job.
- * 
  */
 public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not the schedule is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -33,7 +31,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule end time.
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -44,7 +41,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Output<String> interval;
@@ -55,7 +51,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule start time.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -66,7 +61,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule interval type
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<JobScheduleType> type;

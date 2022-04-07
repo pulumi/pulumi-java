@@ -18,7 +18,6 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Group members information for the server trust group.
-     * 
      */
     @Import(name="groupMembers", required=true)
       private final Output<List<ServerInfoArgs>> groupMembers;
@@ -29,7 +28,6 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the region where the resource is located.
-     * 
      */
     @Import(name="locationName", required=true)
       private final Output<String> locationName;
@@ -40,7 +38,6 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the server trust group.
-     * 
      */
     @Import(name="serverTrustGroupName")
       private final @Nullable Output<String> serverTrustGroupName;
@@ -62,7 +58,6 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Trust scope of the server trust group.
-     * 
      */
     @Import(name="trustScopes", required=true)
       private final Output<List<String>> trustScopes;

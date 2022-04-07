@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Reference to a Key Vault secret.
- * 
  */
 public final class SecretValueReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies the reference to a given Azure Key Vault.
-     * 
      */
     @Import(name="keyVault", required=true)
       private final KeyVaultReferenceResponse keyVault;
@@ -32,7 +30,6 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
 
     /**
      * Name of the secret.
-     * 
      */
     @Import(name="secretName", required=true)
       private final String secretName;
@@ -43,7 +40,6 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
 
     /**
      * The version of the secret to use. If left blank, the latest version of the secret is used.
-     * 
      */
     @Import(name="secretVersion")
       private final @Nullable String secretVersion;

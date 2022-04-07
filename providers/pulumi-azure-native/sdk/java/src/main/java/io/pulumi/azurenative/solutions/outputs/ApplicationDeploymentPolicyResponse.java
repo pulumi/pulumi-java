@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ApplicationDeploymentPolicyResponse {
     /**
      * The managed application deployment mode.
-     * 
      */
     private final String deploymentMode;
 
@@ -22,7 +21,6 @@ public final class ApplicationDeploymentPolicyResponse {
 
     /**
      * The managed application deployment mode.
-     * 
     */
     public String getDeploymentMode() {
         return this.deploymentMode;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A WebLinkedService that uses anonymous authentication to communicate with an HTTP endpoint.
- * 
  */
 public final class WebAnonymousAuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class WebAnonymousAuthenticationResponse extends io.pulumi.resource
     /**
      * Type of authentication used to connect to the web table source.
      * Expected value is 'Anonymous'.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
@@ -31,7 +29,6 @@ public final class WebAnonymousAuthenticationResponse extends io.pulumi.resource
 
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="url", required=true)
       private final Object url;

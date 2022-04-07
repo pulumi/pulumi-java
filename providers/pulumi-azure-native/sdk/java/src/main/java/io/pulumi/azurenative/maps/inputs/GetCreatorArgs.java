@@ -14,7 +14,6 @@ public final class GetCreatorArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Maps Account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetCreatorArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Maps Creator instance.
-     * 
      */
     @Import(name="creatorName", required=true)
       private final String creatorName;
@@ -36,7 +34,6 @@ public final class GetCreatorArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

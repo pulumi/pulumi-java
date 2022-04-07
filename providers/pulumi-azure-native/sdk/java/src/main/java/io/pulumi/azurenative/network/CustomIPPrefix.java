@@ -20,7 +20,83 @@ import javax.annotation.Nullable;
  * Custom IP prefix resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create custom IP prefix allocation method
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var customIPPrefix = new AzureNative.Network.CustomIPPrefix("customIPPrefix", new AzureNative.Network.CustomIPPrefixArgs
+ *         {
+ *             Cidr = "0.0.0.0/24",
+ *             CustomIpPrefixName = "test-customipprefix",
+ *             Location = "westus",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewCustomIPPrefix(ctx, "customIPPrefix", &network.CustomIPPrefixArgs{
+ * 			Cidr:               pulumi.String("0.0.0.0/24"),
+ * 			CustomIpPrefixName: pulumi.String("test-customipprefix"),
+ * 			Location:           pulumi.String("westus"),
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const customIPPrefix = new azure_native.network.CustomIPPrefix("customIPPrefix", {
+ *     cidr: "0.0.0.0/24",
+ *     customIpPrefixName: "test-customipprefix",
+ *     location: "westus",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * custom_ip_prefix = azure_native.network.CustomIPPrefix("customIPPrefix",
+ *     cidr="0.0.0.0/24",
+ *     custom_ip_prefix_name="test-customipprefix",
+ *     location="westus",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,168 +111,144 @@ import javax.annotation.Nullable;
 public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
     /**
      * The prefix range in CIDR notation. Should include the start address and the prefix length.
-     * 
      */
     @Export(name="cidr", type=String.class, parameters={})
     private Output</* @Nullable */ String> cidr;
 
     /**
      * @return The prefix range in CIDR notation. Should include the start address and the prefix length.
-     * 
      */
     public Output</* @Nullable */ String> getCidr() {
         return this.cidr;
     }
     /**
      * The commissioned state of the Custom IP Prefix.
-     * 
      */
     @Export(name="commissionedState", type=String.class, parameters={})
     private Output</* @Nullable */ String> commissionedState;
 
     /**
      * @return The commissioned state of the Custom IP Prefix.
-     * 
      */
     public Output</* @Nullable */ String> getCommissionedState() {
         return this.commissionedState;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the custom IP prefix.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return The extended location of the custom IP prefix.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the custom IP prefix resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the custom IP prefix resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of all referenced PublicIpPrefixes.
-     * 
      */
     @Export(name="publicIpPrefixes", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> publicIpPrefixes;
 
     /**
      * @return The list of all referenced PublicIpPrefixes.
-     * 
      */
     public Output<List<SubResourceResponse>> getPublicIpPrefixes() {
         return this.publicIpPrefixes;
     }
     /**
      * The resource GUID property of the custom IP prefix resource.
-     * 
      */
     @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
      * @return The resource GUID property of the custom IP prefix resource.
-     * 
      */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
-     * 
      */
     @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**
      * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
-     * 
      */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;

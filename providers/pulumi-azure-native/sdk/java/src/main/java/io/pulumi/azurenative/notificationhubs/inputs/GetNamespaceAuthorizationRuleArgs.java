@@ -14,7 +14,6 @@ public final class GetNamespaceAuthorizationRuleArgs extends io.pulumi.resources
 
     /**
      * Authorization rule name.
-     * 
      */
     @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
@@ -25,7 +24,6 @@ public final class GetNamespaceAuthorizationRuleArgs extends io.pulumi.resources
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -36,7 +34,6 @@ public final class GetNamespaceAuthorizationRuleArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

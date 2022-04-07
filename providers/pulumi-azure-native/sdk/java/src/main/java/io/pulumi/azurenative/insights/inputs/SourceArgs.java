@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the log search query.
- * 
  */
 public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of  Resource referred into query
-     * 
      */
     @Import(name="authorizedResources")
       private final @Nullable Output<List<String>> authorizedResources;
@@ -34,7 +32,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource uri over which log search query is to be run.
-     * 
      */
     @Import(name="dataSourceId", required=true)
       private final Output<String> dataSourceId;
@@ -45,7 +42,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Log search query. Required for action type - AlertingAction
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<String> query;
@@ -56,7 +52,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Set value to 'ResultCount' .
-     * 
      */
     @Import(name="queryType")
       private final @Nullable Output<Either<String,QueryType>> queryType;

@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class ApplicationGatewayBackendHealthHttpSettingsResponse {
     /**
      * Reference to an ApplicationGatewayBackendHttpSettings resource.
-     * 
      */
     private final @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
     /**
      * List of ApplicationGatewayBackendHealthServer resources.
-     * 
      */
     private final @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
 
@@ -34,14 +32,12 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse {
 
     /**
      * Reference to an ApplicationGatewayBackendHttpSettings resource.
-     * 
     */
     public Optional<ApplicationGatewayBackendHttpSettingsResponse> getBackendHttpSettings() {
         return Optional.ofNullable(this.backendHttpSettings);
     }
     /**
      * List of ApplicationGatewayBackendHealthServer resources.
-     * 
     */
     public List<ApplicationGatewayBackendHealthServerResponse> getServers() {
         return this.servers == null ? List.of() : this.servers;

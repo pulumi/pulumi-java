@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
- * 
  */
 public final class CacheConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
 
     /**
      * The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
-     * 
      */
     @Import(name="cacheDuration")
       private final @Nullable String cacheDuration;
@@ -31,7 +29,6 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Whether to use dynamic compression for cached content
-     * 
      */
     @Import(name="dynamicCompression")
       private final @Nullable String dynamicCompression;
@@ -42,7 +39,6 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Treatment of URL query terms when forming the cache key.
-     * 
      */
     @Import(name="queryParameterStripDirective")
       private final @Nullable String queryParameterStripDirective;
@@ -53,7 +49,6 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
 
     /**
      * query parameters to include or exclude (comma separated).
-     * 
      */
     @Import(name="queryParameters")
       private final @Nullable String queryParameters;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details for upgrading vault.
- * 
  */
 public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * UTC time at which the upgrade operation has ended.
-     * 
      */
     @Import(name="endTimeUtc", required=true)
       private final String endTimeUtc;
@@ -29,7 +27,6 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * UTC time at which the upgrade operation status was last updated.
-     * 
      */
     @Import(name="lastUpdatedTimeUtc", required=true)
       private final String lastUpdatedTimeUtc;
@@ -40,7 +37,6 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Message to the user containing information about the upgrade operation.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -51,7 +47,6 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * ID of the vault upgrade operation.
-     * 
      */
     @Import(name="operationId", required=true)
       private final String operationId;
@@ -62,7 +57,6 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource ID of the vault before the upgrade.
-     * 
      */
     @Import(name="previousResourceId", required=true)
       private final String previousResourceId;
@@ -73,7 +67,6 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * UTC time at which the upgrade operation has started.
-     * 
      */
     @Import(name="startTimeUtc", required=true)
       private final String startTimeUtc;
@@ -84,7 +77,6 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Status of the vault upgrade operation.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -95,7 +87,6 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The way the vault upgrade was triggered.
-     * 
      */
     @Import(name="triggerType", required=true)
       private final String triggerType;
@@ -106,7 +97,6 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource ID of the upgraded vault.
-     * 
      */
     @Import(name="upgradedResourceId", required=true)
       private final String upgradedResourceId;

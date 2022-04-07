@@ -18,7 +18,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * CNAME of the certificate to be issued via free certificate
-     * 
      */
     @Import(name="canonicalName")
       private final @Nullable Output<String> canonicalName;
@@ -29,7 +28,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Method of domain validation for free cert
-     * 
      */
     @Import(name="domainValidationMethod")
       private final @Nullable Output<String> domainValidationMethod;
@@ -40,7 +38,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Host names the certificate applies to.
-     * 
      */
     @Import(name="hostNames")
       private final @Nullable Output<List<String>> hostNames;
@@ -51,7 +48,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Key Vault Csm resource Id.
-     * 
      */
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
@@ -62,7 +58,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Key Vault secret name.
-     * 
      */
     @Import(name="keyVaultSecretName")
       private final @Nullable Output<String> keyVaultSecretName;
@@ -73,7 +68,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -84,7 +78,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -95,7 +88,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the certificate.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -106,7 +98,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Certificate password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -117,7 +108,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Pfx blob.
-     * 
      */
     @Import(name="pfxBlob")
       private final @Nullable Output<String> pfxBlob;
@@ -128,7 +118,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -139,7 +128,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
-     * 
      */
     @Import(name="serverFarmId")
       private final @Nullable Output<String> serverFarmId;
@@ -150,7 +138,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Support contact information and instructions.
- * 
  */
 public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Support contact email address.
-     * 
      */
     @Import(name="email")
       private final @Nullable String email;
@@ -31,7 +29,6 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Support instructions.
-     * 
      */
     @Import(name="instructions")
       private final @Nullable String instructions;
@@ -42,7 +39,6 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Support contact phone number.
-     * 
      */
     @Import(name="phone")
       private final @Nullable String phone;
@@ -53,7 +49,6 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Support web address.
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;

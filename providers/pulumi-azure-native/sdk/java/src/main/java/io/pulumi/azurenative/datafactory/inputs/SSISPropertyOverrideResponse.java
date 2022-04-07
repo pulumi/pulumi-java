@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SSIS property override.
- * 
  */
 public final class SSISPropertyOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SSISPropertyOverrideResponse extends io.pulumi.resources.Invo
 
     /**
      * Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
-     * 
      */
     @Import(name="isSensitive")
       private final @Nullable Boolean isSensitive;
@@ -32,7 +30,6 @@ public final class SSISPropertyOverrideResponse extends io.pulumi.resources.Invo
 
     /**
      * SSIS package property override value. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="value", required=true)
       private final Object value;

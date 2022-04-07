@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The dataset reference object.
- * 
  */
 public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The id of the dataset reference.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the dataset reference.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

@@ -19,7 +19,87 @@ import javax.annotation.Nullable;
  * IoT sensor model
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update IoT sensor
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sensor = new AzureNative.IoTSecurity.Sensor("sensor", new AzureNative.IoTSecurity.SensorArgs
+ *         {
+ *             Scope = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+ *             SensorName = "mySensor",
+ *             SensorType = "Ot",
+ *             TiAutomaticUpdates = true,
+ *             Zone = "Zone Name",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	iotsecurity "github.com/pulumi/pulumi-azure-native/sdk/go/azure/iotsecurity"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := iotsecurity.NewSensor(ctx, "sensor", &iotsecurity.SensorArgs{
+ * 			Scope:              pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub"),
+ * 			SensorName:         pulumi.String("mySensor"),
+ * 			SensorType:         pulumi.String("Ot"),
+ * 			TiAutomaticUpdates: pulumi.Bool(true),
+ * 			Zone:               pulumi.String("Zone Name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sensor = new azure_native.iotsecurity.Sensor("sensor", {
+ *     scope: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+ *     sensorName: "mySensor",
+ *     sensorType: "Ot",
+ *     tiAutomaticUpdates: true,
+ *     zone: "Zone Name",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sensor = azure_native.iotsecurity.Sensor("sensor",
+ *     scope="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+ *     sensor_name="mySensor",
+ *     sensor_type="Ot",
+ *     ti_automatic_updates=True,
+ *     zone="Zone Name")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,182 +114,156 @@ import javax.annotation.Nullable;
 public class Sensor extends io.pulumi.resources.CustomResource {
     /**
      * Last connectivity time of the IoT sensor
-     * 
      */
     @Export(name="connectivityTime", type=String.class, parameters={})
     private Output<String> connectivityTime;
 
     /**
      * @return Last connectivity time of the IoT sensor
-     * 
      */
     public Output<String> getConnectivityTime() {
         return this.connectivityTime;
     }
     /**
      * Dynamic mode status of the IoT sensor
-     * 
      */
     @Export(name="dynamicLearning", type=Boolean.class, parameters={})
     private Output<Boolean> dynamicLearning;
 
     /**
      * @return Dynamic mode status of the IoT sensor
-     * 
      */
     public Output<Boolean> getDynamicLearning() {
         return this.dynamicLearning;
     }
     /**
      * Learning mode status of the IoT sensor
-     * 
      */
     @Export(name="learningMode", type=Boolean.class, parameters={})
     private Output<Boolean> learningMode;
 
     /**
      * @return Learning mode status of the IoT sensor
-     * 
      */
     public Output<Boolean> getLearningMode() {
         return this.learningMode;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Status of the IoT sensor
-     * 
      */
     @Export(name="sensorStatus", type=String.class, parameters={})
     private Output<String> sensorStatus;
 
     /**
      * @return Status of the IoT sensor
-     * 
      */
     public Output<String> getSensorStatus() {
         return this.sensorStatus;
     }
     /**
      * Type of sensor
-     * 
      */
     @Export(name="sensorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sensorType;
 
     /**
      * @return Type of sensor
-     * 
      */
     public Output</* @Nullable */ String> getSensorType() {
         return this.sensorType;
     }
     /**
      * Version of the IoT sensor
-     * 
      */
     @Export(name="sensorVersion", type=String.class, parameters={})
     private Output<String> sensorVersion;
 
     /**
      * @return Version of the IoT sensor
-     * 
      */
     public Output<String> getSensorVersion() {
         return this.sensorVersion;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * TI Automatic mode status of the IoT sensor
-     * 
      */
     @Export(name="tiAutomaticUpdates", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> tiAutomaticUpdates;
 
     /**
      * @return TI Automatic mode status of the IoT sensor
-     * 
      */
     public Output</* @Nullable */ Boolean> getTiAutomaticUpdates() {
         return this.tiAutomaticUpdates;
     }
     /**
      * TI Status of the IoT sensor
-     * 
      */
     @Export(name="tiStatus", type=String.class, parameters={})
     private Output<String> tiStatus;
 
     /**
      * @return TI Status of the IoT sensor
-     * 
      */
     public Output<String> getTiStatus() {
         return this.tiStatus;
     }
     /**
      * TI Version of the IoT sensor
-     * 
      */
     @Export(name="tiVersion", type=String.class, parameters={})
     private Output<String> tiVersion;
 
     /**
      * @return TI Version of the IoT sensor
-     * 
      */
     public Output<String> getTiVersion() {
         return this.tiVersion;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Zone of the IoT sensor
-     * 
      */
     @Export(name="zone", type=String.class, parameters={})
     private Output</* @Nullable */ String> zone;
 
     /**
      * @return Zone of the IoT sensor
-     * 
      */
     public Output</* @Nullable */ String> getZone() {
         return this.zone;

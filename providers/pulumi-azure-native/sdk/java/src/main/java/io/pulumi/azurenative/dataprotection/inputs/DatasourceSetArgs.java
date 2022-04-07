@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * DatasourceSet details of datasource to be backed up
- * 
  */
 public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * DatasourceType of the resource.
-     * 
      */
     @Import(name="datasourceType")
       private final @Nullable Output<String> datasourceType;
@@ -31,7 +29,6 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of Datasource object, used to initialize the right inherited type
-     * 
      */
     @Import(name="objectType")
       private final @Nullable Output<String> objectType;
@@ -42,7 +39,6 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.
-     * 
      */
     @Import(name="resourceID", required=true)
       private final Output<String> resourceID;
@@ -53,7 +49,6 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of datasource.
-     * 
      */
     @Import(name="resourceLocation")
       private final @Nullable Output<String> resourceLocation;
@@ -64,7 +59,6 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique identifier of the resource in the context of parent.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -75,7 +69,6 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Type of Datasource.
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
@@ -86,7 +79,6 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Uri of the resource.
-     * 
      */
     @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;

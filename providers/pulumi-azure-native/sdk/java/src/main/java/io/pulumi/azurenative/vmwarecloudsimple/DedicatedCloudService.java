@@ -19,7 +19,83 @@ import javax.annotation.Nullable;
  * Dedicated cloud service model
  * API Version: 2019-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateDedicatedCloudService
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dedicatedCloudService = new AzureNative.VMwareCloudSimple.DedicatedCloudService("dedicatedCloudService", new AzureNative.VMwareCloudSimple.DedicatedCloudServiceArgs
+ *         {
+ *             DedicatedCloudServiceName = "myService",
+ *             GatewaySubnet = "10.0.0.0",
+ *             Location = "westus",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	vmwarecloudsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/vmwarecloudsimple"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := vmwarecloudsimple.NewDedicatedCloudService(ctx, "dedicatedCloudService", &vmwarecloudsimple.DedicatedCloudServiceArgs{
+ * 			DedicatedCloudServiceName: pulumi.String("myService"),
+ * 			GatewaySubnet:             pulumi.String("10.0.0.0"),
+ * 			Location:                  pulumi.String("westus"),
+ * 			ResourceGroupName:         pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dedicatedCloudService = new azure_native.vmwarecloudsimple.DedicatedCloudService("dedicatedCloudService", {
+ *     dedicatedCloudServiceName: "myService",
+ *     gatewaySubnet: "10.0.0.0",
+ *     location: "westus",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * dedicated_cloud_service = azure_native.vmwarecloudsimple.DedicatedCloudService("dedicatedCloudService",
+ *     dedicated_cloud_service_name="myService",
+ *     gateway_subnet="10.0.0.0",
+ *     location="westus",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,112 +110,96 @@ import javax.annotation.Nullable;
 public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
     /**
      * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
-     * 
      */
     @Export(name="gatewaySubnet", type=String.class, parameters={})
     private Output<String> gatewaySubnet;
 
     /**
      * @return gateway Subnet for the account. It will collect the subnet address and always treat it as /28
-     * 
      */
     public Output<String> getGatewaySubnet() {
         return this.gatewaySubnet;
     }
     /**
      * indicates whether account onboarded or not in a given region
-     * 
      */
     @Export(name="isAccountOnboarded", type=String.class, parameters={})
     private Output<String> isAccountOnboarded;
 
     /**
      * @return indicates whether account onboarded or not in a given region
-     * 
      */
     public Output<String> getIsAccountOnboarded() {
         return this.isAccountOnboarded;
     }
     /**
      * Azure region
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Azure region
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * {dedicatedCloudServiceName}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return {dedicatedCloudServiceName}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * total nodes purchased
-     * 
      */
     @Export(name="nodes", type=Integer.class, parameters={})
     private Output<Integer> nodes;
 
     /**
      * @return total nodes purchased
-     * 
      */
     public Output<Integer> getNodes() {
         return this.nodes;
     }
     /**
      * link to a service management web portal
-     * 
      */
     @Export(name="serviceURL", type=String.class, parameters={})
     private Output<String> serviceURL;
 
     /**
      * @return link to a service management web portal
-     * 
      */
     public Output<String> getServiceURL() {
         return this.serviceURL;
     }
     /**
      * The list of tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The list of tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return {resourceProviderNamespace}/{resourceType}
-     * 
      */
     public Output<String> getType() {
         return this.type;

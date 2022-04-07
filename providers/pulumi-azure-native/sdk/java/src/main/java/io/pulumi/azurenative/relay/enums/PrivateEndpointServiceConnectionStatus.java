@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
-     * 
      */
     @EnumType
     public enum PrivateEndpointServiceConnectionStatus {

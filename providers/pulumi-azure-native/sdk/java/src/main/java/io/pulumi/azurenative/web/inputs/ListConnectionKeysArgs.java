@@ -17,7 +17,6 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The connection name.
-     * 
      */
     @Import(name="connectionName", required=true)
       private final String connectionName;
@@ -28,7 +27,6 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -39,7 +37,6 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Kind of resource
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -50,7 +47,6 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource Location
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -61,7 +57,6 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource Name
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -72,7 +67,6 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -83,7 +77,6 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -94,7 +87,6 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Resource type
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -105,7 +97,6 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * time span for how long the keys will be valid
-     * 
      */
     @Import(name="validityTimeSpan")
       private final @Nullable String validityTimeSpan;

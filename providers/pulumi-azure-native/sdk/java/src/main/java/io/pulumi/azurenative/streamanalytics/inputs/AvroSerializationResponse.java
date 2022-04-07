@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes how data from an input is serialized or how data is serialized when written to an output in Avro format.
- * 
  */
 public final class AvroSerializationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class AvroSerializationResponse extends io.pulumi.resources.InvokeA
     /**
      * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Avro'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

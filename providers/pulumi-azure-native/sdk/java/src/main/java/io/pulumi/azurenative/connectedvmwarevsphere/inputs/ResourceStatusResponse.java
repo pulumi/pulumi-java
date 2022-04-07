@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The resource status information.
- * 
  */
 public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The last update time for this condition.
-     * 
      */
     @Import(name="lastUpdatedAt", required=true)
       private final String lastUpdatedAt;
@@ -29,7 +27,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A human readable message indicating details about the status.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -40,7 +37,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The reason for the condition's status.
-     * 
      */
     @Import(name="reason", required=true)
       private final String reason;
@@ -51,7 +47,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Severity with which to treat failures of this type of condition.
-     * 
      */
     @Import(name="severity", required=true)
       private final String severity;
@@ -62,7 +57,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Status of the condition.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -73,7 +67,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The type of the condition.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

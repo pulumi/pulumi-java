@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ResourceSetDescriptionResponse {
     /**
      * The elements included in the set.
-     * 
      */
     private final @Nullable List<String> elements;
     /**
      * The elements that are not included in the set, in case elements contains '*' indicating 'all'.
-     * 
      */
     private final @Nullable List<String> exceptions;
 
@@ -32,14 +30,12 @@ public final class ResourceSetDescriptionResponse {
 
     /**
      * The elements included in the set.
-     * 
     */
     public List<String> getElements() {
         return this.elements == null ? List.of() : this.elements;
     }
     /**
      * The elements that are not included in the set, in case elements contains '*' indicating 'all'.
-     * 
     */
     public List<String> getExceptions() {
         return this.exceptions == null ? List.of() : this.exceptions;

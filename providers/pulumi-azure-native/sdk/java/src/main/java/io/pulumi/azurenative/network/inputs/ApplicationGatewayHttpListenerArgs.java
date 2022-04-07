@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Http listener of an application gateway.
- * 
  */
 public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * Custom error configurations of the HTTP listener.
-     * 
      */
     @Import(name="customErrorConfigurations")
       private final @Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
@@ -37,7 +35,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * Reference to the FirewallPolicy resource.
-     * 
      */
     @Import(name="firewallPolicy")
       private final @Nullable Output<SubResourceArgs> firewallPolicy;
@@ -48,7 +45,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * Frontend IP configuration resource of an application gateway.
-     * 
      */
     @Import(name="frontendIPConfiguration")
       private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
@@ -59,7 +55,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * Frontend port resource of an application gateway.
-     * 
      */
     @Import(name="frontendPort")
       private final @Nullable Output<SubResourceArgs> frontendPort;
@@ -70,7 +65,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * Host name of HTTP listener.
-     * 
      */
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
@@ -81,7 +75,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * List of Host names for HTTP Listener that allows special wildcard characters as well.
-     * 
      */
     @Import(name="hostNames")
       private final @Nullable Output<List<String>> hostNames;
@@ -92,7 +85,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -103,7 +95,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * Name of the HTTP listener that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -114,7 +105,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * Protocol of the HTTP listener.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
@@ -125,7 +115,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * Applicable only if protocol is https. Enables SNI for multi-hosting.
-     * 
      */
     @Import(name="requireServerNameIndication")
       private final @Nullable Output<Boolean> requireServerNameIndication;
@@ -136,7 +125,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * SSL certificate resource of an application gateway.
-     * 
      */
     @Import(name="sslCertificate")
       private final @Nullable Output<SubResourceArgs> sslCertificate;
@@ -147,7 +135,6 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
 
     /**
      * SSL profile resource of the application gateway.
-     * 
      */
     @Import(name="sslProfile")
       private final @Nullable Output<SubResourceArgs> sslProfile;

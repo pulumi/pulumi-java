@@ -18,7 +18,6 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
 
     /**
      * Connection name
-     * 
      */
     @Import(name="connectionName", required=true)
       private final String connectionName;
@@ -29,7 +28,6 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
 
     /**
      * Collection of resources
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<ConsentLinkParameterDefinition> parameters;
@@ -40,7 +38,6 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
 
     /**
      * The resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -51,7 +48,6 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
 
     /**
      * Subscription Id
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;

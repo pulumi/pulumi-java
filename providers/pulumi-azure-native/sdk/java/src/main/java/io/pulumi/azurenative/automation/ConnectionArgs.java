@@ -18,7 +18,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -29,7 +28,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parameters supplied to the create or update connection operation.
-     * 
      */
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
@@ -40,7 +38,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the connectionType of the connection.
-     * 
      */
     @Import(name="connectionType", required=true)
       private final Output<ConnectionTypeAssociationPropertyArgs> connectionType;
@@ -51,7 +48,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the description of the connection.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -62,7 +58,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the field definition properties of the connection.
-     * 
      */
     @Import(name="fieldDefinitionValues")
       private final @Nullable Output<Map<String,String>> fieldDefinitionValues;
@@ -73,7 +68,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the connection.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -84,7 +78,6 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The JSON object that represents the range for http status codes
- * 
  */
 public final class HttpErrorRangeParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HttpErrorRangeParametersResponse extends io.pulumi.resources.
 
     /**
      * The inclusive start of the http status code range.
-     * 
      */
     @Import(name="begin")
       private final @Nullable Integer begin;
@@ -31,7 +29,6 @@ public final class HttpErrorRangeParametersResponse extends io.pulumi.resources.
 
     /**
      * The inclusive end of the http status code range.
-     * 
      */
     @Import(name="end")
       private final @Nullable Integer end;

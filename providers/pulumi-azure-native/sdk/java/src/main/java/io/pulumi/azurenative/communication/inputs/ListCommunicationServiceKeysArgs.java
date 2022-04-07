@@ -14,7 +14,6 @@ public final class ListCommunicationServiceKeysArgs extends io.pulumi.resources.
 
     /**
      * The name of the CommunicationService resource.
-     * 
      */
     @Import(name="communicationServiceName", required=true)
       private final String communicationServiceName;
@@ -25,7 +24,6 @@ public final class ListCommunicationServiceKeysArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

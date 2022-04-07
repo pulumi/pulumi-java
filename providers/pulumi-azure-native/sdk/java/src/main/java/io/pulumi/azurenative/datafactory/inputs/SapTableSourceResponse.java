@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity source for SAP Table source.
- * 
  */
 public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -33,7 +31,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the maximum number of rows that will be retrieved at a time when retrieving data from SAP Table. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="batchSize")
       private final @Nullable Object batchSize;
@@ -44,7 +41,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="customRfcReadTableFunctionModule")
       private final @Nullable Object customRfcReadTableFunctionModule;
@@ -55,7 +51,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -66,7 +61,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -77,7 +71,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The partition mechanism that will be used for SAP table read in parallel. Possible values include: "None", "PartitionOnInt", "PartitionOnCalendarYear", "PartitionOnCalendarMonth", "PartitionOnCalendarDate", "PartitionOnTime".
-     * 
      */
     @Import(name="partitionOption")
       private final @Nullable Object partitionOption;
@@ -88,7 +81,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The settings that will be leveraged for SAP table source partitioning.
-     * 
      */
     @Import(name="partitionSettings")
       private final @Nullable SapTablePartitionSettingsResponse partitionSettings;
@@ -99,7 +91,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
@@ -110,7 +101,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The fields of the SAP table that will be retrieved. For example, column0, column1. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="rfcTableFields")
       private final @Nullable Object rfcTableFields;
@@ -121,7 +111,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The options for the filtering of the SAP Table. For example, COLUMN0 EQ SOME VALUE. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="rfcTableOptions")
       private final @Nullable Object rfcTableOptions;
@@ -132,7 +121,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The number of rows to be retrieved. Type: integer(or Expression with resultType integer).
-     * 
      */
     @Import(name="rowCount")
       private final @Nullable Object rowCount;
@@ -143,7 +131,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The number of rows that will be skipped. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="rowSkips")
       private final @Nullable Object rowSkips;
@@ -154,7 +141,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="sapDataColumnDelimiter")
       private final @Nullable Object sapDataColumnDelimiter;
@@ -165,7 +151,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -176,7 +161,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -188,7 +172,6 @@ public final class SapTableSourceResponse extends io.pulumi.resources.InvokeArgs
     /**
      * Copy source type.
      * Expected value is 'SapTableSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

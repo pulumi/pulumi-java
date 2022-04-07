@@ -16,7 +16,6 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The workflow access key name.
-     * 
      */
     @Import(name="accessKeyName")
       private final @Nullable Output<String> accessKeyName;
@@ -27,7 +26,6 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Gets or sets the resource id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -38,7 +36,6 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Gets or sets the not-after time.
-     * 
      */
     @Import(name="notAfter")
       private final @Nullable Output<String> notAfter;
@@ -49,7 +46,6 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Gets or sets the not-before time.
-     * 
      */
     @Import(name="notBefore")
       private final @Nullable Output<String> notBefore;
@@ -60,7 +56,6 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -71,7 +66,6 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The workflow name.
-     * 
      */
     @Import(name="workflowName", required=true)
       private final Output<String> workflowName;

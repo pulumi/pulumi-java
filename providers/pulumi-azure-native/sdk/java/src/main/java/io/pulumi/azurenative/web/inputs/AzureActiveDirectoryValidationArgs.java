@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the Azure Active Directory token validation flow.
- * 
  */
 public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
 
     /**
      * The list of audiences that can make successful authentication/authorization requests.
-     * 
      */
     @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
@@ -33,7 +31,6 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
 
     /**
      * The configuration settings of the checks that should be made while validating the JWT Claims.
-     * 
      */
     @Import(name="jwtClaimChecks")
       private final @Nullable Output<JwtClaimChecksArgs> jwtClaimChecks;

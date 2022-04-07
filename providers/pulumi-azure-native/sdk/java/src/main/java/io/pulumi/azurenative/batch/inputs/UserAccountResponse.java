@@ -18,7 +18,6 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
-     * 
      */
     @Import(name="elevationLevel")
       private final @Nullable String elevationLevel;
@@ -29,7 +28,6 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
-     * 
      */
     @Import(name="linuxUserConfiguration")
       private final @Nullable LinuxUserConfigurationResponse linuxUserConfiguration;
@@ -54,7 +52,6 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.
-     * 
      */
     @Import(name="windowsUserConfiguration")
       private final @Nullable WindowsUserConfigurationResponse windowsUserConfiguration;

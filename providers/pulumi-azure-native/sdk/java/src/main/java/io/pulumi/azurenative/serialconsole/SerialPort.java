@@ -17,7 +17,91 @@ import javax.annotation.Nullable;
  * Represents the serial port of the parent resource.
  * API Version: 2018-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a new serial port resource.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serialPort = new AzureNative.SerialConsole.SerialPort("serialPort", new AzureNative.SerialConsole.SerialPortArgs
+ *         {
+ *             ParentResource = "myVM",
+ *             ParentResourceType = "virtualMachines",
+ *             ResourceGroupName = "myResourceGroup",
+ *             ResourceProviderNamespace = "Microsoft.Compute",
+ *             SerialPort = "0",
+ *             State = "enabled",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	serialconsole "github.com/pulumi/pulumi-azure-native/sdk/go/azure/serialconsole"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := serialconsole.NewSerialPort(ctx, "serialPort", &serialconsole.SerialPortArgs{
+ * 			ParentResource:            pulumi.String("myVM"),
+ * 			ParentResourceType:        pulumi.String("virtualMachines"),
+ * 			ResourceGroupName:         pulumi.String("myResourceGroup"),
+ * 			ResourceProviderNamespace: pulumi.String("Microsoft.Compute"),
+ * 			SerialPort:                pulumi.String("0"),
+ * 			State:                     "enabled",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serialPort = new azure_native.serialconsole.SerialPort("serialPort", {
+ *     parentResource: "myVM",
+ *     parentResourceType: "virtualMachines",
+ *     resourceGroupName: "myResourceGroup",
+ *     resourceProviderNamespace: "Microsoft.Compute",
+ *     serialPort: "0",
+ *     state: "enabled",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * serial_port = azure_native.serialconsole.SerialPort("serialPort",
+ *     parent_resource="myVM",
+ *     parent_resource_type="virtualMachines",
+ *     resource_group_name="myResourceGroup",
+ *     resource_provider_namespace="Microsoft.Compute",
+ *     serial_port="0",
+ *     state="enabled")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +116,36 @@ import javax.annotation.Nullable;
 public class SerialPort extends io.pulumi.resources.CustomResource {
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Specifies whether the port is enabled for a serial console connection.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
      * @return Specifies whether the port is enabled for a serial console connection.
-     * 
      */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

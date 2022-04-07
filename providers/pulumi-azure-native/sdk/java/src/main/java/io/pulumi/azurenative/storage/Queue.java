@@ -16,9 +16,169 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2021-02-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### QueueOperationPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var queue = new AzureNative.Storage.Queue("queue", new AzureNative.Storage.QueueArgs
+ *         {
+ *             AccountName = "sto328",
+ *             QueueName = "queue6185",
+ *             ResourceGroupName = "res3376",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewQueue(ctx, "queue", &storage.QueueArgs{
+ * 			AccountName:       pulumi.String("sto328"),
+ * 			QueueName:         pulumi.String("queue6185"),
+ * 			ResourceGroupName: pulumi.String("res3376"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const queue = new azure_native.storage.Queue("queue", {
+ *     accountName: "sto328",
+ *     queueName: "queue6185",
+ *     resourceGroupName: "res3376",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * queue = azure_native.storage.Queue("queue",
+ *     account_name="sto328",
+ *     queue_name="queue6185",
+ *     resource_group_name="res3376")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### QueueOperationPutWithMetadata
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var queue = new AzureNative.Storage.Queue("queue", new AzureNative.Storage.QueueArgs
+ *         {
+ *             AccountName = "sto328",
+ *             Metadata = 
+ *             {
+ *                 { "sample1", "meta1" },
+ *                 { "sample2", "meta2" },
+ *             },
+ *             QueueName = "queue6185",
+ *             ResourceGroupName = "res3376",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewQueue(ctx, "queue", &storage.QueueArgs{
+ * 			AccountName: pulumi.String("sto328"),
+ * 			Metadata: pulumi.StringMap{
+ * 				"sample1": pulumi.String("meta1"),
+ * 				"sample2": pulumi.String("meta2"),
+ * 			},
+ * 			QueueName:         pulumi.String("queue6185"),
+ * 			ResourceGroupName: pulumi.String("res3376"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const queue = new azure_native.storage.Queue("queue", {
+ *     accountName: "sto328",
+ *     metadata: {
+ *         sample1: "meta1",
+ *         sample2: "meta2",
+ *     },
+ *     queueName: "queue6185",
+ *     resourceGroupName: "res3376",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * queue = azure_native.storage.Queue("queue",
+ *     account_name="sto328",
+ *     metadata={
+ *         "sample1": "meta1",
+ *         "sample2": "meta2",
+ *     },
+ *     queue_name="queue6185",
+ *     resource_group_name="res3376")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +193,48 @@ import javax.annotation.Nullable;
 public class Queue extends io.pulumi.resources.CustomResource {
     /**
      * Integer indicating an approximate number of messages in the queue. This number is not lower than the actual number of messages in the queue, but could be higher.
-     * 
      */
     @Export(name="approximateMessageCount", type=Integer.class, parameters={})
     private Output<Integer> approximateMessageCount;
 
     /**
      * @return Integer indicating an approximate number of messages in the queue. This number is not lower than the actual number of messages in the queue, but could be higher.
-     * 
      */
     public Output<Integer> getApproximateMessageCount() {
         return this.approximateMessageCount;
     }
     /**
      * A name-value pair that represents queue metadata.
-     * 
      */
     @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
      * @return A name-value pair that represents queue metadata.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getMetadata() {
         return this.metadata;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

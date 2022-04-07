@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The operating system type of the cloud shell. Deprecated, use preferredShellType.
-     * 
      */
     @EnumType
     public enum OsType {

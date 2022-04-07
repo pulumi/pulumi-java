@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Principal Type of the sever administrator.
-     * 
      */
     @EnumType
     public enum PrincipalType {

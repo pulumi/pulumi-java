@@ -18,7 +18,6 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * ARM resource ID of the registered dataVersion.
-     * 
      */
     @Import(name="dataId")
       private final @Nullable Output<String> dataId;
@@ -29,7 +28,6 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Mechanism for accessing the data artifact.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<Either<String,DataBindingMode>> mode;
@@ -40,7 +38,6 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Location of data inside the container process.
-     * 
      */
     @Import(name="pathOnCompute")
       private final @Nullable Output<String> pathOnCompute;

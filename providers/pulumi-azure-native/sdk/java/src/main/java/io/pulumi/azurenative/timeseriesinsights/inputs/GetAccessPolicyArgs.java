@@ -14,7 +14,6 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Time Series Insights access policy associated with the specified environment.
-     * 
      */
     @Import(name="accessPolicyName", required=true)
       private final String accessPolicyName;
@@ -25,7 +24,6 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Time Series Insights environment associated with the specified resource group.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final String environmentName;
@@ -36,7 +34,6 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

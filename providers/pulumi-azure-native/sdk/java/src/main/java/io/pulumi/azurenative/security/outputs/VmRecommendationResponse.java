@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class VmRecommendationResponse {
     /**
      * The configuration status of the machines group or machine or rule
-     * 
      */
     private final @Nullable String configurationStatus;
     /**
      * The machine supportability of Enforce feature
-     * 
      */
     private final @Nullable String enforcementSupport;
     /**
      * The recommendation action of the machine or rule
-     * 
      */
     private final @Nullable String recommendationAction;
     /**
      * The full resource id of the machine
-     * 
      */
     private final @Nullable String resourceId;
 
@@ -46,28 +42,24 @@ public final class VmRecommendationResponse {
 
     /**
      * The configuration status of the machines group or machine or rule
-     * 
     */
     public Optional<String> getConfigurationStatus() {
         return Optional.ofNullable(this.configurationStatus);
     }
     /**
      * The machine supportability of Enforce feature
-     * 
     */
     public Optional<String> getEnforcementSupport() {
         return Optional.ofNullable(this.enforcementSupport);
     }
     /**
      * The recommendation action of the machine or rule
-     * 
     */
     public Optional<String> getRecommendationAction() {
         return Optional.ofNullable(this.recommendationAction);
     }
     /**
      * The full resource id of the machine
-     * 
     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);

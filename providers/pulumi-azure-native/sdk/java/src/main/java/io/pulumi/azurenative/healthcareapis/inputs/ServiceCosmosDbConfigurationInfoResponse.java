@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The settings for the Cosmos DB database backing the service.
- * 
  */
 public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
 
     /**
      * The URI of the customer-managed key for the backing database.
-     * 
      */
     @Import(name="keyVaultKeyUri")
       private final @Nullable String keyVaultKeyUri;
@@ -32,7 +30,6 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
 
     /**
      * The provisioned throughput for the backing database.
-     * 
      */
     @Import(name="offerThroughput")
       private final @Nullable Integer offerThroughput;

@@ -14,7 +14,6 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
 
     /**
      * Identifier of the certificate entity. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="certificateId", required=true)
       private final String certificateId;
@@ -25,7 +24,6 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
 
     /**
      * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
-     * 
      */
     @Import(name="gatewayId", required=true)
       private final String gatewayId;
@@ -36,7 +34,6 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

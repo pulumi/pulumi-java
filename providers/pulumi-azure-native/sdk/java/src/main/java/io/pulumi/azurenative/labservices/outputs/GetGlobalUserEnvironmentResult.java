@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetGlobalUserEnvironmentResult {
     /**
      * Details of the environment
-     * 
      */
     private final EnvironmentDetailsResponse environment;
 
@@ -22,7 +21,6 @@ public final class GetGlobalUserEnvironmentResult {
 
     /**
      * Details of the environment
-     * 
     */
     public EnvironmentDetailsResponse getEnvironment() {
         return this.environment;

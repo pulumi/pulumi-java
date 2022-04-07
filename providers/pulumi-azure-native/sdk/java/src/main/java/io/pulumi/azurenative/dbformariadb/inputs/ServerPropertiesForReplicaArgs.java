@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties to create a new replica.
- * 
  */
 public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
     /**
      * The mode to create a new server.
      * Expected value is 'Replica'.
-     * 
      */
     @Import(name="createMode", required=true)
       private final Output<String> createMode;
@@ -38,7 +36,6 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
 
     /**
      * Enforce a minimal Tls version for the server.
-     * 
      */
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
@@ -49,7 +46,6 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
 
     /**
      * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
@@ -60,7 +56,6 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
 
     /**
      * The master server id to create replica from.
-     * 
      */
     @Import(name="sourceServerId", required=true)
       private final Output<String> sourceServerId;
@@ -71,7 +66,6 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
 
     /**
      * Enable ssl enforcement or not when connect to server.
-     * 
      */
     @Import(name="sslEnforcement")
       private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
@@ -82,7 +76,6 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
 
     /**
      * Storage profile of a server.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
@@ -93,7 +86,6 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
 
     /**
      * Server version.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Either<String,ServerVersion>> version;

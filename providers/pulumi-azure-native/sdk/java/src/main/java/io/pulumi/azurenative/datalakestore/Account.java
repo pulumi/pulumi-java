@@ -23,7 +23,211 @@ import javax.annotation.Nullable;
  * Data Lake Store account information.
  * API Version: 2016-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates the specified Data Lake Store account
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var account = new AzureNative.DataLakeStore.Account("account", new AzureNative.DataLakeStore.AccountArgs
+ *         {
+ *             AccountName = "contosoadla",
+ *             DefaultGroup = "test_default_group",
+ *             EncryptionConfig = new AzureNative.DataLakeStore.Inputs.EncryptionConfigArgs
+ *             {
+ *                 KeyVaultMetaInfo = new AzureNative.DataLakeStore.Inputs.KeyVaultMetaInfoArgs
+ *                 {
+ *                     EncryptionKeyName = "test_encryption_key_name",
+ *                     EncryptionKeyVersion = "encryption_key_version",
+ *                     KeyVaultResourceId = "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+ *                 },
+ *                 Type = "UserManaged",
+ *             },
+ *             EncryptionState = "Enabled",
+ *             FirewallAllowAzureIps = "Enabled",
+ *             FirewallRules = 
+ *             {
+ *                 new AzureNative.DataLakeStore.Inputs.CreateFirewallRuleWithAccountParametersArgs
+ *                 {
+ *                     EndIpAddress = "2.2.2.2",
+ *                     Name = "test_rule",
+ *                     StartIpAddress = "1.1.1.1",
+ *                 },
+ *             },
+ *             FirewallState = "Enabled",
+ *             Identity = new AzureNative.DataLakeStore.Inputs.EncryptionIdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "eastus2",
+ *             NewTier = "Consumption",
+ *             ResourceGroupName = "contosorg",
+ *             Tags = 
+ *             {
+ *                 { "test_key", "test_value" },
+ *             },
+ *             TrustedIdProviderState = "Enabled",
+ *             TrustedIdProviders = 
+ *             {
+ *                 new AzureNative.DataLakeStore.Inputs.CreateTrustedIdProviderWithAccountParametersArgs
+ *                 {
+ *                     IdProvider = "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
+ *                     Name = "test_trusted_id_provider_name",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datalakestore "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datalakestore"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datalakestore.NewAccount(ctx, "account", &datalakestore.AccountArgs{
+ * 			AccountName:  pulumi.String("contosoadla"),
+ * 			DefaultGroup: pulumi.String("test_default_group"),
+ * 			EncryptionConfig: &datalakestore.EncryptionConfigArgs{
+ * 				KeyVaultMetaInfo: &datalakestore.KeyVaultMetaInfoArgs{
+ * 					EncryptionKeyName:    pulumi.String("test_encryption_key_name"),
+ * 					EncryptionKeyVersion: pulumi.String("encryption_key_version"),
+ * 					KeyVaultResourceId:   pulumi.String("34adfa4f-cedf-4dc0-ba29-b6d1a69ab345"),
+ * 				},
+ * 				Type: "UserManaged",
+ * 			},
+ * 			EncryptionState:       "Enabled",
+ * 			FirewallAllowAzureIps: "Enabled",
+ * 			FirewallRules: []datalakestore.CreateFirewallRuleWithAccountParametersArgs{
+ * 				&datalakestore.CreateFirewallRuleWithAccountParametersArgs{
+ * 					EndIpAddress:   pulumi.String("2.2.2.2"),
+ * 					Name:           pulumi.String("test_rule"),
+ * 					StartIpAddress: pulumi.String("1.1.1.1"),
+ * 				},
+ * 			},
+ * 			FirewallState: "Enabled",
+ * 			Identity: &datalakestore.EncryptionIdentityArgs{
+ * 				Type: "SystemAssigned",
+ * 			},
+ * 			Location:          pulumi.String("eastus2"),
+ * 			NewTier:           "Consumption",
+ * 			ResourceGroupName: pulumi.String("contosorg"),
+ * 			Tags: pulumi.StringMap{
+ * 				"test_key": pulumi.String("test_value"),
+ * 			},
+ * 			TrustedIdProviderState: "Enabled",
+ * 			TrustedIdProviders: []datalakestore.CreateTrustedIdProviderWithAccountParametersArgs{
+ * 				&datalakestore.CreateTrustedIdProviderWithAccountParametersArgs{
+ * 					IdProvider: pulumi.String("https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1"),
+ * 					Name:       pulumi.String("test_trusted_id_provider_name"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const account = new azure_native.datalakestore.Account("account", {
+ *     accountName: "contosoadla",
+ *     defaultGroup: "test_default_group",
+ *     encryptionConfig: {
+ *         keyVaultMetaInfo: {
+ *             encryptionKeyName: "test_encryption_key_name",
+ *             encryptionKeyVersion: "encryption_key_version",
+ *             keyVaultResourceId: "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+ *         },
+ *         type: "UserManaged",
+ *     },
+ *     encryptionState: "Enabled",
+ *     firewallAllowAzureIps: "Enabled",
+ *     firewallRules: [{
+ *         endIpAddress: "2.2.2.2",
+ *         name: "test_rule",
+ *         startIpAddress: "1.1.1.1",
+ *     }],
+ *     firewallState: "Enabled",
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "eastus2",
+ *     newTier: "Consumption",
+ *     resourceGroupName: "contosorg",
+ *     tags: {
+ *         test_key: "test_value",
+ *     },
+ *     trustedIdProviderState: "Enabled",
+ *     trustedIdProviders: [{
+ *         idProvider: "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
+ *         name: "test_trusted_id_provider_name",
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * account = azure_native.datalakestore.Account("account",
+ *     account_name="contosoadla",
+ *     default_group="test_default_group",
+ *     encryption_config=azure_native.datalakestore.EncryptionConfigArgs(
+ *         key_vault_meta_info=azure_native.datalakestore.KeyVaultMetaInfoArgs(
+ *             encryption_key_name="test_encryption_key_name",
+ *             encryption_key_version="encryption_key_version",
+ *             key_vault_resource_id="34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
+ *         ),
+ *         type="UserManaged",
+ *     ),
+ *     encryption_state="Enabled",
+ *     firewall_allow_azure_ips="Enabled",
+ *     firewall_rules=[azure_native.datalakestore.CreateFirewallRuleWithAccountParametersArgs(
+ *         end_ip_address="2.2.2.2",
+ *         name="test_rule",
+ *         start_ip_address="1.1.1.1",
+ *     )],
+ *     firewall_state="Enabled",
+ *     identity=azure_native.datalakestore.EncryptionIdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="eastus2",
+ *     new_tier="Consumption",
+ *     resource_group_name="contosorg",
+ *     tags={
+ *         "test_key": "test_value",
+ *     },
+ *     trusted_id_provider_state="Enabled",
+ *     trusted_id_providers=[azure_native.datalakestore.CreateTrustedIdProviderWithAccountParametersArgs(
+ *         id_provider="https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
+ *         name="test_trusted_id_provider_name",
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,322 +242,276 @@ import javax.annotation.Nullable;
 public class Account extends io.pulumi.resources.CustomResource {
     /**
      * The unique identifier associated with this Data Lake Store account.
-     * 
      */
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
      * @return The unique identifier associated with this Data Lake Store account.
-     * 
      */
     public Output<String> getAccountId() {
         return this.accountId;
     }
     /**
      * The account creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The account creation time.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * The commitment tier in use for the current month.
-     * 
      */
     @Export(name="currentTier", type=String.class, parameters={})
     private Output<String> currentTier;
 
     /**
      * @return The commitment tier in use for the current month.
-     * 
      */
     public Output<String> getCurrentTier() {
         return this.currentTier;
     }
     /**
      * The default owner group for all new folders and files created in the Data Lake Store account.
-     * 
      */
     @Export(name="defaultGroup", type=String.class, parameters={})
     private Output<String> defaultGroup;
 
     /**
      * @return The default owner group for all new folders and files created in the Data Lake Store account.
-     * 
      */
     public Output<String> getDefaultGroup() {
         return this.defaultGroup;
     }
     /**
      * The Key Vault encryption configuration.
-     * 
      */
     @Export(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
     private Output<EncryptionConfigResponse> encryptionConfig;
 
     /**
      * @return The Key Vault encryption configuration.
-     * 
      */
     public Output<EncryptionConfigResponse> getEncryptionConfig() {
         return this.encryptionConfig;
     }
     /**
      * The current state of encryption provisioning for this Data Lake Store account.
-     * 
      */
     @Export(name="encryptionProvisioningState", type=String.class, parameters={})
     private Output<String> encryptionProvisioningState;
 
     /**
      * @return The current state of encryption provisioning for this Data Lake Store account.
-     * 
      */
     public Output<String> getEncryptionProvisioningState() {
         return this.encryptionProvisioningState;
     }
     /**
      * The current state of encryption for this Data Lake Store account.
-     * 
      */
     @Export(name="encryptionState", type=String.class, parameters={})
     private Output<String> encryptionState;
 
     /**
      * @return The current state of encryption for this Data Lake Store account.
-     * 
      */
     public Output<String> getEncryptionState() {
         return this.encryptionState;
     }
     /**
      * The full CName endpoint for this account.
-     * 
      */
     @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
      * @return The full CName endpoint for this account.
-     * 
      */
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
     /**
      * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
-     * 
      */
     @Export(name="firewallAllowAzureIps", type=String.class, parameters={})
     private Output<String> firewallAllowAzureIps;
 
     /**
      * @return The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
-     * 
      */
     public Output<String> getFirewallAllowAzureIps() {
         return this.firewallAllowAzureIps;
     }
     /**
      * The list of firewall rules associated with this Data Lake Store account.
-     * 
      */
     @Export(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
     private Output<List<FirewallRuleResponse>> firewallRules;
 
     /**
      * @return The list of firewall rules associated with this Data Lake Store account.
-     * 
      */
     public Output<List<FirewallRuleResponse>> getFirewallRules() {
         return this.firewallRules;
     }
     /**
      * The current state of the IP address firewall for this Data Lake Store account.
-     * 
      */
     @Export(name="firewallState", type=String.class, parameters={})
     private Output<String> firewallState;
 
     /**
      * @return The current state of the IP address firewall for this Data Lake Store account.
-     * 
      */
     public Output<String> getFirewallState() {
         return this.firewallState;
     }
     /**
      * The Key Vault encryption identity, if any.
-     * 
      */
     @Export(name="identity", type=EncryptionIdentityResponse.class, parameters={})
     private Output<EncryptionIdentityResponse> identity;
 
     /**
      * @return The Key Vault encryption identity, if any.
-     * 
      */
     public Output<EncryptionIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The account last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
      * @return The account last modified time.
-     * 
      */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The commitment tier to use for next month.
-     * 
      */
     @Export(name="newTier", type=String.class, parameters={})
     private Output<String> newTier;
 
     /**
      * @return The commitment tier to use for next month.
-     * 
      */
     public Output<String> getNewTier() {
         return this.newTier;
     }
     /**
      * The provisioning status of the Data Lake Store account.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the Data Lake Store account.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The state of the Data Lake Store account.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The state of the Data Lake Store account.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output<Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The current state of the trusted identity provider feature for this Data Lake Store account.
-     * 
      */
     @Export(name="trustedIdProviderState", type=String.class, parameters={})
     private Output<String> trustedIdProviderState;
 
     /**
      * @return The current state of the trusted identity provider feature for this Data Lake Store account.
-     * 
      */
     public Output<String> getTrustedIdProviderState() {
         return this.trustedIdProviderState;
     }
     /**
      * The list of trusted identity providers associated with this Data Lake Store account.
-     * 
      */
     @Export(name="trustedIdProviders", type=List.class, parameters={TrustedIdProviderResponse.class})
     private Output<List<TrustedIdProviderResponse>> trustedIdProviders;
 
     /**
      * @return The list of trusted identity providers associated with this Data Lake Store account.
-     * 
      */
     public Output<List<TrustedIdProviderResponse>> getTrustedIdProviders() {
         return this.trustedIdProviders;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The list of virtual network rules associated with this Data Lake Store account.
-     * 
      */
     @Export(name="virtualNetworkRules", type=List.class, parameters={VirtualNetworkRuleResponse.class})
     private Output<List<VirtualNetworkRuleResponse>> virtualNetworkRules;
 
     /**
      * @return The list of virtual network rules associated with this Data Lake Store account.
-     * 
      */
     public Output<List<VirtualNetworkRuleResponse>> getVirtualNetworkRules() {
         return this.virtualNetworkRules;

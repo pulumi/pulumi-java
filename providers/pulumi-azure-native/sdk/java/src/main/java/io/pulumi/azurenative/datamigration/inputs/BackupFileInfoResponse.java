@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information of the backup file
- * 
  */
 public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Sequence number of the backup file in the backup set
-     * 
      */
     @Import(name="familySequenceNumber")
       private final @Nullable Integer familySequenceNumber;
@@ -32,7 +30,6 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Location of the backup file in shared folder
-     * 
      */
     @Import(name="fileLocation")
       private final @Nullable String fileLocation;
@@ -43,7 +40,6 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Status of the backup file during migration
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

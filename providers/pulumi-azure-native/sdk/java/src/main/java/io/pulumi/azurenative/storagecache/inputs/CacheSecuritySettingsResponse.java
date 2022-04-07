@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cache security settings.
- * 
  */
 public final class CacheSecuritySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CacheSecuritySettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * NFS access policies defined for this cache.
-     * 
      */
     @Import(name="accessPolicies")
       private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;

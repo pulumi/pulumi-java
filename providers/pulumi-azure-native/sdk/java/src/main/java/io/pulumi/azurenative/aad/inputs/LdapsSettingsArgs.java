@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Secure LDAP Settings
- * 
  */
 public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
-     * 
      */
     @Import(name="externalAccess")
       private final @Nullable Output<Either<String,ExternalAccess>> externalAccess;
@@ -34,7 +32,6 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A flag to determine whether or not Secure LDAP is enabled or disabled.
-     * 
      */
     @Import(name="ldaps")
       private final @Nullable Output<Either<String,Ldaps>> ldaps;
@@ -45,7 +42,6 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.
-     * 
      */
     @Import(name="pfxCertificate")
       private final @Nullable Output<String> pfxCertificate;
@@ -56,7 +52,6 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The password to decrypt the provided Secure LDAP certificate pfx file.
-     * 
      */
     @Import(name="pfxCertificatePassword")
       private final @Nullable Output<String> pfxCertificatePassword;

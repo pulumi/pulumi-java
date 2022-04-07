@@ -18,7 +18,91 @@ import javax.annotation.Nullable;
  * Subscription details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateSubscription
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var subscription = new AzureNative.ApiManagement.Subscription("subscription", new AzureNative.ApiManagement.SubscriptionArgs
+ *         {
+ *             DisplayName = "testsub",
+ *             OwnerId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
+ *             ResourceGroupName = "rg1",
+ *             Scope = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5600b59475ff190048060002",
+ *             ServiceName = "apimService1",
+ *             Sid = "testsub",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewSubscription(ctx, "subscription", &apimanagement.SubscriptionArgs{
+ * 			DisplayName:       pulumi.String("testsub"),
+ * 			OwnerId:           pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Scope:             pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5600b59475ff190048060002"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Sid:               pulumi.String("testsub"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const subscription = new azure_native.apimanagement.Subscription("subscription", {
+ *     displayName: "testsub",
+ *     ownerId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
+ *     resourceGroupName: "rg1",
+ *     scope: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5600b59475ff190048060002",
+ *     serviceName: "apimService1",
+ *     sid: "testsub",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * subscription = azure_native.apimanagement.Subscription("subscription",
+ *     display_name="testsub",
+ *     owner_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/57127d485157a511ace86ae7",
+ *     resource_group_name="rg1",
+ *     scope="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5600b59475ff190048060002",
+ *     service_name="apimService1",
+ *     sid="testsub")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +117,12 @@ import javax.annotation.Nullable;
 public class Subscription extends io.pulumi.resources.CustomResource {
     /**
      * Determines whether tracing is enabled
-     * 
      */
     @Export(name="allowTracing", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowTracing;
 
     /**
      * @return Determines whether tracing is enabled
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllowTracing() {
         return this.allowTracing;
@@ -61,14 +143,12 @@ public class Subscription extends io.pulumi.resources.CustomResource {
     }
     /**
      * The name of the subscription, or null if the subscription has no name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The name of the subscription, or null if the subscription has no name.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
@@ -103,14 +183,12 @@ public class Subscription extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -131,56 +209,48 @@ public class Subscription extends io.pulumi.resources.CustomResource {
     }
     /**
      * The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
-     * 
      */
     @Export(name="ownerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerId;
 
     /**
      * @return The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
-     * 
      */
     public Output</* @Nullable */ String> getOwnerId() {
         return this.ownerId;
     }
     /**
      * Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
      */
     @Export(name="primaryKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryKey;
 
     /**
      * @return Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
      */
     public Output</* @Nullable */ String> getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * Scope like /products/{productId} or /apis or /apis/{apiId}.
-     * 
      */
     @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**
      * @return Scope like /products/{productId} or /apis or /apis/{apiId}.
-     * 
      */
     public Output<String> getScope() {
         return this.scope;
     }
     /**
      * Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
      */
     @Export(name="secondaryKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryKey;
 
     /**
      * @return Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
      */
     public Output</* @Nullable */ String> getSecondaryKey() {
         return this.secondaryKey;
@@ -201,42 +271,36 @@ public class Subscription extends io.pulumi.resources.CustomResource {
     }
     /**
      * Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
-     * 
      */
     @Export(name="stateComment", type=String.class, parameters={})
     private Output</* @Nullable */ String> stateComment;
 
     /**
      * @return Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
-     * 
      */
     public Output</* @Nullable */ String> getStateComment() {
         return this.stateComment;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

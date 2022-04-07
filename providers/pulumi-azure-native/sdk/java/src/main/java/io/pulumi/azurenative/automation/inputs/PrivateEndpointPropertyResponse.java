@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Private endpoint which the connection belongs to.
- * 
  */
 public final class PrivateEndpointPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateEndpointPropertyResponse extends io.pulumi.resources.I
 
     /**
      * Resource id of the private endpoint.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

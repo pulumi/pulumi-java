@@ -14,7 +14,6 @@ public final class GetTemplateArtifactArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the blueprint artifact.
-     * 
      */
     @Import(name="artifactName", required=true)
       private final String artifactName;
@@ -25,7 +24,6 @@ public final class GetTemplateArtifactArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the blueprint definition.
-     * 
      */
     @Import(name="blueprintName", required=true)
       private final String blueprintName;
@@ -36,7 +34,6 @@ public final class GetTemplateArtifactArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     * 
      */
     @Import(name="resourceScope", required=true)
       private final String resourceScope;

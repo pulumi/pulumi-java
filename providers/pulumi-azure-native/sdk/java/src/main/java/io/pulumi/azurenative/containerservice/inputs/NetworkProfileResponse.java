@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the OpenShift networking configuration
- * 
  */
 public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * CIDR of the Vnet to peer.
-     * 
      */
     @Import(name="peerVnetId")
       private final @Nullable String peerVnetId;
@@ -31,7 +29,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * CIDR for the OpenShift Vnet.
-     * 
      */
     @Import(name="vnetCidr")
       private final @Nullable String vnetCidr;
@@ -42,7 +39,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * ID of the Vnet created for OSA cluster.
-     * 
      */
     @Import(name="vnetId")
       private final @Nullable String vnetId;

@@ -18,7 +18,6 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Defines whether to send email notifications about new security alerts
-     * 
      */
     @Import(name="alertNotifications")
       private final @Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
@@ -29,7 +28,6 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
-     * 
      */
     @Import(name="emails")
       private final @Nullable Output<String> emails;
@@ -40,7 +38,6 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
-     * 
      */
     @Import(name="notificationsByRole")
       private final @Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
@@ -51,7 +48,6 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The security contact's phone number
-     * 
      */
     @Import(name="phone")
       private final @Nullable Output<String> phone;
@@ -62,7 +58,6 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the security contact object
-     * 
      */
     @Import(name="securityContactName")
       private final @Nullable Output<String> securityContactName;

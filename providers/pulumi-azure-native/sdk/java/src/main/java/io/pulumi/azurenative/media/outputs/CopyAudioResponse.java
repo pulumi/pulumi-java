@@ -13,13 +13,11 @@ import javax.annotation.Nullable;
 public final class CopyAudioResponse {
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
-     * 
      */
     private final @Nullable String label;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.CopyAudio'.
-     * 
      */
     private final String odataType;
 
@@ -33,7 +31,6 @@ public final class CopyAudioResponse {
 
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
-     * 
     */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
@@ -41,7 +38,6 @@ public final class CopyAudioResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.CopyAudio'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;

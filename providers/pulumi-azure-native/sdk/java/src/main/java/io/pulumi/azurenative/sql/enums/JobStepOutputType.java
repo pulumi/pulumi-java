@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The output destination type.
-     * 
      */
     @EnumType
     public enum JobStepOutputType {

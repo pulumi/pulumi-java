@@ -23,7 +23,6 @@ public final class ContainerRegistryResponse extends io.pulumi.resources.InvokeA
 
     /**
      * If omitted, the default is "docker.io".
-     * 
      */
     @Import(name="registryServer")
       private final @Nullable String registryServer;

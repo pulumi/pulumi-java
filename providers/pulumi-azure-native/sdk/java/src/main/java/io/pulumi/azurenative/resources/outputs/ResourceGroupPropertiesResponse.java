@@ -10,8 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ResourceGroupPropertiesResponse {
     /**
-     * The provisioning state.
-     * 
+     * The provisioning state. 
      */
     private final String provisioningState;
 
@@ -21,8 +20,7 @@ public final class ResourceGroupPropertiesResponse {
     }
 
     /**
-     * The provisioning state.
-     * 
+     * The provisioning state. 
     */
     public String getProvisioningState() {
         return this.provisioningState;

@@ -24,7 +24,6 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ARM id of the discovery service site.
-     * 
      */
     @Import(name="discoverySiteId")
       private final @Nullable Output<String> discoverySiteId;

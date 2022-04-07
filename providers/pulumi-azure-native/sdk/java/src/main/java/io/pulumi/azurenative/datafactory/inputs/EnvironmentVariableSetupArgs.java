@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The custom setup of setting environment variable.
- * 
  */
 public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
     /**
      * The type of custom setup.
      * Expected value is 'EnvironmentVariableSetup'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -31,7 +29,6 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the environment variable.
-     * 
      */
     @Import(name="variableName", required=true)
       private final Output<String> variableName;
@@ -42,7 +39,6 @@ public final class EnvironmentVariableSetupArgs extends io.pulumi.resources.Reso
 
     /**
      * The value of the environment variable.
-     * 
      */
     @Import(name="variableValue", required=true)
       private final Output<String> variableValue;

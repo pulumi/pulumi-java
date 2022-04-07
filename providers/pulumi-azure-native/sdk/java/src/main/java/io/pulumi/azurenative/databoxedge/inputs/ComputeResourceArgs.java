@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Compute infrastructure Resource
- * 
  */
 public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Memory in GB
-     * 
      */
     @Import(name="memoryInGB", required=true)
       private final Output<Double> memoryInGB;
@@ -31,7 +29,6 @@ public final class ComputeResourceArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Processor count
-     * 
      */
     @Import(name="processorCount", required=true)
       private final Output<Integer> processorCount;

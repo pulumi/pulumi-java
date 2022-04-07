@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol for the outbound rule in load balancer.
-     * 
      */
     @EnumType
     public enum LoadBalancerOutboundRuleProtocol {

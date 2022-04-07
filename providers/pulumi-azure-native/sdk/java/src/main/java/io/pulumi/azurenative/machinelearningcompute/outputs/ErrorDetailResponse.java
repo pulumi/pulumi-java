@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ErrorDetailResponse {
     /**
      * Error code.
-     * 
      */
     private final String code;
     /**
      * Error message.
-     * 
      */
     private final String message;
 
@@ -30,14 +28,12 @@ public final class ErrorDetailResponse {
 
     /**
      * Error code.
-     * 
     */
     public String getCode() {
         return this.code;
     }
     /**
      * Error message.
-     * 
     */
     public String getMessage() {
         return this.message;

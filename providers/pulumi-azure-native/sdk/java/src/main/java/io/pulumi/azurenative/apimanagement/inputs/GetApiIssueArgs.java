@@ -17,7 +17,6 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * API identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="apiId", required=true)
       private final String apiId;
@@ -27,8 +26,7 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Expand the comment attachments.
-     * 
+     * Expand the comment attachments. 
      */
     @Import(name="expandCommentsAttachments")
       private final @Nullable Boolean expandCommentsAttachments;
@@ -39,7 +37,6 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Issue identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="issueId", required=true)
       private final String issueId;
@@ -50,7 +47,6 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -61,7 +57,6 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

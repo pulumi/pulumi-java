@@ -33,224 +33,192 @@ import javax.annotation.Nullable;
 public class GalleryImage extends io.pulumi.resources.CustomResource {
     /**
      * The author of the gallery image.
-     * 
      */
     @Export(name="author", type=String.class, parameters={})
     private Output<String> author;
 
     /**
      * @return The author of the gallery image.
-     * 
      */
     public Output<String> getAuthor() {
         return this.author;
     }
     /**
      * The creation date of the gallery image.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return The creation date of the gallery image.
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The description of the gallery image.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The description of the gallery image.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The icon of the gallery image.
-     * 
      */
     @Export(name="icon", type=String.class, parameters={})
     private Output<String> icon;
 
     /**
      * @return The icon of the gallery image.
-     * 
      */
     public Output<String> getIcon() {
         return this.icon;
     }
     /**
      * The image reference of the gallery image.
-     * 
      */
     @Export(name="imageReference", type=GalleryImageReferenceResponse.class, parameters={})
     private Output<GalleryImageReferenceResponse> imageReference;
 
     /**
      * @return The image reference of the gallery image.
-     * 
      */
     public Output<GalleryImageReferenceResponse> getImageReference() {
         return this.imageReference;
     }
     /**
      * Indicates whether this gallery image is enabled.
-     * 
      */
     @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
      * @return Indicates whether this gallery image is enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Indicates whether this gallery has been overridden for this lab account
-     * 
      */
     @Export(name="isOverride", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isOverride;
 
     /**
      * @return Indicates whether this gallery has been overridden for this lab account
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsOverride() {
         return this.isOverride;
     }
     /**
      * Indicates if the plan has been authorized for programmatic deployment.
-     * 
      */
     @Export(name="isPlanAuthorized", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isPlanAuthorized;
 
     /**
      * @return Indicates if the plan has been authorized for programmatic deployment.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsPlanAuthorized() {
         return this.isPlanAuthorized;
     }
     /**
      * The details of the latest operation. ex: status, error
-     * 
      */
     @Export(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
     /**
      * @return The details of the latest operation. ex: status, error
-     * 
      */
     public Output<LatestOperationResultResponse> getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The third party plan that applies to this image
-     * 
      */
     @Export(name="planId", type=String.class, parameters={})
     private Output<String> planId;
 
     /**
      * @return The third party plan that applies to this image
-     * 
      */
     public Output<String> getPlanId() {
         return this.planId;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output</* @Nullable */ String> getUniqueIdentifier() {
         return this.uniqueIdentifier;

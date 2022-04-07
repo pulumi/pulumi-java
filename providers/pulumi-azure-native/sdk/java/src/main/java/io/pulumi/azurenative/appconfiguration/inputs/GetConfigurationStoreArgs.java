@@ -14,7 +14,6 @@ public final class GetConfigurationStoreArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the configuration store.
-     * 
      */
     @Import(name="configStoreName", required=true)
       private final String configStoreName;
@@ -25,7 +24,6 @@ public final class GetConfigurationStoreArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

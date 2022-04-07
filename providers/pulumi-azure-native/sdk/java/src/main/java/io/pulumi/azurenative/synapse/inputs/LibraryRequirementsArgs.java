@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Library requirements for a Big Data pool powered by Apache Spark
- * 
  */
 public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The library requirements.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;
@@ -31,7 +29,6 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The filename of the library requirements file.
-     * 
      */
     @Import(name="filename")
       private final @Nullable Output<String> filename;

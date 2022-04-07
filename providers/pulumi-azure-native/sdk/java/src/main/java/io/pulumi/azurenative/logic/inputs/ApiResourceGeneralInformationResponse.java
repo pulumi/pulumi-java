@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The API general information.
- * 
  */
 public final class ApiResourceGeneralInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -31,7 +29,6 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
 
     /**
      * The display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -42,7 +39,6 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
 
     /**
      * The icon url.
-     * 
      */
     @Import(name="iconUrl")
       private final @Nullable String iconUrl;
@@ -53,7 +49,6 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
 
     /**
      * The release tag.
-     * 
      */
     @Import(name="releaseTag")
       private final @Nullable String releaseTag;
@@ -64,7 +59,6 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
 
     /**
      * The terms of use url.
-     * 
      */
     @Import(name="termsOfUseUrl")
       private final @Nullable String termsOfUseUrl;
@@ -75,7 +69,6 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
 
     /**
      * The tier.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class IpAddressResponse {
     /**
      * The Dns name label for the IP.
-     * 
      */
     private final @Nullable String dnsNameLabel;
     /**
      * The FQDN for the IP.
-     * 
      */
     private final String fqdn;
     /**
      * The IP exposed to the public internet.
-     * 
      */
     private final @Nullable String ip;
     /**
      * The list of ports exposed on the container group.
-     * 
      */
     private final List<PortResponse> ports;
     /**
      * Specifies if the IP is exposed to the public internet or private VNET.
-     * 
      */
     private final String type;
 
@@ -55,35 +50,30 @@ public final class IpAddressResponse {
 
     /**
      * The Dns name label for the IP.
-     * 
     */
     public Optional<String> getDnsNameLabel() {
         return Optional.ofNullable(this.dnsNameLabel);
     }
     /**
      * The FQDN for the IP.
-     * 
     */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * The IP exposed to the public internet.
-     * 
     */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * The list of ports exposed on the container group.
-     * 
     */
     public List<PortResponse> getPorts() {
         return this.ports;
     }
     /**
      * Specifies if the IP is exposed to the public internet or private VNET.
-     * 
     */
     public String getType() {
         return this.type;

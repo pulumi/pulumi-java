@@ -16,7 +16,6 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Expands referenced resources.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the Firewall Policy.
-     * 
      */
     @Import(name="firewallPolicyName", required=true)
       private final String firewallPolicyName;
@@ -38,7 +36,6 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

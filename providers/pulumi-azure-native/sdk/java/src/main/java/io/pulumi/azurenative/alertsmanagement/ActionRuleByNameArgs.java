@@ -21,7 +21,6 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of action rule that needs to be created/updated
-     * 
      */
     @Import(name="actionRuleName")
       private final @Nullable Output<String> actionRuleName;
@@ -32,7 +31,6 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -43,7 +41,6 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * action rule properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
@@ -54,7 +51,6 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource group name where the resource is created.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -65,7 +61,6 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

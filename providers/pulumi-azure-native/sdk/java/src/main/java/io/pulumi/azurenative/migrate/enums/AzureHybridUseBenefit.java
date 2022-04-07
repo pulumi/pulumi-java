@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * AHUB discount on windows virtual machines.
-     * 
      */
     @EnumType
     public enum AzureHybridUseBenefit {

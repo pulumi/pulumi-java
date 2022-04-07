@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application logs to file system configuration.
- * 
  */
 public final class FileSystemApplicationLogsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class FileSystemApplicationLogsConfigResponse extends io.pulumi.res
 
     /**
      * Log level.
-     * 
      */
     @Import(name="level")
       private final @Nullable String level;

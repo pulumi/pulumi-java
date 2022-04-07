@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of the user's elastic deployment associated with the monitor resource.
- * 
  */
 public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
 
     /**
      * Associated Azure subscription Id for the elastic deployment.
-     * 
      */
     @Import(name="azureSubscriptionId", required=true)
       private final String azureSubscriptionId;
@@ -29,7 +27,6 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
 
     /**
      * Elastic deployment Id
-     * 
      */
     @Import(name="deploymentId", required=true)
       private final String deploymentId;
@@ -40,7 +37,6 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
 
     /**
      * Region where Deployment at Elastic side took place.
-     * 
      */
     @Import(name="elasticsearchRegion", required=true)
       private final String elasticsearchRegion;
@@ -51,7 +47,6 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
 
     /**
      * Elasticsearch ingestion endpoint of the Elastic deployment.
-     * 
      */
     @Import(name="elasticsearchServiceUrl", required=true)
       private final String elasticsearchServiceUrl;
@@ -62,7 +57,6 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
 
     /**
      * Kibana endpoint of the Elastic deployment.
-     * 
      */
     @Import(name="kibanaServiceUrl", required=true)
       private final String kibanaServiceUrl;
@@ -73,7 +67,6 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
 
     /**
      * Kibana dashboard sso URL of the Elastic deployment.
-     * 
      */
     @Import(name="kibanaSsoUrl", required=true)
       private final String kibanaSsoUrl;
@@ -84,7 +77,6 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
 
     /**
      * Elastic deployment name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

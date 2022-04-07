@@ -21,7 +21,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the availability set.
-     * 
      */
     @Import(name="availabilitySetName")
       private final @Nullable Output<String> availabilitySetName;
@@ -32,7 +31,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -43,7 +41,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Fault Domain count.
-     * 
      */
     @Import(name="platformFaultDomainCount")
       private final @Nullable Output<Integer> platformFaultDomainCount;
@@ -54,7 +51,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Update Domain count.
-     * 
      */
     @Import(name="platformUpdateDomainCount")
       private final @Nullable Output<Integer> platformUpdateDomainCount;
@@ -65,7 +61,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
-     * 
      */
     @Import(name="proximityPlacementGroup")
       private final @Nullable Output<SubResourceArgs> proximityPlacementGroup;
@@ -76,7 +71,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -98,7 +91,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -109,7 +101,6 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A list of references to all virtual machines in the availability set.
-     * 
      */
     @Import(name="virtualMachines")
       private final @Nullable Output<List<SubResourceArgs>> virtualMachines;

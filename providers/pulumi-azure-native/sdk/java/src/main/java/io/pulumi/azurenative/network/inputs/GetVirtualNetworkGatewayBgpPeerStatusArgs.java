@@ -16,7 +16,6 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
 
     /**
      * The IP address of the peer to retrieve the status of.
-     * 
      */
     @Import(name="peer")
       private final @Nullable String peer;
@@ -27,7 +26,6 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
 
     /**
      * The name of the virtual network gateway.
-     * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
       private final String virtualNetworkGatewayName;

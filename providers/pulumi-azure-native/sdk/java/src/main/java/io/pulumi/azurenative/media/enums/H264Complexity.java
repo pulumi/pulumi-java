@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Tells the encoder how to choose its encoding settings. The default value is Balanced.
-     * 
      */
     @EnumType
     public enum H264Complexity {
         /**
          * Tells the encoder to use settings that are optimized for faster encoding. Quality is sacrificed to decrease encoding time.
-         * 
          */
         Speed("Speed"),
         /**
          * Tells the encoder to use settings that achieve a balance between speed and quality.
-         * 
          */
         Balanced("Balanced"),
         /**
          * Tells the encoder to use settings that are optimized to produce higher quality output at the expense of slower overall encode time.
-         * 
          */
         Quality("Quality");
 

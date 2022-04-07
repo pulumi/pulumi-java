@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class PackageStoreResponse {
     /**
      * The name of the package store
-     * 
      */
     private final String name;
     /**
      * The package store linked service reference.
-     * 
      */
     private final EntityReferenceResponse packageStoreLinkedService;
 
@@ -31,14 +29,12 @@ public final class PackageStoreResponse {
 
     /**
      * The name of the package store
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The package store linked service reference.
-     * 
     */
     public EntityReferenceResponse getPackageStoreLinkedService() {
         return this.packageStoreLinkedService;

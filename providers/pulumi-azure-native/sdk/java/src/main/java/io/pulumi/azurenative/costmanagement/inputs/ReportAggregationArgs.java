@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The aggregation expression to be used in the report.
- * 
  */
 public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the aggregation function to use.
-     * 
      */
     @Import(name="function", required=true)
       private final Output<Either<String,FunctionType>> function;
@@ -32,7 +30,6 @@ public final class ReportAggregationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the column to aggregate.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

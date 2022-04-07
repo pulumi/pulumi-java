@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * The Advanced Threat Protection resource.
  * API Version: 2019-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates the Advanced Threat Protection settings on a specified resource.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var advancedThreatProtection = new AzureNative.Security.AdvancedThreatProtection("advancedThreatProtection", new AzureNative.Security.AdvancedThreatProtectionArgs
+ *         {
+ *             IsEnabled = true,
+ *             ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount",
+ *             SettingName = "current",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewAdvancedThreatProtection(ctx, "advancedThreatProtection", &security.AdvancedThreatProtectionArgs{
+ * 			IsEnabled:   pulumi.Bool(true),
+ * 			ResourceId:  pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount"),
+ * 			SettingName: pulumi.String("current"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const advancedThreatProtection = new azure_native.security.AdvancedThreatProtection("advancedThreatProtection", {
+ *     isEnabled: true,
+ *     resourceId: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount",
+ *     settingName: "current",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * advanced_threat_protection = azure_native.security.AdvancedThreatProtection("advancedThreatProtection",
+ *     is_enabled=True,
+ *     resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Storage/storageAccounts/samplestorageaccount",
+ *     setting_name="current")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +105,36 @@ import javax.annotation.Nullable;
 public class AdvancedThreatProtection extends io.pulumi.resources.CustomResource {
     /**
      * Indicates whether Advanced Threat Protection is enabled.
-     * 
      */
     @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
      * @return Indicates whether Advanced Threat Protection is enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

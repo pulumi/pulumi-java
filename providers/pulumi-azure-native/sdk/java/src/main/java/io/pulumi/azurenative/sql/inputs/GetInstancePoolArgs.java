@@ -14,7 +14,6 @@ public final class GetInstancePoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the instance pool to be retrieved.
-     * 
      */
     @Import(name="instancePoolName", required=true)
       private final String instancePoolName;
@@ -25,7 +24,6 @@ public final class GetInstancePoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

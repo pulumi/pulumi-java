@@ -16,12 +16,10 @@ import javax.annotation.Nullable;
 public final class TriggerPipelineReferenceResponse {
     /**
      * Pipeline parameters.
-     * 
      */
     private final @Nullable Map<String,Object> parameters;
     /**
      * Pipeline reference.
-     * 
      */
     private final @Nullable PipelineReferenceResponse pipelineReference;
 
@@ -35,14 +33,12 @@ public final class TriggerPipelineReferenceResponse {
 
     /**
      * Pipeline parameters.
-     * 
     */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Pipeline reference.
-     * 
     */
     public Optional<PipelineReferenceResponse> getPipelineReference() {
         return Optional.ofNullable(this.pipelineReference);

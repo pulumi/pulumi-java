@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines how resources deployed by a blueprint assignment are locked.
- * 
  */
 public final class AssignmentLockSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
 
     /**
      * List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*{@literal /}read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.
-     * 
      */
     @Import(name="excludedActions")
       private final @Nullable List<String> excludedActions;
@@ -32,7 +30,6 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
 
     /**
      * List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.
-     * 
      */
     @Import(name="excludedPrincipals")
       private final @Nullable List<String> excludedPrincipals;
@@ -43,7 +40,6 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
 
     /**
      * Lock mode.
-     * 
      */
     @Import(name="mode")
       private final @Nullable String mode;

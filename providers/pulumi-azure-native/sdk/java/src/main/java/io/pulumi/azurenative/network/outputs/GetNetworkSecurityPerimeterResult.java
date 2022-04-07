@@ -14,47 +14,38 @@ import javax.annotation.Nullable;
 public final class GetNetworkSecurityPerimeterResult {
     /**
      * A description of the network security perimeter.
-     * 
      */
     private final @Nullable String description;
     /**
      * A friendly name for the network security perimeter.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The provisioning state of the scope assignment resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -82,63 +73,54 @@ public final class GetNetworkSecurityPerimeterResult {
 
     /**
      * A description of the network security perimeter.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A friendly name for the network security perimeter.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the scope assignment resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

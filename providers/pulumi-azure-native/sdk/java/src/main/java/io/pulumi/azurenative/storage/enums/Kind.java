@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Required. Indicates the type of storage account.
-     * 
      */
     @EnumType
     public enum Kind {

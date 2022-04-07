@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a configuration for non-DRM keys.
- * 
  */
 public final class ContentKeyPolicyClearKeyConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ContentKeyPolicyClearKeyConfigurationArgs extends io.pulumi.r
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;

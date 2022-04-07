@@ -16,27 +16,22 @@ import javax.annotation.Nullable;
 public final class ManagementConfigurationPropertiesResponse {
     /**
      * The applicationId of the appliance for this Management.
-     * 
      */
     private final @Nullable String applicationId;
     /**
      * Parameters to run the ARM template
-     * 
      */
     private final List<ArmTemplateParameterResponse> parameters;
     /**
      * The type of the parent resource.
-     * 
      */
     private final String parentResourceType;
     /**
      * The provisioning state for the ManagementConfiguration.
-     * 
      */
     private final String provisioningState;
     /**
      * The Json object containing the ARM template to deploy
-     * 
      */
     private final Object template;
 
@@ -56,35 +51,30 @@ public final class ManagementConfigurationPropertiesResponse {
 
     /**
      * The applicationId of the appliance for this Management.
-     * 
     */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * Parameters to run the ARM template
-     * 
     */
     public List<ArmTemplateParameterResponse> getParameters() {
         return this.parameters;
     }
     /**
      * The type of the parent resource.
-     * 
     */
     public String getParentResourceType() {
         return this.parentResourceType;
     }
     /**
      * The provisioning state for the ManagementConfiguration.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The Json object containing the ARM template to deploy
-     * 
     */
     public Object getTemplate() {
         return this.template;

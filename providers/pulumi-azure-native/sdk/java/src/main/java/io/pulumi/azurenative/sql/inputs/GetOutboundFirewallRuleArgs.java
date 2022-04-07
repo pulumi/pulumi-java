@@ -21,7 +21,6 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -32,7 +31,6 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;

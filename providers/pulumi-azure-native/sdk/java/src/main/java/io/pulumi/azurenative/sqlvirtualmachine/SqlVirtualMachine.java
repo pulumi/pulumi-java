@@ -25,7 +25,697 @@ import javax.annotation.Nullable;
  * A SQL virtual machine.
  * API Version: 2017-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates a SQL virtual machine and joins it to a SQL virtual machine group.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlVirtualMachine = new AzureNative.SqlVirtualMachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNative.SqlVirtualMachine.SqlVirtualMachineArgs
+ *         {
+ *             Location = "northeurope",
+ *             ResourceGroupName = "testrg",
+ *             SqlVirtualMachineGroupResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
+ *             SqlVirtualMachineName = "testvm",
+ *             VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
+ *             WsfcDomainCredentials = new AzureNative.SqlVirtualMachine.Inputs.WsfcDomainCredentialsArgs
+ *             {
+ *                 ClusterBootstrapAccountPassword = "<Password>",
+ *                 ClusterOperatorAccountPassword = "<Password>",
+ *                 SqlServiceAccountPassword = "<Password>",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sqlvirtualmachine.NewSqlVirtualMachine(ctx, "sqlVirtualMachine", &sqlvirtualmachine.SqlVirtualMachineArgs{
+ * 			Location:                         pulumi.String("northeurope"),
+ * 			ResourceGroupName:                pulumi.String("testrg"),
+ * 			SqlVirtualMachineGroupResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup"),
+ * 			SqlVirtualMachineName:            pulumi.String("testvm"),
+ * 			VirtualMachineResourceId:         pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2"),
+ * 			WsfcDomainCredentials: &sqlvirtualmachine.WsfcDomainCredentialsArgs{
+ * 				ClusterBootstrapAccountPassword: pulumi.String("<Password>"),
+ * 				ClusterOperatorAccountPassword:  pulumi.String("<Password>"),
+ * 				SqlServiceAccountPassword:       pulumi.String("<Password>"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlVirtualMachine = new azure_native.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
+ *     location: "northeurope",
+ *     resourceGroupName: "testrg",
+ *     sqlVirtualMachineGroupResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
+ *     sqlVirtualMachineName: "testvm",
+ *     virtualMachineResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
+ *     wsfcDomainCredentials: {
+ *         clusterBootstrapAccountPassword: "<Password>",
+ *         clusterOperatorAccountPassword: "<Password>",
+ *         sqlServiceAccountPassword: "<Password>",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_virtual_machine = azure_native.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+ *     location="northeurope",
+ *     resource_group_name="testrg",
+ *     sql_virtual_machine_group_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup",
+ *     sql_virtual_machine_name="testvm",
+ *     virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2",
+ *     wsfc_domain_credentials=azure_native.sqlvirtualmachine.WsfcDomainCredentialsArgs(
+ *         cluster_bootstrap_account_password="<Password>",
+ *         cluster_operator_account_password="<Password>",
+ *         sql_service_account_password="<Password>",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates a SQL virtual machine for Storage Configuration Settings to EXTEND Data, Log or TempDB storage pool.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlVirtualMachine = new AzureNative.SqlVirtualMachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNative.SqlVirtualMachine.SqlVirtualMachineArgs
+ *         {
+ *             Location = "northeurope",
+ *             ResourceGroupName = "testrg",
+ *             SqlVirtualMachineName = "testvm",
+ *             StorageConfigurationSettings = new AzureNative.SqlVirtualMachine.Inputs.StorageConfigurationSettingsArgs
+ *             {
+ *                 DiskConfigurationType = "EXTEND",
+ *                 SqlDataSettings = new AzureNative.SqlVirtualMachine.Inputs.SQLStorageSettingsArgs
+ *                 {
+ *                     Luns = 
+ *                     {
+ *                         2,
+ *                     },
+ *                 },
+ *             },
+ *             VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sqlvirtualmachine.NewSqlVirtualMachine(ctx, "sqlVirtualMachine", &sqlvirtualmachine.SqlVirtualMachineArgs{
+ * 			Location:              pulumi.String("northeurope"),
+ * 			ResourceGroupName:     pulumi.String("testrg"),
+ * 			SqlVirtualMachineName: pulumi.String("testvm"),
+ * 			StorageConfigurationSettings: &sqlvirtualmachine.StorageConfigurationSettingsArgs{
+ * 				DiskConfigurationType: pulumi.String("EXTEND"),
+ * 				SqlDataSettings: &sqlvirtualmachine.SQLStorageSettingsArgs{
+ * 					Luns: pulumi.IntArray{
+ * 						pulumi.Int(2),
+ * 					},
+ * 				},
+ * 			},
+ * 			VirtualMachineResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlVirtualMachine = new azure_native.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
+ *     location: "northeurope",
+ *     resourceGroupName: "testrg",
+ *     sqlVirtualMachineName: "testvm",
+ *     storageConfigurationSettings: {
+ *         diskConfigurationType: "EXTEND",
+ *         sqlDataSettings: {
+ *             luns: [2],
+ *         },
+ *     },
+ *     virtualMachineResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_virtual_machine = azure_native.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+ *     location="northeurope",
+ *     resource_group_name="testrg",
+ *     sql_virtual_machine_name="testvm",
+ *     storage_configuration_settings=azure_native.sqlvirtualmachine.StorageConfigurationSettingsArgs(
+ *         disk_configuration_type="EXTEND",
+ *         sql_data_settings=azure_native.sqlvirtualmachine.SQLStorageSettingsArgs(
+ *             luns=[2],
+ *         ),
+ *     ),
+ *     virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates a SQL virtual machine for Storage Configuration Settings to NEW Data, Log and TempDB storage pool.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlVirtualMachine = new AzureNative.SqlVirtualMachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNative.SqlVirtualMachine.SqlVirtualMachineArgs
+ *         {
+ *             Location = "northeurope",
+ *             ResourceGroupName = "testrg",
+ *             SqlVirtualMachineName = "testvm",
+ *             StorageConfigurationSettings = new AzureNative.SqlVirtualMachine.Inputs.StorageConfigurationSettingsArgs
+ *             {
+ *                 DiskConfigurationType = "NEW",
+ *                 SqlDataSettings = new AzureNative.SqlVirtualMachine.Inputs.SQLStorageSettingsArgs
+ *                 {
+ *                     DefaultFilePath = "F:\\folderpath\\",
+ *                     Luns = 
+ *                     {
+ *                         0,
+ *                     },
+ *                 },
+ *                 SqlLogSettings = new AzureNative.SqlVirtualMachine.Inputs.SQLStorageSettingsArgs
+ *                 {
+ *                     DefaultFilePath = "G:\\folderpath\\",
+ *                     Luns = 
+ *                     {
+ *                         1,
+ *                     },
+ *                 },
+ *                 SqlTempDbSettings = new AzureNative.SqlVirtualMachine.Inputs.SQLStorageSettingsArgs
+ *                 {
+ *                     DefaultFilePath = "D:\\TEMP",
+ *                 },
+ *                 StorageWorkloadType = "OLTP",
+ *             },
+ *             VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sqlvirtualmachine.NewSqlVirtualMachine(ctx, "sqlVirtualMachine", &sqlvirtualmachine.SqlVirtualMachineArgs{
+ * 			Location:              pulumi.String("northeurope"),
+ * 			ResourceGroupName:     pulumi.String("testrg"),
+ * 			SqlVirtualMachineName: pulumi.String("testvm"),
+ * 			StorageConfigurationSettings: &sqlvirtualmachine.StorageConfigurationSettingsArgs{
+ * 				DiskConfigurationType: pulumi.String("NEW"),
+ * 				SqlDataSettings: &sqlvirtualmachine.SQLStorageSettingsArgs{
+ * 					DefaultFilePath: pulumi.String("F:\\folderpath\\"),
+ * 					Luns: pulumi.IntArray{
+ * 						pulumi.Int(0),
+ * 					},
+ * 				},
+ * 				SqlLogSettings: &sqlvirtualmachine.SQLStorageSettingsArgs{
+ * 					DefaultFilePath: pulumi.String("G:\\folderpath\\"),
+ * 					Luns: pulumi.IntArray{
+ * 						pulumi.Int(1),
+ * 					},
+ * 				},
+ * 				SqlTempDbSettings: &sqlvirtualmachine.SQLStorageSettingsArgs{
+ * 					DefaultFilePath: pulumi.String("D:\\TEMP"),
+ * 				},
+ * 				StorageWorkloadType: pulumi.String("OLTP"),
+ * 			},
+ * 			VirtualMachineResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlVirtualMachine = new azure_native.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
+ *     location: "northeurope",
+ *     resourceGroupName: "testrg",
+ *     sqlVirtualMachineName: "testvm",
+ *     storageConfigurationSettings: {
+ *         diskConfigurationType: "NEW",
+ *         sqlDataSettings: {
+ *             defaultFilePath: "F:\\folderpath\\",
+ *             luns: [0],
+ *         },
+ *         sqlLogSettings: {
+ *             defaultFilePath: "G:\\folderpath\\",
+ *             luns: [1],
+ *         },
+ *         sqlTempDbSettings: {
+ *             defaultFilePath: "D:\\TEMP",
+ *         },
+ *         storageWorkloadType: "OLTP",
+ *     },
+ *     virtualMachineResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_virtual_machine = azure_native.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+ *     location="northeurope",
+ *     resource_group_name="testrg",
+ *     sql_virtual_machine_name="testvm",
+ *     storage_configuration_settings=azure_native.sqlvirtualmachine.StorageConfigurationSettingsArgs(
+ *         disk_configuration_type="NEW",
+ *         sql_data_settings=azure_native.sqlvirtualmachine.SQLStorageSettingsArgs(
+ *             default_file_path="F:\\folderpath\\",
+ *             luns=[0],
+ *         ),
+ *         sql_log_settings=azure_native.sqlvirtualmachine.SQLStorageSettingsArgs(
+ *             default_file_path="G:\\folderpath\\",
+ *             luns=[1],
+ *         ),
+ *         sql_temp_db_settings=azure_native.sqlvirtualmachine.SQLStorageSettingsArgs(
+ *             default_file_path="D:\\TEMP",
+ *         ),
+ *         storage_workload_type="OLTP",
+ *     ),
+ *     virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates a SQL virtual machine with max parameters.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlVirtualMachine = new AzureNative.SqlVirtualMachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNative.SqlVirtualMachine.SqlVirtualMachineArgs
+ *         {
+ *             AutoBackupSettings = new AzureNative.SqlVirtualMachine.Inputs.AutoBackupSettingsArgs
+ *             {
+ *                 BackupScheduleType = "Manual",
+ *                 BackupSystemDbs = true,
+ *                 Enable = true,
+ *                 EnableEncryption = true,
+ *                 FullBackupFrequency = "Daily",
+ *                 FullBackupStartTime = 6,
+ *                 FullBackupWindowHours = 11,
+ *                 LogBackupFrequency = 10,
+ *                 Password = "<Password>",
+ *                 RetentionPeriod = 17,
+ *                 StorageAccessKey = "<primary storage access key>",
+ *                 StorageAccountUrl = "https://teststorage.blob.core.windows.net/",
+ *             },
+ *             AutoPatchingSettings = new AzureNative.SqlVirtualMachine.Inputs.AutoPatchingSettingsArgs
+ *             {
+ *                 DayOfWeek = "Sunday",
+ *                 Enable = true,
+ *                 MaintenanceWindowDuration = 60,
+ *                 MaintenanceWindowStartingHour = 2,
+ *             },
+ *             KeyVaultCredentialSettings = new AzureNative.SqlVirtualMachine.Inputs.KeyVaultCredentialSettingsArgs
+ *             {
+ *                 Enable = false,
+ *             },
+ *             Location = "northeurope",
+ *             ResourceGroupName = "testrg",
+ *             ServerConfigurationsManagementSettings = new AzureNative.SqlVirtualMachine.Inputs.ServerConfigurationsManagementSettingsArgs
+ *             {
+ *                 AdditionalFeaturesServerConfigurations = new AzureNative.SqlVirtualMachine.Inputs.AdditionalFeaturesServerConfigurationsArgs
+ *                 {
+ *                     IsRServicesEnabled = false,
+ *                 },
+ *                 SqlConnectivityUpdateSettings = new AzureNative.SqlVirtualMachine.Inputs.SqlConnectivityUpdateSettingsArgs
+ *                 {
+ *                     ConnectivityType = "PRIVATE",
+ *                     Port = 1433,
+ *                     SqlAuthUpdatePassword = "<password>",
+ *                     SqlAuthUpdateUserName = "sqllogin",
+ *                 },
+ *                 SqlStorageUpdateSettings = new AzureNative.SqlVirtualMachine.Inputs.SqlStorageUpdateSettingsArgs
+ *                 {
+ *                     DiskConfigurationType = "NEW",
+ *                     DiskCount = 1,
+ *                     StartingDeviceId = 2,
+ *                 },
+ *                 SqlWorkloadTypeUpdateSettings = new AzureNative.SqlVirtualMachine.Inputs.SqlWorkloadTypeUpdateSettingsArgs
+ *                 {
+ *                     SqlWorkloadType = "OLTP",
+ *                 },
+ *             },
+ *             SqlImageSku = "Enterprise",
+ *             SqlManagement = "Full",
+ *             SqlServerLicenseType = "PAYG",
+ *             SqlVirtualMachineName = "testvm",
+ *             VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sqlvirtualmachine.NewSqlVirtualMachine(ctx, "sqlVirtualMachine", &sqlvirtualmachine.SqlVirtualMachineArgs{
+ * 			AutoBackupSettings: &sqlvirtualmachine.AutoBackupSettingsArgs{
+ * 				BackupScheduleType:    pulumi.String("Manual"),
+ * 				BackupSystemDbs:       pulumi.Bool(true),
+ * 				Enable:                pulumi.Bool(true),
+ * 				EnableEncryption:      pulumi.Bool(true),
+ * 				FullBackupFrequency:   pulumi.String("Daily"),
+ * 				FullBackupStartTime:   pulumi.Int(6),
+ * 				FullBackupWindowHours: pulumi.Int(11),
+ * 				LogBackupFrequency:    pulumi.Int(10),
+ * 				Password:              pulumi.String("<Password>"),
+ * 				RetentionPeriod:       pulumi.Int(17),
+ * 				StorageAccessKey:      pulumi.String("<primary storage access key>"),
+ * 				StorageAccountUrl:     pulumi.String("https://teststorage.blob.core.windows.net/"),
+ * 			},
+ * 			AutoPatchingSettings: &sqlvirtualmachine.AutoPatchingSettingsArgs{
+ * 				DayOfWeek:                     "Sunday",
+ * 				Enable:                        pulumi.Bool(true),
+ * 				MaintenanceWindowDuration:     pulumi.Int(60),
+ * 				MaintenanceWindowStartingHour: pulumi.Int(2),
+ * 			},
+ * 			KeyVaultCredentialSettings: &sqlvirtualmachine.KeyVaultCredentialSettingsArgs{
+ * 				Enable: pulumi.Bool(false),
+ * 			},
+ * 			Location:          pulumi.String("northeurope"),
+ * 			ResourceGroupName: pulumi.String("testrg"),
+ * 			ServerConfigurationsManagementSettings: &sqlvirtualmachine.ServerConfigurationsManagementSettingsArgs{
+ * 				AdditionalFeaturesServerConfigurations: &sqlvirtualmachine.AdditionalFeaturesServerConfigurationsArgs{
+ * 					IsRServicesEnabled: pulumi.Bool(false),
+ * 				},
+ * 				SqlConnectivityUpdateSettings: &sqlvirtualmachine.SqlConnectivityUpdateSettingsArgs{
+ * 					ConnectivityType:      pulumi.String("PRIVATE"),
+ * 					Port:                  pulumi.Int(1433),
+ * 					SqlAuthUpdatePassword: pulumi.String("<password>"),
+ * 					SqlAuthUpdateUserName: pulumi.String("sqllogin"),
+ * 				},
+ * 				SqlStorageUpdateSettings: &sqlvirtualmachine.SqlStorageUpdateSettingsArgs{
+ * 					DiskConfigurationType: pulumi.String("NEW"),
+ * 					DiskCount:             pulumi.Int(1),
+ * 					StartingDeviceId:      pulumi.Int(2),
+ * 				},
+ * 				SqlWorkloadTypeUpdateSettings: &sqlvirtualmachine.SqlWorkloadTypeUpdateSettingsArgs{
+ * 					SqlWorkloadType: pulumi.String("OLTP"),
+ * 				},
+ * 			},
+ * 			SqlImageSku:              pulumi.String("Enterprise"),
+ * 			SqlManagement:            pulumi.String("Full"),
+ * 			SqlServerLicenseType:     pulumi.String("PAYG"),
+ * 			SqlVirtualMachineName:    pulumi.String("testvm"),
+ * 			VirtualMachineResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlVirtualMachine = new azure_native.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
+ *     autoBackupSettings: {
+ *         backupScheduleType: "Manual",
+ *         backupSystemDbs: true,
+ *         enable: true,
+ *         enableEncryption: true,
+ *         fullBackupFrequency: "Daily",
+ *         fullBackupStartTime: 6,
+ *         fullBackupWindowHours: 11,
+ *         logBackupFrequency: 10,
+ *         password: "<Password>",
+ *         retentionPeriod: 17,
+ *         storageAccessKey: "<primary storage access key>",
+ *         storageAccountUrl: "https://teststorage.blob.core.windows.net/",
+ *     },
+ *     autoPatchingSettings: {
+ *         dayOfWeek: "Sunday",
+ *         enable: true,
+ *         maintenanceWindowDuration: 60,
+ *         maintenanceWindowStartingHour: 2,
+ *     },
+ *     keyVaultCredentialSettings: {
+ *         enable: false,
+ *     },
+ *     location: "northeurope",
+ *     resourceGroupName: "testrg",
+ *     serverConfigurationsManagementSettings: {
+ *         additionalFeaturesServerConfigurations: {
+ *             isRServicesEnabled: false,
+ *         },
+ *         sqlConnectivityUpdateSettings: {
+ *             connectivityType: "PRIVATE",
+ *             port: 1433,
+ *             sqlAuthUpdatePassword: "<password>",
+ *             sqlAuthUpdateUserName: "sqllogin",
+ *         },
+ *         sqlStorageUpdateSettings: {
+ *             diskConfigurationType: "NEW",
+ *             diskCount: 1,
+ *             startingDeviceId: 2,
+ *         },
+ *         sqlWorkloadTypeUpdateSettings: {
+ *             sqlWorkloadType: "OLTP",
+ *         },
+ *     },
+ *     sqlImageSku: "Enterprise",
+ *     sqlManagement: "Full",
+ *     sqlServerLicenseType: "PAYG",
+ *     sqlVirtualMachineName: "testvm",
+ *     virtualMachineResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_virtual_machine = azure_native.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+ *     auto_backup_settings=azure_native.sqlvirtualmachine.AutoBackupSettingsArgs(
+ *         backup_schedule_type="Manual",
+ *         backup_system_dbs=True,
+ *         enable=True,
+ *         enable_encryption=True,
+ *         full_backup_frequency="Daily",
+ *         full_backup_start_time=6,
+ *         full_backup_window_hours=11,
+ *         log_backup_frequency=10,
+ *         password="<Password>",
+ *         retention_period=17,
+ *         storage_access_key="<primary storage access key>",
+ *         storage_account_url="https://teststorage.blob.core.windows.net/",
+ *     ),
+ *     auto_patching_settings=azure_native.sqlvirtualmachine.AutoPatchingSettingsArgs(
+ *         day_of_week="Sunday",
+ *         enable=True,
+ *         maintenance_window_duration=60,
+ *         maintenance_window_starting_hour=2,
+ *     ),
+ *     key_vault_credential_settings=azure_native.sqlvirtualmachine.KeyVaultCredentialSettingsArgs(
+ *         enable=False,
+ *     ),
+ *     location="northeurope",
+ *     resource_group_name="testrg",
+ *     server_configurations_management_settings=azure_native.sqlvirtualmachine.ServerConfigurationsManagementSettingsArgs(
+ *         additional_features_server_configurations=azure_native.sqlvirtualmachine.AdditionalFeaturesServerConfigurationsArgs(
+ *             is_r_services_enabled=False,
+ *         ),
+ *         sql_connectivity_update_settings=azure_native.sqlvirtualmachine.SqlConnectivityUpdateSettingsArgs(
+ *             connectivity_type="PRIVATE",
+ *             port=1433,
+ *             sql_auth_update_password="<password>",
+ *             sql_auth_update_user_name="sqllogin",
+ *         ),
+ *         sql_storage_update_settings=azure_native.sqlvirtualmachine.SqlStorageUpdateSettingsArgs(
+ *             disk_configuration_type="NEW",
+ *             disk_count=1,
+ *             starting_device_id=2,
+ *         ),
+ *         sql_workload_type_update_settings=azure_native.sqlvirtualmachine.SqlWorkloadTypeUpdateSettingsArgs(
+ *             sql_workload_type="OLTP",
+ *         ),
+ *     ),
+ *     sql_image_sku="Enterprise",
+ *     sql_management="Full",
+ *     sql_server_license_type="PAYG",
+ *     sql_virtual_machine_name="testvm",
+ *     virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates a SQL virtual machine with min parameters.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlVirtualMachine = new AzureNative.SqlVirtualMachine.SqlVirtualMachine("sqlVirtualMachine", new AzureNative.SqlVirtualMachine.SqlVirtualMachineArgs
+ *         {
+ *             Location = "northeurope",
+ *             ResourceGroupName = "testrg",
+ *             SqlVirtualMachineName = "testvm",
+ *             VirtualMachineResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sqlvirtualmachine.NewSqlVirtualMachine(ctx, "sqlVirtualMachine", &sqlvirtualmachine.SqlVirtualMachineArgs{
+ * 			Location:                 pulumi.String("northeurope"),
+ * 			ResourceGroupName:        pulumi.String("testrg"),
+ * 			SqlVirtualMachineName:    pulumi.String("testvm"),
+ * 			VirtualMachineResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlVirtualMachine = new azure_native.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine", {
+ *     location: "northeurope",
+ *     resourceGroupName: "testrg",
+ *     sqlVirtualMachineName: "testvm",
+ *     virtualMachineResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_virtual_machine = azure_native.sqlvirtualmachine.SqlVirtualMachine("sqlVirtualMachine",
+ *     location="northeurope",
+ *     resource_group_name="testrg",
+ *     sql_virtual_machine_name="testvm",
+ *     virtual_machine_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,252 +730,216 @@ import javax.annotation.Nullable;
 public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
     /**
      * Auto backup settings for SQL Server.
-     * 
      */
     @Export(name="autoBackupSettings", type=AutoBackupSettingsResponse.class, parameters={})
     private Output</* @Nullable */ AutoBackupSettingsResponse> autoBackupSettings;
 
     /**
      * @return Auto backup settings for SQL Server.
-     * 
      */
     public Output</* @Nullable */ AutoBackupSettingsResponse> getAutoBackupSettings() {
         return this.autoBackupSettings;
     }
     /**
      * Auto patching settings for applying critical security updates to SQL virtual machine.
-     * 
      */
     @Export(name="autoPatchingSettings", type=AutoPatchingSettingsResponse.class, parameters={})
     private Output</* @Nullable */ AutoPatchingSettingsResponse> autoPatchingSettings;
 
     /**
      * @return Auto patching settings for applying critical security updates to SQL virtual machine.
-     * 
      */
     public Output</* @Nullable */ AutoPatchingSettingsResponse> getAutoPatchingSettings() {
         return this.autoPatchingSettings;
     }
     /**
      * Azure Active Directory identity of the server.
-     * 
      */
     @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
      * @return Azure Active Directory identity of the server.
-     * 
      */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Key vault credential settings.
-     * 
      */
     @Export(name="keyVaultCredentialSettings", type=KeyVaultCredentialSettingsResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultCredentialSettingsResponse> keyVaultCredentialSettings;
 
     /**
      * @return Key vault credential settings.
-     * 
      */
     public Output</* @Nullable */ KeyVaultCredentialSettingsResponse> getKeyVaultCredentialSettings() {
         return this.keyVaultCredentialSettings;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state to track the async operation status.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state to track the async operation status.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * SQL Server configuration management settings.
-     * 
      */
     @Export(name="serverConfigurationsManagementSettings", type=ServerConfigurationsManagementSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ServerConfigurationsManagementSettingsResponse> serverConfigurationsManagementSettings;
 
     /**
      * @return SQL Server configuration management settings.
-     * 
      */
     public Output</* @Nullable */ ServerConfigurationsManagementSettingsResponse> getServerConfigurationsManagementSettings() {
         return this.serverConfigurationsManagementSettings;
     }
     /**
      * SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
-     * 
      */
     @Export(name="sqlImageOffer", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlImageOffer;
 
     /**
      * @return SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
-     * 
      */
     public Output</* @Nullable */ String> getSqlImageOffer() {
         return this.sqlImageOffer;
     }
     /**
      * SQL Server edition type.
-     * 
      */
     @Export(name="sqlImageSku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlImageSku;
 
     /**
      * @return SQL Server edition type.
-     * 
      */
     public Output</* @Nullable */ String> getSqlImageSku() {
         return this.sqlImageSku;
     }
     /**
      * SQL Server Management type.
-     * 
      */
     @Export(name="sqlManagement", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlManagement;
 
     /**
      * @return SQL Server Management type.
-     * 
      */
     public Output</* @Nullable */ String> getSqlManagement() {
         return this.sqlManagement;
     }
     /**
      * SQL Server license type.
-     * 
      */
     @Export(name="sqlServerLicenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlServerLicenseType;
 
     /**
      * @return SQL Server license type.
-     * 
      */
     public Output</* @Nullable */ String> getSqlServerLicenseType() {
         return this.sqlServerLicenseType;
     }
     /**
      * ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
-     * 
      */
     @Export(name="sqlVirtualMachineGroupResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlVirtualMachineGroupResourceId;
 
     /**
      * @return ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
-     * 
      */
     public Output</* @Nullable */ String> getSqlVirtualMachineGroupResourceId() {
         return this.sqlVirtualMachineGroupResourceId;
     }
     /**
      * Storage Configuration Settings.
-     * 
      */
     @Export(name="storageConfigurationSettings", type=StorageConfigurationSettingsResponse.class, parameters={})
     private Output</* @Nullable */ StorageConfigurationSettingsResponse> storageConfigurationSettings;
 
     /**
      * @return Storage Configuration Settings.
-     * 
      */
     public Output</* @Nullable */ StorageConfigurationSettingsResponse> getStorageConfigurationSettings() {
         return this.storageConfigurationSettings;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * ARM Resource id of underlying virtual machine created from SQL marketplace image.
-     * 
      */
     @Export(name="virtualMachineResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualMachineResourceId;
 
     /**
      * @return ARM Resource id of underlying virtual machine created from SQL marketplace image.
-     * 
      */
     public Output</* @Nullable */ String> getVirtualMachineResourceId() {
         return this.virtualMachineResourceId;
     }
     /**
      * Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
-     * 
      */
     @Export(name="wsfcDomainCredentials", type=WsfcDomainCredentialsResponse.class, parameters={})
     private Output</* @Nullable */ WsfcDomainCredentialsResponse> wsfcDomainCredentials;
 
     /**
      * @return Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
-     * 
      */
     public Output</* @Nullable */ WsfcDomainCredentialsResponse> getWsfcDomainCredentials() {
         return this.wsfcDomainCredentials;

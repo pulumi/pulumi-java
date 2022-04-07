@@ -15,7 +15,6 @@ public final class GetGlobalUserOperationBatchStatusArgs extends io.pulumi.resou
 
     /**
      * The operation url of long running operation
-     * 
      */
     @Import(name="urls", required=true)
       private final List<String> urls;
@@ -26,7 +25,6 @@ public final class GetGlobalUserOperationBatchStatusArgs extends io.pulumi.resou
 
     /**
      * The name of the user.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

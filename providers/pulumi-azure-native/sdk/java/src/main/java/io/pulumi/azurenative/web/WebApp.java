@@ -37,56 +37,48 @@ import javax.annotation.Nullable;
 public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * Management information availability state for the app.
-     * 
      */
     @Export(name="availabilityState", type=String.class, parameters={})
     private Output<String> availabilityState;
 
     /**
      * @return Management information availability state for the app.
-     * 
      */
     public Output<String> getAvailabilityState() {
         return this.availabilityState;
     }
     /**
      * <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
-     * 
      */
     @Export(name="clientAffinityEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> clientAffinityEnabled;
 
     /**
      * @return <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
-     * 
      */
     public Output</* @Nullable */ Boolean> getClientAffinityEnabled() {
         return this.clientAffinityEnabled;
     }
     /**
      * <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
-     * 
      */
     @Export(name="clientCertEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> clientCertEnabled;
 
     /**
      * @return <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
-     * 
      */
     public Output</* @Nullable */ Boolean> getClientCertEnabled() {
         return this.clientCertEnabled;
     }
     /**
      * client certificate authentication comma-separated exclusion paths
-     * 
      */
     @Export(name="clientCertExclusionPaths", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientCertExclusionPaths;
 
     /**
      * @return client certificate authentication comma-separated exclusion paths
-     * 
      */
     public Output</* @Nullable */ String> getClientCertExclusionPaths() {
         return this.clientCertExclusionPaths;
@@ -96,7 +88,6 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * - ClientCertEnabled: false means ClientCert is ignored.
      * - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
-     * 
      */
     @Export(name="clientCertMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientCertMode;
@@ -106,77 +97,66 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * - ClientCertEnabled: false means ClientCert is ignored.
      * - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
-     * 
      */
     public Output</* @Nullable */ String> getClientCertMode() {
         return this.clientCertMode;
     }
     /**
      * Size of the function container.
-     * 
      */
     @Export(name="containerSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> containerSize;
 
     /**
      * @return Size of the function container.
-     * 
      */
     public Output</* @Nullable */ Integer> getContainerSize() {
         return this.containerSize;
     }
     /**
      * Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
-     * 
      */
     @Export(name="customDomainVerificationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> customDomainVerificationId;
 
     /**
      * @return Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
-     * 
      */
     public Output</* @Nullable */ String> getCustomDomainVerificationId() {
         return this.customDomainVerificationId;
     }
     /**
      * Maximum allowed daily memory-time quota (applicable on dynamic apps only).
-     * 
      */
     @Export(name="dailyMemoryTimeQuota", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dailyMemoryTimeQuota;
 
     /**
      * @return Maximum allowed daily memory-time quota (applicable on dynamic apps only).
-     * 
      */
     public Output</* @Nullable */ Integer> getDailyMemoryTimeQuota() {
         return this.dailyMemoryTimeQuota;
     }
     /**
      * Default hostname of the app. Read-only.
-     * 
      */
     @Export(name="defaultHostName", type=String.class, parameters={})
     private Output<String> defaultHostName;
 
     /**
      * @return Default hostname of the app. Read-only.
-     * 
      */
     public Output<String> getDefaultHostName() {
         return this.defaultHostName;
     }
     /**
      * <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
@@ -184,7 +164,6 @@ public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
      * the app is not served on those hostnames.
-     * 
      */
     @Export(name="enabledHostNames", type=List.class, parameters={String.class})
     private Output<List<String>> enabledHostNames;
@@ -192,35 +171,30 @@ public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * @return Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
      * the app is not served on those hostnames.
-     * 
      */
     public Output<List<String>> getEnabledHostNames() {
         return this.enabledHostNames;
     }
     /**
      * Hostname SSL states are used to manage the SSL bindings for app's hostnames.
-     * 
      */
     @Export(name="hostNameSslStates", type=List.class, parameters={HostNameSslStateResponse.class})
     private Output</* @Nullable */ List<HostNameSslStateResponse>> hostNameSslStates;
 
     /**
      * @return Hostname SSL states are used to manage the SSL bindings for app's hostnames.
-     * 
      */
     public Output</* @Nullable */ List<HostNameSslStateResponse>> getHostNameSslStates() {
         return this.hostNameSslStates;
     }
     /**
      * Hostnames associated with the app.
-     * 
      */
     @Export(name="hostNames", type=List.class, parameters={String.class})
     private Output<List<String>> hostNames;
 
     /**
      * @return Hostnames associated with the app.
-     * 
      */
     public Output<List<String>> getHostNames() {
         return this.hostNames;
@@ -228,7 +202,6 @@ public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
      *  If <code>true</code>, the app is only accessible via API management process.
-     * 
      */
     @Export(name="hostNamesDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hostNamesDisabled;
@@ -236,21 +209,18 @@ public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * @return <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
      *  If <code>true</code>, the app is only accessible via API management process.
-     * 
      */
     public Output</* @Nullable */ Boolean> getHostNamesDisabled() {
         return this.hostNamesDisabled;
     }
     /**
      * App Service Environment to use for the app.
-     * 
      */
     @Export(name="hostingEnvironmentProfile", type=HostingEnvironmentProfileResponse.class, parameters={})
     private Output</* @Nullable */ HostingEnvironmentProfileResponse> hostingEnvironmentProfile;
 
     /**
      * @return App Service Environment to use for the app.
-     * 
      */
     public Output</* @Nullable */ HostingEnvironmentProfileResponse> getHostingEnvironmentProfile() {
         return this.hostingEnvironmentProfile;
@@ -258,7 +228,6 @@ public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * HttpsOnly: configures a web site to accept only https requests. Issues redirect for
      * http requests
-     * 
      */
     @Export(name="httpsOnly", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> httpsOnly;
@@ -266,133 +235,114 @@ public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * @return HttpsOnly: configures a web site to accept only https requests. Issues redirect for
      * http requests
-     * 
      */
     public Output</* @Nullable */ Boolean> getHttpsOnly() {
         return this.httpsOnly;
     }
     /**
      * Hyper-V sandbox.
-     * 
      */
     @Export(name="hyperV", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hyperV;
 
     /**
      * @return Hyper-V sandbox.
-     * 
      */
     public Output</* @Nullable */ Boolean> getHyperV() {
         return this.hyperV;
     }
     /**
      * Managed service identity.
-     * 
      */
     @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
      * @return Managed service identity.
-     * 
      */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Specifies an operation id if this site has a pending operation.
-     * 
      */
     @Export(name="inProgressOperationId", type=String.class, parameters={})
     private Output<String> inProgressOperationId;
 
     /**
      * @return Specifies an operation id if this site has a pending operation.
-     * 
      */
     public Output<String> getInProgressOperationId() {
         return this.inProgressOperationId;
     }
     /**
      * <code>true</code> if the app is a default container; otherwise, <code>false</code>.
-     * 
      */
     @Export(name="isDefaultContainer", type=Boolean.class, parameters={})
     private Output<Boolean> isDefaultContainer;
 
     /**
      * @return <code>true</code> if the app is a default container; otherwise, <code>false</code>.
-     * 
      */
     public Output<Boolean> getIsDefaultContainer() {
         return this.isDefaultContainer;
     }
     /**
      * Obsolete: Hyper-V sandbox.
-     * 
      */
     @Export(name="isXenon", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isXenon;
 
     /**
      * @return Obsolete: Hyper-V sandbox.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsXenon() {
         return this.isXenon;
     }
     /**
      * Identity to use for Key Vault Reference authentication.
-     * 
      */
     @Export(name="keyVaultReferenceIdentity", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultReferenceIdentity;
 
     /**
      * @return Identity to use for Key Vault Reference authentication.
-     * 
      */
     public Output</* @Nullable */ String> getKeyVaultReferenceIdentity() {
         return this.keyVaultReferenceIdentity;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Last time the app was modified, in UTC. Read-only.
-     * 
      */
     @Export(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
     /**
      * @return Last time the app was modified, in UTC. Read-only.
-     * 
      */
     public Output<String> getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
      * Resource Location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource Location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
@@ -400,7 +350,6 @@ public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * Maximum number of workers.
      * This only applies to Functions container.
-     * 
      */
     @Export(name="maxNumberOfWorkers", type=Integer.class, parameters={})
     private Output<Integer> maxNumberOfWorkers;
@@ -408,273 +357,234 @@ public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * @return Maximum number of workers.
      * This only applies to Functions container.
-     * 
      */
     public Output<Integer> getMaxNumberOfWorkers() {
         return this.maxNumberOfWorkers;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
-     * 
      */
     @Export(name="outboundIpAddresses", type=String.class, parameters={})
     private Output<String> outboundIpAddresses;
 
     /**
      * @return List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
-     * 
      */
     public Output<String> getOutboundIpAddresses() {
         return this.outboundIpAddresses;
     }
     /**
      * List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.
-     * 
      */
     @Export(name="possibleOutboundIpAddresses", type=String.class, parameters={})
     private Output<String> possibleOutboundIpAddresses;
 
     /**
      * @return List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.
-     * 
      */
     public Output<String> getPossibleOutboundIpAddresses() {
         return this.possibleOutboundIpAddresses;
     }
     /**
      * Site redundancy mode
-     * 
      */
     @Export(name="redundancyMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> redundancyMode;
 
     /**
      * @return Site redundancy mode
-     * 
      */
     public Output</* @Nullable */ String> getRedundancyMode() {
         return this.redundancyMode;
     }
     /**
      * Name of the repository site.
-     * 
      */
     @Export(name="repositorySiteName", type=String.class, parameters={})
     private Output<String> repositorySiteName;
 
     /**
      * @return Name of the repository site.
-     * 
      */
     public Output<String> getRepositorySiteName() {
         return this.repositorySiteName;
     }
     /**
      * <code>true</code> if reserved; otherwise, <code>false</code>.
-     * 
      */
     @Export(name="reserved", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reserved;
 
     /**
      * @return <code>true</code> if reserved; otherwise, <code>false</code>.
-     * 
      */
     public Output</* @Nullable */ Boolean> getReserved() {
         return this.reserved;
     }
     /**
      * Name of the resource group the app belongs to. Read-only.
-     * 
      */
     @Export(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
     /**
      * @return Name of the resource group the app belongs to. Read-only.
-     * 
      */
     public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
-     * 
      */
     @Export(name="scmSiteAlsoStopped", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> scmSiteAlsoStopped;
 
     /**
      * @return <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
-     * 
      */
     public Output</* @Nullable */ Boolean> getScmSiteAlsoStopped() {
         return this.scmSiteAlsoStopped;
     }
     /**
      * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
-     * 
      */
     @Export(name="serverFarmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverFarmId;
 
     /**
      * @return Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
-     * 
      */
     public Output</* @Nullable */ String> getServerFarmId() {
         return this.serverFarmId;
     }
     /**
      * Configuration of the app.
-     * 
      */
     @Export(name="siteConfig", type=SiteConfigResponse.class, parameters={})
     private Output</* @Nullable */ SiteConfigResponse> siteConfig;
 
     /**
      * @return Configuration of the app.
-     * 
      */
     public Output</* @Nullable */ SiteConfigResponse> getSiteConfig() {
         return this.siteConfig;
     }
     /**
      * Status of the last deployment slot swap operation.
-     * 
      */
     @Export(name="slotSwapStatus", type=SlotSwapStatusResponse.class, parameters={})
     private Output<SlotSwapStatusResponse> slotSwapStatus;
 
     /**
      * @return Status of the last deployment slot swap operation.
-     * 
      */
     public Output<SlotSwapStatusResponse> getSlotSwapStatus() {
         return this.slotSwapStatus;
     }
     /**
      * Current state of the app.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Current state of the app.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Checks if Customer provided storage account is required
-     * 
      */
     @Export(name="storageAccountRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> storageAccountRequired;
 
     /**
      * @return Checks if Customer provided storage account is required
-     * 
      */
     public Output</* @Nullable */ Boolean> getStorageAccountRequired() {
         return this.storageAccountRequired;
     }
     /**
      * App suspended till in case memory-time quota is exceeded.
-     * 
      */
     @Export(name="suspendedTill", type=String.class, parameters={})
     private Output<String> suspendedTill;
 
     /**
      * @return App suspended till in case memory-time quota is exceeded.
-     * 
      */
     public Output<String> getSuspendedTill() {
         return this.suspendedTill;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Specifies which deployment slot this app will swap into. Read-only.
-     * 
      */
     @Export(name="targetSwapSlot", type=String.class, parameters={})
     private Output<String> targetSwapSlot;
 
     /**
      * @return Specifies which deployment slot this app will swap into. Read-only.
-     * 
      */
     public Output<String> getTargetSwapSlot() {
         return this.targetSwapSlot;
     }
     /**
      * Azure Traffic Manager hostnames associated with the app. Read-only.
-     * 
      */
     @Export(name="trafficManagerHostNames", type=List.class, parameters={String.class})
     private Output<List<String>> trafficManagerHostNames;
 
     /**
      * @return Azure Traffic Manager hostnames associated with the app. Read-only.
-     * 
      */
     public Output<List<String>> getTrafficManagerHostNames() {
         return this.trafficManagerHostNames;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * State indicating whether the app has exceeded its quota usage. Read-only.
-     * 
      */
     @Export(name="usageState", type=String.class, parameters={})
     private Output<String> usageState;
 
     /**
      * @return State indicating whether the app has exceeded its quota usage. Read-only.
-     * 
      */
     public Output<String> getUsageState() {
         return this.usageState;
@@ -682,7 +592,6 @@ public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
      * This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
-     * 
      */
     @Export(name="virtualNetworkSubnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualNetworkSubnetId;
@@ -690,7 +599,6 @@ public class WebApp extends io.pulumi.resources.CustomResource {
     /**
      * @return Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration.
      * This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
-     * 
      */
     public Output</* @Nullable */ String> getVirtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;

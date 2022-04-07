@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The type of IoT Security recommendation.
- * 
  */
 public final class RecommendationConfigurationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class RecommendationConfigurationPropertiesResponse extends io.pulu
 
     /**
      * The type of IoT Security recommendation.
-     * 
      */
     @Import(name="recommendationType", required=true)
       private final String recommendationType;
@@ -36,7 +34,6 @@ public final class RecommendationConfigurationPropertiesResponse extends io.pulu
 
     /**
      * Recommendation status. When the recommendation status is disabled recommendations are not generated.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

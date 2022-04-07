@@ -21,7 +21,6 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The name and SendRule connection string of the event hub for azureEventHub logger.
      * Instrumentation key for applicationInsights logger.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<Map<String,String>> credentials;
@@ -32,7 +31,6 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Logger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +41,6 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether records are buffered in the logger before publishing. Default is assumed to be true.
-     * 
      */
     @Import(name="isBuffered")
       private final @Nullable Output<Boolean> isBuffered;
@@ -54,7 +51,6 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Logger identifier. Must be unique in the API Management service instance.
-     * 
      */
     @Import(name="loggerId")
       private final @Nullable Output<String> loggerId;
@@ -65,7 +61,6 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Logger type.
-     * 
      */
     @Import(name="loggerType", required=true)
       private final Output<Either<String,LoggerType>> loggerType;
@@ -76,7 +71,6 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -98,7 +91,6 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

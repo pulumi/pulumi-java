@@ -17,7 +17,100 @@ import javax.annotation.Nullable;
  * Single item in a List or Get AuthorizationRule operation
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### EventHubAuthorizationRuleCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var eventHubAuthorizationRule = new AzureNative.EventHub.EventHubAuthorizationRule("eventHubAuthorizationRule", new AzureNative.EventHub.EventHubAuthorizationRuleArgs
+ *         {
+ *             AuthorizationRuleName = "sdk-Authrules-2513",
+ *             EventHubName = "sdk-EventHub-532",
+ *             NamespaceName = "sdk-Namespace-960",
+ *             ResourceGroupName = "ArunMonocle",
+ *             Rights = 
+ *             {
+ *                 "Listen",
+ *                 "Send",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventhub.NewEventHubAuthorizationRule(ctx, "eventHubAuthorizationRule", &eventhub.EventHubAuthorizationRuleArgs{
+ * 			AuthorizationRuleName: pulumi.String("sdk-Authrules-2513"),
+ * 			EventHubName:          pulumi.String("sdk-EventHub-532"),
+ * 			NamespaceName:         pulumi.String("sdk-Namespace-960"),
+ * 			ResourceGroupName:     pulumi.String("ArunMonocle"),
+ * 			Rights: pulumi.StringArray{
+ * 				pulumi.String("Listen"),
+ * 				pulumi.String("Send"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const eventHubAuthorizationRule = new azure_native.eventhub.EventHubAuthorizationRule("eventHubAuthorizationRule", {
+ *     authorizationRuleName: "sdk-Authrules-2513",
+ *     eventHubName: "sdk-EventHub-532",
+ *     namespaceName: "sdk-Namespace-960",
+ *     resourceGroupName: "ArunMonocle",
+ *     rights: [
+ *         "Listen",
+ *         "Send",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * event_hub_authorization_rule = azure_native.eventhub.EventHubAuthorizationRule("eventHubAuthorizationRule",
+ *     authorization_rule_name="sdk-Authrules-2513",
+ *     event_hub_name="sdk-EventHub-532",
+ *     namespace_name="sdk-Namespace-960",
+ *     resource_group_name="ArunMonocle",
+ *     rights=[
+ *         "Listen",
+ *         "Send",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +125,36 @@ import javax.annotation.Nullable;
 public class EventHubAuthorizationRule extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
-     * 
      */
     @Export(name="rights", type=List.class, parameters={String.class})
     private Output<List<String>> rights;
 
     /**
      * @return The rights associated with the rule.
-     * 
      */
     public Output<List<String>> getRights() {
         return this.rights;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

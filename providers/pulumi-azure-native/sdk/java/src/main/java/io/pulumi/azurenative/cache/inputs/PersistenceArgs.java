@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Persistence-related configuration for the RedisEnterprise database
- * 
  */
 public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sets whether AOF is enabled.
-     * 
      */
     @Import(name="aofEnabled")
       private final @Nullable Output<Boolean> aofEnabled;
@@ -35,7 +33,6 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sets the frequency at which data is written to disk.
-     * 
      */
     @Import(name="aofFrequency")
       private final @Nullable Output<Either<String,AofFrequency>> aofFrequency;
@@ -46,7 +43,6 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sets whether RDB is enabled.
-     * 
      */
     @Import(name="rdbEnabled")
       private final @Nullable Output<Boolean> rdbEnabled;
@@ -57,7 +53,6 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sets the frequency at which a snapshot of the database is created.
-     * 
      */
     @Import(name="rdbFrequency")
       private final @Nullable Output<Either<String,RdbFrequency>> rdbFrequency;

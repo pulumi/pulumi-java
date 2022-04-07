@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class GetInsightsResultsMetadataResponse {
     /**
      * information about the failed queries
-     * 
      */
     private final @Nullable List<GetInsightsErrorResponse> errors;
     /**
      * the total items found for the insights request
-     * 
      */
     private final Integer totalCount;
 
@@ -33,14 +31,12 @@ public final class GetInsightsResultsMetadataResponse {
 
     /**
      * information about the failed queries
-     * 
     */
     public List<GetInsightsErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * the total items found for the insights request
-     * 
     */
     public Integer getTotalCount() {
         return this.totalCount;

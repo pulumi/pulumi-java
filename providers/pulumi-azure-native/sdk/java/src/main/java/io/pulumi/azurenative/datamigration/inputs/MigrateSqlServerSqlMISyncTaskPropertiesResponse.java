@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for task that migrates SQL Server databases to Azure SQL Database Managed Instance sync scenario
- * 
  */
 public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -30,7 +29,6 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
 
     /**
      * Array of command properties.
-     * 
      */
     @Import(name="commands", required=true)
       private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
@@ -41,7 +39,6 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
 
     /**
      * Array of errors. This is ignored if submitted.
-     * 
      */
     @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
@@ -52,7 +49,6 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
 
     /**
      * Task input
-     * 
      */
     @Import(name="input")
       private final @Nullable MigrateSqlServerSqlMISyncTaskInputResponse input;
@@ -63,7 +59,6 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
 
     /**
      * Task output. This is ignored if submitted.
-     * 
      */
     @Import(name="output", required=true)
       private final List<Object> output;
@@ -74,7 +69,6 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
 
     /**
      * The state of the task. This is ignored if submitted.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -86,7 +80,6 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
     /**
      * Task type.
      * Expected value is 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS'.
-     * 
      */
     @Import(name="taskType", required=true)
       private final String taskType;

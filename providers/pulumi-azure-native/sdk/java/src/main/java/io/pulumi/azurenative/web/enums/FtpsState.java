@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * State of FTP / FTPS service
-     * 
      */
     @EnumType
     public enum FtpsState {

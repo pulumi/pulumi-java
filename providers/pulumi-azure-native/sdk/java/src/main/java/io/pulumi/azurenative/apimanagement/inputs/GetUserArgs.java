@@ -14,7 +14,6 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;
@@ -36,7 +34,6 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * User identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="userId", required=true)
       private final String userId;

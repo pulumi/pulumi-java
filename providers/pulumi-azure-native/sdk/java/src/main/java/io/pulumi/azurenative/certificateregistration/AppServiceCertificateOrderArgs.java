@@ -21,7 +21,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
@@ -32,7 +31,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * Name of the certificate order.
-     * 
      */
     @Import(name="certificateOrderName")
       private final @Nullable Output<String> certificateOrderName;
@@ -43,7 +41,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * State of the Key Vault secret.
-     * 
      */
     @Import(name="certificates")
       private final @Nullable Output<Map<String,AppServiceCertificateArgs>> certificates;
@@ -54,7 +51,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * Last CSR that was created for this order.
-     * 
      */
     @Import(name="csr")
       private final @Nullable Output<String> csr;
@@ -65,7 +61,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * Certificate distinguished name.
-     * 
      */
     @Import(name="distinguishedName")
       private final @Nullable Output<String> distinguishedName;
@@ -76,7 +71,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * Certificate key size.
-     * 
      */
     @Import(name="keySize")
       private final @Nullable Output<Integer> keySize;
@@ -87,7 +81,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -98,7 +91,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * Resource Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -109,7 +101,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * Certificate product type.
-     * 
      */
     @Import(name="productType", required=true)
       private final Output<CertificateProductType> productType;
@@ -120,7 +111,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -131,7 +121,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -142,7 +131,6 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
 
     /**
      * Duration in years (must be between 1 and 3).
-     * 
      */
     @Import(name="validityInYears")
       private final @Nullable Output<Integer> validityInYears;

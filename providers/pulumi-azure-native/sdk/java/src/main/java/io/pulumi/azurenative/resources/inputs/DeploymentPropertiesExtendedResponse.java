@@ -20,7 +20,6 @@ import java.util.Objects;
 
 /**
  * Deployment properties with additional details.
- * 
  */
 public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The correlation ID of the deployment.
-     * 
      */
     @Import(name="correlationId", required=true)
       private final String correlationId;
@@ -39,7 +37,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The debug setting of the deployment.
-     * 
      */
     @Import(name="debugSetting", required=true)
       private final DebugSettingResponse debugSetting;
@@ -50,7 +47,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The list of deployment dependencies.
-     * 
      */
     @Import(name="dependencies", required=true)
       private final List<DependencyResponse> dependencies;
@@ -61,7 +57,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The duration of the template deployment.
-     * 
      */
     @Import(name="duration", required=true)
       private final String duration;
@@ -72,7 +67,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The deployment error.
-     * 
      */
     @Import(name="error", required=true)
       private final ErrorResponseResponse error;
@@ -83,7 +77,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The deployment mode. Possible values are Incremental and Complete.
-     * 
      */
     @Import(name="mode", required=true)
       private final String mode;
@@ -94,7 +87,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The deployment on error behavior.
-     * 
      */
     @Import(name="onErrorDeployment", required=true)
       private final OnErrorDeploymentExtendedResponse onErrorDeployment;
@@ -105,7 +97,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * Array of provisioned resources.
-     * 
      */
     @Import(name="outputResources", required=true)
       private final List<ResourceReferenceResponse> outputResources;
@@ -116,7 +107,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * Key/value pairs that represent deployment output.
-     * 
      */
     @Import(name="outputs", required=true)
       private final Object outputs;
@@ -126,8 +116,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     }
 
     /**
-     * Deployment parameters.
-     * 
+     * Deployment parameters. 
      */
     @Import(name="parameters", required=true)
       private final Object parameters;
@@ -137,8 +126,7 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
     }
 
     /**
-     * The URI referencing the parameters.
-     * 
+     * The URI referencing the parameters. 
      */
     @Import(name="parametersLink", required=true)
       private final ParametersLinkResponse parametersLink;
@@ -149,7 +137,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The list of resource providers needed for the deployment.
-     * 
      */
     @Import(name="providers", required=true)
       private final List<ProviderResponse> providers;
@@ -160,7 +147,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * Denotes the state of provisioning.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -171,7 +157,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The hash produced for the template.
-     * 
      */
     @Import(name="templateHash", required=true)
       private final String templateHash;
@@ -182,7 +167,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The URI referencing the template.
-     * 
      */
     @Import(name="templateLink", required=true)
       private final TemplateLinkResponse templateLink;
@@ -193,7 +177,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * The timestamp of the template deployment.
-     * 
      */
     @Import(name="timestamp", required=true)
       private final String timestamp;
@@ -204,7 +187,6 @@ public final class DeploymentPropertiesExtendedResponse extends io.pulumi.resour
 
     /**
      * Array of validated resources.
-     * 
      */
     @Import(name="validatedResources", required=true)
       private final List<ResourceReferenceResponse> validatedResources;

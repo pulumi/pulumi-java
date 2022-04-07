@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class MpnsCredentialResponse {
     /**
      * The certificate key for this credential.
-     * 
      */
     private final @Nullable String certificateKey;
     /**
      * The MPNS certificate.
-     * 
      */
     private final @Nullable String mpnsCertificate;
     /**
      * The MPNS certificate Thumbprint
-     * 
      */
     private final @Nullable String thumbprint;
 
@@ -39,21 +36,18 @@ public final class MpnsCredentialResponse {
 
     /**
      * The certificate key for this credential.
-     * 
     */
     public Optional<String> getCertificateKey() {
         return Optional.ofNullable(this.certificateKey);
     }
     /**
      * The MPNS certificate.
-     * 
     */
     public Optional<String> getMpnsCertificate() {
         return Optional.ofNullable(this.mpnsCertificate);
     }
     /**
      * The MPNS certificate Thumbprint
-     * 
     */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);

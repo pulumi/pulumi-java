@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of an hourly schedule.
- * 
  */
 public final class HourDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HourDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Minutes of the hour the schedule will run.
-     * 
      */
     @Import(name="minute")
       private final @Nullable Integer minute;

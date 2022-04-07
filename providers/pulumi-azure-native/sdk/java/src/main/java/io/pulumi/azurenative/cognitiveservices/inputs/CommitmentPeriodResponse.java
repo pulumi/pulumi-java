@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cognitive Services account commitment period.
- * 
  */
 public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Commitment period commitment count.
-     * 
      */
     @Import(name="count")
       private final @Nullable Integer count;
@@ -33,7 +31,6 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Commitment period end date.
-     * 
      */
     @Import(name="endDate", required=true)
       private final String endDate;
@@ -44,7 +41,6 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Cognitive Services account commitment quota.
-     * 
      */
     @Import(name="quota", required=true)
       private final CommitmentQuotaResponse quota;
@@ -55,7 +51,6 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Commitment period start date.
-     * 
      */
     @Import(name="startDate", required=true)
       private final String startDate;
@@ -66,7 +61,6 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Commitment period commitment tier.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

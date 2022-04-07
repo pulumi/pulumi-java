@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * VMWare Azure specific protection profile Input.
- * 
  */
 public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The app consistent snapshot frequency (in minutes).
-     * 
      */
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
@@ -35,7 +33,6 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     /**
      * The class type.
      * Expected value is 'InMage'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -46,7 +43,6 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.
-     * 
      */
     @Import(name="multiVmSyncStatus", required=true)
       private final Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
@@ -57,7 +53,6 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The duration in minutes until which the recovery points need to be stored.
-     * 
      */
     @Import(name="recoveryPointHistory")
       private final @Nullable Output<Integer> recoveryPointHistory;
@@ -68,7 +63,6 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The recovery point threshold in minutes.
-     * 
      */
     @Import(name="recoveryPointThresholdInMinutes")
       private final @Nullable Output<Integer> recoveryPointThresholdInMinutes;

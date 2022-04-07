@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Diagnostics settings for Geneva.
- * 
  */
 public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
 
     /**
      * Azure Internal monitoring pipeline account.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -32,7 +30,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
 
     /**
      * Azure Internal monitoring pipeline autokey associated with the certificate.
-     * 
      */
     @Import(name="autoKeyConfigUrl")
       private final @Nullable Output<String> autoKeyConfigUrl;
@@ -43,7 +40,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
 
     /**
      * A description of the sink.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -54,7 +50,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
 
     /**
      * Azure Internal monitoring agent fluentd configuration.
-     * 
      */
     @Import(name="fluentdConfigUrl")
       private final @Nullable Output<Object> fluentdConfigUrl;
@@ -66,7 +61,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     /**
      * The kind of DiagnosticsSink.
      * Expected value is 'AzureInternalMonitoringPipeline'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -77,7 +71,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
 
     /**
      * Azure Internal monitoring agent configuration.
-     * 
      */
     @Import(name="maConfigUrl")
       private final @Nullable Output<String> maConfigUrl;
@@ -88,7 +81,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
 
     /**
      * Name of the sink. This value is referenced by DiagnosticsReferenceDescription
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -99,7 +91,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
 
     /**
      * Azure Internal monitoring pipeline account namespace.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;

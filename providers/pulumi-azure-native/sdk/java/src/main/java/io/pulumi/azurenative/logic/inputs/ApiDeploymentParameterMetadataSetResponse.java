@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The API deployment parameters metadata.
- * 
  */
 public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
 
     /**
      * The package content link parameter.
-     * 
      */
     @Import(name="packageContentLink")
       private final @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
@@ -31,7 +29,6 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
 
     /**
      * The package content link parameter.
-     * 
      */
     @Import(name="redisCacheConnectionString")
       private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;

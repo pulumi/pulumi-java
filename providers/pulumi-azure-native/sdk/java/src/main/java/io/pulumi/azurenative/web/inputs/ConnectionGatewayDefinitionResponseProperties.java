@@ -19,7 +19,6 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
 
     /**
      * The URI of the backend
-     * 
      */
     @Import(name="backendUri")
       private final @Nullable String backendUri;
@@ -30,7 +29,6 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
 
     /**
      * The gateway installation reference
-     * 
      */
     @Import(name="connectionGatewayInstallation")
       private final @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation;
@@ -41,7 +39,6 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
 
     /**
      * The gateway admin
-     * 
      */
     @Import(name="contactInformation")
       private final @Nullable List<String> contactInformation;
@@ -52,7 +49,6 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
 
     /**
      * The gateway description
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -63,7 +59,6 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
 
     /**
      * The gateway display name
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -74,7 +69,6 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
 
     /**
      * The machine name of the gateway
-     * 
      */
     @Import(name="machineName")
       private final @Nullable String machineName;
@@ -85,7 +79,6 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
 
     /**
      * The gateway status
-     * 
      */
     @Import(name="status")
       private final @Nullable Object status;

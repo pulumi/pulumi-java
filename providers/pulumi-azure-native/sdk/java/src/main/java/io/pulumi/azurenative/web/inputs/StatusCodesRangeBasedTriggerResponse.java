@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger based on range of status codes.
- * 
  */
 public final class StatusCodesRangeBasedTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StatusCodesRangeBasedTriggerResponse extends io.pulumi.resour
 
     /**
      * Request Count.
-     * 
      */
     @Import(name="count")
       private final @Nullable Integer count;
@@ -39,7 +37,6 @@ public final class StatusCodesRangeBasedTriggerResponse extends io.pulumi.resour
 
     /**
      * HTTP status code.
-     * 
      */
     @Import(name="statusCodes")
       private final @Nullable String statusCodes;
@@ -50,7 +47,6 @@ public final class StatusCodesRangeBasedTriggerResponse extends io.pulumi.resour
 
     /**
      * Time interval.
-     * 
      */
     @Import(name="timeInterval")
       private final @Nullable String timeInterval;

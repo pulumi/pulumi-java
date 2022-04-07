@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The details of the AZURE ML environment.
- * 
  */
 public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
 
     /**
      * The definition of a Docker container.
-     * 
      */
     @Import(name="docker")
       private final @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker;
@@ -36,7 +34,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
 
     /**
      * Definition of environment variables to be defined in the environment.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
@@ -47,7 +44,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
 
     /**
      * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
-     * 
      */
     @Import(name="inferencingStackVersion")
       private final @Nullable String inferencingStackVersion;
@@ -58,7 +54,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
 
     /**
      * The name of the environment.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -69,7 +64,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
 
     /**
      * Settings for a Python environment.
-     * 
      */
     @Import(name="python")
       private final @Nullable ModelEnvironmentDefinitionResponseResponsePython python;
@@ -80,7 +74,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
 
     /**
      * Settings for a R environment.
-     * 
      */
     @Import(name="r")
       private final @Nullable ModelEnvironmentDefinitionResponseResponseR r;
@@ -91,7 +84,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
 
     /**
      * The configuration for a Spark environment.
-     * 
      */
     @Import(name="spark")
       private final @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark;
@@ -102,7 +94,6 @@ public final class EnvironmentImageResponseResponseEnvironment extends io.pulumi
 
     /**
      * The environment version.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

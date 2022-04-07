@@ -19,7 +19,6 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Incoming Traffic Policy
-     * 
      */
     @Import(name="incomingTrafficPolicy")
       private final @Nullable Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy;
@@ -30,7 +29,6 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of Storage Sync Service resource.
-     * 
      */
     @Import(name="storageSyncServiceName")
       private final @Nullable Output<String> storageSyncServiceName;
@@ -63,7 +59,6 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The routing types that are supported for action requests.
-     * 
      */
     @EnumType
     public enum ActionRouting {

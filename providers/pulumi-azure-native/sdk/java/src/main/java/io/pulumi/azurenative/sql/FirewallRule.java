@@ -17,7 +17,165 @@ import javax.annotation.Nullable;
  * A server firewall rule.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a firewall rule max/min
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var firewallRule = new AzureNative.Sql.FirewallRule("firewallRule", new AzureNative.Sql.FirewallRuleArgs
+ *         {
+ *             EndIpAddress = "0.0.0.3",
+ *             FirewallRuleName = "firewallrulecrudtest-5370",
+ *             ResourceGroupName = "firewallrulecrudtest-12",
+ *             ServerName = "firewallrulecrudtest-6285",
+ *             StartIpAddress = "0.0.0.3",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewFirewallRule(ctx, "firewallRule", &sql.FirewallRuleArgs{
+ * 			EndIpAddress:      pulumi.String("0.0.0.3"),
+ * 			FirewallRuleName:  pulumi.String("firewallrulecrudtest-5370"),
+ * 			ResourceGroupName: pulumi.String("firewallrulecrudtest-12"),
+ * 			ServerName:        pulumi.String("firewallrulecrudtest-6285"),
+ * 			StartIpAddress:    pulumi.String("0.0.0.3"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const firewallRule = new azure_native.sql.FirewallRule("firewallRule", {
+ *     endIpAddress: "0.0.0.3",
+ *     firewallRuleName: "firewallrulecrudtest-5370",
+ *     resourceGroupName: "firewallrulecrudtest-12",
+ *     serverName: "firewallrulecrudtest-6285",
+ *     startIpAddress: "0.0.0.3",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * firewall_rule = azure_native.sql.FirewallRule("firewallRule",
+ *     end_ip_address="0.0.0.3",
+ *     firewall_rule_name="firewallrulecrudtest-5370",
+ *     resource_group_name="firewallrulecrudtest-12",
+ *     server_name="firewallrulecrudtest-6285",
+ *     start_ip_address="0.0.0.3")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Update a firewall rule max/min
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var firewallRule = new AzureNative.Sql.FirewallRule("firewallRule", new AzureNative.Sql.FirewallRuleArgs
+ *         {
+ *             EndIpAddress = "0.0.0.1",
+ *             FirewallRuleName = "firewallrulecrudtest-3927",
+ *             ResourceGroupName = "firewallrulecrudtest-12",
+ *             ServerName = "firewallrulecrudtest-6285",
+ *             StartIpAddress = "0.0.0.1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewFirewallRule(ctx, "firewallRule", &sql.FirewallRuleArgs{
+ * 			EndIpAddress:      pulumi.String("0.0.0.1"),
+ * 			FirewallRuleName:  pulumi.String("firewallrulecrudtest-3927"),
+ * 			ResourceGroupName: pulumi.String("firewallrulecrudtest-12"),
+ * 			ServerName:        pulumi.String("firewallrulecrudtest-6285"),
+ * 			StartIpAddress:    pulumi.String("0.0.0.1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const firewallRule = new azure_native.sql.FirewallRule("firewallRule", {
+ *     endIpAddress: "0.0.0.1",
+ *     firewallRuleName: "firewallrulecrudtest-3927",
+ *     resourceGroupName: "firewallrulecrudtest-12",
+ *     serverName: "firewallrulecrudtest-6285",
+ *     startIpAddress: "0.0.0.1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * firewall_rule = azure_native.sql.FirewallRule("firewallRule",
+ *     end_ip_address="0.0.0.1",
+ *     firewall_rule_name="firewallrulecrudtest-3927",
+ *     resource_group_name="firewallrulecrudtest-12",
+ *     server_name="firewallrulecrudtest-6285",
+ *     start_ip_address="0.0.0.1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +190,48 @@ import javax.annotation.Nullable;
 public class FirewallRule extends io.pulumi.resources.CustomResource {
     /**
      * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
-     * 
      */
     @Export(name="endIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> endIpAddress;
 
     /**
      * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
-     * 
      */
     public Output</* @Nullable */ String> getEndIpAddress() {
         return this.endIpAddress;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
-     * 
      */
     @Export(name="startIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> startIpAddress;
 
     /**
      * @return The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
-     * 
      */
     public Output</* @Nullable */ String> getStartIpAddress() {
         return this.startIpAddress;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

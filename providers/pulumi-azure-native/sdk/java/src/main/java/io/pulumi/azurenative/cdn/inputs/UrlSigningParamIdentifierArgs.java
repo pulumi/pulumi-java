@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Defines how to identify a parameter for a specific purpose e.g. expires
- * 
  */
 public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
 
     /**
      * Indicates the purpose of the parameter
-     * 
      */
     @Import(name="paramIndicator", required=true)
       private final Output<Either<String,ParamIndicator>> paramIndicator;
@@ -32,7 +30,6 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
 
     /**
      * Parameter name
-     * 
      */
     @Import(name="paramName", required=true)
       private final Output<String> paramName;

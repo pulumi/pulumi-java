@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
     /**
      * Describes the possible values
-     * 
      */
     private final @Nullable List<String> filterValues;
 
@@ -24,7 +23,6 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
 
     /**
      * Describes the possible values
-     * 
     */
     public List<String> getFilterValues() {
         return this.filterValues == null ? List.of() : this.filterValues;

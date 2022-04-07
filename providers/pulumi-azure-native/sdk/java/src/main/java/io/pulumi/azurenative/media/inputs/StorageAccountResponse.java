@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The storage account details.
- * 
  */
 public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The type of the storage account.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

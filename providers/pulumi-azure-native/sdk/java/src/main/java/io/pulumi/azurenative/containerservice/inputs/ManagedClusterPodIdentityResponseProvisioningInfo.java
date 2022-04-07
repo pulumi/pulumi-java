@@ -16,7 +16,6 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo extends io.
 
     /**
      * Pod identity assignment error (if any).
-     * 
      */
     @Import(name="error")
       private final @Nullable CloudErrorResponse error;

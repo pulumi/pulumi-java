@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status of the token example enabled or disabled.
-     * 
      */
     @EnumType
     public enum TokenStatus {

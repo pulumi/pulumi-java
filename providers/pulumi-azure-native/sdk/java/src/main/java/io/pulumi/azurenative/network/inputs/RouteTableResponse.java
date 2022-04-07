@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Route table resource.
- * 
  */
 public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether to disable the routes learned by BGP on that route table. True means disable.
-     * 
      */
     @Import(name="disableBgpRoutePropagation")
       private final @Nullable Boolean disableBgpRoutePropagation;
@@ -36,7 +34,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -47,7 +44,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -58,7 +54,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -69,7 +64,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -80,7 +74,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of the route table resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -91,7 +84,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource GUID property of the route table.
-     * 
      */
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
@@ -102,7 +94,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Collection of routes contained within a route table.
-     * 
      */
     @Import(name="routes")
       private final @Nullable List<RouteResponse> routes;
@@ -113,7 +104,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A collection of references to subnets.
-     * 
      */
     @Import(name="subnets", required=true)
       private final List<SubnetResponse> subnets;
@@ -124,7 +114,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -135,7 +124,6 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

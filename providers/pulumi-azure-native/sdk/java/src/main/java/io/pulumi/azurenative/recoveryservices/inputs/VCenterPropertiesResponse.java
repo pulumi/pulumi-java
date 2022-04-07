@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * vCenter properties.
- * 
  */
 public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The VCenter discovery status.
-     * 
      */
     @Import(name="discoveryStatus")
       private final @Nullable String discoveryStatus;
@@ -33,7 +31,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The ARM resource name of the fabric containing this VCenter.
-     * 
      */
     @Import(name="fabricArmResourceName")
       private final @Nullable String fabricArmResourceName;
@@ -44,7 +41,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Friendly name of the vCenter.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -55,7 +51,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The health errors for this VCenter.
-     * 
      */
     @Import(name="healthErrors")
       private final @Nullable List<HealthErrorResponse> healthErrors;
@@ -66,7 +61,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The infrastructure Id of vCenter.
-     * 
      */
     @Import(name="infrastructureId")
       private final @Nullable String infrastructureId;
@@ -77,7 +71,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * VCenter internal ID.
-     * 
      */
     @Import(name="internalId")
       private final @Nullable String internalId;
@@ -88,7 +81,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The IP address of the vCenter.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -99,7 +91,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The time when the last heartbeat was received by vCenter.
-     * 
      */
     @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
@@ -110,7 +101,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The port number for discovery.
-     * 
      */
     @Import(name="port")
       private final @Nullable String port;
@@ -121,7 +111,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The process server Id.
-     * 
      */
     @Import(name="processServerId")
       private final @Nullable String processServerId;
@@ -132,7 +121,6 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The account Id which has privileges to discover the vCenter.
-     * 
      */
     @Import(name="runAsAccountId")
       private final @Nullable String runAsAccountId;

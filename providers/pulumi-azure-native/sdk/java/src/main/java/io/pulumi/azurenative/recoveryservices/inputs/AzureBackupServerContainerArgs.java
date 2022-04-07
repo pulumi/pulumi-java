@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * AzureBackupServer (DPMVenus) workload-specific protection container.
- * 
  */
 public final class AzureBackupServerContainerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -37,7 +35,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * Specifies whether the container is re-registrable.
-     * 
      */
     @Import(name="canReRegister")
       private final @Nullable Output<Boolean> canReRegister;
@@ -48,7 +45,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * ID of container.
-     * 
      */
     @Import(name="containerId")
       private final @Nullable Output<String> containerId;
@@ -63,7 +59,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'AzureBackupServerContainer'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
@@ -74,7 +69,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * Backup engine Agent version
-     * 
      */
     @Import(name="dpmAgentVersion")
       private final @Nullable Output<String> dpmAgentVersion;
@@ -85,7 +79,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * List of BackupEngines protecting the container
-     * 
      */
     @Import(name="dpmServers")
       private final @Nullable Output<List<String>> dpmServers;
@@ -96,7 +89,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * Extended Info of the container.
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable Output<DPMContainerExtendedInfoArgs> extendedInfo;
@@ -107,7 +99,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -118,7 +109,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
@@ -129,7 +119,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * Number of protected items in the BackupEngine
-     * 
      */
     @Import(name="protectedItemCount")
       private final @Nullable Output<Double> protectedItemCount;
@@ -140,7 +129,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * Protection status of the container.
-     * 
      */
     @Import(name="protectionStatus")
       private final @Nullable Output<String> protectionStatus;
@@ -151,7 +139,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
@@ -162,7 +149,6 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
 
     /**
      * To check if upgrade available
-     * 
      */
     @Import(name="upgradeAvailable")
       private final @Nullable Output<Boolean> upgradeAvailable;

@@ -16,52 +16,42 @@ import javax.annotation.Nullable;
 public final class GetIntegrationAccountCertificateResult {
     /**
      * The changed time.
-     * 
      */
     private final String changedTime;
     /**
      * The created time.
-     * 
      */
     private final String createdTime;
     /**
      * The resource id.
-     * 
      */
     private final String id;
     /**
      * The key details in the key vault.
-     * 
      */
     private final @Nullable KeyVaultKeyReferenceResponse key;
     /**
      * The resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * The metadata.
-     * 
      */
     private final @Nullable Object metadata;
     /**
      * Gets the resource name.
-     * 
      */
     private final String name;
     /**
      * The public certificate.
-     * 
      */
     private final @Nullable String publicCertificate;
     /**
      * The resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Gets the resource type.
-     * 
      */
     private final String type;
 
@@ -91,70 +81,60 @@ public final class GetIntegrationAccountCertificateResult {
 
     /**
      * The changed time.
-     * 
     */
     public String getChangedTime() {
         return this.changedTime;
     }
     /**
      * The created time.
-     * 
     */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The resource id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The key details in the key vault.
-     * 
     */
     public Optional<KeyVaultKeyReferenceResponse> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The metadata.
-     * 
     */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Gets the resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The public certificate.
-     * 
     */
     public Optional<String> getPublicCertificate() {
         return Optional.ofNullable(this.publicCertificate);
     }
     /**
      * The resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
-     * 
     */
     public String getType() {
         return this.type;

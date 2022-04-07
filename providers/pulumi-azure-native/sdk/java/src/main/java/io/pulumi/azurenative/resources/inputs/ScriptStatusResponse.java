@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Generic object modeling results of script execution.
- * 
  */
 public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * ACI resource Id.
-     * 
      */
     @Import(name="containerInstanceId", required=true)
       private final String containerInstanceId;
@@ -32,7 +30,6 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * End time of the script execution.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -43,7 +40,6 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Error that is relayed from the script execution.
-     * 
      */
     @Import(name="error")
       private final @Nullable ErrorResponseResponse error;
@@ -54,7 +50,6 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Time the deployment script resource will expire.
-     * 
      */
     @Import(name="expirationTime", required=true)
       private final String expirationTime;
@@ -65,7 +60,6 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Start time of the script execution.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -76,7 +70,6 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Storage account resource Id.
-     * 
      */
     @Import(name="storageAccountId", required=true)
       private final String storageAccountId;

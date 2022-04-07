@@ -18,7 +18,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Bot resource.
-     * 
      */
     @Import(name="botName")
       private final @Nullable Output<String> botName;
@@ -29,7 +28,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Bot resource group in the user subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SKU of the HealthBot.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -62,7 +58,6 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Auto-scaling properties of a Big Data pool powered by Apache Spark
- * 
  */
 public final class AutoScalePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AutoScalePropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Whether automatic scaling is enabled for the Big Data pool.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
@@ -32,7 +30,6 @@ public final class AutoScalePropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * The maximum number of nodes the Big Data pool can support.
-     * 
      */
     @Import(name="maxNodeCount")
       private final @Nullable Integer maxNodeCount;
@@ -43,7 +40,6 @@ public final class AutoScalePropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * The minimum number of nodes the Big Data pool can support.
-     * 
      */
     @Import(name="minNodeCount")
       private final @Nullable Integer minNodeCount;

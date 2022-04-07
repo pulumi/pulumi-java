@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Header type.
-     * 
      */
     @EnumType
     public enum Header {

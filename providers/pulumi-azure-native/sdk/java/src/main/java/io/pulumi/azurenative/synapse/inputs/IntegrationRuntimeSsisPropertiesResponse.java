@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * SSIS properties for managed integration runtime.
- * 
  */
 public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
 
     /**
      * Catalog information for managed dedicated integration runtime.
-     * 
      */
     @Import(name="catalogInfo")
       private final @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo;
@@ -39,7 +37,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
 
     /**
      * Custom setup script properties for a managed dedicated integration runtime.
-     * 
      */
     @Import(name="customSetupScriptProperties")
       private final @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties;
@@ -50,7 +47,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
 
     /**
      * Data proxy properties for a managed dedicated integration runtime.
-     * 
      */
     @Import(name="dataProxyProperties")
       private final @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties;
@@ -61,7 +57,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
 
     /**
      * The edition for the SSIS Integration Runtime
-     * 
      */
     @Import(name="edition")
       private final @Nullable String edition;
@@ -72,7 +67,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
 
     /**
      * Custom setup without script properties for a SSIS integration runtime.
-     * 
      */
     @Import(name="expressCustomSetupProperties")
       private final @Nullable List<Object> expressCustomSetupProperties;
@@ -83,7 +77,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
 
     /**
      * License type for bringing your own license scenario.
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable String licenseType;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The aggregation expression to be used in the report.
- * 
  */
 public final class ReportAggregationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ReportAggregationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the aggregation function to use.
-     * 
      */
     @Import(name="function", required=true)
       private final String function;
@@ -29,7 +27,6 @@ public final class ReportAggregationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the column to aggregate.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the NSG resource settings.
- * 
  */
 public final class NetworkSecurityGroupResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends io.pulum
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Network/networkSecurityGroups'.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;
@@ -34,7 +32,6 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends io.pulum
 
     /**
      * Gets or sets Security rules of network security group.
-     * 
      */
     @Import(name="securityRules")
       private final @Nullable List<NsgSecurityRuleResponse> securityRules;
@@ -45,7 +42,6 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends io.pulum
 
     /**
      * Gets or sets the target Resource name.
-     * 
      */
     @Import(name="targetResourceName", required=true)
       private final String targetResourceName;

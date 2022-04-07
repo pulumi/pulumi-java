@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An error response from the Azure Migrate service.
- * 
  */
 public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
 
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -30,7 +28,6 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
 
     /**
      * A list of additional details about the error.
-     * 
      */
     @Import(name="details", required=true)
       private final List<MoveResourceErrorBodyResponse> details;
@@ -41,7 +38,6 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
 
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -52,7 +48,6 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
 
     /**
      * The target of the particular error. For example, the name of the property in error.
-     * 
      */
     @Import(name="target", required=true)
       private final String target;

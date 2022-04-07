@@ -20,7 +20,6 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Configuration details of the guest configuration assignment.
-     * 
      */
     @Import(name="assignment")
       private final @Nullable AssignmentInfoResponse assignment;
@@ -31,7 +30,6 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
-     * 
      */
     @Import(name="complianceStatus", required=true)
       private final String complianceStatus;
@@ -42,7 +40,6 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * End date and time of the guest configuration assignment compliance status check.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -53,7 +50,6 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * ARM resource id of the report for the guest configuration assignment.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -64,7 +60,6 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Type of report, Consistency or Initial
-     * 
      */
     @Import(name="operationType", required=true)
       private final String operationType;
@@ -75,7 +70,6 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * GUID that identifies the guest configuration assignment report under a subscription, resource group.
-     * 
      */
     @Import(name="reportId", required=true)
       private final String reportId;
@@ -86,7 +80,6 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The list of resources for which guest configuration assignment compliance is checked.
-     * 
      */
     @Import(name="resources")
       private final @Nullable List<AssignmentReportResourceResponse> resources;
@@ -97,7 +90,6 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Start date and time of the guest configuration assignment compliance status check.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -108,7 +100,6 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Information about the VM.
-     * 
      */
     @Import(name="vm")
       private final @Nullable VMInfoResponse vm;

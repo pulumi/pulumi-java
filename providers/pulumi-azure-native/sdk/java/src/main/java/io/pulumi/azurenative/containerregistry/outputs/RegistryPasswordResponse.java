@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class RegistryPasswordResponse {
     /**
      * The password name.
-     * 
      */
     private final @Nullable String name;
     /**
      * The password value.
-     * 
      */
     private final @Nullable String value;
 
@@ -32,14 +30,12 @@ public final class RegistryPasswordResponse {
 
     /**
      * The password name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The password value.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

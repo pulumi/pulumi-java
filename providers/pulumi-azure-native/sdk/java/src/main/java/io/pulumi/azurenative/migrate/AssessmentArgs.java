@@ -17,7 +17,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique name of an assessment within a project.
-     * 
      */
     @Import(name="assessmentName")
       private final @Nullable Output<String> assessmentName;
@@ -28,7 +27,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * For optimistic concurrency control.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -39,7 +37,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique name of a group within a project.
-     * 
      */
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
@@ -50,7 +47,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Migrate project.
-     * 
      */
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
@@ -61,7 +57,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the assessment.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<AssessmentPropertiesArgs> properties;
@@ -72,7 +67,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Resource Group that project is part of.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

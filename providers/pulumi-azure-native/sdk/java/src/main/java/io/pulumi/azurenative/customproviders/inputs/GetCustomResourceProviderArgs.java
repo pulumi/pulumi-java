@@ -14,7 +14,6 @@ public final class GetCustomResourceProviderArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetCustomResourceProviderArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource provider.
-     * 
      */
     @Import(name="resourceProviderName", required=true)
       private final String resourceProviderName;

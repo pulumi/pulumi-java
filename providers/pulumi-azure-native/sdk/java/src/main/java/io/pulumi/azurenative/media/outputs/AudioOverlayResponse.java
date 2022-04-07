@@ -14,38 +14,31 @@ import javax.annotation.Nullable;
 public final class AudioOverlayResponse {
     /**
      * The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
-     * 
      */
     private final @Nullable Double audioGainLevel;
     /**
      * The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
-     * 
      */
     private final @Nullable String end;
     /**
      * The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
-     * 
      */
     private final @Nullable String fadeInDuration;
     /**
      * The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
-     * 
      */
     private final @Nullable String fadeOutDuration;
     /**
      * The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
-     * 
      */
     private final String inputLabel;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.AudioOverlay'.
-     * 
      */
     private final String odataType;
     /**
      * The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
-     * 
      */
     private final @Nullable String start;
 
@@ -69,35 +62,30 @@ public final class AudioOverlayResponse {
 
     /**
      * The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
-     * 
     */
     public Optional<Double> getAudioGainLevel() {
         return Optional.ofNullable(this.audioGainLevel);
     }
     /**
      * The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
-     * 
     */
     public Optional<String> getEnd() {
         return Optional.ofNullable(this.end);
     }
     /**
      * The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
-     * 
     */
     public Optional<String> getFadeInDuration() {
         return Optional.ofNullable(this.fadeInDuration);
     }
     /**
      * The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
-     * 
     */
     public Optional<String> getFadeOutDuration() {
         return Optional.ofNullable(this.fadeOutDuration);
     }
     /**
      * The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
-     * 
     */
     public String getInputLabel() {
         return this.inputLabel;
@@ -105,14 +93,12 @@ public final class AudioOverlayResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.AudioOverlay'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
-     * 
     */
     public Optional<String> getStart() {
         return Optional.ofNullable(this.start);

@@ -14,7 +14,6 @@ public final class GetUserAssignedIdentityArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the Resource Group to which the identity belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetUserAssignedIdentityArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the identity resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

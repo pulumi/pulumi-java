@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of App Insights.
- * 
  */
 public final class AppInsightsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AppInsightsPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * ARM resource ID of the App Insights.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

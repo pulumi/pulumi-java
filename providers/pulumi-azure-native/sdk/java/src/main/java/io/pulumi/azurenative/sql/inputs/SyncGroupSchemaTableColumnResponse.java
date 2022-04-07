@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of column in sync group table.
- * 
  */
 public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resource
 
     /**
      * Data size of the column.
-     * 
      */
     @Import(name="dataSize")
       private final @Nullable String dataSize;
@@ -31,7 +29,6 @@ public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resource
 
     /**
      * Data type of the column.
-     * 
      */
     @Import(name="dataType")
       private final @Nullable String dataType;
@@ -42,7 +39,6 @@ public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resource
 
     /**
      * Quoted name of sync group table column.
-     * 
      */
     @Import(name="quotedName")
       private final @Nullable String quotedName;

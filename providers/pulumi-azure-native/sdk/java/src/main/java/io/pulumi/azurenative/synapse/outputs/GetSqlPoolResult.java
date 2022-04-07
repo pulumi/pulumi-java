@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 public final class GetSqlPoolResult {
     /**
      * Collation mode
-     * 
      */
     private final @Nullable String collation;
     /**
@@ -29,77 +28,62 @@ public final class GetSqlPoolResult {
      * Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
      * 
      * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
-     * 
      */
     private final @Nullable String createMode;
     /**
      * Date the SQL pool was created
-     * 
      */
     private final @Nullable String creationDate;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The geo-location where the resource lives
-     * 
      */
     private final String location;
     /**
      * Maximum size in bytes
-     * 
      */
     private final @Nullable Double maxSizeBytes;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Resource state
-     * 
      */
     private final @Nullable String provisioningState;
     /**
      * Backup database to restore from
-     * 
      */
     private final @Nullable String recoverableDatabaseId;
     /**
      * Snapshot time to restore
-     * 
      */
     private final @Nullable String restorePointInTime;
     /**
      * SQL pool SKU
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * Source database to create from
-     * 
      */
     private final @Nullable String sourceDatabaseId;
     /**
      * Resource status
-     * 
      */
     private final @Nullable String status;
     /**
      * The storage account type used to store backups for this sql pool.
-     * 
      */
     private final @Nullable String storageAccountType;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -141,7 +125,6 @@ public final class GetSqlPoolResult {
 
     /**
      * Collation mode
-     * 
     */
     public Optional<String> getCollation() {
         return Optional.ofNullable(this.collation);
@@ -156,105 +139,90 @@ public final class GetSqlPoolResult {
      * Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
      * 
      * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
-     * 
     */
     public Optional<String> getCreateMode() {
         return Optional.ofNullable(this.createMode);
     }
     /**
      * Date the SQL pool was created
-     * 
     */
     public Optional<String> getCreationDate() {
         return Optional.ofNullable(this.creationDate);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Maximum size in bytes
-     * 
     */
     public Optional<Double> getMaxSizeBytes() {
         return Optional.ofNullable(this.maxSizeBytes);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource state
-     * 
     */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Backup database to restore from
-     * 
     */
     public Optional<String> getRecoverableDatabaseId() {
         return Optional.ofNullable(this.recoverableDatabaseId);
     }
     /**
      * Snapshot time to restore
-     * 
     */
     public Optional<String> getRestorePointInTime() {
         return Optional.ofNullable(this.restorePointInTime);
     }
     /**
      * SQL pool SKU
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Source database to create from
-     * 
     */
     public Optional<String> getSourceDatabaseId() {
         return Optional.ofNullable(this.sourceDatabaseId);
     }
     /**
      * Resource status
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The storage account type used to store backups for this sql pool.
-     * 
     */
     public Optional<String> getStorageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

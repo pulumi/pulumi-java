@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual disk model
- * 
  */
 public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the controller id.
-     * 
      */
     @Import(name="controllerKey")
       private final @Nullable Output<Integer> controllerKey;
@@ -35,7 +33,6 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the device key value.
-     * 
      */
     @Import(name="deviceKey")
       private final @Nullable Output<Integer> deviceKey;
@@ -46,7 +43,6 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the device name.
-     * 
      */
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
@@ -57,7 +53,6 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the disk mode.
-     * 
      */
     @Import(name="diskMode")
       private final @Nullable Output<Either<String,DiskMode>> diskMode;
@@ -68,7 +63,6 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the disk total size.
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
@@ -79,7 +73,6 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the disk backing type.
-     * 
      */
     @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskType>> diskType;
@@ -90,7 +83,6 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the virtual disk.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -101,7 +93,6 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the unit number of the disk on the controller.
-     * 
      */
     @Import(name="unitNumber")
       private final @Nullable Output<Integer> unitNumber;

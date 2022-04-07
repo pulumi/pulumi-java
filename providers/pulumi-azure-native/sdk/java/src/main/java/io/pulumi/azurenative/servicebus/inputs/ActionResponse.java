@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
- * 
  */
 public final class ActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ActionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
-     * 
      */
     @Import(name="compatibilityLevel")
       private final @Nullable Integer compatibilityLevel;
@@ -33,7 +31,6 @@ public final class ActionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value that indicates whether the rule action requires preprocessing.
-     * 
      */
     @Import(name="requiresPreprocessing")
       private final @Nullable Boolean requiresPreprocessing;
@@ -44,7 +41,6 @@ public final class ActionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SQL expression. e.g. MyProperty='ABC'
-     * 
      */
     @Import(name="sqlExpression")
       private final @Nullable String sqlExpression;

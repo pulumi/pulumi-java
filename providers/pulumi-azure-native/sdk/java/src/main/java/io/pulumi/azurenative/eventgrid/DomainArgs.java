@@ -23,7 +23,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the domain.
-     * 
      */
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
@@ -34,7 +33,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-     * 
      */
     @Import(name="inboundIpRules")
       private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
@@ -45,7 +43,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This determines the format that Event Grid should expect for incoming events published to the domain.
-     * 
      */
     @Import(name="inputSchema")
       private final @Nullable Output<Either<String,InputSchema>> inputSchema;
@@ -56,7 +53,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information about the InputSchemaMapping which specified the info about mapping event payload.
-     * 
      */
     @Import(name="inputSchemaMapping")
       private final @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping;
@@ -67,7 +63,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -77,9 +72,8 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This determines if traffic is allowed over public network. By default it is enabled.
+     * This determines if traffic is allowed over public network. By default it is enabled. 
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -90,7 +84,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -101,7 +94,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

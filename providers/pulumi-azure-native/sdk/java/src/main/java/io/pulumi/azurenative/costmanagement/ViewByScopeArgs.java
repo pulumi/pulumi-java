@@ -27,7 +27,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Show costs accumulated over time.
-     * 
      */
     @Import(name="accumulated")
       private final @Nullable Output<Either<String,AccumulatedType>> accumulated;
@@ -38,7 +37,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Chart type of the main view in Cost Analysis. Required.
-     * 
      */
     @Import(name="chart")
       private final @Nullable Output<Either<String,ChartType>> chart;
@@ -49,7 +47,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Has definition for data in this report config.
-     * 
      */
     @Import(name="dataSet")
       private final @Nullable Output<ReportConfigDatasetArgs> dataSet;
@@ -60,7 +57,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User input name of the view. Required.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -71,7 +67,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -82,7 +77,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of KPIs to show in Cost Analysis UI.
-     * 
      */
     @Import(name="kpis")
       private final @Nullable Output<List<KpiPropertiesArgs>> kpis;
@@ -93,7 +87,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metric to use when displaying costs.
-     * 
      */
     @Import(name="metric")
       private final @Nullable Output<Either<String,MetricType>> metric;
@@ -104,7 +97,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration of 3 sub-views in the Cost Analysis UI.
-     * 
      */
     @Import(name="pivots")
       private final @Nullable Output<List<PivotPropertiesArgs>> pivots;
@@ -115,7 +107,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;
@@ -126,7 +117,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Has time period for pulling data for the report.
-     * 
      */
     @Import(name="timePeriod")
       private final @Nullable Output<ReportConfigTimePeriodArgs> timePeriod;
@@ -137,7 +127,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-     * 
      */
     @Import(name="timeframe", required=true)
       private final Output<Either<String,ReportTimeframeType>> timeframe;
@@ -148,7 +137,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ReportType>> type;
@@ -159,7 +147,6 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * View name
-     * 
      */
     @Import(name="viewName")
       private final @Nullable Output<String> viewName;

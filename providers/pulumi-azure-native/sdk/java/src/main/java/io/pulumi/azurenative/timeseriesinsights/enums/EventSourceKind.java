@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The kind of the event source.
-     * 
      */
     @EnumType
     public enum EventSourceKind {

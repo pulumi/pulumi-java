@@ -18,7 +18,6 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The supported Azure location where the attestation provider should be created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Properties of the attestation provider
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<AttestationServiceCreationSpecificParamsArgs> properties;
@@ -40,7 +38,6 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the attestation provider.
-     * 
      */
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
@@ -51,7 +48,6 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The tags that will be assigned to the attestation provider.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

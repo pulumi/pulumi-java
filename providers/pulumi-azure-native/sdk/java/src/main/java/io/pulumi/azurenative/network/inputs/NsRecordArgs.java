@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An NS record.
- * 
  */
 public final class NsRecordArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NsRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name server name for this NS record.
-     * 
      */
     @Import(name="nsdname")
       private final @Nullable Output<String> nsdname;

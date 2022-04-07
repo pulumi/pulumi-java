@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes properties of a network resource.
- * 
  */
 public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * User readable description of the network.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +30,6 @@ public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.Res
     /**
      * The type of a Service Fabric container network.
      * Expected value is 'NetworkResourceProperties'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;

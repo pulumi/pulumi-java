@@ -18,7 +18,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * Name of the container.
-     * 
      */
     @Import(name="containerName", required=true)
       private final String containerName;
@@ -29,7 +28,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * Optional ETag.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable String eTag;
@@ -40,7 +38,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * Fabric name associated with the container.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final String fabricName;
@@ -51,7 +48,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -62,7 +58,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * AADPropertiesResource properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable AADProperties properties;
@@ -73,7 +68,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * Name of the Protected Item.
-     * 
      */
     @Import(name="protectedItemName", required=true)
       private final String protectedItemName;
@@ -84,7 +78,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * Recovery Point Id
-     * 
      */
     @Import(name="recoveryPointId", required=true)
       private final String recoveryPointId;
@@ -95,7 +88,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -106,7 +98,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -117,7 +108,6 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final String vaultName;

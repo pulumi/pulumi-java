@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * The cloud shell user settings properties.
- * 
  */
 public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The preferred location of the cloud shell.
-     * 
      */
     @Import(name="preferredLocation", required=true)
       private final Output<String> preferredLocation;
@@ -35,7 +33,6 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The operating system type of the cloud shell. Deprecated, use preferredShellType.
-     * 
      */
     @Import(name="preferredOsType", required=true)
       private final Output<Either<String,OsType>> preferredOsType;
@@ -46,7 +43,6 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The shell type of the cloud shell.
-     * 
      */
     @Import(name="preferredShellType", required=true)
       private final Output<Either<String,ShellType>> preferredShellType;
@@ -57,7 +53,6 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The storage profile of the user settings.
-     * 
      */
     @Import(name="storageProfile", required=true)
       private final Output<StorageProfileArgs> storageProfile;
@@ -68,7 +63,6 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Settings for terminal appearance.
-     * 
      */
     @Import(name="terminalSettings", required=true)
       private final Output<TerminalSettingsArgs> terminalSettings;

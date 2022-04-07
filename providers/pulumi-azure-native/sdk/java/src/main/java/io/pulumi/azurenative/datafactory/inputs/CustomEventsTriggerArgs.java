@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger that runs every time a custom event is received.
- * 
  */
 public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * List of tags that can be used for describing the trigger.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -34,7 +32,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Trigger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +42,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The list of event types that cause this trigger to fire.
-     * 
      */
     @Import(name="events", required=true)
       private final Output<List<Object>> events;
@@ -56,7 +52,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Pipelines that need to be started.
-     * 
      */
     @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
@@ -67,7 +62,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ARM resource ID of the Azure Event Grid Topic.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;
@@ -78,7 +72,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
-     * 
      */
     @Import(name="subjectBeginsWith")
       private final @Nullable Output<String> subjectBeginsWith;
@@ -89,7 +82,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
-     * 
      */
     @Import(name="subjectEndsWith")
       private final @Nullable Output<String> subjectEndsWith;
@@ -101,7 +93,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
     /**
      * Trigger type.
      * Expected value is 'CustomEventsTrigger'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

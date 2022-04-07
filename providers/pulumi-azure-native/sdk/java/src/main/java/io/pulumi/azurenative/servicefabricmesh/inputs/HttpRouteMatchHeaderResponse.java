@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes header information for http route matching.
- * 
  */
 public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
 
     /**
      * Name of header to match in request.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
 
     /**
      * how to match header value
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -42,7 +39,6 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
 
     /**
      * Value of header to match in request.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

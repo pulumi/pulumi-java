@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The integration account RosettaNet ProcessConfiguration role settings.
- * 
  */
 public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
 
     /**
      * The action name.
-     * 
      */
     @Import(name="action", required=true)
       private final String action;
@@ -32,7 +30,6 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
 
     /**
      * The RosettaNet ProcessConfiguration business document.
-     * 
      */
     @Import(name="businessDocument", required=true)
       private final RosettaNetPipBusinessDocumentResponse businessDocument;
@@ -43,7 +40,6 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -54,7 +50,6 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
 
     /**
      * The role name.
-     * 
      */
     @Import(name="role", required=true)
       private final String role;
@@ -65,7 +60,6 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
 
     /**
      * The RosettaNet ProcessConfiguration role type.
-     * 
      */
     @Import(name="roleType", required=true)
       private final String roleType;
@@ -76,7 +70,6 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
 
     /**
      * The service name.
-     * 
      */
     @Import(name="service", required=true)
       private final String service;
@@ -87,7 +80,6 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
 
     /**
      * The service classification name.
-     * 
      */
     @Import(name="serviceClassification", required=true)
       private final String serviceClassification;

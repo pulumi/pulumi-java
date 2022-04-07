@@ -26,7 +26,6 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
 
     /**
      * The Key to be used to generate token for user.
-     * 
      */
     @Import(name="keyType", required=true)
       private final KeyType keyType;
@@ -37,7 +36,6 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -48,7 +46,6 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;
@@ -59,7 +56,6 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
 
     /**
      * User identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="userId", required=true)
       private final String userId;

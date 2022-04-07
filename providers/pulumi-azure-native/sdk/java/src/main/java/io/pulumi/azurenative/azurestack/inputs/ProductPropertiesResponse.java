@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional properties of the product
- * 
  */
 public final class ProductPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ProductPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The version.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

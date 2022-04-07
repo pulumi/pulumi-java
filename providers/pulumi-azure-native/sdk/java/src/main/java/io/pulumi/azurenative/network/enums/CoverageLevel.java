@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Test coverage for the endpoint.
-     * 
      */
     @EnumType
     public enum CoverageLevel {

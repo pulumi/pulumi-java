@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A PTR record.
- * 
  */
 public final class PtrRecordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PtrRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The PTR target domain name for this PTR record.
-     * 
      */
     @Import(name="ptrdname")
       private final @Nullable String ptrdname;

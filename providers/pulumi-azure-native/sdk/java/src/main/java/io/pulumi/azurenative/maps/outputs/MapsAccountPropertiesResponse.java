@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class MapsAccountPropertiesResponse {
     /**
      * A unique identifier for the maps account
-     * 
      */
     private final @Nullable String xMsClientId;
 
@@ -24,7 +23,6 @@ public final class MapsAccountPropertiesResponse {
 
     /**
      * A unique identifier for the maps account
-     * 
     */
     public Optional<String> getXMsClientId() {
         return Optional.ofNullable(this.xMsClientId);

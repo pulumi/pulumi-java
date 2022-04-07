@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 /**
  * Environment specification version details.
  * <see href="https://repo2docker.readthedocs.io/en/latest/specification.html" />
- * 
  */
 public final class EnvironmentSpecificationVersionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
     /**
      * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
      * <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
-     * 
      */
     @Import(name="condaFile")
       private final @Nullable String condaFile;
@@ -39,7 +37,6 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
 
     /**
      * The asset description text.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -50,7 +47,6 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
 
     /**
      * Configuration settings for Docker.
-     * 
      */
     @Import(name="docker")
       private final @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
@@ -62,7 +58,6 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
     /**
      * Environment specification is either user managed or curated by the Azure ML service
      * <see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
-     * 
      */
     @Import(name="environmentSpecificationType", required=true)
       private final String environmentSpecificationType;
@@ -73,7 +68,6 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
 
     /**
      * Defines configuration specific to inference.
-     * 
      */
     @Import(name="inferenceContainerProperties")
       private final @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties;
@@ -84,7 +78,6 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
 
     /**
      * If the name version are system generated (anonymous registration).
-     * 
      */
     @Import(name="isAnonymous")
       private final @Nullable Boolean isAnonymous;
@@ -95,7 +88,6 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
 
     /**
      * The asset property dictionary.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -106,7 +98,6 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
 
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;

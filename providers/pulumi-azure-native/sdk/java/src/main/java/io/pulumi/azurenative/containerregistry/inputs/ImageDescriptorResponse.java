@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for a registry image.
- * 
  */
 public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The sha256-based digest of the image manifest.
-     * 
      */
     @Import(name="digest")
       private final @Nullable String digest;
@@ -31,7 +29,6 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The registry login server.
-     * 
      */
     @Import(name="registry")
       private final @Nullable String registry;
@@ -42,7 +39,6 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The repository name.
-     * 
      */
     @Import(name="repository")
       private final @Nullable String repository;
@@ -53,7 +49,6 @@ public final class ImageDescriptorResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The tag name.
-     * 
      */
     @Import(name="tag")
       private final @Nullable String tag;

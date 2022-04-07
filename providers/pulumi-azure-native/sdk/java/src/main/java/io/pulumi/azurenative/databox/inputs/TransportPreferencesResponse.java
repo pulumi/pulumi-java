@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Preferences related to the shipment logistics of the sku
- * 
  */
 public final class TransportPreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TransportPreferencesResponse extends io.pulumi.resources.Invo
 
     /**
      * Indicates Shipment Logistics type that the customer preferred.
-     * 
      */
     @Import(name="preferredShipmentType", required=true)
       private final String preferredShipmentType;

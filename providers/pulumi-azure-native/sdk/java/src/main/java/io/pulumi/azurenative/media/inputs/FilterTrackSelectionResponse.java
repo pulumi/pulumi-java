@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Representing a list of FilterTrackPropertyConditions to select a track.  The filters are combined using a logical AND operation.
- * 
  */
 public final class FilterTrackSelectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class FilterTrackSelectionResponse extends io.pulumi.resources.Invo
 
     /**
      * The track selections.
-     * 
      */
     @Import(name="trackSelections", required=true)
       private final List<FilterTrackPropertyConditionResponse> trackSelections;

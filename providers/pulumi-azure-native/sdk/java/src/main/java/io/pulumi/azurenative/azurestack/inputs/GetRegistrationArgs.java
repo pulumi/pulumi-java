@@ -14,7 +14,6 @@ public final class GetRegistrationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Azure Stack registration.
-     * 
      */
     @Import(name="registrationName", required=true)
       private final String registrationName;
@@ -25,7 +24,6 @@ public final class GetRegistrationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;

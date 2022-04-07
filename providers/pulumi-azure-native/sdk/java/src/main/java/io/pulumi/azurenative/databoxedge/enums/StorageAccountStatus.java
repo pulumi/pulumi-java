@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Current status of the storage account
-     * 
      */
     @EnumType
     public enum StorageAccountStatus {

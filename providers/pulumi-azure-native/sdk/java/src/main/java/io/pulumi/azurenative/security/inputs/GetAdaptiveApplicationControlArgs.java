@@ -14,7 +14,6 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
 
     /**
      * The location where ASC stores the data of the subscription. can be retrieved from Get locations
-     * 
      */
     @Import(name="ascLocation", required=true)
       private final String ascLocation;
@@ -25,7 +24,6 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
 
     /**
      * Name of an application control machine group
-     * 
      */
     @Import(name="groupName", required=true)
       private final String groupName;

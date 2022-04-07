@@ -15,37 +15,30 @@ import javax.annotation.Nullable;
 public final class ConfigurationGroupResponse {
     /**
      * Network group conditional filter.
-     * 
      */
     private final @Nullable String conditionalMembership;
     /**
      * A description of the network group.
-     * 
      */
     private final @Nullable String description;
     /**
      * A friendly name for the network group.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * Group members of network group.
-     * 
      */
     private final @Nullable List<GroupMembersItemResponse> groupMembers;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * Group member type.
-     * 
      */
     private final @Nullable String memberType;
     /**
      * The provisioning state of the scope assignment resource.
-     * 
      */
     private final String provisioningState;
 
@@ -69,49 +62,42 @@ public final class ConfigurationGroupResponse {
 
     /**
      * Network group conditional filter.
-     * 
     */
     public Optional<String> getConditionalMembership() {
         return Optional.ofNullable(this.conditionalMembership);
     }
     /**
      * A description of the network group.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A friendly name for the network group.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Group members of network group.
-     * 
     */
     public List<GroupMembersItemResponse> getGroupMembers() {
         return this.groupMembers == null ? List.of() : this.groupMembers;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Group member type.
-     * 
     */
     public Optional<String> getMemberType() {
         return Optional.ofNullable(this.memberType);
     }
     /**
      * The provisioning state of the scope assignment resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;

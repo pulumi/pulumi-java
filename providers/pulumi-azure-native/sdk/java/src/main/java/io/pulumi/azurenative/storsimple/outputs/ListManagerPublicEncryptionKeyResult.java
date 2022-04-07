@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ListManagerPublicEncryptionKeyResult {
     /**
      * The algorithm used to encrypt the "Value".
-     * 
      */
     private final String encryptionAlgorithm;
     /**
      * The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
-     * 
      */
     private final String value;
     /**
      * The thumbprint of the cert that was used to encrypt "Value".
-     * 
      */
     private final @Nullable String valueCertificateThumbprint;
 
@@ -39,21 +36,18 @@ public final class ListManagerPublicEncryptionKeyResult {
 
     /**
      * The algorithm used to encrypt the "Value".
-     * 
     */
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
      * The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
-     * 
     */
     public String getValue() {
         return this.value;
     }
     /**
      * The thumbprint of the cert that was used to encrypt "Value".
-     * 
     */
     public Optional<String> getValueCertificateThumbprint() {
         return Optional.ofNullable(this.valueCertificateThumbprint);

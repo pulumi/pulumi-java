@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Edifact agreement framing settings.
- * 
  */
 public final class EdifactFramingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The character encoding.
-     * 
      */
     @Import(name="characterEncoding")
       private final @Nullable String characterEncoding;
@@ -32,7 +30,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The EDIFACT frame setting characterSet.
-     * 
      */
     @Import(name="characterSet", required=true)
       private final String characterSet;
@@ -43,7 +40,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The component separator.
-     * 
      */
     @Import(name="componentSeparator", required=true)
       private final Integer componentSeparator;
@@ -54,7 +50,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The data element separator.
-     * 
      */
     @Import(name="dataElementSeparator", required=true)
       private final Integer dataElementSeparator;
@@ -65,7 +60,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The EDIFACT frame setting decimal indicator.
-     * 
      */
     @Import(name="decimalPointIndicator", required=true)
       private final String decimalPointIndicator;
@@ -76,7 +70,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The protocol version.
-     * 
      */
     @Import(name="protocolVersion", required=true)
       private final Integer protocolVersion;
@@ -87,7 +80,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The release indicator.
-     * 
      */
     @Import(name="releaseIndicator", required=true)
       private final Integer releaseIndicator;
@@ -98,7 +90,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The repetition separator.
-     * 
      */
     @Import(name="repetitionSeparator", required=true)
       private final Integer repetitionSeparator;
@@ -109,7 +100,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The segment terminator.
-     * 
      */
     @Import(name="segmentTerminator", required=true)
       private final Integer segmentTerminator;
@@ -120,7 +110,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The EDIFACT frame setting segment terminator suffix.
-     * 
      */
     @Import(name="segmentTerminatorSuffix", required=true)
       private final String segmentTerminatorSuffix;
@@ -131,7 +120,6 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
 
     /**
      * The service code list directory version.
-     * 
      */
     @Import(name="serviceCodeListDirectoryVersion")
       private final @Nullable String serviceCodeListDirectoryVersion;

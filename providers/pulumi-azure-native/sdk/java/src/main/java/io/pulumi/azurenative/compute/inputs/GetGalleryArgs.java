@@ -16,7 +16,6 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Shared Image Gallery.
-     * 
      */
     @Import(name="galleryName", required=true)
       private final String galleryName;
@@ -27,7 +26,6 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The select expression to apply on the operation.
-     * 
      */
     @Import(name="select")
       private final @Nullable String select;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Kubernetes role compute resource
- * 
  */
 public final class KubernetesRoleComputeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class KubernetesRoleComputeArgs extends io.pulumi.resources.Resourc
 
     /**
      * VM profile
-     * 
      */
     @Import(name="vmProfile", required=true)
       private final Output<String> vmProfile;

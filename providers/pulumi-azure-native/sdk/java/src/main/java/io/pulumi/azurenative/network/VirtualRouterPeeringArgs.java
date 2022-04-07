@@ -17,7 +17,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -28,7 +27,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the virtual router peering that is unique within a virtual router.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -39,7 +37,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
 
     /**
      * Peer ASN.
-     * 
      */
     @Import(name="peerAsn")
       private final @Nullable Output<Double> peerAsn;
@@ -50,7 +47,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
 
     /**
      * Peer IP.
-     * 
      */
     @Import(name="peerIp")
       private final @Nullable Output<String> peerIp;
@@ -61,7 +57,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the Virtual Router Peering.
-     * 
      */
     @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
@@ -72,7 +67,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the Virtual Router.
-     * 
      */
     @Import(name="virtualRouterName", required=true)
       private final Output<String> virtualRouterName;

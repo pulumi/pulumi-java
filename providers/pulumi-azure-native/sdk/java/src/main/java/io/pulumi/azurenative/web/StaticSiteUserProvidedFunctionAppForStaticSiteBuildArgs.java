@@ -17,7 +17,6 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
 
     /**
      * The stage site identifier.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
@@ -28,7 +27,6 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
 
     /**
      * Name of the function app to register with the static site build.
-     * 
      */
     @Import(name="functionAppName")
       private final @Nullable Output<String> functionAppName;
@@ -39,7 +37,6 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
 
     /**
      * The region of the function app registered with the static site
-     * 
      */
     @Import(name="functionAppRegion")
       private final @Nullable Output<String> functionAppRegion;
@@ -50,7 +47,6 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
 
     /**
      * The resource id of the function app registered with the static site
-     * 
      */
     @Import(name="functionAppResourceId")
       private final @Nullable Output<String> functionAppResourceId;
@@ -61,7 +57,6 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
 
     /**
      * Specify <code>true</code> to force the update of the auth configuration on the function app even if an AzureStaticWebApps provider is already configured on the function app. The default is <code>false</code>.
-     * 
      */
     @Import(name="isForced")
       private final @Nullable Output<Boolean> isForced;
@@ -72,7 +67,6 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -83,7 +77,6 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
 
     /**
      * Name of the static site.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -94,7 +87,6 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The allowed type DNS record types for this profile.
-     * 
      */
     @EnumType
     public enum AllowedEndpointRecordType {

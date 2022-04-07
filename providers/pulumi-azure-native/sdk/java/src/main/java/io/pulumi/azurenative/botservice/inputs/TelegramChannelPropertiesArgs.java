@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters to provide for the Telegram channel.
- * 
  */
 public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
      */
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
@@ -32,7 +30,6 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Whether this channel is enabled for the bot
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
@@ -43,7 +40,6 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Whether this channel is validated for the bot
-     * 
      */
     @Import(name="isValidated")
       private final @Nullable Output<Boolean> isValidated;

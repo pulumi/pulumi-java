@@ -23,7 +23,174 @@ import javax.annotation.Nullable;
  * A Video Analyzer account.
  * API Version: 2021-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a Video Analyzer account
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var videoAnalyzer = new AzureNative.VideoAnalyzer.VideoAnalyzer("videoAnalyzer", new AzureNative.VideoAnalyzer.VideoAnalyzerArgs
+ *         {
+ *             AccountName = "contosotv",
+ *             Encryption = new AzureNative.VideoAnalyzer.Inputs.AccountEncryptionArgs
+ *             {
+ *                 Type = "SystemKey",
+ *             },
+ *             Identity = new AzureNative.VideoAnalyzer.Inputs.VideoAnalyzerIdentityArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1",  },
+ *                     { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2",  },
+ *                     { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id3",  },
+ *                 },
+ *             },
+ *             Location = "South Central US",
+ *             ResourceGroupName = "contoso",
+ *             StorageAccounts = 
+ *             {
+ *                 new AzureNative.VideoAnalyzer.Inputs.StorageAccountArgs
+ *                 {
+ *                     Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Storage/storageAccounts/storage1",
+ *                     Identity = new AzureNative.VideoAnalyzer.Inputs.ResourceIdentityArgs
+ *                     {
+ *                         UserAssignedIdentity = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2",
+ *                     },
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "tag1", "value1" },
+ *                 { "tag2", "value2" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	videoanalyzer "github.com/pulumi/pulumi-azure-native/sdk/go/azure/videoanalyzer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := videoanalyzer.NewVideoAnalyzer(ctx, "videoAnalyzer", &videoanalyzer.VideoAnalyzerArgs{
+ * 			AccountName: pulumi.String("contosotv"),
+ * 			Encryption: &videoanalyzer.AccountEncryptionArgs{
+ * 				Type: pulumi.String("SystemKey"),
+ * 			},
+ * 			Identity: &videoanalyzer.VideoAnalyzerIdentityArgs{
+ * 				Type: pulumi.String("UserAssigned"),
+ * 				UserAssignedIdentities: pulumi.AnyMap{
+ * 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
+ * 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2": nil,
+ * 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id3": nil,
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("South Central US"),
+ * 			ResourceGroupName: pulumi.String("contoso"),
+ * 			StorageAccounts: videoanalyzer.StorageAccountArray{
+ * 				&videoanalyzer.StorageAccountArgs{
+ * 					Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Storage/storageAccounts/storage1"),
+ * 					Identity: &videoanalyzer.ResourceIdentityArgs{
+ * 						UserAssignedIdentity: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("value1"),
+ * 				"tag2": pulumi.String("value2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const videoAnalyzer = new azure_native.videoanalyzer.VideoAnalyzer("videoAnalyzer", {
+ *     accountName: "contosotv",
+ *     encryption: {
+ *         type: "SystemKey",
+ *     },
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2": {},
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id3": {},
+ *         },
+ *     },
+ *     location: "South Central US",
+ *     resourceGroupName: "contoso",
+ *     storageAccounts: [{
+ *         id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Storage/storageAccounts/storage1",
+ *         identity: {
+ *             userAssignedIdentity: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2",
+ *         },
+ *     }],
+ *     tags: {
+ *         tag1: "value1",
+ *         tag2: "value2",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * video_analyzer = azure_native.videoanalyzer.VideoAnalyzer("videoAnalyzer",
+ *     account_name="contosotv",
+ *     encryption=azure_native.videoanalyzer.AccountEncryptionArgs(
+ *         type="SystemKey",
+ *     ),
+ *     identity=azure_native.videoanalyzer.VideoAnalyzerIdentityArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2": {},
+ *             "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id3": {},
+ *         },
+ *     ),
+ *     location="South Central US",
+ *     resource_group_name="contoso",
+ *     storage_accounts=[azure_native.videoanalyzer.StorageAccountArgs(
+ *         id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Storage/storageAccounts/storage1",
+ *         identity=azure_native.videoanalyzer.ResourceIdentityArgs(
+ *             user_assigned_identity="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2",
+ *         ),
+ *     )],
+ *     tags={
+ *         "tag1": "value1",
+ *         "tag2": "value2",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,126 +205,108 @@ import javax.annotation.Nullable;
 public class VideoAnalyzer extends io.pulumi.resources.CustomResource {
     /**
      * The account encryption properties.
-     * 
      */
     @Export(name="encryption", type=AccountEncryptionResponse.class, parameters={})
     private Output<AccountEncryptionResponse> encryption;
 
     /**
      * @return The account encryption properties.
-     * 
      */
     public Output<AccountEncryptionResponse> getEncryption() {
         return this.encryption;
     }
     /**
      * The list of endpoints associated with this resource.
-     * 
      */
     @Export(name="endpoints", type=List.class, parameters={EndpointResponse.class})
     private Output<List<EndpointResponse>> endpoints;
 
     /**
      * @return The list of endpoints associated with this resource.
-     * 
      */
     public Output<List<EndpointResponse>> getEndpoints() {
         return this.endpoints;
     }
     /**
      * The set of managed identities associated with the Video Analyzer resource.
-     * 
      */
     @Export(name="identity", type=VideoAnalyzerIdentityResponse.class, parameters={})
     private Output</* @Nullable */ VideoAnalyzerIdentityResponse> identity;
 
     /**
      * @return The set of managed identities associated with the Video Analyzer resource.
-     * 
      */
     public Output</* @Nullable */ VideoAnalyzerIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The storage accounts for this resource.
-     * 
      */
     @Export(name="storageAccounts", type=List.class, parameters={StorageAccountResponse.class})
     private Output<List<StorageAccountResponse>> storageAccounts;
 
     /**
      * @return The storage accounts for this resource.
-     * 
      */
     public Output<List<StorageAccountResponse>> getStorageAccounts() {
         return this.storageAccounts;
     }
     /**
      * The system data of the Video Analyzer account.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system data of the Video Analyzer account.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

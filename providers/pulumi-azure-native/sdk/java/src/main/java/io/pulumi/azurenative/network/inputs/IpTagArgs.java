@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains the IpTag associated with the object.
- * 
  */
 public final class IpTagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IpTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IP tag type. Example: FirstPartyUsage.
-     * 
      */
     @Import(name="ipTagType")
       private final @Nullable Output<String> ipTagType;
@@ -31,7 +29,6 @@ public final class IpTagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value of the IP tag associated with the public IP. Example: SQL.
-     * 
      */
     @Import(name="tag")
       private final @Nullable Output<String> tag;

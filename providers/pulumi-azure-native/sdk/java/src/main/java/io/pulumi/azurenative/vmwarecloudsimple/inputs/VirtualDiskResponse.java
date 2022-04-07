@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual disk model
- * 
  */
 public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Disk's Controller id
-     * 
      */
     @Import(name="controllerId", required=true)
       private final String controllerId;
@@ -32,7 +30,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Disk's independence mode type
-     * 
      */
     @Import(name="independenceMode", required=true)
       private final String independenceMode;
@@ -43,7 +40,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Disk's total size
-     * 
      */
     @Import(name="totalSize", required=true)
       private final Integer totalSize;
@@ -54,7 +50,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Disk's id
-     * 
      */
     @Import(name="virtualDiskId")
       private final @Nullable String virtualDiskId;
@@ -65,7 +60,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Disk's display name
-     * 
      */
     @Import(name="virtualDiskName", required=true)
       private final String virtualDiskName;

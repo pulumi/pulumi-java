@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Connector billing model
-     * 
      */
     @EnumType
     public enum ConnectorBillingModel {

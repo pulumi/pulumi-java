@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A piece of evidence supporting the compliance state set in the attestation.
- * 
  */
 public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The description for this piece of evidence.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +29,6 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The URI location of the evidence.
-     * 
      */
     @Import(name="sourceUri")
       private final @Nullable Output<String> sourceUri;

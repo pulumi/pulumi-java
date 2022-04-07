@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The date range for data in the export. This should only be specified with timeFrame set to 'Custom'. The maximum date range is 3 months.
- * 
  */
 public final class ExportTimePeriodResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ExportTimePeriodResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The start date for export data.
-     * 
      */
     @Import(name="from", required=true)
       private final String from;
@@ -29,7 +27,6 @@ public final class ExportTimePeriodResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The end date for export data.
-     * 
      */
     @Import(name="to", required=true)
       private final String to;

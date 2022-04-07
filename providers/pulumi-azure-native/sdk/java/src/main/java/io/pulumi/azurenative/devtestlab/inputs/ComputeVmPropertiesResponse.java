@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a virtual machine returned by the Microsoft.Compute API.
- * 
  */
 public final class ComputeVmPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets data disks blob uri for the virtual machine.
-     * 
      */
     @Import(name="dataDiskIds")
       private final @Nullable List<String> dataDiskIds;
@@ -34,7 +32,6 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets all data disks attached to the virtual machine.
-     * 
      */
     @Import(name="dataDisks")
       private final @Nullable List<ComputeDataDiskResponse> dataDisks;
@@ -45,7 +42,6 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets the network interface ID of the virtual machine.
-     * 
      */
     @Import(name="networkInterfaceId")
       private final @Nullable String networkInterfaceId;
@@ -56,7 +52,6 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets OS disk blob uri for the virtual machine.
-     * 
      */
     @Import(name="osDiskId")
       private final @Nullable String osDiskId;
@@ -67,7 +62,6 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets the OS type of the virtual machine.
-     * 
      */
     @Import(name="osType")
       private final @Nullable String osType;
@@ -78,7 +72,6 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets the statuses of the virtual machine.
-     * 
      */
     @Import(name="statuses")
       private final @Nullable List<ComputeVmInstanceViewStatusResponse> statuses;
@@ -89,7 +82,6 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets the size of the virtual machine.
-     * 
      */
     @Import(name="vmSize")
       private final @Nullable String vmSize;

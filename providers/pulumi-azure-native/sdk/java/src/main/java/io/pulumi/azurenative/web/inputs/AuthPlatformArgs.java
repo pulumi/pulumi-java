@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the platform of App Service Authentication/Authorization.
- * 
  */
 public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The path of the config file containing auth settings if they come from a file.
      * If the path is relative, base will the site's root directory.
-     * 
      */
     @Import(name="configFilePath")
       private final @Nullable Output<String> configFilePath;
@@ -33,7 +31,6 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -45,7 +42,6 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
-     * 
      */
     @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;

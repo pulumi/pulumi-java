@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class GitHubActionCodeConfigurationResponse {
     /**
      * Runtime stack is used to determine the workflow file content for code base apps.
-     * 
      */
     private final @Nullable String runtimeStack;
     /**
      * Runtime version is used to determine what build version to set in the workflow file.
-     * 
      */
     private final @Nullable String runtimeVersion;
 
@@ -32,14 +30,12 @@ public final class GitHubActionCodeConfigurationResponse {
 
     /**
      * Runtime stack is used to determine the workflow file content for code base apps.
-     * 
     */
     public Optional<String> getRuntimeStack() {
         return Optional.ofNullable(this.runtimeStack);
     }
     /**
      * Runtime version is used to determine what build version to set in the workflow file.
-     * 
     */
     public Optional<String> getRuntimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);

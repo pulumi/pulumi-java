@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Routing preference defines the type of network, either microsoft or internet routing to be used to deliver the user data, the default option is microsoft routing
- * 
  */
 public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A boolean flag which indicates whether internet routing storage endpoints are to be published
-     * 
      */
     @Import(name="publishInternetEndpoints")
       private final @Nullable Boolean publishInternetEndpoints;
@@ -32,7 +30,6 @@ public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * A boolean flag which indicates whether microsoft routing storage endpoints are to be published
-     * 
      */
     @Import(name="publishMicrosoftEndpoints")
       private final @Nullable Boolean publishMicrosoftEndpoints;
@@ -43,7 +40,6 @@ public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Routing Choice defines the kind of network routing opted by the user.
-     * 
      */
     @Import(name="routingChoice")
       private final @Nullable String routingChoice;

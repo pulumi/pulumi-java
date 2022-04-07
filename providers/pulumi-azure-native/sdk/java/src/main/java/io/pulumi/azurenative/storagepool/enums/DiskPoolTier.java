@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Determines the SKU of VM deployed for Disk pool
-     * 
      */
     @EnumType
     public enum DiskPoolTier {

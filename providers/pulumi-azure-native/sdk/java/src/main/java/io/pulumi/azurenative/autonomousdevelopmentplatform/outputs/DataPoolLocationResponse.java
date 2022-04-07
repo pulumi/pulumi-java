@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class DataPoolLocationResponse {
     /**
      * Encryption properties of a Data Pool location
-     * 
      */
     private final @Nullable DataPoolEncryptionResponse encryption;
     /**
      * The location name
-     * 
      */
     private final String name;
 
@@ -33,14 +31,12 @@ public final class DataPoolLocationResponse {
 
     /**
      * Encryption properties of a Data Pool location
-     * 
     */
     public Optional<DataPoolEncryptionResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * The location name
-     * 
     */
     public String getName() {
         return this.name;

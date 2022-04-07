@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Access protocol to be used by the share.
-     * 
      */
     @EnumType
     public enum ShareAccessProtocol {

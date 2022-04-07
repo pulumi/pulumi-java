@@ -18,7 +18,123 @@ import javax.annotation.Nullable;
  * The Managed Network Peering Policy resource
  * API Version: 2019-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ManagedNetworkPeeringPoliciesPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managedNetworkPeeringPolicy = new AzureNative.ManagedNetwork.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", new AzureNative.ManagedNetwork.ManagedNetworkPeeringPolicyArgs
+ *         {
+ *             ManagedNetworkName = "myManagedNetwork",
+ *             ManagedNetworkPeeringPolicyName = "myHubAndSpoke",
+ *             Properties = new AzureNative.ManagedNetwork.Inputs.ManagedNetworkPeeringPolicyPropertiesArgs
+ *             {
+ *                 Hub = new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
+ *                 {
+ *                     Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet",
+ *                 },
+ *                 Spokes = 
+ *                 {
+ *                     new AzureNative.ManagedNetwork.Inputs.ResourceIdArgs
+ *                     {
+ *                         Id = "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1",
+ *                     },
+ *                 },
+ *                 Type = "HubAndSpokeTopology",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	managednetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/managednetwork"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := managednetwork.NewManagedNetworkPeeringPolicy(ctx, "managedNetworkPeeringPolicy", &managednetwork.ManagedNetworkPeeringPolicyArgs{
+ * 			ManagedNetworkName:              pulumi.String("myManagedNetwork"),
+ * 			ManagedNetworkPeeringPolicyName: pulumi.String("myHubAndSpoke"),
+ * 			Properties: &managednetwork.ManagedNetworkPeeringPolicyPropertiesArgs{
+ * 				Hub: &managednetwork.ResourceIdArgs{
+ * 					Id: pulumi.String("/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet"),
+ * 				},
+ * 				Spokes: managednetwork.ResourceIdArray{
+ * 					&managednetwork.ResourceIdArgs{
+ * 						Id: pulumi.String("/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1"),
+ * 					},
+ * 				},
+ * 				Type: pulumi.String("HubAndSpokeTopology"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managedNetworkPeeringPolicy = new azure_native.managednetwork.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy", {
+ *     managedNetworkName: "myManagedNetwork",
+ *     managedNetworkPeeringPolicyName: "myHubAndSpoke",
+ *     properties: {
+ *         hub: {
+ *             id: "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet",
+ *         },
+ *         spokes: [{
+ *             id: "/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1",
+ *         }],
+ *         type: "HubAndSpokeTopology",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * managed_network_peering_policy = azure_native.managednetwork.ManagedNetworkPeeringPolicy("managedNetworkPeeringPolicy",
+ *     managed_network_name="myManagedNetwork",
+ *     managed_network_peering_policy_name="myHubAndSpoke",
+ *     properties=azure_native.managednetwork.ManagedNetworkPeeringPolicyPropertiesArgs(
+ *         hub=azure_native.managednetwork.ResourceIdArgs(
+ *             id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myHubVnet",
+ *         ),
+ *         spokes=[azure_native.managednetwork.ResourceIdArgs(
+ *             id="/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1",
+ *         )],
+ *         type="HubAndSpokeTopology",
+ *     ),
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +149,48 @@ import javax.annotation.Nullable;
 public class ManagedNetworkPeeringPolicy extends io.pulumi.resources.CustomResource {
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the properties of a Managed Network Policy
-     * 
      */
     @Export(name="properties", type=ManagedNetworkPeeringPolicyPropertiesResponse.class, parameters={})
     private Output<ManagedNetworkPeeringPolicyPropertiesResponse> properties;
 
     /**
      * @return Gets or sets the properties of a Managed Network Policy
-     * 
      */
     public Output<ManagedNetworkPeeringPolicyPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;

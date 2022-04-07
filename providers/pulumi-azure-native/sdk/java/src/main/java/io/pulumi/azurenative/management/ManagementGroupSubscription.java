@@ -18,7 +18,68 @@ import javax.annotation.Nullable;
  * The details of subscription under management group.
  * API Version: 2020-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AddSubscriptionToManagementGroup
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managementGroupSubscription = new AzureNative.Management.ManagementGroupSubscription("managementGroupSubscription", new AzureNative.Management.ManagementGroupSubscriptionArgs
+ *         {
+ *             GroupId = "Group",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	management "github.com/pulumi/pulumi-azure-native/sdk/go/azure/management"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := management.NewManagementGroupSubscription(ctx, "managementGroupSubscription", &management.ManagementGroupSubscriptionArgs{
+ * 			GroupId: pulumi.String("Group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managementGroupSubscription = new azure_native.management.ManagementGroupSubscription("managementGroupSubscription", {groupId: "Group"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * management_group_subscription = azure_native.management.ManagementGroupSubscription("managementGroupSubscription", group_id="Group")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +94,72 @@ import javax.annotation.Nullable;
 public class ManagementGroupSubscription extends io.pulumi.resources.CustomResource {
     /**
      * The friendly name of the subscription.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The friendly name of the subscription.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The stringified id of the subscription. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The stringified id of the subscription. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The ID of the parent management group.
-     * 
      */
     @Export(name="parent", type=DescendantParentGroupInfoResponse.class, parameters={})
     private Output</* @Nullable */ DescendantParentGroupInfoResponse> parent;
 
     /**
      * @return The ID of the parent management group.
-     * 
      */
     public Output</* @Nullable */ DescendantParentGroupInfoResponse> getParent() {
         return this.parent;
     }
     /**
      * The state of the subscription.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
      * @return The state of the subscription.
-     * 
      */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
     /**
      * The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     @Export(name="tenant", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenant;
 
     /**
      * @return The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     public Output</* @Nullable */ String> getTenant() {
         return this.tenant;
     }
     /**
      * The type of the resource.  For example, Microsoft.Management/managementGroups/subscriptions
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.  For example, Microsoft.Management/managementGroups/subscriptions
-     * 
      */
     public Output<String> getType() {
         return this.type;

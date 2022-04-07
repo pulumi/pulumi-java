@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Product compatibility
- * 
  */
 public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Full error message if any compatibility issues are found
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -33,7 +31,6 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Tells if product is compatible with current device
-     * 
      */
     @Import(name="isCompatible")
       private final @Nullable Boolean isCompatible;
@@ -44,7 +41,6 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * List of all issues found
-     * 
      */
     @Import(name="issues")
       private final @Nullable List<String> issues;
@@ -55,7 +51,6 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Short error message if any compatibility issues are found
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;

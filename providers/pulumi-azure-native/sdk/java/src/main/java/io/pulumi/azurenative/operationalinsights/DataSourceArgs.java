@@ -20,7 +20,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the datasource resource.
-     * 
      */
     @Import(name="dataSourceName")
       private final @Nullable Output<String> dataSourceName;
@@ -31,7 +30,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of the DataSource.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,DataSourceKind>> kind;
@@ -42,7 +40,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data source properties in raw json format, each kind of data source have it's own schema.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Object> properties;
@@ -53,7 +50,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -75,7 +70,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

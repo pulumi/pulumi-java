@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of canonical profile.
- * 
  */
 public final class CanonicalProfileDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CanonicalProfileDefinitionResponse extends io.pulumi.resource
 
     /**
      * Canonical profile ID.
-     * 
      */
     @Import(name="canonicalProfileId")
       private final @Nullable Integer canonicalProfileId;
@@ -33,7 +31,6 @@ public final class CanonicalProfileDefinitionResponse extends io.pulumi.resource
 
     /**
      * Properties of the canonical profile.
-     * 
      */
     @Import(name="properties")
       private final @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;

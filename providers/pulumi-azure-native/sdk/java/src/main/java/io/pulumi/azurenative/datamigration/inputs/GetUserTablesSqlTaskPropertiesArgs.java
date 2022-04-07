@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for the task that collects user tables for the given list of databases
- * 
  */
 public final class GetUserTablesSqlTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class GetUserTablesSqlTaskPropertiesArgs extends io.pulumi.resource
 
     /**
      * Task input
-     * 
      */
     @Import(name="input")
       private final @Nullable Output<GetUserTablesSqlTaskInputArgs> input;
@@ -33,7 +31,6 @@ public final class GetUserTablesSqlTaskPropertiesArgs extends io.pulumi.resource
     /**
      * Task type.
      * Expected value is 'GetUserTables.Sql'.
-     * 
      */
     @Import(name="taskType", required=true)
       private final Output<String> taskType;

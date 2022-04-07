@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Operation request/response representation details.
- * 
  */
 public final class RepresentationContractResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
 
     /**
      * Specifies a registered or custom content type for this representation, e.g. application/xml.
-     * 
      */
     @Import(name="contentType", required=true)
       private final String contentType;
@@ -33,7 +31,6 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
 
     /**
      * Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
-     * 
      */
     @Import(name="formParameters")
       private final @Nullable List<ParameterContractResponse> formParameters;
@@ -44,7 +41,6 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
 
     /**
      * An example of the representation.
-     * 
      */
     @Import(name="sample")
       private final @Nullable String sample;
@@ -55,7 +51,6 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
 
     /**
      * Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
-     * 
      */
     @Import(name="schemaId")
       private final @Nullable String schemaId;
@@ -66,7 +61,6 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
 
     /**
      * Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
-     * 
      */
     @Import(name="typeName")
       private final @Nullable String typeName;

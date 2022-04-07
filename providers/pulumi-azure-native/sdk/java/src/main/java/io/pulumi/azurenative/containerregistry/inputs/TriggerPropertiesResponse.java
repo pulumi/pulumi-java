@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a trigger.
- * 
  */
 public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The trigger based on base image dependencies.
-     * 
      */
     @Import(name="baseImageTrigger")
       private final @Nullable BaseImageTriggerResponse baseImageTrigger;
@@ -34,7 +32,6 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The collection of triggers based on source code repository.
-     * 
      */
     @Import(name="sourceTriggers")
       private final @Nullable List<SourceTriggerResponse> sourceTriggers;
@@ -45,7 +42,6 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The collection of timer triggers.
-     * 
      */
     @Import(name="timerTriggers")
       private final @Nullable List<TimerTriggerResponse> timerTriggers;

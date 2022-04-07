@@ -12,32 +12,26 @@ import java.util.Objects;
 public final class GetUserRuleResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Whether the rule is custom or default.
-     * 
      */
     private final String kind;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The system metadata related to this resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -59,42 +53,36 @@ public final class GetUserRuleResult {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Whether the rule is custom or default.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The system metadata related to this resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

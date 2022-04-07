@@ -14,7 +14,6 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the diagnostic setting.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetDiagnosticSettingArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final String resourceUri;

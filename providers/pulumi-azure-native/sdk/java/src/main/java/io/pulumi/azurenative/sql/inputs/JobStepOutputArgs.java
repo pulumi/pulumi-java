@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The output configuration of a job step.
- * 
  */
 public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource ID of the credential to use to connect to the output destination.
-     * 
      */
     @Import(name="credential", required=true)
       private final Output<String> credential;
@@ -33,7 +31,6 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The output destination database.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -44,7 +41,6 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The output destination resource group.
-     * 
      */
     @Import(name="resourceGroupName")
       private final @Nullable Output<String> resourceGroupName;
@@ -55,7 +51,6 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The output destination schema.
-     * 
      */
     @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
@@ -66,7 +61,6 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The output destination server name.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -77,7 +71,6 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The output destination subscription id.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
@@ -88,7 +81,6 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The output destination table.
-     * 
      */
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
@@ -99,7 +91,6 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The output destination type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,JobStepOutputType>> type;

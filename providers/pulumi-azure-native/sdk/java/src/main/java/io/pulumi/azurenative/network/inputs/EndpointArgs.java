@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class representing a Traffic Manager endpoint.
- * 
  */
 public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of custom headers.
-     * 
      */
     @Import(name="customHeaders")
       private final @Nullable Output<List<EndpointPropertiesCustomHeadersArgs>> customHeaders;
@@ -38,7 +36,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
-     * 
      */
     @Import(name="endpointLocation")
       private final @Nullable Output<String> endpointLocation;
@@ -49,7 +46,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The monitoring status of the endpoint.
-     * 
      */
     @Import(name="endpointMonitorStatus")
       private final @Nullable Output<Either<String,EndpointMonitorStatus>> endpointMonitorStatus;
@@ -60,7 +56,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
-     * 
      */
     @Import(name="endpointStatus")
       private final @Nullable Output<Either<String,EndpointStatus>> endpointStatus;
@@ -71,7 +66,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
-     * 
      */
     @Import(name="geoMapping")
       private final @Nullable Output<List<String>> geoMapping;
@@ -82,7 +76,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -93,7 +86,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     * 
      */
     @Import(name="minChildEndpoints")
       private final @Nullable Output<Double> minChildEndpoints;
@@ -104,7 +96,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     * 
      */
     @Import(name="minChildEndpointsIPv4")
       private final @Nullable Output<Double> minChildEndpointsIPv4;
@@ -115,7 +106,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
-     * 
      */
     @Import(name="minChildEndpointsIPv6")
       private final @Nullable Output<Double> minChildEndpointsIPv6;
@@ -126,7 +116,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -137,7 +126,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Double> priority;
@@ -148,7 +136,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
-     * 
      */
     @Import(name="subnets")
       private final @Nullable Output<List<EndpointPropertiesSubnetsArgs>> subnets;
@@ -159,7 +146,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<String> target;
@@ -170,7 +156,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
-     * 
      */
     @Import(name="targetResourceId")
       private final @Nullable Output<String> targetResourceId;
@@ -181,7 +166,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -192,7 +176,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
-     * 
      */
     @Import(name="weight")
       private final @Nullable Output<Double> weight;

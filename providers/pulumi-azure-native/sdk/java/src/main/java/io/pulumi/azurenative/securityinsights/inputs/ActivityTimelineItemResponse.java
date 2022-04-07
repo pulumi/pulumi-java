@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Represents Activity timeline item.
- * 
  */
 public final class ActivityTimelineItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The grouping bucket end time.
-     * 
      */
     @Import(name="bucketEndTimeUTC", required=true)
       private final String bucketEndTimeUTC;
@@ -29,7 +27,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The grouping bucket start time.
-     * 
      */
     @Import(name="bucketStartTimeUTC", required=true)
       private final String bucketStartTimeUTC;
@@ -40,7 +37,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The activity timeline content.
-     * 
      */
     @Import(name="content", required=true)
       private final String content;
@@ -51,7 +47,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The time of the first activity in the grouping bucket.
-     * 
      */
     @Import(name="firstActivityTimeUTC", required=true)
       private final String firstActivityTimeUTC;
@@ -63,7 +58,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
     /**
      * The entity query kind
      * Expected value is 'Activity'.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -74,7 +68,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The time of the last activity in the grouping bucket.
-     * 
      */
     @Import(name="lastActivityTimeUTC", required=true)
       private final String lastActivityTimeUTC;
@@ -85,7 +78,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The activity query id.
-     * 
      */
     @Import(name="queryId", required=true)
       private final String queryId;
@@ -96,7 +88,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
 
     /**
      * The activity timeline title.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;

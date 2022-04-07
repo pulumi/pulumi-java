@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The repository type of the source control
-     * 
      */
     @EnumType
     public enum RepoType {

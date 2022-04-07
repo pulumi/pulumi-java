@@ -14,7 +14,6 @@ public final class ListOperationalizationClusterKeysArgs extends io.pulumi.resou
 
     /**
      * The name of the cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class ListOperationalizationClusterKeysArgs extends io.pulumi.resou
 
     /**
      * Name of the resource group in which the cluster is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

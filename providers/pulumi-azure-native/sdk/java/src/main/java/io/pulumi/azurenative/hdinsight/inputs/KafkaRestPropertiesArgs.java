@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The kafka rest proxy configuration which contains AAD security group information.
- * 
  */
 public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The information of AAD security group.
-     * 
      */
     @Import(name="clientGroupInfo")
       private final @Nullable Output<ClientGroupInfoArgs> clientGroupInfo;
@@ -33,7 +31,6 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The configurations that need to be overriden.
-     * 
      */
     @Import(name="configurationOverride")
       private final @Nullable Output<Map<String,String>> configurationOverride;

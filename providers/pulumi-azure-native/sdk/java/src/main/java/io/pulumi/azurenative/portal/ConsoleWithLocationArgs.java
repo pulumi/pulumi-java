@@ -16,7 +16,6 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the console
-     * 
      */
     @Import(name="consoleName")
       private final @Nullable Output<String> consoleName;
@@ -27,7 +26,6 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The provider location
-     * 
      */
     @Import(name="location", required=true)
       private final Output<String> location;

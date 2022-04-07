@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates if the traffic matched against the rule in inbound or outbound.
-     * 
      */
     @EnumType
     public enum SecurityConfigurationRuleDirection {

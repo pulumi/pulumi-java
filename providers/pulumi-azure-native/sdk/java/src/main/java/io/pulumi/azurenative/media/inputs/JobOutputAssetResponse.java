@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents an Asset used as a JobOutput.
- * 
  */
 public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the output Asset.
-     * 
      */
     @Import(name="assetName", required=true)
       private final String assetName;
@@ -33,7 +31,6 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The UTC date and time at which this Job Output finished processing.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -44,7 +41,6 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If the JobOutput is in the Error state, it contains the details of the error.
-     * 
      */
     @Import(name="error", required=true)
       private final JobErrorResponse error;
@@ -55,7 +51,6 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
-     * 
      */
     @Import(name="label")
       private final @Nullable String label;
@@ -67,7 +62,6 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.JobOutputAsset'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -78,7 +72,6 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.
-     * 
      */
     @Import(name="progress", required=true)
       private final Integer progress;
@@ -89,7 +82,6 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The UTC date and time at which this Job Output began processing.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -100,7 +92,6 @@ public final class JobOutputAssetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Describes the state of the JobOutput.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

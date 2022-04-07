@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Incident additional data property bag.
- * 
  */
 public final class IncidentAdditionalDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
 
     /**
      * List of product names of alerts in the incident
-     * 
      */
     @Import(name="alertProductNames", required=true)
       private final List<String> alertProductNames;
@@ -31,7 +29,6 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
 
     /**
      * The number of alerts in the incident
-     * 
      */
     @Import(name="alertsCount", required=true)
       private final Integer alertsCount;
@@ -42,7 +39,6 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
 
     /**
      * The number of bookmarks in the incident
-     * 
      */
     @Import(name="bookmarksCount", required=true)
       private final Integer bookmarksCount;
@@ -53,7 +49,6 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
 
     /**
      * The number of comments in the incident
-     * 
      */
     @Import(name="commentsCount", required=true)
       private final Integer commentsCount;
@@ -64,7 +59,6 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
 
     /**
      * The tactics associated with incident
-     * 
      */
     @Import(name="tactics", required=true)
       private final List<String> tactics;

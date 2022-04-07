@@ -21,7 +21,96 @@ import javax.annotation.Nullable;
  * Appliances definition.
  * API Version: 2021-10-31-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create/Update Appliance
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var appliance = new AzureNative.ResourceConnector.Appliance("appliance", new AzureNative.ResourceConnector.ApplianceArgs
+ *         {
+ *             Distro = "AKSEdge",
+ *             InfrastructureConfig = new AzureNative.ResourceConnector.Inputs.AppliancePropertiesInfrastructureConfigArgs
+ *             {
+ *                 Provider = "VMWare",
+ *             },
+ *             Location = "West US",
+ *             ResourceGroupName = "testresourcegroup",
+ *             ResourceName = "appliance01",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resourceconnector "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resourceconnector"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resourceconnector.NewAppliance(ctx, "appliance", &resourceconnector.ApplianceArgs{
+ * 			Distro: pulumi.String("AKSEdge"),
+ * 			InfrastructureConfig: &resourceconnector.AppliancePropertiesInfrastructureConfigArgs{
+ * 				Provider: pulumi.String("VMWare"),
+ * 			},
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("testresourcegroup"),
+ * 			ResourceName:      pulumi.String("appliance01"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const appliance = new azure_native.resourceconnector.Appliance("appliance", {
+ *     distro: "AKSEdge",
+ *     infrastructureConfig: {
+ *         provider: "VMWare",
+ *     },
+ *     location: "West US",
+ *     resourceGroupName: "testresourcegroup",
+ *     resourceName: "appliance01",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * appliance = azure_native.resourceconnector.Appliance("appliance",
+ *     distro="AKSEdge",
+ *     infrastructure_config=azure_native.resourceconnector.AppliancePropertiesInfrastructureConfigArgs(
+ *         provider="VMWare",
+ *     ),
+ *     location="West US",
+ *     resource_group_name="testresourcegroup",
+ *     resource_name="appliance01")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,168 +125,144 @@ import javax.annotation.Nullable;
 public class Appliance extends io.pulumi.resources.CustomResource {
     /**
      * Represents a supported Fabric/Infra. (AKSEdge etc...).
-     * 
      */
     @Export(name="distro", type=String.class, parameters={})
     private Output</* @Nullable */ String> distro;
 
     /**
      * @return Represents a supported Fabric/Infra. (AKSEdge etc...).
-     * 
      */
     public Output</* @Nullable */ String> getDistro() {
         return this.distro;
     }
     /**
      * Identity for the resource.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return Identity for the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Contains infrastructure information about the Appliance
-     * 
      */
     @Export(name="infrastructureConfig", type=AppliancePropertiesResponseInfrastructureConfig.class, parameters={})
     private Output</* @Nullable */ AppliancePropertiesResponseInfrastructureConfig> infrastructureConfig;
 
     /**
      * @return Contains infrastructure information about the Appliance
-     * 
      */
     public Output</* @Nullable */ AppliancePropertiesResponseInfrastructureConfig> getInfrastructureConfig() {
         return this.infrastructureConfig;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current deployment or provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The current deployment or provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Certificates pair used to download MSI certificate from HIS
-     * 
      */
     @Export(name="publicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicKey;
 
     /**
      * @return Certificates pair used to download MSI certificate from HIS
-     * 
      */
     public Output</* @Nullable */ String> getPublicKey() {
         return this.publicKey;
     }
     /**
      * Appliance’s health and state of connection to on-prem
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Appliance’s health and state of connection to on-prem
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Version of the Appliance
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return Version of the Appliance
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

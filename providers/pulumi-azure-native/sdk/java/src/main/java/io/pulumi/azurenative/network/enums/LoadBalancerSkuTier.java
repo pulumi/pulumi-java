@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Tier of a load balancer SKU.
-     * 
      */
     @EnumType
     public enum LoadBalancerSkuTier {

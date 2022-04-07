@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of sensor
-     * 
      */
     @EnumType
     public enum SensorType {

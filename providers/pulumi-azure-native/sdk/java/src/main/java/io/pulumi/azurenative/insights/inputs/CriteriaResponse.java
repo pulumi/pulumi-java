@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the criteria for converting log to metric.
- * 
  */
 public final class CriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of Dimensions for creating metric
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable List<DimensionResponse> dimensions;
@@ -33,7 +31,6 @@ public final class CriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the metric
-     * 
      */
     @Import(name="metricName", required=true)
       private final String metricName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
-     * 
      */
     @EnumType
     public enum AutoExecuteStatus {

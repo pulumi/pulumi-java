@@ -14,7 +14,6 @@ public final class GetAvailabilityGroupListenerArgs extends io.pulumi.resources.
 
     /**
      * Name of the availability group listener.
-     * 
      */
     @Import(name="availabilityGroupListenerName", required=true)
       private final String availabilityGroupListenerName;
@@ -25,7 +24,6 @@ public final class GetAvailabilityGroupListenerArgs extends io.pulumi.resources.
 
     /**
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetAvailabilityGroupListenerArgs extends io.pulumi.resources.
 
     /**
      * Name of the SQL virtual machine group.
-     * 
      */
     @Import(name="sqlVirtualMachineGroupName", required=true)
       private final String sqlVirtualMachineGroupName;

@@ -14,7 +14,6 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final String factoryName;
@@ -25,7 +24,6 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The linked service name.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final String linkedServiceName;
@@ -36,7 +34,6 @@ public final class GetLinkedServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

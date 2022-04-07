@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class VolumeBackupsResponse {
     /**
      * Total count of backups for volume
-     * 
      */
     private final @Nullable Integer backupsCount;
     /**
      * Policy enabled
-     * 
      */
     private final @Nullable Boolean policyEnabled;
     /**
      * Volume name
-     * 
      */
     private final @Nullable String volumeName;
 
@@ -41,21 +38,18 @@ public final class VolumeBackupsResponse {
 
     /**
      * Total count of backups for volume
-     * 
     */
     public Optional<Integer> getBackupsCount() {
         return Optional.ofNullable(this.backupsCount);
     }
     /**
      * Policy enabled
-     * 
     */
     public Optional<Boolean> getPolicyEnabled() {
         return Optional.ofNullable(this.policyEnabled);
     }
     /**
      * Volume name
-     * 
     */
     public Optional<String> getVolumeName() {
         return Optional.ofNullable(this.volumeName);

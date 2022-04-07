@@ -17,7 +17,6 @@ public final class SubResourceWithColocationStatusResponse extends io.pulumi.res
 
     /**
      * Describes colocation status of a resource in the Proximity Placement Group.
-     * 
      */
     @Import(name="colocationStatus")
       private final @Nullable InstanceViewStatusResponse colocationStatus;
@@ -28,7 +27,6 @@ public final class SubResourceWithColocationStatusResponse extends io.pulumi.res
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

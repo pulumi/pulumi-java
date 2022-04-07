@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The schedule status.
-     * 
      */
     @EnumType
     public enum ScheduleStatus {

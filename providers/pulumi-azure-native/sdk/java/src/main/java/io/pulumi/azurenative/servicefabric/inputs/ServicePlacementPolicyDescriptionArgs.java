@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Describes the policy to be used for placement of a Service Fabric service.
- * 
  */
 public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
 
     /**
      * The type of placement policy for a service fabric service. Following are the possible values.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ServicePlacementPolicyType>> type;

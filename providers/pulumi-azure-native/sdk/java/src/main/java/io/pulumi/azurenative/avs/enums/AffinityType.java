@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * placement policy affinity type
-     * 
      */
     @EnumType
     public enum AffinityType {

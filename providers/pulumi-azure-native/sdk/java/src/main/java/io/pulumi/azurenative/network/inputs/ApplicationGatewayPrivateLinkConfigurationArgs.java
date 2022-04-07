@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Private Link Configuration on an application gateway.
- * 
  */
 public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -33,7 +31,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
 
     /**
      * An array of application gateway private link ip configurations.
-     * 
      */
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations;
@@ -44,7 +41,6 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
 
     /**
      * Name of the private link configuration that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or set the job state.
-     * 
      */
     @EnumType
     public enum JobState {

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the app registration for providers that have app ids and app secrets
- * 
  */
 public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The App ID of the app used for login.
-     * 
      */
     @Import(name="appId")
       private final @Nullable Output<String> appId;
@@ -31,7 +29,6 @@ public final class AppRegistrationArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The app setting name that contains the app secret.
-     * 
      */
     @Import(name="appSecretSettingName")
       private final @Nullable Output<String> appSecretSettingName;

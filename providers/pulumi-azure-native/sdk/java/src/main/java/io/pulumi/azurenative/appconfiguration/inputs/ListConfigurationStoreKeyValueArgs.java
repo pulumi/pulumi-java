@@ -16,7 +16,6 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
 
     /**
      * The name of the configuration store.
-     * 
      */
     @Import(name="configStoreName", required=true)
       private final String configStoreName;
@@ -27,7 +26,6 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
 
     /**
      * The key to retrieve.
-     * 
      */
     @Import(name="key", required=true)
       private final String key;
@@ -38,7 +36,6 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
 
     /**
      * The label of the key.
-     * 
      */
     @Import(name="label")
       private final @Nullable String label;
@@ -49,7 +46,6 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

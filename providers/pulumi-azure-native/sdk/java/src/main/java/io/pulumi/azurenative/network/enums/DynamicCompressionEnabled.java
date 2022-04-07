@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether to use dynamic compression for cached content
-     * 
      */
     @EnumType
     public enum DynamicCompressionEnabled {

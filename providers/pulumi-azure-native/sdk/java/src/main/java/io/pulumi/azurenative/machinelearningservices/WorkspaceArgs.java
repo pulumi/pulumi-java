@@ -24,7 +24,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The flag to indicate whether to allow public access when behind VNet.
-     * 
      */
     @Import(name="allowPublicAccessWhenBehindVnet")
       private final @Nullable Output<Boolean> allowPublicAccessWhenBehindVnet;
@@ -35,7 +34,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
-     * 
      */
     @Import(name="applicationInsights")
       private final @Nullable Output<String> applicationInsights;
@@ -46,7 +44,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
-     * 
      */
     @Import(name="containerRegistry")
       private final @Nullable Output<String> containerRegistry;
@@ -57,7 +54,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of this workspace.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -68,7 +64,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Url for the discovery service to identify regional endpoints for machine learning experimentation services
-     * 
      */
     @Import(name="discoveryUrl")
       private final @Nullable Output<String> discoveryUrl;
@@ -79,7 +74,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The encryption settings of Azure ML workspace.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertyArgs> encryption;
@@ -90,7 +84,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The friendly name for this workspace. This name in mutable
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -101,7 +94,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
-     * 
      */
     @Import(name="hbiWorkspace")
       private final @Nullable Output<Boolean> hbiWorkspace;
@@ -112,7 +104,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -123,7 +114,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The compute name for image build
-     * 
      */
     @Import(name="imageBuildCompute")
       private final @Nullable Output<String> imageBuildCompute;
@@ -134,7 +124,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-     * 
      */
     @Import(name="keyVault")
       private final @Nullable Output<String> keyVault;
@@ -145,7 +134,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -156,7 +144,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user assigned identity resource id that represents the workspace identity.
-     * 
      */
     @Import(name="primaryUserAssignedIdentity")
       private final @Nullable Output<String> primaryUserAssignedIdentity;
@@ -167,7 +154,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -178,7 +164,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service managed resource settings.
-     * 
      */
     @Import(name="serviceManagedResourcesSettings")
       private final @Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings;
@@ -189,7 +174,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of shared private link resources in this workspace.
-     * 
      */
     @Import(name="sharedPrivateLinkResources")
       private final @Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources;
@@ -200,7 +184,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sku of the workspace.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -211,7 +194,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
-     * 
      */
     @Import(name="storageAccount")
       private final @Nullable Output<String> storageAccount;
@@ -222,7 +204,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -233,7 +214,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;

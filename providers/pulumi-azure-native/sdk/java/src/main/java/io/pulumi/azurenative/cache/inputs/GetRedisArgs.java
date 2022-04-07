@@ -14,7 +14,6 @@ public final class GetRedisArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Redis cache.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetRedisArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

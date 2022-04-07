@@ -14,7 +14,6 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the addon for the private cloud
-     * 
      */
     @Import(name="addonName", required=true)
       private final String addonName;
@@ -25,7 +24,6 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
@@ -36,7 +34,6 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

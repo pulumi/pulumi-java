@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class LogStorageSettingsResponse {
     /**
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object enableReliableLogging;
     /**
      * Log storage linked service reference.
-     * 
      */
     private final LinkedServiceReferenceResponse linkedServiceName;
     /**
      * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object logLevel;
     /**
      * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object path;
 
@@ -47,28 +43,24 @@ public final class LogStorageSettingsResponse {
 
     /**
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getEnableReliableLogging() {
         return Optional.ofNullable(this.enableReliableLogging);
     }
     /**
      * Log storage linked service reference.
-     * 
     */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getLogLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
      * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getPath() {
         return Optional.ofNullable(this.path);

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * This activity verifies that an external resource exists.
- * 
  */
 public final class ValidationActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
 
     /**
      * Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="childItems")
       private final @Nullable Object childItems;
@@ -36,7 +34,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
 
     /**
      * Validation activity dataset reference.
-     * 
      */
     @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
@@ -47,7 +44,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -58,7 +54,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -69,7 +64,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
 
     /**
      * Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="minimumSize")
       private final @Nullable Object minimumSize;
@@ -80,7 +74,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -91,7 +84,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
 
     /**
      * A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sleep")
       private final @Nullable Object sleep;
@@ -102,7 +94,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
 
     /**
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Object timeout;
@@ -114,7 +105,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
     /**
      * Type of activity.
      * Expected value is 'Validation'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -125,7 +115,6 @@ public final class ValidationActivityResponse extends io.pulumi.resources.Invoke
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

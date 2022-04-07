@@ -21,7 +21,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The private IP address external mapping for NAT.
-     * 
      */
     @Import(name="externalMappings")
       private final @Nullable Output<List<VpnNatRuleMappingArgs>> externalMappings;
@@ -32,7 +31,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the gateway.
-     * 
      */
     @Import(name="gatewayName", required=true)
       private final Output<String> gatewayName;
@@ -43,7 +41,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -54,7 +51,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The private IP address internal mapping for NAT.
-     * 
      */
     @Import(name="internalMappings")
       private final @Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings;
@@ -65,7 +61,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IP Configuration ID this NAT rule applies to.
-     * 
      */
     @Import(name="ipConfigurationId")
       private final @Nullable Output<String> ipConfigurationId;
@@ -76,7 +71,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Source NAT direction of a VPN NAT.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<Either<String,VpnNatRuleMode>> mode;
@@ -87,7 +81,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -98,7 +91,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the nat rule.
-     * 
      */
     @Import(name="natRuleName")
       private final @Nullable Output<String> natRuleName;
@@ -109,7 +101,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name of the VpnGateway.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -120,7 +111,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of NAT rule for VPN NAT.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,VpnNatRuleType>> type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of a canonical profile property.
- * 
  */
 public final class CanonicalProfileDefinitionResponseProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
 
     /**
      * Profile name.
-     * 
      */
     @Import(name="profileName")
       private final @Nullable String profileName;
@@ -32,7 +30,6 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
 
     /**
      * Property name of profile.
-     * 
      */
     @Import(name="profilePropertyName")
       private final @Nullable String profilePropertyName;
@@ -43,7 +40,6 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
 
     /**
      * The rank.
-     * 
      */
     @Import(name="rank")
       private final @Nullable Integer rank;
@@ -54,7 +50,6 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
 
     /**
      * Type of canonical property value.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -65,7 +60,6 @@ public final class CanonicalProfileDefinitionResponseProperties extends io.pulum
 
     /**
      * Value of the canonical property.
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

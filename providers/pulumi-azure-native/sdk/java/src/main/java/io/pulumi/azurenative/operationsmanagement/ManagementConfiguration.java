@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * The container for solution.
  * API Version: 2015-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ManagementConfigurationCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managementConfiguration = new AzureNative.OperationsManagement.ManagementConfiguration("managementConfiguration", new AzureNative.OperationsManagement.ManagementConfigurationArgs
+ *         {
+ *             Location = "East US",
+ *             ManagementConfigurationName = "managementConfiguration1",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationsmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationsmanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationsmanagement.NewManagementConfiguration(ctx, "managementConfiguration", &operationsmanagement.ManagementConfigurationArgs{
+ * 			Location:                    pulumi.String("East US"),
+ * 			ManagementConfigurationName: pulumi.String("managementConfiguration1"),
+ * 			ResourceGroupName:           pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managementConfiguration = new azure_native.operationsmanagement.ManagementConfiguration("managementConfiguration", {
+ *     location: "East US",
+ *     managementConfigurationName: "managementConfiguration1",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * management_configuration = azure_native.operationsmanagement.ManagementConfiguration("managementConfiguration",
+ *     location="East US",
+ *     management_configuration_name="managementConfiguration1",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +105,48 @@ import javax.annotation.Nullable;
 public class ManagementConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.
-     * 
      */
     @Export(name="properties", type=ManagementConfigurationPropertiesResponse.class, parameters={})
     private Output<ManagementConfigurationPropertiesResponse> properties;
 
     /**
      * @return Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.
-     * 
      */
     public Output<ManagementConfigurationPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

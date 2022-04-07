@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Access profile for managed cluster API server.
- * 
  */
 public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
 
     /**
      * Authorized IP Ranges to kubernetes API server.
-     * 
      */
     @Import(name="authorizedIPRanges")
       private final @Nullable Output<List<String>> authorizedIPRanges;
@@ -33,7 +31,6 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
 
     /**
      * Whether to create the cluster as a private cluster or not.
-     * 
      */
     @Import(name="enablePrivateCluster")
       private final @Nullable Output<Boolean> enablePrivateCluster;
@@ -43,8 +40,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
     }
 
     /**
-     * Private dns zone mode for private cluster.
-     * 
+     * Private dns zone mode for private cluster. 
      */
     @Import(name="privateDNSZone")
       private final @Nullable Output<String> privateDNSZone;

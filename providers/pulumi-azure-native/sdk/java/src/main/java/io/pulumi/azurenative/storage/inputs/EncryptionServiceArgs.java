@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A service that allows server-side encryption to be used.
- * 
  */
 public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A boolean indicating whether or not the service encrypts the data as it is stored.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -34,7 +32,6 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.
-     * 
      */
     @Import(name="keyType")
       private final @Nullable Output<Either<String,KeyType>> keyType;

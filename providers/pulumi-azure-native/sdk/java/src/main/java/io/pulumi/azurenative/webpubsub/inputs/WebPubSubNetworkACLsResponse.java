@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network ACLs for the resource
- * 
  */
 public final class WebPubSubNetworkACLsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class WebPubSubNetworkACLsResponse extends io.pulumi.resources.Invo
 
     /**
      * Default action when no other rule matches
-     * 
      */
     @Import(name="defaultAction")
       private final @Nullable String defaultAction;
@@ -34,7 +32,6 @@ public final class WebPubSubNetworkACLsResponse extends io.pulumi.resources.Invo
 
     /**
      * ACLs for requests from private endpoints
-     * 
      */
     @Import(name="privateEndpoints")
       private final @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
@@ -45,7 +42,6 @@ public final class WebPubSubNetworkACLsResponse extends io.pulumi.resources.Invo
 
     /**
      * ACL for requests from public network
-     * 
      */
     @Import(name="publicNetwork")
       private final @Nullable NetworkACLResponse publicNetwork;

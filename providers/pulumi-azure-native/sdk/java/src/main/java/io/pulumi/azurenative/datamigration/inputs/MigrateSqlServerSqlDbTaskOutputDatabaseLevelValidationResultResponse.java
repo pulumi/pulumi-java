@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Database validation result for Sql Server to Azure Sql DB migration.
- * 
  */
 public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
 
     /**
      * Provides data integrity validation result between the source and target tables that are migrated.
-     * 
      */
     @Import(name="dataIntegrityValidationResult", required=true)
       private final DataIntegrityValidationResultResponse dataIntegrityValidationResult;
@@ -32,7 +30,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
 
     /**
      * Validation end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -43,7 +40,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -54,7 +50,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
 
     /**
      * Migration Identifier
-     * 
      */
     @Import(name="migrationId", required=true)
       private final String migrationId;
@@ -65,7 +60,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
 
     /**
      * Results of some of the query execution result between source and target database
-     * 
      */
     @Import(name="queryAnalysisValidationResult", required=true)
       private final QueryAnalysisValidationResultResponse queryAnalysisValidationResult;
@@ -77,7 +71,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     /**
      * Result type
      * Expected value is 'MigrationDatabaseLevelValidationOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -88,7 +81,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
 
     /**
      * Provides schema comparison result between source and target database
-     * 
      */
     @Import(name="schemaValidationResult", required=true)
       private final SchemaComparisonValidationResultResponse schemaValidationResult;
@@ -99,7 +91,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
 
     /**
      * Name of the source database
-     * 
      */
     @Import(name="sourceDatabaseName", required=true)
       private final String sourceDatabaseName;
@@ -110,7 +101,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
 
     /**
      * Validation start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -121,7 +111,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
 
     /**
      * Current status of validation at the database level
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -132,7 +121,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
 
     /**
      * Name of the target database
-     * 
      */
     @Import(name="targetDatabaseName", required=true)
       private final String targetDatabaseName;

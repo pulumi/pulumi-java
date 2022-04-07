@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a Power BI output data source.
- * 
  */
 public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
@@ -31,7 +29,6 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
 
     /**
      * The ID of the Power BI group.
-     * 
      */
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
@@ -42,7 +39,6 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.
-     * 
      */
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
@@ -53,7 +49,6 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
 
     /**
      * A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
@@ -64,7 +59,6 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
 
     /**
      * The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="table")
       private final @Nullable Output<String> table;
@@ -75,7 +69,6 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
 
     /**
      * The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
-     * 
      */
     @Import(name="tokenUserDisplayName")
       private final @Nullable Output<String> tokenUserDisplayName;
@@ -86,7 +79,6 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
 
     /**
      * The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
-     * 
      */
     @Import(name="tokenUserPrincipalName")
       private final @Nullable Output<String> tokenUserPrincipalName;
@@ -98,7 +90,6 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'PowerBI'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

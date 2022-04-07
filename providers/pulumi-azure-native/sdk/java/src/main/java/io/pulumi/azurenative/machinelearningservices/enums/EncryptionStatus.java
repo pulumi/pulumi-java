@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether or not the encryption is enabled for the workspace.
-     * 
      */
     @EnumType
     public enum EncryptionStatus {

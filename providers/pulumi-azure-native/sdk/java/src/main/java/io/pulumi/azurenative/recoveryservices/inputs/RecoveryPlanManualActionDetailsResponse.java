@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Recovery plan manual action details.
- * 
  */
 public final class RecoveryPlanManualActionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RecoveryPlanManualActionDetailsResponse extends io.pulumi.res
 
     /**
      * The manual action description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class RecoveryPlanManualActionDetailsResponse extends io.pulumi.res
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is 'ManualActionDetails'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;

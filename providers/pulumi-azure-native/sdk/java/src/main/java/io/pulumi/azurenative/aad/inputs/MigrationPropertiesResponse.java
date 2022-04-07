@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Migration Properties
- * 
  */
 public final class MigrationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Migration Progress
-     * 
      */
     @Import(name="migrationProgress", required=true)
       private final MigrationProgressResponse migrationProgress;
@@ -30,7 +28,6 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Old Subnet Id
-     * 
      */
     @Import(name="oldSubnetId", required=true)
       private final String oldSubnetId;
@@ -41,7 +38,6 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Old Vnet Site Id
-     * 
      */
     @Import(name="oldVnetSiteId", required=true)
       private final String oldVnetSiteId;

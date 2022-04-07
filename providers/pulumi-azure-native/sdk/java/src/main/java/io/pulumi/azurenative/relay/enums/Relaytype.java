@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * WCF relay type.
-     * 
      */
     @EnumType
     public enum Relaytype {

@@ -20,7 +20,113 @@ import javax.annotation.Nullable;
  * Private endpoint connection resource.
  * API Version: 2018-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RelayPutPrivateEndpointConnection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.Relay.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.Relay.PrivateEndpointConnectionArgs
+ *         {
+ *             Location = "South Central US",
+ *             NamespaceName = "example-RelayNamespace-5849",
+ *             PrivateEndpoint = new AzureNative.Relay.Inputs.PrivateEndpointArgs
+ *             {
+ *                 Id = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+ *             },
+ *             PrivateEndpointConnectionName = "{privateEndpointConnection name}",
+ *             PrivateLinkServiceConnectionState = new AzureNative.Relay.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 Description = "You may pass",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "resourcegroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	relay "github.com/pulumi/pulumi-azure-native/sdk/go/azure/relay"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := relay.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &relay.PrivateEndpointConnectionArgs{
+ * 			Location:      pulumi.String("South Central US"),
+ * 			NamespaceName: pulumi.String("example-RelayNamespace-5849"),
+ * 			PrivateEndpoint: &relay.PrivateEndpointArgs{
+ * 				Id: pulumi.String("/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1"),
+ * 			},
+ * 			PrivateEndpointConnectionName: pulumi.String("{privateEndpointConnection name}"),
+ * 			PrivateLinkServiceConnectionState: &relay.PrivateLinkServiceConnectionStateArgs{
+ * 				Description: pulumi.String("You may pass"),
+ * 				Status:      pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resourcegroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.relay.PrivateEndpointConnection("privateEndpointConnection", {
+ *     location: "South Central US",
+ *     namespaceName: "example-RelayNamespace-5849",
+ *     privateEndpoint: {
+ *         id: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+ *     },
+ *     privateEndpointConnectionName: "{privateEndpointConnection name}",
+ *     privateLinkServiceConnectionState: {
+ *         description: "You may pass",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "resourcegroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.relay.PrivateEndpointConnection("privateEndpointConnection",
+ *     location="South Central US",
+ *     namespace_name="example-RelayNamespace-5849",
+ *     private_endpoint=azure_native.relay.PrivateEndpointArgs(
+ *         id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+ *     ),
+ *     private_endpoint_connection_name="{privateEndpointConnection name}",
+ *     private_link_service_connection_state=azure_native.relay.PrivateLinkServiceConnectionStateArgs(
+ *         description="You may pass",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="resourcegroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,98 +141,84 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the private endpoint object.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return Properties of the private endpoint object.
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * Approval state of the private link connection.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return Approval state of the private link connection.
-     * 
      */
     public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Provisioning state of the private endpoint connection.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the private endpoint connection.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

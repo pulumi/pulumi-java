@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Routing Choice defines the kind of network routing opted by the user.
-     * 
      */
     @EnumType
     public enum RoutingChoice {

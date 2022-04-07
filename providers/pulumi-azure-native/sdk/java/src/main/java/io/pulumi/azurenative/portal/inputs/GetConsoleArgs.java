@@ -14,7 +14,6 @@ public final class GetConsoleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the console
-     * 
      */
     @Import(name="consoleName", required=true)
       private final String consoleName;

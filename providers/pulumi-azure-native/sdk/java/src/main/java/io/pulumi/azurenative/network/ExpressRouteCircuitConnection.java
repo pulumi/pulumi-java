@@ -19,7 +19,130 @@ import javax.annotation.Nullable;
  * Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ExpressRouteCircuitConnectionCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var expressRouteCircuitConnection = new AzureNative.Network.ExpressRouteCircuitConnection("expressRouteCircuitConnection", new AzureNative.Network.ExpressRouteCircuitConnectionArgs
+ *         {
+ *             AddressPrefix = "10.0.0.0/29",
+ *             AuthorizationKey = "946a1918-b7a2-4917-b43c-8c4cdaee006a",
+ *             CircuitName = "ExpressRouteARMCircuitA",
+ *             ConnectionName = "circuitConnectionUSAUS",
+ *             ExpressRouteCircuitPeering = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering",
+ *             },
+ *             Ipv6CircuitConnectionConfig = new AzureNative.Network.Inputs.Ipv6CircuitConnectionConfigArgs
+ *             {
+ *                 AddressPrefix = "aa:bb::/125",
+ *             },
+ *             PeerExpressRouteCircuitPeering = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering",
+ *             },
+ *             PeeringName = "AzurePrivatePeering",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewExpressRouteCircuitConnection(ctx, "expressRouteCircuitConnection", &network.ExpressRouteCircuitConnectionArgs{
+ * 			AddressPrefix:    pulumi.String("10.0.0.0/29"),
+ * 			AuthorizationKey: pulumi.String("946a1918-b7a2-4917-b43c-8c4cdaee006a"),
+ * 			CircuitName:      pulumi.String("ExpressRouteARMCircuitA"),
+ * 			ConnectionName:   pulumi.String("circuitConnectionUSAUS"),
+ * 			ExpressRouteCircuitPeering: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering"),
+ * 			},
+ * 			Ipv6CircuitConnectionConfig: &network.Ipv6CircuitConnectionConfigArgs{
+ * 				AddressPrefix: pulumi.String("aa:bb::/125"),
+ * 			},
+ * 			PeerExpressRouteCircuitPeering: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering"),
+ * 			},
+ * 			PeeringName:       pulumi.String("AzurePrivatePeering"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const expressRouteCircuitConnection = new azure_native.network.ExpressRouteCircuitConnection("expressRouteCircuitConnection", {
+ *     addressPrefix: "10.0.0.0/29",
+ *     authorizationKey: "946a1918-b7a2-4917-b43c-8c4cdaee006a",
+ *     circuitName: "ExpressRouteARMCircuitA",
+ *     connectionName: "circuitConnectionUSAUS",
+ *     expressRouteCircuitPeering: {
+ *         id: "/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering",
+ *     },
+ *     ipv6CircuitConnectionConfig: {
+ *         addressPrefix: "aa:bb::/125",
+ *     },
+ *     peerExpressRouteCircuitPeering: {
+ *         id: "/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering",
+ *     },
+ *     peeringName: "AzurePrivatePeering",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * express_route_circuit_connection = azure_native.network.ExpressRouteCircuitConnection("expressRouteCircuitConnection",
+ *     address_prefix="10.0.0.0/29",
+ *     authorization_key="946a1918-b7a2-4917-b43c-8c4cdaee006a",
+ *     circuit_name="ExpressRouteARMCircuitA",
+ *     connection_name="circuitConnectionUSAUS",
+ *     express_route_circuit_peering=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering",
+ *     ),
+ *     ipv6_circuit_connection_config=azure_native.network.Ipv6CircuitConnectionConfigArgs(
+ *         address_prefix="aa:bb::/125",
+ *     ),
+ *     peer_express_route_circuit_peering=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering",
+ *     ),
+ *     peering_name="AzurePrivatePeering",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,140 +157,120 @@ import javax.annotation.Nullable;
 public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomResource {
     /**
      * /29 IP address space to carve out Customer addresses for tunnels.
-     * 
      */
     @Export(name="addressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressPrefix;
 
     /**
      * @return /29 IP address space to carve out Customer addresses for tunnels.
-     * 
      */
     public Output</* @Nullable */ String> getAddressPrefix() {
         return this.addressPrefix;
     }
     /**
      * The authorization key.
-     * 
      */
     @Export(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
     /**
      * @return The authorization key.
-     * 
      */
     public Output</* @Nullable */ String> getAuthorizationKey() {
         return this.authorizationKey;
     }
     /**
      * Express Route Circuit connection state.
-     * 
      */
     @Export(name="circuitConnectionStatus", type=String.class, parameters={})
     private Output<String> circuitConnectionStatus;
 
     /**
      * @return Express Route Circuit connection state.
-     * 
      */
     public Output<String> getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
-     * 
      */
     @Export(name="expressRouteCircuitPeering", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> expressRouteCircuitPeering;
 
     /**
      * @return Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getExpressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
     }
     /**
      * IPv6 Address PrefixProperties of the express route circuit connection.
-     * 
      */
     @Export(name="ipv6CircuitConnectionConfig", type=Ipv6CircuitConnectionConfigResponse.class, parameters={})
     private Output</* @Nullable */ Ipv6CircuitConnectionConfigResponse> ipv6CircuitConnectionConfig;
 
     /**
      * @return IPv6 Address PrefixProperties of the express route circuit connection.
-     * 
      */
     public Output</* @Nullable */ Ipv6CircuitConnectionConfigResponse> getIpv6CircuitConnectionConfig() {
         return this.ipv6CircuitConnectionConfig;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
-     * 
      */
     @Export(name="peerExpressRouteCircuitPeering", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> peerExpressRouteCircuitPeering;
 
     /**
      * @return Reference to Express Route Circuit Private Peering Resource of the peered circuit.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getPeerExpressRouteCircuitPeering() {
         return this.peerExpressRouteCircuitPeering;
     }
     /**
      * The provisioning state of the express route circuit connection resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the express route circuit connection resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

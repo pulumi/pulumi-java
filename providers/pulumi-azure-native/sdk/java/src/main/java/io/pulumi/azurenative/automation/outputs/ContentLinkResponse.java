@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ContentLinkResponse {
     /**
      * Gets or sets the hash.
-     * 
      */
     private final @Nullable ContentHashResponse contentHash;
     /**
      * Gets or sets the uri of the runbook content.
-     * 
      */
     private final @Nullable String uri;
     /**
      * Gets or sets the version of the content.
-     * 
      */
     private final @Nullable String version;
 
@@ -40,21 +37,18 @@ public final class ContentLinkResponse {
 
     /**
      * Gets or sets the hash.
-     * 
     */
     public Optional<ContentHashResponse> getContentHash() {
         return Optional.ofNullable(this.contentHash);
     }
     /**
      * Gets or sets the uri of the runbook content.
-     * 
     */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }
     /**
      * Gets or sets the version of the content.
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

@@ -15,37 +15,30 @@ import javax.annotation.Nullable;
 public final class GetAccountResult {
     /**
      * The description of the account.
-     * 
      */
     private final @Nullable String description;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The geo-location where the resource lives
-     * 
      */
     private final String location;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -69,49 +62,42 @@ public final class GetAccountResult {
 
     /**
      * The description of the account.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

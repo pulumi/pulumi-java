@@ -14,7 +14,6 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
 
     /**
      * The workflow trigger name.
-     * 
      */
     @Import(name="triggerName", required=true)
       private final String triggerName;
@@ -36,7 +34,6 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends io.pulumi.resource
 
     /**
      * The workflow name.
-     * 
      */
     @Import(name="workflowName", required=true)
       private final String workflowName;

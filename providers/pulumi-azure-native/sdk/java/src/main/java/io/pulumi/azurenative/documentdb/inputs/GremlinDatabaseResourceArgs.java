@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Cosmos DB Gremlin database resource object
- * 
  */
 public final class GremlinDatabaseResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GremlinDatabaseResourceArgs extends io.pulumi.resources.Resou
 
     /**
      * Name of the Cosmos DB Gremlin database
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

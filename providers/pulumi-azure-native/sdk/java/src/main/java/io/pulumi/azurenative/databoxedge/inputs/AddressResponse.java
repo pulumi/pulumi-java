@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The shipping address of the customer.
- * 
  */
 public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The address line1.
-     * 
      */
     @Import(name="addressLine1")
       private final @Nullable String addressLine1;
@@ -31,7 +29,6 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The address line2.
-     * 
      */
     @Import(name="addressLine2")
       private final @Nullable String addressLine2;
@@ -42,7 +39,6 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The address line3.
-     * 
      */
     @Import(name="addressLine3")
       private final @Nullable String addressLine3;
@@ -53,7 +49,6 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The city name.
-     * 
      */
     @Import(name="city")
       private final @Nullable String city;
@@ -64,7 +59,6 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The country name.
-     * 
      */
     @Import(name="country", required=true)
       private final String country;
@@ -75,7 +69,6 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The postal code.
-     * 
      */
     @Import(name="postalCode")
       private final @Nullable String postalCode;
@@ -86,7 +79,6 @@ public final class AddressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The state name.
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

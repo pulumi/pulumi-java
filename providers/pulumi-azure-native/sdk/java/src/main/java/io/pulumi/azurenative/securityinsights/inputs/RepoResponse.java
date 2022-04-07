@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a repository.
- * 
  */
 public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Array of branches.
-     * 
      */
     @Import(name="branches")
       private final @Nullable List<String> branches;
@@ -32,7 +30,6 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the repository.
-     * 
      */
     @Import(name="fullName")
       private final @Nullable String fullName;
@@ -43,7 +40,6 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The url to access the repository.
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;

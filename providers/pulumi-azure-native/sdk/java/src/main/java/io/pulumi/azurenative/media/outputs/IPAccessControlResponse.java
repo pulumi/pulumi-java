@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class IPAccessControlResponse {
     /**
      * The IP allow list.
-     * 
      */
     private final @Nullable List<IPRangeResponse> allow;
 
@@ -24,7 +23,6 @@ public final class IPAccessControlResponse {
 
     /**
      * The IP allow list.
-     * 
     */
     public List<IPRangeResponse> getAllow() {
         return this.allow == null ? List.of() : this.allow;

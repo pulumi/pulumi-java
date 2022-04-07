@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The failover deployment model.
-     * 
      */
     @EnumType
     public enum FailoverDeploymentModel {

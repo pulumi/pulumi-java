@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines contents of a web application rule
- * 
  */
 public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes what action to be applied when rule matches.
-     * 
      */
     @Import(name="action", required=true)
       private final String action;
@@ -34,7 +32,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable String enabledState;
@@ -45,7 +42,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of match conditions.
-     * 
      */
     @Import(name="matchConditions", required=true)
       private final List<FrontDoorMatchConditionResponse> matchConditions;
@@ -56,7 +52,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes the name of the rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -67,7 +62,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
-     * 
      */
     @Import(name="priority", required=true)
       private final Integer priority;
@@ -78,7 +72,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Time window for resetting the rate limit count. Default is 1 minute.
-     * 
      */
     @Import(name="rateLimitDurationInMinutes")
       private final @Nullable Integer rateLimitDurationInMinutes;
@@ -89,7 +82,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of allowed requests per client within the time window.
-     * 
      */
     @Import(name="rateLimitThreshold")
       private final @Nullable Integer rateLimitThreshold;
@@ -100,7 +92,6 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes type of rule.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final String ruleType;

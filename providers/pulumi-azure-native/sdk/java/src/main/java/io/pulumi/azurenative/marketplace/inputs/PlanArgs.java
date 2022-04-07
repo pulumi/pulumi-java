@@ -18,7 +18,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Plan accessibility
-     * 
      */
     @Import(name="accessibility")
       private final @Nullable Output<Either<String,Accessibility>> accessibility;

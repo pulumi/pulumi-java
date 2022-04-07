@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The IP access control.
- * 
  */
 public final class IPAccessControlResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IPAccessControlResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The IP allow list.
-     * 
      */
     @Import(name="allow")
       private final @Nullable List<IPRangeResponse> allow;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The application gateway private link ip configuration.
- * 
  */
 public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -33,7 +31,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -44,7 +41,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
 
     /**
      * The name of application gateway private link ip configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -55,7 +51,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
 
     /**
      * Whether the ip configuration is primary or not.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Boolean primary;
@@ -66,7 +61,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
 
     /**
      * The private IP address of the IP configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
@@ -77,7 +71,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
@@ -88,7 +81,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
 
     /**
      * The provisioning state of the application gateway private link IP configuration.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -99,7 +91,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
 
     /**
      * Reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
@@ -110,7 +101,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

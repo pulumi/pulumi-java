@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a buildpack binding
- * 
  */
 public final class BuildpackBindingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
 
     /**
      * Buildpack Binding Type
-     * 
      */
     @Import(name="bindingType")
       private final @Nullable String bindingType;
@@ -32,7 +30,6 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
 
     /**
      * The object describes the buildpack binding launch properties
-     * 
      */
     @Import(name="launchProperties")
       private final @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
@@ -43,7 +40,6 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
 
     /**
      * State of the Buildpack Binding.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

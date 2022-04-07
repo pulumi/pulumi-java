@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Task properties of the software update configuration.
- * 
  */
 public final class TaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the parameters of the task.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
@@ -32,7 +30,6 @@ public final class TaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the runbook.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<String> source;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Firmware type
-     * 
      */
     @EnumType
     public enum FirmwareType {

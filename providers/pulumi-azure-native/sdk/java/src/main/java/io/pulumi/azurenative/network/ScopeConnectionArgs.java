@@ -16,7 +16,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A description of the scope connection.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
@@ -38,7 +36,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -60,7 +56,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name for the cross-tenant connection.
-     * 
      */
     @Import(name="scopeConnectionName")
       private final @Nullable Output<String> scopeConnectionName;
@@ -71,7 +66,6 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Tenant ID.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

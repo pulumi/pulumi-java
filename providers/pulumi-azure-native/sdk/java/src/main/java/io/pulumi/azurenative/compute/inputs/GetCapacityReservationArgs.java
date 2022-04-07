@@ -16,7 +16,6 @@ public final class GetCapacityReservationArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the capacity reservation group.
-     * 
      */
     @Import(name="capacityReservationGroupName", required=true)
       private final String capacityReservationGroupName;
@@ -27,7 +26,6 @@ public final class GetCapacityReservationArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the capacity reservation.
-     * 
      */
     @Import(name="capacityReservationName", required=true)
       private final String capacityReservationName;
@@ -38,7 +36,6 @@ public final class GetCapacityReservationArgs extends io.pulumi.resources.Invoke
 
     /**
      * The expand expression to apply on the operation. 'InstanceView' retrieves a snapshot of the runtime properties of the capacity reservation that is managed by the platform and can change outside of control plane operations.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -49,7 +46,6 @@ public final class GetCapacityReservationArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

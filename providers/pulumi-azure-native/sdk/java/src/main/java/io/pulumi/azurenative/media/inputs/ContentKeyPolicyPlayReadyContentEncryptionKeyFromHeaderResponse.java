@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies that the content key ID is in the PlayReady header.
- * 
  */
 public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderRespon
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;

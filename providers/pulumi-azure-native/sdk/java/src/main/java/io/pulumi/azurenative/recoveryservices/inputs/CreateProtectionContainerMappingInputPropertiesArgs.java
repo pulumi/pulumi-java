@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configure pairing input properties.
- * 
  */
 public final class CreateProtectionContainerMappingInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
 
     /**
      * Applicable policy.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -34,7 +32,6 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
 
     /**
      * Provider specific input for pairing.
-     * 
      */
     @Import(name="providerSpecificInput")
       private final @Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
@@ -45,7 +42,6 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
 
     /**
      * The target unique protection container name.
-     * 
      */
     @Import(name="targetProtectionContainerId")
       private final @Nullable Output<String> targetProtectionContainerId;

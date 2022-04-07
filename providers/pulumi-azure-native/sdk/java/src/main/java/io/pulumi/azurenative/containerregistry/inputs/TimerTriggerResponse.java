@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a timer trigger.
- * 
  */
 public final class TimerTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TimerTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the trigger.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class TimerTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The CRON expression for the task schedule
-     * 
      */
     @Import(name="schedule", required=true)
       private final String schedule;
@@ -42,7 +39,6 @@ public final class TimerTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The current status of trigger.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

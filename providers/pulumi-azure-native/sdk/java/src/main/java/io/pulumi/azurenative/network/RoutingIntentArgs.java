@@ -18,7 +18,6 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -29,7 +28,6 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -40,7 +38,6 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name of the RoutingIntent.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the per VirtualHub singleton Routing Intent resource.
-     * 
      */
     @Import(name="routingIntentName")
       private final @Nullable Output<String> routingIntentName;
@@ -62,7 +58,6 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of routing policies.
-     * 
      */
     @Import(name="routingPolicies")
       private final @Nullable Output<List<RoutingPolicyArgs>> routingPolicies;
@@ -73,7 +68,6 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the VirtualHub.
-     * 
      */
     @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;

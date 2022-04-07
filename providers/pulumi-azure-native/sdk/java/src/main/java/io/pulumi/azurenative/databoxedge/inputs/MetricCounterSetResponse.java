@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The metric counter set
- * 
  */
 public final class MetricCounterSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MetricCounterSetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The counters that should be collected in this set.
-     * 
      */
     @Import(name="counters", required=true)
       private final List<MetricCounterResponse> counters;

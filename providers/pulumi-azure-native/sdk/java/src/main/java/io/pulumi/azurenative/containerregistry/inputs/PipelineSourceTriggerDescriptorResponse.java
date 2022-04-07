@@ -16,7 +16,6 @@ public final class PipelineSourceTriggerDescriptorResponse extends io.pulumi.res
 
     /**
      * The timestamp when the source update happened.
-     * 
      */
     @Import(name="timestamp")
       private final @Nullable String timestamp;

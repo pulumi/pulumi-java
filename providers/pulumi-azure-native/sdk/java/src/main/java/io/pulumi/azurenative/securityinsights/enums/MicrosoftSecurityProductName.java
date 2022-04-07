@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The alerts' productName on which the cases will be generated
-     * 
      */
     @EnumType
     public enum MicrosoftSecurityProductName {

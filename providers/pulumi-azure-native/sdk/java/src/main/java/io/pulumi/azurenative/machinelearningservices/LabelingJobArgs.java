@@ -17,7 +17,6 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name and identifier for LabelingJob.
-     * 
      */
     @Import(name="labelingJobId")
       private final @Nullable Output<String> labelingJobId;
@@ -28,7 +27,6 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Definition of a labeling job.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<LabelingJobPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The billing information of the resource.
- * 
  */
 public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * If present, following values are allowed:
      *     Free: 1
      *     Standard: 1,2,5,10,20,50,100
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -40,7 +38,6 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the SKU. Required.
      * 
      * Allowed values: Standard_S1, Free_F1
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -50,10 +47,9 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional tier of this particular SKU. 'Standard' or 'Free'.
+     * Optional tier of this particular SKU. 'Standard' or 'Free'. 
      * 
      * `Basic` is deprecated, use `Standard` instead.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Either<String,WebPubSubSkuTier>> tier;

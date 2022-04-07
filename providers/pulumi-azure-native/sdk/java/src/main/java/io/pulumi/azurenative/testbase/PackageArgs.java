@@ -20,7 +20,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Application name
-     * 
      */
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
@@ -31,7 +30,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The file path of the package.
-     * 
      */
     @Import(name="blobPath", required=true)
       private final Output<String> blobPath;
@@ -42,7 +40,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The flighting ring for feature update.
-     * 
      */
     @Import(name="flightingRing", required=true)
       private final Output<String> flightingRing;
@@ -53,7 +50,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -64,7 +60,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the Test Base Package.
-     * 
      */
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
@@ -75,7 +70,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -97,7 +90,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the target OSs of specific OS Update types.
-     * 
      */
     @Import(name="targetOSList", required=true)
       private final Output<List<TargetOSInfoArgs>> targetOSList;
@@ -108,7 +100,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource name of the Test Base Account.
-     * 
      */
     @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;
@@ -119,7 +110,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The detailed test information.
-     * 
      */
     @Import(name="tests", required=true)
       private final Output<List<TestArgs>> tests;
@@ -130,7 +120,6 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Application version
-     * 
      */
     @Import(name="version", required=true)
       private final Output<String> version;

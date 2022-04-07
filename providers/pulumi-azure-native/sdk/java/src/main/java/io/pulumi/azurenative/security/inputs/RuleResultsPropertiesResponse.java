@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rule results properties.
- * 
  */
 public final class RuleResultsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RuleResultsPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Expected results in the baseline.
-     * 
      */
     @Import(name="results")
       private final @Nullable List<List<String>> results;

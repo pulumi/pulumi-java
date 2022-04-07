@@ -16,17 +16,14 @@ import javax.annotation.Nullable;
 public final class VirtualMachinePatchStatusResponse {
     /**
      * The available patch summary of the latest assessment operation for the virtual machine.
-     * 
      */
     private final @Nullable AvailablePatchSummaryResponse availablePatchSummary;
     /**
      * The enablement status of the specified patchMode
-     * 
      */
     private final List<InstanceViewStatusResponse> configurationStatuses;
     /**
      * The installation summary of the latest installation operation for the virtual machine.
-     * 
      */
     private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 
@@ -42,21 +39,18 @@ public final class VirtualMachinePatchStatusResponse {
 
     /**
      * The available patch summary of the latest assessment operation for the virtual machine.
-     * 
     */
     public Optional<AvailablePatchSummaryResponse> getAvailablePatchSummary() {
         return Optional.ofNullable(this.availablePatchSummary);
     }
     /**
      * The enablement status of the specified patchMode
-     * 
     */
     public List<InstanceViewStatusResponse> getConfigurationStatuses() {
         return this.configurationStatuses;
     }
     /**
      * The installation summary of the latest installation operation for the virtual machine.
-     * 
     */
     public Optional<LastPatchInstallationSummaryResponse> getLastPatchInstallationSummary() {
         return Optional.ofNullable(this.lastPatchInstallationSummary);

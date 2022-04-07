@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Address information for domain registration.
- * 
  */
 public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * First line of an Address.
-     * 
      */
     @Import(name="address1", required=true)
       private final Output<String> address1;
@@ -31,7 +29,6 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The second line of the Address. Optional.
-     * 
      */
     @Import(name="address2")
       private final @Nullable Output<String> address2;
@@ -42,7 +39,6 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The city for the address.
-     * 
      */
     @Import(name="city", required=true)
       private final Output<String> city;
@@ -53,7 +49,6 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The country for the address.
-     * 
      */
     @Import(name="country", required=true)
       private final Output<String> country;
@@ -64,7 +59,6 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The postal code for the address.
-     * 
      */
     @Import(name="postalCode", required=true)
       private final Output<String> postalCode;
@@ -75,7 +69,6 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The state or province for the address.
-     * 
      */
     @Import(name="state", required=true)
       private final Output<String> state;

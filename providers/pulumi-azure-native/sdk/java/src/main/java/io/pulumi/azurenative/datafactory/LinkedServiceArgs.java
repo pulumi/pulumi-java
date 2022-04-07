@@ -119,7 +119,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
@@ -130,7 +129,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The linked service name.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<String> linkedServiceName;
@@ -141,7 +139,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of linked service.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Object> properties;
@@ -152,7 +149,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

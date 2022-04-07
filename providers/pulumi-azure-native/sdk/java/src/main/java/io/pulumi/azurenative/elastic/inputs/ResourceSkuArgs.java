@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Microsoft.Elastic SKU.
- * 
  */
 public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the SKU.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

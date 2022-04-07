@@ -18,7 +18,6 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * Display name of the VM group.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -29,7 +28,6 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * Virtual machine members of this group.
-     * 
      */
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
@@ -40,7 +38,6 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -51,7 +48,6 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * NSX revision number.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
@@ -73,7 +68,6 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
 
     /**
      * NSX VM Group identifier. Generally the same as the VM Group's display name
-     * 
      */
     @Import(name="vmGroupId")
       private final @Nullable Output<String> vmGroupId;

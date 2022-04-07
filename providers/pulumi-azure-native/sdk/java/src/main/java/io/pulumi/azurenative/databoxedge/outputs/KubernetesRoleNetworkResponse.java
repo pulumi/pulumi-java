@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class KubernetesRoleNetworkResponse {
     /**
      * Cni configuration
-     * 
      */
     private final CniConfigResponse cniConfig;
     /**
      * Load balancer configuration
-     * 
      */
     private final LoadBalancerConfigResponse loadBalancerConfig;
 
@@ -31,14 +29,12 @@ public final class KubernetesRoleNetworkResponse {
 
     /**
      * Cni configuration
-     * 
     */
     public CniConfigResponse getCniConfig() {
         return this.cniConfig;
     }
     /**
      * Load balancer configuration
-     * 
     */
     public LoadBalancerConfigResponse getLoadBalancerConfig() {
         return this.loadBalancerConfig;

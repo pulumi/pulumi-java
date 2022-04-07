@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ReportConfigTimePeriodResponse {
     /**
      * The start date to pull data from.
-     * 
      */
     private final String from;
     /**
      * The end date to pull data to.
-     * 
      */
     private final String to;
 
@@ -30,14 +28,12 @@ public final class ReportConfigTimePeriodResponse {
 
     /**
      * The start date to pull data from.
-     * 
     */
     public String getFrom() {
         return this.from;
     }
     /**
      * The end date to pull data to.
-     * 
     */
     public String getTo() {
         return this.to;

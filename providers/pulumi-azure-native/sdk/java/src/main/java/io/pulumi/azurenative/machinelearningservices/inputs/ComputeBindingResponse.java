@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Compute binding definition.
- * 
  */
 public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * ID of the compute resource.
-     * 
      */
     @Import(name="computeId")
       private final @Nullable String computeId;
@@ -32,7 +30,6 @@ public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Number of nodes.
-     * 
      */
     @Import(name="nodeCount")
       private final @Nullable Integer nodeCount;

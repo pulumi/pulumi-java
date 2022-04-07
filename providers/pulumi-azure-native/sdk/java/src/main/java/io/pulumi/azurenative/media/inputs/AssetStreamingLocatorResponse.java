@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Properties of the Streaming Locator.
- * 
  */
 public final class AssetStreamingLocatorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
 
     /**
      * Asset Name.
-     * 
      */
     @Import(name="assetName", required=true)
       private final String assetName;
@@ -29,7 +27,6 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
 
     /**
      * The creation time of the Streaming Locator.
-     * 
      */
     @Import(name="created", required=true)
       private final String created;
@@ -40,7 +37,6 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the default ContentKeyPolicy used by this Streaming Locator.
-     * 
      */
     @Import(name="defaultContentKeyPolicyName", required=true)
       private final String defaultContentKeyPolicyName;
@@ -51,7 +47,6 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
 
     /**
      * The end time of the Streaming Locator.
-     * 
      */
     @Import(name="endTime", required=true)
       private final String endTime;
@@ -62,7 +57,6 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
 
     /**
      * Streaming Locator name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -73,7 +67,6 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
 
     /**
      * The start time of the Streaming Locator.
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;
@@ -84,7 +77,6 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
 
     /**
      * StreamingLocatorId of the Streaming Locator.
-     * 
      */
     @Import(name="streamingLocatorId", required=true)
       private final String streamingLocatorId;
@@ -95,7 +87,6 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the Streaming Policy used by this Streaming Locator.
-     * 
      */
     @Import(name="streamingPolicyName", required=true)
       private final String streamingPolicyName;

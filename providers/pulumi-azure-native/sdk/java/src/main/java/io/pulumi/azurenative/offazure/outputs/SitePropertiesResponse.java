@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class SitePropertiesResponse {
     /**
      * On-premises agent details.
-     * 
      */
     private final @Nullable SiteAgentPropertiesResponse agentDetails;
     /**
      * Appliance Name.
-     * 
      */
     private final @Nullable String applianceName;
     /**
      * ARM ID of migration hub solution for SDS.
-     * 
      */
     private final @Nullable String discoverySolutionId;
     /**
      * Service endpoint.
-     * 
      */
     private final String serviceEndpoint;
     /**
      * Service principal identity details used by agent for communication to the service.
-     * 
      */
     private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
 
@@ -55,35 +50,30 @@ public final class SitePropertiesResponse {
 
     /**
      * On-premises agent details.
-     * 
     */
     public Optional<SiteAgentPropertiesResponse> getAgentDetails() {
         return Optional.ofNullable(this.agentDetails);
     }
     /**
      * Appliance Name.
-     * 
     */
     public Optional<String> getApplianceName() {
         return Optional.ofNullable(this.applianceName);
     }
     /**
      * ARM ID of migration hub solution for SDS.
-     * 
     */
     public Optional<String> getDiscoverySolutionId() {
         return Optional.ofNullable(this.discoverySolutionId);
     }
     /**
      * Service endpoint.
-     * 
     */
     public String getServiceEndpoint() {
         return this.serviceEndpoint;
     }
     /**
      * Service principal identity details used by agent for communication to the service.
-     * 
     */
     public Optional<SiteSpnPropertiesResponse> getServicePrincipalIdentityDetails() {
         return Optional.ofNullable(this.servicePrincipalIdentityDetails);

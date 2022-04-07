@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The visibility list of the private link service.
- * 
  */
 public final class PrivateLinkServicePropertiesVisibilityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PrivateLinkServicePropertiesVisibilityArgs extends io.pulumi.
 
     /**
      * The list of subscriptions.
-     * 
      */
     @Import(name="subscriptions")
       private final @Nullable Output<List<String>> subscriptions;

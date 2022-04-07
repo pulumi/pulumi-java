@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * SSIS properties for managed integration runtime.
- * 
  */
 public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
 
     /**
      * Catalog information for managed dedicated integration runtime.
-     * 
      */
     @Import(name="catalogInfo")
       private final @Nullable Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo;
@@ -42,7 +40,6 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
 
     /**
      * Custom setup script properties for a managed dedicated integration runtime.
-     * 
      */
     @Import(name="customSetupScriptProperties")
       private final @Nullable Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties;
@@ -53,7 +50,6 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
 
     /**
      * Data proxy properties for a managed dedicated integration runtime.
-     * 
      */
     @Import(name="dataProxyProperties")
       private final @Nullable Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties;
@@ -64,7 +60,6 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
 
     /**
      * The edition for the SSIS Integration Runtime
-     * 
      */
     @Import(name="edition")
       private final @Nullable Output<Either<String,IntegrationRuntimeEdition>> edition;
@@ -75,7 +70,6 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
 
     /**
      * Custom setup without script properties for a SSIS integration runtime.
-     * 
      */
     @Import(name="expressCustomSetupProperties")
       private final @Nullable Output<List<Object>> expressCustomSetupProperties;
@@ -86,7 +80,6 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
 
     /**
      * License type for bringing your own license scenario.
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,IntegrationRuntimeLicenseType>> licenseType;

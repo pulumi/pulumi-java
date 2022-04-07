@@ -19,7 +19,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * GroupIds from the private link service resource.
-     * 
      */
     @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
@@ -30,7 +29,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Fully qualified identifier of the resource.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -41,7 +39,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -52,7 +49,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The Private Endpoint resource for this Connection.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
@@ -63,7 +59,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Details about the state of the connection.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable ConnectionStateResponse privateLinkServiceConnectionState;
@@ -74,7 +69,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Provisioning state of the Private Endpoint Connection.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -85,7 +79,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

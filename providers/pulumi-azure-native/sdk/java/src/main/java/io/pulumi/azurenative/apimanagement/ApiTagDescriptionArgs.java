@@ -16,7 +16,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
-     * 
      */
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
@@ -27,7 +26,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Description of the Tag.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -38,7 +36,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Description of the external resources describing the tag.
-     * 
      */
     @Import(name="externalDocsDescription")
       private final @Nullable Output<String> externalDocsDescription;
@@ -49,7 +46,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Absolute URL of external resources describing the tag.
-     * 
      */
     @Import(name="externalDocsUrl")
       private final @Nullable Output<String> externalDocsUrl;
@@ -60,7 +56,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -71,7 +66,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -82,7 +76,6 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Tag description identifier. Used when creating tagDescription for API/Tag association. Based on API and Tag names.
-     * 
      */
     @Import(name="tagDescriptionId")
       private final @Nullable Output<String> tagDescriptionId;

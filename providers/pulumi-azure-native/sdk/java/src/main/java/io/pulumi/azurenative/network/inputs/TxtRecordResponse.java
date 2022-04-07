@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A TXT record.
- * 
  */
 public final class TxtRecordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class TxtRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The text value of this TXT record.
-     * 
      */
     @Import(name="value")
       private final @Nullable List<String> value;

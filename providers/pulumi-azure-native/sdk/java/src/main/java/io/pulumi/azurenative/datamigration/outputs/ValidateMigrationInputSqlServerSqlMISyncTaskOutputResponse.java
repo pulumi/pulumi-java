@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse {
     /**
      * Database identifier
-     * 
      */
     private final String id;
     /**
      * Name of database
-     * 
      */
     private final String name;
     /**
      * Errors associated with a selected database object
-     * 
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
@@ -39,21 +36,18 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse {
 
     /**
      * Database identifier
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Name of database
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Errors associated with a selected database object
-     * 
     */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;

@@ -14,7 +14,6 @@ public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the configuration store.
-     * 
      */
     @Import(name="configStoreName", required=true)
       private final String configStoreName;
@@ -25,7 +24,6 @@ public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
-     * 
      */
     @Import(name="keyValueName", required=true)
       private final String keyValueName;
@@ -36,7 +34,6 @@ public final class GetKeyValueArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

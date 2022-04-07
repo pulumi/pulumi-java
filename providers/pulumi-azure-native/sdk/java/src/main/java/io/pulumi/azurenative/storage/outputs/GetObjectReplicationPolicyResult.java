@@ -14,42 +14,34 @@ import javax.annotation.Nullable;
 public final class GetObjectReplicationPolicyResult {
     /**
      * Required. Destination account name.
-     * 
      */
     private final String destinationAccount;
     /**
      * Indicates when the policy is enabled on the source account.
-     * 
      */
     private final String enabledTime;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * A unique id for object replication policy.
-     * 
      */
     private final String policyId;
     /**
      * The storage account object replication rules.
-     * 
      */
     private final @Nullable List<ObjectReplicationPolicyRuleResponse> rules;
     /**
      * Required. Source account name.
-     * 
      */
     private final String sourceAccount;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -75,56 +67,48 @@ public final class GetObjectReplicationPolicyResult {
 
     /**
      * Required. Destination account name.
-     * 
     */
     public String getDestinationAccount() {
         return this.destinationAccount;
     }
     /**
      * Indicates when the policy is enabled on the source account.
-     * 
     */
     public String getEnabledTime() {
         return this.enabledTime;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * A unique id for object replication policy.
-     * 
     */
     public String getPolicyId() {
         return this.policyId;
     }
     /**
      * The storage account object replication rules.
-     * 
     */
     public List<ObjectReplicationPolicyRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
      * Required. Source account name.
-     * 
     */
     public String getSourceAccount() {
         return this.sourceAccount;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

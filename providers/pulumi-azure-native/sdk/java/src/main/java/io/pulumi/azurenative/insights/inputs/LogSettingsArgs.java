@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Part of MultiTenantDiagnosticSettings. Specifies the settings for a particular log.
- * 
  */
 public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
-     * 
      */
     @Import(name="category")
       private final @Nullable Output<String> category;
@@ -33,7 +31,6 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * a value indicating whether this log is enabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
@@ -44,7 +41,6 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the retention policy for this log.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;

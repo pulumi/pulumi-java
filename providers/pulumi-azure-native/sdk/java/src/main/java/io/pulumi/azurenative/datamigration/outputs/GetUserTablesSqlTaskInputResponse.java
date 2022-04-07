@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class GetUserTablesSqlTaskInputResponse {
     /**
      * Connection information for SQL Server
-     * 
      */
     private final SqlConnectionInfoResponse connectionInfo;
     /**
      * List of database names to collect tables for
-     * 
      */
     private final List<String> selectedDatabases;
 
@@ -32,14 +30,12 @@ public final class GetUserTablesSqlTaskInputResponse {
 
     /**
      * Connection information for SQL Server
-     * 
     */
     public SqlConnectionInfoResponse getConnectionInfo() {
         return this.connectionInfo;
     }
     /**
      * List of database names to collect tables for
-     * 
     */
     public List<String> getSelectedDatabases() {
         return this.selectedDatabases;

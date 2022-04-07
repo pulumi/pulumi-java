@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Resource for a regional service location.
- * 
  */
 public final class DataTransferRegionalServiceResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
 
     /**
      * The location name.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -29,7 +27,6 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
 
     /**
      * The regional service name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -40,7 +37,6 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
 
     /**
      * Describes the status of a service.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

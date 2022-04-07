@@ -17,7 +17,6 @@ public final class StaticSitePrivateEndpointConnectionArgs extends io.pulumi.res
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -28,7 +27,6 @@ public final class StaticSitePrivateEndpointConnectionArgs extends io.pulumi.res
 
     /**
      * Name of the static site.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -39,7 +37,6 @@ public final class StaticSitePrivateEndpointConnectionArgs extends io.pulumi.res
 
     /**
      * Name of the private endpoint connection.
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -50,7 +47,6 @@ public final class StaticSitePrivateEndpointConnectionArgs extends io.pulumi.res
 
     /**
      * The state of a private link connection
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
@@ -61,7 +57,6 @@ public final class StaticSitePrivateEndpointConnectionArgs extends io.pulumi.res
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

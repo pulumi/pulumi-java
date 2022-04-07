@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details about the error for a failed pipeline job.
- * 
  */
 public final class PipelineJobErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PipelineJobErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The error code.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -31,7 +29,6 @@ public final class PipelineJobErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The error message.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;

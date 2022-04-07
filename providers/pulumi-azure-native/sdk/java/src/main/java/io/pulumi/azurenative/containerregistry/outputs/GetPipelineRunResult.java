@@ -16,42 +16,34 @@ import javax.annotation.Nullable;
 public final class GetPipelineRunResult {
     /**
      * How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
-     * 
      */
     private final @Nullable String forceUpdateTag;
     /**
      * The resource ID.
-     * 
      */
     private final String id;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The provisioning state of a pipeline run.
-     * 
      */
     private final String provisioningState;
     /**
      * The request parameters for a pipeline run.
-     * 
      */
     private final @Nullable PipelineRunRequestResponse request;
     /**
      * The response of a pipeline run.
-     * 
      */
     private final PipelineRunResponseResponse response;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -77,56 +69,48 @@ public final class GetPipelineRunResult {
 
     /**
      * How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
-     * 
     */
     public Optional<String> getForceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
      * The resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of a pipeline run.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The request parameters for a pipeline run.
-     * 
     */
     public Optional<PipelineRunRequestResponse> getRequest() {
         return Optional.ofNullable(this.request);
     }
     /**
      * The response of a pipeline run.
-     * 
     */
     public PipelineRunResponseResponse getResponse() {
         return this.response;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

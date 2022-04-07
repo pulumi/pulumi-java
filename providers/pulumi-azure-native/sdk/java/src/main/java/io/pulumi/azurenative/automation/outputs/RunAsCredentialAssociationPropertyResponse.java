@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class RunAsCredentialAssociationPropertyResponse {
     /**
      * Gets or sets the name of the credential.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class RunAsCredentialAssociationPropertyResponse {
 
     /**
      * Gets or sets the name of the credential.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

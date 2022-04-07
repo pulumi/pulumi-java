@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Kubernetes cluster configuration
- * 
  */
 public final class KubernetesClusterInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class KubernetesClusterInfoResponse extends io.pulumi.resources.Inv
 
     /**
      * Etcd configuration
-     * 
      */
     @Import(name="etcdInfo", required=true)
       private final EtcdInfoResponse etcdInfo;
@@ -32,7 +30,6 @@ public final class KubernetesClusterInfoResponse extends io.pulumi.resources.Inv
 
     /**
      * Kubernetes cluster nodes
-     * 
      */
     @Import(name="nodes", required=true)
       private final List<NodeInfoResponse> nodes;
@@ -43,7 +40,6 @@ public final class KubernetesClusterInfoResponse extends io.pulumi.resources.Inv
 
     /**
      * Kubernetes cluster version
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

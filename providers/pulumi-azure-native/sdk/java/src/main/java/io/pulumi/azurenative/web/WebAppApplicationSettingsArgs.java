@@ -17,7 +17,6 @@ public final class WebAppApplicationSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -28,7 +27,6 @@ public final class WebAppApplicationSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -39,7 +37,6 @@ public final class WebAppApplicationSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * Settings.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -50,7 +47,6 @@ public final class WebAppApplicationSettingsArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

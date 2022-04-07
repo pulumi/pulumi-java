@@ -20,7 +20,6 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Identifier for purposes of race condition
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -31,7 +30,6 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Icon File Uris
-     * 
      */
     @Import(name="iconFileUris")
       private final @Nullable Output<Map<String,String>> iconFileUris;
@@ -42,7 +40,6 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The offer ID to update or delete
-     * 
      */
     @Import(name="offerId")
       private final @Nullable Output<String> offerId;
@@ -53,7 +50,6 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Offer plans
-     * 
      */
     @Import(name="plans")
       private final @Nullable Output<List<PlanArgs>> plans;
@@ -64,7 +60,6 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The store ID - must use the tenant ID
-     * 
      */
     @Import(name="privateStoreId", required=true)
       private final Output<String> privateStoreId;
@@ -75,7 +70,6 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Plan ids limitation for this offer
-     * 
      */
     @Import(name="specificPlanIdsLimitation")
       private final @Nullable Output<List<String>> specificPlanIdsLimitation;
@@ -86,7 +80,6 @@ public final class PrivateStoreOfferArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.
-     * 
      */
     @Import(name="updateSuppressedDueIdempotence")
       private final @Nullable Output<Boolean> updateSuppressedDueIdempotence;

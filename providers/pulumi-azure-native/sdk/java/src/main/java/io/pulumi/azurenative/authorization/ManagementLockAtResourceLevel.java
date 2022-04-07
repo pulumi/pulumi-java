@@ -18,7 +18,95 @@ import javax.annotation.Nullable;
  * The lock information.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create management lock at resource level
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managementLockAtResourceLevel = new AzureNative.Authorization.ManagementLockAtResourceLevel("managementLockAtResourceLevel", new AzureNative.Authorization.ManagementLockAtResourceLevelArgs
+ *         {
+ *             Level = "ReadOnly",
+ *             LockName = "testlock",
+ *             ParentResourcePath = "parentResourcePath",
+ *             ResourceGroupName = "resourcegroupname",
+ *             ResourceName = "teststorageaccount",
+ *             ResourceProviderNamespace = "Microsoft.Storage",
+ *             ResourceType = "storageAccounts",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewManagementLockAtResourceLevel(ctx, "managementLockAtResourceLevel", &authorization.ManagementLockAtResourceLevelArgs{
+ * 			Level:                     pulumi.String("ReadOnly"),
+ * 			LockName:                  pulumi.String("testlock"),
+ * 			ParentResourcePath:        pulumi.String("parentResourcePath"),
+ * 			ResourceGroupName:         pulumi.String("resourcegroupname"),
+ * 			ResourceName:              pulumi.String("teststorageaccount"),
+ * 			ResourceProviderNamespace: pulumi.String("Microsoft.Storage"),
+ * 			ResourceType:              pulumi.String("storageAccounts"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managementLockAtResourceLevel = new azure_native.authorization.ManagementLockAtResourceLevel("managementLockAtResourceLevel", {
+ *     level: "ReadOnly",
+ *     lockName: "testlock",
+ *     parentResourcePath: "parentResourcePath",
+ *     resourceGroupName: "resourcegroupname",
+ *     resourceName: "teststorageaccount",
+ *     resourceProviderNamespace: "Microsoft.Storage",
+ *     resourceType: "storageAccounts",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * management_lock_at_resource_level = azure_native.authorization.ManagementLockAtResourceLevel("managementLockAtResourceLevel",
+ *     level="ReadOnly",
+ *     lock_name="testlock",
+ *     parent_resource_path="parentResourcePath",
+ *     resource_group_name="resourcegroupname",
+ *     resource_name="teststorageaccount",
+ *     resource_provider_namespace="Microsoft.Storage",
+ *     resource_type="storageAccounts")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +121,60 @@ import javax.annotation.Nullable;
 public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomResource {
     /**
      * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
-     * 
      */
     @Export(name="level", type=String.class, parameters={})
     private Output<String> level;
 
     /**
      * @return The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
-     * 
      */
     public Output<String> getLevel() {
         return this.level;
     }
     /**
      * The name of the lock.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the lock.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Notes about the lock. Maximum of 512 characters.
-     * 
      */
     @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
      * @return Notes about the lock. Maximum of 512 characters.
-     * 
      */
     public Output</* @Nullable */ String> getNotes() {
         return this.notes;
     }
     /**
      * The owners of the lock.
-     * 
      */
     @Export(name="owners", type=List.class, parameters={ManagementLockOwnerResponse.class})
     private Output</* @Nullable */ List<ManagementLockOwnerResponse>> owners;
 
     /**
      * @return The owners of the lock.
-     * 
      */
     public Output</* @Nullable */ List<ManagementLockOwnerResponse>> getOwners() {
         return this.owners;
     }
     /**
      * The resource type of the lock - Microsoft.Authorization/locks.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type of the lock - Microsoft.Authorization/locks.
-     * 
      */
     public Output<String> getType() {
         return this.type;

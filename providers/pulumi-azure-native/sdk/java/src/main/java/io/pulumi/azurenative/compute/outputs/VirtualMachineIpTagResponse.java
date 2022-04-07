@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class VirtualMachineIpTagResponse {
     /**
      * IP tag type. Example: FirstPartyUsage.
-     * 
      */
     private final @Nullable String ipTagType;
     /**
      * IP tag associated with the public IP. Example: SQL, Storage etc.
-     * 
      */
     private final @Nullable String tag;
 
@@ -32,14 +30,12 @@ public final class VirtualMachineIpTagResponse {
 
     /**
      * IP tag type. Example: FirstPartyUsage.
-     * 
     */
     public Optional<String> getIpTagType() {
         return Optional.ofNullable(this.ipTagType);
     }
     /**
      * IP tag associated with the public IP. Example: SQL, Storage etc.
-     * 
     */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Collection of instances belong to the Service Registry
- * 
  */
 public final class ServiceRegistryInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ServiceRegistryInstanceResponse extends io.pulumi.resources.I
 
     /**
      * Name of the Service Registry instance
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class ServiceRegistryInstanceResponse extends io.pulumi.resources.I
 
     /**
      * Status of the Service Registry instance
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

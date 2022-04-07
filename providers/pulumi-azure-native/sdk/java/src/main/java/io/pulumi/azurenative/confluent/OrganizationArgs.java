@@ -19,7 +19,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of Organization resource
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Confluent offer detail
-     * 
      */
     @Import(name="offerDetail")
       private final @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
@@ -41,7 +39,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Organization resource name
-     * 
      */
     @Import(name="organizationName")
       private final @Nullable Output<String> organizationName;
@@ -52,7 +49,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Organization resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -74,7 +69,6 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Subscriber detail
-     * 
      */
     @Import(name="userDetail")
       private final @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail;

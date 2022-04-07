@@ -22,7 +22,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifier of the Backend entity. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="backendId")
       private final @Nullable Output<String> backendId;
@@ -33,7 +32,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Backend Credentials Contract Properties
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<BackendCredentialsContractArgs> credentials;
@@ -44,7 +42,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Backend Description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -55,7 +52,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Backend Properties contract
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<BackendPropertiesArgs> properties;
@@ -66,7 +62,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Backend communication protocol.
-     * 
      */
     @Import(name="protocol", required=true)
       private final Output<Either<String,BackendProtocol>> protocol;
@@ -77,7 +72,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Backend Proxy Contract Properties
-     * 
      */
     @Import(name="proxy")
       private final @Nullable Output<BackendProxyContractArgs> proxy;
@@ -88,7 +82,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -99,7 +92,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -110,7 +102,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -121,7 +112,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Backend Title.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;
@@ -132,7 +122,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Backend TLS Properties
-     * 
      */
     @Import(name="tls")
       private final @Nullable Output<BackendTlsPropertiesArgs> tls;
@@ -143,7 +132,6 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Runtime Url of the Backend.
-     * 
      */
     @Import(name="url", required=true)
       private final Output<String> url;

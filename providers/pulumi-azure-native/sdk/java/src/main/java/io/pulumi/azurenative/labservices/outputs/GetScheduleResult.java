@@ -15,52 +15,42 @@ import javax.annotation.Nullable;
 public final class GetScheduleResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Notes for this schedule.
-     * 
      */
     private final @Nullable String notes;
     /**
      * Current provisioning state of the schedule.
-     * 
      */
     private final String provisioningState;
     /**
      * The recurrence pattern of the scheduled actions.
-     * 
      */
     private final @Nullable RecurrencePatternResponse recurrencePattern;
     /**
      * When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
-     * 
      */
     private final @Nullable String startAt;
     /**
      * When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
-     * 
      */
     private final String stopAt;
     /**
      * Metadata pertaining to creation and last modification of the schedule.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The IANA timezone id for the schedule.
-     * 
      */
     private final String timeZoneId;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -90,70 +80,60 @@ public final class GetScheduleResult {
 
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Notes for this schedule.
-     * 
     */
     public Optional<String> getNotes() {
         return Optional.ofNullable(this.notes);
     }
     /**
      * Current provisioning state of the schedule.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The recurrence pattern of the scheduled actions.
-     * 
     */
     public Optional<RecurrencePatternResponse> getRecurrencePattern() {
         return Optional.ofNullable(this.recurrencePattern);
     }
     /**
      * When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
-     * 
     */
     public Optional<String> getStartAt() {
         return Optional.ofNullable(this.startAt);
     }
     /**
      * When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
-     * 
     */
     public String getStopAt() {
         return this.stopAt;
     }
     /**
      * Metadata pertaining to creation and last modification of the schedule.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The IANA timezone id for the schedule.
-     * 
     */
     public String getTimeZoneId() {
         return this.timeZoneId;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

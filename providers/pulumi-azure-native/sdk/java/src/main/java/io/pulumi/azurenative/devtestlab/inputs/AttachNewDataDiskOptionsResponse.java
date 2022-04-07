@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties to attach new disk to the Virtual Machine.
- * 
  */
 public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
 
     /**
      * The name of the disk to be attached.
-     * 
      */
     @Import(name="diskName")
       private final @Nullable String diskName;
@@ -32,7 +30,6 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
 
     /**
      * Size of the disk to be attached in Gibibytes.
-     * 
      */
     @Import(name="diskSizeGiB")
       private final @Nullable Integer diskSizeGiB;
@@ -43,7 +40,6 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
 
     /**
      * The storage type for the disk (i.e. Standard, Premium).
-     * 
      */
     @Import(name="diskType")
       private final @Nullable String diskType;

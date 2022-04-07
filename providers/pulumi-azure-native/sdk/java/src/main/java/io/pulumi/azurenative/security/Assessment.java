@@ -26,7 +26,101 @@ import javax.annotation.Nullable;
  * Security assessment on a resource
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create security recommendation task on a resource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var assessment = new AzureNative.Security.Assessment("assessment", new AzureNative.Security.AssessmentArgs
+ *         {
+ *             AssessmentName = "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
+ *             ResourceDetails = new AzureNative.Security.Inputs.AzureResourceDetailsArgs
+ *             {
+ *                 Source = "Azure",
+ *             },
+ *             ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
+ *             Status = new AzureNative.Security.Inputs.AssessmentStatusArgs
+ *             {
+ *                 Code = "Healthy",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewAssessment(ctx, "assessment", &security.AssessmentArgs{
+ * 			AssessmentName: pulumi.String("8bb8be0a-6010-4789-812f-e4d661c4ed0e"),
+ * 			ResourceDetails: security.AzureResourceDetails{
+ * 				Source: "Azure",
+ * 			},
+ * 			ResourceId: pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2"),
+ * 			Status: &security.AssessmentStatusArgs{
+ * 				Code: pulumi.String("Healthy"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const assessment = new azure_native.security.Assessment("assessment", {
+ *     assessmentName: "8bb8be0a-6010-4789-812f-e4d661c4ed0e",
+ *     resourceDetails: {
+ *         source: "Azure",
+ *     },
+ *     resourceId: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
+ *     status: {
+ *         code: "Healthy",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * assessment = azure_native.security.Assessment("assessment",
+ *     assessment_name="8bb8be0a-6010-4789-812f-e4d661c4ed0e",
+ *     resource_details=azure_native.security.AzureResourceDetailsArgs(
+ *         source="Azure",
+ *     ),
+ *     resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2",
+ *     status=azure_native.security.AssessmentStatusArgs(
+ *         code="Healthy",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,126 +135,108 @@ import javax.annotation.Nullable;
 public class Assessment extends io.pulumi.resources.CustomResource {
     /**
      * Additional data regarding the assessment
-     * 
      */
     @Export(name="additionalData", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> additionalData;
 
     /**
      * @return Additional data regarding the assessment
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getAdditionalData() {
         return this.additionalData;
     }
     /**
      * User friendly display name of the assessment
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return User friendly display name of the assessment
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Links relevant to the assessment
-     * 
      */
     @Export(name="links", type=AssessmentLinksResponse.class, parameters={})
     private Output<AssessmentLinksResponse> links;
 
     /**
      * @return Links relevant to the assessment
-     * 
      */
     public Output<AssessmentLinksResponse> getLinks() {
         return this.links;
     }
     /**
      * Describes properties of an assessment metadata.
-     * 
      */
     @Export(name="metadata", type=SecurityAssessmentMetadataPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ SecurityAssessmentMetadataPropertiesResponse> metadata;
 
     /**
      * @return Describes properties of an assessment metadata.
-     * 
      */
     public Output</* @Nullable */ SecurityAssessmentMetadataPropertiesResponse> getMetadata() {
         return this.metadata;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Data regarding 3rd party partner integration
-     * 
      */
     @Export(name="partnersData", type=SecurityAssessmentPartnerDataResponse.class, parameters={})
     private Output</* @Nullable */ SecurityAssessmentPartnerDataResponse> partnersData;
 
     /**
      * @return Data regarding 3rd party partner integration
-     * 
      */
     public Output</* @Nullable */ SecurityAssessmentPartnerDataResponse> getPartnersData() {
         return this.partnersData;
     }
     /**
      * Details of the resource that was assessed
-     * 
      */
     @Export(name="resourceDetails", type=Object.class, parameters={})
     private Output<Object> resourceDetails;
 
     /**
      * @return Details of the resource that was assessed
-     * 
      */
     public Output<Object> getResourceDetails() {
         return this.resourceDetails;
     }
     /**
      * The result of the assessment
-     * 
      */
     @Export(name="status", type=AssessmentStatusResponse.class, parameters={})
     private Output<AssessmentStatusResponse> status;
 
     /**
      * @return The result of the assessment
-     * 
      */
     public Output<AssessmentStatusResponse> getStatus() {
         return this.status;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

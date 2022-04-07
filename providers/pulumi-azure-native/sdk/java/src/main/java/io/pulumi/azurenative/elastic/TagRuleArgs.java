@@ -17,7 +17,6 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
@@ -28,7 +27,6 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the monitoring tag rules.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the Elastic resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tag Rule Set resource name
-     * 
      */
     @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;

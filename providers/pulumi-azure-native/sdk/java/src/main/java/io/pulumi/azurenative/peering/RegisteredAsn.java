@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * The customer's ASN that is registered by the peering service provider.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a registered ASN for the peering
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registeredAsn = new AzureNative.Peering.RegisteredAsn("registeredAsn", new AzureNative.Peering.RegisteredAsnArgs
+ *         {
+ *             Asn = 65000,
+ *             PeeringName = "peeringName",
+ *             RegisteredAsnName = "registeredAsnName",
+ *             ResourceGroupName = "rgName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := peering.NewRegisteredAsn(ctx, "registeredAsn", &peering.RegisteredAsnArgs{
+ * 			Asn:               pulumi.Int(65000),
+ * 			PeeringName:       pulumi.String("peeringName"),
+ * 			RegisteredAsnName: pulumi.String("registeredAsnName"),
+ * 			ResourceGroupName: pulumi.String("rgName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const registeredAsn = new azure_native.peering.RegisteredAsn("registeredAsn", {
+ *     asn: 65000,
+ *     peeringName: "peeringName",
+ *     registeredAsnName: "registeredAsnName",
+ *     resourceGroupName: "rgName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * registered_asn = azure_native.peering.RegisteredAsn("registeredAsn",
+ *     asn=65000,
+ *     peering_name="peeringName",
+ *     registered_asn_name="registeredAsnName",
+ *     resource_group_name="rgName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +109,60 @@ import javax.annotation.Nullable;
 public class RegisteredAsn extends io.pulumi.resources.CustomResource {
     /**
      * The customer's ASN from which traffic originates.
-     * 
      */
     @Export(name="asn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> asn;
 
     /**
      * @return The customer's ASN from which traffic originates.
-     * 
      */
     public Output</* @Nullable */ Integer> getAsn() {
         return this.asn;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The peering service prefix key that is to be shared with the customer.
-     * 
      */
     @Export(name="peeringServicePrefixKey", type=String.class, parameters={})
     private Output<String> peeringServicePrefixKey;
 
     /**
      * @return The peering service prefix key that is to be shared with the customer.
-     * 
      */
     public Output<String> getPeeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

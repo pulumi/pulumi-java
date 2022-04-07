@@ -14,7 +14,6 @@ public final class GetWatcherArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
@@ -25,7 +24,6 @@ public final class GetWatcherArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetWatcherArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The watcher name.
-     * 
      */
     @Import(name="watcherName", required=true)
       private final String watcherName;

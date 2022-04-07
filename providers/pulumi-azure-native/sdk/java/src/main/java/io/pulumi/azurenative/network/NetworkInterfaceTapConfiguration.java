@@ -18,7 +18,92 @@ import javax.annotation.Nullable;
  * Tap configuration in a Network Interface.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Network Interface Tap Configurations
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var networkInterfaceTapConfiguration = new AzureNative.Network.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration", new AzureNative.Network.NetworkInterfaceTapConfigurationArgs
+ *         {
+ *             NetworkInterfaceName = "mynic",
+ *             ResourceGroupName = "testrg",
+ *             TapConfigurationName = "tapconfiguration1",
+ *             VirtualNetworkTap = new AzureNative.Network.Inputs.VirtualNetworkTapArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewNetworkInterfaceTapConfiguration(ctx, "networkInterfaceTapConfiguration", &network.NetworkInterfaceTapConfigurationArgs{
+ * 			NetworkInterfaceName: pulumi.String("mynic"),
+ * 			ResourceGroupName:    pulumi.String("testrg"),
+ * 			TapConfigurationName: pulumi.String("tapconfiguration1"),
+ * 			VirtualNetworkTap: &network.VirtualNetworkTapArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const networkInterfaceTapConfiguration = new azure_native.network.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration", {
+ *     networkInterfaceName: "mynic",
+ *     resourceGroupName: "testrg",
+ *     tapConfigurationName: "tapconfiguration1",
+ *     virtualNetworkTap: {
+ *         id: "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * network_interface_tap_configuration = azure_native.network.NetworkInterfaceTapConfiguration("networkInterfaceTapConfiguration",
+ *     network_interface_name="mynic",
+ *     resource_group_name="testrg",
+ *     tap_configuration_name="tapconfiguration1",
+ *     virtual_network_tap=azure_native.network.VirtualNetworkTapArgs(
+ *         id="/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworkTaps/testvtap",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +118,60 @@ import javax.annotation.Nullable;
 public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the network interface tap configuration resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the network interface tap configuration resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Sub Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Sub Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The reference to the Virtual Network Tap resource.
-     * 
      */
     @Export(name="virtualNetworkTap", type=VirtualNetworkTapResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkTapResponse> virtualNetworkTap;
 
     /**
      * @return The reference to the Virtual Network Tap resource.
-     * 
      */
     public Output</* @Nullable */ VirtualNetworkTapResponse> getVirtualNetworkTap() {
         return this.virtualNetworkTap;

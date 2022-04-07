@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Model that represents a continuous action.
- * 
  */
 public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * ISO8601 formatted string that represents a duration.
-     * 
      */
     @Import(name="duration", required=true)
       private final Output<String> duration;
@@ -32,7 +30,6 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * String that represents a Capability URN.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -43,7 +40,6 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * List of key value pairs.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<List<KeyValuePairArgs>> parameters;
@@ -54,7 +50,6 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * String that represents a selector.
-     * 
      */
     @Import(name="selectorId", required=true)
       private final Output<String> selectorId;
@@ -66,7 +61,6 @@ public final class ContinuousActionArgs extends io.pulumi.resources.ResourceArgs
     /**
      * Enum that discriminates between action models.
      * Expected value is 'continuous'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DataCollectionEndpointResponseNetworkAcls {
     /**
      * The configuration to set whether network access from public internet to the endpoints are allowed.
-     * 
      */
     private final @Nullable String publicNetworkAccess;
 
@@ -24,7 +23,6 @@ public final class DataCollectionEndpointResponseNetworkAcls {
 
     /**
      * The configuration to set whether network access from public internet to the endpoints are allowed.
-     * 
     */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);

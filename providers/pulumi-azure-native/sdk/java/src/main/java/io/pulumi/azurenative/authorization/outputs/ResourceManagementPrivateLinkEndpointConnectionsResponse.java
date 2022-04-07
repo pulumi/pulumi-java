@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
     /**
      * The private endpoint connections.
-     * 
      */
     private final @Nullable List<String> privateEndpointConnections;
 
@@ -24,7 +23,6 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
 
     /**
      * The private endpoint connections.
-     * 
     */
     public List<String> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;

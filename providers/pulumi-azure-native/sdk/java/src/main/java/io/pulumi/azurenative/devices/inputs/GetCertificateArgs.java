@@ -14,7 +14,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the certificate
-     * 
      */
     @Import(name="certificateName", required=true)
       private final String certificateName;
@@ -25,7 +24,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the IoT hub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the IoT hub.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

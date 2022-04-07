@@ -22,7 +22,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The entity query content to display in timeline
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;
@@ -33,7 +32,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The entity query description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -44,7 +42,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * Determines whether this activity is enabled or disabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -55,7 +52,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The query applied only to entities matching to all filters
-     * 
      */
     @Import(name="entitiesFilter")
       private final @Nullable Output<Map<String,List<String>>> entitiesFilter;
@@ -66,7 +62,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * entity query ID
-     * 
      */
     @Import(name="entityQueryId")
       private final @Nullable Output<String> entityQueryId;
@@ -77,7 +72,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The type of the query's source entity
-     * 
      */
     @Import(name="inputEntityType")
       private final @Nullable Output<Either<String,EntityType>> inputEntityType;
@@ -89,7 +83,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
     /**
      * The kind of the entity query that supports put request.
      * Expected value is 'Activity'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -100,7 +93,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
@@ -111,7 +103,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The Activity query definitions
-     * 
      */
     @Import(name="queryDefinitions")
       private final @Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
@@ -122,7 +113,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * List of the fields of the source entity that are required to run the query
-     * 
      */
     @Import(name="requiredInputFieldsSets")
       private final @Nullable Output<List<List<String>>> requiredInputFieldsSets;
@@ -133,7 +123,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -144,7 +133,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The template id this activity was created from
-     * 
      */
     @Import(name="templateName")
       private final @Nullable Output<String> templateName;
@@ -155,7 +143,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The entity query title
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;
@@ -166,7 +153,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

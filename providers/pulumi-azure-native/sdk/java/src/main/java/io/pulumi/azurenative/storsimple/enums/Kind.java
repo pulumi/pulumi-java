@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @EnumType
     public enum Kind {

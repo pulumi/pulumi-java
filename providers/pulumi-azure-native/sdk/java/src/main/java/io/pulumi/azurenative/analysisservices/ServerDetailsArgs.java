@@ -23,7 +23,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of AS server administrators
-     * 
      */
     @Import(name="asAdministrators")
       private final @Nullable Output<ServerAdministratorsArgs> asAdministrators;
@@ -34,7 +33,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SAS container URI to the backup container.
-     * 
      */
     @Import(name="backupBlobContainerUri")
       private final @Nullable Output<String> backupBlobContainerUri;
@@ -45,7 +43,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The gateway details configured for the AS server.
-     * 
      */
     @Import(name="gatewayDetails")
       private final @Nullable Output<GatewayDetailsArgs> gatewayDetails;
@@ -56,7 +53,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The firewall settings for the AS server.
-     * 
      */
     @Import(name="ipV4FirewallSettings")
       private final @Nullable Output<IPv4FirewallSettingsArgs> ipV4FirewallSettings;
@@ -67,7 +63,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of the Analysis Services resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -78,7 +73,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The managed mode of the server (0 = not managed, 1 = managed).
-     * 
      */
     @Import(name="managedMode")
       private final @Nullable Output<Integer> managedMode;
@@ -89,7 +83,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.
-     * 
      */
     @Import(name="querypoolConnectionMode")
       private final @Nullable Output<ConnectionMode> querypoolConnectionMode;
@@ -100,7 +93,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -111,7 +103,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The server monitor mode for AS server
-     * 
      */
     @Import(name="serverMonitorMode")
       private final @Nullable Output<Integer> serverMonitorMode;
@@ -122,7 +113,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Analysis Services server. It must be a minimum of 3 characters, and a maximum of 63.
-     * 
      */
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
@@ -133,7 +123,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of the Analysis Services resource.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<ResourceSkuArgs> sku;
@@ -144,7 +133,6 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Key-value pairs of additional resource provisioning properties.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

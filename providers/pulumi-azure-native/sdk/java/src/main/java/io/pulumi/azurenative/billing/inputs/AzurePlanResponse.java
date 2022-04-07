@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the Azure plan.
- * 
  */
 public final class AzurePlanResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzurePlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku description.
-     * 
      */
     @Import(name="skuDescription", required=true)
       private final String skuDescription;
@@ -31,7 +29,6 @@ public final class AzurePlanResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku id.
-     * 
      */
     @Import(name="skuId")
       private final @Nullable String skuId;

@@ -19,7 +19,97 @@ import javax.annotation.Nullable;
  * Restore Point details.
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a restore point
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var restorePoint = new AzureNative.Compute.RestorePoint("restorePoint", new AzureNative.Compute.RestorePointArgs
+ *         {
+ *             ExcludeDisks = 
+ *             {
+ *                 new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
+ *                 {
+ *                     Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123",
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             RestorePointCollectionName = "rpcName",
+ *             RestorePointName = "rpName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewRestorePoint(ctx, "restorePoint", &compute.RestorePointArgs{
+ * 			ExcludeDisks: []compute.ApiEntityReferenceArgs{
+ * 				&compute.ApiEntityReferenceArgs{
+ * 					Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName:          pulumi.String("myResourceGroup"),
+ * 			RestorePointCollectionName: pulumi.String("rpcName"),
+ * 			RestorePointName:           pulumi.String("rpName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const restorePoint = new azure_native.compute.RestorePoint("restorePoint", {
+ *     excludeDisks: [{
+ *         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123",
+ *     }],
+ *     resourceGroupName: "myResourceGroup",
+ *     restorePointCollectionName: "rpcName",
+ *     restorePointName: "rpName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * restore_point = azure_native.compute.RestorePoint("restorePoint",
+ *     exclude_disks=[azure_native.compute.ApiEntityReferenceArgs(
+ *         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123",
+ *     )],
+ *     resource_group_name="myResourceGroup",
+ *     restore_point_collection_name="rpcName",
+ *     restore_point_name="rpName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +124,84 @@ import javax.annotation.Nullable;
 public class RestorePoint extends io.pulumi.resources.CustomResource {
     /**
      * Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
-     * 
      */
     @Export(name="consistencyMode", type=String.class, parameters={})
     private Output<String> consistencyMode;
 
     /**
      * @return Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
-     * 
      */
     public Output<String> getConsistencyMode() {
         return this.consistencyMode;
     }
     /**
      * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
-     * 
      */
     @Export(name="excludeDisks", type=List.class, parameters={ApiEntityReferenceResponse.class})
     private Output</* @Nullable */ List<ApiEntityReferenceResponse>> excludeDisks;
 
     /**
      * @return List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
-     * 
      */
     public Output</* @Nullable */ List<ApiEntityReferenceResponse>> getExcludeDisks() {
         return this.excludeDisks;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets the provisioning state of the restore point.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets the provisioning state of the restore point.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets the details of the VM captured at the time of the restore point creation.
-     * 
      */
     @Export(name="sourceMetadata", type=RestorePointSourceMetadataResponse.class, parameters={})
     private Output<RestorePointSourceMetadataResponse> sourceMetadata;
 
     /**
      * @return Gets the details of the VM captured at the time of the restore point creation.
-     * 
      */
     public Output<RestorePointSourceMetadataResponse> getSourceMetadata() {
         return this.sourceMetadata;
     }
     /**
      * Gets the creation time of the restore point.
-     * 
      */
     @Export(name="timeCreated", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeCreated;
 
     /**
      * @return Gets the creation time of the restore point.
-     * 
      */
     public Output</* @Nullable */ String> getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

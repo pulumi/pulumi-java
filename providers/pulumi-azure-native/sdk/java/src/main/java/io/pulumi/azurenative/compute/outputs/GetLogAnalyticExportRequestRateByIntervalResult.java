@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetLogAnalyticExportRequestRateByIntervalResult {
     /**
      * LogAnalyticsOutput
-     * 
      */
     private final LogAnalyticsOutputResponse properties;
 
@@ -22,7 +21,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalResult {
 
     /**
      * LogAnalyticsOutput
-     * 
     */
     public LogAnalyticsOutputResponse getProperties() {
         return this.properties;

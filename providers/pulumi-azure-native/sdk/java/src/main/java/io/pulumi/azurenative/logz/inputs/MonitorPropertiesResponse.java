@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties specific to the monitor resource.
- * 
  */
 public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -31,7 +30,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The priority of the resource.
-     * 
      */
     @Import(name="liftrResourcePreference", required=true)
       private final Integer liftrResourcePreference;
@@ -49,7 +47,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
-     * 
      */
     @Import(name="marketplaceSubscriptionStatus")
       private final @Nullable String marketplaceSubscriptionStatus;
@@ -60,7 +57,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Flag specifying if the resource monitoring is enabled or disabled.
-     * 
      */
     @Import(name="monitoringStatus")
       private final @Nullable String monitoringStatus;
@@ -78,7 +74,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Flag specifying if the resource provisioning state as tracked by ARM.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

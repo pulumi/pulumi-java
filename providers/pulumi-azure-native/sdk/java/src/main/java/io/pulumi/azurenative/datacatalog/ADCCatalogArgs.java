@@ -23,7 +23,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure data catalog admin list.
-     * 
      */
     @Import(name="admins")
       private final @Nullable Output<List<PrincipalsArgs>> admins;
@@ -34,7 +33,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the data catalog in the specified subscription and resource group.
-     * 
      */
     @Import(name="catalogName")
       private final @Nullable Output<String> catalogName;
@@ -45,7 +43,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Automatic unit adjustment enabled or not.
-     * 
      */
     @Import(name="enableAutomaticUnitAdjustment")
       private final @Nullable Output<Boolean> enableAutomaticUnitAdjustment;
@@ -56,7 +53,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -67,7 +63,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -78,7 +73,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure data catalog SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<Either<String,SkuType>> sku;
@@ -89,7 +83,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure data catalog provision status.
-     * 
      */
     @Import(name="successfullyProvisioned")
       private final @Nullable Output<Boolean> successfullyProvisioned;
@@ -100,7 +93,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -111,7 +103,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure data catalog units.
-     * 
      */
     @Import(name="units")
       private final @Nullable Output<Integer> units;
@@ -122,7 +113,6 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure data catalog user list.
-     * 
      */
     @Import(name="users")
       private final @Nullable Output<List<PrincipalsArgs>> users;

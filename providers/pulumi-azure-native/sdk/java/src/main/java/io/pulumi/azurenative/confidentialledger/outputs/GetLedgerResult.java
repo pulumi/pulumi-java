@@ -16,37 +16,30 @@ import javax.annotation.Nullable;
 public final class GetLedgerResult {
     /**
      * Fully qualified resource Id for the resource.
-     * 
      */
     private final String id;
     /**
      * The Azure location where the Confidential Ledger is running.
-     * 
      */
     private final @Nullable String location;
     /**
      * Name of the Resource.
-     * 
      */
     private final String name;
     /**
      * Properties of Confidential Ledger Resource.
-     * 
      */
     private final LedgerPropertiesResponse properties;
     /**
      * Metadata pertaining to creation and last modification of the resource
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Additional tags for Confidential Ledger
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -70,49 +63,42 @@ public final class GetLedgerResult {
 
     /**
      * Fully qualified resource Id for the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The Azure location where the Confidential Ledger is running.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the Resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of Confidential Ledger Resource.
-     * 
     */
     public LedgerPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Additional tags for Confidential Ledger
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class RemediationFiltersResponse {
     /**
      * The resource locations that will be remediated.
-     * 
      */
     private final @Nullable List<String> locations;
 
@@ -24,7 +23,6 @@ public final class RemediationFiltersResponse {
 
     /**
      * The resource locations that will be remediated.
-     * 
     */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;

@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * Provider of the volume.
-     * 
      */
     @EnumType
     public enum VolumeProvider {
         /**
          * Provides volumes that are backed by Azure Files.
-         * 
          */
         SFAzureFile("SFAzureFile");
 

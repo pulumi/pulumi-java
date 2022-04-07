@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Error definition for managed integration runtime.
- * 
  */
 public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
 
     /**
      * Error code.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -30,7 +28,6 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
 
     /**
      * Error message.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -41,7 +38,6 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
 
     /**
      * Managed integration runtime error parameters.
-     * 
      */
     @Import(name="parameters", required=true)
       private final List<String> parameters;
@@ -52,7 +48,6 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
 
     /**
      * The time when the error occurred.
-     * 
      */
     @Import(name="time", required=true)
       private final String time;

@@ -18,7 +18,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<Either<String,Location>> location;
@@ -29,7 +28,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Azure Stack registration.
-     * 
      */
     @Import(name="registrationName")
       private final @Nullable Output<String> registrationName;
@@ -40,7 +38,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The token identifying registered Azure Stack
-     * 
      */
     @Import(name="registrationToken", required=true)
       private final Output<String> registrationToken;
@@ -51,7 +48,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;

@@ -17,7 +17,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
-     * 
      */
     @Import(name="aliasName")
       private final @Nullable Output<String> aliasName;
@@ -28,7 +27,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Put alias request properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<PutAliasRequestPropertiesArgs> properties;

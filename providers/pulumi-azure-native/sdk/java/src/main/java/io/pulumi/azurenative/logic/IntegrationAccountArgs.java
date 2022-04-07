@@ -21,7 +21,6 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName")
       private final @Nullable Output<String> integrationAccountName;
@@ -32,7 +31,6 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The integration service environment.
-     * 
      */
     @Import(name="integrationServiceEnvironment")
       private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
@@ -43,7 +41,6 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -54,7 +51,6 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -65,7 +61,6 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The sku.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<IntegrationAccountSkuArgs> sku;
@@ -76,7 +71,6 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The workflow state.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,WorkflowState>> state;
@@ -87,7 +81,6 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

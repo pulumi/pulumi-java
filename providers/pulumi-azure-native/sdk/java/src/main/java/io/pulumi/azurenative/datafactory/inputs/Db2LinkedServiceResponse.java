@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for DB2 data source.
- * 
  */
 public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
@@ -50,7 +47,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="certificateCommonName")
       private final @Nullable Object certificateCommonName;
@@ -61,7 +57,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -72,7 +67,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Object connectionString;
@@ -83,7 +77,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="database")
       private final @Nullable Object database;
@@ -94,7 +87,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -105,7 +97,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -116,7 +107,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="packageCollection")
       private final @Nullable Object packageCollection;
@@ -127,7 +117,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -138,7 +127,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Password for authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -149,7 +137,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="server")
       private final @Nullable Object server;
@@ -161,7 +148,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
     /**
      * Type of linked service.
      * Expected value is 'Db2'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -172,7 +158,6 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username")
       private final @Nullable Object username;

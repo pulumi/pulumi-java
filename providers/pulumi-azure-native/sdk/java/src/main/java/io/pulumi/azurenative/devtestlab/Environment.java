@@ -19,7 +19,100 @@ import javax.annotation.Nullable;
  * An environment, which is essentially an ARM template deployment.
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Environments_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var environment = new AzureNative.DevTestLab.Environment("environment", new AzureNative.DevTestLab.EnvironmentArgs
+ *         {
+ *             DeploymentProperties = new AzureNative.DevTestLab.Inputs.EnvironmentDeploymentPropertiesArgs
+ *             {
+ *                 ArmTemplateId = "/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/artifactSources/{artifactSourceName}/armTemplates/{armTemplateName}",
+ *                 Parameters = {},
+ *             },
+ *             LabName = "{labName}",
+ *             Name = "{environmentName}",
+ *             ResourceGroupName = "resourceGroupName",
+ *             UserName = "@me",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewEnvironment(ctx, "environment", &devtestlab.EnvironmentArgs{
+ * 			DeploymentProperties: &devtestlab.EnvironmentDeploymentPropertiesArgs{
+ * 				ArmTemplateId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/artifactSources/{artifactSourceName}/armTemplates/{armTemplateName}"),
+ * 				Parameters:    devtestlab.ArmTemplateParameterPropertiesArray{},
+ * 			},
+ * 			LabName:           pulumi.String("{labName}"),
+ * 			Name:              pulumi.String("{environmentName}"),
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 			UserName:          pulumi.String("@me"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const environment = new azure_native.devtestlab.Environment("environment", {
+ *     deploymentProperties: {
+ *         armTemplateId: "/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/artifactSources/{artifactSourceName}/armTemplates/{armTemplateName}",
+ *         parameters: [],
+ *     },
+ *     labName: "{labName}",
+ *     name: "{environmentName}",
+ *     resourceGroupName: "resourceGroupName",
+ *     userName: "@me",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * environment = azure_native.devtestlab.Environment("environment",
+ *     deployment_properties=azure_native.devtestlab.EnvironmentDeploymentPropertiesArgs(
+ *         arm_template_id="/subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/artifactSources/{artifactSourceName}/armTemplates/{armTemplateName}",
+ *         parameters=[],
+ *     ),
+ *     lab_name="{labName}",
+ *     name="{environmentName}",
+ *     resource_group_name="resourceGroupName",
+ *     user_name="@me")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,140 +127,120 @@ import javax.annotation.Nullable;
 public class Environment extends io.pulumi.resources.CustomResource {
     /**
      * The display name of the Azure Resource Manager template that produced the environment.
-     * 
      */
     @Export(name="armTemplateDisplayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> armTemplateDisplayName;
 
     /**
      * @return The display name of the Azure Resource Manager template that produced the environment.
-     * 
      */
     public Output</* @Nullable */ String> getArmTemplateDisplayName() {
         return this.armTemplateDisplayName;
     }
     /**
      * The creator of the environment.
-     * 
      */
     @Export(name="createdByUser", type=String.class, parameters={})
     private Output<String> createdByUser;
 
     /**
      * @return The creator of the environment.
-     * 
      */
     public Output<String> getCreatedByUser() {
         return this.createdByUser;
     }
     /**
      * The deployment properties of the environment.
-     * 
      */
     @Export(name="deploymentProperties", type=EnvironmentDeploymentPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ EnvironmentDeploymentPropertiesResponse> deploymentProperties;
 
     /**
      * @return The deployment properties of the environment.
-     * 
      */
     public Output</* @Nullable */ EnvironmentDeploymentPropertiesResponse> getDeploymentProperties() {
         return this.deploymentProperties;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The identifier of the resource group containing the environment's resources.
-     * 
      */
     @Export(name="resourceGroupId", type=String.class, parameters={})
     private Output<String> resourceGroupId;
 
     /**
      * @return The identifier of the resource group containing the environment's resources.
-     * 
      */
     public Output<String> getResourceGroupId() {
         return this.resourceGroupId;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;

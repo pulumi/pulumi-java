@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The application package contact information.
- * 
  */
 public final class ApplicationPackageContactResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
 
     /**
      * The contact name.
-     * 
      */
     @Import(name="contactName")
       private final @Nullable String contactName;
@@ -31,7 +29,6 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
 
     /**
      * The contact email.
-     * 
      */
     @Import(name="email", required=true)
       private final String email;
@@ -42,7 +39,6 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
 
     /**
      * The contact phone number.
-     * 
      */
     @Import(name="phone", required=true)
       private final String phone;

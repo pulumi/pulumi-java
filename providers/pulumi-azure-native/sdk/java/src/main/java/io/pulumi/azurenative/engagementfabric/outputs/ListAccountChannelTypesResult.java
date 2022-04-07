@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListAccountChannelTypesResult {
     /**
      * Channel descriptions
-     * 
      */
     private final @Nullable List<ChannelTypeDescriptionResponse> value;
 
@@ -24,7 +23,6 @@ public final class ListAccountChannelTypesResult {
 
     /**
      * Channel descriptions
-     * 
     */
     public List<ChannelTypeDescriptionResponse> getValue() {
         return this.value == null ? List.of() : this.value;

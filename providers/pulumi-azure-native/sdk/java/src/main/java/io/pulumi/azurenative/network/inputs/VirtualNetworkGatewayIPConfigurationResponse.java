@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP configuration for virtual network gateway.
- * 
  */
 public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -32,7 +30,6 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -43,7 +40,6 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -54,7 +50,6 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
 
     /**
      * Private IP Address for this gateway.
-     * 
      */
     @Import(name="privateIPAddress", required=true)
       private final String privateIPAddress;
@@ -65,7 +60,6 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
@@ -76,7 +70,6 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
 
     /**
      * The provisioning state of the virtual network gateway IP configuration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -87,7 +80,6 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
 
     /**
      * The reference to the public IP resource.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable SubResourceResponse publicIPAddress;
@@ -98,7 +90,6 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
 
     /**
      * The reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;

@@ -21,7 +21,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Administrator username for the server. Once created it cannot be changed.
-     * 
      */
     @Import(name="administratorLogin")
       private final @Nullable Output<String> administratorLogin;
@@ -32,7 +31,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The administrator login password (required for server creation).
-     * 
      */
     @Import(name="administratorLoginPassword")
       private final @Nullable Output<String> administratorLoginPassword;
@@ -43,7 +41,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Active Directory identity of the server.
-     * 
      */
     @Import(name="administrators")
       private final @Nullable Output<ServerExternalAdministratorArgs> administrators;
@@ -54,7 +51,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Active Directory identity of the server.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
@@ -65,7 +61,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A CMK URI of the key to use for encryption.
-     * 
      */
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
@@ -76,7 +71,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -87,7 +81,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
-     * 
      */
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<String> minimalTlsVersion;
@@ -98,7 +91,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource id of a user assigned identity to be used by default.
-     * 
      */
     @Import(name="primaryUserAssignedIdentityId")
       private final @Nullable Output<String> primaryUserAssignedIdentityId;
@@ -109,7 +101,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess;
@@ -120,7 +111,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -131,7 +121,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
@@ -142,7 +131,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -153,7 +141,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the server.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

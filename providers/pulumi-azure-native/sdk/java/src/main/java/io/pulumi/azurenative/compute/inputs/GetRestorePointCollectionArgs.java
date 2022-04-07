@@ -16,7 +16,6 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
 
     /**
      * The expand expression to apply on the operation. If expand=restorePoints, server will return all contained restore points in the restorePointCollection.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the restore point collection.
-     * 
      */
     @Import(name="restorePointCollectionName", required=true)
       private final String restorePointCollectionName;

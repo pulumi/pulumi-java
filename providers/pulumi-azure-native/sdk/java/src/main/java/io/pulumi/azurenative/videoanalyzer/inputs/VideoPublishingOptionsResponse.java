@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Optional flags used to change how video is published. These are only allowed for topologies where "kind" is set to "live".
- * 
  */
 public final class VideoPublishingOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VideoPublishingOptionsResponse extends io.pulumi.resources.In
 
     /**
      * When set to 'true' content will not be archived or recorded. This is used, for example, when the topology is used only for low latency video streaming. Default is 'false'.  If set to 'true', then "disableRtspPublishing" must be set to 'false'.
-     * 
      */
     @Import(name="disableArchive")
       private final @Nullable String disableArchive;
@@ -31,7 +29,6 @@ public final class VideoPublishingOptionsResponse extends io.pulumi.resources.In
 
     /**
      * When set to 'true' the RTSP playback URL will not be published, disabling low latency streaming. This is used, for example, when the topology is used only for archiving content. Default is 'false'.  If set to 'true', then "disableArchive" must be set to 'false'.
-     * 
      */
     @Import(name="disableRtspPublishing")
       private final @Nullable String disableRtspPublishing;

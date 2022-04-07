@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Nested parameter definition.
- * 
  */
 public final class ModeValueInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ModeValueInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The interface string name for the nested parameter.
-     * 
      */
     @Import(name="interfaceString")
       private final @Nullable String interfaceString;
@@ -33,7 +31,6 @@ public final class ModeValueInfoResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The definition of the parameter.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<ModuleAssetParameterResponse> parameters;

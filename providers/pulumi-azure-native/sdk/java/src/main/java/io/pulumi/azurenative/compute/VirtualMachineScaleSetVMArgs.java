@@ -28,7 +28,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
-     * 
      */
     @Import(name="additionalCapabilities")
       private final @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
@@ -39,7 +38,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). <br><br> For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) <br><br> Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
-     * 
      */
     @Import(name="availabilitySet")
       private final @Nullable Output<SubResourceArgs> availabilitySet;
@@ -50,7 +48,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
-     * 
      */
     @Import(name="diagnosticsProfile")
       private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
@@ -61,7 +58,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the hardware settings for the virtual machine.
-     * 
      */
     @Import(name="hardwareProfile")
       private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
@@ -72,7 +68,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * The instance ID of the virtual machine.
-     * 
      */
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
@@ -83,7 +78,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
@@ -94,7 +88,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -105,7 +98,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the network interfaces of the virtual machine.
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
@@ -116,7 +108,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the network profile configuration of the virtual machine.
-     * 
      */
     @Import(name="networkProfileConfiguration")
       private final @Nullable Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration;
@@ -127,7 +118,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the operating system settings for the virtual machine.
-     * 
      */
     @Import(name="osProfile")
       private final @Nullable Output<OSProfileArgs> osProfile;
@@ -138,7 +128,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
-     * 
      */
     @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
@@ -149,7 +138,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the protection policy of the virtual machine.
-     * 
      */
     @Import(name="protectionPolicy")
       private final @Nullable Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy;
@@ -160,7 +148,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -171,7 +158,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the Security related profile settings for the virtual machine.
-     * 
      */
     @Import(name="securityProfile")
       private final @Nullable Output<SecurityProfileArgs> securityProfile;
@@ -182,7 +168,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies the storage settings for the virtual machine disks.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
@@ -193,7 +178,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -204,7 +188,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
-     * 
      */
     @Import(name="userData")
       private final @Nullable Output<String> userData;
@@ -215,7 +198,6 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the VM scale set where the extension should be create or updated.
-     * 
      */
     @Import(name="vmScaleSetName", required=true)
       private final Output<String> vmScaleSetName;

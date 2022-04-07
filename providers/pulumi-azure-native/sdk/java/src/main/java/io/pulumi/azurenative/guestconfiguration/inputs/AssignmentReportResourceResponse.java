@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The guest configuration assignment resource.
- * 
  */
 public final class AssignmentReportResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
 
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
-     * 
      */
     @Import(name="complianceStatus", required=true)
       private final String complianceStatus;
@@ -34,7 +32,6 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
 
     /**
      * Properties of a guest configuration assignment resource.
-     * 
      */
     @Import(name="properties", required=true)
       private final Object properties;
@@ -45,7 +42,6 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
 
     /**
      * Compliance reason and reason code for a resource.
-     * 
      */
     @Import(name="reasons")
       private final @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons;
@@ -56,7 +52,6 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
 
     /**
      * Name of the guest configuration assignment resource setting.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;

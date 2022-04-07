@@ -16,7 +16,6 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets or sets the message.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -27,7 +26,6 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets or sets the queue name.
-     * 
      */
     @Import(name="queueName")
       private final @Nullable String queueName;
@@ -38,7 +36,6 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets or sets the SAS key.
-     * 
      */
     @Import(name="sasToken")
       private final @Nullable String sasToken;
@@ -49,7 +46,6 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets or sets the storage account name.
-     * 
      */
     @Import(name="storageAccount")
       private final @Nullable String storageAccount;

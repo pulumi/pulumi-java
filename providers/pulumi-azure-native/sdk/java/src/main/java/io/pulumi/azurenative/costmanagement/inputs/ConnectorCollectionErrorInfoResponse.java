@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of any error encountered on last collection attempt
- * 
  */
 public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
 
     /**
      * Short error code
-     * 
      */
     @Import(name="errorCode", required=true)
       private final String errorCode;
@@ -29,7 +27,6 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
 
     /**
      * External Provider error message
-     * 
      */
     @Import(name="errorInnerMessage", required=true)
       private final String errorInnerMessage;
@@ -40,7 +37,6 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
 
     /**
      * Detailed error message
-     * 
      */
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
@@ -51,7 +47,6 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
 
     /**
      * Time the error started occurring (Last time error occurred in lastChecked)
-     * 
      */
     @Import(name="errorStartTime", required=true)
       private final String errorStartTime;

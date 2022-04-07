@@ -16,7 +16,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
 
     /**
      * BLOB Container name.
-     * 
      */
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
@@ -38,7 +36,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
 
     /**
      * The id of the source data set.
-     * 
      */
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
@@ -49,7 +46,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
 
     /**
      * The name of the data set mapping to be created.
-     * 
      */
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
@@ -61,7 +57,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
     /**
      * Kind of data set mapping.
      * Expected value is 'Container'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -72,7 +67,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
 
     /**
      * Resource group of storage account.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
@@ -83,7 +77,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -94,7 +87,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
 
     /**
      * The name of the share subscription which will hold the data set sink.
-     * 
      */
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
@@ -105,7 +97,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
 
     /**
      * Storage account name of the source data set.
-     * 
      */
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
@@ -116,7 +107,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
 
     /**
      * Subscription id of storage account.
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;

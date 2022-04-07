@@ -17,7 +17,6 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The hybrid connection name.
-     * 
      */
     @Import(name="hybridConnectionName")
       private final @Nullable Output<String> hybridConnectionName;
@@ -28,7 +27,6 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -39,7 +37,6 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Returns true if client authorization is needed for this hybrid connection; otherwise, false.
-     * 
      */
     @Import(name="requiresClientAuthorization")
       private final @Nullable Output<Boolean> requiresClientAuthorization;
@@ -50,7 +47,6 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
-     * 
      */
     @Import(name="userMetadata")
       private final @Nullable Output<String> userMetadata;

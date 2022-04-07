@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Link with additional information about a product.
- * 
  */
 public final class ProductLinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ProductLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The description of the link.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -31,7 +29,6 @@ public final class ProductLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URI corresponding to the link.
-     * 
      */
     @Import(name="uri")
       private final @Nullable String uri;

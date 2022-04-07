@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a project.
- * 
  */
 public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
-     * 
      */
     @Import(name="assessmentSolutionId")
       private final @Nullable Output<String> assessmentSolutionId;
@@ -33,7 +31,6 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The ARM id of the storage account used for interactions when public access is disabled.
-     * 
      */
     @Import(name="customerStorageAccountArmId")
       private final @Nullable Output<String> customerStorageAccountArmId;
@@ -44,7 +41,6 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The ARM id of service map workspace created by customer.
-     * 
      */
     @Import(name="customerWorkspaceId")
       private final @Nullable Output<String> customerWorkspaceId;
@@ -55,7 +51,6 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Location of service map workspace created by customer.
-     * 
      */
     @Import(name="customerWorkspaceLocation")
       private final @Nullable Output<String> customerWorkspaceLocation;
@@ -66,7 +61,6 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Assessment project status.
-     * 
      */
     @Import(name="projectStatus")
       private final @Nullable Output<Either<String,ProjectStatus>> projectStatus;
@@ -77,7 +71,6 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;

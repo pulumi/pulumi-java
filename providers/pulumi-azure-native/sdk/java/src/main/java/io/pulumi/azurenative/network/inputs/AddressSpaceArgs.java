@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
- * 
  */
 public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of address blocks reserved for this virtual network in CIDR notation.
-     * 
      */
     @Import(name="addressPrefixes")
       private final @Nullable Output<List<String>> addressPrefixes;

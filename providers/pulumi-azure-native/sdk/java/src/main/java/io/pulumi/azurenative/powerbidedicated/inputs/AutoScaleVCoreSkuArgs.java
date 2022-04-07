@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the SKU name and Azure pricing tier for auto scale v-core resource.
- * 
  */
 public final class AutoScaleVCoreSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AutoScaleVCoreSkuArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The capacity of an auto scale v-core resource.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -34,7 +32,6 @@ public final class AutoScaleVCoreSkuArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Name of the SKU level.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -45,7 +42,6 @@ public final class AutoScaleVCoreSkuArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the Azure pricing tier to which the SKU applies.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Either<String,VCoreSkuTier>> tier;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Device details.
- * 
  */
 public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Management Resource Id
-     * 
      */
     @Import(name="managementResourceId", required=true)
       private final String managementResourceId;
@@ -29,7 +27,6 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Management Resource Tenant ID
-     * 
      */
     @Import(name="managementResourceTenantId", required=true)
       private final String managementResourceTenantId;
@@ -40,7 +37,6 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * device serial number
-     * 
      */
     @Import(name="serialNumber", required=true)
       private final String serialNumber;

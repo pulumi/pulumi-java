@@ -16,7 +16,6 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ADLS account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the dataSet.
-     * 
      */
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
@@ -38,7 +36,6 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The file name in the ADLS account.
-     * 
      */
     @Import(name="fileName", required=true)
       private final Output<String> fileName;
@@ -49,7 +46,6 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The folder path within the ADLS account.
-     * 
      */
     @Import(name="folderPath", required=true)
       private final Output<String> folderPath;
@@ -61,7 +57,6 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
     /**
      * Kind of data set.
      * Expected value is 'AdlsGen1File'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -72,7 +67,6 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource group of ADLS account.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
@@ -83,7 +77,6 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -94,7 +87,6 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the share to add the data set to.
-     * 
      */
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
@@ -105,7 +97,6 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Subscription id of ADLS account.
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;

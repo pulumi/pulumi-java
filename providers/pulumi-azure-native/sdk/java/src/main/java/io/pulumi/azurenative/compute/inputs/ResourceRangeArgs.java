@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the resource range.
- * 
  */
 public final class ResourceRangeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum number of the resource.
-     * 
      */
     @Import(name="max")
       private final @Nullable Output<Integer> max;
@@ -31,7 +29,6 @@ public final class ResourceRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum number of the resource.
-     * 
      */
     @Import(name="min")
       private final @Nullable Output<Integer> min;

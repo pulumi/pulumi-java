@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * InMageRcm disk input.
- * 
  */
 public final class InMageRcmDiskInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class InMageRcmDiskInputArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The disk encryption set ARM Id.
-     * 
      */
     @Import(name="diskEncryptionSetId")
       private final @Nullable Output<String> diskEncryptionSetId;
@@ -33,7 +31,6 @@ public final class InMageRcmDiskInputArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The disk Id.
-     * 
      */
     @Import(name="diskId")
       private final @Nullable Output<String> diskId;
@@ -44,7 +41,6 @@ public final class InMageRcmDiskInputArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The disk type.
-     * 
      */
     @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskAccountType>> diskType;
@@ -55,7 +51,6 @@ public final class InMageRcmDiskInputArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The log storage account ARM Id.
-     * 
      */
     @Import(name="logStorageAccountId")
       private final @Nullable Output<String> logStorageAccountId;

@@ -15,52 +15,42 @@ import javax.annotation.Nullable;
 public final class GetAttachedDatabaseConfigurationResult {
     /**
      * The list of databases from the clusterResourceId which are currently attached to the cluster.
-     * 
      */
     private final List<String> attachedDatabaseNames;
     /**
      * The resource id of the cluster where the databases you would like to attach reside.
-     * 
      */
     private final String clusterResourceId;
     /**
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-     * 
      */
     private final String databaseName;
     /**
      * The default principals modification kind
-     * 
      */
     private final String defaultPrincipalsModificationKind;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The provisioned state of the resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Table level sharing specifications
-     * 
      */
     private final @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -90,70 +80,60 @@ public final class GetAttachedDatabaseConfigurationResult {
 
     /**
      * The list of databases from the clusterResourceId which are currently attached to the cluster.
-     * 
     */
     public List<String> getAttachedDatabaseNames() {
         return this.attachedDatabaseNames;
     }
     /**
      * The resource id of the cluster where the databases you would like to attach reside.
-     * 
     */
     public String getClusterResourceId() {
         return this.clusterResourceId;
     }
     /**
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-     * 
     */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * The default principals modification kind
-     * 
     */
     public String getDefaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Table level sharing specifications
-     * 
     */
     public Optional<TableLevelSharingPropertiesResponse> getTableLevelSharingProperties() {
         return Optional.ofNullable(this.tableLevelSharingProperties);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

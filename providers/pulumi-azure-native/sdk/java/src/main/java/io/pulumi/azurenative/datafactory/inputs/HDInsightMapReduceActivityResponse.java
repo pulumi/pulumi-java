@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * HDInsight MapReduce activity type.
- * 
  */
 public final class HDInsightMapReduceActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * User specified arguments to HDInsightActivity.
-     * 
      */
     @Import(name="arguments")
       private final @Nullable List<Object> arguments;
@@ -38,7 +36,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Class name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="className", required=true)
       private final Object className;
@@ -49,7 +46,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Allows user to specify defines for the MapReduce job request.
-     * 
      */
     @Import(name="defines")
       private final @Nullable Map<String,Object> defines;
@@ -60,7 +56,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -71,7 +66,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -82,7 +76,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Debug info option.
-     * 
      */
     @Import(name="getDebugInfo")
       private final @Nullable String getDebugInfo;
@@ -93,7 +86,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Jar path. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="jarFilePath", required=true)
       private final Object jarFilePath;
@@ -104,7 +96,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Jar libs.
-     * 
      */
     @Import(name="jarLibs")
       private final @Nullable List<Object> jarLibs;
@@ -115,7 +106,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Jar linked service reference.
-     * 
      */
     @Import(name="jarLinkedService")
       private final @Nullable LinkedServiceReferenceResponse jarLinkedService;
@@ -126,7 +116,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -137,7 +126,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -148,7 +136,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -159,7 +146,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Storage linked service references.
-     * 
      */
     @Import(name="storageLinkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
@@ -171,7 +157,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
     /**
      * Type of activity.
      * Expected value is 'HDInsightMapReduce'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -182,7 +167,6 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

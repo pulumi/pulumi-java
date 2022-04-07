@@ -26,7 +26,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The AdmCredential of the created NotificationHub
-     * 
      */
     @Import(name="admCredential")
       private final @Nullable Output<AdmCredentialArgs> admCredential;
@@ -37,7 +36,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The ApnsCredential of the created NotificationHub
-     * 
      */
     @Import(name="apnsCredential")
       private final @Nullable Output<ApnsCredentialArgs> apnsCredential;
@@ -48,7 +46,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The AuthorizationRules of the created NotificationHub
-     * 
      */
     @Import(name="authorizationRules")
       private final @Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
@@ -59,7 +56,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The BaiduCredential of the created NotificationHub
-     * 
      */
     @Import(name="baiduCredential")
       private final @Nullable Output<BaiduCredentialArgs> baiduCredential;
@@ -70,7 +66,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The GcmCredential of the created NotificationHub
-     * 
      */
     @Import(name="gcmCredential")
       private final @Nullable Output<GcmCredentialArgs> gcmCredential;
@@ -81,7 +76,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -92,7 +86,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The MpnsCredential of the created NotificationHub
-     * 
      */
     @Import(name="mpnsCredential")
       private final @Nullable Output<MpnsCredentialArgs> mpnsCredential;
@@ -103,7 +96,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The NotificationHub name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -114,7 +106,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The namespace name.
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -125,7 +116,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The notification hub name.
-     * 
      */
     @Import(name="notificationHubName")
       private final @Nullable Output<String> notificationHubName;
@@ -136,7 +126,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The RegistrationTtl of the created NotificationHub
-     * 
      */
     @Import(name="registrationTtl")
       private final @Nullable Output<String> registrationTtl;
@@ -147,7 +136,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -158,7 +146,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The sku of the created namespace
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -169,7 +156,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -180,7 +166,6 @@ public final class NotificationHubArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The WnsCredential of the created NotificationHub
-     * 
      */
     @Import(name="wnsCredential")
       private final @Nullable Output<WnsCredentialArgs> wnsCredential;

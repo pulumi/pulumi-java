@@ -19,7 +19,83 @@ import javax.annotation.Nullable;
  * Device resource.
  * API Version: 2020-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update device
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var device = new AzureNative.HybridNetwork.Device("device", new AzureNative.HybridNetwork.DeviceArgs
+ *         {
+ *             DeviceName = "TestDevice",
+ *             DeviceType = "AzureStackEdge",
+ *             Location = "eastus",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hybridnetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridnetwork"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hybridnetwork.NewDevice(ctx, "device", &hybridnetwork.DeviceArgs{
+ * 			DeviceName:        pulumi.String("TestDevice"),
+ * 			DeviceType:        pulumi.String("AzureStackEdge"),
+ * 			Location:          pulumi.String("eastus"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const device = new azure_native.hybridnetwork.Device("device", {
+ *     deviceName: "TestDevice",
+ *     deviceType: "AzureStackEdge",
+ *     location: "eastus",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * device = azure_native.hybridnetwork.Device("device",
+ *     device_name="TestDevice",
+ *     device_type="AzureStackEdge",
+ *     location="eastus",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,112 +110,96 @@ import javax.annotation.Nullable;
 public class Device extends io.pulumi.resources.CustomResource {
     /**
      * The type of the device.
-     * 
      */
     @Export(name="deviceType", type=String.class, parameters={})
     private Output<String> deviceType;
 
     /**
      * @return The type of the device.
-     * 
      */
     public Output<String> getDeviceType() {
         return this.deviceType;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The list of network functions deployed on the device.
-     * 
      */
     @Export(name="networkFunctions", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> networkFunctions;
 
     /**
      * @return The list of network functions deployed on the device.
-     * 
      */
     public Output<List<SubResourceResponse>> getNetworkFunctions() {
         return this.networkFunctions;
     }
     /**
      * The provisioning state of the device resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the device resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The current device status.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The current device status.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB Cassandra table column
- * 
  */
 public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Cosmos DB Cassandra table column
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the Cosmos DB Cassandra table column
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

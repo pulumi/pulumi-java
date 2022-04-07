@@ -17,7 +17,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of Cognitive Services account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -28,7 +27,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the deployment associated with the Cognitive Services Account
-     * 
      */
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
@@ -39,7 +37,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of Cognitive Services account deployment.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<DeploymentPropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed integration runtime, including managed elastic and managed dedicated integration runtimes.
- * 
  */
 public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
 
     /**
      * The compute resource for managed integration runtime.
-     * 
      */
     @Import(name="computeProperties")
       private final @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
@@ -33,7 +31,6 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
 
     /**
      * Integration runtime description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -44,7 +41,6 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
 
     /**
      * SSIS properties for managed integration runtime.
-     * 
      */
     @Import(name="ssisProperties")
       private final @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
@@ -56,7 +52,6 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     /**
      * The type of integration runtime.
      * Expected value is 'Managed'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

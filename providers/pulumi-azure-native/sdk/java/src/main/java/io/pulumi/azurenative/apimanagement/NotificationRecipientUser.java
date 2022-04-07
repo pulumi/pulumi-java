@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * Recipient User details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateNotificationRecipientUser
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var notificationRecipientUser = new AzureNative.ApiManagement.NotificationRecipientUser("notificationRecipientUser", new AzureNative.ApiManagement.NotificationRecipientUserArgs
+ *         {
+ *             NotificationName = "RequestPublisherNotificationMessage",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             UserId = "576823d0a40f7e74ec07d642",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewNotificationRecipientUser(ctx, "notificationRecipientUser", &apimanagement.NotificationRecipientUserArgs{
+ * 			NotificationName:  pulumi.String("RequestPublisherNotificationMessage"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			UserId:            pulumi.String("576823d0a40f7e74ec07d642"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const notificationRecipientUser = new azure_native.apimanagement.NotificationRecipientUser("notificationRecipientUser", {
+ *     notificationName: "RequestPublisherNotificationMessage",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     userId: "576823d0a40f7e74ec07d642",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * notification_recipient_user = azure_native.apimanagement.NotificationRecipientUser("notificationRecipientUser",
+ *     notification_name="RequestPublisherNotificationMessage",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     user_id="576823d0a40f7e74ec07d642")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +108,36 @@ import javax.annotation.Nullable;
 public class NotificationRecipientUser extends io.pulumi.resources.CustomResource {
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * API Management UserId subscribed to notification.
-     * 
      */
     @Export(name="userId", type=String.class, parameters={})
     private Output</* @Nullable */ String> userId;
 
     /**
      * @return API Management UserId subscribed to notification.
-     * 
      */
     public Output</* @Nullable */ String> getUserId() {
         return this.userId;

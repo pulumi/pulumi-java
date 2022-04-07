@@ -16,7 +16,6 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Policy Export Format.
-     * 
      */
     @Import(name="format")
       private final @Nullable String format;
@@ -27,7 +26,6 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identifier of the Policy.
-     * 
      */
     @Import(name="policyId", required=true)
       private final String policyId;
@@ -38,7 +36,6 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Product identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="productId", required=true)
       private final String productId;
@@ -49,7 +46,6 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -60,7 +56,6 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

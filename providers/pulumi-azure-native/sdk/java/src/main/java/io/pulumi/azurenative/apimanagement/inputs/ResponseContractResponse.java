@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Operation response details.
- * 
  */
 public final class ResponseContractResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Operation response description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -35,7 +33,6 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Collection of operation response headers.
-     * 
      */
     @Import(name="headers")
       private final @Nullable List<ParameterContractResponse> headers;
@@ -46,7 +43,6 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Collection of operation response representations.
-     * 
      */
     @Import(name="representations")
       private final @Nullable List<RepresentationContractResponse> representations;
@@ -57,7 +53,6 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Operation response HTTP status code.
-     * 
      */
     @Import(name="statusCode", required=true)
       private final Integer statusCode;

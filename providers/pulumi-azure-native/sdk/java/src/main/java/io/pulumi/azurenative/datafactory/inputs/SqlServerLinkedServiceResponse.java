@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * SQL Server linked service.
- * 
  */
 public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
 
     /**
      * Sql always encrypted properties.
-     * 
      */
     @Import(name="alwaysEncryptedSettings")
       private final @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
@@ -40,7 +38,6 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -51,7 +48,6 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -62,7 +58,6 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
 
     /**
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString", required=true)
       private final Object connectionString;
@@ -73,7 +68,6 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -84,7 +78,6 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -95,7 +88,6 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -106,7 +98,6 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
 
     /**
      * The on-premises Windows authentication password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -118,7 +109,6 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
     /**
      * Type of linked service.
      * Expected value is 'SqlServer'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -129,7 +119,6 @@ public final class SqlServerLinkedServiceResponse extends io.pulumi.resources.In
 
     /**
      * The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="userName")
       private final @Nullable Object userName;

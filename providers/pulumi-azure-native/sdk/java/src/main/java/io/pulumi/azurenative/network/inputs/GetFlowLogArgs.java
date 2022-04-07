@@ -14,7 +14,6 @@ public final class GetFlowLogArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the flow log resource.
-     * 
      */
     @Import(name="flowLogName", required=true)
       private final String flowLogName;
@@ -25,7 +24,6 @@ public final class GetFlowLogArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the network watcher.
-     * 
      */
     @Import(name="networkWatcherName", required=true)
       private final String networkWatcherName;
@@ -36,7 +34,6 @@ public final class GetFlowLogArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

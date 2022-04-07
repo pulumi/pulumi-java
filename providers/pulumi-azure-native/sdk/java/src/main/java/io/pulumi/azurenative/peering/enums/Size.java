@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The size of the peering SKU.
-     * 
      */
     @EnumType
     public enum Size {

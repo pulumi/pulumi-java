@@ -18,7 +18,461 @@ import javax.annotation.Nullable;
  * A Synapse Workspace Sql Pool Table data set.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DataSets_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var synapseWorkspaceSqlPoolTableDataSet = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSet(ctx, "synapseWorkspaceSqlPoolTableDataSet", &datashare.SynapseWorkspaceSqlPoolTableDataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const synapseWorkspaceSqlPoolTableDataSet = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * synapse_workspace_sql_pool_table_data_set = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_KustoCluster_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var synapseWorkspaceSqlPoolTableDataSet = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSet(ctx, "synapseWorkspaceSqlPoolTableDataSet", &datashare.SynapseWorkspaceSqlPoolTableDataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const synapseWorkspaceSqlPoolTableDataSet = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * synapse_workspace_sql_pool_table_data_set = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_KustoDatabase_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var synapseWorkspaceSqlPoolTableDataSet = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSet(ctx, "synapseWorkspaceSqlPoolTableDataSet", &datashare.SynapseWorkspaceSqlPoolTableDataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const synapseWorkspaceSqlPoolTableDataSet = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * synapse_workspace_sql_pool_table_data_set = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_SqlDBTable_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var synapseWorkspaceSqlPoolTableDataSet = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSet(ctx, "synapseWorkspaceSqlPoolTableDataSet", &datashare.SynapseWorkspaceSqlPoolTableDataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const synapseWorkspaceSqlPoolTableDataSet = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * synapse_workspace_sql_pool_table_data_set = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_SqlDWTable_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var synapseWorkspaceSqlPoolTableDataSet = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSet(ctx, "synapseWorkspaceSqlPoolTableDataSet", &datashare.SynapseWorkspaceSqlPoolTableDataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const synapseWorkspaceSqlPoolTableDataSet = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * synapse_workspace_sql_pool_table_data_set = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_SynapseWorkspaceSqlPoolTable_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var synapseWorkspaceSqlPoolTableDataSet = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetArgs
+ *         {
+ *             AccountName = "sourceAccount",
+ *             DataSetName = "dataset1",
+ *             Kind = "SynapseWorkspaceSqlPoolTable",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "share1",
+ *             SynapseWorkspaceSqlPoolTableResourceId = "/subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/sqlPools/ExampleSqlPool/schemas/dbo/tables/table1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSet(ctx, "synapseWorkspaceSqlPoolTableDataSet", &datashare.SynapseWorkspaceSqlPoolTableDataSetArgs{
+ * 			AccountName:                            pulumi.String("sourceAccount"),
+ * 			DataSetName:                            pulumi.String("dataset1"),
+ * 			Kind:                                   pulumi.String("SynapseWorkspaceSqlPoolTable"),
+ * 			ResourceGroupName:                      pulumi.String("SampleResourceGroup"),
+ * 			ShareName:                              pulumi.String("share1"),
+ * 			SynapseWorkspaceSqlPoolTableResourceId: pulumi.String("/subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/sqlPools/ExampleSqlPool/schemas/dbo/tables/table1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const synapseWorkspaceSqlPoolTableDataSet = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet", {
+ *     accountName: "sourceAccount",
+ *     dataSetName: "dataset1",
+ *     kind: "SynapseWorkspaceSqlPoolTable",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "share1",
+ *     synapseWorkspaceSqlPoolTableResourceId: "/subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/sqlPools/ExampleSqlPool/schemas/dbo/tables/table1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * synapse_workspace_sql_pool_table_data_set = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSet("synapseWorkspaceSqlPoolTableDataSet",
+ *     account_name="sourceAccount",
+ *     data_set_name="dataset1",
+ *     kind="SynapseWorkspaceSqlPoolTable",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="share1",
+ *     synapse_workspace_sql_pool_table_resource_id="/subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/sqlPools/ExampleSqlPool/schemas/dbo/tables/table1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +487,12 @@ import javax.annotation.Nullable;
 public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.CustomResource {
     /**
      * Unique id for identifying a data set resource
-     * 
      */
     @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
      * @return Unique id for identifying a data set resource
-     * 
      */
     public Output<String> getDataSetId() {
         return this.dataSetId;
@@ -48,7 +500,6 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.Cus
     /**
      * Kind of data set.
      * Expected value is 'SynapseWorkspaceSqlPoolTable'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -56,63 +507,54 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.Cus
     /**
      * @return Kind of data set.
      * Expected value is 'SynapseWorkspaceSqlPoolTable'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the azure resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource id of the Synapse Workspace SQL Pool Table
-     * 
      */
     @Export(name="synapseWorkspaceSqlPoolTableResourceId", type=String.class, parameters={})
     private Output<String> synapseWorkspaceSqlPoolTableResourceId;
 
     /**
      * @return Resource id of the Synapse Workspace SQL Pool Table
-     * 
      */
     public Output<String> getSynapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
     /**
      * System Data of the Azure resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System Data of the Azure resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the azure resource
-     * 
      */
     public Output<String> getType() {
         return this.type;

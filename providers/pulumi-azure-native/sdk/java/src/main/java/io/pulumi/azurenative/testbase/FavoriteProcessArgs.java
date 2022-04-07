@@ -16,7 +16,6 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
-     * 
      */
     @Import(name="actualProcessName", required=true)
       private final Output<String> actualProcessName;
@@ -27,7 +26,6 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The resource name of a favorite process in a package. If the process name contains characters that are not allowed in Azure Resource Name, we use 'actualProcessName' in request body to submit the name.
-     * 
      */
     @Import(name="favoriteProcessResourceName")
       private final @Nullable Output<String> favoriteProcessResourceName;
@@ -38,7 +36,6 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The resource name of the Test Base Package.
-     * 
      */
     @Import(name="packageName", required=true)
       private final Output<String> packageName;
@@ -49,7 +46,6 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group that contains the resource.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The resource name of the Test Base Account.
-     * 
      */
     @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;

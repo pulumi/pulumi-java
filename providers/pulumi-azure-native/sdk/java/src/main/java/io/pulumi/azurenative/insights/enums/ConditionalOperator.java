@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
-     * 
      */
     @EnumType
     public enum ConditionalOperator {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Provisioning state of the migrate project.
-     * 
      */
     @EnumType
     public enum ProvisioningState {

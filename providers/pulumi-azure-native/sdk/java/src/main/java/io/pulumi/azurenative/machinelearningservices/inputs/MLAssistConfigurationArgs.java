@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents configuration for machine learning assisted features in a labeling job.
- * 
  */
 public final class MLAssistConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The compute designated for inferencing.
-     * 
      */
     @Import(name="inferencingComputeBinding", required=true)
       private final Output<ComputeBindingArgs> inferencingComputeBinding;
@@ -34,7 +32,6 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Indicates whether MLAssist feature is enabled.
-     * 
      */
     @Import(name="mlAssistEnabled")
       private final @Nullable Output<Boolean> mlAssistEnabled;
@@ -45,7 +42,6 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
-     * 
      */
     @Import(name="modelNamePrefix", required=true)
       private final Output<String> modelNamePrefix;
@@ -56,7 +52,6 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
 
     /**
      * Prelabel accuracy threshold used in MLAssist feature.
-     * 
      */
     @Import(name="prelabelAccuracyThreshold")
       private final @Nullable Output<Double> prelabelAccuracyThreshold;
@@ -67,7 +62,6 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
 
     /**
      * The compute designated for training.
-     * 
      */
     @Import(name="trainingComputeBinding", required=true)
       private final Output<ComputeBindingArgs> trainingComputeBinding;

@@ -14,7 +14,6 @@ public final class GetExpressRouteGatewayArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the ExpressRoute gateway.
-     * 
      */
     @Import(name="expressRouteGatewayName", required=true)
       private final String expressRouteGatewayName;
@@ -25,7 +24,6 @@ public final class GetExpressRouteGatewayArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

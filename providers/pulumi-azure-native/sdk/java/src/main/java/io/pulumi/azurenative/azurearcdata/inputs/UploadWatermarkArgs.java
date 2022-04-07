@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties on upload watermark.  Mostly timestamp for each upload data type
- * 
  */
 public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Last uploaded date for logs from kubernetes cluster. Defaults to current date time
-     * 
      */
     @Import(name="logs")
       private final @Nullable Output<String> logs;
@@ -31,7 +29,6 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
-     * 
      */
     @Import(name="metrics")
       private final @Nullable Output<String> metrics;
@@ -42,7 +39,6 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Last uploaded date for usages from kubernetes cluster. Defaults to current date time
-     * 
      */
     @Import(name="usages")
       private final @Nullable Output<String> usages;

@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ConnectionSettingParameterResponse {
     /**
      * Key for the Connection Setting Parameter.
-     * 
      */
     private final @Nullable String key;
     /**
      * Value associated with the Connection Setting Parameter.
-     * 
      */
     private final @Nullable String value;
 
@@ -32,14 +30,12 @@ public final class ConnectionSettingParameterResponse {
 
     /**
      * Key for the Connection Setting Parameter.
-     * 
     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Value associated with the Connection Setting Parameter.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ResourceReferenceResponse {
     /**
      * The resource id.
-     * 
      */
     private final @Nullable String id;
     /**
      * Gets the resource name.
-     * 
      */
     private final String name;
     /**
      * Gets the resource type.
-     * 
      */
     private final String type;
 
@@ -39,21 +36,18 @@ public final class ResourceReferenceResponse {
 
     /**
      * The resource id.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Gets the resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the resource type.
-     * 
     */
     public String getType() {
         return this.type;

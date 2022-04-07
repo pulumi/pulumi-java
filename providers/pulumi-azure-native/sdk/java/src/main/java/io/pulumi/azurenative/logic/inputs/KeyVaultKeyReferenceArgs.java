@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The reference to the key vault key.
- * 
  */
 public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
 
     /**
      * The private key name in key vault.
-     * 
      */
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
@@ -32,7 +30,6 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
 
     /**
      * The key vault reference.
-     * 
      */
     @Import(name="keyVault", required=true)
       private final Output<KeyVaultKeyReferenceKeyVaultArgs> keyVault;
@@ -43,7 +40,6 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
 
     /**
      * The private key version in key vault.
-     * 
      */
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;

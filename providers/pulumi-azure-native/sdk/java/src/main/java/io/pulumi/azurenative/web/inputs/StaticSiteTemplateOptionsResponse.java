@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Template Options for the static site.
- * 
  */
 public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
 
     /**
      * Description of the newly generated repository.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
 
     /**
      * Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
-     * 
      */
     @Import(name="isPrivate")
       private final @Nullable Boolean isPrivate;
@@ -43,7 +40,6 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
 
     /**
      * Owner of the newly generated repository.
-     * 
      */
     @Import(name="owner")
       private final @Nullable String owner;
@@ -54,7 +50,6 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
 
     /**
      * Name of the newly generated repository.
-     * 
      */
     @Import(name="repositoryName")
       private final @Nullable String repositoryName;
@@ -65,7 +60,6 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
 
     /**
      * URL of the template repository. The newly generated repository will be based on this one.
-     * 
      */
     @Import(name="templateRepositoryUrl")
       private final @Nullable String templateRepositoryUrl;

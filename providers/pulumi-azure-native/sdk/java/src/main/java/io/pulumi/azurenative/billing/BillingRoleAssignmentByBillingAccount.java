@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * The role assignment
  * API Version: 2019-10-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutEnrollmentAdministratorRoleAssignment
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var billingRoleAssignmentByBillingAccount = new AzureNative.Billing.BillingRoleAssignmentByBillingAccount("billingRoleAssignmentByBillingAccount", new AzureNative.Billing.BillingRoleAssignmentByBillingAccountArgs
+ *         {
+ *             BillingAccountName = "{billingAccountName}",
+ *             BillingRoleAssignmentName = "{billingRoleAssignmentName}",
+ *             PrincipalId = "99a1a759-30dd-42c2-828c-db398826bb67",
+ *             PrincipalTenantId = "7ca289b9-c32d-4f01-8566-7ff93261d76f",
+ *             RoleDefinitionId = "/providers/Microsoft.Billing/billingAccounts/7898901/billingRoleDefinitions/9f1983cb-2574-400c-87e9-34cf8e2280db",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	billing "github.com/pulumi/pulumi-azure-native/sdk/go/azure/billing"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := billing.NewBillingRoleAssignmentByBillingAccount(ctx, "billingRoleAssignmentByBillingAccount", &billing.BillingRoleAssignmentByBillingAccountArgs{
+ * 			BillingAccountName:        pulumi.String("{billingAccountName}"),
+ * 			BillingRoleAssignmentName: pulumi.String("{billingRoleAssignmentName}"),
+ * 			PrincipalId:               pulumi.String("99a1a759-30dd-42c2-828c-db398826bb67"),
+ * 			PrincipalTenantId:         pulumi.String("7ca289b9-c32d-4f01-8566-7ff93261d76f"),
+ * 			RoleDefinitionId:          pulumi.String("/providers/Microsoft.Billing/billingAccounts/7898901/billingRoleDefinitions/9f1983cb-2574-400c-87e9-34cf8e2280db"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const billingRoleAssignmentByBillingAccount = new azure_native.billing.BillingRoleAssignmentByBillingAccount("billingRoleAssignmentByBillingAccount", {
+ *     billingAccountName: "{billingAccountName}",
+ *     billingRoleAssignmentName: "{billingRoleAssignmentName}",
+ *     principalId: "99a1a759-30dd-42c2-828c-db398826bb67",
+ *     principalTenantId: "7ca289b9-c32d-4f01-8566-7ff93261d76f",
+ *     roleDefinitionId: "/providers/Microsoft.Billing/billingAccounts/7898901/billingRoleDefinitions/9f1983cb-2574-400c-87e9-34cf8e2280db",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * billing_role_assignment_by_billing_account = azure_native.billing.BillingRoleAssignmentByBillingAccount("billingRoleAssignmentByBillingAccount",
+ *     billing_account_name="{billingAccountName}",
+ *     billing_role_assignment_name="{billingRoleAssignmentName}",
+ *     principal_id="99a1a759-30dd-42c2-828c-db398826bb67",
+ *     principal_tenant_id="7ca289b9-c32d-4f01-8566-7ff93261d76f",
+ *     role_definition_id="/providers/Microsoft.Billing/billingAccounts/7898901/billingRoleDefinitions/9f1983cb-2574-400c-87e9-34cf8e2280db")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,168 +112,144 @@ import javax.annotation.Nullable;
 public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.CustomResource {
     /**
      * The principal Id of the user who created the role assignment.
-     * 
      */
     @Export(name="createdByPrincipalId", type=String.class, parameters={})
     private Output<String> createdByPrincipalId;
 
     /**
      * @return The principal Id of the user who created the role assignment.
-     * 
      */
     public Output<String> getCreatedByPrincipalId() {
         return this.createdByPrincipalId;
     }
     /**
      * The tenant Id of the user who created the role assignment.
-     * 
      */
     @Export(name="createdByPrincipalTenantId", type=String.class, parameters={})
     private Output<String> createdByPrincipalTenantId;
 
     /**
      * @return The tenant Id of the user who created the role assignment.
-     * 
      */
     public Output<String> getCreatedByPrincipalTenantId() {
         return this.createdByPrincipalTenantId;
     }
     /**
      * The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
      */
     @Export(name="createdByUserEmailAddress", type=String.class, parameters={})
     private Output<String> createdByUserEmailAddress;
 
     /**
      * @return The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
      */
     public Output<String> getCreatedByUserEmailAddress() {
         return this.createdByUserEmailAddress;
     }
     /**
      * The date the role assignment was created.
-     * 
      */
     @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
      * @return The date the role assignment was created.
-     * 
      */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The principal id of the user to whom the role was assigned.
-     * 
      */
     @Export(name="principalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalId;
 
     /**
      * @return The principal id of the user to whom the role was assigned.
-     * 
      */
     public Output</* @Nullable */ String> getPrincipalId() {
         return this.principalId;
     }
     /**
      * The principal tenant id of the user to whom the role was assigned.
-     * 
      */
     @Export(name="principalTenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalTenantId;
 
     /**
      * @return The principal tenant id of the user to whom the role was assigned.
-     * 
      */
     public Output</* @Nullable */ String> getPrincipalTenantId() {
         return this.principalTenantId;
     }
     /**
      * The ID of the role definition.
-     * 
      */
     @Export(name="roleDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleDefinitionId;
 
     /**
      * @return The ID of the role definition.
-     * 
      */
     public Output</* @Nullable */ String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
      * The scope at which the role was assigned.
-     * 
      */
     @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**
      * @return The scope at which the role was assigned.
-     * 
      */
     public Output<String> getScope() {
         return this.scope;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
      */
     @Export(name="userAuthenticationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> userAuthenticationType;
 
     /**
      * @return The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
      */
     public Output</* @Nullable */ String> getUserAuthenticationType() {
         return this.userAuthenticationType;
     }
     /**
      * The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
      */
     @Export(name="userEmailAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> userEmailAddress;
 
     /**
      * @return The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
      */
     public Output</* @Nullable */ String> getUserEmailAddress() {
         return this.userEmailAddress;

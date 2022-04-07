@@ -14,7 +14,6 @@ public final class GetSupportPlanTypeArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The Canonical support plan type.
-     * 
      */
     @Import(name="planTypeName", required=true)
       private final String planTypeName;
@@ -25,7 +24,6 @@ public final class GetSupportPlanTypeArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The support plan type. For now the only valid type is "canonical".
-     * 
      */
     @Import(name="providerName", required=true)
       private final String providerName;

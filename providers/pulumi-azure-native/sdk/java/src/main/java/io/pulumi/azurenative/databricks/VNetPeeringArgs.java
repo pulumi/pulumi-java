@@ -20,7 +20,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
-     * 
      */
     @Import(name="allowForwardedTraffic")
       private final @Nullable Output<Boolean> allowForwardedTraffic;
@@ -31,7 +30,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If gateway links can be used in remote virtual networking to link to this virtual network.
-     * 
      */
     @Import(name="allowGatewayTransit")
       private final @Nullable Output<Boolean> allowGatewayTransit;
@@ -42,7 +40,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
-     * 
      */
     @Import(name="allowVirtualNetworkAccess")
       private final @Nullable Output<Boolean> allowVirtualNetworkAccess;
@@ -53,7 +50,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The reference to the databricks virtual network address space.
-     * 
      */
     @Import(name="databricksAddressSpace")
       private final @Nullable Output<AddressSpaceArgs> databricksAddressSpace;
@@ -64,7 +60,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
-     * 
      */
     @Import(name="databricksVirtualNetwork")
       private final @Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork;
@@ -75,7 +70,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace vNet peering.
-     * 
      */
     @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
@@ -86,7 +80,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The reference to the remote virtual network address space.
-     * 
      */
     @Import(name="remoteAddressSpace")
       private final @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
@@ -97,7 +90,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
-     * 
      */
     @Import(name="remoteVirtualNetwork", required=true)
       private final Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork;
@@ -108,7 +100,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -119,7 +110,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
-     * 
      */
     @Import(name="useRemoteGateways")
       private final @Nullable Output<Boolean> useRemoteGateways;
@@ -130,7 +120,6 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

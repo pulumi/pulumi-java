@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies how the virtual machine should be created.
-     * 
      */
     @EnumType
     public enum DiskCreateOptionTypes {

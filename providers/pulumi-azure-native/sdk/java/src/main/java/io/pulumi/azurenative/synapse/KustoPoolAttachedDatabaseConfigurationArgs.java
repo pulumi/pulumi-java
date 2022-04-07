@@ -19,7 +19,6 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
 
     /**
      * The name of the attached database configuration.
-     * 
      */
     @Import(name="attachedDatabaseConfigurationName")
       private final @Nullable Output<String> attachedDatabaseConfigurationName;
@@ -30,7 +29,6 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
 
     /**
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -41,7 +39,6 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
 
     /**
      * The default principals modification kind
-     * 
      */
     @Import(name="defaultPrincipalsModificationKind", required=true)
       private final Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
@@ -52,7 +49,6 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
 
     /**
      * The name of the Kusto pool.
-     * 
      */
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
@@ -63,7 +59,6 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
 
     /**
      * The resource id of the kusto pool where the databases you would like to attach reside.
-     * 
      */
     @Import(name="kustoPoolResourceId", required=true)
       private final Output<String> kustoPoolResourceId;
@@ -74,7 +69,6 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -85,7 +79,6 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -96,7 +89,6 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
 
     /**
      * Table level sharing specifications
-     * 
      */
     @Import(name="tableLevelSharingProperties")
       private final @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
@@ -107,7 +99,6 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

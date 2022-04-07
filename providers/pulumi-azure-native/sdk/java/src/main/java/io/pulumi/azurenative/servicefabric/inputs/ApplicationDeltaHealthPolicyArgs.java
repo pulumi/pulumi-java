@@ -22,7 +22,6 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
 
     /**
      * The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.
-     * 
      */
     @Import(name="defaultServiceTypeDeltaHealthPolicy")
       private final @Nullable Output<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy;
@@ -33,7 +32,6 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
 
     /**
      * The map with service type delta health policy per service type name. The map is empty by default.
-     * 
      */
     @Import(name="serviceTypeDeltaHealthPolicies")
       private final @Nullable Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies;

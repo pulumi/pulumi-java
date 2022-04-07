@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of authentication used to connect to the web table source.
-     * 
      */
     @EnumType
     public enum WebAuthenticationType {

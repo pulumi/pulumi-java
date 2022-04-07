@@ -18,7 +18,6 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value indicating whether to send analytics to Microsoft
-     * 
      */
     @Import(name="enableCustomerAnalytics")
       private final @Nullable Output<Boolean> enableCustomerAnalytics;
@@ -29,7 +28,6 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARM ID of the Log Analytics Workspace that is used for monitoring
-     * 
      */
     @Import(name="logAnalyticsWorkspaceArmId")
       private final @Nullable Output<String> logAnalyticsWorkspaceArmId;
@@ -51,7 +48,6 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The workspace ID of the log analytics workspace to be used for monitoring
-     * 
      */
     @Import(name="logAnalyticsWorkspaceId")
       private final @Nullable Output<String> logAnalyticsWorkspaceId;
@@ -62,7 +58,6 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The shared key of the log analytics workspace that is used for monitoring
-     * 
      */
     @Import(name="logAnalyticsWorkspaceSharedKey")
       private final @Nullable Output<String> logAnalyticsWorkspaceSharedKey;
@@ -73,7 +68,6 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The subnet which the SAP monitor will be deployed in
-     * 
      */
     @Import(name="monitorSubnet")
       private final @Nullable Output<String> monitorSubnet;
@@ -84,7 +78,6 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -95,7 +88,6 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the SAP monitor resource.
-     * 
      */
     @Import(name="sapMonitorName")
       private final @Nullable Output<String> sapMonitorName;
@@ -106,7 +98,6 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

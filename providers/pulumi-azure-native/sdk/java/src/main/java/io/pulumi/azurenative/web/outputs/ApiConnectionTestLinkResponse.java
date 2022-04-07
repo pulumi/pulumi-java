@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ApiConnectionTestLinkResponse {
     /**
      * HTTP Method
-     * 
      */
     private final @Nullable String method;
     /**
      * Test link request URI
-     * 
      */
     private final @Nullable String requestUri;
 
@@ -32,14 +30,12 @@ public final class ApiConnectionTestLinkResponse {
 
     /**
      * HTTP Method
-     * 
     */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
     /**
      * Test link request URI
-     * 
     */
     public Optional<String> getRequestUri() {
         return Optional.ofNullable(this.requestUri);

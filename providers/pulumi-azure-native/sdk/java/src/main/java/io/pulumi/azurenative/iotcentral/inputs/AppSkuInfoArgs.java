@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Information about the SKU of the IoT Central application.
- * 
  */
 public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the SKU.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,AppSku>> name;

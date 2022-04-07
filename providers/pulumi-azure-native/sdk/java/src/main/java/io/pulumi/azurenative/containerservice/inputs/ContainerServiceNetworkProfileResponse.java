@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Profile of network configuration.
- * 
  */
 public final class ContainerServiceNetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
 
     /**
      * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
-     * 
      */
     @Import(name="dnsServiceIP")
       private final @Nullable String dnsServiceIP;
@@ -32,7 +30,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
 
     /**
      * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
-     * 
      */
     @Import(name="dockerBridgeCidr")
       private final @Nullable String dockerBridgeCidr;
@@ -43,7 +40,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
 
     /**
      * Profile of the cluster load balancer.
-     * 
      */
     @Import(name="loadBalancerProfile")
       private final @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
@@ -54,7 +50,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
 
     /**
      * The load balancer sku for the managed cluster.
-     * 
      */
     @Import(name="loadBalancerSku")
       private final @Nullable String loadBalancerSku;
@@ -65,7 +60,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
 
     /**
      * Network mode used for building Kubernetes network.
-     * 
      */
     @Import(name="networkMode")
       private final @Nullable String networkMode;
@@ -76,7 +70,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
 
     /**
      * Network plugin used for building Kubernetes network.
-     * 
      */
     @Import(name="networkPlugin")
       private final @Nullable String networkPlugin;
@@ -87,7 +80,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
 
     /**
      * Network policy used for building Kubernetes network.
-     * 
      */
     @Import(name="networkPolicy")
       private final @Nullable String networkPolicy;
@@ -98,7 +90,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
 
     /**
      * The outbound (egress) routing method.
-     * 
      */
     @Import(name="outboundType")
       private final @Nullable String outboundType;
@@ -109,7 +100,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
 
     /**
      * A CIDR notation IP range from which to assign pod IPs when kubenet is used.
-     * 
      */
     @Import(name="podCidr")
       private final @Nullable String podCidr;
@@ -120,7 +110,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
 
     /**
      * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
-     * 
      */
     @Import(name="serviceCidr")
       private final @Nullable String serviceCidr;

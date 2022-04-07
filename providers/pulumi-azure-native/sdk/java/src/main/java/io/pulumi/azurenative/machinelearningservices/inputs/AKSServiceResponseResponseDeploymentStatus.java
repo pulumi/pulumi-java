@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The deployment status.
- * 
  */
 public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
 
     /**
      * The number of available replicas.
-     * 
      */
     @Import(name="availableReplicas")
       private final @Nullable Integer availableReplicas;
@@ -32,7 +30,6 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
 
     /**
      * The desired number of replicas.
-     * 
      */
     @Import(name="desiredReplicas")
       private final @Nullable Integer desiredReplicas;
@@ -43,7 +40,6 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
 
     /**
      * The error details.
-     * 
      */
     @Import(name="error")
       private final @Nullable AKSReplicaStatusResponseError error;
@@ -54,7 +50,6 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
 
     /**
      * The number of updated replicas.
-     * 
      */
     @Import(name="updatedReplicas")
       private final @Nullable Integer updatedReplicas;

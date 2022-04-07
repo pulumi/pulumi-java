@@ -19,7 +19,79 @@ import javax.annotation.Nullable;
  * Service Registry resource
  * API Version: 2022-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ServiceRegistries_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceRegistry = new AzureNative.AppPlatform.ServiceRegistry("serviceRegistry", new AzureNative.AppPlatform.ServiceRegistryArgs
+ *         {
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *             ServiceRegistryName = "default",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewServiceRegistry(ctx, "serviceRegistry", &appplatform.ServiceRegistryArgs{
+ * 			ResourceGroupName:   pulumi.String("myResourceGroup"),
+ * 			ServiceName:         pulumi.String("myservice"),
+ * 			ServiceRegistryName: pulumi.String("default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serviceRegistry = new azure_native.appplatform.ServiceRegistry("serviceRegistry", {
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ *     serviceRegistryName: "default",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service_registry = azure_native.appplatform.ServiceRegistry("serviceRegistry",
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice",
+ *     service_registry_name="default")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +106,48 @@ import javax.annotation.Nullable;
 public class ServiceRegistry extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Service Registry properties payload
-     * 
      */
     @Export(name="properties", type=ServiceRegistryPropertiesResponse.class, parameters={})
     private Output<ServiceRegistryPropertiesResponse> properties;
 
     /**
      * @return Service Registry properties payload
-     * 
      */
     public Output<ServiceRegistryPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

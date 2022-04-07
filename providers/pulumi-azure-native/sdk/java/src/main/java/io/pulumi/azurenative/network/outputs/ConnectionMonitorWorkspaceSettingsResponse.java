@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ConnectionMonitorWorkspaceSettingsResponse {
     /**
      * Log analytics workspace resource ID.
-     * 
      */
     private final @Nullable String workspaceResourceId;
 
@@ -24,7 +23,6 @@ public final class ConnectionMonitorWorkspaceSettingsResponse {
 
     /**
      * Log analytics workspace resource ID.
-     * 
     */
     public Optional<String> getWorkspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);

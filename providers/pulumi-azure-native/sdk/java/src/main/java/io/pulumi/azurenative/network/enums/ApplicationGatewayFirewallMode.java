@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Web application firewall mode.
-     * 
      */
     @EnumType
     public enum ApplicationGatewayFirewallMode {

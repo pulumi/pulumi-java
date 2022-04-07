@@ -19,7 +19,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
@@ -30,7 +29,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
-     * 
      */
     @Import(name="enableAutomaticUpgrade")
       private final @Nullable Output<Boolean> enableAutomaticUpgrade;
@@ -41,7 +39,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -52,7 +49,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * The instance ID of the virtual machine.
-     * 
      */
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
@@ -63,7 +59,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * The virtual machine extension instance view.
-     * 
      */
     @Import(name="instanceView")
       private final @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView;
@@ -74,7 +69,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
@@ -85,7 +79,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
@@ -96,7 +89,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -107,7 +99,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * Json formatted public settings for the extension.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
@@ -118,7 +109,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -129,7 +119,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
@@ -140,7 +129,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * The name of the virtual machine extension.
-     * 
      */
     @Import(name="vmExtensionName")
       private final @Nullable Output<String> vmExtensionName;
@@ -151,7 +139,6 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
 
     /**
      * The name of the VM scale set.
-     * 
      */
     @Import(name="vmScaleSetName", required=true)
       private final Output<String> vmScaleSetName;

@@ -17,9 +17,9 @@ import javax.annotation.Nullable;
  * Each condition can be of one of the following types:
  * __Important__: Each type has its unique subset of properties. Properties from different types CANNOT exist in one condition.
  *    * __Leaf Condition -__ must contain 'field' and either 'equals' or 'containsAny'.
- *        _Please note, 'anyOf' should __not__ be set in a Leaf Condition._
+ *   _Please note, 'anyOf' should __not__ be set in a Leaf Condition._
  *   * __AnyOf Condition -__ must contain __only__ 'anyOf' (which is an array of Leaf Conditions).
- *       _Please note, 'field', 'equals' and 'containsAny' should __not__ be set in an AnyOf Condition._
+ *   _Please note, 'field', 'equals' and 'containsAny' should __not__ be set in an AnyOf Condition._
  * 
  */
 public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources.ResourceArgs {
@@ -28,7 +28,6 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
 
     /**
      * An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.
-     * 
      */
     @Import(name="anyOf")
       private final @Nullable Output<List<AlertRuleLeafConditionArgs>> anyOf;
@@ -39,7 +38,6 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
 
     /**
      * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
-     * 
      */
     @Import(name="containsAny")
       private final @Nullable Output<List<String>> containsAny;
@@ -50,7 +48,6 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
 
     /**
      * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
-     * 
      */
     @Import(name="equals")
       private final @Nullable Output<String> equals;
@@ -62,7 +59,6 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     /**
      * The name of the Activity Log event's field that this condition will examine.
      * The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
-     * 
      */
     @Import(name="field")
       private final @Nullable Output<String> field;

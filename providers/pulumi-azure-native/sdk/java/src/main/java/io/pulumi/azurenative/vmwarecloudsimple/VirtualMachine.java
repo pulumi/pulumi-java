@@ -25,7 +25,177 @@ import javax.annotation.Nullable;
  * Virtual machine model
  * API Version: 2019-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateVirtualMachine
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachine = new AzureNative.VMwareCloudSimple.VirtualMachine("virtualMachine", new AzureNative.VMwareCloudSimple.VirtualMachineArgs
+ *         {
+ *             AmountOfRam = 4096,
+ *             Disks = 
+ *             {
+ *                 new AzureNative.VMwareCloudSimple.Inputs.VirtualDiskArgs
+ *                 {
+ *                     ControllerId = "1000",
+ *                     IndependenceMode = "persistent",
+ *                     TotalSize = 10485760,
+ *                     VirtualDiskId = "2000",
+ *                 },
+ *             },
+ *             Location = "westus2",
+ *             Nics = 
+ *             {
+ *                 new AzureNative.VMwareCloudSimple.Inputs.VirtualNicArgs
+ *                 {
+ *                     Network = new AzureNative.VMwareCloudSimple.Inputs.VirtualNetworkArgs
+ *                     {
+ *                         Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
+ *                     },
+ *                     NicType = "E1000",
+ *                     PowerOnBoot = true,
+ *                     VirtualNicId = "4000",
+ *                 },
+ *             },
+ *             NumberOfCores = 2,
+ *             PrivateCloudId = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
+ *             ResourceGroupName = "myResourceGroup",
+ *             ResourcePool = new AzureNative.VMwareCloudSimple.Inputs.ResourcePoolArgs
+ *             {
+ *                 Id = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
+ *             },
+ *             TemplateId = "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
+ *             VirtualMachineName = "myVirtualMachine",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	vmwarecloudsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/vmwarecloudsimple"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := vmwarecloudsimple.NewVirtualMachine(ctx, "virtualMachine", &vmwarecloudsimple.VirtualMachineArgs{
+ * 			AmountOfRam: pulumi.Int(4096),
+ * 			Disks: []vmwarecloudsimple.VirtualDiskArgs{
+ * 				&vmwarecloudsimple.VirtualDiskArgs{
+ * 					ControllerId:     pulumi.String("1000"),
+ * 					IndependenceMode: "persistent",
+ * 					TotalSize:        pulumi.Int(10485760),
+ * 					VirtualDiskId:    pulumi.String("2000"),
+ * 				},
+ * 			},
+ * 			Location: pulumi.String("westus2"),
+ * 			Nics: []vmwarecloudsimple.VirtualNicArgs{
+ * 				&vmwarecloudsimple.VirtualNicArgs{
+ * 					Network: &vmwarecloudsimple.VirtualNetworkArgs{
+ * 						Id: pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19"),
+ * 					},
+ * 					NicType:      "E1000",
+ * 					PowerOnBoot:  pulumi.Bool(true),
+ * 					VirtualNicId: pulumi.String("4000"),
+ * 				},
+ * 			},
+ * 			NumberOfCores:     pulumi.Int(2),
+ * 			PrivateCloudId:    pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ResourcePool: &vmwarecloudsimple.ResourcePoolArgs{
+ * 				Id: pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26"),
+ * 			},
+ * 			TemplateId:         pulumi.String("/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34"),
+ * 			VirtualMachineName: pulumi.String("myVirtualMachine"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachine = new azure_native.vmwarecloudsimple.VirtualMachine("virtualMachine", {
+ *     amountOfRam: 4096,
+ *     disks: [{
+ *         controllerId: "1000",
+ *         independenceMode: "persistent",
+ *         totalSize: 10485760,
+ *         virtualDiskId: "2000",
+ *     }],
+ *     location: "westus2",
+ *     nics: [{
+ *         network: {
+ *             id: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
+ *         },
+ *         nicType: "E1000",
+ *         powerOnBoot: true,
+ *         virtualNicId: "4000",
+ *     }],
+ *     numberOfCores: 2,
+ *     privateCloudId: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
+ *     resourceGroupName: "myResourceGroup",
+ *     resourcePool: {
+ *         id: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
+ *     },
+ *     templateId: "/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
+ *     virtualMachineName: "myVirtualMachine",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine = azure_native.vmwarecloudsimple.VirtualMachine("virtualMachine",
+ *     amount_of_ram=4096,
+ *     disks=[azure_native.vmwarecloudsimple.VirtualDiskArgs(
+ *         controller_id="1000",
+ *         independence_mode="persistent",
+ *         total_size=10485760,
+ *         virtual_disk_id="2000",
+ *     )],
+ *     location="westus2",
+ *     nics=[azure_native.vmwarecloudsimple.VirtualNicArgs(
+ *         network=azure_native.vmwarecloudsimple.VirtualNetworkArgs(
+ *             id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualNetworks/dvportgroup-19",
+ *         ),
+ *         nic_type="E1000",
+ *         power_on_boot=True,
+ *         virtual_nic_id="4000",
+ *     )],
+ *     number_of_cores=2,
+ *     private_cloud_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud",
+ *     resource_group_name="myResourceGroup",
+ *     resource_pool=azure_native.vmwarecloudsimple.ResourcePoolArgs(
+ *         id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/resourcePools/resgroup-26",
+ *     ),
+ *     template_id="/subscriptions/{subscription-id}/providers/Microsoft.VMwareCloudSimple/locations/westus2/privateClouds/myPrivateCloud/virtualMachineTemplates/vm-34",
+ *     virtual_machine_name="myVirtualMachine")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,364 +210,312 @@ import javax.annotation.Nullable;
 public class VirtualMachine extends io.pulumi.resources.CustomResource {
     /**
      * The amount of memory
-     * 
      */
     @Export(name="amountOfRam", type=Integer.class, parameters={})
     private Output<Integer> amountOfRam;
 
     /**
      * @return The amount of memory
-     * 
      */
     public Output<Integer> getAmountOfRam() {
         return this.amountOfRam;
     }
     /**
      * The list of Virtual Disks' Controllers
-     * 
      */
     @Export(name="controllers", type=List.class, parameters={VirtualDiskControllerResponse.class})
     private Output<List<VirtualDiskControllerResponse>> controllers;
 
     /**
      * @return The list of Virtual Disks' Controllers
-     * 
      */
     public Output<List<VirtualDiskControllerResponse>> getControllers() {
         return this.controllers;
     }
     /**
      * Virtual machine properties
-     * 
      */
     @Export(name="customization", type=GuestOSCustomizationResponse.class, parameters={})
     private Output</* @Nullable */ GuestOSCustomizationResponse> customization;
 
     /**
      * @return Virtual machine properties
-     * 
      */
     public Output</* @Nullable */ GuestOSCustomizationResponse> getCustomization() {
         return this.customization;
     }
     /**
      * The list of Virtual Disks
-     * 
      */
     @Export(name="disks", type=List.class, parameters={VirtualDiskResponse.class})
     private Output</* @Nullable */ List<VirtualDiskResponse>> disks;
 
     /**
      * @return The list of Virtual Disks
-     * 
      */
     public Output</* @Nullable */ List<VirtualDiskResponse>> getDisks() {
         return this.disks;
     }
     /**
      * The DNS name of Virtual Machine in VCenter
-     * 
      */
     @Export(name="dnsname", type=String.class, parameters={})
     private Output<String> dnsname;
 
     /**
      * @return The DNS name of Virtual Machine in VCenter
-     * 
      */
     public Output<String> getDnsname() {
         return this.dnsname;
     }
     /**
      * Expose Guest OS or not
-     * 
      */
     @Export(name="exposeToGuestVM", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> exposeToGuestVM;
 
     /**
      * @return Expose Guest OS or not
-     * 
      */
     public Output</* @Nullable */ Boolean> getExposeToGuestVM() {
         return this.exposeToGuestVM;
     }
     /**
      * The path to virtual machine folder in VCenter
-     * 
      */
     @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
     /**
      * @return The path to virtual machine folder in VCenter
-     * 
      */
     public Output<String> getFolder() {
         return this.folder;
     }
     /**
      * The name of Guest OS
-     * 
      */
     @Export(name="guestOS", type=String.class, parameters={})
     private Output<String> guestOS;
 
     /**
      * @return The name of Guest OS
-     * 
      */
     public Output<String> getGuestOS() {
         return this.guestOS;
     }
     /**
      * The Guest OS type
-     * 
      */
     @Export(name="guestOSType", type=String.class, parameters={})
     private Output<String> guestOSType;
 
     /**
      * @return The Guest OS type
-     * 
      */
     public Output<String> getGuestOSType() {
         return this.guestOSType;
     }
     /**
      * Azure region
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Azure region
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * {virtualMachineName}
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return {virtualMachineName}
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The list of Virtual NICs
-     * 
      */
     @Export(name="nics", type=List.class, parameters={VirtualNicResponse.class})
     private Output</* @Nullable */ List<VirtualNicResponse>> nics;
 
     /**
      * @return The list of Virtual NICs
-     * 
      */
     public Output</* @Nullable */ List<VirtualNicResponse>> getNics() {
         return this.nics;
     }
     /**
      * The number of CPU cores
-     * 
      */
     @Export(name="numberOfCores", type=Integer.class, parameters={})
     private Output<Integer> numberOfCores;
 
     /**
      * @return The number of CPU cores
-     * 
      */
     public Output<Integer> getNumberOfCores() {
         return this.numberOfCores;
     }
     /**
      * Password for login. Deprecated - use customization property
-     * 
      */
     @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
      * @return Password for login. Deprecated - use customization property
-     * 
      */
     public Output</* @Nullable */ String> getPassword() {
         return this.password;
     }
     /**
      * Private Cloud Id
-     * 
      */
     @Export(name="privateCloudId", type=String.class, parameters={})
     private Output<String> privateCloudId;
 
     /**
      * @return Private Cloud Id
-     * 
      */
     public Output<String> getPrivateCloudId() {
         return this.privateCloudId;
     }
     /**
      * The provisioning status of the resource
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The public ip of Virtual Machine
-     * 
      */
     @Export(name="publicIP", type=String.class, parameters={})
     private Output<String> publicIP;
 
     /**
      * @return The public ip of Virtual Machine
-     * 
      */
     public Output<String> getPublicIP() {
         return this.publicIP;
     }
     /**
      * Virtual Machines Resource Pool
-     * 
      */
     @Export(name="resourcePool", type=ResourcePoolResponse.class, parameters={})
     private Output</* @Nullable */ ResourcePoolResponse> resourcePool;
 
     /**
      * @return Virtual Machines Resource Pool
-     * 
      */
     public Output</* @Nullable */ ResourcePoolResponse> getResourcePool() {
         return this.resourcePool;
     }
     /**
      * The status of Virtual machine
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The status of Virtual machine
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The list of tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The list of tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Virtual Machine Template Id
-     * 
      */
     @Export(name="templateId", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateId;
 
     /**
      * @return Virtual Machine Template Id
-     * 
      */
     public Output</* @Nullable */ String> getTemplateId() {
         return this.templateId;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return {resourceProviderNamespace}/{resourceType}
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Username for login. Deprecated - use customization property
-     * 
      */
     @Export(name="username", type=String.class, parameters={})
     private Output</* @Nullable */ String> username;
 
     /**
      * @return Username for login. Deprecated - use customization property
-     * 
      */
     public Output</* @Nullable */ String> getUsername() {
         return this.username;
     }
     /**
      * The list of Virtual VSphere Networks
-     * 
      */
     @Export(name="vSphereNetworks", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vSphereNetworks;
 
     /**
      * @return The list of Virtual VSphere Networks
-     * 
      */
     public Output</* @Nullable */ List<String>> getVSphereNetworks() {
         return this.vSphereNetworks;
     }
     /**
      * The internal id of Virtual Machine in VCenter
-     * 
      */
     @Export(name="vmId", type=String.class, parameters={})
     private Output<String> vmId;
 
     /**
      * @return The internal id of Virtual Machine in VCenter
-     * 
      */
     public Output<String> getVmId() {
         return this.vmId;
     }
     /**
      * VMware tools version
-     * 
      */
     @Export(name="vmwaretools", type=String.class, parameters={})
     private Output<String> vmwaretools;
 
     /**
      * @return VMware tools version
-     * 
      */
     public Output<String> getVmwaretools() {
         return this.vmwaretools;

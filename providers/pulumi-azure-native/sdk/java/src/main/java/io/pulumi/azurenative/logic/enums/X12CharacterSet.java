@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The X12 character set.
-     * 
      */
     @EnumType
     public enum X12CharacterSet {

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The authentication info when authType is servicePrincipal secret
- * 
  */
 public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
     /**
      * The authentication type.
      * Expected value is 'servicePrincipalSecret'.
-     * 
      */
     @Import(name="authType", required=true)
       private final Output<String> authType;
@@ -31,7 +29,6 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
 
     /**
      * ServicePrincipal application clientId for servicePrincipal auth.
-     * 
      */
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
@@ -42,7 +39,6 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
 
     /**
      * Principal Id for servicePrincipal auth.
-     * 
      */
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
@@ -53,7 +49,6 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
 
     /**
      * Secret for servicePrincipal auth.
-     * 
      */
     @Import(name="secret", required=true)
       private final Output<String> secret;

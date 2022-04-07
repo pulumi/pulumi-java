@@ -14,7 +14,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the parent resource (namely, either, the topic name or domain name).
-     * 
      */
     @Import(name="parentName", required=true)
       private final String parentName;
@@ -25,7 +24,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The type of the parent resource. This can be either \'topics\' or \'domains\'.
-     * 
      */
     @Import(name="parentType", required=true)
       private final String parentType;
@@ -36,7 +34,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the private endpoint connection connection.
-     * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
@@ -47,7 +44,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

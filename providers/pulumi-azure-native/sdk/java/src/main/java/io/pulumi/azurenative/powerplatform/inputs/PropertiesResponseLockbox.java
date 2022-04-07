@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings concerning lockbox.
- * 
  */
 public final class PropertiesResponseLockbox extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PropertiesResponseLockbox extends io.pulumi.resources.InvokeA
 
     /**
      * lockbox configuration
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network default admin rule.
- * 
  */
 public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * Indicates the access allowed for this particular rule
-     * 
      */
     @Import(name="access", required=true)
       private final String access;
@@ -36,7 +34,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * Deployment time string.
-     * 
      */
     @Import(name="commitTime")
       private final @Nullable String commitTime;
@@ -47,7 +44,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * A description of the security admin configuration.
-     * 
      */
     @Import(name="configurationDescription")
       private final @Nullable String configurationDescription;
@@ -58,7 +54,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * A display name of the security admin configuration.
-     * 
      */
     @Import(name="configurationDisplayName")
       private final @Nullable String configurationDisplayName;
@@ -69,7 +64,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * A description for this rule. Restricted to 140 chars.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -80,7 +74,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * The destination port ranges.
-     * 
      */
     @Import(name="destinationPortRanges", required=true)
       private final List<String> destinationPortRanges;
@@ -91,7 +84,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
-     * 
      */
     @Import(name="destinations", required=true)
       private final List<AddressPrefixItemResponse> destinations;
@@ -102,7 +94,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * Indicates if the traffic matched against the rule in inbound or outbound.
-     * 
      */
     @Import(name="direction", required=true)
       private final String direction;
@@ -113,7 +104,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * A friendly name for the rule.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -124,7 +114,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * Default rule flag.
-     * 
      */
     @Import(name="flag")
       private final @Nullable String flag;
@@ -135,7 +124,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -147,7 +135,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
     /**
      * Whether the rule is custom or default.
      * Expected value is 'Default'.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -158,7 +145,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-     * 
      */
     @Import(name="priority", required=true)
       private final Integer priority;
@@ -169,7 +155,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * Network protocol this rule applies to.
-     * 
      */
     @Import(name="protocol", required=true)
       private final String protocol;
@@ -180,7 +165,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -191,7 +175,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * Deployment region.
-     * 
      */
     @Import(name="region")
       private final @Nullable String region;
@@ -202,7 +185,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * Groups for rule collection
-     * 
      */
     @Import(name="ruleCollectionAppliesToGroups")
       private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
@@ -213,7 +195,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * A description of the rule collection.
-     * 
      */
     @Import(name="ruleCollectionDescription")
       private final @Nullable String ruleCollectionDescription;
@@ -224,7 +205,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * A display name of the rule collection.
-     * 
      */
     @Import(name="ruleCollectionDisplayName")
       private final @Nullable String ruleCollectionDisplayName;
@@ -235,7 +215,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * Effective configuration groups.
-     * 
      */
     @Import(name="ruleGroups")
       private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
@@ -246,7 +225,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * The source port ranges.
-     * 
      */
     @Import(name="sourcePortRanges", required=true)
       private final List<String> sourcePortRanges;
@@ -257,7 +235,6 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends io.pulumi.reso
 
     /**
      * The CIDR or source IP ranges.
-     * 
      */
     @Import(name="sources", required=true)
       private final List<AddressPrefixItemResponse> sources;

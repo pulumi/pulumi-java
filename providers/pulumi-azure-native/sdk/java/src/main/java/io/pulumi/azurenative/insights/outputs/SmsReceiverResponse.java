@@ -11,22 +11,18 @@ import java.util.Objects;
 public final class SmsReceiverResponse {
     /**
      * The country code of the SMS receiver.
-     * 
      */
     private final String countryCode;
     /**
      * The name of the SMS receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     private final String name;
     /**
      * The phone number of the SMS receiver.
-     * 
      */
     private final String phoneNumber;
     /**
      * The status of the receiver.
-     * 
      */
     private final String status;
 
@@ -44,28 +40,24 @@ public final class SmsReceiverResponse {
 
     /**
      * The country code of the SMS receiver.
-     * 
     */
     public String getCountryCode() {
         return this.countryCode;
     }
     /**
      * The name of the SMS receiver. Names must be unique across all receivers within an action group.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The phone number of the SMS receiver.
-     * 
     */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
     /**
      * The status of the receiver.
-     * 
     */
     public String getStatus() {
         return this.status;

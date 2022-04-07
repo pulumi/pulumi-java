@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The location of azure blob dataset.
- * 
  */
 public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
 
     /**
      * Specify the container of azure blob. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="container")
       private final @Nullable Output<Object> container;
@@ -32,7 +30,6 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
 
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
@@ -43,7 +40,6 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
 
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
@@ -55,7 +51,6 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
     /**
      * Type of dataset storage location.
      * Expected value is 'AzureBlobStorageLocation'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

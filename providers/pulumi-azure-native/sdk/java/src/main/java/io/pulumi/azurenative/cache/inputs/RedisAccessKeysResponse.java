@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Redis cache access keys.
- * 
  */
 public final class RedisAccessKeysResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class RedisAccessKeysResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The current primary key that clients can use to authenticate with Redis cache.
-     * 
      */
     @Import(name="primaryKey", required=true)
       private final String primaryKey;
@@ -29,7 +27,6 @@ public final class RedisAccessKeysResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The current secondary key that clients can use to authenticate with Redis cache.
-     * 
      */
     @Import(name="secondaryKey", required=true)
       private final String secondaryKey;

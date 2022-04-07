@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional information of the DPMContainer.
- * 
  */
 public final class DPMContainerExtendedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DPMContainerExtendedInfoResponse extends io.pulumi.resources.
 
     /**
      * Last refresh time of the DPMContainer.
-     * 
      */
     @Import(name="lastRefreshedAt")
       private final @Nullable String lastRefreshedAt;

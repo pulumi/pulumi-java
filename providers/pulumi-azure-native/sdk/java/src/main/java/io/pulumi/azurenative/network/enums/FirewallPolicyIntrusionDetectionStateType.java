@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Intrusion detection general state.
-     * 
      */
     @EnumType
     public enum FirewallPolicyIntrusionDetectionStateType {

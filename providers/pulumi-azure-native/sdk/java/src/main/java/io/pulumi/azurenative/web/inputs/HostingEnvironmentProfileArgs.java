@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specification for an App Service Environment to use for this resource.
- * 
  */
 public final class HostingEnvironmentProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HostingEnvironmentProfileArgs extends io.pulumi.resources.Res
 
     /**
      * Resource ID of the App Service Environment.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

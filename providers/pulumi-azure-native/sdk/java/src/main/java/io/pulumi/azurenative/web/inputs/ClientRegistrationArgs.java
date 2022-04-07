@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the app registration for providers that have client ids and client secrets
- * 
  */
 public final class ClientRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ClientRegistrationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The Client ID of the app used for login.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
@@ -31,7 +29,6 @@ public final class ClientRegistrationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The app setting name that contains the client secret.
-     * 
      */
     @Import(name="clientSecretSettingName")
       private final @Nullable Output<String> clientSecretSettingName;

@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * ExpressRoute Circuit Authorization
  * API Version: 2020-03-20.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Authorizations_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var authorization = new AzureNative.AVS.Authorization("authorization", new AzureNative.AVS.AuthorizationArgs
+ *         {
+ *             AuthorizationName = "authorization1",
+ *             PrivateCloudName = "cloud1",
+ *             ResourceGroupName = "group1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewAuthorization(ctx, "authorization", &avs.AuthorizationArgs{
+ * 			AuthorizationName: pulumi.String("authorization1"),
+ * 			PrivateCloudName:  pulumi.String("cloud1"),
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const authorization = new azure_native.avs.Authorization("authorization", {
+ *     authorizationName: "authorization1",
+ *     privateCloudName: "cloud1",
+ *     resourceGroupName: "group1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * authorization = azure_native.avs.Authorization("authorization",
+ *     authorization_name="authorization1",
+ *     private_cloud_name="cloud1",
+ *     resource_group_name="group1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,70 +104,60 @@ import javax.annotation.Nullable;
 public class Authorization extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the ExpressRoute Circuit Authorization
-     * 
      */
     @Export(name="expressRouteAuthorizationId", type=String.class, parameters={})
     private Output<String> expressRouteAuthorizationId;
 
     /**
      * @return The ID of the ExpressRoute Circuit Authorization
-     * 
      */
     public Output<String> getExpressRouteAuthorizationId() {
         return this.expressRouteAuthorizationId;
     }
     /**
      * The key of the ExpressRoute Circuit Authorization
-     * 
      */
     @Export(name="expressRouteAuthorizationKey", type=String.class, parameters={})
     private Output<String> expressRouteAuthorizationKey;
 
     /**
      * @return The key of the ExpressRoute Circuit Authorization
-     * 
      */
     public Output<String> getExpressRouteAuthorizationKey() {
         return this.expressRouteAuthorizationKey;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The state of the  ExpressRoute Circuit Authorization provisioning
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The state of the  ExpressRoute Circuit Authorization provisioning
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * controller details
- * 
  */
 public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * controller arm resource id
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

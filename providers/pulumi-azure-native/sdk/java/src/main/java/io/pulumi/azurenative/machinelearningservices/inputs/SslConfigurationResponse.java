@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The ssl configuration for scoring
- * 
  */
 public final class SslConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Cert data
-     * 
      */
     @Import(name="cert")
       private final @Nullable String cert;
@@ -31,7 +29,6 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * CNAME of the cert
-     * 
      */
     @Import(name="cname")
       private final @Nullable String cname;
@@ -42,7 +39,6 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Key data
-     * 
      */
     @Import(name="key")
       private final @Nullable String key;
@@ -53,7 +49,6 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Enable or disable ssl for scoring
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The storage profile of the user settings.
- * 
  */
 public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Size of file share
-     * 
      */
     @Import(name="diskSizeInGB")
       private final @Nullable Integer diskSizeInGB;
@@ -32,7 +30,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
-     * 
      */
     @Import(name="fileShareName")
       private final @Nullable String fileShareName;
@@ -43,7 +40,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Full resource ID of storage account.
-     * 
      */
     @Import(name="storageAccountResourceId")
       private final @Nullable String storageAccountResourceId;

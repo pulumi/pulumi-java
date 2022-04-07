@@ -14,7 +14,6 @@ public final class ListAccountKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Account Name
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class ListAccountKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

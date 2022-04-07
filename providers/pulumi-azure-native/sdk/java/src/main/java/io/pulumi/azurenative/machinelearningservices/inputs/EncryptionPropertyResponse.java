@@ -18,7 +18,6 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
 
     /**
      * The identity that will be used to access the key vault for encryption at rest.
-     * 
      */
     @Import(name="identity")
       private final @Nullable IdentityForCmkResponse identity;
@@ -29,7 +28,6 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
 
     /**
      * Customer Key vault properties.
-     * 
      */
     @Import(name="keyVaultProperties", required=true)
       private final KeyVaultPropertiesResponse keyVaultProperties;
@@ -40,7 +38,6 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
 
     /**
      * Indicates whether or not the encryption is enabled for the workspace.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

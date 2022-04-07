@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Elastic Resource Properties.
- * 
  */
 public final class ElasticPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ElasticPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Details of the elastic cloud deployment.
-     * 
      */
     @Import(name="elasticCloudDeployment")
       private final @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment;
@@ -32,7 +30,6 @@ public final class ElasticPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Details of the user's elastic account.
-     * 
      */
     @Import(name="elasticCloudUser")
       private final @Nullable ElasticCloudUserResponse elasticCloudUser;

@@ -23,7 +23,230 @@ import javax.annotation.Nullable;
  * The Flux Configuration object returned in Get & Put response.
  * API Version: 2021-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Flux Configuration
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fluxConfiguration = new AzureNative.KubernetesConfiguration.FluxConfiguration("fluxConfiguration", new AzureNative.KubernetesConfiguration.FluxConfigurationArgs
+ *         {
+ *             ClusterName = "clusterName1",
+ *             ClusterResourceName = "connectedClusters",
+ *             ClusterRp = "Microsoft.Kubernetes",
+ *             FluxConfigurationName = "srs-fluxconfig",
+ *             GitRepository = new AzureNative.KubernetesConfiguration.Inputs.GitRepositoryDefinitionArgs
+ *             {
+ *                 HttpsCAFile = "ZXhhbXBsZWNlcnRpZmljYXRl",
+ *                 RepositoryRef = new AzureNative.KubernetesConfiguration.Inputs.RepositoryRefDefinitionArgs
+ *                 {
+ *                     Branch = "master",
+ *                 },
+ *                 SyncIntervalInSeconds = 600,
+ *                 TimeoutInSeconds = 600,
+ *                 Url = "https://github.com/Azure/arc-k8s-demo",
+ *             },
+ *             Kustomizations = 
+ *             {
+ *                 { "srs-kustomization1", new AzureNative.KubernetesConfiguration.Inputs.KustomizationDefinitionArgs
+ *                 {
+ *                     DependsOn = {},
+ *                     Path = "./test/path",
+ *                     SyncIntervalInSeconds = 600,
+ *                     TimeoutInSeconds = 600,
+ *                     Validation = "none",
+ *                 } },
+ *                 { "srs-kustomization2", new AzureNative.KubernetesConfiguration.Inputs.KustomizationDefinitionArgs
+ *                 {
+ *                     DependsOn = 
+ *                     {
+ *                         new AzureNative.KubernetesConfiguration.Inputs.DependsOnDefinitionArgs
+ *                         {
+ *                             KustomizationName = "srs-kustomization1",
+ *                         },
+ *                     },
+ *                     Path = "./other/test/path",
+ *                     Prune = false,
+ *                     RetryIntervalInSeconds = 600,
+ *                     SyncIntervalInSeconds = 600,
+ *                     TimeoutInSeconds = 600,
+ *                     Validation = "none",
+ *                 } },
+ *             },
+ *             Namespace = "srs-namespace",
+ *             ResourceGroupName = "rg1",
+ *             Scope = "cluster",
+ *             SourceKind = "GitRepository",
+ *             Suspend = false,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	kubernetesconfiguration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kubernetesconfiguration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kubernetesconfiguration.NewFluxConfiguration(ctx, "fluxConfiguration", &kubernetesconfiguration.FluxConfigurationArgs{
+ * 			ClusterName:           pulumi.String("clusterName1"),
+ * 			ClusterResourceName:   pulumi.String("connectedClusters"),
+ * 			ClusterRp:             pulumi.String("Microsoft.Kubernetes"),
+ * 			FluxConfigurationName: pulumi.String("srs-fluxconfig"),
+ * 			GitRepository: &kubernetesconfiguration.GitRepositoryDefinitionArgs{
+ * 				HttpsCAFile: pulumi.String("ZXhhbXBsZWNlcnRpZmljYXRl"),
+ * 				RepositoryRef: &kubernetesconfiguration.RepositoryRefDefinitionArgs{
+ * 					Branch: pulumi.String("master"),
+ * 				},
+ * 				SyncIntervalInSeconds: pulumi.Float64(600),
+ * 				TimeoutInSeconds:      pulumi.Float64(600),
+ * 				Url:                   pulumi.String("https://github.com/Azure/arc-k8s-demo"),
+ * 			},
+ * 			Kustomizations: kubernetesconfiguration.KustomizationDefinitionMap{
+ * 				"srs-kustomization1": &kubernetesconfiguration.KustomizationDefinitionArgs{
+ * 					DependsOn:             kubernetesconfiguration.DependsOnDefinitionArray{},
+ * 					Path:                  pulumi.String("./test/path"),
+ * 					SyncIntervalInSeconds: pulumi.Float64(600),
+ * 					TimeoutInSeconds:      pulumi.Float64(600),
+ * 					Validation:            pulumi.String("none"),
+ * 				},
+ * 				"srs-kustomization2": &kubernetesconfiguration.KustomizationDefinitionArgs{
+ * 					DependsOn: kubernetesconfiguration.DependsOnDefinitionArray{
+ * 						&kubernetesconfiguration.DependsOnDefinitionArgs{
+ * 							KustomizationName: pulumi.String("srs-kustomization1"),
+ * 						},
+ * 					},
+ * 					Path:                   pulumi.String("./other/test/path"),
+ * 					Prune:                  pulumi.Bool(false),
+ * 					RetryIntervalInSeconds: pulumi.Float64(600),
+ * 					SyncIntervalInSeconds:  pulumi.Float64(600),
+ * 					TimeoutInSeconds:       pulumi.Float64(600),
+ * 					Validation:             pulumi.String("none"),
+ * 				},
+ * 			},
+ * 			Namespace:         pulumi.String("srs-namespace"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Scope:             pulumi.String("cluster"),
+ * 			SourceKind:        pulumi.String("GitRepository"),
+ * 			Suspend:           pulumi.Bool(false),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fluxConfiguration = new azure_native.kubernetesconfiguration.FluxConfiguration("fluxConfiguration", {
+ *     clusterName: "clusterName1",
+ *     clusterResourceName: "connectedClusters",
+ *     clusterRp: "Microsoft.Kubernetes",
+ *     fluxConfigurationName: "srs-fluxconfig",
+ *     gitRepository: {
+ *         httpsCAFile: "ZXhhbXBsZWNlcnRpZmljYXRl",
+ *         repositoryRef: {
+ *             branch: "master",
+ *         },
+ *         syncIntervalInSeconds: 600,
+ *         timeoutInSeconds: 600,
+ *         url: "https://github.com/Azure/arc-k8s-demo",
+ *     },
+ *     kustomizations: {
+ *         "srs-kustomization1": {
+ *             dependsOn: [],
+ *             path: "./test/path",
+ *             syncIntervalInSeconds: 600,
+ *             timeoutInSeconds: 600,
+ *             validation: "none",
+ *         },
+ *         "srs-kustomization2": {
+ *             dependsOn: [{
+ *                 kustomizationName: "srs-kustomization1",
+ *             }],
+ *             path: "./other/test/path",
+ *             prune: false,
+ *             retryIntervalInSeconds: 600,
+ *             syncIntervalInSeconds: 600,
+ *             timeoutInSeconds: 600,
+ *             validation: "none",
+ *         },
+ *     },
+ *     namespace: "srs-namespace",
+ *     resourceGroupName: "rg1",
+ *     scope: "cluster",
+ *     sourceKind: "GitRepository",
+ *     suspend: false,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * flux_configuration = azure_native.kubernetesconfiguration.FluxConfiguration("fluxConfiguration",
+ *     cluster_name="clusterName1",
+ *     cluster_resource_name="connectedClusters",
+ *     cluster_rp="Microsoft.Kubernetes",
+ *     flux_configuration_name="srs-fluxconfig",
+ *     git_repository=azure_native.kubernetesconfiguration.GitRepositoryDefinitionArgs(
+ *         https_ca_file="ZXhhbXBsZWNlcnRpZmljYXRl",
+ *         repository_ref=azure_native.kubernetesconfiguration.RepositoryRefDefinitionArgs(
+ *             branch="master",
+ *         ),
+ *         sync_interval_in_seconds=600,
+ *         timeout_in_seconds=600,
+ *         url="https://github.com/Azure/arc-k8s-demo",
+ *     ),
+ *     kustomizations={
+ *         "srs-kustomization1": azure_native.kubernetesconfiguration.KustomizationDefinitionArgs(
+ *             depends_on=[],
+ *             path="./test/path",
+ *             sync_interval_in_seconds=600,
+ *             timeout_in_seconds=600,
+ *             validation="none",
+ *         ),
+ *         "srs-kustomization2": azure_native.kubernetesconfiguration.KustomizationDefinitionArgs(
+ *             depends_on=[azure_native.kubernetesconfiguration.DependsOnDefinitionArgs(
+ *                 kustomization_name="srs-kustomization1",
+ *             )],
+ *             path="./other/test/path",
+ *             prune=False,
+ *             retry_interval_in_seconds=600,
+ *             sync_interval_in_seconds=600,
+ *             timeout_in_seconds=600,
+ *             validation="none",
+ *         ),
+ *     },
+ *     namespace="srs-namespace",
+ *     resource_group_name="rg1",
+ *     scope="cluster",
+ *     source_kind="GitRepository",
+ *     suspend=False)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,238 +261,204 @@ import javax.annotation.Nullable;
 public class FluxConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
-     * 
      */
     @Export(name="complianceState", type=String.class, parameters={})
     private Output<String> complianceState;
 
     /**
      * @return Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
-     * 
      */
     public Output<String> getComplianceState() {
         return this.complianceState;
     }
     /**
      * Key-value pairs of protected configuration settings for the configuration
-     * 
      */
     @Export(name="configurationProtectedSettings", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> configurationProtectedSettings;
 
     /**
      * @return Key-value pairs of protected configuration settings for the configuration
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getConfigurationProtectedSettings() {
         return this.configurationProtectedSettings;
     }
     /**
      * Error message returned to the user in the case of provisioning failure.
-     * 
      */
     @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     /**
      * @return Error message returned to the user in the case of provisioning failure.
-     * 
      */
     public Output<String> getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * Parameters to reconcile to the GitRepository source kind type.
-     * 
      */
     @Export(name="gitRepository", type=GitRepositoryDefinitionResponse.class, parameters={})
     private Output</* @Nullable */ GitRepositoryDefinitionResponse> gitRepository;
 
     /**
      * @return Parameters to reconcile to the GitRepository source kind type.
-     * 
      */
     public Output</* @Nullable */ GitRepositoryDefinitionResponse> getGitRepository() {
         return this.gitRepository;
     }
     /**
      * Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
-     * 
      */
     @Export(name="kustomizations", type=Map.class, parameters={String.class, KustomizationDefinitionResponse.class})
     private Output</* @Nullable */ Map<String,KustomizationDefinitionResponse>> kustomizations;
 
     /**
      * @return Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
-     * 
      */
     public Output</* @Nullable */ Map<String,KustomizationDefinitionResponse>> getKustomizations() {
         return this.kustomizations;
     }
     /**
      * Datetime the fluxConfiguration last synced its source on the cluster.
-     * 
      */
     @Export(name="lastSourceSyncedAt", type=String.class, parameters={})
     private Output<String> lastSourceSyncedAt;
 
     /**
      * @return Datetime the fluxConfiguration last synced its source on the cluster.
-     * 
      */
     public Output<String> getLastSourceSyncedAt() {
         return this.lastSourceSyncedAt;
     }
     /**
      * Branch and SHA of the last source commit synced with the cluster.
-     * 
      */
     @Export(name="lastSourceSyncedCommitId", type=String.class, parameters={})
     private Output<String> lastSourceSyncedCommitId;
 
     /**
      * @return Branch and SHA of the last source commit synced with the cluster.
-     * 
      */
     public Output<String> getLastSourceSyncedCommitId() {
         return this.lastSourceSyncedCommitId;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
-     * 
      */
     @Export(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
     /**
      * @return The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
-     * 
      */
     public Output</* @Nullable */ String> getNamespace() {
         return this.namespace;
     }
     /**
      * Status of the creation of the fluxConfiguration.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Status of the creation of the fluxConfiguration.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
-     * 
      */
     @Export(name="repositoryPublicKey", type=String.class, parameters={})
     private Output<String> repositoryPublicKey;
 
     /**
      * @return Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
-     * 
      */
     public Output<String> getRepositoryPublicKey() {
         return this.repositoryPublicKey;
     }
     /**
      * Scope at which the operator will be installed.
-     * 
      */
     @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
      * @return Scope at which the operator will be installed.
-     * 
      */
     public Output</* @Nullable */ String> getScope() {
         return this.scope;
     }
     /**
      * Source Kind to pull the configuration data from.
-     * 
      */
     @Export(name="sourceKind", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceKind;
 
     /**
      * @return Source Kind to pull the configuration data from.
-     * 
      */
     public Output</* @Nullable */ String> getSourceKind() {
         return this.sourceKind;
     }
     /**
      * Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
-     * 
      */
     @Export(name="statuses", type=List.class, parameters={ObjectStatusDefinitionResponse.class})
     private Output<List<ObjectStatusDefinitionResponse>> statuses;
 
     /**
      * @return Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
-     * 
      */
     public Output<List<ObjectStatusDefinitionResponse>> getStatuses() {
         return this.statuses;
     }
     /**
      * Whether this configuration should suspend its reconciliation of its kustomizations and sources.
-     * 
      */
     @Export(name="suspend", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> suspend;
 
     /**
      * @return Whether this configuration should suspend its reconciliation of its kustomizations and sources.
-     * 
      */
     public Output</* @Nullable */ Boolean> getSuspend() {
         return this.suspend;
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

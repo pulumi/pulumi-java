@@ -22,7 +22,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Array of source control content types.
-     * 
      */
     @Import(name="contentTypes", required=true)
       private final Output<List<Either<String,ContentType>>> contentTypes;
@@ -33,7 +32,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of resource creation (UTC).
-     * 
      */
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
@@ -44,7 +42,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity that created the resource.
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
@@ -55,7 +52,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity that created the resource.
-     * 
      */
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
@@ -66,7 +62,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the source control
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -77,7 +72,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the source control
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -88,7 +82,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The id (a Guid) of the source control
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -99,7 +92,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
@@ -110,7 +102,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity that last modified the resource.
-     * 
      */
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
@@ -121,7 +112,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity that last modified the resource.
-     * 
      */
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
@@ -132,7 +122,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
@@ -143,7 +132,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The repository type of the source control
-     * 
      */
     @Import(name="repoType", required=true)
       private final Output<Either<String,RepoType>> repoType;
@@ -154,7 +142,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Repository metadata.
-     * 
      */
     @Import(name="repository", required=true)
       private final Output<RepositoryArgs> repository;
@@ -165,7 +152,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -176,7 +162,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source control Id
-     * 
      */
     @Import(name="sourceControlId")
       private final @Nullable Output<String> sourceControlId;
@@ -187,7 +172,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

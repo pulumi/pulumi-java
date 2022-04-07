@@ -16,7 +16,6 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
 
     /**
      * The expand expression to apply on the operation.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
 
     /**
      * The name of the gallery Application Definition in which the Application Version resides.
-     * 
      */
     @Import(name="galleryApplicationName", required=true)
       private final String galleryApplicationName;
@@ -38,7 +36,6 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
 
     /**
      * The name of the gallery Application Version to be retrieved.
-     * 
      */
     @Import(name="galleryApplicationVersionName", required=true)
       private final String galleryApplicationVersionName;
@@ -49,7 +46,6 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
 
     /**
      * The name of the Shared Application Gallery in which the Application Definition resides.
-     * 
      */
     @Import(name="galleryName", required=true)
       private final String galleryName;
@@ -60,7 +56,6 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

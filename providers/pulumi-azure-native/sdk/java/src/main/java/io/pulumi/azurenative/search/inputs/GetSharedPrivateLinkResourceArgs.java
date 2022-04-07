@@ -14,7 +14,6 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
 
     /**
      * The name of the Azure Cognitive Search service associated with the specified resource group.
-     * 
      */
     @Import(name="searchServiceName", required=true)
       private final String searchServiceName;
@@ -36,7 +34,6 @@ public final class GetSharedPrivateLinkResourceArgs extends io.pulumi.resources.
 
     /**
      * The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.
-     * 
      */
     @Import(name="sharedPrivateLinkResourceName", required=true)
       private final String sharedPrivateLinkResourceName;

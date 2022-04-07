@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class LogicAppReceiverResponse {
     /**
      * The callback url where http request sent to.
-     * 
      */
     private final String callbackUrl;
     /**
      * The name of the logic app receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     private final String name;
     /**
      * The azure resource id of the logic app receiver.
-     * 
      */
     private final String resourceId;
     /**
      * Indicates whether to use common alert schema.
-     * 
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
@@ -47,28 +43,24 @@ public final class LogicAppReceiverResponse {
 
     /**
      * The callback url where http request sent to.
-     * 
     */
     public String getCallbackUrl() {
         return this.callbackUrl;
     }
     /**
      * The name of the logic app receiver. Names must be unique across all receivers within an action group.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The azure resource id of the logic app receiver.
-     * 
     */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * Indicates whether to use common alert schema.
-     * 
     */
     public Optional<Boolean> getUseCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);

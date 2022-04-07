@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration of the run playbook automation rule action
- * 
  */
 public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
 
     /**
      * The resource id of the playbook resource
-     * 
      */
     @Import(name="logicAppResourceId")
       private final @Nullable Output<String> logicAppResourceId;
@@ -31,7 +29,6 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
 
     /**
      * The tenant id of the playbook resource
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

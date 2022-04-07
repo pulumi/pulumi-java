@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Backup description.
- * 
  */
 public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Id of the backup.
-     * 
      */
     @Import(name="backupId", required=true)
       private final Integer backupId;
@@ -36,7 +34,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the blob which contains data for this backup.
-     * 
      */
     @Import(name="blobName", required=true)
       private final String blobName;
@@ -47,7 +44,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
-     * 
      */
     @Import(name="correlationId", required=true)
       private final String correlationId;
@@ -58,7 +54,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Timestamp of the backup creation.
-     * 
      */
     @Import(name="created", required=true)
       private final String created;
@@ -69,7 +64,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of databases included in the backup.
-     * 
      */
     @Import(name="databases", required=true)
       private final List<DatabaseBackupSettingResponse> databases;
@@ -80,7 +74,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Timestamp when this backup finished.
-     * 
      */
     @Import(name="finishedTimeStamp", required=true)
       private final String finishedTimeStamp;
@@ -91,7 +84,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -102,7 +94,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -113,7 +104,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Timestamp of a last restore operation which used this backup.
-     * 
      */
     @Import(name="lastRestoreTimeStamp", required=true)
       private final String lastRestoreTimeStamp;
@@ -124,7 +114,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Details regarding this backup. Might contain an error message.
-     * 
      */
     @Import(name="log", required=true)
       private final String log;
@@ -135,7 +124,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource Name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -146,7 +134,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * True if this backup has been created due to a schedule being triggered.
-     * 
      */
     @Import(name="scheduled", required=true)
       private final Boolean scheduled;
@@ -157,7 +144,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Size of the backup in bytes.
-     * 
      */
     @Import(name="sizeInBytes", required=true)
       private final Double sizeInBytes;
@@ -168,7 +154,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Backup status.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -179,7 +164,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SAS URL for the storage account container which contains this backup.
-     * 
      */
     @Import(name="storageAccountUrl", required=true)
       private final String storageAccountUrl;
@@ -190,7 +174,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -201,7 +184,6 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Size of the original web app which has been backed up.
-     * 
      */
     @Import(name="websiteSizeInBytes", required=true)
       private final Double websiteSizeInBytes;

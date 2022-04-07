@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Connection string for ingesting security data and logs
- * 
  */
 public final class IngestionConnectionStringResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IngestionConnectionStringResponse extends io.pulumi.resources
 
     /**
      * The region where ingested logs and data resides
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -29,7 +27,6 @@ public final class IngestionConnectionStringResponse extends io.pulumi.resources
 
     /**
      * Connection string value
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

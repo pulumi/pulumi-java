@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines the origin group override action for the delivery rule.
- * 
  */
 public final class OriginGroupOverrideActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OriginGroupOverrideActionResponse extends io.pulumi.resources
     /**
      * The name of the action for the delivery rule.
      * Expected value is 'OriginGroupOverride'.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class OriginGroupOverrideActionResponse extends io.pulumi.resources
 
     /**
      * Defines the parameters for the action.
-     * 
      */
     @Import(name="parameters", required=true)
       private final OriginGroupOverrideActionParametersResponse parameters;

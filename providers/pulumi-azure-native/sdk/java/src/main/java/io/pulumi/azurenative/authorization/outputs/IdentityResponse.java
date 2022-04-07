@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class IdentityResponse {
     /**
      * The principal ID of the resource identity.
-     * 
      */
     private final String principalId;
     /**
      * The tenant ID of the resource identity.
-     * 
      */
     private final String tenantId;
     /**
      * The identity type. This is the only required field when adding a system assigned identity to a resource.
-     * 
      */
     private final @Nullable String type;
 
@@ -39,21 +36,18 @@ public final class IdentityResponse {
 
     /**
      * The principal ID of the resource identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of the resource identity.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The identity type. This is the only required field when adding a system assigned identity to a resource.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

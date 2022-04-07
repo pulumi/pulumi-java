@@ -20,7 +20,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The reference to the artifact source resource Id where the payload is located.
-     * 
      */
     @Import(name="artifactSourceId")
       private final @Nullable Output<String> artifactSourceId;
@@ -31,7 +30,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the build being deployed.
-     * 
      */
     @Import(name="buildVersion", required=true)
       private final Output<String> buildVersion;
@@ -42,7 +40,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity for the resource.
-     * 
      */
     @Import(name="identity", required=true)
       private final Output<IdentityArgs> identity;
@@ -53,7 +50,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -64,7 +60,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The rollout name.
-     * 
      */
     @Import(name="rolloutName")
       private final @Nullable Output<String> rolloutName;
@@ -86,7 +80,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of step groups that define the orchestration.
-     * 
      */
     @Import(name="stepGroups", required=true)
       private final Output<List<StepGroupArgs>> stepGroups;
@@ -97,7 +90,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -108,7 +100,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
-     * 
      */
     @Import(name="targetServiceTopologyId", required=true)
       private final Output<String> targetServiceTopologyId;

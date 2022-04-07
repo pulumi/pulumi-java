@@ -14,7 +14,6 @@ public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the availability set.
-     * 
      */
     @Import(name="availabilitySetName", required=true)
       private final String availabilitySetName;
@@ -25,7 +24,6 @@ public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

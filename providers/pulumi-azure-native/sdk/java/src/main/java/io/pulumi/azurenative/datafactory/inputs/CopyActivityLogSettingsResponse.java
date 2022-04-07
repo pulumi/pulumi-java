@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for copy activity log.
- * 
  */
 public final class CopyActivityLogSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CopyActivityLogSettingsResponse extends io.pulumi.resources.I
 
     /**
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="enableReliableLogging")
       private final @Nullable Object enableReliableLogging;
@@ -31,7 +29,6 @@ public final class CopyActivityLogSettingsResponse extends io.pulumi.resources.I
 
     /**
      * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="logLevel")
       private final @Nullable Object logLevel;

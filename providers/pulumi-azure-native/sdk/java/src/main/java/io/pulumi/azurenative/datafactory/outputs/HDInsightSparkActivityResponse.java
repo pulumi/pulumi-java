@@ -20,78 +20,63 @@ import javax.annotation.Nullable;
 public final class HDInsightSparkActivityResponse {
     /**
      * The user-specified arguments to HDInsightSparkActivity.
-     * 
      */
     private final @Nullable List<Object> arguments;
     /**
      * The application's Java/Spark main class.
-     * 
      */
     private final @Nullable String className;
     /**
      * Activity depends on condition.
-     * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
      * Activity description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The relative path to the root folder of the code/package to be executed. Type: string (or Expression with resultType string).
-     * 
      */
     private final Object entryFilePath;
     /**
      * Debug info option.
-     * 
      */
     private final @Nullable String getDebugInfo;
     /**
      * Linked service reference.
-     * 
      */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
     /**
      * Activity name.
-     * 
      */
     private final String name;
     /**
      * Activity policy.
-     * 
      */
     private final @Nullable ActivityPolicyResponse policy;
     /**
      * The user to impersonate that will execute the job. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object proxyUser;
     /**
      * The root path in 'sparkJobLinkedService' for all the job’s files. Type: string (or Expression with resultType string).
-     * 
      */
     private final Object rootPath;
     /**
      * Spark configuration property.
-     * 
      */
     private final @Nullable Map<String,Object> sparkConfig;
     /**
      * The storage linked service for uploading the entry file and dependencies, and for receiving logs.
-     * 
      */
     private final @Nullable LinkedServiceReferenceResponse sparkJobLinkedService;
     /**
      * Type of activity.
      * Expected value is 'HDInsightSpark'.
-     * 
      */
     private final String type;
     /**
      * Activity user properties.
-     * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
@@ -131,91 +116,78 @@ public final class HDInsightSparkActivityResponse {
 
     /**
      * The user-specified arguments to HDInsightSparkActivity.
-     * 
     */
     public List<Object> getArguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
      * The application's Java/Spark main class.
-     * 
     */
     public Optional<String> getClassName() {
         return Optional.ofNullable(this.className);
     }
     /**
      * Activity depends on condition.
-     * 
     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The relative path to the root folder of the code/package to be executed. Type: string (or Expression with resultType string).
-     * 
     */
     public Object getEntryFilePath() {
         return this.entryFilePath;
     }
     /**
      * Debug info option.
-     * 
     */
     public Optional<String> getGetDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
      * Linked service reference.
-     * 
     */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Activity policy.
-     * 
     */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * The user to impersonate that will execute the job. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getProxyUser() {
         return Optional.ofNullable(this.proxyUser);
     }
     /**
      * The root path in 'sparkJobLinkedService' for all the job’s files. Type: string (or Expression with resultType string).
-     * 
     */
     public Object getRootPath() {
         return this.rootPath;
     }
     /**
      * Spark configuration property.
-     * 
     */
     public Map<String,Object> getSparkConfig() {
         return this.sparkConfig == null ? Map.of() : this.sparkConfig;
     }
     /**
      * The storage linked service for uploading the entry file and dependencies, and for receiving logs.
-     * 
     */
     public Optional<LinkedServiceReferenceResponse> getSparkJobLinkedService() {
         return Optional.ofNullable(this.sparkJobLinkedService);
@@ -223,14 +195,12 @@ public final class HDInsightSparkActivityResponse {
     /**
      * Type of activity.
      * Expected value is 'HDInsightSpark'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
-     * 
     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;

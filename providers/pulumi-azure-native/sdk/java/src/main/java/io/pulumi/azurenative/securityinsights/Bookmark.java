@@ -19,7 +19,146 @@ import javax.annotation.Nullable;
  * Represents a bookmark in Azure Security Insights.
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates a bookmark.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bookmark = new AzureNative.SecurityInsights.Bookmark("bookmark", new AzureNative.SecurityInsights.BookmarkArgs
+ *         {
+ *             BookmarkId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             Created = "2019-01-01T13:15:30Z",
+ *             CreatedBy = new AzureNative.SecurityInsights.Inputs.UserInfoArgs
+ *             {
+ *                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
+ *             },
+ *             DisplayName = "My bookmark",
+ *             Labels = 
+ *             {
+ *                 "Tag1",
+ *                 "Tag2",
+ *             },
+ *             Notes = "Found a suspicious activity",
+ *             Query = "SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)",
+ *             QueryResult = "Security Event query result",
+ *             ResourceGroupName = "myRg",
+ *             Updated = "2019-01-01T13:15:30Z",
+ *             UpdatedBy = new AzureNative.SecurityInsights.Inputs.UserInfoArgs
+ *             {
+ *                 ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
+ *             },
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewBookmark(ctx, "bookmark", &securityinsights.BookmarkArgs{
+ * 			BookmarkId: pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			Created:    pulumi.String("2019-01-01T13:15:30Z"),
+ * 			CreatedBy: &securityinsights.UserInfoArgs{
+ * 				ObjectId: pulumi.String("2046feea-040d-4a46-9e2b-91c2941bfa70"),
+ * 			},
+ * 			DisplayName: pulumi.String("My bookmark"),
+ * 			Labels: pulumi.StringArray{
+ * 				pulumi.String("Tag1"),
+ * 				pulumi.String("Tag2"),
+ * 			},
+ * 			Notes:             pulumi.String("Found a suspicious activity"),
+ * 			Query:             pulumi.String("SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)"),
+ * 			QueryResult:       pulumi.String("Security Event query result"),
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			Updated:           pulumi.String("2019-01-01T13:15:30Z"),
+ * 			UpdatedBy: &securityinsights.UserInfoArgs{
+ * 				ObjectId: pulumi.String("2046feea-040d-4a46-9e2b-91c2941bfa70"),
+ * 			},
+ * 			WorkspaceName: pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const bookmark = new azure_native.securityinsights.Bookmark("bookmark", {
+ *     bookmarkId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     created: "2019-01-01T13:15:30Z",
+ *     createdBy: {
+ *         objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
+ *     },
+ *     displayName: "My bookmark",
+ *     labels: [
+ *         "Tag1",
+ *         "Tag2",
+ *     ],
+ *     notes: "Found a suspicious activity",
+ *     query: "SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)",
+ *     queryResult: "Security Event query result",
+ *     resourceGroupName: "myRg",
+ *     updated: "2019-01-01T13:15:30Z",
+ *     updatedBy: {
+ *         objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
+ *     },
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * bookmark = azure_native.securityinsights.Bookmark("bookmark",
+ *     bookmark_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     created="2019-01-01T13:15:30Z",
+ *     created_by=azure_native.securityinsights.UserInfoArgs(
+ *         object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
+ *     ),
+ *     display_name="My bookmark",
+ *     labels=[
+ *         "Tag1",
+ *         "Tag2",
+ *     ],
+ *     notes="Found a suspicious activity",
+ *     query="SecurityEvent | where TimeGenerated > ago(1d) and TimeGenerated < ago(2d)",
+ *     query_result="Security Event query result",
+ *     resource_group_name="myRg",
+ *     updated="2019-01-01T13:15:30Z",
+ *     updated_by=azure_native.securityinsights.UserInfoArgs(
+ *         object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
+ *     ),
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,224 +173,192 @@ import javax.annotation.Nullable;
 public class Bookmark extends io.pulumi.resources.CustomResource {
     /**
      * The time the bookmark was created
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output</* @Nullable */ String> created;
 
     /**
      * @return The time the bookmark was created
-     * 
      */
     public Output</* @Nullable */ String> getCreated() {
         return this.created;
     }
     /**
      * Describes a user that created the bookmark
-     * 
      */
     @Export(name="createdBy", type=UserInfoResponse.class, parameters={})
     private Output</* @Nullable */ UserInfoResponse> createdBy;
 
     /**
      * @return Describes a user that created the bookmark
-     * 
      */
     public Output</* @Nullable */ UserInfoResponse> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The display name of the bookmark
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name of the bookmark
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The bookmark event time
-     * 
      */
     @Export(name="eventTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventTime;
 
     /**
      * @return The bookmark event time
-     * 
      */
     public Output</* @Nullable */ String> getEventTime() {
         return this.eventTime;
     }
     /**
      * Describes an incident that relates to bookmark
-     * 
      */
     @Export(name="incidentInfo", type=IncidentInfoResponse.class, parameters={})
     private Output</* @Nullable */ IncidentInfoResponse> incidentInfo;
 
     /**
      * @return Describes an incident that relates to bookmark
-     * 
      */
     public Output</* @Nullable */ IncidentInfoResponse> getIncidentInfo() {
         return this.incidentInfo;
     }
     /**
      * List of labels relevant to this bookmark
-     * 
      */
     @Export(name="labels", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> labels;
 
     /**
      * @return List of labels relevant to this bookmark
-     * 
      */
     public Output</* @Nullable */ List<String>> getLabels() {
         return this.labels;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The notes of the bookmark
-     * 
      */
     @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
      * @return The notes of the bookmark
-     * 
      */
     public Output</* @Nullable */ String> getNotes() {
         return this.notes;
     }
     /**
      * The query of the bookmark.
-     * 
      */
     @Export(name="query", type=String.class, parameters={})
     private Output<String> query;
 
     /**
      * @return The query of the bookmark.
-     * 
      */
     public Output<String> getQuery() {
         return this.query;
     }
     /**
      * The end time for the query
-     * 
      */
     @Export(name="queryEndTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryEndTime;
 
     /**
      * @return The end time for the query
-     * 
      */
     public Output</* @Nullable */ String> getQueryEndTime() {
         return this.queryEndTime;
     }
     /**
      * The query result of the bookmark.
-     * 
      */
     @Export(name="queryResult", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryResult;
 
     /**
      * @return The query result of the bookmark.
-     * 
      */
     public Output</* @Nullable */ String> getQueryResult() {
         return this.queryResult;
     }
     /**
      * The start time for the query
-     * 
      */
     @Export(name="queryStartTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryStartTime;
 
     /**
      * @return The start time for the query
-     * 
      */
     public Output</* @Nullable */ String> getQueryStartTime() {
         return this.queryStartTime;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The last time the bookmark was updated
-     * 
      */
     @Export(name="updated", type=String.class, parameters={})
     private Output</* @Nullable */ String> updated;
 
     /**
      * @return The last time the bookmark was updated
-     * 
      */
     public Output</* @Nullable */ String> getUpdated() {
         return this.updated;
     }
     /**
      * Describes a user that updated the bookmark
-     * 
      */
     @Export(name="updatedBy", type=UserInfoResponse.class, parameters={})
     private Output</* @Nullable */ UserInfoResponse> updatedBy;
 
     /**
      * @return Describes a user that updated the bookmark
-     * 
      */
     public Output</* @Nullable */ UserInfoResponse> getUpdatedBy() {
         return this.updatedBy;

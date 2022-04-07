@@ -18,7 +18,6 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
 
     /**
      *  Unmatched properties from the message are deserialized in this collection.
-     * 
      */
     @Import(name="additionalProperties", required=true)
       private final Map<String,Object> additionalProperties;
@@ -29,7 +28,6 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
 
     /**
      * Available memory (MB) on the integration runtime node.
-     * 
      */
     @Import(name="availableMemoryInMB", required=true)
       private final Integer availableMemoryInMB;
@@ -40,7 +38,6 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
 
     /**
      * Maximum concurrent jobs on the integration runtime node.
-     * 
      */
     @Import(name="concurrentJobsLimit", required=true)
       private final Integer concurrentJobsLimit;
@@ -51,7 +48,6 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
 
     /**
      * The number of jobs currently running on the integration runtime node.
-     * 
      */
     @Import(name="concurrentJobsRunning", required=true)
       private final Integer concurrentJobsRunning;
@@ -62,7 +58,6 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
 
     /**
      * CPU percentage on the integration runtime node.
-     * 
      */
     @Import(name="cpuUtilization", required=true)
       private final Integer cpuUtilization;
@@ -73,7 +68,6 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
 
     /**
      * The maximum concurrent jobs in this integration runtime.
-     * 
      */
     @Import(name="maxConcurrentJobs", required=true)
       private final Integer maxConcurrentJobs;
@@ -84,7 +78,6 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
 
     /**
      * Name of the integration runtime node.
-     * 
      */
     @Import(name="nodeName", required=true)
       private final String nodeName;
@@ -95,7 +88,6 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
 
     /**
      * Received bytes on the integration runtime node.
-     * 
      */
     @Import(name="receivedBytes", required=true)
       private final Double receivedBytes;
@@ -106,7 +98,6 @@ public final class NodeMonitoringDataResponse extends io.pulumi.resources.Invoke
 
     /**
      * Sent bytes on the integration runtime node.
-     * 
      */
     @Import(name="sentBytes", required=true)
       private final Double sentBytes;

@@ -23,7 +23,292 @@ import javax.annotation.Nullable;
  * P2SVpnGateway Resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### P2SVpnGatewayPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var p2sVpnGateway = new AzureNative.Network.P2sVpnGateway("p2sVpnGateway", new AzureNative.Network.P2sVpnGatewayArgs
+ *         {
+ *             CustomDnsServers = 
+ *             {
+ *                 "1.1.1.1",
+ *                 "2.2.2.2",
+ *             },
+ *             GatewayName = "p2sVpnGateway1",
+ *             IsRoutingPreferenceInternet = false,
+ *             Location = "West US",
+ *             P2SConnectionConfigurations = 
+ *             {
+ *                 new AzureNative.Network.Inputs.P2SConnectionConfigurationArgs
+ *                 {
+ *                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
+ *                     Name = "P2SConnectionConfig1",
+ *                     RoutingConfiguration = new AzureNative.Network.Inputs.RoutingConfigurationArgs
+ *                     {
+ *                         AssociatedRouteTable = new AzureNative.Network.Inputs.SubResourceArgs
+ *                         {
+ *                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+ *                         },
+ *                         PropagatedRouteTables = new AzureNative.Network.Inputs.PropagatedRouteTableArgs
+ *                         {
+ *                             Ids = 
+ *                             {
+ *                                 new AzureNative.Network.Inputs.SubResourceArgs
+ *                                 {
+ *                                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+ *                                 },
+ *                                 new AzureNative.Network.Inputs.SubResourceArgs
+ *                                 {
+ *                                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2",
+ *                                 },
+ *                                 new AzureNative.Network.Inputs.SubResourceArgs
+ *                                 {
+ *                                     Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3",
+ *                                 },
+ *                             },
+ *                             Labels = 
+ *                             {
+ *                                 "label1",
+ *                                 "label2",
+ *                             },
+ *                         },
+ *                         VnetRoutes = new AzureNative.Network.Inputs.VnetRouteArgs
+ *                         {
+ *                             StaticRoutes = {},
+ *                         },
+ *                     },
+ *                     VpnClientAddressPool = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *                     {
+ *                         AddressPrefixes = 
+ *                         {
+ *                             "101.3.0.0/16",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             VirtualHub = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+ *             },
+ *             VpnGatewayScaleUnit = 1,
+ *             VpnServerConfiguration = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewP2sVpnGateway(ctx, "p2sVpnGateway", &network.P2sVpnGatewayArgs{
+ * 			CustomDnsServers: pulumi.StringArray{
+ * 				pulumi.String("1.1.1.1"),
+ * 				pulumi.String("2.2.2.2"),
+ * 			},
+ * 			GatewayName:                 pulumi.String("p2sVpnGateway1"),
+ * 			IsRoutingPreferenceInternet: pulumi.Bool(false),
+ * 			Location:                    pulumi.String("West US"),
+ * 			P2SConnectionConfigurations: []network.P2SConnectionConfigurationArgs{
+ * 				&network.P2SConnectionConfigurationArgs{
+ * 					Id:   pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1"),
+ * 					Name: pulumi.String("P2SConnectionConfig1"),
+ * 					RoutingConfiguration: &network.RoutingConfigurationArgs{
+ * 						AssociatedRouteTable: &network.SubResourceArgs{
+ * 							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1"),
+ * 						},
+ * 						PropagatedRouteTables: &network.PropagatedRouteTableArgs{
+ * 							Ids: network.SubResourceArray{
+ * 								&network.SubResourceArgs{
+ * 									Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1"),
+ * 								},
+ * 								&network.SubResourceArgs{
+ * 									Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2"),
+ * 								},
+ * 								&network.SubResourceArgs{
+ * 									Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3"),
+ * 								},
+ * 							},
+ * 							Labels: pulumi.StringArray{
+ * 								pulumi.String("label1"),
+ * 								pulumi.String("label2"),
+ * 							},
+ * 						},
+ * 						VnetRoutes: &network.VnetRouteArgs{
+ * 							StaticRoutes: network.StaticRouteArray{},
+ * 						},
+ * 					},
+ * 					VpnClientAddressPool: &network.AddressSpaceArgs{
+ * 						AddressPrefixes: pulumi.StringArray{
+ * 							pulumi.String("101.3.0.0/16"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			VirtualHub: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1"),
+ * 			},
+ * 			VpnGatewayScaleUnit: pulumi.Int(1),
+ * 			VpnServerConfiguration: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const p2sVpnGateway = new azure_native.network.P2sVpnGateway("p2sVpnGateway", {
+ *     customDnsServers: [
+ *         "1.1.1.1",
+ *         "2.2.2.2",
+ *     ],
+ *     gatewayName: "p2sVpnGateway1",
+ *     isRoutingPreferenceInternet: false,
+ *     location: "West US",
+ *     p2SConnectionConfigurations: [{
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
+ *         name: "P2SConnectionConfig1",
+ *         routingConfiguration: {
+ *             associatedRouteTable: {
+ *                 id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+ *             },
+ *             propagatedRouteTables: {
+ *                 ids: [
+ *                     {
+ *                         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+ *                     },
+ *                     {
+ *                         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2",
+ *                     },
+ *                     {
+ *                         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3",
+ *                     },
+ *                 ],
+ *                 labels: [
+ *                     "label1",
+ *                     "label2",
+ *                 ],
+ *             },
+ *             vnetRoutes: {
+ *                 staticRoutes: [],
+ *             },
+ *         },
+ *         vpnClientAddressPool: {
+ *             addressPrefixes: ["101.3.0.0/16"],
+ *         },
+ *     }],
+ *     resourceGroupName: "rg1",
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     virtualHub: {
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+ *     },
+ *     vpnGatewayScaleUnit: 1,
+ *     vpnServerConfiguration: {
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * p2s_vpn_gateway = azure_native.network.P2sVpnGateway("p2sVpnGateway",
+ *     custom_dns_servers=[
+ *         "1.1.1.1",
+ *         "2.2.2.2",
+ *     ],
+ *     gateway_name="p2sVpnGateway1",
+ *     is_routing_preference_internet=False,
+ *     location="West US",
+ *     p2_s_connection_configurations=[azure_native.network.P2SConnectionConfigurationArgs(
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1",
+ *         name="P2SConnectionConfig1",
+ *         routing_configuration=azure_native.network.RoutingConfigurationArgs(
+ *             associated_route_table=azure_native.network.SubResourceArgs(
+ *                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+ *             ),
+ *             propagated_route_tables=azure_native.network.PropagatedRouteTableArgs(
+ *                 ids=[
+ *                     azure_native.network.SubResourceArgs(
+ *                         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+ *                     ),
+ *                     azure_native.network.SubResourceArgs(
+ *                         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable2",
+ *                     ),
+ *                     azure_native.network.SubResourceArgs(
+ *                         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable3",
+ *                     ),
+ *                 ],
+ *                 labels=[
+ *                     "label1",
+ *                     "label2",
+ *                 ],
+ *             ),
+ *             vnet_routes=azure_native.network.VnetRouteArgs(
+ *                 static_routes=[],
+ *             ),
+ *         ),
+ *         vpn_client_address_pool=azure_native.network.AddressSpaceArgs(
+ *             address_prefixes=["101.3.0.0/16"],
+ *         ),
+ *     )],
+ *     resource_group_name="rg1",
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     virtual_hub=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+ *     ),
+ *     vpn_gateway_scale_unit=1,
+ *     vpn_server_configuration=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,182 +323,156 @@ import javax.annotation.Nullable;
 public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
     /**
      * List of all customer specified DNS servers IP addresses.
-     * 
      */
     @Export(name="customDnsServers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customDnsServers;
 
     /**
      * @return List of all customer specified DNS servers IP addresses.
-     * 
      */
     public Output</* @Nullable */ List<String>> getCustomDnsServers() {
         return this.customDnsServers;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
-     * 
      */
     @Export(name="isRoutingPreferenceInternet", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isRoutingPreferenceInternet;
 
     /**
      * @return Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsRoutingPreferenceInternet() {
         return this.isRoutingPreferenceInternet;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of all p2s connection configurations of the gateway.
-     * 
      */
     @Export(name="p2SConnectionConfigurations", type=List.class, parameters={P2SConnectionConfigurationResponse.class})
     private Output</* @Nullable */ List<P2SConnectionConfigurationResponse>> p2SConnectionConfigurations;
 
     /**
      * @return List of all p2s connection configurations of the gateway.
-     * 
      */
     public Output</* @Nullable */ List<P2SConnectionConfigurationResponse>> getP2SConnectionConfigurations() {
         return this.p2SConnectionConfigurations;
     }
     /**
      * The provisioning state of the P2S VPN gateway resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the P2S VPN gateway resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The VirtualHub to which the gateway belongs.
-     * 
      */
     @Export(name="virtualHub", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualHub;
 
     /**
      * @return The VirtualHub to which the gateway belongs.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
         return this.virtualHub;
     }
     /**
      * All P2S VPN clients' connection health status.
-     * 
      */
     @Export(name="vpnClientConnectionHealth", type=VpnClientConnectionHealthResponse.class, parameters={})
     private Output<VpnClientConnectionHealthResponse> vpnClientConnectionHealth;
 
     /**
      * @return All P2S VPN clients' connection health status.
-     * 
      */
     public Output<VpnClientConnectionHealthResponse> getVpnClientConnectionHealth() {
         return this.vpnClientConnectionHealth;
     }
     /**
      * The scale unit for this p2s vpn gateway.
-     * 
      */
     @Export(name="vpnGatewayScaleUnit", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vpnGatewayScaleUnit;
 
     /**
      * @return The scale unit for this p2s vpn gateway.
-     * 
      */
     public Output</* @Nullable */ Integer> getVpnGatewayScaleUnit() {
         return this.vpnGatewayScaleUnit;
     }
     /**
      * The VpnServerConfiguration to which the p2sVpnGateway is attached to.
-     * 
      */
     @Export(name="vpnServerConfiguration", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> vpnServerConfiguration;
 
     /**
      * @return The VpnServerConfiguration to which the p2sVpnGateway is attached to.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getVpnServerConfiguration() {
         return this.vpnServerConfiguration;

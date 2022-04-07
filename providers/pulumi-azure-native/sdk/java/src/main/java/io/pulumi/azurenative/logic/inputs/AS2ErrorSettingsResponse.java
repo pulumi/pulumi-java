@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The AS2 agreement error settings.
- * 
  */
 public final class AS2ErrorSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AS2ErrorSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The value indicating whether to resend message If MDN is not received.
-     * 
      */
     @Import(name="resendIfMDNNotReceived", required=true)
       private final Boolean resendIfMDNNotReceived;
@@ -29,7 +27,6 @@ public final class AS2ErrorSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The value indicating whether to suspend duplicate message.
-     * 
      */
     @Import(name="suspendDuplicateMessage", required=true)
       private final Boolean suspendDuplicateMessage;

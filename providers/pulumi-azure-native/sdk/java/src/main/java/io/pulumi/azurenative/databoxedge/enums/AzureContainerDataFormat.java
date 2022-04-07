@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Storage format used for the file represented by the share.
-     * 
      */
     @EnumType
     public enum AzureContainerDataFormat {

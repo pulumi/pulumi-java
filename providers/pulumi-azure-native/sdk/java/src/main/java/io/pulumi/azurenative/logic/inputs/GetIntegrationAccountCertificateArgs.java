@@ -14,7 +14,6 @@ public final class GetIntegrationAccountCertificateArgs extends io.pulumi.resour
 
     /**
      * The integration account certificate name.
-     * 
      */
     @Import(name="certificateName", required=true)
       private final String certificateName;
@@ -25,7 +24,6 @@ public final class GetIntegrationAccountCertificateArgs extends io.pulumi.resour
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -36,7 +34,6 @@ public final class GetIntegrationAccountCertificateArgs extends io.pulumi.resour
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

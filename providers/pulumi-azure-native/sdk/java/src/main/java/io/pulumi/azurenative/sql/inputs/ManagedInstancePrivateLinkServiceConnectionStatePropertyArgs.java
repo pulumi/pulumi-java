@@ -15,7 +15,6 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs 
 
     /**
      * The private link service connection description.
-     * 
      */
     @Import(name="description", required=true)
       private final Output<String> description;
@@ -26,7 +25,6 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs 
 
     /**
      * The private link service connection status.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<String> status;

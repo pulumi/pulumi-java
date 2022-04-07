@@ -24,7 +24,6 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
 
     /**
      * The Http URL.
-     * 
      */
     @Import(name="httpUrl")
       private final @Nullable Output<String> httpUrl;

@@ -14,7 +14,6 @@ public final class GetHanaInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the SAP HANA on Azure instance.
-     * 
      */
     @Import(name="hanaInstanceName", required=true)
       private final String hanaInstanceName;
@@ -25,7 +24,6 @@ public final class GetHanaInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

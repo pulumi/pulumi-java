@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The machine extension instance view.
- * 
  */
 public final class MachineExtensionPropertiesResponseInstanceView extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
 
     /**
      * The machine extension name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -32,7 +30,6 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
 
     /**
      * Instance view status.
-     * 
      */
     @Import(name="status")
       private final @Nullable MachineExtensionInstanceViewResponseStatus status;
@@ -43,7 +40,6 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
 
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -54,7 +50,6 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
 
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Import(name="typeHandlerVersion", required=true)
       private final String typeHandlerVersion;

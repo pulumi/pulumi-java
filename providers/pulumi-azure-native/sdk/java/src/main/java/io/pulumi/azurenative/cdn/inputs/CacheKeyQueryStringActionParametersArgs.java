@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the parameters for the cache-key query string action.
- * 
  */
 public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
 
     /**
      * query parameters to include or exclude (comma separated).
-     * 
      */
     @Import(name="queryParameters")
       private final @Nullable Output<String> queryParameters;
@@ -40,7 +38,6 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
 
     /**
      * Caching behavior for the requests
-     * 
      */
     @Import(name="queryStringBehavior", required=true)
       private final Output<Either<String,QueryStringBehavior>> queryStringBehavior;

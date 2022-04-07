@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies datastore type.
-     * 
      */
     @EnumType
     public enum DatastoreTypeArm {

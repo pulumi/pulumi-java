@@ -20,7 +20,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Workbook category, as defined by the user at creation time.
-     * 
      */
     @Import(name="category", required=true)
       private final Output<String> category;
@@ -31,7 +30,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The user-defined name (display name) of the workbook.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -42,7 +40,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -53,7 +50,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity used for BYOS
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<WorkbookManagedIdentityArgs> identity;
@@ -64,7 +60,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of workbook. Choices are user and shared.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
@@ -75,7 +70,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -86,7 +80,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -97,7 +90,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -119,7 +110,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration of this particular workbook. Configuration data is a string containing valid JSON
-     * 
      */
     @Import(name="serializedData", required=true)
       private final Output<String> serializedData;
@@ -130,7 +120,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ResourceId for a source resource.
-     * 
      */
     @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
@@ -141,7 +130,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * BYOS Storage Account URI
-     * 
      */
     @Import(name="storageUri")
       private final @Nullable Output<String> storageUri;
@@ -152,7 +140,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -163,7 +150,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource type
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -174,7 +160,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Workbook version
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

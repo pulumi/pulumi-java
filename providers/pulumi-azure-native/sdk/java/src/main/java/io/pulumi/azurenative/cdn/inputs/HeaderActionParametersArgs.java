@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the parameters for the request header action.
- * 
  */
 public final class HeaderActionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
 
     /**
      * Action to perform
-     * 
      */
     @Import(name="headerAction", required=true)
       private final Output<Either<String,HeaderAction>> headerAction;
@@ -33,7 +31,6 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the header to modify
-     * 
      */
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
@@ -51,7 +48,6 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
 
     /**
      * Value for the specified action
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates type of action rule
-     * 
      */
     @EnumType
     public enum ActionRuleType {

@@ -21,7 +21,227 @@ import javax.annotation.Nullable;
  * Properties of the file share, including Id, resource name, resource type, Etag.
  * API Version: 2021-02-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create NFS Shares
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fileShare = new AzureNative.Storage.FileShare("fileShare", new AzureNative.Storage.FileShareArgs
+ *         {
+ *             AccountName = "sto666",
+ *             EnabledProtocols = "NFS",
+ *             ResourceGroupName = "res346",
+ *             ShareName = "share1235",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewFileShare(ctx, "fileShare", &storage.FileShareArgs{
+ * 			AccountName:       pulumi.String("sto666"),
+ * 			EnabledProtocols:  pulumi.String("NFS"),
+ * 			ResourceGroupName: pulumi.String("res346"),
+ * 			ShareName:         pulumi.String("share1235"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fileShare = new azure_native.storage.FileShare("fileShare", {
+ *     accountName: "sto666",
+ *     enabledProtocols: "NFS",
+ *     resourceGroupName: "res346",
+ *     shareName: "share1235",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * file_share = azure_native.storage.FileShare("fileShare",
+ *     account_name="sto666",
+ *     enabled_protocols="NFS",
+ *     resource_group_name="res346",
+ *     share_name="share1235")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### PutShares
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fileShare = new AzureNative.Storage.FileShare("fileShare", new AzureNative.Storage.FileShareArgs
+ *         {
+ *             AccountName = "sto328",
+ *             ResourceGroupName = "res3376",
+ *             ShareName = "share6185",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewFileShare(ctx, "fileShare", &storage.FileShareArgs{
+ * 			AccountName:       pulumi.String("sto328"),
+ * 			ResourceGroupName: pulumi.String("res3376"),
+ * 			ShareName:         pulumi.String("share6185"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fileShare = new azure_native.storage.FileShare("fileShare", {
+ *     accountName: "sto328",
+ *     resourceGroupName: "res3376",
+ *     shareName: "share6185",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * file_share = azure_native.storage.FileShare("fileShare",
+ *     account_name="sto328",
+ *     resource_group_name="res3376",
+ *     share_name="share6185")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### PutShares with Access Tier
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fileShare = new AzureNative.Storage.FileShare("fileShare", new AzureNative.Storage.FileShareArgs
+ *         {
+ *             AccessTier = "Hot",
+ *             AccountName = "sto666",
+ *             ResourceGroupName = "res346",
+ *             ShareName = "share1235",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewFileShare(ctx, "fileShare", &storage.FileShareArgs{
+ * 			AccessTier:        pulumi.String("Hot"),
+ * 			AccountName:       pulumi.String("sto666"),
+ * 			ResourceGroupName: pulumi.String("res346"),
+ * 			ShareName:         pulumi.String("share1235"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fileShare = new azure_native.storage.FileShare("fileShare", {
+ *     accessTier: "Hot",
+ *     accountName: "sto666",
+ *     resourceGroupName: "res346",
+ *     shareName: "share1235",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * file_share = azure_native.storage.FileShare("fileShare",
+ *     access_tier="Hot",
+ *     account_name="sto666",
+ *     resource_group_name="res346",
+ *     share_name="share1235")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,238 +256,204 @@ import javax.annotation.Nullable;
 public class FileShare extends io.pulumi.resources.CustomResource {
     /**
      * Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
-     * 
      */
     @Export(name="accessTier", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessTier;
 
     /**
      * @return Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
-     * 
      */
     public Output</* @Nullable */ String> getAccessTier() {
         return this.accessTier;
     }
     /**
      * Indicates the last modification time for share access tier.
-     * 
      */
     @Export(name="accessTierChangeTime", type=String.class, parameters={})
     private Output<String> accessTierChangeTime;
 
     /**
      * @return Indicates the last modification time for share access tier.
-     * 
      */
     public Output<String> getAccessTierChangeTime() {
         return this.accessTierChangeTime;
     }
     /**
      * Indicates if there is a pending transition for access tier.
-     * 
      */
     @Export(name="accessTierStatus", type=String.class, parameters={})
     private Output<String> accessTierStatus;
 
     /**
      * @return Indicates if there is a pending transition for access tier.
-     * 
      */
     public Output<String> getAccessTierStatus() {
         return this.accessTierStatus;
     }
     /**
      * Indicates whether the share was deleted.
-     * 
      */
     @Export(name="deleted", type=Boolean.class, parameters={})
     private Output<Boolean> deleted;
 
     /**
      * @return Indicates whether the share was deleted.
-     * 
      */
     public Output<Boolean> getDeleted() {
         return this.deleted;
     }
     /**
      * The deleted time if the share was deleted.
-     * 
      */
     @Export(name="deletedTime", type=String.class, parameters={})
     private Output<String> deletedTime;
 
     /**
      * @return The deleted time if the share was deleted.
-     * 
      */
     public Output<String> getDeletedTime() {
         return this.deletedTime;
     }
     /**
      * The authentication protocol that is used for the file share. Can only be specified when creating a share.
-     * 
      */
     @Export(name="enabledProtocols", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledProtocols;
 
     /**
      * @return The authentication protocol that is used for the file share. Can only be specified when creating a share.
-     * 
      */
     public Output</* @Nullable */ String> getEnabledProtocols() {
         return this.enabledProtocols;
     }
     /**
      * Resource Etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Resource Etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Returns the date and time the share was last modified.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
      * @return Returns the date and time the share was last modified.
-     * 
      */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * A name-value pair to associate with the share as metadata.
-     * 
      */
     @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
      * @return A name-value pair to associate with the share as metadata.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getMetadata() {
         return this.metadata;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Remaining retention days for share that was soft deleted.
-     * 
      */
     @Export(name="remainingRetentionDays", type=Integer.class, parameters={})
     private Output<Integer> remainingRetentionDays;
 
     /**
      * @return Remaining retention days for share that was soft deleted.
-     * 
      */
     public Output<Integer> getRemainingRetentionDays() {
         return this.remainingRetentionDays;
     }
     /**
      * The property is for NFS share only. The default is NoRootSquash.
-     * 
      */
     @Export(name="rootSquash", type=String.class, parameters={})
     private Output</* @Nullable */ String> rootSquash;
 
     /**
      * @return The property is for NFS share only. The default is NoRootSquash.
-     * 
      */
     public Output</* @Nullable */ String> getRootSquash() {
         return this.rootSquash;
     }
     /**
      * The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
-     * 
      */
     @Export(name="shareQuota", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> shareQuota;
 
     /**
      * @return The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
-     * 
      */
     public Output</* @Nullable */ Integer> getShareQuota() {
         return this.shareQuota;
     }
     /**
      * The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
-     * 
      */
     @Export(name="shareUsageBytes", type=Double.class, parameters={})
     private Output<Double> shareUsageBytes;
 
     /**
      * @return The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
-     * 
      */
     public Output<Double> getShareUsageBytes() {
         return this.shareUsageBytes;
     }
     /**
      * Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
-     * 
      */
     @Export(name="snapshotTime", type=String.class, parameters={})
     private Output<String> snapshotTime;
 
     /**
      * @return Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
-     * 
      */
     public Output<String> getSnapshotTime() {
         return this.snapshotTime;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The version of the share.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return The version of the share.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

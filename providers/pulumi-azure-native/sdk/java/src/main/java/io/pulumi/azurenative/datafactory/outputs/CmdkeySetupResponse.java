@@ -15,23 +15,19 @@ import java.util.Objects;
 public final class CmdkeySetupResponse {
     /**
      * The password of data source access.
-     * 
      */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * The server name of data source access.
-     * 
      */
     private final Object targetName;
     /**
      * The type of custom setup.
      * Expected value is 'CmdkeySetup'.
-     * 
      */
     private final String type;
     /**
      * The user name of data source access.
-     * 
      */
     private final Object userName;
 
@@ -49,14 +45,12 @@ public final class CmdkeySetupResponse {
 
     /**
      * The password of data source access.
-     * 
     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password;
     }
     /**
      * The server name of data source access.
-     * 
     */
     public Object getTargetName() {
         return this.targetName;
@@ -64,14 +58,12 @@ public final class CmdkeySetupResponse {
     /**
      * The type of custom setup.
      * Expected value is 'CmdkeySetup'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The user name of data source access.
-     * 
     */
     public Object getUserName() {
         return this.userName;

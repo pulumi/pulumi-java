@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * VpnGatewayNatRule Resource.
- * 
  */
 public final class VpnGatewayNatRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class VpnGatewayNatRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The private IP address external mapping for NAT.
-     * 
      */
     @Import(name="externalMappings")
       private final @Nullable Output<List<VpnNatRuleMappingArgs>> externalMappings;
@@ -36,7 +34,6 @@ public final class VpnGatewayNatRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -47,7 +44,6 @@ public final class VpnGatewayNatRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The private IP address internal mapping for NAT.
-     * 
      */
     @Import(name="internalMappings")
       private final @Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings;
@@ -58,7 +54,6 @@ public final class VpnGatewayNatRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The IP Configuration ID this NAT rule applies to.
-     * 
      */
     @Import(name="ipConfigurationId")
       private final @Nullable Output<String> ipConfigurationId;
@@ -69,7 +64,6 @@ public final class VpnGatewayNatRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The Source NAT direction of a VPN NAT.
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<Either<String,VpnNatRuleMode>> mode;
@@ -80,7 +74,6 @@ public final class VpnGatewayNatRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -91,7 +84,6 @@ public final class VpnGatewayNatRuleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The type of NAT rule for VPN NAT.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,VpnNatRuleType>> type;

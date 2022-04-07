@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value indicating configuration profile.
-     * 
      */
     @EnumType
     public enum ConfigurationProfile {

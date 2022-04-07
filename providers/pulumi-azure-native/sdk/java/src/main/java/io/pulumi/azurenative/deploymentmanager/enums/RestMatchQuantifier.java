@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether any or all of the expressions should match with the response content.
-     * 
      */
     @EnumType
     public enum RestMatchQuantifier {

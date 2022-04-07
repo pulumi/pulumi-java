@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * AppInsights credentials.
- * 
  */
 public final class AppInsightsCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AppInsightsCredentialsResponse extends io.pulumi.resources.In
 
     /**
      * The AppInsights application ID.
-     * 
      */
     @Import(name="appId")
       private final @Nullable String appId;
@@ -31,7 +29,6 @@ public final class AppInsightsCredentialsResponse extends io.pulumi.resources.In
 
     /**
      * The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
-     * 
      */
     @Import(name="instrumentationKey")
       private final @Nullable String instrumentationKey;

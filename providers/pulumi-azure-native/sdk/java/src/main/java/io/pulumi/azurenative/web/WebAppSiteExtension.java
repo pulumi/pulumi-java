@@ -31,280 +31,240 @@ import javax.annotation.Nullable;
 public class WebAppSiteExtension extends io.pulumi.resources.CustomResource {
     /**
      * List of authors.
-     * 
      */
     @Export(name="authors", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> authors;
 
     /**
      * @return List of authors.
-     * 
      */
     public Output</* @Nullable */ List<String>> getAuthors() {
         return this.authors;
     }
     /**
      * Site Extension comment.
-     * 
      */
     @Export(name="comment", type=String.class, parameters={})
     private Output</* @Nullable */ String> comment;
 
     /**
      * @return Site Extension comment.
-     * 
      */
     public Output</* @Nullable */ String> getComment() {
         return this.comment;
     }
     /**
      * Detailed description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Detailed description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Count of downloads.
-     * 
      */
     @Export(name="downloadCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downloadCount;
 
     /**
      * @return Count of downloads.
-     * 
      */
     public Output</* @Nullable */ Integer> getDownloadCount() {
         return this.downloadCount;
     }
     /**
      * Site extension ID.
-     * 
      */
     @Export(name="extensionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> extensionId;
 
     /**
      * @return Site extension ID.
-     * 
      */
     public Output</* @Nullable */ String> getExtensionId() {
         return this.extensionId;
     }
     /**
      * Site extension type.
-     * 
      */
     @Export(name="extensionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> extensionType;
 
     /**
      * @return Site extension type.
-     * 
      */
     public Output</* @Nullable */ String> getExtensionType() {
         return this.extensionType;
     }
     /**
      * Extension URL.
-     * 
      */
     @Export(name="extensionUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> extensionUrl;
 
     /**
      * @return Extension URL.
-     * 
      */
     public Output</* @Nullable */ String> getExtensionUrl() {
         return this.extensionUrl;
     }
     /**
      * Feed URL.
-     * 
      */
     @Export(name="feedUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> feedUrl;
 
     /**
      * @return Feed URL.
-     * 
      */
     public Output</* @Nullable */ String> getFeedUrl() {
         return this.feedUrl;
     }
     /**
      * Icon URL.
-     * 
      */
     @Export(name="iconUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> iconUrl;
 
     /**
      * @return Icon URL.
-     * 
      */
     public Output</* @Nullable */ String> getIconUrl() {
         return this.iconUrl;
     }
     /**
      * Installed timestamp.
-     * 
      */
     @Export(name="installedDateTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> installedDateTime;
 
     /**
      * @return Installed timestamp.
-     * 
      */
     public Output</* @Nullable */ String> getInstalledDateTime() {
         return this.installedDateTime;
     }
     /**
      * Installer command line parameters.
-     * 
      */
     @Export(name="installerCommandLineParams", type=String.class, parameters={})
     private Output</* @Nullable */ String> installerCommandLineParams;
 
     /**
      * @return Installer command line parameters.
-     * 
      */
     public Output</* @Nullable */ String> getInstallerCommandLineParams() {
         return this.installerCommandLineParams;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * License URL.
-     * 
      */
     @Export(name="licenseUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseUrl;
 
     /**
      * @return License URL.
-     * 
      */
     public Output</* @Nullable */ String> getLicenseUrl() {
         return this.licenseUrl;
     }
     /**
      * <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
-     * 
      */
     @Export(name="localIsLatestVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> localIsLatestVersion;
 
     /**
      * @return <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
-     * 
      */
     public Output</* @Nullable */ Boolean> getLocalIsLatestVersion() {
         return this.localIsLatestVersion;
     }
     /**
      * Local path.
-     * 
      */
     @Export(name="localPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> localPath;
 
     /**
      * @return Local path.
-     * 
      */
     public Output</* @Nullable */ String> getLocalPath() {
         return this.localPath;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Project URL.
-     * 
      */
     @Export(name="projectUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectUrl;
 
     /**
      * @return Project URL.
-     * 
      */
     public Output</* @Nullable */ String> getProjectUrl() {
         return this.projectUrl;
     }
     /**
      * Provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return Provisioning state.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Published timestamp.
-     * 
      */
     @Export(name="publishedDateTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> publishedDateTime;
 
     /**
      * @return Published timestamp.
-     * 
      */
     public Output</* @Nullable */ String> getPublishedDateTime() {
         return this.publishedDateTime;
     }
     /**
      * Summary description.
-     * 
      */
     @Export(name="summary", type=String.class, parameters={})
     private Output</* @Nullable */ String> summary;
 
     /**
      * @return Summary description.
-     * 
      */
     public Output</* @Nullable */ String> getSummary() {
         return this.summary;
@@ -317,28 +277,24 @@ public class WebAppSiteExtension extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Version information.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
      * @return Version information.
-     * 
      */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;

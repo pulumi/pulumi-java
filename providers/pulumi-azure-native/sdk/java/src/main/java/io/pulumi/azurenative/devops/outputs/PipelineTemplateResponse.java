@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class PipelineTemplateResponse {
     /**
      * Unique identifier of the pipeline template.
-     * 
      */
     private final String id;
     /**
      * Dictionary of input parameters used in the pipeline template.
-     * 
      */
     private final @Nullable Map<String,String> parameters;
 
@@ -32,14 +30,12 @@ public final class PipelineTemplateResponse {
 
     /**
      * Unique identifier of the pipeline template.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Dictionary of input parameters used in the pipeline template.
-     * 
     */
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;

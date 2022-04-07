@@ -14,7 +14,6 @@ public final class GetWCFRelayArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -25,7 +24,6 @@ public final class GetWCFRelayArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The relay name.
-     * 
      */
     @Import(name="relayName", required=true)
       private final String relayName;
@@ -36,7 +34,6 @@ public final class GetWCFRelayArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

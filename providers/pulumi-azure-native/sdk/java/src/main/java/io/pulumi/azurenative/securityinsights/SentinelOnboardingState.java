@@ -19,7 +19,87 @@ import javax.annotation.Nullable;
  * Sentinel onboarding state
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Sentinel onboarding state
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sentinelOnboardingState = new AzureNative.SecurityInsights.SentinelOnboardingState("sentinelOnboardingState", new AzureNative.SecurityInsights.SentinelOnboardingStateArgs
+ *         {
+ *             CustomerManagedKey = false,
+ *             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+ *             ResourceGroupName = "myRg",
+ *             SentinelOnboardingStateName = "default",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewSentinelOnboardingState(ctx, "sentinelOnboardingState", &securityinsights.SentinelOnboardingStateArgs{
+ * 			CustomerManagedKey:                  pulumi.Bool(false),
+ * 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
+ * 			ResourceGroupName:                   pulumi.String("myRg"),
+ * 			SentinelOnboardingStateName:         pulumi.String("default"),
+ * 			WorkspaceName:                       pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sentinelOnboardingState = new azure_native.securityinsights.SentinelOnboardingState("sentinelOnboardingState", {
+ *     customerManagedKey: false,
+ *     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+ *     resourceGroupName: "myRg",
+ *     sentinelOnboardingStateName: "default",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sentinel_onboarding_state = azure_native.securityinsights.SentinelOnboardingState("sentinelOnboardingState",
+ *     customer_managed_key=False,
+ *     operational_insights_resource_provider="Microsoft.OperationalInsights",
+ *     resource_group_name="myRg",
+ *     sentinel_onboarding_state_name="default",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +114,60 @@ import javax.annotation.Nullable;
 public class SentinelOnboardingState extends io.pulumi.resources.CustomResource {
     /**
      * Flag that indicates the status of the CMK setting
-     * 
      */
     @Export(name="customerManagedKey", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> customerManagedKey;
 
     /**
      * @return Flag that indicates the status of the CMK setting
-     * 
      */
     public Output</* @Nullable */ Boolean> getCustomerManagedKey() {
         return this.customerManagedKey;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

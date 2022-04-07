@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ListContainerAppSecretsResult {
     /**
      * Collection of resources.
-     * 
      */
     private final List<ContainerAppSecretResponse> value;
 
@@ -23,7 +22,6 @@ public final class ListContainerAppSecretsResult {
 
     /**
      * Collection of resources.
-     * 
     */
     public List<ContainerAppSecretResponse> getValue() {
         return this.value;

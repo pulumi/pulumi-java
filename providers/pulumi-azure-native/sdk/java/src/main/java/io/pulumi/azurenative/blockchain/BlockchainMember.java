@@ -21,7 +21,108 @@ import javax.annotation.Nullable;
  * Payload of the blockchain member which is exposed in the request/response of the resource provider.
  * API Version: 2018-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### BlockchainMembers_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var blockchainMember = new AzureNative.Blockchain.BlockchainMember("blockchainMember", new AzureNative.Blockchain.BlockchainMemberArgs
+ *         {
+ *             BlockchainMemberName = "contosemember1",
+ *             Consortium = "ContoseConsortium",
+ *             ConsortiumManagementAccountPassword = "<consortiumManagementAccountPassword>",
+ *             Location = "southeastasia",
+ *             Password = "<password>",
+ *             Protocol = "Quorum",
+ *             ResourceGroupName = "mygroup",
+ *             ValidatorNodesSku = new AzureNative.Blockchain.Inputs.BlockchainMemberNodesSkuArgs
+ *             {
+ *                 Capacity = 2,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	blockchain "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blockchain"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := blockchain.NewBlockchainMember(ctx, "blockchainMember", &blockchain.BlockchainMemberArgs{
+ * 			BlockchainMemberName:                pulumi.String("contosemember1"),
+ * 			Consortium:                          pulumi.String("ContoseConsortium"),
+ * 			ConsortiumManagementAccountPassword: pulumi.String("<consortiumManagementAccountPassword>"),
+ * 			Location:                            pulumi.String("southeastasia"),
+ * 			Password:                            pulumi.String("<password>"),
+ * 			Protocol:                            pulumi.String("Quorum"),
+ * 			ResourceGroupName:                   pulumi.String("mygroup"),
+ * 			ValidatorNodesSku: &blockchain.BlockchainMemberNodesSkuArgs{
+ * 				Capacity: pulumi.Int(2),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const blockchainMember = new azure_native.blockchain.BlockchainMember("blockchainMember", {
+ *     blockchainMemberName: "contosemember1",
+ *     consortium: "ContoseConsortium",
+ *     consortiumManagementAccountPassword: "<consortiumManagementAccountPassword>",
+ *     location: "southeastasia",
+ *     password: "<password>",
+ *     protocol: "Quorum",
+ *     resourceGroupName: "mygroup",
+ *     validatorNodesSku: {
+ *         capacity: 2,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * blockchain_member = azure_native.blockchain.BlockchainMember("blockchainMember",
+ *     blockchain_member_name="contosemember1",
+ *     consortium="ContoseConsortium",
+ *     consortium_management_account_password="<consortiumManagementAccountPassword>",
+ *     location="southeastasia",
+ *     password="<password>",
+ *     protocol="Quorum",
+ *     resource_group_name="mygroup",
+ *     validator_nodes_sku=azure_native.blockchain.BlockchainMemberNodesSkuArgs(
+ *         capacity=2,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,266 +137,228 @@ import javax.annotation.Nullable;
 public class BlockchainMember extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the consortium for the blockchain member.
-     * 
      */
     @Export(name="consortium", type=String.class, parameters={})
     private Output</* @Nullable */ String> consortium;
 
     /**
      * @return Gets or sets the consortium for the blockchain member.
-     * 
      */
     public Output</* @Nullable */ String> getConsortium() {
         return this.consortium;
     }
     /**
      * Gets the managed consortium management account address.
-     * 
      */
     @Export(name="consortiumManagementAccountAddress", type=String.class, parameters={})
     private Output<String> consortiumManagementAccountAddress;
 
     /**
      * @return Gets the managed consortium management account address.
-     * 
      */
     public Output<String> getConsortiumManagementAccountAddress() {
         return this.consortiumManagementAccountAddress;
     }
     /**
      * Sets the managed consortium management account password.
-     * 
      */
     @Export(name="consortiumManagementAccountPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> consortiumManagementAccountPassword;
 
     /**
      * @return Sets the managed consortium management account password.
-     * 
      */
     public Output</* @Nullable */ String> getConsortiumManagementAccountPassword() {
         return this.consortiumManagementAccountPassword;
     }
     /**
      * Gets the display name of the member in the consortium.
-     * 
      */
     @Export(name="consortiumMemberDisplayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> consortiumMemberDisplayName;
 
     /**
      * @return Gets the display name of the member in the consortium.
-     * 
      */
     public Output</* @Nullable */ String> getConsortiumMemberDisplayName() {
         return this.consortiumMemberDisplayName;
     }
     /**
      * Gets the role of the member in the consortium.
-     * 
      */
     @Export(name="consortiumRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> consortiumRole;
 
     /**
      * @return Gets the role of the member in the consortium.
-     * 
      */
     public Output</* @Nullable */ String> getConsortiumRole() {
         return this.consortiumRole;
     }
     /**
      * Gets the dns endpoint of the blockchain member.
-     * 
      */
     @Export(name="dns", type=String.class, parameters={})
     private Output<String> dns;
 
     /**
      * @return Gets the dns endpoint of the blockchain member.
-     * 
      */
     public Output<String> getDns() {
         return this.dns;
     }
     /**
      * Gets or sets firewall rules
-     * 
      */
     @Export(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
     private Output</* @Nullable */ List<FirewallRuleResponse>> firewallRules;
 
     /**
      * @return Gets or sets firewall rules
-     * 
      */
     public Output</* @Nullable */ List<FirewallRuleResponse>> getFirewallRules() {
         return this.firewallRules;
     }
     /**
      * The GEO location of the blockchain service.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The GEO location of the blockchain service.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Sets the basic auth password of the blockchain member.
-     * 
      */
     @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
      * @return Sets the basic auth password of the blockchain member.
-     * 
      */
     public Output</* @Nullable */ String> getPassword() {
         return this.password;
     }
     /**
      * Gets or sets the blockchain protocol.
-     * 
      */
     @Export(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
     /**
      * @return Gets or sets the blockchain protocol.
-     * 
      */
     public Output</* @Nullable */ String> getProtocol() {
         return this.protocol;
     }
     /**
      * Gets or sets the blockchain member provision state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets or sets the blockchain member provision state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets the public key of the blockchain member (default transaction node).
-     * 
      */
     @Export(name="publicKey", type=String.class, parameters={})
     private Output<String> publicKey;
 
     /**
      * @return Gets the public key of the blockchain member (default transaction node).
-     * 
      */
     public Output<String> getPublicKey() {
         return this.publicKey;
     }
     /**
      * Gets the Ethereum root contract address of the blockchain.
-     * 
      */
     @Export(name="rootContractAddress", type=String.class, parameters={})
     private Output<String> rootContractAddress;
 
     /**
      * @return Gets the Ethereum root contract address of the blockchain.
-     * 
      */
     public Output<String> getRootContractAddress() {
         return this.rootContractAddress;
     }
     /**
      * Gets or sets the blockchain member Sku.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return Gets or sets the blockchain member Sku.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Tags of the service which is a list of key value pairs that describes the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags of the service which is a list of key value pairs that describes the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the service - e.g. "Microsoft.Blockchain"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the service - e.g. "Microsoft.Blockchain"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets the auth user name of the blockchain member.
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
      * @return Gets the auth user name of the blockchain member.
-     * 
      */
     public Output<String> getUserName() {
         return this.userName;
     }
     /**
      * Gets or sets the blockchain validator nodes Sku.
-     * 
      */
     @Export(name="validatorNodesSku", type=BlockchainMemberNodesSkuResponse.class, parameters={})
     private Output</* @Nullable */ BlockchainMemberNodesSkuResponse> validatorNodesSku;
 
     /**
      * @return Gets or sets the blockchain validator nodes Sku.
-     * 
      */
     public Output</* @Nullable */ BlockchainMemberNodesSkuResponse> getValidatorNodesSku() {
         return this.validatorNodesSku;

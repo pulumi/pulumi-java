@@ -15,37 +15,30 @@ import javax.annotation.Nullable;
 public final class GetMigrateProjectResult {
     /**
      * Gets or sets the eTag for concurrency control.
-     * 
      */
     private final @Nullable String eTag;
     /**
      * Gets the relative URL to get this migrate project.
-     * 
      */
     private final String id;
     /**
      * Gets or sets the Azure location in which migrate project is created.
-     * 
      */
     private final @Nullable String location;
     /**
      * Gets the name of the migrate project.
-     * 
      */
     private final String name;
     /**
      * Gets or sets the nested properties.
-     * 
      */
     private final MigrateProjectPropertiesResponse properties;
     /**
      * Gets or sets the tags.
-     * 
      */
     private final @Nullable MigrateProjectResponseTags tags;
     /**
      * Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
-     * 
      */
     private final String type;
 
@@ -69,49 +62,42 @@ public final class GetMigrateProjectResult {
 
     /**
      * Gets or sets the eTag for concurrency control.
-     * 
     */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Gets the relative URL to get this migrate project.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the Azure location in which migrate project is created.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the name of the migrate project.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the nested properties.
-     * 
     */
     public MigrateProjectPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Gets or sets the tags.
-     * 
     */
     public Optional<MigrateProjectResponseTags> getTags() {
         return Optional.ofNullable(this.tags);
     }
     /**
      * Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
-     * 
     */
     public String getType() {
         return this.type;

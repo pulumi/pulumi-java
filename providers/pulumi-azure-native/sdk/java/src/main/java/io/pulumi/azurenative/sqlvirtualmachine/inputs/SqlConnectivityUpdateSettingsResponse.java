@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set the access level and network port settings for SQL Server.
- * 
  */
 public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resou
 
     /**
      * SQL Server connectivity option.
-     * 
      */
     @Import(name="connectivityType")
       private final @Nullable String connectivityType;
@@ -32,7 +30,6 @@ public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resou
 
     /**
      * SQL Server port.
-     * 
      */
     @Import(name="port")
       private final @Nullable Integer port;

@@ -19,7 +19,91 @@ import javax.annotation.Nullable;
  * Migrate Project REST Resource.
  * API Version: 2018-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### MigrateProjects_Put
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var migrateProject = new AzureNative.Migrate.MigrateProject("migrateProject", new AzureNative.Migrate.MigrateProjectArgs
+ *         {
+ *             ETag = "\"b701c73a-0000-0000-0000-59c12ff00000\"",
+ *             Location = "Southeast Asia",
+ *             MigrateProjectName = "project01",
+ *             Properties = ,
+ *             ResourceGroupName = "myResourceGroup",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := migrate.NewMigrateProject(ctx, "migrateProject", &migrate.MigrateProjectArgs{
+ * 			ETag:               pulumi.String("\"b701c73a-0000-0000-0000-59c12ff00000\""),
+ * 			Location:           pulumi.String("Southeast Asia"),
+ * 			MigrateProjectName: pulumi.String("project01"),
+ * 			Properties:         nil,
+ * 			ResourceGroupName:  pulumi.String("myResourceGroup"),
+ * 			Tags:               nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const migrateProject = new azure_native.migrate.MigrateProject("migrateProject", {
+ *     eTag: "\"b701c73a-0000-0000-0000-59c12ff00000\"",
+ *     location: "Southeast Asia",
+ *     migrateProjectName: "project01",
+ *     properties: {},
+ *     resourceGroupName: "myResourceGroup",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * migrate_project = azure_native.migrate.MigrateProject("migrateProject",
+ *     e_tag="\"b701c73a-0000-0000-0000-59c12ff00000\"",
+ *     location="Southeast Asia",
+ *     migrate_project_name="project01",
+ *     properties=azure_native.migrate.MigrateProjectPropertiesArgs(),
+ *     resource_group_name="myResourceGroup",
+ *     tags=azure_native.migrate.MigrateProjectTagsArgs())
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +118,72 @@ import javax.annotation.Nullable;
 public class MigrateProject extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the eTag for concurrency control.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
      * @return Gets or sets the eTag for concurrency control.
-     * 
      */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
     /**
      * Gets or sets the Azure location in which migrate project is created.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Gets or sets the Azure location in which migrate project is created.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Gets the name of the migrate project.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the name of the migrate project.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the nested properties.
-     * 
      */
     @Export(name="properties", type=MigrateProjectPropertiesResponse.class, parameters={})
     private Output<MigrateProjectPropertiesResponse> properties;
 
     /**
      * @return Gets or sets the nested properties.
-     * 
      */
     public Output<MigrateProjectPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Gets or sets the tags.
-     * 
      */
     @Export(name="tags", type=MigrateProjectResponseTags.class, parameters={})
     private Output</* @Nullable */ MigrateProjectResponseTags> tags;
 
     /**
      * @return Gets or sets the tags.
-     * 
      */
     public Output</* @Nullable */ MigrateProjectResponseTags> getTags() {
         return this.tags;
     }
     /**
      * Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
-     * 
      */
     public Output<String> getType() {
         return this.type;

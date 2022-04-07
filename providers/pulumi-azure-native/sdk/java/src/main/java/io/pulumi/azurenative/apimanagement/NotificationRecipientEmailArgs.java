@@ -16,7 +16,6 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
 
     /**
      * Email identifier.
-     * 
      */
     @Import(name="email")
       private final @Nullable Output<String> email;
@@ -27,7 +26,6 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
 
     /**
      * Notification Name Identifier.
-     * 
      */
     @Import(name="notificationName", required=true)
       private final Output<String> notificationName;
@@ -38,7 +36,6 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

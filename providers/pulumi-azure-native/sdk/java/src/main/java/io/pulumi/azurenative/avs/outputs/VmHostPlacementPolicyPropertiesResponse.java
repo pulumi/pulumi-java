@@ -14,38 +14,31 @@ import javax.annotation.Nullable;
 public final class VmHostPlacementPolicyPropertiesResponse {
     /**
      * placement policy affinity type
-     * 
      */
     private final String affinityType;
     /**
      * Display name of the placement policy
-     * 
      */
     private final @Nullable String displayName;
     /**
      * Host members list
-     * 
      */
     private final List<String> hostMembers;
     /**
      * The provisioning state
-     * 
      */
     private final String provisioningState;
     /**
      * Whether the placement policy is enabled or disabled
-     * 
      */
     private final @Nullable String state;
     /**
      * placement policy type
      * Expected value is 'VmHost'.
-     * 
      */
     private final String type;
     /**
      * Virtual machine members list
-     * 
      */
     private final List<String> vmMembers;
 
@@ -69,35 +62,30 @@ public final class VmHostPlacementPolicyPropertiesResponse {
 
     /**
      * placement policy affinity type
-     * 
     */
     public String getAffinityType() {
         return this.affinityType;
     }
     /**
      * Display name of the placement policy
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Host members list
-     * 
     */
     public List<String> getHostMembers() {
         return this.hostMembers;
     }
     /**
      * The provisioning state
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether the placement policy is enabled or disabled
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
@@ -105,14 +93,12 @@ public final class VmHostPlacementPolicyPropertiesResponse {
     /**
      * placement policy type
      * Expected value is 'VmHost'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Virtual machine members list
-     * 
     */
     public List<String> getVmMembers() {
         return this.vmMembers;

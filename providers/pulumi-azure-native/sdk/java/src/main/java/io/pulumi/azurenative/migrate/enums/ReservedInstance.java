@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Azure reserved instance.
-     * 
      */
     @EnumType
     public enum ReservedInstance {

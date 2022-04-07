@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class MigrationRequestPropertiesResponse {
     /**
      * The path to the legacy object to migrate.
-     * 
      */
     private final @Nullable String migrationPath;
     /**
      * The type of operation for migration.
-     * 
      */
     private final @Nullable String operation;
 
@@ -32,14 +30,12 @@ public final class MigrationRequestPropertiesResponse {
 
     /**
      * The path to the legacy object to migrate.
-     * 
     */
     public Optional<String> getMigrationPath() {
         return Optional.ofNullable(this.migrationPath);
     }
     /**
      * The type of operation for migration.
-     * 
     */
     public Optional<String> getOperation() {
         return Optional.ofNullable(this.operation);

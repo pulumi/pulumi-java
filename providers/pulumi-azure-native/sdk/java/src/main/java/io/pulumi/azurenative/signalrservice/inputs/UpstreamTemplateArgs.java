@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 /**
  * Upstream template item settings. It defines the Upstream URL of the incoming requests.
  * The template defines the pattern of the event, the hub or the category of the incoming request that matches current URL template.
- * 
  */
 public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      *     1. "*", it to matches any category name
      *     2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
      *     3. The single category name, for example, "connections", it matches the category "connections"
-     * 
      */
     @Import(name="categoryPattern")
       private final @Nullable Output<String> categoryPattern;
@@ -40,7 +38,6 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      *     1. "*", it to matches any event name
      *     2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
      *     3. The single event name, for example, "connect", it matches "connect"
-     * 
      */
     @Import(name="eventPattern")
       private final @Nullable Output<String> eventPattern;
@@ -55,7 +52,6 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
      *     1. "*", it to matches any hub name
      *     2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
      *     3. The single hub name, for example, "hub1", it matches "hub1"
-     * 
      */
     @Import(name="hubPattern")
       private final @Nullable Output<String> hubPattern;
@@ -67,7 +63,6 @@ public final class UpstreamTemplateArgs extends io.pulumi.resources.ResourceArgs
     /**
      * Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
      * For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
-     * 
      */
     @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;

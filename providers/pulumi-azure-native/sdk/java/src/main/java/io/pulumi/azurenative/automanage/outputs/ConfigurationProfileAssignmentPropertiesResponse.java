@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class ConfigurationProfileAssignmentPropertiesResponse {
     /**
      * The Automanage account ARM Resource URI
-     * 
      */
     private final @Nullable String accountId;
     /**
      * The configuration setting for the configuration profile.
-     * 
      */
     private final @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
     /**
      * A value indicating configuration profile.
-     * 
      */
     private final @Nullable String configurationProfile;
     /**
      * The configuration profile custom preferences ARM resource URI
-     * 
      */
     private final @Nullable String configurationProfilePreferenceId;
     /**
      * The state of onboarding, which only appears in the response.
-     * 
      */
     private final String provisioningState;
     /**
      * The target VM resource URI
-     * 
      */
     private final @Nullable String targetId;
 
@@ -61,42 +55,36 @@ public final class ConfigurationProfileAssignmentPropertiesResponse {
 
     /**
      * The Automanage account ARM Resource URI
-     * 
     */
     public Optional<String> getAccountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
      * The configuration setting for the configuration profile.
-     * 
     */
     public Optional<ConfigurationProfileAssignmentComplianceResponse> getCompliance() {
         return Optional.ofNullable(this.compliance);
     }
     /**
      * A value indicating configuration profile.
-     * 
     */
     public Optional<String> getConfigurationProfile() {
         return Optional.ofNullable(this.configurationProfile);
     }
     /**
      * The configuration profile custom preferences ARM resource URI
-     * 
     */
     public Optional<String> getConfigurationProfilePreferenceId() {
         return Optional.ofNullable(this.configurationProfilePreferenceId);
     }
     /**
      * The state of onboarding, which only appears in the response.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The target VM resource URI
-     * 
     */
     public Optional<String> getTargetId() {
         return Optional.ofNullable(this.targetId);

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the correlation filter expression.
- * 
  */
 public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Content type of the message.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -33,7 +31,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Identifier of the correlation.
-     * 
      */
     @Import(name="correlationId")
       private final @Nullable Output<String> correlationId;
@@ -44,7 +41,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Application specific label.
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -55,7 +51,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Identifier of the message.
-     * 
      */
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
@@ -66,7 +61,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * dictionary object for custom filters
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -77,7 +71,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Address of the queue to reply to.
-     * 
      */
     @Import(name="replyTo")
       private final @Nullable Output<String> replyTo;
@@ -88,7 +81,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Session identifier to reply to.
-     * 
      */
     @Import(name="replyToSessionId")
       private final @Nullable Output<String> replyToSessionId;
@@ -99,7 +91,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Value that indicates whether the rule action requires preprocessing.
-     * 
      */
     @Import(name="requiresPreprocessing")
       private final @Nullable Output<Boolean> requiresPreprocessing;
@@ -110,7 +101,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Session identifier.
-     * 
      */
     @Import(name="sessionId")
       private final @Nullable Output<String> sessionId;
@@ -121,7 +111,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Address to send to.
-     * 
      */
     @Import(name="to")
       private final @Nullable Output<String> to;

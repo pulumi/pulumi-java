@@ -16,7 +16,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email of the user used by Logz for contacting them if needed
-     * 
      */
     @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
@@ -27,7 +26,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * First Name of the user
-     * 
      */
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
@@ -38,7 +36,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last Name of the user
-     * 
      */
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
@@ -49,7 +46,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Phone number of the user used by Logz for contacting them if needed
-     * 
      */
     @Import(name="phoneNumber")
       private final @Nullable Output<String> phoneNumber;

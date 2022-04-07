@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines the properties to access the artifacts using an Azure Storage SAS URI.
- * 
  */
 public final class SasAuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SasAuthenticationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
-     * 
      */
     @Import(name="sasUri", required=true)
       private final String sasUri;
@@ -30,7 +28,6 @@ public final class SasAuthenticationResponse extends io.pulumi.resources.InvokeA
     /**
      * The authentication type
      * Expected value is 'Sas'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

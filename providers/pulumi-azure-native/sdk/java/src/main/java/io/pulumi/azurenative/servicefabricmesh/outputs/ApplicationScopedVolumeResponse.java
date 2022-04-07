@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class ApplicationScopedVolumeResponse {
     /**
      * Describes parameters for creating application-scoped volumes.
-     * 
      */
     private final ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters;
     /**
      * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
-     * 
      */
     private final String destinationPath;
     /**
      * Name of the volume being referenced.
-     * 
      */
     private final String name;
     /**
      * The flag indicating whether the volume is read only. Default is 'false'.
-     * 
      */
     private final @Nullable Boolean readOnly;
 
@@ -48,28 +44,24 @@ public final class ApplicationScopedVolumeResponse {
 
     /**
      * Describes parameters for creating application-scoped volumes.
-     * 
     */
     public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse getCreationParameters() {
         return this.creationParameters;
     }
     /**
      * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
-     * 
     */
     public String getDestinationPath() {
         return this.destinationPath;
     }
     /**
      * Name of the volume being referenced.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The flag indicating whether the volume is read only. Default is 'false'.
-     * 
     */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);

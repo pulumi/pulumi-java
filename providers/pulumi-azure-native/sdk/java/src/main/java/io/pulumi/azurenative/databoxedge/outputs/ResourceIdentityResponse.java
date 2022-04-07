@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ResourceIdentityResponse {
     /**
      * Service Principal Id backing the Msi
-     * 
      */
     private final String principalId;
     /**
      * Home Tenant Id
-     * 
      */
     private final String tenantId;
     /**
      * Identity type
-     * 
      */
     private final @Nullable String type;
 
@@ -39,21 +36,18 @@ public final class ResourceIdentityResponse {
 
     /**
      * Service Principal Id backing the Msi
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * Home Tenant Id
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Identity type
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

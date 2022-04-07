@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The kind of nodes that the Big Data pool provides.
-     * 
      */
     @EnumType
     public enum NodeSizeFamily {

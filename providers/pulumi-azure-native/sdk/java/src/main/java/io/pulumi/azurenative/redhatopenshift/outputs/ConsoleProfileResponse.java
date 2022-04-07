@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ConsoleProfileResponse {
     /**
      * The URL to access the cluster console (immutable).
-     * 
      */
     private final @Nullable String url;
 
@@ -24,7 +23,6 @@ public final class ConsoleProfileResponse {
 
     /**
      * The URL to access the cluster console (immutable).
-     * 
     */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);

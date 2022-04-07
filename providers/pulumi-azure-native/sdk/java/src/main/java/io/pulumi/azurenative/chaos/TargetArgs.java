@@ -17,7 +17,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of the target resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents a resource provider namespace.
-     * 
      */
     @Import(name="parentProviderNamespace", required=true)
       private final Output<String> parentProviderNamespace;
@@ -39,7 +37,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents a resource name.
-     * 
      */
     @Import(name="parentResourceName", required=true)
       private final Output<String> parentResourceName;
@@ -50,7 +47,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents a resource type.
-     * 
      */
     @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
@@ -61,7 +57,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties of the target resource.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Object> properties;
@@ -72,7 +67,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents an Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String that represents a Target resource name.
-     * 
      */
     @Import(name="targetName")
       private final @Nullable Output<String> targetName;

@@ -20,7 +20,6 @@ public final class ListWebAppBackupStatusSecretsArgs extends io.pulumi.resources
 
     /**
      * ID of backup.
-     * 
      */
     @Import(name="backupId", required=true)
       private final String backupId;
@@ -31,7 +30,6 @@ public final class ListWebAppBackupStatusSecretsArgs extends io.pulumi.resources
 
     /**
      * Name of the backup.
-     * 
      */
     @Import(name="backupName")
       private final @Nullable String backupName;
@@ -42,7 +40,6 @@ public final class ListWebAppBackupStatusSecretsArgs extends io.pulumi.resources
 
     /**
      * Schedule for the backup if it is executed periodically.
-     * 
      */
     @Import(name="backupSchedule")
       private final @Nullable BackupSchedule backupSchedule;
@@ -53,7 +50,6 @@ public final class ListWebAppBackupStatusSecretsArgs extends io.pulumi.resources
 
     /**
      * Databases included in the backup.
-     * 
      */
     @Import(name="databases")
       private final @Nullable List<DatabaseBackupSetting> databases;
@@ -64,7 +60,6 @@ public final class ListWebAppBackupStatusSecretsArgs extends io.pulumi.resources
 
     /**
      * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
@@ -75,7 +70,6 @@ public final class ListWebAppBackupStatusSecretsArgs extends io.pulumi.resources
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -86,7 +80,6 @@ public final class ListWebAppBackupStatusSecretsArgs extends io.pulumi.resources
 
     /**
      * Name of web app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -97,7 +90,6 @@ public final class ListWebAppBackupStatusSecretsArgs extends io.pulumi.resources
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -108,7 +100,6 @@ public final class ListWebAppBackupStatusSecretsArgs extends io.pulumi.resources
 
     /**
      * SAS URL to the container.
-     * 
      */
     @Import(name="storageAccountUrl", required=true)
       private final String storageAccountUrl;

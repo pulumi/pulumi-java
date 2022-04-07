@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the cloud service role sku.
- * 
  */
 public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies the number of role instances in the cloud service.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Double> capacity;
@@ -32,7 +30,6 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters for Operational-Tier DataStore
- * 
  */
 public final class AzureOperationalStoreParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureOperationalStoreParametersResponse extends io.pulumi.res
 
     /**
      * type of datastore; Operational/Vault/Archive
-     * 
      */
     @Import(name="dataStoreType", required=true)
       private final String dataStoreType;
@@ -32,7 +30,6 @@ public final class AzureOperationalStoreParametersResponse extends io.pulumi.res
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'AzureOperationalStoreParameters'.
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;
@@ -43,7 +40,6 @@ public final class AzureOperationalStoreParametersResponse extends io.pulumi.res
 
     /**
      * Gets or sets the Snapshot Resource Group Uri.
-     * 
      */
     @Import(name="resourceGroupId")
       private final @Nullable String resourceGroupId;

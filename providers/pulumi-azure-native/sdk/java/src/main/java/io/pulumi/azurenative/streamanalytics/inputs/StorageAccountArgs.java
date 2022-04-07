@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that are associated with an Azure Storage account
- * 
  */
 public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
@@ -31,7 +29,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;

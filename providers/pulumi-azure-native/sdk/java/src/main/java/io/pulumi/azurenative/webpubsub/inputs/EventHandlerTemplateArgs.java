@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * EventHandler template item settings.
- * 
  */
 public final class EventHandlerTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EventHandlerTemplateArgs extends io.pulumi.resources.Resource
 
     /**
      * Gets or sets the auth settings for an event handler. If not set, no auth is used.
-     * 
      */
     @Import(name="auth")
       private final @Nullable Output<UpstreamAuthSettingsArgs> auth;
@@ -35,7 +33,6 @@ public final class EventHandlerTemplateArgs extends io.pulumi.resources.Resource
      * There are 2 kind of patterns supported:
      *     1. The single event name, for example, "connect", it matches "connect"
      *     2. Combine multiple events with ",", for example "connect,disconnected", it matches event "connect" and "disconnected"
-     * 
      */
     @Import(name="systemEventPattern")
       private final @Nullable Output<String> systemEventPattern;
@@ -47,7 +44,6 @@ public final class EventHandlerTemplateArgs extends io.pulumi.resources.Resource
     /**
      * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
      * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
-     * 
      */
     @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;
@@ -62,7 +58,6 @@ public final class EventHandlerTemplateArgs extends io.pulumi.resources.Resource
      *     1. "*", it to matches any event name
      *     2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
      *     3. The single event name, for example, "event1", it matches "event1"
-     * 
      */
     @Import(name="userEventPattern")
       private final @Nullable Output<String> userEventPattern;

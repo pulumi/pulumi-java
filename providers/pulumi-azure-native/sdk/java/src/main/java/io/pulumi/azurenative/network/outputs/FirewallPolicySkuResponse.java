@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class FirewallPolicySkuResponse {
     /**
      * Tier of Firewall Policy.
-     * 
      */
     private final @Nullable String tier;
 
@@ -24,7 +23,6 @@ public final class FirewallPolicySkuResponse {
 
     /**
      * Tier of Firewall Policy.
-     * 
     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);

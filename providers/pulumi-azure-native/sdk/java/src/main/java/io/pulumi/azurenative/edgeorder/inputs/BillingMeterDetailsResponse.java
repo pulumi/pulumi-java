@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Holds billing meter details for each type of billing
- * 
  */
 public final class BillingMeterDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Frequency of recurrence
-     * 
      */
     @Import(name="frequency", required=true)
       private final String frequency;
@@ -32,7 +30,6 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Represents MeterDetails
-     * 
      */
     @Import(name="meterDetails", required=true)
       private final Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
@@ -43,7 +40,6 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Represents Metering type (eg one-time or recurrent)
-     * 
      */
     @Import(name="meteringType", required=true)
       private final String meteringType;
@@ -54,7 +50,6 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Represents Billing type name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

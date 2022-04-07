@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies a configuration for Widevine licenses.
- * 
  */
 public final class ContentKeyPolicyWidevineConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends io.pulu
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -30,7 +28,6 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends io.pulu
 
     /**
      * The Widevine template.
-     * 
      */
     @Import(name="widevineTemplate", required=true)
       private final String widevineTemplate;

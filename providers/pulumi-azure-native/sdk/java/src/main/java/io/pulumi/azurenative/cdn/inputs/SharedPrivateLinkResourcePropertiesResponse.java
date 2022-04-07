@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the properties of an existing Shared Private Link Resource to use when connecting to a private origin.
- * 
  */
 public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
 
     /**
      * The group id from the provider of resource the shared private link resource is for.
-     * 
      */
     @Import(name="groupId")
       private final @Nullable String groupId;
@@ -32,7 +30,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
 
     /**
      * The resource id of the resource the shared private link resource is for.
-     * 
      */
     @Import(name="privateLink")
       private final @Nullable ResourceReferenceResponse privateLink;
@@ -43,7 +40,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
 
     /**
      * The location of the shared private link resource
-     * 
      */
     @Import(name="privateLinkLocation")
       private final @Nullable String privateLinkLocation;
@@ -54,7 +50,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
 
     /**
      * The request message for requesting approval of the shared private link resource.
-     * 
      */
     @Import(name="requestMessage")
       private final @Nullable String requestMessage;
@@ -65,7 +60,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
 
     /**
      * Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

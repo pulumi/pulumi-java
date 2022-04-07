@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Sync Session status object.
- * 
  */
 public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
 
     /**
      * Applied bytes
-     * 
      */
     @Import(name="appliedBytes", required=true)
       private final Double appliedBytes;
@@ -30,7 +28,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
 
     /**
      * Applied item count.
-     * 
      */
     @Import(name="appliedItemCount", required=true)
       private final Double appliedItemCount;
@@ -41,7 +38,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
 
     /**
      * Per item error count
-     * 
      */
     @Import(name="perItemErrorCount", required=true)
       private final Double perItemErrorCount;
@@ -52,7 +48,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
 
     /**
      * Sync mode
-     * 
      */
     @Import(name="syncMode", required=true)
       private final String syncMode;
@@ -63,7 +58,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
 
     /**
      * Timestamp when properties were updated
-     * 
      */
     @Import(name="timestamp", required=true)
       private final String timestamp;
@@ -74,7 +68,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
 
     /**
      * Total bytes (if available)
-     * 
      */
     @Import(name="totalBytes", required=true)
       private final Double totalBytes;
@@ -85,7 +78,6 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
 
     /**
      * Total item count (if available)
-     * 
      */
     @Import(name="totalItemCount", required=true)
       private final Double totalItemCount;

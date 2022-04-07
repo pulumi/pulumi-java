@@ -16,7 +16,6 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Allows for expansion of additional Template Spec details in the response. Optional.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Template Spec.
-     * 
      */
     @Import(name="templateSpecName", required=true)
       private final String templateSpecName;

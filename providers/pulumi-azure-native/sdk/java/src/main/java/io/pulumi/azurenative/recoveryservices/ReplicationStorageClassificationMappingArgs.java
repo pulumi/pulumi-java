@@ -17,7 +17,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
 
     /**
      * Fabric name.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
@@ -28,7 +27,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
 
     /**
      * Storage mapping input properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<StorageMappingInputPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -61,7 +57,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
 
     /**
      * Storage classification mapping name.
-     * 
      */
     @Import(name="storageClassificationMappingName")
       private final @Nullable Output<String> storageClassificationMappingName;
@@ -72,7 +67,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
 
     /**
      * Storage classification name.
-     * 
      */
     @Import(name="storageClassificationName", required=true)
       private final Output<String> storageClassificationName;

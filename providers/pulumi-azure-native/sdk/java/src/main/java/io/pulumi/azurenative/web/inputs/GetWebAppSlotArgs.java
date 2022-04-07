@@ -14,7 +14,6 @@ public final class GetWebAppSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetWebAppSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetWebAppSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the deployment slot. By default, this API returns the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final String slot;

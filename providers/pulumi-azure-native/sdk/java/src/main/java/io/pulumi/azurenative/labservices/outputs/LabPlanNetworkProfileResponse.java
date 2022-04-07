@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class LabPlanNetworkProfileResponse {
     /**
      * The external subnet resource id
-     * 
      */
     private final @Nullable String subnetId;
 
@@ -24,7 +23,6 @@ public final class LabPlanNetworkProfileResponse {
 
     /**
      * The external subnet resource id
-     * 
     */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);

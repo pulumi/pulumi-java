@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a resource currently being monitored by the Datadog monitor resource.
- * 
  */
 public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The ARM id of the resource.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -32,7 +30,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Reason for why the resource is sending logs (or why it is not sending).
-     * 
      */
     @Import(name="reasonForLogsStatus")
       private final @Nullable String reasonForLogsStatus;
@@ -43,7 +40,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Reason for why the resource is sending metrics (or why it is not sending).
-     * 
      */
     @Import(name="reasonForMetricsStatus")
       private final @Nullable String reasonForMetricsStatus;
@@ -54,7 +50,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Flag indicating if resource is sending logs to Datadog.
-     * 
      */
     @Import(name="sendingLogs")
       private final @Nullable Boolean sendingLogs;
@@ -65,7 +60,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Flag indicating if resource is sending metrics to Datadog.
-     * 
      */
     @Import(name="sendingMetrics")
       private final @Nullable Boolean sendingMetrics;

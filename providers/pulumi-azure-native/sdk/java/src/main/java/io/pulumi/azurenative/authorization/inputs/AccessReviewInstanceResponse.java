@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Access Review Instance.
- * 
  */
 public final class AccessReviewInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
 
     /**
      * The DateTime when the review instance is scheduled to end.
-     * 
      */
     @Import(name="endDateTime")
       private final @Nullable String endDateTime;
@@ -31,7 +29,6 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
 
     /**
      * The access review instance id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -42,7 +39,6 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
 
     /**
      * The access review instance name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -53,7 +49,6 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
 
     /**
      * The DateTime when the review instance is scheduled to be start.
-     * 
      */
     @Import(name="startDateTime")
       private final @Nullable String startDateTime;
@@ -64,7 +59,6 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
 
     /**
      * This read-only field specifies the status of an access review instance.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -75,7 +69,6 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

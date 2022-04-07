@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether or not public network access is allowed for the account.
-     * 
      */
     @EnumType
     public enum PublicNetworkAccess {

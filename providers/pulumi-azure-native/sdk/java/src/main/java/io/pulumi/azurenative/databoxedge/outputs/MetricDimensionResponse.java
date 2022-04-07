@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class MetricDimensionResponse {
     /**
      * The dimension value.
-     * 
      */
     private final String sourceName;
     /**
      * The dimension type.
-     * 
      */
     private final String sourceType;
 
@@ -30,14 +28,12 @@ public final class MetricDimensionResponse {
 
     /**
      * The dimension value.
-     * 
     */
     public String getSourceName() {
         return this.sourceName;
     }
     /**
      * The dimension type.
-     * 
     */
     public String getSourceType() {
         return this.sourceType;

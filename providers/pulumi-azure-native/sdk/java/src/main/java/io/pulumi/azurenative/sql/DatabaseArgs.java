@@ -29,7 +29,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
-     * 
      */
     @Import(name="autoPauseDelay")
       private final @Nullable Output<Integer> autoPauseDelay;
@@ -40,7 +39,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collation of the metadata catalog.
-     * 
      */
     @Import(name="catalogCollation")
       private final @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
@@ -51,7 +49,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The collation of the database.
-     * 
      */
     @Import(name="collation")
       private final @Nullable Output<String> collation;
@@ -78,7 +75,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
      * 
      * Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
@@ -89,7 +85,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the database.
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
@@ -100,7 +95,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource identifier of the elastic pool containing this database.
-     * 
      */
     @Import(name="elasticPoolId")
       private final @Nullable Output<String> elasticPoolId;
@@ -111,7 +105,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of secondary replicas associated with the database that are used to provide high availability.
-     * 
      */
     @Import(name="highAvailabilityReplicaCount")
       private final @Nullable Output<Integer> highAvailabilityReplicaCount;
@@ -122,7 +115,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,DatabaseLicenseType>> licenseType;
@@ -133,7 +125,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -144,7 +135,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource identifier of the long term retention backup associated with create operation of this database.
-     * 
      */
     @Import(name="longTermRetentionBackupResourceId")
       private final @Nullable Output<String> longTermRetentionBackupResourceId;
@@ -155,7 +145,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
-     * 
      */
     @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
@@ -166,7 +155,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The max size of the database expressed in bytes.
-     * 
      */
     @Import(name="maxSizeBytes")
       private final @Nullable Output<Double> maxSizeBytes;
@@ -177,7 +165,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Minimal capacity that database will always have allocated, if not paused
-     * 
      */
     @Import(name="minCapacity")
       private final @Nullable Output<Double> minCapacity;
@@ -188,7 +175,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
-     * 
      */
     @Import(name="readScale")
       private final @Nullable Output<Either<String,DatabaseReadScale>> readScale;
@@ -199,7 +185,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource identifier of the recoverable database associated with create operation of this database.
-     * 
      */
     @Import(name="recoverableDatabaseId")
       private final @Nullable Output<String> recoverableDatabaseId;
@@ -210,7 +195,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource identifier of the recovery point associated with create operation of this database.
-     * 
      */
     @Import(name="recoveryServicesRecoveryPointId")
       private final @Nullable Output<String> recoveryServicesRecoveryPointId;
@@ -221,7 +205,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The storage account type to be used to store backups for this database.
-     * 
      */
     @Import(name="requestedBackupStorageRedundancy")
       private final @Nullable Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
@@ -232,7 +215,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -243,7 +225,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource identifier of the restorable dropped database associated with create operation of this database.
-     * 
      */
     @Import(name="restorableDroppedDatabaseId")
       private final @Nullable Output<String> restorableDroppedDatabaseId;
@@ -254,7 +235,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
-     * 
      */
     @Import(name="restorePointInTime")
       private final @Nullable Output<String> restorePointInTime;
@@ -265,7 +245,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the sample schema to apply when creating this database.
-     * 
      */
     @Import(name="sampleName")
       private final @Nullable Output<Either<String,SampleName>> sampleName;
@@ -276,7 +255,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
-     * 
      */
     @Import(name="secondaryType")
       private final @Nullable Output<Either<String,SecondaryType>> secondaryType;
@@ -287,7 +265,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -301,6 +278,14 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
      * 
+     * ```azurecli
+     * az sql db list-editions -l <location> -o table
+     * ````
+     * 
+     * ```powershell
+     * Get-AzSqlServerServiceObjective -Location <location>
+     * ````
+     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -311,7 +296,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the time that the database was deleted.
-     * 
      */
     @Import(name="sourceDatabaseDeletionDate")
       private final @Nullable Output<String> sourceDatabaseDeletionDate;
@@ -322,7 +306,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource identifier of the source database associated with create operation of this database.
-     * 
      */
     @Import(name="sourceDatabaseId")
       private final @Nullable Output<String> sourceDatabaseId;
@@ -333,7 +316,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -344,7 +326,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-     * 
      */
     @Import(name="zoneRedundant")
       private final @Nullable Output<Boolean> zoneRedundant;

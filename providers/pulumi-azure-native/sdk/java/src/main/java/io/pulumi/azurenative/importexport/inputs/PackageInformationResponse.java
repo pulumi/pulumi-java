@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains information about the package being shipped by the customer to the Microsoft data center.
- * 
  */
 public final class PackageInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
 
     /**
      * The name of the carrier that is used to ship the import or export drives.
-     * 
      */
     @Import(name="carrierName", required=true)
       private final String carrierName;
@@ -30,7 +28,6 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
 
     /**
      * The number of drives included in the package.
-     * 
      */
     @Import(name="driveCount", required=true)
       private final Double driveCount;
@@ -41,7 +38,6 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
 
     /**
      * The date when the package is shipped.
-     * 
      */
     @Import(name="shipDate", required=true)
       private final String shipDate;
@@ -52,7 +48,6 @@ public final class PackageInformationResponse extends io.pulumi.resources.Invoke
 
     /**
      * The tracking number of the package.
-     * 
      */
     @Import(name="trackingNumber", required=true)
       private final String trackingNumber;

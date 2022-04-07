@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set disk storage settings for SQL Server.
- * 
  */
 public final class SqlStorageUpdateSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SqlStorageUpdateSettingsResponse extends io.pulumi.resources.
 
     /**
      * Disk configuration to apply to SQL Server.
-     * 
      */
     @Import(name="diskConfigurationType")
       private final @Nullable String diskConfigurationType;
@@ -32,7 +30,6 @@ public final class SqlStorageUpdateSettingsResponse extends io.pulumi.resources.
 
     /**
      * Virtual machine disk count.
-     * 
      */
     @Import(name="diskCount")
       private final @Nullable Integer diskCount;
@@ -43,7 +40,6 @@ public final class SqlStorageUpdateSettingsResponse extends io.pulumi.resources.
 
     /**
      * Device id of the first disk to be updated.
-     * 
      */
     @Import(name="startingDeviceId")
       private final @Nullable Integer startingDeviceId;

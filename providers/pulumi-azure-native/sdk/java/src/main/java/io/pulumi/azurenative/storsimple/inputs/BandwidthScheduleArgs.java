@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * The schedule for bandwidth setting.
- * 
  */
 public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The days of the week when this schedule is applicable.
-     * 
      */
     @Import(name="days", required=true)
       private final Output<List<DayOfWeek>> days;
@@ -33,7 +31,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The rate in Mbps.
-     * 
      */
     @Import(name="rateInMbps", required=true)
       private final Output<Integer> rateInMbps;
@@ -44,7 +41,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The start time of the schedule.
-     * 
      */
     @Import(name="start", required=true)
       private final Output<TimeArgs> start;
@@ -55,7 +51,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The stop time of the schedule.
-     * 
      */
     @Import(name="stop", required=true)
       private final Output<TimeArgs> stop;

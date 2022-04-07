@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The compute isolation properties.
- * 
  */
 public final class ComputeIsolationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ComputeIsolationPropertiesResponse extends io.pulumi.resource
 
     /**
      * The flag indicates whether enable compute isolation or not.
-     * 
      */
     @Import(name="enableComputeIsolation")
       private final @Nullable Boolean enableComputeIsolation;
@@ -32,7 +30,6 @@ public final class ComputeIsolationPropertiesResponse extends io.pulumi.resource
 
     /**
      * The host sku.
-     * 
      */
     @Import(name="hostSku")
       private final @Nullable String hostSku;

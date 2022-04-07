@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The sku name.
-     * 
      */
     @EnumType
     public enum SkuName {
         /**
          * Data Box.
-         * 
          */
         DataBox("DataBox"),
         /**
          * Data Box Disk.
-         * 
          */
         DataBoxDisk("DataBoxDisk"),
         /**
          * Data Box Heavy.
-         * 
          */
         DataBoxHeavy("DataBoxHeavy");
 

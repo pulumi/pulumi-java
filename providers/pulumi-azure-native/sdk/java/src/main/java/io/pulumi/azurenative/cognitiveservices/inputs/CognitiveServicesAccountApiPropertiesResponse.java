@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The api properties for special APIs.
- * 
  */
 public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
 
     /**
      * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
-     * 
      */
     @Import(name="aadClientId")
       private final @Nullable String aadClientId;
@@ -32,7 +30,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
 
     /**
      * (Metrics Advisor Only) The Azure AD Tenant Id.
-     * 
      */
     @Import(name="aadTenantId")
       private final @Nullable String aadTenantId;
@@ -43,7 +40,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
 
     /**
      * (Personalization Only) The flag to enable statistics of Bing Search.
-     * 
      */
     @Import(name="eventHubConnectionString")
       private final @Nullable String eventHubConnectionString;
@@ -54,7 +50,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
 
     /**
      * (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
-     * 
      */
     @Import(name="qnaAzureSearchEndpointId")
       private final @Nullable String qnaAzureSearchEndpointId;
@@ -65,7 +60,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
 
     /**
      * (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
-     * 
      */
     @Import(name="qnaAzureSearchEndpointKey")
       private final @Nullable String qnaAzureSearchEndpointKey;
@@ -76,7 +70,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
 
     /**
      * (QnAMaker Only) The runtime endpoint of QnAMaker.
-     * 
      */
     @Import(name="qnaRuntimeEndpoint")
       private final @Nullable String qnaRuntimeEndpoint;
@@ -87,7 +80,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
 
     /**
      * (Bing Search Only) The flag to enable statistics of Bing Search.
-     * 
      */
     @Import(name="statisticsEnabled")
       private final @Nullable Boolean statisticsEnabled;
@@ -98,7 +90,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
 
     /**
      * (Personalization Only) The storage account connection string.
-     * 
      */
     @Import(name="storageAccountConnectionString")
       private final @Nullable String storageAccountConnectionString;
@@ -109,7 +100,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
 
     /**
      * (Metrics Advisor Only) The super user of Metrics Advisor.
-     * 
      */
     @Import(name="superUser")
       private final @Nullable String superUser;
@@ -120,7 +110,6 @@ public final class CognitiveServicesAccountApiPropertiesResponse extends io.pulu
 
     /**
      * (Metrics Advisor Only) The website name of Metrics Advisor.
-     * 
      */
     @Import(name="websiteName")
       private final @Nullable String websiteName;

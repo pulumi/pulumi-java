@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The managed application provider authorization.
- * 
  */
 public final class ApplicationAuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApplicationAuthorizationResponse extends io.pulumi.resources.
 
     /**
      * The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -29,7 +27,6 @@ public final class ApplicationAuthorizationResponse extends io.pulumi.resources.
 
     /**
      * The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group.
-     * 
      */
     @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;

@@ -17,7 +17,95 @@ import javax.annotation.Nullable;
  * Distributed availability group between box and Sql Managed Instance.
  * API Version: 2021-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a distributed availability group.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var distributedAvailabilityGroup = new AzureNative.Sql.DistributedAvailabilityGroup("distributedAvailabilityGroup", new AzureNative.Sql.DistributedAvailabilityGroupArgs
+ *         {
+ *             DistributedAvailabilityGroupName = "dag",
+ *             ManagedInstanceName = "testcl",
+ *             PrimaryAvailabilityGroupName = "BoxLocalAg1",
+ *             ResourceGroupName = "testrg",
+ *             SecondaryAvailabilityGroupName = "testcl",
+ *             SourceEndpoint = "TCP://SERVER:7022",
+ *             TargetDatabase = "testdb",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewDistributedAvailabilityGroup(ctx, "distributedAvailabilityGroup", &sql.DistributedAvailabilityGroupArgs{
+ * 			DistributedAvailabilityGroupName: pulumi.String("dag"),
+ * 			ManagedInstanceName:              pulumi.String("testcl"),
+ * 			PrimaryAvailabilityGroupName:     pulumi.String("BoxLocalAg1"),
+ * 			ResourceGroupName:                pulumi.String("testrg"),
+ * 			SecondaryAvailabilityGroupName:   pulumi.String("testcl"),
+ * 			SourceEndpoint:                   pulumi.String("TCP://SERVER:7022"),
+ * 			TargetDatabase:                   pulumi.String("testdb"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const distributedAvailabilityGroup = new azure_native.sql.DistributedAvailabilityGroup("distributedAvailabilityGroup", {
+ *     distributedAvailabilityGroupName: "dag",
+ *     managedInstanceName: "testcl",
+ *     primaryAvailabilityGroupName: "BoxLocalAg1",
+ *     resourceGroupName: "testrg",
+ *     secondaryAvailabilityGroupName: "testcl",
+ *     sourceEndpoint: "TCP://SERVER:7022",
+ *     targetDatabase: "testdb",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * distributed_availability_group = azure_native.sql.DistributedAvailabilityGroup("distributedAvailabilityGroup",
+ *     distributed_availability_group_name="dag",
+ *     managed_instance_name="testcl",
+ *     primary_availability_group_name="BoxLocalAg1",
+ *     resource_group_name="testrg",
+ *     secondary_availability_group_name="testcl",
+ *     source_endpoint="TCP://SERVER:7022",
+ *     target_database="testdb")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,168 +120,144 @@ import javax.annotation.Nullable;
 public class DistributedAvailabilityGroup extends io.pulumi.resources.CustomResource {
     /**
      * The distributed availability group id
-     * 
      */
     @Export(name="distributedAvailabilityGroupId", type=String.class, parameters={})
     private Output<String> distributedAvailabilityGroupId;
 
     /**
      * @return The distributed availability group id
-     * 
      */
     public Output<String> getDistributedAvailabilityGroupId() {
         return this.distributedAvailabilityGroupId;
     }
     /**
      * The last hardened lsn
-     * 
      */
     @Export(name="lastHardenedLsn", type=String.class, parameters={})
     private Output<String> lastHardenedLsn;
 
     /**
      * @return The last hardened lsn
-     * 
      */
     public Output<String> getLastHardenedLsn() {
         return this.lastHardenedLsn;
     }
     /**
      * The link state
-     * 
      */
     @Export(name="linkState", type=String.class, parameters={})
     private Output<String> linkState;
 
     /**
      * @return The link state
-     * 
      */
     public Output<String> getLinkState() {
         return this.linkState;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The primary availability group name
-     * 
      */
     @Export(name="primaryAvailabilityGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryAvailabilityGroupName;
 
     /**
      * @return The primary availability group name
-     * 
      */
     public Output</* @Nullable */ String> getPrimaryAvailabilityGroupName() {
         return this.primaryAvailabilityGroupName;
     }
     /**
      * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
-     * 
      */
     @Export(name="replicationMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> replicationMode;
 
     /**
      * @return The replication mode of a distributed availability group. Parameter will be ignored during link creation.
-     * 
      */
     public Output</* @Nullable */ String> getReplicationMode() {
         return this.replicationMode;
     }
     /**
      * The secondary availability group name
-     * 
      */
     @Export(name="secondaryAvailabilityGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryAvailabilityGroupName;
 
     /**
      * @return The secondary availability group name
-     * 
      */
     public Output</* @Nullable */ String> getSecondaryAvailabilityGroupName() {
         return this.secondaryAvailabilityGroupName;
     }
     /**
      * The source endpoint
-     * 
      */
     @Export(name="sourceEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceEndpoint;
 
     /**
      * @return The source endpoint
-     * 
      */
     public Output</* @Nullable */ String> getSourceEndpoint() {
         return this.sourceEndpoint;
     }
     /**
      * The source replica id
-     * 
      */
     @Export(name="sourceReplicaId", type=String.class, parameters={})
     private Output<String> sourceReplicaId;
 
     /**
      * @return The source replica id
-     * 
      */
     public Output<String> getSourceReplicaId() {
         return this.sourceReplicaId;
     }
     /**
      * The name of the target database
-     * 
      */
     @Export(name="targetDatabase", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetDatabase;
 
     /**
      * @return The name of the target database
-     * 
      */
     public Output</* @Nullable */ String> getTargetDatabase() {
         return this.targetDatabase;
     }
     /**
      * The target replica id
-     * 
      */
     @Export(name="targetReplicaId", type=String.class, parameters={})
     private Output<String> targetReplicaId;
 
     /**
      * @return The target replica id
-     * 
      */
     public Output<String> getTargetReplicaId() {
         return this.targetReplicaId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

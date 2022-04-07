@@ -16,7 +16,6 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A JSON string containing metadata of the provider instance.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<String> metadata;
@@ -27,7 +26,6 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A JSON string containing the properties of the provider instance.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<String> properties;
@@ -38,7 +36,6 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the provider instance.
-     * 
      */
     @Import(name="providerInstanceName")
       private final @Nullable Output<String> providerInstanceName;
@@ -49,7 +46,6 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the SAP monitor resource.
-     * 
      */
     @Import(name="sapMonitorName", required=true)
       private final Output<String> sapMonitorName;
@@ -71,7 +66,6 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The type of provider instance.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Guest configuration is an artifact that encapsulates DSC configuration and its dependencies. The artifact is a zip file containing DSC configuration (as MOF) and dependent resources and other dependencies like modules.
- * 
  */
 public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
 
     /**
      * Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
-     * 
      */
     @Import(name="assignmentType")
       private final @Nullable Output<Either<String,AssignmentType>> assignmentType;
@@ -37,7 +35,6 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
 
     /**
      * The configuration parameters for the guest configuration.
-     * 
      */
     @Import(name="configurationParameter")
       private final @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter;
@@ -48,7 +45,6 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
 
     /**
      * The protected configuration parameters for the guest configuration.
-     * 
      */
     @Import(name="configurationProtectedParameter")
       private final @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter;
@@ -59,7 +55,6 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
 
     /**
      * The configuration setting for the guest configuration.
-     * 
      */
     @Import(name="configurationSetting")
       private final @Nullable Output<ConfigurationSettingArgs> configurationSetting;
@@ -70,7 +65,6 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
 
     /**
      * Combined hash of the guest configuration package and configuration parameters.
-     * 
      */
     @Import(name="contentHash")
       private final @Nullable Output<String> contentHash;
@@ -81,7 +75,6 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
 
     /**
      * Uri of the storage where guest configuration package is uploaded.
-     * 
      */
     @Import(name="contentUri")
       private final @Nullable Output<String> contentUri;
@@ -92,7 +85,6 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
 
     /**
      * Kind of the guest configuration. For example:DSC
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
@@ -103,7 +95,6 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
 
     /**
      * Name of the guest configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -114,7 +105,6 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
 
     /**
      * Version of the guest configuration.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

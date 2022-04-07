@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DependsOnDefinitionResponse {
     /**
      * Name of the kustomization to claim dependency on
-     * 
      */
     private final @Nullable String kustomizationName;
 
@@ -24,7 +23,6 @@ public final class DependsOnDefinitionResponse {
 
     /**
      * Name of the kustomization to claim dependency on
-     * 
     */
     public Optional<String> getKustomizationName() {
         return Optional.ofNullable(this.kustomizationName);

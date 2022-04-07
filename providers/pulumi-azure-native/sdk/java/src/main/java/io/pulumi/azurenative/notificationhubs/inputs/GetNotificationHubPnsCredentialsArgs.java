@@ -14,7 +14,6 @@ public final class GetNotificationHubPnsCredentialsArgs extends io.pulumi.resour
 
     /**
      * The namespace name.
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -25,7 +24,6 @@ public final class GetNotificationHubPnsCredentialsArgs extends io.pulumi.resour
 
     /**
      * The notification hub name.
-     * 
      */
     @Import(name="notificationHubName", required=true)
       private final String notificationHubName;
@@ -36,7 +34,6 @@ public final class GetNotificationHubPnsCredentialsArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

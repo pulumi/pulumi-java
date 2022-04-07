@@ -21,78 +21,63 @@ import javax.annotation.Nullable;
 public final class ServiceNowLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     private final @Nullable List<Object> annotations;
     /**
      * The authentication type to use.
-     * 
      */
     private final String authenticationType;
     /**
      * The client id for OAuth2 authentication.
-     * 
      */
     private final @Nullable Object clientId;
     /**
      * The client secret for OAuth2 authentication.
-     * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
     /**
      * The integration runtime reference.
-     * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
      * Linked service description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object encryptedCredential;
     /**
      * The endpoint of the ServiceNow server. (i.e. <instance>.service-now.com)
-     * 
      */
     private final Object endpoint;
     /**
      * Parameters for linked service.
-     * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * The password corresponding to the user name for Basic and OAuth2 authentication.
-     * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
      * Expected value is 'ServiceNow'.
-     * 
      */
     private final String type;
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     * 
      */
     private final @Nullable Object useEncryptedEndpoints;
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     * 
      */
     private final @Nullable Object useHostVerification;
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     * 
      */
     private final @Nullable Object usePeerVerification;
     /**
      * The user name used to connect to the ServiceNow server for Basic and OAuth2 authentication.
-     * 
      */
     private final @Nullable Object username;
 
@@ -132,70 +117,60 @@ public final class ServiceNowLinkedServiceResponse {
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The authentication type to use.
-     * 
     */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * The client id for OAuth2 authentication.
-     * 
     */
     public Optional<Object> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The client secret for OAuth2 authentication.
-     * 
     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * The integration runtime reference.
-     * 
     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The endpoint of the ServiceNow server. (i.e. <instance>.service-now.com)
-     * 
     */
     public Object getEndpoint() {
         return this.endpoint;
     }
     /**
      * Parameters for linked service.
-     * 
     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The password corresponding to the user name for Basic and OAuth2 authentication.
-     * 
     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
@@ -203,35 +178,30 @@ public final class ServiceNowLinkedServiceResponse {
     /**
      * Type of linked service.
      * Expected value is 'ServiceNow'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     * 
     */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     * 
     */
     public Optional<Object> getUseHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     * 
     */
     public Optional<Object> getUsePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
     /**
      * The user name used to connect to the ServiceNow server for Basic and OAuth2 authentication.
-     * 
     */
     public Optional<Object> getUsername() {
         return Optional.ofNullable(this.username);

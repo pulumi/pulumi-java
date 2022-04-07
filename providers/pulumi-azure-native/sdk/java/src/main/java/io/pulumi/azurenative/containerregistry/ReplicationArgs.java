@@ -17,7 +17,6 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
@@ -39,7 +37,6 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the replication.
-     * 
      */
     @Import(name="replicationName")
       private final @Nullable Output<String> replicationName;
@@ -50,7 +47,6 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

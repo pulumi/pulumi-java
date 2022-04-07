@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Distribute via Shared Image Gallery.
- * 
  */
 public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
 
     /**
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
-     * 
      */
     @Import(name="artifactTags")
       private final @Nullable Output<Map<String,String>> artifactTags;
@@ -36,7 +34,6 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
 
     /**
      * Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
-     * 
      */
     @Import(name="excludeFromLatest")
       private final @Nullable Output<Boolean> excludeFromLatest;
@@ -47,7 +44,6 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
 
     /**
      * Resource Id of the Shared Image Gallery image
-     * 
      */
     @Import(name="galleryImageId", required=true)
       private final Output<String> galleryImageId;
@@ -58,7 +54,6 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
 
     /**
      * A list of regions that the image will be replicated to
-     * 
      */
     @Import(name="replicationRegions", required=true)
       private final Output<List<String>> replicationRegions;
@@ -69,7 +64,6 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
 
     /**
      * The name to be used for the associated RunOutput.
-     * 
      */
     @Import(name="runOutputName", required=true)
       private final Output<String> runOutputName;
@@ -80,7 +74,6 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
 
     /**
      * Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
-     * 
      */
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType;
@@ -92,7 +85,6 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     /**
      * Type of distribution.
      * Expected value is 'SharedImage'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

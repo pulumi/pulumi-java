@@ -17,7 +17,6 @@ public final class IotDpsResourcePrivateEndpointConnectionArgs extends io.pulumi
 
     /**
      * The name of the private endpoint connection
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -28,7 +27,6 @@ public final class IotDpsResourcePrivateEndpointConnectionArgs extends io.pulumi
 
     /**
      * The properties of a private endpoint connection
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<PrivateEndpointConnectionPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class IotDpsResourcePrivateEndpointConnectionArgs extends io.pulumi
 
     /**
      * The name of the resource group that contains the provisioning service.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class IotDpsResourcePrivateEndpointConnectionArgs extends io.pulumi
 
     /**
      * The name of the provisioning service.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

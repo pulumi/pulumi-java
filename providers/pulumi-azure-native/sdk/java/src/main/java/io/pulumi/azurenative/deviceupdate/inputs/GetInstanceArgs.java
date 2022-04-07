@@ -14,7 +14,6 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Instance name.
-     * 
      */
     @Import(name="instanceName", required=true)
       private final String instanceName;
@@ -36,7 +34,6 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

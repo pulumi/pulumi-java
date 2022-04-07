@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a configuration profile.
- * 
  */
 public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.
 
     /**
      * Settings of change notification configuration for a subscription.
-     * 
      */
     @Import(name="notifications")
       private final @Nullable Output<NotificationSettingsArgs> notifications;

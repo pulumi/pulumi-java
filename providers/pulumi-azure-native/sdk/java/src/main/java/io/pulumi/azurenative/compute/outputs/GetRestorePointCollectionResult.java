@@ -17,47 +17,38 @@ import javax.annotation.Nullable;
 public final class GetRestorePointCollectionResult {
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource location
-     * 
      */
     private final String location;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * The provisioning state of the restore point collection.
-     * 
      */
     private final String provisioningState;
     /**
      * The unique id of the restore point collection.
-     * 
      */
     private final String restorePointCollectionId;
     /**
      * A list containing all restore points created under this restore point collection.
-     * 
      */
     private final List<RestorePointResponse> restorePoints;
     /**
      * The properties of the source resource that this restore point collection is created from.
-     * 
      */
     private final @Nullable RestorePointCollectionSourcePropertiesResponse source;
     /**
      * Resource tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -85,63 +76,54 @@ public final class GetRestorePointCollectionResult {
 
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the restore point collection.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The unique id of the restore point collection.
-     * 
     */
     public String getRestorePointCollectionId() {
         return this.restorePointCollectionId;
     }
     /**
      * A list containing all restore points created under this restore point collection.
-     * 
     */
     public List<RestorePointResponse> getRestorePoints() {
         return this.restorePoints;
     }
     /**
      * The properties of the source resource that this restore point collection is created from.
-     * 
     */
     public Optional<RestorePointCollectionSourcePropertiesResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Resource tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

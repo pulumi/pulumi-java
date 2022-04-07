@@ -19,7 +19,155 @@ import javax.annotation.Nullable;
  * Deployment resource payload
  * API Version: 2020-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Deployments_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deployment = new AzureNative.AppPlatform.Deployment("deployment", new AzureNative.AppPlatform.DeploymentArgs
+ *         {
+ *             AppName = "myapp",
+ *             DeploymentName = "mydeployment",
+ *             Properties = new AzureNative.AppPlatform.Inputs.DeploymentResourcePropertiesArgs
+ *             {
+ *                 DeploymentSettings = new AzureNative.AppPlatform.Inputs.DeploymentSettingsArgs
+ *                 {
+ *                     Cpu = 1,
+ *                     EnvironmentVariables = 
+ *                     {
+ *                         { "env", "test" },
+ *                     },
+ *                     JvmOptions = "-Xms1G -Xmx3G",
+ *                     MemoryInGB = 3,
+ *                     RuntimeVersion = "Java_8",
+ *                 },
+ *                 Source = new AzureNative.AppPlatform.Inputs.UserSourceInfoArgs
+ *                 {
+ *                     ArtifactSelector = "sub-module-1",
+ *                     RelativePath = "resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc",
+ *                     Type = "Source",
+ *                     Version = "1.0",
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewDeployment(ctx, "deployment", &appplatform.DeploymentArgs{
+ * 			AppName:        pulumi.String("myapp"),
+ * 			DeploymentName: pulumi.String("mydeployment"),
+ * 			Properties: &appplatform.DeploymentResourcePropertiesArgs{
+ * 				DeploymentSettings: &appplatform.DeploymentSettingsArgs{
+ * 					Cpu: pulumi.Int(1),
+ * 					EnvironmentVariables: pulumi.StringMap{
+ * 						"env": pulumi.String("test"),
+ * 					},
+ * 					JvmOptions:     pulumi.String("-Xms1G -Xmx3G"),
+ * 					MemoryInGB:     pulumi.Int(3),
+ * 					RuntimeVersion: pulumi.String("Java_8"),
+ * 				},
+ * 				Source: &appplatform.UserSourceInfoArgs{
+ * 					ArtifactSelector: pulumi.String("sub-module-1"),
+ * 					RelativePath:     pulumi.String("resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc"),
+ * 					Type:             pulumi.String("Source"),
+ * 					Version:          pulumi.String("1.0"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deployment = new azure_native.appplatform.Deployment("deployment", {
+ *     appName: "myapp",
+ *     deploymentName: "mydeployment",
+ *     properties: {
+ *         deploymentSettings: {
+ *             cpu: 1,
+ *             environmentVariables: {
+ *                 env: "test",
+ *             },
+ *             jvmOptions: "-Xms1G -Xmx3G",
+ *             memoryInGB: 3,
+ *             runtimeVersion: "Java_8",
+ *         },
+ *         source: {
+ *             artifactSelector: "sub-module-1",
+ *             relativePath: "resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc",
+ *             type: "Source",
+ *             version: "1.0",
+ *         },
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment = azure_native.appplatform.Deployment("deployment",
+ *     app_name="myapp",
+ *     deployment_name="mydeployment",
+ *     properties=azure_native.appplatform.DeploymentResourcePropertiesArgs(
+ *         deployment_settings=azure_native.appplatform.DeploymentSettingsArgs(
+ *             cpu=1,
+ *             environment_variables={
+ *                 "env": "test",
+ *             },
+ *             jvm_options="-Xms1G -Xmx3G",
+ *             memory_in_gb=3,
+ *             runtime_version="Java_8",
+ *         ),
+ *         source=azure_native.appplatform.UserSourceInfoArgs(
+ *             artifact_selector="sub-module-1",
+ *             relative_path="resources/a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333-2019082605-e3095339-1723-44b7-8b5e-31b1003978bc",
+ *             type="Source",
+ *             version="1.0",
+ *         ),
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +182,48 @@ import javax.annotation.Nullable;
 public class Deployment extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the Deployment resource
-     * 
      */
     @Export(name="properties", type=DeploymentResourcePropertiesResponse.class, parameters={})
     private Output<DeploymentResourcePropertiesResponse> properties;
 
     /**
      * @return Properties of the Deployment resource
-     * 
      */
     public Output<DeploymentResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Sku of the Deployment resource
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return Sku of the Deployment resource
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

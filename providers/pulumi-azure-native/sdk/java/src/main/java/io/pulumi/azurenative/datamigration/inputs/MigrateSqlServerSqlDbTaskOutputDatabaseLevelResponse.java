@@ -15,7 +15,6 @@ import java.util.Objects;
 
 /**
  * Database level result for Sql Server to Azure Sql DB migration.
- * 
  */
 public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Name of the item
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -34,7 +32,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -45,7 +42,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Number of database/object errors.
-     * 
      */
     @Import(name="errorCount", required=true)
       private final Double errorCount;
@@ -56,7 +52,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Wildcard string prefix to use for querying all errors of the item
-     * 
      */
     @Import(name="errorPrefix", required=true)
       private final String errorPrefix;
@@ -67,7 +62,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Migration exceptions and warnings.
-     * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
@@ -78,7 +72,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -89,7 +82,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Migration progress message
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -100,7 +92,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Number of objects
-     * 
      */
     @Import(name="numberOfObjects", required=true)
       private final Double numberOfObjects;
@@ -111,7 +102,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Number of successfully completed objects
-     * 
      */
     @Import(name="numberOfObjectsCompleted", required=true)
       private final Double numberOfObjectsCompleted;
@@ -122,7 +112,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Summary of object results in the migration
-     * 
      */
     @Import(name="objectSummary", required=true)
       private final Map<String,DataItemMigrationSummaryResultResponse> objectSummary;
@@ -133,7 +122,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Wildcard string prefix to use for querying all sub-tem results of the item
-     * 
      */
     @Import(name="resultPrefix", required=true)
       private final String resultPrefix;
@@ -145,7 +133,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
     /**
      * Result type
      * Expected value is 'DatabaseLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -156,7 +143,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Migration stage that this database is in
-     * 
      */
     @Import(name="stage", required=true)
       private final String stage;
@@ -167,7 +153,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -178,7 +163,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Current state of migration
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -189,7 +173,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse extends 
 
     /**
      * Status message
-     * 
      */
     @Import(name="statusMessage", required=true)
       private final String statusMessage;

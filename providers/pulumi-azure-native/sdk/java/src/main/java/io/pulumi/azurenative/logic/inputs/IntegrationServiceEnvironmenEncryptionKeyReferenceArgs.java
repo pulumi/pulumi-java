@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The encryption key details for the integration service environment.
- * 
  */
 public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
 
     /**
      * Gets the key name in the Key Vault.
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -32,7 +30,6 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
 
     /**
      * The key vault reference.
-     * 
      */
     @Import(name="keyVault")
       private final @Nullable Output<ResourceReferenceArgs> keyVault;
@@ -43,7 +40,6 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
 
     /**
      * Gets the version of the key specified in the keyName property.
-     * 
      */
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;

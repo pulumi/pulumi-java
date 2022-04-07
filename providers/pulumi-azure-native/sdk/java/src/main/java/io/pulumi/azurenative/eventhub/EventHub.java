@@ -19,7 +19,141 @@ import javax.annotation.Nullable;
  * Single item in List or Get Event Hub operation
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### EventHubCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var eventHub = new AzureNative.EventHub.EventHub("eventHub", new AzureNative.EventHub.EventHubArgs
+ *         {
+ *             CaptureDescription = new AzureNative.EventHub.Inputs.CaptureDescriptionArgs
+ *             {
+ *                 Destination = new AzureNative.EventHub.Inputs.DestinationArgs
+ *                 {
+ *                     ArchiveNameFormat = "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
+ *                     BlobContainer = "container",
+ *                     Name = "EventHubArchive.AzureBlockBlob",
+ *                     StorageAccountResourceId = "/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage",
+ *                 },
+ *                 Enabled = true,
+ *                 Encoding = "Avro",
+ *                 IntervalInSeconds = 120,
+ *                 SizeLimitInBytes = 10485763,
+ *             },
+ *             EventHubName = "sdk-EventHub-6547",
+ *             MessageRetentionInDays = 4,
+ *             NamespaceName = "sdk-Namespace-5357",
+ *             PartitionCount = 4,
+ *             ResourceGroupName = "Default-NotificationHubs-AustraliaEast",
+ *             Status = "Active",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventhub.NewEventHub(ctx, "eventHub", &eventhub.EventHubArgs{
+ * 			CaptureDescription: &eventhub.CaptureDescriptionArgs{
+ * 				Destination: &eventhub.DestinationArgs{
+ * 					ArchiveNameFormat:        pulumi.String("{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}"),
+ * 					BlobContainer:            pulumi.String("container"),
+ * 					Name:                     pulumi.String("EventHubArchive.AzureBlockBlob"),
+ * 					StorageAccountResourceId: pulumi.String("/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage"),
+ * 				},
+ * 				Enabled:           pulumi.Bool(true),
+ * 				Encoding:          "Avro",
+ * 				IntervalInSeconds: pulumi.Int(120),
+ * 				SizeLimitInBytes:  pulumi.Int(10485763),
+ * 			},
+ * 			EventHubName:           pulumi.String("sdk-EventHub-6547"),
+ * 			MessageRetentionInDays: pulumi.Float64(4),
+ * 			NamespaceName:          pulumi.String("sdk-Namespace-5357"),
+ * 			PartitionCount:         pulumi.Float64(4),
+ * 			ResourceGroupName:      pulumi.String("Default-NotificationHubs-AustraliaEast"),
+ * 			Status:                 "Active",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const eventHub = new azure_native.eventhub.EventHub("eventHub", {
+ *     captureDescription: {
+ *         destination: {
+ *             archiveNameFormat: "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
+ *             blobContainer: "container",
+ *             name: "EventHubArchive.AzureBlockBlob",
+ *             storageAccountResourceId: "/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage",
+ *         },
+ *         enabled: true,
+ *         encoding: "Avro",
+ *         intervalInSeconds: 120,
+ *         sizeLimitInBytes: 10485763,
+ *     },
+ *     eventHubName: "sdk-EventHub-6547",
+ *     messageRetentionInDays: 4,
+ *     namespaceName: "sdk-Namespace-5357",
+ *     partitionCount: 4,
+ *     resourceGroupName: "Default-NotificationHubs-AustraliaEast",
+ *     status: "Active",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * event_hub = azure_native.eventhub.EventHub("eventHub",
+ *     capture_description=azure_native.eventhub.CaptureDescriptionArgs(
+ *         destination=azure_native.eventhub.DestinationArgs(
+ *             archive_name_format="{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}",
+ *             blob_container="container",
+ *             name="EventHubArchive.AzureBlockBlob",
+ *             storage_account_resource_id="/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage",
+ *         ),
+ *         enabled=True,
+ *         encoding="Avro",
+ *         interval_in_seconds=120,
+ *         size_limit_in_bytes=10485763,
+ *     ),
+ *     event_hub_name="sdk-EventHub-6547",
+ *     message_retention_in_days=4,
+ *     namespace_name="sdk-Namespace-5357",
+ *     partition_count=4,
+ *     resource_group_name="Default-NotificationHubs-AustraliaEast",
+ *     status="Active")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,126 +168,108 @@ import javax.annotation.Nullable;
 public class EventHub extends io.pulumi.resources.CustomResource {
     /**
      * Properties of capture description
-     * 
      */
     @Export(name="captureDescription", type=CaptureDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ CaptureDescriptionResponse> captureDescription;
 
     /**
      * @return Properties of capture description
-     * 
      */
     public Output</* @Nullable */ CaptureDescriptionResponse> getCaptureDescription() {
         return this.captureDescription;
     }
     /**
      * Exact time the Event Hub was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Exact time the Event Hub was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
-     * 
      */
     @Export(name="messageRetentionInDays", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> messageRetentionInDays;
 
     /**
      * @return Number of days to retain the events for this Event Hub, value should be 1 to 7 days
-     * 
      */
     public Output</* @Nullable */ Double> getMessageRetentionInDays() {
         return this.messageRetentionInDays;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
-     * 
      */
     @Export(name="partitionCount", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> partitionCount;
 
     /**
      * @return Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
-     * 
      */
     public Output</* @Nullable */ Double> getPartitionCount() {
         return this.partitionCount;
     }
     /**
      * Current number of shards on the Event Hub.
-     * 
      */
     @Export(name="partitionIds", type=List.class, parameters={String.class})
     private Output<List<String>> partitionIds;
 
     /**
      * @return Current number of shards on the Event Hub.
-     * 
      */
     public Output<List<String>> getPartitionIds() {
         return this.partitionIds;
     }
     /**
      * Enumerates the possible values for the status of the Event Hub.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return Enumerates the possible values for the status of the Event Hub.
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The exact time the message was updated.
-     * 
      */
     @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**
      * @return The exact time the message was updated.
-     * 
      */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;

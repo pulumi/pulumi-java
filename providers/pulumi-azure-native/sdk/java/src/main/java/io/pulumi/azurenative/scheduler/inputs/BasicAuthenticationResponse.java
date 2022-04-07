@@ -16,7 +16,6 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets or sets the password, return value will always be empty.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -28,7 +27,6 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
     /**
      * Gets or sets the HTTP authentication type.
      * Expected value is 'Basic'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -39,7 +37,6 @@ public final class BasicAuthenticationResponse extends io.pulumi.resources.Invok
 
     /**
      * Gets or sets the username.
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

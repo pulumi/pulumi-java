@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class RestorePointSourceVMStorageProfileResponse {
     /**
      * Gets the data disks of the VM captured at the time of the restore point creation.
-     * 
      */
     private final @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks;
     /**
      * Gets the OS disk of the VM captured at the time of the restore point creation.
-     * 
      */
     private final @Nullable RestorePointSourceVMOSDiskResponse osDisk;
 
@@ -34,14 +32,12 @@ public final class RestorePointSourceVMStorageProfileResponse {
 
     /**
      * Gets the data disks of the VM captured at the time of the restore point creation.
-     * 
     */
     public List<RestorePointSourceVMDataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
      * Gets the OS disk of the VM captured at the time of the restore point creation.
-     * 
     */
     public Optional<RestorePointSourceVMOSDiskResponse> getOsDisk() {
         return Optional.ofNullable(this.osDisk);

@@ -17,7 +17,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the content type.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -28,7 +27,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the correlation ID.
-     * 
      */
     @Import(name="correlationId")
       private final @Nullable Output<String> correlationId;
@@ -39,7 +37,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the force persistence.
-     * 
      */
     @Import(name="forcePersistence")
       private final @Nullable Output<Boolean> forcePersistence;
@@ -50,7 +47,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the label.
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -61,7 +57,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the message ID.
-     * 
      */
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
@@ -72,7 +67,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the partition key.
-     * 
      */
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
@@ -83,7 +77,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the reply to.
-     * 
      */
     @Import(name="replyTo")
       private final @Nullable Output<String> replyTo;
@@ -94,7 +87,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the reply to session ID.
-     * 
      */
     @Import(name="replyToSessionId")
       private final @Nullable Output<String> replyToSessionId;
@@ -105,7 +97,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the scheduled enqueue time UTC.
-     * 
      */
     @Import(name="scheduledEnqueueTimeUtc")
       private final @Nullable Output<String> scheduledEnqueueTimeUtc;
@@ -116,7 +107,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the session ID.
-     * 
      */
     @Import(name="sessionId")
       private final @Nullable Output<String> sessionId;
@@ -127,7 +117,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the time to live.
-     * 
      */
     @Import(name="timeToLive")
       private final @Nullable Output<String> timeToLive;
@@ -138,7 +127,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the to.
-     * 
      */
     @Import(name="to")
       private final @Nullable Output<String> to;
@@ -149,7 +137,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
 
     /**
      * Gets or sets the via partition key.
-     * 
      */
     @Import(name="viaPartitionKey")
       private final @Nullable Output<String> viaPartitionKey;

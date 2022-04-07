@@ -16,7 +16,6 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the Event Hub where usage will be reported.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -27,7 +26,6 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
 
     /**
      * Namespace of the Event Hub where usage will be reported.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable String namespace;
@@ -38,7 +36,6 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
 
     /**
      * SAS token needed to interact with Event Hub.
-     * 
      */
     @Import(name="token")
       private final @Nullable String token;

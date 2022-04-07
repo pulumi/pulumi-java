@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ObjectReferenceDefinitionResponse {
     /**
      * Name of the object
-     * 
      */
     private final @Nullable String name;
     /**
      * Namespace of the object
-     * 
      */
     private final @Nullable String namespace;
 
@@ -32,14 +30,12 @@ public final class ObjectReferenceDefinitionResponse {
 
     /**
      * Name of the object
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace of the object
-     * 
     */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);

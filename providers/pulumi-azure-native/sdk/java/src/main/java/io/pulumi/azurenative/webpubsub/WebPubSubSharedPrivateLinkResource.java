@@ -18,7 +18,91 @@ import javax.annotation.Nullable;
  * Describes a Shared Private Link Resource
  * API Version: 2021-04-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WebPubSubSharedPrivateLinkResources_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var webPubSubSharedPrivateLinkResource = new AzureNative.WebPubSub.WebPubSubSharedPrivateLinkResource("webPubSubSharedPrivateLinkResource", new AzureNative.WebPubSub.WebPubSubSharedPrivateLinkResourceArgs
+ *         {
+ *             GroupId = "sites",
+ *             PrivateLinkResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp",
+ *             RequestMessage = "Please approve",
+ *             ResourceGroupName = "myResourceGroup",
+ *             ResourceName = "myWebPubSubService",
+ *             SharedPrivateLinkResourceName = "upstream",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	webpubsub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/webpubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := webpubsub.NewWebPubSubSharedPrivateLinkResource(ctx, "webPubSubSharedPrivateLinkResource", &webpubsub.WebPubSubSharedPrivateLinkResourceArgs{
+ * 			GroupId:                       pulumi.String("sites"),
+ * 			PrivateLinkResourceId:         pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp"),
+ * 			RequestMessage:                pulumi.String("Please approve"),
+ * 			ResourceGroupName:             pulumi.String("myResourceGroup"),
+ * 			ResourceName:                  pulumi.String("myWebPubSubService"),
+ * 			SharedPrivateLinkResourceName: pulumi.String("upstream"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const webPubSubSharedPrivateLinkResource = new azure_native.webpubsub.WebPubSubSharedPrivateLinkResource("webPubSubSharedPrivateLinkResource", {
+ *     groupId: "sites",
+ *     privateLinkResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp",
+ *     requestMessage: "Please approve",
+ *     resourceGroupName: "myResourceGroup",
+ *     resourceName: "myWebPubSubService",
+ *     sharedPrivateLinkResourceName: "upstream",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * web_pub_sub_shared_private_link_resource = azure_native.webpubsub.WebPubSubSharedPrivateLinkResource("webPubSubSharedPrivateLinkResource",
+ *     group_id="sites",
+ *     private_link_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp",
+ *     request_message="Please approve",
+ *     resource_group_name="myResourceGroup",
+ *     resource_name="myWebPubSubService",
+ *     shared_private_link_resource_name="upstream")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,112 +117,96 @@ import javax.annotation.Nullable;
 public class WebPubSubSharedPrivateLinkResource extends io.pulumi.resources.CustomResource {
     /**
      * The group id from the provider of resource the shared private link resource is for
-     * 
      */
     @Export(name="groupId", type=String.class, parameters={})
     private Output<String> groupId;
 
     /**
      * @return The group id from the provider of resource the shared private link resource is for
-     * 
      */
     public Output<String> getGroupId() {
         return this.groupId;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource id of the resource the shared private link resource is for
-     * 
      */
     @Export(name="privateLinkResourceId", type=String.class, parameters={})
     private Output<String> privateLinkResourceId;
 
     /**
      * @return The resource id of the resource the shared private link resource is for
-     * 
      */
     public Output<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
      * Provisioning state of the shared private link resource
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the shared private link resource
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The request message for requesting approval of the shared private link resource
-     * 
      */
     @Export(name="requestMessage", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestMessage;
 
     /**
      * @return The request message for requesting approval of the shared private link resource
-     * 
      */
     public Output</* @Nullable */ String> getRequestMessage() {
         return this.requestMessage;
     }
     /**
      * Status of the shared private link resource
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Status of the shared private link resource
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The managed identity for the DigitalTwinsInstance.
- * 
  */
 public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.Resource
 
     /**
      * The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,DigitalTwinsIdentityType>> type;

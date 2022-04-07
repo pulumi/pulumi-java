@@ -14,7 +14,6 @@ public final class ContainerRegistryResponse {
     private final String password;
     /**
      * If omitted, the default is "docker.io".
-     * 
      */
     private final @Nullable String registryServer;
     private final String userName;
@@ -34,7 +33,6 @@ public final class ContainerRegistryResponse {
     }
     /**
      * If omitted, the default is "docker.io".
-     * 
     */
     public Optional<String> getRegistryServer() {
         return Optional.ofNullable(this.registryServer);

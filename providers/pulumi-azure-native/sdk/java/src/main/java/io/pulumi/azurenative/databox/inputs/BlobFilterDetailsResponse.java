@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Filter details to transfer Azure Blobs
- * 
  */
 public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * List of full path of the blobs to be transferred.
-     * 
      */
     @Import(name="blobPathList")
       private final @Nullable List<String> blobPathList;
@@ -32,7 +30,6 @@ public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Prefix list of the Azure blobs to be transferred.
-     * 
      */
     @Import(name="blobPrefixList")
       private final @Nullable List<String> blobPrefixList;
@@ -43,7 +40,6 @@ public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * List of blob containers to be transferred.
-     * 
      */
     @Import(name="containerList")
       private final @Nullable List<String> containerList;

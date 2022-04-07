@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * InMageRcm source agent upgrade blocking error details.
- * 
  */
 public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
 
     /**
      * The error code.
-     * 
      */
     @Import(name="errorCode", required=true)
       private final String errorCode;
@@ -30,7 +28,6 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
 
     /**
      * The error message.
-     * 
      */
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
@@ -41,7 +38,6 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
 
     /**
      * The error message parameters.
-     * 
      */
     @Import(name="errorMessageParameters", required=true)
       private final Map<String,String> errorMessageParameters;
@@ -52,7 +48,6 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
 
     /**
      * The error tags.
-     * 
      */
     @Import(name="errorTags", required=true)
       private final Map<String,String> errorTags;
@@ -63,7 +58,6 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
 
     /**
      * The possible causes.
-     * 
      */
     @Import(name="possibleCauses", required=true)
       private final String possibleCauses;
@@ -74,7 +68,6 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse extends io.
 
     /**
      * The recommended action.
-     * 
      */
     @Import(name="recommendedAction", required=true)
       private final String recommendedAction;

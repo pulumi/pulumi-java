@@ -20,7 +20,119 @@ import javax.annotation.Nullable;
  * The Managed Network resource
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Put Network Manager
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var networkManager = new AzureNative.Network.NetworkManager("networkManager", new AzureNative.Network.NetworkManagerArgs
+ *         {
+ *             Description = "My Test Network Manager",
+ *             DisplayName = "TestNetworkManager",
+ *             NetworkManagerName = "TestNetworkManager",
+ *             NetworkManagerScopeAccesses = 
+ *             {
+ *                 "Connectivity",
+ *             },
+ *             NetworkManagerScopes = new AzureNative.Network.Inputs.NetworkManagerPropertiesNetworkManagerScopesArgs
+ *             {
+ *                 ManagementGroups = 
+ *                 {
+ *                     "/Microsoft.Management/testmg",
+ *                 },
+ *                 Subscriptions = 
+ *                 {
+ *                     "/subscriptions/00000000-0000-0000-0000-000000000000",
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewNetworkManager(ctx, "networkManager", &network.NetworkManagerArgs{
+ * 			Description:        pulumi.String("My Test Network Manager"),
+ * 			DisplayName:        pulumi.String("TestNetworkManager"),
+ * 			NetworkManagerName: pulumi.String("TestNetworkManager"),
+ * 			NetworkManagerScopeAccesses: pulumi.StringArray{
+ * 				pulumi.String("Connectivity"),
+ * 			},
+ * 			NetworkManagerScopes: &network.NetworkManagerPropertiesNetworkManagerScopesArgs{
+ * 				ManagementGroups: pulumi.StringArray{
+ * 					pulumi.String("/Microsoft.Management/testmg"),
+ * 				},
+ * 				Subscriptions: pulumi.StringArray{
+ * 					pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const networkManager = new azure_native.network.NetworkManager("networkManager", {
+ *     description: "My Test Network Manager",
+ *     displayName: "TestNetworkManager",
+ *     networkManagerName: "TestNetworkManager",
+ *     networkManagerScopeAccesses: ["Connectivity"],
+ *     networkManagerScopes: {
+ *         managementGroups: ["/Microsoft.Management/testmg"],
+ *         subscriptions: ["/subscriptions/00000000-0000-0000-0000-000000000000"],
+ *     },
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * network_manager = azure_native.network.NetworkManager("networkManager",
+ *     description="My Test Network Manager",
+ *     display_name="TestNetworkManager",
+ *     network_manager_name="TestNetworkManager",
+ *     network_manager_scope_accesses=["Connectivity"],
+ *     network_manager_scopes=azure_native.network.NetworkManagerPropertiesNetworkManagerScopesArgs(
+ *         management_groups=["/Microsoft.Management/testmg"],
+ *         subscriptions=["/subscriptions/00000000-0000-0000-0000-000000000000"],
+ *     ),
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,154 +147,132 @@ import javax.annotation.Nullable;
 public class NetworkManager extends io.pulumi.resources.CustomResource {
     /**
      * A description of the network manager.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the network manager.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * A friendly name for the network manager.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A friendly name for the network manager.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Scope Access.
-     * 
      */
     @Export(name="networkManagerScopeAccesses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> networkManagerScopeAccesses;
 
     /**
      * @return Scope Access.
-     * 
      */
     public Output</* @Nullable */ List<String>> getNetworkManagerScopeAccesses() {
         return this.networkManagerScopeAccesses;
     }
     /**
      * Scope of Network Manager.
-     * 
      */
     @Export(name="networkManagerScopes", type=NetworkManagerPropertiesResponseNetworkManagerScopes.class, parameters={})
     private Output</* @Nullable */ NetworkManagerPropertiesResponseNetworkManagerScopes> networkManagerScopes;
 
     /**
      * @return Scope of Network Manager.
-     * 
      */
     public Output</* @Nullable */ NetworkManagerPropertiesResponseNetworkManagerScopes> getNetworkManagerScopes() {
         return this.networkManagerScopes;
     }
     /**
      * The provisioning state of the scope assignment resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the scope assignment resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata related to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

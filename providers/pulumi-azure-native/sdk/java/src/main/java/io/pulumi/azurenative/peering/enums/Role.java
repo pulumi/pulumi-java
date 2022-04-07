@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The role of the contact.
-     * 
      */
     @EnumType
     public enum Role {

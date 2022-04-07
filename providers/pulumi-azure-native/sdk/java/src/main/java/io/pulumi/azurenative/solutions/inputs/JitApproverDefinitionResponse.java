@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * JIT approver definition.
- * 
  */
 public final class JitApproverDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class JitApproverDefinitionResponse extends io.pulumi.resources.Inv
 
     /**
      * The approver display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -31,7 +29,6 @@ public final class JitApproverDefinitionResponse extends io.pulumi.resources.Inv
 
     /**
      * The approver service principal Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -42,7 +39,6 @@ public final class JitApproverDefinitionResponse extends io.pulumi.resources.Inv
 
     /**
      * The approver type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

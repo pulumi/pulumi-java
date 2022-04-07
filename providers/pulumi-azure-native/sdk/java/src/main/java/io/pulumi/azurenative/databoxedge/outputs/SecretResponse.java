@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class SecretResponse {
     /**
      * Encrypted (using device public key) secret value.
-     * 
      */
     private final @Nullable AsymmetricEncryptedSecretResponse encryptedSecret;
     /**
      * Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).
-     * 
      */
     private final @Nullable String keyVaultId;
 
@@ -33,14 +31,12 @@ public final class SecretResponse {
 
     /**
      * Encrypted (using device public key) secret value.
-     * 
     */
     public Optional<AsymmetricEncryptedSecretResponse> getEncryptedSecret() {
         return Optional.ofNullable(this.encryptedSecret);
     }
     /**
      * Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).
-     * 
     */
     public Optional<String> getKeyVaultId() {
         return Optional.ofNullable(this.keyVaultId);

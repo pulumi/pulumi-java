@@ -18,7 +18,6 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
 
     /**
      * The justification for making the initiate request
-     * 
      */
     @Import(name="justification")
       private final @Nullable Output<String> justification;
@@ -29,7 +28,6 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
 
     /**
      * The identity of the person who made the request
-     * 
      */
     @Import(name="requestor", required=true)
       private final Output<String> requestor;
@@ -40,7 +38,6 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
 
     /**
      * The start time of the request in UTC
-     * 
      */
     @Import(name="startTimeUtc", required=true)
       private final Output<String> startTimeUtc;

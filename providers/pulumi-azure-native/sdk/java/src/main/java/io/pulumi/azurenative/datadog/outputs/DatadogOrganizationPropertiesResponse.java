@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class DatadogOrganizationPropertiesResponse {
     /**
      * Id of the Datadog organization.
-     * 
      */
     private final String id;
     /**
      * Name of the Datadog organization.
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class DatadogOrganizationPropertiesResponse {
 
     /**
      * Id of the Datadog organization.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the Datadog organization.
-     * 
     */
     public String getName() {
         return this.name;

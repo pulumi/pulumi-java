@@ -14,7 +14,6 @@ public final class GetStreamingEndpointArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetStreamingEndpointArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetStreamingEndpointArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the streaming endpoint, maximum length is 24.
-     * 
      */
     @Import(name="streamingEndpointName", required=true)
       private final String streamingEndpointName;

@@ -20,7 +20,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The extendedLocation of the resource.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -31,7 +30,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * null
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<SqlManagedInstancePropertiesArgs> properties;
@@ -53,7 +50,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the Azure resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource sku.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SqlManagedInstanceSkuArgs> sku;
@@ -75,7 +70,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of SQL Managed Instances
-     * 
      */
     @Import(name="sqlManagedInstanceName")
       private final @Nullable Output<String> sqlManagedInstanceName;
@@ -86,7 +80,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

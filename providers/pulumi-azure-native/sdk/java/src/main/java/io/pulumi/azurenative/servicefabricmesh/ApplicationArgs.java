@@ -20,7 +20,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the application.
-     * 
      */
     @Import(name="applicationResourceName")
       private final @Nullable Output<String> applicationResourceName;
@@ -31,7 +30,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Internal - used by Visual Studio to setup the debugging session on the local development environment.
-     * 
      */
     @Import(name="debugParams")
       private final @Nullable Output<String> debugParams;
@@ -42,7 +40,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User readable description of the application.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -53,7 +50,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the diagnostics definition and usage for an application resource.
-     * 
      */
     @Import(name="diagnostics")
       private final @Nullable Output<DiagnosticsDescriptionArgs> diagnostics;
@@ -64,7 +60,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -75,7 +70,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
-     * 
      */
     @Import(name="services")
       private final @Nullable Output<List<ServiceResourceDescriptionArgs>> services;
@@ -97,7 +90,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

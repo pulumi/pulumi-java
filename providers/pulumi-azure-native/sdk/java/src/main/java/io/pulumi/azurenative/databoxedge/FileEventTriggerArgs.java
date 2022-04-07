@@ -18,7 +18,6 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
-     * 
      */
     @Import(name="customContextTag")
       private final @Nullable Output<String> customContextTag;
@@ -29,7 +28,6 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Creates or updates a trigger
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -41,7 +39,6 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
     /**
      * Trigger Kind.
      * Expected value is 'FileEvent'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -52,7 +49,6 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The trigger name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -63,7 +59,6 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Role sink info.
-     * 
      */
     @Import(name="sinkInfo", required=true)
       private final Output<RoleSinkInfoArgs> sinkInfo;
@@ -85,7 +79,6 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * File event source details.
-     * 
      */
     @Import(name="sourceInfo", required=true)
       private final Output<FileSourceInfoArgs> sourceInfo;

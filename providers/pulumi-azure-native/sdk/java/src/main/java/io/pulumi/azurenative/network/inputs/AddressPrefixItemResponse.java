@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Address prefix item.
- * 
  */
 public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Address prefix.
-     * 
      */
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
@@ -31,7 +29,6 @@ public final class AddressPrefixItemResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Address prefix type.
-     * 
      */
     @Import(name="addressPrefixType")
       private final @Nullable String addressPrefixType;

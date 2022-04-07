@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The batch configuration properties definition.
- * 
  */
 public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
 
     /**
      * The name of the batch group.
-     * 
      */
     @Import(name="batchGroupName", required=true)
       private final Output<String> batchGroupName;
@@ -33,7 +31,6 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
 
     /**
      * The artifact changed time.
-     * 
      */
     @Import(name="changedTime")
       private final @Nullable Output<String> changedTime;
@@ -44,7 +41,6 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
 
     /**
      * The artifact creation time.
-     * 
      */
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
@@ -62,7 +58,6 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
 
     /**
      * The batch release criteria.
-     * 
      */
     @Import(name="releaseCriteria", required=true)
       private final Output<BatchReleaseCriteriaArgs> releaseCriteria;

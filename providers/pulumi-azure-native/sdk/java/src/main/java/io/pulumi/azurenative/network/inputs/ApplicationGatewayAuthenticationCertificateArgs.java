@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Authentication certificates of an application gateway.
- * 
  */
 public final class ApplicationGatewayAuthenticationCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationGatewayAuthenticationCertificateArgs extends io.pu
 
     /**
      * Certificate public data.
-     * 
      */
     @Import(name="data")
       private final @Nullable Output<String> data;
@@ -31,7 +29,6 @@ public final class ApplicationGatewayAuthenticationCertificateArgs extends io.pu
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -42,7 +39,6 @@ public final class ApplicationGatewayAuthenticationCertificateArgs extends io.pu
 
     /**
      * Name of the authentication certificate that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * How the data that is collected should be combined over time.
- * 
  */
 public final class ManagementEventAggregationConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
 
     /**
      * the condition operator.
-     * 
      */
     @Import(name="operator")
       private final @Nullable Output<ConditionOperator> operator;
@@ -33,7 +31,6 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
 
     /**
      * The threshold value that activates the alert.
-     * 
      */
     @Import(name="threshold")
       private final @Nullable Output<Double> threshold;
@@ -44,7 +41,6 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
 
     /**
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-     * 
      */
     @Import(name="windowSize")
       private final @Nullable Output<String> windowSize;

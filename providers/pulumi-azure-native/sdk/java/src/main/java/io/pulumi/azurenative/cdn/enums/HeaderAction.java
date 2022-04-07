@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Action to perform
-     * 
      */
     @EnumType
     public enum HeaderAction {

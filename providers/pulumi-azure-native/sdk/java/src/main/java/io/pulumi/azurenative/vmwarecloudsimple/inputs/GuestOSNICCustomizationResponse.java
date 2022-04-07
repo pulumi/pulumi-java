@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Guest OS nic customization
- * 
  */
 public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
 
     /**
      * IP address allocation method
-     * 
      */
     @Import(name="allocation")
       private final @Nullable String allocation;
@@ -32,7 +30,6 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
 
     /**
      * List of dns servers to use
-     * 
      */
     @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
@@ -43,7 +40,6 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
 
     /**
      * Gateway addresses assigned to nic
-     * 
      */
     @Import(name="gateway")
       private final @Nullable List<String> gateway;
@@ -54,7 +50,6 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
 
     /**
      * Static ip address for nic
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -65,7 +60,6 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
 
     /**
      * Network mask for nic
-     * 
      */
     @Import(name="mask")
       private final @Nullable String mask;
@@ -76,7 +70,6 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
 
     /**
      * primary WINS server for Windows
-     * 
      */
     @Import(name="primaryWinsServer")
       private final @Nullable String primaryWinsServer;
@@ -87,7 +80,6 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
 
     /**
      * secondary WINS server for Windows
-     * 
      */
     @Import(name="secondaryWinsServer")
       private final @Nullable String secondaryWinsServer;

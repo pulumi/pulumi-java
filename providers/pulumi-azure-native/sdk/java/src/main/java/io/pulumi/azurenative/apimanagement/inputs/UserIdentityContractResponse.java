@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * User identity details.
- * 
  */
 public final class UserIdentityContractResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class UserIdentityContractResponse extends io.pulumi.resources.Invo
 
     /**
      * Identifier value within provider.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class UserIdentityContractResponse extends io.pulumi.resources.Invo
 
     /**
      * Identity provider name.
-     * 
      */
     @Import(name="provider")
       private final @Nullable String provider;

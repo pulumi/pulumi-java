@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class ListConfigurationStoreKeysResult {
     /**
      * The URI that can be used to request the next set of paged results.
-     * 
      */
     private final @Nullable String nextLink;
     /**
      * The collection value.
-     * 
      */
     private final @Nullable List<ApiKeyResponse> value;
 
@@ -34,14 +32,12 @@ public final class ListConfigurationStoreKeysResult {
 
     /**
      * The URI that can be used to request the next set of paged results.
-     * 
     */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * The collection value.
-     * 
     */
     public List<ApiKeyResponse> getValue() {
         return this.value == null ? List.of() : this.value;

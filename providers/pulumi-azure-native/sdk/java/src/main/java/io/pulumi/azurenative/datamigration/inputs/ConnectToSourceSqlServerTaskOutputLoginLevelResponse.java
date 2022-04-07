@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Login level output for the task that validates connection to SQL Server and also validates source server requirements
- * 
  */
 public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
 
     /**
      * The default database for the login.
-     * 
      */
     @Import(name="defaultDatabase", required=true)
       private final String defaultDatabase;
@@ -31,7 +29,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -42,7 +39,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
 
     /**
      * The state of the login.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
@@ -53,7 +49,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
 
     /**
      * The type of login.
-     * 
      */
     @Import(name="loginType", required=true)
       private final String loginType;
@@ -64,7 +59,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
 
     /**
      * Information about eligibility of login for migration.
-     * 
      */
     @Import(name="migrationEligibility", required=true)
       private final MigrationEligibilityInfoResponse migrationEligibility;
@@ -75,7 +69,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
 
     /**
      * Login name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -87,7 +80,6 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
     /**
      * Type of result - database level or task level
      * Expected value is 'LoginLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;

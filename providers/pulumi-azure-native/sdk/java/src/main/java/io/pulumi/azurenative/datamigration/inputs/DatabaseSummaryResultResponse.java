@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Summary of database results in the migration
- * 
  */
 public final class DatabaseSummaryResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -30,7 +28,6 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Wildcard string prefix to use for querying all errors of the item
-     * 
      */
     @Import(name="errorPrefix", required=true)
       private final String errorPrefix;
@@ -41,7 +38,6 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Number of successfully completed items
-     * 
      */
     @Import(name="itemsCompletedCount", required=true)
       private final Double itemsCompletedCount;
@@ -52,7 +48,6 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Number of items
-     * 
      */
     @Import(name="itemsCount", required=true)
       private final Double itemsCount;
@@ -63,7 +58,6 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the item
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -74,7 +68,6 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Wildcard string prefix to use for querying all sub-tem results of the item
-     * 
      */
     @Import(name="resultPrefix", required=true)
       private final String resultPrefix;
@@ -85,7 +78,6 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Size of the database in megabytes
-     * 
      */
     @Import(name="sizeMB", required=true)
       private final Double sizeMB;
@@ -96,7 +88,6 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -107,7 +98,6 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Current state of migration
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -118,7 +108,6 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
 
     /**
      * Status message
-     * 
      */
     @Import(name="statusMessage", required=true)
       private final String statusMessage;

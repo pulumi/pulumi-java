@@ -16,47 +16,38 @@ import javax.annotation.Nullable;
 public final class AppResourcePropertiesResponse {
     /**
      * Name of the active deployment of the App
-     * 
      */
     private final @Nullable String activeDeploymentName;
     /**
      * Date time when the resource is created
-     * 
      */
     private final String createdTime;
     /**
      * Fully qualified dns Name.
-     * 
      */
     private final @Nullable String fqdn;
     /**
      * Indicate if only https is allowed.
-     * 
      */
     private final @Nullable Boolean httpsOnly;
     /**
      * Persistent disk settings
-     * 
      */
     private final @Nullable PersistentDiskResponse persistentDisk;
     /**
      * Provisioning state of the App
-     * 
      */
     private final String provisioningState;
     /**
      * Indicates whether the App exposes public endpoint
-     * 
      */
     private final @Nullable Boolean public_;
     /**
      * Temporary disk settings
-     * 
      */
     private final @Nullable TemporaryDiskResponse temporaryDisk;
     /**
      * URL of the App
-     * 
      */
     private final String url;
 
@@ -84,63 +75,54 @@ public final class AppResourcePropertiesResponse {
 
     /**
      * Name of the active deployment of the App
-     * 
     */
     public Optional<String> getActiveDeploymentName() {
         return Optional.ofNullable(this.activeDeploymentName);
     }
     /**
      * Date time when the resource is created
-     * 
     */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Fully qualified dns Name.
-     * 
     */
     public Optional<String> getFqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * Indicate if only https is allowed.
-     * 
     */
     public Optional<Boolean> getHttpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
     /**
      * Persistent disk settings
-     * 
     */
     public Optional<PersistentDiskResponse> getPersistentDisk() {
         return Optional.ofNullable(this.persistentDisk);
     }
     /**
      * Provisioning state of the App
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicates whether the App exposes public endpoint
-     * 
     */
     public Optional<Boolean> getPublic_() {
         return Optional.ofNullable(this.public_);
     }
     /**
      * Temporary disk settings
-     * 
     */
     public Optional<TemporaryDiskResponse> getTemporaryDisk() {
         return Optional.ofNullable(this.temporaryDisk);
     }
     /**
      * URL of the App
-     * 
     */
     public String getUrl() {
         return this.url;

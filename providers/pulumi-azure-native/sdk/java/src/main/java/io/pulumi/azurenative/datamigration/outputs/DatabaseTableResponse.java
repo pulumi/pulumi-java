@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class DatabaseTableResponse {
     /**
      * Indicates whether table is empty or not
-     * 
      */
     private final Boolean hasRows;
     /**
      * Schema-qualified name of the table
-     * 
      */
     private final String name;
 
@@ -31,14 +29,12 @@ public final class DatabaseTableResponse {
 
     /**
      * Indicates whether table is empty or not
-     * 
     */
     public Boolean getHasRows() {
         return this.hasRows;
     }
     /**
      * Schema-qualified name of the table
-     * 
     */
     public String getName() {
         return this.name;

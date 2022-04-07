@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The integration account sku.
- * 
  */
 public final class IntegrationAccountSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class IntegrationAccountSkuResponse extends io.pulumi.resources.Inv
 
     /**
      * The sku name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

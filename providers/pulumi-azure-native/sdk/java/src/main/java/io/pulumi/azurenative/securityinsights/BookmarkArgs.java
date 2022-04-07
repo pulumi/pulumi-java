@@ -19,7 +19,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Bookmark ID
-     * 
      */
     @Import(name="bookmarkId")
       private final @Nullable Output<String> bookmarkId;
@@ -30,7 +29,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time the bookmark was created
-     * 
      */
     @Import(name="created")
       private final @Nullable Output<String> created;
@@ -41,7 +39,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a user that created the bookmark
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable Output<UserInfoArgs> createdBy;
@@ -52,7 +49,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the bookmark
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -63,7 +59,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bookmark event time
-     * 
      */
     @Import(name="eventTime")
       private final @Nullable Output<String> eventTime;
@@ -74,7 +69,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes an incident that relates to bookmark
-     * 
      */
     @Import(name="incidentInfo")
       private final @Nullable Output<IncidentInfoArgs> incidentInfo;
@@ -85,7 +79,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of labels relevant to this bookmark
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
@@ -96,7 +89,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The notes of the bookmark
-     * 
      */
     @Import(name="notes")
       private final @Nullable Output<String> notes;
@@ -107,7 +99,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The query of the bookmark.
-     * 
      */
     @Import(name="query", required=true)
       private final Output<String> query;
@@ -118,7 +109,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The end time for the query
-     * 
      */
     @Import(name="queryEndTime")
       private final @Nullable Output<String> queryEndTime;
@@ -129,7 +119,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The query result of the bookmark.
-     * 
      */
     @Import(name="queryResult")
       private final @Nullable Output<String> queryResult;
@@ -140,7 +129,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The start time for the query
-     * 
      */
     @Import(name="queryStartTime")
       private final @Nullable Output<String> queryStartTime;
@@ -151,7 +139,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -162,7 +149,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The last time the bookmark was updated
-     * 
      */
     @Import(name="updated")
       private final @Nullable Output<String> updated;
@@ -173,7 +159,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a user that updated the bookmark
-     * 
      */
     @Import(name="updatedBy")
       private final @Nullable Output<UserInfoArgs> updatedBy;
@@ -184,7 +169,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

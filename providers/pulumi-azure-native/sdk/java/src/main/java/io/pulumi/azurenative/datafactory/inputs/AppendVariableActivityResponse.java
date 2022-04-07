@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Append value for a Variable of type Array.
- * 
  */
 public final class AppendVariableActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -35,7 +33,6 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -46,7 +43,6 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -58,7 +54,6 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
     /**
      * Type of activity.
      * Expected value is 'AppendVariable'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -69,7 +64,6 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
@@ -80,7 +74,6 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
 
     /**
      * Value to be appended. Could be a static value or Expression
-     * 
      */
     @Import(name="value")
       private final @Nullable Object value;
@@ -91,7 +84,6 @@ public final class AppendVariableActivityResponse extends io.pulumi.resources.In
 
     /**
      * Name of the variable whose value needs to be appended to.
-     * 
      */
     @Import(name="variableName")
       private final @Nullable String variableName;

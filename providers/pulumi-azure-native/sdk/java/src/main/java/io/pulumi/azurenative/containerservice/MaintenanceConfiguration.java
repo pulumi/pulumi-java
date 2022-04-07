@@ -20,7 +20,136 @@ import javax.annotation.Nullable;
  * maintenance configuration.
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create/Update Maintenance Configuration
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var maintenanceConfiguration = new AzureNative.ContainerService.MaintenanceConfiguration("maintenanceConfiguration", new AzureNative.ContainerService.MaintenanceConfigurationArgs
+ *         {
+ *             ConfigName = "default",
+ *             NotAllowedTime = 
+ *             {
+ *                 new AzureNative.ContainerService.Inputs.TimeSpanArgs
+ *                 {
+ *                     End = "2020-11-30T12:00:00Z",
+ *                     Start = "2020-11-26T03:00:00Z",
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             ResourceName = "clustername1",
+ *             TimeInWeek = 
+ *             {
+ *                 new AzureNative.ContainerService.Inputs.TimeInWeekArgs
+ *                 {
+ *                     Day = "Monday",
+ *                     HourSlots = 
+ *                     {
+ *                         1,
+ *                         2,
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerservice.NewMaintenanceConfiguration(ctx, "maintenanceConfiguration", &containerservice.MaintenanceConfigurationArgs{
+ * 			ConfigName: pulumi.String("default"),
+ * 			NotAllowedTime: []containerservice.TimeSpanArgs{
+ * 				&containerservice.TimeSpanArgs{
+ * 					End:   pulumi.String("2020-11-30T12:00:00Z"),
+ * 					Start: pulumi.String("2020-11-26T03:00:00Z"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ResourceName:      pulumi.String("clustername1"),
+ * 			TimeInWeek: []containerservice.TimeInWeekArgs{
+ * 				&containerservice.TimeInWeekArgs{
+ * 					Day: pulumi.String("Monday"),
+ * 					HourSlots: pulumi.IntArray{
+ * 						pulumi.Int(1),
+ * 						pulumi.Int(2),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const maintenanceConfiguration = new azure_native.containerservice.MaintenanceConfiguration("maintenanceConfiguration", {
+ *     configName: "default",
+ *     notAllowedTime: [{
+ *         end: "2020-11-30T12:00:00Z",
+ *         start: "2020-11-26T03:00:00Z",
+ *     }],
+ *     resourceGroupName: "rg1",
+ *     resourceName: "clustername1",
+ *     timeInWeek: [{
+ *         day: "Monday",
+ *         hourSlots: [
+ *             1,
+ *             2,
+ *         ],
+ *     }],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * maintenance_configuration = azure_native.containerservice.MaintenanceConfiguration("maintenanceConfiguration",
+ *     config_name="default",
+ *     not_allowed_time=[azure_native.containerservice.TimeSpanArgs(
+ *         end="2020-11-30T12:00:00Z",
+ *         start="2020-11-26T03:00:00Z",
+ *     )],
+ *     resource_group_name="rg1",
+ *     resource_name="clustername1",
+ *     time_in_week=[azure_native.containerservice.TimeInWeekArgs(
+ *         day="Monday",
+ *         hour_slots=[
+ *             1,
+ *             2,
+ *         ],
+ *     )])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,70 +164,60 @@ import javax.annotation.Nullable;
 public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Time slots on which upgrade is not allowed.
-     * 
      */
     @Export(name="notAllowedTime", type=List.class, parameters={TimeSpanResponse.class})
     private Output</* @Nullable */ List<TimeSpanResponse>> notAllowedTime;
 
     /**
      * @return Time slots on which upgrade is not allowed.
-     * 
      */
     public Output</* @Nullable */ List<TimeSpanResponse>> getNotAllowedTime() {
         return this.notAllowedTime;
     }
     /**
      * The system meta data relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system meta data relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Weekday time slots allowed to upgrade.
-     * 
      */
     @Export(name="timeInWeek", type=List.class, parameters={TimeInWeekResponse.class})
     private Output</* @Nullable */ List<TimeInWeekResponse>> timeInWeek;
 
     /**
      * @return Weekday time slots allowed to upgrade.
-     * 
      */
     public Output</* @Nullable */ List<TimeInWeekResponse>> getTimeInWeek() {
         return this.timeInWeek;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

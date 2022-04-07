@@ -23,7 +23,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Determines the type of application which send the create user request. Default is legacy portal.
-     * 
      */
     @Import(name="appType")
       private final @Nullable Output<Either<String,AppType>> appType;
@@ -34,7 +33,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Determines the type of confirmation e-mail that will be sent to the newly created user.
-     * 
      */
     @Import(name="confirmation")
       private final @Nullable Output<Either<String,Confirmation>> confirmation;
@@ -45,7 +43,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email address. Must not be empty and must be unique within the service instance.
-     * 
      */
     @Import(name="email", required=true)
       private final Output<String> email;
@@ -56,7 +53,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * First name.
-     * 
      */
     @Import(name="firstName", required=true)
       private final Output<String> firstName;
@@ -67,7 +63,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of user identities.
-     * 
      */
     @Import(name="identities")
       private final @Nullable Output<List<UserIdentityContractArgs>> identities;
@@ -78,7 +73,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Last name.
-     * 
      */
     @Import(name="lastName", required=true)
       private final Output<String> lastName;
@@ -89,7 +83,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional note about a user set by the administrator.
-     * 
      */
     @Import(name="note")
       private final @Nullable Output<String> note;
@@ -100,7 +93,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Send an Email notification to the User.
-     * 
      */
     @Import(name="notify")
       private final @Nullable Output<Boolean> notify;
@@ -111,7 +103,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User Password. If no value is provided, a default password is generated.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -122,7 +113,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -133,7 +123,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -144,7 +133,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,UserState>> state;
@@ -155,7 +143,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="userId")
       private final @Nullable Output<String> userId;

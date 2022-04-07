@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of a single variable for a Pipeline.
- * 
  */
 public final class VariableSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VariableSpecificationResponse extends io.pulumi.resources.Inv
 
     /**
      * Default value of variable.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
@@ -32,7 +30,6 @@ public final class VariableSpecificationResponse extends io.pulumi.resources.Inv
 
     /**
      * Variable type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

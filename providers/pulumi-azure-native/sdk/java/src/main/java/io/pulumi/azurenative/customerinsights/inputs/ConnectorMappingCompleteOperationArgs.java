@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The complete operation.
- * 
  */
 public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
 
     /**
      * The type of completion operation.
-     * 
      */
     @Import(name="completionOperationType")
       private final @Nullable Output<CompletionOperationTypes> completionOperationType;
@@ -32,7 +30,6 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
 
     /**
      * The destination folder where files will be moved to once the import is done.
-     * 
      */
     @Import(name="destinationFolder")
       private final @Nullable Output<String> destinationFolder;

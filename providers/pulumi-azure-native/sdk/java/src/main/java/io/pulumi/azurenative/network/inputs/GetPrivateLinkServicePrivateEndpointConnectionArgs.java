@@ -16,7 +16,6 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
 
     /**
      * Expands referenced resources.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
 
     /**
      * The name of the private end point connection.
-     * 
      */
     @Import(name="peConnectionName", required=true)
       private final String peConnectionName;
@@ -38,7 +36,6 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -49,7 +46,6 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
 
     /**
      * The name of the private link service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

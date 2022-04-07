@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Protection container mapping properties.
- * 
  */
 public final class ProtectionContainerMappingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Health of pairing.
-     * 
      */
     @Import(name="health")
       private final @Nullable String health;
@@ -36,7 +34,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Health error.
-     * 
      */
     @Import(name="healthErrorDetails")
       private final @Nullable List<HealthErrorResponse> healthErrorDetails;
@@ -47,7 +44,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Friendly name of replication policy.
-     * 
      */
     @Import(name="policyFriendlyName")
       private final @Nullable String policyFriendlyName;
@@ -58,7 +54,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Policy ARM Id.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable String policyId;
@@ -69,7 +64,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Provider specific provider details.
-     * 
      */
     @Import(name="providerSpecificDetails")
       private final @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails;
@@ -80,7 +74,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Friendly name of source fabric.
-     * 
      */
     @Import(name="sourceFabricFriendlyName")
       private final @Nullable String sourceFabricFriendlyName;
@@ -91,7 +84,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Friendly name of source protection container.
-     * 
      */
     @Import(name="sourceProtectionContainerFriendlyName")
       private final @Nullable String sourceProtectionContainerFriendlyName;
@@ -102,7 +94,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Association Status
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;
@@ -113,7 +104,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Friendly name of target fabric.
-     * 
      */
     @Import(name="targetFabricFriendlyName")
       private final @Nullable String targetFabricFriendlyName;
@@ -124,7 +114,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Friendly name of paired container.
-     * 
      */
     @Import(name="targetProtectionContainerFriendlyName")
       private final @Nullable String targetProtectionContainerFriendlyName;
@@ -135,7 +124,6 @@ public final class ProtectionContainerMappingPropertiesResponse extends io.pulum
 
     /**
      * Paired protection container ARM ID.
-     * 
      */
     @Import(name="targetProtectionContainerId")
       private final @Nullable String targetProtectionContainerId;

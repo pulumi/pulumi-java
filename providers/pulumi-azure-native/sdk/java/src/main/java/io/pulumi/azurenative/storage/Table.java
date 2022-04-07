@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * Properties of the table, including Id, resource name, resource type.
  * API Version: 2021-02-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TableOperationPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var table = new AzureNative.Storage.Table("table", new AzureNative.Storage.TableArgs
+ *         {
+ *             AccountName = "sto328",
+ *             ResourceGroupName = "res3376",
+ *             TableName = "table6185",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewTable(ctx, "table", &storage.TableArgs{
+ * 			AccountName:       pulumi.String("sto328"),
+ * 			ResourceGroupName: pulumi.String("res3376"),
+ * 			TableName:         pulumi.String("table6185"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const table = new azure_native.storage.Table("table", {
+ *     accountName: "sto328",
+ *     resourceGroupName: "res3376",
+ *     tableName: "table6185",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * table = azure_native.storage.Table("table",
+ *     account_name="sto328",
+ *     resource_group_name="res3376",
+ *     table_name="table6185")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +104,36 @@ import javax.annotation.Nullable;
 public class Table extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Table name under the specified account
-     * 
      */
     @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
     /**
      * @return Table name under the specified account
-     * 
      */
     public Output<String> getTableName() {
         return this.tableName;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

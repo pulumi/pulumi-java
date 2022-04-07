@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status of the database transparent data encryption.
-     * 
      */
     @EnumType
     public enum TransparentDataEncryptionStatus {

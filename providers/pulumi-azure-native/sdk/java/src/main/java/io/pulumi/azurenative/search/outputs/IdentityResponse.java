@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class IdentityResponse {
     /**
      * The principal ID of resource identity.
-     * 
      */
     private final String principalId;
     /**
      * The tenant ID of resource.
-     * 
      */
     private final String tenantId;
     /**
      * The identity type.
-     * 
      */
     private final String type;
 
@@ -37,21 +34,18 @@ public final class IdentityResponse {
 
     /**
      * The principal ID of resource identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of resource.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The identity type.
-     * 
     */
     public String getType() {
         return this.type;

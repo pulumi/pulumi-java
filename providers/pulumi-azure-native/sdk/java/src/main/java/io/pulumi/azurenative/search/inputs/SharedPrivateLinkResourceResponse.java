@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
- * 
  */
 public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -32,7 +30,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * The name of the resource
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -43,7 +40,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
-     * 
      */
     @Import(name="properties")
       private final @Nullable SharedPrivateLinkResourcePropertiesResponse properties;
@@ -54,7 +50,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

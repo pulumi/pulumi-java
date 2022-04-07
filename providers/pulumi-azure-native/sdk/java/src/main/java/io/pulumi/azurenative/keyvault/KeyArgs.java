@@ -18,7 +18,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the key to be created.
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -29,7 +28,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties of the key to be created.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<KeyPropertiesArgs> properties;
@@ -40,7 +38,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group which contains the specified key vault.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags that will be assigned to the key.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -62,7 +58,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the key vault which contains the key to be created.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;

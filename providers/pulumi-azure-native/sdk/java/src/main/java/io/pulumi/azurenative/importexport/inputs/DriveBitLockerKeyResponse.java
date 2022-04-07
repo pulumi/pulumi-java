@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * BitLocker recovery key or password to the specified drive
- * 
  */
 public final class DriveBitLockerKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DriveBitLockerKeyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * BitLocker recovery key or password
-     * 
      */
     @Import(name="bitLockerKey")
       private final @Nullable String bitLockerKey;
@@ -31,7 +29,6 @@ public final class DriveBitLockerKeyResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Drive ID
-     * 
      */
     @Import(name="driveId")
       private final @Nullable String driveId;

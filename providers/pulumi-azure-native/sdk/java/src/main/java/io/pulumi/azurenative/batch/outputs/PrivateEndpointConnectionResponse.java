@@ -15,33 +15,27 @@ import javax.annotation.Nullable;
 public final class PrivateEndpointConnectionResponse {
     /**
      * The ETag of the resource, used for concurrency statements.
-     * 
      */
     private final String etag;
     /**
      * The ID of the resource.
-     * 
      */
     private final String id;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The private endpoint of the private endpoint connection.
-     * 
      */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
     /**
      * The private link service connection state of the private endpoint connection
-     * 
      */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
     private final String provisioningState;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -65,35 +59,30 @@ public final class PrivateEndpointConnectionResponse {
 
     /**
      * The ETag of the resource, used for concurrency statements.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The ID of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The private endpoint of the private endpoint connection.
-     * 
     */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The private link service connection state of the private endpoint connection
-     * 
     */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -103,7 +92,6 @@ public final class PrivateEndpointConnectionResponse {
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

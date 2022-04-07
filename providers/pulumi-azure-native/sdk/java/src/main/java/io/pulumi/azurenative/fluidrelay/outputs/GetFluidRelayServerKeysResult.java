@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class GetFluidRelayServerKeysResult {
     /**
      * The primary key for this server
-     * 
      */
     private final String key1;
     /**
      * The secondary key for this server
-     * 
      */
     private final String key2;
 
@@ -30,14 +28,12 @@ public final class GetFluidRelayServerKeysResult {
 
     /**
      * The primary key for this server
-     * 
     */
     public String getKey1() {
         return this.key1;
     }
     /**
      * The secondary key for this server
-     * 
     */
     public String getKey2() {
         return this.key2;

@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * InMage provider specific settings
- * 
  */
 public final class InMageReplicationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -30,7 +29,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
-     * 
      */
     @Import(name="activeSiteType")
       private final @Nullable String activeSiteType;
@@ -41,7 +39,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The agent details.
-     * 
      */
     @Import(name="agentDetails")
       private final @Nullable InMageAgentDetailsResponse agentDetails;
@@ -52,7 +49,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null.
-     * 
      */
     @Import(name="azureStorageAccountId")
       private final @Nullable String azureStorageAccountId;
@@ -63,7 +59,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The compressed data change rate in MB.
-     * 
      */
     @Import(name="compressedDataRateInMB")
       private final @Nullable Double compressedDataRateInMB;
@@ -74,7 +69,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The collection of Consistency points.
-     * 
      */
     @Import(name="consistencyPoints")
       private final @Nullable Map<String,String> consistencyPoints;
@@ -85,7 +79,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The data stores of the on-premise machine Value can be list of strings that contain data store names
-     * 
      */
     @Import(name="datastores")
       private final @Nullable List<String> datastores;
@@ -96,7 +89,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * A value indicating the discovery type of the machine.
-     * 
      */
     @Import(name="discoveryType")
       private final @Nullable String discoveryType;
@@ -107,7 +99,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * A value indicating whether any disk is resized for this VM.
-     * 
      */
     @Import(name="diskResized")
       private final @Nullable String diskResized;
@@ -118,7 +109,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The infrastructure VM Id.
-     * 
      */
     @Import(name="infrastructureVmId")
       private final @Nullable String infrastructureVmId;
@@ -130,7 +120,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
     /**
      * Gets the Instance type.
      * Expected value is 'InMage'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -141,7 +130,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The source IP address.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -152,7 +140,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The last heartbeat received from the source server.
-     * 
      */
     @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
@@ -163,7 +150,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The last RPO calculated time.
-     * 
      */
     @Import(name="lastRpoCalculatedTime")
       private final @Nullable String lastRpoCalculatedTime;
@@ -174,7 +160,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The last update time received from on-prem components.
-     * 
      */
     @Import(name="lastUpdateReceivedTime")
       private final @Nullable String lastUpdateReceivedTime;
@@ -185,7 +170,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The master target Id.
-     * 
      */
     @Import(name="masterTargetId")
       private final @Nullable String masterTargetId;
@@ -196,7 +180,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The multi vm group Id, if any.
-     * 
      */
     @Import(name="multiVmGroupId")
       private final @Nullable String multiVmGroupId;
@@ -207,7 +190,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The multi vm group name, if any.
-     * 
      */
     @Import(name="multiVmGroupName")
       private final @Nullable String multiVmGroupName;
@@ -218,7 +200,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * A value indicating whether the multi vm sync is enabled or disabled.
-     * 
      */
     @Import(name="multiVmSyncStatus")
       private final @Nullable String multiVmSyncStatus;
@@ -229,7 +210,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The OS details.
-     * 
      */
     @Import(name="osDetails")
       private final @Nullable OSDiskDetailsResponse osDetails;
@@ -240,7 +220,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The OS Version of the protected item.
-     * 
      */
     @Import(name="osVersion")
       private final @Nullable String osVersion;
@@ -251,7 +230,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The process server Id.
-     * 
      */
     @Import(name="processServerId")
       private final @Nullable String processServerId;
@@ -262,7 +240,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The list of protected disks.
-     * 
      */
     @Import(name="protectedDisks")
       private final @Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks;
@@ -273,7 +250,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The protection stage.
-     * 
      */
     @Import(name="protectionStage")
       private final @Nullable String protectionStage;
@@ -284,7 +260,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * A value indicating whether the source server requires a restart after update.
-     * 
      */
     @Import(name="rebootAfterUpdateStatus")
       private final @Nullable String rebootAfterUpdateStatus;
@@ -295,7 +270,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The replica id of the protected item.
-     * 
      */
     @Import(name="replicaId")
       private final @Nullable String replicaId;
@@ -306,7 +280,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The resync details of the machine
-     * 
      */
     @Import(name="resyncDetails")
       private final @Nullable InitialReplicationDetailsResponse resyncDetails;
@@ -317,7 +290,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The retention window end time.
-     * 
      */
     @Import(name="retentionWindowEnd")
       private final @Nullable String retentionWindowEnd;
@@ -328,7 +300,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The retention window start time.
-     * 
      */
     @Import(name="retentionWindowStart")
       private final @Nullable String retentionWindowStart;
@@ -339,7 +310,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The RPO in seconds.
-     * 
      */
     @Import(name="rpoInSeconds")
       private final @Nullable Double rpoInSeconds;
@@ -350,7 +320,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The CPU count of the VM on the primary side.
-     * 
      */
     @Import(name="sourceVmCpuCount")
       private final @Nullable Integer sourceVmCpuCount;
@@ -361,7 +330,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The RAM size of the VM on the primary side.
-     * 
      */
     @Import(name="sourceVmRamSizeInMB")
       private final @Nullable Integer sourceVmRamSizeInMB;
@@ -372,7 +340,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The uncompressed data change rate in MB.
-     * 
      */
     @Import(name="uncompressedDataRateInMB")
       private final @Nullable Double uncompressedDataRateInMB;
@@ -383,7 +350,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The vCenter infrastructure Id.
-     * 
      */
     @Import(name="vCenterInfrastructureId")
       private final @Nullable String vCenterInfrastructureId;
@@ -394,7 +360,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The validation errors of the on-premise machine Value can be list of validation errors
-     * 
      */
     @Import(name="validationErrors")
       private final @Nullable List<HealthErrorResponse> validationErrors;
@@ -405,7 +370,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The virtual machine Id.
-     * 
      */
     @Import(name="vmId")
       private final @Nullable String vmId;
@@ -416,7 +380,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The PE Network details.
-     * 
      */
     @Import(name="vmNics")
       private final @Nullable List<VMNicDetailsResponse> vmNics;
@@ -427,7 +390,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The protection state for the vm.
-     * 
      */
     @Import(name="vmProtectionState")
       private final @Nullable String vmProtectionState;
@@ -438,7 +400,6 @@ public final class InMageReplicationDetailsResponse extends io.pulumi.resources.
 
     /**
      * The protection state description for the vm.
-     * 
      */
     @Import(name="vmProtectionStateDescription")
       private final @Nullable String vmProtectionStateDescription;

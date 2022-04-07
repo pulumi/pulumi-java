@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * Defines an Network Experiment Profile and lists of Experiments
  * API Version: 2019-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates an NetworkExperiment Profile in a Resource Group
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var networkExperimentProfile = new AzureNative.Network.NetworkExperimentProfile("networkExperimentProfile", new AzureNative.Network.NetworkExperimentProfileArgs
+ *         {
+ *             EnabledState = "Enabled",
+ *             Location = "WestUs",
+ *             ProfileName = "MyProfile",
+ *             ResourceGroupName = "MyResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewNetworkExperimentProfile(ctx, "networkExperimentProfile", &network.NetworkExperimentProfileArgs{
+ * 			EnabledState:      pulumi.String("Enabled"),
+ * 			Location:          pulumi.String("WestUs"),
+ * 			ProfileName:       pulumi.String("MyProfile"),
+ * 			ResourceGroupName: pulumi.String("MyResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const networkExperimentProfile = new azure_native.network.NetworkExperimentProfile("networkExperimentProfile", {
+ *     enabledState: "Enabled",
+ *     location: "WestUs",
+ *     profileName: "MyProfile",
+ *     resourceGroupName: "MyResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * network_experiment_profile = azure_native.network.NetworkExperimentProfile("networkExperimentProfile",
+ *     enabled_state="Enabled",
+ *     location="WestUs",
+ *     profile_name="MyProfile",
+ *     resource_group_name="MyResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +109,84 @@ import javax.annotation.Nullable;
 public class NetworkExperimentProfile extends io.pulumi.resources.CustomResource {
     /**
      * The state of the Experiment
-     * 
      */
     @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
      * @return The state of the Experiment
-     * 
      */
     public Output</* @Nullable */ String> getEnabledState() {
         return this.enabledState;
     }
     /**
      * Gets a unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Gets a unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource status.
-     * 
      */
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
      * @return Resource status.
-     * 
      */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

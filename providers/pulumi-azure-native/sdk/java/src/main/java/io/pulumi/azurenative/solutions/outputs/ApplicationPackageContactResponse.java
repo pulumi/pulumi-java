@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ApplicationPackageContactResponse {
     /**
      * The contact name.
-     * 
      */
     private final @Nullable String contactName;
     /**
      * The contact email.
-     * 
      */
     private final String email;
     /**
      * The contact phone number.
-     * 
      */
     private final String phone;
 
@@ -39,21 +36,18 @@ public final class ApplicationPackageContactResponse {
 
     /**
      * The contact name.
-     * 
     */
     public Optional<String> getContactName() {
         return Optional.ofNullable(this.contactName);
     }
     /**
      * The contact email.
-     * 
     */
     public String getEmail() {
         return this.email;
     }
     /**
      * The contact phone number.
-     * 
     */
     public String getPhone() {
         return this.phone;

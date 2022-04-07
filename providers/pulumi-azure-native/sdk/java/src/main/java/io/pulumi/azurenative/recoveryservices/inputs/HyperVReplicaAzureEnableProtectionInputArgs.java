@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure specific enable protection input.
- * 
  */
 public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The list of VHD IDs of disks to be protected.
-     * 
      */
     @Import(name="disksToInclude")
       private final @Nullable Output<List<String>> disksToInclude;
@@ -32,7 +30,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
-     * 
      */
     @Import(name="enableRdpOnTargetOption")
       private final @Nullable Output<String> enableRdpOnTargetOption;
@@ -43,7 +40,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The Hyper-V host Vm Id.
-     * 
      */
     @Import(name="hvHostVmId")
       private final @Nullable Output<String> hvHostVmId;
@@ -55,7 +51,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
     /**
      * The class type.
      * Expected value is 'HyperVReplicaAzure'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -66,7 +61,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The storage account to be used for logging during replication.
-     * 
      */
     @Import(name="logStorageAccountId")
       private final @Nullable Output<String> logStorageAccountId;
@@ -77,7 +71,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The OS type associated with vm.
-     * 
      */
     @Import(name="osType")
       private final @Nullable Output<String> osType;
@@ -88,7 +81,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The availability set ARM Id.
-     * 
      */
     @Import(name="targetAvailabilitySetId")
       private final @Nullable Output<String> targetAvailabilitySetId;
@@ -99,7 +91,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The target availability zone.
-     * 
      */
     @Import(name="targetAvailabilityZone")
       private final @Nullable Output<String> targetAvailabilityZone;
@@ -110,7 +101,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The selected target Azure network Id.
-     * 
      */
     @Import(name="targetAzureNetworkId")
       private final @Nullable Output<String> targetAzureNetworkId;
@@ -121,7 +111,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The selected target Azure subnet Id.
-     * 
      */
     @Import(name="targetAzureSubnetId")
       private final @Nullable Output<String> targetAzureSubnetId;
@@ -132,7 +121,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
-     * 
      */
     @Import(name="targetAzureV1ResourceGroupId")
       private final @Nullable Output<String> targetAzureV1ResourceGroupId;
@@ -143,7 +131,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
-     * 
      */
     @Import(name="targetAzureV2ResourceGroupId")
       private final @Nullable Output<String> targetAzureV2ResourceGroupId;
@@ -154,7 +141,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The target azure Vm Name.
-     * 
      */
     @Import(name="targetAzureVmName")
       private final @Nullable Output<String> targetAzureVmName;
@@ -165,7 +151,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The proximity placement group ARM Id.
-     * 
      */
     @Import(name="targetProximityPlacementGroupId")
       private final @Nullable Output<String> targetProximityPlacementGroupId;
@@ -176,7 +161,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The storage account name.
-     * 
      */
     @Import(name="targetStorageAccountId")
       private final @Nullable Output<String> targetStorageAccountId;
@@ -187,7 +171,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The target VM size.
-     * 
      */
     @Import(name="targetVmSize")
       private final @Nullable Output<String> targetVmSize;
@@ -198,7 +181,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * A value indicating whether managed disks should be used during failover.
-     * 
      */
     @Import(name="useManagedDisks")
       private final @Nullable Output<String> useManagedDisks;
@@ -209,7 +191,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The OS disk VHD id associated with vm.
-     * 
      */
     @Import(name="vhdId")
       private final @Nullable Output<String> vhdId;
@@ -220,7 +201,6 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends io.pulumi
 
     /**
      * The Vm Name.
-     * 
      */
     @Import(name="vmName")
       private final @Nullable Output<String> vmName;

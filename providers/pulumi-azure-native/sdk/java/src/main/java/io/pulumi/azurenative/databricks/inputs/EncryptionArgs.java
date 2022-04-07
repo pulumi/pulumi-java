@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The object that contains details of encryption used on the workspace.
- * 
  */
 public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of KeyVault key.
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -33,7 +31,6 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
-     * 
      */
     @Import(name="keySource")
       private final @Nullable Output<Either<String,KeySource>> keySource;
@@ -44,7 +41,6 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Uri of KeyVault.
-     * 
      */
     @Import(name="keyVaultUri")
       private final @Nullable Output<String> keyVaultUri;
@@ -55,7 +51,6 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of KeyVault key.
-     * 
      */
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;

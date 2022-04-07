@@ -14,7 +14,6 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the inventoryItem.
-     * 
      */
     @Import(name="inventoryItemName", required=true)
       private final String inventoryItemName;
@@ -25,7 +24,6 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetInventoryItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the vCenter.
-     * 
      */
     @Import(name="vcenterName", required=true)
       private final String vcenterName;

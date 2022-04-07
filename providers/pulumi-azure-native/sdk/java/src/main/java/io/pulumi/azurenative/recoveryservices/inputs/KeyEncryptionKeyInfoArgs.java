@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Key Encryption Key (KEK) information.
- * 
  */
 public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
 
     /**
      * The key URL / identifier.
-     * 
      */
     @Import(name="keyIdentifier")
       private final @Nullable Output<String> keyIdentifier;
@@ -31,7 +29,6 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
 
     /**
      * The KeyVault resource ARM Id for key.
-     * 
      */
     @Import(name="keyVaultResourceArmId")
       private final @Nullable Output<String> keyVaultResourceArmId;

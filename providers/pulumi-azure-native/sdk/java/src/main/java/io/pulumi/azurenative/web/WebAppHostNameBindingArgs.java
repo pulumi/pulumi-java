@@ -20,7 +20,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Azure resource name.
-     * 
      */
     @Import(name="azureResourceName")
       private final @Nullable Output<String> azureResourceName;
@@ -31,7 +30,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Azure resource type.
-     * 
      */
     @Import(name="azureResourceType")
       private final @Nullable Output<AzureResourceType> azureResourceType;
@@ -42,7 +40,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Custom DNS record type.
-     * 
      */
     @Import(name="customHostNameDnsRecordType")
       private final @Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
@@ -53,7 +50,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Fully qualified ARM domain resource URI.
-     * 
      */
     @Import(name="domainId")
       private final @Nullable Output<String> domainId;
@@ -64,7 +60,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Hostname in the hostname binding.
-     * 
      */
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
@@ -75,7 +70,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Hostname type.
-     * 
      */
     @Import(name="hostNameType")
       private final @Nullable Output<HostNameType> hostNameType;
@@ -86,7 +80,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -97,7 +90,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -108,7 +100,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -119,7 +110,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * App Service app name.
-     * 
      */
     @Import(name="siteName")
       private final @Nullable Output<String> siteName;
@@ -130,7 +120,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * SSL type
-     * 
      */
     @Import(name="sslState")
       private final @Nullable Output<SslState> sslState;
@@ -141,7 +130,6 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
 
     /**
      * SSL certificate thumbprint
-     * 
      */
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;

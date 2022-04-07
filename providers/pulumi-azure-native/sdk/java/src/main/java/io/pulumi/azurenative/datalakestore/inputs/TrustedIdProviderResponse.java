@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Data Lake Store trusted identity provider information.
- * 
  */
 public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The resource identifier.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -29,7 +27,6 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The URL of this trusted identity provider.
-     * 
      */
     @Import(name="idProvider", required=true)
       private final String idProvider;
@@ -40,7 +37,6 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -51,7 +47,6 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

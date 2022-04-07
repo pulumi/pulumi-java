@@ -14,7 +14,6 @@ public final class GetPolicyAssignmentArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the policy assignment to get.
-     * 
      */
     @Import(name="policyAssignmentName", required=true)
       private final String policyAssignmentName;
@@ -25,7 +24,6 @@ public final class GetPolicyAssignmentArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;

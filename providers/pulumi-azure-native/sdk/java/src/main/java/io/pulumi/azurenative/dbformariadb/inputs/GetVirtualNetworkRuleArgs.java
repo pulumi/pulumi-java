@@ -14,7 +14,6 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;
@@ -36,7 +34,6 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the virtual network rule.
-     * 
      */
     @Import(name="virtualNetworkRuleName", required=true)
       private final String virtualNetworkRuleName;

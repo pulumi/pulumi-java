@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The RosettaNet ProcessConfiguration business document settings.
- * 
  */
 public final class RosettaNetPipBusinessDocumentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RosettaNetPipBusinessDocumentResponse extends io.pulumi.resou
 
     /**
      * The business document description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -31,7 +29,6 @@ public final class RosettaNetPipBusinessDocumentResponse extends io.pulumi.resou
 
     /**
      * The business document name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -42,7 +39,6 @@ public final class RosettaNetPipBusinessDocumentResponse extends io.pulumi.resou
 
     /**
      * The business document version.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

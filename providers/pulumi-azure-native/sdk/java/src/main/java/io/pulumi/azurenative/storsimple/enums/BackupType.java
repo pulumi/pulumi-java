@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of backup which needs to be taken.
-     * 
      */
     @EnumType
     public enum BackupType {

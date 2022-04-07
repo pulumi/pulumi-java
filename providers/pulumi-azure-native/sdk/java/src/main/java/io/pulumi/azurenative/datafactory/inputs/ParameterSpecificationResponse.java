@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of a single parameter for an entity.
- * 
  */
 public final class ParameterSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ParameterSpecificationResponse extends io.pulumi.resources.In
 
     /**
      * Default value of parameter.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
@@ -32,7 +30,6 @@ public final class ParameterSpecificationResponse extends io.pulumi.resources.In
 
     /**
      * Parameter type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

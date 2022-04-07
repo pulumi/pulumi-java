@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The resource limits.
- * 
  */
 public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The CPU limit of this container instance.
-     * 
      */
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
@@ -32,7 +30,6 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The GPU limit of this container instance.
-     * 
      */
     @Import(name="gpu")
       private final @Nullable Output<GpuResourceArgs> gpu;
@@ -43,7 +40,6 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The memory limit in GB of this container instance.
-     * 
      */
     @Import(name="memoryInGB")
       private final @Nullable Output<Double> memoryInGB;

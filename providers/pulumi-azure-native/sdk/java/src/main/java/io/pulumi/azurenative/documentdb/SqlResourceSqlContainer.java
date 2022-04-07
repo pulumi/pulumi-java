@@ -20,7 +20,273 @@ import javax.annotation.Nullable;
  * An Azure Cosmos DB container.
  * API Version: 2021-03-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CosmosDBSqlContainerCreateUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlResourceSqlContainer = new AzureNative.DocumentDB.SqlResourceSqlContainer("sqlResourceSqlContainer", new AzureNative.DocumentDB.SqlResourceSqlContainerArgs
+ *         {
+ *             AccountName = "ddb1",
+ *             ContainerName = "containerName",
+ *             DatabaseName = "databaseName",
+ *             Location = "West US",
+ *             Options = ,
+ *             Resource = new AzureNative.DocumentDB.Inputs.SqlContainerResourceArgs
+ *             {
+ *                 ConflictResolutionPolicy = new AzureNative.DocumentDB.Inputs.ConflictResolutionPolicyArgs
+ *                 {
+ *                     ConflictResolutionPath = "/path",
+ *                     Mode = "LastWriterWins",
+ *                 },
+ *                 DefaultTtl = 100,
+ *                 Id = "containerName",
+ *                 IndexingPolicy = new AzureNative.DocumentDB.Inputs.IndexingPolicyArgs
+ *                 {
+ *                     Automatic = true,
+ *                     ExcludedPaths = {},
+ *                     IncludedPaths = 
+ *                     {
+ *                         new AzureNative.DocumentDB.Inputs.IncludedPathArgs
+ *                         {
+ *                             Indexes = 
+ *                             {
+ *                                 new AzureNative.DocumentDB.Inputs.IndexesArgs
+ *                                 {
+ *                                     DataType = "String",
+ *                                     Kind = "Range",
+ *                                     Precision = -1,
+ *                                 },
+ *                                 new AzureNative.DocumentDB.Inputs.IndexesArgs
+ *                                 {
+ *                                     DataType = "Number",
+ *                                     Kind = "Range",
+ *                                     Precision = -1,
+ *                                 },
+ *                             },
+ *                             Path = "/*",
+ *                         },
+ *                     },
+ *                     IndexingMode = "consistent",
+ *                 },
+ *                 PartitionKey = new AzureNative.DocumentDB.Inputs.ContainerPartitionKeyArgs
+ *                 {
+ *                     Kind = "Hash",
+ *                     Paths = 
+ *                     {
+ *                         "/AccountNumber",
+ *                     },
+ *                 },
+ *                 UniqueKeyPolicy = new AzureNative.DocumentDB.Inputs.UniqueKeyPolicyArgs
+ *                 {
+ *                     UniqueKeys = 
+ *                     {
+ *                         new AzureNative.DocumentDB.Inputs.UniqueKeyArgs
+ *                         {
+ *                             Paths = 
+ *                             {
+ *                                 "/testPath",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewSqlResourceSqlContainer(ctx, "sqlResourceSqlContainer", &documentdb.SqlResourceSqlContainerArgs{
+ * 			AccountName:   pulumi.String("ddb1"),
+ * 			ContainerName: pulumi.String("containerName"),
+ * 			DatabaseName:  pulumi.String("databaseName"),
+ * 			Location:      pulumi.String("West US"),
+ * 			Options:       nil,
+ * 			Resource: &documentdb.SqlContainerResourceArgs{
+ * 				ConflictResolutionPolicy: &documentdb.ConflictResolutionPolicyArgs{
+ * 					ConflictResolutionPath: pulumi.String("/path"),
+ * 					Mode:                   pulumi.String("LastWriterWins"),
+ * 				},
+ * 				DefaultTtl: pulumi.Int(100),
+ * 				Id:         pulumi.String("containerName"),
+ * 				IndexingPolicy: &documentdb.IndexingPolicyArgs{
+ * 					Automatic:     pulumi.Bool(true),
+ * 					ExcludedPaths: documentdb.ExcludedPathArray{},
+ * 					IncludedPaths: documentdb.IncludedPathArray{
+ * 						&documentdb.IncludedPathArgs{
+ * 							Indexes: documentdb.IndexesArray{
+ * 								&documentdb.IndexesArgs{
+ * 									DataType:  pulumi.String("String"),
+ * 									Kind:      pulumi.String("Range"),
+ * 									Precision: -1,
+ * 								},
+ * 								&documentdb.IndexesArgs{
+ * 									DataType:  pulumi.String("Number"),
+ * 									Kind:      pulumi.String("Range"),
+ * 									Precision: -1,
+ * 								},
+ * 							},
+ * 							Path: pulumi.String("/*"),
+ * 						},
+ * 					},
+ * 					IndexingMode: pulumi.String("consistent"),
+ * 				},
+ * 				PartitionKey: &documentdb.ContainerPartitionKeyArgs{
+ * 					Kind: pulumi.String("Hash"),
+ * 					Paths: pulumi.StringArray{
+ * 						pulumi.String("/AccountNumber"),
+ * 					},
+ * 				},
+ * 				UniqueKeyPolicy: &documentdb.UniqueKeyPolicyArgs{
+ * 					UniqueKeys: documentdb.UniqueKeyArray{
+ * 						&documentdb.UniqueKeyArgs{
+ * 							Paths: pulumi.StringArray{
+ * 								pulumi.String("/testPath"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Tags:              nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlResourceSqlContainer = new azure_native.documentdb.SqlResourceSqlContainer("sqlResourceSqlContainer", {
+ *     accountName: "ddb1",
+ *     containerName: "containerName",
+ *     databaseName: "databaseName",
+ *     location: "West US",
+ *     options: {},
+ *     resource: {
+ *         conflictResolutionPolicy: {
+ *             conflictResolutionPath: "/path",
+ *             mode: "LastWriterWins",
+ *         },
+ *         defaultTtl: 100,
+ *         id: "containerName",
+ *         indexingPolicy: {
+ *             automatic: true,
+ *             excludedPaths: [],
+ *             includedPaths: [{
+ *                 indexes: [
+ *                     {
+ *                         dataType: "String",
+ *                         kind: "Range",
+ *                         precision: -1,
+ *                     },
+ *                     {
+ *                         dataType: "Number",
+ *                         kind: "Range",
+ *                         precision: -1,
+ *                     },
+ *                 ],
+ *                 path: "/*",
+ *             }],
+ *             indexingMode: "consistent",
+ *         },
+ *         partitionKey: {
+ *             kind: "Hash",
+ *             paths: ["/AccountNumber"],
+ *         },
+ *         uniqueKeyPolicy: {
+ *             uniqueKeys: [{
+ *                 paths: ["/testPath"],
+ *             }],
+ *         },
+ *     },
+ *     resourceGroupName: "rg1",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_resource_sql_container = azure_native.documentdb.SqlResourceSqlContainer("sqlResourceSqlContainer",
+ *     account_name="ddb1",
+ *     container_name="containerName",
+ *     database_name="databaseName",
+ *     location="West US",
+ *     options=azure_native.documentdb.CreateUpdateOptionsArgs(),
+ *     resource=azure_native.documentdb.SqlContainerResourceArgs(
+ *         conflict_resolution_policy=azure_native.documentdb.ConflictResolutionPolicyArgs(
+ *             conflict_resolution_path="/path",
+ *             mode="LastWriterWins",
+ *         ),
+ *         default_ttl=100,
+ *         id="containerName",
+ *         indexing_policy=azure_native.documentdb.IndexingPolicyArgs(
+ *             automatic=True,
+ *             excluded_paths=[],
+ *             included_paths=[azure_native.documentdb.IncludedPathArgs(
+ *                 indexes=[
+ *                     azure_native.documentdb.IndexesArgs(
+ *                         data_type="String",
+ *                         kind="Range",
+ *                         precision=-1,
+ *                     ),
+ *                     azure_native.documentdb.IndexesArgs(
+ *                         data_type="Number",
+ *                         kind="Range",
+ *                         precision=-1,
+ *                     ),
+ *                 ],
+ *                 path="/*",
+ *             )],
+ *             indexing_mode="consistent",
+ *         ),
+ *         partition_key=azure_native.documentdb.ContainerPartitionKeyArgs(
+ *             kind="Hash",
+ *             paths=["/AccountNumber"],
+ *         ),
+ *         unique_key_policy=azure_native.documentdb.UniqueKeyPolicyArgs(
+ *             unique_keys=[azure_native.documentdb.UniqueKeyArgs(
+ *                 paths=["/testPath"],
+ *             )],
+ *         ),
+ *     ),
+ *     resource_group_name="rg1",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,28 +301,24 @@ import javax.annotation.Nullable;
 public class SqlResourceSqlContainer extends io.pulumi.resources.CustomResource {
     /**
      * The location of the resource group to which the resource belongs.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource group to which the resource belongs.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the ARM resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the ARM resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -75,28 +337,24 @@ public class SqlResourceSqlContainer extends io.pulumi.resources.CustomResource 
     }
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

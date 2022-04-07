@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes destination endpoint for routing traffic.
- * 
  */
 public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Name of the service fabric Mesh application.
-     * 
      */
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
@@ -30,7 +28,6 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * name of the endpoint in the service.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
@@ -41,7 +38,6 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * service that contains the endpoint.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

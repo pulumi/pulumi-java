@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents an Azure resource group.
- * 
  */
 public final class ResourceGroupValueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceGroupValueResponse extends io.pulumi.resources.Invoke
 
     /**
      * Location of the resource group.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -31,7 +29,6 @@ public final class ResourceGroupValueResponse extends io.pulumi.resources.Invoke
 
     /**
      * Name of the resource group.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * A virtual network rule.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a virtual network rule
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetworkRule = new AzureNative.Sql.VirtualNetworkRule("virtualNetworkRule", new AzureNative.Sql.VirtualNetworkRuleArgs
+ *         {
+ *             IgnoreMissingVnetServiceEndpoint = false,
+ *             ResourceGroupName = "Default",
+ *             ServerName = "vnet-test-svr",
+ *             VirtualNetworkRuleName = "vnet-firewall-rule",
+ *             VirtualNetworkSubnetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewVirtualNetworkRule(ctx, "virtualNetworkRule", &sql.VirtualNetworkRuleArgs{
+ * 			IgnoreMissingVnetServiceEndpoint: pulumi.Bool(false),
+ * 			ResourceGroupName:                pulumi.String("Default"),
+ * 			ServerName:                       pulumi.String("vnet-test-svr"),
+ * 			VirtualNetworkRuleName:           pulumi.String("vnet-firewall-rule"),
+ * 			VirtualNetworkSubnetId:           pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetworkRule = new azure_native.sql.VirtualNetworkRule("virtualNetworkRule", {
+ *     ignoreMissingVnetServiceEndpoint: false,
+ *     resourceGroupName: "Default",
+ *     serverName: "vnet-test-svr",
+ *     virtualNetworkRuleName: "vnet-firewall-rule",
+ *     virtualNetworkSubnetId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network_rule = azure_native.sql.VirtualNetworkRule("virtualNetworkRule",
+ *     ignore_missing_vnet_service_endpoint=False,
+ *     resource_group_name="Default",
+ *     server_name="vnet-test-svr",
+ *     virtual_network_rule_name="vnet-firewall-rule",
+ *     virtual_network_subnet_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +113,60 @@ import javax.annotation.Nullable;
 public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
     /**
      * Create firewall rule before the virtual network has vnet service endpoint enabled.
-     * 
      */
     @Export(name="ignoreMissingVnetServiceEndpoint", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ignoreMissingVnetServiceEndpoint;
 
     /**
      * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIgnoreMissingVnetServiceEndpoint() {
         return this.ignoreMissingVnetServiceEndpoint;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Virtual Network Rule State
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Virtual Network Rule State
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The ARM resource id of the virtual network subnet.
-     * 
      */
     @Export(name="virtualNetworkSubnetId", type=String.class, parameters={})
     private Output<String> virtualNetworkSubnetId;
 
     /**
      * @return The ARM resource id of the virtual network subnet.
-     * 
      */
     public Output<String> getVirtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectToTargetSqlMITaskInputResponse {
     /**
      * Connection information for target SQL Server
-     * 
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
@@ -22,7 +21,6 @@ public final class ConnectToTargetSqlMITaskInputResponse {
 
     /**
      * Connection information for target SQL Server
-     * 
     */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class CloudErrorResponse {
     /**
      * Details about the error.
-     * 
      */
     private final @Nullable CloudErrorBodyResponse error;
 
@@ -24,7 +23,6 @@ public final class CloudErrorResponse {
 
     /**
      * Details about the error.
-     * 
     */
     public Optional<CloudErrorBodyResponse> getError() {
         return Optional.ofNullable(this.error);

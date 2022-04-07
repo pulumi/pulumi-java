@@ -19,7 +19,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -30,7 +29,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The job schedule name.
-     * 
      */
     @Import(name="jobScheduleId")
       private final @Nullable Output<String> jobScheduleId;
@@ -41,7 +39,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets a list of job properties.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
@@ -52,7 +49,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the hybrid worker group that the scheduled job should run on.
-     * 
      */
     @Import(name="runOn")
       private final @Nullable Output<String> runOn;
@@ -74,7 +69,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the runbook.
-     * 
      */
     @Import(name="runbook", required=true)
       private final Output<RunbookAssociationPropertyArgs> runbook;
@@ -85,7 +79,6 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the schedule.
-     * 
      */
     @Import(name="schedule", required=true)
       private final Output<ScheduleAssociationPropertyArgs> schedule;

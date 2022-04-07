@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * KPI Resource Health Details
- * 
  */
 public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource Health Status
-     * 
      */
     @Import(name="resourceHealthStatus")
       private final @Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus;

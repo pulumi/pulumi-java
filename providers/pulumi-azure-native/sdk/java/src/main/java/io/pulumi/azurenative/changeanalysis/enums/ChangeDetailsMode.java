@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
-     * 
      */
     @EnumType
     public enum ChangeDetailsMode {

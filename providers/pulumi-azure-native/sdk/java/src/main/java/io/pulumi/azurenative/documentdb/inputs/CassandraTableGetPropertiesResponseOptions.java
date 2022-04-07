@@ -17,7 +17,6 @@ public final class CassandraTableGetPropertiesResponseOptions extends io.pulumi.
 
     /**
      * Specifies the Autoscale settings.
-     * 
      */
     @Import(name="autoscaleSettings")
       private final @Nullable AutoscaleSettingsResponse autoscaleSettings;
@@ -28,7 +27,6 @@ public final class CassandraTableGetPropertiesResponseOptions extends io.pulumi.
 
     /**
      * Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
-     * 
      */
     @Import(name="throughput")
       private final @Nullable Integer throughput;

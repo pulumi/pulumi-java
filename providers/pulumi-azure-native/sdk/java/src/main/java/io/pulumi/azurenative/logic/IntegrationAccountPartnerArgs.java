@@ -21,7 +21,6 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
 
     /**
      * The partner content.
-     * 
      */
     @Import(name="content", required=true)
       private final Output<PartnerContentArgs> content;
@@ -32,7 +31,6 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
@@ -43,7 +41,6 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -54,7 +51,6 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
 
     /**
      * The metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -65,7 +61,6 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
 
     /**
      * The integration account partner name.
-     * 
      */
     @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
@@ -76,7 +71,6 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
 
     /**
      * The partner type.
-     * 
      */
     @Import(name="partnerType", required=true)
       private final Output<Either<String,PartnerType>> partnerType;
@@ -87,7 +81,6 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -98,7 +91,6 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

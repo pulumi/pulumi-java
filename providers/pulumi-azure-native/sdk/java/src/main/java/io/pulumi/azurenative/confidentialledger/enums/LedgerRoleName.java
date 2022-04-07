@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * LedgerRole associated with the Security Principal of Ledger
-     * 
      */
     @EnumType
     public enum LedgerRoleName {

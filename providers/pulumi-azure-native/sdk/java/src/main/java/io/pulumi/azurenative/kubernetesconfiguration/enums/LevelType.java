@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Level of the status.
-     * 
      */
     @EnumType
     public enum LevelType {

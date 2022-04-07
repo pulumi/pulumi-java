@@ -14,7 +14,6 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
-     * 
      */
     @Import(name="labName", required=true)
       private final String labName;
@@ -25,7 +24,6 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
-     * 
      */
     @Import(name="scheduleName", required=true)
       private final String scheduleName;

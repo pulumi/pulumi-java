@@ -19,7 +19,109 @@ import javax.annotation.Nullable;
  * API connection
  * API Version: 2016-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Replace a connection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connection = new AzureNative.Web.Connection("connection", new AzureNative.Web.ConnectionArgs
+ *         {
+ *             ConnectionName = "testManagedApi",
+ *             Properties = new AzureNative.Web.Inputs.ApiConnectionDefinitionPropertiesArgs
+ *             {
+ *                 Api = new AzureNative.Web.Inputs.ApiReferenceArgs
+ *                 {
+ *                     Id = "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
+ *                 },
+ *                 CustomParameterValues = ,
+ *                 DisplayName = "testManagedApi",
+ *                 ParameterValues = ,
+ *             },
+ *             ResourceGroupName = "testResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := web.NewConnection(ctx, "connection", &web.ConnectionArgs{
+ * 			ConnectionName: pulumi.String("testManagedApi"),
+ * 			Properties: &web.ApiConnectionDefinitionPropertiesArgs{
+ * 				Api: &web.ApiReferenceArgs{
+ * 					Id: pulumi.String("/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi"),
+ * 				},
+ * 				CustomParameterValues: nil,
+ * 				DisplayName:           pulumi.String("testManagedApi"),
+ * 				ParameterValues:       nil,
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connection = new azure_native.web.Connection("connection", {
+ *     connectionName: "testManagedApi",
+ *     properties: {
+ *         api: {
+ *             id: "/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
+ *         },
+ *         customParameterValues: {},
+ *         displayName: "testManagedApi",
+ *         parameterValues: {},
+ *     },
+ *     resourceGroupName: "testResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connection = azure_native.web.Connection("connection",
+ *     connection_name="testManagedApi",
+ *     properties=azure_native.web.ApiConnectionDefinitionPropertiesArgs(
+ *         api=azure_native.web.ApiReferenceArgs(
+ *             id="/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi",
+ *         ),
+ *         custom_parameter_values={},
+ *         display_name="testManagedApi",
+ *         parameter_values={},
+ *     ),
+ *     resource_group_name="testResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,42 +136,36 @@ import javax.annotation.Nullable;
 public class Connection extends io.pulumi.resources.CustomResource {
     /**
      * Resource ETag
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Resource ETag
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -82,28 +178,24 @@ public class Connection extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

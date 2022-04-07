@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the output of a function.
- * 
  */
 public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
-     * 
      */
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;

@@ -14,7 +14,6 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
 
     /**
      * Public certificate name.
-     * 
      */
     @Import(name="publicCertificateName", required=true)
       private final String publicCertificateName;
@@ -36,7 +34,6 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

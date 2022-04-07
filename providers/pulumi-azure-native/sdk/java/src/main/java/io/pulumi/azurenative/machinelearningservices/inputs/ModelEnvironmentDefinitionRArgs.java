@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for a R environment.
- * 
  */
 public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
 
     /**
      * The packages from Bioconductor.
-     * 
      */
     @Import(name="bioConductorPackages")
       private final @Nullable Output<List<String>> bioConductorPackages;
@@ -35,7 +33,6 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
 
     /**
      * The CRAN packages to use.
-     * 
      */
     @Import(name="cranPackages")
       private final @Nullable Output<List<RCranPackageArgs>> cranPackages;
@@ -46,7 +43,6 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
 
     /**
      * The packages from custom urls.
-     * 
      */
     @Import(name="customUrlPackages")
       private final @Nullable Output<List<String>> customUrlPackages;
@@ -57,7 +53,6 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
 
     /**
      * The packages directly from GitHub.
-     * 
      */
     @Import(name="gitHubPackages")
       private final @Nullable Output<List<RGitHubPackageArgs>> gitHubPackages;
@@ -68,7 +63,6 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
 
     /**
      * The version of R to be installed
-     * 
      */
     @Import(name="rVersion")
       private final @Nullable Output<String> rVersion;
@@ -80,7 +74,6 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     /**
      * The Rscript path to use if an environment build is not required.
      * The path specified gets used to call the user script.
-     * 
      */
     @Import(name="rscriptPath")
       private final @Nullable Output<String> rscriptPath;
@@ -91,7 +84,6 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
 
     /**
      * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
-     * 
      */
     @Import(name="snapshotDate")
       private final @Nullable Output<String> snapshotDate;
@@ -102,7 +94,6 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
 
     /**
      * Indicates whether the environment is managed by user or by AzureML.
-     * 
      */
     @Import(name="userManaged")
       private final @Nullable Output<Boolean> userManaged;

@@ -17,7 +17,6 @@ public final class WebAppApplicationSettingsSlotArgs extends io.pulumi.resources
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -28,7 +27,6 @@ public final class WebAppApplicationSettingsSlotArgs extends io.pulumi.resources
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -39,7 +37,6 @@ public final class WebAppApplicationSettingsSlotArgs extends io.pulumi.resources
 
     /**
      * Settings.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -50,7 +47,6 @@ public final class WebAppApplicationSettingsSlotArgs extends io.pulumi.resources
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class WebAppApplicationSettingsSlotArgs extends io.pulumi.resources
 
     /**
      * Name of the deployment slot. If a slot is not specified, the API will update the application settings for the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;

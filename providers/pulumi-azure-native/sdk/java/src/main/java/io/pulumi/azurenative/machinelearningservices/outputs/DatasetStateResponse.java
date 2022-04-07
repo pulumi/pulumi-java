@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class DatasetStateResponse {
     /**
      * Reference to better Dataset or a Definition
-     * 
      */
     private final @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
     /**
      * eTag description
-     * 
      */
     private final String etag;
     /**
      * Dataset state
-     * 
      */
     private final @Nullable String state;
 
@@ -40,21 +37,18 @@ public final class DatasetStateResponse {
 
     /**
      * Reference to better Dataset or a Definition
-     * 
     */
     public Optional<DatasetStateResponseDeprecatedBy> getDeprecatedBy() {
         return Optional.ofNullable(this.deprecatedBy);
     }
     /**
      * eTag description
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Dataset state
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);

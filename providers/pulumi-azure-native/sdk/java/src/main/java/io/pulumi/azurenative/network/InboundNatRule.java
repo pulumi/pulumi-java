@@ -21,7 +21,116 @@ import javax.annotation.Nullable;
  * Inbound NAT rule of the load balancer.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### InboundNatRuleCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var inboundNatRule = new AzureNative.Network.InboundNatRule("inboundNatRule", new AzureNative.Network.InboundNatRuleArgs
+ *         {
+ *             BackendPort = 3389,
+ *             EnableFloatingIP = false,
+ *             EnableTcpReset = false,
+ *             FrontendIPConfiguration = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/ip1",
+ *             },
+ *             FrontendPort = 3390,
+ *             IdleTimeoutInMinutes = 4,
+ *             InboundNatRuleName = "natRule1.1",
+ *             LoadBalancerName = "lb1",
+ *             Protocol = "Tcp",
+ *             ResourceGroupName = "testrg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewInboundNatRule(ctx, "inboundNatRule", &network.InboundNatRuleArgs{
+ * 			BackendPort:      pulumi.Int(3389),
+ * 			EnableFloatingIP: pulumi.Bool(false),
+ * 			EnableTcpReset:   pulumi.Bool(false),
+ * 			FrontendIPConfiguration: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/ip1"),
+ * 			},
+ * 			FrontendPort:         pulumi.Int(3390),
+ * 			IdleTimeoutInMinutes: pulumi.Int(4),
+ * 			InboundNatRuleName:   pulumi.String("natRule1.1"),
+ * 			LoadBalancerName:     pulumi.String("lb1"),
+ * 			Protocol:             pulumi.String("Tcp"),
+ * 			ResourceGroupName:    pulumi.String("testrg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const inboundNatRule = new azure_native.network.InboundNatRule("inboundNatRule", {
+ *     backendPort: 3389,
+ *     enableFloatingIP: false,
+ *     enableTcpReset: false,
+ *     frontendIPConfiguration: {
+ *         id: "/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/ip1",
+ *     },
+ *     frontendPort: 3390,
+ *     idleTimeoutInMinutes: 4,
+ *     inboundNatRuleName: "natRule1.1",
+ *     loadBalancerName: "lb1",
+ *     protocol: "Tcp",
+ *     resourceGroupName: "testrg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * inbound_nat_rule = azure_native.network.InboundNatRule("inboundNatRule",
+ *     backend_port=3389,
+ *     enable_floating_ip=False,
+ *     enable_tcp_reset=False,
+ *     frontend_ip_configuration=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb1/frontendIPConfigurations/ip1",
+ *     ),
+ *     frontend_port=3390,
+ *     idle_timeout_in_minutes=4,
+ *     inbound_nat_rule_name="natRule1.1",
+ *     load_balancer_name="lb1",
+ *     protocol="Tcp",
+ *     resource_group_name="testrg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,168 +145,144 @@ import javax.annotation.Nullable;
 public class InboundNatRule extends io.pulumi.resources.CustomResource {
     /**
      * A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
-     * 
      */
     @Export(name="backendIPConfiguration", type=NetworkInterfaceIPConfigurationResponse.class, parameters={})
     private Output<NetworkInterfaceIPConfigurationResponse> backendIPConfiguration;
 
     /**
      * @return A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
-     * 
      */
     public Output<NetworkInterfaceIPConfigurationResponse> getBackendIPConfiguration() {
         return this.backendIPConfiguration;
     }
     /**
      * The port used for the internal endpoint. Acceptable values range from 1 to 65535.
-     * 
      */
     @Export(name="backendPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> backendPort;
 
     /**
      * @return The port used for the internal endpoint. Acceptable values range from 1 to 65535.
-     * 
      */
     public Output</* @Nullable */ Integer> getBackendPort() {
         return this.backendPort;
     }
     /**
      * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-     * 
      */
     @Export(name="enableFloatingIP", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFloatingIP;
 
     /**
      * @return Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableFloatingIP() {
         return this.enableFloatingIP;
     }
     /**
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
-     * 
      */
     @Export(name="enableTcpReset", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableTcpReset;
 
     /**
      * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableTcpReset() {
         return this.enableTcpReset;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * A reference to frontend IP addresses.
-     * 
      */
     @Export(name="frontendIPConfiguration", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> frontendIPConfiguration;
 
     /**
      * @return A reference to frontend IP addresses.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getFrontendIPConfiguration() {
         return this.frontendIPConfiguration;
     }
     /**
      * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
-     * 
      */
     @Export(name="frontendPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> frontendPort;
 
     /**
      * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
-     * 
      */
     public Output</* @Nullable */ Integer> getFrontendPort() {
         return this.frontendPort;
     }
     /**
      * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
-     * 
      */
     @Export(name="idleTimeoutInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleTimeoutInMinutes;
 
     /**
      * @return The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
-     * 
      */
     public Output</* @Nullable */ Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes;
     }
     /**
      * The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The reference to the transport protocol used by the load balancing rule.
-     * 
      */
     @Export(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
     /**
      * @return The reference to the transport protocol used by the load balancing rule.
-     * 
      */
     public Output</* @Nullable */ String> getProtocol() {
         return this.protocol;
     }
     /**
      * The provisioning state of the inbound NAT rule resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the inbound NAT rule resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

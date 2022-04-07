@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * VMwareCbt specific enable migration input.
- * 
  */
 public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The data mover RunAs account Id.
-     * 
      */
     @Import(name="dataMoverRunAsAccountId", required=true)
       private final Output<String> dataMoverRunAsAccountId;
@@ -35,7 +33,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The disks to include list.
-     * 
      */
     @Import(name="disksToInclude", required=true)
       private final Output<List<VMwareCbtDiskInputArgs>> disksToInclude;
@@ -47,7 +44,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
     /**
      * The class type.
      * Expected value is 'VMwareCbt'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
@@ -58,7 +54,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * License type.
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,LicenseType>> licenseType;
@@ -69,7 +64,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The snapshot RunAs account Id.
-     * 
      */
     @Import(name="snapshotRunAsAccountId", required=true)
       private final Output<String> snapshotRunAsAccountId;
@@ -80,7 +74,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The target availability set ARM Id.
-     * 
      */
     @Import(name="targetAvailabilitySetId")
       private final @Nullable Output<String> targetAvailabilitySetId;
@@ -91,7 +84,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The target boot diagnostics storage account ARM Id.
-     * 
      */
     @Import(name="targetBootDiagnosticsStorageAccountId")
       private final @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
@@ -102,7 +94,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The target network ARM Id.
-     * 
      */
     @Import(name="targetNetworkId", required=true)
       private final Output<String> targetNetworkId;
@@ -113,7 +104,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The target resource group ARM Id.
-     * 
      */
     @Import(name="targetResourceGroupId", required=true)
       private final Output<String> targetResourceGroupId;
@@ -124,7 +114,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The target subnet name.
-     * 
      */
     @Import(name="targetSubnetName")
       private final @Nullable Output<String> targetSubnetName;
@@ -135,7 +124,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The target VM name.
-     * 
      */
     @Import(name="targetVmName")
       private final @Nullable Output<String> targetVmName;
@@ -146,7 +134,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The target VM size.
-     * 
      */
     @Import(name="targetVmSize")
       private final @Nullable Output<String> targetVmSize;
@@ -157,7 +144,6 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
 
     /**
      * The ARM Id of the VM discovered in VMware.
-     * 
      */
     @Import(name="vmwareMachineId", required=true)
       private final Output<String> vmwareMachineId;

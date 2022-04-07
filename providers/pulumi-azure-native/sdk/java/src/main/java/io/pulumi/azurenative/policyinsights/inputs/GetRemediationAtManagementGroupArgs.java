@@ -14,7 +14,6 @@ public final class GetRemediationAtManagementGroupArgs extends io.pulumi.resourc
 
     /**
      * Management group ID.
-     * 
      */
     @Import(name="managementGroupId", required=true)
       private final String managementGroupId;
@@ -25,7 +24,6 @@ public final class GetRemediationAtManagementGroupArgs extends io.pulumi.resourc
 
     /**
      * The namespace for Microsoft Management RP; only "Microsoft.Management" is allowed.
-     * 
      */
     @Import(name="managementGroupsNamespace", required=true)
       private final String managementGroupsNamespace;
@@ -36,7 +34,6 @@ public final class GetRemediationAtManagementGroupArgs extends io.pulumi.resourc
 
     /**
      * The name of the remediation.
-     * 
      */
     @Import(name="remediationName", required=true)
       private final String remediationName;

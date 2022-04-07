@@ -13,42 +13,34 @@ import java.util.Objects;
 public final class GetContainerResult {
     /**
      * Current status of the container.
-     * 
      */
     private final String containerStatus;
     /**
      * The UTC time when container got created.
-     * 
      */
     private final String createdDateTime;
     /**
      * DataFormat for Container
-     * 
      */
     private final String dataFormat;
     /**
      * The path ID that uniquely identifies the object.
-     * 
      */
     private final String id;
     /**
      * The object name.
-     * 
      */
     private final String name;
     /**
      * Details of the refresh job on this container.
-     * 
      */
     private final RefreshDetailsResponse refreshDetails;
     /**
      * Container in DataBoxEdge Resource
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The hierarchical type of the object.
-     * 
      */
     private final String type;
 
@@ -74,56 +66,48 @@ public final class GetContainerResult {
 
     /**
      * Current status of the container.
-     * 
     */
     public String getContainerStatus() {
         return this.containerStatus;
     }
     /**
      * The UTC time when container got created.
-     * 
     */
     public String getCreatedDateTime() {
         return this.createdDateTime;
     }
     /**
      * DataFormat for Container
-     * 
     */
     public String getDataFormat() {
         return this.dataFormat;
     }
     /**
      * The path ID that uniquely identifies the object.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The object name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Details of the refresh job on this container.
-     * 
     */
     public RefreshDetailsResponse getRefreshDetails() {
         return this.refreshDetails;
     }
     /**
      * Container in DataBoxEdge Resource
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
     */
     public String getType() {
         return this.type;

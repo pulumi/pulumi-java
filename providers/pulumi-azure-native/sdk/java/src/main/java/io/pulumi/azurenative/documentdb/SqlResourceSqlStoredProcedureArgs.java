@@ -19,7 +19,6 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -30,7 +29,6 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
 
     /**
      * Cosmos DB container name.
-     * 
      */
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
@@ -41,7 +39,6 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
 
     /**
      * Cosmos DB database name.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -52,7 +49,6 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
 
     /**
      * The location of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -63,7 +59,6 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
 
     /**
      * A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
@@ -74,7 +69,6 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
 
     /**
      * The standard JSON format of a storedProcedure
-     * 
      */
     @Import(name="resource", required=true)
       private final Output<SqlStoredProcedureResourceArgs> resource;
@@ -85,7 +79,6 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -96,7 +89,6 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
 
     /**
      * Cosmos DB storedProcedure name.
-     * 
      */
     @Import(name="storedProcedureName")
       private final @Nullable Output<String> storedProcedureName;
@@ -107,7 +99,6 @@ public final class SqlResourceSqlStoredProcedureArgs extends io.pulumi.resources
 
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

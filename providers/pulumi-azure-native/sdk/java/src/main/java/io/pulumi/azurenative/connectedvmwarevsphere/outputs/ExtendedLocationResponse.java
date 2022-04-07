@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ExtendedLocationResponse {
     /**
      * The extended location name.
-     * 
      */
     private final @Nullable String name;
     /**
      * The extended location type.
-     * 
      */
     private final @Nullable String type;
 
@@ -32,14 +30,12 @@ public final class ExtendedLocationResponse {
 
     /**
      * The extended location name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The extended location type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Partner region information for the failover group.
- * 
  */
 public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Geo location of the partner managed instances.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -31,7 +29,6 @@ public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Replication role of the partner managed instances.
-     * 
      */
     @Import(name="replicationRole", required=true)
       private final String replicationRole;

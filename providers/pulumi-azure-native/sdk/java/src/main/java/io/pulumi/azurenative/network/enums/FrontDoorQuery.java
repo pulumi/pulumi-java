@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Treatment of URL query terms when forming the cache key.
-     * 
      */
     @EnumType
     public enum FrontDoorQuery {

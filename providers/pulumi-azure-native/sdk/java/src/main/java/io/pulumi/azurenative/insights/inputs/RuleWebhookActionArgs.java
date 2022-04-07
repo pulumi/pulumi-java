@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the action to post to service when the rule condition is evaluated. The discriminator is always RuleWebhookAction in this case.
- * 
  */
 public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
     /**
      * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleWebhookAction'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -33,7 +31,6 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -44,7 +41,6 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * the service uri to Post the notification when the alert activates or resolves.
-     * 
      */
     @Import(name="serviceUri")
       private final @Nullable Output<String> serviceUri;

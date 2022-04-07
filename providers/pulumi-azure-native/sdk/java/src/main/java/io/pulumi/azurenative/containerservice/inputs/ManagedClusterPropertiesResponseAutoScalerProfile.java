@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters to be applied to the cluster-autoscaler when enabled
- * 
  */
 public final class ManagedClusterPropertiesResponseAutoScalerProfile extends io.pulumi.resources.InvokeArgs {
 

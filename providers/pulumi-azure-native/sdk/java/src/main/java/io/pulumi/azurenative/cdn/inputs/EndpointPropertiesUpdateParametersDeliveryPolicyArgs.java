@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A policy that specifies the delivery rules to be used for an endpoint.
- * 
  */
 public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
 
     /**
      * User-friendly description of the policy.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -33,7 +31,6 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
 
     /**
      * A list of the delivery rules.
-     * 
      */
     @Import(name="rules", required=true)
       private final Output<List<DeliveryRuleArgs>> rules;

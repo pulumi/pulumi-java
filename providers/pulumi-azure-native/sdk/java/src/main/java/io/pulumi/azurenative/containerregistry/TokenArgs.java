@@ -19,7 +19,6 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The credentials that can be used for authenticating the token.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<TokenCredentialsPropertiesArgs> credentials;
@@ -30,7 +29,6 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
@@ -41,7 +39,6 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource ID of the scope map to which the token will be associated with.
-     * 
      */
     @Import(name="scopeMapId")
       private final @Nullable Output<String> scopeMapId;
@@ -63,7 +59,6 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of the token example enabled or disabled.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,TokenStatus>> status;
@@ -74,7 +69,6 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the token.
-     * 
      */
     @Import(name="tokenName")
       private final @Nullable Output<String> tokenName;

@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class IdentityPropertiesResponse {
     /**
      * The client secret URL of the identity.
-     * 
      */
     private final @Nullable String clientSecretUrl;
     /**
      * The principal id of resource identity.
-     * 
      */
     private final @Nullable String principalId;
     /**
      * The tenant identifier of resource.
-     * 
      */
     private final @Nullable String tenantId;
     /**
      * Managed identity.
-     * 
      */
     private final @Nullable String type;
 
@@ -46,28 +42,24 @@ public final class IdentityPropertiesResponse {
 
     /**
      * The client secret URL of the identity.
-     * 
     */
     public Optional<String> getClientSecretUrl() {
         return Optional.ofNullable(this.clientSecretUrl);
     }
     /**
      * The principal id of resource identity.
-     * 
     */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The tenant identifier of resource.
-     * 
     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Managed identity.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

@@ -14,7 +14,6 @@ public final class GetBackupVaultArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group where the backup vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetBackupVaultArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the backup vault.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final String vaultName;

@@ -18,7 +18,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the network.
-     * 
      */
     @Import(name="networkResourceName")
       private final @Nullable Output<String> networkResourceName;
@@ -40,7 +38,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes properties of a network resource.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<NetworkResourcePropertiesArgs> properties;
@@ -51,7 +48,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

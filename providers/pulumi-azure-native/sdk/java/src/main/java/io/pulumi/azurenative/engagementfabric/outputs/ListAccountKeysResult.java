@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ListAccountKeysResult {
     /**
      * Account keys
-     * 
      */
     private final List<KeyDescriptionResponse> value;
 
@@ -23,7 +22,6 @@ public final class ListAccountKeysResult {
 
     /**
      * Account keys
-     * 
     */
     public List<KeyDescriptionResponse> getValue() {
         return this.value;

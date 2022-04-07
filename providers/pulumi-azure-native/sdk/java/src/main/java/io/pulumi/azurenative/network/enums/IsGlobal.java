@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Flag if global mesh is supported.
-     * 
      */
     @EnumType
     public enum IsGlobal {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Workspace type.
-     * 
      */
     @EnumType
     public enum AdditionalWorkspaceType {

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about the deadletter destination with resource identity.
- * 
  */
 public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
     /**
      * Information about the destination where events have to be delivered for the event subscription.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     @Import(name="deadLetterDestination")
       private final @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
@@ -33,7 +31,6 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
 
     /**
      * The identity to use when dead-lettering events.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<EventSubscriptionIdentityArgs> identity;

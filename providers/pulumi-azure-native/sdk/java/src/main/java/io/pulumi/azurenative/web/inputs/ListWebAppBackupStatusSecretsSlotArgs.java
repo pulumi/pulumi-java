@@ -20,7 +20,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     /**
      * ID of backup.
-     * 
      */
     @Import(name="backupId", required=true)
       private final String backupId;
@@ -31,7 +30,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     /**
      * Name of the backup.
-     * 
      */
     @Import(name="backupName")
       private final @Nullable String backupName;
@@ -42,7 +40,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     /**
      * Schedule for the backup if it is executed periodically.
-     * 
      */
     @Import(name="backupSchedule")
       private final @Nullable BackupSchedule backupSchedule;
@@ -53,7 +50,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     /**
      * Databases included in the backup.
-     * 
      */
     @Import(name="databases")
       private final @Nullable List<DatabaseBackupSetting> databases;
@@ -64,7 +60,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     /**
      * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
@@ -75,7 +70,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable String kind;
@@ -86,7 +80,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     /**
      * Name of web app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -97,7 +90,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -108,7 +100,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     /**
      * Name of web app slot. If not specified then will default to production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final String slot;
@@ -119,7 +110,6 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
 
     /**
      * SAS URL to the container.
-     * 
      */
     @Import(name="storageAccountUrl", required=true)
       private final String storageAccountUrl;

@@ -18,7 +18,6 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the ADP account
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -29,7 +28,6 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Data Pool
-     * 
      */
     @Import(name="dataPoolName")
       private final @Nullable Output<String> dataPoolName;
@@ -40,7 +38,6 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the collection of locations where Data Pool resources should be created
-     * 
      */
     @Import(name="locations", required=true)
       private final Output<List<DataPoolLocationArgs>> locations;
@@ -51,7 +48,6 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

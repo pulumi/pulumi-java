@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the network settings for the HANA instance disks.
- * 
  */
 public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the circuit id for connecting to express route.
-     * 
      */
     @Import(name="circuitId", required=true)
       private final String circuitId;
@@ -33,7 +31,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the network interfaces for the HANA instance.
-     * 
      */
     @Import(name="networkInterfaces")
       private final @Nullable List<IpAddressResponse> networkInterfaces;

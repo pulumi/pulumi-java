@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class ListSourceControlRepositoriesResult {
     /**
      * URL to fetch the next set of repositories.
-     * 
      */
     private final String nextLink;
     /**
      * Array of repositories.
-     * 
      */
     private final List<RepoResponse> value;
 
@@ -32,14 +30,12 @@ public final class ListSourceControlRepositoriesResult {
 
     /**
      * URL to fetch the next set of repositories.
-     * 
     */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * Array of repositories.
-     * 
     */
     public List<RepoResponse> getValue() {
         return this.value;

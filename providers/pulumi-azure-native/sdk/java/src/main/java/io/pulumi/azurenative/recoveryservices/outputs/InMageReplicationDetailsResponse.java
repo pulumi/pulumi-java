@@ -23,193 +23,155 @@ import javax.annotation.Nullable;
 public final class InMageReplicationDetailsResponse {
     /**
      * The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
-     * 
      */
     private final @Nullable String activeSiteType;
     /**
      * The agent details.
-     * 
      */
     private final @Nullable InMageAgentDetailsResponse agentDetails;
     /**
      * A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null.
-     * 
      */
     private final @Nullable String azureStorageAccountId;
     /**
      * The compressed data change rate in MB.
-     * 
      */
     private final @Nullable Double compressedDataRateInMB;
     /**
      * The collection of Consistency points.
-     * 
      */
     private final @Nullable Map<String,String> consistencyPoints;
     /**
      * The data stores of the on-premise machine Value can be list of strings that contain data store names
-     * 
      */
     private final @Nullable List<String> datastores;
     /**
      * A value indicating the discovery type of the machine.
-     * 
      */
     private final @Nullable String discoveryType;
     /**
      * A value indicating whether any disk is resized for this VM.
-     * 
      */
     private final @Nullable String diskResized;
     /**
      * The infrastructure VM Id.
-     * 
      */
     private final @Nullable String infrastructureVmId;
     /**
      * Gets the Instance type.
      * Expected value is 'InMage'.
-     * 
      */
     private final String instanceType;
     /**
      * The source IP address.
-     * 
      */
     private final @Nullable String ipAddress;
     /**
      * The last heartbeat received from the source server.
-     * 
      */
     private final @Nullable String lastHeartbeat;
     /**
      * The last RPO calculated time.
-     * 
      */
     private final @Nullable String lastRpoCalculatedTime;
     /**
      * The last update time received from on-prem components.
-     * 
      */
     private final @Nullable String lastUpdateReceivedTime;
     /**
      * The master target Id.
-     * 
      */
     private final @Nullable String masterTargetId;
     /**
      * The multi vm group Id, if any.
-     * 
      */
     private final @Nullable String multiVmGroupId;
     /**
      * The multi vm group name, if any.
-     * 
      */
     private final @Nullable String multiVmGroupName;
     /**
      * A value indicating whether the multi vm sync is enabled or disabled.
-     * 
      */
     private final @Nullable String multiVmSyncStatus;
     /**
      * The OS details.
-     * 
      */
     private final @Nullable OSDiskDetailsResponse osDetails;
     /**
      * The OS Version of the protected item.
-     * 
      */
     private final @Nullable String osVersion;
     /**
      * The process server Id.
-     * 
      */
     private final @Nullable String processServerId;
     /**
      * The list of protected disks.
-     * 
      */
     private final @Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks;
     /**
      * The protection stage.
-     * 
      */
     private final @Nullable String protectionStage;
     /**
      * A value indicating whether the source server requires a restart after update.
-     * 
      */
     private final @Nullable String rebootAfterUpdateStatus;
     /**
      * The replica id of the protected item.
-     * 
      */
     private final @Nullable String replicaId;
     /**
      * The resync details of the machine
-     * 
      */
     private final @Nullable InitialReplicationDetailsResponse resyncDetails;
     /**
      * The retention window end time.
-     * 
      */
     private final @Nullable String retentionWindowEnd;
     /**
      * The retention window start time.
-     * 
      */
     private final @Nullable String retentionWindowStart;
     /**
      * The RPO in seconds.
-     * 
      */
     private final @Nullable Double rpoInSeconds;
     /**
      * The CPU count of the VM on the primary side.
-     * 
      */
     private final @Nullable Integer sourceVmCpuCount;
     /**
      * The RAM size of the VM on the primary side.
-     * 
      */
     private final @Nullable Integer sourceVmRamSizeInMB;
     /**
      * The uncompressed data change rate in MB.
-     * 
      */
     private final @Nullable Double uncompressedDataRateInMB;
     /**
      * The vCenter infrastructure Id.
-     * 
      */
     private final @Nullable String vCenterInfrastructureId;
     /**
      * The validation errors of the on-premise machine Value can be list of validation errors
-     * 
      */
     private final @Nullable List<HealthErrorResponse> validationErrors;
     /**
      * The virtual machine Id.
-     * 
      */
     private final @Nullable String vmId;
     /**
      * The PE Network details.
-     * 
      */
     private final @Nullable List<VMNicDetailsResponse> vmNics;
     /**
      * The protection state for the vm.
-     * 
      */
     private final @Nullable String vmProtectionState;
     /**
      * The protection state description for the vm.
-     * 
      */
     private final @Nullable String vmProtectionStateDescription;
 
@@ -295,63 +257,54 @@ public final class InMageReplicationDetailsResponse {
 
     /**
      * The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
-     * 
     */
     public Optional<String> getActiveSiteType() {
         return Optional.ofNullable(this.activeSiteType);
     }
     /**
      * The agent details.
-     * 
     */
     public Optional<InMageAgentDetailsResponse> getAgentDetails() {
         return Optional.ofNullable(this.agentDetails);
     }
     /**
      * A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null.
-     * 
     */
     public Optional<String> getAzureStorageAccountId() {
         return Optional.ofNullable(this.azureStorageAccountId);
     }
     /**
      * The compressed data change rate in MB.
-     * 
     */
     public Optional<Double> getCompressedDataRateInMB() {
         return Optional.ofNullable(this.compressedDataRateInMB);
     }
     /**
      * The collection of Consistency points.
-     * 
     */
     public Map<String,String> getConsistencyPoints() {
         return this.consistencyPoints == null ? Map.of() : this.consistencyPoints;
     }
     /**
      * The data stores of the on-premise machine Value can be list of strings that contain data store names
-     * 
     */
     public List<String> getDatastores() {
         return this.datastores == null ? List.of() : this.datastores;
     }
     /**
      * A value indicating the discovery type of the machine.
-     * 
     */
     public Optional<String> getDiscoveryType() {
         return Optional.ofNullable(this.discoveryType);
     }
     /**
      * A value indicating whether any disk is resized for this VM.
-     * 
     */
     public Optional<String> getDiskResized() {
         return Optional.ofNullable(this.diskResized);
     }
     /**
      * The infrastructure VM Id.
-     * 
     */
     public Optional<String> getInfrastructureVmId() {
         return Optional.ofNullable(this.infrastructureVmId);
@@ -359,203 +312,174 @@ public final class InMageReplicationDetailsResponse {
     /**
      * Gets the Instance type.
      * Expected value is 'InMage'.
-     * 
     */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The source IP address.
-     * 
     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The last heartbeat received from the source server.
-     * 
     */
     public Optional<String> getLastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
      * The last RPO calculated time.
-     * 
     */
     public Optional<String> getLastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
     /**
      * The last update time received from on-prem components.
-     * 
     */
     public Optional<String> getLastUpdateReceivedTime() {
         return Optional.ofNullable(this.lastUpdateReceivedTime);
     }
     /**
      * The master target Id.
-     * 
     */
     public Optional<String> getMasterTargetId() {
         return Optional.ofNullable(this.masterTargetId);
     }
     /**
      * The multi vm group Id, if any.
-     * 
     */
     public Optional<String> getMultiVmGroupId() {
         return Optional.ofNullable(this.multiVmGroupId);
     }
     /**
      * The multi vm group name, if any.
-     * 
     */
     public Optional<String> getMultiVmGroupName() {
         return Optional.ofNullable(this.multiVmGroupName);
     }
     /**
      * A value indicating whether the multi vm sync is enabled or disabled.
-     * 
     */
     public Optional<String> getMultiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
     /**
      * The OS details.
-     * 
     */
     public Optional<OSDiskDetailsResponse> getOsDetails() {
         return Optional.ofNullable(this.osDetails);
     }
     /**
      * The OS Version of the protected item.
-     * 
     */
     public Optional<String> getOsVersion() {
         return Optional.ofNullable(this.osVersion);
     }
     /**
      * The process server Id.
-     * 
     */
     public Optional<String> getProcessServerId() {
         return Optional.ofNullable(this.processServerId);
     }
     /**
      * The list of protected disks.
-     * 
     */
     public List<InMageProtectedDiskDetailsResponse> getProtectedDisks() {
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
     /**
      * The protection stage.
-     * 
     */
     public Optional<String> getProtectionStage() {
         return Optional.ofNullable(this.protectionStage);
     }
     /**
      * A value indicating whether the source server requires a restart after update.
-     * 
     */
     public Optional<String> getRebootAfterUpdateStatus() {
         return Optional.ofNullable(this.rebootAfterUpdateStatus);
     }
     /**
      * The replica id of the protected item.
-     * 
     */
     public Optional<String> getReplicaId() {
         return Optional.ofNullable(this.replicaId);
     }
     /**
      * The resync details of the machine
-     * 
     */
     public Optional<InitialReplicationDetailsResponse> getResyncDetails() {
         return Optional.ofNullable(this.resyncDetails);
     }
     /**
      * The retention window end time.
-     * 
     */
     public Optional<String> getRetentionWindowEnd() {
         return Optional.ofNullable(this.retentionWindowEnd);
     }
     /**
      * The retention window start time.
-     * 
     */
     public Optional<String> getRetentionWindowStart() {
         return Optional.ofNullable(this.retentionWindowStart);
     }
     /**
      * The RPO in seconds.
-     * 
     */
     public Optional<Double> getRpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
     /**
      * The CPU count of the VM on the primary side.
-     * 
     */
     public Optional<Integer> getSourceVmCpuCount() {
         return Optional.ofNullable(this.sourceVmCpuCount);
     }
     /**
      * The RAM size of the VM on the primary side.
-     * 
     */
     public Optional<Integer> getSourceVmRamSizeInMB() {
         return Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
     /**
      * The uncompressed data change rate in MB.
-     * 
     */
     public Optional<Double> getUncompressedDataRateInMB() {
         return Optional.ofNullable(this.uncompressedDataRateInMB);
     }
     /**
      * The vCenter infrastructure Id.
-     * 
     */
     public Optional<String> getVCenterInfrastructureId() {
         return Optional.ofNullable(this.vCenterInfrastructureId);
     }
     /**
      * The validation errors of the on-premise machine Value can be list of validation errors
-     * 
     */
     public List<HealthErrorResponse> getValidationErrors() {
         return this.validationErrors == null ? List.of() : this.validationErrors;
     }
     /**
      * The virtual machine Id.
-     * 
     */
     public Optional<String> getVmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
      * The PE Network details.
-     * 
     */
     public List<VMNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The protection state for the vm.
-     * 
     */
     public Optional<String> getVmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
     /**
      * The protection state description for the vm.
-     * 
     */
     public Optional<String> getVmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);

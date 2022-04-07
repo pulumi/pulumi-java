@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ConnectionMonitorSuccessThresholdResponse {
     /**
      * The maximum percentage of failed checks permitted for a test to evaluate as successful.
-     * 
      */
     private final @Nullable Integer checksFailedPercent;
     /**
      * The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.
-     * 
      */
     private final @Nullable Double roundTripTimeMs;
 
@@ -33,14 +31,12 @@ public final class ConnectionMonitorSuccessThresholdResponse {
 
     /**
      * The maximum percentage of failed checks permitted for a test to evaluate as successful.
-     * 
     */
     public Optional<Integer> getChecksFailedPercent() {
         return Optional.ofNullable(this.checksFailedPercent);
     }
     /**
      * The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.
-     * 
     */
     public Optional<Double> getRoundTripTimeMs() {
         return Optional.ofNullable(this.roundTripTimeMs);

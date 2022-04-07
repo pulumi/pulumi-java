@@ -11,27 +11,22 @@ import java.util.Objects;
 public final class VirtualNetworkRuleResponse {
     /**
      * The resource identifier.
-     * 
      */
     private final String id;
     /**
      * The resource name.
-     * 
      */
     private final String name;
     /**
      * The resource identifier for the subnet
-     * 
      */
     private final String subnetId;
     /**
      * The resource type.
-     * 
      */
     private final String type;
     /**
      * The current state of the VirtualNetwork Rule
-     * 
      */
     private final String virtualNetworkRuleState;
 
@@ -51,35 +46,30 @@ public final class VirtualNetworkRuleResponse {
 
     /**
      * The resource identifier.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The resource identifier for the subnet
-     * 
     */
     public String getSubnetId() {
         return this.subnetId;
     }
     /**
      * The resource type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The current state of the VirtualNetwork Rule
-     * 
     */
     public String getVirtualNetworkRuleState() {
         return this.virtualNetworkRuleState;

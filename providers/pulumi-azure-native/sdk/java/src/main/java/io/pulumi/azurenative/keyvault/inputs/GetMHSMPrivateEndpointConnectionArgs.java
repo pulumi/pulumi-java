@@ -14,7 +14,6 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends io.pulumi.resour
 
     /**
      * Name of the managed HSM Pool
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends io.pulumi.resour
 
     /**
      * Name of the private endpoint connection associated with the managed hsm pool.
-     * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
@@ -36,7 +34,6 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends io.pulumi.resour
 
     /**
      * Name of the resource group that contains the managed HSM pool.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

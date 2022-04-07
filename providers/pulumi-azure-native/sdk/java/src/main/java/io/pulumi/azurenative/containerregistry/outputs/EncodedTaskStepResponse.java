@@ -16,38 +16,31 @@ import javax.annotation.Nullable;
 public final class EncodedTaskStepResponse {
     /**
      * List of base image dependencies for a step.
-     * 
      */
     private final List<BaseImageDependencyResponse> baseImageDependencies;
     /**
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
-     * 
      */
     private final @Nullable String contextAccessToken;
     /**
      * The URL(absolute or relative) of the source context for the task step.
-     * 
      */
     private final @Nullable String contextPath;
     /**
      * Base64 encoded value of the template/definition file content.
-     * 
      */
     private final String encodedTaskContent;
     /**
      * Base64 encoded value of the parameters/values file content.
-     * 
      */
     private final @Nullable String encodedValuesContent;
     /**
      * The type of the step.
      * Expected value is 'EncodedTask'.
-     * 
      */
     private final String type;
     /**
      * The collection of overridable values that can be passed when running a task.
-     * 
      */
     private final @Nullable List<SetValueResponse> values;
 
@@ -71,35 +64,30 @@ public final class EncodedTaskStepResponse {
 
     /**
      * List of base image dependencies for a step.
-     * 
     */
     public List<BaseImageDependencyResponse> getBaseImageDependencies() {
         return this.baseImageDependencies;
     }
     /**
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
-     * 
     */
     public Optional<String> getContextAccessToken() {
         return Optional.ofNullable(this.contextAccessToken);
     }
     /**
      * The URL(absolute or relative) of the source context for the task step.
-     * 
     */
     public Optional<String> getContextPath() {
         return Optional.ofNullable(this.contextPath);
     }
     /**
      * Base64 encoded value of the template/definition file content.
-     * 
     */
     public String getEncodedTaskContent() {
         return this.encodedTaskContent;
     }
     /**
      * Base64 encoded value of the parameters/values file content.
-     * 
     */
     public Optional<String> getEncodedValuesContent() {
         return Optional.ofNullable(this.encodedValuesContent);
@@ -107,14 +95,12 @@ public final class EncodedTaskStepResponse {
     /**
      * The type of the step.
      * Expected value is 'EncodedTask'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The collection of overridable values that can be passed when running a task.
-     * 
     */
     public List<SetValueResponse> getValues() {
         return this.values == null ? List.of() : this.values;

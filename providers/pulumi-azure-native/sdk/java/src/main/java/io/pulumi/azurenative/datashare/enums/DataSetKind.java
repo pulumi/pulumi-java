@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Kind of data set.
-     * 
      */
     @EnumType
     public enum DataSetKind {

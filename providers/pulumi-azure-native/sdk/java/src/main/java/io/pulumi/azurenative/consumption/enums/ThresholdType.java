@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of threshold
-     * 
      */
     @EnumType
     public enum ThresholdType {

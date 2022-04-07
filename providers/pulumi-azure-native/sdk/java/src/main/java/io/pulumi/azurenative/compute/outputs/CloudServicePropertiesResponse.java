@@ -19,67 +19,55 @@ public final class CloudServicePropertiesResponse {
     /**
      * (Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
      * The default value is `false`.
-     * 
      */
     private final @Nullable Boolean allowModelOverride;
     /**
      * Specifies the XML service configuration (.cscfg) for the cloud service.
-     * 
      */
     private final @Nullable String configuration;
     /**
      * Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
      * This is a write-only property and is not returned in GET calls.
-     * 
      */
     private final @Nullable String configurationUrl;
     /**
      * Describes a cloud service extension profile.
-     * 
      */
     private final @Nullable CloudServiceExtensionProfileResponse extensionProfile;
     /**
      * Network Profile for the cloud service.
-     * 
      */
     private final @Nullable CloudServiceNetworkProfileResponse networkProfile;
     /**
      * Describes the OS profile for the cloud service.
-     * 
      */
     private final @Nullable CloudServiceOsProfileResponse osProfile;
     /**
      * Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
      * This is a write-only property and is not returned in GET calls.
-     * 
      */
     private final @Nullable String packageUrl;
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     private final String provisioningState;
     /**
      * Describes the role profile for the cloud service.
-     * 
      */
     private final @Nullable CloudServiceRoleProfileResponse roleProfile;
     /**
      * (Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
      * If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
-     * 
      */
     private final @Nullable Boolean startCloudService;
     /**
      * The unique identifier for the cloud service.
-     * 
      */
     private final String uniqueId;
     /**
      * Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
      * Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
      * If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
-     * 
      */
     private final @Nullable String upgradeMode;
 
@@ -114,14 +102,12 @@ public final class CloudServicePropertiesResponse {
     /**
      * (Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
      * The default value is `false`.
-     * 
     */
     public Optional<Boolean> getAllowModelOverride() {
         return Optional.ofNullable(this.allowModelOverride);
     }
     /**
      * Specifies the XML service configuration (.cscfg) for the cloud service.
-     * 
     */
     public Optional<String> getConfiguration() {
         return Optional.ofNullable(this.configuration);
@@ -129,28 +115,24 @@ public final class CloudServicePropertiesResponse {
     /**
      * Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
      * This is a write-only property and is not returned in GET calls.
-     * 
     */
     public Optional<String> getConfigurationUrl() {
         return Optional.ofNullable(this.configurationUrl);
     }
     /**
      * Describes a cloud service extension profile.
-     * 
     */
     public Optional<CloudServiceExtensionProfileResponse> getExtensionProfile() {
         return Optional.ofNullable(this.extensionProfile);
     }
     /**
      * Network Profile for the cloud service.
-     * 
     */
     public Optional<CloudServiceNetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Describes the OS profile for the cloud service.
-     * 
     */
     public Optional<CloudServiceOsProfileResponse> getOsProfile() {
         return Optional.ofNullable(this.osProfile);
@@ -158,21 +140,18 @@ public final class CloudServicePropertiesResponse {
     /**
      * Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
      * This is a write-only property and is not returned in GET calls.
-     * 
     */
     public Optional<String> getPackageUrl() {
         return Optional.ofNullable(this.packageUrl);
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes the role profile for the cloud service.
-     * 
     */
     public Optional<CloudServiceRoleProfileResponse> getRoleProfile() {
         return Optional.ofNullable(this.roleProfile);
@@ -180,14 +159,12 @@ public final class CloudServicePropertiesResponse {
     /**
      * (Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
      * If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
-     * 
     */
     public Optional<Boolean> getStartCloudService() {
         return Optional.ofNullable(this.startCloudService);
     }
     /**
      * The unique identifier for the cloud service.
-     * 
     */
     public String getUniqueId() {
         return this.uniqueId;
@@ -196,7 +173,6 @@ public final class CloudServicePropertiesResponse {
      * Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
      * Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
      * If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
-     * 
     */
     public Optional<String> getUpgradeMode() {
         return Optional.ofNullable(this.upgradeMode);

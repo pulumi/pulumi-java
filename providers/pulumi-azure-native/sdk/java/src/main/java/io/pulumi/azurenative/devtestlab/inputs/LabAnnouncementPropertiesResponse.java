@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a lab's announcement banner
- * 
  */
 public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
 
     /**
      * Is the lab announcement active/enabled at this time?
-     * 
      */
     @Import(name="enabled")
       private final @Nullable String enabled;
@@ -32,7 +30,6 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
 
     /**
      * The time at which the announcement expires (null for never)
-     * 
      */
     @Import(name="expirationDate")
       private final @Nullable String expirationDate;
@@ -43,7 +40,6 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
 
     /**
      * Has this announcement expired?
-     * 
      */
     @Import(name="expired")
       private final @Nullable Boolean expired;
@@ -54,7 +50,6 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
 
     /**
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
-     * 
      */
     @Import(name="markdown")
       private final @Nullable String markdown;
@@ -65,7 +60,6 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
 
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -76,7 +70,6 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
 
     /**
      * The plain text title for the lab announcement
-     * 
      */
     @Import(name="title")
       private final @Nullable String title;
@@ -87,7 +80,6 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
 
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Import(name="uniqueIdentifier", required=true)
       private final String uniqueIdentifier;

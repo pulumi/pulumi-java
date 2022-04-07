@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VMwareCbt protected disk details.
- * 
  */
 public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The disk capacity in bytes.
-     * 
      */
     @Import(name="capacityInBytes", required=true)
       private final Double capacityInBytes;
@@ -32,7 +30,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The disk id.
-     * 
      */
     @Import(name="diskId", required=true)
       private final String diskId;
@@ -43,7 +40,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The disk name.
-     * 
      */
     @Import(name="diskName", required=true)
       private final String diskName;
@@ -54,7 +50,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The disk path.
-     * 
      */
     @Import(name="diskPath", required=true)
       private final String diskPath;
@@ -65,7 +60,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The disk type.
-     * 
      */
     @Import(name="diskType")
       private final @Nullable String diskType;
@@ -76,7 +70,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * A value indicating whether the disk is the OS disk.
-     * 
      */
     @Import(name="isOSDisk", required=true)
       private final String isOSDisk;
@@ -87,7 +80,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The log storage account ARM Id.
-     * 
      */
     @Import(name="logStorageAccountId", required=true)
       private final String logStorageAccountId;
@@ -98,7 +90,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The key vault secret name of the log storage account.
-     * 
      */
     @Import(name="logStorageAccountSasSecretName", required=true)
       private final String logStorageAccountSasSecretName;
@@ -109,7 +100,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The ARM Id of the seed managed disk.
-     * 
      */
     @Import(name="seedManagedDiskId", required=true)
       private final String seedManagedDiskId;
@@ -120,7 +110,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The ARM Id of the target managed disk.
-     * 
      */
     @Import(name="targetManagedDiskId", required=true)
       private final String targetManagedDiskId;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enum indicating the type of the Analytics item.
-     * 
      */
     @EnumType
     public enum ItemType {

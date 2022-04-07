@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of an add provider request.
- * 
  */
 public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
 
     /**
      * The identity provider input for DRA authentication.
-     * 
      */
     @Import(name="authenticationIdentityInput", required=true)
       private final Output<IdentityProviderInputArgs> authenticationIdentityInput;
@@ -32,7 +30,6 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
 
     /**
      * The identity provider input for data plane authentication.
-     * 
      */
     @Import(name="dataPlaneAuthenticationIdentityInput")
       private final @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
@@ -43,7 +40,6 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
 
     /**
      * The Id of the machine where the provider is getting added.
-     * 
      */
     @Import(name="machineId")
       private final @Nullable Output<String> machineId;
@@ -54,7 +50,6 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
 
     /**
      * The name of the machine where the provider is getting added.
-     * 
      */
     @Import(name="machineName", required=true)
       private final Output<String> machineName;
@@ -65,7 +60,6 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
 
     /**
      * The identity provider input for resource access.
-     * 
      */
     @Import(name="resourceAccessIdentityInput", required=true)
       private final Output<IdentityProviderInputArgs> resourceAccessIdentityInput;

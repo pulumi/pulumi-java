@@ -16,7 +16,6 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Expands referenced resources.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the network interface.
-     * 
      */
     @Import(name="networkInterfaceName", required=true)
       private final String networkInterfaceName;
@@ -38,7 +36,6 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The managed application definition artifact type.
-     * 
      */
     @EnumType
     public enum ApplicationArtifactType {

@@ -14,7 +14,6 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Product identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="productId", required=true)
       private final String productId;
@@ -25,7 +24,6 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;
@@ -47,7 +44,6 @@ public final class GetTagByProductArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tag identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="tagId", required=true)
       private final String tagId;

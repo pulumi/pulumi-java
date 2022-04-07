@@ -158,7 +158,6 @@ import javax.annotation.Nullable;
 
 /**
  * Copy activity.
- * 
  */
 public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -166,7 +165,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="dataIntegrationUnits")
       private final @Nullable Output<Object> dataIntegrationUnits;
@@ -177,7 +175,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -188,7 +185,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -199,7 +195,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="enableSkipIncompatibleRow")
       private final @Nullable Output<Object> enableSkipIncompatibleRow;
@@ -210,7 +205,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="enableStaging")
       private final @Nullable Output<Object> enableStaging;
@@ -221,7 +215,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of inputs for the activity.
-     * 
      */
     @Import(name="inputs")
       private final @Nullable Output<List<DatasetReferenceArgs>> inputs;
@@ -232,7 +225,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -243,7 +235,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Log settings customer needs provide when enabling log.
-     * 
      */
     @Import(name="logSettings")
       private final @Nullable Output<LogSettingsArgs> logSettings;
@@ -254,7 +245,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
-     * 
      */
     @Import(name="logStorageSettings")
       private final @Nullable Output<LogStorageSettingsArgs> logStorageSettings;
@@ -265,7 +255,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -276,7 +265,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of outputs for the activity.
-     * 
      */
     @Import(name="outputs")
       private final @Nullable Output<List<DatasetReferenceArgs>> outputs;
@@ -287,7 +275,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="parallelCopies")
       private final @Nullable Output<Object> parallelCopies;
@@ -298,7 +285,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -309,7 +295,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Preserve rules.
-     * 
      */
     @Import(name="preserve")
       private final @Nullable Output<List<Object>> preserve;
@@ -320,7 +305,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Preserve Rules.
-     * 
      */
     @Import(name="preserveRules")
       private final @Nullable Output<List<Object>> preserveRules;
@@ -331,7 +315,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
-     * 
      */
     @Import(name="redirectIncompatibleRowSettings")
       private final @Nullable Output<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings;
@@ -342,7 +325,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Copy activity sink.
-     * 
      */
     @Import(name="sink", required=true)
       private final Output<Object> sink;
@@ -353,7 +335,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specify the fault tolerance for data consistency.
-     * 
      */
     @Import(name="skipErrorFile")
       private final @Nullable Output<SkipErrorFileArgs> skipErrorFile;
@@ -364,7 +345,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Copy activity source.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<Object> source;
@@ -375,7 +355,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies interim staging settings when EnableStaging is true.
-     * 
      */
     @Import(name="stagingSettings")
       private final @Nullable Output<StagingSettingsArgs> stagingSettings;
@@ -386,7 +365,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Copy activity translator. If not specified, tabular translator is used.
-     * 
      */
     @Import(name="translator")
       private final @Nullable Output<Object> translator;
@@ -398,7 +376,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Type of activity.
      * Expected value is 'Copy'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -409,7 +386,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
@@ -420,7 +396,6 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="validateDataConsistency")
       private final @Nullable Output<Object> validateDataConsistency;

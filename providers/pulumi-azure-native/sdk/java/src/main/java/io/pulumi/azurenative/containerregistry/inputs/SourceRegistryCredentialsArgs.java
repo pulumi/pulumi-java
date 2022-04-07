@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the credential parameters for accessing the source registry.
- * 
  */
 public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
      * The authentication mode which determines the source registry login scope. The credentials for the source registry
      * will be generated using the given scope. These credentials will be used to login to
      * the source registry during the run.
-     * 
      */
     @Import(name="loginMode")
       private final @Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode;

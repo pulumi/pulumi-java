@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class IdentityForCmkResponse {
     /**
      * The ArmId of the user assigned identity that will be used to access the customer managed key vault
-     * 
      */
     private final String userAssignedIdentity;
 
@@ -22,7 +21,6 @@ public final class IdentityForCmkResponse {
 
     /**
      * The ArmId of the user assigned identity that will be used to access the customer managed key vault
-     * 
     */
     public String getUserAssignedIdentity() {
         return this.userAssignedIdentity;

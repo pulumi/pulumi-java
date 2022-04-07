@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class VideoAnalyzerIdentityResponse {
     /**
      * The identity type.
-     * 
      */
     private final String type;
     /**
      * The User Assigned Managed Identities.
-     * 
      */
     private final @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
 
@@ -33,14 +31,12 @@ public final class VideoAnalyzerIdentityResponse {
 
     /**
      * The identity type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The User Assigned Managed Identities.
-     * 
     */
     public Map<String,UserAssignedManagedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;

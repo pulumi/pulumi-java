@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class ImageAssetResponse {
     /**
      * The Asset Id.
-     * 
      */
     private final @Nullable String id;
     /**
      * The mime type.
-     * 
      */
     private final @Nullable String mimeType;
     /**
      * Whether the Asset is unpacked.
-     * 
      */
     private final @Nullable Boolean unpack;
     /**
      * The Url of the Asset.
-     * 
      */
     private final @Nullable String url;
 
@@ -47,28 +43,24 @@ public final class ImageAssetResponse {
 
     /**
      * The Asset Id.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The mime type.
-     * 
     */
     public Optional<String> getMimeType() {
         return Optional.ofNullable(this.mimeType);
     }
     /**
      * Whether the Asset is unpacked.
-     * 
     */
     public Optional<Boolean> getUnpack() {
         return Optional.ofNullable(this.unpack);
     }
     /**
      * The Url of the Asset.
-     * 
     */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);

@@ -14,7 +14,6 @@ public final class GetIotDpsResourceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the provisioning service to retrieve.
-     * 
      */
     @Import(name="provisioningServiceName", required=true)
       private final String provisioningServiceName;
@@ -25,7 +24,6 @@ public final class GetIotDpsResourceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

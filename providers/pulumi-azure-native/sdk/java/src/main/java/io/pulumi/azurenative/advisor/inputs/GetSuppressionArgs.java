@@ -14,7 +14,6 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the suppression.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The recommendation ID.
-     * 
      */
     @Import(name="recommendationId", required=true)
       private final String recommendationId;
@@ -36,7 +34,6 @@ public final class GetSuppressionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final String resourceUri;

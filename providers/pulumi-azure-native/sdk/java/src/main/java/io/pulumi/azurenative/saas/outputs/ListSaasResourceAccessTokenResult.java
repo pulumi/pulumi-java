@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ListSaasResourceAccessTokenResult {
     /**
      * The Publisher Offer Base Uri
-     * 
      */
     private final @Nullable String publisherOfferBaseUri;
     /**
      * The generated token
-     * 
      */
     private final @Nullable String token;
 
@@ -32,14 +30,12 @@ public final class ListSaasResourceAccessTokenResult {
 
     /**
      * The Publisher Offer Base Uri
-     * 
     */
     public Optional<String> getPublisherOfferBaseUri() {
         return Optional.ofNullable(this.publisherOfferBaseUri);
     }
     /**
      * The generated token
-     * 
     */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);

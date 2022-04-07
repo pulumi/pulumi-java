@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Docker build step.
- * 
  */
 public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The collection of override arguments to be used when executing this build step.
-     * 
      */
     @Import(name="arguments")
       private final @Nullable Output<List<ArgumentArgs>> arguments;
@@ -34,7 +32,6 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
-     * 
      */
     @Import(name="contextAccessToken")
       private final @Nullable Output<String> contextAccessToken;
@@ -45,7 +42,6 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The URL(absolute or relative) of the source context for the task step.
-     * 
      */
     @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
@@ -56,7 +52,6 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Docker file path relative to the source context.
-     * 
      */
     @Import(name="dockerFilePath", required=true)
       private final Output<String> dockerFilePath;
@@ -67,7 +62,6 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The fully qualified image names including the repository and tag.
-     * 
      */
     @Import(name="imageNames")
       private final @Nullable Output<List<String>> imageNames;
@@ -78,7 +72,6 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The value of this property indicates whether the image built should be pushed to the registry or not.
-     * 
      */
     @Import(name="isPushEnabled")
       private final @Nullable Output<Boolean> isPushEnabled;
@@ -89,7 +82,6 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The value of this property indicates whether the image cache is enabled or not.
-     * 
      */
     @Import(name="noCache")
       private final @Nullable Output<Boolean> noCache;
@@ -100,7 +92,6 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the target build stage for the docker build.
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<String> target;
@@ -112,7 +103,6 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * The type of the step.
      * Expected value is 'Docker'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
-     * 
      */
     @EnumType
     public enum OwaspCrsExclusionEntrySelectorMatchOperator {

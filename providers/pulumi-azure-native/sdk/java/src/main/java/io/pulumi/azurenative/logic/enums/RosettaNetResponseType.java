@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The value indicating whether the RosettaNet PIP communication is synchronous.
-     * 
      */
     @EnumType
     public enum RosettaNetResponseType {

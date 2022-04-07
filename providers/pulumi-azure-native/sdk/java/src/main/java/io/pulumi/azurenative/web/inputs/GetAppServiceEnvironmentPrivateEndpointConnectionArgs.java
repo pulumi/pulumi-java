@@ -14,7 +14,6 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionArgs extends
 
     /**
      * Name of the App Service Environment.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionArgs extends
 
     /**
      * Name of the private endpoint connection.
-     * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
@@ -36,7 +34,6 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionArgs extends
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

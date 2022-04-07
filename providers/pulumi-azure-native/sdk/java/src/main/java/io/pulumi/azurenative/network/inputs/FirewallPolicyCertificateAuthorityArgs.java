@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trusted Root certificates properties for tls.
- * 
  */
 public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
 
     /**
      * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
-     * 
      */
     @Import(name="keyVaultSecretId")
       private final @Nullable Output<String> keyVaultSecretId;
@@ -31,7 +29,6 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
 
     /**
      * Name of the CA certificate.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

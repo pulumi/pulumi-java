@@ -14,7 +14,6 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final String labName;
@@ -25,7 +24,6 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
 
     /**
      * The name of the service fabric.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class ListServiceFabricApplicableSchedulesArgs extends io.pulumi.re
 
     /**
      * The name of the user profile.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

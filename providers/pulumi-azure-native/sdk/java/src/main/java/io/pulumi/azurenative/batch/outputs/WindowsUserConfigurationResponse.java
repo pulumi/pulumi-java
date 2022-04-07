@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class WindowsUserConfigurationResponse {
     /**
      * Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
-     * 
      */
     private final @Nullable String loginMode;
 
@@ -24,7 +23,6 @@ public final class WindowsUserConfigurationResponse {
 
     /**
      * Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
-     * 
     */
     public Optional<String> getLoginMode() {
         return Optional.ofNullable(this.loginMode);

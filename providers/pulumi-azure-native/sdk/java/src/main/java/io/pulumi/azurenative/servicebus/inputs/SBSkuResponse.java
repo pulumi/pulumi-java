@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of the namespace.
- * 
  */
 public final class SBSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SBSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -32,7 +30,6 @@ public final class SBSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of this SKU.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -43,7 +40,6 @@ public final class SBSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The billing tier of this particular SKU.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

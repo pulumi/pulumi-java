@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
- * 
  */
 public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
-     * 
      */
     @Import(name="compatibilityLevel")
       private final @Nullable Output<Integer> compatibilityLevel;
@@ -33,7 +31,6 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value that indicates whether the rule action requires preprocessing.
-     * 
      */
     @Import(name="requiresPreprocessing")
       private final @Nullable Output<Boolean> requiresPreprocessing;
@@ -44,7 +41,6 @@ public final class SqlFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SQL expression. e.g. MyProperty='ABC'
-     * 
      */
     @Import(name="sqlExpression")
       private final @Nullable Output<String> sqlExpression;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Catalog information for managed dedicated integration runtime.
- * 
  */
 public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
 
     /**
      * The password of the administrator user account of the catalog database.
-     * 
      */
     @Import(name="catalogAdminPassword")
       private final @Nullable SecureStringResponse catalogAdminPassword;
@@ -32,7 +30,6 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
 
     /**
      * The administrator user name of catalog database.
-     * 
      */
     @Import(name="catalogAdminUserName")
       private final @Nullable String catalogAdminUserName;
@@ -43,7 +40,6 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
 
     /**
      * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
-     * 
      */
     @Import(name="catalogPricingTier")
       private final @Nullable String catalogPricingTier;
@@ -54,7 +50,6 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
 
     /**
      * The catalog database server URL.
-     * 
      */
     @Import(name="catalogServerEndpoint")
       private final @Nullable String catalogServerEndpoint;
@@ -65,7 +60,6 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
 
     /**
      * The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.
-     * 
      */
     @Import(name="dualStandbyPairName")
       private final @Nullable String dualStandbyPairName;

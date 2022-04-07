@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subnet first address, scope, and/or last address.
- * 
  */
 public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
 
     /**
      * First address in the subnet.
-     * 
      */
     @Import(name="first")
       private final @Nullable Output<String> first;
@@ -32,7 +30,6 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
 
     /**
      * Last address in the subnet.
-     * 
      */
     @Import(name="last")
       private final @Nullable Output<String> last;
@@ -43,7 +40,6 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
 
     /**
      * Block size (number of leading bits in the subnet mask).
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<Integer> scope;

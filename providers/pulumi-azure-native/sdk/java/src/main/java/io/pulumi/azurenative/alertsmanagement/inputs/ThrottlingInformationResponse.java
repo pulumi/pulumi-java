@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Optional throttling information for the alert rule.
- * 
  */
 public final class ThrottlingInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ThrottlingInformationResponse extends io.pulumi.resources.Inv
 
     /**
      * The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
-     * 
      */
     @Import(name="duration")
       private final @Nullable String duration;

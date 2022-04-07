@@ -18,7 +18,100 @@ import javax.annotation.Nullable;
  * Storage mapping object.
  * API Version: 2018-07-10.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create storage classification mapping.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var replicationStorageClassificationMapping = new AzureNative.RecoveryServices.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", new AzureNative.RecoveryServices.ReplicationStorageClassificationMappingArgs
+ *         {
+ *             FabricName = "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
+ *             Properties = new AzureNative.RecoveryServices.Inputs.StorageMappingInputPropertiesArgs
+ *             {
+ *                 TargetStorageClassificationId = "/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09",
+ *             },
+ *             ResourceGroupName = "resourceGroupPS1",
+ *             ResourceName = "vault1",
+ *             StorageClassificationMappingName = "testStorageMapping",
+ *             StorageClassificationName = "8891569e-aaef-4a46-a4a0-78c14f2d7b09",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recoveryservices.NewReplicationStorageClassificationMapping(ctx, "replicationStorageClassificationMapping", &recoveryservices.ReplicationStorageClassificationMappingArgs{
+ * 			FabricName: pulumi.String("2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0"),
+ * 			Properties: &recoveryservices.StorageMappingInputPropertiesArgs{
+ * 				TargetStorageClassificationId: pulumi.String("/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09"),
+ * 			},
+ * 			ResourceGroupName:                pulumi.String("resourceGroupPS1"),
+ * 			ResourceName:                     pulumi.String("vault1"),
+ * 			StorageClassificationMappingName: pulumi.String("testStorageMapping"),
+ * 			StorageClassificationName:        pulumi.String("8891569e-aaef-4a46-a4a0-78c14f2d7b09"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const replicationStorageClassificationMapping = new azure_native.recoveryservices.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping", {
+ *     fabricName: "2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
+ *     properties: {
+ *         targetStorageClassificationId: "/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09",
+ *     },
+ *     resourceGroupName: "resourceGroupPS1",
+ *     resourceName: "vault1",
+ *     storageClassificationMappingName: "testStorageMapping",
+ *     storageClassificationName: "8891569e-aaef-4a46-a4a0-78c14f2d7b09",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * replication_storage_classification_mapping = azure_native.recoveryservices.ReplicationStorageClassificationMapping("replicationStorageClassificationMapping",
+ *     fabric_name="2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0",
+ *     properties=azure_native.recoveryservices.StorageMappingInputPropertiesArgs(
+ *         target_storage_classification_id="/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09",
+ *     ),
+ *     resource_group_name="resourceGroupPS1",
+ *     resource_name="vault1",
+ *     storage_classification_mapping_name="testStorageMapping",
+ *     storage_classification_name="8891569e-aaef-4a46-a4a0-78c14f2d7b09")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +126,48 @@ import javax.annotation.Nullable;
 public class ReplicationStorageClassificationMapping extends io.pulumi.resources.CustomResource {
     /**
      * Resource Location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource Location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the storage mapping object.
-     * 
      */
     @Export(name="properties", type=StorageClassificationMappingPropertiesResponse.class, parameters={})
     private Output<StorageClassificationMappingPropertiesResponse> properties;
 
     /**
      * @return Properties of the storage mapping object.
-     * 
      */
     public Output<StorageClassificationMappingPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource Type
-     * 
      */
     public Output<String> getType() {
         return this.type;

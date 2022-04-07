@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ConnectionStatusDefinitionResponse {
     /**
      * Connection error
-     * 
      */
     private final @Nullable ConnectionErrorResponse error;
     /**
      * The gateway status
-     * 
      */
     private final @Nullable String status;
     /**
      * Target of the error
-     * 
      */
     private final @Nullable String target;
 
@@ -40,21 +37,18 @@ public final class ConnectionStatusDefinitionResponse {
 
     /**
      * Connection error
-     * 
     */
     public Optional<ConnectionErrorResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * The gateway status
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Target of the error
-     * 
     */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);

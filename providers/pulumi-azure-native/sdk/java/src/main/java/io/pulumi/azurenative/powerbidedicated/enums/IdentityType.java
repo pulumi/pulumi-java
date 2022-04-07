@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of identity that last modified the resource
-     * 
      */
     @EnumType
     public enum IdentityType {

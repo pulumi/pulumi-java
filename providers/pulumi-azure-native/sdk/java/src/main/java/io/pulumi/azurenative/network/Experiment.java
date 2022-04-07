@@ -19,7 +19,121 @@ import javax.annotation.Nullable;
  * Defines the properties of an Experiment
  * API Version: 2019-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates an Experiment
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var experiment = new AzureNative.Network.Experiment("experiment", new AzureNative.Network.ExperimentArgs
+ *         {
+ *             Description = "this is my first experiment!",
+ *             EnabledState = "Enabled",
+ *             EndpointA = new AzureNative.Network.Inputs.ExperimentEndpointArgs
+ *             {
+ *                 Endpoint = "endpointA.net",
+ *                 Name = "endpoint A",
+ *             },
+ *             EndpointB = new AzureNative.Network.Inputs.ExperimentEndpointArgs
+ *             {
+ *                 Endpoint = "endpointB.net",
+ *                 Name = "endpoint B",
+ *             },
+ *             ExperimentName = "MyExperiment",
+ *             ProfileName = "MyProfile",
+ *             ResourceGroupName = "MyResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewExperiment(ctx, "experiment", &network.ExperimentArgs{
+ * 			Description:  pulumi.String("this is my first experiment!"),
+ * 			EnabledState: pulumi.String("Enabled"),
+ * 			EndpointA: &network.ExperimentEndpointArgs{
+ * 				Endpoint: pulumi.String("endpointA.net"),
+ * 				Name:     pulumi.String("endpoint A"),
+ * 			},
+ * 			EndpointB: &network.ExperimentEndpointArgs{
+ * 				Endpoint: pulumi.String("endpointB.net"),
+ * 				Name:     pulumi.String("endpoint B"),
+ * 			},
+ * 			ExperimentName:    pulumi.String("MyExperiment"),
+ * 			ProfileName:       pulumi.String("MyProfile"),
+ * 			ResourceGroupName: pulumi.String("MyResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const experiment = new azure_native.network.Experiment("experiment", {
+ *     description: "this is my first experiment!",
+ *     enabledState: "Enabled",
+ *     endpointA: {
+ *         endpoint: "endpointA.net",
+ *         name: "endpoint A",
+ *     },
+ *     endpointB: {
+ *         endpoint: "endpointB.net",
+ *         name: "endpoint B",
+ *     },
+ *     experimentName: "MyExperiment",
+ *     profileName: "MyProfile",
+ *     resourceGroupName: "MyResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * experiment = azure_native.network.Experiment("experiment",
+ *     description="this is my first experiment!",
+ *     enabled_state="Enabled",
+ *     endpoint_a=azure_native.network.ExperimentEndpointArgs(
+ *         endpoint="endpointA.net",
+ *         name="endpoint A",
+ *     ),
+ *     endpoint_b=azure_native.network.ExperimentEndpointArgs(
+ *         endpoint="endpointB.net",
+ *         name="endpoint B",
+ *     ),
+ *     experiment_name="MyExperiment",
+ *     profile_name="MyProfile",
+ *     resource_group_name="MyResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,154 +148,132 @@ import javax.annotation.Nullable;
 public class Experiment extends io.pulumi.resources.CustomResource {
     /**
      * The description of the details or intents of the Experiment
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the details or intents of the Experiment
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The state of the Experiment
-     * 
      */
     @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
      * @return The state of the Experiment
-     * 
      */
     public Output</* @Nullable */ String> getEnabledState() {
         return this.enabledState;
     }
     /**
      * The endpoint A of an experiment
-     * 
      */
     @Export(name="endpointA", type=ExperimentEndpointResponse.class, parameters={})
     private Output</* @Nullable */ ExperimentEndpointResponse> endpointA;
 
     /**
      * @return The endpoint A of an experiment
-     * 
      */
     public Output</* @Nullable */ ExperimentEndpointResponse> getEndpointA() {
         return this.endpointA;
     }
     /**
      * The endpoint B of an experiment
-     * 
      */
     @Export(name="endpointB", type=ExperimentEndpointResponse.class, parameters={})
     private Output</* @Nullable */ ExperimentEndpointResponse> endpointB;
 
     /**
      * @return The endpoint B of an experiment
-     * 
      */
     public Output</* @Nullable */ ExperimentEndpointResponse> getEndpointB() {
         return this.endpointB;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource status.
-     * 
      */
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
      * @return Resource status.
-     * 
      */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
     /**
      * The uri to the Script used in the Experiment
-     * 
      */
     @Export(name="scriptFileUri", type=String.class, parameters={})
     private Output<String> scriptFileUri;
 
     /**
      * @return The uri to the Script used in the Experiment
-     * 
      */
     public Output<String> getScriptFileUri() {
         return this.scriptFileUri;
     }
     /**
      * The description of Experiment status from the server side
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The description of Experiment status from the server side
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

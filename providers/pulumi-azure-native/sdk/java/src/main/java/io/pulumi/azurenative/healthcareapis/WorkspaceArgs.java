@@ -17,7 +17,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the service instance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -39,7 +37,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -50,7 +47,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of workspace resource.
-     * 
      */
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;

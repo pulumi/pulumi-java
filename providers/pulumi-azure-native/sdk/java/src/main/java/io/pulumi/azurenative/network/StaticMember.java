@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * StaticMember Item.
  * API Version: 2021-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### StaticMemberPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var staticMember = new AzureNative.Network.StaticMember("staticMember", new AzureNative.Network.StaticMemberArgs
+ *         {
+ *             NetworkGroupName = "testNetworkGroup",
+ *             NetworkManagerName = "testNetworkManager",
+ *             ResourceGroupName = "rg1",
+ *             ResourceId = "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
+ *             StaticMemberName = "testStaticMember",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewStaticMember(ctx, "staticMember", &network.StaticMemberArgs{
+ * 			NetworkGroupName:   pulumi.String("testNetworkGroup"),
+ * 			NetworkManagerName: pulumi.String("testNetworkManager"),
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 			ResourceId:         pulumi.String("/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1"),
+ * 			StaticMemberName:   pulumi.String("testStaticMember"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const staticMember = new azure_native.network.StaticMember("staticMember", {
+ *     networkGroupName: "testNetworkGroup",
+ *     networkManagerName: "testNetworkManager",
+ *     resourceGroupName: "rg1",
+ *     resourceId: "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
+ *     staticMemberName: "testStaticMember",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * static_member = azure_native.network.StaticMember("staticMember",
+ *     network_group_name="testNetworkGroup",
+ *     network_manager_name="testNetworkManager",
+ *     resource_group_name="rg1",
+ *     resource_id="/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
+ *     static_member_name="testStaticMember")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +113,60 @@ import javax.annotation.Nullable;
 public class StaticMember extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource Id.
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
      * @return Resource Id.
-     * 
      */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
     /**
      * The system metadata related to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class SqlStorageUpdateSettingsResponse {
     /**
      * Disk configuration to apply to SQL Server.
-     * 
      */
     private final @Nullable String diskConfigurationType;
     /**
      * Virtual machine disk count.
-     * 
      */
     private final @Nullable Integer diskCount;
     /**
      * Device id of the first disk to be updated.
-     * 
      */
     private final @Nullable Integer startingDeviceId;
 
@@ -40,21 +37,18 @@ public final class SqlStorageUpdateSettingsResponse {
 
     /**
      * Disk configuration to apply to SQL Server.
-     * 
     */
     public Optional<String> getDiskConfigurationType() {
         return Optional.ofNullable(this.diskConfigurationType);
     }
     /**
      * Virtual machine disk count.
-     * 
     */
     public Optional<Integer> getDiskCount() {
         return Optional.ofNullable(this.diskCount);
     }
     /**
      * Device id of the first disk to be updated.
-     * 
     */
     public Optional<Integer> getStartingDeviceId() {
         return Optional.ofNullable(this.startingDeviceId);

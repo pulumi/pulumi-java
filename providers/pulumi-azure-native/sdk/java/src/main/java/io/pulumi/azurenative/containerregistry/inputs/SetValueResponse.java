@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a overridable value that can be passed to a task template.
- * 
  */
 public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Flag to indicate whether the value represents a secret or not.
-     * 
      */
     @Import(name="isSecret")
       private final @Nullable Boolean isSecret;
@@ -32,7 +30,6 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the overridable value.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -43,7 +40,6 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The overridable value.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

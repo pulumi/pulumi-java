@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of execution parameter
-     * 
      */
     @EnumType
     public enum ScriptExecutionParameterType {

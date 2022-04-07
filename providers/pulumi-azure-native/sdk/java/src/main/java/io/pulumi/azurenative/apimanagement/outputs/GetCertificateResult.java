@@ -19,32 +19,26 @@ public final class GetCertificateResult {
     private final String expirationDate;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * KeyVault location details of the certificate.
-     * 
      */
     private final @Nullable KeyVaultContractPropertiesResponse keyVault;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Subject attribute of the certificate.
-     * 
      */
     private final String subject;
     /**
      * Thumbprint of the certificate.
-     * 
      */
     private final String thumbprint;
     /**
      * Resource type for API Management resource.
-     * 
      */
     private final String type;
 
@@ -75,42 +69,36 @@ public final class GetCertificateResult {
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * KeyVault location details of the certificate.
-     * 
     */
     public Optional<KeyVaultContractPropertiesResponse> getKeyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Subject attribute of the certificate.
-     * 
     */
     public String getSubject() {
         return this.subject;
     }
     /**
      * Thumbprint of the certificate.
-     * 
     */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type for API Management resource.
-     * 
     */
     public String getType() {
         return this.type;

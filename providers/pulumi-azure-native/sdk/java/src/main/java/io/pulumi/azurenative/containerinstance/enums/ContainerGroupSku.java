@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The SKU for a container group.
-     * 
      */
     @EnumType
     public enum ContainerGroupSku {

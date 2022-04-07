@@ -18,7 +18,100 @@ import javax.annotation.Nullable;
  * The view resource format.
  * API Version: 2017-04-26.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Views_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var view = new AzureNative.CustomerInsights.View("view", new AzureNative.CustomerInsights.ViewArgs
+ *         {
+ *             Definition = "{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
+ *             DisplayName = 
+ *             {
+ *                 { "en", "some name" },
+ *             },
+ *             HubName = "sdkTestHub",
+ *             ResourceGroupName = "TestHubRG",
+ *             UserId = "testUser",
+ *             ViewName = "testView",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerinsights.NewView(ctx, "view", &customerinsights.ViewArgs{
+ * 			Definition: pulumi.String("{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}"),
+ * 			DisplayName: pulumi.StringMap{
+ * 				"en": pulumi.String("some name"),
+ * 			},
+ * 			HubName:           pulumi.String("sdkTestHub"),
+ * 			ResourceGroupName: pulumi.String("TestHubRG"),
+ * 			UserId:            pulumi.String("testUser"),
+ * 			ViewName:          pulumi.String("testView"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const view = new azure_native.customerinsights.View("view", {
+ *     definition: "{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
+ *     displayName: {
+ *         en: "some name",
+ *     },
+ *     hubName: "sdkTestHub",
+ *     resourceGroupName: "TestHubRG",
+ *     userId: "testUser",
+ *     viewName: "testView",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * view = azure_native.customerinsights.View("view",
+ *     definition="{\\\"isProfileType\\\":false,\\\"profileTypes\\\":[],\\\"widgets\\\":[],\\\"style\\\":[]}",
+ *     display_name={
+ *         "en": "some name",
+ *     },
+ *     hub_name="sdkTestHub",
+ *     resource_group_name="TestHubRG",
+ *     user_id="testUser",
+ *     view_name="testView")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +126,108 @@ import javax.annotation.Nullable;
 public class View extends io.pulumi.resources.CustomResource {
     /**
      * Date time when view was last modified.
-     * 
      */
     @Export(name="changed", type=String.class, parameters={})
     private Output<String> changed;
 
     /**
      * @return Date time when view was last modified.
-     * 
      */
     public Output<String> getChanged() {
         return this.changed;
     }
     /**
      * Date time when view was created.
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
      * @return Date time when view was created.
-     * 
      */
     public Output<String> getCreated() {
         return this.created;
     }
     /**
      * View definition.
-     * 
      */
     @Export(name="definition", type=String.class, parameters={})
     private Output<String> definition;
 
     /**
      * @return View definition.
-     * 
      */
     public Output<String> getDefinition() {
         return this.definition;
     }
     /**
      * Localized display name for the view.
-     * 
      */
     @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
      * @return Localized display name for the view.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * the hub name.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return the hub name.
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * the user ID.
-     * 
      */
     @Export(name="userId", type=String.class, parameters={})
     private Output</* @Nullable */ String> userId;
 
     /**
      * @return the user ID.
-     * 
      */
     public Output</* @Nullable */ String> getUserId() {
         return this.userId;
     }
     /**
      * Name of the view.
-     * 
      */
     @Export(name="viewName", type=String.class, parameters={})
     private Output<String> viewName;
 
     /**
      * @return Name of the view.
-     * 
      */
     public Output<String> getViewName() {
         return this.viewName;

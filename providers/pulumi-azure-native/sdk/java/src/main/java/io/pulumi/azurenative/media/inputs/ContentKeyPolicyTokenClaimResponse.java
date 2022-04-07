@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a token claim.
- * 
  */
 public final class ContentKeyPolicyTokenClaimResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ContentKeyPolicyTokenClaimResponse extends io.pulumi.resource
 
     /**
      * Token claim type.
-     * 
      */
     @Import(name="claimType")
       private final @Nullable String claimType;
@@ -31,7 +29,6 @@ public final class ContentKeyPolicyTokenClaimResponse extends io.pulumi.resource
 
     /**
      * Token claim value.
-     * 
      */
     @Import(name="claimValue")
       private final @Nullable String claimValue;

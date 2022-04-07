@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class MachineExtensionInstanceViewResponse {
     /**
      * The machine extension name.
-     * 
      */
     private final String name;
     /**
      * Instance view status.
-     * 
      */
     private final @Nullable MachineExtensionInstanceViewResponseStatus status;
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
-     * 
      */
     private final String type;
     /**
      * Specifies the version of the script handler.
-     * 
      */
     private final String typeHandlerVersion;
 
@@ -47,28 +43,24 @@ public final class MachineExtensionInstanceViewResponse {
 
     /**
      * The machine extension name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Instance view status.
-     * 
     */
     public Optional<MachineExtensionInstanceViewResponseStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies the version of the script handler.
-     * 
     */
     public String getTypeHandlerVersion() {
         return this.typeHandlerVersion;

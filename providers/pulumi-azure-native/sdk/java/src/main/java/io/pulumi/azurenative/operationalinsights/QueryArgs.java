@@ -20,7 +20,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Body of the query.
-     * 
      */
     @Import(name="body", required=true)
       private final Output<String> body;
@@ -31,7 +30,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the query.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -42,7 +40,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique display name for your query within the Query Pack.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -53,7 +50,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The id of a specific query defined in the Log Analytics QueryPack
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -64,7 +60,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Additional properties that can be set for the query.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
@@ -75,7 +70,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Log Analytics QueryPack resource.
-     * 
      */
     @Import(name="queryPackName", required=true)
       private final Output<String> queryPackName;
@@ -86,7 +80,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The related metadata items for the function.
-     * 
      */
     @Import(name="related")
       private final @Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
@@ -97,7 +90,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags associated with the query.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,List<String>>> tags;

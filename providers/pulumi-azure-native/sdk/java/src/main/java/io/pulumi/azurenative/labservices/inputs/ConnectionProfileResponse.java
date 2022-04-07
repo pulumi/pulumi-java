@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connection profile for how users connect to lab virtual machines.
- * 
  */
 public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The enabled access level for Client Access over RDP.
-     * 
      */
     @Import(name="clientRdpAccess")
       private final @Nullable String clientRdpAccess;
@@ -31,7 +29,6 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The enabled access level for Client Access over SSH.
-     * 
      */
     @Import(name="clientSshAccess")
       private final @Nullable String clientSshAccess;
@@ -42,7 +39,6 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The enabled access level for Web Access over RDP.
-     * 
      */
     @Import(name="webRdpAccess")
       private final @Nullable String webRdpAccess;
@@ -53,7 +49,6 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The enabled access level for Web Access over SSH.
-     * 
      */
     @Import(name="webSshAccess")
       private final @Nullable String webSshAccess;

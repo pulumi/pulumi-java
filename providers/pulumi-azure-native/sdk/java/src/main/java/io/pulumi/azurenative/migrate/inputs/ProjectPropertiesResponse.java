@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a project.
- * 
  */
 public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
-     * 
      */
     @Import(name="assessmentSolutionId")
       private final @Nullable String assessmentSolutionId;
@@ -34,7 +32,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Time when this project was created. Date-Time represented in ISO-8601 format.
-     * 
      */
     @Import(name="createdTimestamp", required=true)
       private final String createdTimestamp;
@@ -45,7 +42,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The ARM id of the storage account used for interactions when public access is disabled.
-     * 
      */
     @Import(name="customerStorageAccountArmId")
       private final @Nullable String customerStorageAccountArmId;
@@ -56,7 +52,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The ARM id of service map workspace created by customer.
-     * 
      */
     @Import(name="customerWorkspaceId")
       private final @Nullable String customerWorkspaceId;
@@ -67,7 +62,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Location of service map workspace created by customer.
-     * 
      */
     @Import(name="customerWorkspaceLocation")
       private final @Nullable String customerWorkspaceLocation;
@@ -78,7 +72,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
-     * 
      */
     @Import(name="lastAssessmentTimestamp", required=true)
       private final String lastAssessmentTimestamp;
@@ -89,7 +82,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Number of assessments created in the project.
-     * 
      */
     @Import(name="numberOfAssessments", required=true)
       private final Integer numberOfAssessments;
@@ -100,7 +92,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Number of groups created in the project.
-     * 
      */
     @Import(name="numberOfGroups", required=true)
       private final Integer numberOfGroups;
@@ -111,7 +102,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Number of machines in the project.
-     * 
      */
     @Import(name="numberOfMachines", required=true)
       private final Integer numberOfMachines;
@@ -122,7 +112,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The list of private endpoint connections to the project.
-     * 
      */
     @Import(name="privateEndpointConnections", required=true)
       private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
@@ -133,7 +122,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Assessment project status.
-     * 
      */
     @Import(name="projectStatus")
       private final @Nullable String projectStatus;
@@ -144,7 +132,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Provisioning state of the project.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -155,7 +142,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
@@ -166,7 +152,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Endpoint at which the collector agent can call agent REST API.
-     * 
      */
     @Import(name="serviceEndpoint", required=true)
       private final String serviceEndpoint;
@@ -177,7 +162,6 @@ public final class ProjectPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Time when this project was last updated. Date-Time represented in ISO-8601 format.
-     * 
      */
     @Import(name="updatedTimestamp", required=true)
       private final String updatedTimestamp;

@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Required validation properties for tokens generated with RSA algorithm.
- * 
  */
 public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA algorithm to be used: RS256, RS384 or RS512.
-     * 
      */
     @Import(name="alg", required=true)
       private final Output<Either<String,AccessPolicyRsaAlgo>> alg;
@@ -32,7 +30,6 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA public key exponent.
-     * 
      */
     @Import(name="e", required=true)
       private final Output<String> e;
@@ -43,7 +40,6 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
-     * 
      */
     @Import(name="kid", required=true)
       private final Output<String> kid;
@@ -54,7 +50,6 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA public key modulus.
-     * 
      */
     @Import(name="n", required=true)
       private final Output<String> n;
@@ -66,7 +61,6 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.RsaTokenKey'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

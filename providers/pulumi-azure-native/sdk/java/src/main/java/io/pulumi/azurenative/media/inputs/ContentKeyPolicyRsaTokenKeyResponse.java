@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies a RSA key for token validation
- * 
  */
 public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
 
     /**
      * The RSA Parameter exponent
-     * 
      */
     @Import(name="exponent", required=true)
       private final String exponent;
@@ -29,7 +27,6 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
 
     /**
      * The RSA Parameter modulus
-     * 
      */
     @Import(name="modulus", required=true)
       private final String modulus;
@@ -41,7 +38,6 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;

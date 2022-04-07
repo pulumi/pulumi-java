@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The filter expression to be used in the report.
- * 
  */
 public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The logical "AND" expression. Must have at least 2 items.
-     * 
      */
     @Import(name="and")
       private final @Nullable List<ReportFilterResponse> and;
@@ -32,7 +30,6 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Has comparison expression for a dimension
-     * 
      */
     @Import(name="dimension")
       private final @Nullable ReportComparisonExpressionResponse dimension;
@@ -43,7 +40,6 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The logical "NOT" expression.
-     * 
      */
     @Import(name="not")
       private final @Nullable ReportFilterResponse not;
@@ -54,7 +50,6 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The logical "OR" expression. Must have at least 2 items.
-     * 
      */
     @Import(name="or")
       private final @Nullable List<ReportFilterResponse> or;
@@ -65,7 +60,6 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Has comparison expression for a tag
-     * 
      */
     @Import(name="tag")
       private final @Nullable ReportComparisonExpressionResponse tag;

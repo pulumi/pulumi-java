@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of a linked resource.
- * 
  */
 public final class LinkedResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LinkedResourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The ARM id of the linked resource.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

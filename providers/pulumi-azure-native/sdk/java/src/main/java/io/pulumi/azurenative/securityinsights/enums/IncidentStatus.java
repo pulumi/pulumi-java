@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The status of the incident
-     * 
      */
     @EnumType
     public enum IncidentStatus {
         /**
          * An active incident which isn't being handled currently
-         * 
          */
         New("New"),
         /**
          * An active incident which is being handled
-         * 
          */
         Active("Active"),
         /**
          * A non-active incident
-         * 
          */
         Closed("Closed");
 

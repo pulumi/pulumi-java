@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A set of rules governing the network accessibility.
- * 
  */
 public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
-     * 
      */
     @Import(name="defaultAction")
       private final @Nullable String defaultAction;
@@ -34,7 +32,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The list of IP address rules.
-     * 
      */
     @Import(name="ipRules")
       private final @Nullable List<IpRuleResponse> ipRules;
@@ -45,7 +42,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The list of virtual network rules.
-     * 
      */
     @Import(name="virtualNetworkRules")
       private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;

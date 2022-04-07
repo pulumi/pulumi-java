@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom setup script properties for a managed dedicated integration runtime.
- * 
  */
 public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
 
     /**
      * The URI of the Azure blob container that contains the custom setup script.
-     * 
      */
     @Import(name="blobContainerUri")
       private final @Nullable String blobContainerUri;
@@ -32,7 +30,6 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
 
     /**
      * The SAS token of the Azure blob container.
-     * 
      */
     @Import(name="sasToken")
       private final @Nullable SecureStringResponse sasToken;

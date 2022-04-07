@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Frequency of the schedule operation of this policy.
-     * 
      */
     @EnumType
     public enum ScheduleRunType {

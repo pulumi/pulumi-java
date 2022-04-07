@@ -20,7 +20,6 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
 
     /**
      * Managed service identity properties.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
@@ -31,7 +30,6 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
 
     /**
      * The integration service environment name.
-     * 
      */
     @Import(name="integrationServiceEnvironmentName")
       private final @Nullable Output<String> integrationServiceEnvironmentName;
@@ -42,7 +40,6 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
 
     /**
      * The integration service environment properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties;
@@ -64,7 +60,6 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
 
     /**
      * The resource group.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
@@ -75,7 +70,6 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
 
     /**
      * The sku.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku;
@@ -86,7 +80,6 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

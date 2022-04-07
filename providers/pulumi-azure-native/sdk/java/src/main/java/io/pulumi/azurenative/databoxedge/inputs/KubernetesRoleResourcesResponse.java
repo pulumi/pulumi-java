@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Kubernetes role resources
- * 
  */
 public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
 
     /**
      * Kubernetes role compute resource
-     * 
      */
     @Import(name="compute", required=true)
       private final KubernetesRoleComputeResponse compute;
@@ -33,7 +31,6 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
 
     /**
      * Kubernetes role network resource
-     * 
      */
     @Import(name="network", required=true)
       private final KubernetesRoleNetworkResponse network;
@@ -44,7 +41,6 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
 
     /**
      * Kubernetes role storage resource
-     * 
      */
     @Import(name="storage")
       private final @Nullable KubernetesRoleStorageResponse storage;

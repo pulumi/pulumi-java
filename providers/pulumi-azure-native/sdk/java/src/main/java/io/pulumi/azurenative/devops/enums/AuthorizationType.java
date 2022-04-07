@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of authorization.
-     * 
      */
     @EnumType
     public enum AuthorizationType {

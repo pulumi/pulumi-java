@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Legal agreement for a top level domain.
- * 
  */
 public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Unique identifier for the agreement.
-     * 
      */
     @Import(name="agreementKey", required=true)
       private final String agreementKey;
@@ -31,7 +29,6 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Agreement details.
-     * 
      */
     @Import(name="content", required=true)
       private final String content;
@@ -42,7 +39,6 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Agreement title.
-     * 
      */
     @Import(name="title", required=true)
       private final String title;
@@ -53,7 +49,6 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
 
     /**
      * URL where a copy of the agreement details is hosted.
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Style of terminal font.
-     * 
      */
     @EnumType
     public enum FontStyle {

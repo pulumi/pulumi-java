@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the certificate details.
- * 
  */
 public final class CertificateDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
 
     /**
      * Thumbprint of the primary certificate.
-     * 
      */
     @Import(name="thumbprint", required=true)
       private final Output<String> thumbprint;
@@ -31,7 +29,6 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
 
     /**
      * Thumbprint of the secondary certificate.
-     * 
      */
     @Import(name="thumbprintSecondary")
       private final @Nullable Output<String> thumbprintSecondary;
@@ -42,7 +39,6 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
 
     /**
      * The local certificate store location.
-     * 
      */
     @Import(name="x509StoreName")
       private final @Nullable Output<String> x509StoreName;

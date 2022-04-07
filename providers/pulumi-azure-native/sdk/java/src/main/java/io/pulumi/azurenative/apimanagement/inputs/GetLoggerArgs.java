@@ -14,7 +14,6 @@ public final class GetLoggerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Logger identifier. Must be unique in the API Management service instance.
-     * 
      */
     @Import(name="loggerId", required=true)
       private final String loggerId;
@@ -25,7 +24,6 @@ public final class GetLoggerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetLoggerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

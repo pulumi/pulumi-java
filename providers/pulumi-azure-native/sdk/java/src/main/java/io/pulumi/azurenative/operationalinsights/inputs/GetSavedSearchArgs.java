@@ -14,7 +14,6 @@ public final class GetSavedSearchArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetSavedSearchArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The id of the saved search.
-     * 
      */
     @Import(name="savedSearchId", required=true)
       private final String savedSearchId;
@@ -36,7 +34,6 @@ public final class GetSavedSearchArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Recovery plan A2A specific details.
- * 
  */
 public final class RecoveryPlanA2ADetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RecoveryPlanA2ADetailsResponse extends io.pulumi.resources.In
     /**
      * Gets the Instance type.
      * Expected value is 'A2A'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -32,7 +30,6 @@ public final class RecoveryPlanA2ADetailsResponse extends io.pulumi.resources.In
 
     /**
      * The primary zone.
-     * 
      */
     @Import(name="primaryZone")
       private final @Nullable String primaryZone;
@@ -43,7 +40,6 @@ public final class RecoveryPlanA2ADetailsResponse extends io.pulumi.resources.In
 
     /**
      * The recovery zone.
-     * 
      */
     @Import(name="recoveryZone")
       private final @Nullable String recoveryZone;

@@ -18,57 +18,46 @@ import javax.annotation.Nullable;
 public final class GetAccountResult {
     /**
      * API host name.
-     * 
      */
     private final String hostName;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The type of identity used for the resource.
-     * 
      */
     private final @Nullable ManagedServiceIdentityResponse identity;
     /**
      * The geo-location where the resource lives
-     * 
      */
     private final String location;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * List of private endpoint connections associated with the account.
-     * 
      */
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
      * Provisioning state.
-     * 
      */
     private final String provisioningState;
     /**
      * Whether or not public network access is allowed for the account.
-     * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -100,77 +89,66 @@ public final class GetAccountResult {
 
     /**
      * API host name.
-     * 
     */
     public String getHostName() {
         return this.hostName;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The type of identity used for the resource.
-     * 
     */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * List of private endpoint connections associated with the account.
-     * 
     */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
      * Provisioning state.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether or not public network access is allowed for the account.
-     * 
     */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

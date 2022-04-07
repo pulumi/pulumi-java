@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The convention used when determining the session cookie's expiration.
-     * 
      */
     @EnumType
     public enum CookieExpirationConvention {

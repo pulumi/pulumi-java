@@ -17,7 +17,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of Cognitive Services account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -28,7 +27,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The location of the private endpoint connection
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -39,7 +37,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the private endpoint connection associated with the Cognitive Services Account
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -50,7 +47,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Resource properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
@@ -61,7 +57,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

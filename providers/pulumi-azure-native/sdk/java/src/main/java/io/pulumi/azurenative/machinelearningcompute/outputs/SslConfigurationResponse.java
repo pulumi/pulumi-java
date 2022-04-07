@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class SslConfigurationResponse {
     /**
      * The SSL cert data in PEM format.
-     * 
      */
     private final @Nullable String cert;
     /**
      * The CName of the certificate.
-     * 
      */
     private final @Nullable String cname;
     /**
      * The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
-     * 
      */
     private final @Nullable String key;
     /**
      * SSL status. Allowed values are Enabled and Disabled.
-     * 
      */
     private final @Nullable String status;
 
@@ -46,28 +42,24 @@ public final class SslConfigurationResponse {
 
     /**
      * The SSL cert data in PEM format.
-     * 
     */
     public Optional<String> getCert() {
         return Optional.ofNullable(this.cert);
     }
     /**
      * The CName of the certificate.
-     * 
     */
     public Optional<String> getCname() {
         return Optional.ofNullable(this.cname);
     }
     /**
      * The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
-     * 
     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * SSL status. Allowed values are Enabled and Disabled.
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);

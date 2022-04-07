@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * settings for compression.
- * 
  */
 public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * List of content types on which compression applies. The value should be a valid MIME type.
-     * 
      */
     @Import(name="contentTypesToCompress")
       private final @Nullable Output<List<String>> contentTypesToCompress;
@@ -33,7 +31,6 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
-     * 
      */
     @Import(name="isCompressionEnabled")
       private final @Nullable Output<Boolean> isCompressionEnabled;

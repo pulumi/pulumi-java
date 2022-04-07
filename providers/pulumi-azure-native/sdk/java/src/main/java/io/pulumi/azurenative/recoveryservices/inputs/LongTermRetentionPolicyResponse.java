@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Long term retention policy.
- * 
  */
 public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
 
     /**
      * Daily retention schedule of the protection policy.
-     * 
      */
     @Import(name="dailySchedule")
       private final @Nullable DailyRetentionScheduleResponse dailySchedule;
@@ -35,7 +33,6 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
 
     /**
      * Monthly retention schedule of the protection policy.
-     * 
      */
     @Import(name="monthlySchedule")
       private final @Nullable MonthlyRetentionScheduleResponse monthlySchedule;
@@ -47,7 +44,6 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'LongTermRetentionPolicy'.
-     * 
      */
     @Import(name="retentionPolicyType", required=true)
       private final String retentionPolicyType;
@@ -58,7 +54,6 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
 
     /**
      * Weekly retention schedule of the protection policy.
-     * 
      */
     @Import(name="weeklySchedule")
       private final @Nullable WeeklyRetentionScheduleResponse weeklySchedule;
@@ -69,7 +64,6 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
 
     /**
      * Yearly retention schedule of the protection policy.
-     * 
      */
     @Import(name="yearlySchedule")
       private final @Nullable YearlyRetentionScheduleResponse yearlySchedule;

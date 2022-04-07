@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Virtual Machine image for Windows AML Compute
- * 
  */
 public final class VirtualMachineImageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VirtualMachineImageResponse extends io.pulumi.resources.Invok
 
     /**
      * Virtual Machine image path
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

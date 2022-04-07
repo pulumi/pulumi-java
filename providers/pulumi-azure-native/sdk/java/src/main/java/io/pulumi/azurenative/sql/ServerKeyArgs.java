@@ -18,7 +18,6 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/YourKeyVersion, then the server key name should be formatted as: YourVaultName_YourKeyName_YourKeyVersion
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -29,7 +28,6 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -40,7 +38,6 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The server key type like 'ServiceManaged', 'AzureKeyVault'.
-     * 
      */
     @Import(name="serverKeyType", required=true)
       private final Output<Either<String,ServerKeyType>> serverKeyType;
@@ -51,7 +48,6 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -62,7 +58,6 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of the server key. If the ServerKeyType is AzureKeyVault, then the URI is required.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

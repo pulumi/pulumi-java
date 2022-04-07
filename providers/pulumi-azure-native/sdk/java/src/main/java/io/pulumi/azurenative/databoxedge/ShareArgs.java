@@ -26,7 +26,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Access protocol to be used by the share.
-     * 
      */
     @Import(name="accessProtocol", required=true)
       private final Output<Either<String,ShareAccessProtocol>> accessProtocol;
@@ -37,7 +36,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure container mapping for the share.
-     * 
      */
     @Import(name="azureContainerInfo")
       private final @Nullable Output<AzureContainerInfoArgs> azureContainerInfo;
@@ -48,7 +46,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of IP addresses and corresponding access rights on the share(required for NFS protocol).
-     * 
      */
     @Import(name="clientAccessRights")
       private final @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights;
@@ -59,7 +56,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data policy of the share.
-     * 
      */
     @Import(name="dataPolicy")
       private final @Nullable Output<Either<String,DataPolicy>> dataPolicy;
@@ -70,7 +66,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description for the share.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -81,7 +76,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -92,7 +86,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current monitoring status of the share.
-     * 
      */
     @Import(name="monitoringStatus", required=true)
       private final Output<Either<String,MonitoringStatus>> monitoringStatus;
@@ -103,7 +96,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The share name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -114,7 +106,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details of the refresh job on this share.
-     * 
      */
     @Import(name="refreshDetails")
       private final @Nullable Output<RefreshDetailsArgs> refreshDetails;
@@ -125,7 +116,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -136,7 +126,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current status of the share.
-     * 
      */
     @Import(name="shareStatus", required=true)
       private final Output<Either<String,ShareStatus>> shareStatus;
@@ -147,7 +136,6 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Mapping of users and corresponding access rights on the share (required for SMB protocol).
-     * 
      */
     @Import(name="userAccessRights")
       private final @Nullable Output<List<UserAccessRightArgs>> userAccessRights;

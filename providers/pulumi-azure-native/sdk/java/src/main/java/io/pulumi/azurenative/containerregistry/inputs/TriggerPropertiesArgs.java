@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a trigger.
- * 
  */
 public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The trigger based on base image dependencies.
-     * 
      */
     @Import(name="baseImageTrigger")
       private final @Nullable Output<BaseImageTriggerArgs> baseImageTrigger;
@@ -34,7 +32,6 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The collection of triggers based on source code repository.
-     * 
      */
     @Import(name="sourceTriggers")
       private final @Nullable Output<List<SourceTriggerArgs>> sourceTriggers;
@@ -45,7 +42,6 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The collection of timer triggers.
-     * 
      */
     @Import(name="timerTriggers")
       private final @Nullable Output<List<TimerTriggerArgs>> timerTriggers;

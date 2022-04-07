@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Group connectivity details.
- * 
  */
 public final class GroupConnectivityInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
 
     /**
      * List of customer visible FQDNs.
-     * 
      */
     @Import(name="customerVisibleFqdns")
       private final @Nullable List<String> customerVisibleFqdns;
@@ -32,7 +30,6 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
 
     /**
      * Group ID.
-     * 
      */
     @Import(name="groupId", required=true)
       private final String groupId;
@@ -43,7 +40,6 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
 
     /**
      * Internal FQDN.
-     * 
      */
     @Import(name="internalFqdn", required=true)
       private final String internalFqdn;
@@ -54,7 +50,6 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
 
     /**
      * Member name.
-     * 
      */
     @Import(name="memberName", required=true)
       private final String memberName;
@@ -65,7 +60,6 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
 
     /**
      * PrivateLinkService ARM region.
-     * 
      */
     @Import(name="privateLinkServiceArmRegion")
       private final @Nullable String privateLinkServiceArmRegion;
@@ -76,7 +70,6 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
 
     /**
      * Redirect map ID.
-     * 
      */
     @Import(name="redirectMapId")
       private final @Nullable String redirectMapId;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Base class for all execution activities.
- * 
  */
 public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -36,7 +34,6 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -47,7 +44,6 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -58,7 +54,6 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -69,7 +64,6 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -81,7 +75,6 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
     /**
      * Type of activity.
      * Expected value is 'Execution'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -92,7 +85,6 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

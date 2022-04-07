@@ -14,7 +14,6 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource name of the Test Base Customer event.
-     * 
      */
     @Import(name="customerEventName", required=true)
       private final String customerEventName;
@@ -25,7 +24,6 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the resource.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource name of the Test Base Account.
-     * 
      */
     @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;

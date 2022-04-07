@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the parameters for the Url Signing action.
- * 
  */
 public final class UrlSigningActionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
 
     /**
      * Algorithm to use for URL signing
-     * 
      */
     @Import(name="algorithm")
       private final @Nullable Output<Either<String,Algorithm>> algorithm;
@@ -41,8 +39,7 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
     }
 
     /**
-     * Defines which query string parameters in the url to be considered for expires, key id etc.
-     * 
+     * Defines which query string parameters in the url to be considered for expires, key id etc. 
      */
     @Import(name="parameterNameOverride")
       private final @Nullable Output<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;

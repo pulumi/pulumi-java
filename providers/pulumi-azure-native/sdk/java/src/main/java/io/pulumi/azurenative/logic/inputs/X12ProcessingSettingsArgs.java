@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The X12 processing settings.
- * 
  */
 public final class X12ProcessingSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether to convert numerical type to implied decimal.
-     * 
      */
     @Import(name="convertImpliedDecimal", required=true)
       private final Output<Boolean> convertImpliedDecimal;
@@ -30,7 +28,6 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether to create empty xml tags for trailing separators.
-     * 
      */
     @Import(name="createEmptyXmlTagsForTrailingSeparators", required=true)
       private final Output<Boolean> createEmptyXmlTagsForTrailingSeparators;
@@ -41,7 +38,6 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether to mask security information.
-     * 
      */
     @Import(name="maskSecurityInfo", required=true)
       private final Output<Boolean> maskSecurityInfo;
@@ -52,7 +48,6 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether to preserve interchange.
-     * 
      */
     @Import(name="preserveInterchange", required=true)
       private final Output<Boolean> preserveInterchange;
@@ -63,7 +58,6 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether to suspend interchange on error.
-     * 
      */
     @Import(name="suspendInterchangeOnError", required=true)
       private final Output<Boolean> suspendInterchangeOnError;
@@ -74,7 +68,6 @@ public final class X12ProcessingSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether to use dot as decimal separator.
-     * 
      */
     @Import(name="useDotAsDecimalSeparator", required=true)
       private final Output<Boolean> useDotAsDecimalSeparator;

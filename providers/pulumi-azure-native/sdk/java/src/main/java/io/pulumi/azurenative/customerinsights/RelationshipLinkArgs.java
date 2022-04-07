@@ -20,7 +20,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Localized descriptions for the Relationship Link.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
@@ -31,7 +30,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Localized display name for the Relationship Link.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
@@ -42,7 +40,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
@@ -53,7 +50,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The InteractionType associated with the Relationship Link.
-     * 
      */
     @Import(name="interactionType", required=true)
       private final Output<String> interactionType;
@@ -64,7 +60,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The mappings between Interaction and Relationship fields.
-     * 
      */
     @Import(name="mappings")
       private final @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings;
@@ -75,7 +70,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The property references for the Profile of the Relationship.
-     * 
      */
     @Import(name="profilePropertyReferences", required=true)
       private final Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
@@ -86,7 +80,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The property references for the Related Profile of the Relationship.
-     * 
      */
     @Import(name="relatedProfilePropertyReferences", required=true)
       private final Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
@@ -97,7 +90,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the relationship link.
-     * 
      */
     @Import(name="relationshipLinkName")
       private final @Nullable Output<String> relationshipLinkName;
@@ -108,7 +100,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Relationship associated with the Link.
-     * 
      */
     @Import(name="relationshipName", required=true)
       private final Output<String> relationshipName;
@@ -119,7 +110,6 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

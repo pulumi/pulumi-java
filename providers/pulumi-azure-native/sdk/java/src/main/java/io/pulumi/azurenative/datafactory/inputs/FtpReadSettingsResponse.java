@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Ftp read settings.
- * 
  */
 public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="deleteFilesAfterCompletion")
       private final @Nullable Object deleteFilesAfterCompletion;
@@ -33,7 +31,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableChunking")
       private final @Nullable Object disableChunking;
@@ -44,7 +41,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -55,7 +51,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates whether to enable partition discovery.
-     * 
      */
     @Import(name="enablePartitionDiscovery")
       private final @Nullable Boolean enablePartitionDiscovery;
@@ -66,7 +61,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileListPath")
       private final @Nullable Object fileListPath;
@@ -77,7 +71,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -88,7 +81,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionRootPath")
       private final @Nullable Object partitionRootPath;
@@ -99,7 +91,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="recursive")
       private final @Nullable Object recursive;
@@ -111,7 +102,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
     /**
      * The read setting type.
      * Expected value is 'FtpReadSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -122,7 +112,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specify whether to use binary transfer mode for FTP stores.
-     * 
      */
     @Import(name="useBinaryTransfer")
       private final @Nullable Boolean useBinaryTransfer;
@@ -133,7 +122,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Ftp wildcardFileName. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="wildcardFileName")
       private final @Nullable Object wildcardFileName;
@@ -144,7 +132,6 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="wildcardFolderPath")
       private final @Nullable Object wildcardFolderPath;

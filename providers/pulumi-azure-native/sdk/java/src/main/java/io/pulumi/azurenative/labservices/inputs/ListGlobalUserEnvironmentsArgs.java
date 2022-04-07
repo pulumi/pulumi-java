@@ -16,7 +16,6 @@ public final class ListGlobalUserEnvironmentsArgs extends io.pulumi.resources.In
 
     /**
      * The resource Id of the lab
-     * 
      */
     @Import(name="labId")
       private final @Nullable String labId;
@@ -27,7 +26,6 @@ public final class ListGlobalUserEnvironmentsArgs extends io.pulumi.resources.In
 
     /**
      * The name of the user.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The class to specify one track property condition.
- * 
  */
 public final class FilterTrackPropertyConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FilterTrackPropertyConditionResponse extends io.pulumi.resour
 
     /**
      * The track property condition operation.
-     * 
      */
     @Import(name="operation", required=true)
       private final String operation;
@@ -29,7 +27,6 @@ public final class FilterTrackPropertyConditionResponse extends io.pulumi.resour
 
     /**
      * The track property type.
-     * 
      */
     @Import(name="property", required=true)
       private final String property;
@@ -40,7 +37,6 @@ public final class FilterTrackPropertyConditionResponse extends io.pulumi.resour
 
     /**
      * The track property value.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

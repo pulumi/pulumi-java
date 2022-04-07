@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class TrafficAnalyticsConfigurationPropertiesResponse {
     /**
      * Flag to enable/disable traffic analytics.
-     * 
      */
     private final @Nullable Boolean enabled;
     /**
      * The interval in minutes which would decide how frequently TA service should do flow analytics.
-     * 
      */
     private final @Nullable Integer trafficAnalyticsInterval;
     /**
      * The resource guid of the attached workspace.
-     * 
      */
     private final @Nullable String workspaceId;
     /**
      * The location of the attached workspace.
-     * 
      */
     private final @Nullable String workspaceRegion;
     /**
      * Resource Id of the attached workspace.
-     * 
      */
     private final @Nullable String workspaceResourceId;
 
@@ -55,35 +50,30 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse {
 
     /**
      * Flag to enable/disable traffic analytics.
-     * 
     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The interval in minutes which would decide how frequently TA service should do flow analytics.
-     * 
     */
     public Optional<Integer> getTrafficAnalyticsInterval() {
         return Optional.ofNullable(this.trafficAnalyticsInterval);
     }
     /**
      * The resource guid of the attached workspace.
-     * 
     */
     public Optional<String> getWorkspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
     /**
      * The location of the attached workspace.
-     * 
     */
     public Optional<String> getWorkspaceRegion() {
         return Optional.ofNullable(this.workspaceRegion);
     }
     /**
      * Resource Id of the attached workspace.
-     * 
     */
     public Optional<String> getWorkspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);

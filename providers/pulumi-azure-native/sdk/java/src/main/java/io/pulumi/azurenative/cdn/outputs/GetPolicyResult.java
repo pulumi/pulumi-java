@@ -22,73 +22,59 @@ import javax.annotation.Nullable;
 public final class GetPolicyResult {
     /**
      * Describes custom rules inside the policy.
-     * 
      */
     private final @Nullable CustomRuleListResponse customRules;
     /**
      * Describes Azure CDN endpoints associated with this Web Application Firewall policy.
-     * 
      */
     private final List<CdnEndpointResponse> endpointLinks;
     /**
      * Gets a unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final @Nullable String etag;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource location.
-     * 
      */
     private final String location;
     /**
      * Describes managed rules inside the policy.
-     * 
      */
     private final @Nullable ManagedRuleSetListResponse managedRules;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Describes  policySettings for policy
-     * 
      */
     private final @Nullable PolicySettingsResponse policySettings;
     /**
      * Provisioning state of the WebApplicationFirewallPolicy.
-     * 
      */
     private final String provisioningState;
     /**
      * Describes rate limit rules inside the policy.
-     * 
      */
     private final @Nullable RateLimitRuleListResponse rateLimitRules;
     private final String resourceState;
     /**
      * The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
-     * 
      */
     private final SkuResponse sku;
     /**
      * Read only system data
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -128,70 +114,60 @@ public final class GetPolicyResult {
 
     /**
      * Describes custom rules inside the policy.
-     * 
     */
     public Optional<CustomRuleListResponse> getCustomRules() {
         return Optional.ofNullable(this.customRules);
     }
     /**
      * Describes Azure CDN endpoints associated with this Web Application Firewall policy.
-     * 
     */
     public List<CdnEndpointResponse> getEndpointLinks() {
         return this.endpointLinks;
     }
     /**
      * Gets a unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Describes managed rules inside the policy.
-     * 
     */
     public Optional<ManagedRuleSetListResponse> getManagedRules() {
         return Optional.ofNullable(this.managedRules);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Describes  policySettings for policy
-     * 
     */
     public Optional<PolicySettingsResponse> getPolicySettings() {
         return Optional.ofNullable(this.policySettings);
     }
     /**
      * Provisioning state of the WebApplicationFirewallPolicy.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes rate limit rules inside the policy.
-     * 
     */
     public Optional<RateLimitRuleListResponse> getRateLimitRules() {
         return Optional.ofNullable(this.rateLimitRules);
@@ -201,28 +177,24 @@ public final class GetPolicyResult {
     }
     /**
      * The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
-     * 
     */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * Read only system data
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

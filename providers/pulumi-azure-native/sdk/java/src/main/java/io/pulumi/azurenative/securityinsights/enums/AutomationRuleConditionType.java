@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * The type of the automation rule condition
-     * 
      */
     @EnumType
     public enum AutomationRuleConditionType {
         /**
          * Evaluate an object property value
-         * 
          */
         Property("Property");
 

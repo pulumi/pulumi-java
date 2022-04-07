@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties pertaining to the BlobNfsTarget.
- * 
  */
 public final class BlobNfsTargetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BlobNfsTargetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Resource ID of the storage container.
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;
@@ -31,7 +29,6 @@ public final class BlobNfsTargetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Identifies the StorageCache usage model to be used for this storage target.
-     * 
      */
     @Import(name="usageModel")
       private final @Nullable String usageModel;

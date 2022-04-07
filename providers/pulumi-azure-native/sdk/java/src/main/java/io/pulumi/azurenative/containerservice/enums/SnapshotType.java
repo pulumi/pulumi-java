@@ -10,13 +10,11 @@ import java.util.StringJoiner;
 
     /**
      * The type of a snapshot. The default is NodePool.
-     * 
      */
     @EnumType
     public enum SnapshotType {
         /**
          * The snapshot is a snapshot of a node pool.
-         * 
          */
         NodePool("NodePool");
 

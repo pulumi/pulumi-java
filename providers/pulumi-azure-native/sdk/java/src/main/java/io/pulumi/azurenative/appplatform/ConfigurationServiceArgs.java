@@ -17,7 +17,6 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of Application Configuration Service.
-     * 
      */
     @Import(name="configurationServiceName")
       private final @Nullable Output<String> configurationServiceName;
@@ -28,7 +27,6 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Application Configuration Service properties payload
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ConfigurationServicePropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the Service resource.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

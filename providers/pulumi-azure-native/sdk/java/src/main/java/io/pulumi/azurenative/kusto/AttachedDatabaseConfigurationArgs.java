@@ -19,7 +19,6 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
 
     /**
      * The name of the attached database configuration.
-     * 
      */
     @Import(name="attachedDatabaseConfigurationName")
       private final @Nullable Output<String> attachedDatabaseConfigurationName;
@@ -30,7 +29,6 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -41,7 +39,6 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
 
     /**
      * The resource id of the cluster where the databases you would like to attach reside.
-     * 
      */
     @Import(name="clusterResourceId", required=true)
       private final Output<String> clusterResourceId;
@@ -52,7 +49,6 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
 
     /**
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -63,7 +59,6 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
 
     /**
      * The default principals modification kind
-     * 
      */
     @Import(name="defaultPrincipalsModificationKind", required=true)
       private final Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
@@ -74,7 +69,6 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -85,7 +79,6 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -96,7 +89,6 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
 
     /**
      * Table level sharing specifications
-     * 
      */
     @Import(name="tableLevelSharingProperties")
       private final @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;

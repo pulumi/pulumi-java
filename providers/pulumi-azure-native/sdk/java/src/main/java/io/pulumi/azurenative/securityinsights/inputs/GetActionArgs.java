@@ -14,7 +14,6 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Action ID
-     * 
      */
     @Import(name="actionId", required=true)
       private final String actionId;
@@ -25,7 +24,6 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Alert rule ID
-     * 
      */
     @Import(name="ruleId", required=true)
       private final String ruleId;
@@ -47,7 +44,6 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

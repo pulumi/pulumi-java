@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The variable to be excluded.
-     * 
      */
     @EnumType
     public enum OwaspCrsExclusionEntryMatchVariable {

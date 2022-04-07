@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the Google provider.
- * 
  */
 public final class GoogleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GoogleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -34,7 +32,6 @@ public final class GoogleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the login flow.
-     * 
      */
     @Import(name="login")
       private final @Nullable Output<LoginScopesArgs> login;
@@ -45,7 +42,6 @@ public final class GoogleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the app registration for the Google provider.
-     * 
      */
     @Import(name="registration")
       private final @Nullable Output<ClientRegistrationArgs> registration;
@@ -56,7 +52,6 @@ public final class GoogleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the Azure Active Directory token validation flow.
-     * 
      */
     @Import(name="validation")
       private final @Nullable Output<AllowedAudiencesValidationArgs> validation;

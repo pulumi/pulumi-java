@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListGlobalUserLabsResult {
     /**
      * List of all the labs
-     * 
      */
     private final @Nullable List<LabDetailsResponse> labs;
 
@@ -24,7 +23,6 @@ public final class ListGlobalUserLabsResult {
 
     /**
      * List of all the labs
-     * 
     */
     public List<LabDetailsResponse> getLabs() {
         return this.labs == null ? List.of() : this.labs;

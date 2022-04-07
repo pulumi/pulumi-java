@@ -21,7 +21,6 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-     * 
      */
     @Import(name="actions")
       private final @Nullable Output<List<HealthAlertActionArgs>> actions;
@@ -32,7 +31,6 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * defines the specific alert criteria information.
-     * 
      */
     @Import(name="criteria", required=true)
       private final Output<HealthAlertCriteriaArgs> criteria;
@@ -43,7 +41,6 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the description of the health alert that will be included in the alert email.
-     * 
      */
     @Import(name="description", required=true)
       private final Output<String> description;
@@ -54,7 +51,6 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the flag that indicates whether the health alert is enabled.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
@@ -65,7 +61,6 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -76,7 +71,6 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the rule.
-     * 
      */
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
@@ -98,7 +91,6 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the list of resource id's that this health alert is scoped to.
-     * 
      */
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
@@ -109,7 +101,6 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the role profile for the cloud service.
- * 
  */
 public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.Resou
 
     /**
      * List of roles for the cloud service.
-     * 
      */
     @Import(name="roles")
       private final @Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles;

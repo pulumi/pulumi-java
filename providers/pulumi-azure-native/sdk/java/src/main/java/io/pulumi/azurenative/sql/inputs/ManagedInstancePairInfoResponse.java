@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Pairs of Managed Instances in the failover group.
- * 
  */
 public final class ManagedInstancePairInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManagedInstancePairInfoResponse extends io.pulumi.resources.I
 
     /**
      * Id of Partner Managed Instance in pair.
-     * 
      */
     @Import(name="partnerManagedInstanceId")
       private final @Nullable String partnerManagedInstanceId;
@@ -31,7 +29,6 @@ public final class ManagedInstancePairInfoResponse extends io.pulumi.resources.I
 
     /**
      * Id of Primary Managed Instance in pair.
-     * 
      */
     @Import(name="primaryManagedInstanceId")
       private final @Nullable String primaryManagedInstanceId;

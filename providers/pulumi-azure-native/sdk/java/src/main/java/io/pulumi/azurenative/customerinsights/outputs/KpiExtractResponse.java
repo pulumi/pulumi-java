@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class KpiExtractResponse {
     /**
      * The expression.
-     * 
      */
     private final String expression;
     /**
      * KPI extract name.
-     * 
      */
     private final String extractName;
 
@@ -30,14 +28,12 @@ public final class KpiExtractResponse {
 
     /**
      * The expression.
-     * 
     */
     public String getExpression() {
         return this.expression;
     }
     /**
      * KPI extract name.
-     * 
     */
     public String getExtractName() {
         return this.extractName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. <br><br> NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.
- * 
  */
 public final class DiskEncryptionSetParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DiskEncryptionSetParametersResponse extends io.pulumi.resourc
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

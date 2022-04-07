@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Reference to sinks in DiagnosticsDescription.
- * 
  */
 public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Status of whether or not sinks are enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -33,7 +31,6 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
-     * 
      */
     @Import(name="sinkRefs")
       private final @Nullable Output<List<String>> sinkRefs;

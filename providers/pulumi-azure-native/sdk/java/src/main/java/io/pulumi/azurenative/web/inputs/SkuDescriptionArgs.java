@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of a SKU for a scalable resource.
- * 
  */
 public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Capabilities of the SKU, e.g., is traffic manager enabled?
-     * 
      */
     @Import(name="capabilities")
       private final @Nullable Output<List<CapabilityArgs>> capabilities;
@@ -35,7 +33,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current number of instances assigned to the resource.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -46,7 +43,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Family code of the resource SKU.
-     * 
      */
     @Import(name="family")
       private final @Nullable Output<String> family;
@@ -57,7 +53,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Locations of the SKU.
-     * 
      */
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
@@ -68,7 +63,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -79,7 +73,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Size specifier of the resource SKU.
-     * 
      */
     @Import(name="size")
       private final @Nullable Output<String> size;
@@ -90,7 +83,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Min, max, and default scale values of the SKU.
-     * 
      */
     @Import(name="skuCapacity")
       private final @Nullable Output<SkuCapacityArgs> skuCapacity;
@@ -101,7 +93,6 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Service tier of the resource SKU.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;

@@ -19,7 +19,6 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
 
     /**
      * The integration account certificate name.
-     * 
      */
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
@@ -30,7 +29,6 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
@@ -41,7 +39,6 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
 
     /**
      * The key details in the key vault.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<KeyVaultKeyReferenceArgs> key;
@@ -52,7 +49,6 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -63,7 +59,6 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
 
     /**
      * The metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -74,7 +69,6 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
 
     /**
      * The public certificate.
-     * 
      */
     @Import(name="publicCertificate")
       private final @Nullable Output<String> publicCertificate;
@@ -85,7 +79,6 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -96,7 +89,6 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

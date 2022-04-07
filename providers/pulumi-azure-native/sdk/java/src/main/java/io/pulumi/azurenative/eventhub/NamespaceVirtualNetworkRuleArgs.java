@@ -16,7 +16,6 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
 
     /**
      * The Namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -27,7 +26,6 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
 
     /**
      * Name of the resource group within the azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
 
     /**
      * The Virtual Network Rule name.
-     * 
      */
     @Import(name="virtualNetworkRuleName")
       private final @Nullable Output<String> virtualNetworkRuleName;
@@ -49,7 +46,6 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
 
     /**
      * ARM ID of Virtual Network Subnet
-     * 
      */
     @Import(name="virtualNetworkSubnetId")
       private final @Nullable Output<String> virtualNetworkSubnetId;

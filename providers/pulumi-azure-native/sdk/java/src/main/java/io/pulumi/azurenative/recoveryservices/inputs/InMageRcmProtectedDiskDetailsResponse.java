@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * InMageRcm protected disk details.
- * 
  */
 public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The disk capacity in bytes.
-     * 
      */
     @Import(name="capacityInBytes", required=true)
       private final Double capacityInBytes;
@@ -30,7 +28,6 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The disk encryption set ARM Id.
-     * 
      */
     @Import(name="diskEncryptionSetId", required=true)
       private final String diskEncryptionSetId;
@@ -41,7 +38,6 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The disk Id.
-     * 
      */
     @Import(name="diskId", required=true)
       private final String diskId;
@@ -52,7 +48,6 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The disk name.
-     * 
      */
     @Import(name="diskName", required=true)
       private final String diskName;
@@ -63,7 +58,6 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The disk type.
-     * 
      */
     @Import(name="diskType", required=true)
       private final String diskType;
@@ -74,7 +68,6 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * A value indicating whether the disk is the OS disk.
-     * 
      */
     @Import(name="isOSDisk", required=true)
       private final String isOSDisk;
@@ -85,7 +78,6 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The log storage account ARM Id.
-     * 
      */
     @Import(name="logStorageAccountId", required=true)
       private final String logStorageAccountId;
@@ -96,7 +88,6 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The ARM Id of the seed managed disk.
-     * 
      */
     @Import(name="seedManagedDiskId", required=true)
       private final String seedManagedDiskId;
@@ -107,7 +98,6 @@ public final class InMageRcmProtectedDiskDetailsResponse extends io.pulumi.resou
 
     /**
      * The ARM Id of the target managed disk.
-     * 
      */
     @Import(name="targetManagedDiskId", required=true)
       private final String targetManagedDiskId;

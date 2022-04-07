@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * AgentPoolType represents types of an agent pool
-     * 
      */
     @EnumType
     public enum AgentPoolType {

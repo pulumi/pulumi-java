@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The monitoring status of the volume.
-     * 
      */
     @EnumType
     public enum MonitoringStatus {

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the parameters for RequestHeader match conditions
- * 
  */
 public final class RequestHeaderMatchConditionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RequestHeaderMatchConditionParametersResponse extends io.pulu
 
     /**
      * The match value for the condition of the delivery rule
-     * 
      */
     @Import(name="matchValues")
       private final @Nullable List<String> matchValues;
@@ -33,7 +31,6 @@ public final class RequestHeaderMatchConditionParametersResponse extends io.pulu
 
     /**
      * Describes if this is negate condition or not
-     * 
      */
     @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
@@ -51,7 +48,6 @@ public final class RequestHeaderMatchConditionParametersResponse extends io.pulu
 
     /**
      * Describes operator to be matched
-     * 
      */
     @Import(name="operator", required=true)
       private final String operator;
@@ -62,7 +58,6 @@ public final class RequestHeaderMatchConditionParametersResponse extends io.pulu
 
     /**
      * Name of Header to be matched
-     * 
      */
     @Import(name="selector")
       private final @Nullable String selector;
@@ -73,7 +68,6 @@ public final class RequestHeaderMatchConditionParametersResponse extends io.pulu
 
     /**
      * List of transforms
-     * 
      */
     @Import(name="transforms")
       private final @Nullable List<String> transforms;

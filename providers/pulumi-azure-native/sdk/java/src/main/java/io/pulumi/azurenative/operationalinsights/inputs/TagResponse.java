@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A tag of a saved search.
- * 
  */
 public final class TagResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TagResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The tag name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class TagResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The tag value.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

@@ -14,7 +14,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final String deviceName;
@@ -25,7 +24,6 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

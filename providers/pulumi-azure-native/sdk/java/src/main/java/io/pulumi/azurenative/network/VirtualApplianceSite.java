@@ -18,7 +18,113 @@ import javax.annotation.Nullable;
  * Virtual Appliance Site resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Network Virtual Appliance Site
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualApplianceSite = new AzureNative.Network.VirtualApplianceSite("virtualApplianceSite", new AzureNative.Network.VirtualApplianceSiteArgs
+ *         {
+ *             AddressPrefix = "192.168.1.0/24",
+ *             NetworkVirtualApplianceName = "nva",
+ *             O365Policy = new AzureNative.Network.Inputs.Office365PolicyPropertiesArgs
+ *             {
+ *                 BreakOutCategories = new AzureNative.Network.Inputs.BreakOutCategoryPoliciesArgs
+ *                 {
+ *                     Allow = true,
+ *                     Default = true,
+ *                     Optimize = true,
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             SiteName = "site1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualApplianceSite(ctx, "virtualApplianceSite", &network.VirtualApplianceSiteArgs{
+ * 			AddressPrefix:               pulumi.String("192.168.1.0/24"),
+ * 			NetworkVirtualApplianceName: pulumi.String("nva"),
+ * 			O365Policy: &network.Office365PolicyPropertiesArgs{
+ * 				BreakOutCategories: &network.BreakOutCategoryPoliciesArgs{
+ * 					Allow:    pulumi.Bool(true),
+ * 					Default:  pulumi.Bool(true),
+ * 					Optimize: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			SiteName:          pulumi.String("site1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualApplianceSite = new azure_native.network.VirtualApplianceSite("virtualApplianceSite", {
+ *     addressPrefix: "192.168.1.0/24",
+ *     networkVirtualApplianceName: "nva",
+ *     o365Policy: {
+ *         breakOutCategories: {
+ *             allow: true,
+ *             "default": true,
+ *             optimize: true,
+ *         },
+ *     },
+ *     resourceGroupName: "rg1",
+ *     siteName: "site1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_appliance_site = azure_native.network.VirtualApplianceSite("virtualApplianceSite",
+ *     address_prefix="192.168.1.0/24",
+ *     network_virtual_appliance_name="nva",
+ *     o365_policy=azure_native.network.Office365PolicyPropertiesArgs(
+ *         break_out_categories=azure_native.network.BreakOutCategoryPoliciesArgs(
+ *             allow=True,
+ *             default=True,
+ *             optimize=True,
+ *         ),
+ *     ),
+ *     resource_group_name="rg1",
+ *     site_name="site1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +139,72 @@ import javax.annotation.Nullable;
 public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
     /**
      * Address Prefix.
-     * 
      */
     @Export(name="addressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressPrefix;
 
     /**
      * @return Address Prefix.
-     * 
      */
     public Output</* @Nullable */ String> getAddressPrefix() {
         return this.addressPrefix;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Name of the virtual appliance site.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the virtual appliance site.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Office 365 Policy.
-     * 
      */
     @Export(name="o365Policy", type=Office365PolicyPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ Office365PolicyPropertiesResponse> o365Policy;
 
     /**
      * @return Office 365 Policy.
-     * 
      */
     public Output</* @Nullable */ Office365PolicyPropertiesResponse> getO365Policy() {
         return this.o365Policy;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Site type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Site type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

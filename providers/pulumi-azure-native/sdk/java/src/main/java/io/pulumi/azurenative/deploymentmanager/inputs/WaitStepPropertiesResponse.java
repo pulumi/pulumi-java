@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Defines the properties of a Wait step.
- * 
  */
 public final class WaitStepPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class WaitStepPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The Wait attributes
-     * 
      */
     @Import(name="attributes", required=true)
       private final WaitStepAttributesResponse attributes;
@@ -31,7 +29,6 @@ public final class WaitStepPropertiesResponse extends io.pulumi.resources.Invoke
     /**
      * The type of step.
      * Expected value is 'Wait'.
-     * 
      */
     @Import(name="stepType", required=true)
       private final String stepType;

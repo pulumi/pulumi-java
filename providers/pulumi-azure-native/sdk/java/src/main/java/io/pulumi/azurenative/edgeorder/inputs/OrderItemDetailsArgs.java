@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Order item details
- * 
  */
 public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Additional notification email list
-     * 
      */
     @Import(name="notificationEmailList")
       private final @Nullable Output<List<String>> notificationEmailList;
@@ -36,7 +34,6 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Order item type.
-     * 
      */
     @Import(name="orderItemType", required=true)
       private final Output<Either<String,OrderItemType>> orderItemType;
@@ -47,7 +44,6 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Customer notification Preferences
-     * 
      */
     @Import(name="preferences")
       private final @Nullable Output<PreferencesArgs> preferences;
@@ -58,7 +54,6 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Unique identifier for configuration.
-     * 
      */
     @Import(name="productDetails", required=true)
       private final Output<ProductDetailsArgs> productDetails;

@@ -14,13 +14,11 @@ import javax.annotation.Nullable;
 public final class LogSchedulePolicyResponse {
     /**
      * Frequency of the log schedule operation of this policy in minutes.
-     * 
      */
     private final @Nullable Integer scheduleFrequencyInMins;
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'LogSchedulePolicy'.
-     * 
      */
     private final String schedulePolicyType;
 
@@ -34,7 +32,6 @@ public final class LogSchedulePolicyResponse {
 
     /**
      * Frequency of the log schedule operation of this policy in minutes.
-     * 
     */
     public Optional<Integer> getScheduleFrequencyInMins() {
         return Optional.ofNullable(this.scheduleFrequencyInMins);
@@ -42,7 +39,6 @@ public final class LogSchedulePolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'LogSchedulePolicy'.
-     * 
     */
     public String getSchedulePolicyType() {
         return this.schedulePolicyType;

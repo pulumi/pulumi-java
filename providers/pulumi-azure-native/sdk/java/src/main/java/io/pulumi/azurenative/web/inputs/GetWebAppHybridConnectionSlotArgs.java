@@ -14,7 +14,6 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
 
     /**
      * The name of the web app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
 
     /**
      * The namespace for this hybrid connection.
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -36,7 +34,6 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
 
     /**
      * The relay name for this hybrid connection.
-     * 
      */
     @Import(name="relayName", required=true)
       private final String relayName;
@@ -47,7 +44,6 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -58,7 +54,6 @@ public final class GetWebAppHybridConnectionSlotArgs extends io.pulumi.resources
 
     /**
      * The name of the slot for the web app.
-     * 
      */
     @Import(name="slot", required=true)
       private final String slot;

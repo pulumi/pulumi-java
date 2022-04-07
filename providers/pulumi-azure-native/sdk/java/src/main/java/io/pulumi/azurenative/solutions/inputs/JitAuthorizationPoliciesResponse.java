@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The JIT authorization policies.
- * 
  */
 public final class JitAuthorizationPoliciesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class JitAuthorizationPoliciesResponse extends io.pulumi.resources.
 
     /**
      * The the principal id that will be granted JIT access.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -29,7 +27,6 @@ public final class JitAuthorizationPoliciesResponse extends io.pulumi.resources.
 
     /**
      * The role definition id that will be granted to the Principal.
-     * 
      */
     @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;

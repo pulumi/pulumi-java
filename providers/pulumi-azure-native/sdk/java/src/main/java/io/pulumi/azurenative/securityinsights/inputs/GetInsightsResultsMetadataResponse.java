@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Get Insights result metadata.
- * 
  */
 public final class GetInsightsResultsMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
 
     /**
      * information about the failed queries
-     * 
      */
     @Import(name="errors")
       private final @Nullable List<GetInsightsErrorResponse> errors;
@@ -33,7 +31,6 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
 
     /**
      * the total items found for the insights request
-     * 
      */
     @Import(name="totalCount", required=true)
       private final Integer totalCount;

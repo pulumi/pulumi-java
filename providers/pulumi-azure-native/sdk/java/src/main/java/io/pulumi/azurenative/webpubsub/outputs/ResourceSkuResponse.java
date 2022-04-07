@@ -18,31 +18,26 @@ public final class ResourceSkuResponse {
      * If present, following values are allowed:
      *     Free: 1
      *     Standard: 1,2,5,10,20,50,100
-     * 
      */
     private final @Nullable Integer capacity;
     /**
      * Not used. Retained for future use.
-     * 
      */
     private final String family;
     /**
      * The name of the SKU. Required.
      * 
      * Allowed values: Standard_S1, Free_F1
-     * 
      */
     private final String name;
     /**
      * Not used. Retained for future use.
-     * 
      */
     private final String size;
     /**
-     * Optional tier of this particular SKU. 'Standard' or 'Free'.
+     * Optional tier of this particular SKU. 'Standard' or 'Free'. 
      * 
      * `Basic` is deprecated, use `Standard` instead.
-     * 
      */
     private final @Nullable String tier;
 
@@ -66,14 +61,12 @@ public final class ResourceSkuResponse {
      * If present, following values are allowed:
      *     Free: 1
      *     Standard: 1,2,5,10,20,50,100
-     * 
     */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Not used. Retained for future use.
-     * 
     */
     public String getFamily() {
         return this.family;
@@ -82,23 +75,20 @@ public final class ResourceSkuResponse {
      * The name of the SKU. Required.
      * 
      * Allowed values: Standard_S1, Free_F1
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Not used. Retained for future use.
-     * 
     */
     public String getSize() {
         return this.size;
     }
     /**
-     * Optional tier of this particular SKU. 'Standard' or 'Free'.
+     * Optional tier of this particular SKU. 'Standard' or 'Free'. 
      * 
      * `Basic` is deprecated, use `Standard` instead.
-     * 
     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);

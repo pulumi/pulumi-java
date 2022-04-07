@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information on the client (user or application) that made some action
- * 
  */
 public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The email of the client.
-     * 
      */
     @Import(name="email")
       private final @Nullable String email;
@@ -31,7 +29,6 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the client.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -42,7 +39,6 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The object id of the client.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable String objectId;
@@ -53,7 +49,6 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The user principal name of the client.
-     * 
      */
     @Import(name="userPrincipalName")
       private final @Nullable String userPrincipalName;

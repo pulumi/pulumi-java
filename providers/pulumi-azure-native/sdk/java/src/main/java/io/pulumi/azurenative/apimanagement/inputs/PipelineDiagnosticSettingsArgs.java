@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
- * 
  */
 public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Diagnostic settings for request.
-     * 
      */
     @Import(name="request")
       private final @Nullable Output<HttpMessageDiagnosticArgs> request;
@@ -31,7 +29,6 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Diagnostic settings for response.
-     * 
      */
     @Import(name="response")
       private final @Nullable Output<HttpMessageDiagnosticArgs> response;

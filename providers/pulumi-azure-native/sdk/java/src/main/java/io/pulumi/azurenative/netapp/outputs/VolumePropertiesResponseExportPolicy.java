@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class VolumePropertiesResponseExportPolicy {
     /**
      * Export policy rule
-     * 
      */
     private final @Nullable List<ExportPolicyRuleResponse> rules;
 
@@ -24,7 +23,6 @@ public final class VolumePropertiesResponseExportPolicy {
 
     /**
      * Export policy rule
-     * 
     */
     public List<ExportPolicyRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;

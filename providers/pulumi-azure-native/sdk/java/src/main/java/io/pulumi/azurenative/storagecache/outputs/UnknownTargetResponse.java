@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class UnknownTargetResponse {
     /**
      * Dictionary of string->string pairs containing information about the Storage Target.
-     * 
      */
     private final @Nullable Map<String,String> attributes;
 
@@ -24,7 +23,6 @@ public final class UnknownTargetResponse {
 
     /**
      * Dictionary of string->string pairs containing information about the Storage Target.
-     * 
     */
     public Map<String,String> getAttributes() {
         return this.attributes == null ? Map.of() : this.attributes;

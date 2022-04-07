@@ -18,7 +18,6 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -29,7 +28,6 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifier of the property.
-     * 
      */
     @Import(name="propId")
       private final @Nullable Output<String> propId;
@@ -40,7 +38,6 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Determines whether the value is a secret and should be encrypted or not. Default value is false.
-     * 
      */
     @Import(name="secret")
       private final @Nullable Output<Boolean> secret;
@@ -62,7 +58,6 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -73,7 +68,6 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional tags that when provided can be used to filter the property list.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
@@ -84,7 +78,6 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

@@ -14,18 +14,15 @@ import javax.annotation.Nullable;
 public final class StatusCodesRangeBasedTriggerResponse {
     /**
      * Request Count.
-     * 
      */
     private final @Nullable Integer count;
     private final @Nullable String path;
     /**
      * HTTP status code.
-     * 
      */
     private final @Nullable String statusCodes;
     /**
      * Time interval.
-     * 
      */
     private final @Nullable String timeInterval;
 
@@ -43,7 +40,6 @@ public final class StatusCodesRangeBasedTriggerResponse {
 
     /**
      * Request Count.
-     * 
     */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
@@ -53,14 +49,12 @@ public final class StatusCodesRangeBasedTriggerResponse {
     }
     /**
      * HTTP status code.
-     * 
     */
     public Optional<String> getStatusCodes() {
         return Optional.ofNullable(this.statusCodes);
     }
     /**
      * Time interval.
-     * 
     */
     public Optional<String> getTimeInterval() {
         return Optional.ofNullable(this.timeInterval);

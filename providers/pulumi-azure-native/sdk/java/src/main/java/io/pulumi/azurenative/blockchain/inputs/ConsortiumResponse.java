@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Consortium payload
- * 
  */
 public final class ConsortiumResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConsortiumResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the blockchain member name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class ConsortiumResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the protocol for the consortium.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable String protocol;

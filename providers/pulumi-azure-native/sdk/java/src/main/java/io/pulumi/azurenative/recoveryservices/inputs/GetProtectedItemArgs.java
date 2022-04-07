@@ -16,7 +16,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Container name associated with the backed up item.
-     * 
      */
     @Import(name="containerName", required=true)
       private final String containerName;
@@ -27,7 +26,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Fabric name associated with the backed up item.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final String fabricName;
@@ -38,7 +36,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * OData filter options.
-     * 
      */
     @Import(name="filter")
       private final @Nullable String filter;
@@ -49,7 +46,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Backed up item name whose details are to be fetched.
-     * 
      */
     @Import(name="protectedItemName", required=true)
       private final String protectedItemName;
@@ -60,7 +56,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -71,7 +66,6 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final String vaultName;

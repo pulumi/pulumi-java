@@ -19,7 +19,100 @@ import javax.annotation.Nullable;
  * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
  * API Version: 2020-05-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### EnvironmentsCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var environment = new AzureNative.TimeSeriesInsights.Environment("environment", new AzureNative.TimeSeriesInsights.EnvironmentArgs
+ *         {
+ *             EnvironmentName = "env1",
+ *             Kind = "Gen1",
+ *             Location = "West US",
+ *             ResourceGroupName = "rg1",
+ *             Sku = new AzureNative.TimeSeriesInsights.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 1,
+ *                 Name = "S1",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := timeseriesinsights.NewEnvironment(ctx, "environment", &timeseriesinsights.EnvironmentArgs{
+ * 			EnvironmentName:   pulumi.String("env1"),
+ * 			Kind:              pulumi.String("Gen1"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Sku: &timeseriesinsights.SkuArgs{
+ * 				Capacity: pulumi.Int(1),
+ * 				Name:     pulumi.String("S1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const environment = new azure_native.timeseriesinsights.Environment("environment", {
+ *     environmentName: "env1",
+ *     kind: "Gen1",
+ *     location: "West US",
+ *     resourceGroupName: "rg1",
+ *     sku: {
+ *         capacity: 1,
+ *         name: "S1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * environment = azure_native.timeseriesinsights.Environment("environment",
+ *     environment_name="env1",
+ *     kind="Gen1",
+ *     location="West US",
+ *     resource_group_name="rg1",
+ *     sku=azure_native.timeseriesinsights.SkuArgs(
+ *         capacity=1,
+ *         name="S1",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,91 +124,78 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: Gen1Environment, Gen2Environment.
- * 
  */
 @Deprecated /* Please use one of the variants: Gen1Environment, Gen2Environment. */
 @ResourceType(type="azure-native:timeseriesinsights:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
     /**
      * The kind of the environment.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The kind of the environment.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
      * @return The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
-     * 
      */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

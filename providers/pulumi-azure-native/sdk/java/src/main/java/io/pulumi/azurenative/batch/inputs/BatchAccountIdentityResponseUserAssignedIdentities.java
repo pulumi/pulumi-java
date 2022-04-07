@@ -14,7 +14,6 @@ public final class BatchAccountIdentityResponseUserAssignedIdentities extends io
 
     /**
      * The client id of user assigned identity.
-     * 
      */
     @Import(name="clientId", required=true)
       private final String clientId;
@@ -25,7 +24,6 @@ public final class BatchAccountIdentityResponseUserAssignedIdentities extends io
 
     /**
      * The principal id of user assigned identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;

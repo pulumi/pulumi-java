@@ -21,7 +21,521 @@ import javax.annotation.Nullable;
  * The properties of File services in storage account.
  * API Version: 2021-02-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutFileServices
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fileServiceProperties = new AzureNative.Storage.FileServiceProperties("fileServiceProperties", new AzureNative.Storage.FileServicePropertiesArgs
+ *         {
+ *             AccountName = "sto8607",
+ *             Cors = new AzureNative.Storage.Inputs.CorsRulesArgs
+ *             {
+ *                 CorsRules = 
+ *                 {
+ *                     new AzureNative.Storage.Inputs.CorsRuleArgs
+ *                     {
+ *                         AllowedHeaders = 
+ *                         {
+ *                             "x-ms-meta-abc",
+ *                             "x-ms-meta-data*",
+ *                             "x-ms-meta-target*",
+ *                         },
+ *                         AllowedMethods = 
+ *                         {
+ *                             "GET",
+ *                             "HEAD",
+ *                             "POST",
+ *                             "OPTIONS",
+ *                             "MERGE",
+ *                             "PUT",
+ *                         },
+ *                         AllowedOrigins = 
+ *                         {
+ *                             "http://www.contoso.com",
+ *                             "http://www.fabrikam.com",
+ *                         },
+ *                         ExposedHeaders = 
+ *                         {
+ *                             "x-ms-meta-*",
+ *                         },
+ *                         MaxAgeInSeconds = 100,
+ *                     },
+ *                     new AzureNative.Storage.Inputs.CorsRuleArgs
+ *                     {
+ *                         AllowedHeaders = 
+ *                         {
+ *                             "*",
+ *                         },
+ *                         AllowedMethods = 
+ *                         {
+ *                             "GET",
+ *                         },
+ *                         AllowedOrigins = 
+ *                         {
+ *                             "*",
+ *                         },
+ *                         ExposedHeaders = 
+ *                         {
+ *                             "*",
+ *                         },
+ *                         MaxAgeInSeconds = 2,
+ *                     },
+ *                     new AzureNative.Storage.Inputs.CorsRuleArgs
+ *                     {
+ *                         AllowedHeaders = 
+ *                         {
+ *                             "x-ms-meta-12345675754564*",
+ *                         },
+ *                         AllowedMethods = 
+ *                         {
+ *                             "GET",
+ *                             "PUT",
+ *                         },
+ *                         AllowedOrigins = 
+ *                         {
+ *                             "http://www.abc23.com",
+ *                             "https://www.fabrikam.com/*",
+ *                         },
+ *                         ExposedHeaders = 
+ *                         {
+ *                             "x-ms-meta-abc",
+ *                             "x-ms-meta-data*",
+ *                             "x-ms-meta-target*",
+ *                         },
+ *                         MaxAgeInSeconds = 2000,
+ *                     },
+ *                 },
+ *             },
+ *             FileServicesName = "default",
+ *             ResourceGroupName = "res4410",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewFileServiceProperties(ctx, "fileServiceProperties", &storage.FileServicePropertiesArgs{
+ * 			AccountName: pulumi.String("sto8607"),
+ * 			Cors: &storage.CorsRulesArgs{
+ * 				CorsRules: storage.CorsRuleArray{
+ * 					&storage.CorsRuleArgs{
+ * 						AllowedHeaders: pulumi.StringArray{
+ * 							pulumi.String("x-ms-meta-abc"),
+ * 							pulumi.String("x-ms-meta-data*"),
+ * 							pulumi.String("x-ms-meta-target*"),
+ * 						},
+ * 						AllowedMethods: pulumi.StringArray{
+ * 							pulumi.String("GET"),
+ * 							pulumi.String("HEAD"),
+ * 							pulumi.String("POST"),
+ * 							pulumi.String("OPTIONS"),
+ * 							pulumi.String("MERGE"),
+ * 							pulumi.String("PUT"),
+ * 						},
+ * 						AllowedOrigins: pulumi.StringArray{
+ * 							pulumi.String("http://www.contoso.com"),
+ * 							pulumi.String("http://www.fabrikam.com"),
+ * 						},
+ * 						ExposedHeaders: pulumi.StringArray{
+ * 							pulumi.String("x-ms-meta-*"),
+ * 						},
+ * 						MaxAgeInSeconds: pulumi.Int(100),
+ * 					},
+ * 					&storage.CorsRuleArgs{
+ * 						AllowedHeaders: pulumi.StringArray{
+ * 							pulumi.String("*"),
+ * 						},
+ * 						AllowedMethods: pulumi.StringArray{
+ * 							pulumi.String("GET"),
+ * 						},
+ * 						AllowedOrigins: pulumi.StringArray{
+ * 							pulumi.String("*"),
+ * 						},
+ * 						ExposedHeaders: pulumi.StringArray{
+ * 							pulumi.String("*"),
+ * 						},
+ * 						MaxAgeInSeconds: pulumi.Int(2),
+ * 					},
+ * 					&storage.CorsRuleArgs{
+ * 						AllowedHeaders: pulumi.StringArray{
+ * 							pulumi.String("x-ms-meta-12345675754564*"),
+ * 						},
+ * 						AllowedMethods: pulumi.StringArray{
+ * 							pulumi.String("GET"),
+ * 							pulumi.String("PUT"),
+ * 						},
+ * 						AllowedOrigins: pulumi.StringArray{
+ * 							pulumi.String("http://www.abc23.com"),
+ * 							pulumi.String("https://www.fabrikam.com/*"),
+ * 						},
+ * 						ExposedHeaders: pulumi.StringArray{
+ * 							pulumi.String("x-ms-meta-abc"),
+ * 							pulumi.String("x-ms-meta-data*"),
+ * 							pulumi.String("x-ms-meta-target*"),
+ * 						},
+ * 						MaxAgeInSeconds: pulumi.Int(2000),
+ * 					},
+ * 				},
+ * 			},
+ * 			FileServicesName:  pulumi.String("default"),
+ * 			ResourceGroupName: pulumi.String("res4410"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fileServiceProperties = new azure_native.storage.FileServiceProperties("fileServiceProperties", {
+ *     accountName: "sto8607",
+ *     cors: {
+ *         corsRules: [
+ *             {
+ *                 allowedHeaders: [
+ *                     "x-ms-meta-abc",
+ *                     "x-ms-meta-data*",
+ *                     "x-ms-meta-target*",
+ *                 ],
+ *                 allowedMethods: [
+ *                     "GET",
+ *                     "HEAD",
+ *                     "POST",
+ *                     "OPTIONS",
+ *                     "MERGE",
+ *                     "PUT",
+ *                 ],
+ *                 allowedOrigins: [
+ *                     "http://www.contoso.com",
+ *                     "http://www.fabrikam.com",
+ *                 ],
+ *                 exposedHeaders: ["x-ms-meta-*"],
+ *                 maxAgeInSeconds: 100,
+ *             },
+ *             {
+ *                 allowedHeaders: ["*"],
+ *                 allowedMethods: ["GET"],
+ *                 allowedOrigins: ["*"],
+ *                 exposedHeaders: ["*"],
+ *                 maxAgeInSeconds: 2,
+ *             },
+ *             {
+ *                 allowedHeaders: ["x-ms-meta-12345675754564*"],
+ *                 allowedMethods: [
+ *                     "GET",
+ *                     "PUT",
+ *                 ],
+ *                 allowedOrigins: [
+ *                     "http://www.abc23.com",
+ *                     "https://www.fabrikam.com/*",
+ *                 ],
+ *                 exposedHeaders: [
+ *                     "x-ms-meta-abc",
+ *                     "x-ms-meta-data*",
+ *                     "x-ms-meta-target*",
+ *                 ],
+ *                 maxAgeInSeconds: 2000,
+ *             },
+ *         ],
+ *     },
+ *     fileServicesName: "default",
+ *     resourceGroupName: "res4410",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * file_service_properties = azure_native.storage.FileServiceProperties("fileServiceProperties",
+ *     account_name="sto8607",
+ *     cors=azure_native.storage.CorsRulesArgs(
+ *         cors_rules=[
+ *             azure_native.storage.CorsRuleArgs(
+ *                 allowed_headers=[
+ *                     "x-ms-meta-abc",
+ *                     "x-ms-meta-data*",
+ *                     "x-ms-meta-target*",
+ *                 ],
+ *                 allowed_methods=[
+ *                     "GET",
+ *                     "HEAD",
+ *                     "POST",
+ *                     "OPTIONS",
+ *                     "MERGE",
+ *                     "PUT",
+ *                 ],
+ *                 allowed_origins=[
+ *                     "http://www.contoso.com",
+ *                     "http://www.fabrikam.com",
+ *                 ],
+ *                 exposed_headers=["x-ms-meta-*"],
+ *                 max_age_in_seconds=100,
+ *             ),
+ *             azure_native.storage.CorsRuleArgs(
+ *                 allowed_headers=["*"],
+ *                 allowed_methods=["GET"],
+ *                 allowed_origins=["*"],
+ *                 exposed_headers=["*"],
+ *                 max_age_in_seconds=2,
+ *             ),
+ *             azure_native.storage.CorsRuleArgs(
+ *                 allowed_headers=["x-ms-meta-12345675754564*"],
+ *                 allowed_methods=[
+ *                     "GET",
+ *                     "PUT",
+ *                 ],
+ *                 allowed_origins=[
+ *                     "http://www.abc23.com",
+ *                     "https://www.fabrikam.com/*",
+ *                 ],
+ *                 exposed_headers=[
+ *                     "x-ms-meta-abc",
+ *                     "x-ms-meta-data*",
+ *                     "x-ms-meta-target*",
+ *                 ],
+ *                 max_age_in_seconds=2000,
+ *             ),
+ *         ],
+ *     ),
+ *     file_services_name="default",
+ *     resource_group_name="res4410")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### PutFileServices_EnableSMBMultichannel
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fileServiceProperties = new AzureNative.Storage.FileServiceProperties("fileServiceProperties", new AzureNative.Storage.FileServicePropertiesArgs
+ *         {
+ *             AccountName = "sto8607",
+ *             FileServicesName = "default",
+ *             ProtocolSettings = new AzureNative.Storage.Inputs.ProtocolSettingsArgs
+ *             {
+ *                 Smb = new AzureNative.Storage.Inputs.SmbSettingArgs
+ *                 {
+ *                     Multichannel = new AzureNative.Storage.Inputs.MultichannelArgs
+ *                     {
+ *                         Enabled = true,
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "res4410",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewFileServiceProperties(ctx, "fileServiceProperties", &storage.FileServicePropertiesArgs{
+ * 			AccountName:      pulumi.String("sto8607"),
+ * 			FileServicesName: pulumi.String("default"),
+ * 			ProtocolSettings: &storage.ProtocolSettingsArgs{
+ * 				Smb: &storage.SmbSettingArgs{
+ * 					Multichannel: &storage.MultichannelArgs{
+ * 						Enabled: pulumi.Bool(true),
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("res4410"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fileServiceProperties = new azure_native.storage.FileServiceProperties("fileServiceProperties", {
+ *     accountName: "sto8607",
+ *     fileServicesName: "default",
+ *     protocolSettings: {
+ *         smb: {
+ *             multichannel: {
+ *                 enabled: true,
+ *             },
+ *         },
+ *     },
+ *     resourceGroupName: "res4410",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * file_service_properties = azure_native.storage.FileServiceProperties("fileServiceProperties",
+ *     account_name="sto8607",
+ *     file_services_name="default",
+ *     protocol_settings=azure_native.storage.ProtocolSettingsArgs(
+ *         smb=azure_native.storage.SmbSettingArgs(
+ *             multichannel=azure_native.storage.MultichannelArgs(
+ *                 enabled=True,
+ *             ),
+ *         ),
+ *     ),
+ *     resource_group_name="res4410")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### PutFileServices_EnableSecureSmbFeatures
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fileServiceProperties = new AzureNative.Storage.FileServiceProperties("fileServiceProperties", new AzureNative.Storage.FileServicePropertiesArgs
+ *         {
+ *             AccountName = "sto8607",
+ *             FileServicesName = "default",
+ *             ProtocolSettings = new AzureNative.Storage.Inputs.ProtocolSettingsArgs
+ *             {
+ *                 Smb = new AzureNative.Storage.Inputs.SmbSettingArgs
+ *                 {
+ *                     AuthenticationMethods = "NTLMv2;Kerberos",
+ *                     ChannelEncryption = "AES-128-CCM;AES-128-GCM;AES-256-GCM",
+ *                     KerberosTicketEncryption = "RC4-HMAC;AES-256",
+ *                     Versions = "SMB2.1;SMB3.0;SMB3.1.1",
+ *                 },
+ *             },
+ *             ResourceGroupName = "res4410",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storage.NewFileServiceProperties(ctx, "fileServiceProperties", &storage.FileServicePropertiesArgs{
+ * 			AccountName:      pulumi.String("sto8607"),
+ * 			FileServicesName: pulumi.String("default"),
+ * 			ProtocolSettings: &storage.ProtocolSettingsArgs{
+ * 				Smb: &storage.SmbSettingArgs{
+ * 					AuthenticationMethods:    pulumi.String("NTLMv2;Kerberos"),
+ * 					ChannelEncryption:        pulumi.String("AES-128-CCM;AES-128-GCM;AES-256-GCM"),
+ * 					KerberosTicketEncryption: pulumi.String("RC4-HMAC;AES-256"),
+ * 					Versions:                 pulumi.String("SMB2.1;SMB3.0;SMB3.1.1"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("res4410"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fileServiceProperties = new azure_native.storage.FileServiceProperties("fileServiceProperties", {
+ *     accountName: "sto8607",
+ *     fileServicesName: "default",
+ *     protocolSettings: {
+ *         smb: {
+ *             authenticationMethods: "NTLMv2;Kerberos",
+ *             channelEncryption: "AES-128-CCM;AES-128-GCM;AES-256-GCM",
+ *             kerberosTicketEncryption: "RC4-HMAC;AES-256",
+ *             versions: "SMB2.1;SMB3.0;SMB3.1.1",
+ *         },
+ *     },
+ *     resourceGroupName: "res4410",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * file_service_properties = azure_native.storage.FileServiceProperties("fileServiceProperties",
+ *     account_name="sto8607",
+ *     file_services_name="default",
+ *     protocol_settings=azure_native.storage.ProtocolSettingsArgs(
+ *         smb=azure_native.storage.SmbSettingArgs(
+ *             authentication_methods="NTLMv2;Kerberos",
+ *             channel_encryption="AES-128-CCM;AES-128-GCM;AES-256-GCM",
+ *             kerberos_ticket_encryption="RC4-HMAC;AES-256",
+ *             versions="SMB2.1;SMB3.0;SMB3.1.1",
+ *         ),
+ *     ),
+ *     resource_group_name="res4410")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,84 +550,72 @@ import javax.annotation.Nullable;
 public class FileServiceProperties extends io.pulumi.resources.CustomResource {
     /**
      * Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
-     * 
      */
     @Export(name="cors", type=CorsRulesResponse.class, parameters={})
     private Output</* @Nullable */ CorsRulesResponse> cors;
 
     /**
      * @return Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
-     * 
      */
     public Output</* @Nullable */ CorsRulesResponse> getCors() {
         return this.cors;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Protocol settings for file service
-     * 
      */
     @Export(name="protocolSettings", type=ProtocolSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ProtocolSettingsResponse> protocolSettings;
 
     /**
      * @return Protocol settings for file service
-     * 
      */
     public Output</* @Nullable */ ProtocolSettingsResponse> getProtocolSettings() {
         return this.protocolSettings;
     }
     /**
      * The file service properties for share soft delete.
-     * 
      */
     @Export(name="shareDeleteRetentionPolicy", type=DeleteRetentionPolicyResponse.class, parameters={})
     private Output</* @Nullable */ DeleteRetentionPolicyResponse> shareDeleteRetentionPolicy;
 
     /**
      * @return The file service properties for share soft delete.
-     * 
      */
     public Output</* @Nullable */ DeleteRetentionPolicyResponse> getShareDeleteRetentionPolicy() {
         return this.shareDeleteRetentionPolicy;
     }
     /**
      * Sku name and tier.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
      * @return Sku name and tier.
-     * 
      */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

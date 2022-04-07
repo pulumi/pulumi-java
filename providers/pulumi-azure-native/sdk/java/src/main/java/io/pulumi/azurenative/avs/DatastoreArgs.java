@@ -18,7 +18,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the cluster in the private cloud
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -29,7 +28,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the datastore in the private cloud cluster
-     * 
      */
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
@@ -40,7 +38,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An iSCSI volume
-     * 
      */
     @Import(name="diskPoolVolume")
       private final @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume;
@@ -51,7 +48,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An Azure NetApp Files volume
-     * 
      */
     @Import(name="netAppVolume")
       private final @Nullable Output<NetAppVolumeArgs> netAppVolume;
@@ -62,7 +58,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -73,7 +68,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

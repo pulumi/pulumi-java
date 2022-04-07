@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure ML Update Resource management activity.
- * 
  */
 public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -37,7 +35,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -48,7 +45,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -59,7 +55,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -70,7 +65,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -81,7 +75,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
 
     /**
      * The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="trainedModelFilePath", required=true)
       private final Object trainedModelFilePath;
@@ -92,7 +85,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
 
     /**
      * Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
-     * 
      */
     @Import(name="trainedModelLinkedServiceName", required=true)
       private final LinkedServiceReferenceResponse trainedModelLinkedServiceName;
@@ -103,7 +95,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
 
     /**
      * Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="trainedModelName", required=true)
       private final Object trainedModelName;
@@ -115,7 +106,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
     /**
      * Type of activity.
      * Expected value is 'AzureMLUpdateResource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -126,7 +116,6 @@ public final class AzureMLUpdateResourceActivityResponse extends io.pulumi.resou
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

@@ -14,7 +14,6 @@ public final class GetDigitalTwinsEndpointArgs extends io.pulumi.resources.Invok
 
     /**
      * Name of Endpoint Resource.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final String endpointName;
@@ -25,7 +24,6 @@ public final class GetDigitalTwinsEndpointArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group that contains the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetDigitalTwinsEndpointArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Restore parameters.
- * 
  */
 public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp to end the restore by (UTC).
-     * 
      */
     @Import(name="endRestoreTime")
       private final @Nullable Output<String> endRestoreTime;
@@ -31,7 +29,6 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp to start the restore from (UTC).
-     * 
      */
     @Import(name="startRestoreTime")
       private final @Nullable Output<String> startRestoreTime;

@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * The Video Sync Mode
-     * 
      */
     @EnumType
     public enum VideoSyncMode {
         /**
          * This is the default method. Chooses between Cfr and Vfr depending on muxer capabilities. For output format MP4, the default mode is Cfr.
-         * 
          */
         Auto("Auto"),
         /**
          * The presentation timestamps on frames are passed through from the input file to the output file writer. Recommended when the input source has variable frame rate, and are attempting to produce multiple layers for adaptive streaming in the output which have aligned GOP boundaries. Note: if two or more frames in the input have duplicate timestamps, then the output will also have the same behavior
-         * 
          */
         Passthrough("Passthrough"),
         /**
          * Input frames will be repeated and/or dropped as needed to achieve exactly the requested constant frame rate. Recommended when the output frame rate is explicitly set at a specified value
-         * 
          */
         Cfr("Cfr"),
         /**
          * Similar to the Passthrough mode, but if the input has frames that have duplicate timestamps, then only one frame is passed through to the output, and others are dropped. Recommended when the number of output frames is expected to be equal to the number of input frames. For example, the output is used to calculate a quality metric like PSNR against the input
-         * 
          */
         Vfr("Vfr");
 

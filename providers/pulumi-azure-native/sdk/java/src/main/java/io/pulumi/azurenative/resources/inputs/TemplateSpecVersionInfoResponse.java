@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * High-level information about a Template Spec version.
- * 
  */
 public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
 
     /**
      * Template Spec version description.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -29,7 +27,6 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
 
     /**
      * The timestamp of when the version was created.
-     * 
      */
     @Import(name="timeCreated", required=true)
       private final String timeCreated;
@@ -40,7 +37,6 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
 
     /**
      * The timestamp of when the version was last modified.
-     * 
      */
     @Import(name="timeModified", required=true)
       private final String timeModified;

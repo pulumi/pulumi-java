@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The kind of the resource.
-     * 
      */
     @EnumType
     public enum KnownDataCollectionRuleResourceKind {

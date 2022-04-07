@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class ExtensionStatusResponse {
     /**
      * Status code provided by the Extension
-     * 
      */
     private final @Nullable String code;
     /**
      * Short description of status of this instance of the extension.
-     * 
      */
     private final @Nullable String displayStatus;
     /**
      * Level of the status.
-     * 
      */
     private final @Nullable String level;
     /**
      * Detailed message of the status from the Extension instance.
-     * 
      */
     private final @Nullable String message;
     /**
      * DateLiteral (per ISO8601) noting the time of installation status.
-     * 
      */
     private final @Nullable String time;
 
@@ -53,35 +48,30 @@ public final class ExtensionStatusResponse {
 
     /**
      * Status code provided by the Extension
-     * 
     */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Short description of status of this instance of the extension.
-     * 
     */
     public Optional<String> getDisplayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
     /**
      * Level of the status.
-     * 
     */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
     /**
      * Detailed message of the status from the Extension instance.
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * DateLiteral (per ISO8601) noting the time of installation status.
-     * 
     */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);

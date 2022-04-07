@@ -21,7 +21,6 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the creation time of the runbook draft.
-     * 
      */
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
@@ -32,7 +31,6 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the draft runbook content link.
-     * 
      */
     @Import(name="draftContentLink")
       private final @Nullable Output<ContentLinkArgs> draftContentLink;
@@ -43,7 +41,6 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets whether runbook is in edit mode.
-     * 
      */
     @Import(name="inEdit")
       private final @Nullable Output<Boolean> inEdit;
@@ -54,7 +51,6 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the last modified time of the runbook draft.
-     * 
      */
     @Import(name="lastModifiedTime")
       private final @Nullable Output<String> lastModifiedTime;
@@ -65,7 +61,6 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the runbook output types.
-     * 
      */
     @Import(name="outputTypes")
       private final @Nullable Output<List<String>> outputTypes;
@@ -76,7 +71,6 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the runbook draft parameters.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,RunbookParameterArgs>> parameters;

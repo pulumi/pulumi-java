@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Data Lake Store virtual network rule information.
- * 
  */
 public final class VirtualNetworkRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The resource identifier.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -29,7 +27,6 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -40,7 +37,6 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The resource identifier for the subnet.
-     * 
      */
     @Import(name="subnetId", required=true)
       private final String subnetId;
@@ -51,7 +47,6 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Upstream auth type enum.
-     * 
      */
     @EnumType
     public enum UpstreamAuthType {

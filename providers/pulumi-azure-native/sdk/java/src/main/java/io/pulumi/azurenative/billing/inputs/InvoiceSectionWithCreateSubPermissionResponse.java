@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Invoice section properties with create subscription permission.
- * 
  */
 public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
 
     /**
      * The name of the billing profile for the invoice section.
-     * 
      */
     @Import(name="billingProfileDisplayName", required=true)
       private final String billingProfileDisplayName;
@@ -33,7 +31,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
 
     /**
      * The ID of the billing profile for the invoice section.
-     * 
      */
     @Import(name="billingProfileId", required=true)
       private final String billingProfileId;
@@ -44,7 +41,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
 
     /**
      * The billing profile spending limit.
-     * 
      */
     @Import(name="billingProfileSpendingLimit", required=true)
       private final String billingProfileSpendingLimit;
@@ -55,7 +51,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
 
     /**
      * The status of the billing profile.
-     * 
      */
     @Import(name="billingProfileStatus", required=true)
       private final String billingProfileStatus;
@@ -66,7 +61,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
 
     /**
      * Reason for the specified billing profile status.
-     * 
      */
     @Import(name="billingProfileStatusReasonCode", required=true)
       private final String billingProfileStatusReasonCode;
@@ -77,7 +71,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
 
     /**
      * The system generated unique identifier for a billing profile.
-     * 
      */
     @Import(name="billingProfileSystemId", required=true)
       private final String billingProfileSystemId;
@@ -88,7 +81,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
 
     /**
      * Enabled azure plans for the associated billing profile.
-     * 
      */
     @Import(name="enabledAzurePlans")
       private final @Nullable List<AzurePlanResponse> enabledAzurePlans;
@@ -99,7 +91,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
 
     /**
      * The name of the invoice section.
-     * 
      */
     @Import(name="invoiceSectionDisplayName", required=true)
       private final String invoiceSectionDisplayName;
@@ -110,7 +101,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
 
     /**
      * The ID of the invoice section.
-     * 
      */
     @Import(name="invoiceSectionId", required=true)
       private final String invoiceSectionId;
@@ -121,7 +111,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
 
     /**
      * The system generated unique identifier for an invoice section.
-     * 
      */
     @Import(name="invoiceSectionSystemId", required=true)
       private final String invoiceSectionSystemId;

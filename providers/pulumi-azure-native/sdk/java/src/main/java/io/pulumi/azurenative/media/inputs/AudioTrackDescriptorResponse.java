@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A TrackSelection to select audio tracks.
- * 
  */
 public final class AudioTrackDescriptorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AudioTrackDescriptorResponse extends io.pulumi.resources.Invo
 
     /**
      * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
-     * 
      */
     @Import(name="channelMapping")
       private final @Nullable String channelMapping;
@@ -32,7 +30,6 @@ public final class AudioTrackDescriptorResponse extends io.pulumi.resources.Invo
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.AudioTrackDescriptor'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;

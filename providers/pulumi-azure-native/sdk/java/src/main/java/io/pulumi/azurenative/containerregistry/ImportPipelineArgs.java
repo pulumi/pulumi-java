@@ -22,7 +22,6 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the import pipeline.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
@@ -33,7 +32,6 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the import pipeline.
-     * 
      */
     @Import(name="importPipelineName")
       private final @Nullable Output<String> importPipelineName;
@@ -44,7 +42,6 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the import pipeline.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -55,7 +52,6 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of all options configured for the pipeline.
-     * 
      */
     @Import(name="options")
       private final @Nullable Output<List<Either<String,PipelineOptions>>> options;
@@ -66,7 +62,6 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
@@ -77,7 +72,6 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -88,7 +82,6 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source properties of the import pipeline.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<ImportPipelineSourcePropertiesArgs> source;
@@ -99,7 +92,6 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties that describe the trigger of the import pipeline.
-     * 
      */
     @Import(name="trigger")
       private final @Nullable Output<PipelineTriggerPropertiesArgs> trigger;

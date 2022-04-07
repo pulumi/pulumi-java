@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The private link service connection state.
- * 
  */
 public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
 
     /**
      * The required actions.
-     * 
      */
     @Import(name="actionsRequired")
       private final @Nullable Output<String> actionsRequired;
@@ -33,7 +31,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
 
     /**
      * The description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -44,7 +41,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
 
     /**
      * The status.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,Status>> status;

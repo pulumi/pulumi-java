@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a single status change.
- * 
  */
 public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Dictionary to hold generic information which is not stored
      * by the already existing properties
-     * 
      */
     @Import(name="additionalOrderDetails", required=true)
       private final Map<String,String> additionalOrderDetails;
@@ -34,7 +32,6 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Comments related to this status change.
-     * 
      */
     @Import(name="comments")
       private final @Nullable String comments;
@@ -45,7 +42,6 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Status of the order as per the allowed status types.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -56,7 +52,6 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Tracking information related to the state in the ordering flow
-     * 
      */
     @Import(name="trackingInformation", required=true)
       private final TrackingInfoResponse trackingInformation;
@@ -67,7 +62,6 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Time of status update.
-     * 
      */
     @Import(name="updateDateTime", required=true)
       private final String updateDateTime;

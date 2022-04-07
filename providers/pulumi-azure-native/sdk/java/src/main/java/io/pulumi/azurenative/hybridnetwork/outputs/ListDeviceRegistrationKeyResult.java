@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ListDeviceRegistrationKeyResult {
     /**
      * The registration key for the device.
-     * 
      */
     private final String registrationKey;
 
@@ -22,7 +21,6 @@ public final class ListDeviceRegistrationKeyResult {
 
     /**
      * The registration key for the device.
-     * 
     */
     public String getRegistrationKey() {
         return this.registrationKey;

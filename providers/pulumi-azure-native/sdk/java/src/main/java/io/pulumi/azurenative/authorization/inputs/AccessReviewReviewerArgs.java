@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Descriptor for what needs to be reviewed
- * 
  */
 public final class AccessReviewReviewerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
 
     /**
      * The id of the reviewer(user/servicePrincipal)
-     * 
      */
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;

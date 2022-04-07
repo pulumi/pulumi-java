@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU parameters particular to a cluster instance.
- * 
  */
 public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The quantity of Event Hubs Cluster Capacity Units contained in this cluster.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -34,7 +32,6 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of this SKU.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,ClusterSkuName>> name;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for public IP address sharing.
- * 
  */
 public final class SubnetSharedPublicIpAddressConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse extends io.p
 
     /**
      * Backend ports that virtual machines on this subnet are allowed to expose
-     * 
      */
     @Import(name="allowedPorts")
       private final @Nullable List<PortResponse> allowedPorts;

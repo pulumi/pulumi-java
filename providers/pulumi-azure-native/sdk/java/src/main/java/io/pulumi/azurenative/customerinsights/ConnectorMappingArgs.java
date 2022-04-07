@@ -20,7 +20,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the connector.
-     * 
      */
     @Import(name="connectorName", required=true)
       private final Output<String> connectorName;
@@ -31,7 +30,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Type of connector.
-     * 
      */
     @Import(name="connectorType")
       private final @Nullable Output<Either<String,ConnectorTypes>> connectorType;
@@ -42,7 +40,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The description of the connector mapping.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -53,7 +50,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Display name for the connector mapping.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -64,7 +60,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Defines which entity type the file should map to.
-     * 
      */
     @Import(name="entityType", required=true)
       private final Output<EntityTypes> entityType;
@@ -75,7 +70,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The mapping entity name.
-     * 
      */
     @Import(name="entityTypeName", required=true)
       private final Output<String> entityTypeName;
@@ -86,7 +80,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
@@ -97,7 +90,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the connector mapping.
-     * 
      */
     @Import(name="mappingName")
       private final @Nullable Output<String> mappingName;
@@ -108,7 +100,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The properties of the mapping.
-     * 
      */
     @Import(name="mappingProperties", required=true)
       private final Output<ConnectorMappingPropertiesArgs> mappingProperties;
@@ -119,7 +110,6 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

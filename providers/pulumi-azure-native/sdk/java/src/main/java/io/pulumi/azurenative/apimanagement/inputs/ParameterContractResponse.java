@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Operation parameters details.
- * 
  */
 public final class ParameterContractResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Default parameter value.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable String defaultValue;
@@ -33,7 +31,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Parameter description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -44,7 +41,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Parameter name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -55,7 +51,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies whether parameter is required or not.
-     * 
      */
     @Import(name="required")
       private final @Nullable Boolean required;
@@ -66,7 +61,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Parameter type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -77,7 +71,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Parameter values.
-     * 
      */
     @Import(name="values")
       private final @Nullable List<String> values;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The X12 schema reference.
- * 
  */
 public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The message id.
-     * 
      */
     @Import(name="messageId", required=true)
       private final Output<String> messageId;
@@ -31,7 +29,6 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The schema name.
-     * 
      */
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
@@ -42,7 +39,6 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The schema version.
-     * 
      */
     @Import(name="schemaVersion", required=true)
       private final Output<String> schemaVersion;
@@ -53,7 +49,6 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The sender application id.
-     * 
      */
     @Import(name="senderApplicationId")
       private final @Nullable Output<String> senderApplicationId;

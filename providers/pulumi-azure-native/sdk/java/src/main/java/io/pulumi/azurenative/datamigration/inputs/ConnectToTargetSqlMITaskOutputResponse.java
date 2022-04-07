@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Output for the task that validates connection to Azure SQL Database Managed Instance.
- * 
  */
 public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
 
     /**
      * List of agent jobs on the target server.
-     * 
      */
     @Import(name="agentJobs", required=true)
       private final List<String> agentJobs;
@@ -31,7 +29,6 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -42,7 +39,6 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
 
     /**
      * List of logins on the target server.
-     * 
      */
     @Import(name="logins", required=true)
       private final List<String> logins;
@@ -53,7 +49,6 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
 
     /**
      * Target server brand version
-     * 
      */
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
@@ -64,7 +59,6 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
 
     /**
      * Target server version
-     * 
      */
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
@@ -75,7 +69,6 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
 
     /**
      * Validation errors
-     * 
      */
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;

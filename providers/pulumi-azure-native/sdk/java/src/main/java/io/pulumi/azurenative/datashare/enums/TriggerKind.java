@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Kind of synchronization on trigger.
-     * 
      */
     @EnumType
     public enum TriggerKind {

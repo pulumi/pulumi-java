@@ -14,7 +14,6 @@ public final class GetVirtualMachineTemplateArgs extends io.pulumi.resources.Inv
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVirtualMachineTemplateArgs extends io.pulumi.resources.Inv
 
     /**
      * Name of the virtual machine template resource.
-     * 
      */
     @Import(name="virtualMachineTemplateName", required=true)
       private final String virtualMachineTemplateName;

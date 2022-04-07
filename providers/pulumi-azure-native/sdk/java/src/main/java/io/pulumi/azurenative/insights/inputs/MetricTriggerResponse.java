@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The trigger that results in a scaling action.
- * 
  */
 public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
@@ -35,7 +33,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * a value indicating whether metric should divide per instance.
-     * 
      */
     @Import(name="dividePerInstance")
       private final @Nullable Boolean dividePerInstance;
@@ -46,7 +43,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the name of the metric that defines what the rule monitors.
-     * 
      */
     @Import(name="metricName", required=true)
       private final String metricName;
@@ -57,7 +53,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the namespace of the metric that defines what the rule monitors.
-     * 
      */
     @Import(name="metricNamespace")
       private final @Nullable String metricNamespace;
@@ -68,7 +63,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the location of the resource the rule monitors.
-     * 
      */
     @Import(name="metricResourceLocation")
       private final @Nullable String metricResourceLocation;
@@ -79,7 +73,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the resource identifier of the resource the rule monitors.
-     * 
      */
     @Import(name="metricResourceUri", required=true)
       private final String metricResourceUri;
@@ -90,7 +83,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the operator that is used to compare the metric data and the threshold.
-     * 
      */
     @Import(name="operator", required=true)
       private final String operator;
@@ -101,7 +93,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the metric statistic type. How the metrics from multiple instances are combined.
-     * 
      */
     @Import(name="statistic", required=true)
       private final String statistic;
@@ -112,7 +103,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the threshold of the metric that triggers the scale action.
-     * 
      */
     @Import(name="threshold", required=true)
       private final Double threshold;
@@ -123,7 +113,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * time aggregation type. How the data that is collected should be combined over time. The default value is Average.
-     * 
      */
     @Import(name="timeAggregation", required=true)
       private final String timeAggregation;
@@ -134,7 +123,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
-     * 
      */
     @Import(name="timeGrain", required=true)
       private final String timeGrain;
@@ -145,7 +133,6 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
-     * 
      */
     @Import(name="timeWindow", required=true)
       private final String timeWindow;

@@ -20,7 +20,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
-     * 
      */
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
@@ -31,7 +30,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the operation. May include HTML formatting tags.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -42,7 +40,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Operation Name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -53,7 +50,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
-     * 
      */
     @Import(name="method", required=true)
       private final Output<String> method;
@@ -64,7 +60,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Operation identifier within an API. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="operationId")
       private final @Nullable Output<String> operationId;
@@ -75,7 +70,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Operation Policies
-     * 
      */
     @Import(name="policies")
       private final @Nullable Output<String> policies;
@@ -86,7 +80,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An entity containing request details.
-     * 
      */
     @Import(name="request")
       private final @Nullable Output<RequestContractArgs> request;
@@ -97,7 +90,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Array of Operation responses.
-     * 
      */
     @Import(name="responses")
       private final @Nullable Output<List<ResponseContractArgs>> responses;
@@ -119,7 +110,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -130,7 +120,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of URL template parameters.
-     * 
      */
     @Import(name="templateParameters")
       private final @Nullable Output<List<ParameterContractArgs>> templateParameters;
@@ -141,7 +130,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
-     * 
      */
     @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;

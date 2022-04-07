@@ -20,7 +20,164 @@ import javax.annotation.Nullable;
  * Specifies information about the gallery Application Version that you want to create or update.
  * API Version: 2020-09-30.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a simple gallery Application Version.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var galleryApplicationVersion = new AzureNative.Compute.GalleryApplicationVersion("galleryApplicationVersion", new AzureNative.Compute.GalleryApplicationVersionArgs
+ *         {
+ *             GalleryApplicationName = "myGalleryApplicationName",
+ *             GalleryApplicationVersionName = "1.0.0",
+ *             GalleryName = "myGalleryName",
+ *             Location = "West US",
+ *             PublishingProfile = new AzureNative.Compute.Inputs.GalleryApplicationVersionPublishingProfileArgs
+ *             {
+ *                 EndOfLifeDate = "2019-07-01T07:00:00Z",
+ *                 ManageActions = new AzureNative.Compute.Inputs.UserArtifactManageArgs
+ *                 {
+ *                     Install = "powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
+ *                     Remove = "del C:\\package ",
+ *                 },
+ *                 ReplicaCount = 1,
+ *                 Source = new AzureNative.Compute.Inputs.UserArtifactSourceArgs
+ *                 {
+ *                     MediaLink = "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
+ *                 },
+ *                 StorageAccountType = "Standard_LRS",
+ *                 TargetRegions = 
+ *                 {
+ *                     new AzureNative.Compute.Inputs.TargetRegionArgs
+ *                     {
+ *                         Name = "West US",
+ *                         RegionalReplicaCount = 1,
+ *                         StorageAccountType = "Standard_LRS",
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewGalleryApplicationVersion(ctx, "galleryApplicationVersion", &compute.GalleryApplicationVersionArgs{
+ * 			GalleryApplicationName:        pulumi.String("myGalleryApplicationName"),
+ * 			GalleryApplicationVersionName: pulumi.String("1.0.0"),
+ * 			GalleryName:                   pulumi.String("myGalleryName"),
+ * 			Location:                      pulumi.String("West US"),
+ * 			PublishingProfile: &compute.GalleryApplicationVersionPublishingProfileArgs{
+ * 				EndOfLifeDate: pulumi.String("2019-07-01T07:00:00Z"),
+ * 				ManageActions: &compute.UserArtifactManageArgs{
+ * 					Install: pulumi.String("powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\""),
+ * 					Remove:  pulumi.String("del C:\\package "),
+ * 				},
+ * 				ReplicaCount: pulumi.Int(1),
+ * 				Source: &compute.UserArtifactSourceArgs{
+ * 					MediaLink: pulumi.String("https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}"),
+ * 				},
+ * 				StorageAccountType: pulumi.String("Standard_LRS"),
+ * 				TargetRegions: compute.TargetRegionArray{
+ * 					&compute.TargetRegionArgs{
+ * 						Name:                 pulumi.String("West US"),
+ * 						RegionalReplicaCount: pulumi.Int(1),
+ * 						StorageAccountType:   pulumi.String("Standard_LRS"),
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const galleryApplicationVersion = new azure_native.compute.GalleryApplicationVersion("galleryApplicationVersion", {
+ *     galleryApplicationName: "myGalleryApplicationName",
+ *     galleryApplicationVersionName: "1.0.0",
+ *     galleryName: "myGalleryName",
+ *     location: "West US",
+ *     publishingProfile: {
+ *         endOfLifeDate: "2019-07-01T07:00:00Z",
+ *         manageActions: {
+ *             install: "powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
+ *             remove: "del C:\\package ",
+ *         },
+ *         replicaCount: 1,
+ *         source: {
+ *             mediaLink: "https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
+ *         },
+ *         storageAccountType: "Standard_LRS",
+ *         targetRegions: [{
+ *             name: "West US",
+ *             regionalReplicaCount: 1,
+ *             storageAccountType: "Standard_LRS",
+ *         }],
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * gallery_application_version = azure_native.compute.GalleryApplicationVersion("galleryApplicationVersion",
+ *     gallery_application_name="myGalleryApplicationName",
+ *     gallery_application_version_name="1.0.0",
+ *     gallery_name="myGalleryName",
+ *     location="West US",
+ *     publishing_profile=azure_native.compute.GalleryApplicationVersionPublishingProfileArgs(
+ *         end_of_life_date="2019-07-01T07:00:00Z",
+ *         manage_actions=azure_native.compute.UserArtifactManageArgs(
+ *             install="powershell -command \"Expand-Archive -Path package.zip -DestinationPath C:\\package\"",
+ *             remove="del C:\\package ",
+ *         ),
+ *         replica_count=1,
+ *         source=azure_native.compute.UserArtifactSourceArgs(
+ *             media_link="https://mystorageaccount.blob.core.windows.net/mycontainer/package.zip?{sasKey}",
+ *         ),
+ *         storage_account_type="Standard_LRS",
+ *         target_regions=[azure_native.compute.TargetRegionArgs(
+ *             name="West US",
+ *             regional_replica_count=1,
+ *             storage_account_type="Standard_LRS",
+ *         )],
+ *     ),
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,98 +192,84 @@ import javax.annotation.Nullable;
 public class GalleryApplicationVersion extends io.pulumi.resources.CustomResource {
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The publishing profile of a gallery image version.
-     * 
      */
     @Export(name="publishingProfile", type=GalleryApplicationVersionPublishingProfileResponse.class, parameters={})
     private Output<GalleryApplicationVersionPublishingProfileResponse> publishingProfile;
 
     /**
      * @return The publishing profile of a gallery image version.
-     * 
      */
     public Output<GalleryApplicationVersionPublishingProfileResponse> getPublishingProfile() {
         return this.publishingProfile;
     }
     /**
      * This is the replication status of the gallery image version.
-     * 
      */
     @Export(name="replicationStatus", type=ReplicationStatusResponse.class, parameters={})
     private Output<ReplicationStatusResponse> replicationStatus;
 
     /**
      * @return This is the replication status of the gallery image version.
-     * 
      */
     public Output<ReplicationStatusResponse> getReplicationStatus() {
         return this.replicationStatus;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

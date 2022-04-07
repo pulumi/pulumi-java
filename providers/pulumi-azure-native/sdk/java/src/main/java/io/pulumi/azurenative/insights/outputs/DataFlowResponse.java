@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class DataFlowResponse {
     /**
      * List of destinations for this data flow.
-     * 
      */
     private final @Nullable List<String> destinations;
     /**
      * List of streams for this data flow.
-     * 
      */
     private final @Nullable List<String> streams;
 
@@ -32,14 +30,12 @@ public final class DataFlowResponse {
 
     /**
      * List of destinations for this data flow.
-     * 
     */
     public List<String> getDestinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
     /**
      * List of streams for this data flow.
-     * 
     */
     public List<String> getStreams() {
         return this.streams == null ? List.of() : this.streams;

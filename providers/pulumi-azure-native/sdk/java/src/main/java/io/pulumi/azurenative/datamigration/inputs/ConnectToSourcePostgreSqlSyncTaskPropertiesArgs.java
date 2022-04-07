@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for the task that validates connection to PostgreSQL server and source server requirements for online migration
- * 
  */
 public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends io.pu
 
     /**
      * Task input
-     * 
      */
     @Import(name="input")
       private final @Nullable Output<ConnectToSourcePostgreSqlSyncTaskInputArgs> input;
@@ -33,7 +31,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskPropertiesArgs extends io.pu
     /**
      * Task type.
      * Expected value is 'ConnectToSource.PostgreSql.Sync'.
-     * 
      */
     @Import(name="taskType", required=true)
       private final Output<String> taskType;

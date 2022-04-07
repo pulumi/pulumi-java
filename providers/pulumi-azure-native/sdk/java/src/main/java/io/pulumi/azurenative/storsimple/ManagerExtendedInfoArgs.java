@@ -17,7 +17,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
-     * 
      */
     @Import(name="algorithm", required=true)
       private final Output<String> algorithm;
@@ -28,7 +27,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Represents the CEK of the resource.
-     * 
      */
     @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
@@ -39,7 +37,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Represents the Cert thumbprint that was used to encrypt the CEK.
-     * 
      */
     @Import(name="encryptionKeyThumbprint")
       private final @Nullable Output<String> encryptionKeyThumbprint;
@@ -50,7 +47,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Represents the CIK of the resource.
-     * 
      */
     @Import(name="integrityKey", required=true)
       private final Output<String> integrityKey;
@@ -61,7 +57,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
@@ -72,7 +67,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
@@ -83,7 +77,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
-     * 
      */
     @Import(name="portalCertificateThumbprint")
       private final @Nullable Output<String> portalCertificateThumbprint;
@@ -94,7 +87,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -105,7 +97,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The version of the extended info being persisted.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

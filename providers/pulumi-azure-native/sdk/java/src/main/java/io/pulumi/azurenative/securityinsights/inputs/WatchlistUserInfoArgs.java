@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * User information that made some action
- * 
  */
 public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The object id of the user.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;

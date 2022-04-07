@@ -20,7 +20,83 @@ import javax.annotation.Nullable;
  * The description of Dicom Service
  * API Version: 2021-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a Dicom Service
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dicomService = new AzureNative.HealthcareApis.DicomService("dicomService", new AzureNative.HealthcareApis.DicomServiceArgs
+ *         {
+ *             DicomServiceName = "blue",
+ *             Location = "westus",
+ *             ResourceGroupName = "testRG",
+ *             WorkspaceName = "workspace1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	healthcareapis "github.com/pulumi/pulumi-azure-native/sdk/go/azure/healthcareapis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := healthcareapis.NewDicomService(ctx, "dicomService", &healthcareapis.DicomServiceArgs{
+ * 			DicomServiceName:  pulumi.String("blue"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("testRG"),
+ * 			WorkspaceName:     pulumi.String("workspace1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dicomService = new azure_native.healthcareapis.DicomService("dicomService", {
+ *     dicomServiceName: "blue",
+ *     location: "westus",
+ *     resourceGroupName: "testRG",
+ *     workspaceName: "workspace1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * dicom_service = azure_native.healthcareapis.DicomService("dicomService",
+ *     dicom_service_name="blue",
+ *     location="westus",
+ *     resource_group_name="testRG",
+ *     workspace_name="workspace1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +111,108 @@ import javax.annotation.Nullable;
 public class DicomService extends io.pulumi.resources.CustomResource {
     /**
      * Dicom Service authentication configuration.
-     * 
      */
     @Export(name="authenticationConfiguration", type=DicomServiceAuthenticationConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ DicomServiceAuthenticationConfigurationResponse> authenticationConfiguration;
 
     /**
      * @return Dicom Service authentication configuration.
-     * 
      */
     public Output</* @Nullable */ DicomServiceAuthenticationConfigurationResponse> getAuthenticationConfiguration() {
         return this.authenticationConfiguration;
     }
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return An etag associated with the resource, used for optimistic concurrency when editing it.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The url of the Dicom Services.
-     * 
      */
     @Export(name="serviceUrl", type=String.class, parameters={})
     private Output<String> serviceUrl;
 
     /**
      * @return The url of the Dicom Services.
-     * 
      */
     public Output<String> getServiceUrl() {
         return this.serviceUrl;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

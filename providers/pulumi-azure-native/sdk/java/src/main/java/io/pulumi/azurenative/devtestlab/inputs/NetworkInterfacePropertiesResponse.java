@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a network interface.
- * 
  */
 public final class NetworkInterfacePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
 
     /**
      * The DNS name.
-     * 
      */
     @Import(name="dnsName")
       private final @Nullable String dnsName;
@@ -32,7 +30,6 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
 
     /**
      * The private IP address.
-     * 
      */
     @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
@@ -43,7 +40,6 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
 
     /**
      * The public IP address.
-     * 
      */
     @Import(name="publicIpAddress")
       private final @Nullable String publicIpAddress;
@@ -54,7 +50,6 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
 
     /**
      * The resource ID of the public IP address.
-     * 
      */
     @Import(name="publicIpAddressId")
       private final @Nullable String publicIpAddressId;
@@ -65,7 +60,6 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
 
     /**
      * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
-     * 
      */
     @Import(name="rdpAuthority")
       private final @Nullable String rdpAuthority;
@@ -76,7 +70,6 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
 
     /**
      * The configuration for sharing a public IP address across multiple virtual machines.
-     * 
      */
     @Import(name="sharedPublicIpAddressConfiguration")
       private final @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
@@ -87,7 +80,6 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
 
     /**
      * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
-     * 
      */
     @Import(name="sshAuthority")
       private final @Nullable String sshAuthority;
@@ -98,7 +90,6 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
 
     /**
      * The resource ID of the sub net.
-     * 
      */
     @Import(name="subnetId")
       private final @Nullable String subnetId;
@@ -109,7 +100,6 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
 
     /**
      * The resource ID of the virtual network.
-     * 
      */
     @Import(name="virtualNetworkId")
       private final @Nullable String virtualNetworkId;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Show costs accumulated over time.
-     * 
      */
     @EnumType
     public enum AccumulatedType {

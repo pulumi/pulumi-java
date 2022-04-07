@@ -28,7 +28,373 @@ import javax.annotation.Nullable;
  * A class represent a resource.
  * API Version: 2021-04-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WebPubSub_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var webPubSub = new AzureNative.WebPubSub.WebPubSub("webPubSub", new AzureNative.WebPubSub.WebPubSubArgs
+ *         {
+ *             EventHandler = new AzureNative.WebPubSub.Inputs.EventHandlerSettingsArgs
+ *             {
+ *                 Items = 
+ *                 {
+ *                     { "hub1", 
+ *                     {
+ *                         new AzureNative.WebPubSub.Inputs.EventHandlerTemplateArgs
+ *                         {
+ *                             UrlTemplate = "https://example.com/chat/api/hub1",
+ *                             UserEventPattern = "*",
+ *                         },
+ *                     } },
+ *                     { "hub2", 
+ *                     {
+ *                         new AzureNative.WebPubSub.Inputs.EventHandlerTemplateArgs
+ *                         {
+ *                             UrlTemplate = "https://example.com/chat/api/hub2/example1",
+ *                             UserEventPattern = "example1",
+ *                         },
+ *                         new AzureNative.WebPubSub.Inputs.EventHandlerTemplateArgs
+ *                         {
+ *                             UrlTemplate = "https://example.com/chat/api/hub2/example2",
+ *                             UserEventPattern = "example2",
+ *                         },
+ *                     } },
+ *                 },
+ *             },
+ *             Features = 
+ *             {
+ *                 new AzureNative.WebPubSub.Inputs.WebPubSubFeatureArgs
+ *                 {
+ *                     Flag = "ServiceMode",
+ *                     Properties = ,
+ *                     Value = "Serverless",
+ *                 },
+ *                 new AzureNative.WebPubSub.Inputs.WebPubSubFeatureArgs
+ *                 {
+ *                     Flag = "EnableConnectivityLogs",
+ *                     Properties = ,
+ *                     Value = "True",
+ *                 },
+ *                 new AzureNative.WebPubSub.Inputs.WebPubSubFeatureArgs
+ *                 {
+ *                     Flag = "EnableMessagingLogs",
+ *                     Properties = ,
+ *                     Value = "False",
+ *                 },
+ *                 new AzureNative.WebPubSub.Inputs.WebPubSubFeatureArgs
+ *                 {
+ *                     Flag = "EnableLiveTrace",
+ *                     Properties = ,
+ *                     Value = "False",
+ *                 },
+ *             },
+ *             Identity = new AzureNative.WebPubSub.Inputs.ManagedIdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "eastus",
+ *             NetworkACLs = new AzureNative.WebPubSub.Inputs.WebPubSubNetworkACLsArgs
+ *             {
+ *                 DefaultAction = "Deny",
+ *                 PrivateEndpoints = 
+ *                 {
+ *                     new AzureNative.WebPubSub.Inputs.PrivateEndpointACLArgs
+ *                     {
+ *                         Allow = 
+ *                         {
+ *                             "ServerConnection",
+ *                         },
+ *                         Name = "mywebpubsubservice.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+ *                     },
+ *                 },
+ *                 PublicNetwork = new AzureNative.WebPubSub.Inputs.NetworkACLArgs
+ *                 {
+ *                     Allow = 
+ *                     {
+ *                         "ClientConnection",
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ResourceName = "myWebPubSubService",
+ *             Sku = new AzureNative.WebPubSub.Inputs.ResourceSkuArgs
+ *             {
+ *                 Capacity = 1,
+ *                 Name = "Standard_S1",
+ *                 Tier = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             Tls = new AzureNative.WebPubSub.Inputs.WebPubSubTlsSettingsArgs
+ *             {
+ *                 ClientCertEnabled = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	webpubsub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/webpubsub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := webpubsub.NewWebPubSub(ctx, "webPubSub", &webpubsub.WebPubSubArgs{
+ * 			EventHandler: &webpubsub.EventHandlerSettingsArgs{
+ * 				Items: webpubsub.EventHandlerTemplateArrayMap{
+ * 					"hub1": webpubsub.EventHandlerTemplateArray{
+ * 						&webpubsub.EventHandlerTemplateArgs{
+ * 							UrlTemplate:      pulumi.String("https://example.com/chat/api/hub1"),
+ * 							UserEventPattern: pulumi.String("*"),
+ * 						},
+ * 					},
+ * 					"hub2": webpubsub.EventHandlerTemplateArray{
+ * 						&webpubsub.EventHandlerTemplateArgs{
+ * 							UrlTemplate:      pulumi.String("https://example.com/chat/api/hub2/example1"),
+ * 							UserEventPattern: pulumi.String("example1"),
+ * 						},
+ * 						&webpubsub.EventHandlerTemplateArgs{
+ * 							UrlTemplate:      pulumi.String("https://example.com/chat/api/hub2/example2"),
+ * 							UserEventPattern: pulumi.String("example2"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Features: []webpubsub.WebPubSubFeatureArgs{
+ * 				&webpubsub.WebPubSubFeatureArgs{
+ * 					Flag:       pulumi.String("ServiceMode"),
+ * 					Properties: nil,
+ * 					Value:      pulumi.String("Serverless"),
+ * 				},
+ * 				&webpubsub.WebPubSubFeatureArgs{
+ * 					Flag:       pulumi.String("EnableConnectivityLogs"),
+ * 					Properties: nil,
+ * 					Value:      pulumi.String("True"),
+ * 				},
+ * 				&webpubsub.WebPubSubFeatureArgs{
+ * 					Flag:       pulumi.String("EnableMessagingLogs"),
+ * 					Properties: nil,
+ * 					Value:      pulumi.String("False"),
+ * 				},
+ * 				&webpubsub.WebPubSubFeatureArgs{
+ * 					Flag:       pulumi.String("EnableLiveTrace"),
+ * 					Properties: nil,
+ * 					Value:      pulumi.String("False"),
+ * 				},
+ * 			},
+ * 			Identity: &webpubsub.ManagedIdentityArgs{
+ * 				Type: pulumi.String("SystemAssigned"),
+ * 			},
+ * 			Location: pulumi.String("eastus"),
+ * 			NetworkACLs: &webpubsub.WebPubSubNetworkACLsArgs{
+ * 				DefaultAction: pulumi.String("Deny"),
+ * 				PrivateEndpoints: webpubsub.PrivateEndpointACLArray{
+ * 					&webpubsub.PrivateEndpointACLArgs{
+ * 						Allow: pulumi.StringArray{
+ * 							pulumi.String("ServerConnection"),
+ * 						},
+ * 						Name: pulumi.String("mywebpubsubservice.1fa229cd-bf3f-47f0-8c49-afb36723997e"),
+ * 					},
+ * 				},
+ * 				PublicNetwork: &webpubsub.NetworkACLArgs{
+ * 					Allow: pulumi.StringArray{
+ * 						pulumi.String("ClientConnection"),
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ResourceName:      pulumi.String("myWebPubSubService"),
+ * 			Sku: &webpubsub.ResourceSkuArgs{
+ * 				Capacity: pulumi.Int(1),
+ * 				Name:     pulumi.String("Standard_S1"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			Tls: &webpubsub.WebPubSubTlsSettingsArgs{
+ * 				ClientCertEnabled: pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const webPubSub = new azure_native.webpubsub.WebPubSub("webPubSub", {
+ *     eventHandler: {
+ *         items: {
+ *             hub1: [{
+ *                 urlTemplate: "https://example.com/chat/api/hub1",
+ *                 userEventPattern: "*",
+ *             }],
+ *             hub2: [
+ *                 {
+ *                     urlTemplate: "https://example.com/chat/api/hub2/example1",
+ *                     userEventPattern: "example1",
+ *                 },
+ *                 {
+ *                     urlTemplate: "https://example.com/chat/api/hub2/example2",
+ *                     userEventPattern: "example2",
+ *                 },
+ *             ],
+ *         },
+ *     },
+ *     features: [
+ *         {
+ *             flag: "ServiceMode",
+ *             properties: {},
+ *             value: "Serverless",
+ *         },
+ *         {
+ *             flag: "EnableConnectivityLogs",
+ *             properties: {},
+ *             value: "True",
+ *         },
+ *         {
+ *             flag: "EnableMessagingLogs",
+ *             properties: {},
+ *             value: "False",
+ *         },
+ *         {
+ *             flag: "EnableLiveTrace",
+ *             properties: {},
+ *             value: "False",
+ *         },
+ *     ],
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "eastus",
+ *     networkACLs: {
+ *         defaultAction: "Deny",
+ *         privateEndpoints: [{
+ *             allow: ["ServerConnection"],
+ *             name: "mywebpubsubservice.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+ *         }],
+ *         publicNetwork: {
+ *             allow: ["ClientConnection"],
+ *         },
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     resourceName: "myWebPubSubService",
+ *     sku: {
+ *         capacity: 1,
+ *         name: "Standard_S1",
+ *         tier: "Standard",
+ *     },
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     tls: {
+ *         clientCertEnabled: false,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * web_pub_sub = azure_native.webpubsub.WebPubSub("webPubSub",
+ *     event_handler=azure_native.webpubsub.EventHandlerSettingsArgs(
+ *         items={
+ *             "hub1": [azure_native.webpubsub.EventHandlerTemplateArgs(
+ *                 url_template="https://example.com/chat/api/hub1",
+ *                 user_event_pattern="*",
+ *             )],
+ *             "hub2": [
+ *                 azure_native.webpubsub.EventHandlerTemplateArgs(
+ *                     url_template="https://example.com/chat/api/hub2/example1",
+ *                     user_event_pattern="example1",
+ *                 ),
+ *                 azure_native.webpubsub.EventHandlerTemplateArgs(
+ *                     url_template="https://example.com/chat/api/hub2/example2",
+ *                     user_event_pattern="example2",
+ *                 ),
+ *             ],
+ *         },
+ *     ),
+ *     features=[
+ *         azure_native.webpubsub.WebPubSubFeatureArgs(
+ *             flag="ServiceMode",
+ *             properties={},
+ *             value="Serverless",
+ *         ),
+ *         azure_native.webpubsub.WebPubSubFeatureArgs(
+ *             flag="EnableConnectivityLogs",
+ *             properties={},
+ *             value="True",
+ *         ),
+ *         azure_native.webpubsub.WebPubSubFeatureArgs(
+ *             flag="EnableMessagingLogs",
+ *             properties={},
+ *             value="False",
+ *         ),
+ *         azure_native.webpubsub.WebPubSubFeatureArgs(
+ *             flag="EnableLiveTrace",
+ *             properties={},
+ *             value="False",
+ *         ),
+ *     ],
+ *     identity=azure_native.webpubsub.ManagedIdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="eastus",
+ *     network_acls=azure_native.webpubsub.WebPubSubNetworkACLsArgs(
+ *         default_action="Deny",
+ *         private_endpoints=[azure_native.webpubsub.PrivateEndpointACLArgs(
+ *             allow=["ServerConnection"],
+ *             name="mywebpubsubservice.1fa229cd-bf3f-47f0-8c49-afb36723997e",
+ *         )],
+ *         public_network=azure_native.webpubsub.NetworkACLArgs(
+ *             allow=["ClientConnection"],
+ *         ),
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     resource_name="myWebPubSubService",
+ *     sku=azure_native.webpubsub.ResourceSkuArgs(
+ *         capacity=1,
+ *         name="Standard_S1",
+ *         tier="Standard",
+ *     ),
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     tls=azure_native.webpubsub.WebPubSubTlsSettingsArgs(
+ *         client_cert_enabled=False,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -43,28 +409,24 @@ import javax.annotation.Nullable;
 public class WebPubSub extends io.pulumi.resources.CustomResource {
     /**
      * The settings for event handler in webpubsub service.
-     * 
      */
     @Export(name="eventHandler", type=EventHandlerSettingsResponse.class, parameters={})
     private Output</* @Nullable */ EventHandlerSettingsResponse> eventHandler;
 
     /**
      * @return The settings for event handler in webpubsub service.
-     * 
      */
     public Output</* @Nullable */ EventHandlerSettingsResponse> getEventHandler() {
         return this.eventHandler;
     }
     /**
      * The publicly accessible IP of the resource.
-     * 
      */
     @Export(name="externalIP", type=String.class, parameters={})
     private Output<String> externalIP;
 
     /**
      * @return The publicly accessible IP of the resource.
-     * 
      */
     public Output<String> getExternalIP() {
         return this.externalIP;
@@ -73,10 +435,9 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * List of the featureFlags.
      * 
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
-     * And the response will only include featureFlags that are explicitly set.
+     * And the response will only include featureFlags that are explicitly set. 
      * When a featureFlag is not explicitly set, its globally default value will be used
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
-     * 
      */
     @Export(name="features", type=List.class, parameters={WebPubSubFeatureResponse.class})
     private Output</* @Nullable */ List<WebPubSubFeatureResponse>> features;
@@ -85,108 +446,93 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * @return List of the featureFlags.
      * 
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
-     * And the response will only include featureFlags that are explicitly set.
+     * And the response will only include featureFlags that are explicitly set. 
      * When a featureFlag is not explicitly set, its globally default value will be used
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
-     * 
      */
     public Output</* @Nullable */ List<WebPubSubFeatureResponse>> getFeatures() {
         return this.features;
     }
     /**
      * FQDN of the service instance.
-     * 
      */
     @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
      * @return FQDN of the service instance.
-     * 
      */
     public Output<String> getHostName() {
         return this.hostName;
     }
     /**
      * The managed identity response
-     * 
      */
     @Export(name="identity", type=ManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityResponse> identity;
 
     /**
      * @return The managed identity response
-     * 
      */
     public Output</* @Nullable */ ManagedIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Network ACLs
-     * 
      */
     @Export(name="networkACLs", type=WebPubSubNetworkACLsResponse.class, parameters={})
     private Output</* @Nullable */ WebPubSubNetworkACLsResponse> networkACLs;
 
     /**
      * @return Network ACLs
-     * 
      */
     public Output</* @Nullable */ WebPubSubNetworkACLsResponse> getNetworkACLs() {
         return this.networkACLs;
     }
     /**
      * Private endpoint connections to the resource.
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return Private endpoint connections to the resource.
-     * 
      */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
@@ -195,7 +541,6 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * Enable or disable public network access. Default to "Enabled".
      * When it's Enabled, network ACLs still apply.
      * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
-     * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
@@ -204,133 +549,114 @@ public class WebPubSub extends io.pulumi.resources.CustomResource {
      * @return Enable or disable public network access. Default to "Enabled".
      * When it's Enabled, network ACLs still apply.
      * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
-     * 
      */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * The publicly accessible port of the resource which is designed for browser/client side usage.
-     * 
      */
     @Export(name="publicPort", type=Integer.class, parameters={})
     private Output<Integer> publicPort;
 
     /**
      * @return The publicly accessible port of the resource which is designed for browser/client side usage.
-     * 
      */
     public Output<Integer> getPublicPort() {
         return this.publicPort;
     }
     /**
      * The publicly accessible port of the resource which is designed for customer server side usage.
-     * 
      */
     @Export(name="serverPort", type=Integer.class, parameters={})
     private Output<Integer> serverPort;
 
     /**
      * @return The publicly accessible port of the resource which is designed for customer server side usage.
-     * 
      */
     public Output<Integer> getServerPort() {
         return this.serverPort;
     }
     /**
      * The list of shared private link resources.
-     * 
      */
     @Export(name="sharedPrivateLinkResources", type=List.class, parameters={SharedPrivateLinkResourceResponse.class})
     private Output<List<SharedPrivateLinkResourceResponse>> sharedPrivateLinkResources;
 
     /**
      * @return The list of shared private link resources.
-     * 
      */
     public Output<List<SharedPrivateLinkResourceResponse>> getSharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources;
     }
     /**
      * The billing information of the resource.(e.g. Free, Standard)
-     * 
      */
     @Export(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSkuResponse> sku;
 
     /**
      * @return The billing information of the resource.(e.g. Free, Standard)
-     * 
      */
     public Output</* @Nullable */ ResourceSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * TLS settings.
-     * 
      */
     @Export(name="tls", type=WebPubSubTlsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ WebPubSubTlsSettingsResponse> tls;
 
     /**
      * @return TLS settings.
-     * 
      */
     public Output</* @Nullable */ WebPubSubTlsSettingsResponse> getTls() {
         return this.tls;
     }
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Version of the resource. Probably you need the same or higher version of client SDKs.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return Version of the resource. Probably you need the same or higher version of client SDKs.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

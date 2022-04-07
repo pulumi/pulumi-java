@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
-     * 
      */
     @EnumType
     public enum CosmosDbServicePrincipalCredentialType {

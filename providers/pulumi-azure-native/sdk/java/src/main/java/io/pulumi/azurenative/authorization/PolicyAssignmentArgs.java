@@ -24,7 +24,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * This message will be part of response in case of policy violation.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -35,7 +34,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The display name of the policy assignment.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -46,7 +44,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
-     * 
      */
     @Import(name="enforcementMode")
       private final @Nullable Output<Either<String,EnforcementMode>> enforcementMode;
@@ -57,7 +54,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The managed identity associated with the policy assignment.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -68,7 +64,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The location of the policy assignment. Only required when utilizing managed identity.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -79,7 +74,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -90,7 +84,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The messages that describe why a resource is non-compliant with the policy.
-     * 
      */
     @Import(name="nonComplianceMessages")
       private final @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages;
@@ -101,7 +94,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The policy's excluded scopes.
-     * 
      */
     @Import(name="notScopes")
       private final @Nullable Output<List<String>> notScopes;
@@ -112,7 +104,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The parameter values for the assigned policy rule. The keys are the parameter names.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
@@ -123,7 +114,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the policy assignment.
-     * 
      */
     @Import(name="policyAssignmentName")
       private final @Nullable Output<String> policyAssignmentName;
@@ -134,7 +124,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The ID of the policy definition or policy set definition being assigned.
-     * 
      */
     @Import(name="policyDefinitionId")
       private final @Nullable Output<String> policyDefinitionId;
@@ -145,7 +134,6 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;

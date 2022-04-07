@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of an artifact.
- * 
  */
 public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
 
     /**
      * The artifact's identifier.
-     * 
      */
     @Import(name="artifactId")
       private final @Nullable String artifactId;
@@ -33,7 +31,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
 
     /**
      * The artifact's title.
-     * 
      */
     @Import(name="artifactTitle")
       private final @Nullable String artifactTitle;
@@ -44,7 +41,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
 
     /**
      * The status message from the deployment.
-     * 
      */
     @Import(name="deploymentStatusMessage")
       private final @Nullable String deploymentStatusMessage;
@@ -55,7 +51,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
 
     /**
      * The time that the artifact starts to install on the virtual machine.
-     * 
      */
     @Import(name="installTime")
       private final @Nullable String installTime;
@@ -66,7 +61,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
 
     /**
      * The parameters of the artifact.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<ArtifactParameterPropertiesResponse> parameters;
@@ -77,7 +71,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
 
     /**
      * The status of the artifact.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -88,7 +81,6 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
 
     /**
      * The status message from the virtual machine extension.
-     * 
      */
     @Import(name="vmExtensionStatusMessage")
       private final @Nullable String vmExtensionStatusMessage;

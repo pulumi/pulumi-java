@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Match Variable
-     * 
      */
     @EnumType
     public enum RulesEngineMatchVariable {

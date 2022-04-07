@@ -39,7 +39,142 @@ import javax.annotation.Nullable;
  * A task resource
  * API Version: 2018-04-19.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Tasks_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var task = new AzureNative.DataMigration.Task("task", new AzureNative.DataMigration.TaskArgs
+ *         {
+ *             GroupName = "DmsSdkRg",
+ *             ProjectName = "DmsSdkProject",
+ *             Properties = new AzureNative.DataMigration.Inputs.ConnectToTargetSqlDbTaskPropertiesArgs
+ *             {
+ *                 Input = new AzureNative.DataMigration.Inputs.ConnectToTargetSqlDbTaskInputArgs
+ *                 {
+ *                     TargetConnectionInfo = new AzureNative.DataMigration.Inputs.SqlConnectionInfoArgs
+ *                     {
+ *                         Authentication = "SqlAuthentication",
+ *                         DataSource = "ssma-test-server.database.windows.net",
+ *                         EncryptConnection = true,
+ *                         Password = "testpassword",
+ *                         TrustServerCertificate = true,
+ *                         Type = "SqlConnectionInfo",
+ *                         UserName = "testuser",
+ *                     },
+ *                 },
+ *                 TaskType = "ConnectToTarget.SqlDb",
+ *             },
+ *             ServiceName = "DmsSdkService",
+ *             TaskName = "DmsSdkTask",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datamigration.NewTask(ctx, "task", &datamigration.TaskArgs{
+ * 			GroupName:   pulumi.String("DmsSdkRg"),
+ * 			ProjectName: pulumi.String("DmsSdkProject"),
+ * 			Properties: datamigration.ConnectToTargetSqlDbTaskProperties{
+ * 				Input: datamigration.ConnectToTargetSqlDbTaskInput{
+ * 					TargetConnectionInfo: datamigration.SqlConnectionInfo{
+ * 						Authentication:         "SqlAuthentication",
+ * 						DataSource:             "ssma-test-server.database.windows.net",
+ * 						EncryptConnection:      true,
+ * 						Password:               "testpassword",
+ * 						TrustServerCertificate: true,
+ * 						Type:                   "SqlConnectionInfo",
+ * 						UserName:               "testuser",
+ * 					},
+ * 				},
+ * 				TaskType: "ConnectToTarget.SqlDb",
+ * 			},
+ * 			ServiceName: pulumi.String("DmsSdkService"),
+ * 			TaskName:    pulumi.String("DmsSdkTask"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const task = new azure_native.datamigration.Task("task", {
+ *     groupName: "DmsSdkRg",
+ *     projectName: "DmsSdkProject",
+ *     properties: {
+ *         input: {
+ *             targetConnectionInfo: {
+ *                 authentication: "SqlAuthentication",
+ *                 dataSource: "ssma-test-server.database.windows.net",
+ *                 encryptConnection: true,
+ *                 password: "testpassword",
+ *                 trustServerCertificate: true,
+ *                 type: "SqlConnectionInfo",
+ *                 userName: "testuser",
+ *             },
+ *         },
+ *         taskType: "ConnectToTarget.SqlDb",
+ *     },
+ *     serviceName: "DmsSdkService",
+ *     taskName: "DmsSdkTask",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * task = azure_native.datamigration.Task("task",
+ *     group_name="DmsSdkRg",
+ *     project_name="DmsSdkProject",
+ *     properties=azure_native.datamigration.ConnectToTargetSqlDbTaskPropertiesArgs(
+ *         input=azure_native.datamigration.ConnectToTargetSqlDbTaskInputArgs(
+ *             target_connection_info=azure_native.datamigration.SqlConnectionInfoArgs(
+ *                 authentication="SqlAuthentication",
+ *                 data_source="ssma-test-server.database.windows.net",
+ *                 encrypt_connection=True,
+ *                 password="testpassword",
+ *                 trust_server_certificate=True,
+ *                 type="SqlConnectionInfo",
+ *                 user_name="testuser",
+ *             ),
+ *         ),
+ *         task_type="ConnectToTarget.SqlDb",
+ *     ),
+ *     service_name="DmsSdkService",
+ *     task_name="DmsSdkTask")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -54,56 +189,48 @@ import javax.annotation.Nullable;
 public class Task extends io.pulumi.resources.CustomResource {
     /**
      * HTTP strong entity tag value. This is ignored if submitted.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return HTTP strong entity tag value. This is ignored if submitted.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Custom task properties
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return Custom task properties
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the login flow, including the scopes that should be requested.
- * 
  */
 public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of the scopes that should be requested while authenticating.
-     * 
      */
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;

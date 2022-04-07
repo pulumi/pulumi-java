@@ -14,7 +14,6 @@ public final class GetVpnServerConfigurationArgs extends io.pulumi.resources.Inv
 
     /**
      * The resource group name of the VpnServerConfiguration.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVpnServerConfigurationArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the VpnServerConfiguration being retrieved.
-     * 
      */
     @Import(name="vpnServerConfigurationName", required=true)
       private final String vpnServerConfigurationName;

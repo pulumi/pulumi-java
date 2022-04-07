@@ -17,7 +17,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User-defined description of the job.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the job agent.
-     * 
      */
     @Import(name="jobAgentName", required=true)
       private final Output<String> jobAgentName;
@@ -39,7 +37,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the job to get.
-     * 
      */
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
@@ -50,7 +47,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Schedule properties of the job.
-     * 
      */
     @Import(name="schedule")
       private final @Nullable Output<JobScheduleArgs> schedule;
@@ -72,7 +67,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;

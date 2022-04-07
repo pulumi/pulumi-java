@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The replication policy rule between two containers.
- * 
  */
 public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
 
     /**
      * Required. Destination container name.
-     * 
      */
     @Import(name="destinationContainer", required=true)
       private final String destinationContainer;
@@ -32,7 +30,6 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
 
     /**
      * Optional. An object that defines the filter set.
-     * 
      */
     @Import(name="filters")
       private final @Nullable ObjectReplicationPolicyFilterResponse filters;
@@ -43,7 +40,6 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
 
     /**
      * Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
-     * 
      */
     @Import(name="ruleId")
       private final @Nullable String ruleId;
@@ -54,7 +50,6 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
 
     /**
      * Required. Source container name.
-     * 
      */
     @Import(name="sourceContainer", required=true)
       private final String sourceContainer;

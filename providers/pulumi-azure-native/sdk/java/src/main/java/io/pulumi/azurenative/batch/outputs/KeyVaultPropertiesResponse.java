@@ -17,7 +17,6 @@ public final class KeyVaultPropertiesResponse {
      *  The Batch Account has a System Assigned identity
      *  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
      *  The KeyVault has soft-delete and purge protection enabled
-     * 
      */
     private final @Nullable String keyIdentifier;
 
@@ -32,7 +31,6 @@ public final class KeyVaultPropertiesResponse {
      *  The Batch Account has a System Assigned identity
      *  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
      *  The KeyVault has soft-delete and purge protection enabled
-     * 
     */
     public Optional<String> getKeyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);

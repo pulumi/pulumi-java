@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ExportDeliveryInfoResponse {
     /**
      * Has destination for the export being delivered.
-     * 
      */
     private final ExportDeliveryDestinationResponse destination;
 
@@ -22,7 +21,6 @@ public final class ExportDeliveryInfoResponse {
 
     /**
      * Has destination for the export being delivered.
-     * 
     */
     public ExportDeliveryDestinationResponse getDestination() {
         return this.destination;

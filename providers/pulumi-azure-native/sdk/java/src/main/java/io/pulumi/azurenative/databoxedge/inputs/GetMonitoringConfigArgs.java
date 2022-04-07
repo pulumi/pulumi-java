@@ -14,7 +14,6 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final String deviceName;
@@ -25,7 +24,6 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetMonitoringConfigArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The role name.
-     * 
      */
     @Import(name="roleName", required=true)
       private final String roleName;

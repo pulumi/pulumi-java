@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Enabled configuration.
- * 
  */
 public final class EnabledConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EnabledConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;

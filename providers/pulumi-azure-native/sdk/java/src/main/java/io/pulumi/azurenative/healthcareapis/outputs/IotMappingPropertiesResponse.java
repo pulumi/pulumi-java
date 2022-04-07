@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class IotMappingPropertiesResponse {
     /**
      * The mapping.
-     * 
      */
     private final @Nullable Object content;
 
@@ -24,7 +23,6 @@ public final class IotMappingPropertiesResponse {
 
     /**
      * The mapping.
-     * 
     */
     public Optional<Object> getContent() {
         return Optional.ofNullable(this.content);

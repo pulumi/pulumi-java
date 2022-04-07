@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of StorSimple Manager.
-     * 
      */
     @EnumType
     public enum ManagerType {

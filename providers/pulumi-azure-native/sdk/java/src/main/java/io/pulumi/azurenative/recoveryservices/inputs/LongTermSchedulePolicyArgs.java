@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Long term policy schedule.
- * 
  */
 public final class LongTermSchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LongTermSchedulePolicyArgs extends io.pulumi.resources.Resour
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'LongTermSchedulePolicy'.
-     * 
      */
     @Import(name="schedulePolicyType", required=true)
       private final Output<String> schedulePolicyType;

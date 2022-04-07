@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
-     * 
      */
     @EnumType
     public enum OnErrorDeploymentType {

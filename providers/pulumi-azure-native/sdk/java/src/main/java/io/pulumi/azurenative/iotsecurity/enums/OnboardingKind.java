@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The kind of onboarding for the subscription
-     * 
      */
     @EnumType
     public enum OnboardingKind {

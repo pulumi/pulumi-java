@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for SAP Cloud for Customer.
- * 
  */
 public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -50,7 +47,6 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -61,7 +57,6 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -72,7 +67,6 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -83,7 +77,6 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
 
     /**
      * The password for Basic authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -95,7 +88,6 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
     /**
      * Type of linked service.
      * Expected value is 'SapCloudForCustomer'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -106,7 +98,6 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
 
     /**
      * The URL of SAP Cloud for Customer OData API. For example, '[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]'. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="url", required=true)
       private final Object url;
@@ -117,7 +108,6 @@ public final class SapCloudForCustomerLinkedServiceResponse extends io.pulumi.re
 
     /**
      * The username for Basic authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username")
       private final @Nullable Object username;

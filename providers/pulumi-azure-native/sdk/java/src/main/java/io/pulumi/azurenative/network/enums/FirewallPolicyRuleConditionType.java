@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Rule Condition Type.
-     * 
      */
     @EnumType
     public enum FirewallPolicyRuleConditionType {

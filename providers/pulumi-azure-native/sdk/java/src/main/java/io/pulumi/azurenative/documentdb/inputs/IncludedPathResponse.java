@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The paths that are included in indexing
- * 
  */
 public final class IncludedPathResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class IncludedPathResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of indexes for this path
-     * 
      */
     @Import(name="indexes")
       private final @Nullable List<IndexesResponse> indexes;
@@ -33,7 +31,6 @@ public final class IncludedPathResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-     * 
      */
     @Import(name="path")
       private final @Nullable String path;

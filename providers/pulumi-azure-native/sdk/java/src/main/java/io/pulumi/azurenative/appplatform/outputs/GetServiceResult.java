@@ -16,37 +16,30 @@ import javax.annotation.Nullable;
 public final class GetServiceResult {
     /**
      * Fully qualified resource Id for the resource.
-     * 
      */
     private final String id;
     /**
      * The GEO location of the resource.
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * Properties of the Service resource
-     * 
      */
     private final ClusterResourcePropertiesResponse properties;
     /**
      * Sku of the Service resource
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -70,49 +63,42 @@ public final class GetServiceResult {
 
     /**
      * Fully qualified resource Id for the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The GEO location of the resource.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the Service resource
-     * 
     */
     public ClusterResourcePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Sku of the Service resource
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Determines how resource identity is resolved on the destination.
-     * 
      */
     @EnumType
     public enum IotIdentityResolutionType {

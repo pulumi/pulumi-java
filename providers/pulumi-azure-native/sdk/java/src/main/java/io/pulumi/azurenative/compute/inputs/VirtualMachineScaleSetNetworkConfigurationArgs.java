@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machine scale set network profile's network configurations.
- * 
  */
 public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
 
     /**
      * Specify what happens to the network interface when the VM is deleted
-     * 
      */
     @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
@@ -38,7 +36,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
 
     /**
      * The dns settings to be applied on the network interfaces.
-     * 
      */
     @Import(name="dnsSettings")
       private final @Nullable Output<VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs> dnsSettings;
@@ -49,7 +46,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
 
     /**
      * Specifies whether the network interface is accelerated networking-enabled.
-     * 
      */
     @Import(name="enableAcceleratedNetworking")
       private final @Nullable Output<Boolean> enableAcceleratedNetworking;
@@ -60,7 +56,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
 
     /**
      * Specifies whether the network interface is FPGA networking-enabled.
-     * 
      */
     @Import(name="enableFpga")
       private final @Nullable Output<Boolean> enableFpga;
@@ -71,7 +66,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
 
     /**
      * Whether IP forwarding enabled on this NIC.
-     * 
      */
     @Import(name="enableIPForwarding")
       private final @Nullable Output<Boolean> enableIPForwarding;
@@ -82,7 +76,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -93,7 +86,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
 
     /**
      * Specifies the IP configurations of the network interface.
-     * 
      */
     @Import(name="ipConfigurations", required=true)
       private final Output<List<VirtualMachineScaleSetIPConfigurationArgs>> ipConfigurations;
@@ -104,7 +96,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
 
     /**
      * The network configuration name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -115,7 +106,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
 
     /**
      * The network security group.
-     * 
      */
     @Import(name="networkSecurityGroup")
       private final @Nullable Output<SubResourceArgs> networkSecurityGroup;
@@ -126,7 +116,6 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
 
     /**
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
-     * 
      */
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;

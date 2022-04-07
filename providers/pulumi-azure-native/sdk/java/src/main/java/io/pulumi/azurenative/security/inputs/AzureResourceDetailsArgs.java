@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Details of the Azure resource that was assessed
- * 
  */
 public final class AzureResourceDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AzureResourceDetailsArgs extends io.pulumi.resources.Resource
     /**
      * The platform where the assessed resource resides
      * Expected value is 'Azure'.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<String> source;

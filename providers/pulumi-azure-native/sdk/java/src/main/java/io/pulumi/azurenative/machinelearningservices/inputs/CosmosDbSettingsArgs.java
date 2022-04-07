@@ -16,7 +16,6 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The throughput of the collections in cosmosdb database
-     * 
      */
     @Import(name="collectionsThroughput")
       private final @Nullable Output<Integer> collectionsThroughput;

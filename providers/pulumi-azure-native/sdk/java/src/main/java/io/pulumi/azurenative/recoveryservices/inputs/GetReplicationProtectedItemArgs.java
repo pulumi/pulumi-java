@@ -14,7 +14,6 @@ public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.I
 
     /**
      * Fabric unique name.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final String fabricName;
@@ -25,7 +24,6 @@ public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.I
 
     /**
      * Protection container name.
-     * 
      */
     @Import(name="protectionContainerName", required=true)
       private final String protectionContainerName;
@@ -36,7 +34,6 @@ public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.I
 
     /**
      * Replication protected item name.
-     * 
      */
     @Import(name="replicatedProtectedItemName", required=true)
       private final String replicatedProtectedItemName;
@@ -47,7 +44,6 @@ public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.I
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -58,7 +54,6 @@ public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.I
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

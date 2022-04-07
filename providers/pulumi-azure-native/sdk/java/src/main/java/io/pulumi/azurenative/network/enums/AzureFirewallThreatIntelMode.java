@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The operation mode for Threat Intelligence.
-     * 
      */
     @EnumType
     public enum AzureFirewallThreatIntelMode {

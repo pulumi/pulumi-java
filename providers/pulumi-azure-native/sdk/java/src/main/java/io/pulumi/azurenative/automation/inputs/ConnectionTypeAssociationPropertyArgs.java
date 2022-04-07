@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The connection type property associated with the entity.
- * 
  */
 public final class ConnectionTypeAssociationPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectionTypeAssociationPropertyArgs extends io.pulumi.resou
 
     /**
      * Gets or sets the name of the connection type.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

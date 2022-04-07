@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Describes a configuration store SKU.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU name of the configuration store.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

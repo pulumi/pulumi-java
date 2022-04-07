@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The identity of the Batch pool, if configured. If the pool identity is updated during update an existing pool, only the new vms which are created after the pool shrinks to 0 will have the updated identities
- * 
  */
 public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The type of identity used for the Batch Pool.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<PoolIdentityType> type;
@@ -34,7 +32,6 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;

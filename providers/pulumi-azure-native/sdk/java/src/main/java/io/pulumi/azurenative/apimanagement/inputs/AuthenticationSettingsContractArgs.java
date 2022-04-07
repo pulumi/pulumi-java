@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * API Authentication Settings.
- * 
  */
 public final class AuthenticationSettingsContractArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
 
     /**
      * OAuth2 Authentication settings
-     * 
      */
     @Import(name="oAuth2")
       private final @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2;
@@ -32,7 +30,6 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
 
     /**
      * OpenID Connect Authentication Settings
-     * 
      */
     @Import(name="openid")
       private final @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid;

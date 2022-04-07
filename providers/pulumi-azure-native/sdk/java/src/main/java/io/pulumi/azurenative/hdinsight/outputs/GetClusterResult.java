@@ -16,42 +16,34 @@ import javax.annotation.Nullable;
 public final class GetClusterResult {
     /**
      * The ETag for the resource
-     * 
      */
     private final @Nullable String etag;
     /**
      * Fully qualified resource Id for the resource.
-     * 
      */
     private final String id;
     /**
      * The identity of the cluster, if configured.
-     * 
      */
     private final @Nullable ClusterIdentityResponse identity;
     /**
      * The Azure Region where the resource lives
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The properties of the cluster.
-     * 
      */
     private final ClusterGetPropertiesResponse properties;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -77,56 +69,48 @@ public final class GetClusterResult {
 
     /**
      * The ETag for the resource
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the cluster, if configured.
-     * 
     */
     public Optional<ClusterIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The Azure Region where the resource lives
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of the cluster.
-     * 
     */
     public ClusterGetPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

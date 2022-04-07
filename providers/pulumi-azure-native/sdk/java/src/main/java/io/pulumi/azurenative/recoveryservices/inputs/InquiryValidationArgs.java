@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Validation for inquired protectable items under a given container.
- * 
  */
 public final class InquiryValidationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class InquiryValidationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Status for the Inquiry Validation.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<String> status;

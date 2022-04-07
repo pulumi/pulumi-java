@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The filter expression to be used in the report.
- * 
  */
 public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The logical "AND" expression. Must have at least 2 items.
-     * 
      */
     @Import(name="and")
       private final @Nullable Output<List<ReportConfigFilterArgs>> and;
@@ -32,7 +30,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Has comparison expression for a dimension
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> dimensions;
@@ -43,7 +40,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The logical "OR" expression. Must have at least 2 items.
-     * 
      */
     @Import(name="or")
       private final @Nullable Output<List<ReportConfigFilterArgs>> or;
@@ -54,7 +50,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Has comparison expression for a tag key
-     * 
      */
     @Import(name="tagKey")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tagKey;
@@ -65,7 +60,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Has comparison expression for a tag value
-     * 
      */
     @Import(name="tagValue")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tagValue;
@@ -76,7 +70,6 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Has comparison expression for a tag
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tags;

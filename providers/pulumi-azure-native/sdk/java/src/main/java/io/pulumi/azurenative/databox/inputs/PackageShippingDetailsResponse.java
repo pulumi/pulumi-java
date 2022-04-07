@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Shipping details.
- * 
  */
 public final class PackageShippingDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Name of the carrier.
-     * 
      */
     @Import(name="carrierName", required=true)
       private final String carrierName;
@@ -29,7 +27,6 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Tracking Id of shipment.
-     * 
      */
     @Import(name="trackingId", required=true)
       private final String trackingId;
@@ -40,7 +37,6 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Url where shipment can be tracked.
-     * 
      */
     @Import(name="trackingUrl", required=true)
       private final String trackingUrl;

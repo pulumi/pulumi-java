@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A request to approve or reject a private endpoint connection
- * 
  */
 public final class PrivateLinkConnectionApprovalRequestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateLinkConnectionApprovalRequestArgs extends io.pulumi.re
 
     /**
      * The state of a private link connection
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;

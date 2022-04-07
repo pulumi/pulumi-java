@@ -22,7 +22,75 @@ import javax.annotation.Nullable;
  * Monitor resource.
  * API Version: 2020-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Monitors_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var monitor = new AzureNative.Elastic.Monitor("monitor", new AzureNative.Elastic.MonitorArgs
+ *         {
+ *             MonitorName = "myMonitor",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	elastic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/elastic"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := elastic.NewMonitor(ctx, "monitor", &elastic.MonitorArgs{
+ * 			MonitorName:       pulumi.String("myMonitor"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const monitor = new azure_native.elastic.Monitor("monitor", {
+ *     monitorName: "myMonitor",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * monitor = azure_native.elastic.Monitor("monitor",
+ *     monitor_name="myMonitor",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,112 +105,96 @@ import javax.annotation.Nullable;
 public class Monitor extends io.pulumi.resources.CustomResource {
     /**
      * Identity properties of the monitor resource.
-     * 
      */
     @Export(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
     /**
      * @return Identity properties of the monitor resource.
-     * 
      */
     public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The location of the monitor resource
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the monitor resource
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Name of the monitor resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the monitor resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the monitor resource.
-     * 
      */
     @Export(name="properties", type=MonitorPropertiesResponse.class, parameters={})
     private Output<MonitorPropertiesResponse> properties;
 
     /**
      * @return Properties of the monitor resource.
-     * 
      */
     public Output<MonitorPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * SKU of the monitor resource.
-     * 
      */
     @Export(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSkuResponse> sku;
 
     /**
      * @return SKU of the monitor resource.
-     * 
      */
     public Output</* @Nullable */ ResourceSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The system metadata relating to this resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The tags of the monitor resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the monitor resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the monitor resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the monitor resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

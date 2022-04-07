@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Resource request payload of Service Registry
- * 
  */
 public final class ServiceRegistryResourceRequestsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ServiceRegistryResourceRequestsResponse extends io.pulumi.res
 
     /**
      * Cpu allocated to each Service Registry instance
-     * 
      */
     @Import(name="cpu", required=true)
       private final String cpu;
@@ -30,7 +28,6 @@ public final class ServiceRegistryResourceRequestsResponse extends io.pulumi.res
 
     /**
      * Instance count of the Service Registry
-     * 
      */
     @Import(name="instanceCount", required=true)
       private final Integer instanceCount;
@@ -41,7 +38,6 @@ public final class ServiceRegistryResourceRequestsResponse extends io.pulumi.res
 
     /**
      * Memory allocated to each Service Registry instance
-     * 
      */
     @Import(name="memory", required=true)
       private final String memory;

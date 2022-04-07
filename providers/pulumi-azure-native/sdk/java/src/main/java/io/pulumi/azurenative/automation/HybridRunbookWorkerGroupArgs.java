@@ -17,7 +17,6 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -28,7 +27,6 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * Sets the credential of a worker group.
-     * 
      */
     @Import(name="credential")
       private final @Nullable Output<RunAsCredentialAssociationPropertyArgs> credential;
@@ -39,7 +37,6 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * The hybrid runbook worker group name
-     * 
      */
     @Import(name="hybridRunbookWorkerGroupName")
       private final @Nullable Output<String> hybridRunbookWorkerGroupName;
@@ -50,7 +47,6 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

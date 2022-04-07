@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * File system linked service.
- * 
  */
 public final class FileServerLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -39,7 +37,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -50,7 +47,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -61,7 +57,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -72,7 +67,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * Host name of the server. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="host", required=true)
       private final Output<Object> host;
@@ -83,7 +77,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -94,7 +87,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * Password to logon the server.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -106,7 +98,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
     /**
      * Type of linked service.
      * Expected value is 'FileServer'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -117,7 +108,6 @@ public final class FileServerLinkedServiceArgs extends io.pulumi.resources.Resou
 
     /**
      * User ID to logon the server. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="userId")
       private final @Nullable Output<Object> userId;

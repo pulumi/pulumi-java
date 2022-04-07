@@ -16,7 +16,6 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
 
     /**
      * The datastore name.
-     * 
      */
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
@@ -27,7 +26,6 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
 
     /**
      * Path within the datastore.
-     * 
      */
     @Import(name="relativePath")
       private final @Nullable Output<String> relativePath;

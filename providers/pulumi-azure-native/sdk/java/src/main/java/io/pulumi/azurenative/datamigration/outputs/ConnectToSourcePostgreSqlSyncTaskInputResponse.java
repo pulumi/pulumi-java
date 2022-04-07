@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ConnectToSourcePostgreSqlSyncTaskInputResponse {
     /**
      * Connection information for source PostgreSQL server
-     * 
      */
     private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
@@ -22,7 +21,6 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse {
 
     /**
      * Connection information for source PostgreSQL server
-     * 
     */
     public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;

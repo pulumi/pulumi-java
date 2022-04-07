@@ -19,7 +19,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource Id for the event hub authorization rule.
-     * 
      */
     @Import(name="eventHubAuthorizationRuleId")
       private final @Nullable Output<String> eventHubAuthorizationRuleId;
@@ -30,7 +29,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the event hub. If none is specified, the default event hub will be selected.
-     * 
      */
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
@@ -41,7 +39,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * A string indicating whether the export to Log Analytics should use the default destination type, i.e. AzureDiagnostics, or use a destination type constructed as follows: <normalized service identity>_<normalized category name>. Possible values are: Dedicated and null (null is default.)
-     * 
      */
     @Import(name="logAnalyticsDestinationType")
       private final @Nullable Output<String> logAnalyticsDestinationType;
@@ -52,7 +49,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The list of logs settings.
-     * 
      */
     @Import(name="logs")
       private final @Nullable Output<List<LogSettingsArgs>> logs;
@@ -63,7 +59,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The list of metric settings.
-     * 
      */
     @Import(name="metrics")
       private final @Nullable Output<List<MetricSettingsArgs>> metrics;
@@ -74,7 +69,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the diagnostic setting.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -85,7 +79,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
@@ -96,7 +89,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
-     * 
      */
     @Import(name="serviceBusRuleId")
       private final @Nullable Output<String> serviceBusRuleId;
@@ -107,7 +99,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource ID of the storage account to which you would like to send Diagnostic Logs.
-     * 
      */
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
@@ -118,7 +109,6 @@ public final class DiagnosticSettingArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
-     * 
      */
     @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;

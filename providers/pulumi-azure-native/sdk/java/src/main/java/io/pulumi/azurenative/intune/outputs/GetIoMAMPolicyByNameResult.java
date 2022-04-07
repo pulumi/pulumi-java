@@ -28,19 +28,16 @@ public final class GetIoMAMPolicyByNameResult {
     private final String groupStatus;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     private final String lastModifiedTime;
     /**
      * Resource Location
-     * 
      */
     private final @Nullable String location;
     private final @Nullable String managedBrowser;
     /**
      * Resource name
-     * 
      */
     private final String name;
     private final Integer numOfApps;
@@ -49,13 +46,11 @@ public final class GetIoMAMPolicyByNameResult {
     private final @Nullable Integer pinNumRetry;
     /**
      * Resource Tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     private final @Nullable String touchId;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -154,7 +149,6 @@ public final class GetIoMAMPolicyByNameResult {
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
@@ -164,7 +158,6 @@ public final class GetIoMAMPolicyByNameResult {
     }
     /**
      * Resource Location
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
@@ -174,7 +167,6 @@ public final class GetIoMAMPolicyByNameResult {
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
@@ -193,7 +185,6 @@ public final class GetIoMAMPolicyByNameResult {
     }
     /**
      * Resource Tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -203,7 +194,6 @@ public final class GetIoMAMPolicyByNameResult {
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

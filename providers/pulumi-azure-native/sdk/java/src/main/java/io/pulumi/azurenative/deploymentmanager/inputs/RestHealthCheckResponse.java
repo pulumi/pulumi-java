@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A REST based health check
- * 
  */
 public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * A unique name for this check.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -33,7 +31,6 @@ public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The request to the health provider.
-     * 
      */
     @Import(name="request", required=true)
       private final RestRequestResponse request;
@@ -44,7 +41,6 @@ public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
-     * 
      */
     @Import(name="response")
       private final @Nullable RestResponseResponse response;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PtrRecordResponse {
     /**
      * The PTR target domain name for this PTR record.
-     * 
      */
     private final @Nullable String ptrdname;
 
@@ -24,7 +23,6 @@ public final class PtrRecordResponse {
 
     /**
      * The PTR target domain name for this PTR record.
-     * 
     */
     public Optional<String> getPtrdname() {
         return Optional.ofNullable(this.ptrdname);

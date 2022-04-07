@@ -19,7 +19,6 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -31,7 +30,6 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
     /**
      * Kind of synchronization on trigger.
      * Expected value is 'ScheduleBased'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -42,7 +40,6 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Recurrence Interval
-     * 
      */
     @Import(name="recurrenceInterval", required=true)
       private final Output<Either<String,RecurrenceInterval>> recurrenceInterval;
@@ -53,7 +50,6 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the share subscription which will hold the data set sink.
-     * 
      */
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
@@ -75,7 +70,6 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Synchronization mode
-     * 
      */
     @Import(name="synchronizationMode")
       private final @Nullable Output<Either<String,SynchronizationMode>> synchronizationMode;
@@ -86,7 +80,6 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Synchronization time
-     * 
      */
     @Import(name="synchronizationTime", required=true)
       private final Output<String> synchronizationTime;
@@ -97,7 +90,6 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the trigger.
-     * 
      */
     @Import(name="triggerName")
       private final @Nullable Output<String> triggerName;

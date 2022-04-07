@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Batch inference output configuration.
- * 
  */
 public final class BatchOutputConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BatchOutputConfigurationResponse extends io.pulumi.resources.
 
     /**
      * Customized output file name for append_row output action.
-     * 
      */
     @Import(name="appendRowFileName")
       private final @Nullable String appendRowFileName;
@@ -31,7 +29,6 @@ public final class BatchOutputConfigurationResponse extends io.pulumi.resources.
 
     /**
      * Indicates how the output will be organized.
-     * 
      */
     @Import(name="outputAction")
       private final @Nullable String outputAction;

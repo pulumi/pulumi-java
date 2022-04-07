@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a token restriction. Provided token must match these requirements for successful license or key delivery.
- * 
  */
 public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
 
     /**
      * A list of alternative verification keys.
-     * 
      */
     @Import(name="alternateVerificationKeys")
       private final @Nullable List<Object> alternateVerificationKeys;
@@ -37,7 +35,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
 
     /**
      * The audience for the token.
-     * 
      */
     @Import(name="audience", required=true)
       private final String audience;
@@ -48,7 +45,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
 
     /**
      * The token issuer.
-     * 
      */
     @Import(name="issuer", required=true)
       private final String issuer;
@@ -60,7 +56,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -71,7 +66,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
 
     /**
      * The OpenID connect discovery document.
-     * 
      */
     @Import(name="openIdConnectDiscoveryDocument")
       private final @Nullable String openIdConnectDiscoveryDocument;
@@ -82,7 +76,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
 
     /**
      * The primary verification key.
-     * 
      */
     @Import(name="primaryVerificationKey", required=true)
       private final Object primaryVerificationKey;
@@ -93,7 +86,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
 
     /**
      * A list of required token claims.
-     * 
      */
     @Import(name="requiredClaims")
       private final @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
@@ -104,7 +96,6 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends io.pulumi.re
 
     /**
      * The type of token.
-     * 
      */
     @Import(name="restrictionTokenType", required=true)
       private final String restrictionTokenType;

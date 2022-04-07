@@ -14,7 +14,6 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends io.pulumi.res
 
     /**
      * The device name
-     * 
      */
     @Import(name="deviceName", required=true)
       private final String deviceName;
@@ -25,7 +24,6 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends io.pulumi.res
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final String managerName;
@@ -36,7 +34,6 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends io.pulumi.res
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

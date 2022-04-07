@@ -18,7 +18,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the proxy resource holding details of HCI ArcSetting information.
-     * 
      */
     @Import(name="arcSettingName")
       private final @Nullable Output<String> arcSettingName;
@@ -29,7 +28,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -40,7 +38,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of resource creation (UTC).
-     * 
      */
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
@@ -51,7 +48,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity that created the resource.
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
@@ -62,7 +58,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity that created the resource.
-     * 
      */
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
@@ -73,7 +68,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
@@ -84,7 +78,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity that last modified the resource.
-     * 
      */
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
@@ -95,7 +88,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity that last modified the resource.
-     * 
      */
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
@@ -106,7 +98,6 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

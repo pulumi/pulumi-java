@@ -16,7 +16,6 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tag name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -27,7 +26,6 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -49,7 +46,6 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tag identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="tagId")
       private final @Nullable Output<String> tagId;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Deployment container liveness/readiness probe configuration.
- * 
  */
 public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The number of failures to allow before returning an unhealthy status.
-     * 
      */
     @Import(name="failureThreshold")
       private final @Nullable Integer failureThreshold;
@@ -32,7 +30,6 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The delay before the first probe in ISO 8601 format.
-     * 
      */
     @Import(name="initialDelay")
       private final @Nullable String initialDelay;
@@ -43,7 +40,6 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The length of time between probes in ISO 8601 format.
-     * 
      */
     @Import(name="period")
       private final @Nullable String period;
@@ -54,7 +50,6 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The number of successful probes before returning a healthy status.
-     * 
      */
     @Import(name="successThreshold")
       private final @Nullable Integer successThreshold;
@@ -65,7 +60,6 @@ public final class ProbeSettingsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The probe timeout in ISO 8601 format.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable String timeout;

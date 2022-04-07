@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Video source allows for content from a Video Analyzer video resource to be ingested into a pipeline. Currently supported only with batch pipelines.
- * 
  */
 public final class VideoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class VideoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Node name. Must be unique within the topology.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -30,7 +28,6 @@ public final class VideoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
-     * 
      */
     @Import(name="timeSequences", required=true)
       private final VideoSequenceAbsoluteTimeMarkersResponse timeSequences;
@@ -42,7 +39,6 @@ public final class VideoSourceResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -53,7 +49,6 @@ public final class VideoSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Video Analyzer video resource to be used as the source.
-     * 
      */
     @Import(name="videoName", required=true)
       private final String videoName;

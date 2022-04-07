@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of Hive server.
-     * 
      */
     @EnumType
     public enum HiveServerType {

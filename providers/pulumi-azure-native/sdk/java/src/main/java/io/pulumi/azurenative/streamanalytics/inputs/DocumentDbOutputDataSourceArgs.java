@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a DocumentDB output data source.
- * 
  */
 public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
 
     /**
      * The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
@@ -31,7 +29,6 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
 
     /**
      * The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
@@ -42,7 +39,6 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
 
     /**
      * The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="collectionNamePattern")
       private final @Nullable Output<String> collectionNamePattern;
@@ -53,7 +49,6 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="database")
       private final @Nullable Output<String> database;
@@ -64,7 +59,6 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the field in output events used to specify the primary key which insert or update operations are based on.
-     * 
      */
     @Import(name="documentId")
       private final @Nullable Output<String> documentId;
@@ -75,7 +69,6 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.
-     * 
      */
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
@@ -87,7 +80,6 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.Storage/DocumentDB'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * IP address version.
-     * 
      */
     @EnumType
     public enum IPVersion {

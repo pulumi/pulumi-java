@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of compute
-     * 
      */
     @EnumType
     public enum ComputeType {

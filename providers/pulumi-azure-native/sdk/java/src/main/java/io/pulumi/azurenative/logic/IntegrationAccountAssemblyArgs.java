@@ -18,7 +18,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
 
     /**
      * The assembly artifact name.
-     * 
      */
     @Import(name="assemblyArtifactName")
       private final @Nullable Output<String> assemblyArtifactName;
@@ -29,7 +28,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
@@ -40,7 +38,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
 
     /**
      * The assembly properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<AssemblyPropertiesArgs> properties;
@@ -62,7 +58,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Kubelet configurations of agent nodes.
- * 
  */
 public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
-     * 
      */
     @Import(name="allowedUnsafeSysctls")
       private final @Nullable List<String> allowedUnsafeSysctls;
@@ -34,7 +32,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The maximum number of container log files that can be present for a container. The number must be ≥ 2.
-     * 
      */
     @Import(name="containerLogMaxFiles")
       private final @Nullable Integer containerLogMaxFiles;
@@ -45,7 +42,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The maximum size (e.g. 10Mi) of container log file before it is rotated.
-     * 
      */
     @Import(name="containerLogMaxSizeMB")
       private final @Nullable Integer containerLogMaxSizeMB;
@@ -56,7 +52,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Enable CPU CFS quota enforcement for containers that specify CPU limits.
-     * 
      */
     @Import(name="cpuCfsQuota")
       private final @Nullable Boolean cpuCfsQuota;
@@ -67,7 +62,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Sets CPU CFS quota period value.
-     * 
      */
     @Import(name="cpuCfsQuotaPeriod")
       private final @Nullable String cpuCfsQuotaPeriod;
@@ -78,7 +72,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * CPU Manager policy to use.
-     * 
      */
     @Import(name="cpuManagerPolicy")
       private final @Nullable String cpuManagerPolicy;
@@ -89,7 +82,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * If set to true it will make the Kubelet fail to start if swap is enabled on the node.
-     * 
      */
     @Import(name="failSwapOn")
       private final @Nullable Boolean failSwapOn;
@@ -100,7 +92,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The percent of disk usage after which image garbage collection is always run.
-     * 
      */
     @Import(name="imageGcHighThreshold")
       private final @Nullable Integer imageGcHighThreshold;
@@ -111,7 +102,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The percent of disk usage before which image garbage collection is never run.
-     * 
      */
     @Import(name="imageGcLowThreshold")
       private final @Nullable Integer imageGcLowThreshold;
@@ -122,7 +112,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The maximum number of processes per pod.
-     * 
      */
     @Import(name="podMaxPids")
       private final @Nullable Integer podMaxPids;
@@ -133,7 +122,6 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Topology Manager policy to use.
-     * 
      */
     @Import(name="topologyManagerPolicy")
       private final @Nullable String topologyManagerPolicy;

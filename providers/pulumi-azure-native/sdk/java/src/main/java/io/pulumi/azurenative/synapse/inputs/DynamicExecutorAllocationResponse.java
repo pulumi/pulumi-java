@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dynamic Executor Allocation Properties
- * 
  */
 public final class DynamicExecutorAllocationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DynamicExecutorAllocationResponse extends io.pulumi.resources
 
     /**
      * Indicates whether Dynamic Executor Allocation is enabled or not.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;

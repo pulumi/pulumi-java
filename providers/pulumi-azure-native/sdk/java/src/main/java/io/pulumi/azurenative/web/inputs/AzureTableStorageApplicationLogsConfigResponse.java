@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application logs to Azure table storage configuration.
- * 
  */
 public final class AzureTableStorageApplicationLogsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends io.pul
 
     /**
      * Log level.
-     * 
      */
     @Import(name="level")
       private final @Nullable String level;
@@ -31,7 +29,6 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends io.pul
 
     /**
      * SAS URL to an Azure table with add/query/delete permissions.
-     * 
      */
     @Import(name="sasUrl", required=true)
       private final String sasUrl;

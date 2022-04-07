@@ -18,7 +18,6 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
 
     /**
      * The identity block returned by ARM resource that supports managed identity.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
@@ -29,7 +28,6 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
 
     /**
      * The location where the resource is to be deployed.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the configuration profile. The profile name should be set to 'default', all other names will be overwritten.
-     * 
      */
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
@@ -51,7 +48,6 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
 
     /**
      * The properties of a configuration profile.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties;

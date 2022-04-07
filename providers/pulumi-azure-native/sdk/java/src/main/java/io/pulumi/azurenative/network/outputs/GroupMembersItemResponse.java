@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GroupMembersItemResponse {
     /**
      * Resource Id.
-     * 
      */
     private final @Nullable String resourceId;
 
@@ -24,7 +23,6 @@ public final class GroupMembersItemResponse {
 
     /**
      * Resource Id.
-     * 
     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);

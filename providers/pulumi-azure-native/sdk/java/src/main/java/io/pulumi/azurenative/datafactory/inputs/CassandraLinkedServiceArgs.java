@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for Cassandra data source.
- * 
  */
 public final class CassandraLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -39,7 +37,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable Output<Object> authenticationType;
@@ -50,7 +47,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -61,7 +57,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -72,7 +67,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -83,7 +77,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Host name for connection. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="host", required=true)
       private final Output<Object> host;
@@ -94,7 +87,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -105,7 +97,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Password for authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -116,7 +107,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * The port for the connection. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Object> port;
@@ -128,7 +118,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
     /**
      * Type of linked service.
      * Expected value is 'Cassandra'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -139,7 +128,6 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
 
     /**
      * Username for authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<Object> username;

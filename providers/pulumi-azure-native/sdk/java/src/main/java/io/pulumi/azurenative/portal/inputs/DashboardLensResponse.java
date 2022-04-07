@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A dashboard lens.
- * 
  */
 public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The dashboard len's metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Map<String,Object> metadata;
@@ -36,7 +34,6 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The lens order.
-     * 
      */
     @Import(name="order", required=true)
       private final Integer order;
@@ -47,7 +44,6 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The dashboard parts.
-     * 
      */
     @Import(name="parts", required=true)
       private final List<DashboardPartsResponse> parts;

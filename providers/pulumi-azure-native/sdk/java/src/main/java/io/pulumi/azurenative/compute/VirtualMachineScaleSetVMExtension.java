@@ -20,7 +20,112 @@ import javax.annotation.Nullable;
  * Describes a VMSS VM Extension.
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create VirtualMachineScaleSet VM extension.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineScaleSetVMExtension = new AzureNative.Compute.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension", new AzureNative.Compute.VirtualMachineScaleSetVMExtensionArgs
+ *         {
+ *             AutoUpgradeMinorVersion = true,
+ *             InstanceId = "0",
+ *             Publisher = "extPublisher",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Settings = 
+ *             {
+ *                 { "UserName", "xyz@microsoft.com" },
+ *             },
+ *             Type = "extType",
+ *             TypeHandlerVersion = "1.2",
+ *             VmExtensionName = "myVMExtension",
+ *             VmScaleSetName = "myvmScaleSet",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewVirtualMachineScaleSetVMExtension(ctx, "virtualMachineScaleSetVMExtension", &compute.VirtualMachineScaleSetVMExtensionArgs{
+ * 			AutoUpgradeMinorVersion: pulumi.Bool(true),
+ * 			InstanceId:              pulumi.String("0"),
+ * 			Publisher:               pulumi.String("extPublisher"),
+ * 			ResourceGroupName:       pulumi.String("myResourceGroup"),
+ * 			Settings: pulumi.Any{
+ * 				UserName: "xyz@microsoft.com",
+ * 			},
+ * 			Type:               pulumi.String("extType"),
+ * 			TypeHandlerVersion: pulumi.String("1.2"),
+ * 			VmExtensionName:    pulumi.String("myVMExtension"),
+ * 			VmScaleSetName:     pulumi.String("myvmScaleSet"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineScaleSetVMExtension = new azure_native.compute.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension", {
+ *     autoUpgradeMinorVersion: true,
+ *     instanceId: "0",
+ *     publisher: "extPublisher",
+ *     resourceGroupName: "myResourceGroup",
+ *     settings: {
+ *         UserName: "xyz@microsoft.com",
+ *     },
+ *     type: "extType",
+ *     typeHandlerVersion: "1.2",
+ *     vmExtensionName: "myVMExtension",
+ *     vmScaleSetName: "myvmScaleSet",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_scale_set_vm_extension = azure_native.compute.VirtualMachineScaleSetVMExtension("virtualMachineScaleSetVMExtension",
+ *     auto_upgrade_minor_version=True,
+ *     instance_id="0",
+ *     publisher="extPublisher",
+ *     resource_group_name="myResourceGroup",
+ *     settings={
+ *         "UserName": "xyz@microsoft.com",
+ *     },
+ *     type="extType",
+ *     type_handler_version="1.2",
+ *     vm_extension_name="myVMExtension",
+ *     vm_scale_set_name="myvmScaleSet")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,154 +140,132 @@ import javax.annotation.Nullable;
 public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.CustomResource {
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Export(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpgradeMinorVersion;
 
     /**
      * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion;
     }
     /**
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
-     * 
      */
     @Export(name="enableAutomaticUpgrade", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutomaticUpgrade;
 
     /**
      * @return Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableAutomaticUpgrade() {
         return this.enableAutomaticUpgrade;
     }
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
      * @return How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     public Output</* @Nullable */ String> getForceUpdateTag() {
         return this.forceUpdateTag;
     }
     /**
      * The virtual machine extension instance view.
-     * 
      */
     @Export(name="instanceView", type=VirtualMachineExtensionInstanceViewResponse.class, parameters={})
     private Output</* @Nullable */ VirtualMachineExtensionInstanceViewResponse> instanceView;
 
     /**
      * @return The virtual machine extension instance view.
-     * 
      */
     public Output</* @Nullable */ VirtualMachineExtensionInstanceViewResponse> getInstanceView() {
         return this.instanceView;
     }
     /**
      * The name of the extension.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the extension.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     @Export(name="protectedSettings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> protectedSettings;
 
     /**
      * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     public Output</* @Nullable */ Object> getProtectedSettings() {
         return this.protectedSettings;
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Export(name="publisher", type=String.class, parameters={})
     private Output</* @Nullable */ String> publisher;
 
     /**
      * @return The name of the extension handler publisher.
-     * 
      */
     public Output</* @Nullable */ String> getPublisher() {
         return this.publisher;
     }
     /**
      * Json formatted public settings for the extension.
-     * 
      */
     @Export(name="settings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> settings;
 
     /**
      * @return Json formatted public settings for the extension.
-     * 
      */
     public Output</* @Nullable */ Object> getSettings() {
         return this.settings;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Export(name="typeHandlerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeHandlerVersion;
 
     /**
      * @return Specifies the version of the script handler.
-     * 
      */
     public Output</* @Nullable */ String> getTypeHandlerVersion() {
         return this.typeHandlerVersion;

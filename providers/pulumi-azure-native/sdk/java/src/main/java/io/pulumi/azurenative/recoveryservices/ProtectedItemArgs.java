@@ -30,7 +30,6 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Container name associated with the backup item.
-     * 
      */
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
@@ -41,7 +40,6 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional ETag.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -52,7 +50,6 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fabric name associated with the backup item.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
@@ -63,7 +60,6 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -74,7 +70,6 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ProtectedItemResource properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
@@ -85,7 +80,6 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Item name to be backed up.
-     * 
      */
     @Import(name="protectedItemName")
       private final @Nullable Output<String> protectedItemName;
@@ -96,7 +90,6 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -107,7 +100,6 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -118,7 +110,6 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;

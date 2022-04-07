@@ -21,7 +21,113 @@ import javax.annotation.Nullable;
  * Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AFDCustomDomains_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var afdCustomDomain = new AzureNative.Cdn.AFDCustomDomain("afdCustomDomain", new AzureNative.Cdn.AFDCustomDomainArgs
+ *         {
+ *             AzureDnsZone = new AzureNative.Cdn.Inputs.ResourceReferenceArgs
+ *             {
+ *                 Id = "",
+ *             },
+ *             CustomDomainName = "domain1",
+ *             HostName = "www.someDomain.net",
+ *             ProfileName = "profile1",
+ *             ResourceGroupName = "RG",
+ *             TlsSettings = new AzureNative.Cdn.Inputs.AFDDomainHttpsParametersArgs
+ *             {
+ *                 CertificateType = "ManagedCertificate",
+ *                 MinimumTlsVersion = "TLS12",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cdn.NewAFDCustomDomain(ctx, "afdCustomDomain", &cdn.AFDCustomDomainArgs{
+ * 			AzureDnsZone: &cdn.ResourceReferenceArgs{
+ * 				Id: pulumi.String(""),
+ * 			},
+ * 			CustomDomainName:  pulumi.String("domain1"),
+ * 			HostName:          pulumi.String("www.someDomain.net"),
+ * 			ProfileName:       pulumi.String("profile1"),
+ * 			ResourceGroupName: pulumi.String("RG"),
+ * 			TlsSettings: &cdn.AFDDomainHttpsParametersArgs{
+ * 				CertificateType:   pulumi.String("ManagedCertificate"),
+ * 				MinimumTlsVersion: "TLS12",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const afdCustomDomain = new azure_native.cdn.AFDCustomDomain("afdCustomDomain", {
+ *     azureDnsZone: {
+ *         id: "",
+ *     },
+ *     customDomainName: "domain1",
+ *     hostName: "www.someDomain.net",
+ *     profileName: "profile1",
+ *     resourceGroupName: "RG",
+ *     tlsSettings: {
+ *         certificateType: "ManagedCertificate",
+ *         minimumTlsVersion: "TLS12",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * afd_custom_domain = azure_native.cdn.AFDCustomDomain("afdCustomDomain",
+ *     azure_dns_zone=azure_native.cdn.ResourceReferenceArgs(
+ *         id="",
+ *     ),
+ *     custom_domain_name="domain1",
+ *     host_name="www.someDomain.net",
+ *     profile_name="profile1",
+ *     resource_group_name="RG",
+ *     tls_settings=azure_native.cdn.AFDDomainHttpsParametersArgs(
+ *         certificate_type="ManagedCertificate",
+ *         minimum_tls_version="TLS12",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,14 +142,12 @@ import javax.annotation.Nullable;
 public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
     /**
      * Resource reference to the Azure DNS zone
-     * 
      */
     @Export(name="azureDnsZone", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> azureDnsZone;
 
     /**
      * @return Resource reference to the Azure DNS zone
-     * 
      */
     public Output</* @Nullable */ ResourceReferenceResponse> getAzureDnsZone() {
         return this.azureDnsZone;
@@ -56,112 +160,96 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
     }
     /**
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
-     * 
      */
     @Export(name="domainValidationState", type=String.class, parameters={})
     private Output<String> domainValidationState;
 
     /**
      * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
-     * 
      */
     public Output<String> getDomainValidationState() {
         return this.domainValidationState;
     }
     /**
      * The host name of the domain. Must be a domain name.
-     * 
      */
     @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
      * @return The host name of the domain. Must be a domain name.
-     * 
      */
     public Output<String> getHostName() {
         return this.hostName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning status
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning status
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
-     * 
      */
     @Export(name="tlsSettings", type=AFDDomainHttpsParametersResponse.class, parameters={})
     private Output</* @Nullable */ AFDDomainHttpsParametersResponse> tlsSettings;
 
     /**
      * @return The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
-     * 
      */
     public Output</* @Nullable */ AFDDomainHttpsParametersResponse> getTlsSettings() {
         return this.tlsSettings;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Values the customer needs to validate domain ownership
-     * 
      */
     @Export(name="validationProperties", type=DomainValidationPropertiesResponse.class, parameters={})
     private Output<DomainValidationPropertiesResponse> validationProperties;
 
     /**
      * @return Values the customer needs to validate domain ownership
-     * 
      */
     public Output<DomainValidationPropertiesResponse> getValidationProperties() {
         return this.validationProperties;

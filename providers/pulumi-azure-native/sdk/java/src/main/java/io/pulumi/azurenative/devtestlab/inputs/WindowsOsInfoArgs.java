@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information about a Windows OS.
- * 
  */
 public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
-     * 
      */
     @Import(name="windowsOsState")
       private final @Nullable Output<Either<String,WindowsOsState>> windowsOsState;

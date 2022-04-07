@@ -15,23 +15,19 @@ import javax.annotation.Nullable;
 public final class AzureKeyVaultSecretReferenceResponse {
     /**
      * The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
-     * 
      */
     private final Object secretName;
     /**
      * The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object secretVersion;
     /**
      * The Azure Key Vault linked service reference.
-     * 
      */
     private final LinkedServiceReferenceResponse store;
     /**
      * Type of the secret.
      * Expected value is 'AzureKeyVaultSecret'.
-     * 
      */
     private final String type;
 
@@ -49,21 +45,18 @@ public final class AzureKeyVaultSecretReferenceResponse {
 
     /**
      * The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
-     * 
     */
     public Object getSecretName() {
         return this.secretName;
     }
     /**
      * The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getSecretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
      * The Azure Key Vault linked service reference.
-     * 
     */
     public LinkedServiceReferenceResponse getStore() {
         return this.store;
@@ -71,7 +64,6 @@ public final class AzureKeyVaultSecretReferenceResponse {
     /**
      * Type of the secret.
      * Expected value is 'AzureKeyVaultSecret'.
-     * 
     */
     public String getType() {
         return this.type;

@@ -16,7 +16,6 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
 
     /**
      * Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.
-     * 
      */
     @Import(name="coarseGrainTimestamp")
       private final @Nullable Output<String> coarseGrainTimestamp;
@@ -27,7 +26,6 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
 
     /**
      *  Column name to be used as FineGrainTimestamp
-     * 
      */
     @Import(name="fineGrainTimestamp")
       private final @Nullable Output<String> fineGrainTimestamp;

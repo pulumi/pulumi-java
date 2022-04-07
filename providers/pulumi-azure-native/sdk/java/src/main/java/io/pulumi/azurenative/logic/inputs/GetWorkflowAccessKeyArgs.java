@@ -14,7 +14,6 @@ public final class GetWorkflowAccessKeyArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The workflow access key name.
-     * 
      */
     @Import(name="accessKeyName", required=true)
       private final String accessKeyName;
@@ -25,7 +24,6 @@ public final class GetWorkflowAccessKeyArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetWorkflowAccessKeyArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The workflow name.
-     * 
      */
     @Import(name="workflowName", required=true)
       private final String workflowName;

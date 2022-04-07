@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Input for the task that validates connection to Azure Database for PostgreSQL and target server requirements
- * 
  */
 public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
 
     /**
      * Connection information for source PostgreSQL server
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
@@ -29,7 +27,6 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse exte
 
     /**
      * Connection information for target Azure Database for PostgreSQL server
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final PostgreSqlConnectionInfoResponse targetConnectionInfo;

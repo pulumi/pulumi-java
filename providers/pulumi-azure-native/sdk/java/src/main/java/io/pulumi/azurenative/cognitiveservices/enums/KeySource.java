@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enumerates the possible value of keySource for Encryption
-     * 
      */
     @EnumType
     public enum KeySource {

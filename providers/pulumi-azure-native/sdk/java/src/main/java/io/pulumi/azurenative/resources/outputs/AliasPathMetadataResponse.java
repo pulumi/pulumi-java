@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AliasPathMetadataResponse {
     /**
      * The attributes of the token that the alias path is referring to.
-     * 
      */
     private final String attributes;
     /**
      * The type of the token that the alias path is referring to.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class AliasPathMetadataResponse {
 
     /**
      * The attributes of the token that the alias path is referring to.
-     * 
     */
     public String getAttributes() {
         return this.attributes;
     }
     /**
      * The type of the token that the alias path is referring to.
-     * 
     */
     public String getType() {
         return this.type;

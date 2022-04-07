@@ -35,27 +35,22 @@ import javax.annotation.Nullable;
 public final class GetTaskResult {
     /**
      * HTTP strong entity tag value. This is ignored if submitted.
-     * 
      */
     private final @Nullable String etag;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Custom task properties
-     * 
      */
     private final Object properties;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -75,35 +70,30 @@ public final class GetTaskResult {
 
     /**
      * HTTP strong entity tag value. This is ignored if submitted.
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Custom task properties
-     * 
     */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

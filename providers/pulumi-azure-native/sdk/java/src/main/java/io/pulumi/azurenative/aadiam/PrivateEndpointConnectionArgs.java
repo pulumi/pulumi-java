@@ -19,7 +19,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the private link policy in Azure AD.
-     * 
      */
     @Import(name="policyName", required=true)
       private final Output<String> policyName;
@@ -30,7 +29,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Properties of the private endpoint object.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
@@ -41,7 +39,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The PrivateEndpointConnection name.
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -52,7 +49,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Updated tag information to set into the PrivateLinkConnection instance.
-     * 
      */
     @Import(name="privateLinkConnectionTags")
       private final @Nullable Output<TagsResourceArgs> privateLinkConnectionTags;
@@ -63,7 +59,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Approval state of the private link connection.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
@@ -74,7 +69,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Name of an Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

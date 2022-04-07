@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Database file specific information
- * 
  */
 public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable String databaseName;
@@ -32,7 +30,6 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Database file type
-     * 
      */
     @Import(name="fileType")
       private final @Nullable String fileType;
@@ -43,7 +40,6 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Unique identifier for database file
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -54,7 +50,6 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Logical name of the file
-     * 
      */
     @Import(name="logicalName")
       private final @Nullable String logicalName;
@@ -65,7 +60,6 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Operating-system full path of the file
-     * 
      */
     @Import(name="physicalFullName")
       private final @Nullable String physicalFullName;
@@ -76,7 +70,6 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Suggested full path of the file for restoring
-     * 
      */
     @Import(name="restoreFullName")
       private final @Nullable String restoreFullName;
@@ -87,7 +80,6 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Size of the file in megabytes
-     * 
      */
     @Import(name="sizeMB")
       private final @Nullable Double sizeMB;

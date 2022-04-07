@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the settings to produce a JPEG image from the input video.
- * 
  */
 public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
-     * 
      */
     @Import(name="height")
       private final @Nullable Output<String> height;
@@ -32,7 +30,6 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -44,7 +41,6 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.JpgLayer'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -55,7 +51,6 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
-     * 
      */
     @Import(name="quality")
       private final @Nullable Output<Integer> quality;
@@ -66,7 +61,6 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
-     * 
      */
     @Import(name="width")
       private final @Nullable Output<String> width;

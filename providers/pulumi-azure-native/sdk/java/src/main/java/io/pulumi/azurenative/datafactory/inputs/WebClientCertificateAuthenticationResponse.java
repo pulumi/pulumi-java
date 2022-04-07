@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * A WebLinkedService that uses client certificate based authentication to communicate with an HTTP endpoint. This scheme follows mutual authentication; the server must also provide valid credentials to the client.
- * 
  */
 public final class WebClientCertificateAuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class WebClientCertificateAuthenticationResponse extends io.pulumi.
     /**
      * Type of authentication used to connect to the web table source.
      * Expected value is 'ClientCertificate'.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
@@ -34,7 +32,6 @@ public final class WebClientCertificateAuthenticationResponse extends io.pulumi.
 
     /**
      * Password for the PFX file.
-     * 
      */
     @Import(name="password", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -45,7 +42,6 @@ public final class WebClientCertificateAuthenticationResponse extends io.pulumi.
 
     /**
      * Base64-encoded contents of a PFX file.
-     * 
      */
     @Import(name="pfx", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
@@ -56,7 +52,6 @@ public final class WebClientCertificateAuthenticationResponse extends io.pulumi.
 
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="url", required=true)
       private final Object url;

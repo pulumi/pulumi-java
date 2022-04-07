@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Source LifeCycle
- * 
  */
 public final class SourceLifeCycleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class SourceLifeCycleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Delete Option
-     * 
      */
     @Import(name="deleteAfter", required=true)
       private final AbsoluteDeleteOptionResponse deleteAfter;
@@ -34,7 +32,6 @@ public final class SourceLifeCycleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * DataStoreInfo base
-     * 
      */
     @Import(name="sourceDataStore", required=true)
       private final DataStoreInfoBaseResponse sourceDataStore;

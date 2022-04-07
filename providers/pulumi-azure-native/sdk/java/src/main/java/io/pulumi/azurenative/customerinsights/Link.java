@@ -21,7 +21,169 @@ import javax.annotation.Nullable;
  * The link resource format.
  * API Version: 2017-04-26.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Links_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var link = new AzureNative.CustomerInsights.Link("link", new AzureNative.CustomerInsights.LinkArgs
+ *         {
+ *             Description = 
+ *             {
+ *                 { "en-us", "Link Description" },
+ *             },
+ *             DisplayName = 
+ *             {
+ *                 { "en-us", "Link DisplayName" },
+ *             },
+ *             HubName = "sdkTestHub",
+ *             LinkName = "linkTest4806",
+ *             Mappings = 
+ *             {
+ *                 new AzureNative.CustomerInsights.Inputs.TypePropertiesMappingArgs
+ *                 {
+ *                     LinkType = "UpdateAlways",
+ *                     SourcePropertyName = "testInteraction1949",
+ *                     TargetPropertyName = "testProfile1446",
+ *                 },
+ *             },
+ *             ParticipantPropertyReferences = 
+ *             {
+ *                 new AzureNative.CustomerInsights.Inputs.ParticipantPropertyReferenceArgs
+ *                 {
+ *                     SourcePropertyName = "testInteraction1949",
+ *                     TargetPropertyName = "ProfileId",
+ *                 },
+ *             },
+ *             ResourceGroupName = "TestHubRG",
+ *             SourceEntityType = "Interaction",
+ *             SourceEntityTypeName = "testInteraction1949",
+ *             TargetEntityType = "Profile",
+ *             TargetEntityTypeName = "testProfile1446",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerinsights.NewLink(ctx, "link", &customerinsights.LinkArgs{
+ * 			Description: pulumi.StringMap{
+ * 				"en-us": pulumi.String("Link Description"),
+ * 			},
+ * 			DisplayName: pulumi.StringMap{
+ * 				"en-us": pulumi.String("Link DisplayName"),
+ * 			},
+ * 			HubName:  pulumi.String("sdkTestHub"),
+ * 			LinkName: pulumi.String("linkTest4806"),
+ * 			Mappings: []customerinsights.TypePropertiesMappingArgs{
+ * 				&customerinsights.TypePropertiesMappingArgs{
+ * 					LinkType:           "UpdateAlways",
+ * 					SourcePropertyName: pulumi.String("testInteraction1949"),
+ * 					TargetPropertyName: pulumi.String("testProfile1446"),
+ * 				},
+ * 			},
+ * 			ParticipantPropertyReferences: customerinsights.ParticipantPropertyReferenceArray{
+ * 				&customerinsights.ParticipantPropertyReferenceArgs{
+ * 					SourcePropertyName: pulumi.String("testInteraction1949"),
+ * 					TargetPropertyName: pulumi.String("ProfileId"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName:    pulumi.String("TestHubRG"),
+ * 			SourceEntityType:     "Interaction",
+ * 			SourceEntityTypeName: pulumi.String("testInteraction1949"),
+ * 			TargetEntityType:     "Profile",
+ * 			TargetEntityTypeName: pulumi.String("testProfile1446"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const link = new azure_native.customerinsights.Link("link", {
+ *     description: {
+ *         "en-us": "Link Description",
+ *     },
+ *     displayName: {
+ *         "en-us": "Link DisplayName",
+ *     },
+ *     hubName: "sdkTestHub",
+ *     linkName: "linkTest4806",
+ *     mappings: [{
+ *         linkType: "UpdateAlways",
+ *         sourcePropertyName: "testInteraction1949",
+ *         targetPropertyName: "testProfile1446",
+ *     }],
+ *     participantPropertyReferences: [{
+ *         sourcePropertyName: "testInteraction1949",
+ *         targetPropertyName: "ProfileId",
+ *     }],
+ *     resourceGroupName: "TestHubRG",
+ *     sourceEntityType: "Interaction",
+ *     sourceEntityTypeName: "testInteraction1949",
+ *     targetEntityType: "Profile",
+ *     targetEntityTypeName: "testProfile1446",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * link = azure_native.customerinsights.Link("link",
+ *     description={
+ *         "en-us": "Link Description",
+ *     },
+ *     display_name={
+ *         "en-us": "Link DisplayName",
+ *     },
+ *     hub_name="sdkTestHub",
+ *     link_name="linkTest4806",
+ *     mappings=[azure_native.customerinsights.TypePropertiesMappingArgs(
+ *         link_type="UpdateAlways",
+ *         source_property_name="testInteraction1949",
+ *         target_property_name="testProfile1446",
+ *     )],
+ *     participant_property_references=[azure_native.customerinsights.ParticipantPropertyReferenceArgs(
+ *         source_property_name="testInteraction1949",
+ *         target_property_name="ProfileId",
+ *     )],
+ *     resource_group_name="TestHubRG",
+ *     source_entity_type="Interaction",
+ *     source_entity_type_name="testInteraction1949",
+ *     target_entity_type="Profile",
+ *     target_entity_type_name="testProfile1446")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,210 +198,180 @@ import javax.annotation.Nullable;
 public class Link extends io.pulumi.resources.CustomResource {
     /**
      * Localized descriptions for the Link.
-     * 
      */
     @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
      * @return Localized descriptions for the Link.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDescription() {
         return this.description;
     }
     /**
      * Localized display name for the Link.
-     * 
      */
     @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
      * @return Localized display name for the Link.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDisplayName() {
         return this.displayName;
     }
     /**
      * The link name.
-     * 
      */
     @Export(name="linkName", type=String.class, parameters={})
     private Output<String> linkName;
 
     /**
      * @return The link name.
-     * 
      */
     public Output<String> getLinkName() {
         return this.linkName;
     }
     /**
      * The set of properties mappings between the source and target Types.
-     * 
      */
     @Export(name="mappings", type=List.class, parameters={TypePropertiesMappingResponse.class})
     private Output</* @Nullable */ List<TypePropertiesMappingResponse>> mappings;
 
     /**
      * @return The set of properties mappings between the source and target Types.
-     * 
      */
     public Output</* @Nullable */ List<TypePropertiesMappingResponse>> getMappings() {
         return this.mappings;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
-     * 
      */
     @Export(name="operationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> operationType;
 
     /**
      * @return Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
-     * 
      */
     public Output</* @Nullable */ String> getOperationType() {
         return this.operationType;
     }
     /**
      * The properties that represent the participating profile.
-     * 
      */
     @Export(name="participantPropertyReferences", type=List.class, parameters={ParticipantPropertyReferenceResponse.class})
     private Output<List<ParticipantPropertyReferenceResponse>> participantPropertyReferences;
 
     /**
      * @return The properties that represent the participating profile.
-     * 
      */
     public Output<List<ParticipantPropertyReferenceResponse>> getParticipantPropertyReferences() {
         return this.participantPropertyReferences;
     }
     /**
      * Provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
-     * 
      */
     @Export(name="referenceOnly", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> referenceOnly;
 
     /**
      * @return Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
-     * 
      */
     public Output</* @Nullable */ Boolean> getReferenceOnly() {
         return this.referenceOnly;
     }
     /**
      * Type of source entity.
-     * 
      */
     @Export(name="sourceEntityType", type=String.class, parameters={})
     private Output<String> sourceEntityType;
 
     /**
      * @return Type of source entity.
-     * 
      */
     public Output<String> getSourceEntityType() {
         return this.sourceEntityType;
     }
     /**
      * Name of the source Entity Type.
-     * 
      */
     @Export(name="sourceEntityTypeName", type=String.class, parameters={})
     private Output<String> sourceEntityTypeName;
 
     /**
      * @return Name of the source Entity Type.
-     * 
      */
     public Output<String> getSourceEntityTypeName() {
         return this.sourceEntityTypeName;
     }
     /**
      * Type of target entity.
-     * 
      */
     @Export(name="targetEntityType", type=String.class, parameters={})
     private Output<String> targetEntityType;
 
     /**
      * @return Type of target entity.
-     * 
      */
     public Output<String> getTargetEntityType() {
         return this.targetEntityType;
     }
     /**
      * Name of the target Entity Type.
-     * 
      */
     @Export(name="targetEntityTypeName", type=String.class, parameters={})
     private Output<String> targetEntityTypeName;
 
     /**
      * @return Name of the target Entity Type.
-     * 
      */
     public Output<String> getTargetEntityTypeName() {
         return this.targetEntityTypeName;
     }
     /**
      * The hub name.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return The hub name.
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

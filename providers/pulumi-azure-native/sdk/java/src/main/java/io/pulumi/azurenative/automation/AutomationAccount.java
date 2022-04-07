@@ -24,7 +24,96 @@ import javax.annotation.Nullable;
  * Definition of the automation account type.
  * API Version: 2021-06-22.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update automation account
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var automationAccount = new AzureNative.Automation.AutomationAccount("automationAccount", new AzureNative.Automation.AutomationAccountArgs
+ *         {
+ *             AutomationAccountName = "myAutomationAccount9",
+ *             Location = "East US 2",
+ *             Name = "myAutomationAccount9",
+ *             ResourceGroupName = "rg",
+ *             Sku = new AzureNative.Automation.Inputs.SkuArgs
+ *             {
+ *                 Name = "Free",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewAutomationAccount(ctx, "automationAccount", &automation.AutomationAccountArgs{
+ * 			AutomationAccountName: pulumi.String("myAutomationAccount9"),
+ * 			Location:              pulumi.String("East US 2"),
+ * 			Name:                  pulumi.String("myAutomationAccount9"),
+ * 			ResourceGroupName:     pulumi.String("rg"),
+ * 			Sku: &automation.SkuArgs{
+ * 				Name: pulumi.String("Free"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const automationAccount = new azure_native.automation.AutomationAccount("automationAccount", {
+ *     automationAccountName: "myAutomationAccount9",
+ *     location: "East US 2",
+ *     name: "myAutomationAccount9",
+ *     resourceGroupName: "rg",
+ *     sku: {
+ *         name: "Free",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * automation_account = azure_native.automation.AutomationAccount("automationAccount",
+ *     automation_account_name="myAutomationAccount9",
+ *     location="East US 2",
+ *     name="myAutomationAccount9",
+ *     resource_group_name="rg",
+ *     sku=azure_native.automation.SkuArgs(
+ *         name="Free",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,252 +128,216 @@ import javax.annotation.Nullable;
 public class AutomationAccount extends io.pulumi.resources.CustomResource {
     /**
      * URL of automation hybrid service which is used for hybrid worker on-boarding.
-     * 
      */
     @Export(name="automationHybridServiceUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> automationHybridServiceUrl;
 
     /**
      * @return URL of automation hybrid service which is used for hybrid worker on-boarding.
-     * 
      */
     public Output</* @Nullable */ String> getAutomationHybridServiceUrl() {
         return this.automationHybridServiceUrl;
     }
     /**
      * Gets the creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return Gets the creation time.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Gets or sets the description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Indicates whether requests using non-AAD authentication are blocked
-     * 
      */
     @Export(name="disableLocalAuth", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableLocalAuth;
 
     /**
      * @return Indicates whether requests using non-AAD authentication are blocked
-     * 
      */
     public Output</* @Nullable */ Boolean> getDisableLocalAuth() {
         return this.disableLocalAuth;
     }
     /**
      * Encryption properties for the automation account
-     * 
      */
     @Export(name="encryption", type=EncryptionPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionPropertiesResponse> encryption;
 
     /**
      * @return Encryption properties for the automation account
-     * 
      */
     public Output</* @Nullable */ EncryptionPropertiesResponse> getEncryption() {
         return this.encryption;
     }
     /**
      * Gets or sets the etag of the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Gets or sets the etag of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Identity for the resource.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return Identity for the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Gets or sets the last modified by.
-     * 
      */
     @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
      * @return Gets or sets the last modified by.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Gets the last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
      * @return Gets the last modified time.
-     * 
      */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The Azure Region where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The Azure Region where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of Automation operations supported by the Automation resource provider.
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return List of Automation operations supported by the Automation resource provider.
-     * 
      */
     public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
-     * 
      */
     @Export(name="publicNetworkAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publicNetworkAccess;
 
     /**
      * @return Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
-     * 
      */
     public Output</* @Nullable */ Boolean> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * Gets or sets the SKU of account.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return Gets or sets the SKU of account.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Gets status of account.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Gets status of account.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Resource system metadata.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Resource system metadata.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

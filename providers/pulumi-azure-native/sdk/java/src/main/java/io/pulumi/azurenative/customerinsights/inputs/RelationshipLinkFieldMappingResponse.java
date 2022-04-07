@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The fields mapping for Relationships.
- * 
  */
 public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
 
     /**
      * The field name on the Interaction Type.
-     * 
      */
     @Import(name="interactionFieldName", required=true)
       private final String interactionFieldName;
@@ -31,7 +29,6 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
 
     /**
      * Link type.
-     * 
      */
     @Import(name="linkType")
       private final @Nullable String linkType;
@@ -42,7 +39,6 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
 
     /**
      * The field name on the Relationship metadata.
-     * 
      */
     @Import(name="relationshipFieldName", required=true)
       private final String relationshipFieldName;

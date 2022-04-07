@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Per database settings of an elastic pool.
- * 
  */
 public final class ElasticPoolPerDatabaseSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends io.pulumi.reso
 
     /**
      * The maximum capacity any one database can consume.
-     * 
      */
     @Import(name="maxCapacity")
       private final @Nullable Double maxCapacity;
@@ -31,7 +29,6 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends io.pulumi.reso
 
     /**
      * The minimum capacity all databases are guaranteed.
-     * 
      */
     @Import(name="minCapacity")
       private final @Nullable Double minCapacity;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A tag of a saved search.
- * 
  */
 public final class TagArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tag name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -30,7 +28,6 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tag value.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

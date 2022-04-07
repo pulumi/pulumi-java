@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describes the ServerVersion of an a MongoDB account.
-     * 
      */
     @EnumType
     public enum ServerVersion {

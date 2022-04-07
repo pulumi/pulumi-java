@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SQL pool SKU
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Integer capacity;
@@ -32,7 +30,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The SKU name
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The service tier
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

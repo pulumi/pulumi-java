@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * InMageRcm NIC details.
- * 
  */
 public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * A value indicating whether this is the primary NIC.
-     * 
      */
     @Import(name="isPrimaryNic", required=true)
       private final String isPrimaryNic;
@@ -29,7 +27,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * A value indicating whether this NIC is selected for failover.
-     * 
      */
     @Import(name="isSelectedForFailover", required=true)
       private final String isSelectedForFailover;
@@ -40,7 +37,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * The NIC Id.
-     * 
      */
     @Import(name="nicId", required=true)
       private final String nicId;
@@ -51,7 +47,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * The source IP address.
-     * 
      */
     @Import(name="sourceIPAddress", required=true)
       private final String sourceIPAddress;
@@ -62,7 +57,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * The source IP address type.
-     * 
      */
     @Import(name="sourceIPAddressType", required=true)
       private final String sourceIPAddressType;
@@ -73,7 +67,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Source network Id.
-     * 
      */
     @Import(name="sourceNetworkId", required=true)
       private final String sourceNetworkId;
@@ -84,7 +77,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Source subnet name.
-     * 
      */
     @Import(name="sourceSubnetName", required=true)
       private final String sourceSubnetName;
@@ -95,7 +87,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * The target IP address.
-     * 
      */
     @Import(name="targetIPAddress", required=true)
       private final String targetIPAddress;
@@ -106,7 +97,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * The target IP address type.
-     * 
      */
     @Import(name="targetIPAddressType", required=true)
       private final String targetIPAddressType;
@@ -117,7 +107,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Target subnet name.
-     * 
      */
     @Import(name="targetSubnetName", required=true)
       private final String targetSubnetName;
@@ -128,7 +117,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * The test IP address.
-     * 
      */
     @Import(name="testIPAddress", required=true)
       private final String testIPAddress;
@@ -139,7 +127,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * The test IP address type.
-     * 
      */
     @Import(name="testIPAddressType", required=true)
       private final String testIPAddressType;
@@ -150,7 +137,6 @@ public final class InMageRcmNicDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Test subnet name.
-     * 
      */
     @Import(name="testSubnetName", required=true)
       private final String testSubnetName;

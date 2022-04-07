@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The data format of the message. Optionally the data format can be added to each message.
-     * 
      */
     @EnumType
     public enum IotHubDataFormat {

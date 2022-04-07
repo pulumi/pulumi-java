@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Request body for adding a new or existing data disk to a virtual machine.
- * 
  */
 public final class DataDiskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DataDiskPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Specifies options to attach a new disk to the virtual machine.
-     * 
      */
     @Import(name="attachNewDataDiskOptions")
       private final @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions;
@@ -32,7 +30,6 @@ public final class DataDiskPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Specifies the existing lab disk id to attach to virtual machine.
-     * 
      */
     @Import(name="existingLabDiskId")
       private final @Nullable String existingLabDiskId;
@@ -43,7 +40,6 @@ public final class DataDiskPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
-     * 
      */
     @Import(name="hostCaching")
       private final @Nullable String hostCaching;

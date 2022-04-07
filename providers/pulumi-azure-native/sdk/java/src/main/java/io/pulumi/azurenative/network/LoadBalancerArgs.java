@@ -27,7 +27,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of backend address pools used by a load balancer.
-     * 
      */
     @Import(name="backendAddressPools")
       private final @Nullable Output<List<BackendAddressPoolArgs>> backendAddressPools;
@@ -38,7 +37,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The extended location of the load balancer.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -49,7 +47,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Object representing the frontend IPs to be used for the load balancer.
-     * 
      */
     @Import(name="frontendIPConfigurations")
       private final @Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations;
@@ -60,7 +57,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -71,7 +67,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
-     * 
      */
     @Import(name="inboundNatPools")
       private final @Nullable Output<List<InboundNatPoolArgs>> inboundNatPools;
@@ -82,7 +77,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
-     * 
      */
     @Import(name="inboundNatRules")
       private final @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
@@ -93,7 +87,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the load balancer.
-     * 
      */
     @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
@@ -104,7 +97,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Object collection representing the load balancing rules Gets the provisioning.
-     * 
      */
     @Import(name="loadBalancingRules")
       private final @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
@@ -115,7 +107,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -126,7 +117,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The outbound rules.
-     * 
      */
     @Import(name="outboundRules")
       private final @Nullable Output<List<OutboundRuleArgs>> outboundRules;
@@ -137,7 +127,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of probe objects used in the load balancer.
-     * 
      */
     @Import(name="probes")
       private final @Nullable Output<List<ProbeArgs>> probes;
@@ -148,7 +137,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -159,7 +147,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The load balancer SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<LoadBalancerSkuArgs> sku;
@@ -170,7 +157,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

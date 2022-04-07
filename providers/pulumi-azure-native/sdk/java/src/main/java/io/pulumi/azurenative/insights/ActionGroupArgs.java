@@ -29,7 +29,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the action group.
-     * 
      */
     @Import(name="actionGroupName")
       private final @Nullable Output<String> actionGroupName;
@@ -40,7 +39,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
-     * 
      */
     @Import(name="armRoleReceivers")
       private final @Nullable Output<List<ArmRoleReceiverArgs>> armRoleReceivers;
@@ -51,7 +49,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of AutomationRunbook receivers that are part of this action group.
-     * 
      */
     @Import(name="automationRunbookReceivers")
       private final @Nullable Output<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers;
@@ -62,7 +59,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of AzureAppPush receivers that are part of this action group.
-     * 
      */
     @Import(name="azureAppPushReceivers")
       private final @Nullable Output<List<AzureAppPushReceiverArgs>> azureAppPushReceivers;
@@ -73,7 +69,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of azure function receivers that are part of this action group.
-     * 
      */
     @Import(name="azureFunctionReceivers")
       private final @Nullable Output<List<AzureFunctionReceiverArgs>> azureFunctionReceivers;
@@ -84,7 +79,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of email receivers that are part of this action group.
-     * 
      */
     @Import(name="emailReceivers")
       private final @Nullable Output<List<EmailReceiverArgs>> emailReceivers;
@@ -95,7 +89,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
@@ -106,7 +99,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The short name of the action group. This will be used in SMS messages.
-     * 
      */
     @Import(name="groupShortName", required=true)
       private final Output<String> groupShortName;
@@ -117,7 +109,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of ITSM receivers that are part of this action group.
-     * 
      */
     @Import(name="itsmReceivers")
       private final @Nullable Output<List<ItsmReceiverArgs>> itsmReceivers;
@@ -128,7 +119,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -139,7 +129,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of logic app receivers that are part of this action group.
-     * 
      */
     @Import(name="logicAppReceivers")
       private final @Nullable Output<List<LogicAppReceiverArgs>> logicAppReceivers;
@@ -150,7 +139,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -161,7 +149,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of SMS receivers that are part of this action group.
-     * 
      */
     @Import(name="smsReceivers")
       private final @Nullable Output<List<SmsReceiverArgs>> smsReceivers;
@@ -172,7 +159,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -183,7 +169,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of voice receivers that are part of this action group.
-     * 
      */
     @Import(name="voiceReceivers")
       private final @Nullable Output<List<VoiceReceiverArgs>> voiceReceivers;
@@ -194,7 +179,6 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of webhook receivers that are part of this action group.
-     * 
      */
     @Import(name="webhookReceivers")
       private final @Nullable Output<List<WebhookReceiverArgs>> webhookReceivers;

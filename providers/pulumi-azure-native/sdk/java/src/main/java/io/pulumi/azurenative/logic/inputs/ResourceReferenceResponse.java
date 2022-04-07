@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The resource reference.
- * 
  */
 public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The resource id.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Gets the resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -42,7 +39,6 @@ public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Gets the resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

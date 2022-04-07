@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a configuration parameter.
- * 
  */
 public final class ConfigurationParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConfigurationParameterArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the configuration parameter.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class ConfigurationParameterArgs extends io.pulumi.resources.Resour
 
     /**
      * Value of the configuration parameter.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

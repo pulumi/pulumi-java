@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Azure Blob sink.
- * 
  */
 public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Blob writer add header. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="blobWriterAddHeader")
       private final @Nullable Output<Object> blobWriterAddHeader;
@@ -34,7 +32,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Blob writer date time format. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="blobWriterDateTimeFormat")
       private final @Nullable Output<Object> blobWriterDateTimeFormat;
@@ -45,7 +42,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Blob writer overwrite files. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="blobWriterOverwriteFiles")
       private final @Nullable Output<Object> blobWriterOverwriteFiles;
@@ -56,7 +52,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of copy behavior for copy sink.
-     * 
      */
     @Import(name="copyBehavior")
       private final @Nullable Output<Object> copyBehavior;
@@ -67,7 +62,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -78,7 +72,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -89,7 +82,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specify the custom metadata to be added to sink data. Type: array of objects (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<List<MetadataItemArgs>> metadata;
@@ -100,7 +92,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
@@ -111,7 +102,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
@@ -123,7 +113,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Copy sink type.
      * Expected value is 'BlobSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -134,7 +123,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
@@ -145,7 +133,6 @@ public final class BlobSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;

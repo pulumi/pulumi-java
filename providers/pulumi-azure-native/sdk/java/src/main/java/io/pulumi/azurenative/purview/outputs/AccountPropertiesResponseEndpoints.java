@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class AccountPropertiesResponseEndpoints {
     /**
      * Gets the catalog endpoint.
-     * 
      */
     private final String catalog;
     /**
      * Gets the guardian endpoint.
-     * 
      */
     private final String guardian;
     /**
      * Gets the scan endpoint.
-     * 
      */
     private final String scan;
 
@@ -37,21 +34,18 @@ public final class AccountPropertiesResponseEndpoints {
 
     /**
      * Gets the catalog endpoint.
-     * 
     */
     public String getCatalog() {
         return this.catalog;
     }
     /**
      * Gets the guardian endpoint.
-     * 
     */
     public String getGuardian() {
         return this.guardian;
     }
     /**
      * Gets the scan endpoint.
-     * 
     */
     public String getScan() {
         return this.scan;

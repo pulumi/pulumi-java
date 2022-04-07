@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The origin group for CDN content which is added when creating a CDN endpoint. Traffic is sent to the origins within the origin group based on origin health.
- * 
  */
 public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
 
     /**
      * Health probe settings to the origin that is used to determine the health of the origin.
-     * 
      */
     @Import(name="healthProbeSettings")
       private final @Nullable HealthProbeParametersResponse healthProbeSettings;
@@ -36,7 +34,6 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
 
     /**
      * Origin group name which must be unique within the endpoint.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -47,7 +44,6 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
 
     /**
      * The source of the content being delivered via CDN within given origin group.
-     * 
      */
     @Import(name="origins", required=true)
       private final List<ResourceReferenceResponse> origins;
@@ -58,7 +54,6 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
 
     /**
      * The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
-     * 
      */
     @Import(name="responseBasedOriginErrorDetectionSettings")
       private final @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings;
@@ -69,7 +64,6 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
 
     /**
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
-     * 
      */
     @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
       private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;

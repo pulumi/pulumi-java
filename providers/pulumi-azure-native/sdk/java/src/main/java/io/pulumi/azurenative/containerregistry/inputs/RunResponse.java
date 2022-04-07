@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Run resource properties
- * 
  */
 public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The machine configuration of the run agent.
-     * 
      */
     @Import(name="agentConfiguration")
       private final @Nullable AgentPropertiesResponse agentConfiguration;
@@ -40,7 +38,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The dedicated agent pool for the run.
-     * 
      */
     @Import(name="agentPoolName")
       private final @Nullable String agentPoolName;
@@ -51,7 +48,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time the run was scheduled.
-     * 
      */
     @Import(name="createTime")
       private final @Nullable String createTime;
@@ -62,7 +58,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of custom registries that were logged in during this run.
-     * 
      */
     @Import(name="customRegistries")
       private final @Nullable List<String> customRegistries;
@@ -73,7 +68,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time the run finished.
-     * 
      */
     @Import(name="finishTime")
       private final @Nullable String finishTime;
@@ -84,7 +78,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource ID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -95,7 +88,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The image update trigger that caused the run. This is applicable if the task has base image trigger configured.
-     * 
      */
     @Import(name="imageUpdateTrigger")
       private final @Nullable ImageUpdateTriggerResponse imageUpdateTrigger;
@@ -106,7 +98,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value that indicates whether archiving is enabled or not.
-     * 
      */
     @Import(name="isArchiveEnabled")
       private final @Nullable Boolean isArchiveEnabled;
@@ -117,7 +108,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The last updated time for the run.
-     * 
      */
     @Import(name="lastUpdatedTime")
       private final @Nullable String lastUpdatedTime;
@@ -128,7 +118,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The image description for the log artifact.
-     * 
      */
     @Import(name="logArtifact", required=true)
       private final ImageDescriptorResponse logArtifact;
@@ -139,7 +128,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -150,7 +138,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
-     * 
      */
     @Import(name="outputImages")
       private final @Nullable List<ImageDescriptorResponse> outputImages;
@@ -161,7 +148,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The platform properties against which the run will happen.
-     * 
      */
     @Import(name="platform")
       private final @Nullable PlatformPropertiesResponse platform;
@@ -172,7 +158,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of a run.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -183,7 +168,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error message received from backend systems after the run is scheduled.
-     * 
      */
     @Import(name="runErrorMessage", required=true)
       private final String runErrorMessage;
@@ -194,7 +178,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The unique identifier for the run.
-     * 
      */
     @Import(name="runId")
       private final @Nullable String runId;
@@ -205,7 +188,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of run.
-     * 
      */
     @Import(name="runType")
       private final @Nullable String runType;
@@ -216,7 +198,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The scope of the credentials that were used to login to the source registry during this run.
-     * 
      */
     @Import(name="sourceRegistryAuth")
       private final @Nullable String sourceRegistryAuth;
@@ -227,7 +208,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The source trigger that caused the run.
-     * 
      */
     @Import(name="sourceTrigger")
       private final @Nullable SourceTriggerDescriptorResponse sourceTrigger;
@@ -238,7 +218,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time the run started.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;
@@ -249,7 +228,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The current status of the run.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -260,7 +238,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
@@ -271,7 +248,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The task against which run was scheduled.
-     * 
      */
     @Import(name="task")
       private final @Nullable String task;
@@ -282,7 +258,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The timer trigger that caused the run.
-     * 
      */
     @Import(name="timerTrigger")
       private final @Nullable TimerTriggerDescriptorResponse timerTrigger;
@@ -293,7 +268,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -304,7 +278,6 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The update trigger token passed for the Run.
-     * 
      */
     @Import(name="updateTriggerToken")
       private final @Nullable String updateTriggerToken;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource Access Rule.
- * 
  */
 public final class ResourceAccessRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceAccessRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;
@@ -31,7 +29,6 @@ public final class ResourceAccessRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * Tenant Id
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;

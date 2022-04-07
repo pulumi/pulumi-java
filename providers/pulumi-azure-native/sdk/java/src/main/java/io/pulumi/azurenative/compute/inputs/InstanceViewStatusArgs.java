@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Instance view status.
- * 
  */
 public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The status code.
-     * 
      */
     @Import(name="code")
       private final @Nullable Output<String> code;
@@ -32,7 +30,6 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The short localizable label for the status.
-     * 
      */
     @Import(name="displayStatus")
       private final @Nullable Output<String> displayStatus;
@@ -43,7 +40,6 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The level code.
-     * 
      */
     @Import(name="level")
       private final @Nullable Output<StatusLevelTypes> level;
@@ -54,7 +50,6 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The detailed status message, including for alerts and error messages.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -65,7 +60,6 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The time of the status.
-     * 
      */
     @Import(name="time")
       private final @Nullable Output<String> time;

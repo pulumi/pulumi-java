@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class JobStagesResponse {
     /**
      * Display name of the job stage.
-     * 
      */
     private final String displayName;
     /**
      * Job Stage Details
-     * 
      */
     private final Object jobStageDetails;
     /**
      * Name of the job stage.
-     * 
      */
     private final String stageName;
     /**
      * Status of the job stage.
-     * 
      */
     private final String stageStatus;
     /**
      * Time for the job stage in UTC ISO 8601 format.
-     * 
      */
     private final String stageTime;
 
@@ -52,35 +47,30 @@ public final class JobStagesResponse {
 
     /**
      * Display name of the job stage.
-     * 
     */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Job Stage Details
-     * 
     */
     public Object getJobStageDetails() {
         return this.jobStageDetails;
     }
     /**
      * Name of the job stage.
-     * 
     */
     public String getStageName() {
         return this.stageName;
     }
     /**
      * Status of the job stage.
-     * 
     */
     public String getStageStatus() {
         return this.stageStatus;
     }
     /**
      * Time for the job stage in UTC ISO 8601 format.
-     * 
     */
     public String getStageTime() {
         return this.stageTime;

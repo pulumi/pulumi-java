@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SKU name
-     * 
      */
     @EnumType
     public enum AzureSkuName {

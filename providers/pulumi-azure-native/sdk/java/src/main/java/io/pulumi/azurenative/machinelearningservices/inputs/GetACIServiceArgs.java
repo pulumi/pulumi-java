@@ -17,7 +17,6 @@ public final class GetACIServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Set to True to include Model details.
-     * 
      */
     @Import(name="expand")
       private final @Nullable Boolean expand;
@@ -28,7 +27,6 @@ public final class GetACIServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -39,7 +37,6 @@ public final class GetACIServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Azure Machine Learning service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;
@@ -50,7 +47,6 @@ public final class GetACIServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

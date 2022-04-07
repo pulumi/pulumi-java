@@ -17,7 +17,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -28,7 +27,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -39,7 +37,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the secret.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -50,7 +47,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -72,7 +67,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the user profile.
-     * 
      */
     @Import(name="userName", required=true)
       private final Output<String> userName;
@@ -83,7 +77,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value of the secret for secret creation.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

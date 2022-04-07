@@ -20,7 +20,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
-     * 
      */
     @Import(name="agentPublicKeyCertificate", required=true)
       private final Output<String> agentPublicKeyCertificate;
@@ -31,7 +30,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the Kubernetes cluster on which get is called.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -42,7 +40,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Kubernetes distribution running on this connected cluster.
-     * 
      */
     @Import(name="distribution")
       private final @Nullable Output<String> distribution;
@@ -53,7 +50,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The identity of the connected cluster.
-     * 
      */
     @Import(name="identity", required=true)
       private final Output<ConnectedClusterIdentityArgs> identity;
@@ -64,7 +60,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
-     * 
      */
     @Import(name="infrastructure")
       private final @Nullable Output<String> infrastructure;
@@ -75,7 +70,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -86,7 +80,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Provisioning state of the connected cluster resource.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
@@ -97,7 +90,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

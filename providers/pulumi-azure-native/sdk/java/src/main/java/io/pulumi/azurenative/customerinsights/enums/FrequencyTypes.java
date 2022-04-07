@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The frequency to update.
-     * 
      */
     @EnumType
     public enum FrequencyTypes {

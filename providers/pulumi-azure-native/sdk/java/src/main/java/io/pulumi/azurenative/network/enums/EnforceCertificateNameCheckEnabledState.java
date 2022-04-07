@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
-     * 
      */
     @EnumType
     public enum EnforceCertificateNameCheckEnabledState {

@@ -15,57 +15,46 @@ import javax.annotation.Nullable;
 public final class GetNamespaceResult {
     /**
      * The time the namespace was created.
-     * 
      */
     private final String createdAt;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * The Geo-location where the resource lives
-     * 
      */
     private final String location;
     /**
      * Identifier for Azure Insights metrics
-     * 
      */
     private final String metricId;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * Provisioning state of the namespace.
-     * 
      */
     private final String provisioningState;
     /**
      * Endpoint you can use to perform Service Bus operations.
-     * 
      */
     private final String serviceBusEndpoint;
     /**
      * Properties of Sku
-     * 
      */
     private final @Nullable SBSkuResponse sku;
     /**
      * Resource tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type
-     * 
      */
     private final String type;
     /**
      * The time the namespace was updated.
-     * 
      */
     private final String updatedAt;
 
@@ -97,77 +86,66 @@ public final class GetNamespaceResult {
 
     /**
      * The time the namespace was created.
-     * 
     */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The Geo-location where the resource lives
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Identifier for Azure Insights metrics
-     * 
     */
     public String getMetricId() {
         return this.metricId;
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the namespace.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Endpoint you can use to perform Service Bus operations.
-     * 
     */
     public String getServiceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
      * Properties of Sku
-     * 
     */
     public Optional<SBSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
-     * 
     */
     public String getUpdatedAt() {
         return this.updatedAt;

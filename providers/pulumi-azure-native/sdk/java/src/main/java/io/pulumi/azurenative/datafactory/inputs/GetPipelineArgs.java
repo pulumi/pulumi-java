@@ -14,7 +14,6 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final String factoryName;
@@ -25,7 +24,6 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The pipeline name.
-     * 
      */
     @Import(name="pipelineName", required=true)
       private final String pipelineName;
@@ -36,7 +34,6 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

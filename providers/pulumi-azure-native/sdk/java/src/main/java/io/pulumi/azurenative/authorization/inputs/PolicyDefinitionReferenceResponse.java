@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The policy definition reference.
- * 
  */
 public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources
 
     /**
      * The name of the groups that this policy definition reference belongs to.
-     * 
      */
     @Import(name="groupNames")
       private final @Nullable List<String> groupNames;
@@ -34,7 +32,6 @@ public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources
 
     /**
      * The parameter values for the referenced policy rule. The keys are the parameter names.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterValuesValueResponse> parameters;
@@ -45,7 +42,6 @@ public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources
 
     /**
      * The ID of the policy definition or policy set definition.
-     * 
      */
     @Import(name="policyDefinitionId", required=true)
       private final String policyDefinitionId;
@@ -56,7 +52,6 @@ public final class PolicyDefinitionReferenceResponse extends io.pulumi.resources
 
     /**
      * A unique id (within the policy set definition) for this policy definition reference.
-     * 
      */
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable String policyDefinitionReferenceId;

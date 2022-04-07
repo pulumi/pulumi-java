@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a virtual machine that determine how it is connected to a load balancer.
- * 
  */
 public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
 
     /**
      * The incoming NAT rules
-     * 
      */
     @Import(name="inboundNatRules")
       private final @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;

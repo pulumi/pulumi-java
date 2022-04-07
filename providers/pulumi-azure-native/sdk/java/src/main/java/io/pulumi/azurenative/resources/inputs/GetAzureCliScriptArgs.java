@@ -14,7 +14,6 @@ public final class GetAzureCliScriptArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetAzureCliScriptArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the deployment script.
-     * 
      */
     @Import(name="scriptName", required=true)
       private final String scriptName;

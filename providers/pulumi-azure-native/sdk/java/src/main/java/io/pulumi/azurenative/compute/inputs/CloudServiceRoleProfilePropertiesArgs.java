@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the role properties.
- * 
  */
 public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
 
     /**
      * Describes the cloud service role sku.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<CloudServiceRoleSkuArgs> sku;

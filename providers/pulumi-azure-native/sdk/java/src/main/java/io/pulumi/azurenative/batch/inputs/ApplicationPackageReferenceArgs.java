@@ -23,7 +23,6 @@ public final class ApplicationPackageReferenceArgs extends io.pulumi.resources.R
 
     /**
      * If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * API portal properties payload
- * 
  */
 public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The array of resource Ids of gateway to integrate with API portal.
-     * 
      */
     @Import(name="gatewayIds")
       private final @Nullable Output<List<String>> gatewayIds;
@@ -34,7 +32,6 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Indicate if only https is allowed.
-     * 
      */
     @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
@@ -45,7 +42,6 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Indicates whether the API portal exposes endpoint.
-     * 
      */
     @Import(name="public")
       private final @Nullable Output<Boolean> public_;
@@ -56,7 +52,6 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Collection of OpenAPI source URL locations.
-     * 
      */
     @Import(name="sourceUrls")
       private final @Nullable Output<List<String>> sourceUrls;
@@ -67,7 +62,6 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Single sign-on related configuration
-     * 
      */
     @Import(name="ssoProperties")
       private final @Nullable Output<SsoPropertiesArgs> ssoProperties;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Tables that will be included and excluded in the follower database
- * 
  */
 public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * List of external tables exclude from the follower database
-     * 
      */
     @Import(name="externalTablesToExclude")
       private final @Nullable Output<List<String>> externalTablesToExclude;
@@ -32,7 +30,6 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * List of external tables to include in the follower database
-     * 
      */
     @Import(name="externalTablesToInclude")
       private final @Nullable Output<List<String>> externalTablesToInclude;
@@ -43,7 +40,6 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * List of materialized views exclude from the follower database
-     * 
      */
     @Import(name="materializedViewsToExclude")
       private final @Nullable Output<List<String>> materializedViewsToExclude;
@@ -54,7 +50,6 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * List of materialized views to include in the follower database
-     * 
      */
     @Import(name="materializedViewsToInclude")
       private final @Nullable Output<List<String>> materializedViewsToInclude;
@@ -65,7 +60,6 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * List of tables to exclude from the follower database
-     * 
      */
     @Import(name="tablesToExclude")
       private final @Nullable Output<List<String>> tablesToExclude;
@@ -76,7 +70,6 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * List of tables to include in the follower database
-     * 
      */
     @Import(name="tablesToInclude")
       private final @Nullable Output<List<String>> tablesToInclude;

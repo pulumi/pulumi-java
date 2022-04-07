@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ConnectorMappingCompleteOperationResponse {
     /**
      * The type of completion operation.
-     * 
      */
     private final @Nullable String completionOperationType;
     /**
      * The destination folder where files will be moved to once the import is done.
-     * 
      */
     private final @Nullable String destinationFolder;
 
@@ -32,14 +30,12 @@ public final class ConnectorMappingCompleteOperationResponse {
 
     /**
      * The type of completion operation.
-     * 
     */
     public Optional<String> getCompletionOperationType() {
         return Optional.ofNullable(this.completionOperationType);
     }
     /**
      * The destination folder where files will be moved to once the import is done.
-     * 
     */
     public Optional<String> getDestinationFolder() {
         return Optional.ofNullable(this.destinationFolder);

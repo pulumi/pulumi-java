@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a category of labels in a labeling job.
- * 
  */
 public final class LabelCategoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class LabelCategoryResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Indicates whether it is allowed to select multiple classes in this category.
-     * 
      */
     @Import(name="allowMultiSelect")
       private final @Nullable Boolean allowMultiSelect;
@@ -34,7 +32,6 @@ public final class LabelCategoryResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Dictionary of label classes in this category.
-     * 
      */
     @Import(name="classes", required=true)
       private final Map<String,LabelClassResponse> classes;
@@ -45,7 +42,6 @@ public final class LabelCategoryResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Display name of the label category.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;

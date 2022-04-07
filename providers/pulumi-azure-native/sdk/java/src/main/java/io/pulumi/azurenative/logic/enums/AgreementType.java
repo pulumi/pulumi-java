@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The agreement type.
-     * 
      */
     @EnumType
     public enum AgreementType {

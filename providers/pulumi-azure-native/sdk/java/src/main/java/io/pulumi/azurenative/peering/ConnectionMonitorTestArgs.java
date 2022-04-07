@@ -17,7 +17,6 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the connection monitor test
-     * 
      */
     @Import(name="connectionMonitorTestName")
       private final @Nullable Output<String> connectionMonitorTestName;
@@ -28,7 +27,6 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The Connection Monitor test destination
-     * 
      */
     @Import(name="destination")
       private final @Nullable Output<String> destination;
@@ -39,7 +37,6 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The Connection Monitor test destination port
-     * 
      */
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
@@ -50,7 +47,6 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the peering service.
-     * 
      */
     @Import(name="peeringServiceName", required=true)
       private final Output<String> peeringServiceName;
@@ -61,7 +57,6 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The Connection Monitor test source agent
-     * 
      */
     @Import(name="sourceAgent")
       private final @Nullable Output<String> sourceAgent;
@@ -83,7 +77,6 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
 
     /**
      * The Connection Monitor test frequency in seconds
-     * 
      */
     @Import(name="testFrequencyInSec")
       private final @Nullable Output<Integer> testFrequencyInSec;

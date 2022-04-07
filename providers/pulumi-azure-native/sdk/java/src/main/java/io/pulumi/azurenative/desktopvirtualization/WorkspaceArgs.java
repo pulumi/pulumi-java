@@ -21,7 +21,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of applicationGroup resource Ids.
-     * 
      */
     @Import(name="applicationGroupReferences")
       private final @Nullable Output<List<String>> applicationGroupReferences;
@@ -32,7 +31,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of Workspace.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -43,7 +41,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Friendly name of Workspace.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -61,7 +58,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -72,7 +68,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -83,7 +78,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-     * 
      */
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
@@ -101,7 +95,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -119,7 +112,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -130,7 +122,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;

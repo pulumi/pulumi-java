@@ -14,7 +14,6 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Default string modeled as parameter for auto generation to work correctly.
-     * 
      */
     @Import(name="default", required=true)
       private final String default_;
@@ -25,7 +24,6 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the redis cache.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

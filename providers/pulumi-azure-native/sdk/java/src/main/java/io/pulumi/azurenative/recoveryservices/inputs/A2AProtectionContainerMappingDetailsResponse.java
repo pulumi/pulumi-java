@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A2A provider specific settings.
- * 
  */
 public final class A2AProtectionContainerMappingDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
 
     /**
      * A value indicating whether the auto update is enabled.
-     * 
      */
     @Import(name="agentAutoUpdateStatus")
       private final @Nullable String agentAutoUpdateStatus;
@@ -31,7 +29,6 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
 
     /**
      * The automation account arm id.
-     * 
      */
     @Import(name="automationAccountArmId")
       private final @Nullable String automationAccountArmId;
@@ -43,7 +40,6 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'A2A'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -54,7 +50,6 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
 
     /**
      * The job schedule arm name.
-     * 
      */
     @Import(name="jobScheduleName")
       private final @Nullable String jobScheduleName;
@@ -65,7 +60,6 @@ public final class A2AProtectionContainerMappingDetailsResponse extends io.pulum
 
     /**
      * The schedule arm name.
-     * 
      */
     @Import(name="scheduleName")
       private final @Nullable String scheduleName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The state of the data masking policy.
-     * 
      */
     @EnumType
     public enum DataMaskingState {

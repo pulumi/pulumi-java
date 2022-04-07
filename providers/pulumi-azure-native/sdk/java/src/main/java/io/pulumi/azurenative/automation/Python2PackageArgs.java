@@ -18,7 +18,6 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -29,7 +28,6 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the module content link.
-     * 
      */
     @Import(name="contentLink", required=true)
       private final Output<ContentLinkArgs> contentLink;
@@ -40,7 +38,6 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of python package.
-     * 
      */
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
@@ -51,7 +48,6 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the tags attached to the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

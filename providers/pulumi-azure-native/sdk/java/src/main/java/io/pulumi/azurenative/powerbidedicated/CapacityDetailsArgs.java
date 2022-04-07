@@ -22,7 +22,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A collection of Dedicated capacity administrators
-     * 
      */
     @Import(name="administration")
       private final @Nullable Output<DedicatedCapacityAdministratorsArgs> administration;
@@ -33,7 +32,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the Dedicated capacity. It must be a minimum of 3 characters, and a maximum of 63.
-     * 
      */
     @Import(name="dedicatedCapacityName")
       private final @Nullable Output<String> dedicatedCapacityName;
@@ -44,7 +42,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Location of the PowerBI Dedicated resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -55,7 +52,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
-     * 
      */
     @Import(name="mode")
       private final @Nullable Output<Either<String,Mode>> mode;
@@ -66,7 +62,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -77,7 +72,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The SKU of the PowerBI Dedicated capacity resource.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<CapacitySkuArgs> sku;
@@ -88,7 +82,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Import(name="systemData")
       private final @Nullable Output<SystemDataArgs> systemData;
@@ -99,7 +92,6 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Key-value pairs of additional resource provisioning properties.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

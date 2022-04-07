@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * The top level Linked service resource container.
  * API Version: 2020-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### LinkedServicesCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var linkedService = new AzureNative.OperationalInsights.LinkedService("linkedService", new AzureNative.OperationalInsights.LinkedServiceArgs
+ *         {
+ *             LinkedServiceName = "Cluster",
+ *             ResourceGroupName = "mms-eus",
+ *             WorkspaceName = "TestLinkWS",
+ *             WriteAccessResourceId = "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationalinsights.NewLinkedService(ctx, "linkedService", &operationalinsights.LinkedServiceArgs{
+ * 			LinkedServiceName:     pulumi.String("Cluster"),
+ * 			ResourceGroupName:     pulumi.String("mms-eus"),
+ * 			WorkspaceName:         pulumi.String("TestLinkWS"),
+ * 			WriteAccessResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const linkedService = new azure_native.operationalinsights.LinkedService("linkedService", {
+ *     linkedServiceName: "Cluster",
+ *     resourceGroupName: "mms-eus",
+ *     workspaceName: "TestLinkWS",
+ *     writeAccessResourceId: "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * linked_service = azure_native.operationalinsights.LinkedService("linkedService",
+ *     linked_service_name="Cluster",
+ *     resource_group_name="mms-eus",
+ *     workspace_name="TestLinkWS",
+ *     write_access_resource_id="/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/clusters/testcluster")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +109,72 @@ import javax.annotation.Nullable;
 public class LinkedService extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the linked service.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return The provisioning state of the linked service.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
      * @return The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
-     * 
      */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
-     * 
      */
     @Export(name="writeAccessResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> writeAccessResourceId;
 
     /**
      * @return The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
-     * 
      */
     public Output</* @Nullable */ String> getWriteAccessResourceId() {
         return this.writeAccessResourceId;

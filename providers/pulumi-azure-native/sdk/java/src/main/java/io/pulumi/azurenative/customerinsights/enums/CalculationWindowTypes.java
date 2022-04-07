@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The calculation window.
-     * 
      */
     @EnumType
     public enum CalculationWindowTypes {

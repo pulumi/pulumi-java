@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class of paths for streaming
- * 
  */
 public final class StreamingPathResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StreamingPathResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Encryption scheme
-     * 
      */
     @Import(name="encryptionScheme", required=true)
       private final String encryptionScheme;
@@ -32,7 +30,6 @@ public final class StreamingPathResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Streaming paths for each protocol and encryptionScheme pair
-     * 
      */
     @Import(name="paths")
       private final @Nullable List<String> paths;
@@ -43,7 +40,6 @@ public final class StreamingPathResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Streaming protocol
-     * 
      */
     @Import(name="streamingProtocol", required=true)
       private final String streamingProtocol;

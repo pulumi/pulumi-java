@@ -18,7 +18,105 @@ import javax.annotation.Nullable;
  * The Private Endpoint Connection resource.
  * API Version: 2017-04-18.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutPrivateEndpointConnection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.CognitiveServices.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.CognitiveServices.PrivateEndpointConnectionArgs
+ *         {
+ *             AccountName = "sto9699",
+ *             PrivateEndpointConnectionName = "{privateEndpointConnectionName}",
+ *             Properties = new AzureNative.CognitiveServices.Inputs.PrivateEndpointConnectionPropertiesArgs
+ *             {
+ *                 PrivateLinkServiceConnectionState = new AzureNative.CognitiveServices.Inputs.PrivateLinkServiceConnectionStateArgs
+ *                 {
+ *                     Description = "Auto-Approved",
+ *                     Status = "Approved",
+ *                 },
+ *             },
+ *             ResourceGroupName = "res7687",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cognitiveservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cognitiveservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cognitiveservices.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &cognitiveservices.PrivateEndpointConnectionArgs{
+ * 			AccountName:                   pulumi.String("sto9699"),
+ * 			PrivateEndpointConnectionName: pulumi.String("{privateEndpointConnectionName}"),
+ * 			Properties: &cognitiveservices.PrivateEndpointConnectionPropertiesArgs{
+ * 				PrivateLinkServiceConnectionState: &cognitiveservices.PrivateLinkServiceConnectionStateArgs{
+ * 					Description: pulumi.String("Auto-Approved"),
+ * 					Status:      pulumi.String("Approved"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("res7687"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.cognitiveservices.PrivateEndpointConnection("privateEndpointConnection", {
+ *     accountName: "sto9699",
+ *     privateEndpointConnectionName: "{privateEndpointConnectionName}",
+ *     properties: {
+ *         privateLinkServiceConnectionState: {
+ *             description: "Auto-Approved",
+ *             status: "Approved",
+ *         },
+ *     },
+ *     resourceGroupName: "res7687",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.cognitiveservices.PrivateEndpointConnection("privateEndpointConnection",
+ *     account_name="sto9699",
+ *     private_endpoint_connection_name="{privateEndpointConnectionName}",
+ *     properties=azure_native.cognitiveservices.PrivateEndpointConnectionPropertiesArgs(
+ *         private_link_service_connection_state=azure_native.cognitiveservices.PrivateLinkServiceConnectionStateArgs(
+ *             description="Auto-Approved",
+ *             status="Approved",
+ *         ),
+ *     ),
+ *     resource_group_name="res7687")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +131,60 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * Entity Tag
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Entity Tag
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The location of the private endpoint connection
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the private endpoint connection
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource properties.
-     * 
      */
     @Export(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
     /**
      * @return Resource properties.
-     * 
      */
     public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

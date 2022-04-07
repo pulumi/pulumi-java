@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Channel settings definition
- * 
  */
 public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The bot icon url
-     * 
      */
     @Import(name="botIconUrl")
       private final @Nullable String botIconUrl;
@@ -34,7 +32,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The bot id
-     * 
      */
     @Import(name="botId")
       private final @Nullable String botId;
@@ -45,7 +42,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The channel display name
-     * 
      */
     @Import(name="channelDisplayName")
       private final @Nullable String channelDisplayName;
@@ -56,7 +52,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The channel id
-     * 
      */
     @Import(name="channelId")
       private final @Nullable String channelId;
@@ -67,7 +62,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
-     * 
      */
     @Import(name="disableLocalAuth")
       private final @Nullable Boolean disableLocalAuth;
@@ -78,7 +72,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The extensionKey1
-     * 
      */
     @Import(name="extensionKey1")
       private final @Nullable String extensionKey1;
@@ -89,7 +82,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The extensionKey2
-     * 
      */
     @Import(name="extensionKey2")
       private final @Nullable String extensionKey2;
@@ -100,7 +92,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Whether this channel is enabled for the bot
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Boolean isEnabled;
@@ -111,7 +102,6 @@ public final class ChannelSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The list of sites
-     * 
      */
     @Import(name="sites")
       private final @Nullable List<SiteResponse> sites;

@@ -15,47 +15,38 @@ import java.util.Objects;
 public final class NodeMonitoringDataResponse {
     /**
      *  Unmatched properties from the message are deserialized in this collection.
-     * 
      */
     private final Map<String,Object> additionalProperties;
     /**
      * Available memory (MB) on the integration runtime node.
-     * 
      */
     private final Integer availableMemoryInMB;
     /**
      * Maximum concurrent jobs on the integration runtime node.
-     * 
      */
     private final Integer concurrentJobsLimit;
     /**
      * The number of jobs currently running on the integration runtime node.
-     * 
      */
     private final Integer concurrentJobsRunning;
     /**
      * CPU percentage on the integration runtime node.
-     * 
      */
     private final Integer cpuUtilization;
     /**
      * The maximum concurrent jobs in this integration runtime.
-     * 
      */
     private final Integer maxConcurrentJobs;
     /**
      * Name of the integration runtime node.
-     * 
      */
     private final String nodeName;
     /**
      * Received bytes on the integration runtime node.
-     * 
      */
     private final Double receivedBytes;
     /**
      * Sent bytes on the integration runtime node.
-     * 
      */
     private final Double sentBytes;
 
@@ -83,63 +74,54 @@ public final class NodeMonitoringDataResponse {
 
     /**
      *  Unmatched properties from the message are deserialized in this collection.
-     * 
     */
     public Map<String,Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
     /**
      * Available memory (MB) on the integration runtime node.
-     * 
     */
     public Integer getAvailableMemoryInMB() {
         return this.availableMemoryInMB;
     }
     /**
      * Maximum concurrent jobs on the integration runtime node.
-     * 
     */
     public Integer getConcurrentJobsLimit() {
         return this.concurrentJobsLimit;
     }
     /**
      * The number of jobs currently running on the integration runtime node.
-     * 
     */
     public Integer getConcurrentJobsRunning() {
         return this.concurrentJobsRunning;
     }
     /**
      * CPU percentage on the integration runtime node.
-     * 
     */
     public Integer getCpuUtilization() {
         return this.cpuUtilization;
     }
     /**
      * The maximum concurrent jobs in this integration runtime.
-     * 
     */
     public Integer getMaxConcurrentJobs() {
         return this.maxConcurrentJobs;
     }
     /**
      * Name of the integration runtime node.
-     * 
     */
     public String getNodeName() {
         return this.nodeName;
     }
     /**
      * Received bytes on the integration runtime node.
-     * 
     */
     public Double getReceivedBytes() {
         return this.receivedBytes;
     }
     /**
      * Sent bytes on the integration runtime node.
-     * 
     */
     public Double getSentBytes() {
         return this.sentBytes;

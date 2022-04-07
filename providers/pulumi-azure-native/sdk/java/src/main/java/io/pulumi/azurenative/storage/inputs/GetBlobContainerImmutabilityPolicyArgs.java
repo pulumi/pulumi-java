@@ -14,7 +14,6 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends io.pulumi.reso
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends io.pulumi.reso
 
     /**
      * The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-     * 
      */
     @Import(name="containerName", required=true)
       private final String containerName;
@@ -36,7 +34,6 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends io.pulumi.reso
 
     /**
      * The name of the blob container immutabilityPolicy within the specified storage account. ImmutabilityPolicy Name must be 'default'
-     * 
      */
     @Import(name="immutabilityPolicyName", required=true)
       private final String immutabilityPolicyName;
@@ -47,7 +44,6 @@ public final class GetBlobContainerImmutabilityPolicyArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetRegistrationActivationKeyResult {
     /**
      * Azure Stack activation key.
-     * 
      */
     private final @Nullable String activationKey;
 
@@ -24,7 +23,6 @@ public final class GetRegistrationActivationKeyResult {
 
     /**
      * Azure Stack activation key.
-     * 
     */
     public Optional<String> getActivationKey() {
         return Optional.ofNullable(this.activationKey);

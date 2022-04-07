@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure ML Execute Pipeline activity.
- * 
  */
 public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="continueOnStepFailure")
       private final @Nullable Output<Object> continueOnStepFailure;
@@ -37,7 +35,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).
-     * 
      */
     @Import(name="dataPathAssignments")
       private final @Nullable Output<Object> dataPathAssignments;
@@ -48,7 +45,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -59,7 +55,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -70,7 +65,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Run history experiment name of the pipeline run. This information will be passed in the ExperimentName property of the published pipeline execution request. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="experimentName")
       private final @Nullable Output<Object> experimentName;
@@ -81,7 +75,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -92,7 +85,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="mlParentRunId")
       private final @Nullable Output<Object> mlParentRunId;
@@ -103,7 +95,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="mlPipelineEndpointId")
       private final @Nullable Output<Object> mlPipelineEndpointId;
@@ -114,7 +105,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="mlPipelineId")
       private final @Nullable Output<Object> mlPipelineId;
@@ -125,7 +115,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Key,Value pairs to be passed to the published Azure ML pipeline endpoint. Keys must match the names of pipeline parameters defined in the published pipeline. Values will be passed in the ParameterAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).
-     * 
      */
     @Import(name="mlPipelineParameters")
       private final @Nullable Output<Object> mlPipelineParameters;
@@ -136,7 +125,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -147,7 +135,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -159,7 +146,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     /**
      * Type of activity.
      * Expected value is 'AzureMLExecutePipeline'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -170,7 +156,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
@@ -181,7 +166,6 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
 
     /**
      * Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Object> version;

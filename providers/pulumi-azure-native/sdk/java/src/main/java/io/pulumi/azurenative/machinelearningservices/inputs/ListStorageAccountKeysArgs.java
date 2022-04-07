@@ -14,7 +14,6 @@ public final class ListStorageAccountKeysArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class ListStorageAccountKeysArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

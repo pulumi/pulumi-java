@@ -14,7 +14,6 @@ public final class GetWorkspaceSqlAadAdminArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetWorkspaceSqlAadAdminArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

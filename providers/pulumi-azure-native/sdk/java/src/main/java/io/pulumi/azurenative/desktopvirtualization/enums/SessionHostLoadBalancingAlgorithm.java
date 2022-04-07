@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Load balancing algorithm for ramp up period.
-     * 
      */
     @EnumType
     public enum SessionHostLoadBalancingAlgorithm {

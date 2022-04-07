@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Mechanism for data movement to datastore.
-     * 
      */
     @EnumType
     public enum DataBindingMode {

@@ -14,7 +14,6 @@ public final class GetIntegrationAccountAssemblyArgs extends io.pulumi.resources
 
     /**
      * The assembly artifact name.
-     * 
      */
     @Import(name="assemblyArtifactName", required=true)
       private final String assemblyArtifactName;
@@ -25,7 +24,6 @@ public final class GetIntegrationAccountAssemblyArgs extends io.pulumi.resources
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -36,7 +34,6 @@ public final class GetIntegrationAccountAssemblyArgs extends io.pulumi.resources
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

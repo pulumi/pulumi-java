@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class containing DNS settings in a Traffic Manager profile.
- * 
  */
 public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
-     * 
      */
     @Import(name="fqdn", required=true)
       private final String fqdn;
@@ -32,7 +30,6 @@ public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
-     * 
      */
     @Import(name="relativeName")
       private final @Nullable String relativeName;
@@ -43,7 +40,6 @@ public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.
-     * 
      */
     @Import(name="ttl")
       private final @Nullable Double ttl;

@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class GraphNodeResponse {
     /**
      * The id of the asset represented by this node.
-     * 
      */
     private final @Nullable String assetId;
     /**
      * The id of the input element represented by this node.
-     * 
      */
     private final @Nullable String inputId;
     /**
      * The id of the output element represented by this node.
-     * 
      */
     private final @Nullable String outputId;
     /**
      * If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
-     * 
      */
     private final @Nullable Map<String,WebServiceParameterResponse> parameters;
 
@@ -48,28 +44,24 @@ public final class GraphNodeResponse {
 
     /**
      * The id of the asset represented by this node.
-     * 
     */
     public Optional<String> getAssetId() {
         return Optional.ofNullable(this.assetId);
     }
     /**
      * The id of the input element represented by this node.
-     * 
     */
     public Optional<String> getInputId() {
         return Optional.ofNullable(this.inputId);
     }
     /**
      * The id of the output element represented by this node.
-     * 
     */
     public Optional<String> getOutputId() {
         return Optional.ofNullable(this.outputId);
     }
     /**
      * If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
-     * 
     */
     public Map<String,WebServiceParameterResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;

@@ -18,7 +18,6 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -29,7 +28,6 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
 
     /**
      * The key type.
-     * 
      */
     @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
@@ -40,7 +38,6 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
 
     /**
      * The expiry time.
-     * 
      */
     @Import(name="notAfter")
       private final @Nullable String notAfter;
@@ -51,7 +48,6 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
 
     /**
      * The integration account partner name.
-     * 
      */
     @Import(name="partnerName", required=true)
       private final String partnerName;
@@ -62,7 +58,6 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends i
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

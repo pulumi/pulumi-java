@@ -14,7 +14,6 @@ public final class ListAssetStreamingLocatorsArgs extends io.pulumi.resources.In
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class ListAssetStreamingLocatorsArgs extends io.pulumi.resources.In
 
     /**
      * The Asset name.
-     * 
      */
     @Import(name="assetName", required=true)
       private final String assetName;
@@ -36,7 +34,6 @@ public final class ListAssetStreamingLocatorsArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

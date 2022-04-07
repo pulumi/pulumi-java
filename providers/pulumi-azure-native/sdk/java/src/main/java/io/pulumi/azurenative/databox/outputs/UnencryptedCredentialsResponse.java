@@ -15,12 +15,10 @@ import java.util.Objects;
 public final class UnencryptedCredentialsResponse {
     /**
      * Name of the job.
-     * 
      */
     private final String jobName;
     /**
      * Secrets related to this job.
-     * 
      */
     private final Object jobSecrets;
 
@@ -34,14 +32,12 @@ public final class UnencryptedCredentialsResponse {
 
     /**
      * Name of the job.
-     * 
     */
     public String getJobName() {
         return this.jobName;
     }
     /**
      * Secrets related to this job.
-     * 
     */
     public Object getJobSecrets() {
         return this.jobSecrets;

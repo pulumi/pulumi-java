@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The pricing tier of the web application firewall policy.
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the pricing tier.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

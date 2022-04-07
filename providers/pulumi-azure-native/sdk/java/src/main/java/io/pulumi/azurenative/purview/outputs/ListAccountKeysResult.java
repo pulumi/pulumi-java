@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ListAccountKeysResult {
     /**
      * Gets or sets the primary connection string.
-     * 
      */
     private final @Nullable String atlasKafkaPrimaryEndpoint;
     /**
      * Gets or sets the secondary connection string.
-     * 
      */
     private final @Nullable String atlasKafkaSecondaryEndpoint;
 
@@ -32,14 +30,12 @@ public final class ListAccountKeysResult {
 
     /**
      * Gets or sets the primary connection string.
-     * 
     */
     public Optional<String> getAtlasKafkaPrimaryEndpoint() {
         return Optional.ofNullable(this.atlasKafkaPrimaryEndpoint);
     }
     /**
      * Gets or sets the secondary connection string.
-     * 
     */
     public Optional<String> getAtlasKafkaSecondaryEndpoint() {
         return Optional.ofNullable(this.atlasKafkaSecondaryEndpoint);

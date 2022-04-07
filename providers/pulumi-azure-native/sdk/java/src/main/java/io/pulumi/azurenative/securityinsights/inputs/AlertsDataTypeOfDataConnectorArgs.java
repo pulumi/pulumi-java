@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Alerts data type for data connectors.
- * 
  */
 public final class AlertsDataTypeOfDataConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AlertsDataTypeOfDataConnectorArgs extends io.pulumi.resources
 
     /**
      * Alerts data type connection.
-     * 
      */
     @Import(name="alerts")
       private final @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;

@@ -17,7 +17,100 @@ import javax.annotation.Nullable;
  * Description of a namespace authorization rule.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### QueueAuthorizationRuleCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var queueAuthorizationRule = new AzureNative.ServiceBus.QueueAuthorizationRule("queueAuthorizationRule", new AzureNative.ServiceBus.QueueAuthorizationRuleArgs
+ *         {
+ *             AuthorizationRuleName = "sdk-AuthRules-5800",
+ *             NamespaceName = "sdk-Namespace-7982",
+ *             QueueName = "sdk-Queues-2317",
+ *             ResourceGroupName = "ArunMonocle",
+ *             Rights = 
+ *             {
+ *                 "Listen",
+ *                 "Send",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewQueueAuthorizationRule(ctx, "queueAuthorizationRule", &servicebus.QueueAuthorizationRuleArgs{
+ * 			AuthorizationRuleName: pulumi.String("sdk-AuthRules-5800"),
+ * 			NamespaceName:         pulumi.String("sdk-Namespace-7982"),
+ * 			QueueName:             pulumi.String("sdk-Queues-2317"),
+ * 			ResourceGroupName:     pulumi.String("ArunMonocle"),
+ * 			Rights: servicebus.AccessRightsArray{
+ * 				"Listen",
+ * 				"Send",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const queueAuthorizationRule = new azure_native.servicebus.QueueAuthorizationRule("queueAuthorizationRule", {
+ *     authorizationRuleName: "sdk-AuthRules-5800",
+ *     namespaceName: "sdk-Namespace-7982",
+ *     queueName: "sdk-Queues-2317",
+ *     resourceGroupName: "ArunMonocle",
+ *     rights: [
+ *         "Listen",
+ *         "Send",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * queue_authorization_rule = azure_native.servicebus.QueueAuthorizationRule("queueAuthorizationRule",
+ *     authorization_rule_name="sdk-AuthRules-5800",
+ *     namespace_name="sdk-Namespace-7982",
+ *     queue_name="sdk-Queues-2317",
+ *     resource_group_name="ArunMonocle",
+ *     rights=[
+ *         "Listen",
+ *         "Send",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +125,36 @@ import javax.annotation.Nullable;
 public class QueueAuthorizationRule extends io.pulumi.resources.CustomResource {
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
-     * 
      */
     @Export(name="rights", type=List.class, parameters={String.class})
     private Output<List<String>> rights;
 
     /**
      * @return The rights associated with the rule.
-     * 
      */
     public Output<List<String>> getRights() {
         return this.rights;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

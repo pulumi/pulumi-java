@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * A PostgreSQL Server key.
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates a PostgreSQL Server key
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverKey = new AzureNative.DBforPostgreSQL.ServerKey("serverKey", new AzureNative.DBforPostgreSQL.ServerKeyArgs
+ *         {
+ *             KeyName = "someVault_someKey_01234567890123456789012345678901",
+ *             ResourceGroupName = "testrg",
+ *             ServerKeyType = "AzureKeyVault",
+ *             ServerName = "testserver",
+ *             Uri = "https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	dbforpostgresql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbforpostgresql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dbforpostgresql.NewServerKey(ctx, "serverKey", &dbforpostgresql.ServerKeyArgs{
+ * 			KeyName:           pulumi.String("someVault_someKey_01234567890123456789012345678901"),
+ * 			ResourceGroupName: pulumi.String("testrg"),
+ * 			ServerKeyType:     pulumi.String("AzureKeyVault"),
+ * 			ServerName:        pulumi.String("testserver"),
+ * 			Uri:               pulumi.String("https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverKey = new azure_native.dbforpostgresql.ServerKey("serverKey", {
+ *     keyName: "someVault_someKey_01234567890123456789012345678901",
+ *     resourceGroupName: "testrg",
+ *     serverKeyType: "AzureKeyVault",
+ *     serverName: "testserver",
+ *     uri: "https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_key = azure_native.dbforpostgresql.ServerKey("serverKey",
+ *     key_name="someVault_someKey_01234567890123456789012345678901",
+ *     resource_group_name="testrg",
+ *     server_key_type="AzureKeyVault",
+ *     server_name="testserver",
+ *     uri="https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +112,72 @@ import javax.annotation.Nullable;
 public class ServerKey extends io.pulumi.resources.CustomResource {
     /**
      * The key creation date.
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
      * @return The key creation date.
-     * 
      */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * Kind of encryption protector used to protect the key.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Kind of encryption protector used to protect the key.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The key type like 'AzureKeyVault'.
-     * 
      */
     @Export(name="serverKeyType", type=String.class, parameters={})
     private Output<String> serverKeyType;
 
     /**
      * @return The key type like 'AzureKeyVault'.
-     * 
      */
     public Output<String> getServerKeyType() {
         return this.serverKeyType;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The URI of the key.
-     * 
      */
     @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**
      * @return The URI of the key.
-     * 
      */
     public Output</* @Nullable */ String> getUri() {
         return this.uri;

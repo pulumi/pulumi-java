@@ -18,7 +18,104 @@ import javax.annotation.Nullable;
  * NSX DNS Zone
  * API Version: 2020-07-17-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WorkloadNetworks_CreateDnsZone
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workloadNetworkDnsZone = new AzureNative.AVS.WorkloadNetworkDnsZone("workloadNetworkDnsZone", new AzureNative.AVS.WorkloadNetworkDnsZoneArgs
+ *         {
+ *             DisplayName = "dnsZone1",
+ *             DnsServerIps = 
+ *             {
+ *                 "1.1.1.1",
+ *             },
+ *             DnsZoneId = "dnsZone1",
+ *             Domain = {},
+ *             PrivateCloudName = "cloud1",
+ *             ResourceGroupName = "group1",
+ *             Revision = 1,
+ *             SourceIp = "8.8.8.8",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewWorkloadNetworkDnsZone(ctx, "workloadNetworkDnsZone", &avs.WorkloadNetworkDnsZoneArgs{
+ * 			DisplayName: pulumi.String("dnsZone1"),
+ * 			DnsServerIps: pulumi.StringArray{
+ * 				pulumi.String("1.1.1.1"),
+ * 			},
+ * 			DnsZoneId:         pulumi.String("dnsZone1"),
+ * 			Domain:            pulumi.StringArray{},
+ * 			PrivateCloudName:  pulumi.String("cloud1"),
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 			Revision:          pulumi.Float64(1),
+ * 			SourceIp:          pulumi.String("8.8.8.8"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workloadNetworkDnsZone = new azure_native.avs.WorkloadNetworkDnsZone("workloadNetworkDnsZone", {
+ *     displayName: "dnsZone1",
+ *     dnsServerIps: ["1.1.1.1"],
+ *     dnsZoneId: "dnsZone1",
+ *     domain: [],
+ *     privateCloudName: "cloud1",
+ *     resourceGroupName: "group1",
+ *     revision: 1,
+ *     sourceIp: "8.8.8.8",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workload_network_dns_zone = azure_native.avs.WorkloadNetworkDnsZone("workloadNetworkDnsZone",
+ *     display_name="dnsZone1",
+ *     dns_server_ips=["1.1.1.1"],
+ *     dns_zone_id="dnsZone1",
+ *     domain=[],
+ *     private_cloud_name="cloud1",
+ *     resource_group_name="group1",
+ *     revision=1,
+ *     source_ip="8.8.8.8")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +130,108 @@ import javax.annotation.Nullable;
 public class WorkloadNetworkDnsZone extends io.pulumi.resources.CustomResource {
     /**
      * Display name of the DNS Zone.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Display name of the DNS Zone.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * DNS Server IP array of the DNS Zone.
-     * 
      */
     @Export(name="dnsServerIps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dnsServerIps;
 
     /**
      * @return DNS Server IP array of the DNS Zone.
-     * 
      */
     public Output</* @Nullable */ List<String>> getDnsServerIps() {
         return this.dnsServerIps;
     }
     /**
      * Number of DNS Services using the DNS zone.
-     * 
      */
     @Export(name="dnsServices", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> dnsServices;
 
     /**
      * @return Number of DNS Services using the DNS zone.
-     * 
      */
     public Output</* @Nullable */ Double> getDnsServices() {
         return this.dnsServices;
     }
     /**
      * Domain names of the DNS Zone.
-     * 
      */
     @Export(name="domain", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> domain;
 
     /**
      * @return Domain names of the DNS Zone.
-     * 
      */
     public Output</* @Nullable */ List<String>> getDomain() {
         return this.domain;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
-     * 
      */
     @Export(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
     /**
      * @return NSX revision number.
-     * 
      */
     public Output</* @Nullable */ Double> getRevision() {
         return this.revision;
     }
     /**
      * Source IP of the DNS Zone.
-     * 
      */
     @Export(name="sourceIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceIp;
 
     /**
      * @return Source IP of the DNS Zone.
-     * 
      */
     public Output</* @Nullable */ String> getSourceIp() {
         return this.sourceIp;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

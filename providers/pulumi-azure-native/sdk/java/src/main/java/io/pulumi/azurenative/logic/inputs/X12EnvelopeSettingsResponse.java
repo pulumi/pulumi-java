@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The X12 agreement envelope settings.
- * 
  */
 public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The controls standards id.
-     * 
      */
     @Import(name="controlStandardsId", required=true)
       private final Integer controlStandardsId;
@@ -33,7 +31,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The control version number.
-     * 
      */
     @Import(name="controlVersionNumber", required=true)
       private final String controlVersionNumber;
@@ -44,7 +41,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to enable default group headers.
-     * 
      */
     @Import(name="enableDefaultGroupHeaders", required=true)
       private final Boolean enableDefaultGroupHeaders;
@@ -55,7 +51,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The functional group id.
-     * 
      */
     @Import(name="functionalGroupId")
       private final @Nullable String functionalGroupId;
@@ -66,7 +61,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The group control number lower bound.
-     * 
      */
     @Import(name="groupControlNumberLowerBound", required=true)
       private final Integer groupControlNumberLowerBound;
@@ -77,7 +71,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The group control number upper bound.
-     * 
      */
     @Import(name="groupControlNumberUpperBound", required=true)
       private final Integer groupControlNumberUpperBound;
@@ -88,7 +81,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The group header agency code.
-     * 
      */
     @Import(name="groupHeaderAgencyCode", required=true)
       private final String groupHeaderAgencyCode;
@@ -99,7 +91,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The group header date format.
-     * 
      */
     @Import(name="groupHeaderDateFormat", required=true)
       private final String groupHeaderDateFormat;
@@ -110,7 +101,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The group header time format.
-     * 
      */
     @Import(name="groupHeaderTimeFormat", required=true)
       private final String groupHeaderTimeFormat;
@@ -121,7 +111,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The group header version.
-     * 
      */
     @Import(name="groupHeaderVersion", required=true)
       private final String groupHeaderVersion;
@@ -132,7 +121,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The interchange  control number lower bound.
-     * 
      */
     @Import(name="interchangeControlNumberLowerBound", required=true)
       private final Integer interchangeControlNumberLowerBound;
@@ -143,7 +131,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The interchange  control number upper bound.
-     * 
      */
     @Import(name="interchangeControlNumberUpperBound", required=true)
       private final Integer interchangeControlNumberUpperBound;
@@ -154,7 +141,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to overwrite existing transaction set control number.
-     * 
      */
     @Import(name="overwriteExistingTransactionSetControlNumber", required=true)
       private final Boolean overwriteExistingTransactionSetControlNumber;
@@ -165,7 +151,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The receiver application id.
-     * 
      */
     @Import(name="receiverApplicationId", required=true)
       private final String receiverApplicationId;
@@ -176,7 +161,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to rollover group control number.
-     * 
      */
     @Import(name="rolloverGroupControlNumber", required=true)
       private final Boolean rolloverGroupControlNumber;
@@ -187,7 +171,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to rollover interchange control number.
-     * 
      */
     @Import(name="rolloverInterchangeControlNumber", required=true)
       private final Boolean rolloverInterchangeControlNumber;
@@ -198,7 +181,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to rollover transaction set control number.
-     * 
      */
     @Import(name="rolloverTransactionSetControlNumber", required=true)
       private final Boolean rolloverTransactionSetControlNumber;
@@ -209,7 +191,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The sender application id.
-     * 
      */
     @Import(name="senderApplicationId", required=true)
       private final String senderApplicationId;
@@ -220,7 +201,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The transaction set control number lower bound.
-     * 
      */
     @Import(name="transactionSetControlNumberLowerBound", required=true)
       private final Integer transactionSetControlNumberLowerBound;
@@ -231,7 +211,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The transaction set control number prefix.
-     * 
      */
     @Import(name="transactionSetControlNumberPrefix")
       private final @Nullable String transactionSetControlNumberPrefix;
@@ -242,7 +221,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The transaction set control number suffix.
-     * 
      */
     @Import(name="transactionSetControlNumberSuffix")
       private final @Nullable String transactionSetControlNumberSuffix;
@@ -253,7 +231,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The transaction set control number upper bound.
-     * 
      */
     @Import(name="transactionSetControlNumberUpperBound", required=true)
       private final Integer transactionSetControlNumberUpperBound;
@@ -264,7 +241,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The usage indicator.
-     * 
      */
     @Import(name="usageIndicator", required=true)
       private final String usageIndicator;
@@ -275,7 +251,6 @@ public final class X12EnvelopeSettingsResponse extends io.pulumi.resources.Invok
 
     /**
      * The value indicating whether to use control standards id as repetition character.
-     * 
      */
     @Import(name="useControlStandardsIdAsRepetitionCharacter", required=true)
       private final Boolean useControlStandardsIdAsRepetitionCharacter;

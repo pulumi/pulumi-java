@@ -14,18 +14,15 @@ import javax.annotation.Nullable;
 public final class StringNotContainsAdvancedFilterResponse {
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     private final @Nullable String key;
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'StringNotContains'.
-     * 
      */
     private final String operatorType;
     /**
      * The set of filter values.
-     * 
      */
     private final @Nullable List<String> values;
 
@@ -41,7 +38,6 @@ public final class StringNotContainsAdvancedFilterResponse {
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
@@ -49,14 +45,12 @@ public final class StringNotContainsAdvancedFilterResponse {
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'StringNotContains'.
-     * 
     */
     public String getOperatorType() {
         return this.operatorType;
     }
     /**
      * The set of filter values.
-     * 
     */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;

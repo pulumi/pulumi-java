@@ -14,7 +14,6 @@ public final class GetActiveSessionsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the Bastion Host.
-     * 
      */
     @Import(name="bastionHostName", required=true)
       private final String bastionHostName;
@@ -25,7 +24,6 @@ public final class GetActiveSessionsArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

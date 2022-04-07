@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The available data types for Amazon Web Services CloudTrail data connector.
- * 
  */
 public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
 
     /**
      * Logs data type.
-     * 
      */
     @Import(name="logs")
       private final @Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;

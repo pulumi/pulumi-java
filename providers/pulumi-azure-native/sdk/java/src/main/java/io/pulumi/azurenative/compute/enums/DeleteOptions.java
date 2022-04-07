@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specify what happens to the public IP when the VM is deleted
-     * 
      */
     @EnumType
     public enum DeleteOptions {

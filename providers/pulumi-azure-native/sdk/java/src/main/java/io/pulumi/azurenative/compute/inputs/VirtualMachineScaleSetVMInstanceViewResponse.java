@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * The instance view of a virtual machine scale set VM.
- * 
  */
 public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. <br><br>Minimum api-version: 2020-06-01.
-     * 
      */
     @Import(name="assignedHost", required=true)
       private final String assignedHost;
@@ -40,7 +38,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.
-     * 
      */
     @Import(name="bootDiagnostics")
       private final @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
@@ -51,7 +48,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * The disks information.
-     * 
      */
     @Import(name="disks")
       private final @Nullable List<DiskInstanceViewResponse> disks;
@@ -62,7 +58,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * The extensions information.
-     * 
      */
     @Import(name="extensions")
       private final @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
@@ -73,7 +68,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * The Maintenance Operation status on the virtual machine.
-     * 
      */
     @Import(name="maintenanceRedeployStatus")
       private final @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
@@ -84,7 +78,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * The placement group in which the VM is running. If the VM is deallocated it will not have a placementGroupId.
-     * 
      */
     @Import(name="placementGroupId")
       private final @Nullable String placementGroupId;
@@ -95,7 +88,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * The Fault Domain count.
-     * 
      */
     @Import(name="platformFaultDomain")
       private final @Nullable Integer platformFaultDomain;
@@ -106,7 +98,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * The Update Domain count.
-     * 
      */
     @Import(name="platformUpdateDomain")
       private final @Nullable Integer platformUpdateDomain;
@@ -117,7 +108,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * The Remote desktop certificate thumbprint.
-     * 
      */
     @Import(name="rdpThumbPrint")
       private final @Nullable String rdpThumbPrint;
@@ -128,7 +118,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * The resource status information.
-     * 
      */
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
@@ -139,7 +128,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * The VM Agent running on the virtual machine.
-     * 
      */
     @Import(name="vmAgent")
       private final @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
@@ -150,7 +138,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse extends io.pulum
 
     /**
      * The health status for the VM.
-     * 
      */
     @Import(name="vmHealth", required=true)
       private final VirtualMachineHealthStatusResponse vmHealth;

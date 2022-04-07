@@ -18,7 +18,6 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
 
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
-     * 
      */
     @Import(name="allowedSourceAddressPrefix")
       private final @Nullable String allowedSourceAddressPrefix;
@@ -29,7 +28,6 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
 
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
-     * 
      */
     @Import(name="allowedSourceAddressPrefixes")
       private final @Nullable List<String> allowedSourceAddressPrefixes;
@@ -40,7 +38,6 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
 
     /**
      * The date & time at which the request ends in UTC
-     * 
      */
     @Import(name="endTimeUtc", required=true)
       private final String endTimeUtc;
@@ -51,7 +48,6 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
 
     /**
      * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
-     * 
      */
     @Import(name="mappedPort")
       private final @Nullable Integer mappedPort;
@@ -69,7 +65,6 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
 
     /**
      * The status of the port
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -80,7 +75,6 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
 
     /**
      * A description of why the `status` has its value
-     * 
      */
     @Import(name="statusReason", required=true)
       private final String statusReason;

@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * Data Lake Store virtual network rule information.
  * API Version: 2016-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates the specified virtual network rule. During update, the virtual network rule with the specified name will be replaced with this new virtual network rule.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetworkRule = new AzureNative.DataLakeStore.VirtualNetworkRule("virtualNetworkRule", new AzureNative.DataLakeStore.VirtualNetworkRuleArgs
+ *         {
+ *             AccountName = "contosoadla",
+ *             ResourceGroupName = "contosorg",
+ *             SubnetId = "test_subnetId",
+ *             VirtualNetworkRuleName = "test_virtual_network_rules_name",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datalakestore "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datalakestore"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datalakestore.NewVirtualNetworkRule(ctx, "virtualNetworkRule", &datalakestore.VirtualNetworkRuleArgs{
+ * 			AccountName:            pulumi.String("contosoadla"),
+ * 			ResourceGroupName:      pulumi.String("contosorg"),
+ * 			SubnetId:               pulumi.String("test_subnetId"),
+ * 			VirtualNetworkRuleName: pulumi.String("test_virtual_network_rules_name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetworkRule = new azure_native.datalakestore.VirtualNetworkRule("virtualNetworkRule", {
+ *     accountName: "contosoadla",
+ *     resourceGroupName: "contosorg",
+ *     subnetId: "test_subnetId",
+ *     virtualNetworkRuleName: "test_virtual_network_rules_name",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network_rule = azure_native.datalakestore.VirtualNetworkRule("virtualNetworkRule",
+ *     account_name="contosoadla",
+ *     resource_group_name="contosorg",
+ *     subnet_id="test_subnetId",
+ *     virtual_network_rule_name="test_virtual_network_rules_name")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +108,36 @@ import javax.annotation.Nullable;
 public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource identifier for the subnet.
-     * 
      */
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
      * @return The resource identifier for the subnet.
-     * 
      */
     public Output<String> getSubnetId() {
         return this.subnetId;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

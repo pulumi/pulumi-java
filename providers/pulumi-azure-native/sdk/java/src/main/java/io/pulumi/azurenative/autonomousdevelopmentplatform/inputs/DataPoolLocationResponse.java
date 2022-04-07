@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Location of a Data Pool
- * 
  */
 public final class DataPoolLocationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DataPoolLocationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Encryption properties of a Data Pool location
-     * 
      */
     @Import(name="encryption")
       private final @Nullable DataPoolEncryptionResponse encryption;
@@ -32,7 +30,6 @@ public final class DataPoolLocationResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The location name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

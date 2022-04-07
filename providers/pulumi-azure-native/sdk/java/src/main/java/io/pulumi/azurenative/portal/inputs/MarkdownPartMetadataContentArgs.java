@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The content of markdown part.
- * 
  */
 public final class MarkdownPartMetadataContentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MarkdownPartMetadataContentArgs extends io.pulumi.resources.R
 
     /**
      * The setting of the content of markdown part.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<MarkdownPartMetadataSettingsSettingsArgs> settings;

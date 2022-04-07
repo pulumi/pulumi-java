@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * how to match value in the Uri
-     * 
      */
     @EnumType
     public enum PathMatchType {

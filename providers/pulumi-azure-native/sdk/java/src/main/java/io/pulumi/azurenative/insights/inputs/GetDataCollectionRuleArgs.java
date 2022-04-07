@@ -14,7 +14,6 @@ public final class GetDataCollectionRuleArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the data collection rule. The name is case insensitive.
-     * 
      */
     @Import(name="dataCollectionRuleName", required=true)
       private final String dataCollectionRuleName;
@@ -25,7 +24,6 @@ public final class GetDataCollectionRuleArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

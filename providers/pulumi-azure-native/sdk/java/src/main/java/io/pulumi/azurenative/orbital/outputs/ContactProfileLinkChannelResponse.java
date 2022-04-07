@@ -15,37 +15,30 @@ import javax.annotation.Nullable;
 public final class ContactProfileLinkChannelResponse {
     /**
      * Bandwidth in MHz
-     * 
      */
     private final Double bandwidthMHz;
     /**
      * Center Frequency in MHz
-     * 
      */
     private final Double centerFrequencyMHz;
     /**
      * Configuration for decoding
-     * 
      */
     private final @Nullable String decodingConfiguration;
     /**
      * Configuration for demodulation
-     * 
      */
     private final @Nullable String demodulationConfiguration;
     /**
      * Configuration for encoding
-     * 
      */
     private final @Nullable String encodingConfiguration;
     /**
      * Customer End point to store/retrieve data during a contact.
-     * 
      */
     private final EndPointResponse endPoint;
     /**
      * Configuration for modulation
-     * 
      */
     private final @Nullable String modulationConfiguration;
 
@@ -69,49 +62,42 @@ public final class ContactProfileLinkChannelResponse {
 
     /**
      * Bandwidth in MHz
-     * 
     */
     public Double getBandwidthMHz() {
         return this.bandwidthMHz;
     }
     /**
      * Center Frequency in MHz
-     * 
     */
     public Double getCenterFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
     /**
      * Configuration for decoding
-     * 
     */
     public Optional<String> getDecodingConfiguration() {
         return Optional.ofNullable(this.decodingConfiguration);
     }
     /**
      * Configuration for demodulation
-     * 
     */
     public Optional<String> getDemodulationConfiguration() {
         return Optional.ofNullable(this.demodulationConfiguration);
     }
     /**
      * Configuration for encoding
-     * 
     */
     public Optional<String> getEncodingConfiguration() {
         return Optional.ofNullable(this.encodingConfiguration);
     }
     /**
      * Customer End point to store/retrieve data during a contact.
-     * 
     */
     public EndPointResponse getEndPoint() {
         return this.endPoint;
     }
     /**
      * Configuration for modulation
-     * 
     */
     public Optional<String> getModulationConfiguration() {
         return Optional.ofNullable(this.modulationConfiguration);

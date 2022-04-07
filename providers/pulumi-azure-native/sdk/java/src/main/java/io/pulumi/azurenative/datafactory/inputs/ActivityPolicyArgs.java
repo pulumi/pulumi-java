@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Execution policy for an activity.
- * 
  */
 public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="retry")
       private final @Nullable Output<Object> retry;
@@ -33,7 +31,6 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Interval between each retry attempt (in seconds). The default is 30 sec.
-     * 
      */
     @Import(name="retryIntervalInSeconds")
       private final @Nullable Output<Integer> retryIntervalInSeconds;
@@ -44,7 +41,6 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When set to true, Input from activity is considered as secure and will not be logged to monitoring.
-     * 
      */
     @Import(name="secureInput")
       private final @Nullable Output<Boolean> secureInput;
@@ -55,7 +51,6 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When set to true, Output from activity is considered as secure and will not be logged to monitoring.
-     * 
      */
     @Import(name="secureOutput")
       private final @Nullable Output<Boolean> secureOutput;
@@ -66,7 +61,6 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<Object> timeout;

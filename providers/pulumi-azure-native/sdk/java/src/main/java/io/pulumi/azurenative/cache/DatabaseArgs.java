@@ -24,7 +24,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
-     * 
      */
     @Import(name="clientProtocol")
       private final @Nullable Output<Either<String,Protocol>> clientProtocol;
@@ -35,7 +34,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the RedisEnterprise cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -46,7 +44,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Clustering policy - default is OSSCluster. Specified at create time.
-     * 
      */
     @Import(name="clusteringPolicy")
       private final @Nullable Output<Either<String,ClusteringPolicy>> clusteringPolicy;
@@ -57,7 +54,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the database.
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
@@ -68,7 +64,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Redis eviction policy - default is VolatileLRU
-     * 
      */
     @Import(name="evictionPolicy")
       private final @Nullable Output<Either<String,EvictionPolicy>> evictionPolicy;
@@ -79,7 +74,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional set of redis modules to enable in this database - modules can only be added at creation time.
-     * 
      */
     @Import(name="modules")
       private final @Nullable Output<List<ModuleArgs>> modules;
@@ -90,7 +84,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Persistence settings
-     * 
      */
     @Import(name="persistence")
       private final @Nullable Output<PersistenceArgs> persistence;
@@ -101,7 +94,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * TCP port of the database endpoint. Specified at create time. Defaults to an available port.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -112,7 +104,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

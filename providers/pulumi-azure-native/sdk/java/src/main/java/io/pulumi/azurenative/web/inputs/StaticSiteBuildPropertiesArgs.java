@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Build properties for the static site.
- * 
  */
 public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * A custom command to run during deployment of the Azure Functions API application.
-     * 
      */
     @Import(name="apiBuildCommand")
       private final @Nullable Output<String> apiBuildCommand;
@@ -32,7 +30,6 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The path to the api code within the repository.
-     * 
      */
     @Import(name="apiLocation")
       private final @Nullable Output<String> apiLocation;
@@ -43,7 +40,6 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
-     * 
      */
     @Import(name="appArtifactLocation")
       private final @Nullable Output<String> appArtifactLocation;
@@ -54,7 +50,6 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * A custom command to run during deployment of the static content application.
-     * 
      */
     @Import(name="appBuildCommand")
       private final @Nullable Output<String> appBuildCommand;
@@ -65,7 +60,6 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The path to the app code within the repository.
-     * 
      */
     @Import(name="appLocation")
       private final @Nullable Output<String> appLocation;
@@ -76,7 +70,6 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Github Action secret name override.
-     * 
      */
     @Import(name="githubActionSecretNameOverride")
       private final @Nullable Output<String> githubActionSecretNameOverride;
@@ -87,7 +80,6 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The output path of the app after building.
-     * 
      */
     @Import(name="outputLocation")
       private final @Nullable Output<String> outputLocation;
@@ -98,7 +90,6 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Skip Github Action workflow generation.
-     * 
      */
     @Import(name="skipGithubActionWorkflowGeneration")
       private final @Nullable Output<Boolean> skipGithubActionWorkflowGeneration;

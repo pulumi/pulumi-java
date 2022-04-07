@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The read behavior for the operation. Default is Query.
-     * 
      */
     @EnumType
     public enum SalesforceSourceReadBehavior {

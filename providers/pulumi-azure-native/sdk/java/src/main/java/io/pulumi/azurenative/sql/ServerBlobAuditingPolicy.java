@@ -19,7 +19,214 @@ import javax.annotation.Nullable;
  * A server blob auditing policy.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update a server's blob auditing policy with all parameters
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverBlobAuditingPolicy = new AzureNative.Sql.ServerBlobAuditingPolicy("serverBlobAuditingPolicy", new AzureNative.Sql.ServerBlobAuditingPolicyArgs
+ *         {
+ *             AuditActionsAndGroups = 
+ *             {
+ *                 "SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP",
+ *                 "FAILED_DATABASE_AUTHENTICATION_GROUP",
+ *                 "BATCH_COMPLETED_GROUP",
+ *             },
+ *             BlobAuditingPolicyName = "default",
+ *             IsAzureMonitorTargetEnabled = true,
+ *             IsStorageSecondaryKeyInUse = false,
+ *             QueueDelayMs = 4000,
+ *             ResourceGroupName = "blobauditingtest-4799",
+ *             RetentionDays = 6,
+ *             ServerName = "blobauditingtest-6440",
+ *             State = "Enabled",
+ *             StorageAccountAccessKey = "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+ *             StorageAccountSubscriptionId = "00000000-1234-0000-5678-000000000000",
+ *             StorageEndpoint = "https://mystorage.blob.core.windows.net",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewServerBlobAuditingPolicy(ctx, "serverBlobAuditingPolicy", &sql.ServerBlobAuditingPolicyArgs{
+ * 			AuditActionsAndGroups: pulumi.StringArray{
+ * 				pulumi.String("SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP"),
+ * 				pulumi.String("FAILED_DATABASE_AUTHENTICATION_GROUP"),
+ * 				pulumi.String("BATCH_COMPLETED_GROUP"),
+ * 			},
+ * 			BlobAuditingPolicyName:       pulumi.String("default"),
+ * 			IsAzureMonitorTargetEnabled:  pulumi.Bool(true),
+ * 			IsStorageSecondaryKeyInUse:   pulumi.Bool(false),
+ * 			QueueDelayMs:                 pulumi.Int(4000),
+ * 			ResourceGroupName:            pulumi.String("blobauditingtest-4799"),
+ * 			RetentionDays:                pulumi.Int(6),
+ * 			ServerName:                   pulumi.String("blobauditingtest-6440"),
+ * 			State:                        "Enabled",
+ * 			StorageAccountAccessKey:      pulumi.String("sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD=="),
+ * 			StorageAccountSubscriptionId: pulumi.String("00000000-1234-0000-5678-000000000000"),
+ * 			StorageEndpoint:              pulumi.String("https://mystorage.blob.core.windows.net"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverBlobAuditingPolicy = new azure_native.sql.ServerBlobAuditingPolicy("serverBlobAuditingPolicy", {
+ *     auditActionsAndGroups: [
+ *         "SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP",
+ *         "FAILED_DATABASE_AUTHENTICATION_GROUP",
+ *         "BATCH_COMPLETED_GROUP",
+ *     ],
+ *     blobAuditingPolicyName: "default",
+ *     isAzureMonitorTargetEnabled: true,
+ *     isStorageSecondaryKeyInUse: false,
+ *     queueDelayMs: 4000,
+ *     resourceGroupName: "blobauditingtest-4799",
+ *     retentionDays: 6,
+ *     serverName: "blobauditingtest-6440",
+ *     state: "Enabled",
+ *     storageAccountAccessKey: "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+ *     storageAccountSubscriptionId: "00000000-1234-0000-5678-000000000000",
+ *     storageEndpoint: "https://mystorage.blob.core.windows.net",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_blob_auditing_policy = azure_native.sql.ServerBlobAuditingPolicy("serverBlobAuditingPolicy",
+ *     audit_actions_and_groups=[
+ *         "SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP",
+ *         "FAILED_DATABASE_AUTHENTICATION_GROUP",
+ *         "BATCH_COMPLETED_GROUP",
+ *     ],
+ *     blob_auditing_policy_name="default",
+ *     is_azure_monitor_target_enabled=True,
+ *     is_storage_secondary_key_in_use=False,
+ *     queue_delay_ms=4000,
+ *     resource_group_name="blobauditingtest-4799",
+ *     retention_days=6,
+ *     server_name="blobauditingtest-6440",
+ *     state="Enabled",
+ *     storage_account_access_key="sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+ *     storage_account_subscription_id="00000000-1234-0000-5678-000000000000",
+ *     storage_endpoint="https://mystorage.blob.core.windows.net")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Update a server's blob auditing policy with minimal parameters
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverBlobAuditingPolicy = new AzureNative.Sql.ServerBlobAuditingPolicy("serverBlobAuditingPolicy", new AzureNative.Sql.ServerBlobAuditingPolicyArgs
+ *         {
+ *             BlobAuditingPolicyName = "default",
+ *             ResourceGroupName = "blobauditingtest-4799",
+ *             ServerName = "blobauditingtest-6440",
+ *             State = "Enabled",
+ *             StorageAccountAccessKey = "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+ *             StorageEndpoint = "https://mystorage.blob.core.windows.net",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewServerBlobAuditingPolicy(ctx, "serverBlobAuditingPolicy", &sql.ServerBlobAuditingPolicyArgs{
+ * 			BlobAuditingPolicyName:  pulumi.String("default"),
+ * 			ResourceGroupName:       pulumi.String("blobauditingtest-4799"),
+ * 			ServerName:              pulumi.String("blobauditingtest-6440"),
+ * 			State:                   "Enabled",
+ * 			StorageAccountAccessKey: pulumi.String("sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD=="),
+ * 			StorageEndpoint:         pulumi.String("https://mystorage.blob.core.windows.net"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverBlobAuditingPolicy = new azure_native.sql.ServerBlobAuditingPolicy("serverBlobAuditingPolicy", {
+ *     blobAuditingPolicyName: "default",
+ *     resourceGroupName: "blobauditingtest-4799",
+ *     serverName: "blobauditingtest-6440",
+ *     state: "Enabled",
+ *     storageAccountAccessKey: "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+ *     storageEndpoint: "https://mystorage.blob.core.windows.net",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_blob_auditing_policy = azure_native.sql.ServerBlobAuditingPolicy("serverBlobAuditingPolicy",
+ *     blob_auditing_policy_name="default",
+ *     resource_group_name="blobauditingtest-4799",
+ *     server_name="blobauditingtest-6440",
+ *     state="Enabled",
+ *     storage_account_access_key="sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+ *     storage_endpoint="https://mystorage.blob.core.windows.net")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -90,7 +297,6 @@ public class ServerBlobAuditingPolicy extends io.pulumi.resources.CustomResource
      * SELECT on SCHEMA::mySchema by public
      * 
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-     * 
      */
     @Export(name="auditActionsAndGroups", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> auditActionsAndGroups;
@@ -153,13 +359,12 @@ public class ServerBlobAuditingPolicy extends io.pulumi.resources.CustomResource
      * SELECT on SCHEMA::mySchema by public
      * 
      * For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
-     * 
      */
     public Output</* @Nullable */ List<String>> getAuditActionsAndGroups() {
         return this.auditActionsAndGroups;
     }
     /**
-     * Specifies whether audit events are sent to Azure Monitor.
+     * Specifies whether audit events are sent to Azure Monitor. 
      * In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
      * 
      * When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -176,7 +381,7 @@ public class ServerBlobAuditingPolicy extends io.pulumi.resources.CustomResource
     private Output</* @Nullable */ Boolean> isAzureMonitorTargetEnabled;
 
     /**
-     * @return Specifies whether audit events are sent to Azure Monitor.
+     * @return Specifies whether audit events are sent to Azure Monitor. 
      * In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
      * 
      * When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created.
@@ -226,28 +431,24 @@ public class ServerBlobAuditingPolicy extends io.pulumi.resources.CustomResource
     }
     /**
      * Specifies whether storageAccountAccessKey value is the storage's secondary key.
-     * 
      */
     @Export(name="isStorageSecondaryKeyInUse", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isStorageSecondaryKeyInUse;
 
     /**
      * @return Specifies whether storageAccountAccessKey value is the storage's secondary key.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsStorageSecondaryKeyInUse() {
         return this.isStorageSecondaryKeyInUse;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -255,7 +456,6 @@ public class ServerBlobAuditingPolicy extends io.pulumi.resources.CustomResource
     /**
      * Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
-     * 
      */
     @Export(name="queueDelayMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> queueDelayMs;
@@ -263,77 +463,66 @@ public class ServerBlobAuditingPolicy extends io.pulumi.resources.CustomResource
     /**
      * @return Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed.
      * The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
-     * 
      */
     public Output</* @Nullable */ Integer> getQueueDelayMs() {
         return this.queueDelayMs;
     }
     /**
      * Specifies the number of days to keep in the audit logs in the storage account.
-     * 
      */
     @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
     /**
      * @return Specifies the number of days to keep in the audit logs in the storage account.
-     * 
      */
     public Output</* @Nullable */ Integer> getRetentionDays() {
         return this.retentionDays;
     }
     /**
      * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Specifies the blob storage subscription Id.
-     * 
      */
     @Export(name="storageAccountSubscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountSubscriptionId;
 
     /**
      * @return Specifies the blob storage subscription Id.
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccountSubscriptionId() {
         return this.storageAccountSubscriptionId;
     }
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
-     * 
      */
     @Export(name="storageEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageEndpoint;
 
     /**
      * @return Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
-     * 
      */
     public Output</* @Nullable */ String> getStorageEndpoint() {
         return this.storageEndpoint;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

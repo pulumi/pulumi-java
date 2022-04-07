@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * the constraints of the bot meta data.
- * 
  */
 public final class ServiceProviderParameterResponseConstraints extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ServiceProviderParameterResponseConstraints extends io.pulumi
 
     /**
      * Whether required the constraints of the bot meta data.
-     * 
      */
     @Import(name="required")
       private final @Nullable Boolean required;

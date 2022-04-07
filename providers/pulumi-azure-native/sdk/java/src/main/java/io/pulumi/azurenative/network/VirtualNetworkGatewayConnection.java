@@ -27,7 +27,289 @@ import javax.annotation.Nullable;
  * A common class for general resource information.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateVirtualNetworkGatewayConnection_S2S
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetworkGatewayConnection = new AzureNative.Network.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection", new AzureNative.Network.VirtualNetworkGatewayConnectionArgs
+ *         {
+ *             ConnectionMode = "Default",
+ *             ConnectionProtocol = "IKEv2",
+ *             ConnectionType = "IPsec",
+ *             DpdTimeoutSeconds = 30,
+ *             EnableBgp = false,
+ *             IpsecPolicies = {},
+ *             LocalNetworkGateway2 = new AzureNative.Network.Inputs.LocalNetworkGatewayArgs
+ *             {
+ *                 GatewayIpAddress = "x.x.x.x",
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw",
+ *                 LocalNetworkAddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *                 {
+ *                     AddressPrefixes = 
+ *                     {
+ *                         "10.1.0.0/16",
+ *                     },
+ *                 },
+ *                 Location = "centralus",
+ *                 Tags = ,
+ *             },
+ *             Location = "centralus",
+ *             ResourceGroupName = "rg1",
+ *             RoutingWeight = 0,
+ *             SharedKey = "Abc123",
+ *             TrafficSelectorPolicies = {},
+ *             UsePolicyBasedTrafficSelectors = false,
+ *             VirtualNetworkGateway1 = new AzureNative.Network.Inputs.VirtualNetworkGatewayArgs
+ *             {
+ *                 ActiveActive = false,
+ *                 BgpSettings = new AzureNative.Network.Inputs.BgpSettingsArgs
+ *                 {
+ *                     Asn = 65514,
+ *                     BgpPeeringAddress = "10.0.1.30",
+ *                     PeerWeight = 0,
+ *                 },
+ *                 EnableBgp = false,
+ *                 GatewayType = "Vpn",
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw",
+ *                 IpConfigurations = 
+ *                 {
+ *                     new AzureNative.Network.Inputs.VirtualNetworkGatewayIPConfigurationArgs
+ *                     {
+ *                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1",
+ *                         Name = "gwipconfig1",
+ *                         PrivateIPAllocationMethod = "Dynamic",
+ *                         PublicIPAddress = new AzureNative.Network.Inputs.SubResourceArgs
+ *                         {
+ *                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+ *                         },
+ *                         Subnet = new AzureNative.Network.Inputs.SubResourceArgs
+ *                         {
+ *                             Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+ *                         },
+ *                     },
+ *                 },
+ *                 Location = "centralus",
+ *                 Sku = new AzureNative.Network.Inputs.VirtualNetworkGatewaySkuArgs
+ *                 {
+ *                     Name = "VpnGw1",
+ *                     Tier = "VpnGw1",
+ *                 },
+ *                 Tags = ,
+ *                 VpnType = "RouteBased",
+ *             },
+ *             VirtualNetworkGatewayConnectionName = "connS2S",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetworkGatewayConnection(ctx, "virtualNetworkGatewayConnection", &network.VirtualNetworkGatewayConnectionArgs{
+ * 			ConnectionMode:     pulumi.String("Default"),
+ * 			ConnectionProtocol: pulumi.String("IKEv2"),
+ * 			ConnectionType:     pulumi.String("IPsec"),
+ * 			DpdTimeoutSeconds:  pulumi.Int(30),
+ * 			EnableBgp:          pulumi.Bool(false),
+ * 			IpsecPolicies:      network.IpsecPolicyArray{},
+ * 			LocalNetworkGateway2: &network.LocalNetworkGatewayArgs{
+ * 				GatewayIpAddress: pulumi.String("x.x.x.x"),
+ * 				Id:               pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw"),
+ * 				LocalNetworkAddressSpace: &network.AddressSpaceArgs{
+ * 					AddressPrefixes: pulumi.StringArray{
+ * 						pulumi.String("10.1.0.0/16"),
+ * 					},
+ * 				},
+ * 				Location: pulumi.String("centralus"),
+ * 				Tags:     nil,
+ * 			},
+ * 			Location:                       pulumi.String("centralus"),
+ * 			ResourceGroupName:              pulumi.String("rg1"),
+ * 			RoutingWeight:                  pulumi.Int(0),
+ * 			SharedKey:                      pulumi.String("Abc123"),
+ * 			TrafficSelectorPolicies:        network.TrafficSelectorPolicyArray{},
+ * 			UsePolicyBasedTrafficSelectors: pulumi.Bool(false),
+ * 			VirtualNetworkGateway1: &network.VirtualNetworkGatewayArgs{
+ * 				ActiveActive: pulumi.Bool(false),
+ * 				BgpSettings: &network.BgpSettingsArgs{
+ * 					Asn:               pulumi.Float64(65514),
+ * 					BgpPeeringAddress: pulumi.String("10.0.1.30"),
+ * 					PeerWeight:        pulumi.Int(0),
+ * 				},
+ * 				EnableBgp:   pulumi.Bool(false),
+ * 				GatewayType: pulumi.String("Vpn"),
+ * 				Id:          pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw"),
+ * 				IpConfigurations: network.VirtualNetworkGatewayIPConfigurationArray{
+ * 					&network.VirtualNetworkGatewayIPConfigurationArgs{
+ * 						Id:                        pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1"),
+ * 						Name:                      pulumi.String("gwipconfig1"),
+ * 						PrivateIPAllocationMethod: pulumi.String("Dynamic"),
+ * 						PublicIPAddress: &network.SubResourceArgs{
+ * 							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip"),
+ * 						},
+ * 						Subnet: &network.SubResourceArgs{
+ * 							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet"),
+ * 						},
+ * 					},
+ * 				},
+ * 				Location: pulumi.String("centralus"),
+ * 				Sku: &network.VirtualNetworkGatewaySkuArgs{
+ * 					Name: pulumi.String("VpnGw1"),
+ * 					Tier: pulumi.String("VpnGw1"),
+ * 				},
+ * 				Tags:    nil,
+ * 				VpnType: pulumi.String("RouteBased"),
+ * 			},
+ * 			VirtualNetworkGatewayConnectionName: pulumi.String("connS2S"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetworkGatewayConnection = new azure_native.network.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection", {
+ *     connectionMode: "Default",
+ *     connectionProtocol: "IKEv2",
+ *     connectionType: "IPsec",
+ *     dpdTimeoutSeconds: 30,
+ *     enableBgp: false,
+ *     ipsecPolicies: [],
+ *     localNetworkGateway2: {
+ *         gatewayIpAddress: "x.x.x.x",
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw",
+ *         localNetworkAddressSpace: {
+ *             addressPrefixes: ["10.1.0.0/16"],
+ *         },
+ *         location: "centralus",
+ *         tags: {},
+ *     },
+ *     location: "centralus",
+ *     resourceGroupName: "rg1",
+ *     routingWeight: 0,
+ *     sharedKey: "Abc123",
+ *     trafficSelectorPolicies: [],
+ *     usePolicyBasedTrafficSelectors: false,
+ *     virtualNetworkGateway1: {
+ *         activeActive: false,
+ *         bgpSettings: {
+ *             asn: 65514,
+ *             bgpPeeringAddress: "10.0.1.30",
+ *             peerWeight: 0,
+ *         },
+ *         enableBgp: false,
+ *         gatewayType: "Vpn",
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw",
+ *         ipConfigurations: [{
+ *             id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1",
+ *             name: "gwipconfig1",
+ *             privateIPAllocationMethod: "Dynamic",
+ *             publicIPAddress: {
+ *                 id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+ *             },
+ *             subnet: {
+ *                 id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+ *             },
+ *         }],
+ *         location: "centralus",
+ *         sku: {
+ *             name: "VpnGw1",
+ *             tier: "VpnGw1",
+ *         },
+ *         tags: {},
+ *         vpnType: "RouteBased",
+ *     },
+ *     virtualNetworkGatewayConnectionName: "connS2S",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network_gateway_connection = azure_native.network.VirtualNetworkGatewayConnection("virtualNetworkGatewayConnection",
+ *     connection_mode="Default",
+ *     connection_protocol="IKEv2",
+ *     connection_type="IPsec",
+ *     dpd_timeout_seconds=30,
+ *     enable_bgp=False,
+ *     ipsec_policies=[],
+ *     local_network_gateway2=azure_native.network.LocalNetworkGatewayArgs(
+ *         gateway_ip_address="x.x.x.x",
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw",
+ *         local_network_address_space=azure_native.network.AddressSpaceArgs(
+ *             address_prefixes=["10.1.0.0/16"],
+ *         ),
+ *         location="centralus",
+ *         tags={},
+ *     ),
+ *     location="centralus",
+ *     resource_group_name="rg1",
+ *     routing_weight=0,
+ *     shared_key="Abc123",
+ *     traffic_selector_policies=[],
+ *     use_policy_based_traffic_selectors=False,
+ *     virtual_network_gateway1=azure_native.network.VirtualNetworkGatewayArgs(
+ *         active_active=False,
+ *         bgp_settings=azure_native.network.BgpSettingsArgs(
+ *             asn=65514,
+ *             bgp_peering_address="10.0.1.30",
+ *             peer_weight=0,
+ *         ),
+ *         enable_bgp=False,
+ *         gateway_type="Vpn",
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw",
+ *         ip_configurations=[azure_native.network.VirtualNetworkGatewayIPConfigurationArgs(
+ *             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1",
+ *             name="gwipconfig1",
+ *             private_ip_allocation_method="Dynamic",
+ *             public_ip_address=azure_native.network.SubResourceArgs(
+ *                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+ *             ),
+ *             subnet=azure_native.network.SubResourceArgs(
+ *                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+ *             ),
+ *         )],
+ *         location="centralus",
+ *         sku=azure_native.network.VirtualNetworkGatewaySkuArgs(
+ *             name="VpnGw1",
+ *             tier="VpnGw1",
+ *         ),
+ *         tags={},
+ *         vpn_type="RouteBased",
+ *     ),
+ *     virtual_network_gateway_connection_name="connS2S")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -42,392 +324,336 @@ import javax.annotation.Nullable;
 public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomResource {
     /**
      * The authorizationKey.
-     * 
      */
     @Export(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
     /**
      * @return The authorizationKey.
-     * 
      */
     public Output</* @Nullable */ String> getAuthorizationKey() {
         return this.authorizationKey;
     }
     /**
      * The connection mode for this connection.
-     * 
      */
     @Export(name="connectionMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionMode;
 
     /**
      * @return The connection mode for this connection.
-     * 
      */
     public Output</* @Nullable */ String> getConnectionMode() {
         return this.connectionMode;
     }
     /**
      * Connection protocol used for this connection.
-     * 
      */
     @Export(name="connectionProtocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionProtocol;
 
     /**
      * @return Connection protocol used for this connection.
-     * 
      */
     public Output</* @Nullable */ String> getConnectionProtocol() {
         return this.connectionProtocol;
     }
     /**
      * Virtual Network Gateway connection status.
-     * 
      */
     @Export(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
     /**
      * @return Virtual Network Gateway connection status.
-     * 
      */
     public Output<String> getConnectionStatus() {
         return this.connectionStatus;
     }
     /**
      * Gateway connection type.
-     * 
      */
     @Export(name="connectionType", type=String.class, parameters={})
     private Output<String> connectionType;
 
     /**
      * @return Gateway connection type.
-     * 
      */
     public Output<String> getConnectionType() {
         return this.connectionType;
     }
     /**
      * The dead peer detection timeout of this connection in seconds.
-     * 
      */
     @Export(name="dpdTimeoutSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dpdTimeoutSeconds;
 
     /**
      * @return The dead peer detection timeout of this connection in seconds.
-     * 
      */
     public Output</* @Nullable */ Integer> getDpdTimeoutSeconds() {
         return this.dpdTimeoutSeconds;
     }
     /**
      * The egress bytes transferred in this connection.
-     * 
      */
     @Export(name="egressBytesTransferred", type=Double.class, parameters={})
     private Output<Double> egressBytesTransferred;
 
     /**
      * @return The egress bytes transferred in this connection.
-     * 
      */
     public Output<Double> getEgressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
      * EnableBgp flag.
-     * 
      */
     @Export(name="enableBgp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBgp;
 
     /**
      * @return EnableBgp flag.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableBgp() {
         return this.enableBgp;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Bypass ExpressRoute Gateway for data forwarding.
-     * 
      */
     @Export(name="expressRouteGatewayBypass", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> expressRouteGatewayBypass;
 
     /**
      * @return Bypass ExpressRoute Gateway for data forwarding.
-     * 
      */
     public Output</* @Nullable */ Boolean> getExpressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass;
     }
     /**
      * The ingress bytes transferred in this connection.
-     * 
      */
     @Export(name="ingressBytesTransferred", type=Double.class, parameters={})
     private Output<Double> ingressBytesTransferred;
 
     /**
      * @return The ingress bytes transferred in this connection.
-     * 
      */
     public Output<Double> getIngressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
      * The IPSec Policies to be considered by this connection.
-     * 
      */
     @Export(name="ipsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
     private Output</* @Nullable */ List<IpsecPolicyResponse>> ipsecPolicies;
 
     /**
      * @return The IPSec Policies to be considered by this connection.
-     * 
      */
     public Output</* @Nullable */ List<IpsecPolicyResponse>> getIpsecPolicies() {
         return this.ipsecPolicies;
     }
     /**
      * The reference to local network gateway resource.
-     * 
      */
     @Export(name="localNetworkGateway2", type=LocalNetworkGatewayResponse.class, parameters={})
     private Output</* @Nullable */ LocalNetworkGatewayResponse> localNetworkGateway2;
 
     /**
      * @return The reference to local network gateway resource.
-     * 
      */
     public Output</* @Nullable */ LocalNetworkGatewayResponse> getLocalNetworkGateway2() {
         return this.localNetworkGateway2;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The reference to peerings resource.
-     * 
      */
     @Export(name="peer", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> peer;
 
     /**
      * @return The reference to peerings resource.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getPeer() {
         return this.peer;
     }
     /**
      * The provisioning state of the virtual network gateway connection resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the virtual network gateway connection resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the virtual network gateway connection resource.
-     * 
      */
     @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
      * @return The resource GUID property of the virtual network gateway connection resource.
-     * 
      */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The routing weight.
-     * 
      */
     @Export(name="routingWeight", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> routingWeight;
 
     /**
      * @return The routing weight.
-     * 
      */
     public Output</* @Nullable */ Integer> getRoutingWeight() {
         return this.routingWeight;
     }
     /**
      * The IPSec shared key.
-     * 
      */
     @Export(name="sharedKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedKey;
 
     /**
      * @return The IPSec shared key.
-     * 
      */
     public Output</* @Nullable */ String> getSharedKey() {
         return this.sharedKey;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The Traffic Selector Policies to be considered by this connection.
-     * 
      */
     @Export(name="trafficSelectorPolicies", type=List.class, parameters={TrafficSelectorPolicyResponse.class})
     private Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> trafficSelectorPolicies;
 
     /**
      * @return The Traffic Selector Policies to be considered by this connection.
-     * 
      */
     public Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> getTrafficSelectorPolicies() {
         return this.trafficSelectorPolicies;
     }
     /**
      * Collection of all tunnels' connection health status.
-     * 
      */
     @Export(name="tunnelConnectionStatus", type=List.class, parameters={TunnelConnectionHealthResponse.class})
     private Output<List<TunnelConnectionHealthResponse>> tunnelConnectionStatus;
 
     /**
      * @return Collection of all tunnels' connection health status.
-     * 
      */
     public Output<List<TunnelConnectionHealthResponse>> getTunnelConnectionStatus() {
         return this.tunnelConnectionStatus;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Use private local Azure IP for the connection.
-     * 
      */
     @Export(name="useLocalAzureIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useLocalAzureIpAddress;
 
     /**
      * @return Use private local Azure IP for the connection.
-     * 
      */
     public Output</* @Nullable */ Boolean> getUseLocalAzureIpAddress() {
         return this.useLocalAzureIpAddress;
     }
     /**
      * Enable policy-based traffic selectors.
-     * 
      */
     @Export(name="usePolicyBasedTrafficSelectors", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> usePolicyBasedTrafficSelectors;
 
     /**
      * @return Enable policy-based traffic selectors.
-     * 
      */
     public Output</* @Nullable */ Boolean> getUsePolicyBasedTrafficSelectors() {
         return this.usePolicyBasedTrafficSelectors;
     }
     /**
      * The reference to virtual network gateway resource.
-     * 
      */
     @Export(name="virtualNetworkGateway1", type=VirtualNetworkGatewayResponse.class, parameters={})
     private Output<VirtualNetworkGatewayResponse> virtualNetworkGateway1;
 
     /**
      * @return The reference to virtual network gateway resource.
-     * 
      */
     public Output<VirtualNetworkGatewayResponse> getVirtualNetworkGateway1() {
         return this.virtualNetworkGateway1;
     }
     /**
      * The reference to virtual network gateway resource.
-     * 
      */
     @Export(name="virtualNetworkGateway2", type=VirtualNetworkGatewayResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkGatewayResponse> virtualNetworkGateway2;
 
     /**
      * @return The reference to virtual network gateway resource.
-     * 
      */
     public Output</* @Nullable */ VirtualNetworkGatewayResponse> getVirtualNetworkGateway2() {
         return this.virtualNetworkGateway2;

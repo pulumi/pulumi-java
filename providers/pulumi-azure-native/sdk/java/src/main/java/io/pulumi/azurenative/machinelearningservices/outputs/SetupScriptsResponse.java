@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class SetupScriptsResponse {
     /**
      * Customized setup scripts
-     * 
      */
     private final @Nullable ScriptsToExecuteResponse scripts;
 
@@ -24,7 +23,6 @@ public final class SetupScriptsResponse {
 
     /**
      * Customized setup scripts
-     * 
     */
     public Optional<ScriptsToExecuteResponse> getScripts() {
         return Optional.ofNullable(this.scripts);

@@ -19,7 +19,91 @@ import javax.annotation.Nullable;
  * Model that represents a Capability resource.
  * API Version: 2021-09-15-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create/update a Capability that extends a virtual machine Target resource.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var capability = new AzureNative.Chaos.Capability("capability", new AzureNative.Chaos.CapabilityArgs
+ *         {
+ *             CapabilityName = "Shutdown-1.0",
+ *             ParentProviderNamespace = "Microsoft.Compute",
+ *             ParentResourceName = "exampleVM",
+ *             ParentResourceType = "virtualMachines",
+ *             ResourceGroupName = "exampleRG",
+ *             TargetName = "Microsoft-VirtualMachine",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	chaos "github.com/pulumi/pulumi-azure-native/sdk/go/azure/chaos"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := chaos.NewCapability(ctx, "capability", &chaos.CapabilityArgs{
+ * 			CapabilityName:          pulumi.String("Shutdown-1.0"),
+ * 			ParentProviderNamespace: pulumi.String("Microsoft.Compute"),
+ * 			ParentResourceName:      pulumi.String("exampleVM"),
+ * 			ParentResourceType:      pulumi.String("virtualMachines"),
+ * 			ResourceGroupName:       pulumi.String("exampleRG"),
+ * 			TargetName:              pulumi.String("Microsoft-VirtualMachine"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const capability = new azure_native.chaos.Capability("capability", {
+ *     capabilityName: "Shutdown-1.0",
+ *     parentProviderNamespace: "Microsoft.Compute",
+ *     parentResourceName: "exampleVM",
+ *     parentResourceType: "virtualMachines",
+ *     resourceGroupName: "exampleRG",
+ *     targetName: "Microsoft-VirtualMachine",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * capability = azure_native.chaos.Capability("capability",
+ *     capability_name="Shutdown-1.0",
+ *     parent_provider_namespace="Microsoft.Compute",
+ *     parent_resource_name="exampleVM",
+ *     parent_resource_type="virtualMachines",
+ *     resource_group_name="exampleRG",
+ *     target_name="Microsoft-VirtualMachine")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +118,48 @@ import javax.annotation.Nullable;
 public class Capability extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The properties of a capability resource.
-     * 
      */
     @Export(name="properties", type=CapabilityPropertiesResponse.class, parameters={})
     private Output<CapabilityPropertiesResponse> properties;
 
     /**
      * @return The properties of a capability resource.
-     * 
      */
     public Output<CapabilityPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The standard system metadata of a resource type.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The standard system metadata of a resource type.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

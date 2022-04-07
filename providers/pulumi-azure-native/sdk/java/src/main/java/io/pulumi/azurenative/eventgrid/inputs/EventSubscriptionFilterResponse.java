@@ -27,7 +27,6 @@ import javax.annotation.Nullable;
 
 /**
  * Filter for the Event Subscription.
- * 
  */
 public final class EventSubscriptionFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -35,7 +34,6 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
 
     /**
      * An array of advanced filters that are used for filtering event subscriptions.
-     * 
      */
     @Import(name="advancedFilters")
       private final @Nullable List<Object> advancedFilters;
@@ -46,7 +44,6 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
 
     /**
      * A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
-     * 
      */
     @Import(name="includedEventTypes")
       private final @Nullable List<String> includedEventTypes;
@@ -58,7 +55,6 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
     /**
      * Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
      * should be compared in a case sensitive manner.
-     * 
      */
     @Import(name="isSubjectCaseSensitive")
       private final @Nullable Boolean isSubjectCaseSensitive;
@@ -71,7 +67,6 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * An optional string to filter events for an event subscription based on a resource path prefix.
      * The format of this depends on the publisher of the events.
      * Wildcard characters are not supported in this path.
-     * 
      */
     @Import(name="subjectBeginsWith")
       private final @Nullable String subjectBeginsWith;
@@ -83,7 +78,6 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
     /**
      * An optional string to filter events for an event subscription based on a resource path suffix.
      * Wildcard characters are not supported in this path.
-     * 
      */
     @Import(name="subjectEndsWith")
       private final @Nullable String subjectEndsWith;

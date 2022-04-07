@@ -14,7 +14,6 @@ public final class GetPartnerRegistrationArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of the partner registration.
-     * 
      */
     @Import(name="partnerRegistrationName", required=true)
       private final String partnerRegistrationName;
@@ -25,7 +24,6 @@ public final class GetPartnerRegistrationArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

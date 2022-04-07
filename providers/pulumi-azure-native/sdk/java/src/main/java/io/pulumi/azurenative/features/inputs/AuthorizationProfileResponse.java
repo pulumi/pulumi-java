@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Authorization Profile
- * 
  */
 public final class AuthorizationProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
 
     /**
      * The approved time
-     * 
      */
     @Import(name="approvedTime", required=true)
       private final String approvedTime;
@@ -29,7 +27,6 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
 
     /**
      * The approver
-     * 
      */
     @Import(name="approver", required=true)
       private final String approver;
@@ -40,7 +37,6 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
 
     /**
      * The requested time
-     * 
      */
     @Import(name="requestedTime", required=true)
       private final String requestedTime;
@@ -51,7 +47,6 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
 
     /**
      * The requester
-     * 
      */
     @Import(name="requester", required=true)
       private final String requester;
@@ -62,7 +57,6 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
 
     /**
      * The requester object id
-     * 
      */
     @Import(name="requesterObjectId", required=true)
       private final String requesterObjectId;

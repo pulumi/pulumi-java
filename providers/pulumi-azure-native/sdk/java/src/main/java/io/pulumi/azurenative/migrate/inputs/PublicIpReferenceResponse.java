@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Defines reference to a public IP.
- * 
  */
 public final class PublicIpReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PublicIpReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Gets the ARM resource ID of the tracked resource being referenced.
-     * 
      */
     @Import(name="sourceArmResourceId", required=true)
       private final String sourceArmResourceId;

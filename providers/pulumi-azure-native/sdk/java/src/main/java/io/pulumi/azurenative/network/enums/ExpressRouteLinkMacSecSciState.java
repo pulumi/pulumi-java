@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Sci mode enabled/disabled.
-     * 
      */
     @EnumType
     public enum ExpressRouteLinkMacSecSciState {

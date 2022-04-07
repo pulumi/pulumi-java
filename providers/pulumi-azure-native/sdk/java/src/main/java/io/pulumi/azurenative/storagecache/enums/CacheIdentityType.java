@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of identity used for the cache
-     * 
      */
     @EnumType
     public enum CacheIdentityType {

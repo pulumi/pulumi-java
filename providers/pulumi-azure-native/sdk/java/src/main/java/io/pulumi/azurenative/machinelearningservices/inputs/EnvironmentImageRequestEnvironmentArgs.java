@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The details of the AZURE ML environment.
- * 
  */
 public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
 
     /**
      * The definition of a Docker container.
-     * 
      */
     @Import(name="docker")
       private final @Nullable Output<ModelEnvironmentDefinitionDockerArgs> docker;
@@ -36,7 +34,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
 
     /**
      * Definition of environment variables to be defined in the environment.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
@@ -47,7 +44,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
 
     /**
      * The inferencing stack version added to the image. To avoid adding an inferencing stack, do not set this value. Valid values: "latest".
-     * 
      */
     @Import(name="inferencingStackVersion")
       private final @Nullable Output<String> inferencingStackVersion;
@@ -58,7 +54,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
 
     /**
      * The name of the environment.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -69,7 +64,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
 
     /**
      * Settings for a Python environment.
-     * 
      */
     @Import(name="python")
       private final @Nullable Output<ModelEnvironmentDefinitionPythonArgs> python;
@@ -80,7 +74,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
 
     /**
      * Settings for a R environment.
-     * 
      */
     @Import(name="r")
       private final @Nullable Output<ModelEnvironmentDefinitionRArgs> r;
@@ -91,7 +84,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
 
     /**
      * The configuration for a Spark environment.
-     * 
      */
     @Import(name="spark")
       private final @Nullable Output<ModelEnvironmentDefinitionSparkArgs> spark;
@@ -102,7 +94,6 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
 
     /**
      * The environment version.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

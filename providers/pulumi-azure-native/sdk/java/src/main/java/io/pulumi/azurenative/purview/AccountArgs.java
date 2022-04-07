@@ -20,7 +20,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the account.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -31,7 +30,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity Info on the tracked resource
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -42,7 +40,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the managed resource group name
-     * 
      */
     @Import(name="managedResourceGroupName")
       private final @Nullable Output<String> managedResourceGroupName;
@@ -64,7 +60,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the public network access.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -75,7 +70,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags on the azure resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

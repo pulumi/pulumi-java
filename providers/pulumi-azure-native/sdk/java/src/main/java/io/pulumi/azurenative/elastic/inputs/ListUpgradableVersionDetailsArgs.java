@@ -14,7 +14,6 @@ public final class ListUpgradableVersionDetailsArgs extends io.pulumi.resources.
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final String monitorName;
@@ -25,7 +24,6 @@ public final class ListUpgradableVersionDetailsArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group to which the Elastic resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

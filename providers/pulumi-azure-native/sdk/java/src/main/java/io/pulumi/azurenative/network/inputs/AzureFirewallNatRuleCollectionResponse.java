@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * NAT rule collection resource.
- * 
  */
 public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
 
     /**
      * The action type of a NAT rule collection.
-     * 
      */
     @Import(name="action")
       private final @Nullable AzureFirewallNatRCActionResponse action;
@@ -35,7 +33,6 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -46,7 +43,6 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -57,7 +53,6 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
 
     /**
      * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -68,7 +63,6 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
 
     /**
      * Priority of the NAT rule collection resource.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Integer priority;
@@ -79,7 +73,6 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
 
     /**
      * The provisioning state of the NAT rule collection resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -90,7 +83,6 @@ public final class AzureFirewallNatRuleCollectionResponse extends io.pulumi.reso
 
     /**
      * Collection of rules used by a NAT rule collection.
-     * 
      */
     @Import(name="rules")
       private final @Nullable List<AzureFirewallNatRuleResponse> rules;

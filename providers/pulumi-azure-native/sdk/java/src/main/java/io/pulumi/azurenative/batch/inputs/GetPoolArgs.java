@@ -14,7 +14,6 @@ public final class GetPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Batch account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The pool name. This must be unique within the account.
-     * 
      */
     @Import(name="poolName", required=true)
       private final String poolName;
@@ -36,7 +34,6 @@ public final class GetPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the Batch account.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * A global reach connection resource
  * API Version: 2020-07-17-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### GlobalReachConnections_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var globalReachConnection = new AzureNative.AVS.GlobalReachConnection("globalReachConnection", new AzureNative.AVS.GlobalReachConnectionArgs
+ *         {
+ *             AuthorizationKey = "01010101-0101-0101-0101-010101010101",
+ *             GlobalReachConnectionName = "connection1",
+ *             PeerExpressRouteCircuit = "/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer",
+ *             PrivateCloudName = "cloud1",
+ *             ResourceGroupName = "group1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewGlobalReachConnection(ctx, "globalReachConnection", &avs.GlobalReachConnectionArgs{
+ * 			AuthorizationKey:          pulumi.String("01010101-0101-0101-0101-010101010101"),
+ * 			GlobalReachConnectionName: pulumi.String("connection1"),
+ * 			PeerExpressRouteCircuit:   pulumi.String("/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer"),
+ * 			PrivateCloudName:          pulumi.String("cloud1"),
+ * 			ResourceGroupName:         pulumi.String("group1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const globalReachConnection = new azure_native.avs.GlobalReachConnection("globalReachConnection", {
+ *     authorizationKey: "01010101-0101-0101-0101-010101010101",
+ *     globalReachConnectionName: "connection1",
+ *     peerExpressRouteCircuit: "/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer",
+ *     privateCloudName: "cloud1",
+ *     resourceGroupName: "group1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * global_reach_connection = azure_native.avs.GlobalReachConnection("globalReachConnection",
+ *     authorization_key="01010101-0101-0101-0101-010101010101",
+ *     global_reach_connection_name="connection1",
+ *     peer_express_route_circuit="/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer",
+ *     private_cloud_name="cloud1",
+ *     resource_group_name="group1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,98 +112,84 @@ import javax.annotation.Nullable;
 public class GlobalReachConnection extends io.pulumi.resources.CustomResource {
     /**
      * The network used for global reach carved out from the original network block provided for the private cloud
-     * 
      */
     @Export(name="addressPrefix", type=String.class, parameters={})
     private Output<String> addressPrefix;
 
     /**
      * @return The network used for global reach carved out from the original network block provided for the private cloud
-     * 
      */
     public Output<String> getAddressPrefix() {
         return this.addressPrefix;
     }
     /**
      * Authorization key from the peer express route used for the global reach connection
-     * 
      */
     @Export(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
     /**
      * @return Authorization key from the peer express route used for the global reach connection
-     * 
      */
     public Output</* @Nullable */ String> getAuthorizationKey() {
         return this.authorizationKey;
     }
     /**
      * The connection status of the global reach connection
-     * 
      */
     @Export(name="circuitConnectionStatus", type=String.class, parameters={})
     private Output<String> circuitConnectionStatus;
 
     /**
      * @return The connection status of the global reach connection
-     * 
      */
     public Output<String> getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
-     * 
      */
     @Export(name="peerExpressRouteCircuit", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerExpressRouteCircuit;
 
     /**
      * @return Identifier of the ExpressRoute Circuit to peer with in the global reach connection
-     * 
      */
     public Output</* @Nullable */ String> getPeerExpressRouteCircuit() {
         return this.peerExpressRouteCircuit;
     }
     /**
      * The state of the  ExpressRoute Circuit Authorization provisioning
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The state of the  ExpressRoute Circuit Authorization provisioning
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

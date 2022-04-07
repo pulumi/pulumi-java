@@ -14,7 +14,6 @@ public final class GraphResourceGetPropertiesResponseResource extends io.pulumi.
 
     /**
      * Name of the Cosmos DB Graph
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

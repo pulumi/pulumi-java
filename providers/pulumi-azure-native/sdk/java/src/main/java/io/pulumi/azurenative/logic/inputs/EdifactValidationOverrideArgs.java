@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * The Edifact validation override settings.
- * 
  */
 public final class EdifactValidationOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
 
     /**
      * The value indicating whether to allow leading and trailing spaces and zeroes.
-     * 
      */
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
@@ -33,7 +31,6 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
 
     /**
      * The value indicating whether to validate character Set.
-     * 
      */
     @Import(name="enforceCharacterSet", required=true)
       private final Output<Boolean> enforceCharacterSet;
@@ -44,7 +41,6 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
 
     /**
      * The message id on which the validation settings has to be applied.
-     * 
      */
     @Import(name="messageId", required=true)
       private final Output<String> messageId;
@@ -55,7 +51,6 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
 
     /**
      * The trailing separator policy.
-     * 
      */
     @Import(name="trailingSeparatorPolicy", required=true)
       private final Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
@@ -66,7 +61,6 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
 
     /**
      * The value indicating whether to trim leading and trailing spaces and zeroes.
-     * 
      */
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
@@ -77,7 +71,6 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
 
     /**
      * The value indicating whether to validate EDI types.
-     * 
      */
     @Import(name="validateEDITypes", required=true)
       private final Output<Boolean> validateEDITypes;
@@ -88,7 +81,6 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
 
     /**
      * The value indicating whether to validate XSD types.
-     * 
      */
     @Import(name="validateXSDTypes", required=true)
       private final Output<Boolean> validateXSDTypes;

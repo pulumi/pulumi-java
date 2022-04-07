@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Base class for generic container of backup items
- * 
  */
 public final class GenericContainerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -36,7 +34,6 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'GenericContainer'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final String containerType;
@@ -47,7 +44,6 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Extended information (not returned in List container API calls)
-     * 
      */
     @Import(name="extendedInformation")
       private final @Nullable GenericContainerExtendedInfoResponse extendedInformation;
@@ -58,7 +54,6 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of the container's fabric
-     * 
      */
     @Import(name="fabricName")
       private final @Nullable String fabricName;
@@ -69,7 +64,6 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -80,7 +74,6 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
@@ -91,7 +84,6 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;

@@ -17,7 +17,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifier of the certificate entity. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
@@ -28,7 +27,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Base 64 encoded certificate using the application/x-pkcs12 representation.
-     * 
      */
     @Import(name="data")
       private final @Nullable Output<String> data;
@@ -39,7 +37,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * KeyVault location details of the certificate.
-     * 
      */
     @Import(name="keyVault")
       private final @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
@@ -50,7 +47,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Password for the Certificate
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -61,7 +57,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the guest agent provisioning action.
-     * 
      */
     @EnumType
     public enum ProvisioningAction {

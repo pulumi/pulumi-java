@@ -15,7 +15,6 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends io.pulumi
 
     /**
      * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -26,7 +25,6 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends io.pulumi
 
     /**
      * Properties of load balancer frontend ip configuration.
-     * 
      */
     @Import(name="properties", required=true)
       private final LoadBalancerFrontendIPConfigurationPropertiesResponse properties;

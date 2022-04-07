@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Filter and return results from input array based on the conditions.
- * 
  */
 public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Condition to be used for filtering the input.
-     * 
      */
     @Import(name="condition", required=true)
       private final ExpressionResponse condition;
@@ -35,7 +33,6 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -46,7 +43,6 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -57,7 +53,6 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Input array on which filter should be applied.
-     * 
      */
     @Import(name="items", required=true)
       private final ExpressionResponse items;
@@ -68,7 +63,6 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -80,7 +74,6 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
     /**
      * Type of activity.
      * Expected value is 'Filter'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -91,7 +84,6 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class LinuxPatchSettingsResponse {
     /**
      * Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine. <br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
-     * 
      */
     private final @Nullable String assessmentMode;
     /**
      * Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
-     * 
      */
     private final @Nullable String patchMode;
 
@@ -32,14 +30,12 @@ public final class LinuxPatchSettingsResponse {
 
     /**
      * Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine. <br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
-     * 
     */
     public Optional<String> getAssessmentMode() {
         return Optional.ofNullable(this.assessmentMode);
     }
     /**
      * Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
-     * 
     */
     public Optional<String> getPatchMode() {
         return Optional.ofNullable(this.patchMode);

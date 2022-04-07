@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Solution properties supported by the OperationsManagement resource provider.
- * 
  */
 public final class SolutionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
-     * 
      */
     @Import(name="containedResources")
       private final @Nullable List<String> containedResources;
@@ -32,7 +30,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The provisioning state for the solution.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -43,7 +40,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
-     * 
      */
     @Import(name="referencedResources")
       private final @Nullable List<String> referencedResources;
@@ -54,7 +50,6 @@ public final class SolutionPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The azure resourceId for the workspace where the solution will be deployed/enabled.
-     * 
      */
     @Import(name="workspaceResourceId", required=true)
       private final String workspaceResourceId;

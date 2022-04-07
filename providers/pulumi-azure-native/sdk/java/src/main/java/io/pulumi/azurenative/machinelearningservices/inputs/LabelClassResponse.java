@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a label or a category of labels in a labeling job.
- * 
  */
 public final class LabelClassResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LabelClassResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Display name of the label class.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -32,7 +30,6 @@ public final class LabelClassResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dictionary of subclasses of the label class.
-     * 
      */
     @Import(name="subclasses")
       private final @Nullable Map<String,LabelClassResponse> subclasses;

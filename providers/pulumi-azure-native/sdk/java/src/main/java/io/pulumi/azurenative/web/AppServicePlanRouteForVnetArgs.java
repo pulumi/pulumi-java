@@ -18,7 +18,6 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
 
     /**
      * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-     * 
      */
     @Import(name="endAddress")
       private final @Nullable Output<String> endAddress;
@@ -29,7 +28,6 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -40,7 +38,6 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
 
     /**
      * Name of the App Service plan.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -51,7 +48,6 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
 
     /**
      * Name of the Virtual Network route.
-     * 
      */
     @Import(name="routeName")
       private final @Nullable Output<String> routeName;
@@ -78,7 +73,6 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
      * STATIC - Static route set on the app only
      * 
      * These values will be used for syncing an app's routes with those from a Virtual Network.
-     * 
      */
     @Import(name="routeType")
       private final @Nullable Output<Either<String,RouteType>> routeType;
@@ -89,7 +83,6 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
 
     /**
      * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
-     * 
      */
     @Import(name="startAddress")
       private final @Nullable Output<String> startAddress;
@@ -100,7 +93,6 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
 
     /**
      * Name of the Virtual Network.
-     * 
      */
     @Import(name="vnetName", required=true)
       private final Output<String> vnetName;

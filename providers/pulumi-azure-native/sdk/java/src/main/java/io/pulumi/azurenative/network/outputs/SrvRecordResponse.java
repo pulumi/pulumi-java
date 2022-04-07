@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class SrvRecordResponse {
     /**
      * The port value for this SRV record.
-     * 
      */
     private final @Nullable Integer port;
     /**
      * The priority value for this SRV record.
-     * 
      */
     private final @Nullable Integer priority;
     /**
      * The target domain name for this SRV record.
-     * 
      */
     private final @Nullable String target;
     /**
      * The weight value for this SRV record.
-     * 
      */
     private final @Nullable Integer weight;
 
@@ -47,28 +43,24 @@ public final class SrvRecordResponse {
 
     /**
      * The port value for this SRV record.
-     * 
     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The priority value for this SRV record.
-     * 
     */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The target domain name for this SRV record.
-     * 
     */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * The weight value for this SRV record.
-     * 
     */
     public Optional<Integer> getWeight() {
         return Optional.ofNullable(this.weight);

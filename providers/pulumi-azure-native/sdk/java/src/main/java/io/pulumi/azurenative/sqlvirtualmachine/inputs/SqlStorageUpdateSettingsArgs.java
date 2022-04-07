@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set disk storage settings for SQL Server.
- * 
  */
 public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
 
     /**
      * Disk configuration to apply to SQL Server.
-     * 
      */
     @Import(name="diskConfigurationType")
       private final @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
@@ -34,7 +32,6 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
 
     /**
      * Virtual machine disk count.
-     * 
      */
     @Import(name="diskCount")
       private final @Nullable Output<Integer> diskCount;
@@ -45,7 +42,6 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
 
     /**
      * Device id of the first disk to be updated.
-     * 
      */
     @Import(name="startingDeviceId")
       private final @Nullable Output<Integer> startingDeviceId;

@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class KeyVaultKeyReferenceResponseKeyVault {
     /**
      * The resource id.
-     * 
      */
     private final @Nullable String id;
     /**
      * The resource name.
-     * 
      */
     private final String name;
     /**
      * The resource type.
-     * 
      */
     private final String type;
 
@@ -39,21 +36,18 @@ public final class KeyVaultKeyReferenceResponseKeyVault {
 
     /**
      * The resource id.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The resource type.
-     * 
     */
     public String getType() {
         return this.type;

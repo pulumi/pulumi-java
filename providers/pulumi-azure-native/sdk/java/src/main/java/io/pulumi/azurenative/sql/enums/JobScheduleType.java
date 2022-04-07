@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Schedule interval type
-     * 
      */
     @EnumType
     public enum JobScheduleType {

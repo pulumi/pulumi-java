@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines a managed rule group override setting.
- * 
  */
 public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Identifier for the managed rule.
-     * 
      */
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
@@ -33,7 +31,6 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The state of the managed rule. Defaults to Disabled if not specified.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,ManagedRuleEnabledState>> state;

@@ -16,28 +16,23 @@ import javax.annotation.Nullable;
 public final class AlertingActionResponse {
     /**
      * Azure action group reference.
-     * 
      */
     private final @Nullable AzNsActionGroupResponse aznsAction;
     /**
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
      * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
-     * 
      */
     private final String odataType;
     /**
      * Severity of the alert
-     * 
      */
     private final String severity;
     /**
      * time (in minutes) for which Alerts should be throttled or suppressed.
-     * 
      */
     private final @Nullable Integer throttlingInMin;
     /**
      * The trigger condition that results in the alert rule being.
-     * 
      */
     private final TriggerConditionResponse trigger;
 
@@ -57,7 +52,6 @@ public final class AlertingActionResponse {
 
     /**
      * Azure action group reference.
-     * 
     */
     public Optional<AzNsActionGroupResponse> getAznsAction() {
         return Optional.ofNullable(this.aznsAction);
@@ -65,28 +59,24 @@ public final class AlertingActionResponse {
     /**
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
      * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Severity of the alert
-     * 
     */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * time (in minutes) for which Alerts should be throttled or suppressed.
-     * 
     */
     public Optional<Integer> getThrottlingInMin() {
         return Optional.ofNullable(this.throttlingInMin);
     }
     /**
      * The trigger condition that results in the alert rule being.
-     * 
     */
     public TriggerConditionResponse getTrigger() {
         return this.trigger;

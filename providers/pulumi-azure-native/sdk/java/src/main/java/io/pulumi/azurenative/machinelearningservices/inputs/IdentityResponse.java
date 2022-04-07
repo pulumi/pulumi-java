@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity for the resource.
- * 
  */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The principal ID of resource identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -33,7 +31,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The tenant ID of resource.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -44,7 +41,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -55,7 +51,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The user assigned identities associated with the resource.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;

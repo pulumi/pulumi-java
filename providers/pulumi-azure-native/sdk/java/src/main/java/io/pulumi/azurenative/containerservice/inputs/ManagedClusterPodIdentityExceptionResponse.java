@@ -15,7 +15,6 @@ public final class ManagedClusterPodIdentityExceptionResponse extends io.pulumi.
 
     /**
      * Name of the pod identity exception.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -26,7 +25,6 @@ public final class ManagedClusterPodIdentityExceptionResponse extends io.pulumi.
 
     /**
      * Namespace of the pod identity exception.
-     * 
      */
     @Import(name="namespace", required=true)
       private final String namespace;
@@ -37,7 +35,6 @@ public final class ManagedClusterPodIdentityExceptionResponse extends io.pulumi.
 
     /**
      * Pod labels to match.
-     * 
      */
     @Import(name="podLabels", required=true)
       private final Map<String,String> podLabels;

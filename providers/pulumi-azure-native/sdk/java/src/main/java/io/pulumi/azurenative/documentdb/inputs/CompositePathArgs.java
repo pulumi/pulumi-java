@@ -18,7 +18,6 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sort order for composite paths.
-     * 
      */
     @Import(name="order")
       private final @Nullable Output<Either<String,CompositePathSortOrder>> order;
@@ -29,7 +28,6 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;

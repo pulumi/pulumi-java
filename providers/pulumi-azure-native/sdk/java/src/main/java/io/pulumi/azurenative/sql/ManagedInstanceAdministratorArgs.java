@@ -25,7 +25,6 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
 
     /**
      * Type of the managed instance administrator.
-     * 
      */
     @Import(name="administratorType", required=true)
       private final Output<Either<String,ManagedInstanceAdministratorType>> administratorType;
@@ -36,7 +35,6 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
 
     /**
      * Login name of the managed instance administrator.
-     * 
      */
     @Import(name="login", required=true)
       private final Output<String> login;
@@ -47,7 +45,6 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
 
     /**
      * The name of the managed instance.
-     * 
      */
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
@@ -58,7 +55,6 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -69,7 +65,6 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
 
     /**
      * SID (object ID) of the managed instance administrator.
-     * 
      */
     @Import(name="sid", required=true)
       private final Output<String> sid;
@@ -80,7 +75,6 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
 
     /**
      * Tenant ID of the managed instance administrator.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

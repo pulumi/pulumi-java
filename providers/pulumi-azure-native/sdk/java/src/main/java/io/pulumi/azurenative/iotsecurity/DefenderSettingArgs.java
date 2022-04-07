@@ -20,7 +20,6 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Size of the device quota. Value is required to be in multiples of 100.
-     * 
      */
     @Import(name="deviceQuota", required=true)
       private final Output<Integer> deviceQuota;
@@ -31,7 +30,6 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * MDE integration configuration
-     * 
      */
     @Import(name="mdeIntegration", required=true)
       private final Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
@@ -42,7 +40,6 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The kind of onboarding for the subscription
-     * 
      */
     @Import(name="onboardingKind", required=true)
       private final Output<Either<String,OnboardingKind>> onboardingKind;
@@ -53,7 +50,6 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Sentinel Workspace Resource Ids
-     * 
      */
     @Import(name="sentinelWorkspaceResourceIds", required=true)
       private final Output<List<String>> sentinelWorkspaceResourceIds;

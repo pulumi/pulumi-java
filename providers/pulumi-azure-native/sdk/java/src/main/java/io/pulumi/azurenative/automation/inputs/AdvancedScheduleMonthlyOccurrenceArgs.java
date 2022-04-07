@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of the create advanced schedule monthly occurrence.
- * 
  */
 public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
 
     /**
      * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
-     * 
      */
     @Import(name="day")
       private final @Nullable Output<Either<String,ScheduleDay>> day;
@@ -34,7 +32,6 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
 
     /**
      * Occurrence of the week within the month. Must be between 1 and 5
-     * 
      */
     @Import(name="occurrence")
       private final @Nullable Output<Integer> occurrence;

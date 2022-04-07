@@ -17,7 +17,6 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends io.pulu
 
     /**
      * The name of the remediation.
-     * 
      */
     @Import(name="remediationName", required=true)
       private final String remediationName;
@@ -28,7 +27,6 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends io.pulu
 
     /**
      * Resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -39,7 +37,6 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends io.pulu
 
     /**
      * Maximum number of records to return.
-     * 
      */
     @Import(name="top")
       private final @Nullable Integer top;

@@ -20,7 +20,211 @@ import javax.annotation.Nullable;
  * Api Operation details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateApiOperation
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var apiOperation = new AzureNative.ApiManagement.ApiOperation("apiOperation", new AzureNative.ApiManagement.ApiOperationArgs
+ *         {
+ *             ApiId = "PetStoreTemplate2",
+ *             Description = "This can only be done by the logged in user.",
+ *             DisplayName = "createUser2",
+ *             Method = "POST",
+ *             OperationId = "newoperations",
+ *             Request = new AzureNative.ApiManagement.Inputs.RequestContractArgs
+ *             {
+ *                 Description = "Created user object",
+ *                 Headers = {},
+ *                 QueryParameters = {},
+ *                 Representations = 
+ *                 {
+ *                     new AzureNative.ApiManagement.Inputs.RepresentationContractArgs
+ *                     {
+ *                         ContentType = "application/json",
+ *                         SchemaId = "592f6c1d0af5840ca8897f0c",
+ *                         TypeName = "User",
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             Responses = 
+ *             {
+ *                 new AzureNative.ApiManagement.Inputs.ResponseContractArgs
+ *                 {
+ *                     Description = "successful operation",
+ *                     Headers = {},
+ *                     Representations = 
+ *                     {
+ *                         new AzureNative.ApiManagement.Inputs.RepresentationContractArgs
+ *                         {
+ *                             ContentType = "application/xml",
+ *                         },
+ *                         new AzureNative.ApiManagement.Inputs.RepresentationContractArgs
+ *                         {
+ *                             ContentType = "application/json",
+ *                         },
+ *                     },
+ *                     StatusCode = 200,
+ *                 },
+ *             },
+ *             ServiceName = "apimService1",
+ *             TemplateParameters = {},
+ *             UrlTemplate = "/user1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApiOperation(ctx, "apiOperation", &apimanagement.ApiOperationArgs{
+ * 			ApiId:       pulumi.String("PetStoreTemplate2"),
+ * 			Description: pulumi.String("This can only be done by the logged in user."),
+ * 			DisplayName: pulumi.String("createUser2"),
+ * 			Method:      pulumi.String("POST"),
+ * 			OperationId: pulumi.String("newoperations"),
+ * 			Request: &apimanagement.RequestContractArgs{
+ * 				Description:     pulumi.String("Created user object"),
+ * 				Headers:         apimanagement.ParameterContractArray{},
+ * 				QueryParameters: apimanagement.ParameterContractArray{},
+ * 				Representations: apimanagement.RepresentationContractArray{
+ * 					&apimanagement.RepresentationContractArgs{
+ * 						ContentType: pulumi.String("application/json"),
+ * 						SchemaId:    pulumi.String("592f6c1d0af5840ca8897f0c"),
+ * 						TypeName:    pulumi.String("User"),
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Responses: []apimanagement.ResponseContractArgs{
+ * 				&apimanagement.ResponseContractArgs{
+ * 					Description: pulumi.String("successful operation"),
+ * 					Headers:     apimanagement.ParameterContractArray{},
+ * 					Representations: apimanagement.RepresentationContractArray{
+ * 						&apimanagement.RepresentationContractArgs{
+ * 							ContentType: pulumi.String("application/xml"),
+ * 						},
+ * 						&apimanagement.RepresentationContractArgs{
+ * 							ContentType: pulumi.String("application/json"),
+ * 						},
+ * 					},
+ * 					StatusCode: pulumi.Int(200),
+ * 				},
+ * 			},
+ * 			ServiceName:        pulumi.String("apimService1"),
+ * 			TemplateParameters: apimanagement.ParameterContractArray{},
+ * 			UrlTemplate:        pulumi.String("/user1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation", {
+ *     apiId: "PetStoreTemplate2",
+ *     description: "This can only be done by the logged in user.",
+ *     displayName: "createUser2",
+ *     method: "POST",
+ *     operationId: "newoperations",
+ *     request: {
+ *         description: "Created user object",
+ *         headers: [],
+ *         queryParameters: [],
+ *         representations: [{
+ *             contentType: "application/json",
+ *             schemaId: "592f6c1d0af5840ca8897f0c",
+ *             typeName: "User",
+ *         }],
+ *     },
+ *     resourceGroupName: "rg1",
+ *     responses: [{
+ *         description: "successful operation",
+ *         headers: [],
+ *         representations: [
+ *             {
+ *                 contentType: "application/xml",
+ *             },
+ *             {
+ *                 contentType: "application/json",
+ *             },
+ *         ],
+ *         statusCode: 200,
+ *     }],
+ *     serviceName: "apimService1",
+ *     templateParameters: [],
+ *     urlTemplate: "/user1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api_operation = azure_native.apimanagement.ApiOperation("apiOperation",
+ *     api_id="PetStoreTemplate2",
+ *     description="This can only be done by the logged in user.",
+ *     display_name="createUser2",
+ *     method="POST",
+ *     operation_id="newoperations",
+ *     request=azure_native.apimanagement.RequestContractArgs(
+ *         description="Created user object",
+ *         headers=[],
+ *         query_parameters=[],
+ *         representations=[azure_native.apimanagement.RepresentationContractArgs(
+ *             content_type="application/json",
+ *             schema_id="592f6c1d0af5840ca8897f0c",
+ *             type_name="User",
+ *         )],
+ *     ),
+ *     resource_group_name="rg1",
+ *     responses=[azure_native.apimanagement.ResponseContractArgs(
+ *         description="successful operation",
+ *         headers=[],
+ *         representations=[
+ *             azure_native.apimanagement.RepresentationContractArgs(
+ *                 content_type="application/xml",
+ *             ),
+ *             azure_native.apimanagement.RepresentationContractArgs(
+ *                 content_type="application/json",
+ *             ),
+ *         ],
+ *         status_code=200,
+ *     )],
+ *     service_name="apimService1",
+ *     template_parameters=[],
+ *     url_template="/user1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,140 +239,120 @@ import javax.annotation.Nullable;
 public class ApiOperation extends io.pulumi.resources.CustomResource {
     /**
      * Description of the operation. May include HTML formatting tags.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the operation. May include HTML formatting tags.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Operation Name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Operation Name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
-     * 
      */
     @Export(name="method", type=String.class, parameters={})
     private Output<String> method;
 
     /**
      * @return A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
-     * 
      */
     public Output<String> getMethod() {
         return this.method;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Operation Policies
-     * 
      */
     @Export(name="policies", type=String.class, parameters={})
     private Output</* @Nullable */ String> policies;
 
     /**
      * @return Operation Policies
-     * 
      */
     public Output</* @Nullable */ String> getPolicies() {
         return this.policies;
     }
     /**
      * An entity containing request details.
-     * 
      */
     @Export(name="request", type=RequestContractResponse.class, parameters={})
     private Output</* @Nullable */ RequestContractResponse> request;
 
     /**
      * @return An entity containing request details.
-     * 
      */
     public Output</* @Nullable */ RequestContractResponse> getRequest() {
         return this.request;
     }
     /**
      * Array of Operation responses.
-     * 
      */
     @Export(name="responses", type=List.class, parameters={ResponseContractResponse.class})
     private Output</* @Nullable */ List<ResponseContractResponse>> responses;
 
     /**
      * @return Array of Operation responses.
-     * 
      */
     public Output</* @Nullable */ List<ResponseContractResponse>> getResponses() {
         return this.responses;
     }
     /**
      * Collection of URL template parameters.
-     * 
      */
     @Export(name="templateParameters", type=List.class, parameters={ParameterContractResponse.class})
     private Output</* @Nullable */ List<ParameterContractResponse>> templateParameters;
 
     /**
      * @return Collection of URL template parameters.
-     * 
      */
     public Output</* @Nullable */ List<ParameterContractResponse>> getTemplateParameters() {
         return this.templateParameters;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
-     * 
      */
     @Export(name="urlTemplate", type=String.class, parameters={})
     private Output<String> urlTemplate;
 
     /**
      * @return Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
-     * 
      */
     public Output<String> getUrlTemplate() {
         return this.urlTemplate;

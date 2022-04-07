@@ -16,7 +16,6 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Id of the Partner
-     * 
      */
     @Import(name="partnerId")
       private final @Nullable Output<String> partnerId;

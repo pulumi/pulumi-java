@@ -16,7 +16,6 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
 
     /**
      * Specify the $expand query. Example: 'properties($select=webHookUrl)'
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final String labName;
@@ -38,7 +36,6 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the notification channel.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -49,7 +46,6 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

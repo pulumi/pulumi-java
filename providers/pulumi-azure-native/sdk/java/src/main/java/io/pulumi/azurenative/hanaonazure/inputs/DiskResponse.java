@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the disk information for the HANA instance
- * 
  */
 public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the size of an empty data disk in gigabytes.
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
@@ -32,7 +30,6 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-     * 
      */
     @Import(name="lun", required=true)
       private final Integer lun;
@@ -43,7 +40,6 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The disk name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

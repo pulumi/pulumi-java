@@ -16,17 +16,14 @@ import javax.annotation.Nullable;
 public final class QueueScaleRuleResponse {
     /**
      * Authentication secrets for the queue scale rule.
-     * 
      */
     private final @Nullable List<ScaleRuleAuthResponse> auth;
     /**
      * Queue length.
-     * 
      */
     private final @Nullable Integer queueLength;
     /**
      * Queue name.
-     * 
      */
     private final @Nullable String queueName;
 
@@ -42,21 +39,18 @@ public final class QueueScaleRuleResponse {
 
     /**
      * Authentication secrets for the queue scale rule.
-     * 
     */
     public List<ScaleRuleAuthResponse> getAuth() {
         return this.auth == null ? List.of() : this.auth;
     }
     /**
      * Queue length.
-     * 
     */
     public Optional<Integer> getQueueLength() {
         return Optional.ofNullable(this.queueLength);
     }
     /**
      * Queue name.
-     * 
     */
     public Optional<String> getQueueName() {
         return Optional.ofNullable(this.queueName);

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of health probe request that is made.
-     * 
      */
     @EnumType
     public enum HealthProbeRequestType {

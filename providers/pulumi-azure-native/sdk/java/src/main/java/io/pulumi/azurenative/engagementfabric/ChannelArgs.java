@@ -18,7 +18,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Account Name
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -29,7 +28,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The functions to be enabled for the channel
-     * 
      */
     @Import(name="channelFunctions")
       private final @Nullable Output<List<String>> channelFunctions;
@@ -40,7 +38,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Channel Name
-     * 
      */
     @Import(name="channelName")
       private final @Nullable Output<String> channelName;
@@ -51,7 +48,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The channel type
-     * 
      */
     @Import(name="channelType", required=true)
       private final Output<String> channelType;
@@ -62,7 +58,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The channel credentials
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<Map<String,String>> credentials;
@@ -73,7 +68,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

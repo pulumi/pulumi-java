@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines contents of a web application firewall global configuration
- * 
  */
 public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
-     * 
      */
     @Import(name="defaultCustomBlockResponseBody")
       private final @Nullable String defaultCustomBlockResponseBody;
@@ -32,7 +30,6 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If the action type is block, this field defines the default customer overridable http response status code.
-     * 
      */
     @Import(name="defaultCustomBlockResponseStatusCode")
       private final @Nullable Integer defaultCustomBlockResponseStatusCode;
@@ -43,7 +40,6 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If action type is redirect, this field represents the default redirect URL for the client.
-     * 
      */
     @Import(name="defaultRedirectUrl")
       private final @Nullable String defaultRedirectUrl;
@@ -54,7 +50,6 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * describes if the policy is in enabled state or disabled state
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable String enabledState;
@@ -65,7 +60,6 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Describes if it is in detection mode or prevention mode at policy level.
-     * 
      */
     @Import(name="mode")
       private final @Nullable String mode;

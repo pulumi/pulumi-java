@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Job endpoint definition
- * 
  */
 public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Url for endpoint.
-     * 
      */
     @Import(name="endpoint")
       private final @Nullable String endpoint;
@@ -33,7 +31,6 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Endpoint type.
-     * 
      */
     @Import(name="jobEndpointType")
       private final @Nullable String jobEndpointType;
@@ -44,7 +41,6 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Port for endpoint.
-     * 
      */
     @Import(name="port")
       private final @Nullable Integer port;
@@ -55,7 +51,6 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Additional properties to set on the endpoint.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;

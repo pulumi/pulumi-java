@@ -22,7 +22,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
-     * 
      */
     @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
@@ -33,7 +32,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Parameters that will be hidden/not visible to ARM, such as passwords and credentials
-     * 
      */
     @Import(name="hiddenParameters")
       private final @Nullable Output<List<Object>> hiddenParameters;
@@ -44,7 +42,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * User-defined dictionary.
-     * 
      */
     @Import(name="namedOutputs")
       private final @Nullable Output<Map<String,Object>> namedOutputs;
@@ -55,7 +52,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Standard output stream from the powershell execution
-     * 
      */
     @Import(name="output")
       private final @Nullable Output<List<String>> output;
@@ -66,7 +62,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Parameters the script will accept
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<Object>> parameters;
@@ -77,7 +72,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the private cloud.
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -88,7 +82,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -99,7 +92,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Time to live for the resource. If not provided, will be available for 60 days
-     * 
      */
     @Import(name="retention")
       private final @Nullable Output<String> retention;
@@ -110,7 +102,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A reference to the script cmdlet resource if user is running a AVS script
-     * 
      */
     @Import(name="scriptCmdletId")
       private final @Nullable Output<String> scriptCmdletId;
@@ -121,7 +112,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the user-invoked script execution resource
-     * 
      */
     @Import(name="scriptExecutionName")
       private final @Nullable Output<String> scriptExecutionName;
@@ -132,7 +122,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Time limit for execution
-     * 
      */
     @Import(name="timeout", required=true)
       private final Output<String> timeout;

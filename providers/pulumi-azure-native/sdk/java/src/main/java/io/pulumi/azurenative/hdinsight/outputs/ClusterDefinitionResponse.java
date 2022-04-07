@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class ClusterDefinitionResponse {
     /**
      * The link to the blueprint.
-     * 
      */
     private final @Nullable String blueprint;
     /**
      * The versions of different services in the cluster.
-     * 
      */
     private final @Nullable Map<String,String> componentVersion;
     /**
      * The cluster configurations.
-     * 
      */
     private final @Nullable Object configurations;
     /**
      * The type of cluster.
-     * 
      */
     private final @Nullable String kind;
 
@@ -48,28 +44,24 @@ public final class ClusterDefinitionResponse {
 
     /**
      * The link to the blueprint.
-     * 
     */
     public Optional<String> getBlueprint() {
         return Optional.ofNullable(this.blueprint);
     }
     /**
      * The versions of different services in the cluster.
-     * 
     */
     public Map<String,String> getComponentVersion() {
         return this.componentVersion == null ? Map.of() : this.componentVersion;
     }
     /**
      * The cluster configurations.
-     * 
     */
     public Optional<Object> getConfigurations() {
         return Optional.ofNullable(this.configurations);
     }
     /**
      * The type of cluster.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);

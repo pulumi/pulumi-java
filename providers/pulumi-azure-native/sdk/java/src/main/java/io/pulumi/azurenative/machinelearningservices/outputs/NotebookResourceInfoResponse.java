@@ -15,12 +15,10 @@ public final class NotebookResourceInfoResponse {
     private final @Nullable String fqdn;
     /**
      * The error that occurs when preparing notebook.
-     * 
      */
     private final @Nullable NotebookPreparationErrorResponse notebookPreparationError;
     /**
      * the data plane resourceId that used to initialize notebook component
-     * 
      */
     private final @Nullable String resourceId;
 
@@ -39,14 +37,12 @@ public final class NotebookResourceInfoResponse {
     }
     /**
      * The error that occurs when preparing notebook.
-     * 
     */
     public Optional<NotebookPreparationErrorResponse> getNotebookPreparationError() {
         return Optional.ofNullable(this.notebookPreparationError);
     }
     /**
      * the data plane resourceId that used to initialize notebook component
-     * 
     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);

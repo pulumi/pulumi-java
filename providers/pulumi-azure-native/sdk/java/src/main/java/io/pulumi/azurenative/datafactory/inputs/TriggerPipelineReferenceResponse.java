@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Pipeline that needs to be triggered with the given parameters.
- * 
  */
 public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.
 
     /**
      * Pipeline parameters.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
@@ -34,7 +32,6 @@ public final class TriggerPipelineReferenceResponse extends io.pulumi.resources.
 
     /**
      * Pipeline reference.
-     * 
      */
     @Import(name="pipelineReference")
       private final @Nullable PipelineReferenceResponse pipelineReference;

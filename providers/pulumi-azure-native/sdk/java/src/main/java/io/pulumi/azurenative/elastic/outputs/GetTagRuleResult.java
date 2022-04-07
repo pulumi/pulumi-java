@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GetTagRuleResult {
     /**
      * The id of the rule set.
-     * 
      */
     private final String id;
     /**
      * Name of the rule set.
-     * 
      */
     private final String name;
     /**
      * Properties of the monitoring tag rules.
-     * 
      */
     private final MonitoringTagRulesPropertiesResponse properties;
     /**
      * The system metadata relating to this resource
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the rule set.
-     * 
      */
     private final String type;
 
@@ -53,35 +48,30 @@ public final class GetTagRuleResult {
 
     /**
      * The id of the rule set.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the rule set.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the monitoring tag rules.
-     * 
     */
     public MonitoringTagRulesPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The system metadata relating to this resource
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the rule set.
-     * 
     */
     public String getType() {
         return this.type;

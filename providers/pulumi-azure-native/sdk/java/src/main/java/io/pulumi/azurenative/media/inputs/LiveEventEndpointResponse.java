@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The live event endpoint.
- * 
  */
 public final class LiveEventEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LiveEventEndpointResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The endpoint protocol.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable String protocol;
@@ -31,7 +29,6 @@ public final class LiveEventEndpointResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The endpoint URL.
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;

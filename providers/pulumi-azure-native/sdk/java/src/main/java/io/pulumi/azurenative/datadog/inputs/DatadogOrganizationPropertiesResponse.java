@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Datadog organization properties
- * 
  */
 public final class DatadogOrganizationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DatadogOrganizationPropertiesResponse extends io.pulumi.resou
 
     /**
      * Id of the Datadog organization.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -29,7 +27,6 @@ public final class DatadogOrganizationPropertiesResponse extends io.pulumi.resou
 
     /**
      * Name of the Datadog organization.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

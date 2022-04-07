@@ -11,32 +11,26 @@ import java.util.Objects;
 public final class ResourcePoolResponse {
     /**
      * Hierarchical resource pool name
-     * 
      */
     private final String fullName;
     /**
      * resource pool id (privateCloudId:vsphereId)
-     * 
      */
     private final String id;
     /**
      * Azure region
-     * 
      */
     private final String location;
     /**
      * {ResourcePoolName}
-     * 
      */
     private final String name;
     /**
      * The Private Cloud Id
-     * 
      */
     private final String privateCloudId;
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
      */
     private final String type;
 
@@ -58,42 +52,36 @@ public final class ResourcePoolResponse {
 
     /**
      * Hierarchical resource pool name
-     * 
     */
     public String getFullName() {
         return this.fullName;
     }
     /**
      * resource pool id (privateCloudId:vsphereId)
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Azure region
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * {ResourcePoolName}
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The Private Cloud Id
-     * 
     */
     public String getPrivateCloudId() {
         return this.privateCloudId;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
-     * 
     */
     public String getType() {
         return this.type;

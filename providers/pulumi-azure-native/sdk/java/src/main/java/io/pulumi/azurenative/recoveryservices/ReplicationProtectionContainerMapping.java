@@ -18,7 +18,108 @@ import javax.annotation.Nullable;
  * Protection container mapping object.
  * API Version: 2018-07-10.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create protection container mapping.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var replicationProtectionContainerMapping = new AzureNative.RecoveryServices.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", new AzureNative.RecoveryServices.ReplicationProtectionContainerMappingArgs
+ *         {
+ *             FabricName = "cloud1",
+ *             MappingName = "cloud1protectionprofile1",
+ *             Properties = new AzureNative.RecoveryServices.Inputs.CreateProtectionContainerMappingInputPropertiesArgs
+ *             {
+ *                 PolicyId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+ *                 ProviderSpecificInput = ,
+ *                 TargetProtectionContainerId = "Microsoft Azure",
+ *             },
+ *             ProtectionContainerName = "cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+ *             ResourceGroupName = "resourceGroupPS1",
+ *             ResourceName = "vault1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recoveryservices.NewReplicationProtectionContainerMapping(ctx, "replicationProtectionContainerMapping", &recoveryservices.ReplicationProtectionContainerMappingArgs{
+ * 			FabricName:  pulumi.String("cloud1"),
+ * 			MappingName: pulumi.String("cloud1protectionprofile1"),
+ * 			Properties: &recoveryservices.CreateProtectionContainerMappingInputPropertiesArgs{
+ * 				PolicyId:                    pulumi.String("/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1"),
+ * 				ProviderSpecificInput:       nil,
+ * 				TargetProtectionContainerId: pulumi.String("Microsoft Azure"),
+ * 			},
+ * 			ProtectionContainerName: pulumi.String("cloud_6d224fc6-f326-5d35-96de-fbf51efb3179"),
+ * 			ResourceGroupName:       pulumi.String("resourceGroupPS1"),
+ * 			ResourceName:            pulumi.String("vault1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const replicationProtectionContainerMapping = new azure_native.recoveryservices.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping", {
+ *     fabricName: "cloud1",
+ *     mappingName: "cloud1protectionprofile1",
+ *     properties: {
+ *         policyId: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+ *         providerSpecificInput: {},
+ *         targetProtectionContainerId: "Microsoft Azure",
+ *     },
+ *     protectionContainerName: "cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+ *     resourceGroupName: "resourceGroupPS1",
+ *     resourceName: "vault1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * replication_protection_container_mapping = azure_native.recoveryservices.ReplicationProtectionContainerMapping("replicationProtectionContainerMapping",
+ *     fabric_name="cloud1",
+ *     mapping_name="cloud1protectionprofile1",
+ *     properties=azure_native.recoveryservices.CreateProtectionContainerMappingInputPropertiesArgs(
+ *         policy_id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+ *         provider_specific_input={},
+ *         target_protection_container_id="Microsoft Azure",
+ *     ),
+ *     protection_container_name="cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+ *     resource_group_name="resourceGroupPS1",
+ *     resource_name="vault1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +134,48 @@ import javax.annotation.Nullable;
 public class ReplicationProtectionContainerMapping extends io.pulumi.resources.CustomResource {
     /**
      * Resource Location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource Location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The custom data.
-     * 
      */
     @Export(name="properties", type=ProtectionContainerMappingPropertiesResponse.class, parameters={})
     private Output<ProtectionContainerMappingPropertiesResponse> properties;
 
     /**
      * @return The custom data.
-     * 
      */
     public Output<ProtectionContainerMappingPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource Type
-     * 
      */
     public Output<String> getType() {
         return this.type;

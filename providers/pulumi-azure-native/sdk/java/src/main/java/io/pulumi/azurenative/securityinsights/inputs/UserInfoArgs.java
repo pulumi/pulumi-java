@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * User information that made some action
- * 
  */
 public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The object id of the user.
-     * 
      */
     @Import(name="objectId", required=true)
       private final Output<String> objectId;

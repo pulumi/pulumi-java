@@ -23,7 +23,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Destination IP ranges.
-     * 
      */
     @Import(name="destinationIpRanges")
       private final @Nullable Output<List<QosIpRangeArgs>> destinationIpRanges;
@@ -34,7 +33,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Destination port ranges.
-     * 
      */
     @Import(name="destinationPortRanges")
       private final @Nullable Output<List<QosPortRangeArgs>> destinationPortRanges;
@@ -45,7 +43,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="dscpConfigurationName")
       private final @Nullable Output<String> dscpConfigurationName;
@@ -56,7 +53,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -67,7 +63,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -78,7 +73,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of markings to be used in the configuration.
-     * 
      */
     @Import(name="markings")
       private final @Nullable Output<List<Integer>> markings;
@@ -89,7 +83,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * RNM supported protocol types.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ProtocolType>> protocol;
@@ -100,7 +93,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -111,7 +103,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Source IP ranges.
-     * 
      */
     @Import(name="sourceIpRanges")
       private final @Nullable Output<List<QosIpRangeArgs>> sourceIpRanges;
@@ -122,7 +113,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Sources port ranges.
-     * 
      */
     @Import(name="sourcePortRanges")
       private final @Nullable Output<List<QosPortRangeArgs>> sourcePortRanges;
@@ -133,7 +123,6 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes Advanced Audio Codec (AAC) audio encoding settings.
- * 
  */
 public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The bitrate, in bits per second, of the output encoded audio.
-     * 
      */
     @Import(name="bitrate")
       private final @Nullable Integer bitrate;
@@ -32,7 +30,6 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The number of channels in the audio.
-     * 
      */
     @Import(name="channels")
       private final @Nullable Integer channels;
@@ -43,7 +40,6 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
-     * 
      */
     @Import(name="label")
       private final @Nullable String label;
@@ -55,7 +51,6 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.AacAudio'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;
@@ -66,7 +61,6 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The encoding profile to be used when encoding audio with AAC.
-     * 
      */
     @Import(name="profile")
       private final @Nullable String profile;
@@ -77,7 +71,6 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sampling rate to use for encoding in hertz.
-     * 
      */
     @Import(name="samplingRate")
       private final @Nullable Integer samplingRate;

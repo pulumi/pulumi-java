@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * The integration account session.
  * API Version: 2019-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update an integration account session
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var integrationAccountSession = new AzureNative.Logic.IntegrationAccountSession("integrationAccountSession", new AzureNative.Logic.IntegrationAccountSessionArgs
+ *         {
+ *             Content = 
+ *             {
+ *                 { "controlNumber", "1234" },
+ *                 { "controlNumberChangedTime", "2017-02-21T22:30:11.9923759Z" },
+ *             },
+ *             IntegrationAccountName = "testia123",
+ *             ResourceGroupName = "testrg123",
+ *             SessionName = "testsession123-ICN",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logic.NewIntegrationAccountSession(ctx, "integrationAccountSession", &logic.IntegrationAccountSessionArgs{
+ * 			Content: pulumi.Any{
+ * 				ControlNumber:            "1234",
+ * 				ControlNumberChangedTime: "2017-02-21T22:30:11.9923759Z",
+ * 			},
+ * 			IntegrationAccountName: pulumi.String("testia123"),
+ * 			ResourceGroupName:      pulumi.String("testrg123"),
+ * 			SessionName:            pulumi.String("testsession123-ICN"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const integrationAccountSession = new azure_native.logic.IntegrationAccountSession("integrationAccountSession", {
+ *     content: {
+ *         controlNumber: "1234",
+ *         controlNumberChangedTime: "2017-02-21T22:30:11.9923759Z",
+ *     },
+ *     integrationAccountName: "testia123",
+ *     resourceGroupName: "testrg123",
+ *     sessionName: "testsession123-ICN",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * integration_account_session = azure_native.logic.IntegrationAccountSession("integrationAccountSession",
+ *     content={
+ *         "controlNumber": "1234",
+ *         "controlNumberChangedTime": "2017-02-21T22:30:11.9923759Z",
+ *     },
+ *     integration_account_name="testia123",
+ *     resource_group_name="testrg123",
+ *     session_name="testsession123-ICN")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +123,84 @@ import javax.annotation.Nullable;
 public class IntegrationAccountSession extends io.pulumi.resources.CustomResource {
     /**
      * The changed time.
-     * 
      */
     @Export(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
     /**
      * @return The changed time.
-     * 
      */
     public Output<String> getChangedTime() {
         return this.changedTime;
     }
     /**
      * The session content.
-     * 
      */
     @Export(name="content", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> content;
 
     /**
      * @return The session content.
-     * 
      */
     public Output</* @Nullable */ Object> getContent() {
         return this.content;
     }
     /**
      * The created time.
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return The created time.
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Gets the resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets the resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets the resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Encryption settings for one disk volume.
- * 
  */
 public final class EncryptionSettingsElementResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class EncryptionSettingsElementResponse extends io.pulumi.resources
 
     /**
      * Key Vault Secret Url and vault id of the disk encryption key
-     * 
      */
     @Import(name="diskEncryptionKey")
       private final @Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey;
@@ -32,7 +30,6 @@ public final class EncryptionSettingsElementResponse extends io.pulumi.resources
 
     /**
      * Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.
-     * 
      */
     @Import(name="keyEncryptionKey")
       private final @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ConfigurationServiceInstanceResponse {
     /**
      * Name of the Application Configuration Service instance
-     * 
      */
     private final String name;
     /**
      * Status of the Application Configuration Service instance
-     * 
      */
     private final String status;
 
@@ -30,14 +28,12 @@ public final class ConfigurationServiceInstanceResponse {
 
     /**
      * Name of the Application Configuration Service instance
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Status of the Application Configuration Service instance
-     * 
     */
     public String getStatus() {
         return this.status;

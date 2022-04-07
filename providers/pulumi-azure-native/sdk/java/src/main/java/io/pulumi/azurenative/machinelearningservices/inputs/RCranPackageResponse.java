@@ -16,7 +16,6 @@ public final class RCranPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The package name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -27,7 +26,6 @@ public final class RCranPackageResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The repository name.
-     * 
      */
     @Import(name="repository")
       private final @Nullable String repository;

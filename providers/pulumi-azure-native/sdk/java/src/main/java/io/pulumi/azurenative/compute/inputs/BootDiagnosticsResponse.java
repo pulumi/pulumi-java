@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.
- * 
  */
 public final class BootDiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BootDiagnosticsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Whether boot diagnostics should be enabled on the Virtual Machine.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
@@ -32,7 +30,6 @@ public final class BootDiagnosticsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Uri of the storage account to use for placing the console output and screenshot. <br><br>If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
-     * 
      */
     @Import(name="storageUri")
       private final @Nullable String storageUri;

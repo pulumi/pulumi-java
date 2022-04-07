@@ -16,7 +16,6 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
 
     /**
      * The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.
-     * 
      */
     @Import(name="accessResourcePath")
       private final @Nullable String accessResourcePath;
@@ -27,7 +26,6 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
 
     /**
      * Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.
-     * 
      */
     @Import(name="expireTime")
       private final @Nullable String expireTime;
@@ -38,7 +36,6 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final String factoryName;
@@ -49,7 +46,6 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
 
     /**
      * The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.
-     * 
      */
     @Import(name="permissions")
       private final @Nullable String permissions;
@@ -60,7 +56,6 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the profile. Currently only the default is supported. The default value is DefaultProfile.
-     * 
      */
     @Import(name="profileName")
       private final @Nullable String profileName;
@@ -71,7 +66,6 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -82,7 +76,6 @@ public final class GetFactoryDataPlaneAccessArgs extends io.pulumi.resources.Inv
 
     /**
      * Start time for the token. If not specified the current time will be used.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;

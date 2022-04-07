@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describes operator to be matched
-     * 
      */
     @EnumType
     public enum CookiesOperator {

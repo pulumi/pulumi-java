@@ -14,7 +14,6 @@ public final class GetTagAtScopeArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource scope.
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;

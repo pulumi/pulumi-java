@@ -19,7 +19,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The RosettaNet process configuration activity settings.
-     * 
      */
     @Import(name="activitySettings", required=true)
       private final Output<RosettaNetPipActivitySettingsArgs> activitySettings;
@@ -30,7 +29,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The integration account RosettaNet ProcessConfiguration properties.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -41,7 +39,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The RosettaNet initiator role settings.
-     * 
      */
     @Import(name="initiatorRoleSettings", required=true)
       private final Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
@@ -52,7 +49,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
@@ -63,7 +59,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -74,7 +69,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -85,7 +79,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The integration account RosettaNet process code.
-     * 
      */
     @Import(name="processCode", required=true)
       private final Output<String> processCode;
@@ -96,7 +89,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The integration account RosettaNet process name.
-     * 
      */
     @Import(name="processName", required=true)
       private final Output<String> processName;
@@ -107,7 +99,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The integration account RosettaNet process version.
-     * 
      */
     @Import(name="processVersion", required=true)
       private final Output<String> processVersion;
@@ -118,7 +109,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -129,7 +119,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The RosettaNet responder role settings.
-     * 
      */
     @Import(name="responderRoleSettings", required=true)
       private final Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
@@ -140,7 +129,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The integration account RosettaNet ProcessConfiguration name.
-     * 
      */
     @Import(name="rosettaNetProcessConfigurationName")
       private final @Nullable Output<String> rosettaNetProcessConfigurationName;
@@ -151,7 +139,6 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

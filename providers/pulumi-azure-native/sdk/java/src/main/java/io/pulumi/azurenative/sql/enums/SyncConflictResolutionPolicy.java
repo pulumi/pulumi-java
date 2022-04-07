@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Conflict resolution policy of the sync group.
-     * 
      */
     @EnumType
     public enum SyncConflictResolutionPolicy {

@@ -13,15 +13,13 @@ import javax.annotation.Nullable;
 
 /**
  * A property containing information about the blobs to be exported for an export job. This property is required for export jobs, but must not be specified for import jobs.
- * 
  */
 public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExportArgs Empty = new ExportArgs();
 
     /**
-     * The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root.
-     * 
+     * The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. 
      */
     @Import(name="blobListBlobPath")
       private final @Nullable Output<String> blobListBlobPath;
@@ -32,7 +30,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of blob-path strings.
-     * 
      */
     @Import(name="blobPath")
       private final @Nullable Output<List<String>> blobPath;
@@ -43,7 +40,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A collection of blob-prefix strings.
-     * 
      */
     @Import(name="blobPathPrefix")
       private final @Nullable Output<List<String>> blobPathPrefix;

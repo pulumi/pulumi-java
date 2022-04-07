@@ -19,7 +19,95 @@ import javax.annotation.Nullable;
  * Peering Service
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a  peering service
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var peeringService = new AzureNative.Peering.PeeringService("peeringService", new AzureNative.Peering.PeeringServiceArgs
+ *         {
+ *             Location = "eastus",
+ *             PeeringServiceLocation = "state1",
+ *             PeeringServiceName = "peeringServiceName",
+ *             PeeringServiceProvider = "serviceProvider1",
+ *             ProviderBackupPeeringLocation = "peeringLocation2",
+ *             ProviderPrimaryPeeringLocation = "peeringLocation1",
+ *             ResourceGroupName = "rgName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := peering.NewPeeringService(ctx, "peeringService", &peering.PeeringServiceArgs{
+ * 			Location:                       pulumi.String("eastus"),
+ * 			PeeringServiceLocation:         pulumi.String("state1"),
+ * 			PeeringServiceName:             pulumi.String("peeringServiceName"),
+ * 			PeeringServiceProvider:         pulumi.String("serviceProvider1"),
+ * 			ProviderBackupPeeringLocation:  pulumi.String("peeringLocation2"),
+ * 			ProviderPrimaryPeeringLocation: pulumi.String("peeringLocation1"),
+ * 			ResourceGroupName:              pulumi.String("rgName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const peeringService = new azure_native.peering.PeeringService("peeringService", {
+ *     location: "eastus",
+ *     peeringServiceLocation: "state1",
+ *     peeringServiceName: "peeringServiceName",
+ *     peeringServiceProvider: "serviceProvider1",
+ *     providerBackupPeeringLocation: "peeringLocation2",
+ *     providerPrimaryPeeringLocation: "peeringLocation1",
+ *     resourceGroupName: "rgName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * peering_service = azure_native.peering.PeeringService("peeringService",
+ *     location="eastus",
+ *     peering_service_location="state1",
+ *     peering_service_name="peeringServiceName",
+ *     peering_service_provider="serviceProvider1",
+ *     provider_backup_peering_location="peeringLocation2",
+ *     provider_primary_peering_location="peeringLocation1",
+ *     resource_group_name="rgName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,140 +122,120 @@ import javax.annotation.Nullable;
 public class PeeringService extends io.pulumi.resources.CustomResource {
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The location (state/province) of the customer.
-     * 
      */
     @Export(name="peeringServiceLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringServiceLocation;
 
     /**
      * @return The location (state/province) of the customer.
-     * 
      */
     public Output</* @Nullable */ String> getPeeringServiceLocation() {
         return this.peeringServiceLocation;
     }
     /**
      * The name of the service provider.
-     * 
      */
     @Export(name="peeringServiceProvider", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringServiceProvider;
 
     /**
      * @return The name of the service provider.
-     * 
      */
     public Output</* @Nullable */ String> getPeeringServiceProvider() {
         return this.peeringServiceProvider;
     }
     /**
      * The backup peering (Microsoft/service provider) location to be used for customer traffic.
-     * 
      */
     @Export(name="providerBackupPeeringLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> providerBackupPeeringLocation;
 
     /**
      * @return The backup peering (Microsoft/service provider) location to be used for customer traffic.
-     * 
      */
     public Output</* @Nullable */ String> getProviderBackupPeeringLocation() {
         return this.providerBackupPeeringLocation;
     }
     /**
      * The primary peering (Microsoft/service provider) location to be used for customer traffic.
-     * 
      */
     @Export(name="providerPrimaryPeeringLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> providerPrimaryPeeringLocation;
 
     /**
      * @return The primary peering (Microsoft/service provider) location to be used for customer traffic.
-     * 
      */
     public Output</* @Nullable */ String> getProviderPrimaryPeeringLocation() {
         return this.providerPrimaryPeeringLocation;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU that defines the type of the peering service.
-     * 
      */
     @Export(name="sku", type=PeeringServiceSkuResponse.class, parameters={})
     private Output</* @Nullable */ PeeringServiceSkuResponse> sku;
 
     /**
      * @return The SKU that defines the type of the peering service.
-     * 
      */
     public Output</* @Nullable */ PeeringServiceSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

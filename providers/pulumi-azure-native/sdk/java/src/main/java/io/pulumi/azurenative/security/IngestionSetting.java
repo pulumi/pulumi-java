@@ -17,7 +17,68 @@ import javax.annotation.Nullable;
  * Configures how to correlate scan data and logs with resources associated with the subscription.
  * API Version: 2021-01-15-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create an ingestion setting for subscription
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ingestionSetting = new AzureNative.Security.IngestionSetting("ingestionSetting", new AzureNative.Security.IngestionSettingArgs
+ *         {
+ *             IngestionSettingName = "default",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewIngestionSetting(ctx, "ingestionSetting", &security.IngestionSettingArgs{
+ * 			IngestionSettingName: pulumi.String("default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const ingestionSetting = new azure_native.security.IngestionSetting("ingestionSetting", {ingestionSettingName: "default"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * ingestion_setting = azure_native.security.IngestionSetting("ingestionSetting", ingestion_setting_name="default")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,28 +93,24 @@ import javax.annotation.Nullable;
 public class IngestionSetting extends io.pulumi.resources.CustomResource {
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

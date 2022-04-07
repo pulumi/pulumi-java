@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ScaleSettingsResponse {
     /**
      * This property and fixedScale are mutually exclusive and one of the properties must be specified.
-     * 
      */
     private final @Nullable AutoScaleSettingsResponse autoScale;
     /**
      * This property and autoScale are mutually exclusive and one of the properties must be specified.
-     * 
      */
     private final @Nullable FixedScaleSettingsResponse fixedScale;
 
@@ -33,14 +31,12 @@ public final class ScaleSettingsResponse {
 
     /**
      * This property and fixedScale are mutually exclusive and one of the properties must be specified.
-     * 
     */
     public Optional<AutoScaleSettingsResponse> getAutoScale() {
         return Optional.ofNullable(this.autoScale);
     }
     /**
      * This property and autoScale are mutually exclusive and one of the properties must be specified.
-     * 
     */
     public Optional<FixedScaleSettingsResponse> getFixedScale() {
         return Optional.ofNullable(this.fixedScale);

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Database specific information for MySQL to Azure Database for MySQL migration task inputs
- * 
  */
 public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
 
     /**
      * Migration settings which tune the migration behavior
-     * 
      */
     @Import(name="migrationSetting")
       private final @Nullable Map<String,String> migrationSetting;
@@ -32,7 +30,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
 
     /**
      * Source settings to tune source endpoint migration behavior
-     * 
      */
     @Import(name="sourceSetting")
       private final @Nullable Map<String,String> sourceSetting;
@@ -54,7 +50,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
 
     /**
      * Name of target database. Note: Target database will be truncated before starting migration.
-     * 
      */
     @Import(name="targetDatabaseName")
       private final @Nullable String targetDatabaseName;
@@ -65,7 +60,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
 
     /**
      * Target settings to tune target endpoint migration behavior
-     * 
      */
     @Import(name="targetSetting")
       private final @Nullable Map<String,String> targetSetting;

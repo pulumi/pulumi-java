@@ -15,57 +15,46 @@ import javax.annotation.Nullable;
 public final class VCenterPropertiesResponse {
     /**
      * The VCenter discovery status.
-     * 
      */
     private final @Nullable String discoveryStatus;
     /**
      * The ARM resource name of the fabric containing this VCenter.
-     * 
      */
     private final @Nullable String fabricArmResourceName;
     /**
      * Friendly name of the vCenter.
-     * 
      */
     private final @Nullable String friendlyName;
     /**
      * The health errors for this VCenter.
-     * 
      */
     private final @Nullable List<HealthErrorResponse> healthErrors;
     /**
      * The infrastructure Id of vCenter.
-     * 
      */
     private final @Nullable String infrastructureId;
     /**
      * VCenter internal ID.
-     * 
      */
     private final @Nullable String internalId;
     /**
      * The IP address of the vCenter.
-     * 
      */
     private final @Nullable String ipAddress;
     /**
      * The time when the last heartbeat was received by vCenter.
-     * 
      */
     private final @Nullable String lastHeartbeat;
     /**
      * The port number for discovery.
-     * 
      */
     private final @Nullable String port;
     /**
      * The process server Id.
-     * 
      */
     private final @Nullable String processServerId;
     /**
      * The account Id which has privileges to discover the vCenter.
-     * 
      */
     private final @Nullable String runAsAccountId;
 
@@ -97,77 +86,66 @@ public final class VCenterPropertiesResponse {
 
     /**
      * The VCenter discovery status.
-     * 
     */
     public Optional<String> getDiscoveryStatus() {
         return Optional.ofNullable(this.discoveryStatus);
     }
     /**
      * The ARM resource name of the fabric containing this VCenter.
-     * 
     */
     public Optional<String> getFabricArmResourceName() {
         return Optional.ofNullable(this.fabricArmResourceName);
     }
     /**
      * Friendly name of the vCenter.
-     * 
     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The health errors for this VCenter.
-     * 
     */
     public List<HealthErrorResponse> getHealthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
     /**
      * The infrastructure Id of vCenter.
-     * 
     */
     public Optional<String> getInfrastructureId() {
         return Optional.ofNullable(this.infrastructureId);
     }
     /**
      * VCenter internal ID.
-     * 
     */
     public Optional<String> getInternalId() {
         return Optional.ofNullable(this.internalId);
     }
     /**
      * The IP address of the vCenter.
-     * 
     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The time when the last heartbeat was received by vCenter.
-     * 
     */
     public Optional<String> getLastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
      * The port number for discovery.
-     * 
     */
     public Optional<String> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The process server Id.
-     * 
     */
     public Optional<String> getProcessServerId() {
         return Optional.ofNullable(this.processServerId);
     }
     /**
      * The account Id which has privileges to discover the vCenter.
-     * 
     */
     public Optional<String> getRunAsAccountId() {
         return Optional.ofNullable(this.runAsAccountId);

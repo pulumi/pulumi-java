@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the script.
-     * 
      */
     @EnumType
     public enum ScriptType {

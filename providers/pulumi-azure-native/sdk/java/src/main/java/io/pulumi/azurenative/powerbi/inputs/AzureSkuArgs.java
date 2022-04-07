@@ -18,7 +18,6 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SKU name
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,AzureSkuName>> name;
@@ -29,7 +28,6 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SKU tier
-     * 
      */
     @Import(name="tier", required=true)
       private final Output<Either<String,AzureSkuTier>> tier;

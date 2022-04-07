@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Input for the task that validates connection to SQL DB and target server requirements
- * 
  */
 public final class ConnectToTargetSqlDbTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConnectToTargetSqlDbTaskInputResponse extends io.pulumi.resou
 
     /**
      * Connection information for target SQL DB
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;

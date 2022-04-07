@@ -12,12 +12,10 @@ public final class DiskEncryptionSetResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Compute/diskEncryptionSets'.
-     * 
      */
     private final String resourceType;
     /**
      * Gets or sets the target Resource name.
-     * 
      */
     private final String targetResourceName;
 
@@ -32,14 +30,12 @@ public final class DiskEncryptionSetResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Compute/diskEncryptionSets'.
-     * 
     */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets the target Resource name.
-     * 
     */
     public String getTargetResourceName() {
         return this.targetResourceName;

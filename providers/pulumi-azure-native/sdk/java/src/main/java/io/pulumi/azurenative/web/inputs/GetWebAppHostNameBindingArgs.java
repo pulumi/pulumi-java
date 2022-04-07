@@ -14,7 +14,6 @@ public final class GetWebAppHostNameBindingArgs extends io.pulumi.resources.Invo
 
     /**
      * Hostname in the hostname binding.
-     * 
      */
     @Import(name="hostName", required=true)
       private final String hostName;
@@ -25,7 +24,6 @@ public final class GetWebAppHostNameBindingArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetWebAppHostNameBindingArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

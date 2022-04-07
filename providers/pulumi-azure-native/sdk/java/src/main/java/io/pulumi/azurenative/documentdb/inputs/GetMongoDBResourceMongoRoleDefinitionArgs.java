@@ -14,7 +14,6 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.r
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.r
 
     /**
      * The ID for the Role Definition {dbName.roleName}.
-     * 
      */
     @Import(name="mongoRoleDefinitionId", required=true)
       private final String mongoRoleDefinitionId;
@@ -36,7 +34,6 @@ public final class GetMongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.r
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

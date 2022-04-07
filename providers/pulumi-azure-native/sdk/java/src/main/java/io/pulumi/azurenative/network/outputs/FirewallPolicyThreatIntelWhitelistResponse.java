@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class FirewallPolicyThreatIntelWhitelistResponse {
     /**
      * List of FQDNs for the ThreatIntel Whitelist.
-     * 
      */
     private final @Nullable List<String> fqdns;
     /**
      * List of IP addresses for the ThreatIntel Whitelist.
-     * 
      */
     private final @Nullable List<String> ipAddresses;
 
@@ -32,14 +30,12 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
 
     /**
      * List of FQDNs for the ThreatIntel Whitelist.
-     * 
     */
     public List<String> getFqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
     /**
      * List of IP addresses for the ThreatIntel Whitelist.
-     * 
     */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;

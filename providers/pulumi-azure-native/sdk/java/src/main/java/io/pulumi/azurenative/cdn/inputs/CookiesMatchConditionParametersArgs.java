@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the parameters for Cookies match conditions
- * 
  */
 public final class CookiesMatchConditionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
 
     /**
      * The match value for the condition of the delivery rule
-     * 
      */
     @Import(name="matchValues")
       private final @Nullable Output<List<String>> matchValues;
@@ -36,7 +34,6 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
 
     /**
      * Describes if this is negate condition or not
-     * 
      */
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
@@ -54,7 +51,6 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
 
     /**
      * Describes operator to be matched
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<Either<String,CookiesOperator>> operator;
@@ -65,7 +61,6 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
 
     /**
      * Name of Cookies to be matched
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<String> selector;
@@ -76,7 +71,6 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
 
     /**
      * List of transforms
-     * 
      */
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,Transform>>> transforms;

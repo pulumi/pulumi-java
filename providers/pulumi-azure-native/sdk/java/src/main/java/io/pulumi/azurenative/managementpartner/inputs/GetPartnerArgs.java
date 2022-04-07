@@ -14,7 +14,6 @@ public final class GetPartnerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Id of the Partner
-     * 
      */
     @Import(name="partnerId", required=true)
       private final String partnerId;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed service identity.
- * 
  */
 public final class ManagedServiceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
 
     /**
      * Type of managed service identity.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ManagedServiceIdentityType> type;
@@ -34,7 +32,6 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
 
     /**
      * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;

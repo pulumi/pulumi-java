@@ -14,7 +14,6 @@ public final class ListLinkerConfigurationsArgs extends io.pulumi.resources.Invo
 
     /**
      * The name Linker resource.
-     * 
      */
     @Import(name="linkerName", required=true)
       private final String linkerName;
@@ -25,7 +24,6 @@ public final class ListLinkerConfigurationsArgs extends io.pulumi.resources.Invo
 
     /**
      * The fully qualified Azure Resource manager identifier of the resource to be connected.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final String resourceUri;

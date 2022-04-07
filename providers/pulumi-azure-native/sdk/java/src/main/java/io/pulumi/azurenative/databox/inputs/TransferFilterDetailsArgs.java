@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the filtering the transfer of data.
- * 
  */
 public final class TransferFilterDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Filter details to transfer Azure files.
-     * 
      */
     @Import(name="azureFileFilterDetails")
       private final @Nullable Output<AzureFileFilterDetailsArgs> azureFileFilterDetails;
@@ -37,7 +35,6 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Filter details to transfer blobs.
-     * 
      */
     @Import(name="blobFilterDetails")
       private final @Nullable Output<BlobFilterDetailsArgs> blobFilterDetails;
@@ -48,7 +45,6 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Type of the account of data.
-     * 
      */
     @Import(name="dataAccountType", required=true)
       private final Output<Either<String,DataAccountType>> dataAccountType;
@@ -59,7 +55,6 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Details of the filter files to be used for data transfer.
-     * 
      */
     @Import(name="filterFileDetails")
       private final @Nullable Output<List<FilterFileDetailsArgs>> filterFileDetails;

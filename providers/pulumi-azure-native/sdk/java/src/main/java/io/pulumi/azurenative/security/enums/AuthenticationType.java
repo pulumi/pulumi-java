@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
-     * 
      */
     @EnumType
     public enum AuthenticationType {
         /**
          * AWS cloud account connector user credentials authentication
-         * 
          */
         AwsCreds("awsCreds"),
         /**
          * AWS account connector assume role authentication
-         * 
          */
         AwsAssumeRole("awsAssumeRole"),
         /**
          * GCP account connector service to service authentication
-         * 
          */
         GcpCredentials("gcpCredentials");
 

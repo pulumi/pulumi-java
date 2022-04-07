@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters to provide for the DirectLine Speech channel.
- * 
  */
 public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
 
     /**
      * The cognitive service region with this channel registration.
-     * 
      */
     @Import(name="cognitiveServiceRegion", required=true)
       private final String cognitiveServiceRegion;
@@ -32,7 +30,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
 
     /**
      * The cognitive service subscription key to use with this channel registration.
-     * 
      */
     @Import(name="cognitiveServiceSubscriptionKey", required=true)
       private final String cognitiveServiceSubscriptionKey;
@@ -43,7 +40,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
 
     /**
      * Custom voice deployment id (optional).
-     * 
      */
     @Import(name="customSpeechModelId")
       private final @Nullable String customSpeechModelId;
@@ -54,7 +50,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
 
     /**
      * Custom speech model id (optional).
-     * 
      */
     @Import(name="customVoiceDeploymentId")
       private final @Nullable String customVoiceDeploymentId;
@@ -65,7 +60,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
 
     /**
      * Make this a default bot for chosen cognitive service account.
-     * 
      */
     @Import(name="isDefaultBotForCogSvcAccount")
       private final @Nullable Boolean isDefaultBotForCogSvcAccount;
@@ -76,7 +70,6 @@ public final class DirectLineSpeechChannelPropertiesResponse extends io.pulumi.r
 
     /**
      * Whether this channel is enabled or not.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Boolean isEnabled;

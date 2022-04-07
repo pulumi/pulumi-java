@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a hub.
- * 
  */
 public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The settings for configuring if anonymous connections are allowed for this hub: "allow" or "deny". Default to "deny".
-     * 
      */
     @Import(name="anonymousConnectPolicy")
       private final @Nullable Output<String> anonymousConnectPolicy;
@@ -33,7 +31,6 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Event handler of a hub.
-     * 
      */
     @Import(name="eventHandlers")
       private final @Nullable Output<List<EventHandlerArgs>> eventHandlers;

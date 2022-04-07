@@ -14,7 +14,6 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
 
     /**
      * Threat intelligence indicator name field.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
@@ -36,7 +34,6 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

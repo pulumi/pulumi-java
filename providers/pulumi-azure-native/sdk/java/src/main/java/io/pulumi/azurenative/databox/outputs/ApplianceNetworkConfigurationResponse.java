@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ApplianceNetworkConfigurationResponse {
     /**
      * Mac Address.
-     * 
      */
     private final String macAddress;
     /**
      * Name of the network.
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class ApplianceNetworkConfigurationResponse {
 
     /**
      * Mac Address.
-     * 
     */
     public String getMacAddress() {
         return this.macAddress;
     }
     /**
      * Name of the network.
-     * 
     */
     public String getName() {
         return this.name;

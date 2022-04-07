@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of a parameter that can be provided to the policy.
- * 
  */
 public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
 
     /**
      * The allowed values for the parameter.
-     * 
      */
     @Import(name="allowedValues")
       private final @Nullable Output<List<Object>> allowedValues;
@@ -36,7 +34,6 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
 
     /**
      * The default value for the parameter if no value is provided.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
@@ -47,7 +44,6 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
 
     /**
      * General metadata for the parameter.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata;
@@ -58,7 +54,6 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
 
     /**
      * The data type of the parameter.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ParameterType>> type;

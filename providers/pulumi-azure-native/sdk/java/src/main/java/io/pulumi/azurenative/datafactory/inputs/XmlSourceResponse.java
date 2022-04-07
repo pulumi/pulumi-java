@@ -27,7 +27,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Xml source.
- * 
  */
 public final class XmlSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -35,7 +34,6 @@ public final class XmlSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -46,7 +44,6 @@ public final class XmlSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -57,7 +54,6 @@ public final class XmlSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Xml format settings.
-     * 
      */
     @Import(name="formatSettings")
       private final @Nullable XmlReadSettingsResponse formatSettings;
@@ -68,7 +64,6 @@ public final class XmlSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -79,7 +74,6 @@ public final class XmlSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -90,7 +84,6 @@ public final class XmlSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -101,7 +94,6 @@ public final class XmlSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Xml store settings.
-     * 
      */
     @Import(name="storeSettings")
       private final @Nullable Object storeSettings;
@@ -113,7 +105,6 @@ public final class XmlSourceResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Copy source type.
      * Expected value is 'XmlSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

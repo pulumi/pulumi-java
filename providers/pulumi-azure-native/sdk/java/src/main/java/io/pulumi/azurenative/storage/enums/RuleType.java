@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The valid value is Lifecycle
-     * 
      */
     @EnumType
     public enum RuleType {

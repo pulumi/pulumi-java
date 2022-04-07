@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Links relevant to the assessment
- * 
  */
 public final class AssessmentLinksResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AssessmentLinksResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Link to assessment in Azure Portal
-     * 
      */
     @Import(name="azurePortalUri", required=true)
       private final String azurePortalUri;

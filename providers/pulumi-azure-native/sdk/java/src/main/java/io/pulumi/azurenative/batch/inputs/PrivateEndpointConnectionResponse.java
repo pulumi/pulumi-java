@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains information about a private link resource.
- * 
  */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The ETag of the resource, used for concurrency statements.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -33,7 +31,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The ID of the resource.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -44,7 +41,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -55,7 +51,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The private endpoint of the private endpoint connection.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
@@ -66,7 +61,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The private link service connection state of the private endpoint connection
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
@@ -84,7 +78,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

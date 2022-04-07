@@ -18,7 +18,91 @@ import javax.annotation.Nullable;
  * A share data transfer object.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Shares_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var share = new AzureNative.DataShare.Share("share", new AzureNative.DataShare.ShareArgs
+ *         {
+ *             AccountName = "Account1",
+ *             Description = "share description",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareKind = "CopyBased",
+ *             ShareName = "Share1",
+ *             Terms = "Confidential",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewShare(ctx, "share", &datashare.ShareArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			Description:       pulumi.String("share description"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareKind:         pulumi.String("CopyBased"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 			Terms:             pulumi.String("Confidential"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const share = new azure_native.datashare.Share("share", {
+ *     accountName: "Account1",
+ *     description: "share description",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareKind: "CopyBased",
+ *     shareName: "Share1",
+ *     terms: "Confidential",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * share = azure_native.datashare.Share("share",
+ *     account_name="Account1",
+ *     description="share description",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_kind="CopyBased",
+ *     share_name="Share1",
+ *     terms="Confidential")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,140 +117,120 @@ import javax.annotation.Nullable;
 public class Share extends io.pulumi.resources.CustomResource {
     /**
      * Time at which the share was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Time at which the share was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Share description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Share description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Name of the azure resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the azure resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets or sets the provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Share kind.
-     * 
      */
     @Export(name="shareKind", type=String.class, parameters={})
     private Output</* @Nullable */ String> shareKind;
 
     /**
      * @return Share kind.
-     * 
      */
     public Output</* @Nullable */ String> getShareKind() {
         return this.shareKind;
     }
     /**
      * System Data of the Azure resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System Data of the Azure resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Share terms.
-     * 
      */
     @Export(name="terms", type=String.class, parameters={})
     private Output</* @Nullable */ String> terms;
 
     /**
      * @return Share terms.
-     * 
      */
     public Output</* @Nullable */ String> getTerms() {
         return this.terms;
     }
     /**
      * Type of the azure resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the azure resource
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Email of the user who created the resource
-     * 
      */
     @Export(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
     /**
      * @return Email of the user who created the resource
-     * 
      */
     public Output<String> getUserEmail() {
         return this.userEmail;
     }
     /**
      * Name of the user who created the resource
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
      * @return Name of the user who created the resource
-     * 
      */
     public Output<String> getUserName() {
         return this.userName;

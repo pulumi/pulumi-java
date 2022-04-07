@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class GetIotHubResourceEventHubConsumerGroupResult {
     /**
      * The etag.
-     * 
      */
     private final String etag;
     /**
      * The Event Hub-compatible consumer group identifier.
-     * 
      */
     private final String id;
     /**
      * The Event Hub-compatible consumer group name.
-     * 
      */
     private final String name;
     /**
      * The tags.
-     * 
      */
     private final Map<String,String> properties;
     /**
      * the resource type.
-     * 
      */
     private final String type;
 
@@ -52,35 +47,30 @@ public final class GetIotHubResourceEventHubConsumerGroupResult {
 
     /**
      * The etag.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The Event Hub-compatible consumer group identifier.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The Event Hub-compatible consumer group name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The tags.
-     * 
     */
     public Map<String,String> getProperties() {
         return this.properties;
     }
     /**
      * the resource type.
-     * 
     */
     public String getType() {
         return this.type;

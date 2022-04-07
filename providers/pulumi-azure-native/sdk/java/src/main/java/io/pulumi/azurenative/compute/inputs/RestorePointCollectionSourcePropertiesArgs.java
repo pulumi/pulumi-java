@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of the source resource that this restore point collection is created from.
- * 
  */
 public final class RestorePointCollectionSourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RestorePointCollectionSourcePropertiesArgs extends io.pulumi.
 
     /**
      * Resource Id of the source resource used to create this restore point collection
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

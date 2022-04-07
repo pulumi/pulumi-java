@@ -17,38 +17,31 @@ import javax.annotation.Nullable;
 public final class FilterActivityResponse {
     /**
      * Condition to be used for filtering the input.
-     * 
      */
     private final ExpressionResponse condition;
     /**
      * Activity depends on condition.
-     * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
      * Activity description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Input array on which filter should be applied.
-     * 
      */
     private final ExpressionResponse items;
     /**
      * Activity name.
-     * 
      */
     private final String name;
     /**
      * Type of activity.
      * Expected value is 'Filter'.
-     * 
      */
     private final String type;
     /**
      * Activity user properties.
-     * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
@@ -72,35 +65,30 @@ public final class FilterActivityResponse {
 
     /**
      * Condition to be used for filtering the input.
-     * 
     */
     public ExpressionResponse getCondition() {
         return this.condition;
     }
     /**
      * Activity depends on condition.
-     * 
     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Input array on which filter should be applied.
-     * 
     */
     public ExpressionResponse getItems() {
         return this.items;
     }
     /**
      * Activity name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -108,14 +96,12 @@ public final class FilterActivityResponse {
     /**
      * Type of activity.
      * Expected value is 'Filter'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
-     * 
     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;

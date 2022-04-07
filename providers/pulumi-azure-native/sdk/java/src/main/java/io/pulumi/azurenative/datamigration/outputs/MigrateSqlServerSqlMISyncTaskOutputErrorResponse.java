@@ -12,18 +12,15 @@ import java.util.Objects;
 public final class MigrateSqlServerSqlMISyncTaskOutputErrorResponse {
     /**
      * Migration error
-     * 
      */
     private final ReportableExceptionResponse error;
     /**
      * Result identifier
-     * 
      */
     private final String id;
     /**
      * Result type
      * Expected value is 'ErrorOutput'.
-     * 
      */
     private final String resultType;
 
@@ -39,14 +36,12 @@ public final class MigrateSqlServerSqlMISyncTaskOutputErrorResponse {
 
     /**
      * Migration error
-     * 
     */
     public ReportableExceptionResponse getError() {
         return this.error;
     }
     /**
      * Result identifier
-     * 
     */
     public String getId() {
         return this.id;
@@ -54,7 +49,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputErrorResponse {
     /**
      * Result type
      * Expected value is 'ErrorOutput'.
-     * 
     */
     public String getResultType() {
         return this.resultType;

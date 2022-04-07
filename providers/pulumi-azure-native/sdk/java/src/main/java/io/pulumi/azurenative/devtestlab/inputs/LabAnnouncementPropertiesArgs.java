@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a lab's announcement banner
- * 
  */
 public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Is the lab announcement active/enabled at this time?
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Either<String,EnableStatus>> enabled;
@@ -34,7 +32,6 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The time at which the announcement expires (null for never)
-     * 
      */
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
@@ -45,7 +42,6 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Has this announcement expired?
-     * 
      */
     @Import(name="expired")
       private final @Nullable Output<Boolean> expired;
@@ -56,7 +52,6 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
-     * 
      */
     @Import(name="markdown")
       private final @Nullable Output<String> markdown;
@@ -67,7 +62,6 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The plain text title for the lab announcement
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

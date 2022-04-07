@@ -17,7 +17,6 @@ public final class ListDomainRecommendationsArgs extends io.pulumi.resources.Inv
 
     /**
      * Keywords to be used for generating domain recommendations.
-     * 
      */
     @Import(name="keywords")
       private final @Nullable String keywords;
@@ -28,7 +27,6 @@ public final class ListDomainRecommendationsArgs extends io.pulumi.resources.Inv
 
     /**
      * Maximum number of recommendations.
-     * 
      */
     @Import(name="maxDomainRecommendations")
       private final @Nullable Integer maxDomainRecommendations;

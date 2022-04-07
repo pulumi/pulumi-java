@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class MessageResponse {
     /**
      * The actual message text.
-     * 
      */
     private final String message;
     /**
      * Time in UTC this message was provided.
-     * 
      */
     private final String timeStamp;
 
@@ -30,14 +28,12 @@ public final class MessageResponse {
 
     /**
      * The actual message text.
-     * 
     */
     public String getMessage() {
         return this.message;
     }
     /**
      * Time in UTC this message was provided.
-     * 
     */
     public String getTimeStamp() {
         return this.timeStamp;

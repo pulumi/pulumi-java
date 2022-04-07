@@ -20,7 +20,6 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -31,7 +30,6 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * Gets or sets the configuration of the node.
-     * 
      */
     @Import(name="configuration", required=true)
       private final Output<DscConfigurationAssociationPropertyArgs> configuration;
@@ -42,7 +40,6 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * If a new build version of NodeConfiguration is required.
-     * 
      */
     @Import(name="incrementNodeConfigurationBuild")
       private final @Nullable Output<Boolean> incrementNodeConfigurationBuild;
@@ -53,7 +50,6 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the node configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -64,7 +60,6 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * The Dsc node configuration name.
-     * 
      */
     @Import(name="nodeConfigurationName")
       private final @Nullable Output<String> nodeConfigurationName;
@@ -75,7 +70,6 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * Gets or sets the source.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<ContentSourceArgs> source;
@@ -97,7 +90,6 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
 
     /**
      * Gets or sets the tags attached to the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

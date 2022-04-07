@@ -14,7 +14,6 @@ public final class GetRegisteredAsnArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the peering.
-     * 
      */
     @Import(name="peeringName", required=true)
       private final String peeringName;
@@ -25,7 +24,6 @@ public final class GetRegisteredAsnArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the registered ASN.
-     * 
      */
     @Import(name="registeredAsnName", required=true)
       private final String registeredAsnName;
@@ -36,7 +34,6 @@ public final class GetRegisteredAsnArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

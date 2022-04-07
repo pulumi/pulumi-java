@@ -25,7 +25,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties when targetType is blobNfs.
-     * 
      */
     @Import(name="blobNfs")
       private final @Nullable Output<BlobNfsTargetArgs> blobNfs;
@@ -36,7 +35,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
-     * 
      */
     @Import(name="cacheName", required=true)
       private final Output<String> cacheName;
@@ -47,7 +45,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties when targetType is clfs.
-     * 
      */
     @Import(name="clfs")
       private final @Nullable Output<ClfsTargetArgs> clfs;
@@ -58,7 +55,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of Cache namespace junctions to target for namespace associations.
-     * 
      */
     @Import(name="junctions")
       private final @Nullable Output<List<NamespaceJunctionArgs>> junctions;
@@ -69,7 +65,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties when targetType is nfs3.
-     * 
      */
     @Import(name="nfs3")
       private final @Nullable Output<Nfs3TargetArgs> nfs3;
@@ -80,7 +75,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
@@ -91,7 +85,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Target resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -102,7 +95,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Storage Target.
-     * 
      */
     @Import(name="storageTargetName")
       private final @Nullable Output<String> storageTargetName;
@@ -113,7 +105,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the Storage Target.
-     * 
      */
     @Import(name="targetType", required=true)
       private final Output<Either<String,StorageTargetType>> targetType;
@@ -124,7 +115,6 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties when targetType is unknown.
-     * 
      */
     @Import(name="unknown")
       private final @Nullable Output<UnknownTargetArgs> unknown;

@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class PropagatedRouteTableResponse {
     /**
      * The list of resource ids of all the RouteTables.
-     * 
      */
     private final @Nullable List<SubResourceResponse> ids;
     /**
      * The list of labels.
-     * 
      */
     private final @Nullable List<String> labels;
 
@@ -33,14 +31,12 @@ public final class PropagatedRouteTableResponse {
 
     /**
      * The list of resource ids of all the RouteTables.
-     * 
     */
     public List<SubResourceResponse> getIds() {
         return this.ids == null ? List.of() : this.ids;
     }
     /**
      * The list of labels.
-     * 
     */
     public List<String> getLabels() {
         return this.labels == null ? List.of() : this.labels;

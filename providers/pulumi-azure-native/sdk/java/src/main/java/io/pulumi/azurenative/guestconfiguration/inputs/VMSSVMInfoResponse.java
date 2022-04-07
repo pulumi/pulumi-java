@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Information about VMSS VM
- * 
  */
 public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
-     * 
      */
     @Import(name="complianceStatus", required=true)
       private final String complianceStatus;
@@ -29,7 +27,6 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Date and time when last compliance status was checked.
-     * 
      */
     @Import(name="lastComplianceChecked", required=true)
       private final String lastComplianceChecked;
@@ -39,8 +36,7 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Id of the latest report for the guest configuration assignment.
-     * 
+     * Id of the latest report for the guest configuration assignment. 
      */
     @Import(name="latestReportId", required=true)
       private final String latestReportId;
@@ -51,7 +47,6 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * UUID of the VM.
-     * 
      */
     @Import(name="vmId", required=true)
       private final String vmId;
@@ -62,7 +57,6 @@ public final class VMSSVMInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Azure resource Id of the VM.
-     * 
      */
     @Import(name="vmResourceId", required=true)
       private final String vmResourceId;

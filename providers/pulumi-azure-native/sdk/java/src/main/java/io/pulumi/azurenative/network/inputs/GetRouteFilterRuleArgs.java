@@ -14,7 +14,6 @@ public final class GetRouteFilterRuleArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetRouteFilterRuleArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the route filter.
-     * 
      */
     @Import(name="routeFilterName", required=true)
       private final String routeFilterName;
@@ -36,7 +34,6 @@ public final class GetRouteFilterRuleArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the rule.
-     * 
      */
     @Import(name="ruleName", required=true)
       private final String ruleName;

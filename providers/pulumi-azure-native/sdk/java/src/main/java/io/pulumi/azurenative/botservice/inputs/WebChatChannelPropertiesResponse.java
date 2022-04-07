@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters to provide for the Web Chat channel.
- * 
  */
 public final class WebChatChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class WebChatChannelPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The list of Web Chat sites
-     * 
      */
     @Import(name="sites")
       private final @Nullable List<WebChatSiteResponse> sites;
@@ -33,7 +31,6 @@ public final class WebChatChannelPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Web chat control embed code
-     * 
      */
     @Import(name="webChatEmbedCode", required=true)
       private final String webChatEmbedCode;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class RunbookAssociationPropertyResponse {
     /**
      * Gets or sets the name of the runbook.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,7 +23,6 @@ public final class RunbookAssociationPropertyResponse {
 
     /**
      * Gets or sets the name of the runbook.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

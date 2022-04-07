@@ -18,7 +18,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
 
     /**
      * Display name of the DNS Zone.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -29,7 +28,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
 
     /**
      * DNS Server IP array of the DNS Zone.
-     * 
      */
     @Import(name="dnsServerIps")
       private final @Nullable Output<List<String>> dnsServerIps;
@@ -40,7 +38,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
 
     /**
      * Number of DNS Services using the DNS zone.
-     * 
      */
     @Import(name="dnsServices")
       private final @Nullable Output<Double> dnsServices;
@@ -51,7 +48,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
 
     /**
      * NSX DNS Zone identifier. Generally the same as the DNS Zone's display name
-     * 
      */
     @Import(name="dnsZoneId")
       private final @Nullable Output<String> dnsZoneId;
@@ -62,7 +58,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
 
     /**
      * Domain names of the DNS Zone.
-     * 
      */
     @Import(name="domain")
       private final @Nullable Output<List<String>> domain;
@@ -73,7 +68,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -84,7 +78,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -95,7 +88,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
 
     /**
      * NSX revision number.
-     * 
      */
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
@@ -106,7 +98,6 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
 
     /**
      * Source IP of the DNS Zone.
-     * 
      */
     @Import(name="sourceIp")
       private final @Nullable Output<String> sourceIp;

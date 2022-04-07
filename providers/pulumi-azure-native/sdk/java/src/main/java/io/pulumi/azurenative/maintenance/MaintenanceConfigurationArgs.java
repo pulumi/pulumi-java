@@ -19,7 +19,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
-     * 
      */
     @Import(name="extensionProperties")
       private final @Nullable Output<Map<String,String>> extensionProperties;
@@ -30,7 +29,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Gets or sets location of the resource
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
-     * 
      */
     @Import(name="maintenanceScope")
       private final @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope;
@@ -52,7 +49,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
@@ -63,7 +59,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource Identifier
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -85,7 +79,6 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Gets or sets tags of the resource
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

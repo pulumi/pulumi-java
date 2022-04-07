@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity source for SAP Business Warehouse Open Hub Destination source.
- * 
  */
 public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -32,7 +30,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The ID of request for delta loading. Once it is set, only data with requestId larger than the value of this property will be retrieved. The default value is 0. Type: integer (or Expression with resultType integer ).
-     * 
      */
     @Import(name="baseRequestId")
       private final @Nullable Object baseRequestId;
@@ -43,7 +40,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="customRfcReadTableFunctionModule")
       private final @Nullable Object customRfcReadTableFunctionModule;
@@ -54,7 +50,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -65,7 +60,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Whether to exclude the records of the last request. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="excludeLastRequest")
       private final @Nullable Object excludeLastRequest;
@@ -76,7 +70,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -87,7 +80,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
@@ -98,7 +90,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="sapDataColumnDelimiter")
       private final @Nullable Object sapDataColumnDelimiter;
@@ -109,7 +100,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -120,7 +110,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -132,7 +121,6 @@ public final class SapOpenHubSourceResponse extends io.pulumi.resources.InvokeAr
     /**
      * Copy source type.
      * Expected value is 'SapOpenHubSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

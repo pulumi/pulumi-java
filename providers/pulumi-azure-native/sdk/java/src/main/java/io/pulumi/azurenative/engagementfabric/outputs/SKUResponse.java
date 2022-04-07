@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class SKUResponse {
     /**
      * The name of the SKU
-     * 
      */
     private final String name;
     /**
      * The price tier of the SKU
-     * 
      */
     private final @Nullable String tier;
 
@@ -32,14 +30,12 @@ public final class SKUResponse {
 
     /**
      * The name of the SKU
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The price tier of the SKU
-     * 
     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);

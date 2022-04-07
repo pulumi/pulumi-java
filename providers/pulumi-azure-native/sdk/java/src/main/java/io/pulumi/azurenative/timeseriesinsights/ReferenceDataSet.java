@@ -19,7 +19,126 @@ import javax.annotation.Nullable;
  * A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs.
  * API Version: 2020-05-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ReferenceDataSetsCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var referenceDataSet = new AzureNative.TimeSeriesInsights.ReferenceDataSet("referenceDataSet", new AzureNative.TimeSeriesInsights.ReferenceDataSetArgs
+ *         {
+ *             EnvironmentName = "env1",
+ *             KeyProperties = 
+ *             {
+ *                 new AzureNative.TimeSeriesInsights.Inputs.ReferenceDataSetKeyPropertyArgs
+ *                 {
+ *                     Name = "DeviceId1",
+ *                     Type = "String",
+ *                 },
+ *                 new AzureNative.TimeSeriesInsights.Inputs.ReferenceDataSetKeyPropertyArgs
+ *                 {
+ *                     Name = "DeviceFloor",
+ *                     Type = "Double",
+ *                 },
+ *             },
+ *             Location = "West US",
+ *             ReferenceDataSetName = "rds1",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := timeseriesinsights.NewReferenceDataSet(ctx, "referenceDataSet", &timeseriesinsights.ReferenceDataSetArgs{
+ * 			EnvironmentName: pulumi.String("env1"),
+ * 			KeyProperties: timeseriesinsights.ReferenceDataSetKeyPropertyArray{
+ * 				&timeseriesinsights.ReferenceDataSetKeyPropertyArgs{
+ * 					Name: pulumi.String("DeviceId1"),
+ * 					Type: pulumi.String("String"),
+ * 				},
+ * 				&timeseriesinsights.ReferenceDataSetKeyPropertyArgs{
+ * 					Name: pulumi.String("DeviceFloor"),
+ * 					Type: pulumi.String("Double"),
+ * 				},
+ * 			},
+ * 			Location:             pulumi.String("West US"),
+ * 			ReferenceDataSetName: pulumi.String("rds1"),
+ * 			ResourceGroupName:    pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const referenceDataSet = new azure_native.timeseriesinsights.ReferenceDataSet("referenceDataSet", {
+ *     environmentName: "env1",
+ *     keyProperties: [
+ *         {
+ *             name: "DeviceId1",
+ *             type: "String",
+ *         },
+ *         {
+ *             name: "DeviceFloor",
+ *             type: "Double",
+ *         },
+ *     ],
+ *     location: "West US",
+ *     referenceDataSetName: "rds1",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * reference_data_set = azure_native.timeseriesinsights.ReferenceDataSet("referenceDataSet",
+ *     environment_name="env1",
+ *     key_properties=[
+ *         azure_native.timeseriesinsights.ReferenceDataSetKeyPropertyArgs(
+ *             name="DeviceId1",
+ *             type="String",
+ *         ),
+ *         azure_native.timeseriesinsights.ReferenceDataSetKeyPropertyArgs(
+ *             name="DeviceFloor",
+ *             type="Double",
+ *         ),
+ *     ],
+ *     location="West US",
+ *     reference_data_set_name="rds1",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,112 +153,96 @@ import javax.annotation.Nullable;
 public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
     /**
      * The time the resource was created.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The time the resource was created.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
-     * 
      */
     @Export(name="dataStringComparisonBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataStringComparisonBehavior;
 
     /**
      * @return The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
-     * 
      */
     public Output</* @Nullable */ String> getDataStringComparisonBehavior() {
         return this.dataStringComparisonBehavior;
     }
     /**
      * The list of key properties for the reference data set.
-     * 
      */
     @Export(name="keyProperties", type=List.class, parameters={ReferenceDataSetKeyPropertyResponse.class})
     private Output<List<ReferenceDataSetKeyPropertyResponse>> keyProperties;
 
     /**
      * @return The list of key properties for the reference data set.
-     * 
      */
     public Output<List<ReferenceDataSetKeyPropertyResponse>> getKeyProperties() {
         return this.keyProperties;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

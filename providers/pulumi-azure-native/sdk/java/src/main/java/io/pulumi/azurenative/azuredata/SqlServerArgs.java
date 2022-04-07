@@ -17,7 +17,6 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Cores of the Sql Server.
-     * 
      */
     @Import(name="cores")
       private final @Nullable Output<Integer> cores;
@@ -28,7 +27,6 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sql Server Edition.
-     * 
      */
     @Import(name="edition")
       private final @Nullable Output<String> edition;
@@ -39,7 +37,6 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sql Server Json Property Bag.
-     * 
      */
     @Import(name="propertyBag")
       private final @Nullable Output<String> propertyBag;
@@ -50,7 +47,6 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID for Parent Sql Server Registration.
-     * 
      */
     @Import(name="registrationID")
       private final @Nullable Output<String> registrationID;
@@ -61,7 +57,6 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the SQL Server.
-     * 
      */
     @Import(name="sqlServerName")
       private final @Nullable Output<String> sqlServerName;
@@ -83,7 +77,6 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the SQL Server registration.
-     * 
      */
     @Import(name="sqlServerRegistrationName", required=true)
       private final Output<String> sqlServerRegistrationName;
@@ -94,7 +87,6 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Version of the Sql Server.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

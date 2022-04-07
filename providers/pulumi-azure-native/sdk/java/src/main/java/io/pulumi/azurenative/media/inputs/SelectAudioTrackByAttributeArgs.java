@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Select audio tracks from the input by specifying an attribute and an attribute filter.
- * 
  */
 public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
 
     /**
      * The TrackAttribute to filter the tracks by.
-     * 
      */
     @Import(name="attribute", required=true)
       private final Output<Either<String,TrackAttribute>> attribute;
@@ -35,7 +33,6 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
 
     /**
      * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
-     * 
      */
     @Import(name="channelMapping")
       private final @Nullable Output<Either<String,ChannelMapping>> channelMapping;
@@ -46,7 +43,6 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
 
     /**
      * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
-     * 
      */
     @Import(name="filter", required=true)
       private final Output<Either<String,AttributeFilter>> filter;
@@ -57,7 +53,6 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
 
     /**
      * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
-     * 
      */
     @Import(name="filterValue")
       private final @Nullable Output<String> filterValue;
@@ -69,7 +64,6 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.SelectAudioTrackByAttribute'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;

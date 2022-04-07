@@ -21,7 +21,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Flag to enable/disable flow logging.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -32,7 +31,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters that define the configuration of traffic analytics.
-     * 
      */
     @Import(name="flowAnalyticsConfiguration")
       private final @Nullable Output<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration;
@@ -43,7 +41,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the flow log.
-     * 
      */
     @Import(name="flowLogName")
       private final @Nullable Output<String> flowLogName;
@@ -54,7 +51,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters that define the flow log format.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<FlowLogFormatParametersArgs> format;
@@ -65,7 +61,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -76,7 +71,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -87,7 +81,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the network watcher.
-     * 
      */
     @Import(name="networkWatcherName", required=true)
       private final Output<String> networkWatcherName;
@@ -98,7 +91,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -109,7 +101,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters that define the retention policy for flow log.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable Output<RetentionPolicyParametersArgs> retentionPolicy;
@@ -120,7 +111,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the storage account which is used to store the flow log.
-     * 
      */
     @Import(name="storageId", required=true)
       private final Output<String> storageId;
@@ -131,7 +121,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -142,7 +131,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of network security group to which flow log will be applied.
-     * 
      */
     @Import(name="targetResourceId", required=true)
       private final Output<String> targetResourceId;

@@ -18,57 +18,46 @@ import javax.annotation.Nullable;
 public final class GetResourceResult {
     /**
      * Resource ID
-     * 
      */
     private final String id;
     /**
      * The identity of the resource.
-     * 
      */
     private final @Nullable IdentityResponse identity;
     /**
      * The kind of the resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource location
-     * 
      */
     private final @Nullable String location;
     /**
      * ID of the resource that manages this resource.
-     * 
      */
     private final @Nullable String managedBy;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * The plan of the resource.
-     * 
      */
     private final @Nullable PlanResponse plan;
     /**
      * The resource properties.
-     * 
      */
     private final Object properties;
     /**
      * The SKU of the resource.
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * Resource tags
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -100,77 +89,66 @@ public final class GetResourceResult {
 
     /**
      * Resource ID
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the resource.
-     * 
     */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of the resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource location
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * ID of the resource that manages this resource.
-     * 
     */
     public Optional<String> getManagedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The plan of the resource.
-     * 
     */
     public Optional<PlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * The resource properties.
-     * 
     */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * The SKU of the resource.
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

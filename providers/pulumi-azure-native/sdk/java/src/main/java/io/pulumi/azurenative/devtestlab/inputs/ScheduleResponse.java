@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * A schedule.
- * 
  */
 public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The creation date of the schedule.
-     * 
      */
     @Import(name="createdDate", required=true)
       private final String createdDate;
@@ -36,7 +34,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the schedule will occur once each day of the week, specify the daily recurrence.
-     * 
      */
     @Import(name="dailyRecurrence")
       private final @Nullable DayDetailsResponse dailyRecurrence;
@@ -47,7 +44,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
-     * 
      */
     @Import(name="hourlyRecurrence")
       private final @Nullable HourDetailsResponse hourlyRecurrence;
@@ -58,7 +54,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -69,7 +64,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -80,7 +74,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -91,7 +84,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Notification settings.
-     * 
      */
     @Import(name="notificationSettings")
       private final @Nullable NotificationSettingsResponse notificationSettings;
@@ -102,7 +94,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -113,7 +104,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The status of the schedule (i.e. Enabled, Disabled)
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -124,7 +114,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -135,7 +124,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource ID to which the schedule belongs
-     * 
      */
     @Import(name="targetResourceId")
       private final @Nullable String targetResourceId;
@@ -146,7 +134,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     * 
      */
     @Import(name="taskType")
       private final @Nullable String taskType;
@@ -157,7 +144,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time zone ID (e.g. Pacific Standard time).
-     * 
      */
     @Import(name="timeZoneId")
       private final @Nullable String timeZoneId;
@@ -168,7 +154,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -179,7 +164,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Import(name="uniqueIdentifier", required=true)
       private final String uniqueIdentifier;
@@ -190,7 +174,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
-     * 
      */
     @Import(name="weeklyRecurrence")
       private final @Nullable WeekDetailsResponse weeklyRecurrence;

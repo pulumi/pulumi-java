@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ListStorageAccountSASResult {
     /**
      * List SAS credentials of storage account.
-     * 
      */
     private final String accountSasToken;
 
@@ -22,7 +21,6 @@ public final class ListStorageAccountSASResult {
 
     /**
      * List SAS credentials of storage account.
-     * 
     */
     public String getAccountSasToken() {
         return this.accountSasToken;

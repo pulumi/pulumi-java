@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Fabric properties.
- * 
  */
 public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -30,7 +29,6 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * BCDR state of the fabric.
-     * 
      */
     @Import(name="bcdrState")
       private final @Nullable String bcdrState;
@@ -41,7 +39,6 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Fabric specific settings.
-     * 
      */
     @Import(name="customDetails")
       private final @Nullable Object customDetails;
@@ -52,7 +49,6 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Encryption details for the fabric.
-     * 
      */
     @Import(name="encryptionDetails")
       private final @Nullable EncryptionDetailsResponse encryptionDetails;
@@ -63,7 +59,6 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Friendly name of the fabric.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -74,7 +69,6 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Health of fabric.
-     * 
      */
     @Import(name="health")
       private final @Nullable String health;
@@ -85,7 +79,6 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Fabric health error details.
-     * 
      */
     @Import(name="healthErrorDetails")
       private final @Nullable List<HealthErrorResponse> healthErrorDetails;
@@ -96,7 +89,6 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Dra Registration Id.
-     * 
      */
     @Import(name="internalIdentifier")
       private final @Nullable String internalIdentifier;
@@ -107,7 +99,6 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Rollover encryption details for the fabric.
-     * 
      */
     @Import(name="rolloverEncryptionDetails")
       private final @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;

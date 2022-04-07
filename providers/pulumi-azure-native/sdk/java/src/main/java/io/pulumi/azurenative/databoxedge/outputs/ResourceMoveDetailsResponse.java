@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ResourceMoveDetailsResponse {
     /**
      * Denotes whether move operation is in progress
-     * 
      */
     private final @Nullable String operationInProgress;
     /**
      * Denotes the timeout of the operation to finish
-     * 
      */
     private final @Nullable String operationInProgressLockTimeoutInUTC;
 
@@ -32,14 +30,12 @@ public final class ResourceMoveDetailsResponse {
 
     /**
      * Denotes whether move operation is in progress
-     * 
     */
     public Optional<String> getOperationInProgress() {
         return Optional.ofNullable(this.operationInProgress);
     }
     /**
      * Denotes the timeout of the operation to finish
-     * 
     */
     public Optional<String> getOperationInProgressLockTimeoutInUTC() {
         return Optional.ofNullable(this.operationInProgressLockTimeoutInUTC);

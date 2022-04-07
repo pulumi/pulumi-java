@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines a service unit.
- * 
  */
 public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The artifacts for the service unit.
-     * 
      */
     @Import(name="artifacts")
       private final @Nullable ServiceUnitArtifactsResponse artifacts;
@@ -34,7 +32,6 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes the type of ARM deployment to be performed on the resource.
-     * 
      */
     @Import(name="deploymentMode", required=true)
       private final String deploymentMode;
@@ -45,7 +42,6 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the service unit.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -56,7 +52,6 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Detailed step information, if present.
-     * 
      */
     @Import(name="steps")
       private final @Nullable List<RolloutStepResponse> steps;
@@ -67,7 +62,6 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
-     * 
      */
     @Import(name="targetResourceGroup", required=true)
       private final String targetResourceGroup;

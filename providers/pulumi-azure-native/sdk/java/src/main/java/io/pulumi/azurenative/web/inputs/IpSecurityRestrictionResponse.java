@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP security restriction on an app.
- * 
  */
 public final class IpSecurityRestrictionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
 
     /**
      * Allow or Deny access for this IP range.
-     * 
      */
     @Import(name="action")
       private final @Nullable String action;
@@ -34,7 +32,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
 
     /**
      * IP restriction rule description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -45,12 +42,12 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
 
     /**
      * IP restriction rule headers.
-     * X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+     * X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). 
      * The matching logic is ..
      * - If the property is null or empty (default), all hosts(or lack of) are allowed.
      * - A value is compared using ordinal-ignore-case (excluding port number).
      * - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain foo.contoso.com
-     *    but not the root domain contoso.com or multi-level foo.bar.contoso.com
+     *  but not the root domain contoso.com or multi-level foo.bar.contoso.com
      * - Unicode host names are allowed but are converted to Punycode for matching.
      * 
      * X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples).
@@ -60,7 +57,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * 
      * X-Azure-FDID and X-FD-HealthProbe.
      * The matching logic is exact match.
-     * 
      */
     @Import(name="headers")
       private final @Nullable Map<String,List<String>> headers;
@@ -74,7 +70,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * It can be in form of pure ipv4 address (required SubnetMask property) or
      * CIDR notation such as ipv4/mask (leading bit match). For CIDR,
      * SubnetMask property must not be specified.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -85,7 +80,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
 
     /**
      * IP restriction rule name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -96,7 +90,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
 
     /**
      * Priority of IP restriction rule.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Integer priority;
@@ -107,7 +100,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
 
     /**
      * Subnet mask for the range of IP addresses the restriction is valid for.
-     * 
      */
     @Import(name="subnetMask")
       private final @Nullable String subnetMask;
@@ -118,7 +110,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
 
     /**
      * (internal) Subnet traffic tag
-     * 
      */
     @Import(name="subnetTrafficTag")
       private final @Nullable Integer subnetTrafficTag;
@@ -129,7 +120,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
 
     /**
      * Defines what this IP filter will be used for. This is to support IP filtering on proxies.
-     * 
      */
     @Import(name="tag")
       private final @Nullable String tag;
@@ -140,7 +130,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
 
     /**
      * Virtual network resource id
-     * 
      */
     @Import(name="vnetSubnetResourceId")
       private final @Nullable String vnetSubnetResourceId;
@@ -151,7 +140,6 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
 
     /**
      * (internal) Vnet traffic tag
-     * 
      */
     @Import(name="vnetTrafficTag")
       private final @Nullable Integer vnetTrafficTag;

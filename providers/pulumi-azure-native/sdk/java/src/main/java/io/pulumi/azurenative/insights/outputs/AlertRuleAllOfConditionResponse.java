@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class AlertRuleAllOfConditionResponse {
     /**
      * The list of Activity Log Alert rule conditions.
-     * 
      */
     private final List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
 
@@ -23,7 +22,6 @@ public final class AlertRuleAllOfConditionResponse {
 
     /**
      * The list of Activity Log Alert rule conditions.
-     * 
     */
     public List<AlertRuleAnyOfOrLeafConditionResponse> getAllOf() {
         return this.allOf;

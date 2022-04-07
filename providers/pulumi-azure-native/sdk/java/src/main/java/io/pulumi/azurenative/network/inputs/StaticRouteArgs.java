@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * List of all Static Routes.
- * 
  */
 public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of all address prefixes.
-     * 
      */
     @Import(name="addressPrefixes")
       private final @Nullable Output<List<String>> addressPrefixes;
@@ -32,7 +30,6 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the StaticRoute that is unique within a VnetRoute.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ip address of the next hop.
-     * 
      */
     @Import(name="nextHopIpAddress")
       private final @Nullable Output<String> nextHopIpAddress;

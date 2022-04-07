@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Salesforce Service Cloud sink.
- * 
  */
 public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -32,7 +30,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
 
     /**
      * The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="externalIdFieldName")
       private final @Nullable Object externalIdFieldName;
@@ -43,7 +40,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
 
     /**
      * The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="ignoreNullValues")
       private final @Nullable Object ignoreNullValues;
@@ -54,7 +50,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -65,7 +60,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
@@ -76,7 +70,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
@@ -88,7 +81,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
     /**
      * Copy sink type.
      * Expected value is 'SalesforceServiceCloudSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -99,7 +91,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
@@ -110,7 +101,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
@@ -121,7 +111,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
 
     /**
      * The write behavior for the operation. Default is Insert.
-     * 
      */
     @Import(name="writeBehavior")
       private final @Nullable String writeBehavior;

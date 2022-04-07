@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * Recipient Email details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateNotificationRecipientEmail
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var notificationRecipientEmail = new AzureNative.ApiManagement.NotificationRecipientEmail("notificationRecipientEmail", new AzureNative.ApiManagement.NotificationRecipientEmailArgs
+ *         {
+ *             Email = "foobar@live.com",
+ *             NotificationName = "RequestPublisherNotificationMessage",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewNotificationRecipientEmail(ctx, "notificationRecipientEmail", &apimanagement.NotificationRecipientEmailArgs{
+ * 			Email:             pulumi.String("foobar@live.com"),
+ * 			NotificationName:  pulumi.String("RequestPublisherNotificationMessage"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const notificationRecipientEmail = new azure_native.apimanagement.NotificationRecipientEmail("notificationRecipientEmail", {
+ *     email: "foobar@live.com",
+ *     notificationName: "RequestPublisherNotificationMessage",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * notification_recipient_email = azure_native.apimanagement.NotificationRecipientEmail("notificationRecipientEmail",
+ *     email="foobar@live.com",
+ *     notification_name="RequestPublisherNotificationMessage",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +108,36 @@ import javax.annotation.Nullable;
 public class NotificationRecipientEmail extends io.pulumi.resources.CustomResource {
     /**
      * User Email subscribed to notification.
-     * 
      */
     @Export(name="email", type=String.class, parameters={})
     private Output</* @Nullable */ String> email;
 
     /**
      * @return User Email subscribed to notification.
-     * 
      */
     public Output</* @Nullable */ String> getEmail() {
         return this.email;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -16,7 +16,6 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
 
     /**
      * Name of the custom entity store assignment. Generated name is GUID.
-     * 
      */
     @Import(name="customEntityStoreAssignmentName")
       private final @Nullable Output<String> customEntityStoreAssignmentName;
@@ -27,7 +26,6 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
 
     /**
      * The principal assigned with entity store. If not provided, will use caller principal. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
-     * 
      */
     @Import(name="principal")
       private final @Nullable Output<String> principal;
@@ -38,7 +36,6 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

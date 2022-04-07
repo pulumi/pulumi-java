@@ -17,7 +17,108 @@ import javax.annotation.Nullable;
  * Service Endpoint policy definitions.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create service endpoint policy definition
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceEndpointPolicyDefinition = new AzureNative.Network.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition", new AzureNative.Network.ServiceEndpointPolicyDefinitionArgs
+ *         {
+ *             Description = "Storage Service EndpointPolicy Definition",
+ *             ResourceGroupName = "rg1",
+ *             Service = "Microsoft.Storage",
+ *             ServiceEndpointPolicyDefinitionName = "testDefinition",
+ *             ServiceEndpointPolicyName = "testPolicy",
+ *             ServiceResources = 
+ *             {
+ *                 "/subscriptions/subid1",
+ *                 "/subscriptions/subid1/resourceGroups/storageRg",
+ *                 "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewServiceEndpointPolicyDefinition(ctx, "serviceEndpointPolicyDefinition", &network.ServiceEndpointPolicyDefinitionArgs{
+ * 			Description:                         pulumi.String("Storage Service EndpointPolicy Definition"),
+ * 			ResourceGroupName:                   pulumi.String("rg1"),
+ * 			Service:                             pulumi.String("Microsoft.Storage"),
+ * 			ServiceEndpointPolicyDefinitionName: pulumi.String("testDefinition"),
+ * 			ServiceEndpointPolicyName:           pulumi.String("testPolicy"),
+ * 			ServiceResources: pulumi.StringArray{
+ * 				pulumi.String("/subscriptions/subid1"),
+ * 				pulumi.String("/subscriptions/subid1/resourceGroups/storageRg"),
+ * 				pulumi.String("/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serviceEndpointPolicyDefinition = new azure_native.network.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition", {
+ *     description: "Storage Service EndpointPolicy Definition",
+ *     resourceGroupName: "rg1",
+ *     service: "Microsoft.Storage",
+ *     serviceEndpointPolicyDefinitionName: "testDefinition",
+ *     serviceEndpointPolicyName: "testPolicy",
+ *     serviceResources: [
+ *         "/subscriptions/subid1",
+ *         "/subscriptions/subid1/resourceGroups/storageRg",
+ *         "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service_endpoint_policy_definition = azure_native.network.ServiceEndpointPolicyDefinition("serviceEndpointPolicyDefinition",
+ *     description="Storage Service EndpointPolicy Definition",
+ *     resource_group_name="rg1",
+ *     service="Microsoft.Storage",
+ *     service_endpoint_policy_definition_name="testDefinition",
+ *     service_endpoint_policy_name="testPolicy",
+ *     service_resources=[
+ *         "/subscriptions/subid1",
+ *         "/subscriptions/subid1/resourceGroups/storageRg",
+ *         "/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +133,72 @@ import javax.annotation.Nullable;
 public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomResource {
     /**
      * A description for this rule. Restricted to 140 chars.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description for this rule. Restricted to 140 chars.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the service endpoint policy definition resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the service endpoint policy definition resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Service endpoint name.
-     * 
      */
     @Export(name="service", type=String.class, parameters={})
     private Output</* @Nullable */ String> service;
 
     /**
      * @return Service endpoint name.
-     * 
      */
     public Output</* @Nullable */ String> getService() {
         return this.service;
     }
     /**
      * A list of service resources.
-     * 
      */
     @Export(name="serviceResources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> serviceResources;
 
     /**
      * @return A list of service resources.
-     * 
      */
     public Output</* @Nullable */ List<String>> getServiceResources() {
         return this.serviceResources;

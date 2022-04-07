@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * GCP cloud account connector based service to service credentials, the credentials are composed of the organization ID and a JSON API key (write only)
- * 
  */
 public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Auth provider x509 certificate URL field of the API key (write only)
-     * 
      */
     @Import(name="authProviderX509CertUrl", required=true)
       private final Output<String> authProviderX509CertUrl;
@@ -30,7 +28,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Auth URI field of the API key (write only)
-     * 
      */
     @Import(name="authUri", required=true)
       private final Output<String> authUri;
@@ -42,7 +39,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     /**
      * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
      * Expected value is 'gcpCredentials'.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
@@ -53,7 +49,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Client email field of the API key (write only)
-     * 
      */
     @Import(name="clientEmail", required=true)
       private final Output<String> clientEmail;
@@ -64,7 +59,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Client ID field of the API key (write only)
-     * 
      */
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
@@ -75,7 +69,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Client x509 certificate URL field of the API key (write only)
-     * 
      */
     @Import(name="clientX509CertUrl", required=true)
       private final Output<String> clientX509CertUrl;
@@ -86,7 +79,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * The organization ID of the GCP cloud account
-     * 
      */
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
@@ -97,7 +89,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Private key field of the API key (write only)
-     * 
      */
     @Import(name="privateKey", required=true)
       private final Output<String> privateKey;
@@ -108,7 +99,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Private key ID field of the API key (write only)
-     * 
      */
     @Import(name="privateKeyId", required=true)
       private final Output<String> privateKeyId;
@@ -119,7 +109,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Project ID field of the API key (write only)
-     * 
      */
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
@@ -130,7 +119,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Token URI field of the API key (write only)
-     * 
      */
     @Import(name="tokenUri", required=true)
       private final Output<String> tokenUri;
@@ -141,7 +129,6 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Type field of the API key (write only)
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

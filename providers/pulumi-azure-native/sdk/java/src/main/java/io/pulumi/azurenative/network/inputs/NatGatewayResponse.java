@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Nat Gateway resource.
- * 
  */
 public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -36,7 +34,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -47,7 +44,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The idle timeout of the nat gateway.
-     * 
      */
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
@@ -58,7 +54,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -69,7 +64,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -80,7 +74,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of the NAT gateway resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -91,7 +84,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of public ip addresses associated with the nat gateway resource.
-     * 
      */
     @Import(name="publicIpAddresses")
       private final @Nullable List<SubResourceResponse> publicIpAddresses;
@@ -102,7 +94,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of public ip prefixes associated with the nat gateway resource.
-     * 
      */
     @Import(name="publicIpPrefixes")
       private final @Nullable List<SubResourceResponse> publicIpPrefixes;
@@ -113,7 +104,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource GUID property of the NAT gateway resource.
-     * 
      */
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
@@ -124,7 +114,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The nat gateway SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable NatGatewaySkuResponse sku;
@@ -135,7 +124,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of references to the subnets using this nat gateway resource.
-     * 
      */
     @Import(name="subnets", required=true)
       private final List<SubResourceResponse> subnets;
@@ -146,7 +134,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -157,7 +144,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -168,7 +154,6 @@ public final class NatGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A list of availability zones denoting the zone in which Nat Gateway should be deployed.
-     * 
      */
     @Import(name="zones")
       private final @Nullable List<String> zones;

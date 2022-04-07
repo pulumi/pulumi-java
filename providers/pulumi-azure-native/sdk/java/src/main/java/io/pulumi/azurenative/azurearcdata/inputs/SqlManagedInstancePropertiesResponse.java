@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of sqlManagedInstance.
- * 
  */
 public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
 
     /**
      * The instance admin user
-     * 
      */
     @Import(name="admin")
       private final @Nullable String admin;
@@ -33,7 +31,6 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
 
     /**
      * Username and password for basic authentication.
-     * 
      */
     @Import(name="basicLoginInformation")
       private final @Nullable BasicLoginInformationResponse basicLoginInformation;
@@ -44,7 +41,6 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
 
     /**
      * null
-     * 
      */
     @Import(name="dataControllerId")
       private final @Nullable String dataControllerId;
@@ -55,7 +51,6 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
 
     /**
      * The instance end time
-     * 
      */
     @Import(name="endTime")
       private final @Nullable String endTime;
@@ -66,7 +61,6 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
 
     /**
      * The raw kubernetes information
-     * 
      */
     @Import(name="k8sRaw")
       private final @Nullable Object k8sRaw;
@@ -77,7 +71,6 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
 
     /**
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
-     * 
      */
     @Import(name="lastUploadedDate")
       private final @Nullable String lastUploadedDate;
@@ -95,7 +88,6 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
 
     /**
      * The instance start time
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;

@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Firewall Policy Filter Rule.
- * 
  */
 public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
 
     /**
      * The action type of a Filter rule.
-     * 
      */
     @Import(name="action")
       private final @Nullable FirewallPolicyFilterRuleActionResponse action;
@@ -38,7 +36,6 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
 
     /**
      * The name of the rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -49,7 +46,6 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
 
     /**
      * Priority of the Firewall Policy Rule resource.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Integer priority;
@@ -60,7 +56,6 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
 
     /**
      * Collection of rule conditions used by a rule.
-     * 
      */
     @Import(name="ruleConditions")
       private final @Nullable List<Object> ruleConditions;
@@ -72,7 +67,6 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
     /**
      * The type of the rule.
      * Expected value is 'FirewallPolicyFilterRule'.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final String ruleType;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * API route config of the Spring Cloud Gateway
- * 
  */
 public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A description, will be applied to methods in the generated OpenAPI documentation.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -34,7 +32,6 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * To modify the request before sending it to the target endpoint, or the received response.
-     * 
      */
     @Import(name="filters")
       private final @Nullable Output<List<String>> filters;
@@ -45,7 +42,6 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Route processing order.
-     * 
      */
     @Import(name="order")
       private final @Nullable Output<Integer> order;
@@ -56,7 +52,6 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
-     * 
      */
     @Import(name="predicates")
       private final @Nullable Output<List<String>> predicates;
@@ -67,7 +62,6 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Enable sso validation.
-     * 
      */
     @Import(name="ssoEnabled")
       private final @Nullable Output<Boolean> ssoEnabled;
@@ -78,7 +72,6 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Classification tags, will be applied to methods in the generated OpenAPI documentation.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
@@ -89,7 +82,6 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A title, will be applied to methods in the generated OpenAPI documentation.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;
@@ -100,7 +92,6 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Pass currently-authenticated user's identity token to application service, default is 'false'
-     * 
      */
     @Import(name="tokenRelay")
       private final @Nullable Output<Boolean> tokenRelay;
@@ -111,7 +102,6 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Full uri, will override `appName`.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

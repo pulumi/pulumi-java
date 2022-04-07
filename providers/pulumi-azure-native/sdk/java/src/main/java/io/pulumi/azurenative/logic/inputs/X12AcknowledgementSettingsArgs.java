@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The X12 agreement acknowledgement settings.
- * 
  */
 public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The acknowledgement control number lower bound.
-     * 
      */
     @Import(name="acknowledgementControlNumberLowerBound", required=true)
       private final Output<Integer> acknowledgementControlNumberLowerBound;
@@ -33,7 +31,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The acknowledgement control number prefix.
-     * 
      */
     @Import(name="acknowledgementControlNumberPrefix")
       private final @Nullable Output<String> acknowledgementControlNumberPrefix;
@@ -44,7 +41,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The acknowledgement control number suffix.
-     * 
      */
     @Import(name="acknowledgementControlNumberSuffix")
       private final @Nullable Output<String> acknowledgementControlNumberSuffix;
@@ -55,7 +51,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The acknowledgement control number upper bound.
-     * 
      */
     @Import(name="acknowledgementControlNumberUpperBound", required=true)
       private final Output<Integer> acknowledgementControlNumberUpperBound;
@@ -66,7 +61,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The value indicating whether to batch functional acknowledgements.
-     * 
      */
     @Import(name="batchFunctionalAcknowledgements", required=true)
       private final Output<Boolean> batchFunctionalAcknowledgements;
@@ -77,7 +71,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The value indicating whether to batch implementation acknowledgements.
-     * 
      */
     @Import(name="batchImplementationAcknowledgements", required=true)
       private final Output<Boolean> batchImplementationAcknowledgements;
@@ -88,7 +81,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The value indicating whether to batch the technical acknowledgements.
-     * 
      */
     @Import(name="batchTechnicalAcknowledgements", required=true)
       private final Output<Boolean> batchTechnicalAcknowledgements;
@@ -99,7 +91,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The functional acknowledgement version.
-     * 
      */
     @Import(name="functionalAcknowledgementVersion")
       private final @Nullable Output<String> functionalAcknowledgementVersion;
@@ -110,7 +101,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The implementation acknowledgement version.
-     * 
      */
     @Import(name="implementationAcknowledgementVersion")
       private final @Nullable Output<String> implementationAcknowledgementVersion;
@@ -121,7 +111,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The value indicating whether functional acknowledgement is needed.
-     * 
      */
     @Import(name="needFunctionalAcknowledgement", required=true)
       private final Output<Boolean> needFunctionalAcknowledgement;
@@ -132,7 +121,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The value indicating whether implementation acknowledgement is needed.
-     * 
      */
     @Import(name="needImplementationAcknowledgement", required=true)
       private final Output<Boolean> needImplementationAcknowledgement;
@@ -143,7 +131,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The value indicating whether a loop is needed for valid messages.
-     * 
      */
     @Import(name="needLoopForValidMessages", required=true)
       private final Output<Boolean> needLoopForValidMessages;
@@ -154,7 +141,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The value indicating whether technical acknowledgement is needed.
-     * 
      */
     @Import(name="needTechnicalAcknowledgement", required=true)
       private final Output<Boolean> needTechnicalAcknowledgement;
@@ -165,7 +151,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The value indicating whether to rollover acknowledgement control number.
-     * 
      */
     @Import(name="rolloverAcknowledgementControlNumber", required=true)
       private final Output<Boolean> rolloverAcknowledgementControlNumber;
@@ -176,7 +161,6 @@ public final class X12AcknowledgementSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The value indicating whether to send synchronous acknowledgement.
-     * 
      */
     @Import(name="sendSynchronousAcknowledgement", required=true)
       private final Output<Boolean> sendSynchronousAcknowledgement;

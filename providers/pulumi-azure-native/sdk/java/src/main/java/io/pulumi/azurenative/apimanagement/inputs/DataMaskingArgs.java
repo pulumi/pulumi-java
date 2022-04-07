@@ -17,7 +17,6 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Masking settings for headers
-     * 
      */
     @Import(name="headers")
       private final @Nullable Output<List<DataMaskingEntityArgs>> headers;
@@ -28,7 +27,6 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Masking settings for Url query parameters
-     * 
      */
     @Import(name="queryParams")
       private final @Nullable Output<List<DataMaskingEntityArgs>> queryParams;

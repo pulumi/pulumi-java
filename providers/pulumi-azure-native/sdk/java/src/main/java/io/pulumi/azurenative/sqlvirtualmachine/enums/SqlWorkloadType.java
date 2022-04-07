@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SQL Server workload type.
-     * 
      */
     @EnumType
     public enum SqlWorkloadType {

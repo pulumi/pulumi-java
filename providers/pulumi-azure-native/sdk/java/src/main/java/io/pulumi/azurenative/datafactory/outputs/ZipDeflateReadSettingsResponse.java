@@ -14,13 +14,11 @@ import javax.annotation.Nullable;
 public final class ZipDeflateReadSettingsResponse {
     /**
      * Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object preserveZipFileNameAsFolder;
     /**
      * The Compression setting type.
      * Expected value is 'ZipDeflateReadSettings'.
-     * 
      */
     private final String type;
 
@@ -34,7 +32,6 @@ public final class ZipDeflateReadSettingsResponse {
 
     /**
      * Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getPreserveZipFileNameAsFolder() {
         return Optional.ofNullable(this.preserveZipFileNameAsFolder);
@@ -42,7 +39,6 @@ public final class ZipDeflateReadSettingsResponse {
     /**
      * The Compression setting type.
      * Expected value is 'ZipDeflateReadSettings'.
-     * 
     */
     public String getType() {
         return this.type;

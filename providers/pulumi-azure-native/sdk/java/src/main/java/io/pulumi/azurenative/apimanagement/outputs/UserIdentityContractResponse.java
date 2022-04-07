@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class UserIdentityContractResponse {
     /**
      * Identifier value within provider.
-     * 
      */
     private final @Nullable String id;
     /**
      * Identity provider name.
-     * 
      */
     private final @Nullable String provider;
 
@@ -32,14 +30,12 @@ public final class UserIdentityContractResponse {
 
     /**
      * Identifier value within provider.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Identity provider name.
-     * 
     */
     public Optional<String> getProvider() {
         return Optional.ofNullable(this.provider);

@@ -19,7 +19,6 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -30,7 +29,6 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * KeyVault location details of the namedValue.
-     * 
      */
     @Import(name="keyVault")
       private final @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
@@ -41,7 +39,6 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifier of the NamedValue.
-     * 
      */
     @Import(name="namedValueId")
       private final @Nullable Output<String> namedValueId;
@@ -52,7 +49,6 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Determines whether the value is a secret and should be encrypted or not. Default value is false.
-     * 
      */
     @Import(name="secret")
       private final @Nullable Output<Boolean> secret;
@@ -74,7 +69,6 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -85,7 +79,6 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional tags that when provided can be used to filter the NamedValue list.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
@@ -96,7 +89,6 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Management policy action for base blob.
- * 
  */
 public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
 
     /**
      * The function to delete the blob
-     * 
      */
     @Import(name="delete")
       private final @Nullable Output<DateAfterModificationArgs> delete;
@@ -32,7 +30,6 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
 
     /**
      * This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
-     * 
      */
     @Import(name="enableAutoTierToHotFromCool")
       private final @Nullable Output<Boolean> enableAutoTierToHotFromCool;
@@ -43,7 +40,6 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
 
     /**
      * The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
-     * 
      */
     @Import(name="tierToArchive")
       private final @Nullable Output<DateAfterModificationArgs> tierToArchive;
@@ -54,7 +50,6 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
 
     /**
      * The function to tier blobs to cool storage. Support blobs currently at Hot tier
-     * 
      */
     @Import(name="tierToCool")
       private final @Nullable Output<DateAfterModificationArgs> tierToCool;

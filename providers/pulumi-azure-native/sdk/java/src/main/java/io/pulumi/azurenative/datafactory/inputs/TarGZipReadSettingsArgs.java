@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The TarGZip compression read settings.
- * 
  */
 public final class TarGZipReadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TarGZipReadSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="preserveCompressionFileNameAsFolder")
       private final @Nullable Output<Object> preserveCompressionFileNameAsFolder;
@@ -33,7 +31,6 @@ public final class TarGZipReadSettingsArgs extends io.pulumi.resources.ResourceA
     /**
      * The Compression setting type.
      * Expected value is 'TarGZipReadSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

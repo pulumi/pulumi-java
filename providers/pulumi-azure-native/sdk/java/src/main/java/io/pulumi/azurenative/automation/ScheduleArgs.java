@@ -20,7 +20,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the AdvancedSchedule.
-     * 
      */
     @Import(name="advancedSchedule")
       private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
@@ -31,7 +30,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -42,7 +40,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the description of the schedule.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -53,7 +50,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the end time of the schedule.
-     * 
      */
     @Import(name="expiryTime")
       private final @Nullable Output<String> expiryTime;
@@ -64,7 +60,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the frequency of the schedule.
-     * 
      */
     @Import(name="frequency", required=true)
       private final Output<Either<String,ScheduleFrequency>> frequency;
@@ -75,7 +70,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the interval of the schedule.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Output<Object> interval;
@@ -86,7 +80,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the Schedule.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -97,7 +90,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The schedule name.
-     * 
      */
     @Import(name="scheduleName")
       private final @Nullable Output<String> scheduleName;
@@ -119,7 +110,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the start time of the schedule.
-     * 
      */
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
@@ -130,7 +120,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the time zone of the schedule.
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;

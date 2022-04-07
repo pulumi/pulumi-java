@@ -15,67 +15,54 @@ import javax.annotation.Nullable;
 public final class ApplicationGatewayRequestRoutingRuleResponse {
     /**
      * Backend address pool resource of the application gateway.
-     * 
      */
     private final @Nullable SubResourceResponse backendAddressPool;
     /**
      * Backend http settings resource of the application gateway.
-     * 
      */
     private final @Nullable SubResourceResponse backendHttpSettings;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Http listener resource of the application gateway.
-     * 
      */
     private final @Nullable SubResourceResponse httpListener;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * Name of the request routing rule that is unique within an Application Gateway.
-     * 
      */
     private final @Nullable String name;
     /**
      * Priority of the request routing rule.
-     * 
      */
     private final @Nullable Integer priority;
     /**
      * The provisioning state of the request routing rule resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Redirect configuration resource of the application gateway.
-     * 
      */
     private final @Nullable SubResourceResponse redirectConfiguration;
     /**
      * Rewrite Rule Set resource in Basic rule of the application gateway.
-     * 
      */
     private final @Nullable SubResourceResponse rewriteRuleSet;
     /**
      * Rule type.
-     * 
      */
     private final @Nullable String ruleType;
     /**
      * Type of the resource.
-     * 
      */
     private final String type;
     /**
      * URL path map resource of the application gateway.
-     * 
      */
     private final @Nullable SubResourceResponse urlPathMap;
 
@@ -111,91 +98,78 @@ public final class ApplicationGatewayRequestRoutingRuleResponse {
 
     /**
      * Backend address pool resource of the application gateway.
-     * 
     */
     public Optional<SubResourceResponse> getBackendAddressPool() {
         return Optional.ofNullable(this.backendAddressPool);
     }
     /**
      * Backend http settings resource of the application gateway.
-     * 
     */
     public Optional<SubResourceResponse> getBackendHttpSettings() {
         return Optional.ofNullable(this.backendHttpSettings);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Http listener resource of the application gateway.
-     * 
     */
     public Optional<SubResourceResponse> getHttpListener() {
         return Optional.ofNullable(this.httpListener);
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the request routing rule that is unique within an Application Gateway.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the request routing rule.
-     * 
     */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The provisioning state of the request routing rule resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Redirect configuration resource of the application gateway.
-     * 
     */
     public Optional<SubResourceResponse> getRedirectConfiguration() {
         return Optional.ofNullable(this.redirectConfiguration);
     }
     /**
      * Rewrite Rule Set resource in Basic rule of the application gateway.
-     * 
     */
     public Optional<SubResourceResponse> getRewriteRuleSet() {
         return Optional.ofNullable(this.rewriteRuleSet);
     }
     /**
      * Rule type.
-     * 
     */
     public Optional<String> getRuleType() {
         return Optional.ofNullable(this.ruleType);
     }
     /**
      * Type of the resource.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * URL path map resource of the application gateway.
-     * 
     */
     public Optional<SubResourceResponse> getUrlPathMap() {
         return Optional.ofNullable(this.urlPathMap);

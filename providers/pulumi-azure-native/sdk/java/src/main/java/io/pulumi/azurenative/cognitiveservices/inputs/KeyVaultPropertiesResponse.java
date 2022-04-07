@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties to configure keyVault Properties
- * 
  */
 public final class KeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Name of the Key from KeyVault
-     * 
      */
     @Import(name="keyName")
       private final @Nullable String keyName;
@@ -31,7 +29,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Uri of KeyVault
-     * 
      */
     @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
@@ -42,7 +39,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Version of the Key from KeyVault
-     * 
      */
     @Import(name="keyVersion")
       private final @Nullable String keyVersion;

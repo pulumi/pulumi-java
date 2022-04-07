@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ApiVersionConstraintResponse {
     /**
      * Limit control plane API calls to API Management service with version equal to or newer than this value.
-     * 
      */
     private final @Nullable String minApiVersion;
 
@@ -24,7 +23,6 @@ public final class ApiVersionConstraintResponse {
 
     /**
      * Limit control plane API calls to API Management service with version equal to or newer than this value.
-     * 
     */
     public Optional<String> getMinApiVersion() {
         return Optional.ofNullable(this.minApiVersion);

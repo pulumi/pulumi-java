@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Specifies the criteria for converting log to metric.
- * 
  */
 public final class DimensionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DimensionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the dimension
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -30,7 +28,6 @@ public final class DimensionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Operator for dimension values
-     * 
      */
     @Import(name="operator", required=true)
       private final String operator;
@@ -41,7 +38,6 @@ public final class DimensionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of dimension values
-     * 
      */
     @Import(name="values", required=true)
       private final List<String> values;

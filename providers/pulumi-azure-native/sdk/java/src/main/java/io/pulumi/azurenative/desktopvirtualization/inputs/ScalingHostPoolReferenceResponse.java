@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Scaling plan reference to hostpool.
- * 
  */
 public final class ScalingHostPoolReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ScalingHostPoolReferenceResponse extends io.pulumi.resources.
 
     /**
      * Arm path of referenced hostpool.
-     * 
      */
     @Import(name="hostPoolArmPath")
       private final @Nullable String hostPoolArmPath;
@@ -32,7 +30,6 @@ public final class ScalingHostPoolReferenceResponse extends io.pulumi.resources.
 
     /**
      * Is the scaling plan enabled for this hostpool.
-     * 
      */
     @Import(name="scalingPlanEnabled")
       private final @Nullable Boolean scalingPlanEnabled;

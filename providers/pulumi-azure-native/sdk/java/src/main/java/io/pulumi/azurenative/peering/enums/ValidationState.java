@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The validation state of the ASN associated with the peer.
-     * 
      */
     @EnumType
     public enum ValidationState {

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class TagResponse {
     /**
      * The tag name.
-     * 
      */
     private final String name;
     /**
      * The tag value.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class TagResponse {
 
     /**
      * The tag name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The tag value.
-     * 
     */
     public String getValue() {
         return this.value;

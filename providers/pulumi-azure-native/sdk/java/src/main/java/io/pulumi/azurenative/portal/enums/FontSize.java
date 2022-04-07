@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Size of terminal font.
-     * 
      */
     @EnumType
     public enum FontSize {

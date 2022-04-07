@@ -12,23 +12,19 @@ import java.util.Objects;
 public final class MediaGraphAssetSinkResponse {
     /**
      * Asset name.
-     * 
      */
     private final String assetName;
     /**
      * Sink inputs.
-     * 
      */
     private final List<String> inputs;
     /**
      * Sink name.
-     * 
      */
     private final String name;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphAssetSink'.
-     * 
      */
     private final String odataType;
 
@@ -46,21 +42,18 @@ public final class MediaGraphAssetSinkResponse {
 
     /**
      * Asset name.
-     * 
     */
     public String getAssetName() {
         return this.assetName;
     }
     /**
      * Sink inputs.
-     * 
     */
     public List<String> getInputs() {
         return this.inputs;
     }
     /**
      * Sink name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -68,7 +61,6 @@ public final class MediaGraphAssetSinkResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphAssetSink'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;

@@ -21,7 +21,112 @@ import javax.annotation.Nullable;
  * Peering in an ExpressRoute Cross Connection resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ExpressRouteCrossConnectionBgpPeeringCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var expressRouteCrossConnectionPeering = new AzureNative.Network.ExpressRouteCrossConnectionPeering("expressRouteCrossConnectionPeering", new AzureNative.Network.ExpressRouteCrossConnectionPeeringArgs
+ *         {
+ *             CrossConnectionName = "<circuitServiceKey>",
+ *             Ipv6PeeringConfig = new AzureNative.Network.Inputs.Ipv6ExpressRouteCircuitPeeringConfigArgs
+ *             {
+ *                 PrimaryPeerAddressPrefix = "3FFE:FFFF:0:CD30::/126",
+ *                 SecondaryPeerAddressPrefix = "3FFE:FFFF:0:CD30::4/126",
+ *             },
+ *             PeerASN = 200,
+ *             PeeringName = "AzurePrivatePeering",
+ *             PrimaryPeerAddressPrefix = "192.168.16.252/30",
+ *             ResourceGroupName = "CrossConnection-SiliconValley",
+ *             SecondaryPeerAddressPrefix = "192.168.18.252/30",
+ *             VlanId = 200,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewExpressRouteCrossConnectionPeering(ctx, "expressRouteCrossConnectionPeering", &network.ExpressRouteCrossConnectionPeeringArgs{
+ * 			CrossConnectionName: pulumi.String("<circuitServiceKey>"),
+ * 			Ipv6PeeringConfig: &network.Ipv6ExpressRouteCircuitPeeringConfigArgs{
+ * 				PrimaryPeerAddressPrefix:   pulumi.String("3FFE:FFFF:0:CD30::/126"),
+ * 				SecondaryPeerAddressPrefix: pulumi.String("3FFE:FFFF:0:CD30::4/126"),
+ * 			},
+ * 			PeerASN:                    pulumi.Float64(200),
+ * 			PeeringName:                pulumi.String("AzurePrivatePeering"),
+ * 			PrimaryPeerAddressPrefix:   pulumi.String("192.168.16.252/30"),
+ * 			ResourceGroupName:          pulumi.String("CrossConnection-SiliconValley"),
+ * 			SecondaryPeerAddressPrefix: pulumi.String("192.168.18.252/30"),
+ * 			VlanId:                     pulumi.Int(200),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const expressRouteCrossConnectionPeering = new azure_native.network.ExpressRouteCrossConnectionPeering("expressRouteCrossConnectionPeering", {
+ *     crossConnectionName: "<circuitServiceKey>",
+ *     ipv6PeeringConfig: {
+ *         primaryPeerAddressPrefix: "3FFE:FFFF:0:CD30::/126",
+ *         secondaryPeerAddressPrefix: "3FFE:FFFF:0:CD30::4/126",
+ *     },
+ *     peerASN: 200,
+ *     peeringName: "AzurePrivatePeering",
+ *     primaryPeerAddressPrefix: "192.168.16.252/30",
+ *     resourceGroupName: "CrossConnection-SiliconValley",
+ *     secondaryPeerAddressPrefix: "192.168.18.252/30",
+ *     vlanId: 200,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * express_route_cross_connection_peering = azure_native.network.ExpressRouteCrossConnectionPeering("expressRouteCrossConnectionPeering",
+ *     cross_connection_name="<circuitServiceKey>",
+ *     ipv6_peering_config=azure_native.network.Ipv6ExpressRouteCircuitPeeringConfigArgs(
+ *         primary_peer_address_prefix="3FFE:FFFF:0:CD30::/126",
+ *         secondary_peer_address_prefix="3FFE:FFFF:0:CD30::4/126",
+ *     ),
+ *     peer_asn=200,
+ *     peering_name="AzurePrivatePeering",
+ *     primary_peer_address_prefix="192.168.16.252/30",
+ *     resource_group_name="CrossConnection-SiliconValley",
+ *     secondary_peer_address_prefix="192.168.18.252/30",
+ *     vlan_id=200)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,238 +141,204 @@ import javax.annotation.Nullable;
 public class ExpressRouteCrossConnectionPeering extends io.pulumi.resources.CustomResource {
     /**
      * The Azure ASN.
-     * 
      */
     @Export(name="azureASN", type=Integer.class, parameters={})
     private Output<Integer> azureASN;
 
     /**
      * @return The Azure ASN.
-     * 
      */
     public Output<Integer> getAzureASN() {
         return this.azureASN;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The GatewayManager Etag.
-     * 
      */
     @Export(name="gatewayManagerEtag", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayManagerEtag;
 
     /**
      * @return The GatewayManager Etag.
-     * 
      */
     public Output</* @Nullable */ String> getGatewayManagerEtag() {
         return this.gatewayManagerEtag;
     }
     /**
      * The IPv6 peering configuration.
-     * 
      */
     @Export(name="ipv6PeeringConfig", type=Ipv6ExpressRouteCircuitPeeringConfigResponse.class, parameters={})
     private Output</* @Nullable */ Ipv6ExpressRouteCircuitPeeringConfigResponse> ipv6PeeringConfig;
 
     /**
      * @return The IPv6 peering configuration.
-     * 
      */
     public Output</* @Nullable */ Ipv6ExpressRouteCircuitPeeringConfigResponse> getIpv6PeeringConfig() {
         return this.ipv6PeeringConfig;
     }
     /**
      * Who was the last to modify the peering.
-     * 
      */
     @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output<String> lastModifiedBy;
 
     /**
      * @return Who was the last to modify the peering.
-     * 
      */
     public Output<String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The Microsoft peering configuration.
-     * 
      */
     @Export(name="microsoftPeeringConfig", type=ExpressRouteCircuitPeeringConfigResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig;
 
     /**
      * @return The Microsoft peering configuration.
-     * 
      */
     public Output</* @Nullable */ ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
         return this.microsoftPeeringConfig;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The peer ASN.
-     * 
      */
     @Export(name="peerASN", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> peerASN;
 
     /**
      * @return The peer ASN.
-     * 
      */
     public Output</* @Nullable */ Double> getPeerASN() {
         return this.peerASN;
     }
     /**
      * The peering type.
-     * 
      */
     @Export(name="peeringType", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringType;
 
     /**
      * @return The peering type.
-     * 
      */
     public Output</* @Nullable */ String> getPeeringType() {
         return this.peeringType;
     }
     /**
      * The primary port.
-     * 
      */
     @Export(name="primaryAzurePort", type=String.class, parameters={})
     private Output<String> primaryAzurePort;
 
     /**
      * @return The primary port.
-     * 
      */
     public Output<String> getPrimaryAzurePort() {
         return this.primaryAzurePort;
     }
     /**
      * The primary address prefix.
-     * 
      */
     @Export(name="primaryPeerAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryPeerAddressPrefix;
 
     /**
      * @return The primary address prefix.
-     * 
      */
     public Output</* @Nullable */ String> getPrimaryPeerAddressPrefix() {
         return this.primaryPeerAddressPrefix;
     }
     /**
      * The provisioning state of the express route cross connection peering resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the express route cross connection peering resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The secondary port.
-     * 
      */
     @Export(name="secondaryAzurePort", type=String.class, parameters={})
     private Output<String> secondaryAzurePort;
 
     /**
      * @return The secondary port.
-     * 
      */
     public Output<String> getSecondaryAzurePort() {
         return this.secondaryAzurePort;
     }
     /**
      * The secondary address prefix.
-     * 
      */
     @Export(name="secondaryPeerAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryPeerAddressPrefix;
 
     /**
      * @return The secondary address prefix.
-     * 
      */
     public Output</* @Nullable */ String> getSecondaryPeerAddressPrefix() {
         return this.secondaryPeerAddressPrefix;
     }
     /**
      * The shared key.
-     * 
      */
     @Export(name="sharedKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedKey;
 
     /**
      * @return The shared key.
-     * 
      */
     public Output</* @Nullable */ String> getSharedKey() {
         return this.sharedKey;
     }
     /**
      * The peering state.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
      * @return The peering state.
-     * 
      */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
     /**
      * The VLAN ID.
-     * 
      */
     @Export(name="vlanId", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vlanId;
 
     /**
      * @return The VLAN ID.
-     * 
      */
     public Output</* @Nullable */ Integer> getVlanId() {
         return this.vlanId;

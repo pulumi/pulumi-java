@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application gateway web application firewall configuration.
- * 
  */
 public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
 
     /**
      * The disabled rule groups.
-     * 
      */
     @Import(name="disabledRuleGroups")
       private final @Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups;
@@ -36,7 +34,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
 
     /**
      * Whether the web application firewall is enabled or not.
-     * 
      */
     @Import(name="enabled", required=true)
       private final Boolean enabled;
@@ -47,7 +44,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
 
     /**
      * The exclusion list.
-     * 
      */
     @Import(name="exclusions")
       private final @Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions;
@@ -58,7 +54,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
 
     /**
      * Maximum file upload size in Mb for WAF.
-     * 
      */
     @Import(name="fileUploadLimitInMb")
       private final @Nullable Integer fileUploadLimitInMb;
@@ -69,7 +64,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
 
     /**
      * Web application firewall mode.
-     * 
      */
     @Import(name="firewallMode", required=true)
       private final String firewallMode;
@@ -80,7 +74,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
 
     /**
      * Maximum request body size for WAF.
-     * 
      */
     @Import(name="maxRequestBodySize")
       private final @Nullable Integer maxRequestBodySize;
@@ -91,7 +84,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
 
     /**
      * Maximum request body size in Kb for WAF.
-     * 
      */
     @Import(name="maxRequestBodySizeInKb")
       private final @Nullable Integer maxRequestBodySizeInKb;
@@ -102,7 +94,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
 
     /**
      * Whether allow WAF to check request Body.
-     * 
      */
     @Import(name="requestBodyCheck")
       private final @Nullable Boolean requestBodyCheck;
@@ -113,7 +104,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
 
     /**
      * The type of the web application firewall rule set. Possible values are: 'OWASP'.
-     * 
      */
     @Import(name="ruleSetType", required=true)
       private final String ruleSetType;
@@ -124,7 +114,6 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
 
     /**
      * The version of the rule set type.
-     * 
      */
     @Import(name="ruleSetVersion", required=true)
       private final String ruleSetVersion;

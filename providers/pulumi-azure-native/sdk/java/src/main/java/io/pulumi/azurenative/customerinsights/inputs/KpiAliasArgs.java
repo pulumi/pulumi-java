@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The KPI alias.
- * 
  */
 public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * KPI alias name.
-     * 
      */
     @Import(name="aliasName", required=true)
       private final Output<String> aliasName;
@@ -30,7 +28,6 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The expression.
-     * 
      */
     @Import(name="expression", required=true)
       private final Output<String> expression;

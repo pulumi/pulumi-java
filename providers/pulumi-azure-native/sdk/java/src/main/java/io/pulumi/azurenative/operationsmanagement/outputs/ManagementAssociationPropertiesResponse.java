@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ManagementAssociationPropertiesResponse {
     /**
      * The applicationId of the appliance for this association.
-     * 
      */
     private final String applicationId;
 
@@ -22,7 +21,6 @@ public final class ManagementAssociationPropertiesResponse {
 
     /**
      * The applicationId of the appliance for this association.
-     * 
     */
     public String getApplicationId() {
         return this.applicationId;

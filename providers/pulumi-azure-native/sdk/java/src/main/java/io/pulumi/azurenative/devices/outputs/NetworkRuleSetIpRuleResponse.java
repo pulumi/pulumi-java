@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class NetworkRuleSetIpRuleResponse {
     /**
      * IP Filter Action
-     * 
      */
     private final @Nullable String action;
     /**
      * Name of the IP filter rule.
-     * 
      */
     private final String filterName;
     /**
      * A string that contains the IP address range in CIDR notation for the rule.
-     * 
      */
     private final String ipMask;
 
@@ -39,21 +36,18 @@ public final class NetworkRuleSetIpRuleResponse {
 
     /**
      * IP Filter Action
-     * 
     */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Name of the IP filter rule.
-     * 
     */
     public String getFilterName() {
         return this.filterName;
     }
     /**
      * A string that contains the IP address range in CIDR notation for the rule.
-     * 
     */
     public String getIpMask() {
         return this.ipMask;

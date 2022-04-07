@@ -18,7 +18,149 @@ import javax.annotation.Nullable;
  * Represents ASC (Azure Security Center) data connector.
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates an Office365 data connector.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ascDataConnector = new AzureNative.SecurityInsights.ASCDataConnector("ascDataConnector", new AzureNative.SecurityInsights.ASCDataConnectorArgs
+ *         {
+ *             DataConnectorId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             ResourceGroupName = "myRg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewASCDataConnector(ctx, "ascDataConnector", &securityinsights.ASCDataConnectorArgs{
+ * 			DataConnectorId:   pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const ascDataConnector = new azure_native.securityinsights.ASCDataConnector("ascDataConnector", {
+ *     dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     resourceGroupName: "myRg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * asc_data_connector = azure_native.securityinsights.ASCDataConnector("ascDataConnector",
+ *     data_connector_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     resource_group_name="myRg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates an Threat Intelligence Platform data connector.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ascDataConnector = new AzureNative.SecurityInsights.ASCDataConnector("ascDataConnector", new AzureNative.SecurityInsights.ASCDataConnectorArgs
+ *         {
+ *             DataConnectorId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             ResourceGroupName = "myRg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewASCDataConnector(ctx, "ascDataConnector", &securityinsights.ASCDataConnectorArgs{
+ * 			DataConnectorId:   pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const ascDataConnector = new azure_native.securityinsights.ASCDataConnector("ascDataConnector", {
+ *     dataConnectorId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     resourceGroupName: "myRg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * asc_data_connector = azure_native.securityinsights.ASCDataConnector("ascDataConnector",
+ *     data_connector_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     resource_group_name="myRg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,28 +175,24 @@ import javax.annotation.Nullable;
 public class ASCDataConnector extends io.pulumi.resources.CustomResource {
     /**
      * The available data types for the connector.
-     * 
      */
     @Export(name="dataTypes", type=AlertsDataTypeOfDataConnectorResponse.class, parameters={})
     private Output</* @Nullable */ AlertsDataTypeOfDataConnectorResponse> dataTypes;
 
     /**
      * @return The available data types for the connector.
-     * 
      */
     public Output</* @Nullable */ AlertsDataTypeOfDataConnectorResponse> getDataTypes() {
         return this.dataTypes;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
@@ -62,7 +200,6 @@ public class ASCDataConnector extends io.pulumi.resources.CustomResource {
     /**
      * The kind of the data connector
      * Expected value is 'AzureSecurityCenter'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -70,49 +207,42 @@ public class ASCDataConnector extends io.pulumi.resources.CustomResource {
     /**
      * @return The kind of the data connector
      * Expected value is 'AzureSecurityCenter'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The subscription id to connect to, and get the data from.
-     * 
      */
     @Export(name="subscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subscriptionId;
 
     /**
      * @return The subscription id to connect to, and get the data from.
-     * 
      */
     public Output</* @Nullable */ String> getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,7 +14,6 @@ public final class ListDatastoreSecretsArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Datastore name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class ListDatastoreSecretsArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListDatastoreSecretsArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

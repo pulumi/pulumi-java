@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class GetCertificateResult {
     /**
      * This is only returned when the certificate provisioningState is 'Failed'.
-     * 
      */
     private final DeleteCertificateErrorResponse deleteCertificateError;
     /**
      * The ETag of the resource, used for concurrency statements.
-     * 
      */
     private final String etag;
     /**
      * The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
-     * 
      */
     private final @Nullable String format;
     /**
      * The ID of the resource.
-     * 
      */
     private final String id;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The previous provisioned state of the resource
-     * 
      */
     private final String previousProvisioningState;
     private final String previousProvisioningStateTransitionTime;
@@ -47,22 +41,18 @@ public final class GetCertificateResult {
     private final String provisioningStateTransitionTime;
     /**
      * The public key of the certificate.
-     * 
      */
     private final String publicData;
     /**
      * This must match the thumbprint from the name.
-     * 
      */
     private final @Nullable String thumbprint;
     /**
      * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
-     * 
      */
     private final @Nullable String thumbprintAlgorithm;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -98,42 +88,36 @@ public final class GetCertificateResult {
 
     /**
      * This is only returned when the certificate provisioningState is 'Failed'.
-     * 
     */
     public DeleteCertificateErrorResponse getDeleteCertificateError() {
         return this.deleteCertificateError;
     }
     /**
      * The ETag of the resource, used for concurrency statements.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
-     * 
     */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * The ID of the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The previous provisioned state of the resource
-     * 
     */
     public String getPreviousProvisioningState() {
         return this.previousProvisioningState;
@@ -149,28 +133,24 @@ public final class GetCertificateResult {
     }
     /**
      * The public key of the certificate.
-     * 
     */
     public String getPublicData() {
         return this.publicData;
     }
     /**
      * This must match the thumbprint from the name.
-     * 
     */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
      * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
-     * 
     */
     public Optional<String> getThumbprintAlgorithm() {
         return Optional.ofNullable(this.thumbprintAlgorithm);
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

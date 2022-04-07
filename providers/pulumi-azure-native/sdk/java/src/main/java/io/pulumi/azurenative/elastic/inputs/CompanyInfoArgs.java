@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Company information of the user to be passed to partners.
- * 
  */
 public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Business of the company
-     * 
      */
     @Import(name="business")
       private final @Nullable Output<String> business;
@@ -31,7 +29,6 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Country of the company location.
-     * 
      */
     @Import(name="country")
       private final @Nullable Output<String> country;
@@ -42,7 +39,6 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Domain of the company
-     * 
      */
     @Import(name="domain")
       private final @Nullable Output<String> domain;
@@ -53,7 +49,6 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of employees in the company
-     * 
      */
     @Import(name="employeesNumber")
       private final @Nullable Output<String> employeesNumber;
@@ -64,7 +59,6 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * State of the company location.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<String> state;

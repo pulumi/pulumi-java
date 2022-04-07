@@ -25,7 +25,175 @@ import javax.annotation.Nullable;
  * A Big Data pool
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a Big Data pool
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bigDataPool = new AzureNative.Synapse.BigDataPool("bigDataPool", new AzureNative.Synapse.BigDataPoolArgs
+ *         {
+ *             AutoPause = new AzureNative.Synapse.Inputs.AutoPausePropertiesArgs
+ *             {
+ *                 DelayInMinutes = 15,
+ *                 Enabled = true,
+ *             },
+ *             AutoScale = new AzureNative.Synapse.Inputs.AutoScalePropertiesArgs
+ *             {
+ *                 Enabled = true,
+ *                 MaxNodeCount = 50,
+ *                 MinNodeCount = 3,
+ *             },
+ *             BigDataPoolName = "ExamplePool",
+ *             DefaultSparkLogFolder = "/logs",
+ *             LibraryRequirements = new AzureNative.Synapse.Inputs.LibraryRequirementsArgs
+ *             {
+ *                 Content = "",
+ *                 Filename = "requirements.txt",
+ *             },
+ *             Location = "West US 2",
+ *             NodeCount = 4,
+ *             NodeSize = "Medium",
+ *             NodeSizeFamily = "MemoryOptimized",
+ *             ResourceGroupName = "ExampleResourceGroup",
+ *             SparkEventsFolder = "/events",
+ *             SparkVersion = "2.4",
+ *             Tags = 
+ *             {
+ *                 { "key", "value" },
+ *             },
+ *             WorkspaceName = "ExampleWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewBigDataPool(ctx, "bigDataPool", &synapse.BigDataPoolArgs{
+ * 			AutoPause: &synapse.AutoPausePropertiesArgs{
+ * 				DelayInMinutes: pulumi.Int(15),
+ * 				Enabled:        pulumi.Bool(true),
+ * 			},
+ * 			AutoScale: &synapse.AutoScalePropertiesArgs{
+ * 				Enabled:      pulumi.Bool(true),
+ * 				MaxNodeCount: pulumi.Int(50),
+ * 				MinNodeCount: pulumi.Int(3),
+ * 			},
+ * 			BigDataPoolName:       pulumi.String("ExamplePool"),
+ * 			DefaultSparkLogFolder: pulumi.String("/logs"),
+ * 			LibraryRequirements: &synapse.LibraryRequirementsArgs{
+ * 				Content:  pulumi.String(""),
+ * 				Filename: pulumi.String("requirements.txt"),
+ * 			},
+ * 			Location:          pulumi.String("West US 2"),
+ * 			NodeCount:         pulumi.Int(4),
+ * 			NodeSize:          pulumi.String("Medium"),
+ * 			NodeSizeFamily:    pulumi.String("MemoryOptimized"),
+ * 			ResourceGroupName: pulumi.String("ExampleResourceGroup"),
+ * 			SparkEventsFolder: pulumi.String("/events"),
+ * 			SparkVersion:      pulumi.String("2.4"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key": pulumi.String("value"),
+ * 			},
+ * 			WorkspaceName: pulumi.String("ExampleWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
+ *     autoPause: {
+ *         delayInMinutes: 15,
+ *         enabled: true,
+ *     },
+ *     autoScale: {
+ *         enabled: true,
+ *         maxNodeCount: 50,
+ *         minNodeCount: 3,
+ *     },
+ *     bigDataPoolName: "ExamplePool",
+ *     defaultSparkLogFolder: "/logs",
+ *     libraryRequirements: {
+ *         content: "",
+ *         filename: "requirements.txt",
+ *     },
+ *     location: "West US 2",
+ *     nodeCount: 4,
+ *     nodeSize: "Medium",
+ *     nodeSizeFamily: "MemoryOptimized",
+ *     resourceGroupName: "ExampleResourceGroup",
+ *     sparkEventsFolder: "/events",
+ *     sparkVersion: "2.4",
+ *     tags: {
+ *         key: "value",
+ *     },
+ *     workspaceName: "ExampleWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * big_data_pool = azure_native.synapse.BigDataPool("bigDataPool",
+ *     auto_pause=azure_native.synapse.AutoPausePropertiesArgs(
+ *         delay_in_minutes=15,
+ *         enabled=True,
+ *     ),
+ *     auto_scale=azure_native.synapse.AutoScalePropertiesArgs(
+ *         enabled=True,
+ *         max_node_count=50,
+ *         min_node_count=3,
+ *     ),
+ *     big_data_pool_name="ExamplePool",
+ *     default_spark_log_folder="/logs",
+ *     library_requirements=azure_native.synapse.LibraryRequirementsArgs(
+ *         content="",
+ *         filename="requirements.txt",
+ *     ),
+ *     location="West US 2",
+ *     node_count=4,
+ *     node_size="Medium",
+ *     node_size_family="MemoryOptimized",
+ *     resource_group_name="ExampleResourceGroup",
+ *     spark_events_folder="/events",
+ *     spark_version="2.4",
+ *     tags={
+ *         "key": "value",
+ *     },
+ *     workspace_name="ExampleWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,308 +208,264 @@ import javax.annotation.Nullable;
 public class BigDataPool extends io.pulumi.resources.CustomResource {
     /**
      * Auto-pausing properties
-     * 
      */
     @Export(name="autoPause", type=AutoPausePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AutoPausePropertiesResponse> autoPause;
 
     /**
      * @return Auto-pausing properties
-     * 
      */
     public Output</* @Nullable */ AutoPausePropertiesResponse> getAutoPause() {
         return this.autoPause;
     }
     /**
      * Auto-scaling properties
-     * 
      */
     @Export(name="autoScale", type=AutoScalePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AutoScalePropertiesResponse> autoScale;
 
     /**
      * @return Auto-scaling properties
-     * 
      */
     public Output</* @Nullable */ AutoScalePropertiesResponse> getAutoScale() {
         return this.autoScale;
     }
     /**
      * The cache size
-     * 
      */
     @Export(name="cacheSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> cacheSize;
 
     /**
      * @return The cache size
-     * 
      */
     public Output</* @Nullable */ Integer> getCacheSize() {
         return this.cacheSize;
     }
     /**
      * The time when the Big Data pool was created.
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationDate;
 
     /**
      * @return The time when the Big Data pool was created.
-     * 
      */
     public Output</* @Nullable */ String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * List of custom libraries/packages associated with the spark pool.
-     * 
      */
     @Export(name="customLibraries", type=List.class, parameters={LibraryInfoResponse.class})
     private Output</* @Nullable */ List<LibraryInfoResponse>> customLibraries;
 
     /**
      * @return List of custom libraries/packages associated with the spark pool.
-     * 
      */
     public Output</* @Nullable */ List<LibraryInfoResponse>> getCustomLibraries() {
         return this.customLibraries;
     }
     /**
      * The default folder where Spark logs will be written.
-     * 
      */
     @Export(name="defaultSparkLogFolder", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultSparkLogFolder;
 
     /**
      * @return The default folder where Spark logs will be written.
-     * 
      */
     public Output</* @Nullable */ String> getDefaultSparkLogFolder() {
         return this.defaultSparkLogFolder;
     }
     /**
      * Dynamic Executor Allocation
-     * 
      */
     @Export(name="dynamicExecutorAllocation", type=DynamicExecutorAllocationResponse.class, parameters={})
     private Output</* @Nullable */ DynamicExecutorAllocationResponse> dynamicExecutorAllocation;
 
     /**
      * @return Dynamic Executor Allocation
-     * 
      */
     public Output</* @Nullable */ DynamicExecutorAllocationResponse> getDynamicExecutorAllocation() {
         return this.dynamicExecutorAllocation;
     }
     /**
      * Whether compute isolation is required or not.
-     * 
      */
     @Export(name="isComputeIsolationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isComputeIsolationEnabled;
 
     /**
      * @return Whether compute isolation is required or not.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsComputeIsolationEnabled() {
         return this.isComputeIsolationEnabled;
     }
     /**
      * The time when the Big Data pool was updated successfully.
-     * 
      */
     @Export(name="lastSucceededTimestamp", type=String.class, parameters={})
     private Output<String> lastSucceededTimestamp;
 
     /**
      * @return The time when the Big Data pool was updated successfully.
-     * 
      */
     public Output<String> getLastSucceededTimestamp() {
         return this.lastSucceededTimestamp;
     }
     /**
      * Library version requirements
-     * 
      */
     @Export(name="libraryRequirements", type=LibraryRequirementsResponse.class, parameters={})
     private Output</* @Nullable */ LibraryRequirementsResponse> libraryRequirements;
 
     /**
      * @return Library version requirements
-     * 
      */
     public Output</* @Nullable */ LibraryRequirementsResponse> getLibraryRequirements() {
         return this.libraryRequirements;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The number of nodes in the Big Data pool.
-     * 
      */
     @Export(name="nodeCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> nodeCount;
 
     /**
      * @return The number of nodes in the Big Data pool.
-     * 
      */
     public Output</* @Nullable */ Integer> getNodeCount() {
         return this.nodeCount;
     }
     /**
      * The level of compute power that each node in the Big Data pool has.
-     * 
      */
     @Export(name="nodeSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> nodeSize;
 
     /**
      * @return The level of compute power that each node in the Big Data pool has.
-     * 
      */
     public Output</* @Nullable */ String> getNodeSize() {
         return this.nodeSize;
     }
     /**
      * The kind of nodes that the Big Data pool provides.
-     * 
      */
     @Export(name="nodeSizeFamily", type=String.class, parameters={})
     private Output</* @Nullable */ String> nodeSizeFamily;
 
     /**
      * @return The kind of nodes that the Big Data pool provides.
-     * 
      */
     public Output</* @Nullable */ String> getNodeSizeFamily() {
         return this.nodeSizeFamily;
     }
     /**
      * The state of the Big Data pool.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return The state of the Big Data pool.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether session level packages enabled.
-     * 
      */
     @Export(name="sessionLevelPackagesEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sessionLevelPackagesEnabled;
 
     /**
      * @return Whether session level packages enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getSessionLevelPackagesEnabled() {
         return this.sessionLevelPackagesEnabled;
     }
     /**
      * Spark configuration file to specify additional properties
-     * 
      */
     @Export(name="sparkConfigProperties", type=LibraryRequirementsResponse.class, parameters={})
     private Output</* @Nullable */ LibraryRequirementsResponse> sparkConfigProperties;
 
     /**
      * @return Spark configuration file to specify additional properties
-     * 
      */
     public Output</* @Nullable */ LibraryRequirementsResponse> getSparkConfigProperties() {
         return this.sparkConfigProperties;
     }
     /**
      * The Spark events folder
-     * 
      */
     @Export(name="sparkEventsFolder", type=String.class, parameters={})
     private Output</* @Nullable */ String> sparkEventsFolder;
 
     /**
      * @return The Spark events folder
-     * 
      */
     public Output</* @Nullable */ String> getSparkEventsFolder() {
         return this.sparkEventsFolder;
     }
     /**
      * The Apache Spark version.
-     * 
      */
     @Export(name="sparkVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> sparkVersion;
 
     /**
      * @return The Apache Spark version.
-     * 
      */
     public Output</* @Nullable */ String> getSparkVersion() {
         return this.sparkVersion;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

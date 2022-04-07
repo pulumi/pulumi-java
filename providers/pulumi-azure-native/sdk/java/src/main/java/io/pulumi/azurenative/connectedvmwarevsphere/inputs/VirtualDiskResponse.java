@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual disk model
- * 
  */
 public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the controller id.
-     * 
      */
     @Import(name="controllerKey")
       private final @Nullable Integer controllerKey;
@@ -32,7 +30,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the device key value.
-     * 
      */
     @Import(name="deviceKey")
       private final @Nullable Integer deviceKey;
@@ -43,7 +40,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the device name.
-     * 
      */
     @Import(name="deviceName")
       private final @Nullable String deviceName;
@@ -54,7 +50,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the disk mode.
-     * 
      */
     @Import(name="diskMode")
       private final @Nullable String diskMode;
@@ -65,7 +60,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the disk object id.
-     * 
      */
     @Import(name="diskObjectId", required=true)
       private final String diskObjectId;
@@ -76,7 +70,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the disk total size.
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
@@ -87,7 +80,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the disk backing type.
-     * 
      */
     @Import(name="diskType")
       private final @Nullable String diskType;
@@ -98,7 +90,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the label of the virtual disk in vCenter.
-     * 
      */
     @Import(name="label", required=true)
       private final String label;
@@ -109,7 +100,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the name of the virtual disk.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -120,7 +110,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the unit number of the disk on the controller.
-     * 
      */
     @Import(name="unitNumber")
       private final @Nullable Integer unitNumber;

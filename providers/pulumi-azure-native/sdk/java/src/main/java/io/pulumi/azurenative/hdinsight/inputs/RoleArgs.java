@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a role on the cluster.
- * 
  */
 public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The autoscale configurations.
-     * 
      */
     @Import(name="autoscaleConfiguration")
       private final @Nullable Output<AutoscaleArgs> autoscaleConfiguration;
@@ -40,7 +38,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data disks groups for the role.
-     * 
      */
     @Import(name="dataDisksGroups")
       private final @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups;
@@ -51,7 +48,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether encrypt the data disks.
-     * 
      */
     @Import(name="encryptDataDisks")
       private final @Nullable Output<Boolean> encryptDataDisks;
@@ -62,7 +58,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hardware profile.
-     * 
      */
     @Import(name="hardwareProfile")
       private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
@@ -73,7 +68,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The minimum instance count of the cluster.
-     * 
      */
     @Import(name="minInstanceCount")
       private final @Nullable Output<Integer> minInstanceCount;
@@ -84,7 +78,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the role.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -95,7 +88,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The operating system profile.
-     * 
      */
     @Import(name="osProfile")
       private final @Nullable Output<OsProfileArgs> osProfile;
@@ -106,7 +98,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of script actions on the role.
-     * 
      */
     @Import(name="scriptActions")
       private final @Nullable Output<List<ScriptActionArgs>> scriptActions;
@@ -117,7 +108,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The instance count of the cluster.
-     * 
      */
     @Import(name="targetInstanceCount")
       private final @Nullable Output<Integer> targetInstanceCount;
@@ -128,7 +118,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the virtual machine group.
-     * 
      */
     @Import(name="vMGroupName")
       private final @Nullable Output<String> vMGroupName;
@@ -139,7 +128,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The virtual network profile.
-     * 
      */
     @Import(name="virtualNetworkProfile")
       private final @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;

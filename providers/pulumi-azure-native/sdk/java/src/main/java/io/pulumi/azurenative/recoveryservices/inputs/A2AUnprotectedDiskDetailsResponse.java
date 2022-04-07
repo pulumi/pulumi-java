@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A2A unprotected disk details.
- * 
  */
 public final class A2AUnprotectedDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class A2AUnprotectedDiskDetailsResponse extends io.pulumi.resources
 
     /**
      * The source lun Id for the data disk.
-     * 
      */
     @Import(name="diskLunId")
       private final @Nullable Integer diskLunId;

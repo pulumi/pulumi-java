@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The network function template.
- * 
  */
 public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.Resou
 
     /**
      * An array of network function role definitions.
-     * 
      */
     @Import(name="networkFunctionRoleConfigurations")
       private final @Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;

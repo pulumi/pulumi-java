@@ -16,7 +16,6 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server dns alias.
-     * 
      */
     @Import(name="dnsAliasName")
       private final @Nullable Output<String> dnsAliasName;
@@ -27,7 +26,6 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -38,7 +36,6 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server that the alias is pointing to.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;

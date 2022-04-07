@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * Trigger details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TriggerPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var trigger = new AzureNative.DataBoxEdge.Trigger("trigger", new AzureNative.DataBoxEdge.TriggerArgs
+ *         {
+ *             DeviceName = "testedgedevice",
+ *             Kind = "FileEvent",
+ *             Name = "trigger1",
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewTrigger(ctx, "trigger", &databoxedge.TriggerArgs{
+ * 			DeviceName:        pulumi.String("testedgedevice"),
+ * 			Kind:              pulumi.String("FileEvent"),
+ * 			Name:              pulumi.String("trigger1"),
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const trigger = new azure_native.databoxedge.Trigger("trigger", {
+ *     deviceName: "testedgedevice",
+ *     kind: "FileEvent",
+ *     name: "trigger1",
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * trigger = azure_native.databoxedge.Trigger("trigger",
+ *     device_name="testedgedevice",
+ *     kind="FileEvent",
+ *     name="trigger1",
+ *     resource_group_name="GroupForEdgeAutomation")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,63 +106,54 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger.
- * 
  */
 @Deprecated /* Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger. */
 @ResourceType(type="azure-native:databoxedge:Trigger")
 public class Trigger extends io.pulumi.resources.CustomResource {
     /**
      * Trigger Kind.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Trigger Kind.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Trigger in DataBoxEdge Resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Trigger in DataBoxEdge Resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

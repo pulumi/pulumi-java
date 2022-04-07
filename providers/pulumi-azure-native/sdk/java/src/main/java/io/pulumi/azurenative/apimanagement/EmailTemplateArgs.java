@@ -18,7 +18,6 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email Template Body. This should be a valid XDocument
-     * 
      */
     @Import(name="body")
       private final @Nullable Output<String> body;
@@ -29,7 +28,6 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the Email Template.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email Template Parameter values.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters;
@@ -51,7 +48,6 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -73,7 +68,6 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Subject of the Template.
-     * 
      */
     @Import(name="subject")
       private final @Nullable Output<String> subject;
@@ -84,7 +78,6 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Email Template Name Identifier.
-     * 
      */
     @Import(name="templateName")
       private final @Nullable Output<String> templateName;
@@ -95,7 +88,6 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Title of the Template.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

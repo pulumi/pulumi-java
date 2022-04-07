@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Hyper V VM network details.
- * 
  */
 public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A value indicating whether the NIC has accelerated networking enabled.
-     * 
      */
     @Import(name="enableAcceleratedNetworkingOnRecovery")
       private final @Nullable Boolean enableAcceleratedNetworkingOnRecovery;
@@ -34,7 +32,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether the test failover NIC has accelerated networking enabled.
-     * 
      */
     @Import(name="enableAcceleratedNetworkingOnTfo")
       private final @Nullable Boolean enableAcceleratedNetworkingOnTfo;
@@ -45,7 +42,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Ip address type.
-     * 
      */
     @Import(name="ipAddressType")
       private final @Nullable String ipAddressType;
@@ -56,7 +52,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The nic Id.
-     * 
      */
     @Import(name="nicId")
       private final @Nullable String nicId;
@@ -67,7 +62,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Primary nic static IP address.
-     * 
      */
     @Import(name="primaryNicStaticIPAddress")
       private final @Nullable String primaryNicStaticIPAddress;
@@ -78,7 +72,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The target backend address pools for the NIC.
-     * 
      */
     @Import(name="recoveryLBBackendAddressPoolIds")
       private final @Nullable List<String> recoveryLBBackendAddressPoolIds;
@@ -89,7 +82,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The id of the NSG associated with the NIC.
-     * 
      */
     @Import(name="recoveryNetworkSecurityGroupId")
       private final @Nullable String recoveryNetworkSecurityGroupId;
@@ -100,7 +92,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * IP allocation type for recovery VM.
-     * 
      */
     @Import(name="recoveryNicIpAddressType")
       private final @Nullable String recoveryNicIpAddressType;
@@ -111,7 +102,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the NIC to be used when creating target NICs.
-     * 
      */
     @Import(name="recoveryNicName")
       private final @Nullable String recoveryNicName;
@@ -122,7 +112,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group of the NIC to be used when creating target NICs.
-     * 
      */
     @Import(name="recoveryNicResourceGroupName")
       private final @Nullable String recoveryNicResourceGroupName;
@@ -133,7 +122,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The id of the public IP address resource associated with the NIC.
-     * 
      */
     @Import(name="recoveryPublicIpAddressId")
       private final @Nullable String recoveryPublicIpAddressId;
@@ -144,7 +132,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Recovery VM network Id.
-     * 
      */
     @Import(name="recoveryVMNetworkId")
       private final @Nullable String recoveryVMNetworkId;
@@ -155,7 +142,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Recovery VM subnet name.
-     * 
      */
     @Import(name="recoveryVMSubnetName")
       private final @Nullable String recoveryVMSubnetName;
@@ -166,7 +152,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The replica nic Id.
-     * 
      */
     @Import(name="replicaNicId")
       private final @Nullable String replicaNicId;
@@ -177,7 +162,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Replica nic static IP address.
-     * 
      */
     @Import(name="replicaNicStaticIPAddress")
       private final @Nullable String replicaNicStaticIPAddress;
@@ -188,7 +172,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A value indicating whether an existing NIC is allowed to be reused during failover subject to availability.
-     * 
      */
     @Import(name="reuseExistingNic")
       private final @Nullable Boolean reuseExistingNic;
@@ -199,7 +182,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Selection type for failover.
-     * 
      */
     @Import(name="selectionType")
       private final @Nullable String selectionType;
@@ -210,7 +192,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The source nic ARM Id.
-     * 
      */
     @Import(name="sourceNicArmId")
       private final @Nullable String sourceNicArmId;
@@ -221,7 +202,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The IP configurations to be used by NIC during test failover.
-     * 
      */
     @Import(name="tfoIPConfigs")
       private final @Nullable List<IPConfigResponse> tfoIPConfigs;
@@ -232,7 +212,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The NSG to be used by NIC during test failover.
-     * 
      */
     @Import(name="tfoNetworkSecurityGroupId")
       private final @Nullable String tfoNetworkSecurityGroupId;
@@ -243,7 +222,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the NIC to be used when creating target NICs in TFO.
-     * 
      */
     @Import(name="tfoRecoveryNicName")
       private final @Nullable String tfoRecoveryNicName;
@@ -254,7 +232,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group of the NIC to be used when creating target NICs in TFO.
-     * 
      */
     @Import(name="tfoRecoveryNicResourceGroupName")
       private final @Nullable String tfoRecoveryNicResourceGroupName;
@@ -265,7 +242,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A value indicating whether an existing NIC is allowed to be reused during test failover subject to availability.
-     * 
      */
     @Import(name="tfoReuseExistingNic")
       private final @Nullable Boolean tfoReuseExistingNic;
@@ -276,7 +252,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The network to be used by NIC during test failover.
-     * 
      */
     @Import(name="tfoVMNetworkId")
       private final @Nullable String tfoVMNetworkId;
@@ -287,7 +262,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The subnet to be used by NIC during test failover.
-     * 
      */
     @Import(name="tfoVMSubnetName")
       private final @Nullable String tfoVMSubnetName;
@@ -298,7 +272,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * VM network name.
-     * 
      */
     @Import(name="vMNetworkName")
       private final @Nullable String vMNetworkName;
@@ -309,7 +282,6 @@ public final class VMNicDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * VM subnet name.
-     * 
      */
     @Import(name="vMSubnetName")
       private final @Nullable String vMSubnetName;

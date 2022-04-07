@@ -30,7 +30,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The DDoS protection custom policy associated with the public IP address.
-     * 
      */
     @Import(name="ddosSettings")
       private final @Nullable Output<DdosSettingsArgs> ddosSettings;
@@ -41,7 +40,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The FQDN of the DNS record associated with the public IP address.
-     * 
      */
     @Import(name="dnsSettings")
       private final @Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings;
@@ -52,7 +50,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The extended location of the public ip address.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -63,7 +60,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -74,7 +70,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The idle timeout of the public IP address.
-     * 
      */
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
@@ -85,7 +80,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The IP address associated with the public IP address resource.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
@@ -96,7 +90,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The list of tags associated with the public IP address.
-     * 
      */
     @Import(name="ipTags")
       private final @Nullable Output<List<IpTagArgs>> ipTags;
@@ -107,7 +100,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The linked public IP address of the public IP address resource.
-     * 
      */
     @Import(name="linkedPublicIPAddress")
       private final @Nullable Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
@@ -118,7 +110,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -129,7 +120,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Migration phase of Public IP Address.
-     * 
      */
     @Import(name="migrationPhase")
       private final @Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
@@ -140,7 +130,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The NatGateway for the Public IP address.
-     * 
      */
     @Import(name="natGateway")
       private final @Nullable Output<NatGatewayArgs> natGateway;
@@ -151,7 +140,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The public IP address version.
-     * 
      */
     @Import(name="publicIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
@@ -162,7 +150,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The public IP address allocation method.
-     * 
      */
     @Import(name="publicIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
@@ -173,7 +160,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Public IP Prefix this Public IP Address should be allocated from.
-     * 
      */
     @Import(name="publicIPPrefix")
       private final @Nullable Output<SubResourceArgs> publicIPPrefix;
@@ -184,7 +170,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the public IP address.
-     * 
      */
     @Import(name="publicIpAddressName")
       private final @Nullable Output<String> publicIpAddressName;
@@ -195,7 +180,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -206,7 +190,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The service public IP address of the public IP address resource.
-     * 
      */
     @Import(name="servicePublicIPAddress")
       private final @Nullable Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
@@ -217,7 +200,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The public IP address SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<PublicIPAddressSkuArgs> sku;
@@ -228,7 +210,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -239,7 +220,6 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

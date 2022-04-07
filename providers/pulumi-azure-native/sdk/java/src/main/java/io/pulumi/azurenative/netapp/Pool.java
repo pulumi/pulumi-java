@@ -19,7 +19,95 @@ import javax.annotation.Nullable;
  * Capacity pool resource
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Pools_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var pool = new AzureNative.NetApp.Pool("pool", new AzureNative.NetApp.PoolArgs
+ *         {
+ *             AccountName = "account1",
+ *             Location = "eastus",
+ *             PoolName = "pool1",
+ *             QosType = "Auto",
+ *             ResourceGroupName = "myRG",
+ *             ServiceLevel = "Premium",
+ *             Size = 4398046511104,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	netapp "github.com/pulumi/pulumi-azure-native/sdk/go/azure/netapp"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := netapp.NewPool(ctx, "pool", &netapp.PoolArgs{
+ * 			AccountName:       pulumi.String("account1"),
+ * 			Location:          pulumi.String("eastus"),
+ * 			PoolName:          pulumi.String("pool1"),
+ * 			QosType:           pulumi.String("Auto"),
+ * 			ResourceGroupName: pulumi.String("myRG"),
+ * 			ServiceLevel:      pulumi.String("Premium"),
+ * 			Size:              pulumi.Float64(4398046511104),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const pool = new azure_native.netapp.Pool("pool", {
+ *     accountName: "account1",
+ *     location: "eastus",
+ *     poolName: "pool1",
+ *     qosType: "Auto",
+ *     resourceGroupName: "myRG",
+ *     serviceLevel: "Premium",
+ *     size: 4398046511104,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * pool = azure_native.netapp.Pool("pool",
+ *     account_name="account1",
+ *     location="eastus",
+ *     pool_name="pool1",
+ *     qos_type="Auto",
+ *     resource_group_name="myRG",
+ *     service_level="Premium",
+ *     size=4398046511104)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,154 +122,132 @@ import javax.annotation.Nullable;
 public class Pool extends io.pulumi.resources.CustomResource {
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * UUID v4 used to identify the Pool
-     * 
      */
     @Export(name="poolId", type=String.class, parameters={})
     private Output<String> poolId;
 
     /**
      * @return UUID v4 used to identify the Pool
-     * 
      */
     public Output<String> getPoolId() {
         return this.poolId;
     }
     /**
      * Azure lifecycle management
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Azure lifecycle management
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The qos type of the pool
-     * 
      */
     @Export(name="qosType", type=String.class, parameters={})
     private Output</* @Nullable */ String> qosType;
 
     /**
      * @return The qos type of the pool
-     * 
      */
     public Output</* @Nullable */ String> getQosType() {
         return this.qosType;
     }
     /**
      * The service level of the file system
-     * 
      */
     @Export(name="serviceLevel", type=String.class, parameters={})
     private Output<String> serviceLevel;
 
     /**
      * @return The service level of the file system
-     * 
      */
     public Output<String> getServiceLevel() {
         return this.serviceLevel;
     }
     /**
      * Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
-     * 
      */
     @Export(name="size", type=Double.class, parameters={})
     private Output<Double> size;
 
     /**
      * @return Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
-     * 
      */
     public Output<Double> getSize() {
         return this.size;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Total throughput of pool in Mibps
-     * 
      */
     @Export(name="totalThroughputMibps", type=Double.class, parameters={})
     private Output<Double> totalThroughputMibps;
 
     /**
      * @return Total throughput of pool in Mibps
-     * 
      */
     public Output<Double> getTotalThroughputMibps() {
         return this.totalThroughputMibps;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Utilized throughput of pool in Mibps
-     * 
      */
     @Export(name="utilizedThroughputMibps", type=Double.class, parameters={})
     private Output<Double> utilizedThroughputMibps;
 
     /**
      * @return Utilized throughput of pool in Mibps
-     * 
      */
     public Output<Double> getUtilizedThroughputMibps() {
         return this.utilizedThroughputMibps;

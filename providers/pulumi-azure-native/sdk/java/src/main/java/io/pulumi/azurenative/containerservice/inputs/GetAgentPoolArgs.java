@@ -14,7 +14,6 @@ public final class GetAgentPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the agent pool.
-     * 
      */
     @Import(name="agentPoolName", required=true)
       private final String agentPoolName;
@@ -25,7 +24,6 @@ public final class GetAgentPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetAgentPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the managed cluster resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

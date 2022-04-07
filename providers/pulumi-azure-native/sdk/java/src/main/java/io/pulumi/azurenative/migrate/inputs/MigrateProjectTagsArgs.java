@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Gets or sets the tags.
- * 
  */
 public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceArgs {
 

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a user that is recommended to be allowed for a certain rule
- * 
  */
 public final class UserRecommendationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class UserRecommendationResponse extends io.pulumi.resources.Invoke
 
     /**
      * The recommendation action of the machine or rule
-     * 
      */
     @Import(name="recommendationAction")
       private final @Nullable String recommendationAction;
@@ -31,7 +29,6 @@ public final class UserRecommendationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Represents a user that is recommended to be allowed for a certain rule
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

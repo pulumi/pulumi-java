@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * May be used to filter budgets by resource group, resource, or meter.
- * 
  */
 public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The logical "AND" expression. Must have at least 2 items.
-     * 
      */
     @Import(name="and")
       private final @Nullable List<BudgetFilterPropertiesResponse> and;
@@ -33,7 +31,6 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Has comparison expression for a dimension
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable BudgetComparisonExpressionResponse dimensions;
@@ -44,7 +41,6 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The logical "NOT" expression.
-     * 
      */
     @Import(name="not")
       private final @Nullable BudgetFilterPropertiesResponse not;
@@ -55,7 +51,6 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Has comparison expression for a tag
-     * 
      */
     @Import(name="tags")
       private final @Nullable BudgetComparisonExpressionResponse tags;

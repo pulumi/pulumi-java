@@ -14,7 +14,6 @@ public final class GetADCCatalogArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the data catalog in the specified subscription and resource group.
-     * 
      */
     @Import(name="catalogName", required=true)
       private final String catalogName;
@@ -25,7 +24,6 @@ public final class GetADCCatalogArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

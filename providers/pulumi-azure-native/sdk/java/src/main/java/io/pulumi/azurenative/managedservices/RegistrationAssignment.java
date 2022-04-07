@@ -18,7 +18,88 @@ import javax.annotation.Nullable;
  * Registration assignment.
  * API Version: 2019-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Put Registration Assignment
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registrationAssignment = new AzureNative.ManagedServices.RegistrationAssignment("registrationAssignment", new AzureNative.ManagedServices.RegistrationAssignmentArgs
+ *         {
+ *             Properties = new AzureNative.ManagedServices.Inputs.RegistrationAssignmentPropertiesArgs
+ *             {
+ *                 RegistrationDefinitionId = "/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
+ *             },
+ *             RegistrationAssignmentId = "26c128c2-fefa-4340-9bb1-6e081c90ada2",
+ *             Scope = "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	managedservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/managedservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := managedservices.NewRegistrationAssignment(ctx, "registrationAssignment", &managedservices.RegistrationAssignmentArgs{
+ * 			Properties: &managedservices.RegistrationAssignmentPropertiesArgs{
+ * 				RegistrationDefinitionId: pulumi.String("/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2"),
+ * 			},
+ * 			RegistrationAssignmentId: pulumi.String("26c128c2-fefa-4340-9bb1-6e081c90ada2"),
+ * 			Scope:                    pulumi.String("subscription/0afefe50-734e-4610-8a82-a144ahf49dea"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const registrationAssignment = new azure_native.managedservices.RegistrationAssignment("registrationAssignment", {
+ *     properties: {
+ *         registrationDefinitionId: "/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
+ *     },
+ *     registrationAssignmentId: "26c128c2-fefa-4340-9bb1-6e081c90ada2",
+ *     scope: "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * registration_assignment = azure_native.managedservices.RegistrationAssignment("registrationAssignment",
+ *     properties=azure_native.managedservices.RegistrationAssignmentPropertiesArgs(
+ *         registration_definition_id="/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2",
+ *     ),
+ *     registration_assignment_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
+ *     scope="subscription/0afefe50-734e-4610-8a82-a144ahf49dea")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +114,36 @@ import javax.annotation.Nullable;
 public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
     /**
      * Name of the registration assignment.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the registration assignment.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of a registration assignment.
-     * 
      */
     @Export(name="properties", type=RegistrationAssignmentPropertiesResponse.class, parameters={})
     private Output<RegistrationAssignmentPropertiesResponse> properties;
 
     /**
      * @return Properties of a registration assignment.
-     * 
      */
     public Output<RegistrationAssignmentPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

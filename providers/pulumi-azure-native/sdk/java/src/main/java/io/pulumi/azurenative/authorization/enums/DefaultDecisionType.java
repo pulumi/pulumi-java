@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * This specifies the behavior for the autoReview feature when an access review completes.
-     * 
      */
     @EnumType
     public enum DefaultDecisionType {

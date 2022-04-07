@@ -14,7 +14,6 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
 
     /**
      * The name of IoT Connector FHIR destination resource.
-     * 
      */
     @Import(name="fhirDestinationName", required=true)
       private final String fhirDestinationName;
@@ -25,7 +24,6 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
 
     /**
      * The name of IoT Connector resource.
-     * 
      */
     @Import(name="iotConnectorName", required=true)
       private final String iotConnectorName;
@@ -36,7 +34,6 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
 
     /**
      * The name of the resource group that contains the service instance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetIotConnectorFhirDestinationArgs extends io.pulumi.resource
 
     /**
      * The name of workspace resource.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

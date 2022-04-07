@@ -19,7 +19,6 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -30,7 +29,6 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
 
     /**
      * A collection of service endpoint policy definitions of the service endpoint policy.
-     * 
      */
     @Import(name="serviceEndpointPolicyDefinitions")
       private final @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
@@ -63,7 +59,6 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the service endpoint policy.
-     * 
      */
     @Import(name="serviceEndpointPolicyName")
       private final @Nullable Output<String> serviceEndpointPolicyName;
@@ -74,7 +69,6 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

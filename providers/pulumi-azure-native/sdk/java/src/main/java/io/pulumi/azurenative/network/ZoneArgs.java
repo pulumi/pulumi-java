@@ -20,7 +20,6 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -31,7 +30,6 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
-     * 
      */
     @Import(name="registrationVirtualNetworks")
       private final @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks;
@@ -42,7 +40,6 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
-     * 
      */
     @Import(name="resolutionVirtualNetworks")
       private final @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks;
@@ -53,7 +50,6 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -75,7 +70,6 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the DNS zone (without a terminating dot).
-     * 
      */
     @Import(name="zoneName")
       private final @Nullable Output<String> zoneName;
@@ -86,7 +80,6 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of this DNS zone (Public or Private).
-     * 
      */
     @Import(name="zoneType")
       private final @Nullable Output<ZoneType> zoneType;

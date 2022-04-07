@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Status of Arc agent for a particular node in HCI Cluster.
- * 
  */
 public final class PerNodeStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PerNodeStateResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Fully qualified resource ID for the Arc agent of this node.
-     * 
      */
     @Import(name="arcInstance", required=true)
       private final String arcInstance;
@@ -29,7 +27,6 @@ public final class PerNodeStateResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Node in HCI Cluster
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -40,7 +37,6 @@ public final class PerNodeStateResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * State of Arc agent in this node.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

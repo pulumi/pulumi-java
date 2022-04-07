@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * An Activity Log Alert rule condition that is met when all its member conditions are met.
- * 
  */
 public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
 
     /**
      * The list of Activity Log Alert rule conditions.
-     * 
      */
     @Import(name="allOf", required=true)
       private final Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;

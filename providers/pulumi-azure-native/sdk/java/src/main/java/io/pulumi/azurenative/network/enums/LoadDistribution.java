@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The load distribution policy for this rule.
-     * 
      */
     @EnumType
     public enum LoadDistribution {

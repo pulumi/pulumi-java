@@ -14,7 +14,6 @@ import java.util.StringJoiner;
      * Default: Regular instance creation.
      * 
      * Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified.
-     * 
      */
     @EnumType
     public enum ManagedServerCreateMode {

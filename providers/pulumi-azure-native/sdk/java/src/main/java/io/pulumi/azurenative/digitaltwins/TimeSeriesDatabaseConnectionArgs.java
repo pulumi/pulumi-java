@@ -17,7 +17,6 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
 
     /**
      * Properties of a specific time series database connection.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<AzureDataExplorerConnectionPropertiesArgs> properties;
@@ -28,7 +27,6 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group that contains the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -39,7 +37,6 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
 
     /**
      * The name of the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -50,7 +47,6 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
 
     /**
      * Name of time series database connection.
-     * 
      */
     @Import(name="timeSeriesDatabaseConnectionName")
       private final @Nullable Output<String> timeSeriesDatabaseConnectionName;

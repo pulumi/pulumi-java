@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The set of data plane operations permitted through this Role Definition.
- * 
  */
 public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of data actions that are allowed.
-     * 
      */
     @Import(name="dataActions")
       private final @Nullable List<String> dataActions;
@@ -32,7 +30,6 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of data actions that are denied.
-     * 
      */
     @Import(name="notDataActions")
       private final @Nullable List<String> notDataActions;

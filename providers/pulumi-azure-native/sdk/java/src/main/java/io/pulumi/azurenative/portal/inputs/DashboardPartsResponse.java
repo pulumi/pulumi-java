@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A dashboard part.
- * 
  */
 public final class DashboardPartsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DashboardPartsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The dashboard part's metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable MarkdownPartMetadataResponse metadata;
@@ -32,7 +30,6 @@ public final class DashboardPartsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The dashboard's part position.
-     * 
      */
     @Import(name="position", required=true)
       private final DashboardPartsResponsePosition position;

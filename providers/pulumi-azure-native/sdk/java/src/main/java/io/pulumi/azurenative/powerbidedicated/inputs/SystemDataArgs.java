@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata pertaining to creation and last modification of the resource.
- * 
  */
 public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of resource creation (UTC)
-     * 
      */
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
@@ -33,7 +31,6 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An identifier for the identity that created the resource
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
@@ -44,7 +41,6 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity that created the resource
-     * 
      */
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,IdentityType>> createdByType;
@@ -55,7 +51,6 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
@@ -66,7 +61,6 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An identifier for the identity that last modified the resource
-     * 
      */
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
@@ -77,7 +71,6 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity that last modified the resource
-     * 
      */
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,IdentityType>> lastModifiedByType;

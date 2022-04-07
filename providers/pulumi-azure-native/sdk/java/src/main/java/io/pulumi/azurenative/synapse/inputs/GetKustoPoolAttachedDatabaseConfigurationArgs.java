@@ -14,7 +14,6 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
 
     /**
      * The name of the attached database configuration.
-     * 
      */
     @Import(name="attachedDatabaseConfigurationName", required=true)
       private final String attachedDatabaseConfigurationName;
@@ -25,7 +24,6 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
 
     /**
      * The name of the Kusto pool.
-     * 
      */
     @Import(name="kustoPoolName", required=true)
       private final String kustoPoolName;
@@ -36,7 +34,6 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

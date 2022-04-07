@@ -21,7 +21,350 @@ import javax.annotation.Nullable;
  * Backend details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateBackendProxyBackend
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var backend = new AzureNative.ApiManagement.Backend("backend", new AzureNative.ApiManagement.BackendArgs
+ *         {
+ *             BackendId = "proxybackend",
+ *             Credentials = new AzureNative.ApiManagement.Inputs.BackendCredentialsContractArgs
+ *             {
+ *                 Authorization = new AzureNative.ApiManagement.Inputs.BackendAuthorizationHeaderCredentialsArgs
+ *                 {
+ *                     Parameter = "opensesma",
+ *                     Scheme = "Basic",
+ *                 },
+ *                 Header = 
+ *                 {
+ *                     { "x-my-1", 
+ *                     {
+ *                         "val1",
+ *                         "val2",
+ *                     } },
+ *                 },
+ *                 Query = 
+ *                 {
+ *                     { "sv", 
+ *                     {
+ *                         "xx",
+ *                         "bb",
+ *                         "cc",
+ *                     } },
+ *                 },
+ *             },
+ *             Description = "description5308",
+ *             Protocol = "http",
+ *             Proxy = new AzureNative.ApiManagement.Inputs.BackendProxyContractArgs
+ *             {
+ *                 Password = "<password>",
+ *                 Url = "http://192.168.1.1:8080",
+ *                 Username = "Contoso\\admin",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Tls = new AzureNative.ApiManagement.Inputs.BackendTlsPropertiesArgs
+ *             {
+ *                 ValidateCertificateChain = true,
+ *                 ValidateCertificateName = true,
+ *             },
+ *             Url = "https://backendname2644/",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewBackend(ctx, "backend", &apimanagement.BackendArgs{
+ * 			BackendId: pulumi.String("proxybackend"),
+ * 			Credentials: &apimanagement.BackendCredentialsContractArgs{
+ * 				Authorization: &apimanagement.BackendAuthorizationHeaderCredentialsArgs{
+ * 					Parameter: pulumi.String("opensesma"),
+ * 					Scheme:    pulumi.String("Basic"),
+ * 				},
+ * 				Header: pulumi.StringArrayMap{
+ * 					"x-my-1": pulumi.StringArray{
+ * 						pulumi.String("val1"),
+ * 						pulumi.String("val2"),
+ * 					},
+ * 				},
+ * 				Query: pulumi.StringArrayMap{
+ * 					"sv": pulumi.StringArray{
+ * 						pulumi.String("xx"),
+ * 						pulumi.String("bb"),
+ * 						pulumi.String("cc"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Description: pulumi.String("description5308"),
+ * 			Protocol:    pulumi.String("http"),
+ * 			Proxy: &apimanagement.BackendProxyContractArgs{
+ * 				Password: pulumi.String("<password>"),
+ * 				Url:      pulumi.String("http://192.168.1.1:8080"),
+ * 				Username: pulumi.String("Contoso\\admin"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Tls: &apimanagement.BackendTlsPropertiesArgs{
+ * 				ValidateCertificateChain: pulumi.Bool(true),
+ * 				ValidateCertificateName:  pulumi.Bool(true),
+ * 			},
+ * 			Url: pulumi.String("https://backendname2644/"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const backend = new azure_native.apimanagement.Backend("backend", {
+ *     backendId: "proxybackend",
+ *     credentials: {
+ *         authorization: {
+ *             parameter: "opensesma",
+ *             scheme: "Basic",
+ *         },
+ *         header: {
+ *             "x-my-1": [
+ *                 "val1",
+ *                 "val2",
+ *             ],
+ *         },
+ *         query: {
+ *             sv: [
+ *                 "xx",
+ *                 "bb",
+ *                 "cc",
+ *             ],
+ *         },
+ *     },
+ *     description: "description5308",
+ *     protocol: "http",
+ *     proxy: {
+ *         password: "<password>",
+ *         url: "http://192.168.1.1:8080",
+ *         username: "Contoso\\admin",
+ *     },
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     tls: {
+ *         validateCertificateChain: true,
+ *         validateCertificateName: true,
+ *     },
+ *     url: "https://backendname2644/",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * backend = azure_native.apimanagement.Backend("backend",
+ *     backend_id="proxybackend",
+ *     credentials=azure_native.apimanagement.BackendCredentialsContractArgs(
+ *         authorization=azure_native.apimanagement.BackendAuthorizationHeaderCredentialsArgs(
+ *             parameter="opensesma",
+ *             scheme="Basic",
+ *         ),
+ *         header={
+ *             "x-my-1": [
+ *                 "val1",
+ *                 "val2",
+ *             ],
+ *         },
+ *         query={
+ *             "sv": [
+ *                 "xx",
+ *                 "bb",
+ *                 "cc",
+ *             ],
+ *         },
+ *     ),
+ *     description="description5308",
+ *     protocol="http",
+ *     proxy=azure_native.apimanagement.BackendProxyContractArgs(
+ *         password="<password>",
+ *         url="http://192.168.1.1:8080",
+ *         username="Contoso\\admin",
+ *     ),
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     tls=azure_native.apimanagement.BackendTlsPropertiesArgs(
+ *         validate_certificate_chain=True,
+ *         validate_certificate_name=True,
+ *     ),
+ *     url="https://backendname2644/")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateBackendServiceFabric
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var backend = new AzureNative.ApiManagement.Backend("backend", new AzureNative.ApiManagement.BackendArgs
+ *         {
+ *             BackendId = "sfbackend",
+ *             Description = "Service Fabric Test App 1",
+ *             Properties = new AzureNative.ApiManagement.Inputs.BackendPropertiesArgs
+ *             {
+ *                 ServiceFabricCluster = new AzureNative.ApiManagement.Inputs.BackendServiceFabricClusterPropertiesArgs
+ *                 {
+ *                     ClientCertificateId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1",
+ *                     ManagementEndpoints = 
+ *                     {
+ *                         "https://somecluster.com",
+ *                     },
+ *                     MaxPartitionResolutionRetries = 5,
+ *                     ServerX509Names = 
+ *                     {
+ *                         new AzureNative.ApiManagement.Inputs.X509CertificateNameArgs
+ *                         {
+ *                             IssuerCertificateThumbprint = "IssuerCertificateThumbprint1",
+ *                             Name = "ServerCommonName1",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Protocol = "http",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Url = "fabric:/mytestapp/mytestservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewBackend(ctx, "backend", &apimanagement.BackendArgs{
+ * 			BackendId:   pulumi.String("sfbackend"),
+ * 			Description: pulumi.String("Service Fabric Test App 1"),
+ * 			Properties: &apimanagement.BackendPropertiesArgs{
+ * 				ServiceFabricCluster: &apimanagement.BackendServiceFabricClusterPropertiesArgs{
+ * 					ClientCertificateId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1"),
+ * 					ManagementEndpoints: pulumi.StringArray{
+ * 						pulumi.String("https://somecluster.com"),
+ * 					},
+ * 					MaxPartitionResolutionRetries: pulumi.Int(5),
+ * 					ServerX509Names: apimanagement.X509CertificateNameArray{
+ * 						&apimanagement.X509CertificateNameArgs{
+ * 							IssuerCertificateThumbprint: pulumi.String("IssuerCertificateThumbprint1"),
+ * 							Name:                        pulumi.String("ServerCommonName1"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Protocol:          pulumi.String("http"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Url:               pulumi.String("fabric:/mytestapp/mytestservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const backend = new azure_native.apimanagement.Backend("backend", {
+ *     backendId: "sfbackend",
+ *     description: "Service Fabric Test App 1",
+ *     properties: {
+ *         serviceFabricCluster: {
+ *             clientCertificateId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1",
+ *             managementEndpoints: ["https://somecluster.com"],
+ *             maxPartitionResolutionRetries: 5,
+ *             serverX509Names: [{
+ *                 issuerCertificateThumbprint: "IssuerCertificateThumbprint1",
+ *                 name: "ServerCommonName1",
+ *             }],
+ *         },
+ *     },
+ *     protocol: "http",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     url: "fabric:/mytestapp/mytestservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * backend = azure_native.apimanagement.Backend("backend",
+ *     backend_id="sfbackend",
+ *     description="Service Fabric Test App 1",
+ *     properties=azure_native.apimanagement.BackendPropertiesArgs(
+ *         service_fabric_cluster=azure_native.apimanagement.BackendServiceFabricClusterPropertiesArgs(
+ *             client_certificate_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1",
+ *             management_endpoints=["https://somecluster.com"],
+ *             max_partition_resolution_retries=5,
+ *             server_x509_names=[azure_native.apimanagement.X509CertificateNameArgs(
+ *                 issuer_certificate_thumbprint="IssuerCertificateThumbprint1",
+ *                 name="ServerCommonName1",
+ *             )],
+ *         ),
+ *     ),
+ *     protocol="http",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     url="fabric:/mytestapp/mytestservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,154 +379,132 @@ import javax.annotation.Nullable;
 public class Backend extends io.pulumi.resources.CustomResource {
     /**
      * Backend Credentials Contract Properties
-     * 
      */
     @Export(name="credentials", type=BackendCredentialsContractResponse.class, parameters={})
     private Output</* @Nullable */ BackendCredentialsContractResponse> credentials;
 
     /**
      * @return Backend Credentials Contract Properties
-     * 
      */
     public Output</* @Nullable */ BackendCredentialsContractResponse> getCredentials() {
         return this.credentials;
     }
     /**
      * Backend Description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Backend Description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Backend Properties contract
-     * 
      */
     @Export(name="properties", type=BackendPropertiesResponse.class, parameters={})
     private Output<BackendPropertiesResponse> properties;
 
     /**
      * @return Backend Properties contract
-     * 
      */
     public Output<BackendPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Backend communication protocol.
-     * 
      */
     @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
      * @return Backend communication protocol.
-     * 
      */
     public Output<String> getProtocol() {
         return this.protocol;
     }
     /**
      * Backend Proxy Contract Properties
-     * 
      */
     @Export(name="proxy", type=BackendProxyContractResponse.class, parameters={})
     private Output</* @Nullable */ BackendProxyContractResponse> proxy;
 
     /**
      * @return Backend Proxy Contract Properties
-     * 
      */
     public Output</* @Nullable */ BackendProxyContractResponse> getProxy() {
         return this.proxy;
     }
     /**
      * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
      * @return Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
-     * 
      */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
     /**
      * Backend Title.
-     * 
      */
     @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
     /**
      * @return Backend Title.
-     * 
      */
     public Output</* @Nullable */ String> getTitle() {
         return this.title;
     }
     /**
      * Backend TLS Properties
-     * 
      */
     @Export(name="tls", type=BackendTlsPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ BackendTlsPropertiesResponse> tls;
 
     /**
      * @return Backend TLS Properties
-     * 
      */
     public Output</* @Nullable */ BackendTlsPropertiesResponse> getTls() {
         return this.tls;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Runtime Url of the Backend.
-     * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
      * @return Runtime Url of the Backend.
-     * 
      */
     public Output<String> getUrl() {
         return this.url;

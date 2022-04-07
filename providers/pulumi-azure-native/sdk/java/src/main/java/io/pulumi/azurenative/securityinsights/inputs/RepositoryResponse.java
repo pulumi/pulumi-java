@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * metadata of a repository.
- * 
  */
 public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Branch name of repository.
-     * 
      */
     @Import(name="branch")
       private final @Nullable String branch;
@@ -33,7 +31,6 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Url to access repository action logs.
-     * 
      */
     @Import(name="deploymentLogsUrl")
       private final @Nullable String deploymentLogsUrl;
@@ -44,7 +41,6 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Display url of repository.
-     * 
      */
     @Import(name="displayUrl")
       private final @Nullable String displayUrl;
@@ -55,7 +51,6 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dictionary of source control content type and path mapping.
-     * 
      */
     @Import(name="pathMapping")
       private final @Nullable List<ContentPathMapResponse> pathMapping;
@@ -66,7 +61,6 @@ public final class RepositoryResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Url of repository.
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;

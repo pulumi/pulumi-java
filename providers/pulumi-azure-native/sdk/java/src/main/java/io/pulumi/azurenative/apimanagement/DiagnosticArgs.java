@@ -24,7 +24,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies for what type of messages sampling settings should not apply.
-     * 
      */
     @Import(name="alwaysLog")
       private final @Nullable Output<Either<String,AlwaysLog>> alwaysLog;
@@ -35,7 +34,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Diagnostic settings for incoming/outgoing HTTP messages to the Backend
-     * 
      */
     @Import(name="backend")
       private final @Nullable Output<PipelineDiagnosticSettingsArgs> backend;
@@ -46,7 +44,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Diagnostic identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="diagnosticId")
       private final @Nullable Output<String> diagnosticId;
@@ -57,7 +54,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
-     * 
      */
     @Import(name="frontend")
       private final @Nullable Output<PipelineDiagnosticSettingsArgs> frontend;
@@ -68,7 +64,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sets correlation protocol to use for Application Insights diagnostics.
-     * 
      */
     @Import(name="httpCorrelationProtocol")
       private final @Nullable Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol;
@@ -79,7 +74,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Log the ClientIP. Default is false.
-     * 
      */
     @Import(name="logClientIp")
       private final @Nullable Output<Boolean> logClientIp;
@@ -90,7 +84,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Id of a target logger.
-     * 
      */
     @Import(name="loggerId", required=true)
       private final Output<String> loggerId;
@@ -101,7 +94,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The format of the Operation Name for Application Insights telemetries. Default is Name.
-     * 
      */
     @Import(name="operationNameFormat")
       private final @Nullable Output<Either<String,OperationNameFormat>> operationNameFormat;
@@ -112,7 +104,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -123,7 +114,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sampling settings for Diagnostic.
-     * 
      */
     @Import(name="sampling")
       private final @Nullable Output<SamplingSettingsArgs> sampling;
@@ -134,7 +124,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -145,7 +134,6 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The verbosity level applied to traces emitted by trace policies.
-     * 
      */
     @Import(name="verbosity")
       private final @Nullable Output<Either<String,Verbosity>> verbosity;

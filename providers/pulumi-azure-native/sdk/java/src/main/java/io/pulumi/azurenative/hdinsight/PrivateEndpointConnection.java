@@ -20,7 +20,100 @@ import javax.annotation.Nullable;
  * The private endpoint connection.
  * API Version: 2021-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Approve a private endpoint connection manually.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.HDInsight.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.HDInsight.PrivateEndpointConnectionArgs
+ *         {
+ *             ClusterName = "cluster1",
+ *             PrivateEndpointConnectionName = "testprivateep.b3bf5fed-9b12-4560-b7d0-2abe1bba07e2",
+ *             PrivateLinkServiceConnectionState = new AzureNative.HDInsight.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 ActionsRequired = "None",
+ *                 Description = "update it from pending to approved.",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hdinsight "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hdinsight"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hdinsight.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &hdinsight.PrivateEndpointConnectionArgs{
+ * 			ClusterName:                   pulumi.String("cluster1"),
+ * 			PrivateEndpointConnectionName: pulumi.String("testprivateep.b3bf5fed-9b12-4560-b7d0-2abe1bba07e2"),
+ * 			PrivateLinkServiceConnectionState: &hdinsight.PrivateLinkServiceConnectionStateArgs{
+ * 				ActionsRequired: pulumi.String("None"),
+ * 				Description:     pulumi.String("update it from pending to approved."),
+ * 				Status:          pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.hdinsight.PrivateEndpointConnection("privateEndpointConnection", {
+ *     clusterName: "cluster1",
+ *     privateEndpointConnectionName: "testprivateep.b3bf5fed-9b12-4560-b7d0-2abe1bba07e2",
+ *     privateLinkServiceConnectionState: {
+ *         actionsRequired: "None",
+ *         description: "update it from pending to approved.",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.hdinsight.PrivateEndpointConnection("privateEndpointConnection",
+ *     cluster_name="cluster1",
+ *     private_endpoint_connection_name="testprivateep.b3bf5fed-9b12-4560-b7d0-2abe1bba07e2",
+ *     private_link_service_connection_state=azure_native.hdinsight.PrivateLinkServiceConnectionStateArgs(
+ *         actions_required="None",
+ *         description="update it from pending to approved.",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,98 +128,84 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * The link identifier.
-     * 
      */
     @Export(name="linkIdentifier", type=String.class, parameters={})
     private Output<String> linkIdentifier;
 
     /**
      * @return The link identifier.
-     * 
      */
     public Output<String> getLinkIdentifier() {
         return this.linkIdentifier;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The private endpoint of the private endpoint connection
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output<PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The private endpoint of the private endpoint connection
-     * 
      */
     public Output<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * The private link service connection state.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return The private link service connection state.
-     * 
      */
     public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

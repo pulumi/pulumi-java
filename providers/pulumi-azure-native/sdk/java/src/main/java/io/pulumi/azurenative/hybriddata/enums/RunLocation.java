@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * This is the preferred geo location for the job to run.
-     * 
      */
     @EnumType
     public enum RunLocation {

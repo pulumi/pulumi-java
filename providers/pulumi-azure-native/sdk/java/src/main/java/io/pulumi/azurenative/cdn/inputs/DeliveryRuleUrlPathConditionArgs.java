@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Defines the UrlPath condition for the delivery rule.
- * 
  */
 public final class DeliveryRuleUrlPathConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DeliveryRuleUrlPathConditionArgs extends io.pulumi.resources.
     /**
      * The name of the condition for the delivery rule.
      * Expected value is 'UrlPath'.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class DeliveryRuleUrlPathConditionArgs extends io.pulumi.resources.
 
     /**
      * Defines the parameters for the condition.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<UrlPathMatchConditionParametersArgs> parameters;

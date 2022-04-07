@@ -14,7 +14,6 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the blueprint assignment.
-     * 
      */
     @Import(name="assignmentName", required=true)
       private final String assignmentName;
@@ -25,7 +24,6 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     * 
      */
     @Import(name="resourceScope", required=true)
       private final String resourceScope;

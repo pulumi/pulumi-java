@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the app registration for the Twitter provider.
- * 
  */
 public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
      * The OAuth 1.0a consumer key of the Twitter application used for sign-in.
      * This setting is required for enabling Twitter Sign-In.
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
-     * 
      */
     @Import(name="consumerKey")
       private final @Nullable Output<String> consumerKey;
@@ -34,7 +32,6 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
     /**
      * The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
      * application used for sign-in.
-     * 
      */
     @Import(name="consumerSecretSettingName")
       private final @Nullable Output<String> consumerSecretSettingName;

@@ -17,72 +17,58 @@ import javax.annotation.Nullable;
 public final class GetIntegrationAccountAgreementResult {
     /**
      * The agreement type.
-     * 
      */
     private final String agreementType;
     /**
      * The changed time.
-     * 
      */
     private final String changedTime;
     /**
      * The agreement content.
-     * 
      */
     private final AgreementContentResponse content;
     /**
      * The created time.
-     * 
      */
     private final String createdTime;
     /**
      * The business identity of the guest partner.
-     * 
      */
     private final BusinessIdentityResponse guestIdentity;
     /**
      * The integration account partner that is set as guest partner for this agreement.
-     * 
      */
     private final String guestPartner;
     /**
      * The business identity of the host partner.
-     * 
      */
     private final BusinessIdentityResponse hostIdentity;
     /**
      * The integration account partner that is set as host partner for this agreement.
-     * 
      */
     private final String hostPartner;
     /**
      * The resource id.
-     * 
      */
     private final String id;
     /**
      * The resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * The metadata.
-     * 
      */
     private final @Nullable Object metadata;
     /**
      * Gets the resource name.
-     * 
      */
     private final String name;
     /**
      * The resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Gets the resource type.
-     * 
      */
     private final String type;
 
@@ -120,98 +106,84 @@ public final class GetIntegrationAccountAgreementResult {
 
     /**
      * The agreement type.
-     * 
     */
     public String getAgreementType() {
         return this.agreementType;
     }
     /**
      * The changed time.
-     * 
     */
     public String getChangedTime() {
         return this.changedTime;
     }
     /**
      * The agreement content.
-     * 
     */
     public AgreementContentResponse getContent() {
         return this.content;
     }
     /**
      * The created time.
-     * 
     */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The business identity of the guest partner.
-     * 
     */
     public BusinessIdentityResponse getGuestIdentity() {
         return this.guestIdentity;
     }
     /**
      * The integration account partner that is set as guest partner for this agreement.
-     * 
     */
     public String getGuestPartner() {
         return this.guestPartner;
     }
     /**
      * The business identity of the host partner.
-     * 
     */
     public BusinessIdentityResponse getHostIdentity() {
         return this.hostIdentity;
     }
     /**
      * The integration account partner that is set as host partner for this agreement.
-     * 
     */
     public String getHostPartner() {
         return this.hostPartner;
     }
     /**
      * The resource id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The metadata.
-     * 
     */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Gets the resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
-     * 
     */
     public String getType() {
         return this.type;

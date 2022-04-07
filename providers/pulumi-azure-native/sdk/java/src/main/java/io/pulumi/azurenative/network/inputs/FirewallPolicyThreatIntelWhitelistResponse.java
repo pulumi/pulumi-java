@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ThreatIntel Whitelist for Firewall Policy.
- * 
  */
 public final class FirewallPolicyThreatIntelWhitelistResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends io.pulumi.
 
     /**
      * List of FQDNs for the ThreatIntel Whitelist.
-     * 
      */
     @Import(name="fqdns")
       private final @Nullable List<String> fqdns;
@@ -32,7 +30,6 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends io.pulumi.
 
     /**
      * List of IP addresses for the ThreatIntel Whitelist.
-     * 
      */
     @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;

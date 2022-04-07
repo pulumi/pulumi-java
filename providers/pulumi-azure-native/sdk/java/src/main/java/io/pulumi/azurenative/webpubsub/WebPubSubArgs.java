@@ -24,7 +24,6 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The settings for event handler in webpubsub service.
-     * 
      */
     @Import(name="eventHandler")
       private final @Nullable Output<EventHandlerSettingsArgs> eventHandler;
@@ -37,10 +36,9 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * List of the featureFlags.
      * 
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
-     * And the response will only include featureFlags that are explicitly set.
+     * And the response will only include featureFlags that are explicitly set. 
      * When a featureFlag is not explicitly set, its globally default value will be used
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
-     * 
      */
     @Import(name="features")
       private final @Nullable Output<List<WebPubSubFeatureArgs>> features;
@@ -51,7 +49,6 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The managed identity response
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedIdentityArgs> identity;
@@ -62,7 +59,6 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -73,7 +69,6 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Network ACLs
-     * 
      */
     @Import(name="networkACLs")
       private final @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs;
@@ -86,7 +81,6 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
      * Enable or disable public network access. Default to "Enabled".
      * When it's Enabled, network ACLs still apply.
      * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
@@ -97,7 +91,6 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +101,6 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -119,7 +111,6 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The billing information of the resource.(e.g. Free, Standard)
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
@@ -130,7 +121,6 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -141,7 +131,6 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * TLS settings.
-     * 
      */
     @Import(name="tls")
       private final @Nullable Output<WebPubSubTlsSettingsArgs> tls;

@@ -22,7 +22,6 @@ public final class ApplicationHealthPolicyResponse extends io.pulumi.resources.I
 
     /**
      * The health policy used by default to evaluate the health of a service type.
-     * 
      */
     @Import(name="defaultServiceTypeHealthPolicy")
       private final @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
@@ -33,7 +32,6 @@ public final class ApplicationHealthPolicyResponse extends io.pulumi.resources.I
 
     /**
      * The map with service type health policy per service type name. The map is empty by default.
-     * 
      */
     @Import(name="serviceTypeHealthPolicies")
       private final @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;

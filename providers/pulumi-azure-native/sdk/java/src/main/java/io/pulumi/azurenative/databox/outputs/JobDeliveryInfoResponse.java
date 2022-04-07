@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class JobDeliveryInfoResponse {
     /**
      * Scheduled date time.
-     * 
      */
     private final @Nullable String scheduledDateTime;
 
@@ -24,7 +23,6 @@ public final class JobDeliveryInfoResponse {
 
     /**
      * Scheduled date time.
-     * 
     */
     public Optional<String> getScheduledDateTime() {
         return Optional.ofNullable(this.scheduledDateTime);

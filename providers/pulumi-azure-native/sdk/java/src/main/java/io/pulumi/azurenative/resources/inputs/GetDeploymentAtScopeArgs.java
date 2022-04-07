@@ -14,7 +14,6 @@ public final class GetDeploymentAtScopeArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the deployment.
-     * 
      */
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
@@ -25,7 +24,6 @@ public final class GetDeploymentAtScopeArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The resource scope.
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;

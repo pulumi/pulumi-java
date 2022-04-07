@@ -14,7 +14,6 @@ public final class GetSqlResourceSqlContainerArgs extends io.pulumi.resources.In
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetSqlResourceSqlContainerArgs extends io.pulumi.resources.In
 
     /**
      * Cosmos DB container name.
-     * 
      */
     @Import(name="containerName", required=true)
       private final String containerName;
@@ -36,7 +34,6 @@ public final class GetSqlResourceSqlContainerArgs extends io.pulumi.resources.In
 
     /**
      * Cosmos DB database name.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -47,7 +44,6 @@ public final class GetSqlResourceSqlContainerArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

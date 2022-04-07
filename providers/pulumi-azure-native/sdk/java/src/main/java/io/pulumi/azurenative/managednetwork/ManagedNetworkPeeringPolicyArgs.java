@@ -17,7 +17,6 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
 
     /**
      * The name of the Managed Network.
-     * 
      */
     @Import(name="managedNetworkName", required=true)
       private final Output<String> managedNetworkName;
@@ -39,7 +37,6 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
 
     /**
      * The name of the Managed Network Peering Policy.
-     * 
      */
     @Import(name="managedNetworkPeeringPolicyName")
       private final @Nullable Output<String> managedNetworkPeeringPolicyName;
@@ -50,7 +47,6 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
 
     /**
      * Gets or sets the properties of a Managed Network Policy
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
@@ -61,7 +57,6 @@ public final class ManagedNetworkPeeringPolicyArgs extends io.pulumi.resources.R
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

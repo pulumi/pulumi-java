@@ -14,7 +14,6 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
@@ -25,7 +24,6 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetIntegrationAccountSessionArgs extends io.pulumi.resources.
 
     /**
      * The integration account session name.
-     * 
      */
     @Import(name="sessionName", required=true)
       private final String sessionName;

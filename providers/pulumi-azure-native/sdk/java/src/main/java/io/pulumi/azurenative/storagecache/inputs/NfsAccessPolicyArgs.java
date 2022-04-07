@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A set of rules describing access policies applied to NFSv3 clients of the cache.
- * 
  */
 public final class NfsAccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NfsAccessPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The set of rules describing client accesses allowed under this policy.
-     * 
      */
     @Import(name="accessRules", required=true)
       private final Output<List<NfsAccessRuleArgs>> accessRules;
@@ -32,7 +30,6 @@ public final class NfsAccessPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name identifying this policy. Access Policy names are not case sensitive.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

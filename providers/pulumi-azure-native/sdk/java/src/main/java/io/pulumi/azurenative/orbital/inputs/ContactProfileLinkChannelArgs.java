@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contact Profile Link Channel
- * 
  */
 public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
 
     /**
      * Bandwidth in MHz
-     * 
      */
     @Import(name="bandwidthMHz", required=true)
       private final Output<Double> bandwidthMHz;
@@ -33,7 +31,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
 
     /**
      * Center Frequency in MHz
-     * 
      */
     @Import(name="centerFrequencyMHz", required=true)
       private final Output<Double> centerFrequencyMHz;
@@ -44,7 +41,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
 
     /**
      * Configuration for decoding
-     * 
      */
     @Import(name="decodingConfiguration")
       private final @Nullable Output<String> decodingConfiguration;
@@ -55,7 +51,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
 
     /**
      * Configuration for demodulation
-     * 
      */
     @Import(name="demodulationConfiguration")
       private final @Nullable Output<String> demodulationConfiguration;
@@ -66,7 +61,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
 
     /**
      * Configuration for encoding
-     * 
      */
     @Import(name="encodingConfiguration")
       private final @Nullable Output<String> encodingConfiguration;
@@ -77,7 +71,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
 
     /**
      * Customer End point to store/retrieve data during a contact.
-     * 
      */
     @Import(name="endPoint", required=true)
       private final Output<EndPointArgs> endPoint;
@@ -88,7 +81,6 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
 
     /**
      * Configuration for modulation
-     * 
      */
     @Import(name="modulationConfiguration")
       private final @Nullable Output<String> modulationConfiguration;

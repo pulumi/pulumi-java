@@ -19,7 +19,111 @@ import javax.annotation.Nullable;
  * Schema for Application properties.
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Application_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var application = new AzureNative.DesktopVirtualization.Application("application", new AzureNative.DesktopVirtualization.ApplicationArgs
+ *         {
+ *             ApplicationGroupName = "applicationGroup1",
+ *             ApplicationName = "application1",
+ *             CommandLineArguments = "arguments",
+ *             CommandLineSetting = "Allow",
+ *             Description = "des1",
+ *             FilePath = "path",
+ *             FriendlyName = "friendly",
+ *             IconIndex = 1,
+ *             IconPath = "icon",
+ *             ResourceGroupName = "resourceGroup1",
+ *             ShowInPortal = true,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	desktopvirtualization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/desktopvirtualization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := desktopvirtualization.NewApplication(ctx, "application", &desktopvirtualization.ApplicationArgs{
+ * 			ApplicationGroupName: pulumi.String("applicationGroup1"),
+ * 			ApplicationName:      pulumi.String("application1"),
+ * 			CommandLineArguments: pulumi.String("arguments"),
+ * 			CommandLineSetting:   pulumi.String("Allow"),
+ * 			Description:          pulumi.String("des1"),
+ * 			FilePath:             pulumi.String("path"),
+ * 			FriendlyName:         pulumi.String("friendly"),
+ * 			IconIndex:            pulumi.Int(1),
+ * 			IconPath:             pulumi.String("icon"),
+ * 			ResourceGroupName:    pulumi.String("resourceGroup1"),
+ * 			ShowInPortal:         pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const application = new azure_native.desktopvirtualization.Application("application", {
+ *     applicationGroupName: "applicationGroup1",
+ *     applicationName: "application1",
+ *     commandLineArguments: "arguments",
+ *     commandLineSetting: "Allow",
+ *     description: "des1",
+ *     filePath: "path",
+ *     friendlyName: "friendly",
+ *     iconIndex: 1,
+ *     iconPath: "icon",
+ *     resourceGroupName: "resourceGroup1",
+ *     showInPortal: true,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * application = azure_native.desktopvirtualization.Application("application",
+ *     application_group_name="applicationGroup1",
+ *     application_name="application1",
+ *     command_line_arguments="arguments",
+ *     command_line_setting="Allow",
+ *     description="des1",
+ *     file_path="path",
+ *     friendly_name="friendly",
+ *     icon_index=1,
+ *     icon_path="icon",
+ *     resource_group_name="resourceGroup1",
+ *     show_in_portal=True)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,224 +138,192 @@ import javax.annotation.Nullable;
 public class Application extends io.pulumi.resources.CustomResource {
     /**
      * Resource Type of Application.
-     * 
      */
     @Export(name="applicationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> applicationType;
 
     /**
      * @return Resource Type of Application.
-     * 
      */
     public Output</* @Nullable */ String> getApplicationType() {
         return this.applicationType;
     }
     /**
      * Command Line Arguments for Application.
-     * 
      */
     @Export(name="commandLineArguments", type=String.class, parameters={})
     private Output</* @Nullable */ String> commandLineArguments;
 
     /**
      * @return Command Line Arguments for Application.
-     * 
      */
     public Output</* @Nullable */ String> getCommandLineArguments() {
         return this.commandLineArguments;
     }
     /**
      * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
-     * 
      */
     @Export(name="commandLineSetting", type=String.class, parameters={})
     private Output<String> commandLineSetting;
 
     /**
      * @return Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
-     * 
      */
     public Output<String> getCommandLineSetting() {
         return this.commandLineSetting;
     }
     /**
      * Description of Application.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of Application.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Specifies a path for the executable file for the application.
-     * 
      */
     @Export(name="filePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> filePath;
 
     /**
      * @return Specifies a path for the executable file for the application.
-     * 
      */
     public Output</* @Nullable */ String> getFilePath() {
         return this.filePath;
     }
     /**
      * Friendly name of Application.
-     * 
      */
     @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
      * @return Friendly name of Application.
-     * 
      */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * the icon a 64 bit string as a byte array.
-     * 
      */
     @Export(name="iconContent", type=String.class, parameters={})
     private Output<String> iconContent;
 
     /**
      * @return the icon a 64 bit string as a byte array.
-     * 
      */
     public Output<String> getIconContent() {
         return this.iconContent;
     }
     /**
      * Hash of the icon.
-     * 
      */
     @Export(name="iconHash", type=String.class, parameters={})
     private Output<String> iconHash;
 
     /**
      * @return Hash of the icon.
-     * 
      */
     public Output<String> getIconHash() {
         return this.iconHash;
     }
     /**
      * Index of the icon.
-     * 
      */
     @Export(name="iconIndex", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> iconIndex;
 
     /**
      * @return Index of the icon.
-     * 
      */
     public Output</* @Nullable */ Integer> getIconIndex() {
         return this.iconIndex;
     }
     /**
      * Path to icon.
-     * 
      */
     @Export(name="iconPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> iconPath;
 
     /**
      * @return Path to icon.
-     * 
      */
     public Output</* @Nullable */ String> getIconPath() {
         return this.iconPath;
     }
     /**
      * Specifies the package application Id for MSIX applications
-     * 
      */
     @Export(name="msixPackageApplicationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> msixPackageApplicationId;
 
     /**
      * @return Specifies the package application Id for MSIX applications
-     * 
      */
     public Output</* @Nullable */ String> getMsixPackageApplicationId() {
         return this.msixPackageApplicationId;
     }
     /**
      * Specifies the package family name for MSIX applications
-     * 
      */
     @Export(name="msixPackageFamilyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> msixPackageFamilyName;
 
     /**
      * @return Specifies the package family name for MSIX applications
-     * 
      */
     public Output</* @Nullable */ String> getMsixPackageFamilyName() {
         return this.msixPackageFamilyName;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * ObjectId of Application. (internal use)
-     * 
      */
     @Export(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
     /**
      * @return ObjectId of Application. (internal use)
-     * 
      */
     public Output<String> getObjectId() {
         return this.objectId;
     }
     /**
      * Specifies whether to show the RemoteApp program in the RD Web Access server.
-     * 
      */
     @Export(name="showInPortal", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> showInPortal;
 
     /**
      * @return Specifies whether to show the RemoteApp program in the RD Web Access server.
-     * 
      */
     public Output</* @Nullable */ Boolean> getShowInPortal() {
         return this.showInPortal;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

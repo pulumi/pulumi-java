@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class GetStorageResult {
     /**
      * Fully qualified resource Id for the resource.
-     * 
      */
     private final String id;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * Properties of the storage resource payload.
-     * 
      */
     private final StorageAccountResponse properties;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -53,35 +48,30 @@ public final class GetStorageResult {
 
     /**
      * Fully qualified resource Id for the resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the storage resource payload.
-     * 
     */
     public StorageAccountResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

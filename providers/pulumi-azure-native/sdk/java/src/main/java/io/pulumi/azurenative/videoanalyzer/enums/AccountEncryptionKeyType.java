@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The type of key used to encrypt the Account Key.
-     * 
      */
     @EnumType
     public enum AccountEncryptionKeyType {
         /**
          * The Account Key is encrypted with a System Key.
-         * 
          */
         SystemKey("SystemKey"),
         /**
          * The Account Key is encrypted with a Customer Key.
-         * 
          */
         CustomerKey("CustomerKey");
 

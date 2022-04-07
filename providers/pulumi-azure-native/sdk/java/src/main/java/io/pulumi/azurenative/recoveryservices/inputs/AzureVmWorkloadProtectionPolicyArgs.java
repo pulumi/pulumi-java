@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure VM (Mercury) workload-specific backup policy.
- * 
  */
 public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'AzureWorkload'.
-     * 
      */
     @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
@@ -39,7 +37,6 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
 
     /**
      * Fix the policy inconsistency
-     * 
      */
     @Import(name="makePolicyConsistent")
       private final @Nullable Output<Boolean> makePolicyConsistent;
@@ -50,7 +47,6 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
 
     /**
      * Number of items associated with this policy.
-     * 
      */
     @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
@@ -61,7 +57,6 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
 
     /**
      * Common settings for the backup management
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<SettingsArgs> settings;
@@ -72,7 +67,6 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
 
     /**
      * List of sub-protection policies which includes schedule and retention
-     * 
      */
     @Import(name="subProtectionPolicy")
       private final @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
@@ -83,7 +77,6 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
 
     /**
      * Type of workload for the backup management
-     * 
      */
     @Import(name="workLoadType")
       private final @Nullable Output<Either<String,WorkloadType>> workLoadType;

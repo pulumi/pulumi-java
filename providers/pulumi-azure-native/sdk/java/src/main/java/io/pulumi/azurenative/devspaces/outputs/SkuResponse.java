@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class SkuResponse {
     /**
      * The name of the SKU for Azure Dev Spaces Controller.
-     * 
      */
     private final String name;
     /**
      * The tier of the SKU for Azure Dev Spaces Controller.
-     * 
      */
     private final @Nullable String tier;
 
@@ -32,14 +30,12 @@ public final class SkuResponse {
 
     /**
      * The name of the SKU for Azure Dev Spaces Controller.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The tier of the SKU for Azure Dev Spaces Controller.
-     * 
     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);

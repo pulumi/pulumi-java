@@ -13,33 +13,28 @@ import javax.annotation.Nullable;
 public final class AzureActiveDirectoryRegistrationResponse {
     /**
      * The Client ID of this relying party application, known as the client_id.
-     * This setting is required for enabling OpenID Connection authentication with Azure Active Directory or
+     * This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
      * other 3rd party OpenID Connect providers.
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
-     * 
      */
     private final @Nullable String clientId;
     /**
      * An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
      * a replacement for the Client Secret Certificate Thumbprint. It is also optional.
-     * 
      */
     private final @Nullable String clientSecretCertificateIssuer;
     /**
      * An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
      * a replacement for the Client Secret Certificate Thumbprint. It is also optional.
-     * 
      */
     private final @Nullable String clientSecretCertificateSubjectAlternativeName;
     /**
      * An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
      * a replacement for the Client Secret. It is also optional.
-     * 
      */
     private final @Nullable String clientSecretCertificateThumbprint;
     /**
      * The app setting name that contains the client secret of the relying party application.
-     * 
      */
     private final @Nullable String clientSecretSettingName;
     /**
@@ -47,7 +42,6 @@ public final class AzureActiveDirectoryRegistrationResponse {
      * When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/.
      * This URI is a case-sensitive identifier for the token issuer.
      * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
-     * 
      */
     private final @Nullable String openIdIssuer;
 
@@ -69,10 +63,9 @@ public final class AzureActiveDirectoryRegistrationResponse {
 
     /**
      * The Client ID of this relying party application, known as the client_id.
-     * This setting is required for enabling OpenID Connection authentication with Azure Active Directory or
+     * This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
      * other 3rd party OpenID Connect providers.
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
-     * 
     */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
@@ -80,7 +73,6 @@ public final class AzureActiveDirectoryRegistrationResponse {
     /**
      * An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes. This property acts as
      * a replacement for the Client Secret Certificate Thumbprint. It is also optional.
-     * 
     */
     public Optional<String> getClientSecretCertificateIssuer() {
         return Optional.ofNullable(this.clientSecretCertificateIssuer);
@@ -88,7 +80,6 @@ public final class AzureActiveDirectoryRegistrationResponse {
     /**
      * An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes. This property acts as
      * a replacement for the Client Secret Certificate Thumbprint. It is also optional.
-     * 
     */
     public Optional<String> getClientSecretCertificateSubjectAlternativeName() {
         return Optional.ofNullable(this.clientSecretCertificateSubjectAlternativeName);
@@ -96,14 +87,12 @@ public final class AzureActiveDirectoryRegistrationResponse {
     /**
      * An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
      * a replacement for the Client Secret. It is also optional.
-     * 
     */
     public Optional<String> getClientSecretCertificateThumbprint() {
         return Optional.ofNullable(this.clientSecretCertificateThumbprint);
     }
     /**
      * The app setting name that contains the client secret of the relying party application.
-     * 
     */
     public Optional<String> getClientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
@@ -113,7 +102,6 @@ public final class AzureActiveDirectoryRegistrationResponse {
      * When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/.
      * This URI is a case-sensitive identifier for the token issuer.
      * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
-     * 
     */
     public Optional<String> getOpenIdIssuer() {
         return Optional.ofNullable(this.openIdIssuer);

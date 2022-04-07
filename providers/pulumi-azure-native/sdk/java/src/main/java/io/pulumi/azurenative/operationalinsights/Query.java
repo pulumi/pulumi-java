@@ -21,7 +21,172 @@ import javax.annotation.Nullable;
  * A Log Analytics QueryPack-Query definition.
  * API Version: 2019-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### QueryPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var query = new AzureNative.OperationalInsights.Query("query", new AzureNative.OperationalInsights.QueryArgs
+ *         {
+ *             Body = @"let newExceptionsTimeRange = 1d;
+ * let timeRangeToCheckBefore = 7d;
+ * exceptions
+ * | where timestamp < ago(timeRangeToCheckBefore)
+ * | summarize count() by problemId
+ * | join kind= rightanti (
+ * exceptions
+ * | where timestamp >= ago(newExceptionsTimeRange)
+ * | extend stack = tostring(details[0].rawStack)
+ * | summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+ * ) on problemId 
+ * | order by  count_ desc
+ * ",
+ *             Description = "my description",
+ *             DisplayName = "Exceptions - New in the last 24 hours",
+ *             Id = "a449f8af-8e64-4b3a-9b16-5a7165ff98c4",
+ *             QueryPackName = "my-querypack",
+ *             Related = new AzureNative.OperationalInsights.Inputs.LogAnalyticsQueryPackQueryPropertiesRelatedArgs
+ *             {
+ *                 Categories = 
+ *                 {
+ *                     "analytics",
+ *                 },
+ *             },
+ *             ResourceGroupName = "my-resource-group",
+ *             Tags = 
+ *             {
+ *                 { "my-label", 
+ *                 {
+ *                     "label1",
+ *                 } },
+ *                 { "my-other-label", 
+ *                 {
+ *                     "label2",
+ *                 } },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationalinsights.NewQuery(ctx, "query", &operationalinsights.QueryArgs{
+ * 			Body:          pulumi.String("let newExceptionsTimeRange = 1d;\nlet timeRangeToCheckBefore = 7d;\nexceptions\n| where timestamp < ago(timeRangeToCheckBefore)\n| summarize count() by problemId\n| join kind= rightanti (\nexceptions\n| where timestamp >= ago(newExceptionsTimeRange)\n| extend stack = tostring(details[0].rawStack)\n| summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  \n) on problemId \n| order by  count_ desc\n"),
+ * 			Description:   pulumi.String("my description"),
+ * 			DisplayName:   pulumi.String("Exceptions - New in the last 24 hours"),
+ * 			Id:            pulumi.String("a449f8af-8e64-4b3a-9b16-5a7165ff98c4"),
+ * 			QueryPackName: pulumi.String("my-querypack"),
+ * 			Related: &operationalinsights.LogAnalyticsQueryPackQueryPropertiesRelatedArgs{
+ * 				Categories: pulumi.StringArray{
+ * 					pulumi.String("analytics"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			Tags: pulumi.StringArrayMap{
+ * 				"my-label": pulumi.StringArray{
+ * 					pulumi.String("label1"),
+ * 				},
+ * 				"my-other-label": pulumi.StringArray{
+ * 					pulumi.String("label2"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const query = new azure_native.operationalinsights.Query("query", {
+ *     body: `let newExceptionsTimeRange = 1d;
+ * let timeRangeToCheckBefore = 7d;
+ * exceptions
+ * | where timestamp < ago(timeRangeToCheckBefore)
+ * | summarize count() by problemId
+ * | join kind= rightanti (
+ * exceptions
+ * | where timestamp >= ago(newExceptionsTimeRange)
+ * | extend stack = tostring(details[0].rawStack)
+ * | summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+ * ) on problemId 
+ * | order by  count_ desc
+ * `,
+ *     description: "my description",
+ *     displayName: "Exceptions - New in the last 24 hours",
+ *     id: "a449f8af-8e64-4b3a-9b16-5a7165ff98c4",
+ *     queryPackName: "my-querypack",
+ *     related: {
+ *         categories: ["analytics"],
+ *     },
+ *     resourceGroupName: "my-resource-group",
+ *     tags: {
+ *         "my-label": ["label1"],
+ *         "my-other-label": ["label2"],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * query = azure_native.operationalinsights.Query("query",
+ *     body="""let newExceptionsTimeRange = 1d;
+ * let timeRangeToCheckBefore = 7d;
+ * exceptions
+ * | where timestamp < ago(timeRangeToCheckBefore)
+ * | summarize count() by problemId
+ * | join kind= rightanti (
+ * exceptions
+ * | where timestamp >= ago(newExceptionsTimeRange)
+ * | extend stack = tostring(details[0].rawStack)
+ * | summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+ * ) on problemId 
+ * | order by  count_ desc
+ * """,
+ *     description="my description",
+ *     display_name="Exceptions - New in the last 24 hours",
+ *     id="a449f8af-8e64-4b3a-9b16-5a7165ff98c4",
+ *     query_pack_name="my-querypack",
+ *     related=azure_native.operationalinsights.LogAnalyticsQueryPackQueryPropertiesRelatedArgs(
+ *         categories=["analytics"],
+ *     ),
+ *     resource_group_name="my-resource-group",
+ *     tags={
+ *         "my-label": ["label1"],
+ *         "my-other-label": ["label2"],
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,168 +201,144 @@ import javax.annotation.Nullable;
 public class Query extends io.pulumi.resources.CustomResource {
     /**
      * Object Id of user creating the query.
-     * 
      */
     @Export(name="author", type=String.class, parameters={})
     private Output<String> author;
 
     /**
      * @return Object Id of user creating the query.
-     * 
      */
     public Output<String> getAuthor() {
         return this.author;
     }
     /**
      * Body of the query.
-     * 
      */
     @Export(name="body", type=String.class, parameters={})
     private Output<String> body;
 
     /**
      * @return Body of the query.
-     * 
      */
     public Output<String> getBody() {
         return this.body;
     }
     /**
      * Description of the query.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the query.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Unique display name for your query within the Query Pack.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Unique display name for your query within the Query Pack.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional properties that can be set for the query.
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return Additional properties that can be set for the query.
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * The related metadata items for the function.
-     * 
      */
     @Export(name="related", type=LogAnalyticsQueryPackQueryPropertiesResponseRelated.class, parameters={})
     private Output</* @Nullable */ LogAnalyticsQueryPackQueryPropertiesResponseRelated> related;
 
     /**
      * @return The related metadata items for the function.
-     * 
      */
     public Output</* @Nullable */ LogAnalyticsQueryPackQueryPropertiesResponseRelated> getRelated() {
         return this.related;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Tags associated with the query.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> tags;
 
     /**
      * @return Tags associated with the query.
-     * 
      */
     public Output</* @Nullable */ Map<String,List<String>>> getTags() {
         return this.tags;
     }
     /**
      * Creation Date for the Log Analytics Query, in ISO 8601 format.
-     * 
      */
     @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
      * @return Creation Date for the Log Analytics Query, in ISO 8601 format.
-     * 
      */
     public Output<String> getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * Last modified date of the Log Analytics Query, in ISO 8601 format.
-     * 
      */
     @Export(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
     /**
      * @return Last modified date of the Log Analytics Query, in ISO 8601 format.
-     * 
      */
     public Output<String> getTimeModified() {
         return this.timeModified;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

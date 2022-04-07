@@ -21,7 +21,6 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -32,7 +31,6 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-     * 
      */
     @Import(name="encryptionScopeName")
       private final @Nullable Output<String> encryptionScopeName;
@@ -43,7 +41,6 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
-     * 
      */
     @Import(name="keyVaultProperties")
       private final @Nullable Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties;
@@ -54,7 +51,6 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
-     * 
      */
     @Import(name="requireInfrastructureEncryption")
       private final @Nullable Output<Boolean> requireInfrastructureEncryption;
@@ -65,7 +61,6 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<Either<String,EncryptionScopeSource>> source;
@@ -87,7 +81,6 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,EncryptionScopeState>> state;

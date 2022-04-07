@@ -14,7 +14,6 @@ public final class GetComponentLinkedStorageAccountArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetComponentLinkedStorageAccountArgs extends io.pulumi.resour
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;
@@ -36,7 +34,6 @@ public final class GetComponentLinkedStorageAccountArgs extends io.pulumi.resour
 
     /**
      * The type of the Application Insights component data source for the linked storage account.
-     * 
      */
     @Import(name="storageType", required=true)
       private final String storageType;

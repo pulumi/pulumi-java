@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * AAD Vpn authentication type related parameters.
- * 
  */
 public final class AadAuthenticationParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
 
     /**
      * AAD Vpn authentication parameter AAD audience.
-     * 
      */
     @Import(name="aadAudience")
       private final @Nullable String aadAudience;
@@ -31,7 +29,6 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
 
     /**
      * AAD Vpn authentication parameter AAD issuer.
-     * 
      */
     @Import(name="aadIssuer")
       private final @Nullable String aadIssuer;
@@ -42,7 +39,6 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
 
     /**
      * AAD Vpn authentication parameter AAD tenant.
-     * 
      */
     @Import(name="aadTenant")
       private final @Nullable String aadTenant;

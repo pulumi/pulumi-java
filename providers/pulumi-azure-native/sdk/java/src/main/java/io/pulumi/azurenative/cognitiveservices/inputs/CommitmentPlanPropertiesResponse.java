@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of Cognitive Services account commitment plan.
- * 
  */
 public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * AutoRenew commitment plan.
-     * 
      */
     @Import(name="autoRenew")
       private final @Nullable Boolean autoRenew;
@@ -33,7 +31,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Cognitive Services account commitment period.
-     * 
      */
     @Import(name="current")
       private final @Nullable CommitmentPeriodResponse current;
@@ -44,7 +41,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Account hosting model.
-     * 
      */
     @Import(name="hostingModel")
       private final @Nullable String hostingModel;
@@ -55,7 +51,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Cognitive Services account commitment period.
-     * 
      */
     @Import(name="last", required=true)
       private final CommitmentPeriodResponse last;
@@ -66,7 +61,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Cognitive Services account commitment period.
-     * 
      */
     @Import(name="next")
       private final @Nullable CommitmentPeriodResponse next;
@@ -77,7 +71,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Commitment plan type.
-     * 
      */
     @Import(name="planType")
       private final @Nullable String planType;

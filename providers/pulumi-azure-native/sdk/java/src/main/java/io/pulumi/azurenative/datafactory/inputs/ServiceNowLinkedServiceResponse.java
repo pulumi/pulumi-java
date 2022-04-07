@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * ServiceNow server linked service.
- * 
  */
 public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The authentication type to use.
-     * 
      */
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
@@ -50,7 +47,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The client id for OAuth2 authentication.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Object clientId;
@@ -61,7 +57,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The client secret for OAuth2 authentication.
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
@@ -72,7 +67,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -83,7 +77,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -94,7 +87,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -105,7 +97,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The endpoint of the ServiceNow server. (i.e. <instance>.service-now.com)
-     * 
      */
     @Import(name="endpoint", required=true)
       private final Object endpoint;
@@ -116,7 +107,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -127,7 +117,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The password corresponding to the user name for Basic and OAuth2 authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -139,7 +128,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
     /**
      * Type of linked service.
      * Expected value is 'ServiceNow'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -150,7 +138,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     * 
      */
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Object useEncryptedEndpoints;
@@ -161,7 +148,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="useHostVerification")
       private final @Nullable Object useHostVerification;
@@ -172,7 +158,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="usePeerVerification")
       private final @Nullable Object usePeerVerification;
@@ -183,7 +168,6 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The user name used to connect to the ServiceNow server for Basic and OAuth2 authentication.
-     * 
      */
     @Import(name="username")
       private final @Nullable Object username;

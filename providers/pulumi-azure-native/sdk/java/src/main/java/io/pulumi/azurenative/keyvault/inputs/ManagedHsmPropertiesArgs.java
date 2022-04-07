@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the managed HSM Pool
- * 
  */
 public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable Output<CreateMode> createMode;
@@ -38,7 +36,6 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
-     * 
      */
     @Import(name="enablePurgeProtection")
       private final @Nullable Output<Boolean> enablePurgeProtection;
@@ -49,7 +46,6 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
-     * 
      */
     @Import(name="enableSoftDelete")
       private final @Nullable Output<Boolean> enableSoftDelete;
@@ -60,7 +56,6 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Array of initial administrators object ids for this managed hsm pool.
-     * 
      */
     @Import(name="initialAdminObjectIds")
       private final @Nullable Output<List<String>> initialAdminObjectIds;
@@ -71,7 +66,6 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Rules governing the accessibility of the key vault from specific network locations.
-     * 
      */
     @Import(name="networkAcls")
       private final @Nullable Output<MHSMNetworkRuleSetArgs> networkAcls;
@@ -82,7 +76,6 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -93,7 +86,6 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * softDelete data retention days. It accepts >=7 and <=90.
-     * 
      */
     @Import(name="softDeleteRetentionInDays")
       private final @Nullable Output<Integer> softDeleteRetentionInDays;
@@ -104,7 +96,6 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;

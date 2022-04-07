@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * AzureStorage backup policy.
- * 
  */
 public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'AzureStorage'.
-     * 
      */
     @Import(name="backupManagementType", required=true)
       private final String backupManagementType;
@@ -40,7 +38,6 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
 
     /**
      * Number of items associated with this policy.
-     * 
      */
     @Import(name="protectedItemsCount")
       private final @Nullable Integer protectedItemsCount;
@@ -51,7 +48,6 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
 
     /**
      * Retention policy with the details on backup copy retention ranges.
-     * 
      */
     @Import(name="retentionPolicy")
       private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
@@ -62,7 +58,6 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
 
     /**
      * Backup schedule specified as part of backup policy.
-     * 
      */
     @Import(name="schedulePolicy")
       private final @Nullable Object schedulePolicy;
@@ -73,7 +68,6 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
 
     /**
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable String timeZone;
@@ -84,7 +78,6 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
 
     /**
      * Type of workload for the backup management
-     * 
      */
     @Import(name="workLoadType")
       private final @Nullable String workLoadType;

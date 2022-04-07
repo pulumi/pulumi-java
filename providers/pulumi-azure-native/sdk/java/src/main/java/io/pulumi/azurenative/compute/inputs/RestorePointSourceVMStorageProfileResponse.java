@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the storage profile.
- * 
  */
 public final class RestorePointSourceVMStorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RestorePointSourceVMStorageProfileResponse extends io.pulumi.
 
     /**
      * Gets the data disks of the VM captured at the time of the restore point creation.
-     * 
      */
     @Import(name="dataDisks")
       private final @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks;
@@ -33,7 +31,6 @@ public final class RestorePointSourceVMStorageProfileResponse extends io.pulumi.
 
     /**
      * Gets the OS disk of the VM captured at the time of the restore point creation.
-     * 
      */
     @Import(name="osDisk")
       private final @Nullable RestorePointSourceVMOSDiskResponse osDisk;

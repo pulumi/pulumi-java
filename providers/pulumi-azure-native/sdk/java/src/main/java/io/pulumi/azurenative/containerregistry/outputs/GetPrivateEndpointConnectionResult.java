@@ -16,37 +16,30 @@ import javax.annotation.Nullable;
 public final class GetPrivateEndpointConnectionResult {
     /**
      * The resource ID.
-     * 
      */
     private final String id;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * The resource of private endpoint.
-     * 
      */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
     /**
      * The provisioning state of private endpoint connection resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -70,49 +63,42 @@ public final class GetPrivateEndpointConnectionResult {
 
     /**
      * The resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The resource of private endpoint.
-     * 
     */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
     */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * The provisioning state of private endpoint connection resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

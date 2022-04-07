@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schedules applicable to a virtual machine. The schedules may have been defined on a VM or on lab level.
- * 
  */
 public final class ApplicableScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -33,7 +31,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The auto-shutdown schedule, if one has been set at the lab or lab resource level.
-     * 
      */
     @Import(name="labVmsShutdown")
       private final @Nullable ScheduleResponse labVmsShutdown;
@@ -44,7 +41,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The auto-startup schedule, if one has been set at the lab or lab resource level.
-     * 
      */
     @Import(name="labVmsStartup")
       private final @Nullable ScheduleResponse labVmsStartup;
@@ -55,7 +51,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -66,7 +61,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -77,7 +71,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -88,7 +81,6 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Routing Configuration indicating the associated and propagated route tables for this connection.
- * 
  */
 public final class RoutingConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RoutingConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * The resource id RouteTable associated with this RoutingConfiguration.
-     * 
      */
     @Import(name="associatedRouteTable")
       private final @Nullable SubResourceResponse associatedRouteTable;
@@ -33,7 +31,6 @@ public final class RoutingConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * The list of RouteTables to advertise the routes to.
-     * 
      */
     @Import(name="propagatedRouteTables")
       private final @Nullable PropagatedRouteTableResponse propagatedRouteTables;
@@ -44,7 +41,6 @@ public final class RoutingConfigurationResponse extends io.pulumi.resources.Invo
 
     /**
      * List of routes that control routing from VirtualHub into a virtual network connection.
-     * 
      */
     @Import(name="vnetRoutes")
       private final @Nullable VnetRouteResponse vnetRoutes;

@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class DataStoreResponse {
     /**
      * The capacity of data store in GBs.
-     * 
      */
     private final @Nullable String capacity;
     /**
      * The free space of data store in GBs.
-     * 
      */
     private final @Nullable String freeSpace;
     /**
      * The symbolic name of data store.
-     * 
      */
     private final @Nullable String symbolicName;
     /**
      * The type of data store.
-     * 
      */
     private final @Nullable String type;
     /**
      * The uuid of data store.
-     * 
      */
     private final @Nullable String uuid;
 
@@ -53,35 +48,30 @@ public final class DataStoreResponse {
 
     /**
      * The capacity of data store in GBs.
-     * 
     */
     public Optional<String> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The free space of data store in GBs.
-     * 
     */
     public Optional<String> getFreeSpace() {
         return Optional.ofNullable(this.freeSpace);
     }
     /**
      * The symbolic name of data store.
-     * 
     */
     public Optional<String> getSymbolicName() {
         return Optional.ofNullable(this.symbolicName);
     }
     /**
      * The type of data store.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The uuid of data store.
-     * 
     */
     public Optional<String> getUuid() {
         return Optional.ofNullable(this.uuid);

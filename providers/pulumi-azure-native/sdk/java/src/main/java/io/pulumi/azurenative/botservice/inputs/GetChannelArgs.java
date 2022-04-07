@@ -14,7 +14,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Bot resource.
-     * 
      */
     @Import(name="channelName", required=true)
       private final String channelName;
@@ -25,7 +24,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Bot resource group in the user subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Bot resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

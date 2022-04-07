@@ -18,7 +18,100 @@ import javax.annotation.Nullable;
  * Solution REST Resource.
  * API Version: 2018-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Solutions_Put
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var solution = new AzureNative.Migrate.Solution("solution", new AzureNative.Migrate.SolutionArgs
+ *         {
+ *             MigrateProjectName = "project01",
+ *             Properties = new AzureNative.Migrate.Inputs.SolutionPropertiesArgs
+ *             {
+ *                 Goal = "Databases",
+ *                 Purpose = "Assessment",
+ *                 Tool = "DataMigrationAssistant",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             SolutionName = "dbsolution",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := migrate.NewSolution(ctx, "solution", &migrate.SolutionArgs{
+ * 			MigrateProjectName: pulumi.String("project01"),
+ * 			Properties: &migrate.SolutionPropertiesArgs{
+ * 				Goal:    pulumi.String("Databases"),
+ * 				Purpose: pulumi.String("Assessment"),
+ * 				Tool:    pulumi.String("DataMigrationAssistant"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			SolutionName:      pulumi.String("dbsolution"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const solution = new azure_native.migrate.Solution("solution", {
+ *     migrateProjectName: "project01",
+ *     properties: {
+ *         goal: "Databases",
+ *         purpose: "Assessment",
+ *         tool: "DataMigrationAssistant",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     solutionName: "dbsolution",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * solution = azure_native.migrate.Solution("solution",
+ *     migrate_project_name="project01",
+ *     properties=azure_native.migrate.SolutionPropertiesArgs(
+ *         goal="Databases",
+ *         purpose="Assessment",
+ *         tool="DataMigrationAssistant",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     solution_name="dbsolution")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +126,48 @@ import javax.annotation.Nullable;
 public class Solution extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the ETAG for optimistic concurrency control.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Gets or sets the ETAG for optimistic concurrency control.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Gets the name of this REST resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the name of this REST resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the properties of the solution.
-     * 
      */
     @Export(name="properties", type=SolutionPropertiesResponse.class, parameters={})
     private Output<SolutionPropertiesResponse> properties;
 
     /**
      * @return Gets or sets the properties of the solution.
-     * 
      */
     public Output<SolutionPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Gets the type of this REST resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets the type of this REST resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

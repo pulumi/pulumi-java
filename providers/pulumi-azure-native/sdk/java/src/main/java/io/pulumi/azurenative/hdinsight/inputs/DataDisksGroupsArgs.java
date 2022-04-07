@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The data disks groups for the role.
- * 
  */
 public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The number of disks per node.
-     * 
      */
     @Import(name="disksPerNode")
       private final @Nullable Output<Integer> disksPerNode;

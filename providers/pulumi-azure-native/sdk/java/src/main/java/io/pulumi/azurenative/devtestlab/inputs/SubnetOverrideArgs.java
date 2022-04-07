@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Property overrides on a subnet of a virtual network.
- * 
  */
 public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name given to the subnet within the lab.
-     * 
      */
     @Import(name="labSubnetName")
       private final @Nullable Output<String> labSubnetName;
@@ -34,7 +32,6 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource ID of the subnet.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -45,7 +42,6 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties that virtual machines on this subnet will share.
-     * 
      */
     @Import(name="sharedPublicIpAddressConfiguration")
       private final @Nullable Output<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
@@ -56,7 +52,6 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
-     * 
      */
     @Import(name="useInVmCreationPermission")
       private final @Nullable Output<Either<String,UsagePermissionType>> useInVmCreationPermission;
@@ -67,7 +62,6 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
-     * 
      */
     @Import(name="usePublicIpAddressPermission")
       private final @Nullable Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission;
@@ -78,7 +72,6 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The virtual network pool associated with this subnet.
-     * 
      */
     @Import(name="virtualNetworkPoolName")
       private final @Nullable Output<String> virtualNetworkPoolName;

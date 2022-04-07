@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Web activity authentication properties.
- * 
  */
 public final class WebActivityAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
 
     /**
      * The credential reference containing authentication information.
-     * 
      */
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
@@ -36,7 +34,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
 
     /**
      * Password for the PFX file or basic authentication / Secret when used for ServicePrincipal
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -47,7 +44,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
 
     /**
      * Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal
-     * 
      */
     @Import(name="pfx")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
@@ -58,7 +54,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
 
     /**
      * Resource for which Azure Auth token will be requested when using MSI Authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="resource")
       private final @Nullable Output<Object> resource;
@@ -69,7 +64,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
 
     /**
      * Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal)
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -80,7 +74,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
 
     /**
      * TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="userTenant")
       private final @Nullable Output<Object> userTenant;
@@ -91,7 +84,6 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
 
     /**
      * Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<Object> username;

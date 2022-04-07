@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schedule for a given suppression configuration.
- * 
  */
 public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
 
     /**
      * End date for suppression
-     * 
      */
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
@@ -33,7 +31,6 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
 
     /**
      * End date for suppression
-     * 
      */
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
@@ -44,7 +41,6 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Specifies the values for recurrence pattern
-     * 
      */
     @Import(name="recurrenceValues")
       private final @Nullable Output<List<Integer>> recurrenceValues;
@@ -55,7 +51,6 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Start date for suppression
-     * 
      */
     @Import(name="startDate")
       private final @Nullable Output<String> startDate;
@@ -66,7 +61,6 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Start time for suppression
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;

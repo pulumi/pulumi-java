@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Contains all the secrets of a Disk.
- * 
  */
 public final class DiskSecretResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DiskSecretResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Bit Locker key of the disk which can be used to unlock the disk to copy data.
-     * 
      */
     @Import(name="bitLockerKey", required=true)
       private final String bitLockerKey;
@@ -29,7 +27,6 @@ public final class DiskSecretResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Serial number of the assigned disk.
-     * 
      */
     @Import(name="diskSerialNumber", required=true)
       private final String diskSerialNumber;

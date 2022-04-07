@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies whether template expressions are evaluated within the scope of the parent template or nested template.
- * 
  */
 public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
 
     /**
      * The scope to be used for evaluation of parameters, variables and functions in a nested template.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope;

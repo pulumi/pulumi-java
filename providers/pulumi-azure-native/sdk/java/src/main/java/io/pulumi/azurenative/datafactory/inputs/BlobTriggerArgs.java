@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger that runs every time the selected Blob container changes.
- * 
  */
 public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of tags that can be used for describing the trigger.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -36,7 +34,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Trigger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -47,7 +44,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path of the container/folder that will trigger the pipeline.
-     * 
      */
     @Import(name="folderPath", required=true)
       private final Output<String> folderPath;
@@ -58,7 +54,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Storage linked service reference.
-     * 
      */
     @Import(name="linkedService", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedService;
@@ -69,7 +64,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The max number of parallel files to handle when it is triggered.
-     * 
      */
     @Import(name="maxConcurrency", required=true)
       private final Output<Integer> maxConcurrency;
@@ -80,7 +74,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Pipelines that need to be started.
-     * 
      */
     @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
@@ -92,7 +85,6 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Trigger type.
      * Expected value is 'BlobTrigger'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -21,7 +21,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The backup policy name.
-     * 
      */
     @Import(name="backupPolicyName", required=true)
       private final Output<String> backupPolicyName;
@@ -32,7 +31,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The backup schedule name.
-     * 
      */
     @Import(name="backupScheduleName")
       private final @Nullable Output<String> backupScheduleName;
@@ -43,7 +41,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of backup which needs to be taken.
-     * 
      */
     @Import(name="backupType", required=true)
       private final Output<BackupType> backupType;
@@ -54,7 +51,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -65,7 +61,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
@@ -76,7 +71,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
@@ -87,7 +81,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -98,7 +91,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of backups to be retained.
-     * 
      */
     @Import(name="retentionCount", required=true)
       private final Output<Double> retentionCount;
@@ -109,7 +101,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The schedule recurrence.
-     * 
      */
     @Import(name="scheduleRecurrence", required=true)
       private final Output<ScheduleRecurrenceArgs> scheduleRecurrence;
@@ -120,7 +111,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The schedule status.
-     * 
      */
     @Import(name="scheduleStatus", required=true)
       private final Output<ScheduleStatus> scheduleStatus;
@@ -131,7 +121,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The start time of the schedule.
-     * 
      */
     @Import(name="startTime", required=true)
       private final Output<String> startTime;

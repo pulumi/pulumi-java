@@ -14,7 +14,6 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthArgs extends io.pulumi.
 
     /**
      * The name of the P2SVpnGateway.
-     * 
      */
     @Import(name="gatewayName", required=true)
       private final String gatewayName;
@@ -25,7 +24,6 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthArgs extends io.pulumi.
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -14,7 +14,6 @@ public final class GetApplicationTypeArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the application type name resource.
-     * 
      */
     @Import(name="applicationTypeName", required=true)
       private final String applicationTypeName;
@@ -25,7 +24,6 @@ public final class GetApplicationTypeArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -36,7 +34,6 @@ public final class GetApplicationTypeArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

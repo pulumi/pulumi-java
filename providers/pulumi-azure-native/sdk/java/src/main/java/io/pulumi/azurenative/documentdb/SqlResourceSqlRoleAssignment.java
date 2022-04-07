@@ -17,7 +17,91 @@ import javax.annotation.Nullable;
  * An Azure Cosmos DB Role Assignment
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CosmosDBSqlRoleAssignmentCreateUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlResourceSqlRoleAssignment = new AzureNative.DocumentDB.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment", new AzureNative.DocumentDB.SqlResourceSqlRoleAssignmentArgs
+ *         {
+ *             AccountName = "myAccountName",
+ *             PrincipalId = "myPrincipalId",
+ *             ResourceGroupName = "myResourceGroupName",
+ *             RoleAssignmentId = "myRoleAssignmentId",
+ *             RoleDefinitionId = "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId",
+ *             Scope = "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewSqlResourceSqlRoleAssignment(ctx, "sqlResourceSqlRoleAssignment", &documentdb.SqlResourceSqlRoleAssignmentArgs{
+ * 			AccountName:       pulumi.String("myAccountName"),
+ * 			PrincipalId:       pulumi.String("myPrincipalId"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroupName"),
+ * 			RoleAssignmentId:  pulumi.String("myRoleAssignmentId"),
+ * 			RoleDefinitionId:  pulumi.String("/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId"),
+ * 			Scope:             pulumi.String("/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlResourceSqlRoleAssignment = new azure_native.documentdb.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment", {
+ *     accountName: "myAccountName",
+ *     principalId: "myPrincipalId",
+ *     resourceGroupName: "myResourceGroupName",
+ *     roleAssignmentId: "myRoleAssignmentId",
+ *     roleDefinitionId: "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId",
+ *     scope: "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_resource_sql_role_assignment = azure_native.documentdb.SqlResourceSqlRoleAssignment("sqlResourceSqlRoleAssignment",
+ *     account_name="myAccountName",
+ *     principal_id="myPrincipalId",
+ *     resource_group_name="myResourceGroupName",
+ *     role_assignment_id="myRoleAssignmentId",
+ *     role_definition_id="/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId",
+ *     scope="/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,70 +116,60 @@ import javax.annotation.Nullable;
 public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomResource {
     /**
      * The name of the database account.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the database account.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
-     * 
      */
     @Export(name="principalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalId;
 
     /**
      * @return The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
-     * 
      */
     public Output</* @Nullable */ String> getPrincipalId() {
         return this.principalId;
     }
     /**
      * The unique identifier for the associated Role Definition.
-     * 
      */
     @Export(name="roleDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleDefinitionId;
 
     /**
      * @return The unique identifier for the associated Role Definition.
-     * 
      */
     public Output</* @Nullable */ String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
      * The data plane resource path for which access is being granted through this Role Assignment.
-     * 
      */
     @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
      * @return The data plane resource path for which access is being granted through this Role Assignment.
-     * 
      */
     public Output</* @Nullable */ String> getScope() {
         return this.scope;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

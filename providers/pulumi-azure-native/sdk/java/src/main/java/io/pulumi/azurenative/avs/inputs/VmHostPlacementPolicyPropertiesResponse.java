@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VM-Host placement policy properties
- * 
  */
 public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
 
     /**
      * placement policy affinity type
-     * 
      */
     @Import(name="affinityType", required=true)
       private final String affinityType;
@@ -32,7 +30,6 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
 
     /**
      * Display name of the placement policy
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -43,7 +40,6 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
 
     /**
      * Host members list
-     * 
      */
     @Import(name="hostMembers", required=true)
       private final List<String> hostMembers;
@@ -54,7 +50,6 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
 
     /**
      * The provisioning state
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -65,7 +60,6 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
 
     /**
      * Whether the placement policy is enabled or disabled
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;
@@ -77,7 +71,6 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
     /**
      * placement policy type
      * Expected value is 'VmHost'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -88,7 +81,6 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
 
     /**
      * Virtual machine members list
-     * 
      */
     @Import(name="vmMembers", required=true)
       private final List<String> vmMembers;

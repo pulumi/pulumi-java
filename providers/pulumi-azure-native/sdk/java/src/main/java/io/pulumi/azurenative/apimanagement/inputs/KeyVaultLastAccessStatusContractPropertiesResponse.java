@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Issue contract Update Properties.
- * 
  */
 public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
 
     /**
      * Last status code for sync and refresh of secret from key vault.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -31,7 +29,6 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
 
     /**
      * Details of the error else empty.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;

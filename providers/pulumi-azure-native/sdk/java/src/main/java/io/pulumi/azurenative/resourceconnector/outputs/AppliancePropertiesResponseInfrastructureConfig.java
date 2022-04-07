@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class AppliancePropertiesResponseInfrastructureConfig {
     /**
      * Information about the connected appliance.
-     * 
      */
     private final @Nullable String provider;
 
@@ -24,7 +23,6 @@ public final class AppliancePropertiesResponseInfrastructureConfig {
 
     /**
      * Information about the connected appliance.
-     * 
     */
     public Optional<String> getProvider() {
         return Optional.ofNullable(this.provider);

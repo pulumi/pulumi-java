@@ -16,7 +16,6 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The consumer group name
-     * 
      */
     @Import(name="consumerGroupName")
       private final @Nullable Output<String> consumerGroupName;
@@ -27,7 +26,6 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Event Hub name
-     * 
      */
     @Import(name="eventHubName", required=true)
       private final Output<String> eventHubName;
@@ -38,7 +36,6 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -49,7 +46,6 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group within the azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
-     * 
      */
     @Import(name="userMetadata")
       private final @Nullable Output<String> userMetadata;

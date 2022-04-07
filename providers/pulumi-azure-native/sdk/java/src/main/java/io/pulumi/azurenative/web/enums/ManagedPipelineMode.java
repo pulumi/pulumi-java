@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Managed pipeline mode.
-     * 
      */
     @EnumType
     public enum ManagedPipelineMode {

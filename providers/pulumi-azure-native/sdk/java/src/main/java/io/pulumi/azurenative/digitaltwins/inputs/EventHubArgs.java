@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties related to EventHub.
- * 
  */
 public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the authentication type being used for connecting to the endpoint.
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
@@ -33,7 +31,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-     * 
      */
     @Import(name="connectionStringPrimaryKey")
       private final @Nullable Output<String> connectionStringPrimaryKey;
@@ -44,7 +41,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
-     * 
      */
     @Import(name="connectionStringSecondaryKey")
       private final @Nullable Output<String> connectionStringSecondaryKey;
@@ -55,7 +51,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
-     * 
      */
     @Import(name="deadLetterSecret")
       private final @Nullable Output<String> deadLetterSecret;
@@ -66,7 +61,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dead letter storage URL for identity-based authentication.
-     * 
      */
     @Import(name="deadLetterUri")
       private final @Nullable Output<String> deadLetterUri;
@@ -78,7 +72,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The type of Digital Twins endpoint
      * Expected value is 'EventHub'.
-     * 
      */
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
@@ -89,7 +82,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
-     * 
      */
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
@@ -100,7 +92,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The EventHub name in the EventHub namespace for identity-based authentication.
-     * 
      */
     @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;

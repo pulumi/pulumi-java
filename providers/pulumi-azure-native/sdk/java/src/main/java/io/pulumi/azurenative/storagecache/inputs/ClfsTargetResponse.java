@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties pertaining to the ClfsTarget
- * 
  */
 public final class ClfsTargetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ClfsTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID of storage container.
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;

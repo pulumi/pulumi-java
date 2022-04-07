@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Tar compression read settings.
- * 
  */
 public final class TarReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class TarReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="preserveCompressionFileNameAsFolder")
       private final @Nullable Object preserveCompressionFileNameAsFolder;
@@ -33,7 +31,6 @@ public final class TarReadSettingsResponse extends io.pulumi.resources.InvokeArg
     /**
      * The Compression setting type.
      * Expected value is 'TarReadSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

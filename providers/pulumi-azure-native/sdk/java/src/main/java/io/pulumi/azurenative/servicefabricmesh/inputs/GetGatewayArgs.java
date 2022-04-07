@@ -14,7 +14,6 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identity of the gateway.
-     * 
      */
     @Import(name="gatewayResourceName", required=true)
       private final String gatewayResourceName;
@@ -25,7 +24,6 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Azure resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

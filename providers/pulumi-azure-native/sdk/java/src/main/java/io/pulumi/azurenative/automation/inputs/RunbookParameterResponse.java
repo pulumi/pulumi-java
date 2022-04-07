@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of the runbook parameter type.
- * 
  */
 public final class RunbookParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RunbookParameterResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the default value of parameter.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable String defaultValue;
@@ -33,7 +31,6 @@ public final class RunbookParameterResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
-     * 
      */
     @Import(name="isMandatory")
       private final @Nullable Boolean isMandatory;
@@ -44,7 +41,6 @@ public final class RunbookParameterResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Get or sets the position of the parameter.
-     * 
      */
     @Import(name="position")
       private final @Nullable Integer position;
@@ -55,7 +51,6 @@ public final class RunbookParameterResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Gets or sets the type of the parameter.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

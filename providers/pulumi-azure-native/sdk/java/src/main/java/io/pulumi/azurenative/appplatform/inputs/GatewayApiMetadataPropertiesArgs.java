@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * API metadata property for Spring Cloud Gateway
- * 
  */
 public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
 
     /**
      * Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +29,6 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
 
     /**
      * Location of additional documentation for the APIs available on the Gateway instance
-     * 
      */
     @Import(name="documentation")
       private final @Nullable Output<String> documentation;
@@ -42,7 +39,6 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
 
     /**
      * Base URL that API consumers will use to access APIs on the Gateway instance.
-     * 
      */
     @Import(name="serverUrl")
       private final @Nullable Output<String> serverUrl;
@@ -53,7 +49,6 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
 
     /**
      * Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;
@@ -64,7 +59,6 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
 
     /**
      * Version of APIs available on this Gateway instance (default: `unspecified`).
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

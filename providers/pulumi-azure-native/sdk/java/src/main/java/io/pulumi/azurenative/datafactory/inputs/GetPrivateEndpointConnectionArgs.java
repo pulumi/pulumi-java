@@ -14,7 +14,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final String factoryName;
@@ -25,7 +24,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The private endpoint connection name.
-     * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
@@ -36,7 +34,6 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

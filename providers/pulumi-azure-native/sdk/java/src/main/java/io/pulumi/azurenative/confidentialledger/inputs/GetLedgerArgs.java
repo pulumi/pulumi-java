@@ -14,7 +14,6 @@ public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Confidential Ledger
-     * 
      */
     @Import(name="ledgerName", required=true)
       private final String ledgerName;
@@ -25,7 +24,6 @@ public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP configuration for virtual network gateway.
- * 
  */
 public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -34,7 +32,6 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -45,7 +42,6 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
 
     /**
      * The private IP address allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
@@ -56,7 +52,6 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
 
     /**
      * The reference to the public IP resource.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable Output<SubResourceArgs> publicIPAddress;
@@ -67,7 +62,6 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
 
     /**
      * The reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the managed instance administrator.
-     * 
      */
     @EnumType
     public enum ManagedInstanceAdministratorType {

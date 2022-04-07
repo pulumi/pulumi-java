@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The default principals modification kind
-     * 
      */
     @EnumType
     public enum DefaultPrincipalsModificationKind {

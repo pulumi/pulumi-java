@@ -18,7 +18,68 @@ import javax.annotation.Nullable;
  * Vendor resource.
  * API Version: 2020-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update Vendor resource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vendor = new AzureNative.HybridNetwork.Vendor("vendor", new AzureNative.HybridNetwork.VendorArgs
+ *         {
+ *             VendorName = "TestVendor",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hybridnetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridnetwork"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hybridnetwork.NewVendor(ctx, "vendor", &hybridnetwork.VendorArgs{
+ * 			VendorName: pulumi.String("TestVendor"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const vendor = new azure_native.hybridnetwork.Vendor("vendor", {vendorName: "TestVendor"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * vendor = azure_native.hybridnetwork.Vendor("vendor", vendor_name="TestVendor")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +94,48 @@ import javax.annotation.Nullable;
 public class Vendor extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the vendor resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the vendor resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * A list of IDs of the vendor skus offered by the vendor.
-     * 
      */
     @Export(name="skus", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> skus;
 
     /**
      * @return A list of IDs of the vendor skus offered by the vendor.
-     * 
      */
     public Output<List<SubResourceResponse>> getSkus() {
         return this.skus;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the customer managed key associated with the workspace
- * 
  */
 public final class WorkspaceKeyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class WorkspaceKeyDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Workspace Key sub-resource key vault url
-     * 
      */
     @Import(name="keyVaultUrl")
       private final @Nullable String keyVaultUrl;
@@ -31,7 +29,6 @@ public final class WorkspaceKeyDetailsResponse extends io.pulumi.resources.Invok
 
     /**
      * Workspace Key sub-resource name
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

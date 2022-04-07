@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * A server DNS alias.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create server DNS alias
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverDnsAlias = new AzureNative.Sql.ServerDnsAlias("serverDnsAlias", new AzureNative.Sql.ServerDnsAliasArgs
+ *         {
+ *             DnsAliasName = "dns-alias-name-1",
+ *             ResourceGroupName = "Default",
+ *             ServerName = "dns-alias-server",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewServerDnsAlias(ctx, "serverDnsAlias", &sql.ServerDnsAliasArgs{
+ * 			DnsAliasName:      pulumi.String("dns-alias-name-1"),
+ * 			ResourceGroupName: pulumi.String("Default"),
+ * 			ServerName:        pulumi.String("dns-alias-server"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverDnsAlias = new azure_native.sql.ServerDnsAlias("serverDnsAlias", {
+ *     dnsAliasName: "dns-alias-name-1",
+ *     resourceGroupName: "Default",
+ *     serverName: "dns-alias-server",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_dns_alias = azure_native.sql.ServerDnsAlias("serverDnsAlias",
+ *     dns_alias_name="dns-alias-name-1",
+ *     resource_group_name="Default",
+ *     server_name="dns-alias-server")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +104,36 @@ import javax.annotation.Nullable;
 public class ServerDnsAlias extends io.pulumi.resources.CustomResource {
     /**
      * The fully qualified DNS record for alias
-     * 
      */
     @Export(name="azureDnsRecord", type=String.class, parameters={})
     private Output<String> azureDnsRecord;
 
     /**
      * @return The fully qualified DNS record for alias
-     * 
      */
     public Output<String> getAzureDnsRecord() {
         return this.azureDnsRecord;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

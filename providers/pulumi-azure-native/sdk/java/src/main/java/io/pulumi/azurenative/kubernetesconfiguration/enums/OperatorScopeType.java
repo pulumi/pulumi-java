@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Scope at which the operator will be installed.
-     * 
      */
     @EnumType
     public enum OperatorScopeType {

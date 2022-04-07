@@ -17,7 +17,6 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
 
     /**
      * Tells whether to return registration definition details also along with registration assignment details.
-     * 
      */
     @Import(name="expandRegistrationDefinition")
       private final @Nullable Boolean expandRegistrationDefinition;
@@ -28,7 +27,6 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
 
     /**
      * Guid of the registration assignment.
-     * 
      */
     @Import(name="registrationAssignmentId", required=true)
       private final String registrationAssignmentId;
@@ -39,7 +37,6 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
 
     /**
      * Scope of the resource.
-     * 
      */
     @Import(name="scope", required=true)
       private final String scope;

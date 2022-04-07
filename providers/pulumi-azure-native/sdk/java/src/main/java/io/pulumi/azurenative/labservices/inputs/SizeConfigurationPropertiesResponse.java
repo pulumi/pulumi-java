@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents the size configuration under the lab account
- * 
  */
 public final class SizeConfigurationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SizeConfigurationPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
-     * 
      */
     @Import(name="environmentSizes")
       private final @Nullable List<EnvironmentSizeResponse> environmentSizes;

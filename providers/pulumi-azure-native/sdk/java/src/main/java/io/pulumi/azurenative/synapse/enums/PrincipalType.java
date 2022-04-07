@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Principal type.
-     * 
      */
     @EnumType
     public enum PrincipalType {

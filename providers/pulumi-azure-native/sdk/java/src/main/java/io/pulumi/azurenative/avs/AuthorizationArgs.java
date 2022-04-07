@@ -16,7 +16,6 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the ExpressRoute Circuit Authorization in the private cloud
-     * 
      */
     @Import(name="authorizationName")
       private final @Nullable Output<String> authorizationName;
@@ -27,7 +26,6 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the private cloud.
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -38,7 +36,6 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

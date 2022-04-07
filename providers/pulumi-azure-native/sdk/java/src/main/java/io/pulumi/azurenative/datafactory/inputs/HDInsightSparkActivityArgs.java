@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * HDInsight Spark activity.
- * 
  */
 public final class HDInsightSparkActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * The user-specified arguments to HDInsightSparkActivity.
-     * 
      */
     @Import(name="arguments")
       private final @Nullable Output<List<Object>> arguments;
@@ -40,7 +38,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * The application's Java/Spark main class.
-     * 
      */
     @Import(name="className")
       private final @Nullable Output<String> className;
@@ -51,7 +48,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -62,7 +58,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -73,7 +68,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * The relative path to the root folder of the code/package to be executed. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="entryFilePath", required=true)
       private final Output<Object> entryFilePath;
@@ -84,7 +78,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * Debug info option.
-     * 
      */
     @Import(name="getDebugInfo")
       private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
@@ -95,7 +88,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -106,7 +98,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -117,7 +108,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -128,7 +118,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * The user to impersonate that will execute the job. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="proxyUser")
       private final @Nullable Output<Object> proxyUser;
@@ -139,7 +128,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * The root path in 'sparkJobLinkedService' for all the job’s files. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="rootPath", required=true)
       private final Output<Object> rootPath;
@@ -150,7 +138,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * Spark configuration property.
-     * 
      */
     @Import(name="sparkConfig")
       private final @Nullable Output<Map<String,Object>> sparkConfig;
@@ -161,7 +148,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * The storage linked service for uploading the entry file and dependencies, and for receiving logs.
-     * 
      */
     @Import(name="sparkJobLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> sparkJobLinkedService;
@@ -173,7 +159,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
     /**
      * Type of activity.
      * Expected value is 'HDInsightSpark'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -184,7 +169,6 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

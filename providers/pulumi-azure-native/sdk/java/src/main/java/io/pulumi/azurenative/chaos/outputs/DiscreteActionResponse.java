@@ -13,23 +13,19 @@ import java.util.Objects;
 public final class DiscreteActionResponse {
     /**
      * String that represents a Capability URN.
-     * 
      */
     private final String name;
     /**
      * List of key value pairs.
-     * 
      */
     private final List<KeyValuePairResponse> parameters;
     /**
      * String that represents a selector.
-     * 
      */
     private final String selectorId;
     /**
      * Enum that discriminates between action models.
      * Expected value is 'discrete'.
-     * 
      */
     private final String type;
 
@@ -47,21 +43,18 @@ public final class DiscreteActionResponse {
 
     /**
      * String that represents a Capability URN.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * List of key value pairs.
-     * 
     */
     public List<KeyValuePairResponse> getParameters() {
         return this.parameters;
     }
     /**
      * String that represents a selector.
-     * 
     */
     public String getSelectorId() {
         return this.selectorId;
@@ -69,7 +62,6 @@ public final class DiscreteActionResponse {
     /**
      * Enum that discriminates between action models.
      * Expected value is 'discrete'.
-     * 
     */
     public String getType() {
         return this.type;

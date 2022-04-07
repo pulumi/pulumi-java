@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Health Alert Description
- * 
  */
 public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Health Alert Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -29,7 +27,6 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Health Alert Issue
-     * 
      */
     @Import(name="issue", required=true)
       private final String issue;
@@ -40,7 +37,6 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Health Alert Last Detected DateTime
-     * 
      */
     @Import(name="lastDetected", required=true)
       private final String lastDetected;
@@ -51,7 +47,6 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Health Alert Name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -62,7 +57,6 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Health Alert Raised DateTime
-     * 
      */
     @Import(name="raised", required=true)
       private final String raised;
@@ -73,7 +67,6 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Health Alert TSG Link
-     * 
      */
     @Import(name="resolutionUri", required=true)
       private final String resolutionUri;
@@ -84,7 +77,6 @@ public final class HealthAlertResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Health Alert Severity
-     * 
      */
     @Import(name="severity", required=true)
       private final String severity;

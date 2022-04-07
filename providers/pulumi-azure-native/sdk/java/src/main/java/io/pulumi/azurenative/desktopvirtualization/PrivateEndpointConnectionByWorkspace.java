@@ -20,7 +20,100 @@ import javax.annotation.Nullable;
  * The Private Endpoint Connection resource.
  * API Version: 2021-04-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PrivateEndpointConnection_UpdateByWorkspace
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnectionByWorkspace = new AzureNative.DesktopVirtualization.PrivateEndpointConnectionByWorkspace("privateEndpointConnectionByWorkspace", new AzureNative.DesktopVirtualization.PrivateEndpointConnectionByWorkspaceArgs
+ *         {
+ *             PrivateEndpointConnectionName = "workspace1.377103f1-5179-4bdf-8556-4cdd3207cc5b",
+ *             PrivateLinkServiceConnectionState = new AzureNative.DesktopVirtualization.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 ActionsRequired = "None",
+ *                 Description = "Approved by admin@consoto.com",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "resourceGroup1",
+ *             WorkspaceName = "workspace1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	desktopvirtualization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/desktopvirtualization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := desktopvirtualization.NewPrivateEndpointConnectionByWorkspace(ctx, "privateEndpointConnectionByWorkspace", &desktopvirtualization.PrivateEndpointConnectionByWorkspaceArgs{
+ * 			PrivateEndpointConnectionName: pulumi.String("workspace1.377103f1-5179-4bdf-8556-4cdd3207cc5b"),
+ * 			PrivateLinkServiceConnectionState: &desktopvirtualization.PrivateLinkServiceConnectionStateArgs{
+ * 				ActionsRequired: pulumi.String("None"),
+ * 				Description:     pulumi.String("Approved by admin@consoto.com"),
+ * 				Status:          pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resourceGroup1"),
+ * 			WorkspaceName:     pulumi.String("workspace1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnectionByWorkspace = new azure_native.desktopvirtualization.PrivateEndpointConnectionByWorkspace("privateEndpointConnectionByWorkspace", {
+ *     privateEndpointConnectionName: "workspace1.377103f1-5179-4bdf-8556-4cdd3207cc5b",
+ *     privateLinkServiceConnectionState: {
+ *         actionsRequired: "None",
+ *         description: "Approved by admin@consoto.com",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "resourceGroup1",
+ *     workspaceName: "workspace1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection_by_workspace = azure_native.desktopvirtualization.PrivateEndpointConnectionByWorkspace("privateEndpointConnectionByWorkspace",
+ *     private_endpoint_connection_name="workspace1.377103f1-5179-4bdf-8556-4cdd3207cc5b",
+ *     private_link_service_connection_state=azure_native.desktopvirtualization.PrivateLinkServiceConnectionStateArgs(
+ *         actions_required="None",
+ *         description="Approved by admin@consoto.com",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="resourceGroup1",
+ *     workspace_name="workspace1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +128,72 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnectionByWorkspace extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The resource of private end point.
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the private endpoint connection resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

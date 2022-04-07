@@ -16,7 +16,6 @@ public final class WindowsUserConfigurationArgs extends io.pulumi.resources.Reso
 
     /**
      * Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
-     * 
      */
     @Import(name="loginMode")
       private final @Nullable Output<LoginMode> loginMode;

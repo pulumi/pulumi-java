@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Agent details.
- * 
  */
 public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Id of the agent running on the server.
-     * 
      */
     @Import(name="agentId", required=true)
       private final String agentId;
@@ -31,7 +29,6 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The machine BIOS Id.
-     * 
      */
     @Import(name="biosId", required=true)
       private final String biosId;
@@ -42,7 +39,6 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The details of agent disks.
-     * 
      */
     @Import(name="disks", required=true)
       private final List<AgentDiskDetailsResponse> disks;
@@ -53,7 +49,6 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The machine FQDN.
-     * 
      */
     @Import(name="fqdn", required=true)
       private final String fqdn;
@@ -64,7 +59,6 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Id of the machine to which the agent is registered.
-     * 
      */
     @Import(name="machineId", required=true)
       private final String machineId;

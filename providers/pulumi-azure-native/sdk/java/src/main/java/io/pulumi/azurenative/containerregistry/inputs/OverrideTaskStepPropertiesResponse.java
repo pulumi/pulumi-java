@@ -20,7 +20,6 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
     /**
      * Gets or sets the collection of override arguments to be used when
      * executing a build step.
-     * 
      */
     @Import(name="arguments")
       private final @Nullable List<ArgumentResponse> arguments;
@@ -31,7 +30,6 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
 
     /**
      * The source context against which run has to be queued.
-     * 
      */
     @Import(name="contextPath")
       private final @Nullable String contextPath;
@@ -42,7 +40,6 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
 
     /**
      * The file against which run has to be queued.
-     * 
      */
     @Import(name="file")
       private final @Nullable String file;
@@ -53,7 +50,6 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
 
     /**
      * The name of the target build stage for the docker build.
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;
@@ -64,7 +60,6 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
 
     /**
      * Base64 encoded update trigger token that will be attached with the base image trigger webhook.
-     * 
      */
     @Import(name="updateTriggerToken")
       private final @Nullable String updateTriggerToken;
@@ -75,7 +70,6 @@ public final class OverrideTaskStepPropertiesResponse extends io.pulumi.resource
 
     /**
      * The collection of overridable values that can be passed when running a Task.
-     * 
      */
     @Import(name="values")
       private final @Nullable List<SetValueResponse> values;

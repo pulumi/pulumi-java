@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity provider details.
- * 
  */
 public final class IdentityProviderDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The base authority for Azure Active Directory authentication.
-     * 
      */
     @Import(name="aadAuthority")
       private final @Nullable String aadAuthority;
@@ -31,7 +29,6 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="applicationId")
       private final @Nullable String applicationId;
@@ -42,7 +39,6 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="audience")
       private final @Nullable String audience;
@@ -53,7 +49,6 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable String objectId;
@@ -64,7 +59,6 @@ public final class IdentityProviderDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;

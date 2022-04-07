@@ -23,7 +23,6 @@ public final class ApplicationMetricDescriptionResponse {
     private final @Nullable Double maximumCapacity;
     /**
      * The name of the metric.
-     * 
      */
     private final @Nullable String name;
     /**
@@ -68,7 +67,6 @@ public final class ApplicationMetricDescriptionResponse {
     }
     /**
      * The name of the metric.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

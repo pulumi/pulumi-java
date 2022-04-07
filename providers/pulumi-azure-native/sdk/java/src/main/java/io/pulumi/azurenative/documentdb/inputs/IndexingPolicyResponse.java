@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB indexing policy
- * 
  */
 public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicates if the indexing policy is automatic
-     * 
      */
     @Import(name="automatic")
       private final @Nullable Boolean automatic;
@@ -37,7 +35,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * List of composite path list
-     * 
      */
     @Import(name="compositeIndexes")
       private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
@@ -48,7 +45,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * List of paths to exclude from indexing
-     * 
      */
     @Import(name="excludedPaths")
       private final @Nullable List<ExcludedPathResponse> excludedPaths;
@@ -59,7 +55,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * List of paths to include in the indexing
-     * 
      */
     @Import(name="includedPaths")
       private final @Nullable List<IncludedPathResponse> includedPaths;
@@ -70,7 +65,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicates the indexing mode.
-     * 
      */
     @Import(name="indexingMode")
       private final @Nullable String indexingMode;
@@ -81,7 +75,6 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * List of spatial specifics
-     * 
      */
     @Import(name="spatialIndexes")
       private final @Nullable List<SpatialSpecResponse> spatialIndexes;

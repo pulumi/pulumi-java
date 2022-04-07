@@ -16,7 +16,6 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
 
     /**
      * The resourceId of the environment
-     * 
      */
     @Import(name="environmentId", required=true)
       private final String environmentId;
@@ -27,7 +26,6 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
 
     /**
      * Specify the $expand query. Example: 'properties($expand=environment)'
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -38,7 +36,6 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the user.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

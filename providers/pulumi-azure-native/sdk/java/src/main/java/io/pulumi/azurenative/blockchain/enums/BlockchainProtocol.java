@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the blockchain protocol.
-     * 
      */
     @EnumType
     public enum BlockchainProtocol {

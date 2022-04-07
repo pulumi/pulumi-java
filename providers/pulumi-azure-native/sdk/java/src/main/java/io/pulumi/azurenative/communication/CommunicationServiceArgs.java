@@ -17,7 +17,6 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the CommunicationService resource.
-     * 
      */
     @Import(name="communicationServiceName")
       private final @Nullable Output<String> communicationServiceName;
@@ -28,7 +27,6 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The location where the communication service stores its data at rest.
-     * 
      */
     @Import(name="dataLocation", required=true)
       private final Output<String> dataLocation;
@@ -39,7 +37,6 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The Azure location where the CommunicationService is running.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -50,7 +47,6 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
 
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

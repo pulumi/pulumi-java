@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * Identity Provider details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateIdentityProvider
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var identityProvider = new AzureNative.ApiManagement.IdentityProvider("identityProvider", new AzureNative.ApiManagement.IdentityProviderArgs
+ *         {
+ *             ClientId = "facebookid",
+ *             ClientSecret = "facebookapplicationsecret",
+ *             IdentityProviderName = "facebook",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewIdentityProvider(ctx, "identityProvider", &apimanagement.IdentityProviderArgs{
+ * 			ClientId:             pulumi.String("facebookid"),
+ * 			ClientSecret:         pulumi.String("facebookapplicationsecret"),
+ * 			IdentityProviderName: pulumi.String("facebook"),
+ * 			ResourceGroupName:    pulumi.String("rg1"),
+ * 			ServiceName:          pulumi.String("apimService1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const identityProvider = new azure_native.apimanagement.IdentityProvider("identityProvider", {
+ *     clientId: "facebookid",
+ *     clientSecret: "facebookapplicationsecret",
+ *     identityProviderName: "facebook",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * identity_provider = azure_native.apimanagement.IdentityProvider("identityProvider",
+ *     client_id="facebookid",
+ *     client_secret="facebookapplicationsecret",
+ *     identity_provider_name="facebook",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,154 +112,132 @@ import javax.annotation.Nullable;
 public class IdentityProvider extends io.pulumi.resources.CustomResource {
     /**
      * List of Allowed Tenants when configuring Azure Active Directory login.
-     * 
      */
     @Export(name="allowedTenants", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedTenants;
 
     /**
      * @return List of Allowed Tenants when configuring Azure Active Directory login.
-     * 
      */
     public Output</* @Nullable */ List<String>> getAllowedTenants() {
         return this.allowedTenants;
     }
     /**
      * OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
-     * 
      */
     @Export(name="authority", type=String.class, parameters={})
     private Output</* @Nullable */ String> authority;
 
     /**
      * @return OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
-     * 
      */
     public Output</* @Nullable */ String> getAuthority() {
         return this.authority;
     }
     /**
      * Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
-     * 
      */
     @Export(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
     /**
      * @return Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
-     * 
      */
     public Output<String> getClientId() {
         return this.clientId;
     }
     /**
      * Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
      */
     @Export(name="clientSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientSecret;
 
     /**
      * @return Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
      */
     public Output</* @Nullable */ String> getClientSecret() {
         return this.clientSecret;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     @Export(name="passwordResetPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> passwordResetPolicyName;
 
     /**
      * @return Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     public Output</* @Nullable */ String> getPasswordResetPolicyName() {
         return this.passwordResetPolicyName;
     }
     /**
      * Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     @Export(name="profileEditingPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> profileEditingPolicyName;
 
     /**
      * @return Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     public Output</* @Nullable */ String> getProfileEditingPolicyName() {
         return this.profileEditingPolicyName;
     }
     /**
      * Signin Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     @Export(name="signinPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> signinPolicyName;
 
     /**
      * @return Signin Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     public Output</* @Nullable */ String> getSigninPolicyName() {
         return this.signinPolicyName;
     }
     /**
      * The TenantId to use instead of Common when logging into Active Directory
-     * 
      */
     @Export(name="signinTenant", type=String.class, parameters={})
     private Output</* @Nullable */ String> signinTenant;
 
     /**
      * @return The TenantId to use instead of Common when logging into Active Directory
-     * 
      */
     public Output</* @Nullable */ String> getSigninTenant() {
         return this.signinTenant;
     }
     /**
      * Signup Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     @Export(name="signupPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> signupPolicyName;
 
     /**
      * @return Signup Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     public Output</* @Nullable */ String> getSignupPolicyName() {
         return this.signupPolicyName;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

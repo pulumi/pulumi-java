@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Backup schedule type.
-     * 
      */
     @EnumType
     public enum BackupScheduleType {

@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ExportExecutionListResultResponse {
     /**
      * A list of export executions.
-     * 
      */
     private final List<ExportExecutionResponse> value;
 
@@ -23,7 +22,6 @@ public final class ExportExecutionListResultResponse {
 
     /**
      * A list of export executions.
-     * 
     */
     public List<ExportExecutionResponse> getValue() {
         return this.value;

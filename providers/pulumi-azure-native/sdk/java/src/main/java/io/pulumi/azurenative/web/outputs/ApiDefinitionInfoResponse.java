@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ApiDefinitionInfoResponse {
     /**
      * The URL of the API definition.
-     * 
      */
     private final @Nullable String url;
 
@@ -24,7 +23,6 @@ public final class ApiDefinitionInfoResponse {
 
     /**
      * The URL of the API definition.
-     * 
     */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);

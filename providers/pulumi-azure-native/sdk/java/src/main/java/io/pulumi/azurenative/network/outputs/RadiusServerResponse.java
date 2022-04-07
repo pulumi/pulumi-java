@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class RadiusServerResponse {
     /**
      * The address of this radius server.
-     * 
      */
     private final String radiusServerAddress;
     /**
      * The initial score assigned to this radius server.
-     * 
      */
     private final @Nullable Double radiusServerScore;
     /**
      * The secret used for this radius server.
-     * 
      */
     private final @Nullable String radiusServerSecret;
 
@@ -40,21 +37,18 @@ public final class RadiusServerResponse {
 
     /**
      * The address of this radius server.
-     * 
     */
     public String getRadiusServerAddress() {
         return this.radiusServerAddress;
     }
     /**
      * The initial score assigned to this radius server.
-     * 
     */
     public Optional<Double> getRadiusServerScore() {
         return Optional.ofNullable(this.radiusServerScore);
     }
     /**
      * The secret used for this radius server.
-     * 
     */
     public Optional<String> getRadiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);

@@ -17,6 +17,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2016-01-29.
  * ## Import
  * 
@@ -31,42 +32,36 @@ import javax.annotation.Nullable;
 public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
     /**
      * Azure location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Azure location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Workspace collection name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Workspace collection name
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Properties
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return Properties
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
@@ -85,14 +80,12 @@ public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output</* @Nullable */ String> getType() {
         return this.type;

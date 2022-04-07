@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Application Insights component daily data volume cap
- * 
  */
 public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
 
     /**
      * Daily data volume cap in GB.
-     * 
      */
     @Import(name="cap")
       private final @Nullable Output<Double> cap;
@@ -33,7 +31,6 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
 
     /**
      * Do not send a notification email when the daily data volume cap is met.
-     * 
      */
     @Import(name="stopSendNotificationWhenHitCap")
       private final @Nullable Output<Boolean> stopSendNotificationWhenHitCap;
@@ -44,7 +41,6 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
 
     /**
      * Reserved, not used for now.
-     * 
      */
     @Import(name="stopSendNotificationWhenHitThreshold")
       private final @Nullable Output<Boolean> stopSendNotificationWhenHitThreshold;
@@ -55,7 +51,6 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
 
     /**
      * Reserved, not used for now.
-     * 
      */
     @Import(name="warningThreshold")
       private final @Nullable Output<Integer> warningThreshold;

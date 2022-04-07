@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for Salesforce.
- * 
  */
 public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="apiVersion")
       private final @Nullable Object apiVersion;
@@ -50,7 +47,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -61,7 +57,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -72,7 +67,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -83,7 +77,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The URL of Salesforce instance. Default is 'https://login.salesforce.com'. To copy data from sandbox, specify 'https://test.salesforce.com'. To copy data from custom domain, specify, for example, 'https://[domain].my.salesforce.com'. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="environmentUrl")
       private final @Nullable Object environmentUrl;
@@ -94,7 +87,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -105,7 +97,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The password for Basic authentication of the Salesforce instance.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -116,7 +107,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The security token is optional to remotely access Salesforce instance.
-     * 
      */
     @Import(name="securityToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
@@ -128,7 +118,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     /**
      * Type of linked service.
      * Expected value is 'Salesforce'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -139,7 +128,6 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username")
       private final @Nullable Object username;

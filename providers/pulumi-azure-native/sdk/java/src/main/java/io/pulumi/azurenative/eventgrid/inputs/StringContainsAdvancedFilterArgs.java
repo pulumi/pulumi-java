@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * StringContains Advanced Filter.
- * 
  */
 public final class StringContainsAdvancedFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class StringContainsAdvancedFilterArgs extends io.pulumi.resources.
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -33,7 +31,6 @@ public final class StringContainsAdvancedFilterArgs extends io.pulumi.resources.
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'StringContains'.
-     * 
      */
     @Import(name="operatorType", required=true)
       private final Output<String> operatorType;
@@ -44,7 +41,6 @@ public final class StringContainsAdvancedFilterArgs extends io.pulumi.resources.
 
     /**
      * The set of filter values.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

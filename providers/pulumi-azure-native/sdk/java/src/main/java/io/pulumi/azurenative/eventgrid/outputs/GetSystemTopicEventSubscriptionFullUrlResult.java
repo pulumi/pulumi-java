@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetSystemTopicEventSubscriptionFullUrlResult {
     /**
      * The URL that represents the endpoint of the destination of an event subscription.
-     * 
      */
     private final @Nullable String endpointUrl;
 
@@ -24,7 +23,6 @@ public final class GetSystemTopicEventSubscriptionFullUrlResult {
 
     /**
      * The URL that represents the endpoint of the destination of an event subscription.
-     * 
     */
     public Optional<String> getEndpointUrl() {
         return Optional.ofNullable(this.endpointUrl);

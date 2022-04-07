@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is optional input that contains the authentication that should be used to generate the namespace.
- * 
  */
 public final class CustomLocationPropertiesResponseAuthentication extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CustomLocationPropertiesResponseAuthentication extends io.pul
 
     /**
      * The type of the Custom Locations authentication
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

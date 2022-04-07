@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes Windows Remote Management configuration of the VM
- * 
  */
 public final class WinRMConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class WinRMConfigurationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The list of Windows Remote Management listeners
-     * 
      */
     @Import(name="listeners")
       private final @Nullable Output<List<WinRMListenerArgs>> listeners;

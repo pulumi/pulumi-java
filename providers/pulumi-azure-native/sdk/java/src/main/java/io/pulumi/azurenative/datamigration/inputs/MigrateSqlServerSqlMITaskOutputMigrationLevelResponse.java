@@ -19,7 +19,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Selected agent jobs as a map from name to id
-     * 
      */
     @Import(name="agentJobs", required=true)
       private final Map<String,String> agentJobs;
@@ -30,7 +29,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Selected databases as a map from database name to database id
-     * 
      */
     @Import(name="databases", required=true)
       private final Map<String,String> databases;
@@ -41,7 +39,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -52,7 +49,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Migration exceptions and warnings.
-     * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
@@ -63,7 +59,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -74,7 +69,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Selected logins as a map from name to id
-     * 
      */
     @Import(name="logins", required=true)
       private final Map<String,String> logins;
@@ -85,7 +79,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Migration progress message
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -96,7 +89,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * List of orphaned users.
-     * 
      */
     @Import(name="orphanedUsersInfo", required=true)
       private final List<OrphanedUserInfoResponse> orphanedUsersInfo;
@@ -108,7 +100,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
     /**
      * Result type
      * Expected value is 'MigrationLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -119,7 +110,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Map of server role migration results.
-     * 
      */
     @Import(name="serverRoleResults", required=true)
       private final Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
@@ -130,7 +120,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Source server brand version
-     * 
      */
     @Import(name="sourceServerBrandVersion", required=true)
       private final String sourceServerBrandVersion;
@@ -141,7 +130,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Source server version
-     * 
      */
     @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
@@ -152,7 +140,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -163,7 +150,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Current state of migration
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -174,7 +160,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Current status of migration
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -185,7 +170,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Target server brand version
-     * 
      */
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
@@ -196,7 +180,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
 
     /**
      * Target server version
-     * 
      */
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;

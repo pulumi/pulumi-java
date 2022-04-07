@@ -12,7 +12,6 @@ public final class ContentKeyPolicyUnknownRestrictionResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyUnknownRestriction'.
-     * 
      */
     private final String odataType;
 
@@ -24,7 +23,6 @@ public final class ContentKeyPolicyUnknownRestrictionResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyUnknownRestriction'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;

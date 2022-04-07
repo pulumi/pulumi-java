@@ -18,7 +18,99 @@ import javax.annotation.Nullable;
  * Definition of the certificate.
  * API Version: 2019-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a certificate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var certificate = new AzureNative.Automation.Certificate("certificate", new AzureNative.Automation.CertificateArgs
+ *         {
+ *             AutomationAccountName = "myAutomationAccount18",
+ *             Base64Value = "base 64 value of cert",
+ *             CertificateName = "testCert",
+ *             Description = "Sample Cert",
+ *             IsExportable = false,
+ *             Name = "testCert",
+ *             ResourceGroupName = "rg",
+ *             Thumbprint = "thumbprint of cert",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewCertificate(ctx, "certificate", &automation.CertificateArgs{
+ * 			AutomationAccountName: pulumi.String("myAutomationAccount18"),
+ * 			Base64Value:           pulumi.String("base 64 value of cert"),
+ * 			CertificateName:       pulumi.String("testCert"),
+ * 			Description:           pulumi.String("Sample Cert"),
+ * 			IsExportable:          pulumi.Bool(false),
+ * 			Name:                  pulumi.String("testCert"),
+ * 			ResourceGroupName:     pulumi.String("rg"),
+ * 			Thumbprint:            pulumi.String("thumbprint of cert"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const certificate = new azure_native.automation.Certificate("certificate", {
+ *     automationAccountName: "myAutomationAccount18",
+ *     base64Value: "base 64 value of cert",
+ *     certificateName: "testCert",
+ *     description: "Sample Cert",
+ *     isExportable: false,
+ *     name: "testCert",
+ *     resourceGroupName: "rg",
+ *     thumbprint: "thumbprint of cert",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * certificate = azure_native.automation.Certificate("certificate",
+ *     automation_account_name="myAutomationAccount18",
+ *     base64_value="base 64 value of cert",
+ *     certificate_name="testCert",
+ *     description="Sample Cert",
+ *     is_exportable=False,
+ *     name="testCert",
+ *     resource_group_name="rg",
+ *     thumbprint="thumbprint of cert")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,112 +125,96 @@ import javax.annotation.Nullable;
 public class Certificate extends io.pulumi.resources.CustomResource {
     /**
      * Gets the creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return Gets the creation time.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Gets or sets the description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Gets the expiry time of the certificate.
-     * 
      */
     @Export(name="expiryTime", type=String.class, parameters={})
     private Output<String> expiryTime;
 
     /**
      * @return Gets the expiry time of the certificate.
-     * 
      */
     public Output<String> getExpiryTime() {
         return this.expiryTime;
     }
     /**
      * Gets the is exportable flag of the certificate.
-     * 
      */
     @Export(name="isExportable", type=Boolean.class, parameters={})
     private Output<Boolean> isExportable;
 
     /**
      * @return Gets the is exportable flag of the certificate.
-     * 
      */
     public Output<Boolean> getIsExportable() {
         return this.isExportable;
     }
     /**
      * Gets the last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
      * @return Gets the last modified time.
-     * 
      */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets the thumbprint of the certificate.
-     * 
      */
     @Export(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
     /**
      * @return Gets the thumbprint of the certificate.
-     * 
      */
     public Output<String> getThumbprint() {
         return this.thumbprint;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

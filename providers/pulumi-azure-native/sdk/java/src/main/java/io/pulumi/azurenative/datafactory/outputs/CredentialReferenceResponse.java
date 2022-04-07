@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class CredentialReferenceResponse {
     /**
      * Reference credential name.
-     * 
      */
     private final String referenceName;
     /**
      * Credential reference type.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class CredentialReferenceResponse {
 
     /**
      * Reference credential name.
-     * 
     */
     public String getReferenceName() {
         return this.referenceName;
     }
     /**
      * Credential reference type.
-     * 
     */
     public String getType() {
         return this.type;

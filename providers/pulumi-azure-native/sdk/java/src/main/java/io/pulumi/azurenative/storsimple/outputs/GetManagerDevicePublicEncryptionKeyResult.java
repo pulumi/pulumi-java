@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetManagerDevicePublicEncryptionKeyResult {
     /**
      * The key.
-     * 
      */
     private final String key;
 
@@ -22,7 +21,6 @@ public final class GetManagerDevicePublicEncryptionKeyResult {
 
     /**
      * The key.
-     * 
     */
     public String getKey() {
         return this.key;

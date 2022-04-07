@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The compute resource properties for managed integration runtime.
- * 
  */
 public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
 
     /**
      * Data flow properties for managed integration runtime.
-     * 
      */
     @Import(name="dataFlowProperties")
       private final @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties;
@@ -34,7 +32,6 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
 
     /**
      * The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -45,7 +42,6 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
 
     /**
      * Maximum parallel executions count per node for managed integration runtime.
-     * 
      */
     @Import(name="maxParallelExecutionsPerNode")
       private final @Nullable Integer maxParallelExecutionsPerNode;
@@ -56,7 +52,6 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
 
     /**
      * The node size requirement to managed integration runtime.
-     * 
      */
     @Import(name="nodeSize")
       private final @Nullable String nodeSize;
@@ -67,7 +62,6 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
 
     /**
      * The required number of nodes for managed integration runtime.
-     * 
      */
     @Import(name="numberOfNodes")
       private final @Nullable Integer numberOfNodes;
@@ -78,7 +72,6 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
 
     /**
      * VNet properties for managed integration runtime.
-     * 
      */
     @Import(name="vNetProperties")
       private final @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;

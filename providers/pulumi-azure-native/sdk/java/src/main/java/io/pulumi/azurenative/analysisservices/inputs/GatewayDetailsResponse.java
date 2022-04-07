@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The gateway details.
- * 
  */
 public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Uri of the DMTS cluster.
-     * 
      */
     @Import(name="dmtsClusterUri", required=true)
       private final String dmtsClusterUri;
@@ -31,7 +29,6 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gateway object id from in the DMTS cluster for the gateway resource.
-     * 
      */
     @Import(name="gatewayObjectId", required=true)
       private final String gatewayObjectId;
@@ -42,7 +39,6 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gateway resource to be associated with the server.
-     * 
      */
     @Import(name="gatewayResourceId")
       private final @Nullable String gatewayResourceId;

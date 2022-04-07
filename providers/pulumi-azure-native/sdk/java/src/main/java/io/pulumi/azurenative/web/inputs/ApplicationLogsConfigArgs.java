@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application logs configuration.
- * 
  */
 public final class ApplicationLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
 
     /**
      * Application logs to blob storage configuration.
-     * 
      */
     @Import(name="azureBlobStorage")
       private final @Nullable Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage;
@@ -33,7 +31,6 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
 
     /**
      * Application logs to azure table storage configuration.
-     * 
      */
     @Import(name="azureTableStorage")
       private final @Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage;
@@ -44,7 +41,6 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
 
     /**
      * Application logs to file system configuration.
-     * 
      */
     @Import(name="fileSystem")
       private final @Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem;

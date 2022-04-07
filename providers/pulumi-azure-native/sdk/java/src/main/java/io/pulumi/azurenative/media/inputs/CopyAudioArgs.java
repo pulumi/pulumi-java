@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A codec flag, which tells the encoder to copy the input audio bitstream.
- * 
  */
 public final class CopyAudioArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CopyAudioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -32,7 +30,6 @@ public final class CopyAudioArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.CopyAudio'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;

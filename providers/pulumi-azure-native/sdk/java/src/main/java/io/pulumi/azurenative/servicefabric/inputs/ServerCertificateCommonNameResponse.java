@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes the server certificate details using common name.
- * 
  */
 public final class ServerCertificateCommonNameResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ServerCertificateCommonNameResponse extends io.pulumi.resourc
 
     /**
      * The common name of the server certificate.
-     * 
      */
     @Import(name="certificateCommonName", required=true)
       private final String certificateCommonName;
@@ -29,7 +27,6 @@ public final class ServerCertificateCommonNameResponse extends io.pulumi.resourc
 
     /**
      * The issuer thumbprint of the server certificate.
-     * 
      */
     @Import(name="certificateIssuerThumbprint", required=true)
       private final String certificateIssuerThumbprint;

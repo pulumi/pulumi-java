@@ -19,7 +19,149 @@ import javax.annotation.Nullable;
  * Properties that define a ProactiveDetection configuration.
  * API Version: 2015-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ProactiveDetectionConfigurationUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var proactiveDetectionConfiguration = new AzureNative.Insights.ProactiveDetectionConfiguration("proactiveDetectionConfiguration", new AzureNative.Insights.ProactiveDetectionConfigurationArgs
+ *         {
+ *             ConfigurationId = "slowpageloadtime",
+ *             CustomEmails = 
+ *             {
+ *                 "foo@microsoft.com",
+ *                 "foo2@microsoft.com",
+ *             },
+ *             Enabled = true,
+ *             Name = "slowpageloadtime",
+ *             ResourceGroupName = "my-resource-group",
+ *             ResourceName = "my-component",
+ *             RuleDefinitions = new AzureNative.Insights.Inputs.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs
+ *             {
+ *                 Description = "Smart Detection rules notify you of performance anomaly issues.",
+ *                 DisplayName = "Slow page load time",
+ *                 HelpUrl = "https://docs.microsoft.com/en-us/azure/application-insights/app-insights-proactive-performance-diagnostics",
+ *                 IsEnabledByDefault = true,
+ *                 IsHidden = false,
+ *                 IsInPreview = false,
+ *                 Name = "slowpageloadtime",
+ *                 SupportsEmailNotifications = true,
+ *             },
+ *             SendEmailsToSubscriptionOwners = true,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewProactiveDetectionConfiguration(ctx, "proactiveDetectionConfiguration", &insights.ProactiveDetectionConfigurationArgs{
+ * 			ConfigurationId: pulumi.String("slowpageloadtime"),
+ * 			CustomEmails: pulumi.StringArray{
+ * 				pulumi.String("foo@microsoft.com"),
+ * 				pulumi.String("foo2@microsoft.com"),
+ * 			},
+ * 			Enabled:           pulumi.Bool(true),
+ * 			Name:              pulumi.String("slowpageloadtime"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			ResourceName:      pulumi.String("my-component"),
+ * 			RuleDefinitions: &insights.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs{
+ * 				Description:                pulumi.String("Smart Detection rules notify you of performance anomaly issues."),
+ * 				DisplayName:                pulumi.String("Slow page load time"),
+ * 				HelpUrl:                    pulumi.String("https://docs.microsoft.com/en-us/azure/application-insights/app-insights-proactive-performance-diagnostics"),
+ * 				IsEnabledByDefault:         pulumi.Bool(true),
+ * 				IsHidden:                   pulumi.Bool(false),
+ * 				IsInPreview:                pulumi.Bool(false),
+ * 				Name:                       pulumi.String("slowpageloadtime"),
+ * 				SupportsEmailNotifications: pulumi.Bool(true),
+ * 			},
+ * 			SendEmailsToSubscriptionOwners: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const proactiveDetectionConfiguration = new azure_native.insights.ProactiveDetectionConfiguration("proactiveDetectionConfiguration", {
+ *     configurationId: "slowpageloadtime",
+ *     customEmails: [
+ *         "foo@microsoft.com",
+ *         "foo2@microsoft.com",
+ *     ],
+ *     enabled: true,
+ *     name: "slowpageloadtime",
+ *     resourceGroupName: "my-resource-group",
+ *     resourceName: "my-component",
+ *     ruleDefinitions: {
+ *         description: "Smart Detection rules notify you of performance anomaly issues.",
+ *         displayName: "Slow page load time",
+ *         helpUrl: "https://docs.microsoft.com/en-us/azure/application-insights/app-insights-proactive-performance-diagnostics",
+ *         isEnabledByDefault: true,
+ *         isHidden: false,
+ *         isInPreview: false,
+ *         name: "slowpageloadtime",
+ *         supportsEmailNotifications: true,
+ *     },
+ *     sendEmailsToSubscriptionOwners: true,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * proactive_detection_configuration = azure_native.insights.ProactiveDetectionConfiguration("proactiveDetectionConfiguration",
+ *     configuration_id="slowpageloadtime",
+ *     custom_emails=[
+ *         "foo@microsoft.com",
+ *         "foo2@microsoft.com",
+ *     ],
+ *     enabled=True,
+ *     name="slowpageloadtime",
+ *     resource_group_name="my-resource-group",
+ *     resource_name="my-component",
+ *     rule_definitions=azure_native.insights.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs(
+ *         description="Smart Detection rules notify you of performance anomaly issues.",
+ *         display_name="Slow page load time",
+ *         help_url="https://docs.microsoft.com/en-us/azure/application-insights/app-insights-proactive-performance-diagnostics",
+ *         is_enabled_by_default=True,
+ *         is_hidden=False,
+ *         is_in_preview=False,
+ *         name="slowpageloadtime",
+ *         supports_email_notifications=True,
+ *     ),
+ *     send_emails_to_subscription_owners=True)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +176,72 @@ import javax.annotation.Nullable;
 public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Custom email addresses for this rule notifications
-     * 
      */
     @Export(name="customEmails", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customEmails;
 
     /**
      * @return Custom email addresses for this rule notifications
-     * 
      */
     public Output</* @Nullable */ List<String>> getCustomEmails() {
         return this.customEmails;
     }
     /**
      * A flag that indicates whether this rule is enabled by the user
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return A flag that indicates whether this rule is enabled by the user
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * The last time this rule was updated
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastUpdatedTime;
 
     /**
      * @return The last time this rule was updated
-     * 
      */
     public Output</* @Nullable */ String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * The rule name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The rule name
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Static definitions of the ProactiveDetection configuration rule (same values for all components).
-     * 
      */
     @Export(name="ruleDefinitions", type=ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions.class, parameters={})
     private Output</* @Nullable */ ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> ruleDefinitions;
 
     /**
      * @return Static definitions of the ProactiveDetection configuration rule (same values for all components).
-     * 
      */
     public Output</* @Nullable */ ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> getRuleDefinitions() {
         return this.ruleDefinitions;
     }
     /**
      * A flag that indicated whether notifications on this rule should be sent to subscription owners
-     * 
      */
     @Export(name="sendEmailsToSubscriptionOwners", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sendEmailsToSubscriptionOwners;
 
     /**
      * @return A flag that indicated whether notifications on this rule should be sent to subscription owners
-     * 
      */
     public Output</* @Nullable */ Boolean> getSendEmailsToSubscriptionOwners() {
         return this.sendEmailsToSubscriptionOwners;

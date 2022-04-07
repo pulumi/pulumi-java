@@ -20,7 +20,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * CreationData to be used to specify the source agent pool resource ID to create this snapshot.
-     * 
      */
     @Import(name="creationData")
       private final @Nullable Output<CreationDataArgs> creationData;
@@ -31,7 +30,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -53,7 +50,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the managed cluster resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -64,7 +60,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of a snapshot. The default is NodePool.
-     * 
      */
     @Import(name="snapshotType")
       private final @Nullable Output<Either<String,SnapshotType>> snapshotType;
@@ -75,7 +70,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

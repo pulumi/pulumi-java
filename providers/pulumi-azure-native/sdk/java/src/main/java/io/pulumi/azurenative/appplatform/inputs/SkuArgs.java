@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sku of Azure Spring Cloud
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current capacity of the target resource
-     * 
      */
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
@@ -32,7 +30,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Sku
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tier of the Sku
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sql upsert option settings
- * 
  */
 public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Schema name for interim table. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="interimSchemaName")
       private final @Nullable Output<Object> interimSchemaName;
@@ -31,7 +29,6 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
-     * 
      */
     @Import(name="keys")
       private final @Nullable Output<Object> keys;
@@ -42,7 +39,6 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="useTempDB")
       private final @Nullable Output<Object> useTempDB;

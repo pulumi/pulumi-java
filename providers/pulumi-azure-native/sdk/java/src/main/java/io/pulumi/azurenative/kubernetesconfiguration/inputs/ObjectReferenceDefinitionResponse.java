@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Object reference to a Kubernetes object on a cluster
- * 
  */
 public final class ObjectReferenceDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ObjectReferenceDefinitionResponse extends io.pulumi.resources
 
     /**
      * Name of the object
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class ObjectReferenceDefinitionResponse extends io.pulumi.resources
 
     /**
      * Namespace of the object
-     * 
      */
     @Import(name="namespace")
       private final @Nullable String namespace;

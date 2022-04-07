@@ -14,7 +14,6 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final String hubName;
@@ -25,7 +24,6 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The user ID. Use * to retrieve hub level view.
-     * 
      */
     @Import(name="userId", required=true)
       private final String userId;
@@ -47,7 +44,6 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the view.
-     * 
      */
     @Import(name="viewName", required=true)
       private final String viewName;

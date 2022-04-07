@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Chart type of the main view in Cost Analysis. Required.
-     * 
      */
     @EnumType
     public enum ChartType {

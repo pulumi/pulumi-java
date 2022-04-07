@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The workspace managed identity
- * 
  */
 public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The principal ID of the workspace managed identity
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -31,7 +29,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The tenant ID of the workspace managed identity
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -42,7 +39,6 @@ public final class ManagedIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The type of managed identity for the workspace
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

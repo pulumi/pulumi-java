@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The container probe, for liveness or readiness
- * 
  */
 public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The execution command to probe
-     * 
      */
     @Import(name="exec")
       private final @Nullable ContainerExecResponse exec;
@@ -33,7 +31,6 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The failure threshold.
-     * 
      */
     @Import(name="failureThreshold")
       private final @Nullable Integer failureThreshold;
@@ -44,7 +41,6 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The Http Get settings to probe
-     * 
      */
     @Import(name="httpGet")
       private final @Nullable ContainerHttpGetResponse httpGet;
@@ -55,7 +51,6 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The initial delay seconds.
-     * 
      */
     @Import(name="initialDelaySeconds")
       private final @Nullable Integer initialDelaySeconds;
@@ -66,7 +61,6 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The period seconds.
-     * 
      */
     @Import(name="periodSeconds")
       private final @Nullable Integer periodSeconds;
@@ -77,7 +71,6 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The success threshold.
-     * 
      */
     @Import(name="successThreshold")
       private final @Nullable Integer successThreshold;
@@ -88,7 +81,6 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The timeout seconds.
-     * 
      */
     @Import(name="timeoutSeconds")
       private final @Nullable Integer timeoutSeconds;

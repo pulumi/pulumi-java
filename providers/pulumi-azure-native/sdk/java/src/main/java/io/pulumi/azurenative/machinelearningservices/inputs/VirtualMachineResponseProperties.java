@@ -18,7 +18,6 @@ public final class VirtualMachineResponseProperties extends io.pulumi.resources.
 
     /**
      * Public IP address of the virtual machine.
-     * 
      */
     @Import(name="address")
       private final @Nullable String address;
@@ -29,7 +28,6 @@ public final class VirtualMachineResponseProperties extends io.pulumi.resources.
 
     /**
      * Admin credentials for virtual machine
-     * 
      */
     @Import(name="administratorAccount")
       private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
@@ -40,7 +38,6 @@ public final class VirtualMachineResponseProperties extends io.pulumi.resources.
 
     /**
      * Port open for ssh connections.
-     * 
      */
     @Import(name="sshPort")
       private final @Nullable Integer sshPort;
@@ -51,7 +48,6 @@ public final class VirtualMachineResponseProperties extends io.pulumi.resources.
 
     /**
      * Virtual Machine size
-     * 
      */
     @Import(name="virtualMachineSize")
       private final @Nullable String virtualMachineSize;

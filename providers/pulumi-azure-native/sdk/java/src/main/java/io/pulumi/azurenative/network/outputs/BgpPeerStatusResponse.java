@@ -12,42 +12,34 @@ import java.util.Objects;
 public final class BgpPeerStatusResponse {
     /**
      * The autonomous system number of the remote BGP peer.
-     * 
      */
     private final Double asn;
     /**
      * For how long the peering has been up.
-     * 
      */
     private final String connectedDuration;
     /**
      * The virtual network gateway's local address.
-     * 
      */
     private final String localAddress;
     /**
      * The number of BGP messages received.
-     * 
      */
     private final Double messagesReceived;
     /**
      * The number of BGP messages sent.
-     * 
      */
     private final Double messagesSent;
     /**
      * The remote BGP peer.
-     * 
      */
     private final String neighbor;
     /**
      * The number of routes learned from this peer.
-     * 
      */
     private final Double routesReceived;
     /**
      * The BGP peer state.
-     * 
      */
     private final String state;
 
@@ -73,56 +65,48 @@ public final class BgpPeerStatusResponse {
 
     /**
      * The autonomous system number of the remote BGP peer.
-     * 
     */
     public Double getAsn() {
         return this.asn;
     }
     /**
      * For how long the peering has been up.
-     * 
     */
     public String getConnectedDuration() {
         return this.connectedDuration;
     }
     /**
      * The virtual network gateway's local address.
-     * 
     */
     public String getLocalAddress() {
         return this.localAddress;
     }
     /**
      * The number of BGP messages received.
-     * 
     */
     public Double getMessagesReceived() {
         return this.messagesReceived;
     }
     /**
      * The number of BGP messages sent.
-     * 
     */
     public Double getMessagesSent() {
         return this.messagesSent;
     }
     /**
      * The remote BGP peer.
-     * 
     */
     public String getNeighbor() {
         return this.neighbor;
     }
     /**
      * The number of routes learned from this peer.
-     * 
     */
     public Double getRoutesReceived() {
         return this.routesReceived;
     }
     /**
      * The BGP peer state.
-     * 
     */
     public String getState() {
         return this.state;

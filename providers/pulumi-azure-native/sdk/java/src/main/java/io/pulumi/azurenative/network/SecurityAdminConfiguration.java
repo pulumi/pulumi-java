@@ -18,7 +18,91 @@ import javax.annotation.Nullable;
  * Defines the security configuration
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create network manager security admin configuration
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var securityAdminConfiguration = new AzureNative.Network.SecurityAdminConfiguration("securityAdminConfiguration", new AzureNative.Network.SecurityAdminConfigurationArgs
+ *         {
+ *             ConfigurationName = "myTestSecurityConfig",
+ *             DeleteExistingNSGs = "True",
+ *             Description = "A sample policy",
+ *             NetworkManagerName = "testNetworkManager",
+ *             ResourceGroupName = "rg1",
+ *             SecurityType = "AdminPolicy",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewSecurityAdminConfiguration(ctx, "securityAdminConfiguration", &network.SecurityAdminConfigurationArgs{
+ * 			ConfigurationName:  pulumi.String("myTestSecurityConfig"),
+ * 			DeleteExistingNSGs: pulumi.String("True"),
+ * 			Description:        pulumi.String("A sample policy"),
+ * 			NetworkManagerName: pulumi.String("testNetworkManager"),
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 			SecurityType:       pulumi.String("AdminPolicy"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const securityAdminConfiguration = new azure_native.network.SecurityAdminConfiguration("securityAdminConfiguration", {
+ *     configurationName: "myTestSecurityConfig",
+ *     deleteExistingNSGs: "True",
+ *     description: "A sample policy",
+ *     networkManagerName: "testNetworkManager",
+ *     resourceGroupName: "rg1",
+ *     securityType: "AdminPolicy",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * security_admin_configuration = azure_native.network.SecurityAdminConfiguration("securityAdminConfiguration",
+ *     configuration_name="myTestSecurityConfig",
+ *     delete_existing_nsgs="True",
+ *     description="A sample policy",
+ *     network_manager_name="testNetworkManager",
+ *     resource_group_name="rg1",
+ *     security_type="AdminPolicy")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +117,108 @@ import javax.annotation.Nullable;
 public class SecurityAdminConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Flag if need to delete existing network security groups.
-     * 
      */
     @Export(name="deleteExistingNSGs", type=String.class, parameters={})
     private Output</* @Nullable */ String> deleteExistingNSGs;
 
     /**
      * @return Flag if need to delete existing network security groups.
-     * 
      */
     public Output</* @Nullable */ String> getDeleteExistingNSGs() {
         return this.deleteExistingNSGs;
     }
     /**
      * A description of the security configuration.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the security configuration.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * A display name of the security configuration.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A display name of the security configuration.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Security Type.
-     * 
      */
     @Export(name="securityType", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityType;
 
     /**
      * @return Security Type.
-     * 
      */
     public Output</* @Nullable */ String> getSecurityType() {
         return this.securityType;
     }
     /**
      * The system metadata related to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

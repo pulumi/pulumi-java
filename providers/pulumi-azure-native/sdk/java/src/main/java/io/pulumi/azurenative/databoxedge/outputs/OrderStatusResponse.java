@@ -16,27 +16,22 @@ public final class OrderStatusResponse {
     /**
      * Dictionary to hold generic information which is not stored
      * by the already existing properties
-     * 
      */
     private final Map<String,String> additionalOrderDetails;
     /**
      * Comments related to this status change.
-     * 
      */
     private final @Nullable String comments;
     /**
      * Status of the order as per the allowed status types.
-     * 
      */
     private final String status;
     /**
      * Tracking information related to the state in the ordering flow
-     * 
      */
     private final TrackingInfoResponse trackingInformation;
     /**
      * Time of status update.
-     * 
      */
     private final String updateDateTime;
 
@@ -57,35 +52,30 @@ public final class OrderStatusResponse {
     /**
      * Dictionary to hold generic information which is not stored
      * by the already existing properties
-     * 
     */
     public Map<String,String> getAdditionalOrderDetails() {
         return this.additionalOrderDetails;
     }
     /**
      * Comments related to this status change.
-     * 
     */
     public Optional<String> getComments() {
         return Optional.ofNullable(this.comments);
     }
     /**
      * Status of the order as per the allowed status types.
-     * 
     */
     public String getStatus() {
         return this.status;
     }
     /**
      * Tracking information related to the state in the ordering flow
-     * 
     */
     public TrackingInfoResponse getTrackingInformation() {
         return this.trackingInformation;
     }
     /**
      * Time of status update.
-     * 
     */
     public String getUpdateDateTime() {
         return this.updateDateTime;

@@ -28,7 +28,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Data Lake Store account.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -39,7 +38,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default owner group for all new folders and files created in the Data Lake Store account.
-     * 
      */
     @Import(name="defaultGroup")
       private final @Nullable Output<String> defaultGroup;
@@ -50,7 +48,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Key Vault encryption configuration.
-     * 
      */
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
@@ -61,7 +58,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current state of encryption for this Data Lake Store account.
-     * 
      */
     @Import(name="encryptionState")
       private final @Nullable Output<EncryptionState> encryptionState;
@@ -72,7 +68,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
-     * 
      */
     @Import(name="firewallAllowAzureIps")
       private final @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
@@ -83,7 +78,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of firewall rules associated with this Data Lake Store account.
-     * 
      */
     @Import(name="firewallRules")
       private final @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
@@ -94,7 +88,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current state of the IP address firewall for this Data Lake Store account.
-     * 
      */
     @Import(name="firewallState")
       private final @Nullable Output<FirewallState> firewallState;
@@ -105,7 +98,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Key Vault encryption identity, if any.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<EncryptionIdentityArgs> identity;
@@ -116,7 +108,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -127,7 +118,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The commitment tier to use for next month.
-     * 
      */
     @Import(name="newTier")
       private final @Nullable Output<TierType> newTier;
@@ -138,7 +128,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -149,7 +138,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -160,7 +148,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The current state of the trusted identity provider feature for this Data Lake Store account.
-     * 
      */
     @Import(name="trustedIdProviderState")
       private final @Nullable Output<TrustedIdProviderState> trustedIdProviderState;
@@ -171,7 +158,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of trusted identity providers associated with this Data Lake Store account.
-     * 
      */
     @Import(name="trustedIdProviders")
       private final @Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
@@ -182,7 +168,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of virtual network rules associated with this Data Lake Store account.
-     * 
      */
     @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;

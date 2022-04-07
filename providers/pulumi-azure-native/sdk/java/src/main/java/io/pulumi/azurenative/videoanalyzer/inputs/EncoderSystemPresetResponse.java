@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes a built-in preset for encoding the input content using the encoder processor.
- * 
  */
 public final class EncoderSystemPresetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EncoderSystemPresetResponse extends io.pulumi.resources.Invok
 
     /**
      * Name of the built-in encoding preset.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -30,7 +28,6 @@ public final class EncoderSystemPresetResponse extends io.pulumi.resources.Invok
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

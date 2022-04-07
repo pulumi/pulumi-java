@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of Spark server.
-     * 
      */
     @EnumType
     public enum SparkServerType {

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Files not tiering error object
- * 
  */
 public final class FilesNotTieringErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
 
     /**
      * Error code (HResult)
-     * 
      */
     @Import(name="errorCode", required=true)
       private final Integer errorCode;
@@ -30,7 +28,6 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
 
     /**
      * Count of files with this error
-     * 
      */
     @Import(name="fileCount", required=true)
       private final Double fileCount;

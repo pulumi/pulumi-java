@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The managed application lock level.
-     * 
      */
     @EnumType
     public enum ApplicationLockLevel {

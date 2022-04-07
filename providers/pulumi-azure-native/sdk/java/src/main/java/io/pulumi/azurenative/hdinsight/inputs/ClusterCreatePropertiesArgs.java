@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * The cluster create parameters.
- * 
  */
 public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The cluster definition.
-     * 
      */
     @Import(name="clusterDefinition")
       private final @Nullable Output<ClusterDefinitionArgs> clusterDefinition;
@@ -42,7 +40,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The version of the cluster.
-     * 
      */
     @Import(name="clusterVersion")
       private final @Nullable Output<String> clusterVersion;
@@ -53,7 +50,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The compute isolation properties.
-     * 
      */
     @Import(name="computeIsolationProperties")
       private final @Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties;
@@ -64,7 +60,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The compute profile.
-     * 
      */
     @Import(name="computeProfile")
       private final @Nullable Output<ComputeProfileArgs> computeProfile;
@@ -75,7 +70,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The disk encryption properties.
-     * 
      */
     @Import(name="diskEncryptionProperties")
       private final @Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties;
@@ -86,7 +80,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The encryption-in-transit properties.
-     * 
      */
     @Import(name="encryptionInTransitProperties")
       private final @Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties;
@@ -97,7 +90,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The cluster kafka rest proxy configuration.
-     * 
      */
     @Import(name="kafkaRestProperties")
       private final @Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties;
@@ -108,7 +100,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The minimal supported tls version.
-     * 
      */
     @Import(name="minSupportedTlsVersion")
       private final @Nullable Output<String> minSupportedTlsVersion;
@@ -119,7 +110,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The network properties.
-     * 
      */
     @Import(name="networkProperties")
       private final @Nullable Output<NetworkPropertiesArgs> networkProperties;
@@ -130,7 +120,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The type of operating system.
-     * 
      */
     @Import(name="osType")
       private final @Nullable Output<OSType> osType;
@@ -141,7 +130,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The security profile.
-     * 
      */
     @Import(name="securityProfile")
       private final @Nullable Output<SecurityProfileArgs> securityProfile;
@@ -152,7 +140,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The storage profile.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
@@ -163,7 +150,6 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
 
     /**
      * The cluster tier.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Tier> tier;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * File output type
-     * 
      */
     @EnumType
     public enum OutputType {

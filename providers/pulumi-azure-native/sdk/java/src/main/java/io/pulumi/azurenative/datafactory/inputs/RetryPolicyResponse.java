@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Execution policy for an activity.
- * 
  */
 public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="count")
       private final @Nullable Object count;
@@ -32,7 +30,6 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Interval between retries in seconds. Default is 30.
-     * 
      */
     @Import(name="intervalInSeconds")
       private final @Nullable Integer intervalInSeconds;

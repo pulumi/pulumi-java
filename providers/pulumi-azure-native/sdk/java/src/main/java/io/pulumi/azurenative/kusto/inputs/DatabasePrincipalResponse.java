@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A class representing database principal entity.
- * 
  */
 public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Application id - relevant only for application principal type.
-     * 
      */
     @Import(name="appId")
       private final @Nullable String appId;
@@ -31,7 +29,6 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Database principal email if exists.
-     * 
      */
     @Import(name="email")
       private final @Nullable String email;
@@ -42,7 +39,6 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Database principal fully qualified name.
-     * 
      */
     @Import(name="fqn")
       private final @Nullable String fqn;
@@ -53,7 +49,6 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Database principal name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -64,7 +59,6 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Database principal role.
-     * 
      */
     @Import(name="role", required=true)
       private final String role;
@@ -75,7 +69,6 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The tenant name of the principal
-     * 
      */
     @Import(name="tenantName", required=true)
       private final String tenantName;
@@ -86,7 +79,6 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Database principal type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

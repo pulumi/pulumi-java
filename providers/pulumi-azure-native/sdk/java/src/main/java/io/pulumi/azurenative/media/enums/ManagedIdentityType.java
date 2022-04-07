@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The identity type.
-     * 
      */
     @EnumType
     public enum ManagedIdentityType {
         /**
          * A system-assigned managed identity.
-         * 
          */
         SystemAssigned("SystemAssigned"),
         /**
          * No managed identity.
-         * 
          */
         None("None");
 

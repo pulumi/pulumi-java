@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class IPv4FirewallSettingsResponse {
     /**
      * The indicator of enabling PBI service.
-     * 
      */
     private final @Nullable Boolean enablePowerBIService;
     /**
      * An array of firewall rules.
-     * 
      */
     private final @Nullable List<IPv4FirewallRuleResponse> firewallRules;
 
@@ -34,14 +32,12 @@ public final class IPv4FirewallSettingsResponse {
 
     /**
      * The indicator of enabling PBI service.
-     * 
     */
     public Optional<Boolean> getEnablePowerBIService() {
         return Optional.ofNullable(this.enablePowerBIService);
     }
     /**
      * An array of firewall rules.
-     * 
     */
     public List<IPv4FirewallRuleResponse> getFirewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;

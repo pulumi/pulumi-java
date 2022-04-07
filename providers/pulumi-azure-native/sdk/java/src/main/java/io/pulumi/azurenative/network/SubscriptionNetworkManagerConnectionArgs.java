@@ -16,7 +16,6 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
 
     /**
      * A description of the scope connection.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -27,7 +26,6 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
 
     /**
      * Name for the network manager connection.
-     * 
      */
     @Import(name="networkManagerConnectionName")
       private final @Nullable Output<String> networkManagerConnectionName;
@@ -38,7 +36,6 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
 
     /**
      * Network Manager Id.
-     * 
      */
     @Import(name="networkManagerId")
       private final @Nullable Output<String> networkManagerId;

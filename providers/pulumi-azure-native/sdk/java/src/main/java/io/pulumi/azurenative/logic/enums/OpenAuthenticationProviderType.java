@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of provider for OAuth.
-     * 
      */
     @EnumType
     public enum OpenAuthenticationProviderType {

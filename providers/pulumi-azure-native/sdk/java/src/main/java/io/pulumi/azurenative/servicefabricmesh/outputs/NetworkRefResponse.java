@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class NetworkRefResponse {
     /**
      * A list of endpoints that are exposed on this network.
-     * 
      */
     private final @Nullable List<EndpointRefResponse> endpointRefs;
     /**
      * Name of the network
-     * 
      */
     private final @Nullable String name;
 
@@ -34,14 +32,12 @@ public final class NetworkRefResponse {
 
     /**
      * A list of endpoints that are exposed on this network.
-     * 
     */
     public List<EndpointRefResponse> getEndpointRefs() {
         return this.endpointRefs == null ? List.of() : this.endpointRefs;
     }
     /**
      * Name of the network
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

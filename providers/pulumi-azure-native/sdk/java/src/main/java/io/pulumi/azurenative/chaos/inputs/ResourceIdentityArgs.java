@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The managed identity of a resource.
- * 
  */
 public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * String of the resource identity type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<ResourceIdentityType> type;

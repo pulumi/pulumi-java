@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ImageRegistryCredentialResponse {
     /**
      * The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations.
-     * 
      */
     private final @Nullable String password;
     /**
      * Docker image registry server, without protocol such as `http` and `https`.
-     * 
      */
     private final String server;
     /**
      * The username for the private registry.
-     * 
      */
     private final String username;
 
@@ -39,21 +36,18 @@ public final class ImageRegistryCredentialResponse {
 
     /**
      * The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations.
-     * 
     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Docker image registry server, without protocol such as `http` and `https`.
-     * 
     */
     public String getServer() {
         return this.server;
     }
     /**
      * The username for the private registry.
-     * 
     */
     public String getUsername() {
         return this.username;

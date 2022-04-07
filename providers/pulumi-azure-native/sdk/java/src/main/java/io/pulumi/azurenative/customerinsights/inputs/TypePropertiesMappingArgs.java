@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata for a Link's property mapping.
- * 
  */
 public final class TypePropertiesMappingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Link type.
-     * 
      */
     @Import(name="linkType")
       private final @Nullable Output<LinkTypes> linkType;
@@ -32,7 +30,6 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
 
     /**
      *  Property name on the source Entity Type.
-     * 
      */
     @Import(name="sourcePropertyName", required=true)
       private final Output<String> sourcePropertyName;
@@ -43,7 +40,6 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
 
     /**
      * Property name on the target Entity Type.
-     * 
      */
     @Import(name="targetPropertyName", required=true)
       private final Output<String> targetPropertyName;

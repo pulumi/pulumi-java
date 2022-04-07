@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class KeyVaultLastAccessStatusContractPropertiesResponse {
     /**
      * Last status code for sync and refresh of secret from key vault.
-     * 
      */
     private final @Nullable String code;
     /**
      * Details of the error else empty.
-     * 
      */
     private final @Nullable String message;
     /**
@@ -39,14 +37,12 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
 
     /**
      * Last status code for sync and refresh of secret from key vault.
-     * 
     */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Details of the error else empty.
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);

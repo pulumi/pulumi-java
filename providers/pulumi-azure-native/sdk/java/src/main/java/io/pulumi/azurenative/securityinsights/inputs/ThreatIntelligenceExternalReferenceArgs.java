@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes external reference
- * 
  */
 public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
 
     /**
      * External reference description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +30,6 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
 
     /**
      * External reference ID
-     * 
      */
     @Import(name="externalId")
       private final @Nullable Output<String> externalId;
@@ -43,7 +40,6 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
 
     /**
      * External reference hashes
-     * 
      */
     @Import(name="hashes")
       private final @Nullable Output<Map<String,String>> hashes;
@@ -54,7 +50,6 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
 
     /**
      * External reference source name
-     * 
      */
     @Import(name="sourceName")
       private final @Nullable Output<String> sourceName;
@@ -65,7 +60,6 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
 
     /**
      * External reference URL
-     * 
      */
     @Import(name="url")
       private final @Nullable Output<String> url;

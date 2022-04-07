@@ -16,7 +16,6 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Id of a specific item defined in the Application Insights component
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -27,7 +26,6 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of a specific item defined in the Application Insights component
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -38,7 +36,6 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -49,7 +46,6 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;
@@ -60,7 +56,6 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
-     * 
      */
     @Import(name="scopePath", required=true)
       private final String scopePath;

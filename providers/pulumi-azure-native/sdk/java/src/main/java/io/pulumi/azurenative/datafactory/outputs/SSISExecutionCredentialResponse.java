@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class SSISExecutionCredentialResponse {
     /**
      * Domain for windows authentication.
-     * 
      */
     private final Object domain;
     /**
      * Password for windows authentication.
-     * 
      */
     private final SecureStringResponse password;
     /**
      * UseName for windows authentication.
-     * 
      */
     private final Object userName;
 
@@ -38,21 +35,18 @@ public final class SSISExecutionCredentialResponse {
 
     /**
      * Domain for windows authentication.
-     * 
     */
     public Object getDomain() {
         return this.domain;
     }
     /**
      * Password for windows authentication.
-     * 
     */
     public SecureStringResponse getPassword() {
         return this.password;
     }
     /**
      * UseName for windows authentication.
-     * 
     */
     public Object getUserName() {
         return this.userName;

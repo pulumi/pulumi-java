@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The collection of Connectivity related groups and policies within the Managed Network
- * 
  */
 public final class ConnectivityCollectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectivityCollectionResponse extends io.pulumi.resources.In
 
     /**
      * The collection of connectivity related Managed Network Groups within the Managed Network
-     * 
      */
     @Import(name="groups", required=true)
       private final List<ManagedNetworkGroupResponse> groups;
@@ -31,7 +29,6 @@ public final class ConnectivityCollectionResponse extends io.pulumi.resources.In
 
     /**
      * The collection of Managed Network Peering Policies within the Managed Network
-     * 
      */
     @Import(name="peerings", required=true)
       private final List<ManagedNetworkPeeringPolicyResponse> peerings;

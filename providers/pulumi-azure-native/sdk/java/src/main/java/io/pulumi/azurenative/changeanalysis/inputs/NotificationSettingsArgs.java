@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings of change notification configuration for a subscription.
- * 
  */
 public final class NotificationSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * The state of notifications feature.
-     * 
      */
     @Import(name="activationState")
       private final @Nullable Output<Either<String,NotificationsState>> activationState;
@@ -34,7 +32,6 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
 
     /**
      * Configuration properties of an Azure Monitor workspace that receives change notifications.
-     * 
      */
     @Import(name="azureMonitorWorkspaceProperties")
       private final @Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;

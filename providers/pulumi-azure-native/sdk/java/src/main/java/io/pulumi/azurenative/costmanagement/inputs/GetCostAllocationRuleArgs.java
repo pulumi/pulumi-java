@@ -14,7 +14,6 @@ public final class GetCostAllocationRuleArgs extends io.pulumi.resources.InvokeA
 
     /**
      * BillingAccount ID
-     * 
      */
     @Import(name="billingAccountId", required=true)
       private final String billingAccountId;
@@ -25,7 +24,6 @@ public final class GetCostAllocationRuleArgs extends io.pulumi.resources.InvokeA
 
     /**
      * Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.
-     * 
      */
     @Import(name="ruleName", required=true)
       private final String ruleName;

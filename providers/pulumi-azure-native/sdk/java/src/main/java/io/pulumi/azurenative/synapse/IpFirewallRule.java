@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * IP firewall rule
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create an IP firewall rule
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ipFirewallRule = new AzureNative.Synapse.IpFirewallRule("ipFirewallRule", new AzureNative.Synapse.IpFirewallRuleArgs
+ *         {
+ *             EndIpAddress = "10.0.0.254",
+ *             ResourceGroupName = "ExampleResourceGroup",
+ *             RuleName = "ExampleIpFirewallRule",
+ *             StartIpAddress = "10.0.0.0",
+ *             WorkspaceName = "ExampleWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewIpFirewallRule(ctx, "ipFirewallRule", &synapse.IpFirewallRuleArgs{
+ * 			EndIpAddress:      pulumi.String("10.0.0.254"),
+ * 			ResourceGroupName: pulumi.String("ExampleResourceGroup"),
+ * 			RuleName:          pulumi.String("ExampleIpFirewallRule"),
+ * 			StartIpAddress:    pulumi.String("10.0.0.0"),
+ * 			WorkspaceName:     pulumi.String("ExampleWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const ipFirewallRule = new azure_native.synapse.IpFirewallRule("ipFirewallRule", {
+ *     endIpAddress: "10.0.0.254",
+ *     resourceGroupName: "ExampleResourceGroup",
+ *     ruleName: "ExampleIpFirewallRule",
+ *     startIpAddress: "10.0.0.0",
+ *     workspaceName: "ExampleWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * ip_firewall_rule = azure_native.synapse.IpFirewallRule("ipFirewallRule",
+ *     end_ip_address="10.0.0.254",
+ *     resource_group_name="ExampleResourceGroup",
+ *     rule_name="ExampleIpFirewallRule",
+ *     start_ip_address="10.0.0.0",
+ *     workspace_name="ExampleWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,70 +112,60 @@ import javax.annotation.Nullable;
 public class IpFirewallRule extends io.pulumi.resources.CustomResource {
     /**
      * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
-     * 
      */
     @Export(name="endIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> endIpAddress;
 
     /**
      * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
-     * 
      */
     public Output</* @Nullable */ String> getEndIpAddress() {
         return this.endIpAddress;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Resource provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The start IP address of the firewall rule. Must be IPv4 format
-     * 
      */
     @Export(name="startIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> startIpAddress;
 
     /**
      * @return The start IP address of the firewall rule. Must be IPv4 format
-     * 
      */
     public Output</* @Nullable */ String> getStartIpAddress() {
         return this.startIpAddress;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

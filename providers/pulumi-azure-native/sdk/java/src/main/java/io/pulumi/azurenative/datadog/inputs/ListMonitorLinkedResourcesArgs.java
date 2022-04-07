@@ -14,7 +14,6 @@ public final class ListMonitorLinkedResourcesArgs extends io.pulumi.resources.In
 
     /**
      * Monitor resource name
-     * 
      */
     @Import(name="monitorName", required=true)
       private final String monitorName;
@@ -25,7 +24,6 @@ public final class ListMonitorLinkedResourcesArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

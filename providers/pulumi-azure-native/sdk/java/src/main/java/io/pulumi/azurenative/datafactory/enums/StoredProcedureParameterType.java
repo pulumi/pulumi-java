@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Stored procedure parameter type.
-     * 
      */
     @EnumType
     public enum StoredProcedureParameterType {

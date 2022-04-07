@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * NetworkSecurityGroup resource.
- * 
  */
 public final class NetworkSecurityGroupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * The default security rules of network security group.
-     * 
      */
     @Import(name="defaultSecurityRules", required=true)
       private final List<SecurityRuleResponse> defaultSecurityRules;
@@ -37,7 +35,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -48,7 +45,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * A collection of references to flow log resources.
-     * 
      */
     @Import(name="flowLogs", required=true)
       private final List<FlowLogResponse> flowLogs;
@@ -59,7 +55,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -70,7 +65,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -81,7 +75,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -92,7 +85,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * A collection of references to network interfaces.
-     * 
      */
     @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
@@ -103,7 +95,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * The provisioning state of the network security group resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -114,7 +105,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * The resource GUID property of the network security group resource.
-     * 
      */
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
@@ -125,7 +115,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * A collection of security rules of the network security group.
-     * 
      */
     @Import(name="securityRules")
       private final @Nullable List<SecurityRuleResponse> securityRules;
@@ -136,7 +125,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * A collection of references to subnets.
-     * 
      */
     @Import(name="subnets", required=true)
       private final List<SubnetResponse> subnets;
@@ -147,7 +135,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -158,7 +145,6 @@ public final class NetworkSecurityGroupResponse extends io.pulumi.resources.Invo
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

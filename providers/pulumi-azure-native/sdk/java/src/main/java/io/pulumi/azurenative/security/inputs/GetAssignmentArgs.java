@@ -14,7 +14,6 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The security assignment key - unique key for the standard assignment
-     * 
      */
     @Import(name="assignmentId", required=true)
       private final String assignmentId;
@@ -25,7 +24,6 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

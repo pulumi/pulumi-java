@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class ListConnectedClusterUserCredentialsResult {
     /**
      * Contains the REP (rendezvous endpoint) and “Sender” access token.
-     * 
      */
     private final HybridConnectionConfigResponse hybridConnectionConfig;
     /**
      * Base64-encoded Kubernetes configuration file.
-     * 
      */
     private final List<CredentialResultResponse> kubeconfigs;
 
@@ -32,14 +30,12 @@ public final class ListConnectedClusterUserCredentialsResult {
 
     /**
      * Contains the REP (rendezvous endpoint) and “Sender” access token.
-     * 
     */
     public HybridConnectionConfigResponse getHybridConnectionConfig() {
         return this.hybridConnectionConfig;
     }
     /**
      * Base64-encoded Kubernetes configuration file.
-     * 
     */
     public List<CredentialResultResponse> getKubeconfigs() {
         return this.kubeconfigs;

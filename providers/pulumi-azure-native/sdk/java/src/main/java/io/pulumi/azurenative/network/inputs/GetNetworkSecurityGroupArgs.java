@@ -16,7 +16,6 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
 
     /**
      * Expands referenced resources.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the network security group.
-     * 
      */
     @Import(name="networkSecurityGroupName", required=true)
       private final String networkSecurityGroupName;
@@ -38,7 +36,6 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

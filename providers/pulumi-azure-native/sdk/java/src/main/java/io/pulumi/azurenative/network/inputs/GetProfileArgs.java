@@ -14,7 +14,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Traffic Manager profile.
-     * 
      */
     @Import(name="profileName", required=true)
       private final String profileName;
@@ -25,7 +24,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group containing the Traffic Manager profile.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

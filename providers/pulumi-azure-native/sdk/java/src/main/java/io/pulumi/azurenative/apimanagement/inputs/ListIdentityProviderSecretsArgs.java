@@ -14,7 +14,6 @@ public final class ListIdentityProviderSecretsArgs extends io.pulumi.resources.I
 
     /**
      * Identity Provider Type identifier.
-     * 
      */
     @Import(name="identityProviderName", required=true)
       private final String identityProviderName;
@@ -25,7 +24,6 @@ public final class ListIdentityProviderSecretsArgs extends io.pulumi.resources.I
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListIdentityProviderSecretsArgs extends io.pulumi.resources.I
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

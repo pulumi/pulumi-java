@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of direct peering.
-     * 
      */
     @EnumType
     public enum DirectPeeringType {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates whether audit logs are enabled on the connected registry.
-     * 
      */
     @EnumType
     public enum AuditLogStatus {

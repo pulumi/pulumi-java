@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The storage type for the disk (i.e. Standard, Premium).
-     * 
      */
     @EnumType
     public enum StorageType {

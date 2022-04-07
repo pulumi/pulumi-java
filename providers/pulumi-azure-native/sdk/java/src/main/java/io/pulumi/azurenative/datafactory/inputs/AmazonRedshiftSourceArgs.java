@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity source for Amazon Redshift Source.
- * 
  */
 public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
@@ -33,7 +31,6 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -44,7 +41,6 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -55,7 +51,6 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Database query. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<Object> query;
@@ -66,7 +61,6 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
@@ -77,7 +71,6 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.
-     * 
      */
     @Import(name="redshiftUnloadSettings")
       private final @Nullable Output<RedshiftUnloadSettingsArgs> redshiftUnloadSettings;
@@ -88,7 +81,6 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
@@ -99,7 +91,6 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
@@ -111,7 +102,6 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
     /**
      * Copy source type.
      * Expected value is 'AmazonRedshiftSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

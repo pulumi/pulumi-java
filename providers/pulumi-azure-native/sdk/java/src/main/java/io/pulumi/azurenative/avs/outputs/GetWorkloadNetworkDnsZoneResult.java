@@ -15,52 +15,42 @@ import javax.annotation.Nullable;
 public final class GetWorkloadNetworkDnsZoneResult {
     /**
      * Display name of the DNS Zone.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * DNS Server IP array of the DNS Zone.
-     * 
      */
     private final @Nullable List<String> dnsServerIps;
     /**
      * Number of DNS Services using the DNS zone.
-     * 
      */
     private final @Nullable Double dnsServices;
     /**
      * Domain names of the DNS Zone.
-     * 
      */
     private final @Nullable List<String> domain;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The provisioning state
-     * 
      */
     private final String provisioningState;
     /**
      * NSX revision number.
-     * 
      */
     private final @Nullable Double revision;
     /**
      * Source IP of the DNS Zone.
-     * 
      */
     private final @Nullable String sourceIp;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -90,70 +80,60 @@ public final class GetWorkloadNetworkDnsZoneResult {
 
     /**
      * Display name of the DNS Zone.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * DNS Server IP array of the DNS Zone.
-     * 
     */
     public List<String> getDnsServerIps() {
         return this.dnsServerIps == null ? List.of() : this.dnsServerIps;
     }
     /**
      * Number of DNS Services using the DNS zone.
-     * 
     */
     public Optional<Double> getDnsServices() {
         return Optional.ofNullable(this.dnsServices);
     }
     /**
      * Domain names of the DNS Zone.
-     * 
     */
     public List<String> getDomain() {
         return this.domain == null ? List.of() : this.domain;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
-     * 
     */
     public Optional<Double> getRevision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * Source IP of the DNS Zone.
-     * 
     */
     public Optional<String> getSourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

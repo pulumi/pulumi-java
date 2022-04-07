@@ -16,7 +16,6 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the SAS key.
-     * 
      */
     @Import(name="sasKey")
       private final @Nullable String sasKey;
@@ -27,7 +26,6 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the SAS key name.
-     * 
      */
     @Import(name="sasKeyName")
       private final @Nullable String sasKeyName;
@@ -38,7 +36,6 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the authentication type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

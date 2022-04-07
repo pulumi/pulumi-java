@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The SKU of the Maps Account.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the SKU, in standard format (such as S0).
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

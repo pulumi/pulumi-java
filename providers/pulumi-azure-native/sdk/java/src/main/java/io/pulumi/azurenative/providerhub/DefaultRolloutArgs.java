@@ -17,7 +17,6 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the rollout.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<DefaultRolloutPropertiesArgs> properties;
@@ -28,7 +27,6 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource provider hosted within ProviderHub.
-     * 
      */
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
@@ -39,7 +37,6 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The rollout name.
-     * 
      */
     @Import(name="rolloutName")
       private final @Nullable Output<String> rolloutName;

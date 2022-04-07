@@ -17,7 +17,100 @@ import javax.annotation.Nullable;
  * Description of a namespace authorization rule.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RelayAuthorizationRuleCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var wcfRelayAuthorizationRule = new AzureNative.Relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", new AzureNative.Relay.WCFRelayAuthorizationRuleArgs
+ *         {
+ *             AuthorizationRuleName = "example-RelayAuthRules-01",
+ *             NamespaceName = "example-RelayNamespace-01",
+ *             RelayName = "example-Relay-wcf-01",
+ *             ResourceGroupName = "resourcegroup",
+ *             Rights = 
+ *             {
+ *                 "Listen",
+ *                 "Send",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	relay "github.com/pulumi/pulumi-azure-native/sdk/go/azure/relay"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := relay.NewWCFRelayAuthorizationRule(ctx, "wcfRelayAuthorizationRule", &relay.WCFRelayAuthorizationRuleArgs{
+ * 			AuthorizationRuleName: pulumi.String("example-RelayAuthRules-01"),
+ * 			NamespaceName:         pulumi.String("example-RelayNamespace-01"),
+ * 			RelayName:             pulumi.String("example-Relay-wcf-01"),
+ * 			ResourceGroupName:     pulumi.String("resourcegroup"),
+ * 			Rights: relay.AccessRightsArray{
+ * 				"Listen",
+ * 				"Send",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const wcfRelayAuthorizationRule = new azure_native.relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule", {
+ *     authorizationRuleName: "example-RelayAuthRules-01",
+ *     namespaceName: "example-RelayNamespace-01",
+ *     relayName: "example-Relay-wcf-01",
+ *     resourceGroupName: "resourcegroup",
+ *     rights: [
+ *         "Listen",
+ *         "Send",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * wcf_relay_authorization_rule = azure_native.relay.WCFRelayAuthorizationRule("wcfRelayAuthorizationRule",
+ *     authorization_rule_name="example-RelayAuthRules-01",
+ *     namespace_name="example-RelayNamespace-01",
+ *     relay_name="example-Relay-wcf-01",
+ *     resource_group_name="resourcegroup",
+ *     rights=[
+ *         "Listen",
+ *         "Send",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +125,36 @@ import javax.annotation.Nullable;
 public class WCFRelayAuthorizationRule extends io.pulumi.resources.CustomResource {
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
-     * 
      */
     @Export(name="rights", type=List.class, parameters={String.class})
     private Output<List<String>> rights;
 
     /**
      * @return The rights associated with the rule.
-     * 
      */
     public Output<List<String>> getRights() {
         return this.rights;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

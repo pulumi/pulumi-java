@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity for the resource.
- * 
  */
 public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity type. This is the only required field when adding a system assigned identity to a resource.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;

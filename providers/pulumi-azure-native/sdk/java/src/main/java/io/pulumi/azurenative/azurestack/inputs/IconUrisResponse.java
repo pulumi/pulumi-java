@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Links to product icons.
- * 
  */
 public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI to hero icon.
-     * 
      */
     @Import(name="hero")
       private final @Nullable String hero;
@@ -31,7 +29,6 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI to large icon.
-     * 
      */
     @Import(name="large")
       private final @Nullable String large;
@@ -42,7 +39,6 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI to medium icon.
-     * 
      */
     @Import(name="medium")
       private final @Nullable String medium;
@@ -53,7 +49,6 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI to small icon.
-     * 
      */
     @Import(name="small")
       private final @Nullable String small;
@@ -64,7 +59,6 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * URI to wide icon.
-     * 
      */
     @Import(name="wide")
       private final @Nullable String wide;

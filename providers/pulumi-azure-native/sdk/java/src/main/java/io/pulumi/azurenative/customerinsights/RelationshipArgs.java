@@ -21,7 +21,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Relationship Cardinality.
-     * 
      */
     @Import(name="cardinality")
       private final @Nullable Output<CardinalityTypes> cardinality;
@@ -32,7 +31,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Localized descriptions for the Relationship.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
@@ -43,7 +41,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Localized display name for the Relationship.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
@@ -54,7 +51,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The expiry date time in UTC.
-     * 
      */
     @Import(name="expiryDateTimeUtc")
       private final @Nullable Output<String> expiryDateTimeUtc;
@@ -65,7 +61,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties of the Relationship.
-     * 
      */
     @Import(name="fields")
       private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
@@ -76,7 +71,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
@@ -87,7 +81,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional property to be used to map fields in profile to their strong ids in related profile.
-     * 
      */
     @Import(name="lookupMappings")
       private final @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings;
@@ -98,7 +91,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Profile type.
-     * 
      */
     @Import(name="profileType", required=true)
       private final Output<String> profileType;
@@ -109,7 +101,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Related profile being referenced.
-     * 
      */
     @Import(name="relatedProfileType", required=true)
       private final Output<String> relatedProfileType;
@@ -120,7 +111,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Relationship.
-     * 
      */
     @Import(name="relationshipName")
       private final @Nullable Output<String> relationshipName;
@@ -131,7 +121,6 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

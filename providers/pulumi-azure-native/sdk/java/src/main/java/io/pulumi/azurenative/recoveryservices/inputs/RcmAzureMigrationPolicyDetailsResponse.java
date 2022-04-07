@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * RCM based Azure migration specific policy details.
- * 
  */
 public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * The app consistent snapshot frequency in minutes.
-     * 
      */
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Integer appConsistentFrequencyInMinutes;
@@ -32,7 +30,6 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * The crash consistent snapshot frequency in minutes.
-     * 
      */
     @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Integer crashConsistentFrequencyInMinutes;
@@ -44,7 +41,6 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
     /**
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'RcmAzureMigration'.
-     * 
      */
     @Import(name="instanceType", required=true)
       private final String instanceType;
@@ -55,7 +51,6 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * A value indicating whether multi-VM sync has to be enabled.
-     * 
      */
     @Import(name="multiVmSyncStatus")
       private final @Nullable String multiVmSyncStatus;
@@ -66,7 +61,6 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * The duration in minutes until which the recovery points need to be stored.
-     * 
      */
     @Import(name="recoveryPointHistory")
       private final @Nullable Integer recoveryPointHistory;
@@ -77,7 +71,6 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
 
     /**
      * The recovery point threshold in minutes.
-     * 
      */
     @Import(name="recoveryPointThresholdInMinutes")
       private final @Nullable Integer recoveryPointThresholdInMinutes;

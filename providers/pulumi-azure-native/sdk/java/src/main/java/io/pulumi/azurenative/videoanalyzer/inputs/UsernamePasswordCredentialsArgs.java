@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Username and password credentials.
- * 
  */
 public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
 
     /**
      * Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -31,7 +29,6 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -42,7 +39,6 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
 
     /**
      * Username to be presented as part of the credentials.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

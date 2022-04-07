@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class EnvironmentStatusResponse {
     /**
      * An object that represents the status of ingress on an environment.
-     * 
      */
     private final IngressEnvironmentStatusResponse ingress;
     /**
      * An object that represents the status of warm storage on an environment.
-     * 
      */
     private final WarmStorageEnvironmentStatusResponse warmStorage;
 
@@ -31,14 +29,12 @@ public final class EnvironmentStatusResponse {
 
     /**
      * An object that represents the status of ingress on an environment.
-     * 
     */
     public IngressEnvironmentStatusResponse getIngress() {
         return this.ingress;
     }
     /**
      * An object that represents the status of warm storage on an environment.
-     * 
     */
     public WarmStorageEnvironmentStatusResponse getWarmStorage() {
         return this.warmStorage;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Image registry that contains the base image.
- * 
  */
 public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.resources.ResourceArgs {
 

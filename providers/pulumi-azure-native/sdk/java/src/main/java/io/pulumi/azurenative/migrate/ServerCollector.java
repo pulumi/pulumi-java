@@ -15,9 +15,137 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2019-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ServerCollectors_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverCollector = new AzureNative.Migrate.ServerCollector("serverCollector", new AzureNative.Migrate.ServerCollectorArgs
+ *         {
+ *             ETag = "\"00000606-0000-0d00-0000-605999bf0000\"",
+ *             ProjectName = "app11141project",
+ *             Properties = new AzureNative.Migrate.Inputs.CollectorPropertiesArgs
+ *             {
+ *                 AgentProperties = new AzureNative.Migrate.Inputs.CollectorAgentPropertiesArgs
+ *                 {
+ *                     SpnDetails = new AzureNative.Migrate.Inputs.CollectorBodyAgentSpnPropertiesArgs
+ *                     {
+ *                         ApplicationId = "ad9f701a-cc08-4421-b51f-b5762d58e9ba",
+ *                         Audience = "https://72f988bf-86f1-41af-91ab-2d7cd011db47/app23df4authandaccessaadapp",
+ *                         Authority = "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *                         ObjectId = "b4975e42-9248-4a36-b99f-37eca377ea00",
+ *                         TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *                     },
+ *                 },
+ *                 DiscoverySiteId = "/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/ServerSites/app21141site",
+ *             },
+ *             ResourceGroupName = "pajindtest",
+ *             ServerCollectorName = "app23df4collector",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := migrate.NewServerCollector(ctx, "serverCollector", &migrate.ServerCollectorArgs{
+ * 			ETag:        pulumi.String("\"00000606-0000-0d00-0000-605999bf0000\""),
+ * 			ProjectName: pulumi.String("app11141project"),
+ * 			Properties: &migrate.CollectorPropertiesArgs{
+ * 				AgentProperties: &migrate.CollectorAgentPropertiesArgs{
+ * 					SpnDetails: &migrate.CollectorBodyAgentSpnPropertiesArgs{
+ * 						ApplicationId: pulumi.String("ad9f701a-cc08-4421-b51f-b5762d58e9ba"),
+ * 						Audience:      pulumi.String("https://72f988bf-86f1-41af-91ab-2d7cd011db47/app23df4authandaccessaadapp"),
+ * 						Authority:     pulumi.String("https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47"),
+ * 						ObjectId:      pulumi.String("b4975e42-9248-4a36-b99f-37eca377ea00"),
+ * 						TenantId:      pulumi.String("72f988bf-86f1-41af-91ab-2d7cd011db47"),
+ * 					},
+ * 				},
+ * 				DiscoverySiteId: pulumi.String("/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/ServerSites/app21141site"),
+ * 			},
+ * 			ResourceGroupName:   pulumi.String("pajindtest"),
+ * 			ServerCollectorName: pulumi.String("app23df4collector"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverCollector = new azure_native.migrate.ServerCollector("serverCollector", {
+ *     eTag: "\"00000606-0000-0d00-0000-605999bf0000\"",
+ *     projectName: "app11141project",
+ *     properties: {
+ *         agentProperties: {
+ *             spnDetails: {
+ *                 applicationId: "ad9f701a-cc08-4421-b51f-b5762d58e9ba",
+ *                 audience: "https://72f988bf-86f1-41af-91ab-2d7cd011db47/app23df4authandaccessaadapp",
+ *                 authority: "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *                 objectId: "b4975e42-9248-4a36-b99f-37eca377ea00",
+ *                 tenantId: "72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *             },
+ *         },
+ *         discoverySiteId: "/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/ServerSites/app21141site",
+ *     },
+ *     resourceGroupName: "pajindtest",
+ *     serverCollectorName: "app23df4collector",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_collector = azure_native.migrate.ServerCollector("serverCollector",
+ *     e_tag="\"00000606-0000-0d00-0000-605999bf0000\"",
+ *     project_name="app11141project",
+ *     properties=azure_native.migrate.CollectorPropertiesArgs(
+ *         agent_properties=azure_native.migrate.CollectorAgentPropertiesArgs(
+ *             spn_details=azure_native.migrate.CollectorBodyAgentSpnPropertiesArgs(
+ *                 application_id="ad9f701a-cc08-4421-b51f-b5762d58e9ba",
+ *                 audience="https://72f988bf-86f1-41af-91ab-2d7cd011db47/app23df4authandaccessaadapp",
+ *                 authority="https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *                 object_id="b4975e42-9248-4a36-b99f-37eca377ea00",
+ *                 tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *             ),
+ *         ),
+ *         discovery_site_id="/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/ServerSites/app21141site",
+ *     ),
+ *     resource_group_name="pajindtest",
+ *     server_collector_name="app23df4collector")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 

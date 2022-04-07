@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
-     * 
      */
     @EnumType
     public enum MinimumTlsVersion {

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A private endpoint connection
- * 
  */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -33,7 +31,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The name of the resource
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -44,7 +41,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The private endpoint which the connection belongs to.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
@@ -55,7 +51,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Connection state of the private endpoint connection.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
@@ -66,7 +61,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Provisioning state of the private endpoint connection.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -77,7 +71,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -19,7 +19,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Configuration for auto scaling.
-     * 
      */
     @Import(name="autoScaleConfiguration")
       private final @Nullable Output<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs> autoScaleConfiguration;
@@ -30,7 +29,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the ExpressRoute gateway.
-     * 
      */
     @Import(name="expressRouteGatewayName")
       private final @Nullable Output<String> expressRouteGatewayName;
@@ -41,7 +39,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -52,7 +49,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -63,7 +59,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -85,7 +79,6 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
-     * 
      */
     @Import(name="virtualHub", required=true)
       private final Output<VirtualHubIdArgs> virtualHub;

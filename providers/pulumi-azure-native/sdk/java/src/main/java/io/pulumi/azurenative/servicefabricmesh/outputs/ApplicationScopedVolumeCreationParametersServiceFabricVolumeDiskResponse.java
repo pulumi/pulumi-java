@@ -13,18 +13,15 @@ import javax.annotation.Nullable;
 public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse {
     /**
      * User readable description of the volume.
-     * 
      */
     private final @Nullable String description;
     /**
      * Specifies the application-scoped volume kind.
      * Expected value is 'ServiceFabricVolumeDisk'.
-     * 
      */
     private final String kind;
     /**
      * Volume size
-     * 
      */
     private final String sizeDisk;
 
@@ -40,7 +37,6 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
 
     /**
      * User readable description of the volume.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
@@ -48,14 +44,12 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     /**
      * Specifies the application-scoped volume kind.
      * Expected value is 'ServiceFabricVolumeDisk'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Volume size
-     * 
     */
     public String getSizeDisk() {
         return this.sizeDisk;

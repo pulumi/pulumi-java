@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Reference to a public IP address.
- * 
  */
 public final class ReferencedPublicIpAddressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ReferencedPublicIpAddressResponse extends io.pulumi.resources
 
     /**
      * The PublicIPAddress Reference.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

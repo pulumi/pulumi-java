@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies set of extensions that should be installed onto the virtual machines.
- * 
  */
 public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
@@ -34,7 +32,6 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -45,7 +42,6 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the extension.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -56,7 +52,6 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
@@ -67,7 +62,6 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Collection of extension names after which this extension needs to be provisioned.
-     * 
      */
     @Import(name="provisionAfterExtensions")
       private final @Nullable Output<List<String>> provisionAfterExtensions;
@@ -78,7 +72,6 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Import(name="publisher", required=true)
       private final Output<String> publisher;
@@ -89,7 +82,6 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Json formatted public settings for the extension.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
@@ -100,7 +92,6 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -111,7 +102,6 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Import(name="typeHandlerVersion", required=true)
       private final Output<String> typeHandlerVersion;

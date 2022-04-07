@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Log location settings.
- * 
  */
 public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Log storage linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -32,7 +30,6 @@ public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<Object> path;

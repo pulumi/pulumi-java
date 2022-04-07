@@ -20,7 +20,6 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the Service Bus authentication.
-     * 
      */
     @Import(name="authentication")
       private final @Nullable Output<ServiceBusAuthenticationArgs> authentication;
@@ -31,7 +30,6 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the brokered message properties.
-     * 
      */
     @Import(name="brokeredMessageProperties")
       private final @Nullable Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties;
@@ -42,7 +40,6 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the custom message properties.
-     * 
      */
     @Import(name="customMessageProperties")
       private final @Nullable Output<Map<String,String>> customMessageProperties;
@@ -53,7 +50,6 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the message.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -64,7 +60,6 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the namespace.
-     * 
      */
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
@@ -75,7 +70,6 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the topic path.
-     * 
      */
     @Import(name="topicPath")
       private final @Nullable Output<String> topicPath;
@@ -86,7 +80,6 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
 
     /**
      * Gets or sets the transport type.
-     * 
      */
     @Import(name="transportType")
       private final @Nullable Output<ServiceBusTransportType> transportType;

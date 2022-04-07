@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for Teradata data source.
- * 
  */
 public final class TeradataLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * AuthenticationType to be used for connection.
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
@@ -50,7 +47,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -61,7 +57,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * Teradata ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Object connectionString;
@@ -72,7 +67,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -83,7 +77,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -94,7 +87,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -105,7 +97,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * Password for authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -116,7 +107,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * Server name for connection. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="server")
       private final @Nullable Object server;
@@ -128,7 +118,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
     /**
      * Type of linked service.
      * Expected value is 'Teradata'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -139,7 +128,6 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
 
     /**
      * Username for authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username")
       private final @Nullable Object username;

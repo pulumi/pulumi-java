@@ -13,8 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Defines the parameters for RequestScheme match conditions
- * 
+ * Defines the parameters for RequestScheme match conditions 
  */
 public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
 
     /**
      * The match value for the condition of the delivery rule
-     * 
      */
     @Import(name="matchValues")
       private final @Nullable Output<List<String>> matchValues;
@@ -33,7 +31,6 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
 
     /**
      * Describes if this is negate condition or not
-     * 
      */
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
@@ -51,7 +48,6 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
 
     /**
      * Describes operator to be matched
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<String> operator;

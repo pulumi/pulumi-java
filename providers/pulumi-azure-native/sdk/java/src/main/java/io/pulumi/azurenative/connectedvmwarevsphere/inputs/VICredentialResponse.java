@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Username / Password Credentials to connect to vcenter.
- * 
  */
 public final class VICredentialResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VICredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets username to connect with the vCenter.
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

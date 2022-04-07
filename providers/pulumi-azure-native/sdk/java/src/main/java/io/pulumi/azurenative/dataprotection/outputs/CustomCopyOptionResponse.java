@@ -13,13 +13,11 @@ import javax.annotation.Nullable;
 public final class CustomCopyOptionResponse {
     /**
      * Data copied after given timespan
-     * 
      */
     private final @Nullable String duration;
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'CustomCopyOption'.
-     * 
      */
     private final String objectType;
 
@@ -33,7 +31,6 @@ public final class CustomCopyOptionResponse {
 
     /**
      * Data copied after given timespan
-     * 
     */
     public Optional<String> getDuration() {
         return Optional.ofNullable(this.duration);
@@ -41,7 +38,6 @@ public final class CustomCopyOptionResponse {
     /**
      * Type of the specific object - used for deserializing
      * Expected value is 'CustomCopyOption'.
-     * 
     */
     public String getObjectType() {
         return this.objectType;

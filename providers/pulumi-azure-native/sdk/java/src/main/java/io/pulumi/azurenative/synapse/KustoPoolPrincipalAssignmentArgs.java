@@ -19,7 +19,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The name of the Kusto pool.
-     * 
      */
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
@@ -30,7 +29,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The name of the Kusto principalAssignment.
-     * 
      */
     @Import(name="principalAssignmentName")
       private final @Nullable Output<String> principalAssignmentName;
@@ -41,7 +39,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
-     * 
      */
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
@@ -52,7 +49,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
 
     /**
      * Principal type.
-     * 
      */
     @Import(name="principalType", required=true)
       private final Output<Either<String,PrincipalType>> principalType;
@@ -63,7 +59,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
 
     /**
      * Cluster principal role.
-     * 
      */
     @Import(name="role", required=true)
       private final Output<Either<String,ClusterPrincipalRole>> role;
@@ -85,7 +79,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The tenant id of the principal
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
@@ -96,7 +89,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * User info
- * 
  */
 public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Email of the user used by Datadog for contacting them if needed
-     * 
      */
     @Import(name="emailAddress")
       private final @Nullable String emailAddress;
@@ -31,7 +29,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the user
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -42,7 +39,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Phone number of the user used by Datadog for contacting them if needed
-     * 
      */
     @Import(name="phoneNumber")
       private final @Nullable String phoneNumber;

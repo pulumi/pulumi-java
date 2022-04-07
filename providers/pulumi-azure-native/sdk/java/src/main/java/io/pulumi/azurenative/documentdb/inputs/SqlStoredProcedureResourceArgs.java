@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB SQL storedProcedure resource object
- * 
  */
 public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
 
     /**
      * Body of the Stored Procedure
-     * 
      */
     @Import(name="body")
       private final @Nullable Output<String> body;
@@ -31,7 +29,6 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
 
     /**
      * Name of the Cosmos DB SQL storedProcedure
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

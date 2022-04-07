@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AssignedUserResponse {
     /**
      * User’s AAD Object Id.
-     * 
      */
     private final String objectId;
     /**
      * User’s AAD Tenant Id.
-     * 
      */
     private final String tenantId;
 
@@ -30,14 +28,12 @@ public final class AssignedUserResponse {
 
     /**
      * User’s AAD Object Id.
-     * 
     */
     public String getObjectId() {
         return this.objectId;
     }
     /**
      * User’s AAD Tenant Id.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;

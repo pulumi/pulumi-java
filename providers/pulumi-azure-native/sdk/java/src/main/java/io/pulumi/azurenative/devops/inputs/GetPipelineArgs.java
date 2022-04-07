@@ -14,7 +14,6 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Pipeline resource in ARM.
-     * 
      */
     @Import(name="pipelineName", required=true)
       private final String pipelineName;
@@ -25,7 +24,6 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

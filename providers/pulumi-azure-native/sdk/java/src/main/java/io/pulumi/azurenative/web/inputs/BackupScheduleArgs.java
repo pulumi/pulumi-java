@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Description of a backup schedule. Describes how often should be the backup performed and what should be the retention policy.
- * 
  */
 public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
-     * 
      */
     @Import(name="frequencyInterval", required=true)
       private final Output<Integer> frequencyInterval;
@@ -34,7 +32,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
-     * 
      */
     @Import(name="frequencyUnit", required=true)
       private final Output<FrequencyUnit> frequencyUnit;
@@ -45,7 +42,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
-     * 
      */
     @Import(name="keepAtLeastOneBackup", required=true)
       private final Output<Boolean> keepAtLeastOneBackup;
@@ -56,7 +52,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * After how many days backups should be deleted.
-     * 
      */
     @Import(name="retentionPeriodInDays", required=true)
       private final Output<Integer> retentionPeriodInDays;
@@ -67,7 +62,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When the schedule should start working.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;

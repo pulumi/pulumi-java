@@ -18,7 +18,6 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
 
     /**
      * The name of the backend address pool.
-     * 
      */
     @Import(name="backendAddressPoolName")
       private final @Nullable Output<String> backendAddressPoolName;
@@ -29,7 +28,6 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -40,7 +38,6 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
 
     /**
      * An array of backend addresses.
-     * 
      */
     @Import(name="loadBalancerBackendAddresses")
       private final @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
@@ -51,7 +48,6 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
 
     /**
      * The name of the load balancer.
-     * 
      */
     @Import(name="loadBalancerName", required=true)
       private final Output<String> loadBalancerName;
@@ -62,7 +58,6 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
 
     /**
      * The location of the backend address pool.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -73,7 +68,6 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
 
     /**
      * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -84,7 +78,6 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

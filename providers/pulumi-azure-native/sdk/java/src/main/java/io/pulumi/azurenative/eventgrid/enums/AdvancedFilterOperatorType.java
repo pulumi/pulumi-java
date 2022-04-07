@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * 
      */
     @EnumType
     public enum AdvancedFilterOperatorType {

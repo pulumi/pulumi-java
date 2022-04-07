@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ServiceCosmosDbConfigurationInfoResponse {
     /**
      * The URI of the customer-managed key for the backing database.
-     * 
      */
     private final @Nullable String keyVaultKeyUri;
     /**
      * The provisioned throughput for the backing database.
-     * 
      */
     private final @Nullable Double offerThroughput;
 
@@ -33,14 +31,12 @@ public final class ServiceCosmosDbConfigurationInfoResponse {
 
     /**
      * The URI of the customer-managed key for the backing database.
-     * 
     */
     public Optional<String> getKeyVaultKeyUri() {
         return Optional.ofNullable(this.keyVaultKeyUri);
     }
     /**
      * The provisioned throughput for the backing database.
-     * 
     */
     public Optional<Double> getOfferThroughput() {
         return Optional.ofNullable(this.offerThroughput);

@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class IdentityResponse {
     /**
      * The principal id of managed service identity.
-     * 
      */
     private final String principalId;
     /**
      * The tenant of managed service identity.
-     * 
      */
     private final String tenantId;
     /**
      * The type of managed service identity.
-     * 
      */
     private final String type;
 
@@ -37,21 +34,18 @@ public final class IdentityResponse {
 
     /**
      * The principal id of managed service identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant of managed service identity.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of managed service identity.
-     * 
     */
     public String getType() {
         return this.type;

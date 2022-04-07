@@ -19,7 +19,149 @@ import javax.annotation.Nullable;
  * A SQL Migration Service.
  * API Version: 2021-10-30-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or Update SQL Migration Service with maximum parameters.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlMigrationService = new AzureNative.DataMigration.SqlMigrationService("sqlMigrationService", new AzureNative.DataMigration.SqlMigrationServiceArgs
+ *         {
+ *             Location = "northeurope",
+ *             ResourceGroupName = "testrg",
+ *             SqlMigrationServiceName = "testagent",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datamigration.NewSqlMigrationService(ctx, "sqlMigrationService", &datamigration.SqlMigrationServiceArgs{
+ * 			Location:                pulumi.String("northeurope"),
+ * 			ResourceGroupName:       pulumi.String("testrg"),
+ * 			SqlMigrationServiceName: pulumi.String("testagent"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlMigrationService = new azure_native.datamigration.SqlMigrationService("sqlMigrationService", {
+ *     location: "northeurope",
+ *     resourceGroupName: "testrg",
+ *     sqlMigrationServiceName: "testagent",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_migration_service = azure_native.datamigration.SqlMigrationService("sqlMigrationService",
+ *     location="northeurope",
+ *     resource_group_name="testrg",
+ *     sql_migration_service_name="testagent")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create or Update SQL Migration Service with minimum parameters.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlMigrationService = new AzureNative.DataMigration.SqlMigrationService("sqlMigrationService", new AzureNative.DataMigration.SqlMigrationServiceArgs
+ *         {
+ *             Location = "northeurope",
+ *             ResourceGroupName = "testrg",
+ *             SqlMigrationServiceName = "testagent",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datamigration.NewSqlMigrationService(ctx, "sqlMigrationService", &datamigration.SqlMigrationServiceArgs{
+ * 			Location:                pulumi.String("northeurope"),
+ * 			ResourceGroupName:       pulumi.String("testrg"),
+ * 			SqlMigrationServiceName: pulumi.String("testagent"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlMigrationService = new azure_native.datamigration.SqlMigrationService("sqlMigrationService", {
+ *     location: "northeurope",
+ *     resourceGroupName: "testrg",
+ *     sqlMigrationServiceName: "testagent",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_migration_service = azure_native.datamigration.SqlMigrationService("sqlMigrationService",
+ *     location="northeurope",
+ *     resource_group_name="testrg",
+ *     sql_migration_service_name="testagent")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +176,12 @@ import javax.annotation.Nullable;
 public class SqlMigrationService extends io.pulumi.resources.CustomResource {
     /**
      * Current state of the Integration runtime.
-     * 
      */
     @Export(name="integrationRuntimeState", type=String.class, parameters={})
     private Output<String> integrationRuntimeState;
 
     /**
      * @return Current state of the Integration runtime.
-     * 
      */
     public Output<String> getIntegrationRuntimeState() {
         return this.integrationRuntimeState;
@@ -60,14 +200,12 @@ public class SqlMigrationService extends io.pulumi.resources.CustomResource {
     }
     /**
      * Provisioning state to track the async operation status.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state to track the async operation status.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;

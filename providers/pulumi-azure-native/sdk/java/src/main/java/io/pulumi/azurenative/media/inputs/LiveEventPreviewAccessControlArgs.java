@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The IP access control for the live event preview endpoint.
- * 
  */
 public final class LiveEventPreviewAccessControlArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LiveEventPreviewAccessControlArgs extends io.pulumi.resources
 
     /**
      * The IP access control properties.
-     * 
      */
     @Import(name="ip")
       private final @Nullable Output<IPAccessControlArgs> ip;

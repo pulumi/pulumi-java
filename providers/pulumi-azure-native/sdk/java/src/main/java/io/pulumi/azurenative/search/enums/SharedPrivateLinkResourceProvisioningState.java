@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
-     * 
      */
     @EnumType
     public enum SharedPrivateLinkResourceProvisioningState {

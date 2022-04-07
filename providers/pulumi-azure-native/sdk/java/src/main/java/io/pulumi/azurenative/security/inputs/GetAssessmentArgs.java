@@ -16,7 +16,6 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Assessment Key - Unique key for the assessment type
-     * 
      */
     @Import(name="assessmentName", required=true)
       private final String assessmentName;
@@ -27,7 +26,6 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * OData expand. Optional.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -38,7 +36,6 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;

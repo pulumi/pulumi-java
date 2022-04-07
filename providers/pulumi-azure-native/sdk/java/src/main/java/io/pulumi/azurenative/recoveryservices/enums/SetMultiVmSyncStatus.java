@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.
-     * 
      */
     @EnumType
     public enum SetMultiVmSyncStatus {

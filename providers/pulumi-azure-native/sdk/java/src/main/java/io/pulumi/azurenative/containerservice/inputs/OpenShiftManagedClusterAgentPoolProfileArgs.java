@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the configuration of the OpenShift cluster VMs.
- * 
  */
 public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
 
     /**
      * Number of agents (VMs) to host docker containers.
-     * 
      */
     @Import(name="count", required=true)
       private final Output<Integer> count;
@@ -36,7 +34,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
 
     /**
      * Unique name of the pool profile in the context of the subscription and resource group.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -47,7 +44,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
 
     /**
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
-     * 
      */
     @Import(name="osType")
       private final @Nullable Output<Either<String,OSType>> osType;
@@ -58,7 +54,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
 
     /**
      * Define the role of the AgentPoolProfile.
-     * 
      */
     @Import(name="role")
       private final @Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role;
@@ -69,7 +64,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
 
     /**
      * Subnet CIDR for the peering.
-     * 
      */
     @Import(name="subnetCidr")
       private final @Nullable Output<String> subnetCidr;
@@ -80,7 +74,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
 
     /**
      * Size of agent VMs.
-     * 
      */
     @Import(name="vmSize", required=true)
       private final Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize;

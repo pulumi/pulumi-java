@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class IndexesResponse {
     /**
      * The datatype for which the indexing behavior is applied to.
-     * 
      */
     private final @Nullable String dataType;
     /**
      * Indicates the type of index.
-     * 
      */
     private final @Nullable String kind;
     /**
      * The precision of the index. -1 is maximum precision.
-     * 
      */
     private final @Nullable Integer precision;
 
@@ -40,21 +37,18 @@ public final class IndexesResponse {
 
     /**
      * The datatype for which the indexing behavior is applied to.
-     * 
     */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Indicates the type of index.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The precision of the index. -1 is maximum precision.
-     * 
     */
     public Optional<Integer> getPrecision() {
         return Optional.ofNullable(this.precision);

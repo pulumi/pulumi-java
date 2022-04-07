@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The verbosity of logs persisted on the connected registry.
-     * 
      */
     @EnumType
     public enum LogLevel {

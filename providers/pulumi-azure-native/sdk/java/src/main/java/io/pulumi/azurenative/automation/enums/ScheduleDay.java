@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
-     * 
      */
     @EnumType
     public enum ScheduleDay {

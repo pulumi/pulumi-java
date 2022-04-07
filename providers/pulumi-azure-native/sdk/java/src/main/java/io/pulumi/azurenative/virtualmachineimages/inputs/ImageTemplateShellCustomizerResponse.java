@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Runs a shell script during the customization phase (Linux). Corresponds to Packer shell provisioner. Exactly one of 'scriptUri' or 'inline' can be specified.
- * 
  */
 public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
 
     /**
      * Array of shell commands to execute
-     * 
      */
     @Import(name="inline")
       private final @Nullable List<String> inline;
@@ -32,7 +30,6 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
 
     /**
      * Friendly Name to provide context on what this customization step does
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
 
     /**
      * URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
-     * 
      */
     @Import(name="scriptUri")
       private final @Nullable String scriptUri;
@@ -54,7 +50,6 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
 
     /**
      * SHA256 checksum of the shell script provided in the scriptUri field
-     * 
      */
     @Import(name="sha256Checksum")
       private final @Nullable String sha256Checksum;
@@ -66,7 +61,6 @@ public final class ImageTemplateShellCustomizerResponse extends io.pulumi.resour
     /**
      * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
      * Expected value is 'Shell'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

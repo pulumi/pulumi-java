@@ -16,7 +16,6 @@ public final class PipelineRunSourcePropertiesResponse extends io.pulumi.resourc
 
     /**
      * The name of the source.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -27,7 +26,6 @@ public final class PipelineRunSourcePropertiesResponse extends io.pulumi.resourc
 
     /**
      * The type of the source.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

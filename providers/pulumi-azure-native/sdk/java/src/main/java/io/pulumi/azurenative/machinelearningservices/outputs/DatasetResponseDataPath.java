@@ -18,47 +18,38 @@ import javax.annotation.Nullable;
 public final class DatasetResponseDataPath {
     /**
      * Additional Properties.
-     * 
      */
     private final @Nullable Map<String,Object> additionalProperties;
     /**
      * Azure path for Azure Blob or File
-     * 
      */
     private final String azureFilePath;
     /**
      * Data store Name
-     * 
      */
     private final String datastoreName;
     /**
      * HTTP URL.
-     * 
      */
     private final String httpUrl;
     /**
      * Specify the partition format of path. Defaults to None.
-     * 
      */
     private final String partitionFormat;
     /**
      * Whether or not to ignore unmatched path.
-     * 
      */
     private final Boolean partitionFormatIgnoreError;
     /**
      * List of files expanded from a file GLOB specified
-     * 
      */
     private final List<String> paths;
     /**
      * Relative path in the data store
-     * 
      */
     private final String relativePath;
     /**
      * Sql Query/Table/Stored Procedure details.
-     * 
      */
     private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
 
@@ -86,63 +77,54 @@ public final class DatasetResponseDataPath {
 
     /**
      * Additional Properties.
-     * 
     */
     public Map<String,Object> getAdditionalProperties() {
         return this.additionalProperties == null ? Map.of() : this.additionalProperties;
     }
     /**
      * Azure path for Azure Blob or File
-     * 
     */
     public String getAzureFilePath() {
         return this.azureFilePath;
     }
     /**
      * Data store Name
-     * 
     */
     public String getDatastoreName() {
         return this.datastoreName;
     }
     /**
      * HTTP URL.
-     * 
     */
     public String getHttpUrl() {
         return this.httpUrl;
     }
     /**
      * Specify the partition format of path. Defaults to None.
-     * 
     */
     public String getPartitionFormat() {
         return this.partitionFormat;
     }
     /**
      * Whether or not to ignore unmatched path.
-     * 
     */
     public Boolean getPartitionFormatIgnoreError() {
         return this.partitionFormatIgnoreError;
     }
     /**
      * List of files expanded from a file GLOB specified
-     * 
     */
     public List<String> getPaths() {
         return this.paths;
     }
     /**
      * Relative path in the data store
-     * 
     */
     public String getRelativePath() {
         return this.relativePath;
     }
     /**
      * Sql Query/Table/Stored Procedure details.
-     * 
     */
     public Optional<DatasetResponseSqlDataPath> getSqlDataPath() {
         return Optional.ofNullable(this.sqlDataPath);

@@ -19,7 +19,260 @@ import javax.annotation.Nullable;
  * Description of NetworkRuleSet resource.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NameSpaceNetworkRuleSetCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var namespaceNetworkRuleSet = new AzureNative.ServiceBus.NamespaceNetworkRuleSet("namespaceNetworkRuleSet", new AzureNative.ServiceBus.NamespaceNetworkRuleSetArgs
+ *         {
+ *             DefaultAction = "Deny",
+ *             IpRules = 
+ *             {
+ *                 new AzureNative.ServiceBus.Inputs.NWRuleSetIpRulesArgs
+ *                 {
+ *                     Action = "Allow",
+ *                     IpMask = "1.1.1.1",
+ *                 },
+ *                 new AzureNative.ServiceBus.Inputs.NWRuleSetIpRulesArgs
+ *                 {
+ *                     Action = "Allow",
+ *                     IpMask = "1.1.1.2",
+ *                 },
+ *                 new AzureNative.ServiceBus.Inputs.NWRuleSetIpRulesArgs
+ *                 {
+ *                     Action = "Allow",
+ *                     IpMask = "1.1.1.3",
+ *                 },
+ *                 new AzureNative.ServiceBus.Inputs.NWRuleSetIpRulesArgs
+ *                 {
+ *                     Action = "Allow",
+ *                     IpMask = "1.1.1.4",
+ *                 },
+ *                 new AzureNative.ServiceBus.Inputs.NWRuleSetIpRulesArgs
+ *                 {
+ *                     Action = "Allow",
+ *                     IpMask = "1.1.1.5",
+ *                 },
+ *             },
+ *             NamespaceName = "sdk-Namespace-6019",
+ *             ResourceGroupName = "ResourceGroup",
+ *             VirtualNetworkRules = 
+ *             {
+ *                 new AzureNative.ServiceBus.Inputs.NWRuleSetVirtualNetworkRulesArgs
+ *                 {
+ *                     IgnoreMissingVnetServiceEndpoint = true,
+ *                     Subnet = new AzureNative.ServiceBus.Inputs.SubnetArgs
+ *                     {
+ *                         Id = "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet2",
+ *                     },
+ *                 },
+ *                 new AzureNative.ServiceBus.Inputs.NWRuleSetVirtualNetworkRulesArgs
+ *                 {
+ *                     IgnoreMissingVnetServiceEndpoint = false,
+ *                     Subnet = new AzureNative.ServiceBus.Inputs.SubnetArgs
+ *                     {
+ *                         Id = "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet3",
+ *                     },
+ *                 },
+ *                 new AzureNative.ServiceBus.Inputs.NWRuleSetVirtualNetworkRulesArgs
+ *                 {
+ *                     IgnoreMissingVnetServiceEndpoint = false,
+ *                     Subnet = new AzureNative.ServiceBus.Inputs.SubnetArgs
+ *                     {
+ *                         Id = "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet6",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewNamespaceNetworkRuleSet(ctx, "namespaceNetworkRuleSet", &servicebus.NamespaceNetworkRuleSetArgs{
+ * 			DefaultAction: pulumi.String("Deny"),
+ * 			IpRules: []servicebus.NWRuleSetIpRulesArgs{
+ * 				&servicebus.NWRuleSetIpRulesArgs{
+ * 					Action: pulumi.String("Allow"),
+ * 					IpMask: pulumi.String("1.1.1.1"),
+ * 				},
+ * 				&servicebus.NWRuleSetIpRulesArgs{
+ * 					Action: pulumi.String("Allow"),
+ * 					IpMask: pulumi.String("1.1.1.2"),
+ * 				},
+ * 				&servicebus.NWRuleSetIpRulesArgs{
+ * 					Action: pulumi.String("Allow"),
+ * 					IpMask: pulumi.String("1.1.1.3"),
+ * 				},
+ * 				&servicebus.NWRuleSetIpRulesArgs{
+ * 					Action: pulumi.String("Allow"),
+ * 					IpMask: pulumi.String("1.1.1.4"),
+ * 				},
+ * 				&servicebus.NWRuleSetIpRulesArgs{
+ * 					Action: pulumi.String("Allow"),
+ * 					IpMask: pulumi.String("1.1.1.5"),
+ * 				},
+ * 			},
+ * 			NamespaceName:     pulumi.String("sdk-Namespace-6019"),
+ * 			ResourceGroupName: pulumi.String("ResourceGroup"),
+ * 			VirtualNetworkRules: []servicebus.NWRuleSetVirtualNetworkRulesArgs{
+ * 				&servicebus.NWRuleSetVirtualNetworkRulesArgs{
+ * 					IgnoreMissingVnetServiceEndpoint: pulumi.Bool(true),
+ * 					Subnet: &servicebus.SubnetArgs{
+ * 						Id: pulumi.String("/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet2"),
+ * 					},
+ * 				},
+ * 				&servicebus.NWRuleSetVirtualNetworkRulesArgs{
+ * 					IgnoreMissingVnetServiceEndpoint: pulumi.Bool(false),
+ * 					Subnet: &servicebus.SubnetArgs{
+ * 						Id: pulumi.String("/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet3"),
+ * 					},
+ * 				},
+ * 				&servicebus.NWRuleSetVirtualNetworkRulesArgs{
+ * 					IgnoreMissingVnetServiceEndpoint: pulumi.Bool(false),
+ * 					Subnet: &servicebus.SubnetArgs{
+ * 						Id: pulumi.String("/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet6"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const namespaceNetworkRuleSet = new azure_native.servicebus.NamespaceNetworkRuleSet("namespaceNetworkRuleSet", {
+ *     defaultAction: "Deny",
+ *     ipRules: [
+ *         {
+ *             action: "Allow",
+ *             ipMask: "1.1.1.1",
+ *         },
+ *         {
+ *             action: "Allow",
+ *             ipMask: "1.1.1.2",
+ *         },
+ *         {
+ *             action: "Allow",
+ *             ipMask: "1.1.1.3",
+ *         },
+ *         {
+ *             action: "Allow",
+ *             ipMask: "1.1.1.4",
+ *         },
+ *         {
+ *             action: "Allow",
+ *             ipMask: "1.1.1.5",
+ *         },
+ *     ],
+ *     namespaceName: "sdk-Namespace-6019",
+ *     resourceGroupName: "ResourceGroup",
+ *     virtualNetworkRules: [
+ *         {
+ *             ignoreMissingVnetServiceEndpoint: true,
+ *             subnet: {
+ *                 id: "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet2",
+ *             },
+ *         },
+ *         {
+ *             ignoreMissingVnetServiceEndpoint: false,
+ *             subnet: {
+ *                 id: "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet3",
+ *             },
+ *         },
+ *         {
+ *             ignoreMissingVnetServiceEndpoint: false,
+ *             subnet: {
+ *                 id: "/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet6",
+ *             },
+ *         },
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * namespace_network_rule_set = azure_native.servicebus.NamespaceNetworkRuleSet("namespaceNetworkRuleSet",
+ *     default_action="Deny",
+ *     ip_rules=[
+ *         azure_native.servicebus.NWRuleSetIpRulesArgs(
+ *             action="Allow",
+ *             ip_mask="1.1.1.1",
+ *         ),
+ *         azure_native.servicebus.NWRuleSetIpRulesArgs(
+ *             action="Allow",
+ *             ip_mask="1.1.1.2",
+ *         ),
+ *         azure_native.servicebus.NWRuleSetIpRulesArgs(
+ *             action="Allow",
+ *             ip_mask="1.1.1.3",
+ *         ),
+ *         azure_native.servicebus.NWRuleSetIpRulesArgs(
+ *             action="Allow",
+ *             ip_mask="1.1.1.4",
+ *         ),
+ *         azure_native.servicebus.NWRuleSetIpRulesArgs(
+ *             action="Allow",
+ *             ip_mask="1.1.1.5",
+ *         ),
+ *     ],
+ *     namespace_name="sdk-Namespace-6019",
+ *     resource_group_name="ResourceGroup",
+ *     virtual_network_rules=[
+ *         azure_native.servicebus.NWRuleSetVirtualNetworkRulesArgs(
+ *             ignore_missing_vnet_service_endpoint=True,
+ *             subnet=azure_native.servicebus.SubnetArgs(
+ *                 id="/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet2",
+ *             ),
+ *         ),
+ *         azure_native.servicebus.NWRuleSetVirtualNetworkRulesArgs(
+ *             ignore_missing_vnet_service_endpoint=False,
+ *             subnet=azure_native.servicebus.SubnetArgs(
+ *                 id="/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet3",
+ *             ),
+ *         ),
+ *         azure_native.servicebus.NWRuleSetVirtualNetworkRulesArgs(
+ *             ignore_missing_vnet_service_endpoint=False,
+ *             subnet=azure_native.servicebus.SubnetArgs(
+ *                 id="/subscriptions/subscriptionid/resourcegroups/resourcegroupid/providers/Microsoft.Network/virtualNetworks/myvn/subnets/subnet6",
+ *             ),
+ *         ),
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +287,60 @@ import javax.annotation.Nullable;
 public class NamespaceNetworkRuleSet extends io.pulumi.resources.CustomResource {
     /**
      * Default Action for Network Rule Set
-     * 
      */
     @Export(name="defaultAction", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultAction;
 
     /**
      * @return Default Action for Network Rule Set
-     * 
      */
     public Output</* @Nullable */ String> getDefaultAction() {
         return this.defaultAction;
     }
     /**
      * List of IpRules
-     * 
      */
     @Export(name="ipRules", type=List.class, parameters={NWRuleSetIpRulesResponse.class})
     private Output</* @Nullable */ List<NWRuleSetIpRulesResponse>> ipRules;
 
     /**
      * @return List of IpRules
-     * 
      */
     public Output</* @Nullable */ List<NWRuleSetIpRulesResponse>> getIpRules() {
         return this.ipRules;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * List VirtualNetwork Rules
-     * 
      */
     @Export(name="virtualNetworkRules", type=List.class, parameters={NWRuleSetVirtualNetworkRulesResponse.class})
     private Output</* @Nullable */ List<NWRuleSetVirtualNetworkRulesResponse>> virtualNetworkRules;
 
     /**
      * @return List VirtualNetwork Rules
-     * 
      */
     public Output</* @Nullable */ List<NWRuleSetVirtualNetworkRulesResponse>> getVirtualNetworkRules() {
         return this.virtualNetworkRules;

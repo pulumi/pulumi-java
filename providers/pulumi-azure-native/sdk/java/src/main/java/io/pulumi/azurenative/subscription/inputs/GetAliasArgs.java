@@ -14,7 +14,6 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
-     * 
      */
     @Import(name="aliasName", required=true)
       private final String aliasName;

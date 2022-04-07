@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The object representing continuous mode backup policy.
- * 
  */
 public final class ContinuousModeBackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ContinuousModeBackupPolicyResponse extends io.pulumi.resource
     /**
      * Describes the mode of backups.
      * Expected value is 'Continuous'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

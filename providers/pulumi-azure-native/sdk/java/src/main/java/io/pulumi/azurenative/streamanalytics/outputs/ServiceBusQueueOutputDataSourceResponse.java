@@ -14,33 +14,27 @@ import javax.annotation.Nullable;
 public final class ServiceBusQueueOutputDataSourceResponse {
     /**
      * A string array of the names of output columns to be attached to Service Bus messages as custom properties.
-     * 
      */
     private final @Nullable List<String> propertyColumns;
     /**
      * The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     private final @Nullable String queueName;
     /**
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     private final @Nullable String serviceBusNamespace;
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     private final @Nullable String sharedAccessPolicyKey;
     /**
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     private final @Nullable String sharedAccessPolicyName;
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.ServiceBus/Queue'.
-     * 
      */
     private final String type;
 
@@ -62,35 +56,30 @@ public final class ServiceBusQueueOutputDataSourceResponse {
 
     /**
      * A string array of the names of output columns to be attached to Service Bus messages as custom properties.
-     * 
     */
     public List<String> getPropertyColumns() {
         return this.propertyColumns == null ? List.of() : this.propertyColumns;
     }
     /**
      * The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
-     * 
     */
     public Optional<String> getQueueName() {
         return Optional.ofNullable(this.queueName);
     }
     /**
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
     */
     public Optional<String> getServiceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
-     * 
     */
     public Optional<String> getSharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
     /**
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
     */
     public Optional<String> getSharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
@@ -98,7 +87,6 @@ public final class ServiceBusQueueOutputDataSourceResponse {
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.ServiceBus/Queue'.
-     * 
     */
     public String getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Direct Line channel definition
- * 
  */
 public final class DirectLineChannelResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DirectLineChannelResponse extends io.pulumi.resources.InvokeA
     /**
      * The channel name
      * Expected value is 'DirectLineChannel'.
-     * 
      */
     @Import(name="channelName", required=true)
       private final String channelName;
@@ -33,7 +31,6 @@ public final class DirectLineChannelResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Entity Tag of the resource
-     * 
      */
     @Import(name="etag")
       private final @Nullable String etag;
@@ -44,7 +41,6 @@ public final class DirectLineChannelResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -55,7 +51,6 @@ public final class DirectLineChannelResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The set of properties specific to Direct Line channel resource
-     * 
      */
     @Import(name="properties")
       private final @Nullable DirectLineChannelPropertiesResponse properties;
@@ -66,7 +61,6 @@ public final class DirectLineChannelResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Provisioning state of the resource
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

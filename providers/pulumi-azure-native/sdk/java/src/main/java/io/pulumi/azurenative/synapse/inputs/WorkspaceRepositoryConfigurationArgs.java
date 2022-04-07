@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Git integration settings
- * 
  */
 public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
 
     /**
      * Account name
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -31,7 +29,6 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
 
     /**
      * Collaboration branch
-     * 
      */
     @Import(name="collaborationBranch")
       private final @Nullable Output<String> collaborationBranch;
@@ -42,7 +39,6 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
 
     /**
      * GitHub Enterprise host name. For example: https://github.mydomain.com
-     * 
      */
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
@@ -53,7 +49,6 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
 
     /**
      * The last commit ID
-     * 
      */
     @Import(name="lastCommitId")
       private final @Nullable Output<String> lastCommitId;
@@ -64,7 +59,6 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
 
     /**
      * VSTS project name
-     * 
      */
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
@@ -75,7 +69,6 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
 
     /**
      * Repository name
-     * 
      */
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
@@ -86,7 +79,6 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
 
     /**
      * Root folder to use in the repository
-     * 
      */
     @Import(name="rootFolder")
       private final @Nullable Output<String> rootFolder;
@@ -97,7 +89,6 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
 
     /**
      * The VSTS tenant ID
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
@@ -108,7 +99,6 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
 
     /**
      * Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

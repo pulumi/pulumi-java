@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describe whether this data type connection is enabled or not.
-     * 
      */
     @EnumType
     public enum DataTypeState {

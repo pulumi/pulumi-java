@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Push settings for the App.
- * 
  */
 public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
-     * 
      */
     @Import(name="dynamicTagsJson")
       private final @Nullable Output<String> dynamicTagsJson;
@@ -32,7 +30,6 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
-     * 
      */
     @Import(name="isPushEnabled", required=true)
       private final Output<Boolean> isPushEnabled;
@@ -43,7 +40,6 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -54,7 +50,6 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
-     * 
      */
     @Import(name="tagWhitelistJson")
       private final @Nullable Output<String> tagWhitelistJson;
@@ -66,9 +61,8 @@ public final class PushSettingsArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
-     * '_', '@', '#', '.', ':', '-'.
+     * '_', '@', '#', '.', ':', '-'. 
      * Validation should be performed at the PushRequestHandler.
-     * 
      */
     @Import(name="tagsRequiringAuth")
       private final @Nullable Output<String> tagsRequiringAuth;

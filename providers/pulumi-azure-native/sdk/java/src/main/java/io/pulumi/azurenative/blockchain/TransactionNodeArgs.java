@@ -18,7 +18,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Blockchain member name.
-     * 
      */
     @Import(name="blockchainMemberName", required=true)
       private final Output<String> blockchainMemberName;
@@ -29,7 +28,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets the firewall rules.
-     * 
      */
     @Import(name="firewallRules")
       private final @Nullable Output<List<FirewallRuleArgs>> firewallRules;
@@ -40,7 +38,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets the transaction node location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Sets the transaction node dns endpoint basic auth password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -62,7 +58,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Transaction node name.
-     * 
      */
     @Import(name="transactionNodeName")
       private final @Nullable Output<String> transactionNodeName;

@@ -17,7 +17,6 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the DDoS protection plan.
-     * 
      */
     @Import(name="ddosProtectionPlanName")
       private final @Nullable Output<String> ddosProtectionPlanName;
@@ -28,7 +27,6 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -39,7 +37,6 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

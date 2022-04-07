@@ -18,7 +18,6 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the number of times a retry should be attempted.
-     * 
      */
     @Import(name="retryCount")
       private final @Nullable Output<Integer> retryCount;
@@ -29,7 +28,6 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
-     * 
      */
     @Import(name="retryInterval")
       private final @Nullable Output<String> retryInterval;
@@ -40,7 +38,6 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the retry strategy to be used.
-     * 
      */
     @Import(name="retryType")
       private final @Nullable Output<RetryType> retryType;

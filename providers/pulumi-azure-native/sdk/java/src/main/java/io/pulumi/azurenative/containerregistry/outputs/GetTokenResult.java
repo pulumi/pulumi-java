@@ -15,47 +15,38 @@ import javax.annotation.Nullable;
 public final class GetTokenResult {
     /**
      * The creation date of scope map.
-     * 
      */
     private final String creationDate;
     /**
      * The credentials that can be used for authenticating the token.
-     * 
      */
     private final @Nullable TokenCredentialsPropertiesResponse credentials;
     /**
      * The resource ID.
-     * 
      */
     private final String id;
     /**
      * The name of the resource.
-     * 
      */
     private final String name;
     /**
      * Provisioning state of the resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The resource ID of the scope map to which the token will be associated with.
-     * 
      */
     private final @Nullable String scopeMapId;
     /**
      * The status of the token example enabled or disabled.
-     * 
      */
     private final @Nullable String status;
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -83,63 +74,54 @@ public final class GetTokenResult {
 
     /**
      * The creation date of scope map.
-     * 
     */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The credentials that can be used for authenticating the token.
-     * 
     */
     public Optional<TokenCredentialsPropertiesResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * The resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource ID of the scope map to which the token will be associated with.
-     * 
     */
     public Optional<String> getScopeMapId() {
         return Optional.ofNullable(this.scopeMapId);
     }
     /**
      * The status of the token example enabled or disabled.
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

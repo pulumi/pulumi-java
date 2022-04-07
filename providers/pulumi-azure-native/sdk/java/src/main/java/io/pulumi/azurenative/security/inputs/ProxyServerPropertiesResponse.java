@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
- * 
  */
 public final class ProxyServerPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ProxyServerPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Proxy server IP
-     * 
      */
     @Import(name="ip")
       private final @Nullable String ip;
@@ -31,7 +29,6 @@ public final class ProxyServerPropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Proxy server port
-     * 
      */
     @Import(name="port")
       private final @Nullable String port;

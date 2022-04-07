@@ -22,88 +22,71 @@ import javax.annotation.Nullable;
 public final class CosmosDbLinkedServiceResponse {
     /**
      * The endpoint of the Azure CosmosDB account. Type: string (or Expression with resultType string)
-     * 
      */
     private final @Nullable Object accountEndpoint;
     /**
      * The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey;
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     private final @Nullable List<Object> annotations;
     /**
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object azureCloudType;
     /**
      * The integration runtime reference.
-     * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
      * The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable String connectionMode;
     /**
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     private final @Nullable Object connectionString;
     /**
      * The credential reference containing authentication information.
-     * 
      */
     private final @Nullable CredentialReferenceResponse credential;
     /**
      * The name of the database. Type: string (or Expression with resultType string)
-     * 
      */
     private final @Nullable Object database;
     /**
      * Linked service description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object encryptedCredential;
     /**
      * Parameters for linked service.
-     * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
-     * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
     /**
      * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable String servicePrincipalCredentialType;
     /**
      * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object servicePrincipalId;
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object tenant;
     /**
      * Type of linked service.
      * Expected value is 'CosmosDb'.
-     * 
      */
     private final String type;
 
@@ -147,112 +130,96 @@ public final class CosmosDbLinkedServiceResponse {
 
     /**
      * The endpoint of the Azure CosmosDB account. Type: string (or Expression with resultType string)
-     * 
     */
     public Optional<Object> getAccountEndpoint() {
         return Optional.ofNullable(this.accountEndpoint);
     }
     /**
      * The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.
-     * 
     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * List of tags that can be used for describing the linked service.
-     * 
     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getAzureCloudType() {
         return Optional.ofNullable(this.azureCloudType);
     }
     /**
      * The integration runtime reference.
-     * 
     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<String> getConnectionMode() {
         return Optional.ofNullable(this.connectionMode);
     }
     /**
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
     */
     public Optional<Object> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The credential reference containing authentication information.
-     * 
     */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * The name of the database. Type: string (or Expression with resultType string)
-     * 
     */
     public Optional<Object> getDatabase() {
         return Optional.ofNullable(this.database);
     }
     /**
      * Linked service description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
-     * 
     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
-     * 
     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalCredential() {
         return Optional.ofNullable(this.servicePrincipalCredential);
     }
     /**
      * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<String> getServicePrincipalCredentialType() {
         return Optional.ofNullable(this.servicePrincipalCredentialType);
     }
     /**
      * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getServicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getTenant() {
         return Optional.ofNullable(this.tenant);
@@ -260,7 +227,6 @@ public final class CosmosDbLinkedServiceResponse {
     /**
      * Type of linked service.
      * Expected value is 'CosmosDb'.
-     * 
     */
     public String getType() {
         return this.type;

@@ -18,7 +18,96 @@ import javax.annotation.Nullable;
  * The properties of the EventHubConsumerGroupInfo object.
  * API Version: 2020-08-31.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### IotHubResource_CreateEventHubConsumerGroup
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var iotHubResourceEventHubConsumerGroup = new AzureNative.Devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", new AzureNative.Devices.IotHubResourceEventHubConsumerGroupArgs
+ *         {
+ *             EventHubEndpointName = "events",
+ *             Name = "test",
+ *             Properties = new AzureNative.Devices.Inputs.EventHubConsumerGroupNameArgs
+ *             {
+ *                 Name = "test",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ResourceName = "testHub",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devices.NewIotHubResourceEventHubConsumerGroup(ctx, "iotHubResourceEventHubConsumerGroup", &devices.IotHubResourceEventHubConsumerGroupArgs{
+ * 			EventHubEndpointName: pulumi.String("events"),
+ * 			Name:                 pulumi.String("test"),
+ * 			Properties: &devices.EventHubConsumerGroupNameArgs{
+ * 				Name: pulumi.String("test"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ResourceName:      pulumi.String("testHub"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const iotHubResourceEventHubConsumerGroup = new azure_native.devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
+ *     eventHubEndpointName: "events",
+ *     name: "test",
+ *     properties: {
+ *         name: "test",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     resourceName: "testHub",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * iot_hub_resource_event_hub_consumer_group = azure_native.devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
+ *     event_hub_endpoint_name="events",
+ *     name="test",
+ *     properties=azure_native.devices.EventHubConsumerGroupNameArgs(
+ *         name="test",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     resource_name="testHub")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +122,48 @@ import javax.annotation.Nullable;
 public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.CustomResource {
     /**
      * The etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return The etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The Event Hub-compatible consumer group name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The Event Hub-compatible consumer group name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The tags.
-     * 
      */
     @Export(name="properties", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> properties;
 
     /**
      * @return The tags.
-     * 
      */
     public Output<Map<String,String>> getProperties() {
         return this.properties;
     }
     /**
      * the resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return the resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

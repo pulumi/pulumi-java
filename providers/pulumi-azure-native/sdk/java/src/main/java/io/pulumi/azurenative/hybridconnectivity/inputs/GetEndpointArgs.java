@@ -14,7 +14,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The endpoint name.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final String endpointName;
@@ -25,7 +24,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The fully qualified Azure Resource manager identifier of the resource to be connected.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final String resourceUri;

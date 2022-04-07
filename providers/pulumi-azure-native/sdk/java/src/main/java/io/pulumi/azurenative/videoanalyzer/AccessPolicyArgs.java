@@ -19,7 +19,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the access policy to create or update.
-     * 
      */
     @Import(name="accessPolicyName")
       private final @Nullable Output<String> accessPolicyName;
@@ -30,7 +29,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Video Analyzer account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -41,7 +39,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Authentication method to be used when validating client API access.
-     * 
      */
     @Import(name="authentication")
       private final @Nullable Output<JwtAuthenticationArgs> authentication;
@@ -52,7 +49,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines the access level granted by this policy.
-     * 
      */
     @Import(name="role")
       private final @Nullable Output<Either<String,AccessPolicyRole>> role;

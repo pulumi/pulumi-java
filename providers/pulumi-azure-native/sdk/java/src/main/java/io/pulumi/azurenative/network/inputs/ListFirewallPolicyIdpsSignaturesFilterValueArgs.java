@@ -16,7 +16,6 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pu
 
     /**
      * Describes the name of the column which values will be returned
-     * 
      */
     @Import(name="filterName")
       private final @Nullable String filterName;
@@ -27,7 +26,6 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pu
 
     /**
      * The name of the Firewall Policy.
-     * 
      */
     @Import(name="firewallPolicyName", required=true)
       private final String firewallPolicyName;
@@ -38,7 +36,6 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pu
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

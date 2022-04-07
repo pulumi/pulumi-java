@@ -21,7 +21,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
 
     /**
      * Analytical TTL.
-     * 
      */
     @Import(name="analyticalStorageTtl")
       private final @Nullable Integer analyticalStorageTtl;
@@ -32,7 +31,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
 
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -43,7 +41,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
 
     /**
      * Name of the Cosmos DB MongoDB collection
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -54,7 +51,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
 
     /**
      * List of index keys
-     * 
      */
     @Import(name="indexes")
       private final @Nullable List<MongoIndexResponse> indexes;
@@ -65,7 +61,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
 
     /**
      * A system generated property. A unique identifier.
-     * 
      */
     @Import(name="rid", required=true)
       private final String rid;
@@ -76,7 +71,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
 
     /**
      * A key-value pair of shard keys to be applied for the request.
-     * 
      */
     @Import(name="shardKey")
       private final @Nullable Map<String,String> shardKey;
@@ -87,7 +81,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
 
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
-     * 
      */
     @Import(name="ts", required=true)
       private final Double ts;

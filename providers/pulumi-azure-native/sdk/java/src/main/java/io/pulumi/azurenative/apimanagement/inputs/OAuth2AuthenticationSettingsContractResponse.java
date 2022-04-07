@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * API OAuth2 Authentication settings details.
- * 
  */
 public final class OAuth2AuthenticationSettingsContractResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OAuth2AuthenticationSettingsContractResponse extends io.pulum
 
     /**
      * OAuth authorization server identifier.
-     * 
      */
     @Import(name="authorizationServerId")
       private final @Nullable String authorizationServerId;
@@ -31,7 +29,6 @@ public final class OAuth2AuthenticationSettingsContractResponse extends io.pulum
 
     /**
      * operations scope.
-     * 
      */
     @Import(name="scope")
       private final @Nullable String scope;

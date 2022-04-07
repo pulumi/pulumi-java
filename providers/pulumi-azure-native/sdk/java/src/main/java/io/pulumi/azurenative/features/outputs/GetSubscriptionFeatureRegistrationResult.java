@@ -12,18 +12,15 @@ import java.util.Objects;
 public final class GetSubscriptionFeatureRegistrationResult {
     /**
      * Azure resource Id.
-     * 
      */
     private final String id;
     /**
      * Azure resource name.
-     * 
      */
     private final String name;
     private final SubscriptionFeatureRegistrationResponseProperties properties;
     /**
      * Azure resource type.
-     * 
      */
     private final String type;
 
@@ -41,14 +38,12 @@ public final class GetSubscriptionFeatureRegistrationResult {
 
     /**
      * Azure resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Azure resource name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -58,7 +53,6 @@ public final class GetSubscriptionFeatureRegistrationResult {
     }
     /**
      * Azure resource type.
-     * 
     */
     public String getType() {
         return this.type;

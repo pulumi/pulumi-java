@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class StreamingPathResponse {
     /**
      * Encryption scheme
-     * 
      */
     private final String encryptionScheme;
     /**
      * Streaming paths for each protocol and encryptionScheme pair
-     * 
      */
     private final @Nullable List<String> paths;
     /**
      * Streaming protocol
-     * 
      */
     private final String streamingProtocol;
 
@@ -39,21 +36,18 @@ public final class StreamingPathResponse {
 
     /**
      * Encryption scheme
-     * 
     */
     public String getEncryptionScheme() {
         return this.encryptionScheme;
     }
     /**
      * Streaming paths for each protocol and encryptionScheme pair
-     * 
     */
     public List<String> getPaths() {
         return this.paths == null ? List.of() : this.paths;
     }
     /**
      * Streaming protocol
-     * 
     */
     public String getStreamingProtocol() {
         return this.streamingProtocol;

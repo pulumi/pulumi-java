@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
-     * 
      */
     @EnumType
     public enum MatchProcessingBehavior {

@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * A possible role to configure sending security notification alerts to
-     * 
      */
     @EnumType
     public enum Roles {
         /**
          * If enabled, send notification on new alerts to the account admins
-         * 
          */
         AccountAdmin("AccountAdmin"),
         /**
          * If enabled, send notification on new alerts to the service admins
-         * 
          */
         ServiceAdmin("ServiceAdmin"),
         /**
          * If enabled, send notification on new alerts to the subscription owners
-         * 
          */
         Owner("Owner"),
         /**
          * If enabled, send notification on new alerts to the subscription contributors
-         * 
          */
         Contributor("Contributor");
 

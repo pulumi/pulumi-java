@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class MachineResponseIdentity {
     /**
      * The identity's principal id.
-     * 
      */
     private final String principalId;
     /**
      * The identity's tenant id.
-     * 
      */
     private final String tenantId;
     /**
      * The identity type.
-     * 
      */
     private final @Nullable String type;
 
@@ -39,21 +36,18 @@ public final class MachineResponseIdentity {
 
     /**
      * The identity's principal id.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The identity's tenant id.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The identity type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

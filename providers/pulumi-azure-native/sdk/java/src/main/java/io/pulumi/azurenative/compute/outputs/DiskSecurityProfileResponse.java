@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DiskSecurityProfileResponse {
     /**
      * Specifies the SecurityType of the VM. Applicable for OS disks only.
-     * 
      */
     private final @Nullable String securityType;
 
@@ -24,7 +23,6 @@ public final class DiskSecurityProfileResponse {
 
     /**
      * Specifies the SecurityType of the VM. Applicable for OS disks only.
-     * 
     */
     public Optional<String> getSecurityType() {
         return Optional.ofNullable(this.securityType);

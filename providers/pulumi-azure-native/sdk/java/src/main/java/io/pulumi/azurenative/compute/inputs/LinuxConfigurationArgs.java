@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
- * 
  */
 public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies whether password authentication should be disabled.
-     * 
      */
     @Import(name="disablePasswordAuthentication")
       private final @Nullable Output<Boolean> disablePasswordAuthentication;
@@ -33,7 +31,6 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
-     * 
      */
     @Import(name="patchSettings")
       private final @Nullable Output<LinuxPatchSettingsArgs> patchSettings;
@@ -44,7 +41,6 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
-     * 
      */
     @Import(name="provisionVMAgent")
       private final @Nullable Output<Boolean> provisionVMAgent;
@@ -55,7 +51,6 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specifies the ssh key configuration for a Linux OS.
-     * 
      */
     @Import(name="ssh")
       private final @Nullable Output<SshConfigurationArgs> ssh;

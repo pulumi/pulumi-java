@@ -18,7 +18,6 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -40,7 +38,6 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the restore point collection.
-     * 
      */
     @Import(name="restorePointCollectionName")
       private final @Nullable Output<String> restorePointCollectionName;
@@ -51,7 +48,6 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * The properties of the source resource that this restore point collection is created from.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<RestorePointCollectionSourcePropertiesArgs> source;
@@ -62,7 +58,6 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

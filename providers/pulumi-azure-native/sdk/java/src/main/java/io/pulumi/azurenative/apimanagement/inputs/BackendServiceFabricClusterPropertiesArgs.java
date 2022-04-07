@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the Service Fabric Type Backend.
- * 
  */
 public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
 
     /**
      * The client certificate id for the management endpoint.
-     * 
      */
     @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
@@ -34,7 +32,6 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
 
     /**
      * The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
-     * 
      */
     @Import(name="clientCertificatethumbprint")
       private final @Nullable Output<String> clientCertificatethumbprint;
@@ -45,7 +42,6 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
 
     /**
      * The cluster management endpoint.
-     * 
      */
     @Import(name="managementEndpoints", required=true)
       private final Output<List<String>> managementEndpoints;
@@ -56,7 +52,6 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
 
     /**
      * Maximum number of retries while attempting resolve the partition.
-     * 
      */
     @Import(name="maxPartitionResolutionRetries")
       private final @Nullable Output<Integer> maxPartitionResolutionRetries;
@@ -67,7 +62,6 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
 
     /**
      * Thumbprints of certificates cluster management service uses for tls communication
-     * 
      */
     @Import(name="serverCertificateThumbprints")
       private final @Nullable Output<List<String>> serverCertificateThumbprints;
@@ -78,7 +72,6 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
 
     /**
      * Server X509 Certificate Names Collection
-     * 
      */
     @Import(name="serverX509Names")
       private final @Nullable Output<List<X509CertificateNameArgs>> serverX509Names;

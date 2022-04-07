@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for Sybase data source.
- * 
  */
 public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -40,7 +38,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * AuthenticationType to be used for connection.
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,SybaseAuthenticationType>> authenticationType;
@@ -51,7 +48,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -62,7 +58,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Database name for connection. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="database", required=true)
       private final Output<Object> database;
@@ -73,7 +68,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -84,7 +78,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -95,7 +88,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -106,7 +98,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Password for authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -117,7 +108,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Schema name for connection. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
@@ -128,7 +118,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Server name for connection. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="server", required=true)
       private final Output<Object> server;
@@ -140,7 +129,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
     /**
      * Type of linked service.
      * Expected value is 'Sybase'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -151,7 +139,6 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Username for authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<Object> username;

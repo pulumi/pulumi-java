@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Profile for how to handle shutting down virtual machines.
- * 
  */
 public final class AutoShutdownProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
 
     /**
      * The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
-     * 
      */
     @Import(name="disconnectDelay")
       private final @Nullable String disconnectDelay;
@@ -31,7 +29,6 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
 
     /**
      * The amount of time a VM will idle before it is shutdown if this behavior is enabled.
-     * 
      */
     @Import(name="idleDelay")
       private final @Nullable String idleDelay;
@@ -42,7 +39,6 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
 
     /**
      * The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
-     * 
      */
     @Import(name="noConnectDelay")
       private final @Nullable String noConnectDelay;
@@ -53,7 +49,6 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
 
     /**
      * Whether shutdown on disconnect is enabled
-     * 
      */
     @Import(name="shutdownOnDisconnect")
       private final @Nullable String shutdownOnDisconnect;
@@ -64,7 +59,6 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
 
     /**
      * Whether a VM will get shutdown when it has idled for a period of time.
-     * 
      */
     @Import(name="shutdownOnIdle")
       private final @Nullable String shutdownOnIdle;
@@ -75,7 +69,6 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
 
     /**
      * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
-     * 
      */
     @Import(name="shutdownWhenNotConnected")
       private final @Nullable String shutdownWhenNotConnected;

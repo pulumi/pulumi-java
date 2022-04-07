@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represent a parameter with constrains and metadata.
- * 
  */
 public final class ParameterDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
 
     /**
      * Array of allowed values for this parameter.
-     * 
      */
     @Import(name="allowedValues")
       private final @Nullable List<Object> allowedValues;
@@ -33,7 +31,6 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
 
     /**
      * Default Value for this parameter.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
@@ -44,7 +41,6 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
 
     /**
      * Description of this parameter/resourceGroup.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -55,7 +51,6 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
 
     /**
      * DisplayName of this parameter/resourceGroup.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -66,7 +61,6 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
 
     /**
      * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
-     * 
      */
     @Import(name="strongType")
       private final @Nullable String strongType;
@@ -77,7 +71,6 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
 
     /**
      * Allowed data types for Resource Manager template parameters.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

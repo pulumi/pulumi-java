@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The encryption identity properties.
- * 
  */
 public final class EncryptionIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class EncryptionIdentityResponse extends io.pulumi.resources.Invoke
 
     /**
      * The principal identifier associated with the encryption.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -29,7 +27,6 @@ public final class EncryptionIdentityResponse extends io.pulumi.resources.Invoke
 
     /**
      * The tenant identifier associated with the encryption.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -40,7 +37,6 @@ public final class EncryptionIdentityResponse extends io.pulumi.resources.Invoke
 
     /**
      * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

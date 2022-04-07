@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Health status of the backup item, evaluated based on last heartbeat received
-     * 
      */
     @EnumType
     public enum ProtectedItemHealthStatus {

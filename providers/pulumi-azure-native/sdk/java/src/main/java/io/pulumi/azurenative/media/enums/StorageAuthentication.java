@@ -12,12 +12,10 @@ import java.util.StringJoiner;
     public enum StorageAuthentication {
         /**
          * System authentication.
-         * 
          */
         System("System"),
         /**
          * Managed Identity authentication.
-         * 
          */
         ManagedIdentity("ManagedIdentity");
 

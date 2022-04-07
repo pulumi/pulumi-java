@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class EncryptionPropertiesResponse {
     /**
      * Key vault properties.
-     * 
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
@@ -24,7 +23,6 @@ public final class EncryptionPropertiesResponse {
 
     /**
      * Key vault properties.
-     * 
     */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);

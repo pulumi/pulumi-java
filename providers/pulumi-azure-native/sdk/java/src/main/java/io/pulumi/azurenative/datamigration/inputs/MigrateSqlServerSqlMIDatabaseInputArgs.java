@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Database specific information for SQL to Azure SQL DB Managed Instance migration task inputs
- * 
  */
 public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
 
     /**
      * The list of backup files to be used in case of existing backups.
-     * 
      */
     @Import(name="backupFilePaths")
       private final @Nullable Output<List<String>> backupFilePaths;
@@ -33,7 +31,6 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
 
     /**
      * Backup file share information for backing up this database.
-     * 
      */
     @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
@@ -44,7 +41,6 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -55,7 +51,6 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
 
     /**
      * Name of the database at destination
-     * 
      */
     @Import(name="restoreDatabaseName", required=true)
       private final Output<String> restoreDatabaseName;

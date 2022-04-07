@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Setting indicating whether the service has a managed identity associated with it.
- * 
  */
 public final class ServicesResourceResponseIdentity extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ServicesResourceResponseIdentity extends io.pulumi.resources.
 
     /**
      * The principal ID of the resource identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -31,7 +29,6 @@ public final class ServicesResourceResponseIdentity extends io.pulumi.resources.
 
     /**
      * The tenant ID of the resource.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -42,7 +39,6 @@ public final class ServicesResourceResponseIdentity extends io.pulumi.resources.
 
     /**
      * Type of identity being specified, currently SystemAssigned and None are allowed.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

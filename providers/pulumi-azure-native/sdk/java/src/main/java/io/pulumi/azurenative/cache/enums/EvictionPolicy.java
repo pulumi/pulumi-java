@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Redis eviction policy - default is VolatileLRU
-     * 
      */
     @EnumType
     public enum EvictionPolicy {

@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class GetIPv6FirewallRuleResult {
     /**
      * The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
-     * 
      */
     private final @Nullable String endIPv6Address;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final @Nullable String name;
     /**
      * The start IP address of the firewall rule. Must be IPv6 format.
-     * 
      */
     private final @Nullable String startIPv6Address;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -53,35 +48,30 @@ public final class GetIPv6FirewallRuleResult {
 
     /**
      * The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
-     * 
     */
     public Optional<String> getEndIPv6Address() {
         return Optional.ofNullable(this.endIPv6Address);
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The start IP address of the firewall rule. Must be IPv6 format.
-     * 
     */
     public Optional<String> getStartIPv6Address() {
         return Optional.ofNullable(this.startIPv6Address);
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

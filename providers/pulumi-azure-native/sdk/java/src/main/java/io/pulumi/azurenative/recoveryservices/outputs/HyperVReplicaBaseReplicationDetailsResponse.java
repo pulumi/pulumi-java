@@ -17,43 +17,35 @@ import javax.annotation.Nullable;
 public final class HyperVReplicaBaseReplicationDetailsResponse {
     /**
      * Initial replication details.
-     * 
      */
     private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
     /**
      * Gets the Instance type.
      * Expected value is 'HyperVReplicaBaseReplicationDetails'.
-     * 
      */
     private final String instanceType;
     /**
      * The Last replication time.
-     * 
      */
     private final @Nullable String lastReplicatedTime;
     /**
      * VM disk details.
-     * 
      */
     private final @Nullable List<DiskDetailsResponse> vMDiskDetails;
     /**
      * The virtual machine Id.
-     * 
      */
     private final @Nullable String vmId;
     /**
      * The PE Network details.
-     * 
      */
     private final @Nullable List<VMNicDetailsResponse> vmNics;
     /**
      * The protection state for the vm.
-     * 
      */
     private final @Nullable String vmProtectionState;
     /**
      * The protection state description for the vm.
-     * 
      */
     private final @Nullable String vmProtectionStateDescription;
 
@@ -79,7 +71,6 @@ public final class HyperVReplicaBaseReplicationDetailsResponse {
 
     /**
      * Initial replication details.
-     * 
     */
     public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
         return Optional.ofNullable(this.initialReplicationDetails);
@@ -87,49 +78,42 @@ public final class HyperVReplicaBaseReplicationDetailsResponse {
     /**
      * Gets the Instance type.
      * Expected value is 'HyperVReplicaBaseReplicationDetails'.
-     * 
     */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The Last replication time.
-     * 
     */
     public Optional<String> getLastReplicatedTime() {
         return Optional.ofNullable(this.lastReplicatedTime);
     }
     /**
      * VM disk details.
-     * 
     */
     public List<DiskDetailsResponse> getVMDiskDetails() {
         return this.vMDiskDetails == null ? List.of() : this.vMDiskDetails;
     }
     /**
      * The virtual machine Id.
-     * 
     */
     public Optional<String> getVmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
      * The PE Network details.
-     * 
     */
     public List<VMNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The protection state for the vm.
-     * 
     */
     public Optional<String> getVmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
     /**
      * The protection state description for the vm.
-     * 
     */
     public Optional<String> getVmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);

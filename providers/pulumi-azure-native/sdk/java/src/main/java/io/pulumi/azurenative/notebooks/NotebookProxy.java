@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * A NotebookProxy resource.
  * API Version: 2019-10-11-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Notebook Proxy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var notebookProxy = new AzureNative.Notebooks.NotebookProxy("notebookProxy", new AzureNative.Notebooks.NotebookProxyArgs
+ *         {
+ *             Hostname = "Azure Notebooks",
+ *             ResourceGroupName = "testRP",
+ *             ResourceName = "testResource",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	notebooks "github.com/pulumi/pulumi-azure-native/sdk/go/azure/notebooks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := notebooks.NewNotebookProxy(ctx, "notebookProxy", &notebooks.NotebookProxyArgs{
+ * 			Hostname:          pulumi.String("Azure Notebooks"),
+ * 			ResourceGroupName: pulumi.String("testRP"),
+ * 			ResourceName:      pulumi.String("testResource"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const notebookProxy = new azure_native.notebooks.NotebookProxy("notebookProxy", {
+ *     hostname: "Azure Notebooks",
+ *     resourceGroupName: "testRP",
+ *     resourceName: "testResource",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * notebook_proxy = azure_native.notebooks.NotebookProxy("notebookProxy",
+ *     hostname="Azure Notebooks",
+ *     resource_group_name="testRP",
+ *     resource_name="testResource")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +105,108 @@ import javax.annotation.Nullable;
 public class NotebookProxy extends io.pulumi.resources.CustomResource {
     /**
      * The friendly string identifier of the creator of the NotebookProxy resource.
-     * 
      */
     @Export(name="hostname", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostname;
 
     /**
      * @return The friendly string identifier of the creator of the NotebookProxy resource.
-     * 
      */
     public Output</* @Nullable */ String> getHostname() {
         return this.hostname;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The public DNS name
-     * 
      */
     @Export(name="publicDns", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicDns;
 
     /**
      * @return The public DNS name
-     * 
      */
     public Output</* @Nullable */ String> getPublicDns() {
         return this.publicDns;
     }
     /**
      * Allow public network access on a V-Net locked notebook resource
-     * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
      * @return Allow public network access on a V-Net locked notebook resource
-     * 
      */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * The region of the NotebookProxy resource.
-     * 
      */
     @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**
      * @return The region of the NotebookProxy resource.
-     * 
      */
     public Output</* @Nullable */ String> getRegion() {
         return this.region;
     }
     /**
      * The unique identifier (a GUID) generated for every resource.
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
      * @return The unique identifier (a GUID) generated for every resource.
-     * 
      */
     public Output<String> getResourceId() {
         return this.resourceId;
     }
     /**
      * The alternate application ID used for auth token request in the data plane
-     * 
      */
     @Export(name="secondaryAppId", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryAppId;
 
     /**
      * @return The alternate application ID used for auth token request in the data plane
-     * 
      */
     public Output</* @Nullable */ String> getSecondaryAppId() {
         return this.secondaryAppId;
     }
     /**
      * System data for notebook resource
-     * 
      */
     @Export(name="systemData", type=NotebookResourceSystemDataResponse.class, parameters={})
     private Output</* @Nullable */ NotebookResourceSystemDataResponse> systemData;
 
     /**
      * @return System data for notebook resource
-     * 
      */
     public Output</* @Nullable */ NotebookResourceSystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. Ex- Microsoft.Storage/storageAccounts or Microsoft.Notebooks/notebookProxies.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Storage/storageAccounts or Microsoft.Notebooks/notebookProxies.
-     * 
      */
     public Output<String> getType() {
         return this.type;

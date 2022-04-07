@@ -18,7 +18,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Determines whether tracing can be enabled
-     * 
      */
     @Import(name="allowTracing")
       private final @Nullable Output<Boolean> allowTracing;
@@ -29,7 +28,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Determines the type of application which send the create user request. Default is legacy publisher portal.
-     * 
      */
     @Import(name="appType")
       private final @Nullable Output<String> appType;
@@ -40,7 +38,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Subscription name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -50,10 +47,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Notify change in Subscription State.
-     *  - If false, do not send any email notification for change of state of subscription
-     *  - If true, send email notification of change of state of subscription
-     * 
+     * Notify change in Subscription State. 
+     *  - If false, do not send any email notification for change of state of subscription 
+     *  - If true, send email notification of change of state of subscription 
      */
     @Import(name="notify")
       private final @Nullable Output<Boolean> notify;
@@ -64,7 +60,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User (user id path) for whom subscription is being created in form /users/{userId}
-     * 
      */
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
@@ -75,7 +70,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Primary subscription key. If not specified during request key will be generated automatically.
-     * 
      */
     @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
@@ -86,7 +80,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -97,7 +90,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scope like /products/{productId} or /apis or /apis/{apiId}.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;
@@ -108,7 +100,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secondary subscription key. If not specified during request key will be generated automatically.
-     * 
      */
     @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;
@@ -119,7 +110,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -130,7 +120,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Subscription entity Identifier. The entity represents the association between a user and a product in API Management.
-     * 
      */
     @Import(name="sid")
       private final @Nullable Output<String> sid;
@@ -141,7 +130,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<SubscriptionState> state;

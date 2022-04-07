@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class GetProductsResult {
     /**
      * URI to the next page.
-     * 
      */
     private final @Nullable String nextLink;
     /**
      * List of products.
-     * 
      */
     private final @Nullable List<ProductResponse> value;
 
@@ -34,14 +32,12 @@ public final class GetProductsResult {
 
     /**
      * URI to the next page.
-     * 
     */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of products.
-     * 
     */
     public List<ProductResponse> getValue() {
         return this.value == null ? List.of() : this.value;

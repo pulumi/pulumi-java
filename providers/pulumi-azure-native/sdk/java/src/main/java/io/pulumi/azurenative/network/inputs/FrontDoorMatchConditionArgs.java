@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define a match condition.
- * 
  */
 public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
 
     /**
      * List of possible match values.
-     * 
      */
     @Import(name="matchValue", required=true)
       private final Output<List<String>> matchValue;
@@ -37,7 +35,6 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
 
     /**
      * Request variable to compare with.
-     * 
      */
     @Import(name="matchVariable", required=true)
       private final Output<Either<String,FrontDoorMatchVariable>> matchVariable;
@@ -48,7 +45,6 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
 
     /**
      * Describes if the result of this condition should be negated.
-     * 
      */
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
@@ -59,7 +55,6 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
 
     /**
      * Comparison type to use for matching with the variable value.
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<Either<String,Operator>> operator;
@@ -70,7 +65,6 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
 
     /**
      * Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
-     * 
      */
     @Import(name="selector")
       private final @Nullable Output<String> selector;
@@ -81,7 +75,6 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
 
     /**
      * List of transforms.
-     * 
      */
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,TransformType>>> transforms;

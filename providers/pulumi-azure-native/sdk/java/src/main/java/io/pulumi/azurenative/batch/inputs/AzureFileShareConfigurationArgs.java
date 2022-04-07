@@ -30,7 +30,6 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * This is of the form 'https://{account}.file.core.windows.net/'.
-     * 
      */
     @Import(name="azureFileUrl", required=true)
       private final Output<String> azureFileUrl;
@@ -41,7 +40,6 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * These are 'net use' options in Windows and 'mount' options in Linux.
-     * 
      */
     @Import(name="mountOptions")
       private final @Nullable Output<String> mountOptions;
@@ -52,7 +50,6 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-     * 
      */
     @Import(name="relativeMountPath", required=true)
       private final Output<String> relativeMountPath;

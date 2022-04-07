@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of action.
-     * 
      */
     @EnumType
     public enum FirewallPolicyNatRuleCollectionActionType {

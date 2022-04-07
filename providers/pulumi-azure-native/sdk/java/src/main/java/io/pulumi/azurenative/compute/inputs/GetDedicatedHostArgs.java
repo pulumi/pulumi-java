@@ -16,7 +16,6 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The expand expression to apply on the operation.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the dedicated host group.
-     * 
      */
     @Import(name="hostGroupName", required=true)
       private final String hostGroupName;
@@ -38,7 +36,6 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the dedicated host.
-     * 
      */
     @Import(name="hostName", required=true)
       private final String hostName;
@@ -49,7 +46,6 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

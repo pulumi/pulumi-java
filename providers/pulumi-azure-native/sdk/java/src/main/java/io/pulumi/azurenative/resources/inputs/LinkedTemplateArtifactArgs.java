@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Represents a Template Spec artifact containing an embedded Azure Resource Manager template for use as a linked template.
- * 
  */
 public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * A filesystem safe relative path of the artifact.
-     * 
      */
     @Import(name="path", required=true)
       private final Output<String> path;
@@ -31,7 +29,6 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
 
     /**
      * The Azure Resource Manager template.
-     * 
      */
     @Import(name="template", required=true)
       private final Output<Object> template;

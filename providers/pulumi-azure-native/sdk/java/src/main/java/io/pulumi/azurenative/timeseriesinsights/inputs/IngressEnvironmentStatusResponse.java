@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An object that represents the status of ingress on an environment.
- * 
  */
 public final class IngressEnvironmentStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IngressEnvironmentStatusResponse extends io.pulumi.resources.
 
     /**
      * This string represents the state of ingress operations on an environment. It can be "Disabled", "Ready", "Running", "Paused" or "Unknown"
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;
@@ -32,7 +30,6 @@ public final class IngressEnvironmentStatusResponse extends io.pulumi.resources.
 
     /**
      * An object that contains the details about an environment's state.
-     * 
      */
     @Import(name="stateDetails", required=true)
       private final EnvironmentStateDetailsResponse stateDetails;

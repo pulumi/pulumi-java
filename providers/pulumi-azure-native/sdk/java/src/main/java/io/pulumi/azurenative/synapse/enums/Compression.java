@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The event hub messages compression type
-     * 
      */
     @EnumType
     public enum Compression {

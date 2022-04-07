@@ -13,12 +13,10 @@ import java.util.Objects;
 public final class ListQueryKeyBySearchServiceResult {
     /**
      * Request URL that can be used to query next page of query keys. Returned when the total number of requested query keys exceed maximum page size.
-     * 
      */
     private final String nextLink;
     /**
      * The query keys for the Azure Cognitive Search service.
-     * 
      */
     private final List<QueryKeyResponse> value;
 
@@ -32,14 +30,12 @@ public final class ListQueryKeyBySearchServiceResult {
 
     /**
      * Request URL that can be used to query next page of query keys. Returned when the total number of requested query keys exceed maximum page size.
-     * 
     */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * The query keys for the Azure Cognitive Search service.
-     * 
     */
     public List<QueryKeyResponse> getValue() {
         return this.value;

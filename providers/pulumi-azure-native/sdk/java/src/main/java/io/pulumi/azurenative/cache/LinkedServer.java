@@ -17,7 +17,91 @@ import javax.annotation.Nullable;
  * Response to put/get linked server (with properties) for Redis cache.
  * API Version: 2020-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### LinkedServer_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var linkedServer = new AzureNative.Cache.LinkedServer("linkedServer", new AzureNative.Cache.LinkedServerArgs
+ *         {
+ *             LinkedRedisCacheId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
+ *             LinkedRedisCacheLocation = "West US",
+ *             LinkedServerName = "cache2",
+ *             Name = "cache1",
+ *             ResourceGroupName = "rg1",
+ *             ServerRole = "Secondary",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cache"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cache.NewLinkedServer(ctx, "linkedServer", &cache.LinkedServerArgs{
+ * 			LinkedRedisCacheId:       pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2"),
+ * 			LinkedRedisCacheLocation: pulumi.String("West US"),
+ * 			LinkedServerName:         pulumi.String("cache2"),
+ * 			Name:                     pulumi.String("cache1"),
+ * 			ResourceGroupName:        pulumi.String("rg1"),
+ * 			ServerRole:               "Secondary",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const linkedServer = new azure_native.cache.LinkedServer("linkedServer", {
+ *     linkedRedisCacheId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
+ *     linkedRedisCacheLocation: "West US",
+ *     linkedServerName: "cache2",
+ *     name: "cache1",
+ *     resourceGroupName: "rg1",
+ *     serverRole: "Secondary",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * linked_server = azure_native.cache.LinkedServer("linkedServer",
+ *     linked_redis_cache_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache2",
+ *     linked_redis_cache_location="West US",
+ *     linked_server_name="cache2",
+ *     name="cache1",
+ *     resource_group_name="rg1",
+ *     server_role="Secondary")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +116,72 @@ import javax.annotation.Nullable;
 public class LinkedServer extends io.pulumi.resources.CustomResource {
     /**
      * Fully qualified resourceId of the linked redis cache.
-     * 
      */
     @Export(name="linkedRedisCacheId", type=String.class, parameters={})
     private Output<String> linkedRedisCacheId;
 
     /**
      * @return Fully qualified resourceId of the linked redis cache.
-     * 
      */
     public Output<String> getLinkedRedisCacheId() {
         return this.linkedRedisCacheId;
     }
     /**
      * Location of the linked redis cache.
-     * 
      */
     @Export(name="linkedRedisCacheLocation", type=String.class, parameters={})
     private Output<String> linkedRedisCacheLocation;
 
     /**
      * @return Location of the linked redis cache.
-     * 
      */
     public Output<String> getLinkedRedisCacheLocation() {
         return this.linkedRedisCacheLocation;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Terminal state of the link between primary and secondary redis cache.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Terminal state of the link between primary and secondary redis cache.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Role of the linked server.
-     * 
      */
     @Export(name="serverRole", type=String.class, parameters={})
     private Output<String> serverRole;
 
     /**
      * @return Role of the linked server.
-     * 
      */
     public Output<String> getServerRole() {
         return this.serverRole;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

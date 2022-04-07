@@ -17,7 +17,6 @@ public final class DeploymentConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.
-     * 
      */
     @Import(name="cloudServiceConfiguration")
       private final @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration;
@@ -28,7 +27,6 @@ public final class DeploymentConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
-     * 
      */
     @Import(name="virtualMachineConfiguration")
       private final @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration;

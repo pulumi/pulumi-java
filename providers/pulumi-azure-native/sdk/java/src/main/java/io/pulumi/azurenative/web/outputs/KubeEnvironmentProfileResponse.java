@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class KubeEnvironmentProfileResponse {
     /**
      * Resource ID of the Kubernetes Environment.
-     * 
      */
     private final @Nullable String id;
     /**
      * Name of the Kubernetes Environment.
-     * 
      */
     private final String name;
     /**
      * Resource type of the Kubernetes Environment.
-     * 
      */
     private final String type;
 
@@ -39,21 +36,18 @@ public final class KubeEnvironmentProfileResponse {
 
     /**
      * Resource ID of the Kubernetes Environment.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the Kubernetes Environment.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type of the Kubernetes Environment.
-     * 
     */
     public String getType() {
         return this.type;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Credential reference type.
- * 
  */
 public final class CredentialReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class CredentialReferenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Reference credential name.
-     * 
      */
     @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
@@ -30,7 +28,6 @@ public final class CredentialReferenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Credential reference type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

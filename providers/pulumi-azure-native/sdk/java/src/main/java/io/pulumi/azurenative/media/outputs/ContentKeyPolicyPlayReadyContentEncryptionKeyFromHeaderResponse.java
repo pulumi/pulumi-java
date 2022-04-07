@@ -12,7 +12,6 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderRespon
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'.
-     * 
      */
     private final String odataType;
 
@@ -24,7 +23,6 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderRespon
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;

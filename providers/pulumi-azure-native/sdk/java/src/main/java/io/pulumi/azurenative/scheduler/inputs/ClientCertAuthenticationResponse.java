@@ -16,7 +16,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the certificate expiration date.
-     * 
      */
     @Import(name="certificateExpirationDate")
       private final @Nullable String certificateExpirationDate;
@@ -27,7 +26,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the certificate subject name.
-     * 
      */
     @Import(name="certificateSubjectName")
       private final @Nullable String certificateSubjectName;
@@ -38,7 +36,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the certificate thumbprint.
-     * 
      */
     @Import(name="certificateThumbprint")
       private final @Nullable String certificateThumbprint;
@@ -49,7 +46,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the certificate password, return value will always be empty.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -60,7 +56,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
 
     /**
      * Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
-     * 
      */
     @Import(name="pfx")
       private final @Nullable String pfx;
@@ -72,7 +67,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
     /**
      * Gets or sets the HTTP authentication type.
      * Expected value is 'ClientCertificate'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

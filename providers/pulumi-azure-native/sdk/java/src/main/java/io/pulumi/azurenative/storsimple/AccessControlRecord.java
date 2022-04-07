@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * The access control record.
  * API Version: 2017-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### AccessControlRecordsCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var accessControlRecord = new AzureNative.StorSimple.AccessControlRecord("accessControlRecord", new AzureNative.StorSimple.AccessControlRecordArgs
+ *         {
+ *             AccessControlRecordName = "ACRForTest",
+ *             InitiatorName = "iqn.2017-06.com.contoso:ForTest",
+ *             ManagerName = "ManagerForSDKTest1",
+ *             ResourceGroupName = "ResourceGroupForSDKTest",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := storsimple.NewAccessControlRecord(ctx, "accessControlRecord", &storsimple.AccessControlRecordArgs{
+ * 			AccessControlRecordName: pulumi.String("ACRForTest"),
+ * 			InitiatorName:           pulumi.String("iqn.2017-06.com.contoso:ForTest"),
+ * 			ManagerName:             pulumi.String("ManagerForSDKTest1"),
+ * 			ResourceGroupName:       pulumi.String("ResourceGroupForSDKTest"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const accessControlRecord = new azure_native.storsimple.AccessControlRecord("accessControlRecord", {
+ *     accessControlRecordName: "ACRForTest",
+ *     initiatorName: "iqn.2017-06.com.contoso:ForTest",
+ *     managerName: "ManagerForSDKTest1",
+ *     resourceGroupName: "ResourceGroupForSDKTest",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * access_control_record = azure_native.storsimple.AccessControlRecord("accessControlRecord",
+ *     access_control_record_name="ACRForTest",
+ *     initiator_name="iqn.2017-06.com.contoso:ForTest",
+ *     manager_name="ManagerForSDKTest1",
+ *     resource_group_name="ResourceGroupForSDKTest")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +109,60 @@ import javax.annotation.Nullable;
 public class AccessControlRecord extends io.pulumi.resources.CustomResource {
     /**
      * The iSCSI initiator name (IQN).
-     * 
      */
     @Export(name="initiatorName", type=String.class, parameters={})
     private Output<String> initiatorName;
 
     /**
      * @return The iSCSI initiator name (IQN).
-     * 
      */
     public Output<String> getInitiatorName() {
         return this.initiatorName;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return The Kind of the object. Currently only Series8000 is supported
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * The name of the object.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the object.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The number of volumes using the access control record.
-     * 
      */
     @Export(name="volumeCount", type=Integer.class, parameters={})
     private Output<Integer> volumeCount;
 
     /**
      * @return The number of volumes using the access control record.
-     * 
      */
     public Output<Integer> getVolumeCount() {
         return this.volumeCount;

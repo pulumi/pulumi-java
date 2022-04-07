@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class PrivateEndpointConnectionPropertiesResponse {
     /**
      * ARM id for the private endpoint resource corresponding to the connection.
-     * 
      */
     private final ResourceIdResponse privateEndpoint;
     /**
      * State of the private endpoint connection.
-     * 
      */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
     /**
      * Indicates whether there is an ongoing operation on the private endpoint.
-     * 
      */
     private final String provisioningState;
 
@@ -41,21 +38,18 @@ public final class PrivateEndpointConnectionPropertiesResponse {
 
     /**
      * ARM id for the private endpoint resource corresponding to the connection.
-     * 
     */
     public ResourceIdResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * State of the private endpoint connection.
-     * 
     */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Indicates whether there is an ongoing operation on the private endpoint.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;

@@ -14,7 +14,6 @@ public final class GetVirtualHubIpConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The name of the ipconfig.
-     * 
      */
     @Import(name="ipConfigName", required=true)
       private final String ipConfigName;
@@ -25,7 +24,6 @@ public final class GetVirtualHubIpConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The resource group name of the VirtualHub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetVirtualHubIpConfigurationArgs extends io.pulumi.resources.
 
     /**
      * The name of the VirtualHub.
-     * 
      */
     @Import(name="virtualHubName", required=true)
       private final String virtualHubName;

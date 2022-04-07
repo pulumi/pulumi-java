@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * RTSP source allows for media from an RTSP camera or generic RTSP server to be ingested into a pipeline.
- * 
  */
 public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
-     * 
      */
     @Import(name="endpoint", required=true)
       private final Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint;
@@ -34,7 +32,6 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Node name. Must be unique within the topology.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -45,7 +42,6 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
-     * 
      */
     @Import(name="transport")
       private final @Nullable String transport;
@@ -57,7 +53,6 @@ public final class RtspSourceResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.RtspSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

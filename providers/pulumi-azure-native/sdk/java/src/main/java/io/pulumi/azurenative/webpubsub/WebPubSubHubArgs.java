@@ -17,7 +17,6 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The hub name.
-     * 
      */
     @Import(name="hubName")
       private final @Nullable Output<String> hubName;
@@ -28,7 +27,6 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of a hub.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<WebPubSubHubPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

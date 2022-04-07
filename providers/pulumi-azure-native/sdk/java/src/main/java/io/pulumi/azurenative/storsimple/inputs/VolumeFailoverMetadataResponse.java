@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The metadata of a volume that has valid cloud snapshot.
- * 
  */
 public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
 
     /**
      * The date at which the snapshot was taken.
-     * 
      */
     @Import(name="backupCreatedDate")
       private final @Nullable String backupCreatedDate;
@@ -32,7 +30,6 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
 
     /**
      * The path ID of the backup-element for this volume, inside the backup set.
-     * 
      */
     @Import(name="backupElementId")
       private final @Nullable String backupElementId;
@@ -43,7 +40,6 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
 
     /**
      * The path ID of the backup set.
-     * 
      */
     @Import(name="backupId")
       private final @Nullable String backupId;
@@ -54,7 +50,6 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
 
     /**
      * The path ID of the backup policy using which the snapshot was taken.
-     * 
      */
     @Import(name="backupPolicyId")
       private final @Nullable String backupPolicyId;
@@ -65,7 +60,6 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
 
     /**
      * The size of the volume in bytes at the time the snapshot was taken.
-     * 
      */
     @Import(name="sizeInBytes")
       private final @Nullable Double sizeInBytes;
@@ -76,7 +70,6 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
 
     /**
      * The path ID of the volume.
-     * 
      */
     @Import(name="volumeId")
       private final @Nullable String volumeId;
@@ -87,7 +80,6 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
 
     /**
      * The type of the volume.
-     * 
      */
     @Import(name="volumeType")
       private final @Nullable String volumeType;

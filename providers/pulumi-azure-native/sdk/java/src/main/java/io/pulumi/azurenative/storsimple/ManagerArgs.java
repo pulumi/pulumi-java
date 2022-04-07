@@ -19,7 +19,6 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Represents the type of StorSimple Manager.
-     * 
      */
     @Import(name="cisIntrinsicSettings")
       private final @Nullable Output<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
@@ -30,7 +29,6 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName")
       private final @Nullable Output<String> managerName;
@@ -52,7 +49,6 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
@@ -63,7 +59,6 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the Sku.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<ManagerSkuArgs> sku;
@@ -85,7 +79,6 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags attached to the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

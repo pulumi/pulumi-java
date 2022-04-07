@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Azure Managed Disk to attach to the Disk pool.
- * 
  */
 public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique Azure Resource ID of the Managed Disk.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

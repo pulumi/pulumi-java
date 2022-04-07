@@ -15,7 +15,6 @@ public final class SuppressionAlertsScopeResponse extends io.pulumi.resources.In
 
     /**
      * All the conditions inside need to be true in order to suppress the alert
-     * 
      */
     @Import(name="allOf", required=true)
       private final List<ScopeElementResponse> allOf;

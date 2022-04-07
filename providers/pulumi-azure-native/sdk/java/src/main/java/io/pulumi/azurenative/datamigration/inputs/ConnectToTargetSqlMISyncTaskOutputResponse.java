@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Output for the task that validates connection to Azure SQL Database Managed Instance.
- * 
  */
 public final class ConnectToTargetSqlMISyncTaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends io.pulumi.
 
     /**
      * Target server brand version
-     * 
      */
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
@@ -31,7 +29,6 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends io.pulumi.
 
     /**
      * Target server version
-     * 
      */
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
@@ -42,7 +39,6 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends io.pulumi.
 
     /**
      * Validation errors
-     * 
      */
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Name of a managed cluster SKU.
-     * 
      */
     @EnumType
     public enum ManagedClusterSKUName {

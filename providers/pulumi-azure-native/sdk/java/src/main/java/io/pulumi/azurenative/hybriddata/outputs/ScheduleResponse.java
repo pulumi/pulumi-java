@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ScheduleResponse {
     /**
      * Name of the schedule.
-     * 
      */
     private final @Nullable String name;
     /**
      * A list of repetition intervals in ISO 8601 format.
-     * 
      */
     private final @Nullable List<String> policyList;
 
@@ -33,14 +31,12 @@ public final class ScheduleResponse {
 
     /**
      * Name of the schedule.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of repetition intervals in ISO 8601 format.
-     * 
     */
     public List<String> getPolicyList() {
         return this.policyList == null ? List.of() : this.policyList;

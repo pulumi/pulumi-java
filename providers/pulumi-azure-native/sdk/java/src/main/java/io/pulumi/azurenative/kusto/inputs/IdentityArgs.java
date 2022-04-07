@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity for the resource.
- * 
  */
 public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove all identities.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,IdentityType>> type;
@@ -35,7 +33,6 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;

@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class BlobInventoryPolicyRuleResponse {
     /**
      * An object that defines the blob inventory policy rule.
-     * 
      */
     private final BlobInventoryPolicyDefinitionResponse definition;
     /**
      * Rule is enabled when set to true.
-     * 
      */
     private final Boolean enabled;
     /**
      * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
-     * 
      */
     private final String name;
 
@@ -39,21 +36,18 @@ public final class BlobInventoryPolicyRuleResponse {
 
     /**
      * An object that defines the blob inventory policy rule.
-     * 
     */
     public BlobInventoryPolicyDefinitionResponse getDefinition() {
         return this.definition;
     }
     /**
      * Rule is enabled when set to true.
-     * 
     */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
-     * 
     */
     public String getName() {
         return this.name;

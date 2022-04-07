@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Implements InnerHealthError class. HealthError object has a list of InnerHealthErrors as child errors. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.
- * 
  */
 public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Error creation time (UTC)
-     * 
      */
     @Import(name="creationTimeUtc")
       private final @Nullable String creationTimeUtc;
@@ -31,7 +29,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * ID of the entity.
-     * 
      */
     @Import(name="entityId")
       private final @Nullable String entityId;
@@ -42,7 +39,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Category of error.
-     * 
      */
     @Import(name="errorCategory")
       private final @Nullable String errorCategory;
@@ -53,7 +49,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Error code.
-     * 
      */
     @Import(name="errorCode")
       private final @Nullable String errorCode;
@@ -64,7 +59,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Level of error.
-     * 
      */
     @Import(name="errorLevel")
       private final @Nullable String errorLevel;
@@ -75,7 +69,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Error message.
-     * 
      */
     @Import(name="errorMessage")
       private final @Nullable String errorMessage;
@@ -86,7 +79,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Source of error.
-     * 
      */
     @Import(name="errorSource")
       private final @Nullable String errorSource;
@@ -97,7 +89,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Type of error.
-     * 
      */
     @Import(name="errorType")
       private final @Nullable String errorType;
@@ -108,7 +99,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Possible causes of error.
-     * 
      */
     @Import(name="possibleCauses")
       private final @Nullable String possibleCauses;
@@ -119,7 +109,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Recommended action to resolve error.
-     * 
      */
     @Import(name="recommendedAction")
       private final @Nullable String recommendedAction;
@@ -130,7 +119,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * DRA error message.
-     * 
      */
     @Import(name="recoveryProviderErrorMessage")
       private final @Nullable String recoveryProviderErrorMessage;
@@ -141,7 +129,6 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Summary message of the entity.
-     * 
      */
     @Import(name="summaryMessage")
       private final @Nullable String summaryMessage;

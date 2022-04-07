@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the OS Disk.
- * 
  */
 public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The type of the OS on the VM.
-     * 
      */
     @Import(name="osType")
       private final @Nullable String osType;
@@ -31,7 +29,6 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The id of the disk containing the OS.
-     * 
      */
     @Import(name="osVhdId")
       private final @Nullable String osVhdId;
@@ -42,7 +39,6 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The OS disk VHD name.
-     * 
      */
     @Import(name="vhdName")
       private final @Nullable String vhdName;

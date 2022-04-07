@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The data stored in JSON format.
- * 
  */
 public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Deserializer. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="deserializer")
       private final @Nullable Object deserializer;
@@ -32,7 +30,6 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The code page name of the preferred encoding. If not provided, the default value is 'utf-8', unless the byte order mark (BOM) denotes another Unicode encoding. The full list of supported values can be found in the 'Name' column of the table of encodings in the following reference: https://go.microsoft.com/fwlink/?linkid=861078. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encodingName")
       private final @Nullable Object encodingName;
@@ -43,7 +40,6 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * File pattern of JSON. To be more specific, the way of separating a collection of JSON objects. The default value is 'setOfObjects'. It is case-sensitive.
-     * 
      */
     @Import(name="filePattern")
       private final @Nullable Object filePattern;
@@ -54,7 +50,6 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The JSONPath of the JSON array element to be flattened. Example: "$.ArrayPath". Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="jsonNodeReference")
       private final @Nullable Object jsonNodeReference;
@@ -65,7 +60,6 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The JSONPath definition for each column mapping with a customized column name to extract data from JSON file. For fields under root object, start with "$"; for fields inside the array chosen by jsonNodeReference property, start from the array element. Example: {"Column1": "$.Column1Path", "Column2": "Column2PathInArray"}. Type: object (or Expression with resultType object).
-     * 
      */
     @Import(name="jsonPathDefinition")
       private final @Nullable Object jsonPathDefinition;
@@ -76,7 +70,6 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The character used to separate nesting levels. Default value is '.' (dot). Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="nestingSeparator")
       private final @Nullable Object nestingSeparator;
@@ -87,7 +80,6 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Serializer. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="serializer")
       private final @Nullable Object serializer;
@@ -99,7 +91,6 @@ public final class JsonFormatResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Type of dataset storage format.
      * Expected value is 'JsonFormat'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

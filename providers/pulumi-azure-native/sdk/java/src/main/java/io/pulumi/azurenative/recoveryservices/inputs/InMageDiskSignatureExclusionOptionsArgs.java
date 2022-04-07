@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Guest disk signature based disk exclusion option when doing enable protection of virtual machine in InMage provider.
- * 
  */
 public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
 
     /**
      * The guest signature of disk to be excluded from replication.
-     * 
      */
     @Import(name="diskSignature")
       private final @Nullable Output<String> diskSignature;

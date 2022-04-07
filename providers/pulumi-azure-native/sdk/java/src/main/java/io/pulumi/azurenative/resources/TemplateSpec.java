@@ -21,7 +21,83 @@ import javax.annotation.Nullable;
  * Template Spec object.
  * API Version: 2021-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TemplateSpecsCreateUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var templateSpec = new AzureNative.Resources.TemplateSpec("templateSpec", new AzureNative.Resources.TemplateSpecArgs
+ *         {
+ *             Description = "A very simple Template Spec",
+ *             Location = "eastus",
+ *             ResourceGroupName = "templateSpecRG",
+ *             TemplateSpecName = "simpleTemplateSpec",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := resources.NewTemplateSpec(ctx, "templateSpec", &resources.TemplateSpecArgs{
+ * 			Description:       pulumi.String("A very simple Template Spec"),
+ * 			Location:          pulumi.String("eastus"),
+ * 			ResourceGroupName: pulumi.String("templateSpecRG"),
+ * 			TemplateSpecName:  pulumi.String("simpleTemplateSpec"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const templateSpec = new azure_native.resources.TemplateSpec("templateSpec", {
+ *     description: "A very simple Template Spec",
+ *     location: "eastus",
+ *     resourceGroupName: "templateSpecRG",
+ *     templateSpecName: "simpleTemplateSpec",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * template_spec = azure_native.resources.TemplateSpec("templateSpec",
+ *     description="A very simple Template Spec",
+ *     location="eastus",
+ *     resource_group_name="templateSpecRG",
+ *     template_spec_name="simpleTemplateSpec")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,126 +112,108 @@ import javax.annotation.Nullable;
 public class TemplateSpec extends io.pulumi.resources.CustomResource {
     /**
      * Template Spec description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Template Spec description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Template Spec display name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Template Spec display name.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
-     * 
      */
     @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
      * @return The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
-     * 
      */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
     /**
      * Name of this resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of this resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Type of this resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of this resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
-     * 
      */
     @Export(name="versions", type=Map.class, parameters={String.class, TemplateSpecVersionInfoResponse.class})
     private Output<Map<String,TemplateSpecVersionInfoResponse>> versions;
 
     /**
      * @return High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
-     * 
      */
     public Output<Map<String,TemplateSpecVersionInfoResponse>> getVersions() {
         return this.versions;

@@ -19,7 +19,91 @@ import javax.annotation.Nullable;
  * Description of the WCF relay resource.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RelayCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var wcfRelay = new AzureNative.Relay.WCFRelay("wcfRelay", new AzureNative.Relay.WCFRelayArgs
+ *         {
+ *             NamespaceName = "example-RelayNamespace-9953",
+ *             RelayName = "example-Relay-Wcf-1194",
+ *             RelayType = "NetTcp",
+ *             RequiresClientAuthorization = true,
+ *             RequiresTransportSecurity = true,
+ *             ResourceGroupName = "resourcegroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	relay "github.com/pulumi/pulumi-azure-native/sdk/go/azure/relay"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := relay.NewWCFRelay(ctx, "wcfRelay", &relay.WCFRelayArgs{
+ * 			NamespaceName:               pulumi.String("example-RelayNamespace-9953"),
+ * 			RelayName:                   pulumi.String("example-Relay-Wcf-1194"),
+ * 			RelayType:                   "NetTcp",
+ * 			RequiresClientAuthorization: pulumi.Bool(true),
+ * 			RequiresTransportSecurity:   pulumi.Bool(true),
+ * 			ResourceGroupName:           pulumi.String("resourcegroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const wcfRelay = new azure_native.relay.WCFRelay("wcfRelay", {
+ *     namespaceName: "example-RelayNamespace-9953",
+ *     relayName: "example-Relay-Wcf-1194",
+ *     relayType: "NetTcp",
+ *     requiresClientAuthorization: true,
+ *     requiresTransportSecurity: true,
+ *     resourceGroupName: "resourcegroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * wcf_relay = azure_native.relay.WCFRelay("wcfRelay",
+ *     namespace_name="example-RelayNamespace-9953",
+ *     relay_name="example-Relay-Wcf-1194",
+ *     relay_type="NetTcp",
+ *     requires_client_authorization=True,
+ *     requires_transport_security=True,
+ *     resource_group_name="resourcegroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,140 +118,120 @@ import javax.annotation.Nullable;
 public class WCFRelay extends io.pulumi.resources.CustomResource {
     /**
      * The time the WCF relay was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return The time the WCF relay was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Returns true if the relay is dynamic; otherwise, false.
-     * 
      */
     @Export(name="isDynamic", type=Boolean.class, parameters={})
     private Output<Boolean> isDynamic;
 
     /**
      * @return Returns true if the relay is dynamic; otherwise, false.
-     * 
      */
     public Output<Boolean> getIsDynamic() {
         return this.isDynamic;
     }
     /**
      * The number of listeners for this relay. Note that min :1 and max:25 are supported.
-     * 
      */
     @Export(name="listenerCount", type=Integer.class, parameters={})
     private Output<Integer> listenerCount;
 
     /**
      * @return The number of listeners for this relay. Note that min :1 and max:25 are supported.
-     * 
      */
     public Output<Integer> getListenerCount() {
         return this.listenerCount;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * WCF relay type.
-     * 
      */
     @Export(name="relayType", type=String.class, parameters={})
     private Output</* @Nullable */ String> relayType;
 
     /**
      * @return WCF relay type.
-     * 
      */
     public Output</* @Nullable */ String> getRelayType() {
         return this.relayType;
     }
     /**
      * Returns true if client authorization is needed for this relay; otherwise, false.
-     * 
      */
     @Export(name="requiresClientAuthorization", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresClientAuthorization;
 
     /**
      * @return Returns true if client authorization is needed for this relay; otherwise, false.
-     * 
      */
     public Output</* @Nullable */ Boolean> getRequiresClientAuthorization() {
         return this.requiresClientAuthorization;
     }
     /**
      * Returns true if transport security is needed for this relay; otherwise, false.
-     * 
      */
     @Export(name="requiresTransportSecurity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresTransportSecurity;
 
     /**
      * @return Returns true if transport security is needed for this relay; otherwise, false.
-     * 
      */
     public Output</* @Nullable */ Boolean> getRequiresTransportSecurity() {
         return this.requiresTransportSecurity;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
-     * 
      */
     @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**
      * @return The time the namespace was updated.
-     * 
      */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;
     }
     /**
      * The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
-     * 
      */
     @Export(name="userMetadata", type=String.class, parameters={})
     private Output</* @Nullable */ String> userMetadata;
 
     /**
      * @return The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
-     * 
      */
     public Output</* @Nullable */ String> getUserMetadata() {
         return this.userMetadata;

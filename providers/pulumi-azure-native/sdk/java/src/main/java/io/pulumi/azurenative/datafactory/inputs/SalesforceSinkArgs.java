@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Salesforce sink.
- * 
  */
 public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -34,7 +32,6 @@ public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="externalIdFieldName")
       private final @Nullable Output<Object> externalIdFieldName;
@@ -45,7 +42,6 @@ public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="ignoreNullValues")
       private final @Nullable Output<Object> ignoreNullValues;
@@ -56,7 +52,6 @@ public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -67,7 +62,6 @@ public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
@@ -78,7 +72,6 @@ public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
@@ -90,7 +83,6 @@ public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Copy sink type.
      * Expected value is 'SalesforceSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -101,7 +93,6 @@ public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
@@ -112,7 +103,6 @@ public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
@@ -123,7 +113,6 @@ public final class SalesforceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The write behavior for the operation. Default is Insert.
-     * 
      */
     @Import(name="writeBehavior")
       private final @Nullable Output<Either<String,SalesforceSinkWriteBehavior>> writeBehavior;

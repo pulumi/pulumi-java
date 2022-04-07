@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class MyWorkbookUserAssignedIdentitiesResponse {
     /**
      * The principal ID of resource identity.
-     * 
      */
     private final String principalId;
     /**
      * The tenant ID of resource.
-     * 
      */
     private final String tenantId;
 
@@ -30,14 +28,12 @@ public final class MyWorkbookUserAssignedIdentitiesResponse {
 
     /**
      * The principal ID of resource identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of resource.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;

@@ -17,7 +17,95 @@ import javax.annotation.Nullable;
  * Policy Contract details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateApiOperationPolicy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var apiOperationPolicy = new AzureNative.ApiManagement.ApiOperationPolicy("apiOperationPolicy", new AzureNative.ApiManagement.ApiOperationPolicyArgs
+ *         {
+ *             ApiId = "5600b57e7e8880006a040001",
+ *             Format = "xml",
+ *             OperationId = "5600b57e7e8880006a080001",
+ *             PolicyId = "policy",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Value = "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewApiOperationPolicy(ctx, "apiOperationPolicy", &apimanagement.ApiOperationPolicyArgs{
+ * 			ApiId:             pulumi.String("5600b57e7e8880006a040001"),
+ * 			Format:            pulumi.String("xml"),
+ * 			OperationId:       pulumi.String("5600b57e7e8880006a080001"),
+ * 			PolicyId:          pulumi.String("policy"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Value:             pulumi.String("<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const apiOperationPolicy = new azure_native.apimanagement.ApiOperationPolicy("apiOperationPolicy", {
+ *     apiId: "5600b57e7e8880006a040001",
+ *     format: "xml",
+ *     operationId: "5600b57e7e8880006a080001",
+ *     policyId: "policy",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     value: "<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api_operation_policy = azure_native.apimanagement.ApiOperationPolicy("apiOperationPolicy",
+ *     api_id="5600b57e7e8880006a040001",
+ *     format="xml",
+ *     operation_id="5600b57e7e8880006a080001",
+ *     policy_id="policy",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     value="<policies> <inbound /> <backend>    <forward-request />  </backend>  <outbound /></policies>")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +120,48 @@ import javax.annotation.Nullable;
 public class ApiOperationPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Format of the policyContent.
-     * 
      */
     @Export(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
     /**
      * @return Format of the policyContent.
-     * 
      */
     public Output</* @Nullable */ String> getFormat() {
         return this.format;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Contents of the Policy as defined by the format.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**
      * @return Contents of the Policy as defined by the format.
-     * 
      */
     public Output<String> getValue() {
         return this.value;

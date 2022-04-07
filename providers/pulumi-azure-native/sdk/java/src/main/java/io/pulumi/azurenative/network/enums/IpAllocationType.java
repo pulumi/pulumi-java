@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type for the IpAllocation.
-     * 
      */
     @EnumType
     public enum IpAllocationType {

@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class DirectLineSpeechChannelPropertiesResponse {
     /**
      * The cognitive service region with this channel registration.
-     * 
      */
     private final String cognitiveServiceRegion;
     /**
      * The cognitive service subscription key to use with this channel registration.
-     * 
      */
     private final String cognitiveServiceSubscriptionKey;
     /**
      * Custom voice deployment id (optional).
-     * 
      */
     private final @Nullable String customSpeechModelId;
     /**
      * Custom speech model id (optional).
-     * 
      */
     private final @Nullable String customVoiceDeploymentId;
     /**
      * Make this a default bot for chosen cognitive service account.
-     * 
      */
     private final @Nullable Boolean isDefaultBotForCogSvcAccount;
     /**
      * Whether this channel is enabled or not.
-     * 
      */
     private final @Nullable Boolean isEnabled;
 
@@ -61,42 +55,36 @@ public final class DirectLineSpeechChannelPropertiesResponse {
 
     /**
      * The cognitive service region with this channel registration.
-     * 
     */
     public String getCognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
     }
     /**
      * The cognitive service subscription key to use with this channel registration.
-     * 
     */
     public String getCognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
     }
     /**
      * Custom voice deployment id (optional).
-     * 
     */
     public Optional<String> getCustomSpeechModelId() {
         return Optional.ofNullable(this.customSpeechModelId);
     }
     /**
      * Custom speech model id (optional).
-     * 
     */
     public Optional<String> getCustomVoiceDeploymentId() {
         return Optional.ofNullable(this.customVoiceDeploymentId);
     }
     /**
      * Make this a default bot for chosen cognitive service account.
-     * 
     */
     public Optional<Boolean> getIsDefaultBotForCogSvcAccount() {
         return Optional.ofNullable(this.isDefaultBotForCogSvcAccount);
     }
     /**
      * Whether this channel is enabled or not.
-     * 
     */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);

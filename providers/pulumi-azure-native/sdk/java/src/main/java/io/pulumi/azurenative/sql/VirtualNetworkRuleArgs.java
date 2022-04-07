@@ -17,7 +17,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Create firewall rule before the virtual network has vnet service endpoint enabled.
-     * 
      */
     @Import(name="ignoreMissingVnetServiceEndpoint")
       private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
@@ -28,7 +27,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -39,7 +37,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -50,7 +47,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the virtual network rule.
-     * 
      */
     @Import(name="virtualNetworkRuleName")
       private final @Nullable Output<String> virtualNetworkRuleName;
@@ -61,7 +57,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The ARM resource id of the virtual network subnet.
-     * 
      */
     @Import(name="virtualNetworkSubnetId", required=true)
       private final Output<String> virtualNetworkSubnetId;

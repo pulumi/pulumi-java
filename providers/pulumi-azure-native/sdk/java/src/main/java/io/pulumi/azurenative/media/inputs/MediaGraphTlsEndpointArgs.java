@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * An endpoint which must be connected over TLS/SSL.
- * 
  */
 public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
 
     /**
      * Polymorphic credentials to present to the endpoint.
-     * 
      */
     @Import(name="credentials")
       private final @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
@@ -35,7 +33,6 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -46,7 +43,6 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
 
     /**
      * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.
-     * 
      */
     @Import(name="trustedCertificates")
       private final @Nullable Output<MediaGraphPemCertificateListArgs> trustedCertificates;
@@ -57,7 +53,6 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
 
     /**
      * Url for the endpoint.
-     * 
      */
     @Import(name="url", required=true)
       private final Output<String> url;
@@ -68,7 +63,6 @@ public final class MediaGraphTlsEndpointArgs extends io.pulumi.resources.Resourc
 
     /**
      * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
-     * 
      */
     @Import(name="validationOptions")
       private final @Nullable Output<MediaGraphTlsValidationOptionsArgs> validationOptions;

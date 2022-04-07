@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class PerNodeExtensionStateResponse {
     /**
      * Fully qualified resource ID for the particular Arc Extension on this node.
-     * 
      */
     private final String extension;
     /**
      * Name of the node in HCI Cluster.
-     * 
      */
     private final String name;
     /**
      * State of Arc Extension in this node.
-     * 
      */
     private final String state;
 
@@ -37,21 +34,18 @@ public final class PerNodeExtensionStateResponse {
 
     /**
      * Fully qualified resource ID for the particular Arc Extension on this node.
-     * 
     */
     public String getExtension() {
         return this.extension;
     }
     /**
      * Name of the node in HCI Cluster.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * State of Arc Extension in this node.
-     * 
     */
     public String getState() {
         return this.state;

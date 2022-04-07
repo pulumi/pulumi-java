@@ -18,7 +18,100 @@ import javax.annotation.Nullable;
  * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
  * API Version: 2020-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SharedPrivateLinkResourceCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sharedPrivateLinkResource = new AzureNative.Search.SharedPrivateLinkResource("sharedPrivateLinkResource", new AzureNative.Search.SharedPrivateLinkResourceArgs
+ *         {
+ *             Properties = new AzureNative.Search.Inputs.SharedPrivateLinkResourcePropertiesArgs
+ *             {
+ *                 GroupId = "blob",
+ *                 PrivateLinkResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
+ *                 RequestMessage = "please approve",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             SearchServiceName = "mysearchservice",
+ *             SharedPrivateLinkResourceName = "testResource",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := search.NewSharedPrivateLinkResource(ctx, "sharedPrivateLinkResource", &search.SharedPrivateLinkResourceArgs{
+ * 			Properties: &search.SharedPrivateLinkResourcePropertiesArgs{
+ * 				GroupId:               pulumi.String("blob"),
+ * 				PrivateLinkResourceId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName"),
+ * 				RequestMessage:        pulumi.String("please approve"),
+ * 			},
+ * 			ResourceGroupName:             pulumi.String("rg1"),
+ * 			SearchServiceName:             pulumi.String("mysearchservice"),
+ * 			SharedPrivateLinkResourceName: pulumi.String("testResource"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResource("sharedPrivateLinkResource", {
+ *     properties: {
+ *         groupId: "blob",
+ *         privateLinkResourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
+ *         requestMessage: "please approve",
+ *     },
+ *     resourceGroupName: "rg1",
+ *     searchServiceName: "mysearchservice",
+ *     sharedPrivateLinkResourceName: "testResource",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * shared_private_link_resource = azure_native.search.SharedPrivateLinkResource("sharedPrivateLinkResource",
+ *     properties=azure_native.search.SharedPrivateLinkResourcePropertiesArgs(
+ *         group_id="blob",
+ *         private_link_resource_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
+ *         request_message="please approve",
+ *     ),
+ *     resource_group_name="rg1",
+ *     search_service_name="mysearchservice",
+ *     shared_private_link_resource_name="testResource")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +126,36 @@ import javax.annotation.Nullable;
 public class SharedPrivateLinkResource extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
-     * 
      */
     @Export(name="properties", type=SharedPrivateLinkResourcePropertiesResponse.class, parameters={})
     private Output<SharedPrivateLinkResourcePropertiesResponse> properties;
 
     /**
      * @return Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
-     * 
      */
     public Output<SharedPrivateLinkResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

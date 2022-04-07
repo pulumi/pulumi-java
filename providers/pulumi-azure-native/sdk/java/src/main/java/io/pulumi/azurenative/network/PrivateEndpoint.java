@@ -23,7 +23,241 @@ import javax.annotation.Nullable;
  * Private endpoint resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create private endpoint
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpoint = new AzureNative.Network.PrivateEndpoint("privateEndpoint", new AzureNative.Network.PrivateEndpointArgs
+ *         {
+ *             Location = "eastus2euap",
+ *             PrivateEndpointName = "testPe",
+ *             PrivateLinkServiceConnections = 
+ *             {
+ *                 new AzureNative.Network.Inputs.PrivateLinkServiceConnectionArgs
+ *                 {
+ *                     GroupIds = 
+ *                     {
+ *                         "groupIdFromResource",
+ *                     },
+ *                     Name = "testPlc",
+ *                     PrivateLinkServiceId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+ *                     RequestMessage = "Please approve my connection.",
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             Subnet = new AzureNative.Network.Inputs.SubnetArgs
+ *             {
+ *                 Id = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewPrivateEndpoint(ctx, "privateEndpoint", &network.PrivateEndpointArgs{
+ * 			Location:            pulumi.String("eastus2euap"),
+ * 			PrivateEndpointName: pulumi.String("testPe"),
+ * 			PrivateLinkServiceConnections: []network.PrivateLinkServiceConnectionArgs{
+ * 				&network.PrivateLinkServiceConnectionArgs{
+ * 					GroupIds: pulumi.StringArray{
+ * 						pulumi.String("groupIdFromResource"),
+ * 					},
+ * 					Name:                 pulumi.String("testPlc"),
+ * 					PrivateLinkServiceId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls"),
+ * 					RequestMessage:       pulumi.String("Please approve my connection."),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Subnet: &network.SubnetArgs{
+ * 				Id: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpoint = new azure_native.network.PrivateEndpoint("privateEndpoint", {
+ *     location: "eastus2euap",
+ *     privateEndpointName: "testPe",
+ *     privateLinkServiceConnections: [{
+ *         groupIds: ["groupIdFromResource"],
+ *         name: "testPlc",
+ *         privateLinkServiceId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+ *         requestMessage: "Please approve my connection.",
+ *     }],
+ *     resourceGroupName: "rg1",
+ *     subnet: {
+ *         id: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint = azure_native.network.PrivateEndpoint("privateEndpoint",
+ *     location="eastus2euap",
+ *     private_endpoint_name="testPe",
+ *     private_link_service_connections=[azure_native.network.PrivateLinkServiceConnectionArgs(
+ *         group_ids=["groupIdFromResource"],
+ *         name="testPlc",
+ *         private_link_service_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+ *         request_message="Please approve my connection.",
+ *     )],
+ *     resource_group_name="rg1",
+ *     subnet=azure_native.network.SubnetArgs(
+ *         id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create private endpoint with manual approval connection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpoint = new AzureNative.Network.PrivateEndpoint("privateEndpoint", new AzureNative.Network.PrivateEndpointArgs
+ *         {
+ *             Location = "eastus",
+ *             ManualPrivateLinkServiceConnections = 
+ *             {
+ *                 new AzureNative.Network.Inputs.PrivateLinkServiceConnectionArgs
+ *                 {
+ *                     GroupIds = 
+ *                     {
+ *                         "groupIdFromResource",
+ *                     },
+ *                     PrivateLinkServiceId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+ *                     RequestMessage = "Please manually approve my connection.",
+ *                 },
+ *             },
+ *             PrivateEndpointName = "testPe",
+ *             ResourceGroupName = "rg1",
+ *             Subnet = new AzureNative.Network.Inputs.SubnetArgs
+ *             {
+ *                 Id = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewPrivateEndpoint(ctx, "privateEndpoint", &network.PrivateEndpointArgs{
+ * 			Location: pulumi.String("eastus"),
+ * 			ManualPrivateLinkServiceConnections: []network.PrivateLinkServiceConnectionArgs{
+ * 				&network.PrivateLinkServiceConnectionArgs{
+ * 					GroupIds: pulumi.StringArray{
+ * 						pulumi.String("groupIdFromResource"),
+ * 					},
+ * 					PrivateLinkServiceId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls"),
+ * 					RequestMessage:       pulumi.String("Please manually approve my connection."),
+ * 				},
+ * 			},
+ * 			PrivateEndpointName: pulumi.String("testPe"),
+ * 			ResourceGroupName:   pulumi.String("rg1"),
+ * 			Subnet: &network.SubnetArgs{
+ * 				Id: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpoint = new azure_native.network.PrivateEndpoint("privateEndpoint", {
+ *     location: "eastus",
+ *     manualPrivateLinkServiceConnections: [{
+ *         groupIds: ["groupIdFromResource"],
+ *         privateLinkServiceId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+ *         requestMessage: "Please manually approve my connection.",
+ *     }],
+ *     privateEndpointName: "testPe",
+ *     resourceGroupName: "rg1",
+ *     subnet: {
+ *         id: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint = azure_native.network.PrivateEndpoint("privateEndpoint",
+ *     location="eastus",
+ *     manual_private_link_service_connections=[azure_native.network.PrivateLinkServiceConnectionArgs(
+ *         group_ids=["groupIdFromResource"],
+ *         private_link_service_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+ *         request_message="Please manually approve my connection.",
+ *     )],
+ *     private_endpoint_name="testPe",
+ *     resource_group_name="rg1",
+ *     subnet=azure_native.network.SubnetArgs(
+ *         id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,168 +272,144 @@ import javax.annotation.Nullable;
 public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
     /**
      * An array of custom dns configurations.
-     * 
      */
     @Export(name="customDnsConfigs", type=List.class, parameters={CustomDnsConfigPropertiesFormatResponse.class})
     private Output</* @Nullable */ List<CustomDnsConfigPropertiesFormatResponse>> customDnsConfigs;
 
     /**
      * @return An array of custom dns configurations.
-     * 
      */
     public Output</* @Nullable */ List<CustomDnsConfigPropertiesFormatResponse>> getCustomDnsConfigs() {
         return this.customDnsConfigs;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the load balancer.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return The extended location of the load balancer.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
-     * 
      */
     @Export(name="manualPrivateLinkServiceConnections", type=List.class, parameters={PrivateLinkServiceConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateLinkServiceConnectionResponse>> manualPrivateLinkServiceConnections;
 
     /**
      * @return A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
-     * 
      */
     public Output</* @Nullable */ List<PrivateLinkServiceConnectionResponse>> getManualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * An array of references to the network interfaces created for this private endpoint.
-     * 
      */
     @Export(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
     private Output<List<NetworkInterfaceResponse>> networkInterfaces;
 
     /**
      * @return An array of references to the network interfaces created for this private endpoint.
-     * 
      */
     public Output<List<NetworkInterfaceResponse>> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * A grouping of information about the connection to the remote resource.
-     * 
      */
     @Export(name="privateLinkServiceConnections", type=List.class, parameters={PrivateLinkServiceConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateLinkServiceConnectionResponse>> privateLinkServiceConnections;
 
     /**
      * @return A grouping of information about the connection to the remote resource.
-     * 
      */
     public Output</* @Nullable */ List<PrivateLinkServiceConnectionResponse>> getPrivateLinkServiceConnections() {
         return this.privateLinkServiceConnections;
     }
     /**
      * The provisioning state of the private endpoint resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the private endpoint resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The ID of the subnet from which the private IP will be allocated.
-     * 
      */
     @Export(name="subnet", type=SubnetResponse.class, parameters={})
     private Output</* @Nullable */ SubnetResponse> subnet;
 
     /**
      * @return The ID of the subnet from which the private IP will be allocated.
-     * 
      */
     public Output</* @Nullable */ SubnetResponse> getSubnet() {
         return this.subnet;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

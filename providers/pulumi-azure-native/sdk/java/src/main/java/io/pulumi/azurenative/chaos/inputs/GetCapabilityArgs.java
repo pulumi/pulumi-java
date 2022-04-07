@@ -14,7 +14,6 @@ public final class GetCapabilityArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String that represents a Capability resource name.
-     * 
      */
     @Import(name="capabilityName", required=true)
       private final String capabilityName;
@@ -25,7 +24,6 @@ public final class GetCapabilityArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String that represents a resource provider namespace.
-     * 
      */
     @Import(name="parentProviderNamespace", required=true)
       private final String parentProviderNamespace;
@@ -36,7 +34,6 @@ public final class GetCapabilityArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String that represents a resource name.
-     * 
      */
     @Import(name="parentResourceName", required=true)
       private final String parentResourceName;
@@ -47,7 +44,6 @@ public final class GetCapabilityArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String that represents a resource type.
-     * 
      */
     @Import(name="parentResourceType", required=true)
       private final String parentResourceType;
@@ -58,7 +54,6 @@ public final class GetCapabilityArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String that represents an Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -69,7 +64,6 @@ public final class GetCapabilityArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String that represents a Target resource name.
-     * 
      */
     @Import(name="targetName", required=true)
       private final String targetName;

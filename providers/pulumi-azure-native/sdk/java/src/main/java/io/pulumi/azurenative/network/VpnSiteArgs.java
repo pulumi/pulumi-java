@@ -25,7 +25,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The AddressSpace that contains an array of IP address ranges.
-     * 
      */
     @Import(name="addressSpace")
       private final @Nullable Output<AddressSpaceArgs> addressSpace;
@@ -36,7 +35,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The set of bgp properties.
-     * 
      */
     @Import(name="bgpProperties")
       private final @Nullable Output<BgpSettingsArgs> bgpProperties;
@@ -47,7 +45,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device properties.
-     * 
      */
     @Import(name="deviceProperties")
       private final @Nullable Output<DevicePropertiesArgs> deviceProperties;
@@ -58,7 +55,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -69,7 +65,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ip-address for the vpn-site.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
@@ -80,7 +75,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IsSecuritySite flag.
-     * 
      */
     @Import(name="isSecuritySite")
       private final @Nullable Output<Boolean> isSecuritySite;
@@ -91,7 +85,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -102,7 +95,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Office365 Policy.
-     * 
      */
     @Import(name="o365Policy")
       private final @Nullable Output<O365PolicyPropertiesArgs> o365Policy;
@@ -113,7 +105,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name of the VpnSite.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -124,7 +115,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The key for vpn-site that can be used for connections.
-     * 
      */
     @Import(name="siteKey")
       private final @Nullable Output<String> siteKey;
@@ -135,7 +125,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -146,7 +135,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The VirtualWAN to which the vpnSite belongs.
-     * 
      */
     @Import(name="virtualWan")
       private final @Nullable Output<SubResourceArgs> virtualWan;
@@ -157,7 +145,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of all vpn site links.
-     * 
      */
     @Import(name="vpnSiteLinks")
       private final @Nullable Output<List<VpnSiteLinkArgs>> vpnSiteLinks;
@@ -168,7 +155,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the VpnSite being created or updated.
-     * 
      */
     @Import(name="vpnSiteName")
       private final @Nullable Output<String> vpnSiteName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the data collection options specified.
- * 
  */
 public final class ACIServiceResponseResponseDataCollection extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ACIServiceResponseResponseDataCollection extends io.pulumi.re
 
     /**
      * Option for enabling/disabling Event Hub.
-     * 
      */
     @Import(name="eventHubEnabled")
       private final @Nullable Boolean eventHubEnabled;
@@ -31,7 +29,6 @@ public final class ACIServiceResponseResponseDataCollection extends io.pulumi.re
 
     /**
      * Option for enabling/disabling storage.
-     * 
      */
     @Import(name="storageEnabled")
       private final @Nullable Boolean storageEnabled;

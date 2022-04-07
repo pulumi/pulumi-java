@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The CSPM monitoring for AWS offering configurations
- * 
  */
 public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
 
     /**
      * The native cloud connection configuration
-     * 
      */
     @Import(name="nativeCloudConnection")
       private final @Nullable Output<CspmMonitorAwsOfferingNativeCloudConnectionArgs> nativeCloudConnection;
@@ -33,7 +31,6 @@ public final class CspmMonitorAwsOfferingArgs extends io.pulumi.resources.Resour
     /**
      * The type of the security offering.
      * Expected value is 'CspmMonitorAws'.
-     * 
      */
     @Import(name="offeringType", required=true)
       private final Output<String> offeringType;

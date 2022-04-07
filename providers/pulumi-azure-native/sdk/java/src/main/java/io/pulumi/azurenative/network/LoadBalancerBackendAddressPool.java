@@ -20,7 +20,148 @@ import javax.annotation.Nullable;
  * Pool of backend IP addresses.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update load balancer backend pool with backend addresses containing virtual network and  IP address.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var loadBalancerBackendAddressPool = new AzureNative.Network.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool", new AzureNative.Network.LoadBalancerBackendAddressPoolArgs
+ *         {
+ *             BackendAddressPoolName = "backend",
+ *             LoadBalancerBackendAddresses = 
+ *             {
+ *                 new AzureNative.Network.Inputs.LoadBalancerBackendAddressArgs
+ *                 {
+ *                     IpAddress = "10.0.0.4",
+ *                     Name = "address1",
+ *                     VirtualNetwork = new AzureNative.Network.Inputs.SubResourceArgs
+ *                     {
+ *                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+ *                     },
+ *                 },
+ *                 new AzureNative.Network.Inputs.LoadBalancerBackendAddressArgs
+ *                 {
+ *                     IpAddress = "10.0.0.5",
+ *                     Name = "address2",
+ *                     VirtualNetwork = new AzureNative.Network.Inputs.SubResourceArgs
+ *                     {
+ *                         Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+ *                     },
+ *                 },
+ *             },
+ *             LoadBalancerName = "lb",
+ *             ResourceGroupName = "testrg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewLoadBalancerBackendAddressPool(ctx, "loadBalancerBackendAddressPool", &network.LoadBalancerBackendAddressPoolArgs{
+ * 			BackendAddressPoolName: pulumi.String("backend"),
+ * 			LoadBalancerBackendAddresses: []network.LoadBalancerBackendAddressArgs{
+ * 				&network.LoadBalancerBackendAddressArgs{
+ * 					IpAddress: pulumi.String("10.0.0.4"),
+ * 					Name:      pulumi.String("address1"),
+ * 					VirtualNetwork: &network.SubResourceArgs{
+ * 						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb"),
+ * 					},
+ * 				},
+ * 				&network.LoadBalancerBackendAddressArgs{
+ * 					IpAddress: pulumi.String("10.0.0.5"),
+ * 					Name:      pulumi.String("address2"),
+ * 					VirtualNetwork: &network.SubResourceArgs{
+ * 						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb"),
+ * 					},
+ * 				},
+ * 			},
+ * 			LoadBalancerName:  pulumi.String("lb"),
+ * 			ResourceGroupName: pulumi.String("testrg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const loadBalancerBackendAddressPool = new azure_native.network.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool", {
+ *     backendAddressPoolName: "backend",
+ *     loadBalancerBackendAddresses: [
+ *         {
+ *             ipAddress: "10.0.0.4",
+ *             name: "address1",
+ *             virtualNetwork: {
+ *                 id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+ *             },
+ *         },
+ *         {
+ *             ipAddress: "10.0.0.5",
+ *             name: "address2",
+ *             virtualNetwork: {
+ *                 id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+ *             },
+ *         },
+ *     ],
+ *     loadBalancerName: "lb",
+ *     resourceGroupName: "testrg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * load_balancer_backend_address_pool = azure_native.network.LoadBalancerBackendAddressPool("loadBalancerBackendAddressPool",
+ *     backend_address_pool_name="backend",
+ *     load_balancer_backend_addresses=[
+ *         azure_native.network.LoadBalancerBackendAddressArgs(
+ *             ip_address="10.0.0.4",
+ *             name="address1",
+ *             virtual_network=azure_native.network.SubResourceArgs(
+ *                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+ *             ),
+ *         ),
+ *         azure_native.network.LoadBalancerBackendAddressArgs(
+ *             ip_address="10.0.0.5",
+ *             name="address2",
+ *             virtual_network=azure_native.network.SubResourceArgs(
+ *                 id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb",
+ *             ),
+ *         ),
+ *     ],
+ *     load_balancer_name="lb",
+ *     resource_group_name="testrg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,140 +176,120 @@ import javax.annotation.Nullable;
 public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomResource {
     /**
      * An array of references to IP addresses defined in network interfaces.
-     * 
      */
     @Export(name="backendIPConfigurations", type=List.class, parameters={NetworkInterfaceIPConfigurationResponse.class})
     private Output<List<NetworkInterfaceIPConfigurationResponse>> backendIPConfigurations;
 
     /**
      * @return An array of references to IP addresses defined in network interfaces.
-     * 
      */
     public Output<List<NetworkInterfaceIPConfigurationResponse>> getBackendIPConfigurations() {
         return this.backendIPConfigurations;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * An array of backend addresses.
-     * 
      */
     @Export(name="loadBalancerBackendAddresses", type=List.class, parameters={LoadBalancerBackendAddressResponse.class})
     private Output</* @Nullable */ List<LoadBalancerBackendAddressResponse>> loadBalancerBackendAddresses;
 
     /**
      * @return An array of backend addresses.
-     * 
      */
     public Output</* @Nullable */ List<LoadBalancerBackendAddressResponse>> getLoadBalancerBackendAddresses() {
         return this.loadBalancerBackendAddresses;
     }
     /**
      * An array of references to load balancing rules that use this backend address pool.
-     * 
      */
     @Export(name="loadBalancingRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> loadBalancingRules;
 
     /**
      * @return An array of references to load balancing rules that use this backend address pool.
-     * 
      */
     public Output<List<SubResourceResponse>> getLoadBalancingRules() {
         return this.loadBalancingRules;
     }
     /**
      * The location of the backend address pool.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the backend address pool.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * A reference to an outbound rule that uses this backend address pool.
-     * 
      */
     @Export(name="outboundRule", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> outboundRule;
 
     /**
      * @return A reference to an outbound rule that uses this backend address pool.
-     * 
      */
     public Output<SubResourceResponse> getOutboundRule() {
         return this.outboundRule;
     }
     /**
      * An array of references to outbound rules that use this backend address pool.
-     * 
      */
     @Export(name="outboundRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> outboundRules;
 
     /**
      * @return An array of references to outbound rules that use this backend address pool.
-     * 
      */
     public Output<List<SubResourceResponse>> getOutboundRules() {
         return this.outboundRules;
     }
     /**
      * The provisioning state of the backend address pool resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the backend address pool resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

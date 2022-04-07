@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The entity.
- * 
  */
 public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The friendly name of the management group.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -34,7 +32,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The fully qualified ID for the entity.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -45,7 +42,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The users specific permissions to this item.
-     * 
      */
     @Import(name="inheritedPermissions")
       private final @Nullable String inheritedPermissions;
@@ -56,7 +52,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the entity. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -67,7 +62,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of children is the number of Groups that are exactly one level underneath the current Group.
-     * 
      */
     @Import(name="numberOfChildGroups")
       private final @Nullable Integer numberOfChildGroups;
@@ -78,7 +72,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Number of children is the number of Groups and Subscriptions that are exactly one level underneath the current Group.
-     * 
      */
     @Import(name="numberOfChildren")
       private final @Nullable Integer numberOfChildren;
@@ -96,7 +89,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * (Optional) The ID of the parent management group.
-     * 
      */
     @Import(name="parent")
       private final @Nullable EntityParentGroupInfoResponse parent;
@@ -107,7 +99,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The parent display name chain from the root group to the immediate parent
-     * 
      */
     @Import(name="parentDisplayNameChain")
       private final @Nullable List<String> parentDisplayNameChain;
@@ -118,7 +109,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The parent name chain from the root group to the immediate parent
-     * 
      */
     @Import(name="parentNameChain")
       private final @Nullable List<String> parentNameChain;
@@ -129,7 +119,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The users specific permissions to this item.
-     * 
      */
     @Import(name="permissions")
       private final @Nullable String permissions;
@@ -140,7 +129,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The AAD Tenant ID associated with the entity. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;
@@ -151,7 +139,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the resource. For example, Microsoft.Management/managementGroups
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

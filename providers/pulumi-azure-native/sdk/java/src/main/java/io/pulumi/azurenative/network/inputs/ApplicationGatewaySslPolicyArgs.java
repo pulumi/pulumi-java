@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application Gateway Ssl policy.
- * 
  */
 public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
 
     /**
      * Ssl cipher suites to be enabled in the specified order to application gateway.
-     * 
      */
     @Import(name="cipherSuites")
       private final @Nullable Output<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites;
@@ -37,7 +35,6 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
 
     /**
      * Ssl protocols to be disabled on application gateway.
-     * 
      */
     @Import(name="disabledSslProtocols")
       private final @Nullable Output<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols;
@@ -48,7 +45,6 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
 
     /**
      * Minimum version of Ssl protocol to be supported on application gateway.
-     * 
      */
     @Import(name="minProtocolVersion")
       private final @Nullable Output<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion;
@@ -59,7 +55,6 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
 
     /**
      * Name of Ssl predefined policy.
-     * 
      */
     @Import(name="policyName")
       private final @Nullable Output<Either<String,ApplicationGatewaySslPolicyName>> policyName;
@@ -70,7 +65,6 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
 
     /**
      * Type of Ssl Policy.
-     * 
      */
     @Import(name="policyType")
       private final @Nullable Output<Either<String,ApplicationGatewaySslPolicyType>> policyType;

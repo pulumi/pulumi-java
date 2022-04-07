@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Application Configuration Service properties payload
- * 
  */
 public final class ConfigurationServicePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
 
     /**
      * Collection of instances belong to Application Configuration Service.
-     * 
      */
     @Import(name="instances", required=true)
       private final List<ConfigurationServiceInstanceResponse> instances;
@@ -35,7 +33,6 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
 
     /**
      * State of the Application Configuration Service.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -46,7 +43,6 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
 
     /**
      * The requested resource quantity for required CPU and Memory.
-     * 
      */
     @Import(name="resourceRequests", required=true)
       private final ConfigurationServiceResourceRequestsResponse resourceRequests;
@@ -57,7 +53,6 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
 
     /**
      * The settings of Application Configuration Service.
-     * 
      */
     @Import(name="settings")
       private final @Nullable ConfigurationServiceSettingsResponse settings;

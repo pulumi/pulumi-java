@@ -19,7 +19,223 @@ import javax.annotation.Nullable;
  * PrivateLink Policy configuration object.
  * API Version: 2020-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### privateLinkPolicyCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateLinkForAzureAd = new AzureNative.AadIam.PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureNative.AadIam.PrivateLinkForAzureAdArgs
+ *         {
+ *             AllTenants = false,
+ *             Name = "myOrgPrivateLinkPolicy",
+ *             OwnerTenantId = "950f8bca-bf4d-4a41-ad10-034e792a243d",
+ *             PolicyName = "ddb1",
+ *             ResourceGroup = "myOrgVnetRG",
+ *             ResourceGroupName = "rg1",
+ *             ResourceName = "myOrgVnetPrivateLink",
+ *             SubscriptionId = "57849194-ea1f-470b-abda-d195b25634c1",
+ *             Tenants = 
+ *             {
+ *                 "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+ *                 "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	aadiam "github.com/pulumi/pulumi-azure-native/sdk/go/azure/aadiam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := aadiam.NewprivateLinkForAzureAd(ctx, "privateLinkForAzureAd", &aadiam.privateLinkForAzureAdArgs{
+ * 			AllTenants:        pulumi.Bool(false),
+ * 			Name:              pulumi.String("myOrgPrivateLinkPolicy"),
+ * 			OwnerTenantId:     pulumi.String("950f8bca-bf4d-4a41-ad10-034e792a243d"),
+ * 			PolicyName:        pulumi.String("ddb1"),
+ * 			ResourceGroup:     pulumi.String("myOrgVnetRG"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ResourceName:      pulumi.String("myOrgVnetPrivateLink"),
+ * 			SubscriptionId:    pulumi.String("57849194-ea1f-470b-abda-d195b25634c1"),
+ * 			Tenants: pulumi.StringArray{
+ * 				pulumi.String("3616657d-1c80-41ae-9d83-2a2776f2c9be"),
+ * 				pulumi.String("727b6ef1-18ab-4627-ac95-3f9cd945ed87"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateLinkForAzureAd = new azure_native.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd", {
+ *     allTenants: false,
+ *     name: "myOrgPrivateLinkPolicy",
+ *     ownerTenantId: "950f8bca-bf4d-4a41-ad10-034e792a243d",
+ *     policyName: "ddb1",
+ *     resourceGroup: "myOrgVnetRG",
+ *     resourceGroupName: "rg1",
+ *     resourceName: "myOrgVnetPrivateLink",
+ *     subscriptionId: "57849194-ea1f-470b-abda-d195b25634c1",
+ *     tenants: [
+ *         "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+ *         "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_link_for_azure_ad = azure_native.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd",
+ *     all_tenants=False,
+ *     name="myOrgPrivateLinkPolicy",
+ *     owner_tenant_id="950f8bca-bf4d-4a41-ad10-034e792a243d",
+ *     policy_name="ddb1",
+ *     resource_group="myOrgVnetRG",
+ *     resource_group_name="rg1",
+ *     resource_name="myOrgVnetPrivateLink",
+ *     subscription_id="57849194-ea1f-470b-abda-d195b25634c1",
+ *     tenants=[
+ *         "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+ *         "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### privateLinkPolicyMinCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateLinkForAzureAd = new AzureNative.AadIam.PrivateLinkForAzureAd("privateLinkForAzureAd", new AzureNative.AadIam.PrivateLinkForAzureAdArgs
+ *         {
+ *             AllTenants = false,
+ *             Name = "myOrgPrivateLinkPolicy",
+ *             OwnerTenantId = "950f8bca-bf4d-4a41-ad10-034e792a243d",
+ *             PolicyName = "ddb1",
+ *             ResourceGroup = "myOrgVnetRG",
+ *             ResourceGroupName = "rg1",
+ *             ResourceName = "myOrgVnetPrivateLink",
+ *             SubscriptionId = "57849194-ea1f-470b-abda-d195b25634c1",
+ *             Tenants = 
+ *             {
+ *                 "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+ *                 "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	aadiam "github.com/pulumi/pulumi-azure-native/sdk/go/azure/aadiam"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := aadiam.NewprivateLinkForAzureAd(ctx, "privateLinkForAzureAd", &aadiam.privateLinkForAzureAdArgs{
+ * 			AllTenants:        pulumi.Bool(false),
+ * 			Name:              pulumi.String("myOrgPrivateLinkPolicy"),
+ * 			OwnerTenantId:     pulumi.String("950f8bca-bf4d-4a41-ad10-034e792a243d"),
+ * 			PolicyName:        pulumi.String("ddb1"),
+ * 			ResourceGroup:     pulumi.String("myOrgVnetRG"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ResourceName:      pulumi.String("myOrgVnetPrivateLink"),
+ * 			SubscriptionId:    pulumi.String("57849194-ea1f-470b-abda-d195b25634c1"),
+ * 			Tenants: pulumi.StringArray{
+ * 				pulumi.String("3616657d-1c80-41ae-9d83-2a2776f2c9be"),
+ * 				pulumi.String("727b6ef1-18ab-4627-ac95-3f9cd945ed87"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateLinkForAzureAd = new azure_native.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd", {
+ *     allTenants: false,
+ *     name: "myOrgPrivateLinkPolicy",
+ *     ownerTenantId: "950f8bca-bf4d-4a41-ad10-034e792a243d",
+ *     policyName: "ddb1",
+ *     resourceGroup: "myOrgVnetRG",
+ *     resourceGroupName: "rg1",
+ *     resourceName: "myOrgVnetPrivateLink",
+ *     subscriptionId: "57849194-ea1f-470b-abda-d195b25634c1",
+ *     tenants: [
+ *         "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+ *         "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_link_for_azure_ad = azure_native.aadiam.PrivateLinkForAzureAd("privateLinkForAzureAd",
+ *     all_tenants=False,
+ *     name="myOrgPrivateLinkPolicy",
+ *     owner_tenant_id="950f8bca-bf4d-4a41-ad10-034e792a243d",
+ *     policy_name="ddb1",
+ *     resource_group="myOrgVnetRG",
+ *     resource_group_name="rg1",
+ *     resource_name="myOrgVnetPrivateLink",
+ *     subscription_id="57849194-ea1f-470b-abda-d195b25634c1",
+ *     tenants=[
+ *         "3616657d-1c80-41ae-9d83-2a2776f2c9be",
+ *         "727b6ef1-18ab-4627-ac95-3f9cd945ed87",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,126 +250,108 @@ import javax.annotation.Nullable;
 public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
     /**
      * Flag indicating whether all tenants are allowed
-     * 
      */
     @Export(name="allTenants", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allTenants;
 
     /**
      * @return Flag indicating whether all tenants are allowed
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllTenants() {
         return this.allTenants;
     }
     /**
      * Name of this resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of this resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Guid of the owner tenant
-     * 
      */
     @Export(name="ownerTenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerTenantId;
 
     /**
      * @return Guid of the owner tenant
-     * 
      */
     public Output</* @Nullable */ String> getOwnerTenantId() {
         return this.ownerTenantId;
     }
     /**
      * Name of the resource group
-     * 
      */
     @Export(name="resourceGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceGroup;
 
     /**
      * @return Name of the resource group
-     * 
      */
     public Output</* @Nullable */ String> getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Name of the private link policy resource
-     * 
      */
     @Export(name="resourceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceName;
 
     /**
      * @return Name of the private link policy resource
-     * 
      */
     public Output</* @Nullable */ String> getPropResourceName() {
         return this.resourceName;
     }
     /**
      * Subscription Identifier
-     * 
      */
     @Export(name="subscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subscriptionId;
 
     /**
      * @return Subscription Identifier
-     * 
      */
     public Output</* @Nullable */ String> getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The list of tenantIds.
-     * 
      */
     @Export(name="tenants", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tenants;
 
     /**
      * @return The list of tenantIds.
-     * 
      */
     public Output</* @Nullable */ List<String>> getTenants() {
         return this.tenants;
     }
     /**
      * Type of this resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of this resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

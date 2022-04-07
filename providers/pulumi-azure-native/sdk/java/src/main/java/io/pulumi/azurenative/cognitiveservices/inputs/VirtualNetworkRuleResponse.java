@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A rule governing the accessibility from a specific virtual network.
- * 
  */
 public final class VirtualNetworkRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -32,7 +30,6 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * Ignore missing vnet service endpoint or not.
-     * 
      */
     @Import(name="ignoreMissingVnetServiceEndpoint")
       private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
@@ -43,7 +40,6 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
 
     /**
      * Gets the state of virtual network rule.
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

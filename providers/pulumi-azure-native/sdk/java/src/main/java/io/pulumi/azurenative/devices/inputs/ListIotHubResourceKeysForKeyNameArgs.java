@@ -14,7 +14,6 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends io.pulumi.resour
 
     /**
      * The name of the shared access policy.
-     * 
      */
     @Import(name="keyName", required=true)
       private final String keyName;
@@ -25,7 +24,6 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group that contains the IoT hub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends io.pulumi.resour
 
     /**
      * The name of the IoT hub.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

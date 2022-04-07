@@ -13,42 +13,34 @@ import java.util.Objects;
 public final class GetHybridUseBenefitResult {
     /**
      * Created date
-     * 
      */
     private final String createdDate;
     /**
      * Indicates the revision of the hybrid use benefit
-     * 
      */
     private final Integer etag;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * Last updated date
-     * 
      */
     private final String lastUpdatedDate;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Provisioning state
-     * 
      */
     private final String provisioningState;
     /**
      * Hybrid use benefit SKU
-     * 
      */
     private final SkuResponse sku;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -74,56 +66,48 @@ public final class GetHybridUseBenefitResult {
 
     /**
      * Created date
-     * 
     */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * Indicates the revision of the hybrid use benefit
-     * 
     */
     public Integer getEtag() {
         return this.etag;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Last updated date
-     * 
     */
     public String getLastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Hybrid use benefit SKU
-     * 
     */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

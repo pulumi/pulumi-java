@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Encryption details for the fabric.
- * 
  */
 public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The key encryption key certificate expiry date.
-     * 
      */
     @Import(name="kekCertExpiryDate")
       private final @Nullable String kekCertExpiryDate;
@@ -31,7 +29,6 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The key encryption key certificate thumbprint.
-     * 
      */
     @Import(name="kekCertThumbprint")
       private final @Nullable String kekCertThumbprint;
@@ -42,7 +39,6 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The key encryption key state for the Vmm.
-     * 
      */
     @Import(name="kekState")
       private final @Nullable String kekState;

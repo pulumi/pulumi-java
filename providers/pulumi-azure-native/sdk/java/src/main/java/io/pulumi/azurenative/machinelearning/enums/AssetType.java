@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Asset's type.
-     * 
      */
     @EnumType
     public enum AssetType {

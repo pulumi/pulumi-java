@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class GetClusterGatewaySettingsResult {
     /**
      * Indicates whether or not the gateway settings based authorization is enabled.
-     * 
      */
     private final String isCredentialEnabled;
     /**
      * The gateway settings user password.
-     * 
      */
     private final String password;
     /**
      * The gateway settings user name.
-     * 
      */
     private final String userName;
 
@@ -37,21 +34,18 @@ public final class GetClusterGatewaySettingsResult {
 
     /**
      * Indicates whether or not the gateway settings based authorization is enabled.
-     * 
     */
     public String getIsCredentialEnabled() {
         return this.isCredentialEnabled;
     }
     /**
      * The gateway settings user password.
-     * 
     */
     public String getPassword() {
         return this.password;
     }
     /**
      * The gateway settings user name.
-     * 
     */
     public String getUserName() {
         return this.userName;

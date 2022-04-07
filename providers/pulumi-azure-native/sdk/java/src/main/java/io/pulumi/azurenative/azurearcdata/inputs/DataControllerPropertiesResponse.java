@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The data controller properties.
- * 
  */
 public final class DataControllerPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Username and password for basic login authentication.
-     * 
      */
     @Import(name="basicLoginInformation")
       private final @Nullable BasicLoginInformationResponse basicLoginInformation;
@@ -37,7 +35,6 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
 
     /**
      * The raw kubernetes information
-     * 
      */
     @Import(name="k8sRaw")
       private final @Nullable Object k8sRaw;
@@ -48,7 +45,6 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
-     * 
      */
     @Import(name="lastUploadedDate")
       private final @Nullable String lastUploadedDate;
@@ -59,7 +55,6 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Log analytics workspace id and primary key
-     * 
      */
     @Import(name="logAnalyticsWorkspaceConfig")
       private final @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
@@ -70,7 +65,6 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Properties from the Kubernetes data controller
-     * 
      */
     @Import(name="onPremiseProperty")
       private final @Nullable OnPremisePropertyResponse onPremiseProperty;
@@ -88,7 +82,6 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Service principal for uploading billing, metrics and logs.
-     * 
      */
     @Import(name="uploadServicePrincipal")
       private final @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
@@ -99,7 +92,6 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
 
     /**
      * Properties on upload watermark.  Mostly timestamp for each upload data type
-     * 
      */
     @Import(name="uploadWatermark")
       private final @Nullable UploadWatermarkResponse uploadWatermark;

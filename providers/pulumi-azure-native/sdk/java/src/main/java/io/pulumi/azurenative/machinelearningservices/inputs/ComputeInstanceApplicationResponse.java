@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines an Aml Instance application and its connectivity endpoint URI.
- * 
  */
 public final class ComputeInstanceApplicationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ComputeInstanceApplicationResponse extends io.pulumi.resource
 
     /**
      * Name of the ComputeInstance application.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -31,7 +29,6 @@ public final class ComputeInstanceApplicationResponse extends io.pulumi.resource
 
     /**
      * Application' endpoint URI.
-     * 
      */
     @Import(name="endpointUri")
       private final @Nullable String endpointUri;

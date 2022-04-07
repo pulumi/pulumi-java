@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Instructions for a labeling job.
- * 
  */
 public final class LabelingJobInstructionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class LabelingJobInstructionsArgs extends io.pulumi.resources.Resou
 
     /**
      * The link to a page with detailed labeling instructions for labelers.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

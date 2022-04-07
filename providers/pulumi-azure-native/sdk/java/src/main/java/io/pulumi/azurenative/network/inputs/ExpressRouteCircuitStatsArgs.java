@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains stats associated with the peering.
- * 
  */
 public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
 
     /**
      * The Primary BytesIn of the peering.
-     * 
      */
     @Import(name="primarybytesIn")
       private final @Nullable Output<Double> primarybytesIn;
@@ -31,7 +29,6 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
 
     /**
      * The primary BytesOut of the peering.
-     * 
      */
     @Import(name="primarybytesOut")
       private final @Nullable Output<Double> primarybytesOut;
@@ -42,7 +39,6 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
 
     /**
      * The secondary BytesIn of the peering.
-     * 
      */
     @Import(name="secondarybytesIn")
       private final @Nullable Output<Double> secondarybytesIn;
@@ -53,7 +49,6 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
 
     /**
      * The secondary BytesOut of the peering.
-     * 
      */
     @Import(name="secondarybytesOut")
       private final @Nullable Output<Double> secondarybytesOut;

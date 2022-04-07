@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The resource requests.
- * 
  */
 public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The CPU request of this container instance.
-     * 
      */
     @Import(name="cpu", required=true)
       private final Double cpu;
@@ -32,7 +30,6 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The GPU request of this container instance.
-     * 
      */
     @Import(name="gpu")
       private final @Nullable GpuResourceResponse gpu;
@@ -43,7 +40,6 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The memory request in GB of this container instance.
-     * 
      */
     @Import(name="memoryInGB", required=true)
       private final Double memoryInGB;

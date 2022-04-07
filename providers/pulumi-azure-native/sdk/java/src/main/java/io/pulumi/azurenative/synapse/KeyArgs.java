@@ -17,7 +17,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Used to activate the workspace after a customer managed key is provided.
-     * 
      */
     @Import(name="isActiveCMK")
       private final @Nullable Output<Boolean> isActiveCMK;
@@ -28,7 +27,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace key
-     * 
      */
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
@@ -39,7 +37,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Key Vault Url of the workspace key.
-     * 
      */
     @Import(name="keyVaultUrl")
       private final @Nullable Output<String> keyVaultUrl;
@@ -50,7 +47,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

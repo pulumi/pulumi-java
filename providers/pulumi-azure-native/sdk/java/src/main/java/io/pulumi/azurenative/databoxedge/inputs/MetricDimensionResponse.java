@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The metric dimension
- * 
  */
 public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The dimension value.
-     * 
      */
     @Import(name="sourceName", required=true)
       private final String sourceName;
@@ -29,7 +27,6 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The dimension type.
-     * 
      */
     @Import(name="sourceType", required=true)
       private final String sourceType;

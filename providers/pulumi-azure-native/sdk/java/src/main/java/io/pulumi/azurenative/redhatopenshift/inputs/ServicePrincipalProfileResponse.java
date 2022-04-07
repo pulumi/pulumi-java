@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ServicePrincipalProfile represents a service principal profile.
- * 
  */
 public final class ServicePrincipalProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ServicePrincipalProfileResponse extends io.pulumi.resources.I
 
     /**
      * The client ID used for the cluster (immutable).
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -31,7 +29,6 @@ public final class ServicePrincipalProfileResponse extends io.pulumi.resources.I
 
     /**
      * The client secret used for the cluster (immutable).
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable String clientSecret;

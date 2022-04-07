@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The recurrence schedule occurrence.
- * 
  */
 public final class RecurrenceScheduleOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class RecurrenceScheduleOccurrenceResponse extends io.pulumi.resour
 
     /**
      * The day of the week.
-     * 
      */
     @Import(name="day")
       private final @Nullable String day;
@@ -32,7 +30,6 @@ public final class RecurrenceScheduleOccurrenceResponse extends io.pulumi.resour
 
     /**
      * The occurrence.
-     * 
      */
     @Import(name="occurrence")
       private final @Nullable Integer occurrence;

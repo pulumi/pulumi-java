@@ -14,17 +14,14 @@ import java.util.Objects;
 public final class ServiceRegistryPropertiesResponse {
     /**
      * Collection of instances belong to Service Registry.
-     * 
      */
     private final List<ServiceRegistryInstanceResponse> instances;
     /**
      * State of the Service Registry.
-     * 
      */
     private final String provisioningState;
     /**
      * The requested resource quantity for required CPU and Memory.
-     * 
      */
     private final ServiceRegistryResourceRequestsResponse resourceRequests;
 
@@ -40,21 +37,18 @@ public final class ServiceRegistryPropertiesResponse {
 
     /**
      * Collection of instances belong to Service Registry.
-     * 
     */
     public List<ServiceRegistryInstanceResponse> getInstances() {
         return this.instances;
     }
     /**
      * State of the Service Registry.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The requested resource quantity for required CPU and Memory.
-     * 
     */
     public ServiceRegistryResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;

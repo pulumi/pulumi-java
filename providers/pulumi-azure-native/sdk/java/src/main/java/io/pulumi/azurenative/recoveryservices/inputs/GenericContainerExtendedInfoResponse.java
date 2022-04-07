@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container extended information
- * 
  */
 public final class GenericContainerExtendedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GenericContainerExtendedInfoResponse extends io.pulumi.resour
 
     /**
      * Container identity information
-     * 
      */
     @Import(name="containerIdentityInfo")
       private final @Nullable ContainerIdentityInfoResponse containerIdentityInfo;
@@ -33,7 +31,6 @@ public final class GenericContainerExtendedInfoResponse extends io.pulumi.resour
 
     /**
      * Public key of container cert
-     * 
      */
     @Import(name="rawCertData")
       private final @Nullable String rawCertData;
@@ -44,7 +41,6 @@ public final class GenericContainerExtendedInfoResponse extends io.pulumi.resour
 
     /**
      * Azure Backup Service Endpoints for the container
-     * 
      */
     @Import(name="serviceEndpoints")
       private final @Nullable Map<String,String> serviceEndpoints;

@@ -26,7 +26,6 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
 
     /**
      * The Assessment Key - Unique key for the assessment type
-     * 
      */
     @Import(name="assessmentMetadataName")
       private final @Nullable Output<String> assessmentMetadataName;
@@ -37,7 +36,6 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
 
     /**
      * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
-     * 
      */
     @Import(name="assessmentType", required=true)
       private final Output<Either<String,AssessmentType>> assessmentType;
@@ -55,7 +53,6 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
 
     /**
      * Human readable description of the assessment
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -66,7 +63,6 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
 
     /**
      * User friendly display name of the assessment
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -77,7 +73,6 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
 
     /**
      * The implementation effort required to remediate this assessment
-     * 
      */
     @Import(name="implementationEffort")
       private final @Nullable Output<Either<String,ImplementationEffort>> implementationEffort;
@@ -88,7 +83,6 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
 
     /**
      * Describes the partner that created the assessment
-     * 
      */
     @Import(name="partnerData")
       private final @Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
@@ -99,7 +93,6 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
 
     /**
      * True if this assessment is in preview release status
-     * 
      */
     @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
@@ -110,7 +103,6 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
 
     /**
      * Human readable description of what you should do to mitigate this security issue
-     * 
      */
     @Import(name="remediationDescription")
       private final @Nullable Output<String> remediationDescription;
@@ -121,7 +113,6 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
 
     /**
      * The severity level of the assessment
-     * 
      */
     @Import(name="severity", required=true)
       private final Output<Either<String,Severity>> severity;
@@ -139,7 +130,6 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
 
     /**
      * The user impact of the assessment
-     * 
      */
     @Import(name="userImpact")
       private final @Nullable Output<Either<String,UserImpact>> userImpact;

@@ -15,7 +15,6 @@ public final class DataSourceResponse {
     private final DataSourceConfigurationResponse configuration;
     /**
      * Datasource kind
-     * 
      */
     private final String kind;
     private final List<SinkConfigurationResponse> sinks;
@@ -35,7 +34,6 @@ public final class DataSourceResponse {
     }
     /**
      * Datasource kind
-     * 
     */
     public String getKind() {
         return this.kind;

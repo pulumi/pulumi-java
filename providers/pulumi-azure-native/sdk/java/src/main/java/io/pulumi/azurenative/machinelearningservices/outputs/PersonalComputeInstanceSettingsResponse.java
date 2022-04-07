@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PersonalComputeInstanceSettingsResponse {
     /**
      * A user explicitly assigned to a personal compute instance.
-     * 
      */
     private final @Nullable AssignedUserResponse assignedUser;
 
@@ -24,7 +23,6 @@ public final class PersonalComputeInstanceSettingsResponse {
 
     /**
      * A user explicitly assigned to a personal compute instance.
-     * 
     */
     public Optional<AssignedUserResponse> getAssignedUser() {
         return Optional.ofNullable(this.assignedUser);

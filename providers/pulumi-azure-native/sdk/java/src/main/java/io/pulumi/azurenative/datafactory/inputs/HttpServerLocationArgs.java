@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The location of http server.
- * 
  */
 public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
@@ -32,7 +30,6 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
@@ -43,7 +40,6 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="relativeUrl")
       private final @Nullable Output<Object> relativeUrl;
@@ -55,7 +51,6 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
     /**
      * Type of dataset storage location.
      * Expected value is 'HttpServerLocation'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

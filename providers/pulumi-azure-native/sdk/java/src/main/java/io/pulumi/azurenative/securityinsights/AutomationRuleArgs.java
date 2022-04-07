@@ -22,7 +22,6 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The actions to execute when the automation rule is triggered
-     * 
      */
     @Import(name="actions", required=true)
       private final Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions;
@@ -33,7 +32,6 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Automation rule ID
-     * 
      */
     @Import(name="automationRuleId")
       private final @Nullable Output<String> automationRuleId;
@@ -44,7 +42,6 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the automation  rule
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -55,7 +52,6 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
@@ -66,7 +62,6 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The order of execution of the automation rule
-     * 
      */
     @Import(name="order", required=true)
       private final Output<Integer> order;
@@ -77,7 +72,6 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -88,7 +82,6 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The triggering logic of the automation rule
-     * 
      */
     @Import(name="triggeringLogic", required=true)
       private final Output<AutomationRuleTriggeringLogicArgs> triggeringLogic;
@@ -99,7 +92,6 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

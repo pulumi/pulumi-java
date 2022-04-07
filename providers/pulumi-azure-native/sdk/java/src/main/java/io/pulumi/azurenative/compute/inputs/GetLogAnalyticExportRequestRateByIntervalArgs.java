@@ -18,7 +18,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
 
     /**
      * SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
-     * 
      */
     @Import(name="blobContainerSasUri", required=true)
       private final String blobContainerSasUri;
@@ -29,7 +28,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
 
     /**
      * From time of the query
-     * 
      */
     @Import(name="fromTime", required=true)
       private final String fromTime;
@@ -40,7 +38,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
 
     /**
      * Group query result by Client Application ID.
-     * 
      */
     @Import(name="groupByClientApplicationId")
       private final @Nullable Boolean groupByClientApplicationId;
@@ -51,7 +48,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
 
     /**
      * Group query result by Operation Name.
-     * 
      */
     @Import(name="groupByOperationName")
       private final @Nullable Boolean groupByOperationName;
@@ -62,7 +58,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
 
     /**
      * Group query result by Resource Name.
-     * 
      */
     @Import(name="groupByResourceName")
       private final @Nullable Boolean groupByResourceName;
@@ -73,7 +68,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
 
     /**
      * Group query result by Throttle Policy applied.
-     * 
      */
     @Import(name="groupByThrottlePolicy")
       private final @Nullable Boolean groupByThrottlePolicy;
@@ -84,7 +78,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
 
     /**
      * Group query result by User Agent.
-     * 
      */
     @Import(name="groupByUserAgent")
       private final @Nullable Boolean groupByUserAgent;
@@ -95,7 +88,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
 
     /**
      * Interval value in minutes used to create LogAnalytics call rate logs.
-     * 
      */
     @Import(name="intervalLength", required=true)
       private final IntervalInMins intervalLength;
@@ -106,7 +98,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
 
     /**
      * The location upon which virtual-machine-sizes is queried.
-     * 
      */
     @Import(name="location", required=true)
       private final String location;
@@ -117,7 +108,6 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
 
     /**
      * To time of the query
-     * 
      */
     @Import(name="toTime", required=true)
       private final String toTime;

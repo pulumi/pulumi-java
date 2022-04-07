@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents configuration of dataset used in a labeling job.
- * 
  */
 public final class LabelingDatasetConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LabelingDatasetConfigurationResponse extends io.pulumi.resour
 
     /**
      * Name of the data asset to perform labeling.
-     * 
      */
     @Import(name="assetName", required=true)
       private final String assetName;
@@ -32,7 +30,6 @@ public final class LabelingDatasetConfigurationResponse extends io.pulumi.resour
 
     /**
      * AML dataset version.
-     * 
      */
     @Import(name="datasetVersion", required=true)
       private final String datasetVersion;
@@ -43,7 +40,6 @@ public final class LabelingDatasetConfigurationResponse extends io.pulumi.resour
 
     /**
      * Indicates whether to enable incremental dataset refresh.
-     * 
      */
     @Import(name="enableIncrementalDatasetRefresh")
       private final @Nullable Boolean enableIncrementalDatasetRefresh;

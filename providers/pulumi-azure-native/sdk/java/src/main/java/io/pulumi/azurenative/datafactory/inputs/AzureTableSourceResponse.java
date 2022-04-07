@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Azure Table source.
- * 
  */
 public final class AzureTableSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureTableSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -32,7 +30,6 @@ public final class AzureTableSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Azure Table source ignore table not found. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="azureTableSourceIgnoreTableNotFound")
       private final @Nullable Object azureTableSourceIgnoreTableNotFound;
@@ -43,7 +40,6 @@ public final class AzureTableSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Azure Table source query. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="azureTableSourceQuery")
       private final @Nullable Object azureTableSourceQuery;
@@ -54,7 +50,6 @@ public final class AzureTableSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -65,7 +60,6 @@ public final class AzureTableSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -76,7 +70,6 @@ public final class AzureTableSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
@@ -87,7 +80,6 @@ public final class AzureTableSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -98,7 +90,6 @@ public final class AzureTableSourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -110,7 +101,6 @@ public final class AzureTableSourceResponse extends io.pulumi.resources.InvokeAr
     /**
      * Copy source type.
      * Expected value is 'AzureTableSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

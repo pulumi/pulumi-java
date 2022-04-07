@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Script reference
- * 
  */
 public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional command line arguments passed to the script to run.
-     * 
      */
     @Import(name="scriptArguments")
       private final @Nullable String scriptArguments;
@@ -31,7 +29,6 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The location of scripts in the mounted volume.
-     * 
      */
     @Import(name="scriptData")
       private final @Nullable String scriptData;
@@ -42,7 +39,6 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The storage source of the script: inline, workspace.
-     * 
      */
     @Import(name="scriptSource")
       private final @Nullable String scriptSource;
@@ -53,7 +49,6 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Optional time period passed to timeout command.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable String timeout;

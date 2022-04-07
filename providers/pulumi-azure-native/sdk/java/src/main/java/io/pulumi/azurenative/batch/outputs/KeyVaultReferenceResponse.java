@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class KeyVaultReferenceResponse {
     /**
      * The resource ID of the Azure key vault associated with the Batch account.
-     * 
      */
     private final String id;
     /**
      * The URL of the Azure key vault associated with the Batch account.
-     * 
      */
     private final String url;
 
@@ -30,14 +28,12 @@ public final class KeyVaultReferenceResponse {
 
     /**
      * The resource ID of the Azure key vault associated with the Batch account.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The URL of the Azure key vault associated with the Batch account.
-     * 
     */
     public String getUrl() {
         return this.url;

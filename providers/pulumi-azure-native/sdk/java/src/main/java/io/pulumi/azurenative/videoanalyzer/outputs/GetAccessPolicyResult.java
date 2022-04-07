@@ -15,32 +15,26 @@ import javax.annotation.Nullable;
 public final class GetAccessPolicyResult {
     /**
      * Authentication method to be used when validating client API access.
-     * 
      */
     private final @Nullable JwtAuthenticationResponse authentication;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Defines the access level granted by this policy.
-     * 
      */
     private final @Nullable String role;
     /**
      * The system metadata relating to this resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -62,42 +56,36 @@ public final class GetAccessPolicyResult {
 
     /**
      * Authentication method to be used when validating client API access.
-     * 
     */
     public Optional<JwtAuthenticationResponse> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the access level granted by this policy.
-     * 
     */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }
     /**
      * The system metadata relating to this resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

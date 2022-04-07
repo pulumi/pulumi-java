@@ -20,7 +20,6 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * dictionary object for SchemaGroup group properties
-     * 
      */
     @Import(name="groupProperties")
       private final @Nullable Output<Map<String,String>> groupProperties;
@@ -31,7 +30,6 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -42,7 +40,6 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group within the azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -59,8 +56,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Schema Group name
-     * 
+     * The Schema Group name 
      */
     @Import(name="schemaGroupName")
       private final @Nullable Output<String> schemaGroupName;

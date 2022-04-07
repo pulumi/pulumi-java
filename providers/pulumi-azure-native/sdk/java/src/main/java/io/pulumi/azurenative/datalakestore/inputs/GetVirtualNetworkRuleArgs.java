@@ -14,7 +14,6 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the Data Lake Store account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the virtual network rule to retrieve.
-     * 
      */
     @Import(name="virtualNetworkRuleName", required=true)
       private final String virtualNetworkRuleName;

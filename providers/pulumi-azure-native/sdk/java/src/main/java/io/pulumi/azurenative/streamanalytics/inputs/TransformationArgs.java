@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A transformation object, containing all information associated with the named transformation. All transformations are contained under a streaming job.
- * 
  */
 public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -32,7 +30,6 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<String> query;
@@ -43,7 +40,6 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the number of streaming units that the streaming job uses.
-     * 
      */
     @Import(name="streamingUnits")
       private final @Nullable Output<Integer> streamingUnits;

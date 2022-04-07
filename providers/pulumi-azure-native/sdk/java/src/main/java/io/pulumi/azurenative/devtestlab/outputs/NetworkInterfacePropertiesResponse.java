@@ -14,47 +14,38 @@ import javax.annotation.Nullable;
 public final class NetworkInterfacePropertiesResponse {
     /**
      * The DNS name.
-     * 
      */
     private final @Nullable String dnsName;
     /**
      * The private IP address.
-     * 
      */
     private final @Nullable String privateIpAddress;
     /**
      * The public IP address.
-     * 
      */
     private final @Nullable String publicIpAddress;
     /**
      * The resource ID of the public IP address.
-     * 
      */
     private final @Nullable String publicIpAddressId;
     /**
      * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
-     * 
      */
     private final @Nullable String rdpAuthority;
     /**
      * The configuration for sharing a public IP address across multiple virtual machines.
-     * 
      */
     private final @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
     /**
      * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
-     * 
      */
     private final @Nullable String sshAuthority;
     /**
      * The resource ID of the sub net.
-     * 
      */
     private final @Nullable String subnetId;
     /**
      * The resource ID of the virtual network.
-     * 
      */
     private final @Nullable String virtualNetworkId;
 
@@ -82,63 +73,54 @@ public final class NetworkInterfacePropertiesResponse {
 
     /**
      * The DNS name.
-     * 
     */
     public Optional<String> getDnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
      * The private IP address.
-     * 
     */
     public Optional<String> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * The public IP address.
-     * 
     */
     public Optional<String> getPublicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
     /**
      * The resource ID of the public IP address.
-     * 
     */
     public Optional<String> getPublicIpAddressId() {
         return Optional.ofNullable(this.publicIpAddressId);
     }
     /**
      * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
-     * 
     */
     public Optional<String> getRdpAuthority() {
         return Optional.ofNullable(this.rdpAuthority);
     }
     /**
      * The configuration for sharing a public IP address across multiple virtual machines.
-     * 
     */
     public Optional<SharedPublicIpAddressConfigurationResponse> getSharedPublicIpAddressConfiguration() {
         return Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
     /**
      * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
-     * 
     */
     public Optional<String> getSshAuthority() {
         return Optional.ofNullable(this.sshAuthority);
     }
     /**
      * The resource ID of the sub net.
-     * 
     */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * The resource ID of the virtual network.
-     * 
     */
     public Optional<String> getVirtualNetworkId() {
         return Optional.ofNullable(this.virtualNetworkId);

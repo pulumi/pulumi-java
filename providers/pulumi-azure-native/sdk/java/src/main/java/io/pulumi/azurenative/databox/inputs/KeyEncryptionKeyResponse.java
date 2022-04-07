@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Encryption key containing details about key to encrypt different keys.
- * 
  */
 public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Managed identity properties used for key encryption.
-     * 
      */
     @Import(name="identityProperties")
       private final @Nullable IdentityPropertiesResponse identityProperties;
@@ -32,7 +30,6 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Type of encryption key used for key encryption.
-     * 
      */
     @Import(name="kekType", required=true)
       private final String kekType;
@@ -43,7 +40,6 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Key encryption key. It is required in case of Customer managed KekType.
-     * 
      */
     @Import(name="kekUrl")
       private final @Nullable String kekUrl;
@@ -54,7 +50,6 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Kek vault resource id. It is required in case of Customer managed KekType.
-     * 
      */
     @Import(name="kekVaultResourceID")
       private final @Nullable String kekVaultResourceID;

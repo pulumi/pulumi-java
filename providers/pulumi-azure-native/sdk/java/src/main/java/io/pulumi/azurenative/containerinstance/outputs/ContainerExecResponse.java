@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ContainerExecResponse {
     /**
      * The commands to execute within the container.
-     * 
      */
     private final @Nullable List<String> command;
 
@@ -24,7 +23,6 @@ public final class ContainerExecResponse {
 
     /**
      * The commands to execute within the container.
-     * 
     */
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;

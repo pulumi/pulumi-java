@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Input for the task that gets TDE certificates in Base64 encoded format.
- * 
  */
 public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
 
     /**
      * Backup file share information for file share to be used for temporarily storing files.
-     * 
      */
     @Import(name="backupFileShare", required=true)
       private final Output<FileShareArgs> backupFileShare;
@@ -33,7 +31,6 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
 
     /**
      * Connection information for SQL Server
-     * 
      */
     @Import(name="connectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> connectionInfo;
@@ -44,7 +41,6 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
 
     /**
      * List containing certificate names and corresponding password to use for encrypting the exported certificate.
-     * 
      */
     @Import(name="selectedCertificates", required=true)
       private final Output<List<SelectedCertificateInputArgs>> selectedCertificates;

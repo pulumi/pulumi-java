@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class CdnCertificateSourceParametersResponse {
     /**
      * Type of certificate used
-     * 
      */
     private final String certificateType;
     private final String odataType;
@@ -26,7 +25,6 @@ public final class CdnCertificateSourceParametersResponse {
 
     /**
      * Type of certificate used
-     * 
     */
     public String getCertificateType() {
         return this.certificateType;

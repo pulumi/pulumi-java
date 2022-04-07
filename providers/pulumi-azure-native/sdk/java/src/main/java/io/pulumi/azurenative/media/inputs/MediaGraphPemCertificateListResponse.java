@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A list of PEM formatted certificates.
- * 
  */
 public final class MediaGraphPemCertificateListResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MediaGraphPemCertificateListResponse extends io.pulumi.resour
 
     /**
      * PEM formatted public certificates, one per entry.
-     * 
      */
     @Import(name="certificates", required=true)
       private final List<String> certificates;
@@ -31,7 +29,6 @@ public final class MediaGraphPemCertificateListResponse extends io.pulumi.resour
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphPemCertificateList'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final String odataType;

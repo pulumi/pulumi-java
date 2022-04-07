@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The AS2 agreement validation settings.
- * 
  */
 public final class AS2ValidationSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether to check for certificate revocation list on receive.
-     * 
      */
     @Import(name="checkCertificateRevocationListOnReceive", required=true)
       private final Output<Boolean> checkCertificateRevocationListOnReceive;
@@ -36,7 +34,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether to check for certificate revocation list on send.
-     * 
      */
     @Import(name="checkCertificateRevocationListOnSend", required=true)
       private final Output<Boolean> checkCertificateRevocationListOnSend;
@@ -47,7 +44,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether to check for duplicate message.
-     * 
      */
     @Import(name="checkDuplicateMessage", required=true)
       private final Output<Boolean> checkDuplicateMessage;
@@ -58,7 +54,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether the message has to be compressed.
-     * 
      */
     @Import(name="compressMessage", required=true)
       private final Output<Boolean> compressMessage;
@@ -69,7 +64,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether the message has to be encrypted.
-     * 
      */
     @Import(name="encryptMessage", required=true)
       private final Output<Boolean> encryptMessage;
@@ -80,7 +74,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The encryption algorithm.
-     * 
      */
     @Import(name="encryptionAlgorithm", required=true)
       private final Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
@@ -91,7 +84,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The number of days to look back for duplicate interchange.
-     * 
      */
     @Import(name="interchangeDuplicatesValidityDays", required=true)
       private final Output<Integer> interchangeDuplicatesValidityDays;
@@ -102,7 +94,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether to override incoming message properties with those in agreement.
-     * 
      */
     @Import(name="overrideMessageProperties", required=true)
       private final Output<Boolean> overrideMessageProperties;
@@ -113,7 +104,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The value indicating whether the message has to be signed.
-     * 
      */
     @Import(name="signMessage", required=true)
       private final Output<Boolean> signMessage;
@@ -124,7 +114,6 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The signing algorithm.
-     * 
      */
     @Import(name="signingAlgorithm")
       private final @Nullable Output<Either<String,SigningAlgorithm>> signingAlgorithm;

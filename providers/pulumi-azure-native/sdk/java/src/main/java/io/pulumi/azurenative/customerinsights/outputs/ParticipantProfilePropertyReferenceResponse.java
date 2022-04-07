@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ParticipantProfilePropertyReferenceResponse {
     /**
      * The source interaction property that maps to the target profile property.
-     * 
      */
     private final String interactionPropertyName;
     /**
      * The target profile property that maps to the source interaction property.
-     * 
      */
     private final String profilePropertyName;
 
@@ -30,14 +28,12 @@ public final class ParticipantProfilePropertyReferenceResponse {
 
     /**
      * The source interaction property that maps to the target profile property.
-     * 
     */
     public String getInteractionPropertyName() {
         return this.interactionPropertyName;
     }
     /**
      * The target profile property that maps to the source interaction property.
-     * 
     */
     public String getProfilePropertyName() {
         return this.profilePropertyName;

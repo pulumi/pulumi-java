@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
- * 
  */
 public final class ManagementPolicySchemaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ManagementPolicySchemaArgs extends io.pulumi.resources.Resour
 
     /**
      * The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
-     * 
      */
     @Import(name="rules", required=true)
       private final Output<List<ManagementPolicyRuleArgs>> rules;

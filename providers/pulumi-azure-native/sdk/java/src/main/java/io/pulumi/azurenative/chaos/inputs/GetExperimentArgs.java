@@ -14,7 +14,6 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String that represents a Experiment resource name.
-     * 
      */
     @Import(name="experimentName", required=true)
       private final String experimentName;
@@ -25,7 +24,6 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String that represents an Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

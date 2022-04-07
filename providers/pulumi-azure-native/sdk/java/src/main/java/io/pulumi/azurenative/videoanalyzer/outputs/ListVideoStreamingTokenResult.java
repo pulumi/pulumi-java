@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ListVideoStreamingTokenResult {
     /**
      * The streaming token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
-     * 
      */
     private final String expirationDate;
     /**
      * The streaming token value to be added to the video streaming URL as the value for a "token" query string parameter. The token is specific to a single video.
-     * 
      */
     private final String token;
 
@@ -30,14 +28,12 @@ public final class ListVideoStreamingTokenResult {
 
     /**
      * The streaming token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
-     * 
     */
     public String getExpirationDate() {
         return this.expirationDate;
     }
     /**
      * The streaming token value to be added to the video streaming URL as the value for a "token" query string parameter. The token is specific to a single video.
-     * 
     */
     public String getToken() {
         return this.token;

@@ -21,7 +21,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * IANA "JSON Web Signature and Encryption Algorithms" registry
      * established by [JWA] or be a value that contains a Collision-
      * Resistant Name.
-     * 
      */
     @Import(name="alg")
       private final @Nullable Output<String> alg;
@@ -32,7 +31,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The "crv" (curve) parameter identifies the curve type
-     * 
      */
     @Import(name="crv")
       private final @Nullable Output<String> crv;
@@ -43,7 +41,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA private exponent or ECC private key
-     * 
      */
     @Import(name="d")
       private final @Nullable Output<String> d;
@@ -54,7 +51,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA Private Key Parameter
-     * 
      */
     @Import(name="dp")
       private final @Nullable Output<String> dp;
@@ -65,7 +61,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA Private Key Parameter
-     * 
      */
     @Import(name="dq")
       private final @Nullable Output<String> dq;
@@ -76,7 +71,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA public exponent, in Base64
-     * 
      */
     @Import(name="e")
       private final @Nullable Output<String> e;
@@ -87,7 +81,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Symmetric key
-     * 
      */
     @Import(name="k")
       private final @Nullable Output<String> k;
@@ -106,7 +99,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * they have different "kty" (key type) values but are considered to be
      * equivalent alternatives by the application using them.)  The "kid"
      * value is a case-sensitive string.
-     * 
      */
     @Import(name="kid")
       private final @Nullable Output<String> kid;
@@ -121,7 +113,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * either be registered in the IANA "JSON Web Key Types" registry
      * established by [JWA] or be a value that contains a Collision-
      * Resistant Name.  The "kty" value is a case-sensitive string.
-     * 
      */
     @Import(name="kty", required=true)
       private final Output<String> kty;
@@ -132,7 +123,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA modulus, in Base64
-     * 
      */
     @Import(name="n")
       private final @Nullable Output<String> n;
@@ -143,7 +133,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA secret prime
-     * 
      */
     @Import(name="p")
       private final @Nullable Output<String> p;
@@ -154,7 +143,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA secret prime, with p < q
-     * 
      */
     @Import(name="q")
       private final @Nullable Output<String> q;
@@ -165,7 +153,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * RSA Private Key Parameter
-     * 
      */
     @Import(name="qi")
       private final @Nullable Output<String> qi;
@@ -179,7 +166,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * the public key. The "use" parameter is employed to indicate whether
      * a public key is used for encrypting data or verifying the signature
      * on data. Values are commonly "sig" (signature) or "enc" (encryption).
-     * 
      */
     @Import(name="use")
       private final @Nullable Output<String> use;
@@ -190,7 +176,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * X coordinate for the Elliptic Curve point
-     * 
      */
     @Import(name="x")
       private final @Nullable Output<String> x;
@@ -207,7 +192,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
      * not base64url-encoded) DER [ITU.X690.1994] PKIX certificate value.
      * The PKIX certificate containing the key value MUST be the first
      * certificate.
-     * 
      */
     @Import(name="x5c")
       private final @Nullable Output<List<String>> x5c;
@@ -218,7 +202,6 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Y coordinate for the Elliptic Curve point
-     * 
      */
     @Import(name="y")
       private final @Nullable Output<String> y;

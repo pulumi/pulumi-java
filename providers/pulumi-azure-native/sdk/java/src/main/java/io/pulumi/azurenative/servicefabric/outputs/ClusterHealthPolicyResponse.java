@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 public final class ClusterHealthPolicyResponse {
     /**
      * Defines the application health policy map used to evaluate the health of an application or one of its children entities.
-     * 
      */
     private final @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;
     /**
@@ -54,7 +53,6 @@ public final class ClusterHealthPolicyResponse {
 
     /**
      * Defines the application health policy map used to evaluate the health of an application or one of its children entities.
-     * 
     */
     public Map<String,ApplicationHealthPolicyResponse> getApplicationHealthPolicies() {
         return this.applicationHealthPolicies == null ? Map.of() : this.applicationHealthPolicies;

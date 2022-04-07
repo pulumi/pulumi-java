@@ -18,7 +18,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the addon for the private cloud
-     * 
      */
     @Import(name="addonName")
       private final @Nullable Output<String> addonName;
@@ -29,7 +28,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of private cloud addon
-     * 
      */
     @Import(name="addonType")
       private final @Nullable Output<Either<String,AddonType>> addonType;
@@ -40,7 +38,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SRM license
-     * 
      */
     @Import(name="licenseKey")
       private final @Nullable Output<String> licenseKey;
@@ -51,7 +48,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the private cloud.
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
@@ -62,7 +58,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

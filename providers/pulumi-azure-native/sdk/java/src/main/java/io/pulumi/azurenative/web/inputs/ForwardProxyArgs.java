@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of a forward proxy used to make the requests.
- * 
  */
 public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The convention used to determine the url of the request made.
-     * 
      */
     @Import(name="convention")
       private final @Nullable Output<ForwardProxyConvention> convention;
@@ -32,7 +30,6 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the header containing the host of the request.
-     * 
      */
     @Import(name="customHostHeaderName")
       private final @Nullable Output<String> customHostHeaderName;
@@ -43,7 +40,6 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the header containing the scheme of the request.
-     * 
      */
     @Import(name="customProtoHeaderName")
       private final @Nullable Output<String> customProtoHeaderName;

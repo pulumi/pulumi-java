@@ -23,7 +23,533 @@ import javax.annotation.Nullable;
  * Represents a server.
  * API Version: 2017-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a database as a point in time restore
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var server = new AzureNative.DBforPostgreSQL.Server("server", new AzureNative.DBforPostgreSQL.ServerArgs
+ *         {
+ *             Location = "brazilsouth",
+ *             Properties = new AzureNative.DBforPostgreSQL.Inputs.ServerPropertiesForRestoreArgs
+ *             {
+ *                 CreateMode = "PointInTimeRestore",
+ *                 RestorePointInTime = "2017-12-14T00:00:37.467Z",
+ *                 SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+ *             },
+ *             ResourceGroupName = "TargetResourceGroup",
+ *             ServerName = "targetserver",
+ *             Sku = new AzureNative.DBforPostgreSQL.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 2,
+ *                 Family = "Gen5",
+ *                 Name = "B_Gen5_2",
+ *                 Tier = "Basic",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "ElasticServer", "1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	dbforpostgresql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbforpostgresql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
+ * 			Location: pulumi.String("brazilsouth"),
+ * 			Properties: dbforpostgresql.ServerPropertiesForRestore{
+ * 				CreateMode:         "PointInTimeRestore",
+ * 				RestorePointInTime: "2017-12-14T00:00:37.467Z",
+ * 				SourceServerId:     "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+ * 			ServerName:        pulumi.String("targetserver"),
+ * 			Sku: &dbforpostgresql.SkuArgs{
+ * 				Capacity: pulumi.Int(2),
+ * 				Family:   pulumi.String("Gen5"),
+ * 				Name:     pulumi.String("B_Gen5_2"),
+ * 				Tier:     pulumi.String("Basic"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"ElasticServer": pulumi.String("1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const server = new azure_native.dbforpostgresql.Server("server", {
+ *     location: "brazilsouth",
+ *     properties: {
+ *         createMode: "PointInTimeRestore",
+ *         restorePointInTime: "2017-12-14T00:00:37.467Z",
+ *         sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+ *     },
+ *     resourceGroupName: "TargetResourceGroup",
+ *     serverName: "targetserver",
+ *     sku: {
+ *         capacity: 2,
+ *         family: "Gen5",
+ *         name: "B_Gen5_2",
+ *         tier: "Basic",
+ *     },
+ *     tags: {
+ *         ElasticServer: "1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server = azure_native.dbforpostgresql.Server("server",
+ *     location="brazilsouth",
+ *     properties=azure_native.dbforpostgresql.ServerPropertiesForRestoreArgs(
+ *         create_mode="PointInTimeRestore",
+ *         restore_point_in_time="2017-12-14T00:00:37.467Z",
+ *         source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+ *     ),
+ *     resource_group_name="TargetResourceGroup",
+ *     server_name="targetserver",
+ *     sku=azure_native.dbforpostgresql.SkuArgs(
+ *         capacity=2,
+ *         family="Gen5",
+ *         name="B_Gen5_2",
+ *         tier="Basic",
+ *     ),
+ *     tags={
+ *         "ElasticServer": "1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a new server
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var server = new AzureNative.DBforPostgreSQL.Server("server", new AzureNative.DBforPostgreSQL.ServerArgs
+ *         {
+ *             Location = "westus",
+ *             Properties = new AzureNative.DBforPostgreSQL.Inputs.ServerPropertiesForDefaultCreateArgs
+ *             {
+ *                 AdministratorLogin = "cloudsa",
+ *                 AdministratorLoginPassword = "<administratorLoginPassword>",
+ *                 CreateMode = "Default",
+ *                 MinimalTlsVersion = "TLS1_2",
+ *                 SslEnforcement = "Enabled",
+ *                 StorageProfile = new AzureNative.DBforPostgreSQL.Inputs.StorageProfileArgs
+ *                 {
+ *                     BackupRetentionDays = 7,
+ *                     GeoRedundantBackup = "Disabled",
+ *                     StorageMB = 128000,
+ *                 },
+ *             },
+ *             ResourceGroupName = "TestGroup",
+ *             ServerName = "pgtestsvc4",
+ *             Sku = new AzureNative.DBforPostgreSQL.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 2,
+ *                 Family = "Gen5",
+ *                 Name = "B_Gen5_2",
+ *                 Tier = "Basic",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "ElasticServer", "1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	dbforpostgresql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbforpostgresql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
+ * 			Location: pulumi.String("westus"),
+ * 			Properties: dbforpostgresql.ServerPropertiesForDefaultCreate{
+ * 				AdministratorLogin:         "cloudsa",
+ * 				AdministratorLoginPassword: "<administratorLoginPassword>",
+ * 				CreateMode:                 "Default",
+ * 				MinimalTlsVersion:          "TLS1_2",
+ * 				SslEnforcement:             "Enabled",
+ * 				StorageProfile: dbforpostgresql.StorageProfile{
+ * 					BackupRetentionDays: 7,
+ * 					GeoRedundantBackup:  "Disabled",
+ * 					StorageMB:           128000,
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("TestGroup"),
+ * 			ServerName:        pulumi.String("pgtestsvc4"),
+ * 			Sku: &dbforpostgresql.SkuArgs{
+ * 				Capacity: pulumi.Int(2),
+ * 				Family:   pulumi.String("Gen5"),
+ * 				Name:     pulumi.String("B_Gen5_2"),
+ * 				Tier:     pulumi.String("Basic"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"ElasticServer": pulumi.String("1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const server = new azure_native.dbforpostgresql.Server("server", {
+ *     location: "westus",
+ *     properties: {
+ *         administratorLogin: "cloudsa",
+ *         administratorLoginPassword: "<administratorLoginPassword>",
+ *         createMode: "Default",
+ *         minimalTlsVersion: "TLS1_2",
+ *         sslEnforcement: "Enabled",
+ *         storageProfile: {
+ *             backupRetentionDays: 7,
+ *             geoRedundantBackup: "Disabled",
+ *             storageMB: 128000,
+ *         },
+ *     },
+ *     resourceGroupName: "TestGroup",
+ *     serverName: "pgtestsvc4",
+ *     sku: {
+ *         capacity: 2,
+ *         family: "Gen5",
+ *         name: "B_Gen5_2",
+ *         tier: "Basic",
+ *     },
+ *     tags: {
+ *         ElasticServer: "1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server = azure_native.dbforpostgresql.Server("server",
+ *     location="westus",
+ *     properties=azure_native.dbforpostgresql.ServerPropertiesForDefaultCreateArgs(
+ *         administrator_login="cloudsa",
+ *         administrator_login_password="<administratorLoginPassword>",
+ *         create_mode="Default",
+ *         minimal_tls_version="TLS1_2",
+ *         ssl_enforcement="Enabled",
+ *         storage_profile=azure_native.dbforpostgresql.StorageProfileArgs(
+ *             backup_retention_days=7,
+ *             geo_redundant_backup="Disabled",
+ *             storage_mb=128000,
+ *         ),
+ *     ),
+ *     resource_group_name="TestGroup",
+ *     server_name="pgtestsvc4",
+ *     sku=azure_native.dbforpostgresql.SkuArgs(
+ *         capacity=2,
+ *         family="Gen5",
+ *         name="B_Gen5_2",
+ *         tier="Basic",
+ *     ),
+ *     tags={
+ *         "ElasticServer": "1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a replica server
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var server = new AzureNative.DBforPostgreSQL.Server("server", new AzureNative.DBforPostgreSQL.ServerArgs
+ *         {
+ *             Location = "westcentralus",
+ *             Properties = new AzureNative.DBforPostgreSQL.Inputs.ServerPropertiesForReplicaArgs
+ *             {
+ *                 CreateMode = "Replica",
+ *                 SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
+ *             },
+ *             ResourceGroupName = "TestGroup_WestCentralUS",
+ *             ServerName = "testserver-replica1",
+ *             Sku = new AzureNative.DBforPostgreSQL.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 2,
+ *                 Family = "Gen5",
+ *                 Name = "GP_Gen5_2",
+ *                 Tier = "GeneralPurpose",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	dbforpostgresql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbforpostgresql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
+ * 			Location: pulumi.String("westcentralus"),
+ * 			Properties: dbforpostgresql.ServerPropertiesForReplica{
+ * 				CreateMode:     "Replica",
+ * 				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("TestGroup_WestCentralUS"),
+ * 			ServerName:        pulumi.String("testserver-replica1"),
+ * 			Sku: &dbforpostgresql.SkuArgs{
+ * 				Capacity: pulumi.Int(2),
+ * 				Family:   pulumi.String("Gen5"),
+ * 				Name:     pulumi.String("GP_Gen5_2"),
+ * 				Tier:     pulumi.String("GeneralPurpose"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const server = new azure_native.dbforpostgresql.Server("server", {
+ *     location: "westcentralus",
+ *     properties: {
+ *         createMode: "Replica",
+ *         sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
+ *     },
+ *     resourceGroupName: "TestGroup_WestCentralUS",
+ *     serverName: "testserver-replica1",
+ *     sku: {
+ *         capacity: 2,
+ *         family: "Gen5",
+ *         name: "GP_Gen5_2",
+ *         tier: "GeneralPurpose",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server = azure_native.dbforpostgresql.Server("server",
+ *     location="westcentralus",
+ *     properties=azure_native.dbforpostgresql.ServerPropertiesForReplicaArgs(
+ *         create_mode="Replica",
+ *         source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
+ *     ),
+ *     resource_group_name="TestGroup_WestCentralUS",
+ *     server_name="testserver-replica1",
+ *     sku=azure_native.dbforpostgresql.SkuArgs(
+ *         capacity=2,
+ *         family="Gen5",
+ *         name="GP_Gen5_2",
+ *         tier="GeneralPurpose",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a server as a geo restore 
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var server = new AzureNative.DBforPostgreSQL.Server("server", new AzureNative.DBforPostgreSQL.ServerArgs
+ *         {
+ *             Location = "westus",
+ *             Properties = new AzureNative.DBforPostgreSQL.Inputs.ServerPropertiesForGeoRestoreArgs
+ *             {
+ *                 CreateMode = "GeoRestore",
+ *                 SourceServerId = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+ *             },
+ *             ResourceGroupName = "TargetResourceGroup",
+ *             ServerName = "targetserver",
+ *             Sku = new AzureNative.DBforPostgreSQL.Inputs.SkuArgs
+ *             {
+ *                 Capacity = 2,
+ *                 Family = "Gen5",
+ *                 Name = "GP_Gen5_2",
+ *                 Tier = "GeneralPurpose",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "ElasticServer", "1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	dbforpostgresql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbforpostgresql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
+ * 			Location: pulumi.String("westus"),
+ * 			Properties: dbforpostgresql.ServerPropertiesForGeoRestore{
+ * 				CreateMode:     "GeoRestore",
+ * 				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("TargetResourceGroup"),
+ * 			ServerName:        pulumi.String("targetserver"),
+ * 			Sku: &dbforpostgresql.SkuArgs{
+ * 				Capacity: pulumi.Int(2),
+ * 				Family:   pulumi.String("Gen5"),
+ * 				Name:     pulumi.String("GP_Gen5_2"),
+ * 				Tier:     pulumi.String("GeneralPurpose"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"ElasticServer": pulumi.String("1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const server = new azure_native.dbforpostgresql.Server("server", {
+ *     location: "westus",
+ *     properties: {
+ *         createMode: "GeoRestore",
+ *         sourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+ *     },
+ *     resourceGroupName: "TargetResourceGroup",
+ *     serverName: "targetserver",
+ *     sku: {
+ *         capacity: 2,
+ *         family: "Gen5",
+ *         name: "GP_Gen5_2",
+ *         tier: "GeneralPurpose",
+ *     },
+ *     tags: {
+ *         ElasticServer: "1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server = azure_native.dbforpostgresql.Server("server",
+ *     location="westus",
+ *     properties=azure_native.dbforpostgresql.ServerPropertiesForGeoRestoreArgs(
+ *         create_mode="GeoRestore",
+ *         source_server_id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
+ *     ),
+ *     resource_group_name="TargetResourceGroup",
+ *     server_name="targetserver",
+ *     sku=azure_native.dbforpostgresql.SkuArgs(
+ *         capacity=2,
+ *         family="Gen5",
+ *         name="GP_Gen5_2",
+ *         tier="GeneralPurpose",
+ *     ),
+ *     tags={
+ *         "ElasticServer": "1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,294 +564,252 @@ import javax.annotation.Nullable;
 public class Server extends io.pulumi.resources.CustomResource {
     /**
      * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-     * 
      */
     @Export(name="administratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorLogin;
 
     /**
      * @return The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
-     * 
      */
     public Output</* @Nullable */ String> getAdministratorLogin() {
         return this.administratorLogin;
     }
     /**
      * Status showing whether the server data encryption is enabled with customer-managed keys.
-     * 
      */
     @Export(name="byokEnforcement", type=String.class, parameters={})
     private Output<String> byokEnforcement;
 
     /**
      * @return Status showing whether the server data encryption is enabled with customer-managed keys.
-     * 
      */
     public Output<String> getByokEnforcement() {
         return this.byokEnforcement;
     }
     /**
      * Earliest restore point creation time (ISO8601 format)
-     * 
      */
     @Export(name="earliestRestoreDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> earliestRestoreDate;
 
     /**
      * @return Earliest restore point creation time (ISO8601 format)
-     * 
      */
     public Output</* @Nullable */ String> getEarliestRestoreDate() {
         return this.earliestRestoreDate;
     }
     /**
      * The fully qualified domain name of a server.
-     * 
      */
     @Export(name="fullyQualifiedDomainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> fullyQualifiedDomainName;
 
     /**
      * @return The fully qualified domain name of a server.
-     * 
      */
     public Output</* @Nullable */ String> getFullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
     /**
      * The Azure Active Directory identity of the server.
-     * 
      */
     @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
      * @return The Azure Active Directory identity of the server.
-     * 
      */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Status showing whether the server enabled infrastructure encryption.
-     * 
      */
     @Export(name="infrastructureEncryption", type=String.class, parameters={})
     private Output</* @Nullable */ String> infrastructureEncryption;
 
     /**
      * @return Status showing whether the server enabled infrastructure encryption.
-     * 
      */
     public Output</* @Nullable */ String> getInfrastructureEncryption() {
         return this.infrastructureEncryption;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The master server id of a replica server.
-     * 
      */
     @Export(name="masterServerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> masterServerId;
 
     /**
      * @return The master server id of a replica server.
-     * 
      */
     public Output</* @Nullable */ String> getMasterServerId() {
         return this.masterServerId;
     }
     /**
      * Enforce a minimal Tls version for the server.
-     * 
      */
     @Export(name="minimalTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimalTlsVersion;
 
     /**
      * @return Enforce a minimal Tls version for the server.
-     * 
      */
     public Output</* @Nullable */ String> getMinimalTlsVersion() {
         return this.minimalTlsVersion;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of private endpoint connections on a server
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={ServerPrivateEndpointConnectionResponse.class})
     private Output<List<ServerPrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return List of private endpoint connections on a server
-     * 
      */
     public Output<List<ServerPrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
      * @return Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * The maximum number of replicas that a master server can have.
-     * 
      */
     @Export(name="replicaCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> replicaCapacity;
 
     /**
      * @return The maximum number of replicas that a master server can have.
-     * 
      */
     public Output</* @Nullable */ Integer> getReplicaCapacity() {
         return this.replicaCapacity;
     }
     /**
      * The replication role of the server.
-     * 
      */
     @Export(name="replicationRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> replicationRole;
 
     /**
      * @return The replication role of the server.
-     * 
      */
     public Output</* @Nullable */ String> getReplicationRole() {
         return this.replicationRole;
     }
     /**
      * The SKU (pricing tier) of the server.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The SKU (pricing tier) of the server.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Enable ssl enforcement or not when connect to server.
-     * 
      */
     @Export(name="sslEnforcement", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslEnforcement;
 
     /**
      * @return Enable ssl enforcement or not when connect to server.
-     * 
      */
     public Output</* @Nullable */ String> getSslEnforcement() {
         return this.sslEnforcement;
     }
     /**
      * Storage profile of a server.
-     * 
      */
     @Export(name="storageProfile", type=StorageProfileResponse.class, parameters={})
     private Output</* @Nullable */ StorageProfileResponse> storageProfile;
 
     /**
      * @return Storage profile of a server.
-     * 
      */
     public Output</* @Nullable */ StorageProfileResponse> getStorageProfile() {
         return this.storageProfile;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * A state of a server that is visible to user.
-     * 
      */
     @Export(name="userVisibleState", type=String.class, parameters={})
     private Output</* @Nullable */ String> userVisibleState;
 
     /**
      * @return A state of a server that is visible to user.
-     * 
      */
     public Output</* @Nullable */ String> getUserVisibleState() {
         return this.userVisibleState;
     }
     /**
      * Server version.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
      * @return Server version.
-     * 
      */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;

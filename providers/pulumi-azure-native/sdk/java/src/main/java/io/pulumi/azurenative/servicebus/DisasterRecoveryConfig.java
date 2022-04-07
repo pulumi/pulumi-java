@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * Single item in List or Get Alias(Disaster Recovery configuration) operation
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SBAliasCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var disasterRecoveryConfig = new AzureNative.ServiceBus.DisasterRecoveryConfig("disasterRecoveryConfig", new AzureNative.ServiceBus.DisasterRecoveryConfigArgs
+ *         {
+ *             Alias = "sdk-Namespace-8860",
+ *             AlternateName = "alternameforAlias-Namespace-8860",
+ *             NamespaceName = "sdk-Namespace-8860",
+ *             PartnerNamespace = "sdk-Namespace-37",
+ *             ResourceGroupName = "ardsouzatestRG",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewDisasterRecoveryConfig(ctx, "disasterRecoveryConfig", &servicebus.DisasterRecoveryConfigArgs{
+ * 			Alias:             pulumi.String("sdk-Namespace-8860"),
+ * 			AlternateName:     pulumi.String("alternameforAlias-Namespace-8860"),
+ * 			NamespaceName:     pulumi.String("sdk-Namespace-8860"),
+ * 			PartnerNamespace:  pulumi.String("sdk-Namespace-37"),
+ * 			ResourceGroupName: pulumi.String("ardsouzatestRG"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const disasterRecoveryConfig = new azure_native.servicebus.DisasterRecoveryConfig("disasterRecoveryConfig", {
+ *     alias: "sdk-Namespace-8860",
+ *     alternateName: "alternameforAlias-Namespace-8860",
+ *     namespaceName: "sdk-Namespace-8860",
+ *     partnerNamespace: "sdk-Namespace-37",
+ *     resourceGroupName: "ardsouzatestRG",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * disaster_recovery_config = azure_native.servicebus.DisasterRecoveryConfig("disasterRecoveryConfig",
+ *     alias="sdk-Namespace-8860",
+ *     alternate_name="alternameforAlias-Namespace-8860",
+ *     namespace_name="sdk-Namespace-8860",
+ *     partner_namespace="sdk-Namespace-37",
+ *     resource_group_name="ardsouzatestRG")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +113,84 @@ import javax.annotation.Nullable;
 public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
     /**
      * Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-     * 
      */
     @Export(name="alternateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> alternateName;
 
     /**
      * @return Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-     * 
      */
     public Output</* @Nullable */ String> getAlternateName() {
         return this.alternateName;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-     * 
      */
     @Export(name="partnerNamespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerNamespace;
 
     /**
      * @return ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-     * 
      */
     public Output</* @Nullable */ String> getPartnerNamespace() {
         return this.partnerNamespace;
     }
     /**
      * Number of entities pending to be replicated.
-     * 
      */
     @Export(name="pendingReplicationOperationsCount", type=Double.class, parameters={})
     private Output<Double> pendingReplicationOperationsCount;
 
     /**
      * @return Number of entities pending to be replicated.
-     * 
      */
     public Output<Double> getPendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
     /**
      * Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
-     * 
      */
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
      * @return role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
-     * 
      */
     public Output<String> getRole() {
         return this.role;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

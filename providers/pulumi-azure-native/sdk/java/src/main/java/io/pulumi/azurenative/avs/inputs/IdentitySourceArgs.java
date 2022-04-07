@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * vCenter Single Sign On Identity Source
- * 
  */
 public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The domain's NetBIOS name
-     * 
      */
     @Import(name="alias")
       private final @Nullable Output<String> alias;
@@ -33,7 +31,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The base distinguished name for groups
-     * 
      */
     @Import(name="baseGroupDN")
       private final @Nullable Output<String> baseGroupDN;
@@ -44,7 +41,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The base distinguished name for users
-     * 
      */
     @Import(name="baseUserDN")
       private final @Nullable Output<String> baseUserDN;
@@ -55,7 +51,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The domain's dns name
-     * 
      */
     @Import(name="domain")
       private final @Nullable Output<String> domain;
@@ -66,7 +61,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the identity source
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -77,7 +71,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -88,7 +81,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Primary server URL
-     * 
      */
     @Import(name="primaryServer")
       private final @Nullable Output<String> primaryServer;
@@ -99,7 +91,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secondary server URL
-     * 
      */
     @Import(name="secondaryServer")
       private final @Nullable Output<String> secondaryServer;
@@ -110,7 +101,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Protect LDAP communication using SSL certificate (LDAPS)
-     * 
      */
     @Import(name="ssl")
       private final @Nullable Output<Either<String,SslEnum>> ssl;
@@ -121,7 +111,6 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<String> username;

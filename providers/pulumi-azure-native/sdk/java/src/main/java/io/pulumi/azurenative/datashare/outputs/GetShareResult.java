@@ -14,57 +14,46 @@ import javax.annotation.Nullable;
 public final class GetShareResult {
     /**
      * Time at which the share was created.
-     * 
      */
     private final String createdAt;
     /**
      * Share description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The resource id of the azure resource
-     * 
      */
     private final String id;
     /**
      * Name of the azure resource
-     * 
      */
     private final String name;
     /**
      * Gets or sets the provisioning state
-     * 
      */
     private final String provisioningState;
     /**
      * Share kind.
-     * 
      */
     private final @Nullable String shareKind;
     /**
      * System Data of the Azure resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Share terms.
-     * 
      */
     private final @Nullable String terms;
     /**
      * Type of the azure resource
-     * 
      */
     private final String type;
     /**
      * Email of the user who created the resource
-     * 
      */
     private final String userEmail;
     /**
      * Name of the user who created the resource
-     * 
      */
     private final String userName;
 
@@ -96,77 +85,66 @@ public final class GetShareResult {
 
     /**
      * Time at which the share was created.
-     * 
     */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Share description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The resource id of the azure resource
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the azure resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Share kind.
-     * 
     */
     public Optional<String> getShareKind() {
         return Optional.ofNullable(this.shareKind);
     }
     /**
      * System Data of the Azure resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Share terms.
-     * 
     */
     public Optional<String> getTerms() {
         return Optional.ofNullable(this.terms);
     }
     /**
      * Type of the azure resource
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Email of the user who created the resource
-     * 
     */
     public String getUserEmail() {
         return this.userEmail;
     }
     /**
      * Name of the user who created the resource
-     * 
     */
     public String getUserName() {
         return this.userName;

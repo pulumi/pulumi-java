@@ -17,7 +17,6 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name of the IoT site
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -28,7 +27,6 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;
@@ -39,7 +37,6 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tags of the IoT site
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

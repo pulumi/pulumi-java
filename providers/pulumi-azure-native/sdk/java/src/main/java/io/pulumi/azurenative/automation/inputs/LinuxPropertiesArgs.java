@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linux specific update configuration.
- * 
  */
 public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * packages excluded from the software update configuration.
-     * 
      */
     @Import(name="excludedPackageNameMasks")
       private final @Nullable Output<List<String>> excludedPackageNameMasks;
@@ -34,7 +32,6 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Update classifications included in the software update configuration.
-     * 
      */
     @Import(name="includedPackageClassifications")
       private final @Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
@@ -45,7 +42,6 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * packages included from the software update configuration.
-     * 
      */
     @Import(name="includedPackageNameMasks")
       private final @Nullable Output<List<String>> includedPackageNameMasks;
@@ -56,7 +52,6 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Reboot setting for the software update configuration.
-     * 
      */
     @Import(name="rebootSetting")
       private final @Nullable Output<String> rebootSetting;

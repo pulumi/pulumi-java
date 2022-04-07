@@ -20,7 +20,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Managed Identity information.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<QuantumWorkspaceIdentityArgs> identity;
@@ -31,7 +30,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of Providers selected for this Workspace
-     * 
      */
     @Import(name="providers")
       private final @Nullable Output<List<ProviderArgs>> providers;
@@ -53,7 +50,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM Resource Id of the storage account associated with this workspace.
-     * 
      */
     @Import(name="storageAccount")
       private final @Nullable Output<String> storageAccount;
@@ -75,7 +70,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -86,7 +80,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the quantum workspace resource.
-     * 
      */
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;

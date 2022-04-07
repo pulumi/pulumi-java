@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of this referenced entity.
-     * 
      */
     @EnumType
     public enum IntegrationRuntimeEntityReferenceType {

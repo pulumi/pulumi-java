@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Xml read settings.
- * 
  */
 public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Compression settings.
-     * 
      */
     @Import(name="compressionProperties")
       private final @Nullable Object compressionProperties;
@@ -35,7 +33,6 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="detectDataType")
       private final @Nullable Object detectDataType;
@@ -46,7 +43,6 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: "{"http://www.example.com/xml":"prefix"}" Type: object (or Expression with resultType object).
-     * 
      */
     @Import(name="namespacePrefixes")
       private final @Nullable Object namespacePrefixes;
@@ -57,7 +53,6 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="namespaces")
       private final @Nullable Object namespaces;
@@ -69,7 +64,6 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
     /**
      * The read setting type.
      * Expected value is 'XmlReadSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -80,7 +74,6 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Indicates what validation method is used when reading the xml files. Allowed values: 'none', 'xsd', or 'dtd'. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="validationMode")
       private final @Nullable Object validationMode;

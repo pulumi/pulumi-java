@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class GetFavoriteProcessResult {
     /**
      * The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
-     * 
      */
     private final String actualProcessName;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The system metadata relating to this resource
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -52,35 +47,30 @@ public final class GetFavoriteProcessResult {
 
     /**
      * The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
-     * 
     */
     public String getActualProcessName() {
         return this.actualProcessName;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The system metadata relating to this resource
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

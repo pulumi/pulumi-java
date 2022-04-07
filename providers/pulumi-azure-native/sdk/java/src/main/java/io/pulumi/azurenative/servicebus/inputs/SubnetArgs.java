@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Properties supplied for Subnet
- * 
  */
 public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID of Virtual Network Subnet
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

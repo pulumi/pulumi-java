@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the data collection options specified.
- * 
  */
 public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
 
     /**
      * Option for enabling/disabling Event Hub.
-     * 
      */
     @Import(name="eventHubEnabled")
       private final @Nullable Output<Boolean> eventHubEnabled;
@@ -31,7 +29,6 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
 
     /**
      * Option for enabling/disabling storage.
-     * 
      */
     @Import(name="storageEnabled")
       private final @Nullable Output<Boolean> storageEnabled;

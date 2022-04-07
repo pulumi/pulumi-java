@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger based on request execution time.
- * 
  */
 public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
 
     /**
      * Request Count.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Integer> count;
@@ -32,7 +30,6 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
 
     /**
      * Request Path.
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -43,7 +40,6 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
 
     /**
      * Time interval.
-     * 
      */
     @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
@@ -54,7 +50,6 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
 
     /**
      * Time taken.
-     * 
      */
     @Import(name="timeTaken")
       private final @Nullable Output<String> timeTaken;

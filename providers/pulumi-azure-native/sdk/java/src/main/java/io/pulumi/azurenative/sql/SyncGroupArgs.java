@@ -22,7 +22,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Conflict logging retention period.
-     * 
      */
     @Import(name="conflictLoggingRetentionInDays")
       private final @Nullable Output<Integer> conflictLoggingRetentionInDays;
@@ -33,7 +32,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Conflict resolution policy of the sync group.
-     * 
      */
     @Import(name="conflictResolutionPolicy")
       private final @Nullable Output<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy;
@@ -44,7 +42,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the database on which the sync group is hosted.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -55,7 +52,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If conflict logging is enabled.
-     * 
      */
     @Import(name="enableConflictLogging")
       private final @Nullable Output<Boolean> enableConflictLogging;
@@ -66,7 +62,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Password for the sync group hub database credential.
-     * 
      */
     @Import(name="hubDatabasePassword")
       private final @Nullable Output<String> hubDatabasePassword;
@@ -77,7 +72,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User name for the sync group hub database credential.
-     * 
      */
     @Import(name="hubDatabaseUserName")
       private final @Nullable Output<String> hubDatabaseUserName;
@@ -88,7 +82,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sync interval of the sync group.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
@@ -99,7 +92,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -110,7 +102,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sync schema of the sync group.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Output<SyncGroupSchemaArgs> schema;
@@ -121,7 +112,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -132,7 +122,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name and capacity of the SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -143,7 +132,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM resource id of the sync database in the sync group.
-     * 
      */
     @Import(name="syncDatabaseId")
       private final @Nullable Output<String> syncDatabaseId;
@@ -154,7 +142,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the sync group.
-     * 
      */
     @Import(name="syncGroupName")
       private final @Nullable Output<String> syncGroupName;
@@ -165,7 +152,6 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If use private link connection is enabled.
-     * 
      */
     @Import(name="usePrivateLinkConnection")
       private final @Nullable Output<Boolean> usePrivateLinkConnection;

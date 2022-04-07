@@ -20,7 +20,109 @@ import javax.annotation.Nullable;
  * Specifies information about the capacity reservation group that the capacity reservations should be assigned to. <br><br> Currently, a capacity reservation can only be added to a capacity reservation group at creation time. An existing capacity reservation cannot be added or moved to another capacity reservation group.
  * API Version: 2021-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a capacity reservation group.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var capacityReservationGroup = new AzureNative.Compute.CapacityReservationGroup("capacityReservationGroup", new AzureNative.Compute.CapacityReservationGroupArgs
+ *         {
+ *             CapacityReservationGroupName = "myCapacityReservationGroup",
+ *             Location = "westus",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "department", "finance" },
+ *             },
+ *             Zones = 
+ *             {
+ *                 "1",
+ *                 "2",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewCapacityReservationGroup(ctx, "capacityReservationGroup", &compute.CapacityReservationGroupArgs{
+ * 			CapacityReservationGroupName: pulumi.String("myCapacityReservationGroup"),
+ * 			Location:                     pulumi.String("westus"),
+ * 			ResourceGroupName:            pulumi.String("myResourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"department": pulumi.String("finance"),
+ * 			},
+ * 			Zones: pulumi.StringArray{
+ * 				pulumi.String("1"),
+ * 				pulumi.String("2"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const capacityReservationGroup = new azure_native.compute.CapacityReservationGroup("capacityReservationGroup", {
+ *     capacityReservationGroupName: "myCapacityReservationGroup",
+ *     location: "westus",
+ *     resourceGroupName: "myResourceGroup",
+ *     tags: {
+ *         department: "finance",
+ *     },
+ *     zones: [
+ *         "1",
+ *         "2",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * capacity_reservation_group = azure_native.compute.CapacityReservationGroup("capacityReservationGroup",
+ *     capacity_reservation_group_name="myCapacityReservationGroup",
+ *     location="westus",
+ *     resource_group_name="myResourceGroup",
+ *     tags={
+ *         "department": "finance",
+ *     },
+ *     zones=[
+ *         "1",
+ *         "2",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +137,96 @@ import javax.annotation.Nullable;
 public class CapacityReservationGroup extends io.pulumi.resources.CustomResource {
     /**
      * A list of all capacity reservation resource ids that belong to capacity reservation group.
-     * 
      */
     @Export(name="capacityReservations", type=List.class, parameters={SubResourceReadOnlyResponse.class})
     private Output<List<SubResourceReadOnlyResponse>> capacityReservations;
 
     /**
      * @return A list of all capacity reservation resource ids that belong to capacity reservation group.
-     * 
      */
     public Output<List<SubResourceReadOnlyResponse>> getCapacityReservations() {
         return this.capacityReservations;
     }
     /**
      * The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
-     * 
      */
     @Export(name="instanceView", type=CapacityReservationGroupInstanceViewResponse.class, parameters={})
     private Output<CapacityReservationGroupInstanceViewResponse> instanceView;
 
     /**
      * @return The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
-     * 
      */
     public Output<CapacityReservationGroupInstanceViewResponse> getInstanceView() {
         return this.instanceView;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * A list of references to all virtual machines associated to the capacity reservation group.
-     * 
      */
     @Export(name="virtualMachinesAssociated", type=List.class, parameters={SubResourceReadOnlyResponse.class})
     private Output<List<SubResourceReadOnlyResponse>> virtualMachinesAssociated;
 
     /**
      * @return A list of references to all virtual machines associated to the capacity reservation group.
-     * 
      */
     public Output<List<SubResourceReadOnlyResponse>> getVirtualMachinesAssociated() {
         return this.virtualMachinesAssociated;
     }
     /**
      * Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
-     * 
      */
     @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**
      * @return Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
-     * 
      */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;

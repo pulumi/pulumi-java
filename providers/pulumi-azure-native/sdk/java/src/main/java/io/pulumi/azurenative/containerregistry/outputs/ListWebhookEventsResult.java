@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class ListWebhookEventsResult {
     /**
      * The URI that can be used to request the next list of events.
-     * 
      */
     private final @Nullable String nextLink;
     /**
      * The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
-     * 
      */
     private final @Nullable List<EventResponse> value;
 
@@ -34,14 +32,12 @@ public final class ListWebhookEventsResult {
 
     /**
      * The URI that can be used to request the next list of events.
-     * 
     */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
-     * 
     */
     public List<EventResponse> getValue() {
         return this.value == null ? List.of() : this.value;

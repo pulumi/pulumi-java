@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the load balancer resource settings.
- * 
  */
 public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
 
     /**
      * Gets or sets the backend address pools of the load balancer.
-     * 
      */
     @Import(name="backendAddressPools")
       private final @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
@@ -34,7 +32,6 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
 
     /**
      * Gets or sets the frontend IP configurations of the load balancer.
-     * 
      */
     @Import(name="frontendIPConfigurations")
       private final @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
@@ -46,7 +43,6 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Network/loadBalancers'.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
@@ -57,7 +53,6 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
 
     /**
      * Gets or sets load balancer sku (Basic/Standard).
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<String> sku;
@@ -68,7 +63,6 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
 
     /**
      * Gets or sets the target Resource name.
-     * 
      */
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
@@ -80,7 +74,6 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
     /**
      * Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
      *  precedence only if frontend IP configurations settings are not present.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<String> zones;

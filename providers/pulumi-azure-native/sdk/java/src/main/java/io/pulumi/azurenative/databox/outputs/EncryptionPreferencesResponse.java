@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class EncryptionPreferencesResponse {
     /**
      * Defines secondary layer of software-based encryption enablement.
-     * 
      */
     private final @Nullable String doubleEncryption;
 
@@ -24,7 +23,6 @@ public final class EncryptionPreferencesResponse {
 
     /**
      * Defines secondary layer of software-based encryption enablement.
-     * 
     */
     public Optional<String> getDoubleEncryption() {
         return Optional.ofNullable(this.doubleEncryption);

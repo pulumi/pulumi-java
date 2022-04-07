@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The Edifact message filter for odata query.
- * 
  */
 public final class EdifactMessageFilterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EdifactMessageFilterArgs extends io.pulumi.resources.Resource
 
     /**
      * The message filter type.
-     * 
      */
     @Import(name="messageFilterType", required=true)
       private final Output<Either<String,MessageFilterType>> messageFilterType;

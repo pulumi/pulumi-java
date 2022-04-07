@@ -14,57 +14,46 @@ import javax.annotation.Nullable;
 public final class GetWebAppPremierAddOnSlotResult {
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Kind of resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource Location.
-     * 
      */
     private final String location;
     /**
      * Premier add on Marketplace offer.
-     * 
      */
     private final @Nullable String marketplaceOffer;
     /**
      * Premier add on Marketplace publisher.
-     * 
      */
     private final @Nullable String marketplacePublisher;
     /**
      * Resource Name.
-     * 
      */
     private final String name;
     /**
      * Premier add on Product.
-     * 
      */
     private final @Nullable String product;
     /**
      * Premier add on SKU.
-     * 
      */
     private final @Nullable String sku;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
     /**
      * Premier add on Vendor.
-     * 
      */
     private final @Nullable String vendor;
 
@@ -96,77 +85,66 @@ public final class GetWebAppPremierAddOnSlotResult {
 
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Location.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Premier add on Marketplace offer.
-     * 
     */
     public Optional<String> getMarketplaceOffer() {
         return Optional.ofNullable(this.marketplaceOffer);
     }
     /**
      * Premier add on Marketplace publisher.
-     * 
     */
     public Optional<String> getMarketplacePublisher() {
         return Optional.ofNullable(this.marketplacePublisher);
     }
     /**
      * Resource Name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Premier add on Product.
-     * 
     */
     public Optional<String> getProduct() {
         return Optional.ofNullable(this.product);
     }
     /**
      * Premier add on SKU.
-     * 
     */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Premier add on Vendor.
-     * 
     */
     public Optional<String> getVendor() {
         return Optional.ofNullable(this.vendor);

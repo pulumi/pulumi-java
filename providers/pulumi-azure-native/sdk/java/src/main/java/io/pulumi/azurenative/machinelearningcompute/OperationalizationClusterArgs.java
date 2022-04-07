@@ -24,7 +24,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * AppInsights configuration.
-     * 
      */
     @Import(name="appInsights")
       private final @Nullable Output<AppInsightsPropertiesArgs> appInsights;
@@ -35,7 +34,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the cluster.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -46,7 +44,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * The cluster type.
-     * 
      */
     @Import(name="clusterType", required=true)
       private final Output<Either<String,ClusterType>> clusterType;
@@ -57,7 +54,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * Container Registry properties.
-     * 
      */
     @Import(name="containerRegistry")
       private final @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry;
@@ -68,7 +64,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * Parameters for the Azure Container Service cluster.
-     * 
      */
     @Import(name="containerService")
       private final @Nullable Output<AcsClusterPropertiesArgs> containerService;
@@ -79,7 +74,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * The description of the cluster.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -90,7 +84,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * Contains global configuration for the web services in the cluster.
-     * 
      */
     @Import(name="globalServiceConfiguration")
       private final @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration;
@@ -101,7 +94,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -112,7 +104,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the resource group in which the cluster is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -123,7 +114,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * Storage Account properties.
-     * 
      */
     @Import(name="storageAccount")
       private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
@@ -134,7 +124,6 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
 
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes a configuration store SKU.
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The SKU name of the configuration store.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

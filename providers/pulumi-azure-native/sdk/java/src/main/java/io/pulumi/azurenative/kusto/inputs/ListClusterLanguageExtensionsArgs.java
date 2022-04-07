@@ -14,7 +14,6 @@ public final class ListClusterLanguageExtensionsArgs extends io.pulumi.resources
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class ListClusterLanguageExtensionsArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

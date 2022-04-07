@@ -21,8 +21,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
     public static final WatchlistArgs Empty = new WatchlistArgs();
 
     /**
-     * The content type of the raw content. Example : text/csv or text/tsv
-     * 
+     * The content type of the raw content. Example : text/csv or text/tsv 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -33,7 +32,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time the watchlist was created
-     * 
      */
     @Import(name="created")
       private final @Nullable Output<String> created;
@@ -44,7 +42,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a user that created the watchlist
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable Output<WatchlistUserInfoArgs> createdBy;
@@ -55,7 +52,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The default duration of a watchlist (in ISO 8601 duration format)
-     * 
      */
     @Import(name="defaultDuration")
       private final @Nullable Output<String> defaultDuration;
@@ -66,7 +62,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description of the watchlist
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -77,7 +72,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name of the watchlist
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -88,7 +82,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A flag that indicates if the watchlist is deleted or not
-     * 
      */
     @Import(name="isDeleted")
       private final @Nullable Output<Boolean> isDeleted;
@@ -99,7 +92,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
-     * 
      */
     @Import(name="itemsSearchKey", required=true)
       private final Output<String> itemsSearchKey;
@@ -110,7 +102,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of labels relevant to this watchlist
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
@@ -121,7 +112,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of lines in a csv/tsv content to skip before the header
-     * 
      */
     @Import(name="numberOfLinesToSkip")
       private final @Nullable Output<Integer> numberOfLinesToSkip;
@@ -132,7 +122,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
@@ -143,7 +132,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The provider of the watchlist
-     * 
      */
     @Import(name="provider", required=true)
       private final Output<String> provider;
@@ -154,7 +142,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
-     * 
      */
     @Import(name="rawContent")
       private final @Nullable Output<String> rawContent;
@@ -165,7 +152,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -176,7 +162,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source of the watchlist
-     * 
      */
     @Import(name="source", required=true)
       private final Output<Either<String,Source>> source;
@@ -187,7 +172,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tenantId where the watchlist belongs to
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
@@ -198,7 +182,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The last time the watchlist was updated
-     * 
      */
     @Import(name="updated")
       private final @Nullable Output<String> updated;
@@ -209,7 +192,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes a user that updated the watchlist
-     * 
      */
     @Import(name="updatedBy")
       private final @Nullable Output<WatchlistUserInfoArgs> updatedBy;
@@ -220,7 +202,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
-     * 
      */
     @Import(name="uploadStatus")
       private final @Nullable Output<String> uploadStatus;
@@ -231,7 +212,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The alias of the watchlist
-     * 
      */
     @Import(name="watchlistAlias")
       private final @Nullable Output<String> watchlistAlias;
@@ -242,7 +222,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The id (a Guid) of the watchlist
-     * 
      */
     @Import(name="watchlistId")
       private final @Nullable Output<String> watchlistId;
@@ -253,7 +232,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of Watchlist Items in the Watchlist
-     * 
      */
     @Import(name="watchlistItemsCount")
       private final @Nullable Output<Integer> watchlistItemsCount;
@@ -264,7 +242,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the watchlist
-     * 
      */
     @Import(name="watchlistType")
       private final @Nullable Output<String> watchlistType;
@@ -275,7 +252,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

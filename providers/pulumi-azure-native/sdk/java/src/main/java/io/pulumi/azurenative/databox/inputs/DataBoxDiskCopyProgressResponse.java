@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * DataBox Disk Copy Progress
- * 
  */
 public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
 
     /**
      * Bytes copied during the copy of disk.
-     * 
      */
     @Import(name="bytesCopied", required=true)
       private final Double bytesCopied;
@@ -31,7 +29,6 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
 
     /**
      * Indicates the percentage completed for the copy of the disk.
-     * 
      */
     @Import(name="percentComplete", required=true)
       private final Integer percentComplete;
@@ -42,7 +39,6 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
 
     /**
      * The serial number of the disk
-     * 
      */
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
@@ -53,7 +49,6 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
 
     /**
      * The Status of the copy
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The authentication info when authType is userAssignedIdentity
- * 
  */
 public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
     /**
      * The authentication type.
      * Expected value is 'userAssignedIdentity'.
-     * 
      */
     @Import(name="authType", required=true)
       private final Output<String> authType;
@@ -31,7 +29,6 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
 
     /**
      * Client Id for userAssignedIdentity.
-     * 
      */
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
@@ -42,7 +39,6 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
 
     /**
      * Subscription id for userAssignedIdentity.
-     * 
      */
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;

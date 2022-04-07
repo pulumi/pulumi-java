@@ -16,7 +16,6 @@ public final class ControllerConnectionDetailsResponse extends io.pulumi.resourc
 
     /**
      * Base class for types that supply values used to connect to container orchestrators
-     * 
      */
     @Import(name="orchestratorSpecificConnectionDetails")
       private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;

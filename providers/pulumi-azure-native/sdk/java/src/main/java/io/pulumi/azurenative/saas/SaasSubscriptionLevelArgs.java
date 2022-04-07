@@ -18,7 +18,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource location. Only value allowed for SaaS is 'global'
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
 
     /**
      * The resource name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -40,7 +38,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
 
     /**
      * Properties of the SaaS resource that are relevant for creation.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<SaasCreationPropertiesArgs> properties;
@@ -51,7 +48,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -73,7 +68,6 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
 
     /**
      * the resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

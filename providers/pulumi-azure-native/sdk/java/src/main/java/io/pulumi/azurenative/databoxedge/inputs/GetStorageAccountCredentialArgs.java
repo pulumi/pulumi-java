@@ -14,7 +14,6 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final String deviceName;
@@ -25,7 +24,6 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
 
     /**
      * The storage account credential name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

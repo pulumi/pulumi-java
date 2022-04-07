@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Delimited text write settings.
- * 
  */
 public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * The file extension used to create the files. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileExtension", required=true)
       private final Output<Object> fileExtension;
@@ -32,7 +30,6 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileNamePrefix")
       private final @Nullable Output<Object> fileNamePrefix;
@@ -43,7 +40,6 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxRowsPerFile")
       private final @Nullable Output<Object> maxRowsPerFile;
@@ -54,7 +50,6 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
 
     /**
      * Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="quoteAllText")
       private final @Nullable Output<Object> quoteAllText;
@@ -66,7 +61,6 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
     /**
      * The write setting type.
      * Expected value is 'DelimitedTextWriteSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

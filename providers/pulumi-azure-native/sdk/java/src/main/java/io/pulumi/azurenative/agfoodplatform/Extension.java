@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * Extension resource.
  * API Version: 2020-05-12-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Extensions_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var extension = new AzureNative.AgFoodPlatform.Extension("extension", new AzureNative.AgFoodPlatform.ExtensionArgs
+ *         {
+ *             ExtensionId = "provider.extension",
+ *             FarmBeatsResourceName = "examples-farmbeatsResourceName",
+ *             ResourceGroupName = "examples-rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	agfoodplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/agfoodplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := agfoodplatform.NewExtension(ctx, "extension", &agfoodplatform.ExtensionArgs{
+ * 			ExtensionId:           pulumi.String("provider.extension"),
+ * 			FarmBeatsResourceName: pulumi.String("examples-farmbeatsResourceName"),
+ * 			ResourceGroupName:     pulumi.String("examples-rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const extension = new azure_native.agfoodplatform.Extension("extension", {
+ *     extensionId: "provider.extension",
+ *     farmBeatsResourceName: "examples-farmbeatsResourceName",
+ *     resourceGroupName: "examples-rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * extension = azure_native.agfoodplatform.Extension("extension",
+ *     extension_id="provider.extension",
+ *     farm_beats_resource_name="examples-farmbeatsResourceName",
+ *     resource_group_name="examples-rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +105,108 @@ import javax.annotation.Nullable;
 public class Extension extends io.pulumi.resources.CustomResource {
     /**
      * The ETag value to implement optimistic concurrency.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
     /**
      * @return The ETag value to implement optimistic concurrency.
-     * 
      */
     public Output<String> getETag() {
         return this.eTag;
     }
     /**
      * Extension api docs link.
-     * 
      */
     @Export(name="extensionApiDocsLink", type=String.class, parameters={})
     private Output<String> extensionApiDocsLink;
 
     /**
      * @return Extension api docs link.
-     * 
      */
     public Output<String> getExtensionApiDocsLink() {
         return this.extensionApiDocsLink;
     }
     /**
      * Extension auth link.
-     * 
      */
     @Export(name="extensionAuthLink", type=String.class, parameters={})
     private Output<String> extensionAuthLink;
 
     /**
      * @return Extension auth link.
-     * 
      */
     public Output<String> getExtensionAuthLink() {
         return this.extensionAuthLink;
     }
     /**
      * Extension category. e.g. weather/sensor/satellite.
-     * 
      */
     @Export(name="extensionCategory", type=String.class, parameters={})
     private Output<String> extensionCategory;
 
     /**
      * @return Extension category. e.g. weather/sensor/satellite.
-     * 
      */
     public Output<String> getExtensionCategory() {
         return this.extensionCategory;
     }
     /**
      * Extension Id.
-     * 
      */
     @Export(name="extensionId", type=String.class, parameters={})
     private Output<String> extensionId;
 
     /**
      * @return Extension Id.
-     * 
      */
     public Output<String> getExtensionId() {
         return this.extensionId;
     }
     /**
      * Installed extension version.
-     * 
      */
     @Export(name="installedExtensionVersion", type=String.class, parameters={})
     private Output<String> installedExtensionVersion;
 
     /**
      * @return Installed extension version.
-     * 
      */
     public Output<String> getInstalledExtensionVersion() {
         return this.installedExtensionVersion;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

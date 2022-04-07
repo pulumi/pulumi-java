@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Routing rules in production experiments.
- * 
  */
 public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of ramp-up rules.
-     * 
      */
     @Import(name="rampUpRules")
       private final @Nullable Output<List<RampUpRuleArgs>> rampUpRules;

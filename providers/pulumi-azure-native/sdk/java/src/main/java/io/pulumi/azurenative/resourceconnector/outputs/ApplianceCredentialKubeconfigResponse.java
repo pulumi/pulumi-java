@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ApplianceCredentialKubeconfigResponse {
     /**
      * Name which contains the role of the kubeconfig.
-     * 
      */
     private final String name;
     /**
      * Contains the kubeconfig value.
-     * 
      */
     private final String value;
 
@@ -30,14 +28,12 @@ public final class ApplianceCredentialKubeconfigResponse {
 
     /**
      * Name which contains the role of the kubeconfig.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Contains the kubeconfig value.
-     * 
     */
     public String getValue() {
         return this.value;

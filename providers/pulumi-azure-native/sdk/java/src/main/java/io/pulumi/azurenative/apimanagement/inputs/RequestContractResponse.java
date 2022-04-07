@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Operation request details.
- * 
  */
 public final class RequestContractResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Operation request description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -34,7 +32,6 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Collection of operation request headers.
-     * 
      */
     @Import(name="headers")
       private final @Nullable List<ParameterContractResponse> headers;
@@ -45,7 +42,6 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Collection of operation request query parameters.
-     * 
      */
     @Import(name="queryParameters")
       private final @Nullable List<ParameterContractResponse> queryParameters;
@@ -56,7 +52,6 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Collection of operation request representations.
-     * 
      */
     @Import(name="representations")
       private final @Nullable List<RepresentationContractResponse> representations;

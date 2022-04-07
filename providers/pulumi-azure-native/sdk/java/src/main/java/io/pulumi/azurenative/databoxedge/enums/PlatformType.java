@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Host OS supported by the Kubernetes role.
-     * 
      */
     @EnumType
     public enum PlatformType {

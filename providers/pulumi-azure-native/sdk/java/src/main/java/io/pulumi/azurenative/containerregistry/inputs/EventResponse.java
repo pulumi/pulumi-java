@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The event for a webhook.
- * 
  */
 public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The event request message sent to the service URI.
-     * 
      */
     @Import(name="eventRequestMessage")
       private final @Nullable EventRequestMessageResponse eventRequestMessage;
@@ -33,7 +31,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The event response message received from the service URI.
-     * 
      */
     @Import(name="eventResponseMessage")
       private final @Nullable EventResponseMessageResponse eventResponseMessage;
@@ -44,7 +41,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The event ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

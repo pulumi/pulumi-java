@@ -18,7 +18,6 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -29,7 +28,6 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The Asset name.
-     * 
      */
     @Import(name="assetName", required=true)
       private final String assetName;
@@ -40,7 +38,6 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The SAS URL expiration time.  This must be less than 24 hours from the current time.
-     * 
      */
     @Import(name="expiryTime")
       private final @Nullable String expiryTime;
@@ -51,7 +48,6 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The permissions to set on the SAS URL.
-     * 
      */
     @Import(name="permissions")
       private final @Nullable Either<String,AssetContainerPermission> permissions;
@@ -62,7 +58,6 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

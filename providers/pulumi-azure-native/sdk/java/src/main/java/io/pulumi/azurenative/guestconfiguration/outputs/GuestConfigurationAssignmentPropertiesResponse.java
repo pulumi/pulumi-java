@@ -17,62 +17,50 @@ import javax.annotation.Nullable;
 public final class GuestConfigurationAssignmentPropertiesResponse {
     /**
      * Combined hash of the configuration package and parameters.
-     * 
      */
     private final String assignmentHash;
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
-     * 
      */
     private final String complianceStatus;
     /**
      * The source which initiated the guest configuration assignment. Ex: Azure Policy
-     * 
      */
     private final @Nullable String context;
     /**
      * The guest configuration to assign.
-     * 
      */
     private final @Nullable GuestConfigurationNavigationResponse guestConfiguration;
     /**
      * Date and time when last compliance status was checked.
-     * 
      */
     private final String lastComplianceStatusChecked;
     /**
      * Last reported guest configuration assignment report.
-     * 
      */
     private final @Nullable AssignmentReportResponse latestAssignmentReport;
     /**
-     * Id of the latest report for the guest configuration assignment.
-     * 
+     * Id of the latest report for the guest configuration assignment. 
      */
     private final String latestReportId;
     /**
-     * parameter hash for the guest configuration assignment.
-     * 
+     * parameter hash for the guest configuration assignment. 
      */
     private final String parameterHash;
     /**
      * The provisioning state, which only appears in the response.
-     * 
      */
     private final String provisioningState;
     /**
      * Type of the resource - VMSS / VM
-     * 
      */
     private final String resourceType;
     /**
      * VM resource Id.
-     * 
      */
     private final String targetResourceId;
     /**
      * The list of VM Compliance data for VMSS
-     * 
      */
     private final @Nullable List<VMSSVMInfoResponse> vmssVMList;
 
@@ -106,84 +94,72 @@ public final class GuestConfigurationAssignmentPropertiesResponse {
 
     /**
      * Combined hash of the configuration package and parameters.
-     * 
     */
     public String getAssignmentHash() {
         return this.assignmentHash;
     }
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
-     * 
     */
     public String getComplianceStatus() {
         return this.complianceStatus;
     }
     /**
      * The source which initiated the guest configuration assignment. Ex: Azure Policy
-     * 
     */
     public Optional<String> getContext() {
         return Optional.ofNullable(this.context);
     }
     /**
      * The guest configuration to assign.
-     * 
     */
     public Optional<GuestConfigurationNavigationResponse> getGuestConfiguration() {
         return Optional.ofNullable(this.guestConfiguration);
     }
     /**
      * Date and time when last compliance status was checked.
-     * 
     */
     public String getLastComplianceStatusChecked() {
         return this.lastComplianceStatusChecked;
     }
     /**
      * Last reported guest configuration assignment report.
-     * 
     */
     public Optional<AssignmentReportResponse> getLatestAssignmentReport() {
         return Optional.ofNullable(this.latestAssignmentReport);
     }
     /**
-     * Id of the latest report for the guest configuration assignment.
-     * 
+     * Id of the latest report for the guest configuration assignment. 
     */
     public String getLatestReportId() {
         return this.latestReportId;
     }
     /**
-     * parameter hash for the guest configuration assignment.
-     * 
+     * parameter hash for the guest configuration assignment. 
     */
     public String getParameterHash() {
         return this.parameterHash;
     }
     /**
      * The provisioning state, which only appears in the response.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource - VMSS / VM
-     * 
     */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * VM resource Id.
-     * 
     */
     public String getTargetResourceId() {
         return this.targetResourceId;
     }
     /**
      * The list of VM Compliance data for VMSS
-     * 
     */
     public List<VMSSVMInfoResponse> getVmssVMList() {
         return this.vmssVMList == null ? List.of() : this.vmssVMList;

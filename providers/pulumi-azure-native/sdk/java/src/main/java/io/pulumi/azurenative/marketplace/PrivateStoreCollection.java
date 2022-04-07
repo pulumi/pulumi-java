@@ -20,7 +20,104 @@ import javax.annotation.Nullable;
  * The Collection data structure.
  * API Version: 2021-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreatePrivateStoreCollection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateStoreCollection = new AzureNative.Marketplace.PrivateStoreCollection("privateStoreCollection", new AzureNative.Marketplace.PrivateStoreCollectionArgs
+ *         {
+ *             AllSubscriptions = false,
+ *             Claim = "",
+ *             CollectionId = "d0f5aa2c-ecc3-4d87-906a-f8c486dcc4f1",
+ *             CollectionName = "Test Collection",
+ *             PrivateStoreId = "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
+ *             SubscriptionsList = 
+ *             {
+ *                 "b340914e-353d-453a-85fb-8f9b65b51f91",
+ *                 "f2baa04d-5bfc-461b-b6d8-61b403c9ec48",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	marketplace "github.com/pulumi/pulumi-azure-native/sdk/go/azure/marketplace"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := marketplace.NewPrivateStoreCollection(ctx, "privateStoreCollection", &marketplace.PrivateStoreCollectionArgs{
+ * 			AllSubscriptions: pulumi.Bool(false),
+ * 			Claim:            pulumi.String(""),
+ * 			CollectionId:     pulumi.String("d0f5aa2c-ecc3-4d87-906a-f8c486dcc4f1"),
+ * 			CollectionName:   pulumi.String("Test Collection"),
+ * 			PrivateStoreId:   pulumi.String("a0e28e55-90c4-41d8-8e34-bb7ef7775406"),
+ * 			SubscriptionsList: pulumi.StringArray{
+ * 				pulumi.String("b340914e-353d-453a-85fb-8f9b65b51f91"),
+ * 				pulumi.String("f2baa04d-5bfc-461b-b6d8-61b403c9ec48"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateStoreCollection = new azure_native.marketplace.PrivateStoreCollection("privateStoreCollection", {
+ *     allSubscriptions: false,
+ *     claim: "",
+ *     collectionId: "d0f5aa2c-ecc3-4d87-906a-f8c486dcc4f1",
+ *     collectionName: "Test Collection",
+ *     privateStoreId: "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
+ *     subscriptionsList: [
+ *         "b340914e-353d-453a-85fb-8f9b65b51f91",
+ *         "f2baa04d-5bfc-461b-b6d8-61b403c9ec48",
+ *     ],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_store_collection = azure_native.marketplace.PrivateStoreCollection("privateStoreCollection",
+ *     all_subscriptions=False,
+ *     claim="",
+ *     collection_id="d0f5aa2c-ecc3-4d87-906a-f8c486dcc4f1",
+ *     collection_name="Test Collection",
+ *     private_store_id="a0e28e55-90c4-41d8-8e34-bb7ef7775406",
+ *     subscriptions_list=[
+ *         "b340914e-353d-453a-85fb-8f9b65b51f91",
+ *         "f2baa04d-5bfc-461b-b6d8-61b403c9ec48",
+ *     ])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,140 +132,120 @@ import javax.annotation.Nullable;
 public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
     /**
      * Indicating whether all subscriptions are selected (=true) or not (=false).
-     * 
      */
     @Export(name="allSubscriptions", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allSubscriptions;
 
     /**
      * @return Indicating whether all subscriptions are selected (=true) or not (=false).
-     * 
      */
     public Output</* @Nullable */ Boolean> getAllSubscriptions() {
         return this.allSubscriptions;
     }
     /**
      * Gets or sets the association with Commercial's Billing Account.
-     * 
      */
     @Export(name="claim", type=String.class, parameters={})
     private Output</* @Nullable */ String> claim;
 
     /**
      * @return Gets or sets the association with Commercial's Billing Account.
-     * 
      */
     public Output</* @Nullable */ String> getClaim() {
         return this.claim;
     }
     /**
      * Gets collection Id.
-     * 
      */
     @Export(name="collectionId", type=String.class, parameters={})
     private Output<String> collectionId;
 
     /**
      * @return Gets collection Id.
-     * 
      */
     public Output<String> getCollectionId() {
         return this.collectionId;
     }
     /**
      * Gets or sets collection name.
-     * 
      */
     @Export(name="collectionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> collectionName;
 
     /**
      * @return Gets or sets collection name.
-     * 
      */
     public Output</* @Nullable */ String> getCollectionName() {
         return this.collectionName;
     }
     /**
      * Indicating whether the collection is enabled or disabled.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return Indicating whether the collection is enabled or disabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets the number of offers associated with the collection.
-     * 
      */
     @Export(name="numberOfOffers", type=Double.class, parameters={})
     private Output<Double> numberOfOffers;
 
     /**
      * @return Gets the number of offers associated with the collection.
-     * 
      */
     public Output<Double> getNumberOfOffers() {
         return this.numberOfOffers;
     }
     /**
      * Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
-     * 
      */
     @Export(name="subscriptionsList", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subscriptionsList;
 
     /**
      * @return Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
-     * 
      */
     public Output</* @Nullable */ List<String>> getSubscriptionsList() {
         return this.subscriptionsList;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

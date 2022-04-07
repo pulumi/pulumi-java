@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the resource properties.
- * 
  */
 public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets administrator password.
-     * 
      */
     @Import(name="adminPassword")
       private final @Nullable Output<String> adminPassword;
@@ -33,7 +31,6 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets administrator username.
-     * 
      */
     @Import(name="adminUsername")
       private final @Nullable Output<String> adminUsername;
@@ -44,7 +41,6 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets computer name.
-     * 
      */
     @Import(name="computerName")
       private final @Nullable Output<String> computerName;
@@ -55,7 +51,6 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the type of the os.
-     * 
      */
     @Import(name="osType")
       private final @Nullable Output<Either<String,OsType>> osType;

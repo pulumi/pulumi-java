@@ -19,7 +19,127 @@ import javax.annotation.Nullable;
  * VpnGatewayNatRule Resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NatRulePut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var natRule = new AzureNative.Network.NatRule("natRule", new AzureNative.Network.NatRuleArgs
+ *         {
+ *             ExternalMappings = 
+ *             {
+ *                 new AzureNative.Network.Inputs.VpnNatRuleMappingArgs
+ *                 {
+ *                     AddressSpace = "192.168.21.0/24",
+ *                 },
+ *             },
+ *             GatewayName = "gateway1",
+ *             InternalMappings = 
+ *             {
+ *                 new AzureNative.Network.Inputs.VpnNatRuleMappingArgs
+ *                 {
+ *                     AddressSpace = "10.4.0.0/24",
+ *                 },
+ *             },
+ *             IpConfigurationId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/cloudnet1-VNG/ipConfigurations/default",
+ *             Mode = "EgressSnat",
+ *             NatRuleName = "natRule1",
+ *             ResourceGroupName = "rg1",
+ *             Type = "Static",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewNatRule(ctx, "natRule", &network.NatRuleArgs{
+ * 			ExternalMappings: []network.VpnNatRuleMappingArgs{
+ * 				&network.VpnNatRuleMappingArgs{
+ * 					AddressSpace: pulumi.String("192.168.21.0/24"),
+ * 				},
+ * 			},
+ * 			GatewayName: pulumi.String("gateway1"),
+ * 			InternalMappings: []network.VpnNatRuleMappingArgs{
+ * 				&network.VpnNatRuleMappingArgs{
+ * 					AddressSpace: pulumi.String("10.4.0.0/24"),
+ * 				},
+ * 			},
+ * 			IpConfigurationId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/cloudnet1-VNG/ipConfigurations/default"),
+ * 			Mode:              pulumi.String("EgressSnat"),
+ * 			NatRuleName:       pulumi.String("natRule1"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Type:              pulumi.String("Static"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const natRule = new azure_native.network.NatRule("natRule", {
+ *     externalMappings: [{
+ *         addressSpace: "192.168.21.0/24",
+ *     }],
+ *     gatewayName: "gateway1",
+ *     internalMappings: [{
+ *         addressSpace: "10.4.0.0/24",
+ *     }],
+ *     ipConfigurationId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/cloudnet1-VNG/ipConfigurations/default",
+ *     mode: "EgressSnat",
+ *     natRuleName: "natRule1",
+ *     resourceGroupName: "rg1",
+ *     type: "Static",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * nat_rule = azure_native.network.NatRule("natRule",
+ *     external_mappings=[azure_native.network.VpnNatRuleMappingArgs(
+ *         address_space="192.168.21.0/24",
+ *     )],
+ *     gateway_name="gateway1",
+ *     internal_mappings=[azure_native.network.VpnNatRuleMappingArgs(
+ *         address_space="10.4.0.0/24",
+ *     )],
+ *     ip_configuration_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/cloudnet1-VNG/ipConfigurations/default",
+ *     mode="EgressSnat",
+ *     nat_rule_name="natRule1",
+ *     resource_group_name="rg1",
+ *     type="Static")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,140 +154,120 @@ import javax.annotation.Nullable;
 public class NatRule extends io.pulumi.resources.CustomResource {
     /**
      * List of egress VpnSiteLinkConnections.
-     * 
      */
     @Export(name="egressVpnSiteLinkConnections", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> egressVpnSiteLinkConnections;
 
     /**
      * @return List of egress VpnSiteLinkConnections.
-     * 
      */
     public Output<List<SubResourceResponse>> getEgressVpnSiteLinkConnections() {
         return this.egressVpnSiteLinkConnections;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The private IP address external mapping for NAT.
-     * 
      */
     @Export(name="externalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
     private Output</* @Nullable */ List<VpnNatRuleMappingResponse>> externalMappings;
 
     /**
      * @return The private IP address external mapping for NAT.
-     * 
      */
     public Output</* @Nullable */ List<VpnNatRuleMappingResponse>> getExternalMappings() {
         return this.externalMappings;
     }
     /**
      * List of ingress VpnSiteLinkConnections.
-     * 
      */
     @Export(name="ingressVpnSiteLinkConnections", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> ingressVpnSiteLinkConnections;
 
     /**
      * @return List of ingress VpnSiteLinkConnections.
-     * 
      */
     public Output<List<SubResourceResponse>> getIngressVpnSiteLinkConnections() {
         return this.ingressVpnSiteLinkConnections;
     }
     /**
      * The private IP address internal mapping for NAT.
-     * 
      */
     @Export(name="internalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
     private Output</* @Nullable */ List<VpnNatRuleMappingResponse>> internalMappings;
 
     /**
      * @return The private IP address internal mapping for NAT.
-     * 
      */
     public Output</* @Nullable */ List<VpnNatRuleMappingResponse>> getInternalMappings() {
         return this.internalMappings;
     }
     /**
      * The IP Configuration ID this NAT rule applies to.
-     * 
      */
     @Export(name="ipConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipConfigurationId;
 
     /**
      * @return The IP Configuration ID this NAT rule applies to.
-     * 
      */
     public Output</* @Nullable */ String> getIpConfigurationId() {
         return this.ipConfigurationId;
     }
     /**
      * The Source NAT direction of a VPN NAT.
-     * 
      */
     @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
      * @return The Source NAT direction of a VPN NAT.
-     * 
      */
     public Output</* @Nullable */ String> getMode() {
         return this.mode;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the NAT Rule resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the NAT Rule resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

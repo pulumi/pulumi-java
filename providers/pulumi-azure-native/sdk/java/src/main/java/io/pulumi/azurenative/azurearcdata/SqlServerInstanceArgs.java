@@ -18,7 +18,6 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * null
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<SqlServerInstancePropertiesArgs> properties;
@@ -40,7 +38,6 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the Azure resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of SQL Server Instance
-     * 
      */
     @Import(name="sqlServerInstanceName")
       private final @Nullable Output<String> sqlServerInstanceName;
@@ -62,7 +58,6 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

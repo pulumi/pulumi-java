@@ -15,38 +15,31 @@ import javax.annotation.Nullable;
 public final class SqlManagedInstancePropertiesResponse {
     /**
      * The instance admin user
-     * 
      */
     private final @Nullable String admin;
     /**
      * Username and password for basic authentication.
-     * 
      */
     private final @Nullable BasicLoginInformationResponse basicLoginInformation;
     /**
      * null
-     * 
      */
     private final @Nullable String dataControllerId;
     /**
      * The instance end time
-     * 
      */
     private final @Nullable String endTime;
     /**
      * The raw kubernetes information
-     * 
      */
     private final @Nullable Object k8sRaw;
     /**
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
-     * 
      */
     private final @Nullable String lastUploadedDate;
     private final String provisioningState;
     /**
      * The instance start time
-     * 
      */
     private final @Nullable String startTime;
 
@@ -72,42 +65,36 @@ public final class SqlManagedInstancePropertiesResponse {
 
     /**
      * The instance admin user
-     * 
     */
     public Optional<String> getAdmin() {
         return Optional.ofNullable(this.admin);
     }
     /**
      * Username and password for basic authentication.
-     * 
     */
     public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
     /**
      * null
-     * 
     */
     public Optional<String> getDataControllerId() {
         return Optional.ofNullable(this.dataControllerId);
     }
     /**
      * The instance end time
-     * 
     */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * The raw kubernetes information
-     * 
     */
     public Optional<Object> getK8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
     /**
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
-     * 
     */
     public Optional<String> getLastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
@@ -117,7 +104,6 @@ public final class SqlManagedInstancePropertiesResponse {
     }
     /**
      * The instance start time
-     * 
     */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);

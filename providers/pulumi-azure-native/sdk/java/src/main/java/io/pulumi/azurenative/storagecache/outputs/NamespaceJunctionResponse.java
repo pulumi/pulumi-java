@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class NamespaceJunctionResponse {
     /**
      * Namespace path on a Cache for a Storage Target.
-     * 
      */
     private final @Nullable String namespacePath;
     /**
      * Name of the access policy applied to this junction.
-     * 
      */
     private final @Nullable String nfsAccessPolicy;
     /**
      * NFS export where targetPath exists.
-     * 
      */
     private final @Nullable String nfsExport;
     /**
      * Path in Storage Target to which namespacePath points.
-     * 
      */
     private final @Nullable String targetPath;
 
@@ -46,28 +42,24 @@ public final class NamespaceJunctionResponse {
 
     /**
      * Namespace path on a Cache for a Storage Target.
-     * 
     */
     public Optional<String> getNamespacePath() {
         return Optional.ofNullable(this.namespacePath);
     }
     /**
      * Name of the access policy applied to this junction.
-     * 
     */
     public Optional<String> getNfsAccessPolicy() {
         return Optional.ofNullable(this.nfsAccessPolicy);
     }
     /**
      * NFS export where targetPath exists.
-     * 
     */
     public Optional<String> getNfsExport() {
         return Optional.ofNullable(this.nfsExport);
     }
     /**
      * Path in Storage Target to which namespacePath points.
-     * 
     */
     public Optional<String> getTargetPath() {
         return Optional.ofNullable(this.targetPath);

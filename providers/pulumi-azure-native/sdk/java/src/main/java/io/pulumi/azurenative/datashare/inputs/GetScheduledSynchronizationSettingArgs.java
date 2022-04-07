@@ -14,7 +14,6 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
 
     /**
      * The name of the share.
-     * 
      */
     @Import(name="shareName", required=true)
       private final String shareName;
@@ -47,7 +44,6 @@ public final class GetScheduledSynchronizationSettingArgs extends io.pulumi.reso
 
     /**
      * The name of the synchronizationSetting.
-     * 
      */
     @Import(name="synchronizationSettingName", required=true)
       private final String synchronizationSettingName;

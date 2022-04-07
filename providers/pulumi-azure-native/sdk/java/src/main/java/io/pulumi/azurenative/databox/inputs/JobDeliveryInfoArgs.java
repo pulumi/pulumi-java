@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional delivery info.
- * 
  */
 public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Scheduled date time.
-     * 
      */
     @Import(name="scheduledDateTime")
       private final @Nullable Output<String> scheduledDateTime;

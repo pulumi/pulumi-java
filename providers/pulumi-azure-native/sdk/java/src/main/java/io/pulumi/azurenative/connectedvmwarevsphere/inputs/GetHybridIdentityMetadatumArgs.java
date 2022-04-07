@@ -14,7 +14,6 @@ public final class GetHybridIdentityMetadatumArgs extends io.pulumi.resources.In
 
     /**
      * Name of the HybridIdentityMetadata.
-     * 
      */
     @Import(name="metadataName", required=true)
       private final String metadataName;
@@ -25,7 +24,6 @@ public final class GetHybridIdentityMetadatumArgs extends io.pulumi.resources.In
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetHybridIdentityMetadatumArgs extends io.pulumi.resources.In
 
     /**
      * Name of the vm.
-     * 
      */
     @Import(name="virtualMachineName", required=true)
       private final String virtualMachineName;

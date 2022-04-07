@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * VpnClientConfiguration for P2S client.
- * 
  */
 public final class VpnClientConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
-     * 
      */
     @Import(name="aadAudience")
       private final @Nullable Output<String> aadAudience;
@@ -40,7 +38,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
-     * 
      */
     @Import(name="aadIssuer")
       private final @Nullable Output<String> aadIssuer;
@@ -51,7 +48,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
-     * 
      */
     @Import(name="aadTenant")
       private final @Nullable Output<String> aadTenant;
@@ -62,7 +58,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
-     * 
      */
     @Import(name="radiusServerAddress")
       private final @Nullable Output<String> radiusServerAddress;
@@ -73,7 +68,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
-     * 
      */
     @Import(name="radiusServerSecret")
       private final @Nullable Output<String> radiusServerSecret;
@@ -84,7 +78,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The radiusServers property for multiple radius server configuration.
-     * 
      */
     @Import(name="radiusServers")
       private final @Nullable Output<List<RadiusServerArgs>> radiusServers;
@@ -95,7 +88,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * VPN authentication types for the virtual network gateway..
-     * 
      */
     @Import(name="vpnAuthenticationTypes")
       private final @Nullable Output<List<Either<String,VpnAuthenticationType>>> vpnAuthenticationTypes;
@@ -106,7 +98,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * The reference to the address space resource which represents Address space for P2S VpnClient.
-     * 
      */
     @Import(name="vpnClientAddressPool")
       private final @Nullable Output<AddressSpaceArgs> vpnClientAddressPool;
@@ -117,7 +108,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * VpnClientIpsecPolicies for virtual network gateway P2S client.
-     * 
      */
     @Import(name="vpnClientIpsecPolicies")
       private final @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
@@ -128,7 +118,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * VpnClientProtocols for Virtual network gateway.
-     * 
      */
     @Import(name="vpnClientProtocols")
       private final @Nullable Output<List<Either<String,VpnClientProtocol>>> vpnClientProtocols;
@@ -139,7 +128,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * VpnClientRevokedCertificate for Virtual network gateway.
-     * 
      */
     @Import(name="vpnClientRevokedCertificates")
       private final @Nullable Output<List<VpnClientRevokedCertificateArgs>> vpnClientRevokedCertificates;
@@ -150,7 +138,6 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
 
     /**
      * VpnClientRootCertificate for virtual network gateway.
-     * 
      */
     @Import(name="vpnClientRootCertificates")
       private final @Nullable Output<List<VpnClientRootCertificateArgs>> vpnClientRootCertificates;

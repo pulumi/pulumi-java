@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class RedisLinkedServerResponse {
     /**
      * Linked server Id.
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class RedisLinkedServerResponse {
 
     /**
      * Linked server Id.
-     * 
     */
     public String getId() {
         return this.id;

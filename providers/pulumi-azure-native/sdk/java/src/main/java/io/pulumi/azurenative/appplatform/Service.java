@@ -20,7 +20,251 @@ import javax.annotation.Nullable;
  * Service resource
  * API Version: 2020-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Services_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var service = new AzureNative.AppPlatform.Service("service", new AzureNative.AppPlatform.ServiceArgs
+ *         {
+ *             Location = "eastus",
+ *             Properties = ,
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *             Sku = new AzureNative.AppPlatform.Inputs.SkuArgs
+ *             {
+ *                 Name = "S0",
+ *                 Tier = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewService(ctx, "service", &appplatform.ServiceArgs{
+ * 			Location:          pulumi.String("eastus"),
+ * 			Properties:        nil,
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 			Sku: &appplatform.SkuArgs{
+ * 				Name: pulumi.String("S0"),
+ * 				Tier: pulumi.String("Standard"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const service = new azure_native.appplatform.Service("service", {
+ *     location: "eastus",
+ *     properties: {},
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ *     sku: {
+ *         name: "S0",
+ *         tier: "Standard",
+ *     },
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service = azure_native.appplatform.Service("service",
+ *     location="eastus",
+ *     properties=azure_native.appplatform.ClusterResourcePropertiesArgs(),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice",
+ *     sku=azure_native.appplatform.SkuArgs(
+ *         name="S0",
+ *         tier="Standard",
+ *     ),
+ *     tags={
+ *         "key1": "value1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Services_CreateOrUpdate_VNetInjection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var service = new AzureNative.AppPlatform.Service("service", new AzureNative.AppPlatform.ServiceArgs
+ *         {
+ *             Location = "eastus",
+ *             Properties = new AzureNative.AppPlatform.Inputs.ClusterResourcePropertiesArgs
+ *             {
+ *                 NetworkProfile = new AzureNative.AppPlatform.Inputs.NetworkProfileArgs
+ *                 {
+ *                     AppNetworkResourceGroup = "my-app-network-rg",
+ *                     AppSubnetId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps",
+ *                     ServiceCidr = "10.8.0.0/16,10.244.0.0/16,10.245.0.1/16",
+ *                     ServiceRuntimeNetworkResourceGroup = "my-service-runtime-network-rg",
+ *                     ServiceRuntimeSubnetId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/serviceRuntime",
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *             Sku = new AzureNative.AppPlatform.Inputs.SkuArgs
+ *             {
+ *                 Name = "S0",
+ *                 Tier = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewService(ctx, "service", &appplatform.ServiceArgs{
+ * 			Location: pulumi.String("eastus"),
+ * 			Properties: &appplatform.ClusterResourcePropertiesArgs{
+ * 				NetworkProfile: &appplatform.NetworkProfileArgs{
+ * 					AppNetworkResourceGroup:            pulumi.String("my-app-network-rg"),
+ * 					AppSubnetId:                        pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps"),
+ * 					ServiceCidr:                        pulumi.String("10.8.0.0/16,10.244.0.0/16,10.245.0.1/16"),
+ * 					ServiceRuntimeNetworkResourceGroup: pulumi.String("my-service-runtime-network-rg"),
+ * 					ServiceRuntimeSubnetId:             pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/serviceRuntime"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 			Sku: &appplatform.SkuArgs{
+ * 				Name: pulumi.String("S0"),
+ * 				Tier: pulumi.String("Standard"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const service = new azure_native.appplatform.Service("service", {
+ *     location: "eastus",
+ *     properties: {
+ *         networkProfile: {
+ *             appNetworkResourceGroup: "my-app-network-rg",
+ *             appSubnetId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps",
+ *             serviceCidr: "10.8.0.0/16,10.244.0.0/16,10.245.0.1/16",
+ *             serviceRuntimeNetworkResourceGroup: "my-service-runtime-network-rg",
+ *             serviceRuntimeSubnetId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/serviceRuntime",
+ *         },
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ *     sku: {
+ *         name: "S0",
+ *         tier: "Standard",
+ *     },
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service = azure_native.appplatform.Service("service",
+ *     location="eastus",
+ *     properties=azure_native.appplatform.ClusterResourcePropertiesArgs(
+ *         network_profile=azure_native.appplatform.NetworkProfileArgs(
+ *             app_network_resource_group="my-app-network-rg",
+ *             app_subnet_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/apps",
+ *             service_cidr="10.8.0.0/16,10.244.0.0/16,10.245.0.1/16",
+ *             service_runtime_network_resource_group="my-service-runtime-network-rg",
+ *             service_runtime_subnet_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/serviceRuntime",
+ *         ),
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice",
+ *     sku=azure_native.appplatform.SkuArgs(
+ *         name="S0",
+ *         tier="Standard",
+ *     ),
+ *     tags={
+ *         "key1": "value1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +279,72 @@ import javax.annotation.Nullable;
 public class Service extends io.pulumi.resources.CustomResource {
     /**
      * The GEO location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The GEO location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the Service resource
-     * 
      */
     @Export(name="properties", type=ClusterResourcePropertiesResponse.class, parameters={})
     private Output<ClusterResourcePropertiesResponse> properties;
 
     /**
      * @return Properties of the Service resource
-     * 
      */
     public Output<ClusterResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Sku of the Service resource
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return Sku of the Service resource
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags of the service which is a list of key value pairs that describe the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

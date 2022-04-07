@@ -18,37 +18,30 @@ import javax.annotation.Nullable;
 public final class AKSResponseProperties {
     /**
      * Number of agents
-     * 
      */
     private final @Nullable Integer agentCount;
     /**
      * Agent virtual machine size
-     * 
      */
     private final @Nullable String agentVmSize;
     /**
      * AKS networking configuration for vnet
-     * 
      */
     private final @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration;
     /**
      * Cluster full qualified domain name
-     * 
      */
     private final @Nullable String clusterFqdn;
     /**
      * Intended usage of the cluster
-     * 
      */
     private final @Nullable String clusterPurpose;
     /**
      * SSL configuration
-     * 
      */
     private final @Nullable SslConfigurationResponse sslConfiguration;
     /**
      * System services
-     * 
      */
     private final List<SystemServiceResponse> systemServices;
 
@@ -72,49 +65,42 @@ public final class AKSResponseProperties {
 
     /**
      * Number of agents
-     * 
     */
     public Optional<Integer> getAgentCount() {
         return Optional.ofNullable(this.agentCount);
     }
     /**
      * Agent virtual machine size
-     * 
     */
     public Optional<String> getAgentVmSize() {
         return Optional.ofNullable(this.agentVmSize);
     }
     /**
      * AKS networking configuration for vnet
-     * 
     */
     public Optional<AksNetworkingConfigurationResponse> getAksNetworkingConfiguration() {
         return Optional.ofNullable(this.aksNetworkingConfiguration);
     }
     /**
      * Cluster full qualified domain name
-     * 
     */
     public Optional<String> getClusterFqdn() {
         return Optional.ofNullable(this.clusterFqdn);
     }
     /**
      * Intended usage of the cluster
-     * 
     */
     public Optional<String> getClusterPurpose() {
         return Optional.ofNullable(this.clusterPurpose);
     }
     /**
      * SSL configuration
-     * 
     */
     public Optional<SslConfigurationResponse> getSslConfiguration() {
         return Optional.ofNullable(this.sslConfiguration);
     }
     /**
      * System services
-     * 
     */
     public List<SystemServiceResponse> getSystemServices() {
         return this.systemServices;

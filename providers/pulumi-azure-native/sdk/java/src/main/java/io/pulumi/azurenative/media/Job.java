@@ -26,7 +26,100 @@ import javax.annotation.Nullable;
  * A Job resource type. The progress and state can be obtained by polling a Job or subscribing to events using EventGrid.
  * API Version: 2020-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a Job
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var job = new AzureNative.Media.Job("job", new AzureNative.Media.JobArgs
+ *         {
+ *             AccountName = "contosomedia",
+ *             CorrelationData = 
+ *             {
+ *                 { "Key 2", "Value 2" },
+ *                 { "key1", "value1" },
+ *             },
+ *             Input = new AzureNative.Media.Inputs.JobInputAssetArgs
+ *             {
+ *                 AssetName = "job1-InputAsset",
+ *                 OdataType = "#Microsoft.Media.JobInputAsset",
+ *             },
+ *             JobName = "job1",
+ *             Outputs = 
+ *             {
+ *                 new AzureNative.Media.Inputs.JobOutputAssetArgs
+ *                 {
+ *                     AssetName = "job1-OutputAsset",
+ *                     OdataType = "#Microsoft.Media.JobOutputAsset",
+ *                 },
+ *             },
+ *             ResourceGroupName = "contosoresources",
+ *             TransformName = "exampleTransform",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const job = new azure_native.media.Job("job", {
+ *     accountName: "contosomedia",
+ *     correlationData: {
+ *         "Key 2": "Value 2",
+ *         key1: "value1",
+ *     },
+ *     input: {
+ *         assetName: "job1-InputAsset",
+ *         odataType: "#Microsoft.Media.JobInputAsset",
+ *     },
+ *     jobName: "job1",
+ *     outputs: [{
+ *         assetName: "job1-OutputAsset",
+ *         odataType: "#Microsoft.Media.JobOutputAsset",
+ *     }],
+ *     resourceGroupName: "contosoresources",
+ *     transformName: "exampleTransform",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * job = azure_native.media.Job("job",
+ *     account_name="contosomedia",
+ *     correlation_data={
+ *         "Key 2": "Value 2",
+ *         "key1": "value1",
+ *     },
+ *     input=azure_native.media.JobInputAssetArgs(
+ *         asset_name="job1-InputAsset",
+ *         odata_type="#Microsoft.Media.JobInputAsset",
+ *     ),
+ *     job_name="job1",
+ *     outputs=[{
+ *         "assetName": "job1-OutputAsset",
+ *         "odataType": "#Microsoft.Media.JobOutputAsset",
+ *     }],
+ *     resource_group_name="contosoresources",
+ *     transform_name="exampleTransform")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,182 +134,156 @@ import javax.annotation.Nullable;
 public class Job extends io.pulumi.resources.CustomResource {
     /**
      * Customer provided key, value pairs that will be returned in Job and JobOutput state events.
-     * 
      */
     @Export(name="correlationData", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> correlationData;
 
     /**
      * @return Customer provided key, value pairs that will be returned in Job and JobOutput state events.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getCorrelationData() {
         return this.correlationData;
     }
     /**
      * The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
      * @return The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
      */
     public Output<String> getCreated() {
         return this.created;
     }
     /**
      * Optional customer supplied description of the Job.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Optional customer supplied description of the Job.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The UTC date and time at which this Job finished processing.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
      * @return The UTC date and time at which this Job finished processing.
-     * 
      */
     public Output<String> getEndTime() {
         return this.endTime;
     }
     /**
      * The inputs for the Job.
-     * 
      */
     @Export(name="input", type=Object.class, parameters={})
     private Output<Object> input;
 
     /**
      * @return The inputs for the Job.
-     * 
      */
     public Output<Object> getInput() {
         return this.input;
     }
     /**
      * The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
      */
     @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
      * @return The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
-     * 
      */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The outputs for the Job.
-     * 
      */
     @Export(name="outputs", type=List.class, parameters={JobOutputAssetResponse.class})
     private Output<List<JobOutputAssetResponse>> outputs;
 
     /**
      * @return The outputs for the Job.
-     * 
      */
     public Output<List<JobOutputAssetResponse>> getOutputs() {
         return this.outputs;
     }
     /**
      * Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
-     * 
      */
     @Export(name="priority", type=String.class, parameters={})
     private Output</* @Nullable */ String> priority;
 
     /**
      * @return Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
-     * 
      */
     public Output</* @Nullable */ String> getPriority() {
         return this.priority;
     }
     /**
      * The UTC date and time at which this Job began processing.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
      * @return The UTC date and time at which this Job began processing.
-     * 
      */
     public Output<String> getStartTime() {
         return this.startTime;
     }
     /**
      * The current state of the job.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of the job.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

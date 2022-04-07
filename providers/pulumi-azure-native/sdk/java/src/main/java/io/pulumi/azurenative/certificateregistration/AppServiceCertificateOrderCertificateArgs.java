@@ -17,7 +17,6 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
 
     /**
      * Name of the certificate order.
-     * 
      */
     @Import(name="certificateOrderName", required=true)
       private final Output<String> certificateOrderName;
@@ -28,7 +27,6 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
 
     /**
      * Key Vault resource Id.
-     * 
      */
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
@@ -39,7 +37,6 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
 
     /**
      * Key Vault secret name.
-     * 
      */
     @Import(name="keyVaultSecretName")
       private final @Nullable Output<String> keyVaultSecretName;
@@ -50,7 +47,6 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -61,7 +57,6 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
 
     /**
      * Resource Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -72,7 +67,6 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
 
     /**
      * Name of the certificate.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -83,7 +77,6 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -94,7 +87,6 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

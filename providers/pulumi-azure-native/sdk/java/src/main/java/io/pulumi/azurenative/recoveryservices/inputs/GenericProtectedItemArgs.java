@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Base class for backup items.
- * 
  */
 public final class GenericProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -39,7 +37,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the backup set the backup item belongs to
-     * 
      */
     @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
@@ -50,7 +47,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Unique name of container
-     * 
      */
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
@@ -61,7 +57,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
@@ -72,7 +67,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Time for deferred deletion in UTC
-     * 
      */
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
@@ -83,7 +77,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
-     * 
      */
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
@@ -94,7 +87,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of this backup item's fabric.
-     * 
      */
     @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
@@ -105,7 +97,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -116,7 +107,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
-     * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
@@ -127,7 +117,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
-     * 
      */
     @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
@@ -138,7 +127,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
-     * 
      */
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
@@ -149,7 +137,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
-     * 
      */
     @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
@@ -160,7 +147,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -171,7 +157,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Indicates consistency of policy object and policy applied to this backup item.
-     * 
      */
     @Import(name="policyState")
       private final @Nullable Output<String> policyState;
@@ -182,7 +167,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Data Plane Service ID of the protected item.
-     * 
      */
     @Import(name="protectedItemId")
       private final @Nullable Output<Double> protectedItemId;
@@ -194,7 +178,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
     /**
      * backup item type.
      * Expected value is 'GenericProtectedItem'.
-     * 
      */
     @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
@@ -205,7 +188,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionState>> protectionState;
@@ -216,7 +198,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Loosely coupled (type, value) associations (example - parent of a protected item)
-     * 
      */
     @Import(name="sourceAssociations")
       private final @Nullable Output<Map<String,String>> sourceAssociations;
@@ -227,7 +208,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
@@ -238,7 +218,6 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
 
     /**
      * Type of workload this item represents.
-     * 
      */
     @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;

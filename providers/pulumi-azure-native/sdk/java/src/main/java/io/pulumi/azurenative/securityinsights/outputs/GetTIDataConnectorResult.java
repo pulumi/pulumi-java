@@ -14,43 +14,35 @@ import javax.annotation.Nullable;
 public final class GetTIDataConnectorResult {
     /**
      * The available data types for the connector.
-     * 
      */
     private final @Nullable TIDataConnectorDataTypesResponse dataTypes;
     /**
      * Etag of the azure resource
-     * 
      */
     private final @Nullable String etag;
     /**
      * Azure resource Id
-     * 
      */
     private final String id;
     /**
      * The kind of the data connector
      * Expected value is 'ThreatIntelligence'.
-     * 
      */
     private final String kind;
     /**
      * Azure resource name
-     * 
      */
     private final String name;
     /**
      * The tenant id to connect to, and get the data from.
-     * 
      */
     private final @Nullable String tenantId;
     /**
      * The lookback period for the feed to be imported.
-     * 
      */
     private final @Nullable String tipLookbackPeriod;
     /**
      * Azure resource type
-     * 
      */
     private final String type;
 
@@ -76,21 +68,18 @@ public final class GetTIDataConnectorResult {
 
     /**
      * The available data types for the connector.
-     * 
     */
     public Optional<TIDataConnectorDataTypesResponse> getDataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
     /**
      * Etag of the azure resource
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
-     * 
     */
     public String getId() {
         return this.id;
@@ -98,35 +87,30 @@ public final class GetTIDataConnectorResult {
     /**
      * The kind of the data connector
      * Expected value is 'ThreatIntelligence'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The tenant id to connect to, and get the data from.
-     * 
     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The lookback period for the feed to be imported.
-     * 
     */
     public Optional<String> getTipLookbackPeriod() {
         return Optional.ofNullable(this.tipLookbackPeriod);
     }
     /**
      * Azure resource type
-     * 
     */
     public String getType() {
         return this.type;

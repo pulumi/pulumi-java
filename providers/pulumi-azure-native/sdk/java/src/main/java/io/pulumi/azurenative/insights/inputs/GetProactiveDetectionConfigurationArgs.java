@@ -14,7 +14,6 @@ public final class GetProactiveDetectionConfigurationArgs extends io.pulumi.reso
 
     /**
      * The ProactiveDetection configuration ID. This is unique within a Application Insights component.
-     * 
      */
     @Import(name="configurationId", required=true)
       private final String configurationId;
@@ -25,7 +24,6 @@ public final class GetProactiveDetectionConfigurationArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetProactiveDetectionConfigurationArgs extends io.pulumi.reso
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

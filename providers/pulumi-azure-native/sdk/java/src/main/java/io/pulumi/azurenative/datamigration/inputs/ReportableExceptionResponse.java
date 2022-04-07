@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Exception object for all custom exceptions
- * 
  */
 public final class ReportableExceptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
 
     /**
      * Actionable steps for this exception
-     * 
      */
     @Import(name="actionableMessage")
       private final @Nullable String actionableMessage;
@@ -32,7 +30,6 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
 
     /**
      * The path to the file where exception occurred
-     * 
      */
     @Import(name="filePath", required=true)
       private final String filePath;
@@ -43,7 +40,6 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
 
     /**
      * Coded numerical value that is assigned to a specific exception
-     * 
      */
     @Import(name="hResult", required=true)
       private final Integer hResult;
@@ -54,7 +50,6 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
 
     /**
      * The line number where exception occurred
-     * 
      */
     @Import(name="lineNumber", required=true)
       private final String lineNumber;
@@ -65,7 +60,6 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
 
     /**
      * Error message
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -76,7 +70,6 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
 
     /**
      * Stack trace
-     * 
      */
     @Import(name="stackTrace", required=true)
       private final String stackTrace;

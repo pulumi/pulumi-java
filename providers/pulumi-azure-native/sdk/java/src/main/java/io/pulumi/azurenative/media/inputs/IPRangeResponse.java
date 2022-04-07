@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The IP address range in the CIDR scheme.
- * 
  */
 public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The IP address.
-     * 
      */
     @Import(name="address")
       private final @Nullable String address;
@@ -32,7 +30,6 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The friendly name for the IP address range.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -43,7 +40,6 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The subnet mask prefix length (see CIDR notation).
-     * 
      */
     @Import(name="subnetPrefixLength")
       private final @Nullable Integer subnetPrefixLength;

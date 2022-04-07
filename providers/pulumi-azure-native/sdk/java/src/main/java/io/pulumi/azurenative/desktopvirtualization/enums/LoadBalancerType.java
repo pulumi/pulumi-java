@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the load balancer.
-     * 
      */
     @EnumType
     public enum LoadBalancerType {

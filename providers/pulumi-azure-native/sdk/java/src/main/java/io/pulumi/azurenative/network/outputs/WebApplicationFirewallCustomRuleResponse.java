@@ -16,32 +16,26 @@ import javax.annotation.Nullable;
 public final class WebApplicationFirewallCustomRuleResponse {
     /**
      * Type of Actions.
-     * 
      */
     private final String action;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * List of match conditions.
-     * 
      */
     private final List<MatchConditionResponse> matchConditions;
     /**
      * The name of the resource that is unique within a policy. This name can be used to access the resource.
-     * 
      */
     private final @Nullable String name;
     /**
      * Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
-     * 
      */
     private final Integer priority;
     /**
      * The rule type.
-     * 
      */
     private final String ruleType;
 
@@ -63,42 +57,36 @@ public final class WebApplicationFirewallCustomRuleResponse {
 
     /**
      * Type of Actions.
-     * 
     */
     public String getAction() {
         return this.action;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * List of match conditions.
-     * 
     */
     public List<MatchConditionResponse> getMatchConditions() {
         return this.matchConditions;
     }
     /**
      * The name of the resource that is unique within a policy. This name can be used to access the resource.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
-     * 
     */
     public Integer getPriority() {
         return this.priority;
     }
     /**
      * The rule type.
-     * 
     */
     public String getRuleType() {
         return this.ruleType;

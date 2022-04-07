@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Graph parameter's type.
-     * 
      */
     @EnumType
     public enum ParameterType {

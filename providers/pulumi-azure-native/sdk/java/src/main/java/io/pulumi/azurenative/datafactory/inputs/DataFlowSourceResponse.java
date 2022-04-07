@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Transformation for data flow source.
- * 
  */
 public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Dataset reference.
-     * 
      */
     @Import(name="dataset")
       private final @Nullable DatasetReferenceResponse dataset;
@@ -34,7 +32,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Transformation description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -45,7 +42,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Flowlet Reference
-     * 
      */
     @Import(name="flowlet")
       private final @Nullable DataFlowReferenceResponse flowlet;
@@ -56,7 +52,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedService")
       private final @Nullable LinkedServiceReferenceResponse linkedService;
@@ -67,7 +62,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Transformation name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -78,7 +72,6 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Schema linked service reference.
-     * 
      */
     @Import(name="schemaLinkedService")
       private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;

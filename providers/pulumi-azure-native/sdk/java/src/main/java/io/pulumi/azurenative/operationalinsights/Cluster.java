@@ -24,7 +24,109 @@ import javax.annotation.Nullable;
  * The top level Log Analytics cluster resource container.
  * API Version: 2020-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ClustersCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cluster = new AzureNative.OperationalInsights.Cluster("cluster", new AzureNative.OperationalInsights.ClusterArgs
+ *         {
+ *             ClusterName = "oiautorest6685",
+ *             Location = "australiasoutheast",
+ *             ResourceGroupName = "oiautorest6685",
+ *             Sku = new AzureNative.OperationalInsights.Inputs.ClusterSkuArgs
+ *             {
+ *                 Capacity = 1000,
+ *                 Name = "CapacityReservation",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "tag1", "val1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationalinsights.NewCluster(ctx, "cluster", &operationalinsights.ClusterArgs{
+ * 			ClusterName:       pulumi.String("oiautorest6685"),
+ * 			Location:          pulumi.String("australiasoutheast"),
+ * 			ResourceGroupName: pulumi.String("oiautorest6685"),
+ * 			Sku: &operationalinsights.ClusterSkuArgs{
+ * 				Capacity: pulumi.Float64(1000),
+ * 				Name:     pulumi.String("CapacityReservation"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("val1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cluster = new azure_native.operationalinsights.Cluster("cluster", {
+ *     clusterName: "oiautorest6685",
+ *     location: "australiasoutheast",
+ *     resourceGroupName: "oiautorest6685",
+ *     sku: {
+ *         capacity: 1000,
+ *         name: "CapacityReservation",
+ *     },
+ *     tags: {
+ *         tag1: "val1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cluster = azure_native.operationalinsights.Cluster("cluster",
+ *     cluster_name="oiautorest6685",
+ *     location="australiasoutheast",
+ *     resource_group_name="oiautorest6685",
+ *     sku=azure_native.operationalinsights.ClusterSkuArgs(
+ *         capacity=1000,
+ *         name="CapacityReservation",
+ *     ),
+ *     tags={
+ *         "tag1": "val1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,210 +141,180 @@ import javax.annotation.Nullable;
 public class Cluster extends io.pulumi.resources.CustomResource {
     /**
      * The list of Log Analytics workspaces associated with the cluster
-     * 
      */
     @Export(name="associatedWorkspaces", type=List.class, parameters={AssociatedWorkspaceResponse.class})
     private Output</* @Nullable */ List<AssociatedWorkspaceResponse>> associatedWorkspaces;
 
     /**
      * @return The list of Log Analytics workspaces associated with the cluster
-     * 
      */
     public Output</* @Nullable */ List<AssociatedWorkspaceResponse>> getAssociatedWorkspaces() {
         return this.associatedWorkspaces;
     }
     /**
      * The cluster's billing type.
-     * 
      */
     @Export(name="billingType", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingType;
 
     /**
      * @return The cluster's billing type.
-     * 
      */
     public Output</* @Nullable */ String> getBillingType() {
         return this.billingType;
     }
     /**
      * Additional properties for capacity reservation
-     * 
      */
     @Export(name="capacityReservationProperties", type=CapacityReservationPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ CapacityReservationPropertiesResponse> capacityReservationProperties;
 
     /**
      * @return Additional properties for capacity reservation
-     * 
      */
     public Output</* @Nullable */ CapacityReservationPropertiesResponse> getCapacityReservationProperties() {
         return this.capacityReservationProperties;
     }
     /**
      * The ID associated with the cluster.
-     * 
      */
     @Export(name="clusterId", type=String.class, parameters={})
     private Output<String> clusterId;
 
     /**
      * @return The ID associated with the cluster.
-     * 
      */
     public Output<String> getClusterId() {
         return this.clusterId;
     }
     /**
      * The cluster creation time
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return The cluster creation time
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The identity of the resource.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return The identity of the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
-     * 
      */
     @Export(name="isAvailabilityZonesEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isAvailabilityZonesEnabled;
 
     /**
      * @return Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsAvailabilityZonesEnabled() {
         return this.isAvailabilityZonesEnabled;
     }
     /**
      * The associated key properties.
-     * 
      */
     @Export(name="keyVaultProperties", type=KeyVaultPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultPropertiesResponse> keyVaultProperties;
 
     /**
      * @return The associated key properties.
-     * 
      */
     public Output</* @Nullable */ KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return this.keyVaultProperties;
     }
     /**
      * The last time the cluster was updated.
-     * 
      */
     @Export(name="lastModifiedDate", type=String.class, parameters={})
     private Output<String> lastModifiedDate;
 
     /**
      * @return The last time the cluster was updated.
-     * 
      */
     public Output<String> getLastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the cluster.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the cluster.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku properties.
-     * 
      */
     @Export(name="sku", type=ClusterSkuResponse.class, parameters={})
     private Output</* @Nullable */ ClusterSkuResponse> sku;
 
     /**
      * @return The sku properties.
-     * 
      */
     public Output</* @Nullable */ ClusterSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

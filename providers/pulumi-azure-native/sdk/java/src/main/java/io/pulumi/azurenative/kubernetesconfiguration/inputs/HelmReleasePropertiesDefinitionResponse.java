@@ -17,7 +17,6 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
 
     /**
      * Total number of times that the HelmRelease failed to install or upgrade
-     * 
      */
     @Import(name="failureCount")
       private final @Nullable Double failureCount;
@@ -28,7 +27,6 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
 
     /**
      * The reference to the HelmChart object used as the source to this HelmRelease
-     * 
      */
     @Import(name="helmChartRef")
       private final @Nullable ObjectReferenceDefinitionResponse helmChartRef;
@@ -39,7 +37,6 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
 
     /**
      * Number of times that the HelmRelease failed to install
-     * 
      */
     @Import(name="installFailureCount")
       private final @Nullable Double installFailureCount;
@@ -50,7 +47,6 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
 
     /**
      * The revision number of the last released object change
-     * 
      */
     @Import(name="lastRevisionApplied")
       private final @Nullable Double lastRevisionApplied;
@@ -61,7 +57,6 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
 
     /**
      * Number of times that the HelmRelease failed to upgrade
-     * 
      */
     @Import(name="upgradeFailureCount")
       private final @Nullable Double upgradeFailureCount;

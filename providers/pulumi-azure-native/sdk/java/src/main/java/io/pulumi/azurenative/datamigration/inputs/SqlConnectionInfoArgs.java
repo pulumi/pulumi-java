@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information for connecting to SQL database server
- * 
  */
 public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Additional connection settings
-     * 
      */
     @Import(name="additionalSettings")
       private final @Nullable Output<String> additionalSettings;
@@ -35,7 +33,6 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Authentication type to use for connection
-     * 
      */
     @Import(name="authentication")
       private final @Nullable Output<Either<String,AuthenticationType>> authentication;
@@ -46,7 +43,6 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
-     * 
      */
     @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
@@ -57,7 +53,6 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Whether to encrypt the connection
-     * 
      */
     @Import(name="encryptConnection")
       private final @Nullable Output<Boolean> encryptConnection;
@@ -68,7 +63,6 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Password credential.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -79,7 +73,6 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Server platform type for connection
-     * 
      */
     @Import(name="platform")
       private final @Nullable Output<Either<String,SqlSourcePlatform>> platform;
@@ -90,7 +83,6 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Whether to trust the server certificate
-     * 
      */
     @Import(name="trustServerCertificate")
       private final @Nullable Output<Boolean> trustServerCertificate;
@@ -102,7 +94,6 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     /**
      * Type of connection info
      * Expected value is 'SqlConnectionInfo'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -113,7 +104,6 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * User name
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

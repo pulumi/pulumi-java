@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The X12 agreement framing settings.
- * 
  */
 public final class X12FramingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The X12 character set.
-     * 
      */
     @Import(name="characterSet", required=true)
       private final String characterSet;
@@ -31,7 +29,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The component separator.
-     * 
      */
     @Import(name="componentSeparator", required=true)
       private final Integer componentSeparator;
@@ -42,7 +39,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The data element separator.
-     * 
      */
     @Import(name="dataElementSeparator", required=true)
       private final Integer dataElementSeparator;
@@ -53,7 +49,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The replacement character.
-     * 
      */
     @Import(name="replaceCharacter", required=true)
       private final Integer replaceCharacter;
@@ -64,7 +59,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The value indicating whether to replace separators in payload.
-     * 
      */
     @Import(name="replaceSeparatorsInPayload", required=true)
       private final Boolean replaceSeparatorsInPayload;
@@ -75,7 +69,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The segment terminator.
-     * 
      */
     @Import(name="segmentTerminator", required=true)
       private final Integer segmentTerminator;
@@ -86,7 +79,6 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * The segment terminator suffix.
-     * 
      */
     @Import(name="segmentTerminatorSuffix", required=true)
       private final String segmentTerminatorSuffix;

@@ -14,7 +14,6 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends io.pulumi.reso
 
     /**
      * The name of the virtual network gateway connection.
-     * 
      */
     @Import(name="virtualNetworkGatewayConnectionName", required=true)
       private final String virtualNetworkGatewayConnectionName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Replication properties
- * 
  */
 public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Indicates whether the local volume is the source or destination for the Volume Replication
-     * 
      */
     @Import(name="endpointType")
       private final @Nullable String endpointType;
@@ -31,7 +29,6 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The remote region for the other end of the Volume Replication.
-     * 
      */
     @Import(name="remoteVolumeRegion")
       private final @Nullable String remoteVolumeRegion;
@@ -42,7 +39,6 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The resource ID of the remote volume.
-     * 
      */
     @Import(name="remoteVolumeResourceId", required=true)
       private final String remoteVolumeResourceId;
@@ -53,7 +49,6 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Id
-     * 
      */
     @Import(name="replicationId")
       private final @Nullable String replicationId;
@@ -64,7 +59,6 @@ public final class ReplicationObjectResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Schedule
-     * 
      */
     @Import(name="replicationSchedule", required=true)
       private final String replicationSchedule;

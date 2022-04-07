@@ -14,7 +14,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the route.
-     * 
      */
     @Import(name="routeName", required=true)
       private final String routeName;
@@ -36,7 +34,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the route table.
-     * 
      */
     @Import(name="routeTableName", required=true)
       private final String routeTableName;

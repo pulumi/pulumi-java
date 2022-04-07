@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subscriber detail
- * 
  */
 public final class OrganizationResourcePropertiesResponseUserDetail extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
 
     /**
      * Email address
-     * 
      */
     @Import(name="emailAddress")
       private final @Nullable String emailAddress;
@@ -31,7 +29,6 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
 
     /**
      * First name
-     * 
      */
     @Import(name="firstName")
       private final @Nullable String firstName;
@@ -42,7 +39,6 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
 
     /**
      * Last name
-     * 
      */
     @Import(name="lastName")
       private final @Nullable String lastName;

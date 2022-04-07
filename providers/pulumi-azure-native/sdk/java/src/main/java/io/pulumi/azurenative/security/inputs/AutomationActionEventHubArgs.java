@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The target Event Hub to which event data will be exported. To learn more about Security Center continuous export capabilities, visit https://aka.ms/ASCExportLearnMore
- * 
  */
 public final class AutomationActionEventHubArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
     /**
      * The type of the action that will be triggered by the Automation
      * Expected value is 'EventHub'.
-     * 
      */
     @Import(name="actionType", required=true)
       private final Output<String> actionType;
@@ -32,7 +30,6 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
 
     /**
      * The target Event Hub connection string (it will not be included in any response).
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
@@ -43,7 +40,6 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
 
     /**
      * The target Event Hub Azure Resource ID.
-     * 
      */
     @Import(name="eventHubResourceId")
       private final @Nullable Output<String> eventHubResourceId;

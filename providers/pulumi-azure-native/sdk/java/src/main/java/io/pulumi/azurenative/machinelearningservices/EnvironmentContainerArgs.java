@@ -16,7 +16,6 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
 
     /**
      * Container name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -27,7 +26,6 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
 
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentContainerArgs> properties;
@@ -38,7 +36,6 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

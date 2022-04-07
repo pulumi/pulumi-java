@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Integration runtime reference type.
- * 
  */
 public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
 
     /**
      * Arguments for integration runtime.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
@@ -33,7 +31,6 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
 
     /**
      * Reference integration runtime name.
-     * 
      */
     @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
@@ -44,7 +41,6 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
 
     /**
      * Type of integration runtime.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

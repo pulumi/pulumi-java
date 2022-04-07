@@ -20,7 +20,92 @@ import javax.annotation.Nullable;
  * The key resource.
  * API Version: 2019-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a key
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var key = new AzureNative.KeyVault.Key("key", new AzureNative.KeyVault.KeyArgs
+ *         {
+ *             KeyName = "sample-key-name",
+ *             Properties = new AzureNative.KeyVault.Inputs.KeyPropertiesArgs
+ *             {
+ *                 Kty = "RSA",
+ *             },
+ *             ResourceGroupName = "sample-group",
+ *             VaultName = "sample-vault-name",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := keyvault.NewKey(ctx, "key", &keyvault.KeyArgs{
+ * 			KeyName: pulumi.String("sample-key-name"),
+ * 			Properties: &keyvault.KeyPropertiesArgs{
+ * 				Kty: pulumi.String("RSA"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("sample-group"),
+ * 			VaultName:         pulumi.String("sample-vault-name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const key = new azure_native.keyvault.Key("key", {
+ *     keyName: "sample-key-name",
+ *     properties: {
+ *         kty: "RSA",
+ *     },
+ *     resourceGroupName: "sample-group",
+ *     vaultName: "sample-vault-name",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * key = azure_native.keyvault.Key("key",
+ *     key_name="sample-key-name",
+ *     properties=azure_native.keyvault.KeyPropertiesArgs(
+ *         kty="RSA",
+ *     ),
+ *     resource_group_name="sample-group",
+ *     vault_name="sample-vault-name")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,28 +120,24 @@ import javax.annotation.Nullable;
 public class Key extends io.pulumi.resources.CustomResource {
     /**
      * The attributes of the key.
-     * 
      */
     @Export(name="attributes", type=KeyAttributesResponse.class, parameters={})
     private Output</* @Nullable */ KeyAttributesResponse> attributes;
 
     /**
      * @return The attributes of the key.
-     * 
      */
     public Output</* @Nullable */ KeyAttributesResponse> getAttributes() {
         return this.attributes;
     }
     /**
      * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
-     * 
      */
     @Export(name="curveName", type=String.class, parameters={})
     private Output</* @Nullable */ String> curveName;
 
     /**
      * @return The elliptic curve name. For valid values, see JsonWebKeyCurveName.
-     * 
      */
     public Output</* @Nullable */ String> getCurveName() {
         return this.curveName;
@@ -69,112 +150,96 @@ public class Key extends io.pulumi.resources.CustomResource {
     }
     /**
      * The key size in bits. For example: 2048, 3072, or 4096 for RSA.
-     * 
      */
     @Export(name="keySize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> keySize;
 
     /**
      * @return The key size in bits. For example: 2048, 3072, or 4096 for RSA.
-     * 
      */
     public Output</* @Nullable */ Integer> getKeySize() {
         return this.keySize;
     }
     /**
      * The URI to retrieve the current version of the key.
-     * 
      */
     @Export(name="keyUri", type=String.class, parameters={})
     private Output<String> keyUri;
 
     /**
      * @return The URI to retrieve the current version of the key.
-     * 
      */
     public Output<String> getKeyUri() {
         return this.keyUri;
     }
     /**
      * The URI to retrieve the specific version of the key.
-     * 
      */
     @Export(name="keyUriWithVersion", type=String.class, parameters={})
     private Output<String> keyUriWithVersion;
 
     /**
      * @return The URI to retrieve the specific version of the key.
-     * 
      */
     public Output<String> getKeyUriWithVersion() {
         return this.keyUriWithVersion;
     }
     /**
      * The type of the key. For valid values, see JsonWebKeyType.
-     * 
      */
     @Export(name="kty", type=String.class, parameters={})
     private Output</* @Nullable */ String> kty;
 
     /**
      * @return The type of the key. For valid values, see JsonWebKeyType.
-     * 
      */
     public Output</* @Nullable */ String> getKty() {
         return this.kty;
     }
     /**
      * Azure location of the key vault resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Azure location of the key vault resource.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Name of the key vault resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the key vault resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Tags assigned to the key vault resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
      * @return Tags assigned to the key vault resource.
-     * 
      */
     public Output<Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type of the key vault resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type of the key vault resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

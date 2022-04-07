@@ -16,7 +16,6 @@ public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Represents maximum throughput, the resource can scale up to.
-     * 
      */
     @Import(name="maxThroughput")
       private final @Nullable Output<Integer> maxThroughput;

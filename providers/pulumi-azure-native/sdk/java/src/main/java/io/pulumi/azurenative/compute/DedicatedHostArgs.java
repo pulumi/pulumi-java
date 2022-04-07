@@ -21,7 +21,6 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.
-     * 
      */
     @Import(name="autoReplaceOnFailure")
       private final @Nullable Output<Boolean> autoReplaceOnFailure;
@@ -32,7 +31,6 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the dedicated host group.
-     * 
      */
     @Import(name="hostGroupName", required=true)
       private final Output<String> hostGroupName;
@@ -43,7 +41,6 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the dedicated host .
-     * 
      */
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
@@ -54,7 +51,6 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable Output<DedicatedHostLicenseTypes> licenseType;
@@ -65,7 +61,6 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -76,7 +71,6 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fault domain of the dedicated host within a dedicated host group.
-     * 
      */
     @Import(name="platformFaultDomain")
       private final @Nullable Output<Integer> platformFaultDomain;
@@ -87,7 +81,6 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -98,7 +91,6 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -109,7 +101,6 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

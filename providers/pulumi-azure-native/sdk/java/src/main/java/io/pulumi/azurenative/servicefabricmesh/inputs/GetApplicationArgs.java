@@ -14,7 +14,6 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identity of the application.
-     * 
      */
     @Import(name="applicationResourceName", required=true)
       private final String applicationResourceName;
@@ -25,7 +24,6 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Azure resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

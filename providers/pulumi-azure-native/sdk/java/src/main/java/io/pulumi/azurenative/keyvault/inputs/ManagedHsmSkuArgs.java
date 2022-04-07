@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * SKU details
- * 
  */
 public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SKU Family of the managed HSM Pool
-     * 
      */
     @Import(name="family", required=true)
       private final Output<Either<String,ManagedHsmSkuFamily>> family;
@@ -33,7 +31,6 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SKU of the managed HSM Pool
-     * 
      */
     @Import(name="name", required=true)
       private final Output<ManagedHsmSkuName> name;

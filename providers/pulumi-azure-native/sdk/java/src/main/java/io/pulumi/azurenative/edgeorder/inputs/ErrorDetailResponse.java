@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The error detail.
- * 
  */
 public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error additional info.
-     * 
      */
     @Import(name="additionalInfo", required=true)
       private final List<ErrorAdditionalInfoResponse> additionalInfo;
@@ -31,7 +29,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error code.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -42,7 +39,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error details.
-     * 
      */
     @Import(name="details", required=true)
       private final List<ErrorDetailResponse> details;
@@ -53,7 +49,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error message.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -64,7 +59,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error target.
-     * 
      */
     @Import(name="target", required=true)
       private final String target;

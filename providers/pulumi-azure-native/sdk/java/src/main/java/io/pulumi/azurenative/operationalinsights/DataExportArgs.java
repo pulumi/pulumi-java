@@ -18,7 +18,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The latest data export rule modification time.
-     * 
      */
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
@@ -29,7 +28,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data export rule ID.
-     * 
      */
     @Import(name="dataExportId")
       private final @Nullable Output<String> dataExportId;
@@ -40,7 +38,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data export rule name.
-     * 
      */
     @Import(name="dataExportName")
       private final @Nullable Output<String> dataExportName;
@@ -51,7 +48,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Active when enabled.
-     * 
      */
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
@@ -62,7 +58,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
-     * 
      */
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
@@ -73,7 +68,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Date and time when the export was last modified.
-     * 
      */
     @Import(name="lastModifiedDate")
       private final @Nullable Output<String> lastModifiedDate;
@@ -84,7 +78,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -95,7 +88,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
@@ -106,7 +98,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
-     * 
      */
     @Import(name="tableNames", required=true)
       private final Output<List<String>> tableNames;
@@ -117,7 +108,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

@@ -27,7 +27,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The address prefix for the subnet.
-     * 
      */
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
@@ -38,7 +37,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of address prefixes for the subnet.
-     * 
      */
     @Import(name="addressPrefixes")
       private final @Nullable Output<List<String>> addressPrefixes;
@@ -49,7 +47,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Application gateway IP configurations of virtual network resource.
-     * 
      */
     @Import(name="applicationGatewayIpConfigurations")
       private final @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
@@ -60,7 +57,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of references to the delegations on the subnet.
-     * 
      */
     @Import(name="delegations")
       private final @Nullable Output<List<DelegationArgs>> delegations;
@@ -71,7 +67,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -82,7 +77,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Array of IpAllocation which reference this subnet.
-     * 
      */
     @Import(name="ipAllocations")
       private final @Nullable Output<List<SubResourceArgs>> ipAllocations;
@@ -93,7 +87,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -104,7 +97,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Nat gateway associated with this subnet.
-     * 
      */
     @Import(name="natGateway")
       private final @Nullable Output<SubResourceArgs> natGateway;
@@ -115,7 +107,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The reference to the NetworkSecurityGroup resource.
-     * 
      */
     @Import(name="networkSecurityGroup")
       private final @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
@@ -126,7 +117,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enable or Disable apply network policies on private end point in the subnet.
-     * 
      */
     @Import(name="privateEndpointNetworkPolicies")
       private final @Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
@@ -137,7 +127,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enable or Disable apply network policies on private link service in the subnet.
-     * 
      */
     @Import(name="privateLinkServiceNetworkPolicies")
       private final @Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
@@ -148,7 +137,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -159,7 +147,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The reference to the RouteTable resource.
-     * 
      */
     @Import(name="routeTable")
       private final @Nullable Output<RouteTableArgs> routeTable;
@@ -170,7 +157,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of service endpoint policies.
-     * 
      */
     @Import(name="serviceEndpointPolicies")
       private final @Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
@@ -181,7 +167,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An array of service endpoints.
-     * 
      */
     @Import(name="serviceEndpoints")
       private final @Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
@@ -192,7 +177,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the subnet.
-     * 
      */
     @Import(name="subnetName")
       private final @Nullable Output<String> subnetName;
@@ -203,7 +187,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -214,7 +197,6 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the virtual network.
-     * 
      */
     @Import(name="virtualNetworkName", required=true)
       private final Output<String> virtualNetworkName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The Key to be used to generate token for user.
-     * 
      */
     @EnumType
     public enum KeyType {

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class EdifactAgreementContentResponse {
     /**
      * The EDIFACT one-way receive agreement.
-     * 
      */
     private final EdifactOneWayAgreementResponse receiveAgreement;
     /**
      * The EDIFACT one-way send agreement.
-     * 
      */
     private final EdifactOneWayAgreementResponse sendAgreement;
 
@@ -30,14 +28,12 @@ public final class EdifactAgreementContentResponse {
 
     /**
      * The EDIFACT one-way receive agreement.
-     * 
     */
     public EdifactOneWayAgreementResponse getReceiveAgreement() {
         return this.receiveAgreement;
     }
     /**
      * The EDIFACT one-way send agreement.
-     * 
     */
     public EdifactOneWayAgreementResponse getSendAgreement() {
         return this.sendAgreement;

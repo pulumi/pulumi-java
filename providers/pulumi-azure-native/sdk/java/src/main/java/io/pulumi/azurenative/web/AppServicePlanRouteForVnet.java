@@ -29,42 +29,36 @@ import javax.annotation.Nullable;
 public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResource {
     /**
      * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-     * 
      */
     @Export(name="endAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> endAddress;
 
     /**
      * @return The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-     * 
      */
     public Output</* @Nullable */ String> getEndAddress() {
         return this.endAddress;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -76,7 +70,6 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * STATIC - Static route set on the app only
      * 
      * These values will be used for syncing an app's routes with those from a Virtual Network.
-     * 
      */
     @Export(name="routeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> routeType;
@@ -88,35 +81,30 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * STATIC - Static route set on the app only
      * 
      * These values will be used for syncing an app's routes with those from a Virtual Network.
-     * 
      */
     public Output</* @Nullable */ String> getRouteType() {
         return this.routeType;
     }
     /**
      * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
-     * 
      */
     @Export(name="startAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> startAddress;
 
     /**
      * @return The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
-     * 
      */
     public Output</* @Nullable */ String> getStartAddress() {
         return this.startAddress;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

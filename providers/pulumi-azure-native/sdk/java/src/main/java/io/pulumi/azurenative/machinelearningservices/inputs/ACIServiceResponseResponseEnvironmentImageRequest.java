@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Environment, models and assets used for inferencing.
- * 
  */
 public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
 
     /**
      * The list of assets.
-     * 
      */
     @Import(name="assets")
       private final @Nullable List<ImageAssetResponse> assets;
@@ -36,7 +34,6 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
 
     /**
      * The name of the driver file.
-     * 
      */
     @Import(name="driverProgram")
       private final @Nullable String driverProgram;
@@ -47,7 +44,6 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
 
     /**
      * The details of the AZURE ML environment.
-     * 
      */
     @Import(name="environment")
       private final @Nullable EnvironmentImageResponseResponseEnvironment environment;
@@ -58,7 +54,6 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
 
     /**
      * The unique identifying details of the AZURE ML environment.
-     * 
      */
     @Import(name="environmentReference")
       private final @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
@@ -69,7 +64,6 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
 
     /**
      * The list of model Ids.
-     * 
      */
     @Import(name="modelIds")
       private final @Nullable List<String> modelIds;
@@ -80,7 +74,6 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
 
     /**
      * The list of models.
-     * 
      */
     @Import(name="models")
       private final @Nullable List<ModelResponse> models;

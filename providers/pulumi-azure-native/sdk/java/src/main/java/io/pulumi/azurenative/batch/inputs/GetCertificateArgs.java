@@ -14,7 +14,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Batch account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identifier for the certificate. This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request. For example SHA1-a3d1c5.
-     * 
      */
     @Import(name="certificateName", required=true)
       private final String certificateName;
@@ -36,7 +34,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the Batch account.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

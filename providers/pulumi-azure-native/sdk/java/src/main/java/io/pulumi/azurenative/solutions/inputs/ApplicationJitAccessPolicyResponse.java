@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Managed application Jit access policy.
- * 
  */
 public final class ApplicationJitAccessPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ApplicationJitAccessPolicyResponse extends io.pulumi.resource
 
     /**
      * Whether the JIT access is enabled.
-     * 
      */
     @Import(name="jitAccessEnabled", required=true)
       private final Boolean jitAccessEnabled;
@@ -34,7 +32,6 @@ public final class ApplicationJitAccessPolicyResponse extends io.pulumi.resource
 
     /**
      * JIT approval mode.
-     * 
      */
     @Import(name="jitApprovalMode")
       private final @Nullable String jitApprovalMode;
@@ -45,7 +42,6 @@ public final class ApplicationJitAccessPolicyResponse extends io.pulumi.resource
 
     /**
      * The JIT approvers
-     * 
      */
     @Import(name="jitApprovers")
       private final @Nullable List<JitApproverDefinitionResponse> jitApprovers;
@@ -56,7 +52,6 @@ public final class ApplicationJitAccessPolicyResponse extends io.pulumi.resource
 
     /**
      * The maximum duration JIT access is granted. This is an ISO8601 time period value.
-     * 
      */
     @Import(name="maximumJitAccessDuration")
       private final @Nullable String maximumJitAccessDuration;

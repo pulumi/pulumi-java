@@ -14,7 +14,6 @@ public final class GetEnvironmentContainerArgs extends io.pulumi.resources.Invok
 
     /**
      * Container name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetEnvironmentContainerArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetEnvironmentContainerArgs extends io.pulumi.resources.Invok
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * ArcSetting details.
  * API Version: 2021-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create ArcSetting
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var arcSetting = new AzureNative.AzureStackHCI.ArcSetting("arcSetting", new AzureNative.AzureStackHCI.ArcSettingArgs
+ *         {
+ *             ArcSettingName = "default",
+ *             ClusterName = "myCluster",
+ *             ResourceGroupName = "test-rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	azurestackhci "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azurestackhci"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := azurestackhci.NewArcSetting(ctx, "arcSetting", &azurestackhci.ArcSettingArgs{
+ * 			ArcSettingName:    pulumi.String("default"),
+ * 			ClusterName:       pulumi.String("myCluster"),
+ * 			ResourceGroupName: pulumi.String("test-rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const arcSetting = new azure_native.azurestackhci.ArcSetting("arcSetting", {
+ *     arcSettingName: "default",
+ *     clusterName: "myCluster",
+ *     resourceGroupName: "test-rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * arc_setting = azure_native.azurestackhci.ArcSetting("arcSetting",
+ *     arc_setting_name="default",
+ *     cluster_name="myCluster",
+ *     resource_group_name="test-rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,168 +105,144 @@ import javax.annotation.Nullable;
 public class ArcSetting extends io.pulumi.resources.CustomResource {
     /**
      * Aggregate state of Arc agent across the nodes in this HCI cluster.
-     * 
      */
     @Export(name="aggregateState", type=String.class, parameters={})
     private Output<String> aggregateState;
 
     /**
      * @return Aggregate state of Arc agent across the nodes in this HCI cluster.
-     * 
      */
     public Output<String> getAggregateState() {
         return this.aggregateState;
     }
     /**
      * The resource group that hosts the Arc agents, ie. Hybrid Compute Machine resources.
-     * 
      */
     @Export(name="arcInstanceResourceGroup", type=String.class, parameters={})
     private Output<String> arcInstanceResourceGroup;
 
     /**
      * @return The resource group that hosts the Arc agents, ie. Hybrid Compute Machine resources.
-     * 
      */
     public Output<String> getArcInstanceResourceGroup() {
         return this.arcInstanceResourceGroup;
     }
     /**
      * The timestamp of resource creation (UTC).
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
     /**
      * @return The timestamp of resource creation (UTC).
-     * 
      */
     public Output</* @Nullable */ String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The identity that created the resource.
-     * 
      */
     @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
     /**
      * @return The identity that created the resource.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The type of identity that created the resource.
-     * 
      */
     @Export(name="createdByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdByType;
 
     /**
      * @return The type of identity that created the resource.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedByType() {
         return this.createdByType;
     }
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedAt;
 
     /**
      * @return The timestamp of resource last modification (UTC)
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * The identity that last modified the resource.
-     * 
      */
     @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
      * @return The identity that last modified the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The type of identity that last modified the resource.
-     * 
      */
     @Export(name="lastModifiedByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedByType;
 
     /**
      * @return The type of identity that last modified the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedByType() {
         return this.lastModifiedByType;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of Arc agent in each of the nodes.
-     * 
      */
     @Export(name="perNodeDetails", type=List.class, parameters={PerNodeStateResponse.class})
     private Output<List<PerNodeStateResponse>> perNodeDetails;
 
     /**
      * @return State of Arc agent in each of the nodes.
-     * 
      */
     public Output<List<PerNodeStateResponse>> getPerNodeDetails() {
         return this.perNodeDetails;
     }
     /**
      * Provisioning state of the ArcSetting proxy resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the ArcSetting proxy resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

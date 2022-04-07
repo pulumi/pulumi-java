@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Supported protocols for the customer's endpoint.
-     * 
      */
     @EnumType
     public enum AFDEndpointProtocols {

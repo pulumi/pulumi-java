@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Create network mappings input properties/behavior specific to vmm to vmm Network mapping.
- * 
  */
 public final class VmmToVmmCreateNetworkMappingInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VmmToVmmCreateNetworkMappingInputArgs extends io.pulumi.resou
     /**
      * The instance type.
      * Expected value is 'VmmToVmm'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;

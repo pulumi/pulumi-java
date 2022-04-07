@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the endpoints used for the custom Open ID Connect provider.
- * 
  */
 public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The endpoint to be used to make an authorization request.
-     * 
      */
     @Import(name="authorizationEndpoint")
       private final @Nullable Output<String> authorizationEndpoint;
@@ -31,7 +29,6 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The endpoint that provides the keys necessary to validate the token.
-     * 
      */
     @Import(name="certificationUri")
       private final @Nullable Output<String> certificationUri;
@@ -42,7 +39,6 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The endpoint that issues the token.
-     * 
      */
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
@@ -53,7 +49,6 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The endpoint to be used to request a token.
-     * 
      */
     @Import(name="tokenEndpoint")
       private final @Nullable Output<String> tokenEndpoint;
@@ -64,7 +59,6 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The endpoint that contains all the configuration endpoints for the provider.
-     * 
      */
     @Import(name="wellKnownOpenIdConfiguration")
       private final @Nullable Output<String> wellKnownOpenIdConfiguration;

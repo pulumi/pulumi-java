@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines all possible authentication profiles for the OpenShift cluster.
- * 
  */
 public final class OpenShiftManagedClusterAuthProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class OpenShiftManagedClusterAuthProfileResponse extends io.pulumi.
 
     /**
      * Type of authentication profile to use.
-     * 
      */
     @Import(name="identityProviders")
       private final @Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders;

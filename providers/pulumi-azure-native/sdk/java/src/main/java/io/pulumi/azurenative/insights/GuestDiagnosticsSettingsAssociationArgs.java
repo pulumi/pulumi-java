@@ -17,7 +17,6 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
 
     /**
      * The name of the diagnostic settings association.
-     * 
      */
     @Import(name="associationName")
       private final @Nullable Output<String> associationName;
@@ -28,7 +27,6 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
 
     /**
      * The guest diagnostic settings name.
-     * 
      */
     @Import(name="guestDiagnosticSettingsName", required=true)
       private final Output<String> guestDiagnosticSettingsName;
@@ -39,7 +37,6 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -50,7 +47,6 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
 
     /**
      * The fully qualified ID of the resource, including the resource name and resource type.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
@@ -61,7 +57,6 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

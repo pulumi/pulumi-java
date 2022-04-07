@@ -19,7 +19,154 @@ import javax.annotation.Nullable;
  * Azure Resource Manager resource envelope.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdate Data Version.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataVersion = new AzureNative.MachineLearningServices.DataVersion("dataVersion", new AzureNative.MachineLearningServices.DataVersionArgs
+ *         {
+ *             Name = "dataset123",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.DataVersionArgs
+ *             {
+ *                 DatasetType = "Simple",
+ *                 DatastoreId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastores/mydatastore",
+ *                 Description = "string",
+ *                 IsAnonymous = true,
+ *                 Path = "path/to/file.csv",
+ *                 Properties = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 Tags = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *             },
+ *             ResourceGroupName = "testrg123",
+ *             Version = "1",
+ *             WorkspaceName = "workspace123",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewDataVersion(ctx, "dataVersion", &machinelearningservices.DataVersionArgs{
+ * 			Name: pulumi.String("dataset123"),
+ * 			Properties: &machinelearningservices.DataVersionArgs{
+ * 				DatasetType: pulumi.String("Simple"),
+ * 				DatastoreId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastores/mydatastore"),
+ * 				Description: pulumi.String("string"),
+ * 				IsAnonymous: pulumi.Bool(true),
+ * 				Path:        pulumi.String("path/to/file.csv"),
+ * 				Properties: pulumi.StringMap{
+ * 					"additionalProp1": pulumi.String("string"),
+ * 					"additionalProp2": pulumi.String("string"),
+ * 					"additionalProp3": pulumi.String("string"),
+ * 				},
+ * 				Tags: pulumi.StringMap{
+ * 					"additionalProp1": pulumi.String("string"),
+ * 					"additionalProp2": pulumi.String("string"),
+ * 					"additionalProp3": pulumi.String("string"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			Version:           pulumi.String("1"),
+ * 			WorkspaceName:     pulumi.String("workspace123"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataVersion = new azure_native.machinelearningservices.DataVersion("dataVersion", {
+ *     name: "dataset123",
+ *     properties: {
+ *         datasetType: "Simple",
+ *         datastoreId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastores/mydatastore",
+ *         description: "string",
+ *         isAnonymous: true,
+ *         path: "path/to/file.csv",
+ *         properties: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         tags: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *     },
+ *     resourceGroupName: "testrg123",
+ *     version: "1",
+ *     workspaceName: "workspace123",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_version = azure_native.machinelearningservices.DataVersion("dataVersion",
+ *     name="dataset123",
+ *     properties=azure_native.machinelearningservices.DataVersionArgs(
+ *         dataset_type="Simple",
+ *         datastore_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastores/mydatastore",
+ *         description="string",
+ *         is_anonymous=True,
+ *         path="path/to/file.csv",
+ *         properties={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         tags={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *     ),
+ *     resource_group_name="testrg123",
+ *     version="1",
+ *     workspace_name="workspace123")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +181,48 @@ import javax.annotation.Nullable;
 public class DataVersion extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Export(name="properties", type=DataVersionResponse.class, parameters={})
     private Output<DataVersionResponse> properties;
 
     /**
      * @return Additional attributes of the entity.
-     * 
      */
     public Output<DataVersionResponse> getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System data associated with resource provider
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

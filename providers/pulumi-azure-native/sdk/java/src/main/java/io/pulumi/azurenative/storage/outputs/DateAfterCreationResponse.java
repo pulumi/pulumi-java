@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class DateAfterCreationResponse {
     /**
      * Value indicating the age in days after creation
-     * 
      */
     private final Double daysAfterCreationGreaterThan;
 
@@ -22,7 +21,6 @@ public final class DateAfterCreationResponse {
 
     /**
      * Value indicating the age in days after creation
-     * 
     */
     public Double getDaysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The commissioned state of the Custom IP Prefix.
-     * 
      */
     @EnumType
     public enum CommissionedState {

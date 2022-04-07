@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Policy creation properties.
- * 
  */
 public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
 
     /**
      * The ReplicationProviderSettings.
-     * 
      */
     @Import(name="providerSpecificInput")
       private final @Nullable Output<Object> providerSpecificInput;

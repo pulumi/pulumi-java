@@ -21,7 +21,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * GroupIds from the private link service resource.
-     * 
      */
     @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
@@ -32,7 +31,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the parent resource (namely, either, the topic name or domain name).
-     * 
      */
     @Import(name="parentName", required=true)
       private final Output<String> parentName;
@@ -43,7 +41,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The type of the parent resource. This can be either \'topics\' or \'domains\'.
-     * 
      */
     @Import(name="parentType", required=true)
       private final Output<String> parentType;
@@ -54,7 +51,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The Private Endpoint resource for this Connection.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
@@ -65,7 +61,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the private endpoint connection connection.
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -76,7 +71,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Details about the state of the connection.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
@@ -87,7 +81,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Provisioning state of the Private Endpoint Connection.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
@@ -98,7 +91,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

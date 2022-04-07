@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The error management.
- * 
  */
 public final class ConnectorMappingErrorManagementResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectorMappingErrorManagementResponse extends io.pulumi.res
 
     /**
      * The error limit allowed while importing data.
-     * 
      */
     @Import(name="errorLimit")
       private final @Nullable Integer errorLimit;
@@ -32,7 +30,6 @@ public final class ConnectorMappingErrorManagementResponse extends io.pulumi.res
 
     /**
      * The type of error management to use for the mapping.
-     * 
      */
     @Import(name="errorManagementType", required=true)
       private final String errorManagementType;

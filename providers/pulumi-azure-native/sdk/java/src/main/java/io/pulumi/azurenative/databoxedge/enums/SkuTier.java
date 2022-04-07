@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The SKU tier. This is based on the SKU name.
-     * 
      */
     @EnumType
     public enum SkuTier {

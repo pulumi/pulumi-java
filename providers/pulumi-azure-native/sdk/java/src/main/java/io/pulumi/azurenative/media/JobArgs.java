@@ -27,7 +27,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -38,7 +37,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Customer provided key, value pairs that will be returned in Job and JobOutput state events.
-     * 
      */
     @Import(name="correlationData")
       private final @Nullable Output<Map<String,String>> correlationData;
@@ -49,7 +47,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional customer supplied description of the Job.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -60,7 +57,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The inputs for the Job.
-     * 
      */
     @Import(name="input", required=true)
       private final Output<Object> input;
@@ -71,7 +67,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Job name.
-     * 
      */
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
@@ -82,7 +77,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The outputs for the Job.
-     * 
      */
     @Import(name="outputs", required=true)
       private final Output<List<JobOutputAssetArgs>> outputs;
@@ -93,7 +87,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Either<String,Priority>> priority;
@@ -104,7 +97,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -115,7 +107,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Transform name.
-     * 
      */
     @Import(name="transformName", required=true)
       private final Output<String> transformName;

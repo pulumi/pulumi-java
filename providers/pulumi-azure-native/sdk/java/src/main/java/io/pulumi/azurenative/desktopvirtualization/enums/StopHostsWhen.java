@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies when to stop hosts during ramp down period.
-     * 
      */
     @EnumType
     public enum StopHostsWhen {

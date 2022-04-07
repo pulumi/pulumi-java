@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Customized setup scripts
- * 
  */
 public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Script that's run only once during provision of the compute.
-     * 
      */
     @Import(name="creationScript")
       private final @Nullable Output<ScriptReferenceArgs> creationScript;
@@ -31,7 +29,6 @@ public final class ScriptsToExecuteArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Script that's run every time the machine starts.
-     * 
      */
     @Import(name="startupScript")
       private final @Nullable Output<ScriptReferenceArgs> startupScript;

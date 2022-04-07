@@ -17,7 +17,6 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Kusto cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -28,7 +27,6 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Flag that indicates whether to continue if one of the command fails.
-     * 
      */
     @Import(name="continueOnErrors")
       private final @Nullable Output<Boolean> continueOnErrors;
@@ -39,7 +37,6 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the database in the Kusto cluster.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -50,7 +47,6 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A unique string. If changed the script will be applied again.
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -61,7 +57,6 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group containing the Kusto cluster.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Kusto database script.
-     * 
      */
     @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
@@ -83,7 +77,6 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The url to the KQL script blob file.
-     * 
      */
     @Import(name="scriptUrl", required=true)
       private final Output<String> scriptUrl;
@@ -94,7 +87,6 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SaS token.
-     * 
      */
     @Import(name="scriptUrlSasToken", required=true)
       private final Output<String> scriptUrlSasToken;

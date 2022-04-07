@@ -17,9 +17,116 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2019-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create tenant
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var b2cTenant = new AzureNative.AzureActiveDirectory.B2CTenant("b2cTenant", new AzureNative.AzureActiveDirectory.B2CTenantArgs
+ *         {
+ *             Location = "United States",
+ *             Properties = new AzureNative.AzureActiveDirectory.Inputs.CreateTenantRequestBodyPropertiesArgs
+ *             {
+ *                 CountryCode = "US",
+ *                 DisplayName = "Contoso",
+ *             },
+ *             ResourceGroupName = "contosoResourceGroup",
+ *             ResourceName = "contoso.onmicrosoft.com",
+ *             Sku = new AzureNative.AzureActiveDirectory.Inputs.B2CResourceSKUArgs
+ *             {
+ *                 Name = "Standard",
+ *                 Tier = "A0",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	azureactivedirectory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azureactivedirectory"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := azureactivedirectory.NewB2CTenant(ctx, "b2cTenant", &azureactivedirectory.B2CTenantArgs{
+ * 			Location: pulumi.String("United States"),
+ * 			Properties: &azureactivedirectory.CreateTenantRequestBodyPropertiesArgs{
+ * 				CountryCode: pulumi.String("US"),
+ * 				DisplayName: pulumi.String("Contoso"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("contosoResourceGroup"),
+ * 			ResourceName:      pulumi.String("contoso.onmicrosoft.com"),
+ * 			Sku: &azureactivedirectory.B2CResourceSKUArgs{
+ * 				Name: "Standard",
+ * 				Tier: "A0",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const b2cTenant = new azure_native.azureactivedirectory.B2CTenant("b2cTenant", {
+ *     location: "United States",
+ *     properties: {
+ *         countryCode: "US",
+ *         displayName: "Contoso",
+ *     },
+ *     resourceGroupName: "contosoResourceGroup",
+ *     resourceName: "contoso.onmicrosoft.com",
+ *     sku: {
+ *         name: "Standard",
+ *         tier: "A0",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * b2c_tenant = azure_native.azureactivedirectory.B2CTenant("b2cTenant",
+ *     location="United States",
+ *     properties=azure_native.azureactivedirectory.CreateTenantRequestBodyPropertiesArgs(
+ *         country_code="US",
+ *         display_name="Contoso",
+ *     ),
+ *     resource_group_name="contosoResourceGroup",
+ *     resource_name="contoso.onmicrosoft.com",
+ *     sku=azure_native.azureactivedirectory.B2CResourceSKUArgs(
+ *         name="Standard",
+ *         tier="A0",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +141,84 @@ import javax.annotation.Nullable;
 public class B2CTenant extends io.pulumi.resources.CustomResource {
     /**
      * The billing configuration for the tenant.
-     * 
      */
     @Export(name="billingConfig", type=B2CTenantResourcePropertiesResponseBillingConfig.class, parameters={})
     private Output</* @Nullable */ B2CTenantResourcePropertiesResponseBillingConfig> billingConfig;
 
     /**
      * @return The billing configuration for the tenant.
-     * 
      */
     public Output</* @Nullable */ B2CTenantResourcePropertiesResponseBillingConfig> getBillingConfig() {
         return this.billingConfig;
     }
     /**
      * The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the B2C tenant resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the B2C tenant resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
-     * 
      */
     @Export(name="sku", type=B2CResourceSKUResponse.class, parameters={})
     private Output<B2CResourceSKUResponse> sku;
 
     /**
      * @return SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
-     * 
      */
     public Output<B2CResourceSKUResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource Tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource Tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * An identifier of the B2C tenant.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return An identifier of the B2C tenant.
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of the B2C tenant resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the B2C tenant resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

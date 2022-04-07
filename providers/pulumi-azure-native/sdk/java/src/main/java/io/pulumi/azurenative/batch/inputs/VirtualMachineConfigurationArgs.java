@@ -24,7 +24,6 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.
-     * 
      */
     @Import(name="containerConfiguration")
       private final @Nullable Output<ContainerConfigurationArgs> containerConfiguration;
@@ -35,7 +34,6 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
-     * 
      */
     @Import(name="dataDisks")
       private final @Nullable Output<List<DataDiskArgs>> dataDisks;
@@ -46,7 +44,6 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * If specified, encryption is performed on each node in the pool during node provisioning.
-     * 
      */
     @Import(name="diskEncryptionConfiguration")
       private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
@@ -57,7 +54,6 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * If specified, the extensions mentioned in this configuration will be installed on each node.
-     * 
      */
     @Import(name="extensions")
       private final @Nullable Output<List<VMExtensionArgs>> extensions;
@@ -89,7 +85,6 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.
-     * 
      */
     @Import(name="nodeAgentSkuId", required=true)
       private final Output<String> nodeAgentSkuId;
@@ -100,7 +95,6 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * This configuration will specify rules on how nodes in the pool will be physically allocated.
-     * 
      */
     @Import(name="nodePlacementConfiguration")
       private final @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration;
@@ -111,7 +105,6 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * This property must not be specified if the imageReference specifies a Linux OS image.
-     * 
      */
     @Import(name="windowsConfiguration")
       private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;

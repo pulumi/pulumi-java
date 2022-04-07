@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class SkuResponse {
     /**
      * The name of the HealthBot SKU
-     * 
      */
     private final String name;
 
@@ -22,7 +21,6 @@ public final class SkuResponse {
 
     /**
      * The name of the HealthBot SKU
-     * 
     */
     public String getName() {
         return this.name;

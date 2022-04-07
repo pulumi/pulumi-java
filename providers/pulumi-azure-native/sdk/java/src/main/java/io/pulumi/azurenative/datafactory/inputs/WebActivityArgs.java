@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * Web activity.
- * 
  */
 public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Authentication method used for calling the endpoint.
-     * 
      */
     @Import(name="authentication")
       private final @Nullable Output<WebActivityAuthenticationArgs> authentication;
@@ -42,7 +40,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="body")
       private final @Nullable Output<Object> body;
@@ -53,7 +50,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -64,7 +60,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of datasets passed to web endpoint.
-     * 
      */
     @Import(name="datasets")
       private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
@@ -75,7 +70,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -86,7 +80,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -97,7 +90,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="headers")
       private final @Nullable Output<Object> headers;
@@ -108,7 +100,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -119,7 +110,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of linked services passed to web endpoint.
-     * 
      */
     @Import(name="linkedServices")
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
@@ -130,7 +120,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Rest API method for target endpoint.
-     * 
      */
     @Import(name="method", required=true)
       private final Output<Either<String,WebActivityMethod>> method;
@@ -141,7 +130,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -152,7 +140,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -164,7 +151,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Type of activity.
      * Expected value is 'WebActivity'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -175,7 +161,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Web activity target endpoint and path. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="url", required=true)
       private final Output<Object> url;
@@ -186,7 +171,6 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

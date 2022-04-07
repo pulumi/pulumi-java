@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Buildpack group properties of the Builder
- * 
  */
 public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Buildpacks in the buildpack group
-     * 
      */
     @Import(name="buildpacks")
       private final @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks;
@@ -33,7 +31,6 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * Buildpack group name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

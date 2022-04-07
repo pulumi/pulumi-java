@@ -22,7 +22,168 @@ import javax.annotation.Nullable;
  * A SqlManagedInstance.
  * API Version: 2021-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a SQL Managed Instance
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlManagedInstance = new AzureNative.AzureArcData.SqlManagedInstance("sqlManagedInstance", new AzureNative.AzureArcData.SqlManagedInstanceArgs
+ *         {
+ *             ExtendedLocation = new AzureNative.AzureArcData.Inputs.ExtendedLocationArgs
+ *             {
+ *                 Name = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation",
+ *                 Type = "CustomLocation",
+ *             },
+ *             Location = "northeurope",
+ *             Properties = new AzureNative.AzureArcData.Inputs.SqlManagedInstancePropertiesArgs
+ *             {
+ *                 Admin = "Admin user",
+ *                 BasicLoginInformation = new AzureNative.AzureArcData.Inputs.BasicLoginInformationArgs
+ *                 {
+ *                     Password = "********",
+ *                     Username = "username",
+ *                 },
+ *                 EndTime = "Instance end time",
+ *                 StartTime = "Instance start time",
+ *             },
+ *             ResourceGroupName = "testrg",
+ *             Sku = new AzureNative.AzureArcData.Inputs.SqlManagedInstanceSkuArgs
+ *             {
+ *                 Dev = true,
+ *                 Name = "default",
+ *                 Tier = "GeneralPurpose",
+ *             },
+ *             SqlManagedInstanceName = "testsqlManagedInstance",
+ *             Tags = 
+ *             {
+ *                 { "mytag", "myval" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	azurearcdata "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azurearcdata"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := azurearcdata.NewSqlManagedInstance(ctx, "sqlManagedInstance", &azurearcdata.SqlManagedInstanceArgs{
+ * 			ExtendedLocation: &azurearcdata.ExtendedLocationArgs{
+ * 				Name: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation"),
+ * 				Type: pulumi.String("CustomLocation"),
+ * 			},
+ * 			Location: pulumi.String("northeurope"),
+ * 			Properties: &azurearcdata.SqlManagedInstancePropertiesArgs{
+ * 				Admin: pulumi.String("Admin user"),
+ * 				BasicLoginInformation: &azurearcdata.BasicLoginInformationArgs{
+ * 					Password: pulumi.String("********"),
+ * 					Username: pulumi.String("username"),
+ * 				},
+ * 				EndTime:   pulumi.String("Instance end time"),
+ * 				StartTime: pulumi.String("Instance start time"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testrg"),
+ * 			Sku: &azurearcdata.SqlManagedInstanceSkuArgs{
+ * 				Dev:  pulumi.Bool(true),
+ * 				Name: pulumi.String("default"),
+ * 				Tier: "GeneralPurpose",
+ * 			},
+ * 			SqlManagedInstanceName: pulumi.String("testsqlManagedInstance"),
+ * 			Tags: pulumi.StringMap{
+ * 				"mytag": pulumi.String("myval"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlManagedInstance = new azure_native.azurearcdata.SqlManagedInstance("sqlManagedInstance", {
+ *     extendedLocation: {
+ *         name: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation",
+ *         type: "CustomLocation",
+ *     },
+ *     location: "northeurope",
+ *     properties: {
+ *         admin: "Admin user",
+ *         basicLoginInformation: {
+ *             password: "********",
+ *             username: "username",
+ *         },
+ *         endTime: "Instance end time",
+ *         startTime: "Instance start time",
+ *     },
+ *     resourceGroupName: "testrg",
+ *     sku: {
+ *         dev: true,
+ *         name: "default",
+ *         tier: "GeneralPurpose",
+ *     },
+ *     sqlManagedInstanceName: "testsqlManagedInstance",
+ *     tags: {
+ *         mytag: "myval",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_managed_instance = azure_native.azurearcdata.SqlManagedInstance("sqlManagedInstance",
+ *     extended_location=azure_native.azurearcdata.ExtendedLocationArgs(
+ *         name="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation",
+ *         type="CustomLocation",
+ *     ),
+ *     location="northeurope",
+ *     properties=azure_native.azurearcdata.SqlManagedInstancePropertiesArgs(
+ *         admin="Admin user",
+ *         basic_login_information=azure_native.azurearcdata.BasicLoginInformationArgs(
+ *             password="********",
+ *             username="username",
+ *         ),
+ *         end_time="Instance end time",
+ *         start_time="Instance start time",
+ *     ),
+ *     resource_group_name="testrg",
+ *     sku=azure_native.azurearcdata.SqlManagedInstanceSkuArgs(
+ *         dev=True,
+ *         name="default",
+ *         tier="GeneralPurpose",
+ *     ),
+ *     sql_managed_instance_name="testsqlManagedInstance",
+ *     tags={
+ *         "mytag": "myval",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,112 +198,96 @@ import javax.annotation.Nullable;
 public class SqlManagedInstance extends io.pulumi.resources.CustomResource {
     /**
      * The extendedLocation of the resource.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return The extendedLocation of the resource.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * null
-     * 
      */
     @Export(name="properties", type=SqlManagedInstancePropertiesResponse.class, parameters={})
     private Output<SqlManagedInstancePropertiesResponse> properties;
 
     /**
      * @return null
-     * 
      */
     public Output<SqlManagedInstancePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource sku.
-     * 
      */
     @Export(name="sku", type=SqlManagedInstanceSkuResponse.class, parameters={})
     private Output</* @Nullable */ SqlManagedInstanceSkuResponse> sku;
 
     /**
      * @return Resource sku.
-     * 
      */
     public Output</* @Nullable */ SqlManagedInstanceSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ApiResourceBackendServiceResponse {
     /**
      * The service URL
-     * 
      */
     private final @Nullable String serviceUrl;
 
@@ -24,7 +23,6 @@ public final class ApiResourceBackendServiceResponse {
 
     /**
      * The service URL
-     * 
     */
     public Optional<String> getServiceUrl() {
         return Optional.ofNullable(this.serviceUrl);

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties that define a Azure Arc PrivateLinkScope resource.
- * 
  */
 public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi
 
     /**
      * Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Migration phase of Public IP Address.
-     * 
      */
     @EnumType
     public enum PublicIPAddressMigrationPhase {

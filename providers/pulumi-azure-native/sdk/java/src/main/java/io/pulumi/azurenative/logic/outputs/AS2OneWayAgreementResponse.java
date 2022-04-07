@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class AS2OneWayAgreementResponse {
     /**
      * The AS2 protocol settings.
-     * 
      */
     private final AS2ProtocolSettingsResponse protocolSettings;
     /**
      * The receiver business identity
-     * 
      */
     private final BusinessIdentityResponse receiverBusinessIdentity;
     /**
      * The sender business identity
-     * 
      */
     private final BusinessIdentityResponse senderBusinessIdentity;
 
@@ -38,21 +35,18 @@ public final class AS2OneWayAgreementResponse {
 
     /**
      * The AS2 protocol settings.
-     * 
     */
     public AS2ProtocolSettingsResponse getProtocolSettings() {
         return this.protocolSettings;
     }
     /**
      * The receiver business identity
-     * 
     */
     public BusinessIdentityResponse getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
     /**
      * The sender business identity
-     * 
     */
     public BusinessIdentityResponse getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;

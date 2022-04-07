@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Scope of the extensionInstance. It can be either Cluster or Namespace; but not both.
- * 
  */
 public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies that the scope of the extensionInstance is Cluster
-     * 
      */
     @Import(name="cluster")
       private final @Nullable ScopeClusterResponse cluster;
@@ -32,7 +30,6 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specifies that the scope of the extensionInstance is Namespace
-     * 
      */
     @Import(name="namespace")
       private final @Nullable ScopeNamespaceResponse namespace;

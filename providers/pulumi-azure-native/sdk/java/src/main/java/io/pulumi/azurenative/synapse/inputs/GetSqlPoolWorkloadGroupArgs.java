@@ -14,7 +14,6 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
 
     /**
      * SQL pool name
-     * 
      */
     @Import(name="sqlPoolName", required=true)
       private final String sqlPoolName;
@@ -36,7 +34,6 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the workload group.
-     * 
      */
     @Import(name="workloadGroupName", required=true)
       private final String workloadGroupName;
@@ -47,7 +44,6 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A configuration item for source resource
- * 
  */
 public final class SourceConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SourceConfigurationResponse extends io.pulumi.resources.Invok
 
     /**
      * The name of setting.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class SourceConfigurationResponse extends io.pulumi.resources.Invok
 
     /**
      * The value of setting
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

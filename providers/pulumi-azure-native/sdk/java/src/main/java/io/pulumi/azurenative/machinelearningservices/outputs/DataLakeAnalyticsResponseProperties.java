@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DataLakeAnalyticsResponseProperties {
     /**
      * DataLake Store Account Name
-     * 
      */
     private final @Nullable String dataLakeStoreAccountName;
 
@@ -24,7 +23,6 @@ public final class DataLakeAnalyticsResponseProperties {
 
     /**
      * DataLake Store Account Name
-     * 
     */
     public Optional<String> getDataLakeStoreAccountName() {
         return Optional.ofNullable(this.dataLakeStoreAccountName);

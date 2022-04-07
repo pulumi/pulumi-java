@@ -19,7 +19,6 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Service specific properties for a provisioning service
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<IotDpsPropertiesDescriptionArgs> properties;
@@ -41,7 +39,6 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of provisioning service to create or update.
-     * 
      */
     @Import(name="provisioningServiceName")
       private final @Nullable Output<String> provisioningServiceName;
@@ -52,7 +49,6 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource group identifier.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sku info for a provisioning Service.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<IotDpsSkuInfoArgs> sku;
@@ -74,7 +69,6 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

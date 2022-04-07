@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Restore parameters.
- * 
  */
 public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The timestamp to end the restore by (UTC).
-     * 
      */
     @Import(name="endRestoreTime")
       private final @Nullable String endRestoreTime;
@@ -31,7 +29,6 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The table to restore data from.
-     * 
      */
     @Import(name="sourceTable", required=true)
       private final String sourceTable;
@@ -42,7 +39,6 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The timestamp to start the restore from (UTC).
-     * 
      */
     @Import(name="startRestoreTime")
       private final @Nullable String startRestoreTime;

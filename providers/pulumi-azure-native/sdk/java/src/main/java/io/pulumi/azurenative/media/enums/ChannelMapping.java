@@ -10,48 +10,39 @@ import java.util.StringJoiner;
 
     /**
      * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
-     * 
      */
     @EnumType
     public enum ChannelMapping {
         /**
          * The Front Left Channel.
-         * 
          */
         FrontLeft("FrontLeft"),
         /**
          * The Front Right Channel.
-         * 
          */
         FrontRight("FrontRight"),
         /**
          * The Center Channel.
-         * 
          */
         Center("Center"),
         /**
          * Low Frequency Effects Channel.  Sometimes referred to as the Subwoofer.
-         * 
          */
         LowFrequencyEffects("LowFrequencyEffects"),
         /**
          * The Back Left Channel.  Sometimes referred to as the Left Surround Channel.
-         * 
          */
         BackLeft("BackLeft"),
         /**
          * The Back Right Channel.  Sometimes referred to as the Right Surround Channel.
-         * 
          */
         BackRight("BackRight"),
         /**
          * The Left Stereo channel.  Sometimes referred to as Down Mix Left.
-         * 
          */
         StereoLeft("StereoLeft"),
         /**
          * The Right Stereo channel.  Sometimes referred to as Down Mix Right.
-         * 
          */
         StereoRight("StereoRight");
 

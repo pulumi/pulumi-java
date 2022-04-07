@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The computation function for the KPI.
-     * 
      */
     @EnumType
     public enum KpiFunctions {

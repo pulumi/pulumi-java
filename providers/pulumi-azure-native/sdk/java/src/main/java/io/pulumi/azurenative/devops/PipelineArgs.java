@@ -20,7 +20,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration used to bootstrap the Pipeline.
-     * 
      */
     @Import(name="bootstrapConfiguration", required=true)
       private final Output<BootstrapConfigurationArgs> bootstrapConfiguration;
@@ -31,7 +30,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Pipeline resource in ARM.
-     * 
      */
     @Import(name="pipelineName")
       private final @Nullable Output<String> pipelineName;
@@ -53,7 +50,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
-     * 
      */
     @Import(name="pipelineType", required=true)
       private final Output<Either<String,PipelineTypeEnum>> pipelineType;
@@ -64,7 +60,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -75,7 +70,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

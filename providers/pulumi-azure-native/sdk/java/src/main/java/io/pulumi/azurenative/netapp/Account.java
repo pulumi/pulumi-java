@@ -21,7 +21,129 @@ import javax.annotation.Nullable;
  * NetApp account resource
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Accounts_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var account = new AzureNative.NetApp.Account("account", new AzureNative.NetApp.AccountArgs
+ *         {
+ *             AccountName = "account1",
+ *             ActiveDirectories = 
+ *             {
+ *                 new AzureNative.NetApp.Inputs.ActiveDirectoryArgs
+ *                 {
+ *                     AesEncryption = true,
+ *                     Dns = "10.10.10.3, 10.10.10.4",
+ *                     Domain = "10.10.10.3",
+ *                     LdapSigning = false,
+ *                     OrganizationalUnit = "Engineering",
+ *                     Password = "ad_password",
+ *                     Site = "SiteName",
+ *                     SmbServerName = "SMBServer",
+ *                     Username = "ad_user_name",
+ *                 },
+ *             },
+ *             Location = "eastus",
+ *             ResourceGroupName = "myRG",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	netapp "github.com/pulumi/pulumi-azure-native/sdk/go/azure/netapp"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := netapp.NewAccount(ctx, "account", &netapp.AccountArgs{
+ * 			AccountName: pulumi.String("account1"),
+ * 			ActiveDirectories: []netapp.ActiveDirectoryArgs{
+ * 				&netapp.ActiveDirectoryArgs{
+ * 					AesEncryption:      pulumi.Bool(true),
+ * 					Dns:                pulumi.String("10.10.10.3, 10.10.10.4"),
+ * 					Domain:             pulumi.String("10.10.10.3"),
+ * 					LdapSigning:        pulumi.Bool(false),
+ * 					OrganizationalUnit: pulumi.String("Engineering"),
+ * 					Password:           pulumi.String("ad_password"),
+ * 					Site:               pulumi.String("SiteName"),
+ * 					SmbServerName:      pulumi.String("SMBServer"),
+ * 					Username:           pulumi.String("ad_user_name"),
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("eastus"),
+ * 			ResourceGroupName: pulumi.String("myRG"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const account = new azure_native.netapp.Account("account", {
+ *     accountName: "account1",
+ *     activeDirectories: [{
+ *         aesEncryption: true,
+ *         dns: "10.10.10.3, 10.10.10.4",
+ *         domain: "10.10.10.3",
+ *         ldapSigning: false,
+ *         organizationalUnit: "Engineering",
+ *         password: "ad_password",
+ *         site: "SiteName",
+ *         smbServerName: "SMBServer",
+ *         username: "ad_user_name",
+ *     }],
+ *     location: "eastus",
+ *     resourceGroupName: "myRG",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * account = azure_native.netapp.Account("account",
+ *     account_name="account1",
+ *     active_directories=[azure_native.netapp.ActiveDirectoryArgs(
+ *         aes_encryption=True,
+ *         dns="10.10.10.3, 10.10.10.4",
+ *         domain="10.10.10.3",
+ *         ldap_signing=False,
+ *         organizational_unit="Engineering",
+ *         password="ad_password",
+ *         site="SiteName",
+ *         smb_server_name="SMBServer",
+ *         username="ad_user_name",
+ *     )],
+ *     location="eastus",
+ *     resource_group_name="myRG")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,112 +158,96 @@ import javax.annotation.Nullable;
 public class Account extends io.pulumi.resources.CustomResource {
     /**
      * Active Directories
-     * 
      */
     @Export(name="activeDirectories", type=List.class, parameters={ActiveDirectoryResponse.class})
     private Output</* @Nullable */ List<ActiveDirectoryResponse>> activeDirectories;
 
     /**
      * @return Active Directories
-     * 
      */
     public Output</* @Nullable */ List<ActiveDirectoryResponse>> getActiveDirectories() {
         return this.activeDirectories;
     }
     /**
      * Encryption settings
-     * 
      */
     @Export(name="encryption", type=AccountEncryptionResponse.class, parameters={})
     private Output</* @Nullable */ AccountEncryptionResponse> encryption;
 
     /**
      * @return Encryption settings
-     * 
      */
     public Output</* @Nullable */ AccountEncryptionResponse> getEncryption() {
         return this.encryption;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Azure lifecycle management
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system meta data relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system meta data relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

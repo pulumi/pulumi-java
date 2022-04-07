@@ -21,7 +21,147 @@ import javax.annotation.Nullable;
  * Resource information with extended details.
  * API Version: 2021-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a new managed HSM Pool or update an existing managed HSM Pool
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managedHsm = new AzureNative.KeyVault.ManagedHsm("managedHsm", new AzureNative.KeyVault.ManagedHsmArgs
+ *         {
+ *             Location = "westus",
+ *             Name = "hsm1",
+ *             Properties = new AzureNative.KeyVault.Inputs.ManagedHsmPropertiesArgs
+ *             {
+ *                 EnablePurgeProtection = true,
+ *                 EnableSoftDelete = true,
+ *                 InitialAdminObjectIds = 
+ *                 {
+ *                     "00000000-0000-0000-0000-000000000000",
+ *                 },
+ *                 SoftDeleteRetentionInDays = 90,
+ *                 TenantId = "00000000-0000-0000-0000-000000000000",
+ *             },
+ *             ResourceGroupName = "hsm-group",
+ *             Sku = new AzureNative.KeyVault.Inputs.ManagedHsmSkuArgs
+ *             {
+ *                 Family = "B",
+ *                 Name = "Standard_B1",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "Dept", "hsm" },
+ *                 { "Environment", "dogfood" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := keyvault.NewManagedHsm(ctx, "managedHsm", &keyvault.ManagedHsmArgs{
+ * 			Location: pulumi.String("westus"),
+ * 			Name:     pulumi.String("hsm1"),
+ * 			Properties: &keyvault.ManagedHsmPropertiesArgs{
+ * 				EnablePurgeProtection: pulumi.Bool(true),
+ * 				EnableSoftDelete:      pulumi.Bool(true),
+ * 				InitialAdminObjectIds: pulumi.StringArray{
+ * 					pulumi.String("00000000-0000-0000-0000-000000000000"),
+ * 				},
+ * 				SoftDeleteRetentionInDays: pulumi.Int(90),
+ * 				TenantId:                  pulumi.String("00000000-0000-0000-0000-000000000000"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("hsm-group"),
+ * 			Sku: &keyvault.ManagedHsmSkuArgs{
+ * 				Family: pulumi.String("B"),
+ * 				Name:   "Standard_B1",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"Dept":        pulumi.String("hsm"),
+ * 				"Environment": pulumi.String("dogfood"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
+ *     location: "westus",
+ *     name: "hsm1",
+ *     properties: {
+ *         enablePurgeProtection: true,
+ *         enableSoftDelete: true,
+ *         initialAdminObjectIds: ["00000000-0000-0000-0000-000000000000"],
+ *         softDeleteRetentionInDays: 90,
+ *         tenantId: "00000000-0000-0000-0000-000000000000",
+ *     },
+ *     resourceGroupName: "hsm-group",
+ *     sku: {
+ *         family: "B",
+ *         name: "Standard_B1",
+ *     },
+ *     tags: {
+ *         Dept: "hsm",
+ *         Environment: "dogfood",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * managed_hsm = azure_native.keyvault.ManagedHsm("managedHsm",
+ *     location="westus",
+ *     name="hsm1",
+ *     properties=azure_native.keyvault.ManagedHsmPropertiesArgs(
+ *         enable_purge_protection=True,
+ *         enable_soft_delete=True,
+ *         initial_admin_object_ids=["00000000-0000-0000-0000-000000000000"],
+ *         soft_delete_retention_in_days=90,
+ *         tenant_id="00000000-0000-0000-0000-000000000000",
+ *     ),
+ *     resource_group_name="hsm-group",
+ *     sku=azure_native.keyvault.ManagedHsmSkuArgs(
+ *         family="B",
+ *         name="Standard_B1",
+ *     ),
+ *     tags={
+ *         "Dept": "hsm",
+ *         "Environment": "dogfood",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,98 +176,84 @@ import javax.annotation.Nullable;
 public class ManagedHsm extends io.pulumi.resources.CustomResource {
     /**
      * The supported Azure location where the managed HSM Pool should be created.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The supported Azure location where the managed HSM Pool should be created.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the managed HSM Pool.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the managed HSM Pool.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the managed HSM
-     * 
      */
     @Export(name="properties", type=ManagedHsmPropertiesResponse.class, parameters={})
     private Output<ManagedHsmPropertiesResponse> properties;
 
     /**
      * @return Properties of the managed HSM
-     * 
      */
     public Output<ManagedHsmPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * SKU details
-     * 
      */
     @Export(name="sku", type=ManagedHsmSkuResponse.class, parameters={})
     private Output</* @Nullable */ ManagedHsmSkuResponse> sku;
 
     /**
      * @return SKU details
-     * 
      */
     public Output</* @Nullable */ ManagedHsmSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the key vault resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the key vault resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The resource type of the managed HSM Pool.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type of the managed HSM Pool.
-     * 
      */
     public Output<String> getType() {
         return this.type;

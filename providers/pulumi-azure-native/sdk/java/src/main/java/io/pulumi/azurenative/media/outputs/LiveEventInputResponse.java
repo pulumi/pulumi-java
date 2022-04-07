@@ -16,27 +16,22 @@ import javax.annotation.Nullable;
 public final class LiveEventInputResponse {
     /**
      * Access control for live event input.
-     * 
      */
     private final @Nullable LiveEventInputAccessControlResponse accessControl;
     /**
      * A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
-     * 
      */
     private final @Nullable String accessToken;
     /**
      * The input endpoints for the live event.
-     * 
      */
     private final @Nullable List<LiveEventEndpointResponse> endpoints;
     /**
      * ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
-     * 
      */
     private final @Nullable String keyFrameIntervalDuration;
     /**
      * The input protocol for the live event. This is specified at creation time and cannot be updated.
-     * 
      */
     private final String streamingProtocol;
 
@@ -56,35 +51,30 @@ public final class LiveEventInputResponse {
 
     /**
      * Access control for live event input.
-     * 
     */
     public Optional<LiveEventInputAccessControlResponse> getAccessControl() {
         return Optional.ofNullable(this.accessControl);
     }
     /**
      * A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
-     * 
     */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * The input endpoints for the live event.
-     * 
     */
     public List<LiveEventEndpointResponse> getEndpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
      * ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
-     * 
     */
     public Optional<String> getKeyFrameIntervalDuration() {
         return Optional.ofNullable(this.keyFrameIntervalDuration);
     }
     /**
      * The input protocol for the live event. This is specified at creation time and cannot be updated.
-     * 
     */
     public String getStreamingProtocol() {
         return this.streamingProtocol;

@@ -20,7 +20,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The Namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -31,7 +30,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The Private Endpoint resource for this Connection.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
@@ -42,7 +40,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The PrivateEndpointConnection name
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -53,7 +50,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Details about the state of the connection.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
@@ -64,7 +60,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Provisioning state of the Private Endpoint Connection.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,EndPointProvisioningState>> provisioningState;
@@ -75,7 +70,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the resource group within the azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

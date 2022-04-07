@@ -19,7 +19,6 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The artifacts for the service unit.
-     * 
      */
     @Import(name="artifacts")
       private final @Nullable Output<ServiceUnitArtifactsArgs> artifacts;
@@ -30,7 +29,6 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Describes the type of ARM deployment to be performed on the resource.
-     * 
      */
     @Import(name="deploymentMode", required=true)
       private final Output<DeploymentMode> deploymentMode;
@@ -41,7 +39,6 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -52,7 +49,6 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the service resource.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -74,7 +69,6 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the service topology .
-     * 
      */
     @Import(name="serviceTopologyName", required=true)
       private final Output<String> serviceTopologyName;
@@ -85,7 +79,6 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the service unit resource.
-     * 
      */
     @Import(name="serviceUnitName")
       private final @Nullable Output<String> serviceUnitName;
@@ -96,7 +89,6 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -107,7 +99,6 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
-     * 
      */
     @Import(name="targetResourceGroup", required=true)
       private final Output<String> targetResourceGroup;

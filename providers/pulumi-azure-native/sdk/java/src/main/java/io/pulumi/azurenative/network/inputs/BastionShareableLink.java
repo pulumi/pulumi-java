@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Bastion Shareable Link.
- * 
  */
 public final class BastionShareableLink extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class BastionShareableLink extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Reference of the virtual machine resource.
-     * 
      */
     @Import(name="vm", required=true)
       private final VM vm;

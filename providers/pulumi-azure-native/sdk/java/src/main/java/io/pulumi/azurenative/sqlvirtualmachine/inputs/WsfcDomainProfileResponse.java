@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Active Directory account details to operate Windows Server Failover Cluster.
- * 
  */
 public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).
-     * 
      */
     @Import(name="clusterBootstrapAccount")
       private final @Nullable String clusterBootstrapAccount;
@@ -31,7 +29,6 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
-     * 
      */
     @Import(name="clusterOperatorAccount")
       private final @Nullable String clusterOperatorAccount;
@@ -42,7 +39,6 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Fully qualified name of the domain.
-     * 
      */
     @Import(name="domainFqdn")
       private final @Nullable String domainFqdn;
@@ -53,7 +49,6 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Optional path for fileshare witness.
-     * 
      */
     @Import(name="fileShareWitnessPath")
       private final @Nullable String fileShareWitnessPath;
@@ -64,7 +59,6 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Organizational Unit path in which the nodes and cluster will be present.
-     * 
      */
     @Import(name="ouPath")
       private final @Nullable String ouPath;
@@ -75,7 +69,6 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
-     * 
      */
     @Import(name="sqlServiceAccount")
       private final @Nullable String sqlServiceAccount;
@@ -86,7 +79,6 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Fully qualified ARM resource id of the witness storage account.
-     * 
      */
     @Import(name="storageAccountUrl")
       private final @Nullable String storageAccountUrl;

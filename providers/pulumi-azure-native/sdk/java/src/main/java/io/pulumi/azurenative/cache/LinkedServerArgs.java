@@ -17,7 +17,6 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fully qualified resourceId of the linked redis cache.
-     * 
      */
     @Import(name="linkedRedisCacheId", required=true)
       private final Output<String> linkedRedisCacheId;
@@ -28,7 +27,6 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Location of the linked redis cache.
-     * 
      */
     @Import(name="linkedRedisCacheLocation", required=true)
       private final Output<String> linkedRedisCacheLocation;
@@ -39,7 +37,6 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the linked server that is being added to the Redis cache.
-     * 
      */
     @Import(name="linkedServerName")
       private final @Nullable Output<String> linkedServerName;
@@ -50,7 +47,6 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Redis cache.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -61,7 +57,6 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Role of the linked server.
-     * 
      */
     @Import(name="serverRole", required=true)
       private final Output<ReplicationRole> serverRole;

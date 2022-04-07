@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets provisioning state of the private endpoint connection
-     * 
      */
     @EnumType
     public enum ProvisioningState {

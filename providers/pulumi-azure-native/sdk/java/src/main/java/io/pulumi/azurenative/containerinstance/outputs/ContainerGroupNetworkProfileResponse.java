@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ContainerGroupNetworkProfileResponse {
     /**
      * The identifier for a network profile.
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class ContainerGroupNetworkProfileResponse {
 
     /**
      * The identifier for a network profile.
-     * 
     */
     public String getId() {
         return this.id;

@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class DeliveryPackageInformationResponse {
     /**
      * The name of the carrier that is used to ship the import or export drives.
-     * 
      */
     private final String carrierName;
     /**
      * The number of drives included in the package.
-     * 
      */
     private final @Nullable Double driveCount;
     /**
      * The date when the package is shipped.
-     * 
      */
     private final @Nullable String shipDate;
     /**
      * The tracking number of the package.
-     * 
      */
     private final String trackingNumber;
 
@@ -47,28 +43,24 @@ public final class DeliveryPackageInformationResponse {
 
     /**
      * The name of the carrier that is used to ship the import or export drives.
-     * 
     */
     public String getCarrierName() {
         return this.carrierName;
     }
     /**
      * The number of drives included in the package.
-     * 
     */
     public Optional<Double> getDriveCount() {
         return Optional.ofNullable(this.driveCount);
     }
     /**
      * The date when the package is shipped.
-     * 
     */
     public Optional<String> getShipDate() {
         return Optional.ofNullable(this.shipDate);
     }
     /**
      * The tracking number of the package.
-     * 
     */
     public String getTrackingNumber() {
         return this.trackingNumber;

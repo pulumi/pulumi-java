@@ -17,7 +17,91 @@ import javax.annotation.Nullable;
  * Class representing an data connection.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### KustoDataConnectionsCreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataConnection = new AzureNative.Kusto.DataConnection("dataConnection", new AzureNative.Kusto.DataConnectionArgs
+ *         {
+ *             ClusterName = "kustoclusterrptest4",
+ *             DataConnectionName = "DataConnections8",
+ *             DatabaseName = "KustoDatabase8",
+ *             Kind = "EventHub",
+ *             Location = "westus",
+ *             ResourceGroupName = "kustorptest",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kusto.NewDataConnection(ctx, "dataConnection", &kusto.DataConnectionArgs{
+ * 			ClusterName:        pulumi.String("kustoclusterrptest4"),
+ * 			DataConnectionName: pulumi.String("DataConnections8"),
+ * 			DatabaseName:       pulumi.String("KustoDatabase8"),
+ * 			Kind:               pulumi.String("EventHub"),
+ * 			Location:           pulumi.String("westus"),
+ * 			ResourceGroupName:  pulumi.String("kustorptest"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataConnection = new azure_native.kusto.DataConnection("dataConnection", {
+ *     clusterName: "kustoclusterrptest4",
+ *     dataConnectionName: "DataConnections8",
+ *     databaseName: "KustoDatabase8",
+ *     kind: "EventHub",
+ *     location: "westus",
+ *     resourceGroupName: "kustorptest",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_connection = azure_native.kusto.DataConnection("dataConnection",
+ *     cluster_name="kustoclusterrptest4",
+ *     data_connection_name="DataConnections8",
+ *     database_name="KustoDatabase8",
+ *     kind="EventHub",
+ *     location="westus",
+ *     resource_group_name="kustorptest")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -29,63 +113,54 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection.
- * 
  */
 @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
 @ResourceType(type="azure-native:kusto:DataConnection")
 public class DataConnection extends io.pulumi.resources.CustomResource {
     /**
      * Kind of the endpoint for the data connection
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return Kind of the endpoint for the data connection
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains infrastructure information about the Appliance
- * 
  */
 public final class AppliancePropertiesResponseInfrastructureConfig extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AppliancePropertiesResponseInfrastructureConfig extends io.pu
 
     /**
      * Information about the connected appliance.
-     * 
      */
     @Import(name="provider")
       private final @Nullable String provider;

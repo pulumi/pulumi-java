@@ -30,7 +30,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of A records in the record set.
-     * 
      */
     @Import(name="aRecords")
       private final @Nullable Output<List<ARecordArgs>> aRecords;
@@ -41,7 +40,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of AAAA records in the record set.
-     * 
      */
     @Import(name="aaaaRecords")
       private final @Nullable Output<List<AaaaRecordArgs>> aaaaRecords;
@@ -52,7 +50,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of CAA records in the record set.
-     * 
      */
     @Import(name="caaRecords")
       private final @Nullable Output<List<CaaRecordArgs>> caaRecords;
@@ -63,7 +60,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The CNAME record in the  record set.
-     * 
      */
     @Import(name="cnameRecord")
       private final @Nullable Output<CnameRecordArgs> cnameRecord;
@@ -74,7 +70,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The metadata attached to the record set.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -85,7 +80,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of MX records in the record set.
-     * 
      */
     @Import(name="mxRecords")
       private final @Nullable Output<List<MxRecordArgs>> mxRecords;
@@ -96,7 +90,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of NS records in the record set.
-     * 
      */
     @Import(name="nsRecords")
       private final @Nullable Output<List<NsRecordArgs>> nsRecords;
@@ -107,7 +100,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of PTR records in the record set.
-     * 
      */
     @Import(name="ptrRecords")
       private final @Nullable Output<List<PtrRecordArgs>> ptrRecords;
@@ -118,7 +110,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of DNS record in this record set. Record sets of type SOA can be updated but not created (they are created when the DNS zone is created).
-     * 
      */
     @Import(name="recordType", required=true)
       private final Output<String> recordType;
@@ -129,7 +120,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the record set, relative to the name of the zone.
-     * 
      */
     @Import(name="relativeRecordSetName")
       private final @Nullable Output<String> relativeRecordSetName;
@@ -140,7 +130,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -151,7 +140,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SOA record in the record set.
-     * 
      */
     @Import(name="soaRecord")
       private final @Nullable Output<SoaRecordArgs> soaRecord;
@@ -162,7 +150,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of SRV records in the record set.
-     * 
      */
     @Import(name="srvRecords")
       private final @Nullable Output<List<SrvRecordArgs>> srvRecords;
@@ -173,7 +160,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A reference to an azure resource from where the dns resource value is taken.
-     * 
      */
     @Import(name="targetResource")
       private final @Nullable Output<SubResourceArgs> targetResource;
@@ -184,7 +170,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The TTL (time-to-live) of the records in the record set.
-     * 
      */
     @Import(name="ttl")
       private final @Nullable Output<Double> ttl;
@@ -195,7 +180,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of TXT records in the record set.
-     * 
      */
     @Import(name="txtRecords")
       private final @Nullable Output<List<TxtRecordArgs>> txtRecords;
@@ -206,7 +190,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the DNS zone (without a terminating dot).
-     * 
      */
     @Import(name="zoneName", required=true)
       private final Output<String> zoneName;

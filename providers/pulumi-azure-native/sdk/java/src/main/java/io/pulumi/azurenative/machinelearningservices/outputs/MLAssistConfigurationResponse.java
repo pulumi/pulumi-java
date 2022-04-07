@@ -16,27 +16,22 @@ import javax.annotation.Nullable;
 public final class MLAssistConfigurationResponse {
     /**
      * The compute designated for inferencing.
-     * 
      */
     private final ComputeBindingResponse inferencingComputeBinding;
     /**
      * Indicates whether MLAssist feature is enabled.
-     * 
      */
     private final @Nullable Boolean mlAssistEnabled;
     /**
      * Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
-     * 
      */
     private final String modelNamePrefix;
     /**
      * Prelabel accuracy threshold used in MLAssist feature.
-     * 
      */
     private final @Nullable Double prelabelAccuracyThreshold;
     /**
      * The compute designated for training.
-     * 
      */
     private final ComputeBindingResponse trainingComputeBinding;
 
@@ -56,35 +51,30 @@ public final class MLAssistConfigurationResponse {
 
     /**
      * The compute designated for inferencing.
-     * 
     */
     public ComputeBindingResponse getInferencingComputeBinding() {
         return this.inferencingComputeBinding;
     }
     /**
      * Indicates whether MLAssist feature is enabled.
-     * 
     */
     public Optional<Boolean> getMlAssistEnabled() {
         return Optional.ofNullable(this.mlAssistEnabled);
     }
     /**
      * Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
-     * 
     */
     public String getModelNamePrefix() {
         return this.modelNamePrefix;
     }
     /**
      * Prelabel accuracy threshold used in MLAssist feature.
-     * 
     */
     public Optional<Double> getPrelabelAccuracyThreshold() {
         return Optional.ofNullable(this.prelabelAccuracyThreshold);
     }
     /**
      * The compute designated for training.
-     * 
     */
     public ComputeBindingResponse getTrainingComputeBinding() {
         return this.trainingComputeBinding;

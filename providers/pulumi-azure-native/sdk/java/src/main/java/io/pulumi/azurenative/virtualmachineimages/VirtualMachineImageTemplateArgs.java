@@ -33,7 +33,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
 
     /**
      * Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
-     * 
      */
     @Import(name="buildTimeoutInMinutes")
       private final @Nullable Output<Integer> buildTimeoutInMinutes;
@@ -44,7 +43,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
 
     /**
      * Specifies the properties used to describe the customization steps of the image, like Image source etc
-     * 
      */
     @Import(name="customize")
       private final @Nullable Output<List<Object>> customize;
@@ -55,7 +53,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
 
     /**
      * The distribution targets where the image output needs to go to.
-     * 
      */
     @Import(name="distribute", required=true)
       private final Output<List<Object>> distribute;
@@ -66,7 +63,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
 
     /**
      * The identity of the image template, if configured.
-     * 
      */
     @Import(name="identity", required=true)
       private final Output<ImageTemplateIdentityArgs> identity;
@@ -77,7 +73,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
 
     /**
      * The name of the image Template
-     * 
      */
     @Import(name="imageTemplateName")
       private final @Nullable Output<String> imageTemplateName;
@@ -88,7 +83,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -99,7 +93,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -110,7 +103,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
 
     /**
      * Specifies the properties used to describe the source image.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<Object> source;
@@ -121,7 +113,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -132,7 +123,6 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
 
     /**
      * Describes how virtual machine is set up to build images
-     * 
      */
     @Import(name="vmProfile")
       private final @Nullable Output<ImageTemplateVmProfileArgs> vmProfile;

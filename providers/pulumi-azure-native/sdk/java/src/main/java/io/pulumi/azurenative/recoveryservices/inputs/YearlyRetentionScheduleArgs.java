@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Yearly retention schedule.
- * 
  */
 public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
 
     /**
      * List of months of year of yearly retention policy.
-     * 
      */
     @Import(name="monthsOfYear")
       private final @Nullable Output<List<MonthOfYear>> monthsOfYear;
@@ -38,7 +36,6 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
 
     /**
      * Retention duration of retention Policy.
-     * 
      */
     @Import(name="retentionDuration")
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
@@ -49,7 +46,6 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
 
     /**
      * Daily retention format for yearly retention policy.
-     * 
      */
     @Import(name="retentionScheduleDaily")
       private final @Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily;
@@ -60,7 +56,6 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
 
     /**
      * Retention schedule format for yearly retention policy.
-     * 
      */
     @Import(name="retentionScheduleFormatType")
       private final @Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType;
@@ -71,7 +66,6 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
 
     /**
      * Weekly retention format for yearly retention policy.
-     * 
      */
     @Import(name="retentionScheduleWeekly")
       private final @Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly;
@@ -82,7 +76,6 @@ public final class YearlyRetentionScheduleArgs extends io.pulumi.resources.Resou
 
     /**
      * Retention times of retention policy.
-     * 
      */
     @Import(name="retentionTimes")
       private final @Nullable Output<List<String>> retentionTimes;

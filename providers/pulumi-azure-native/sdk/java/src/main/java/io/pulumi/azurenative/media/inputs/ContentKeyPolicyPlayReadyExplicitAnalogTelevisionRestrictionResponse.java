@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Configures the Explicit Analog Television Output Restriction control bits. For further details see the PlayReady Compliance Rules.
- * 
  */
 public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
 
     /**
      * Indicates whether this restriction is enforced on a Best Effort basis.
-     * 
      */
     @Import(name="bestEffort", required=true)
       private final Boolean bestEffort;
@@ -30,7 +28,6 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
 
     /**
      * Configures the restriction control bits. Must be between 0 and 3 inclusive.
-     * 
      */
     @Import(name="configurationData", required=true)
       private final Integer configurationData;

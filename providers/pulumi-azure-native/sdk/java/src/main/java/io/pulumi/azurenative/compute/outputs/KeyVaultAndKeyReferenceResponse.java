@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class KeyVaultAndKeyReferenceResponse {
     /**
      * Url pointing to a key or secret in KeyVault
-     * 
      */
     private final String keyUrl;
     /**
      * Resource id of the KeyVault containing the key or secret
-     * 
      */
     private final SourceVaultResponse sourceVault;
 
@@ -31,14 +29,12 @@ public final class KeyVaultAndKeyReferenceResponse {
 
     /**
      * Url pointing to a key or secret in KeyVault
-     * 
     */
     public String getKeyUrl() {
         return this.keyUrl;
     }
     /**
      * Resource id of the KeyVault containing the key or secret
-     * 
     */
     public SourceVaultResponse getSourceVault() {
         return this.sourceVault;

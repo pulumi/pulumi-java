@@ -19,7 +19,126 @@ import javax.annotation.Nullable;
  * Azure Resource Manager resource envelope.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdate Data Container.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataContainer = new AzureNative.MachineLearningServices.DataContainer("dataContainer", new AzureNative.MachineLearningServices.DataContainerArgs
+ *         {
+ *             Name = "datacontainer123",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.DataContainerArgs
+ *             {
+ *                 Description = "string",
+ *                 Properties = 
+ *                 {
+ *                     { "properties1", "value1" },
+ *                     { "properties2", "value2" },
+ *                 },
+ *                 Tags = 
+ *                 {
+ *                     { "tag1", "value1" },
+ *                     { "tag2", "value2" },
+ *                 },
+ *             },
+ *             ResourceGroupName = "testrg123",
+ *             WorkspaceName = "workspace123",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewDataContainer(ctx, "dataContainer", &machinelearningservices.DataContainerArgs{
+ * 			Name: pulumi.String("datacontainer123"),
+ * 			Properties: &machinelearningservices.DataContainerArgs{
+ * 				Description: pulumi.String("string"),
+ * 				Properties: pulumi.StringMap{
+ * 					"properties1": pulumi.String("value1"),
+ * 					"properties2": pulumi.String("value2"),
+ * 				},
+ * 				Tags: pulumi.StringMap{
+ * 					"tag1": pulumi.String("value1"),
+ * 					"tag2": pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			WorkspaceName:     pulumi.String("workspace123"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataContainer = new azure_native.machinelearningservices.DataContainer("dataContainer", {
+ *     name: "datacontainer123",
+ *     properties: {
+ *         description: "string",
+ *         properties: {
+ *             properties1: "value1",
+ *             properties2: "value2",
+ *         },
+ *         tags: {
+ *             tag1: "value1",
+ *             tag2: "value2",
+ *         },
+ *     },
+ *     resourceGroupName: "testrg123",
+ *     workspaceName: "workspace123",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_container = azure_native.machinelearningservices.DataContainer("dataContainer",
+ *     name="datacontainer123",
+ *     properties=azure_native.machinelearningservices.DataContainerArgs(
+ *         description="string",
+ *         properties={
+ *             "properties1": "value1",
+ *             "properties2": "value2",
+ *         },
+ *         tags={
+ *             "tag1": "value1",
+ *             "tag2": "value2",
+ *         },
+ *     ),
+ *     resource_group_name="testrg123",
+ *     workspace_name="workspace123")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +153,48 @@ import javax.annotation.Nullable;
 public class DataContainer extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Export(name="properties", type=DataContainerResponse.class, parameters={})
     private Output<DataContainerResponse> properties;
 
     /**
      * @return Additional attributes of the entity.
-     * 
      */
     public Output<DataContainerResponse> getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System data associated with resource provider
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

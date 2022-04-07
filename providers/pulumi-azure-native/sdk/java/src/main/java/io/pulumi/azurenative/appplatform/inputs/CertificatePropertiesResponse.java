@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Certificate resource payload.
- * 
  */
 public final class CertificatePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The activate date of certificate.
-     * 
      */
     @Import(name="activateDate", required=true)
       private final String activateDate;
@@ -32,7 +30,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The certificate version of key vault.
-     * 
      */
     @Import(name="certVersion")
       private final @Nullable String certVersion;
@@ -43,7 +40,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The domain list of certificate.
-     * 
      */
     @Import(name="dnsNames", required=true)
       private final List<String> dnsNames;
@@ -54,7 +50,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The expiration date of certificate.
-     * 
      */
     @Import(name="expirationDate", required=true)
       private final String expirationDate;
@@ -65,7 +60,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The issue date of certificate.
-     * 
      */
     @Import(name="issuedDate", required=true)
       private final String issuedDate;
@@ -76,7 +70,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The issuer of certificate.
-     * 
      */
     @Import(name="issuer", required=true)
       private final String issuer;
@@ -87,7 +80,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The certificate name of key vault.
-     * 
      */
     @Import(name="keyVaultCertName", required=true)
       private final String keyVaultCertName;
@@ -98,7 +90,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The subject name of certificate.
-     * 
      */
     @Import(name="subjectName", required=true)
       private final String subjectName;
@@ -109,7 +100,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The thumbprint of certificate.
-     * 
      */
     @Import(name="thumbprint", required=true)
       private final String thumbprint;
@@ -120,7 +110,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * The vault uri of user key vault.
-     * 
      */
     @Import(name="vaultUri", required=true)
       private final String vaultUri;

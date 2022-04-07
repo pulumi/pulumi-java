@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class for site agent properties.
- * 
  */
 public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Key vault ARM Id.
-     * 
      */
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
@@ -31,7 +29,6 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Key vault URI.
-     * 
      */
     @Import(name="keyVaultUri")
       private final @Nullable Output<String> keyVaultUri;

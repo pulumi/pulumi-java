@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Trigger reference type.
- * 
  */
 public final class TriggerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class TriggerReferenceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Reference trigger name.
-     * 
      */
     @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
@@ -30,7 +28,6 @@ public final class TriggerReferenceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Trigger reference type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

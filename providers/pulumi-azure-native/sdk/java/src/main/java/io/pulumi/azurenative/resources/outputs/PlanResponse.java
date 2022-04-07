@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class PlanResponse {
     /**
      * The plan ID.
-     * 
      */
     private final @Nullable String name;
     /**
      * The offer ID.
-     * 
      */
     private final @Nullable String product;
     /**
      * The promotion code.
-     * 
      */
     private final @Nullable String promotionCode;
     /**
      * The publisher ID.
-     * 
      */
     private final @Nullable String publisher;
     /**
      * The plan's version.
-     * 
      */
     private final @Nullable String version;
 
@@ -53,35 +48,30 @@ public final class PlanResponse {
 
     /**
      * The plan ID.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The offer ID.
-     * 
     */
     public Optional<String> getProduct() {
         return Optional.ofNullable(this.product);
     }
     /**
      * The promotion code.
-     * 
     */
     public Optional<String> getPromotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * The publisher ID.
-     * 
     */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * The plan's version.
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

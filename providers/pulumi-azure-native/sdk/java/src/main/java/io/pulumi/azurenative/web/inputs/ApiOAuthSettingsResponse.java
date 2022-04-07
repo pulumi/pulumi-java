@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * OAuth settings for the connection provider
- * 
  */
 public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Resource provider client id
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -35,7 +33,6 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Client Secret needed for OAuth
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable String clientSecret;
@@ -46,7 +43,6 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * OAuth parameters key is the name of parameter
-     * 
      */
     @Import(name="customParameters")
       private final @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters;
@@ -57,7 +53,6 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Identity provider
-     * 
      */
     @Import(name="identityProvider")
       private final @Nullable String identityProvider;
@@ -68,7 +63,6 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Read only properties for this oauth setting.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Object properties;
@@ -79,7 +73,6 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Url
-     * 
      */
     @Import(name="redirectUrl")
       private final @Nullable String redirectUrl;
@@ -90,7 +83,6 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * OAuth scopes
-     * 
      */
     @Import(name="scopes")
       private final @Nullable List<String> scopes;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties specific to an Enterprise Channel Node.
- * 
  */
 public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
 
     /**
      * The location of the Enterprise Channel Node.
-     * 
      */
     @Import(name="azureLocation", required=true)
       private final Output<String> azureLocation;
@@ -33,7 +31,6 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
 
     /**
      * The sku of the Enterprise Channel Node.
-     * 
      */
     @Import(name="azureSku", required=true)
       private final Output<String> azureSku;
@@ -44,7 +41,6 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the Enterprise Channel Node.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -55,7 +51,6 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
 
     /**
      * The current state of the Enterprise Channel Node.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;

@@ -16,7 +16,6 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * API identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
@@ -27,7 +26,6 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Comment identifier within an Issue. Must be unique in the current Issue.
-     * 
      */
     @Import(name="commentId")
       private final @Nullable Output<String> commentId;
@@ -38,7 +36,6 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Date and time when the comment was created.
-     * 
      */
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
@@ -49,7 +46,6 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Issue identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="issueId", required=true)
       private final Output<String> issueId;
@@ -60,7 +56,6 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -71,7 +66,6 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -82,7 +76,6 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Comment text.
-     * 
      */
     @Import(name="text", required=true)
       private final Output<String> text;
@@ -93,7 +86,6 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * A resource identifier for the user who left the comment.
-     * 
      */
     @Import(name="userId", required=true)
       private final Output<String> userId;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a container endpoint.
- * 
  */
 public final class EndpointPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class EndpointPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The name of the endpoint.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -32,7 +30,6 @@ public final class EndpointPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * Port used by the container.
-     * 
      */
     @Import(name="port")
       private final @Nullable Integer port;

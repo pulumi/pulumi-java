@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameter to pass to ARM template
- * 
  */
 public final class ArmTemplateParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ArmTemplateParameterResponse extends io.pulumi.resources.Invo
 
     /**
      * name of the parameter.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -30,8 +28,7 @@ public final class ArmTemplateParameterResponse extends io.pulumi.resources.Invo
     }
 
     /**
-     * value for the parameter. In Jtoken
-     * 
+     * value for the parameter. In Jtoken 
      */
     @Import(name="value")
       private final @Nullable String value;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Operator for dimension values
-     * 
      */
     @EnumType
     public enum Operator {

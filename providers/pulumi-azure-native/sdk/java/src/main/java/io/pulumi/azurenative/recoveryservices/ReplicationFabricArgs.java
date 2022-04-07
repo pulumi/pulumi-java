@@ -17,7 +17,6 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Name of the ASR fabric.
-     * 
      */
     @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
@@ -28,7 +27,6 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Fabric creation input.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<FabricCreationInputPropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

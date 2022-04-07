@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional Confidential Ledger properties.
- * 
  */
 public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Array of all AAD based Security Principals.
-     * 
      */
     @Import(name="aadBasedSecurityPrincipals")
       private final @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
@@ -36,7 +34,6 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Array of all cert based Security Principals.
-     * 
      */
     @Import(name="certBasedSecurityPrincipals")
       private final @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
@@ -47,7 +44,6 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the Blob Storage Account for saving ledger files
-     * 
      */
     @Import(name="ledgerStorageAccount")
       private final @Nullable Output<String> ledgerStorageAccount;
@@ -58,7 +54,6 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Type of Confidential Ledger
-     * 
      */
     @Import(name="ledgerType")
       private final @Nullable Output<Either<String,LedgerType>> ledgerType;

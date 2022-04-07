@@ -14,7 +14,6 @@ public final class GetCloudEdgeManagementRoleArgs extends io.pulumi.resources.In
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final String deviceName;
@@ -25,7 +24,6 @@ public final class GetCloudEdgeManagementRoleArgs extends io.pulumi.resources.In
 
     /**
      * The role name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class GetCloudEdgeManagementRoleArgs extends io.pulumi.resources.In
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

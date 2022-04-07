@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
- * 
  */
 public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
@@ -35,7 +33,6 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The VHD name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -46,7 +43,6 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The OS type.
-     * 
      */
     @Import(name="osType")
       private final @Nullable Output<Either<String,OperatingSystemTypes>> osType;
@@ -57,7 +53,6 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The virtual hard disk.
-     * 
      */
     @Import(name="vhd")
       private final @Nullable Output<VirtualHardDiskArgs> vhd;

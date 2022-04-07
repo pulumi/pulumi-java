@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ServiceManagedIdentityResponseIdentity {
     /**
      * Type of identity being specified, currently SystemAssigned and None are allowed.
-     * 
      */
     private final @Nullable String type;
 
@@ -24,7 +23,6 @@ public final class ServiceManagedIdentityResponseIdentity {
 
     /**
      * Type of identity being specified, currently SystemAssigned and None are allowed.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

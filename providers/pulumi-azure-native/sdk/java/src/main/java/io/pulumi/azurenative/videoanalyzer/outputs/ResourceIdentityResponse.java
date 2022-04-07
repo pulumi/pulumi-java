@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class ResourceIdentityResponse {
     /**
      * The user assigned managed identity's resource identifier to use when accessing a resource.
-     * 
      */
     private final String userAssignedIdentity;
 
@@ -22,7 +21,6 @@ public final class ResourceIdentityResponse {
 
     /**
      * The user assigned managed identity's resource identifier to use when accessing a resource.
-     * 
     */
     public String getUserAssignedIdentity() {
         return this.userAssignedIdentity;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The information of AAD security group.
- * 
  */
 public final class ClientGroupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ClientGroupInfoResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The AAD security group id.
-     * 
      */
     @Import(name="groupId")
       private final @Nullable String groupId;
@@ -31,7 +29,6 @@ public final class ClientGroupInfoResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The AAD security group name.
-     * 
      */
     @Import(name="groupName")
       private final @Nullable String groupName;

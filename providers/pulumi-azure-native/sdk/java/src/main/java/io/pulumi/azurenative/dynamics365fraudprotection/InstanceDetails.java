@@ -20,7 +20,118 @@ import javax.annotation.Nullable;
  * Represents an instance of a DFP instance resource.
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create instance
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var instanceDetails = new AzureNative.Dynamics365Fraudprotection.InstanceDetails("instanceDetails", new AzureNative.Dynamics365Fraudprotection.InstanceDetailsArgs
+ *         {
+ *             Administration = new AzureNative.Dynamics365Fraudprotection.Inputs.DFPInstanceAdministratorsArgs
+ *             {
+ *                 Members = 
+ *                 {
+ *                     "azsdktest@microsoft.com",
+ *                     "azsdktest2@microsoft.com",
+ *                 },
+ *             },
+ *             InstanceName = "azsdktest",
+ *             Location = "West US",
+ *             ResourceGroupName = "TestRG",
+ *             Tags = 
+ *             {
+ *                 { "testKey", "testValue" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	dynamics365fraudprotection "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dynamics365fraudprotection"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := dynamics365fraudprotection.NewInstanceDetails(ctx, "instanceDetails", &dynamics365fraudprotection.InstanceDetailsArgs{
+ * 			Administration: &dynamics365fraudprotection.DFPInstanceAdministratorsArgs{
+ * 				Members: pulumi.StringArray{
+ * 					pulumi.String("azsdktest@microsoft.com"),
+ * 					pulumi.String("azsdktest2@microsoft.com"),
+ * 				},
+ * 			},
+ * 			InstanceName:      pulumi.String("azsdktest"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("TestRG"),
+ * 			Tags: pulumi.StringMap{
+ * 				"testKey": pulumi.String("testValue"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const instanceDetails = new azure_native.dynamics365fraudprotection.InstanceDetails("instanceDetails", {
+ *     administration: {
+ *         members: [
+ *             "azsdktest@microsoft.com",
+ *             "azsdktest2@microsoft.com",
+ *         ],
+ *     },
+ *     instanceName: "azsdktest",
+ *     location: "West US",
+ *     resourceGroupName: "TestRG",
+ *     tags: {
+ *         testKey: "testValue",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * instance_details = azure_native.dynamics365fraudprotection.InstanceDetails("instanceDetails",
+ *     administration=azure_native.dynamics365fraudprotection.DFPInstanceAdministratorsArgs(
+ *         members=[
+ *             "azsdktest@microsoft.com",
+ *             "azsdktest2@microsoft.com",
+ *         ],
+ *     ),
+ *     instance_name="azsdktest",
+ *     location="West US",
+ *     resource_group_name="TestRG",
+ *     tags={
+ *         "testKey": "testValue",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,98 +146,84 @@ import javax.annotation.Nullable;
 public class InstanceDetails extends io.pulumi.resources.CustomResource {
     /**
      * A collection of DFP instance administrators
-     * 
      */
     @Export(name="administration", type=DFPInstanceAdministratorsResponse.class, parameters={})
     private Output</* @Nullable */ DFPInstanceAdministratorsResponse> administration;
 
     /**
      * @return A collection of DFP instance administrators
-     * 
      */
     public Output</* @Nullable */ DFPInstanceAdministratorsResponse> getAdministration() {
         return this.administration;
     }
     /**
      * Location of the DFP resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Location of the DFP resource.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current deployment state of DFP resource. The provisioningState is to indicate states for resource provisioning.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The current deployment state of DFP resource. The provisioningState is to indicate states for resource provisioning.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Key-value pairs of additional resource provisioning properties.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

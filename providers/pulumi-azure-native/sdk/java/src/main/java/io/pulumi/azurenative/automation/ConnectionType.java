@@ -20,7 +20,159 @@ import javax.annotation.Nullable;
  * Definition of the connection type.
  * API Version: 2019-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update connection type
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connectionType = new AzureNative.Automation.ConnectionType("connectionType", new AzureNative.Automation.ConnectionTypeArgs
+ *         {
+ *             AutomationAccountName = "myAutomationAccount22",
+ *             ConnectionTypeName = "myCT",
+ *             FieldDefinitions = 
+ *             {
+ *                 { "myBoolField", new AzureNative.Automation.Inputs.FieldDefinitionArgs
+ *                 {
+ *                     IsEncrypted = false,
+ *                     IsOptional = false,
+ *                     Type = "bool",
+ *                 } },
+ *                 { "myStringField", new AzureNative.Automation.Inputs.FieldDefinitionArgs
+ *                 {
+ *                     IsEncrypted = false,
+ *                     IsOptional = false,
+ *                     Type = "string",
+ *                 } },
+ *                 { "myStringFieldEncrypted", new AzureNative.Automation.Inputs.FieldDefinitionArgs
+ *                 {
+ *                     IsEncrypted = true,
+ *                     IsOptional = false,
+ *                     Type = "string",
+ *                 } },
+ *             },
+ *             IsGlobal = false,
+ *             Name = "myCT",
+ *             ResourceGroupName = "rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewConnectionType(ctx, "connectionType", &automation.ConnectionTypeArgs{
+ * 			AutomationAccountName: pulumi.String("myAutomationAccount22"),
+ * 			ConnectionTypeName:    pulumi.String("myCT"),
+ * 			FieldDefinitions: automation.FieldDefinitionMap{
+ * 				"myBoolField": &automation.FieldDefinitionArgs{
+ * 					IsEncrypted: pulumi.Bool(false),
+ * 					IsOptional:  pulumi.Bool(false),
+ * 					Type:        pulumi.String("bool"),
+ * 				},
+ * 				"myStringField": &automation.FieldDefinitionArgs{
+ * 					IsEncrypted: pulumi.Bool(false),
+ * 					IsOptional:  pulumi.Bool(false),
+ * 					Type:        pulumi.String("string"),
+ * 				},
+ * 				"myStringFieldEncrypted": &automation.FieldDefinitionArgs{
+ * 					IsEncrypted: pulumi.Bool(true),
+ * 					IsOptional:  pulumi.Bool(false),
+ * 					Type:        pulumi.String("string"),
+ * 				},
+ * 			},
+ * 			IsGlobal:          pulumi.Bool(false),
+ * 			Name:              pulumi.String("myCT"),
+ * 			ResourceGroupName: pulumi.String("rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connectionType = new azure_native.automation.ConnectionType("connectionType", {
+ *     automationAccountName: "myAutomationAccount22",
+ *     connectionTypeName: "myCT",
+ *     fieldDefinitions: {
+ *         myBoolField: {
+ *             isEncrypted: false,
+ *             isOptional: false,
+ *             type: "bool",
+ *         },
+ *         myStringField: {
+ *             isEncrypted: false,
+ *             isOptional: false,
+ *             type: "string",
+ *         },
+ *         myStringFieldEncrypted: {
+ *             isEncrypted: true,
+ *             isOptional: false,
+ *             type: "string",
+ *         },
+ *     },
+ *     isGlobal: false,
+ *     name: "myCT",
+ *     resourceGroupName: "rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connection_type = azure_native.automation.ConnectionType("connectionType",
+ *     automation_account_name="myAutomationAccount22",
+ *     connection_type_name="myCT",
+ *     field_definitions={
+ *         "myBoolField": azure_native.automation.FieldDefinitionArgs(
+ *             is_encrypted=False,
+ *             is_optional=False,
+ *             type="bool",
+ *         ),
+ *         "myStringField": azure_native.automation.FieldDefinitionArgs(
+ *             is_encrypted=False,
+ *             is_optional=False,
+ *             type="string",
+ *         ),
+ *         "myStringFieldEncrypted": azure_native.automation.FieldDefinitionArgs(
+ *             is_encrypted=True,
+ *             is_optional=False,
+ *             type="string",
+ *         ),
+ *     },
+ *     is_global=False,
+ *     name="myCT",
+ *     resource_group_name="rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,98 +187,84 @@ import javax.annotation.Nullable;
 public class ConnectionType extends io.pulumi.resources.CustomResource {
     /**
      * Gets the creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return Gets the creation time.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Gets or sets the description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Gets the field definitions of the connection type.
-     * 
      */
     @Export(name="fieldDefinitions", type=Map.class, parameters={String.class, FieldDefinitionResponse.class})
     private Output<Map<String,FieldDefinitionResponse>> fieldDefinitions;
 
     /**
      * @return Gets the field definitions of the connection type.
-     * 
      */
     public Output<Map<String,FieldDefinitionResponse>> getFieldDefinitions() {
         return this.fieldDefinitions;
     }
     /**
      * Gets or sets a Boolean value to indicate if the connection type is global.
-     * 
      */
     @Export(name="isGlobal", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isGlobal;
 
     /**
      * @return Gets or sets a Boolean value to indicate if the connection type is global.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsGlobal() {
         return this.isGlobal;
     }
     /**
      * Gets or sets the last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
      * @return Gets or sets the last modified time.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * Gets the name of the connection type.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the name of the connection type.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

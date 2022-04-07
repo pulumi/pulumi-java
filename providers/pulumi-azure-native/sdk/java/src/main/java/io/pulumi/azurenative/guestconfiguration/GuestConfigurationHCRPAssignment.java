@@ -18,7 +18,151 @@ import javax.annotation.Nullable;
  * Guest configuration assignment is an association between a machine and guest configuration.
  * API Version: 2020-06-25.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update guest configuration assignment
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var guestConfigurationHCRPAssignment = new AzureNative.GuestConfiguration.GuestConfigurationHCRPAssignment("guestConfigurationHCRPAssignment", new AzureNative.GuestConfiguration.GuestConfigurationHCRPAssignmentArgs
+ *         {
+ *             GuestConfigurationAssignmentName = "WhitelistedApplication",
+ *             Location = "westcentralus",
+ *             MachineName = "myMachineName",
+ *             Name = "WhitelistedApplication",
+ *             Properties = new AzureNative.GuestConfiguration.Inputs.GuestConfigurationAssignmentPropertiesArgs
+ *             {
+ *                 Context = "Azure policy",
+ *                 GuestConfiguration = new AzureNative.GuestConfiguration.Inputs.GuestConfigurationNavigationArgs
+ *                 {
+ *                     AssignmentType = "ApplyAndAutoCorrect",
+ *                     ConfigurationParameter = 
+ *                     {
+ *                         new AzureNative.GuestConfiguration.Inputs.ConfigurationParameterArgs
+ *                         {
+ *                             Name = "[InstalledApplication]bwhitelistedapp;Name",
+ *                             Value = "NotePad,sql",
+ *                         },
+ *                     },
+ *                     ContentHash = "123contenthash",
+ *                     ContentUri = "https://thisisfake/pacakge",
+ *                     Name = "WhitelistedApplication",
+ *                     Version = "1.*",
+ *                 },
+ *             },
+ *             ResourceGroupName = "myResourceGroupName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	guestconfiguration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/guestconfiguration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := guestconfiguration.NewGuestConfigurationHCRPAssignment(ctx, "guestConfigurationHCRPAssignment", &guestconfiguration.GuestConfigurationHCRPAssignmentArgs{
+ * 			GuestConfigurationAssignmentName: pulumi.String("WhitelistedApplication"),
+ * 			Location:                         pulumi.String("westcentralus"),
+ * 			MachineName:                      pulumi.String("myMachineName"),
+ * 			Name:                             pulumi.String("WhitelistedApplication"),
+ * 			Properties: &guestconfiguration.GuestConfigurationAssignmentPropertiesArgs{
+ * 				Context: pulumi.String("Azure policy"),
+ * 				GuestConfiguration: &guestconfiguration.GuestConfigurationNavigationArgs{
+ * 					AssignmentType: pulumi.String("ApplyAndAutoCorrect"),
+ * 					ConfigurationParameter: guestconfiguration.ConfigurationParameterArray{
+ * 						&guestconfiguration.ConfigurationParameterArgs{
+ * 							Name:  pulumi.String("[InstalledApplication]bwhitelistedapp;Name"),
+ * 							Value: pulumi.String("NotePad,sql"),
+ * 						},
+ * 					},
+ * 					ContentHash: pulumi.String("123contenthash"),
+ * 					ContentUri:  pulumi.String("https://thisisfake/pacakge"),
+ * 					Name:        pulumi.String("WhitelistedApplication"),
+ * 					Version:     pulumi.String("1.*"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroupName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const guestConfigurationHCRPAssignment = new azure_native.guestconfiguration.GuestConfigurationHCRPAssignment("guestConfigurationHCRPAssignment", {
+ *     guestConfigurationAssignmentName: "WhitelistedApplication",
+ *     location: "westcentralus",
+ *     machineName: "myMachineName",
+ *     name: "WhitelistedApplication",
+ *     properties: {
+ *         context: "Azure policy",
+ *         guestConfiguration: {
+ *             assignmentType: "ApplyAndAutoCorrect",
+ *             configurationParameter: [{
+ *                 name: "[InstalledApplication]bwhitelistedapp;Name",
+ *                 value: "NotePad,sql",
+ *             }],
+ *             contentHash: "123contenthash",
+ *             contentUri: "https://thisisfake/pacakge",
+ *             name: "WhitelistedApplication",
+ *             version: "1.*",
+ *         },
+ *     },
+ *     resourceGroupName: "myResourceGroupName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * guest_configuration_hcrpassignment = azure_native.guestconfiguration.GuestConfigurationHCRPAssignment("guestConfigurationHCRPAssignment",
+ *     guest_configuration_assignment_name="WhitelistedApplication",
+ *     location="westcentralus",
+ *     machine_name="myMachineName",
+ *     name="WhitelistedApplication",
+ *     properties=azure_native.guestconfiguration.GuestConfigurationAssignmentPropertiesArgs(
+ *         context="Azure policy",
+ *         guest_configuration=azure_native.guestconfiguration.GuestConfigurationNavigationArgs(
+ *             assignment_type="ApplyAndAutoCorrect",
+ *             configuration_parameter=[azure_native.guestconfiguration.ConfigurationParameterArgs(
+ *                 name="[InstalledApplication]bwhitelistedapp;Name",
+ *                 value="NotePad,sql",
+ *             )],
+ *             content_hash="123contenthash",
+ *             content_uri="https://thisisfake/pacakge",
+ *             name="WhitelistedApplication",
+ *             version="1.*",
+ *         ),
+ *     ),
+ *     resource_group_name="myResourceGroupName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +177,48 @@ import javax.annotation.Nullable;
 public class GuestConfigurationHCRPAssignment extends io.pulumi.resources.CustomResource {
     /**
      * Region where the VM is located.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Region where the VM is located.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Name of the guest configuration assignment.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the guest configuration assignment.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Properties of the Guest configuration assignment.
-     * 
      */
     @Export(name="properties", type=GuestConfigurationAssignmentPropertiesResponse.class, parameters={})
     private Output<GuestConfigurationAssignmentPropertiesResponse> properties;
 
     /**
      * @return Properties of the Guest configuration assignment.
-     * 
      */
     public Output<GuestConfigurationAssignmentPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

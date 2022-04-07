@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for access validation based on JSON Web Tokens (JWT).
- * 
  */
 public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of expected token audiences. Token audience is valid if it matches at least one of the given values.
-     * 
      */
     @Import(name="audiences")
       private final @Nullable Output<List<String>> audiences;
@@ -36,7 +34,6 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
-     * 
      */
     @Import(name="claims")
       private final @Nullable Output<List<TokenClaimArgs>> claims;
@@ -47,7 +44,6 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
-     * 
      */
     @Import(name="issuers")
       private final @Nullable Output<List<String>> issuers;
@@ -58,7 +54,6 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
-     * 
      */
     @Import(name="keys")
       private final @Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
@@ -70,7 +65,6 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.JwtAuthentication'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

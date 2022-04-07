@@ -19,7 +19,102 @@ import javax.annotation.Nullable;
  * The key-value resource along with all resource properties.
  * API Version: 2020-07-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### KeyValues_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var keyValue = new AzureNative.AppConfiguration.KeyValue("keyValue", new AzureNative.AppConfiguration.KeyValueArgs
+ *         {
+ *             ConfigStoreName = "contoso",
+ *             KeyValueName = "myKey$myLabel",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "tag1", "tagValue1" },
+ *                 { "tag2", "tagValue2" },
+ *             },
+ *             Value = "myValue",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	appconfiguration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appconfiguration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appconfiguration.NewKeyValue(ctx, "keyValue", &appconfiguration.KeyValueArgs{
+ * 			ConfigStoreName:   pulumi.String("contoso"),
+ * 			KeyValueName:      pulumi.String(fmt.Sprintf("%v%v%v", "myKey", "$", "myLabel")),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tag1": pulumi.String("tagValue1"),
+ * 				"tag2": pulumi.String("tagValue2"),
+ * 			},
+ * 			Value: pulumi.String("myValue"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
+ *     configStoreName: "contoso",
+ *     keyValueName: `myKey$myLabel`,
+ *     resourceGroupName: "myResourceGroup",
+ *     tags: {
+ *         tag1: "tagValue1",
+ *         tag2: "tagValue2",
+ *     },
+ *     value: "myValue",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * key_value = azure_native.appconfiguration.KeyValue("keyValue",
+ *     config_store_name="contoso",
+ *     key_value_name="myKey$myLabel",
+ *     resource_group_name="myResourceGroup",
+ *     tags={
+ *         "tag1": "tagValue1",
+ *         "tag2": "tagValue2",
+ *     },
+ *     value="myValue")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,7 +130,6 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
     /**
      * The content type of the key-value's value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
-     * 
      */
     @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
@@ -43,21 +137,18 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
     /**
      * @return The content type of the key-value's value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
-     * 
      */
     public Output</* @Nullable */ String> getContentType() {
         return this.contentType;
     }
     /**
      * An ETag indicating the state of a key-value within a configuration store.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
     /**
      * @return An ETag indicating the state of a key-value within a configuration store.
-     * 
      */
     public Output<String> getETag() {
         return this.eTag;
@@ -65,7 +156,6 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
     /**
      * The primary identifier of a key-value.
      * The key is used in unison with the label to uniquely identify a key-value.
-     * 
      */
     @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
@@ -73,7 +163,6 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
     /**
      * @return The primary identifier of a key-value.
      * The key is used in unison with the label to uniquely identify a key-value.
-     * 
      */
     public Output<String> getKey() {
         return this.key;
@@ -81,7 +170,6 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
     /**
      * A value used to group key-values.
      * The label is used in unison with the key to uniquely identify a key-value.
-     * 
      */
     @Export(name="label", type=String.class, parameters={})
     private Output<String> label;
@@ -89,21 +177,18 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
     /**
      * @return A value used to group key-values.
      * The label is used in unison with the key to uniquely identify a key-value.
-     * 
      */
     public Output<String> getLabel() {
         return this.label;
     }
     /**
      * The last time a modifying operation was performed on the given key-value.
-     * 
      */
     @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
      * @return The last time a modifying operation was performed on the given key-value.
-     * 
      */
     public Output<String> getLastModified() {
         return this.lastModified;
@@ -111,7 +196,6 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
     /**
      * A value indicating whether the key-value is locked.
      * A locked key-value may not be modified until it is unlocked.
-     * 
      */
     @Export(name="locked", type=Boolean.class, parameters={})
     private Output<Boolean> locked;
@@ -119,63 +203,54 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
     /**
      * @return A value indicating whether the key-value is locked.
      * A locked key-value may not be modified until it is unlocked.
-     * 
      */
     public Output<Boolean> getLocked() {
         return this.locked;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A dictionary of tags that can help identify what a key-value may be applicable for.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A dictionary of tags that can help identify what a key-value may be applicable for.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The value of the key-value.
-     * 
      */
     @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**
      * @return The value of the key-value.
-     * 
      */
     public Output</* @Nullable */ String> getValue() {
         return this.value;

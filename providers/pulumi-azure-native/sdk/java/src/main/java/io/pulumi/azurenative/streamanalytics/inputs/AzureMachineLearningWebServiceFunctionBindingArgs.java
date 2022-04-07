@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The binding to an Azure Machine Learning web service.
- * 
  */
 public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
 
     /**
      * The API key used to authenticate with Request-Response endpoint.
-     * 
      */
     @Import(name="apiKey")
       private final @Nullable Output<String> apiKey;
@@ -35,7 +33,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
 
     /**
      * Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
-     * 
      */
     @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
@@ -46,7 +43,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
 
     /**
      * The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
-     * 
      */
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
@@ -57,7 +53,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
 
     /**
      * The inputs for the Azure Machine Learning web service endpoint.
-     * 
      */
     @Import(name="inputs")
       private final @Nullable Output<AzureMachineLearningWebServiceInputsArgs> inputs;
@@ -68,7 +63,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
 
     /**
      * A list of outputs from the Azure Machine Learning web service endpoint execution.
-     * 
      */
     @Import(name="outputs")
       private final @Nullable Output<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs;
@@ -80,7 +74,6 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
     /**
      * Indicates the function binding type.
      * Expected value is 'Microsoft.MachineLearning/WebService'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

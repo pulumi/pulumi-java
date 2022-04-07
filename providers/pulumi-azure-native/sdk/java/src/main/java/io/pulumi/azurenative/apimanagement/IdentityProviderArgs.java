@@ -19,7 +19,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * List of Allowed Tenants when configuring Azure Active Directory login.
-     * 
      */
     @Import(name="allowedTenants")
       private final @Nullable Output<List<String>> allowedTenants;
@@ -30,7 +29,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
-     * 
      */
     @Import(name="authority")
       private final @Nullable Output<String> authority;
@@ -41,7 +39,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
-     * 
      */
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
@@ -52,7 +49,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
      */
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
@@ -63,7 +59,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Identity Provider Type identifier.
-     * 
      */
     @Import(name="identityProviderName")
       private final @Nullable Output<String> identityProviderName;
@@ -74,7 +69,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     @Import(name="passwordResetPolicyName")
       private final @Nullable Output<String> passwordResetPolicyName;
@@ -85,7 +79,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     @Import(name="profileEditingPolicyName")
       private final @Nullable Output<String> profileEditingPolicyName;
@@ -96,7 +89,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -107,7 +99,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -118,7 +109,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Signin Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     @Import(name="signinPolicyName")
       private final @Nullable Output<String> signinPolicyName;
@@ -129,7 +119,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The TenantId to use instead of Common when logging into Active Directory
-     * 
      */
     @Import(name="signinTenant")
       private final @Nullable Output<String> signinTenant;
@@ -140,7 +129,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Signup Policy Name. Only applies to AAD B2C Identity Provider.
-     * 
      */
     @Import(name="signupPolicyName")
       private final @Nullable Output<String> signupPolicyName;
@@ -151,7 +139,6 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Identity Provider Type identifier.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,IdentityProviderType>> type;

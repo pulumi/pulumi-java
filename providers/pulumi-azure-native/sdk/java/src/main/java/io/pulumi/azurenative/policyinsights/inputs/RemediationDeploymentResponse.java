@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Details of a single deployment created by the remediation.
- * 
  */
 public final class RemediationDeploymentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
 
     /**
      * The time at which the remediation was created.
-     * 
      */
     @Import(name="createdOn", required=true)
       private final String createdOn;
@@ -30,7 +28,6 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
 
     /**
      * Resource ID of the template deployment that will remediate the resource.
-     * 
      */
     @Import(name="deploymentId", required=true)
       private final String deploymentId;
@@ -41,7 +38,6 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
 
     /**
      * Error encountered while remediated the resource.
-     * 
      */
     @Import(name="error", required=true)
       private final ErrorDefinitionResponse error;
@@ -52,7 +48,6 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
 
     /**
      * The time at which the remediation deployment was last updated.
-     * 
      */
     @Import(name="lastUpdatedOn", required=true)
       private final String lastUpdatedOn;
@@ -63,7 +58,6 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
 
     /**
      * Resource ID of the resource that is being remediated by the deployment.
-     * 
      */
     @Import(name="remediatedResourceId", required=true)
       private final String remediatedResourceId;
@@ -74,7 +68,6 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
 
     /**
      * Location of the resource that is being remediated.
-     * 
      */
     @Import(name="resourceLocation", required=true)
       private final String resourceLocation;
@@ -85,7 +78,6 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
 
     /**
      * Status of the remediation deployment.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

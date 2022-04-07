@@ -14,7 +14,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Traffic Manager endpoint.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final String endpointName;
@@ -25,7 +24,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the Traffic Manager endpoint.
-     * 
      */
     @Import(name="endpointType", required=true)
       private final String endpointType;
@@ -36,7 +34,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Traffic Manager profile.
-     * 
      */
     @Import(name="profileName", required=true)
       private final String profileName;
@@ -47,7 +44,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group containing the Traffic Manager endpoint.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

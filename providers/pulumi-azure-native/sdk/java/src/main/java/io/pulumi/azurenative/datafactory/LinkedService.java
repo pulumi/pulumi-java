@@ -120,7 +120,213 @@ import javax.annotation.Nullable;
  * Linked service resource type.
  * API Version: 2018-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### LinkedServices_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var linkedService = new AzureNative.DataFactory.LinkedService("linkedService", new AzureNative.DataFactory.LinkedServiceArgs
+ *         {
+ *             FactoryName = "exampleFactoryName",
+ *             LinkedServiceName = "exampleLinkedService",
+ *             Properties = new AzureNative.DataFactory.Inputs.AzureStorageLinkedServiceArgs
+ *             {
+ *                 ConnectionString = 
+ *                 {
+ *                     { "type", "SecureString" },
+ *                     { "value", "DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>" },
+ *                 },
+ *                 Type = "AzureStorage",
+ *             },
+ *             ResourceGroupName = "exampleResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datafactory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datafactory"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datafactory.NewLinkedService(ctx, "linkedService", &datafactory.LinkedServiceArgs{
+ * 			FactoryName:       pulumi.String("exampleFactoryName"),
+ * 			LinkedServiceName: pulumi.String("exampleLinkedService"),
+ * 			Properties: datafactory.AzureStorageLinkedService{
+ * 				ConnectionString: map[string]interface{}{
+ * 					"type":  "SecureString",
+ * 					"value": "DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>",
+ * 				},
+ * 				Type: "AzureStorage",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const linkedService = new azure_native.datafactory.LinkedService("linkedService", {
+ *     factoryName: "exampleFactoryName",
+ *     linkedServiceName: "exampleLinkedService",
+ *     properties: {
+ *         connectionString: {
+ *             type: "SecureString",
+ *             value: "DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>",
+ *         },
+ *         type: "AzureStorage",
+ *     },
+ *     resourceGroupName: "exampleResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * linked_service = azure_native.datafactory.LinkedService("linkedService",
+ *     factory_name="exampleFactoryName",
+ *     linked_service_name="exampleLinkedService",
+ *     properties=azure_native.datafactory.AzureStorageLinkedServiceArgs(
+ *         connection_string={
+ *             "type": "SecureString",
+ *             "value": "DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>",
+ *         },
+ *         type="AzureStorage",
+ *     ),
+ *     resource_group_name="exampleResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### LinkedServices_Update
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var linkedService = new AzureNative.DataFactory.LinkedService("linkedService", new AzureNative.DataFactory.LinkedServiceArgs
+ *         {
+ *             FactoryName = "exampleFactoryName",
+ *             LinkedServiceName = "exampleLinkedService",
+ *             Properties = new AzureNative.DataFactory.Inputs.AzureStorageLinkedServiceArgs
+ *             {
+ *                 ConnectionString = 
+ *                 {
+ *                     { "type", "SecureString" },
+ *                     { "value", "DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>" },
+ *                 },
+ *                 Description = "Example description",
+ *                 Type = "AzureStorage",
+ *             },
+ *             ResourceGroupName = "exampleResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datafactory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datafactory"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datafactory.NewLinkedService(ctx, "linkedService", &datafactory.LinkedServiceArgs{
+ * 			FactoryName:       pulumi.String("exampleFactoryName"),
+ * 			LinkedServiceName: pulumi.String("exampleLinkedService"),
+ * 			Properties: datafactory.AzureStorageLinkedService{
+ * 				ConnectionString: map[string]interface{}{
+ * 					"type":  "SecureString",
+ * 					"value": "DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>",
+ * 				},
+ * 				Description: "Example description",
+ * 				Type:        "AzureStorage",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const linkedService = new azure_native.datafactory.LinkedService("linkedService", {
+ *     factoryName: "exampleFactoryName",
+ *     linkedServiceName: "exampleLinkedService",
+ *     properties: {
+ *         connectionString: {
+ *             type: "SecureString",
+ *             value: "DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>",
+ *         },
+ *         description: "Example description",
+ *         type: "AzureStorage",
+ *     },
+ *     resourceGroupName: "exampleResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * linked_service = azure_native.datafactory.LinkedService("linkedService",
+ *     factory_name="exampleFactoryName",
+ *     linked_service_name="exampleLinkedService",
+ *     properties=azure_native.datafactory.AzureStorageLinkedServiceArgs(
+ *         connection_string={
+ *             "type": "SecureString",
+ *             "value": "DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=<storage key>",
+ *         },
+ *         description="Example description",
+ *         type="AzureStorage",
+ *     ),
+ *     resource_group_name="exampleResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -135,56 +341,48 @@ import javax.annotation.Nullable;
 public class LinkedService extends io.pulumi.resources.CustomResource {
     /**
      * Etag identifies change in the resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Etag identifies change in the resource.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of linked service.
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return Properties of linked service.
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

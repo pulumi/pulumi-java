@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input for task that migrates SQL Server databases to Azure SQL Database Managed Instance.
- * 
  */
 public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
 
     /**
      * SAS URI of Azure Storage Account Container to be used for storing backup files.
-     * 
      */
     @Import(name="backupBlobShare", required=true)
       private final Output<BlobShareArgs> backupBlobShare;
@@ -38,7 +36,6 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
 
     /**
      * Backup file share information for all selected databases.
-     * 
      */
     @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
@@ -49,7 +46,6 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
 
     /**
      * Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.
-     * 
      */
     @Import(name="backupMode")
       private final @Nullable Output<Either<String,BackupMode>> backupMode;
@@ -60,7 +56,6 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
 
     /**
      * Agent Jobs to migrate.
-     * 
      */
     @Import(name="selectedAgentJobs")
       private final @Nullable Output<List<String>> selectedAgentJobs;
@@ -71,7 +66,6 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
 
     /**
      * Databases to migrate
-     * 
      */
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
@@ -82,7 +76,6 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
 
     /**
      * Logins to migrate.
-     * 
      */
     @Import(name="selectedLogins")
       private final @Nullable Output<List<String>> selectedLogins;
@@ -93,7 +86,6 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
 
     /**
      * Information for connecting to source
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
@@ -104,7 +96,6 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
 
     /**
      * Information for connecting to target
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;

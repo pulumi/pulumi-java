@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * HDInsight Pig activity type.
- * 
  */
 public final class HDInsightPigActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
-     * 
      */
     @Import(name="arguments")
       private final @Nullable Object arguments;
@@ -38,7 +36,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Allows user to specify defines for Pig job request.
-     * 
      */
     @Import(name="defines")
       private final @Nullable Map<String,Object> defines;
@@ -49,7 +46,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -60,7 +56,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -71,7 +66,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Debug info option.
-     * 
      */
     @Import(name="getDebugInfo")
       private final @Nullable String getDebugInfo;
@@ -82,7 +76,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -93,7 +86,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -104,7 +96,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -115,7 +106,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Script linked service reference.
-     * 
      */
     @Import(name="scriptLinkedService")
       private final @Nullable LinkedServiceReferenceResponse scriptLinkedService;
@@ -126,7 +116,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Script path. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="scriptPath")
       private final @Nullable Object scriptPath;
@@ -137,7 +126,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Storage linked service references.
-     * 
      */
     @Import(name="storageLinkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
@@ -149,7 +137,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
     /**
      * Type of activity.
      * Expected value is 'HDInsightPig'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -160,7 +147,6 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

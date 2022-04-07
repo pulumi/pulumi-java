@@ -14,7 +14,6 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.r
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.r
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;
@@ -36,7 +34,6 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.r
 
     /**
      * The name of the shared private link resource
-     * 
      */
     @Import(name="sharedPrivateLinkResourceName", required=true)
       private final String sharedPrivateLinkResourceName;

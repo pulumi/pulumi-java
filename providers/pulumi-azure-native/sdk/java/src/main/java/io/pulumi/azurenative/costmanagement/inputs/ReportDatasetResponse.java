@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of data present in the report.
- * 
  */
 public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-     * 
      */
     @Import(name="aggregation")
       private final @Nullable Map<String,ReportAggregationResponse> aggregation;
@@ -37,7 +35,6 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable ReportDatasetConfigurationResponse configuration;
@@ -48,7 +45,6 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Has filter expression to use in the report.
-     * 
      */
     @Import(name="filter")
       private final @Nullable ReportFilterResponse filter;
@@ -59,7 +55,6 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The granularity of rows in the report.
-     * 
      */
     @Import(name="granularity")
       private final @Nullable String granularity;
@@ -70,7 +65,6 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
-     * 
      */
     @Import(name="grouping")
       private final @Nullable List<ReportGroupingResponse> grouping;

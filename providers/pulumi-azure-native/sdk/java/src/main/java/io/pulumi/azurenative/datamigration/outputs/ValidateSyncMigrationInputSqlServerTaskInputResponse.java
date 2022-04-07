@@ -13,17 +13,14 @@ import java.util.Objects;
 public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
     /**
      * Databases to migrate
-     * 
      */
     private final List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
     /**
      * Information for connecting to source SQL server
-     * 
      */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
     /**
      * Information for connecting to target
-     * 
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
@@ -39,21 +36,18 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
 
     /**
      * Databases to migrate
-     * 
     */
     public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Information for connecting to source SQL server
-     * 
     */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Information for connecting to target
-     * 
     */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;

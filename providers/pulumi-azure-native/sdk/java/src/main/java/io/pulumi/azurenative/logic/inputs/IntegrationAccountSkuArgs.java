@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The integration account sku.
- * 
  */
 public final class IntegrationAccountSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class IntegrationAccountSkuArgs extends io.pulumi.resources.Resourc
 
     /**
      * The sku name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,IntegrationAccountSkuName>> name;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The license type.
-     * 
      */
     @EnumType
     public enum LicenseType {

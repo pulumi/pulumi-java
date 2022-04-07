@@ -16,7 +16,6 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
 
     /**
      * The expand expression to apply on the operation.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
 
     /**
      * The name of the virtual machine extension.
-     * 
      */
     @Import(name="vmExtensionName", required=true)
       private final String vmExtensionName;
@@ -49,7 +46,6 @@ public final class GetVirtualMachineExtensionArgs extends io.pulumi.resources.In
 
     /**
      * The name of the virtual machine containing the extension.
-     * 
      */
     @Import(name="vmName", required=true)
       private final String vmName;

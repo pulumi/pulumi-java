@@ -16,7 +16,6 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
 
     /**
      * The feature name.
-     * 
      */
     @Import(name="featureName")
       private final @Nullable String featureName;
@@ -27,7 +26,6 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
 
     /**
      * The feature type.
-     * 
      */
     @Import(name="featureType")
       private final @Nullable String featureType;
@@ -38,7 +36,6 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
 
     /**
      * The location identifier.
-     * 
      */
     @Import(name="locationId", required=true)
       private final String locationId;

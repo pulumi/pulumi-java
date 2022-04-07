@@ -19,7 +19,6 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Local network gateway's BGP speaker settings.
-     * 
      */
     @Import(name="bgpSettings")
       private final @Nullable Output<BgpSettingsArgs> bgpSettings;
@@ -30,7 +29,6 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * FQDN of local network gateway.
-     * 
      */
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
@@ -41,7 +39,6 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * IP address of local network gateway.
-     * 
      */
     @Import(name="gatewayIpAddress")
       private final @Nullable Output<String> gatewayIpAddress;
@@ -52,7 +49,6 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -63,7 +59,6 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Local network site address space.
-     * 
      */
     @Import(name="localNetworkAddressSpace")
       private final @Nullable Output<AddressSpaceArgs> localNetworkAddressSpace;
@@ -74,7 +69,6 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the local network gateway.
-     * 
      */
     @Import(name="localNetworkGatewayName")
       private final @Nullable Output<String> localNetworkGatewayName;
@@ -85,7 +79,6 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -96,7 +89,6 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -107,7 +99,6 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

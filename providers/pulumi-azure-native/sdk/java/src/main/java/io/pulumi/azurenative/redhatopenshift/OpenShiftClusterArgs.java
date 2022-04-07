@@ -26,7 +26,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The cluster API server profile.
-     * 
      */
     @Import(name="apiserverProfile")
       private final @Nullable Output<APIServerProfileArgs> apiserverProfile;
@@ -37,7 +36,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The cluster profile.
-     * 
      */
     @Import(name="clusterProfile")
       private final @Nullable Output<ClusterProfileArgs> clusterProfile;
@@ -48,7 +46,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The console profile.
-     * 
      */
     @Import(name="consoleProfile")
       private final @Nullable Output<ConsoleProfileArgs> consoleProfile;
@@ -59,7 +56,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The cluster ingress profiles.
-     * 
      */
     @Import(name="ingressProfiles")
       private final @Nullable Output<List<IngressProfileArgs>> ingressProfiles;
@@ -70,7 +66,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -81,7 +76,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The cluster master profile.
-     * 
      */
     @Import(name="masterProfile")
       private final @Nullable Output<MasterProfileArgs> masterProfile;
@@ -92,7 +86,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The cluster network profile.
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
@@ -103,7 +96,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The cluster provisioning state (immutable).
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
@@ -114,7 +106,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -125,7 +116,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the OpenShift cluster resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -136,7 +126,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The cluster service principal profile.
-     * 
      */
     @Import(name="servicePrincipalProfile")
       private final @Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile;
@@ -147,7 +136,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -158,7 +146,6 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The cluster worker profiles.
-     * 
      */
     @Import(name="workerProfiles")
       private final @Nullable Output<List<WorkerProfileArgs>> workerProfiles;

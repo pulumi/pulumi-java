@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Compute OS Type
-     * 
      */
     @EnumType
     public enum OsType {

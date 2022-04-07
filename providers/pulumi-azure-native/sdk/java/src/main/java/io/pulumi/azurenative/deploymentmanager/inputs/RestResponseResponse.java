@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that make up the expected REST response
- * 
  */
 public final class RestResponseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RestResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The regular expressions to match the response content with.
-     * 
      */
     @Import(name="regex")
       private final @Nullable RestResponseResponseRegex regex;
@@ -33,7 +31,6 @@ public final class RestResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.
-     * 
      */
     @Import(name="successStatusCodes")
       private final @Nullable List<String> successStatusCodes;

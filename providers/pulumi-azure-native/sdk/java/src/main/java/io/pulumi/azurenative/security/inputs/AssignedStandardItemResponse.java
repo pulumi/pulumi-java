@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * describe the properties of a of a security standard object reference
- * 
  */
 public final class AssignedStandardItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AssignedStandardItemResponse extends io.pulumi.resources.Invo
 
     /**
      * full resourceId of the Microsoft.Security/standard object
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The EngagementFabric SKU
- * 
  */
 public final class SKUResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SKUResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the SKU
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class SKUResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The price tier of the SKU
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

@@ -14,7 +14,6 @@ public final class GetWorkspaceSettingArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Name of the security setting
-     * 
      */
     @Import(name="workspaceSettingName", required=true)
       private final String workspaceSettingName;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a data disk.
- * 
  */
 public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
 
     /**
      * Gets the caching type.
-     * 
      */
     @Import(name="caching")
       private final @Nullable String caching;
@@ -34,7 +32,6 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
 
     /**
      * Gets the disk restore point Id.
-     * 
      */
     @Import(name="diskRestorePoint")
       private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
@@ -45,7 +42,6 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
 
     /**
      * Gets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks.
-     * 
      */
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
@@ -56,7 +52,6 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
 
     /**
      * Gets the logical unit number.
-     * 
      */
     @Import(name="lun")
       private final @Nullable Integer lun;
@@ -67,7 +62,6 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
 
     /**
      * Gets the managed disk details
-     * 
      */
     @Import(name="managedDisk")
       private final @Nullable ManagedDiskParametersResponse managedDisk;
@@ -78,7 +72,6 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
 
     /**
      * Gets the disk name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

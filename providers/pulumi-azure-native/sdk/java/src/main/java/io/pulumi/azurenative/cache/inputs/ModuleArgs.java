@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies configuration of a redis module
- * 
  */
 public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
-     * 
      */
     @Import(name="args")
       private final @Nullable Output<String> args;
@@ -31,7 +29,6 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

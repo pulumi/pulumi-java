@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes threat kill chain phase entity
- * 
  */
 public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
 
     /**
      * Value of parsed pattern
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;
@@ -31,7 +29,6 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
 
     /**
      * Type of the value
-     * 
      */
     @Import(name="valueType")
       private final @Nullable Output<String> valueType;

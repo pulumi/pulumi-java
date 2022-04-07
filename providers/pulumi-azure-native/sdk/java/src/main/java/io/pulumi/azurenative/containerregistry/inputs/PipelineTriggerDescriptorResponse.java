@@ -16,7 +16,6 @@ public final class PipelineTriggerDescriptorResponse extends io.pulumi.resources
 
     /**
      * The source trigger that caused the pipeline run.
-     * 
      */
     @Import(name="sourceTrigger")
       private final @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;

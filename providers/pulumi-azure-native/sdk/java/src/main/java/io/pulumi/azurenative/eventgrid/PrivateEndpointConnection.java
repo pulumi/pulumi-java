@@ -16,9 +16,107 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
+ * 
  * API Version: 2020-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PrivateEndpointConnections_Update
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.EventGrid.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.EventGrid.PrivateEndpointConnectionArgs
+ *         {
+ *             ParentName = "exampletopic1",
+ *             ParentType = "topics",
+ *             PrivateEndpointConnectionName = "BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B",
+ *             PrivateLinkServiceConnectionState = new AzureNative.EventGrid.Inputs.ConnectionStateArgs
+ *             {
+ *                 ActionsRequired = "None",
+ *                 Description = "approving connection",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "examplerg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventgrid.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &eventgrid.PrivateEndpointConnectionArgs{
+ * 			ParentName:                    pulumi.String("exampletopic1"),
+ * 			ParentType:                    pulumi.String("topics"),
+ * 			PrivateEndpointConnectionName: pulumi.String("BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B"),
+ * 			PrivateLinkServiceConnectionState: &eventgrid.ConnectionStateArgs{
+ * 				ActionsRequired: pulumi.String("None"),
+ * 				Description:     pulumi.String("approving connection"),
+ * 				Status:          pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("examplerg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.eventgrid.PrivateEndpointConnection("privateEndpointConnection", {
+ *     parentName: "exampletopic1",
+ *     parentType: "topics",
+ *     privateEndpointConnectionName: "BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B",
+ *     privateLinkServiceConnectionState: {
+ *         actionsRequired: "None",
+ *         description: "approving connection",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "examplerg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.eventgrid.PrivateEndpointConnection("privateEndpointConnection",
+ *     parent_name="exampletopic1",
+ *     parent_type="topics",
+ *     private_endpoint_connection_name="BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B",
+ *     private_link_service_connection_state=azure_native.eventgrid.ConnectionStateArgs(
+ *         actions_required="None",
+ *         description="approving connection",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="examplerg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +131,72 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * GroupIds from the private link service resource.
-     * 
      */
     @Export(name="groupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> groupIds;
 
     /**
      * @return GroupIds from the private link service resource.
-     * 
      */
     public Output</* @Nullable */ List<String>> getGroupIds() {
         return this.groupIds;
     }
     /**
      * Name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The Private Endpoint resource for this Connection.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The Private Endpoint resource for this Connection.
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * Details about the state of the connection.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=ConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return Details about the state of the connection.
-     * 
      */
     public Output</* @Nullable */ ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Provisioning state of the Private Endpoint Connection.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return Provisioning state of the Private Endpoint Connection.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

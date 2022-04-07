@@ -19,7 +19,87 @@ import javax.annotation.Nullable;
  * This type describes a network resource.
  * API Version: 2018-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdateNetwork
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var network = new AzureNative.ServiceFabricMesh.Network("network", new AzureNative.ServiceFabricMesh.NetworkArgs
+ *         {
+ *             Location = "EastUS",
+ *             NetworkResourceName = "sampleNetwork",
+ *             Properties = ,
+ *             ResourceGroupName = "sbz_demo",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicefabricmesh "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabricmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicefabricmesh.NewNetwork(ctx, "network", &servicefabricmesh.NetworkArgs{
+ * 			Location:            pulumi.String("EastUS"),
+ * 			NetworkResourceName: pulumi.String("sampleNetwork"),
+ * 			Properties:          nil,
+ * 			ResourceGroupName:   pulumi.String("sbz_demo"),
+ * 			Tags:                nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const network = new azure_native.servicefabricmesh.Network("network", {
+ *     location: "EastUS",
+ *     networkResourceName: "sampleNetwork",
+ *     properties: {},
+ *     resourceGroupName: "sbz_demo",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * network = azure_native.servicefabricmesh.Network("network",
+ *     location="EastUS",
+ *     network_resource_name="sampleNetwork",
+ *     properties=azure_native.servicefabricmesh.NetworkResourcePropertiesArgs(),
+ *     resource_group_name="sbz_demo",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +114,60 @@ import javax.annotation.Nullable;
 public class Network extends io.pulumi.resources.CustomResource {
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Describes properties of a network resource.
-     * 
      */
     @Export(name="properties", type=NetworkResourcePropertiesResponse.class, parameters={})
     private Output<NetworkResourcePropertiesResponse> properties;
 
     /**
      * @return Describes properties of a network resource.
-     * 
      */
     public Output<NetworkResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;

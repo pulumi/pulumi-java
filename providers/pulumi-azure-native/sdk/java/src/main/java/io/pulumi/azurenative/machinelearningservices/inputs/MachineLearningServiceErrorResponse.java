@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Wrapper for error response to follow ARM guidelines.
- * 
  */
 public final class MachineLearningServiceErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MachineLearningServiceErrorResponse extends io.pulumi.resourc
 
     /**
      * The error response.
-     * 
      */
     @Import(name="error", required=true)
       private final ErrorResponseResponse error;

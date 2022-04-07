@@ -27,7 +27,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of allowed endpoint record types.
-     * 
      */
     @Import(name="allowedEndpointRecordTypes")
       private final @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
@@ -38,7 +37,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The DNS settings of the Traffic Manager profile.
-     * 
      */
     @Import(name="dnsConfig")
       private final @Nullable Output<DnsConfigArgs> dnsConfig;
@@ -49,7 +47,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of endpoints in the Traffic Manager profile.
-     * 
      */
     @Import(name="endpoints")
       private final @Nullable Output<List<EndpointArgs>> endpoints;
@@ -60,7 +57,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -71,7 +67,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Region where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -82,7 +77,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum number of endpoints to be returned for MultiValue routing type.
-     * 
      */
     @Import(name="maxReturn")
       private final @Nullable Output<Double> maxReturn;
@@ -93,7 +87,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The endpoint monitoring settings of the Traffic Manager profile.
-     * 
      */
     @Import(name="monitorConfig")
       private final @Nullable Output<MonitorConfigArgs> monitorConfig;
@@ -104,7 +97,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -115,7 +107,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Traffic Manager profile.
-     * 
      */
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
@@ -126,7 +117,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The status of the Traffic Manager profile.
-     * 
      */
     @Import(name="profileStatus")
       private final @Nullable Output<Either<String,ProfileStatus>> profileStatus;
@@ -137,7 +127,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group containing the Traffic Manager profile.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -148,7 +137,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -159,7 +147,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The traffic routing method of the Traffic Manager profile.
-     * 
      */
     @Import(name="trafficRoutingMethod")
       private final @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
@@ -170,7 +157,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
-     * 
      */
     @Import(name="trafficViewEnrollmentStatus")
       private final @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
@@ -181,7 +167,6 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

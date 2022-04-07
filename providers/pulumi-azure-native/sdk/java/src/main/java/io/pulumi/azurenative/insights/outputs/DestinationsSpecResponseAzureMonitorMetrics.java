@@ -12,9 +12,8 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DestinationsSpecResponseAzureMonitorMetrics {
     /**
-     * A friendly name for the destination.
+     * A friendly name for the destination. 
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
-     * 
      */
     private final @Nullable String name;
 
@@ -24,9 +23,8 @@ public final class DestinationsSpecResponseAzureMonitorMetrics {
     }
 
     /**
-     * A friendly name for the destination.
+     * A friendly name for the destination. 
      * This name should be unique across all destinations (regardless of type) within the data collection rule.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);

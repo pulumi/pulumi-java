@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties controlling TLS Certificate Validation.
- * 
  */
 public final class BackendTlsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
-     * 
      */
     @Import(name="validateCertificateChain")
       private final @Nullable Output<Boolean> validateCertificateChain;
@@ -31,7 +29,6 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
 
     /**
      * Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
-     * 
      */
     @Import(name="validateCertificateName")
       private final @Nullable Output<Boolean> validateCertificateName;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of an application rule.
- * 
  */
 public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
 
     /**
      * Description of the rule.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -33,7 +31,6 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
 
     /**
      * List of FQDN Tags for this rule.
-     * 
      */
     @Import(name="fqdnTags")
       private final @Nullable Output<List<String>> fqdnTags;
@@ -44,7 +41,6 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
 
     /**
      * Name of the application rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -55,7 +51,6 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
 
     /**
      * Array of ApplicationRuleProtocols.
-     * 
      */
     @Import(name="protocols")
       private final @Nullable Output<List<AzureFirewallApplicationRuleProtocolArgs>> protocols;
@@ -66,7 +61,6 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
 
     /**
      * List of source IP addresses for this rule.
-     * 
      */
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
@@ -77,7 +71,6 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
 
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
@@ -88,7 +81,6 @@ public final class AzureFirewallApplicationRuleArgs extends io.pulumi.resources.
 
     /**
      * List of FQDNs for this rule.
-     * 
      */
     @Import(name="targetFqdns")
       private final @Nullable Output<List<String>> targetFqdns;

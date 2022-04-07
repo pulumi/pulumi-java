@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Replication agent details.
- * 
  */
 public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The health of the replication agent.
-     * 
      */
     @Import(name="health", required=true)
       private final String health;
@@ -31,7 +29,6 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The health errors.
-     * 
      */
     @Import(name="healthErrors", required=true)
       private final List<HealthErrorResponse> healthErrors;
@@ -42,7 +39,6 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The replication agent Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -53,7 +49,6 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The last heartbeat received from the replication agent.
-     * 
      */
     @Import(name="lastHeartbeatUtc", required=true)
       private final String lastHeartbeatUtc;
@@ -64,7 +59,6 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The replication agent name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -75,7 +69,6 @@ public final class ReplicationAgentDetailsResponse extends io.pulumi.resources.I
 
     /**
      * The replication agent version.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

@@ -16,7 +16,6 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Expand the response
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group
-     * 
      */
     @Import(name="groupName", required=true)
       private final String groupName;
@@ -38,7 +36,6 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the project
-     * 
      */
     @Import(name="projectName", required=true)
       private final String projectName;
@@ -49,7 +46,6 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the service
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;
@@ -60,7 +56,6 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Task
-     * 
      */
     @Import(name="taskName", required=true)
       private final String taskName;

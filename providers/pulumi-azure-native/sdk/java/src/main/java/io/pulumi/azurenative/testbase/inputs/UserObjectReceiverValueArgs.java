@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The user object receiver value.
- * 
  */
 public final class UserObjectReceiverValueArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class UserObjectReceiverValueArgs extends io.pulumi.resources.Resou
 
     /**
      * user object ids.
-     * 
      */
     @Import(name="userObjectIds")
       private final @Nullable Output<List<String>> userObjectIds;

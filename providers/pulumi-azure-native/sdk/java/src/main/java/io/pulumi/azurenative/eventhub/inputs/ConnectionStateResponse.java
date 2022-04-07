@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ConnectionState information.
- * 
  */
 public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Description of the connection state.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -31,7 +29,6 @@ public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Status of the connection.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

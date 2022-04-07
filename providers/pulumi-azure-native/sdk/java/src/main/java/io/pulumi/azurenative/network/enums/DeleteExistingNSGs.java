@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Flag if need to delete existing network security groups.
-     * 
      */
     @EnumType
     public enum DeleteExistingNSGs {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * This determines the format that Event Grid should expect for incoming events published to the topic.
-     * 
      */
     @EnumType
     public enum InputSchema {

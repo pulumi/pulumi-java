@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network Interface model
- * 
  */
 public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the device key value.
-     * 
      */
     @Import(name="deviceKey")
       private final @Nullable Output<Integer> deviceKey;
@@ -36,7 +34,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the ipsettings.
-     * 
      */
     @Import(name="ipSettings")
       private final @Nullable Output<NicIPSettingsArgs> ipSettings;
@@ -47,7 +44,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the name of the network interface.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -58,7 +54,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the ARM Id of the network resource to connect the virtual machine.
-     * 
      */
     @Import(name="networkId")
       private final @Nullable Output<String> networkId;
@@ -69,7 +64,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * NIC type
-     * 
      */
     @Import(name="nicType")
       private final @Nullable Output<Either<String,NICType>> nicType;
@@ -80,7 +74,6 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the power on boot.
-     * 
      */
     @Import(name="powerOnBoot")
       private final @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot;

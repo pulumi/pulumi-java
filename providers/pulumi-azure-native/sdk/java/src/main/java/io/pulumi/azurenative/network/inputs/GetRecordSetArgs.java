@@ -14,7 +14,6 @@ public final class GetRecordSetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of DNS record in this record set.
-     * 
      */
     @Import(name="recordType", required=true)
       private final String recordType;
@@ -25,7 +24,6 @@ public final class GetRecordSetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the record set, relative to the name of the zone.
-     * 
      */
     @Import(name="relativeRecordSetName", required=true)
       private final String relativeRecordSetName;
@@ -36,7 +34,6 @@ public final class GetRecordSetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetRecordSetArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the DNS zone (without a terminating dot).
-     * 
      */
     @Import(name="zoneName", required=true)
       private final String zoneName;

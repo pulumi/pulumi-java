@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a virtual machines IP Configuration's PublicIPAddress configuration
- * 
  */
 public final class VirtualMachinePublicIPAddressConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
 
     /**
      * Specify what happens to the public IP address when the VM is deleted
-     * 
      */
     @Import(name="deleteOption")
       private final @Nullable String deleteOption;
@@ -37,7 +35,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
 
     /**
      * The dns settings to be applied on the publicIP addresses .
-     * 
      */
     @Import(name="dnsSettings")
       private final @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings;
@@ -48,7 +45,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
 
     /**
      * The idle timeout of the public IP address.
-     * 
      */
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
@@ -59,7 +55,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
 
     /**
      * The list of IP tags associated with the public IP address.
-     * 
      */
     @Import(name="ipTags")
       private final @Nullable List<VirtualMachineIpTagResponse> ipTags;
@@ -70,7 +65,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
 
     /**
      * The publicIP address configuration name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -81,7 +75,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
 
     /**
      * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
-     * 
      */
     @Import(name="publicIPAddressVersion")
       private final @Nullable String publicIPAddressVersion;
@@ -92,7 +85,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
 
     /**
      * Specify the public IP allocation type
-     * 
      */
     @Import(name="publicIPAllocationMethod")
       private final @Nullable String publicIPAllocationMethod;
@@ -103,7 +95,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
 
     /**
      * The PublicIPPrefix from which to allocate publicIP addresses.
-     * 
      */
     @Import(name="publicIPPrefix")
       private final @Nullable SubResourceResponse publicIPPrefix;
@@ -114,7 +105,6 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends io
 
     /**
      * Describes the public IP Sku
-     * 
      */
     @Import(name="sku")
       private final @Nullable PublicIPAddressSkuResponse sku;

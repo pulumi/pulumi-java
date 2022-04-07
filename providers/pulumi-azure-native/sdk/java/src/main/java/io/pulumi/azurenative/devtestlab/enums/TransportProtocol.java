@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Protocol type of the port.
-     * 
      */
     @EnumType
     public enum TransportProtocol {

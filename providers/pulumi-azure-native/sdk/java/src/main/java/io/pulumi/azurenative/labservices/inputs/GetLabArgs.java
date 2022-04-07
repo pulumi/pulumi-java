@@ -16,7 +16,6 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Specify the $expand query. Example: 'properties($select=maxUsersInLab)'
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the lab Account.
-     * 
      */
     @Import(name="labAccountName", required=true)
       private final String labAccountName;
@@ -38,7 +36,6 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final String labName;
@@ -49,7 +46,6 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

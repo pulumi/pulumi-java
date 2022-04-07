@@ -27,7 +27,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Delivery Info of Job.
-     * 
      */
     @Import(name="deliveryInfo")
       private final @Nullable Output<JobDeliveryInfoArgs> deliveryInfo;
@@ -38,7 +37,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Delivery type of Job.
-     * 
      */
     @Import(name="deliveryType")
       private final @Nullable Output<Either<String,JobDeliveryType>> deliveryType;
@@ -49,7 +47,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Details of a job run. This field will only be sent for expand details filter.
-     * 
      */
     @Import(name="details")
       private final @Nullable Output<Object> details;
@@ -60,7 +57,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Msi identity of the resource
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
@@ -71,7 +67,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     * 
      */
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
@@ -82,7 +77,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -93,7 +87,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -104,7 +97,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sku type.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -115,7 +107,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -126,7 +117,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the data transfer.
-     * 
      */
     @Import(name="transferType", required=true)
       private final Output<Either<String,TransferType>> transferType;

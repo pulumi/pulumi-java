@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The value which should be used for this field.
- * 
  */
 public final class WorkspaceCustomBooleanParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class WorkspaceCustomBooleanParameterArgs extends io.pulumi.resourc
 
     /**
      * The value which should be used for this field.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<Boolean> value;

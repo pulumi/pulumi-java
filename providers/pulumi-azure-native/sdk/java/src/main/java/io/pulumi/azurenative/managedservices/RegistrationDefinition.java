@@ -19,7 +19,181 @@ import javax.annotation.Nullable;
  * Registration definition.
  * API Version: 2019-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Put Registration Definition
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var registrationDefinition = new AzureNative.ManagedServices.RegistrationDefinition("registrationDefinition", new AzureNative.ManagedServices.RegistrationDefinitionArgs
+ *         {
+ *             Plan = new AzureNative.ManagedServices.Inputs.PlanArgs
+ *             {
+ *                 Name = "addesai-plan",
+ *                 Product = "test",
+ *                 Publisher = "marketplace-test",
+ *                 Version = "1.0.0",
+ *             },
+ *             Properties = new AzureNative.ManagedServices.Inputs.RegistrationDefinitionPropertiesArgs
+ *             {
+ *                 Authorizations = 
+ *                 {
+ *                     new AzureNative.ManagedServices.Inputs.AuthorizationArgs
+ *                     {
+ *                         PrincipalId = "f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
+ *                         PrincipalIdDisplayName = "Support User",
+ *                         RoleDefinitionId = "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+ *                     },
+ *                     new AzureNative.ManagedServices.Inputs.AuthorizationArgs
+ *                     {
+ *                         DelegatedRoleDefinitionIds = 
+ *                         {
+ *                             "b24988ac-6180-42a0-ab88-20f7382dd24c",
+ *                         },
+ *                         PrincipalId = "f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
+ *                         PrincipalIdDisplayName = "User Access Administrator",
+ *                         RoleDefinitionId = "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
+ *                     },
+ *                 },
+ *                 Description = "Tes1t",
+ *                 ManagedByTenantId = "83abe5cd-bcc3-441a-bd86-e6a75360cecc",
+ *                 RegistrationDefinitionName = "DefinitionName",
+ *             },
+ *             RegistrationDefinitionId = "26c128c2-fefa-4340-9bb1-6e081c90ada2",
+ *             Scope = "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	managedservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/managedservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := managedservices.NewRegistrationDefinition(ctx, "registrationDefinition", &managedservices.RegistrationDefinitionArgs{
+ * 			Plan: &managedservices.PlanArgs{
+ * 				Name:      pulumi.String("addesai-plan"),
+ * 				Product:   pulumi.String("test"),
+ * 				Publisher: pulumi.String("marketplace-test"),
+ * 				Version:   pulumi.String("1.0.0"),
+ * 			},
+ * 			Properties: &managedservices.RegistrationDefinitionPropertiesArgs{
+ * 				Authorizations: []managedservices.AuthorizationArgs{
+ * 					&managedservices.AuthorizationArgs{
+ * 						PrincipalId:            pulumi.String("f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc"),
+ * 						PrincipalIdDisplayName: pulumi.String("Support User"),
+ * 						RoleDefinitionId:       pulumi.String("acdd72a7-3385-48ef-bd42-f606fba81ae7"),
+ * 					},
+ * 					&managedservices.AuthorizationArgs{
+ * 						DelegatedRoleDefinitionIds: pulumi.StringArray{
+ * 							pulumi.String("b24988ac-6180-42a0-ab88-20f7382dd24c"),
+ * 						},
+ * 						PrincipalId:            pulumi.String("f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc"),
+ * 						PrincipalIdDisplayName: pulumi.String("User Access Administrator"),
+ * 						RoleDefinitionId:       pulumi.String("18d7d88d-d35e-4fb5-a5c3-7773c20a72d9"),
+ * 					},
+ * 				},
+ * 				Description:                pulumi.String("Tes1t"),
+ * 				ManagedByTenantId:          pulumi.String("83abe5cd-bcc3-441a-bd86-e6a75360cecc"),
+ * 				RegistrationDefinitionName: pulumi.String("DefinitionName"),
+ * 			},
+ * 			RegistrationDefinitionId: pulumi.String("26c128c2-fefa-4340-9bb1-6e081c90ada2"),
+ * 			Scope:                    pulumi.String("subscription/0afefe50-734e-4610-8a82-a144ahf49dea"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const registrationDefinition = new azure_native.managedservices.RegistrationDefinition("registrationDefinition", {
+ *     plan: {
+ *         name: "addesai-plan",
+ *         product: "test",
+ *         publisher: "marketplace-test",
+ *         version: "1.0.0",
+ *     },
+ *     properties: {
+ *         authorizations: [
+ *             {
+ *                 principalId: "f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
+ *                 principalIdDisplayName: "Support User",
+ *                 roleDefinitionId: "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+ *             },
+ *             {
+ *                 delegatedRoleDefinitionIds: ["b24988ac-6180-42a0-ab88-20f7382dd24c"],
+ *                 principalId: "f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
+ *                 principalIdDisplayName: "User Access Administrator",
+ *                 roleDefinitionId: "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
+ *             },
+ *         ],
+ *         description: "Tes1t",
+ *         managedByTenantId: "83abe5cd-bcc3-441a-bd86-e6a75360cecc",
+ *         registrationDefinitionName: "DefinitionName",
+ *     },
+ *     registrationDefinitionId: "26c128c2-fefa-4340-9bb1-6e081c90ada2",
+ *     scope: "subscription/0afefe50-734e-4610-8a82-a144ahf49dea",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * registration_definition = azure_native.managedservices.RegistrationDefinition("registrationDefinition",
+ *     plan=azure_native.managedservices.PlanArgs(
+ *         name="addesai-plan",
+ *         product="test",
+ *         publisher="marketplace-test",
+ *         version="1.0.0",
+ *     ),
+ *     properties=azure_native.managedservices.RegistrationDefinitionPropertiesArgs(
+ *         authorizations=[
+ *             azure_native.managedservices.AuthorizationArgs(
+ *                 principal_id="f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
+ *                 principal_id_display_name="Support User",
+ *                 role_definition_id="acdd72a7-3385-48ef-bd42-f606fba81ae7",
+ *             ),
+ *             azure_native.managedservices.AuthorizationArgs(
+ *                 delegated_role_definition_ids=["b24988ac-6180-42a0-ab88-20f7382dd24c"],
+ *                 principal_id="f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc",
+ *                 principal_id_display_name="User Access Administrator",
+ *                 role_definition_id="18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
+ *             ),
+ *         ],
+ *         description="Tes1t",
+ *         managed_by_tenant_id="83abe5cd-bcc3-441a-bd86-e6a75360cecc",
+ *         registration_definition_name="DefinitionName",
+ *     ),
+ *     registration_definition_id="26c128c2-fefa-4340-9bb1-6e081c90ada2",
+ *     scope="subscription/0afefe50-734e-4610-8a82-a144ahf49dea")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +208,48 @@ import javax.annotation.Nullable;
 public class RegistrationDefinition extends io.pulumi.resources.CustomResource {
     /**
      * Name of the registration definition.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the registration definition.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Plan details for the managed services.
-     * 
      */
     @Export(name="plan", type=PlanResponse.class, parameters={})
     private Output</* @Nullable */ PlanResponse> plan;
 
     /**
      * @return Plan details for the managed services.
-     * 
      */
     public Output</* @Nullable */ PlanResponse> getPlan() {
         return this.plan;
     }
     /**
      * Properties of a registration definition.
-     * 
      */
     @Export(name="properties", type=RegistrationDefinitionPropertiesResponse.class, parameters={})
     private Output<RegistrationDefinitionPropertiesResponse> properties;
 
     /**
      * @return Properties of a registration definition.
-     * 
      */
     public Output<RegistrationDefinitionPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

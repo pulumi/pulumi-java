@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of deployment scaling algorithm
-     * 
      */
     @EnumType
     public enum ScaleType {

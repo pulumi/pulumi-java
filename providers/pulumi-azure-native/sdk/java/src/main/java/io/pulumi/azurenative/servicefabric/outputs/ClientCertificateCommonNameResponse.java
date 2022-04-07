@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class ClientCertificateCommonNameResponse {
     /**
      * The common name of the client certificate.
-     * 
      */
     private final String certificateCommonName;
     /**
      * The issuer thumbprint of the client certificate.
-     * 
      */
     private final String certificateIssuerThumbprint;
     /**
      * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
-     * 
      */
     private final Boolean isAdmin;
 
@@ -38,21 +35,18 @@ public final class ClientCertificateCommonNameResponse {
 
     /**
      * The common name of the client certificate.
-     * 
     */
     public String getCertificateCommonName() {
         return this.certificateCommonName;
     }
     /**
      * The issuer thumbprint of the client certificate.
-     * 
     */
     public String getCertificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
     /**
      * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
-     * 
     */
     public Boolean getIsAdmin() {
         return this.isAdmin;

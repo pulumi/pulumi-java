@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Required for storage accounts where kind = BlobStorage. The access tier used for billing.
-     * 
      */
     @EnumType
     public enum AccessTier {

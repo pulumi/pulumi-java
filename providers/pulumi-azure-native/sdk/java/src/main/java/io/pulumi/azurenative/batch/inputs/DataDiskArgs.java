@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings which will be used by the data disks associated to Compute Nodes in the Pool. When using attached data disks, you need to mount and format the disks from within a VM to use them.
- * 
  */
 public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      *  readWrite - The caching mode for the disk is read and write.
      * 
      *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
-     * 
      */
     @Import(name="caching")
       private final @Nullable Output<CachingType> caching;
@@ -46,7 +44,6 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
-     * 
      */
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
@@ -60,7 +57,6 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      *  Standard_LRS - The data disk should use standard locally redundant storage.
      *  Premium_LRS - The data disk should use premium locally redundant storage.
-     * 
      */
     @Import(name="storageAccountType")
       private final @Nullable Output<StorageAccountType> storageAccountType;

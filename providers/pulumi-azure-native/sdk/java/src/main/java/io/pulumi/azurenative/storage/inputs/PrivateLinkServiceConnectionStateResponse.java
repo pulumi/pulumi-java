@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * A collection of information about the state of the connection between service consumer and provider.
- * 
  */
 public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
 
     /**
      * A message indicating if changes on the service provider require any updates on the consumer.
-     * 
      */
     @Import(name="actionRequired")
       private final @Nullable String actionRequired;
@@ -31,7 +29,6 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
 
     /**
      * The reason for approval/rejection of the connection.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -42,7 +39,6 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
 
     /**
      * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

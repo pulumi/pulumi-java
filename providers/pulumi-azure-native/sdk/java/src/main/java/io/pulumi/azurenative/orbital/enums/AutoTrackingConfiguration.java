@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Auto track configuration.
-     * 
      */
     @EnumType
     public enum AutoTrackingConfiguration {

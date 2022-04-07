@@ -19,7 +19,6 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     @Import(name="azureBlobFileSystemConfiguration")
       private final @Nullable Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration;
@@ -30,7 +29,6 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     @Import(name="azureFileShareConfiguration")
       private final @Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration;
@@ -41,7 +39,6 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     @Import(name="cifsMountConfiguration")
       private final @Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration;
@@ -52,7 +49,6 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     @Import(name="nfsMountConfiguration")
       private final @Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration;

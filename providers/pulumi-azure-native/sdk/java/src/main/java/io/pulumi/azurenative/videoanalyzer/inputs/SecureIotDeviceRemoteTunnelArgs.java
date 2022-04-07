@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A remote tunnel securely established using IoT Hub device information.
- * 
  */
 public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.R
 
     /**
      * The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
-     * 
      */
     @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
@@ -30,7 +28,6 @@ public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.R
 
     /**
      * Name of the IoT Hub.
-     * 
      */
     @Import(name="iotHubName", required=true)
       private final Output<String> iotHubName;
@@ -42,7 +39,6 @@ public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.R
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

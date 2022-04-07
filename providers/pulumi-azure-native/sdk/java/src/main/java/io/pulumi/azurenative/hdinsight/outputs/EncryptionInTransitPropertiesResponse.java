@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class EncryptionInTransitPropertiesResponse {
     /**
      * Indicates whether or not inter cluster node communication is encrypted in transit.
-     * 
      */
     private final @Nullable Boolean isEncryptionInTransitEnabled;
 
@@ -24,7 +23,6 @@ public final class EncryptionInTransitPropertiesResponse {
 
     /**
      * Indicates whether or not inter cluster node communication is encrypted in transit.
-     * 
     */
     public Optional<Boolean> getIsEncryptionInTransitEnabled() {
         return Optional.ofNullable(this.isEncryptionInTransitEnabled);

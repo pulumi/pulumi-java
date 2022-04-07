@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enable or Disable apply network policies on private link service in the subnet.
-     * 
      */
     @EnumType
     public enum VirtualNetworkPrivateLinkServiceNetworkPolicies {

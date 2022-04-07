@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Information about a system service deployed in the cluster
- * 
  */
 public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The system service type
-     * 
      */
     @Import(name="systemServiceType", required=true)
       private final Output<Either<String,SystemServiceType>> systemServiceType;

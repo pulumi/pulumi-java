@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * DataBox Disk Job Details.
- * 
  */
 public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Contact details for notification and shipping.
-     * 
      */
     @Import(name="contactDetails", required=true)
       private final Output<ContactDetailsArgs> contactDetails;
@@ -40,7 +38,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Details of the data to be exported from azure.
-     * 
      */
     @Import(name="dataExportDetails")
       private final @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
@@ -51,7 +48,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Details of the data to be imported into azure.
-     * 
      */
     @Import(name="dataImportDetails")
       private final @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
@@ -62,7 +58,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * The expected size of the data, which needs to be transferred in this job, in terabytes.
-     * 
      */
     @Import(name="expectedDataSizeInTeraBytes")
       private final @Nullable Output<Integer> expectedDataSizeInTeraBytes;
@@ -74,7 +69,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
     /**
      * Indicates the type of job details.
      * Expected value is 'DataBoxDisk'.
-     * 
      */
     @Import(name="jobDetailsType", required=true)
       private final Output<String> jobDetailsType;
@@ -85,7 +79,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Details about which key encryption type is being used.
-     * 
      */
     @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
@@ -96,7 +89,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * User entered passkey for DataBox Disk job.
-     * 
      */
     @Import(name="passkey")
       private final @Nullable Output<String> passkey;
@@ -107,7 +99,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Preferences for the order.
-     * 
      */
     @Import(name="preferences")
       private final @Nullable Output<PreferencesArgs> preferences;
@@ -118,7 +109,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
-     * 
      */
     @Import(name="preferredDisks")
       private final @Nullable Output<Map<String,Integer>> preferredDisks;
@@ -129,7 +119,6 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
 
     /**
      * Shipping address of the customer.
-     * 
      */
     @Import(name="shippingAddress")
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;

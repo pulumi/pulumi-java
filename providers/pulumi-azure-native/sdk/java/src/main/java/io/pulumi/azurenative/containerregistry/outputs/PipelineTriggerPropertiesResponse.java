@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PipelineTriggerPropertiesResponse {
     /**
      * The source trigger properties of the pipeline.
-     * 
      */
     private final @Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger;
 
@@ -24,7 +23,6 @@ public final class PipelineTriggerPropertiesResponse {
 
     /**
      * The source trigger properties of the pipeline.
-     * 
     */
     public Optional<PipelineSourceTriggerPropertiesResponse> getSourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);

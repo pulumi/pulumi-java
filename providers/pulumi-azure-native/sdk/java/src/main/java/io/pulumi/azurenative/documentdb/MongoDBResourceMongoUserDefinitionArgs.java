@@ -18,7 +18,6 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -29,7 +28,6 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
 
     /**
      * A custom definition for the USer Definition.
-     * 
      */
     @Import(name="customData")
       private final @Nullable Output<String> customData;
@@ -40,7 +38,6 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
 
     /**
      * The database name for which access is being granted for this User Definition.
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
@@ -51,7 +48,6 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
 
     /**
      * The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
-     * 
      */
     @Import(name="mechanisms")
       private final @Nullable Output<String> mechanisms;
@@ -62,7 +58,6 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
 
     /**
      * The ID for the User Definition {dbName.userName}.
-     * 
      */
     @Import(name="mongoUserDefinitionId")
       private final @Nullable Output<String> mongoUserDefinitionId;
@@ -73,7 +68,6 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
 
     /**
      * The password for User Definition. Response does not contain user password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -84,7 +78,6 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -95,7 +88,6 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
 
     /**
      * The set of roles inherited by the User Definition.
-     * 
      */
     @Import(name="roles")
       private final @Nullable Output<List<RoleArgs>> roles;
@@ -106,7 +98,6 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
 
     /**
      * The user name for User Definition.
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

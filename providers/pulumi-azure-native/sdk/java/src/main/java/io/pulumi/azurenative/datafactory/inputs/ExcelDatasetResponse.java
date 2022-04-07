@@ -32,7 +32,6 @@ import javax.annotation.Nullable;
 
 /**
  * Excel dataset.
- * 
  */
 public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -40,7 +39,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -51,7 +49,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The data compression method used for the json dataset.
-     * 
      */
     @Import(name="compression")
       private final @Nullable DatasetCompressionResponse compression;
@@ -62,7 +59,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -73,7 +69,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="firstRowAsHeader")
       private final @Nullable Object firstRowAsHeader;
@@ -84,7 +79,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
@@ -95,7 +89,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
@@ -106,7 +99,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The location of the excel storage.
-     * 
      */
     @Import(name="location", required=true)
       private final Object location;
@@ -117,7 +109,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The null value string. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="nullValue")
       private final @Nullable Object nullValue;
@@ -128,7 +119,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -139,7 +129,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The partial data of one sheet. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="range")
       private final @Nullable Object range;
@@ -150,7 +139,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Object schema;
@@ -161,7 +149,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer)
-     * 
      */
     @Import(name="sheetIndex")
       private final @Nullable Object sheetIndex;
@@ -172,7 +159,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sheet name of excel file. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="sheetName")
       private final @Nullable Object sheetName;
@@ -183,7 +169,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Object structure;
@@ -195,7 +180,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Type of dataset.
      * Expected value is 'Excel'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

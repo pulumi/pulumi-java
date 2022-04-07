@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The instance view of a virtual machine extension.
- * 
  */
 public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
 
     /**
      * The virtual machine extension name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -33,7 +31,6 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
 
     /**
      * The resource status information.
-     * 
      */
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
@@ -44,7 +41,6 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
 
     /**
      * The resource status information.
-     * 
      */
     @Import(name="substatuses")
       private final @Nullable List<InstanceViewStatusResponse> substatuses;
@@ -55,7 +51,6 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
 
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;
@@ -66,7 +61,6 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
 
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Import(name="typeHandlerVersion")
       private final @Nullable String typeHandlerVersion;

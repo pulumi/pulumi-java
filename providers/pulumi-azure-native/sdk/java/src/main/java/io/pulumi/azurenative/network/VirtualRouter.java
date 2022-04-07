@@ -20,7 +20,105 @@ import javax.annotation.Nullable;
  * VirtualRouter Resource.
  * API Version: 2020-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create VirtualRouter
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualRouter = new AzureNative.Network.VirtualRouter("virtualRouter", new AzureNative.Network.VirtualRouterArgs
+ *         {
+ *             HostedGateway = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
+ *             },
+ *             Location = "West US",
+ *             ResourceGroupName = "rg1",
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             VirtualRouterName = "virtualRouter",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualRouter(ctx, "virtualRouter", &network.VirtualRouterArgs{
+ * 			HostedGateway: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway"),
+ * 			},
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			VirtualRouterName: pulumi.String("virtualRouter"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualRouter = new azure_native.network.VirtualRouter("virtualRouter", {
+ *     hostedGateway: {
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
+ *     },
+ *     location: "West US",
+ *     resourceGroupName: "rg1",
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     virtualRouterName: "virtualRouter",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_router = azure_native.network.VirtualRouter("virtualRouter",
+ *     hosted_gateway=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway",
+ *     ),
+ *     location="West US",
+ *     resource_group_name="rg1",
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     virtual_router_name="virtualRouter")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,154 +133,132 @@ import javax.annotation.Nullable;
 public class VirtualRouter extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The Gateway on which VirtualRouter is hosted.
-     * 
      */
     @Export(name="hostedGateway", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> hostedGateway;
 
     /**
      * @return The Gateway on which VirtualRouter is hosted.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getHostedGateway() {
         return this.hostedGateway;
     }
     /**
      * The Subnet on which VirtualRouter is hosted.
-     * 
      */
     @Export(name="hostedSubnet", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> hostedSubnet;
 
     /**
      * @return The Subnet on which VirtualRouter is hosted.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getHostedSubnet() {
         return this.hostedSubnet;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of references to VirtualRouterPeerings.
-     * 
      */
     @Export(name="peerings", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> peerings;
 
     /**
      * @return List of references to VirtualRouterPeerings.
-     * 
      */
     public Output<List<SubResourceResponse>> getPeerings() {
         return this.peerings;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * VirtualRouter ASN.
-     * 
      */
     @Export(name="virtualRouterAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> virtualRouterAsn;
 
     /**
      * @return VirtualRouter ASN.
-     * 
      */
     public Output</* @Nullable */ Double> getVirtualRouterAsn() {
         return this.virtualRouterAsn;
     }
     /**
      * VirtualRouter IPs.
-     * 
      */
     @Export(name="virtualRouterIps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> virtualRouterIps;
 
     /**
      * @return VirtualRouter IPs.
-     * 
      */
     public Output</* @Nullable */ List<String>> getVirtualRouterIps() {
         return this.virtualRouterIps;

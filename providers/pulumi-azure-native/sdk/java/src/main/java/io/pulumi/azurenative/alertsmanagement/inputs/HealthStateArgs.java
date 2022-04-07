@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Specifies the health state to alert on and the corresponding severity
- * 
  */
 public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Health state name
-     * 
      */
     @Import(name="healthStateName", required=true)
       private final Output<Either<String,HealthStateName>> healthStateName;
@@ -33,7 +31,6 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Severity of alert fired
-     * 
      */
     @Import(name="severity", required=true)
       private final Output<Double> severity;

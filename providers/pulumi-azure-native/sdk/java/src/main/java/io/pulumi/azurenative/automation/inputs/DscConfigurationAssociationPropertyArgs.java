@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Dsc configuration property associated with the entity.
- * 
  */
 public final class DscConfigurationAssociationPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DscConfigurationAssociationPropertyArgs extends io.pulumi.res
 
     /**
      * Gets or sets the name of the Dsc configuration.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -13,37 +13,30 @@ import java.util.Objects;
 public final class X12FramingSettingsResponse {
     /**
      * The X12 character set.
-     * 
      */
     private final String characterSet;
     /**
      * The component separator.
-     * 
      */
     private final Integer componentSeparator;
     /**
      * The data element separator.
-     * 
      */
     private final Integer dataElementSeparator;
     /**
      * The replacement character.
-     * 
      */
     private final Integer replaceCharacter;
     /**
      * The value indicating whether to replace separators in payload.
-     * 
      */
     private final Boolean replaceSeparatorsInPayload;
     /**
      * The segment terminator.
-     * 
      */
     private final Integer segmentTerminator;
     /**
      * The segment terminator suffix.
-     * 
      */
     private final String segmentTerminatorSuffix;
 
@@ -67,49 +60,42 @@ public final class X12FramingSettingsResponse {
 
     /**
      * The X12 character set.
-     * 
     */
     public String getCharacterSet() {
         return this.characterSet;
     }
     /**
      * The component separator.
-     * 
     */
     public Integer getComponentSeparator() {
         return this.componentSeparator;
     }
     /**
      * The data element separator.
-     * 
     */
     public Integer getDataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
      * The replacement character.
-     * 
     */
     public Integer getReplaceCharacter() {
         return this.replaceCharacter;
     }
     /**
      * The value indicating whether to replace separators in payload.
-     * 
     */
     public Boolean getReplaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
     /**
      * The segment terminator.
-     * 
     */
     public Integer getSegmentTerminator() {
         return this.segmentTerminator;
     }
     /**
      * The segment terminator suffix.
-     * 
     */
     public String getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;

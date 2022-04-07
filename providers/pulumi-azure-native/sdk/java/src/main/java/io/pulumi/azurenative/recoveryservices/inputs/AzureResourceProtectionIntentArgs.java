@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * IaaS VM specific backup protection intent item.
- * 
  */
 public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -34,7 +32,6 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
 
     /**
      * Friendly name of the VM represented by this backup item.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -45,7 +42,6 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
 
     /**
      * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
-     * 
      */
     @Import(name="itemId")
       private final @Nullable Output<String> itemId;
@@ -56,7 +52,6 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -68,7 +63,6 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
     /**
      * backup protectionIntent type.
      * Expected value is 'AzureResourceItem'.
-     * 
      */
     @Import(name="protectionIntentItemType", required=true)
       private final Output<String> protectionIntentItemType;
@@ -79,7 +73,6 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionStatus>> protectionState;
@@ -90,7 +83,6 @@ public final class AzureResourceProtectionIntentArgs extends io.pulumi.resources
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class FirstQualityResponse {
     /**
      * The first quality bitrate.
-     * 
      */
     private final Integer bitrate;
 
@@ -22,7 +21,6 @@ public final class FirstQualityResponse {
 
     /**
      * The first quality bitrate.
-     * 
     */
     public Integer getBitrate() {
         return this.bitrate;

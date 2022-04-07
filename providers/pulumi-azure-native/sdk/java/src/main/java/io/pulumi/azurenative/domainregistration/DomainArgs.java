@@ -28,7 +28,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
@@ -39,7 +38,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Legal agreement consent.
-     * 
      */
     @Import(name="consent", required=true)
       private final Output<DomainPurchaseConsentArgs> consent;
@@ -50,7 +48,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Administrative contact.
-     * 
      */
     @Import(name="contactAdmin", required=true)
       private final Output<ContactArgs> contactAdmin;
@@ -61,7 +58,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Billing contact.
-     * 
      */
     @Import(name="contactBilling", required=true)
       private final Output<ContactArgs> contactBilling;
@@ -72,7 +68,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Registrant contact.
-     * 
      */
     @Import(name="contactRegistrant", required=true)
       private final Output<ContactArgs> contactRegistrant;
@@ -83,7 +78,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Technical contact.
-     * 
      */
     @Import(name="contactTech", required=true)
       private final Output<ContactArgs> contactTech;
@@ -94,7 +88,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Current DNS type
-     * 
      */
     @Import(name="dnsType")
       private final @Nullable Output<DnsType> dnsType;
@@ -105,7 +98,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Azure DNS Zone to use
-     * 
      */
     @Import(name="dnsZoneId")
       private final @Nullable Output<String> dnsZoneId;
@@ -116,7 +108,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the domain.
-     * 
      */
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
@@ -127,7 +118,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -138,7 +128,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -149,7 +138,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="privacy")
       private final @Nullable Output<Boolean> privacy;
@@ -160,7 +148,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -171,7 +158,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -182,7 +168,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Target DNS type (would be used for migration)
-     * 
      */
     @Import(name="targetDnsType")
       private final @Nullable Output<DnsType> targetDnsType;

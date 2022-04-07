@@ -20,7 +20,79 @@ import javax.annotation.Nullable;
  * Trigger details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TriggerPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var periodicTimerEventTrigger = new AzureNative.DataBoxEdge.PeriodicTimerEventTrigger("periodicTimerEventTrigger", new AzureNative.DataBoxEdge.PeriodicTimerEventTriggerArgs
+ *         {
+ *             DeviceName = "testedgedevice",
+ *             Name = "trigger1",
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewPeriodicTimerEventTrigger(ctx, "periodicTimerEventTrigger", &databoxedge.PeriodicTimerEventTriggerArgs{
+ * 			DeviceName:        pulumi.String("testedgedevice"),
+ * 			Name:              pulumi.String("trigger1"),
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const periodicTimerEventTrigger = new azure_native.databoxedge.PeriodicTimerEventTrigger("periodicTimerEventTrigger", {
+ *     deviceName: "testedgedevice",
+ *     name: "trigger1",
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * periodic_timer_event_trigger = azure_native.databoxedge.PeriodicTimerEventTrigger("periodicTimerEventTrigger",
+ *     device_name="testedgedevice",
+ *     name="trigger1",
+ *     resource_group_name="GroupForEdgeAutomation")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,14 +107,12 @@ import javax.annotation.Nullable;
 public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResource {
     /**
      * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
-     * 
      */
     @Export(name="customContextTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> customContextTag;
 
     /**
      * @return A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
-     * 
      */
     public Output</* @Nullable */ String> getCustomContextTag() {
         return this.customContextTag;
@@ -50,7 +120,6 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
     /**
      * Trigger Kind.
      * Expected value is 'PeriodicTimerEvent'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -58,77 +127,66 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
     /**
      * @return Trigger Kind.
      * Expected value is 'PeriodicTimerEvent'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Role Sink information.
-     * 
      */
     @Export(name="sinkInfo", type=RoleSinkInfoResponse.class, parameters={})
     private Output<RoleSinkInfoResponse> sinkInfo;
 
     /**
      * @return Role Sink information.
-     * 
      */
     public Output<RoleSinkInfoResponse> getSinkInfo() {
         return this.sinkInfo;
     }
     /**
      * Periodic timer details.
-     * 
      */
     @Export(name="sourceInfo", type=PeriodicTimerSourceInfoResponse.class, parameters={})
     private Output<PeriodicTimerSourceInfoResponse> sourceInfo;
 
     /**
      * @return Periodic timer details.
-     * 
      */
     public Output<PeriodicTimerSourceInfoResponse> getSourceInfo() {
         return this.sourceInfo;
     }
     /**
      * Trigger in DataBoxEdge Resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Trigger in DataBoxEdge Resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

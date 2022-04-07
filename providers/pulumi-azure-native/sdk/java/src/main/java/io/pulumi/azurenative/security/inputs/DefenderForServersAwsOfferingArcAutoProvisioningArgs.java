@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The ARC autoprovisioning configuration
- * 
  */
 public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
 
     /**
      * Is arc auto provisioning enabled
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -32,7 +30,6 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
 
     /**
      * Metadata of Service Principal secret for autoprovisioning
-     * 
      */
     @Import(name="servicePrincipalSecretMetadata")
       private final @Nullable Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;

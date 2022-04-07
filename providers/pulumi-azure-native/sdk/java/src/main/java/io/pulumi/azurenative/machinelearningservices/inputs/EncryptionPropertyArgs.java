@@ -20,7 +20,6 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The identity that will be used to access the key vault for encryption at rest.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityForCmkArgs> identity;
@@ -31,7 +30,6 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Customer Key vault properties.
-     * 
      */
     @Import(name="keyVaultProperties", required=true)
       private final Output<KeyVaultPropertiesArgs> keyVaultProperties;
@@ -42,7 +40,6 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Indicates whether or not the encryption is enabled for the workspace.
-     * 
      */
     @Import(name="status", required=true)
       private final Output<Either<String,EncryptionStatus>> status;

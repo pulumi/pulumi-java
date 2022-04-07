@@ -24,7 +24,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The alert rule actions.
-     * 
      */
     @Import(name="actionGroups", required=true)
       private final Output<ActionGroupsInformationArgs> actionGroups;
@@ -35,7 +34,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the alert rule.
-     * 
      */
     @Import(name="alertRuleName")
       private final @Nullable Output<String> alertRuleName;
@@ -46,7 +44,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The alert rule description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -57,7 +54,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The alert rule's detector.
-     * 
      */
     @Import(name="detector", required=true)
       private final Output<DetectorArgs> detector;
@@ -68,7 +64,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
-     * 
      */
     @Import(name="frequency", required=true)
       private final Output<String> frequency;
@@ -79,7 +74,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -90,7 +84,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -101,7 +94,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The alert rule resources scope.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<List<String>> scope;
@@ -112,7 +104,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The alert rule severity.
-     * 
      */
     @Import(name="severity", required=true)
       private final Output<Either<String,Severity>> severity;
@@ -123,7 +114,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The alert rule state.
-     * 
      */
     @Import(name="state", required=true)
       private final Output<Either<String,AlertRuleState>> state;
@@ -134,7 +124,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -145,7 +134,6 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
 
     /**
      * The alert rule throttling information.
-     * 
      */
     @Import(name="throttling")
       private final @Nullable Output<ThrottlingInformationArgs> throttling;

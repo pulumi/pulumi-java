@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A class representing follower database request.
- * 
  */
 public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
 
     /**
      * Resource name of the attached database configuration in the follower cluster.
-     * 
      */
     @Import(name="attachedDatabaseConfigurationName", required=true)
       private final String attachedDatabaseConfigurationName;
@@ -29,7 +27,6 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
 
     /**
      * The database name owned by this cluster that was followed. * in case following all databases.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -40,7 +37,6 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
 
     /**
      * Resource id of the cluster that follows a database owned by this cluster.
-     * 
      */
     @Import(name="kustoPoolResourceId", required=true)
       private final String kustoPoolResourceId;

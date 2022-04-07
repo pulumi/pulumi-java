@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class InMageAgentDetailsResponse {
     /**
      * Agent expiry date.
-     * 
      */
     private final @Nullable String agentExpiryDate;
     /**
      * A value indicating whether installed agent needs to be updated.
-     * 
      */
     private final @Nullable String agentUpdateStatus;
     /**
      * The agent version.
-     * 
      */
     private final @Nullable String agentVersion;
     /**
      * A value indicating whether reboot is required after update is applied.
-     * 
      */
     private final @Nullable String postUpdateRebootStatus;
 
@@ -46,28 +42,24 @@ public final class InMageAgentDetailsResponse {
 
     /**
      * Agent expiry date.
-     * 
     */
     public Optional<String> getAgentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
     /**
      * A value indicating whether installed agent needs to be updated.
-     * 
     */
     public Optional<String> getAgentUpdateStatus() {
         return Optional.ofNullable(this.agentUpdateStatus);
     }
     /**
      * The agent version.
-     * 
     */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * A value indicating whether reboot is required after update is applied.
-     * 
     */
     public Optional<String> getPostUpdateRebootStatus() {
         return Optional.ofNullable(this.postUpdateRebootStatus);

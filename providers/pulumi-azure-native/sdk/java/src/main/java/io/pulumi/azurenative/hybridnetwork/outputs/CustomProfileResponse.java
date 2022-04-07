@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class CustomProfileResponse {
     /**
      * Path for metadata configuration.
-     * 
      */
     private final @Nullable String metadataConfigurationPath;
 
@@ -24,7 +23,6 @@ public final class CustomProfileResponse {
 
     /**
      * Path for metadata configuration.
-     * 
     */
     public Optional<String> getMetadataConfigurationPath() {
         return Optional.ofNullable(this.metadataConfigurationPath);

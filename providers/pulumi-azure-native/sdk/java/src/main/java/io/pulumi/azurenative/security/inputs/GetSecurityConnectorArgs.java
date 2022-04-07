@@ -14,7 +14,6 @@ public final class GetSecurityConnectorArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetSecurityConnectorArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The security connector name.
-     * 
      */
     @Import(name="securityConnectorName", required=true)
       private final String securityConnectorName;

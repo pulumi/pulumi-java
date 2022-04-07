@@ -21,7 +21,6 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
-     * 
      */
     @Import(name="dataStringComparisonBehavior")
       private final @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
@@ -32,7 +31,6 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the Time Series Insights environment associated with the specified resource group.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
@@ -43,7 +41,6 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The list of key properties for the reference data set.
-     * 
      */
     @Import(name="keyProperties", required=true)
       private final Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
@@ -54,7 +51,6 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -65,7 +61,6 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the reference data set.
-     * 
      */
     @Import(name="referenceDataSetName")
       private final @Nullable Output<String> referenceDataSetName;
@@ -76,7 +71,6 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Key-value pairs of additional properties for the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

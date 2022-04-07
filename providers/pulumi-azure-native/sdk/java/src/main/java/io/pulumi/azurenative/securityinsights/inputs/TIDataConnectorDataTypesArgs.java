@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The available data types for TI (Threat Intelligence) data connector.
- * 
  */
 public final class TIDataConnectorDataTypesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TIDataConnectorDataTypesArgs extends io.pulumi.resources.Reso
 
     /**
      * Data type for indicators connection.
-     * 
      */
     @Import(name="indicators")
       private final @Nullable Output<TIDataConnectorDataTypesIndicatorsArgs> indicators;

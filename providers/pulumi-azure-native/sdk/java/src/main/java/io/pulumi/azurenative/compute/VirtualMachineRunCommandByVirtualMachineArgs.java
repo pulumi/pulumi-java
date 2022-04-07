@@ -22,7 +22,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
-     * 
      */
     @Import(name="asyncExecution")
       private final @Nullable Output<Boolean> asyncExecution;
@@ -33,7 +32,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * Specifies the Azure storage blob where script error stream will be uploaded.
-     * 
      */
     @Import(name="errorBlobUri")
       private final @Nullable Output<String> errorBlobUri;
@@ -44,7 +42,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -55,7 +52,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * Specifies the Azure storage blob where script output stream will be uploaded.
-     * 
      */
     @Import(name="outputBlobUri")
       private final @Nullable Output<String> outputBlobUri;
@@ -66,7 +62,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * The parameters used by the script.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<RunCommandInputParameterArgs>> parameters;
@@ -77,7 +72,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * The parameters used by the script.
-     * 
      */
     @Import(name="protectedParameters")
       private final @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters;
@@ -88,7 +82,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -99,7 +92,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * Specifies the user account password on the VM when executing the run command.
-     * 
      */
     @Import(name="runAsPassword")
       private final @Nullable Output<String> runAsPassword;
@@ -110,7 +102,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * Specifies the user account on the VM when executing the run command.
-     * 
      */
     @Import(name="runAsUser")
       private final @Nullable Output<String> runAsUser;
@@ -121,7 +112,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * The name of the virtual machine run command.
-     * 
      */
     @Import(name="runCommandName")
       private final @Nullable Output<String> runCommandName;
@@ -132,7 +122,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * The source of the run command script.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source;
@@ -143,7 +132,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -154,7 +142,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * The timeout in seconds to execute the run command.
-     * 
      */
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
@@ -165,7 +152,6 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
 
     /**
      * The name of the virtual machine where the run command should be created or updated.
-     * 
      */
     @Import(name="vmName", required=true)
       private final Output<String> vmName;

@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class TriggerConditionResponse {
     /**
      * Trigger condition for metric query rule
-     * 
      */
     private final @Nullable LogMetricTriggerResponse metricTrigger;
     /**
      * Result or count threshold based on which rule should be triggered.
-     * 
      */
     private final Double threshold;
     /**
      * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
-     * 
      */
     private final String thresholdOperator;
 
@@ -41,21 +38,18 @@ public final class TriggerConditionResponse {
 
     /**
      * Trigger condition for metric query rule
-     * 
     */
     public Optional<LogMetricTriggerResponse> getMetricTrigger() {
         return Optional.ofNullable(this.metricTrigger);
     }
     /**
      * Result or count threshold based on which rule should be triggered.
-     * 
     */
     public Double getThreshold() {
         return this.threshold;
     }
     /**
      * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
-     * 
     */
     public String getThresholdOperator() {
         return this.thresholdOperator;

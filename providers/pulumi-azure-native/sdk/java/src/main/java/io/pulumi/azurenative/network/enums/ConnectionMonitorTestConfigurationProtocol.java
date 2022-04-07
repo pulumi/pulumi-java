@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol to use in test evaluation.
-     * 
      */
     @EnumType
     public enum ConnectionMonitorTestConfigurationProtocol {

@@ -14,7 +14,6 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
 
     /**
      * The name of the service endpoint policy definition name.
-     * 
      */
     @Import(name="serviceEndpointPolicyDefinitionName", required=true)
       private final String serviceEndpointPolicyDefinitionName;
@@ -36,7 +34,6 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
 
     /**
      * The name of the service endpoint policy name.
-     * 
      */
     @Import(name="serviceEndpointPolicyName", required=true)
       private final String serviceEndpointPolicyName;

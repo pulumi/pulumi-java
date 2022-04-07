@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Swagger 2.0 schema for a column within the data table representing a web service input or output. See Swagger specification: http://swagger.io/specification/
- * 
  */
 public final class ColumnSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
 
     /**
      * If the data type is categorical, this provides the list of accepted categories.
-     * 
      */
     @Import(name="enum")
       private final @Nullable List<Object> enum_;
@@ -34,7 +32,6 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
 
     /**
      * Additional format information for the data type.
-     * 
      */
     @Import(name="format")
       private final @Nullable String format;
@@ -45,7 +42,6 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
 
     /**
      * Data type of the column.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -56,7 +52,6 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
 
     /**
      * Flag indicating if the type supports null values or not.
-     * 
      */
     @Import(name="xMsIsnullable")
       private final @Nullable Boolean xMsIsnullable;
@@ -67,7 +62,6 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
 
     /**
      * Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
-     * 
      */
     @Import(name="xMsIsordered")
       private final @Nullable Boolean xMsIsordered;

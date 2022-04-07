@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Recurrence Interval
-     * 
      */
     @EnumType
     public enum RecurrenceInterval {

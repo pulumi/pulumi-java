@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Resource stage details.
- * 
  */
 public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Display name of the resource stage.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -29,7 +27,6 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Stage name
-     * 
      */
     @Import(name="stageName", required=true)
       private final String stageName;
@@ -40,7 +37,6 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Stage status.
-     * 
      */
     @Import(name="stageStatus", required=true)
       private final String stageStatus;
@@ -51,7 +47,6 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Stage start time
-     * 
      */
     @Import(name="startTime", required=true)
       private final String startTime;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An application security group in a resource group.
- * 
  */
 public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -32,7 +30,6 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -43,7 +40,6 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -54,7 +50,6 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -65,7 +60,6 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
 
     /**
      * The provisioning state of the application security group resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -76,7 +70,6 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
 
     /**
      * The resource GUID property of the application security group resource. It uniquely identifies a resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
-     * 
      */
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
@@ -87,7 +80,6 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -98,7 +90,6 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

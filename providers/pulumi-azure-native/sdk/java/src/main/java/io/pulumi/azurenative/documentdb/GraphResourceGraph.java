@@ -21,7 +21,104 @@ import javax.annotation.Nullable;
  * An Azure Cosmos DB Graph resource.
  * API Version: 2021-07-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CosmosDBGraphCreateUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var graphResourceGraph = new AzureNative.DocumentDB.GraphResourceGraph("graphResourceGraph", new AzureNative.DocumentDB.GraphResourceGraphArgs
+ *         {
+ *             AccountName = "ddb1",
+ *             GraphName = "graphName",
+ *             Location = "West US",
+ *             Options = ,
+ *             Resource = new AzureNative.DocumentDB.Inputs.GraphResourceArgs
+ *             {
+ *                 Id = "graphName",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewGraphResourceGraph(ctx, "graphResourceGraph", &documentdb.GraphResourceGraphArgs{
+ * 			AccountName: pulumi.String("ddb1"),
+ * 			GraphName:   pulumi.String("graphName"),
+ * 			Location:    pulumi.String("West US"),
+ * 			Options:     nil,
+ * 			Resource: &documentdb.GraphResourceArgs{
+ * 				Id: pulumi.String("graphName"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Tags:              nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const graphResourceGraph = new azure_native.documentdb.GraphResourceGraph("graphResourceGraph", {
+ *     accountName: "ddb1",
+ *     graphName: "graphName",
+ *     location: "West US",
+ *     options: {},
+ *     resource: {
+ *         id: "graphName",
+ *     },
+ *     resourceGroupName: "rg1",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * graph_resource_graph = azure_native.documentdb.GraphResourceGraph("graphResourceGraph",
+ *     account_name="ddb1",
+ *     graph_name="graphName",
+ *     location="West US",
+ *     options=azure_native.documentdb.CreateUpdateOptionsArgs(),
+ *     resource=azure_native.documentdb.GraphResourceArgs(
+ *         id="graphName",
+ *     ),
+ *     resource_group_name="rg1",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,42 +133,36 @@ import javax.annotation.Nullable;
 public class GraphResourceGraph extends io.pulumi.resources.CustomResource {
     /**
      * Identity for the resource.
-     * 
      */
     @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
      * @return Identity for the resource.
-     * 
      */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The location of the resource group to which the resource belongs.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource group to which the resource belongs.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the ARM resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the ARM resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -90,28 +181,24 @@ public class GraphResourceGraph extends io.pulumi.resources.CustomResource {
     }
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

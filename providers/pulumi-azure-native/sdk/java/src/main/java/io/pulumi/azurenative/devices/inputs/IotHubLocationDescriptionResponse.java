@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Public representation of one of the locations where a resource is provisioned.
- * 
  */
 public final class IotHubLocationDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IotHubLocationDescriptionResponse extends io.pulumi.resources
 
     /**
      * The name of the Azure region
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -31,7 +29,6 @@ public final class IotHubLocationDescriptionResponse extends io.pulumi.resources
 
     /**
      * The role of the region, can be either primary or secondary. The primary region is where the IoT hub is currently provisioned. The secondary region is the Azure disaster recovery (DR) paired region and also the region where the IoT hub can failover to.
-     * 
      */
     @Import(name="role")
       private final @Nullable String role;

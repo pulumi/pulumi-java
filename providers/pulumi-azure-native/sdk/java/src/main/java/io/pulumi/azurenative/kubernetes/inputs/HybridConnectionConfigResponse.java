@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Contains the REP (rendezvous endpoint) and “Sender” access token.
- * 
  */
 public final class HybridConnectionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
 
     /**
      * Timestamp when this token will be expired.
-     * 
      */
     @Import(name="expirationTime", required=true)
       private final Double expirationTime;
@@ -30,7 +28,6 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
 
     /**
      * Name of the connection
-     * 
      */
     @Import(name="hybridConnectionName", required=true)
       private final String hybridConnectionName;
@@ -41,7 +38,6 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
 
     /**
      * Name of the relay.
-     * 
      */
     @Import(name="relay", required=true)
       private final String relay;
@@ -52,7 +48,6 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
 
     /**
      * Sender access token
-     * 
      */
     @Import(name="token", required=true)
       private final String token;

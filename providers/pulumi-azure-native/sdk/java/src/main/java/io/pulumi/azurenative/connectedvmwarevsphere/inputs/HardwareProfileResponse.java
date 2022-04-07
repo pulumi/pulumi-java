@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the resource properties.
- * 
  */
 public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets or sets a value indicating whether virtual processors can be added while this virtual machine is running.
-     * 
      */
     @Import(name="cpuHotAddEnabled", required=true)
       private final Boolean cpuHotAddEnabled;
@@ -32,7 +30,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets or sets a value indicating whether virtual processors can be removed while this virtual machine is running.
-     * 
      */
     @Import(name="cpuHotRemoveEnabled", required=true)
       private final Boolean cpuHotRemoveEnabled;
@@ -43,7 +40,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets or sets a value indicating whether memory can be added while this virtual machine is running.
-     * 
      */
     @Import(name="memoryHotAddEnabled", required=true)
       private final Boolean memoryHotAddEnabled;
@@ -54,7 +50,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets or sets memory size in MBs for the vm.
-     * 
      */
     @Import(name="memorySizeMB")
       private final @Nullable Integer memorySizeMB;
@@ -65,7 +60,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets or sets the number of vCPUs for the vm.
-     * 
      */
     @Import(name="numCPUs")
       private final @Nullable Integer numCPUs;
@@ -76,7 +70,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
-     * 
      */
     @Import(name="numCoresPerSocket")
       private final @Nullable Integer numCoresPerSocket;

@@ -29,7 +29,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the managed application definition.
-     * 
      */
     @Import(name="applicationDefinitionName")
       private final @Nullable Output<String> applicationDefinitionName;
@@ -40,7 +39,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
-     * 
      */
     @Import(name="artifacts")
       private final @Nullable Output<List<ApplicationDefinitionArtifactArgs>> artifacts;
@@ -51,7 +49,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The managed application provider authorizations.
-     * 
      */
     @Import(name="authorizations")
       private final @Nullable Output<List<ApplicationAuthorizationArgs>> authorizations;
@@ -62,7 +59,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
-     * 
      */
     @Import(name="createUiDefinition")
       private final @Nullable Output<Object> createUiDefinition;
@@ -73,7 +69,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The managed application deployment policy.
-     * 
      */
     @Import(name="deploymentPolicy")
       private final @Nullable Output<ApplicationDeploymentPolicyArgs> deploymentPolicy;
@@ -84,7 +79,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The managed application definition description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -95,7 +89,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The managed application definition display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -106,7 +99,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * A value indicating whether the package is enabled or not.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
@@ -117,7 +109,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -128,7 +119,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The managed application lock level.
-     * 
      */
     @Import(name="lockLevel", required=true)
       private final Output<ApplicationLockLevel> lockLevel;
@@ -139,7 +129,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The managed application locking policy.
-     * 
      */
     @Import(name="lockingPolicy")
       private final @Nullable Output<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy;
@@ -150,7 +139,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
-     * 
      */
     @Import(name="mainTemplate")
       private final @Nullable Output<Object> mainTemplate;
@@ -161,7 +149,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * ID of the resource that manages this resource.
-     * 
      */
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
@@ -172,7 +159,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The managed application management policy that determines publisher's access to the managed resource group.
-     * 
      */
     @Import(name="managementPolicy")
       private final @Nullable Output<ApplicationManagementPolicyArgs> managementPolicy;
@@ -183,7 +169,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The managed application notification policy.
-     * 
      */
     @Import(name="notificationPolicy")
       private final @Nullable Output<ApplicationNotificationPolicyArgs> notificationPolicy;
@@ -194,7 +179,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The managed application definition package file Uri. Use this element
-     * 
      */
     @Import(name="packageFileUri")
       private final @Nullable Output<String> packageFileUri;
@@ -205,7 +189,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The managed application provider policies.
-     * 
      */
     @Import(name="policies")
       private final @Nullable Output<List<ApplicationPolicyArgs>> policies;
@@ -216,7 +199,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -227,7 +209,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The SKU of the resource.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -238,7 +219,6 @@ public final class ApplicationDefinitionArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

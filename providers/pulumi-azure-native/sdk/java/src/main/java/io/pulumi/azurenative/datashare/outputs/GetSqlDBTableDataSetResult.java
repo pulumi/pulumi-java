@@ -12,53 +12,43 @@ import java.util.Objects;
 public final class GetSqlDBTableDataSetResult {
     /**
      * Unique id for identifying a data set resource
-     * 
      */
     private final String dataSetId;
     /**
      * Database name of the source data set
-     * 
      */
     private final String databaseName;
     /**
      * The resource id of the azure resource
-     * 
      */
     private final String id;
     /**
      * Kind of data set.
      * Expected value is 'SqlDBTable'.
-     * 
      */
     private final String kind;
     /**
      * Name of the azure resource
-     * 
      */
     private final String name;
     /**
      * Schema of the table. Default value is dbo.
-     * 
      */
     private final String schemaName;
     /**
      * Resource id of SQL server
-     * 
      */
     private final String sqlServerResourceId;
     /**
      * System Data of the Azure resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * SQL DB table name.
-     * 
      */
     private final String tableName;
     /**
      * Type of the azure resource
-     * 
      */
     private final String type;
 
@@ -88,21 +78,18 @@ public final class GetSqlDBTableDataSetResult {
 
     /**
      * Unique id for identifying a data set resource
-     * 
     */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * Database name of the source data set
-     * 
     */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * The resource id of the azure resource
-     * 
     */
     public String getId() {
         return this.id;
@@ -110,49 +97,42 @@ public final class GetSqlDBTableDataSetResult {
     /**
      * Kind of data set.
      * Expected value is 'SqlDBTable'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Schema of the table. Default value is dbo.
-     * 
     */
     public String getSchemaName() {
         return this.schemaName;
     }
     /**
      * Resource id of SQL server
-     * 
     */
     public String getSqlServerResourceId() {
         return this.sqlServerResourceId;
     }
     /**
      * System Data of the Azure resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * SQL DB table name.
-     * 
     */
     public String getTableName() {
         return this.tableName;
     }
     /**
      * Type of the azure resource
-     * 
     */
     public String getType() {
         return this.type;

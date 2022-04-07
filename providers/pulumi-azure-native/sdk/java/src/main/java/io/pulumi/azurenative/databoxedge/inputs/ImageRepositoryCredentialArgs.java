@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Image repository credential.
- * 
  */
 public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
 
     /**
      * Image repository url (e.g.: mcr.microsoft.com).
-     * 
      */
     @Import(name="imageRepositoryUrl", required=true)
       private final Output<String> imageRepositoryUrl;
@@ -32,7 +30,6 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
 
     /**
      * Repository user password.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> password;
@@ -43,7 +40,6 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
 
     /**
      * Repository user name.
-     * 
      */
     @Import(name="userName", required=true)
       private final Output<String> userName;

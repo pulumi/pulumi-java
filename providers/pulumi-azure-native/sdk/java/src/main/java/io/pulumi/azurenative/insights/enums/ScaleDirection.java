@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * the scale direction. Whether the scaling action increases or decreases the number of instances.
-     * 
      */
     @EnumType
     public enum ScaleDirection {

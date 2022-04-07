@@ -14,7 +14,6 @@ public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Incident comment ID
-     * 
      */
     @Import(name="incidentCommentId", required=true)
       private final String incidentCommentId;
@@ -25,7 +24,6 @@ public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Incident ID
-     * 
      */
     @Import(name="incidentId", required=true)
       private final String incidentId;
@@ -36,7 +34,6 @@ public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
@@ -47,7 +44,6 @@ public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -58,7 +54,6 @@ public final class GetIncidentCommentArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

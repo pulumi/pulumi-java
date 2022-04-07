@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describes operator to apply to the match condition.
-     * 
      */
     @EnumType
     public enum RulesEngineOperator {

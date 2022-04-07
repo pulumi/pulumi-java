@@ -14,7 +14,6 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends io.pulumi.re
 
     /**
      * Name of the partner namespace.
-     * 
      */
     @Import(name="partnerNamespaceName", required=true)
       private final String partnerNamespaceName;
@@ -25,7 +24,6 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends io.pulumi.re
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

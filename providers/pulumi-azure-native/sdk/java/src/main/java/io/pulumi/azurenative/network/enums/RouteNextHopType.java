@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of Azure hop the packet should be sent to.
-     * 
      */
     @EnumType
     public enum RouteNextHopType {

@@ -15,52 +15,42 @@ import javax.annotation.Nullable;
 public final class GetSecurityPartnerProviderResult {
     /**
      * The connection status with the Security Partner Provider.
-     * 
      */
     private final String connectionStatus;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The provisioning state of the Security Partner Provider resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The security provider name.
-     * 
      */
     private final @Nullable String securityProviderName;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
     /**
      * The virtualHub to which the Security Partner Provider belongs.
-     * 
      */
     private final @Nullable SubResourceResponse virtualHub;
 
@@ -90,70 +80,60 @@ public final class GetSecurityPartnerProviderResult {
 
     /**
      * The connection status with the Security Partner Provider.
-     * 
     */
     public String getConnectionStatus() {
         return this.connectionStatus;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the Security Partner Provider resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The security provider name.
-     * 
     */
     public Optional<String> getSecurityProviderName() {
         return Optional.ofNullable(this.securityProviderName);
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The virtualHub to which the Security Partner Provider belongs.
-     * 
     */
     public Optional<SubResourceResponse> getVirtualHub() {
         return Optional.ofNullable(this.virtualHub);

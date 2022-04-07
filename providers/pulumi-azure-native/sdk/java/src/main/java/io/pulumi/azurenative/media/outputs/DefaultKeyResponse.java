@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class DefaultKeyResponse {
     /**
      * Label can be used to specify Content Key when creating a Streaming Locator
-     * 
      */
     private final @Nullable String label;
     /**
      * Policy used by Default Key
-     * 
      */
     private final @Nullable String policyName;
 
@@ -32,14 +30,12 @@ public final class DefaultKeyResponse {
 
     /**
      * Label can be used to specify Content Key when creating a Streaming Locator
-     * 
     */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Policy used by Default Key
-     * 
     */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);

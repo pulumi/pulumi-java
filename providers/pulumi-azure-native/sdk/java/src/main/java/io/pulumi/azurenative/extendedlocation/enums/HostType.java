@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of host the Custom Locations is referencing (Kubernetes, etc...).
-     * 
      */
     @EnumType
     public enum HostType {

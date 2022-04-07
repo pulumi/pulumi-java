@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ManagedHsmSkuResponse {
     /**
      * SKU Family of the managed HSM Pool
-     * 
      */
     private final String family;
     /**
      * SKU of the managed HSM Pool
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class ManagedHsmSkuResponse {
 
     /**
      * SKU Family of the managed HSM Pool
-     * 
     */
     public String getFamily() {
         return this.family;
     }
     /**
      * SKU of the managed HSM Pool
-     * 
     */
     public String getName() {
         return this.name;

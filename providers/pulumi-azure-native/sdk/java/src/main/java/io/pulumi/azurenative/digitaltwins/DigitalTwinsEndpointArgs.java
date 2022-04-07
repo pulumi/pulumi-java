@@ -20,7 +20,6 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of Endpoint Resource.
-     * 
      */
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
@@ -31,7 +30,6 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
 
     /**
      * DigitalTwinsInstance endpoint resource properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Object> properties;
@@ -42,7 +40,6 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group that contains the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -53,7 +50,6 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the DigitalTwinsInstance.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

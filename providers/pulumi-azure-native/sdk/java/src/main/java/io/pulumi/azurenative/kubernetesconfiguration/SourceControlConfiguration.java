@@ -22,7 +22,149 @@ import javax.annotation.Nullable;
  * The SourceControl Configuration object returned in Get & Put response.
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Source Control Configuration
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sourceControlConfiguration = new AzureNative.KubernetesConfiguration.SourceControlConfiguration("sourceControlConfiguration", new AzureNative.KubernetesConfiguration.SourceControlConfigurationArgs
+ *         {
+ *             ClusterName = "clusterName1",
+ *             ClusterResourceName = "connectedClusters",
+ *             ClusterRp = "Microsoft.Kubernetes",
+ *             ConfigurationProtectedSettings = 
+ *             {
+ *                 { "protectedSetting1Key", "protectedSetting1Value" },
+ *             },
+ *             EnableHelmOperator = true,
+ *             HelmOperatorProperties = new AzureNative.KubernetesConfiguration.Inputs.HelmOperatorPropertiesArgs
+ *             {
+ *                 ChartValues = "--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
+ *                 ChartVersion = "0.3.0",
+ *             },
+ *             OperatorInstanceName = "SRSGitHubFluxOp-01",
+ *             OperatorNamespace = "SRS_Namespace",
+ *             OperatorParams = "--git-email=xyzgituser@users.srs.github.com",
+ *             OperatorScope = "namespace",
+ *             OperatorType = "Flux",
+ *             RepositoryUrl = "git@github.com:k8sdeveloper425/flux-get-started",
+ *             ResourceGroupName = "rg1",
+ *             SourceControlConfigurationName = "SRS_GitHubConfig",
+ *             SshKnownHostsContents = "c3NoLmRldi5henVyZS5jb20gc3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFDN0hyMW9UV3FOcU9sekdKT2ZHSjROYWtWeUl6ZjFyWFlkNGQ3d282akJsa0x2Q0E0b2RCbEwwbURVeVowL1FVZlRUcWV1K3RtMjJnT3N2K1ZyVlRNazZ2d1JVNzVnWS95OXV0NU1iM2JSNUJWNThkS1h5cTlBOVVlQjVDYWtlaG41WmdtNngxbUtvVnlmK0ZGbjI2aVlxWEpSZ3pJWlpjWjVWNmhyRTBRZzM5a1ptNGF6NDhvMEFVYmY2U3A0U0xkdm51TWEyc1ZOd0hCYm9TN0VKa201N1hRUFZVMy9RcHlOTEhiV0Rkend0cmxTK2V6MzBTM0FkWWhMS0VPeEFHOHdlT255cnRMSkFVZW45bVRrb2w4b0lJMWVkZjdtV1diV1ZmMG5CbWx5MjErblpjbUNUSVNRQnRkY3lQYUVubzdmRlFNREQyNi9zMGxmS29iNEt3OEg=",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	kubernetesconfiguration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kubernetesconfiguration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kubernetesconfiguration.NewSourceControlConfiguration(ctx, "sourceControlConfiguration", &kubernetesconfiguration.SourceControlConfigurationArgs{
+ * 			ClusterName:         pulumi.String("clusterName1"),
+ * 			ClusterResourceName: pulumi.String("connectedClusters"),
+ * 			ClusterRp:           pulumi.String("Microsoft.Kubernetes"),
+ * 			ConfigurationProtectedSettings: pulumi.StringMap{
+ * 				"protectedSetting1Key": pulumi.String("protectedSetting1Value"),
+ * 			},
+ * 			EnableHelmOperator: pulumi.Bool(true),
+ * 			HelmOperatorProperties: &kubernetesconfiguration.HelmOperatorPropertiesArgs{
+ * 				ChartValues:  pulumi.String("--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system"),
+ * 				ChartVersion: pulumi.String("0.3.0"),
+ * 			},
+ * 			OperatorInstanceName:           pulumi.String("SRSGitHubFluxOp-01"),
+ * 			OperatorNamespace:              pulumi.String("SRS_Namespace"),
+ * 			OperatorParams:                 pulumi.String("--git-email=xyzgituser@users.srs.github.com"),
+ * 			OperatorScope:                  pulumi.String("namespace"),
+ * 			OperatorType:                   pulumi.String("Flux"),
+ * 			RepositoryUrl:                  pulumi.String("git@github.com:k8sdeveloper425/flux-get-started"),
+ * 			ResourceGroupName:              pulumi.String("rg1"),
+ * 			SourceControlConfigurationName: pulumi.String("SRS_GitHubConfig"),
+ * 			SshKnownHostsContents:          pulumi.String("c3NoLmRldi5henVyZS5jb20gc3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFDN0hyMW9UV3FOcU9sekdKT2ZHSjROYWtWeUl6ZjFyWFlkNGQ3d282akJsa0x2Q0E0b2RCbEwwbURVeVowL1FVZlRUcWV1K3RtMjJnT3N2K1ZyVlRNazZ2d1JVNzVnWS95OXV0NU1iM2JSNUJWNThkS1h5cTlBOVVlQjVDYWtlaG41WmdtNngxbUtvVnlmK0ZGbjI2aVlxWEpSZ3pJWlpjWjVWNmhyRTBRZzM5a1ptNGF6NDhvMEFVYmY2U3A0U0xkdm51TWEyc1ZOd0hCYm9TN0VKa201N1hRUFZVMy9RcHlOTEhiV0Rkend0cmxTK2V6MzBTM0FkWWhMS0VPeEFHOHdlT255cnRMSkFVZW45bVRrb2w4b0lJMWVkZjdtV1diV1ZmMG5CbWx5MjErblpjbUNUSVNRQnRkY3lQYUVubzdmRlFNREQyNi9zMGxmS29iNEt3OEg="),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sourceControlConfiguration = new azure_native.kubernetesconfiguration.SourceControlConfiguration("sourceControlConfiguration", {
+ *     clusterName: "clusterName1",
+ *     clusterResourceName: "connectedClusters",
+ *     clusterRp: "Microsoft.Kubernetes",
+ *     configurationProtectedSettings: {
+ *         protectedSetting1Key: "protectedSetting1Value",
+ *     },
+ *     enableHelmOperator: true,
+ *     helmOperatorProperties: {
+ *         chartValues: "--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
+ *         chartVersion: "0.3.0",
+ *     },
+ *     operatorInstanceName: "SRSGitHubFluxOp-01",
+ *     operatorNamespace: "SRS_Namespace",
+ *     operatorParams: "--git-email=xyzgituser@users.srs.github.com",
+ *     operatorScope: "namespace",
+ *     operatorType: "Flux",
+ *     repositoryUrl: "git@github.com:k8sdeveloper425/flux-get-started",
+ *     resourceGroupName: "rg1",
+ *     sourceControlConfigurationName: "SRS_GitHubConfig",
+ *     sshKnownHostsContents: "c3NoLmRldi5henVyZS5jb20gc3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFDN0hyMW9UV3FOcU9sekdKT2ZHSjROYWtWeUl6ZjFyWFlkNGQ3d282akJsa0x2Q0E0b2RCbEwwbURVeVowL1FVZlRUcWV1K3RtMjJnT3N2K1ZyVlRNazZ2d1JVNzVnWS95OXV0NU1iM2JSNUJWNThkS1h5cTlBOVVlQjVDYWtlaG41WmdtNngxbUtvVnlmK0ZGbjI2aVlxWEpSZ3pJWlpjWjVWNmhyRTBRZzM5a1ptNGF6NDhvMEFVYmY2U3A0U0xkdm51TWEyc1ZOd0hCYm9TN0VKa201N1hRUFZVMy9RcHlOTEhiV0Rkend0cmxTK2V6MzBTM0FkWWhMS0VPeEFHOHdlT255cnRMSkFVZW45bVRrb2w4b0lJMWVkZjdtV1diV1ZmMG5CbWx5MjErblpjbUNUSVNRQnRkY3lQYUVubzdmRlFNREQyNi9zMGxmS29iNEt3OEg=",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * source_control_configuration = azure_native.kubernetesconfiguration.SourceControlConfiguration("sourceControlConfiguration",
+ *     cluster_name="clusterName1",
+ *     cluster_resource_name="connectedClusters",
+ *     cluster_rp="Microsoft.Kubernetes",
+ *     configuration_protected_settings={
+ *         "protectedSetting1Key": "protectedSetting1Value",
+ *     },
+ *     enable_helm_operator=True,
+ *     helm_operator_properties=azure_native.kubernetesconfiguration.HelmOperatorPropertiesArgs(
+ *         chart_values="--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system",
+ *         chart_version="0.3.0",
+ *     ),
+ *     operator_instance_name="SRSGitHubFluxOp-01",
+ *     operator_namespace="SRS_Namespace",
+ *     operator_params="--git-email=xyzgituser@users.srs.github.com",
+ *     operator_scope="namespace",
+ *     operator_type="Flux",
+ *     repository_url="git@github.com:k8sdeveloper425/flux-get-started",
+ *     resource_group_name="rg1",
+ *     source_control_configuration_name="SRS_GitHubConfig",
+ *     ssh_known_hosts_contents="c3NoLmRldi5henVyZS5jb20gc3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFDN0hyMW9UV3FOcU9sekdKT2ZHSjROYWtWeUl6ZjFyWFlkNGQ3d282akJsa0x2Q0E0b2RCbEwwbURVeVowL1FVZlRUcWV1K3RtMjJnT3N2K1ZyVlRNazZ2d1JVNzVnWS95OXV0NU1iM2JSNUJWNThkS1h5cTlBOVVlQjVDYWtlaG41WmdtNngxbUtvVnlmK0ZGbjI2aVlxWEpSZ3pJWlpjWjVWNmhyRTBRZzM5a1ptNGF6NDhvMEFVYmY2U3A0U0xkdm51TWEyc1ZOd0hCYm9TN0VKa201N1hRUFZVMy9RcHlOTEhiV0Rkend0cmxTK2V6MzBTM0FkWWhMS0VPeEFHOHdlT255cnRMSkFVZW45bVRrb2w4b0lJMWVkZjdtV1diV1ZmMG5CbWx5MjErblpjbUNUSVNRQnRkY3lQYUVubzdmRlFNREQyNi9zMGxmS29iNEt3OEg=")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,224 +179,192 @@ import javax.annotation.Nullable;
 public class SourceControlConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * Compliance Status of the Configuration
-     * 
      */
     @Export(name="complianceStatus", type=ComplianceStatusResponse.class, parameters={})
     private Output<ComplianceStatusResponse> complianceStatus;
 
     /**
      * @return Compliance Status of the Configuration
-     * 
      */
     public Output<ComplianceStatusResponse> getComplianceStatus() {
         return this.complianceStatus;
     }
     /**
      * Name-value pairs of protected configuration settings for the configuration
-     * 
      */
     @Export(name="configurationProtectedSettings", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> configurationProtectedSettings;
 
     /**
      * @return Name-value pairs of protected configuration settings for the configuration
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getConfigurationProtectedSettings() {
         return this.configurationProtectedSettings;
     }
     /**
      * Option to enable Helm Operator for this git configuration.
-     * 
      */
     @Export(name="enableHelmOperator", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableHelmOperator;
 
     /**
      * @return Option to enable Helm Operator for this git configuration.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnableHelmOperator() {
         return this.enableHelmOperator;
     }
     /**
      * Properties for Helm operator.
-     * 
      */
     @Export(name="helmOperatorProperties", type=HelmOperatorPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ HelmOperatorPropertiesResponse> helmOperatorProperties;
 
     /**
      * @return Properties for Helm operator.
-     * 
      */
     public Output</* @Nullable */ HelmOperatorPropertiesResponse> getHelmOperatorProperties() {
         return this.helmOperatorProperties;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Instance name of the operator - identifying the specific configuration.
-     * 
      */
     @Export(name="operatorInstanceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatorInstanceName;
 
     /**
      * @return Instance name of the operator - identifying the specific configuration.
-     * 
      */
     public Output</* @Nullable */ String> getOperatorInstanceName() {
         return this.operatorInstanceName;
     }
     /**
      * The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
-     * 
      */
     @Export(name="operatorNamespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatorNamespace;
 
     /**
      * @return The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
-     * 
      */
     public Output</* @Nullable */ String> getOperatorNamespace() {
         return this.operatorNamespace;
     }
     /**
      * Any Parameters for the Operator instance in string format.
-     * 
      */
     @Export(name="operatorParams", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatorParams;
 
     /**
      * @return Any Parameters for the Operator instance in string format.
-     * 
      */
     public Output</* @Nullable */ String> getOperatorParams() {
         return this.operatorParams;
     }
     /**
      * Scope at which the operator will be installed.
-     * 
      */
     @Export(name="operatorScope", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatorScope;
 
     /**
      * @return Scope at which the operator will be installed.
-     * 
      */
     public Output</* @Nullable */ String> getOperatorScope() {
         return this.operatorScope;
     }
     /**
      * Type of the operator
-     * 
      */
     @Export(name="operatorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatorType;
 
     /**
      * @return Type of the operator
-     * 
      */
     public Output</* @Nullable */ String> getOperatorType() {
         return this.operatorType;
     }
     /**
      * The provisioning state of the resource provider.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource provider.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
-     * 
      */
     @Export(name="repositoryPublicKey", type=String.class, parameters={})
     private Output<String> repositoryPublicKey;
 
     /**
      * @return Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
-     * 
      */
     public Output<String> getRepositoryPublicKey() {
         return this.repositoryPublicKey;
     }
     /**
      * Url of the SourceControl Repository.
-     * 
      */
     @Export(name="repositoryUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> repositoryUrl;
 
     /**
      * @return Url of the SourceControl Repository.
-     * 
      */
     public Output</* @Nullable */ String> getRepositoryUrl() {
         return this.repositoryUrl;
     }
     /**
      * Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
-     * 
      */
     @Export(name="sshKnownHostsContents", type=String.class, parameters={})
     private Output</* @Nullable */ String> sshKnownHostsContents;
 
     /**
      * @return Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
-     * 
      */
     public Output</* @Nullable */ String> getSshKnownHostsContents() {
         return this.sshKnownHostsContents;
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

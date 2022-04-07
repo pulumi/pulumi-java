@@ -21,7 +21,99 @@ import javax.annotation.Nullable;
  * Backup policy information
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### BackupPolicies_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var backupPolicy = new AzureNative.NetApp.BackupPolicy("backupPolicy", new AzureNative.NetApp.BackupPolicyArgs
+ *         {
+ *             AccountName = "account1",
+ *             BackupPolicyName = "backupPolicyName",
+ *             DailyBackupsToKeep = 10,
+ *             Enabled = true,
+ *             Location = "westus",
+ *             MonthlyBackupsToKeep = 10,
+ *             ResourceGroupName = "myRG",
+ *             WeeklyBackupsToKeep = 10,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	netapp "github.com/pulumi/pulumi-azure-native/sdk/go/azure/netapp"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := netapp.NewBackupPolicy(ctx, "backupPolicy", &netapp.BackupPolicyArgs{
+ * 			AccountName:          pulumi.String("account1"),
+ * 			BackupPolicyName:     pulumi.String("backupPolicyName"),
+ * 			DailyBackupsToKeep:   pulumi.Int(10),
+ * 			Enabled:              pulumi.Bool(true),
+ * 			Location:             pulumi.String("westus"),
+ * 			MonthlyBackupsToKeep: pulumi.Int(10),
+ * 			ResourceGroupName:    pulumi.String("myRG"),
+ * 			WeeklyBackupsToKeep:  pulumi.Int(10),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const backupPolicy = new azure_native.netapp.BackupPolicy("backupPolicy", {
+ *     accountName: "account1",
+ *     backupPolicyName: "backupPolicyName",
+ *     dailyBackupsToKeep: 10,
+ *     enabled: true,
+ *     location: "westus",
+ *     monthlyBackupsToKeep: 10,
+ *     resourceGroupName: "myRG",
+ *     weeklyBackupsToKeep: 10,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * backup_policy = azure_native.netapp.BackupPolicy("backupPolicy",
+ *     account_name="account1",
+ *     backup_policy_name="backupPolicyName",
+ *     daily_backups_to_keep=10,
+ *     enabled=True,
+ *     location="westus",
+ *     monthly_backups_to_keep=10,
+ *     resource_group_name="myRG",
+ *     weekly_backups_to_keep=10)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,168 +128,144 @@ import javax.annotation.Nullable;
 public class BackupPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Daily backups count to keep
-     * 
      */
     @Export(name="dailyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dailyBackupsToKeep;
 
     /**
      * @return Daily backups count to keep
-     * 
      */
     public Output</* @Nullable */ Integer> getDailyBackupsToKeep() {
         return this.dailyBackupsToKeep;
     }
     /**
      * The property to decide policy is enabled or not
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return The property to decide policy is enabled or not
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Monthly backups count to keep
-     * 
      */
     @Export(name="monthlyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> monthlyBackupsToKeep;
 
     /**
      * @return Monthly backups count to keep
-     * 
      */
     public Output</* @Nullable */ Integer> getMonthlyBackupsToKeep() {
         return this.monthlyBackupsToKeep;
     }
     /**
      * Name of backup policy
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of backup policy
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Azure lifecycle management
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * A list of volumes assigned to this policy
-     * 
      */
     @Export(name="volumeBackups", type=List.class, parameters={VolumeBackupsResponse.class})
     private Output</* @Nullable */ List<VolumeBackupsResponse>> volumeBackups;
 
     /**
      * @return A list of volumes assigned to this policy
-     * 
      */
     public Output</* @Nullable */ List<VolumeBackupsResponse>> getVolumeBackups() {
         return this.volumeBackups;
     }
     /**
      * Volumes using current backup policy
-     * 
      */
     @Export(name="volumesAssigned", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> volumesAssigned;
 
     /**
      * @return Volumes using current backup policy
-     * 
      */
     public Output</* @Nullable */ Integer> getVolumesAssigned() {
         return this.volumesAssigned;
     }
     /**
      * Weekly backups count to keep
-     * 
      */
     @Export(name="weeklyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> weeklyBackupsToKeep;
 
     /**
      * @return Weekly backups count to keep
-     * 
      */
     public Output</* @Nullable */ Integer> getWeeklyBackupsToKeep() {
         return this.weeklyBackupsToKeep;
     }
     /**
      * Yearly backups count to keep
-     * 
      */
     @Export(name="yearlyBackupsToKeep", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> yearlyBackupsToKeep;
 
     /**
      * @return Yearly backups count to keep
-     * 
      */
     public Output</* @Nullable */ Integer> getYearlyBackupsToKeep() {
         return this.yearlyBackupsToKeep;

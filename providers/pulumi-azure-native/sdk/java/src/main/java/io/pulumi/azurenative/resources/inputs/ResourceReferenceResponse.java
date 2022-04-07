@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The resource Id model.
- * 
  */
 public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ResourceReferenceResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The fully qualified resource Id.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

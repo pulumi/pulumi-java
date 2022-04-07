@@ -20,7 +20,109 @@ import javax.annotation.Nullable;
  * A Stream Analytics Cluster object
  * API Version: 2020-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a new cluster
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cluster = new AzureNative.StreamAnalytics.Cluster("cluster", new AzureNative.StreamAnalytics.ClusterArgs
+ *         {
+ *             ClusterName = "An Example Cluster",
+ *             Location = "North US",
+ *             ResourceGroupName = "sjrg",
+ *             Sku = new AzureNative.StreamAnalytics.Inputs.ClusterSkuArgs
+ *             {
+ *                 Capacity = 48,
+ *                 Name = "Default",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "key", "value" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := streamanalytics.NewCluster(ctx, "cluster", &streamanalytics.ClusterArgs{
+ * 			ClusterName:       pulumi.String("An Example Cluster"),
+ * 			Location:          pulumi.String("North US"),
+ * 			ResourceGroupName: pulumi.String("sjrg"),
+ * 			Sku: &streamanalytics.ClusterSkuArgs{
+ * 				Capacity: pulumi.Int(48),
+ * 				Name:     pulumi.String("Default"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"key": pulumi.String("value"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cluster = new azure_native.streamanalytics.Cluster("cluster", {
+ *     clusterName: "An Example Cluster",
+ *     location: "North US",
+ *     resourceGroupName: "sjrg",
+ *     sku: {
+ *         capacity: 48,
+ *         name: "Default",
+ *     },
+ *     tags: {
+ *         key: "value",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cluster = azure_native.streamanalytics.Cluster("cluster",
+ *     cluster_name="An Example Cluster",
+ *     location="North US",
+ *     resource_group_name="sjrg",
+ *     sku=azure_native.streamanalytics.ClusterSkuArgs(
+ *         capacity=48,
+ *         name="Default",
+ *     ),
+ *     tags={
+ *         "key": "value",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,98 +137,84 @@ import javax.annotation.Nullable;
 public class Cluster extends io.pulumi.resources.CustomResource {
     /**
      * The current entity tag for the cluster. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return The current entity tag for the cluster. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The properties associated with a Stream Analytics cluster.
-     * 
      */
     @Export(name="properties", type=ClusterPropertiesResponse.class, parameters={})
     private Output<ClusterPropertiesResponse> properties;
 
     /**
      * @return The properties associated with a Stream Analytics cluster.
-     * 
      */
     public Output<ClusterPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.
-     * 
      */
     @Export(name="sku", type=ClusterSkuResponse.class, parameters={})
     private Output</* @Nullable */ ClusterSkuResponse> sku;
 
     /**
      * @return The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.
-     * 
      */
     public Output</* @Nullable */ ClusterSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;

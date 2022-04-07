@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The SKU (tier) of a workspace.
- * 
  */
 public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
-     * 
      */
     @Import(name="capacityReservationLevel")
       private final @Nullable Integer capacityReservationLevel;
@@ -32,7 +30,6 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The last time when the sku was updated.
-     * 
      */
     @Import(name="lastSkuUpdate", required=true)
       private final String lastSkuUpdate;
@@ -43,7 +40,6 @@ public final class WorkspaceSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the SKU.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

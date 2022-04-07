@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Power Query data flow.
- * 
  */
 public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of tags that can be used for describing the data flow.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -35,7 +33,6 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The description of the data flow.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -46,7 +43,6 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Locale of the Power query mashup document.
-     * 
      */
     @Import(name="documentLocale")
       private final @Nullable Output<String> documentLocale;
@@ -57,7 +53,6 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable Output<DataFlowFolderArgs> folder;
@@ -68,7 +63,6 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Power query mashup script.
-     * 
      */
     @Import(name="script")
       private final @Nullable Output<String> script;
@@ -79,7 +73,6 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of sources in Power Query.
-     * 
      */
     @Import(name="sources")
       private final @Nullable Output<List<PowerQuerySourceArgs>> sources;
@@ -91,7 +84,6 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     /**
      * Type of data flow.
      * Expected value is 'WranglingDataFlow'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

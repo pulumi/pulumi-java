@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the list of managed rule sets for the policy.
- * 
  */
 public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * List of rule sets.
-     * 
      */
     @Import(name="managedRuleSets")
       private final @Nullable Output<List<FrontDoorManagedRuleSetArgs>> managedRuleSets;

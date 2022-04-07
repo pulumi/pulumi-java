@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class MountConfigurationResponse {
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     private final @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration;
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     private final @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration;
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     private final @Nullable CIFSMountConfigurationResponse cifsMountConfiguration;
     /**
      * This property is mutually exclusive with all other properties.
-     * 
      */
     private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
 
@@ -49,28 +45,24 @@ public final class MountConfigurationResponse {
 
     /**
      * This property is mutually exclusive with all other properties.
-     * 
     */
     public Optional<AzureBlobFileSystemConfigurationResponse> getAzureBlobFileSystemConfiguration() {
         return Optional.ofNullable(this.azureBlobFileSystemConfiguration);
     }
     /**
      * This property is mutually exclusive with all other properties.
-     * 
     */
     public Optional<AzureFileShareConfigurationResponse> getAzureFileShareConfiguration() {
         return Optional.ofNullable(this.azureFileShareConfiguration);
     }
     /**
      * This property is mutually exclusive with all other properties.
-     * 
     */
     public Optional<CIFSMountConfigurationResponse> getCifsMountConfiguration() {
         return Optional.ofNullable(this.cifsMountConfiguration);
     }
     /**
      * This property is mutually exclusive with all other properties.
-     * 
     */
     public Optional<NFSMountConfigurationResponse> getNfsMountConfiguration() {
         return Optional.ofNullable(this.nfsMountConfiguration);

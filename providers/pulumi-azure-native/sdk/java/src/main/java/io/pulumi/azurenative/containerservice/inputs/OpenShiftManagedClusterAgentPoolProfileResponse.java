@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the configuration of the OpenShift cluster VMs.
- * 
  */
 public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
 
     /**
      * Number of agents (VMs) to host docker containers.
-     * 
      */
     @Import(name="count", required=true)
       private final Integer count;
@@ -32,7 +30,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
 
     /**
      * Unique name of the pool profile in the context of the subscription and resource group.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -43,7 +40,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
 
     /**
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
-     * 
      */
     @Import(name="osType")
       private final @Nullable String osType;
@@ -54,7 +50,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
 
     /**
      * Define the role of the AgentPoolProfile.
-     * 
      */
     @Import(name="role")
       private final @Nullable String role;
@@ -65,7 +60,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
 
     /**
      * Subnet CIDR for the peering.
-     * 
      */
     @Import(name="subnetCidr")
       private final @Nullable String subnetCidr;
@@ -76,7 +70,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
 
     /**
      * Size of agent VMs.
-     * 
      */
     @Import(name="vmSize", required=true)
       private final String vmSize;

@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class GetGuestUsageResult {
     /**
      * An identifier that represents the Guest Usages resource.
-     * 
      */
     private final String id;
     /**
      * Location of the Guest Usages resource.
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the Guest Usages resource.
-     * 
      */
     private final String name;
     /**
      * Key-value pairs of additional resource provisioning properties.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * An identifier for the tenant for which the resource is being created
-     * 
      */
     private final @Nullable String tenantId;
     /**
      * The type of the Guest Usages resource.
-     * 
      */
     private final String type;
 
@@ -61,42 +55,36 @@ public final class GetGuestUsageResult {
 
     /**
      * An identifier that represents the Guest Usages resource.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Location of the Guest Usages resource.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the Guest Usages resource.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * An identifier for the tenant for which the resource is being created
-     * 
     */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of the Guest Usages resource.
-     * 
     */
     public String getType() {
         return this.type;

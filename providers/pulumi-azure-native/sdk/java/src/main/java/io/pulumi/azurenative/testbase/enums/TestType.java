@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of the test.
-     * 
      */
     @EnumType
     public enum TestType {

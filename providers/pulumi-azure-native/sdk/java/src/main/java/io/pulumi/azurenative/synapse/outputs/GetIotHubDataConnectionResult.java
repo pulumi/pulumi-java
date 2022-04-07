@@ -15,73 +15,59 @@ import javax.annotation.Nullable;
 public final class GetIotHubDataConnectionResult {
     /**
      * The iot hub consumer group.
-     * 
      */
     private final String consumerGroup;
     /**
      * The data format of the message. Optionally the data format can be added to each message.
-     * 
      */
     private final @Nullable String dataFormat;
     /**
      * System properties of the iot hub
-     * 
      */
     private final @Nullable List<String> eventSystemProperties;
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The resource ID of the Iot hub to be used to create a data connection.
-     * 
      */
     private final String iotHubResourceId;
     /**
      * Kind of the endpoint for the data connection
      * Expected value is 'IotHub'.
-     * 
      */
     private final String kind;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-     * 
      */
     private final @Nullable String mappingRuleName;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The provisioned state of the resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The name of the share access policy
-     * 
      */
     private final String sharedAccessPolicyName;
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The table where the data should be ingested. Optionally the table information can be added to each message.
-     * 
      */
     private final @Nullable String tableName;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -119,35 +105,30 @@ public final class GetIotHubDataConnectionResult {
 
     /**
      * The iot hub consumer group.
-     * 
     */
     public String getConsumerGroup() {
         return this.consumerGroup;
     }
     /**
      * The data format of the message. Optionally the data format can be added to each message.
-     * 
     */
     public Optional<String> getDataFormat() {
         return Optional.ofNullable(this.dataFormat);
     }
     /**
      * System properties of the iot hub
-     * 
     */
     public List<String> getEventSystemProperties() {
         return this.eventSystemProperties == null ? List.of() : this.eventSystemProperties;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The resource ID of the Iot hub to be used to create a data connection.
-     * 
     */
     public String getIotHubResourceId() {
         return this.iotHubResourceId;
@@ -155,63 +136,54 @@ public final class GetIotHubDataConnectionResult {
     /**
      * Kind of the endpoint for the data connection
      * Expected value is 'IotHub'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-     * 
     */
     public Optional<String> getMappingRuleName() {
         return Optional.ofNullable(this.mappingRuleName);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The name of the share access policy
-     * 
     */
     public String getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The table where the data should be ingested. Optionally the table information can be added to each message.
-     * 
     */
     public Optional<String> getTableName() {
         return Optional.ofNullable(this.tableName);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

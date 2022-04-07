@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The details of the identity used for CMK
- * 
  */
 public final class CmkKekIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class CmkKekIdentityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
-     * 
      */
     @Import(name="useSystemAssignedIdentity")
       private final @Nullable Boolean useSystemAssignedIdentity;
@@ -32,7 +30,6 @@ public final class CmkKekIdentityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
-     * 
      */
     @Import(name="userAssignedIdentity")
       private final @Nullable String userAssignedIdentity;

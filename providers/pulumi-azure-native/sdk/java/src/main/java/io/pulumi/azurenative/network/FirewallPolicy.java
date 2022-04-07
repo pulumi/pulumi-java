@@ -27,7 +27,403 @@ import javax.annotation.Nullable;
  * FirewallPolicy Resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create FirewallPolicy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var firewallPolicy = new AzureNative.Network.FirewallPolicy("firewallPolicy", new AzureNative.Network.FirewallPolicyArgs
+ *         {
+ *             DnsSettings = new AzureNative.Network.Inputs.DnsSettingsArgs
+ *             {
+ *                 EnableProxy = true,
+ *                 RequireProxyForNetworkRules = false,
+ *                 Servers = 
+ *                 {
+ *                     "30.3.4.5",
+ *                 },
+ *             },
+ *             FirewallPolicyName = "firewallPolicy",
+ *             Insights = new AzureNative.Network.Inputs.FirewallPolicyInsightsArgs
+ *             {
+ *                 IsEnabled = true,
+ *                 LogAnalyticsResources = new AzureNative.Network.Inputs.FirewallPolicyLogAnalyticsResourcesArgs
+ *                 {
+ *                     DefaultWorkspaceId = new AzureNative.Network.Inputs.SubResourceArgs
+ *                     {
+ *                         Id = "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace",
+ *                     },
+ *                     Workspaces = 
+ *                     {
+ *                         new AzureNative.Network.Inputs.FirewallPolicyLogAnalyticsWorkspaceArgs
+ *                         {
+ *                             Region = "westus",
+ *                             WorkspaceId = new AzureNative.Network.Inputs.SubResourceArgs
+ *                             {
+ *                                 Id = "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1",
+ *                             },
+ *                         },
+ *                         new AzureNative.Network.Inputs.FirewallPolicyLogAnalyticsWorkspaceArgs
+ *                         {
+ *                             Region = "eastus",
+ *                             WorkspaceId = new AzureNative.Network.Inputs.SubResourceArgs
+ *                             {
+ *                                 Id = "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 RetentionDays = 100,
+ *             },
+ *             IntrusionDetection = new AzureNative.Network.Inputs.FirewallPolicyIntrusionDetectionArgs
+ *             {
+ *                 Configuration = new AzureNative.Network.Inputs.FirewallPolicyIntrusionDetectionConfigurationArgs
+ *                 {
+ *                     BypassTrafficSettings = 
+ *                     {
+ *                         new AzureNative.Network.Inputs.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs
+ *                         {
+ *                             Description = "Rule 1",
+ *                             DestinationAddresses = 
+ *                             {
+ *                                 "5.6.7.8",
+ *                             },
+ *                             DestinationPorts = 
+ *                             {
+ *                                 "*",
+ *                             },
+ *                             Name = "bypassRule1",
+ *                             Protocol = "TCP",
+ *                             SourceAddresses = 
+ *                             {
+ *                                 "1.2.3.4",
+ *                             },
+ *                         },
+ *                     },
+ *                     SignatureOverrides = 
+ *                     {
+ *                         new AzureNative.Network.Inputs.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs
+ *                         {
+ *                             Id = "2525004",
+ *                             Mode = "Deny",
+ *                         },
+ *                     },
+ *                 },
+ *                 Mode = "Alert",
+ *             },
+ *             Location = "West US",
+ *             ResourceGroupName = "rg1",
+ *             Sku = new AzureNative.Network.Inputs.FirewallPolicySkuArgs
+ *             {
+ *                 Tier = "Premium",
+ *             },
+ *             Snat = new AzureNative.Network.Inputs.FirewallPolicySNATArgs
+ *             {
+ *                 PrivateRanges = 
+ *                 {
+ *                     "IANAPrivateRanges",
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             ThreatIntelMode = "Alert",
+ *             ThreatIntelWhitelist = new AzureNative.Network.Inputs.FirewallPolicyThreatIntelWhitelistArgs
+ *             {
+ *                 Fqdns = 
+ *                 {
+ *                     "*.microsoft.com",
+ *                 },
+ *                 IpAddresses = 
+ *                 {
+ *                     "20.3.4.5",
+ *                 },
+ *             },
+ *             TransportSecurity = new AzureNative.Network.Inputs.FirewallPolicyTransportSecurityArgs
+ *             {
+ *                 CertificateAuthority = new AzureNative.Network.Inputs.FirewallPolicyCertificateAuthorityArgs
+ *                 {
+ *                     KeyVaultSecretId = "https://kv/secret",
+ *                     Name = "clientcert",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewFirewallPolicy(ctx, "firewallPolicy", &network.FirewallPolicyArgs{
+ * 			DnsSettings: &network.DnsSettingsArgs{
+ * 				EnableProxy:                 pulumi.Bool(true),
+ * 				RequireProxyForNetworkRules: pulumi.Bool(false),
+ * 				Servers: pulumi.StringArray{
+ * 					pulumi.String("30.3.4.5"),
+ * 				},
+ * 			},
+ * 			FirewallPolicyName: pulumi.String("firewallPolicy"),
+ * 			Insights: &network.FirewallPolicyInsightsArgs{
+ * 				IsEnabled: pulumi.Bool(true),
+ * 				LogAnalyticsResources: &network.FirewallPolicyLogAnalyticsResourcesArgs{
+ * 					DefaultWorkspaceId: &network.SubResourceArgs{
+ * 						Id: pulumi.String("/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace"),
+ * 					},
+ * 					Workspaces: network.FirewallPolicyLogAnalyticsWorkspaceArray{
+ * 						&network.FirewallPolicyLogAnalyticsWorkspaceArgs{
+ * 							Region: pulumi.String("westus"),
+ * 							WorkspaceId: &network.SubResourceArgs{
+ * 								Id: pulumi.String("/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1"),
+ * 							},
+ * 						},
+ * 						&network.FirewallPolicyLogAnalyticsWorkspaceArgs{
+ * 							Region: pulumi.String("eastus"),
+ * 							WorkspaceId: &network.SubResourceArgs{
+ * 								Id: pulumi.String("/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				RetentionDays: pulumi.Int(100),
+ * 			},
+ * 			IntrusionDetection: &network.FirewallPolicyIntrusionDetectionArgs{
+ * 				Configuration: &network.FirewallPolicyIntrusionDetectionConfigurationArgs{
+ * 					BypassTrafficSettings: network.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArray{
+ * 						&network.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs{
+ * 							Description: pulumi.String("Rule 1"),
+ * 							DestinationAddresses: pulumi.StringArray{
+ * 								pulumi.String("5.6.7.8"),
+ * 							},
+ * 							DestinationPorts: pulumi.StringArray{
+ * 								pulumi.String("*"),
+ * 							},
+ * 							Name:     pulumi.String("bypassRule1"),
+ * 							Protocol: pulumi.String("TCP"),
+ * 							SourceAddresses: pulumi.StringArray{
+ * 								pulumi.String("1.2.3.4"),
+ * 							},
+ * 						},
+ * 					},
+ * 					SignatureOverrides: network.FirewallPolicyIntrusionDetectionSignatureSpecificationArray{
+ * 						&network.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs{
+ * 							Id:   pulumi.String("2525004"),
+ * 							Mode: pulumi.String("Deny"),
+ * 						},
+ * 					},
+ * 				},
+ * 				Mode: pulumi.String("Alert"),
+ * 			},
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Sku: &network.FirewallPolicySkuArgs{
+ * 				Tier: pulumi.String("Premium"),
+ * 			},
+ * 			Snat: &network.FirewallPolicySNATArgs{
+ * 				PrivateRanges: pulumi.StringArray{
+ * 					pulumi.String("IANAPrivateRanges"),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			ThreatIntelMode: pulumi.String("Alert"),
+ * 			ThreatIntelWhitelist: &network.FirewallPolicyThreatIntelWhitelistArgs{
+ * 				Fqdns: pulumi.StringArray{
+ * 					pulumi.String("*.microsoft.com"),
+ * 				},
+ * 				IpAddresses: pulumi.StringArray{
+ * 					pulumi.String("20.3.4.5"),
+ * 				},
+ * 			},
+ * 			TransportSecurity: &network.FirewallPolicyTransportSecurityArgs{
+ * 				CertificateAuthority: &network.FirewallPolicyCertificateAuthorityArgs{
+ * 					KeyVaultSecretId: pulumi.String("https://kv/secret"),
+ * 					Name:             pulumi.String("clientcert"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy", {
+ *     dnsSettings: {
+ *         enableProxy: true,
+ *         requireProxyForNetworkRules: false,
+ *         servers: ["30.3.4.5"],
+ *     },
+ *     firewallPolicyName: "firewallPolicy",
+ *     insights: {
+ *         isEnabled: true,
+ *         logAnalyticsResources: {
+ *             defaultWorkspaceId: {
+ *                 id: "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace",
+ *             },
+ *             workspaces: [
+ *                 {
+ *                     region: "westus",
+ *                     workspaceId: {
+ *                         id: "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1",
+ *                     },
+ *                 },
+ *                 {
+ *                     region: "eastus",
+ *                     workspaceId: {
+ *                         id: "/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2",
+ *                     },
+ *                 },
+ *             ],
+ *         },
+ *         retentionDays: 100,
+ *     },
+ *     intrusionDetection: {
+ *         configuration: {
+ *             bypassTrafficSettings: [{
+ *                 description: "Rule 1",
+ *                 destinationAddresses: ["5.6.7.8"],
+ *                 destinationPorts: ["*"],
+ *                 name: "bypassRule1",
+ *                 protocol: "TCP",
+ *                 sourceAddresses: ["1.2.3.4"],
+ *             }],
+ *             signatureOverrides: [{
+ *                 id: "2525004",
+ *                 mode: "Deny",
+ *             }],
+ *         },
+ *         mode: "Alert",
+ *     },
+ *     location: "West US",
+ *     resourceGroupName: "rg1",
+ *     sku: {
+ *         tier: "Premium",
+ *     },
+ *     snat: {
+ *         privateRanges: ["IANAPrivateRanges"],
+ *     },
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     threatIntelMode: "Alert",
+ *     threatIntelWhitelist: {
+ *         fqdns: ["*.microsoft.com"],
+ *         ipAddresses: ["20.3.4.5"],
+ *     },
+ *     transportSecurity: {
+ *         certificateAuthority: {
+ *             keyVaultSecretId: "https://kv/secret",
+ *             name: "clientcert",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * firewall_policy = azure_native.network.FirewallPolicy("firewallPolicy",
+ *     dns_settings=azure_native.network.DnsSettingsArgs(
+ *         enable_proxy=True,
+ *         require_proxy_for_network_rules=False,
+ *         servers=["30.3.4.5"],
+ *     ),
+ *     firewall_policy_name="firewallPolicy",
+ *     insights=azure_native.network.FirewallPolicyInsightsArgs(
+ *         is_enabled=True,
+ *         log_analytics_resources=azure_native.network.FirewallPolicyLogAnalyticsResourcesArgs(
+ *             default_workspace_id=azure_native.network.SubResourceArgs(
+ *                 id="/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace",
+ *             ),
+ *             workspaces=[
+ *                 azure_native.network.FirewallPolicyLogAnalyticsWorkspaceArgs(
+ *                     region="westus",
+ *                     workspace_id=azure_native.network.SubResourceArgs(
+ *                         id="/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1",
+ *                     ),
+ *                 ),
+ *                 azure_native.network.FirewallPolicyLogAnalyticsWorkspaceArgs(
+ *                     region="eastus",
+ *                     workspace_id=azure_native.network.SubResourceArgs(
+ *                         id="/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2",
+ *                     ),
+ *                 ),
+ *             ],
+ *         ),
+ *         retention_days=100,
+ *     ),
+ *     intrusion_detection=azure_native.network.FirewallPolicyIntrusionDetectionArgs(
+ *         configuration=azure_native.network.FirewallPolicyIntrusionDetectionConfigurationArgs(
+ *             bypass_traffic_settings=[azure_native.network.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs(
+ *                 description="Rule 1",
+ *                 destination_addresses=["5.6.7.8"],
+ *                 destination_ports=["*"],
+ *                 name="bypassRule1",
+ *                 protocol="TCP",
+ *                 source_addresses=["1.2.3.4"],
+ *             )],
+ *             signature_overrides=[azure_native.network.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs(
+ *                 id="2525004",
+ *                 mode="Deny",
+ *             )],
+ *         ),
+ *         mode="Alert",
+ *     ),
+ *     location="West US",
+ *     resource_group_name="rg1",
+ *     sku=azure_native.network.FirewallPolicySkuArgs(
+ *         tier="Premium",
+ *     ),
+ *     snat=azure_native.network.FirewallPolicySNATArgs(
+ *         private_ranges=["IANAPrivateRanges"],
+ *     ),
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     threat_intel_mode="Alert",
+ *     threat_intel_whitelist=azure_native.network.FirewallPolicyThreatIntelWhitelistArgs(
+ *         fqdns=["*.microsoft.com"],
+ *         ip_addresses=["20.3.4.5"],
+ *     ),
+ *     transport_security=azure_native.network.FirewallPolicyTransportSecurityArgs(
+ *         certificate_authority=azure_native.network.FirewallPolicyCertificateAuthorityArgs(
+ *             key_vault_secret_id="https://kv/secret",
+ *             name="clientcert",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -42,266 +438,228 @@ import javax.annotation.Nullable;
 public class FirewallPolicy extends io.pulumi.resources.CustomResource {
     /**
      * The parent firewall policy from which rules are inherited.
-     * 
      */
     @Export(name="basePolicy", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> basePolicy;
 
     /**
      * @return The parent firewall policy from which rules are inherited.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getBasePolicy() {
         return this.basePolicy;
     }
     /**
      * List of references to Child Firewall Policies.
-     * 
      */
     @Export(name="childPolicies", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> childPolicies;
 
     /**
      * @return List of references to Child Firewall Policies.
-     * 
      */
     public Output<List<SubResourceResponse>> getChildPolicies() {
         return this.childPolicies;
     }
     /**
      * DNS Proxy Settings definition.
-     * 
      */
     @Export(name="dnsSettings", type=DnsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ DnsSettingsResponse> dnsSettings;
 
     /**
      * @return DNS Proxy Settings definition.
-     * 
      */
     public Output</* @Nullable */ DnsSettingsResponse> getDnsSettings() {
         return this.dnsSettings;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * List of references to Azure Firewalls that this Firewall Policy is associated with.
-     * 
      */
     @Export(name="firewalls", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> firewalls;
 
     /**
      * @return List of references to Azure Firewalls that this Firewall Policy is associated with.
-     * 
      */
     public Output<List<SubResourceResponse>> getFirewalls() {
         return this.firewalls;
     }
     /**
      * The identity of the firewall policy.
-     * 
      */
     @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
      * @return The identity of the firewall policy.
-     * 
      */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Insights on Firewall Policy.
-     * 
      */
     @Export(name="insights", type=FirewallPolicyInsightsResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicyInsightsResponse> insights;
 
     /**
      * @return Insights on Firewall Policy.
-     * 
      */
     public Output</* @Nullable */ FirewallPolicyInsightsResponse> getInsights() {
         return this.insights;
     }
     /**
      * The configuration for Intrusion detection.
-     * 
      */
     @Export(name="intrusionDetection", type=FirewallPolicyIntrusionDetectionResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicyIntrusionDetectionResponse> intrusionDetection;
 
     /**
      * @return The configuration for Intrusion detection.
-     * 
      */
     public Output</* @Nullable */ FirewallPolicyIntrusionDetectionResponse> getIntrusionDetection() {
         return this.intrusionDetection;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the firewall policy resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the firewall policy resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * List of references to FirewallPolicyRuleCollectionGroups.
-     * 
      */
     @Export(name="ruleCollectionGroups", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> ruleCollectionGroups;
 
     /**
      * @return List of references to FirewallPolicyRuleCollectionGroups.
-     * 
      */
     public Output<List<SubResourceResponse>> getRuleCollectionGroups() {
         return this.ruleCollectionGroups;
     }
     /**
      * The Firewall Policy SKU.
-     * 
      */
     @Export(name="sku", type=FirewallPolicySkuResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicySkuResponse> sku;
 
     /**
      * @return The Firewall Policy SKU.
-     * 
      */
     public Output</* @Nullable */ FirewallPolicySkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The private IP addresses/IP ranges to which traffic will not be SNAT.
-     * 
      */
     @Export(name="snat", type=FirewallPolicySNATResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicySNATResponse> snat;
 
     /**
      * @return The private IP addresses/IP ranges to which traffic will not be SNAT.
-     * 
      */
     public Output</* @Nullable */ FirewallPolicySNATResponse> getSnat() {
         return this.snat;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The operation mode for Threat Intelligence.
-     * 
      */
     @Export(name="threatIntelMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> threatIntelMode;
 
     /**
      * @return The operation mode for Threat Intelligence.
-     * 
      */
     public Output</* @Nullable */ String> getThreatIntelMode() {
         return this.threatIntelMode;
     }
     /**
      * ThreatIntel Whitelist for Firewall Policy.
-     * 
      */
     @Export(name="threatIntelWhitelist", type=FirewallPolicyThreatIntelWhitelistResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicyThreatIntelWhitelistResponse> threatIntelWhitelist;
 
     /**
      * @return ThreatIntel Whitelist for Firewall Policy.
-     * 
      */
     public Output</* @Nullable */ FirewallPolicyThreatIntelWhitelistResponse> getThreatIntelWhitelist() {
         return this.threatIntelWhitelist;
     }
     /**
      * TLS Configuration definition.
-     * 
      */
     @Export(name="transportSecurity", type=FirewallPolicyTransportSecurityResponse.class, parameters={})
     private Output</* @Nullable */ FirewallPolicyTransportSecurityResponse> transportSecurity;
 
     /**
      * @return TLS Configuration definition.
-     * 
      */
     public Output</* @Nullable */ FirewallPolicyTransportSecurityResponse> getTransportSecurity() {
         return this.transportSecurity;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

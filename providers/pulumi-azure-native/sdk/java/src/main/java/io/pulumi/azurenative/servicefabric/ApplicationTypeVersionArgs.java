@@ -17,7 +17,6 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
 
     /**
      * The URL to the application package
-     * 
      */
     @Import(name="appPackageUrl", required=true)
       private final Output<String> appPackageUrl;
@@ -28,7 +27,6 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the application type name resource.
-     * 
      */
     @Import(name="applicationTypeName", required=true)
       private final Output<String> applicationTypeName;
@@ -39,7 +37,6 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -50,7 +47,6 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
 
     /**
      * It will be deprecated in New API, resource location depends on the parent resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -61,7 +57,6 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
 
     /**
      * Azure resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -83,7 +77,6 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
 
     /**
      * The application type version.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

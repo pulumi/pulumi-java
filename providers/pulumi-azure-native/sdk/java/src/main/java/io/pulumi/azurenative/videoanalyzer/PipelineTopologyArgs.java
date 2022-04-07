@@ -25,7 +25,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Azure Video Analyzer account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -36,7 +35,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -47,7 +45,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Topology kind.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
@@ -58,7 +55,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<ParameterDeclarationArgs>> parameters;
@@ -69,7 +65,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Pipeline topology unique identifier.
-     * 
      */
     @Import(name="pipelineTopologyName")
       private final @Nullable Output<String> pipelineTopologyName;
@@ -80,7 +75,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
-     * 
      */
     @Import(name="processors")
       private final @Nullable Output<List<EncoderProcessorArgs>> processors;
@@ -91,7 +85,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -102,7 +95,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
-     * 
      */
     @Import(name="sinks", required=true)
       private final Output<List<VideoSinkArgs>> sinks;
@@ -113,7 +105,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Describes the properties of a SKU.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
@@ -124,7 +115,6 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
-     * 
      */
     @Import(name="sources", required=true)
       private final Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;

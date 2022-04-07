@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The IP restriction rule of the Azure Cognitive Search service.
- * 
  */
 public final class IpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class IpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24) to be allowed.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

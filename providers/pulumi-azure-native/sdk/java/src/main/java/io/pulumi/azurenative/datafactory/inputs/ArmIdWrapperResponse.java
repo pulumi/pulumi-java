@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A wrapper for an ARM resource id
- * 
  */
 public final class ArmIdWrapperResponse extends io.pulumi.resources.InvokeArgs {
 

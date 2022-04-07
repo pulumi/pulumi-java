@@ -19,7 +19,6 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IotHub properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<IotHubPropertiesArgs> properties;
@@ -41,7 +39,6 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the IoT hub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -52,7 +49,6 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the IoT hub.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -63,7 +59,6 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IotHub SKU info
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<IotHubSkuInfoArgs> sku;
@@ -74,7 +69,6 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

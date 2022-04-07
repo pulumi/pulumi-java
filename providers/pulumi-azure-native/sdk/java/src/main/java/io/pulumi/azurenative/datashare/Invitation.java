@@ -18,7 +18,91 @@ import javax.annotation.Nullable;
  * A Invitation data transfer object.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Invitations_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var invitation = new AzureNative.DataShare.Invitation("invitation", new AzureNative.DataShare.InvitationArgs
+ *         {
+ *             AccountName = "Account1",
+ *             ExpirationDate = "2020-08-26T22:33:24.5785265Z",
+ *             InvitationName = "Invitation1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *             TargetEmail = "receiver@microsoft.com",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewInvitation(ctx, "invitation", &datashare.InvitationArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			ExpirationDate:    pulumi.String("2020-08-26T22:33:24.5785265Z"),
+ * 			InvitationName:    pulumi.String("Invitation1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 			TargetEmail:       pulumi.String("receiver@microsoft.com"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const invitation = new azure_native.datashare.Invitation("invitation", {
+ *     accountName: "Account1",
+ *     expirationDate: "2020-08-26T22:33:24.5785265Z",
+ *     invitationName: "Invitation1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ *     targetEmail: "receiver@microsoft.com",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * invitation = azure_native.datashare.Invitation("invitation",
+ *     account_name="Account1",
+ *     expiration_date="2020-08-26T22:33:24.5785265Z",
+ *     invitation_name="Invitation1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1",
+ *     target_email="receiver@microsoft.com")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +117,108 @@ import javax.annotation.Nullable;
 public class Invitation extends io.pulumi.resources.CustomResource {
     /**
      * The expiration date for the invitation and share subscription.
-     * 
      */
     @Export(name="expirationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationDate;
 
     /**
      * @return The expiration date for the invitation and share subscription.
-     * 
      */
     public Output</* @Nullable */ String> getExpirationDate() {
         return this.expirationDate;
     }
     /**
      * unique invitation id
-     * 
      */
     @Export(name="invitationId", type=String.class, parameters={})
     private Output<String> invitationId;
 
     /**
      * @return unique invitation id
-     * 
      */
     public Output<String> getInvitationId() {
         return this.invitationId;
     }
     /**
      * The status of the invitation.
-     * 
      */
     @Export(name="invitationStatus", type=String.class, parameters={})
     private Output<String> invitationStatus;
 
     /**
      * @return The status of the invitation.
-     * 
      */
     public Output<String> getInvitationStatus() {
         return this.invitationStatus;
     }
     /**
      * Name of the azure resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the azure resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The time the recipient responded to the invitation.
-     * 
      */
     @Export(name="respondedAt", type=String.class, parameters={})
     private Output<String> respondedAt;
 
     /**
      * @return The time the recipient responded to the invitation.
-     * 
      */
     public Output<String> getRespondedAt() {
         return this.respondedAt;
     }
     /**
      * Gets the time at which the invitation was sent.
-     * 
      */
     @Export(name="sentAt", type=String.class, parameters={})
     private Output<String> sentAt;
 
     /**
      * @return Gets the time at which the invitation was sent.
-     * 
      */
     public Output<String> getSentAt() {
         return this.sentAt;
     }
     /**
      * System Data of the Azure resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System Data of the Azure resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The target Azure AD Id. Can't be combined with email.
-     * 
      */
     @Export(name="targetActiveDirectoryId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetActiveDirectoryId;
 
     /**
      * @return The target Azure AD Id. Can't be combined with email.
-     * 
      */
     public Output</* @Nullable */ String> getTargetActiveDirectoryId() {
         return this.targetActiveDirectoryId;
     }
     /**
      * The email the invitation is directed to.
-     * 
      */
     @Export(name="targetEmail", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetEmail;
 
     /**
      * @return The email the invitation is directed to.
-     * 
      */
     public Output</* @Nullable */ String> getTargetEmail() {
         return this.targetEmail;
@@ -161,7 +227,6 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * The target user or application Id that invitation is being sent to.
      * Must be specified along TargetActiveDirectoryId. This enables sending
      * invitations to specific users or applications in an AD tenant.
-     * 
      */
     @Export(name="targetObjectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetObjectId;
@@ -170,49 +235,42 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * @return The target user or application Id that invitation is being sent to.
      * Must be specified along TargetActiveDirectoryId. This enables sending
      * invitations to specific users or applications in an AD tenant.
-     * 
      */
     public Output</* @Nullable */ String> getTargetObjectId() {
         return this.targetObjectId;
     }
     /**
      * Type of the azure resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the azure resource
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Email of the user who created the resource
-     * 
      */
     @Export(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
     /**
      * @return Email of the user who created the resource
-     * 
      */
     public Output<String> getUserEmail() {
         return this.userEmail;
     }
     /**
      * Name of the user who created the resource
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
      * @return Name of the user who created the resource
-     * 
      */
     public Output<String> getUserName() {
         return this.userName;

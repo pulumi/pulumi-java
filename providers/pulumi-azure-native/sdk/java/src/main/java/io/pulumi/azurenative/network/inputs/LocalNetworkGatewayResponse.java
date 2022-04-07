@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * A common class for general resource information.
- * 
  */
 public final class LocalNetworkGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * Local network gateway's BGP speaker settings.
-     * 
      */
     @Import(name="bgpSettings")
       private final @Nullable BgpSettingsResponse bgpSettings;
@@ -34,7 +32,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -45,7 +42,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * FQDN of local network gateway.
-     * 
      */
     @Import(name="fqdn")
       private final @Nullable String fqdn;
@@ -56,7 +52,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * IP address of local network gateway.
-     * 
      */
     @Import(name="gatewayIpAddress")
       private final @Nullable String gatewayIpAddress;
@@ -67,7 +62,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -78,7 +72,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * Local network site address space.
-     * 
      */
     @Import(name="localNetworkAddressSpace")
       private final @Nullable AddressSpaceResponse localNetworkAddressSpace;
@@ -89,7 +82,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -100,7 +92,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -111,7 +102,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * The provisioning state of the local network gateway resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -122,7 +112,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * The resource GUID property of the local network gateway resource.
-     * 
      */
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
@@ -133,7 +122,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -144,7 +132,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

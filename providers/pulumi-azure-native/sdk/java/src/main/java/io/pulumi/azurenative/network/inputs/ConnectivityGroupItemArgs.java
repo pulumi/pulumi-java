@@ -20,7 +20,6 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
 
     /**
      * Group connectivity type.
-     * 
      */
     @Import(name="groupConnectivity")
       private final @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity;
@@ -31,7 +30,6 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
 
     /**
      * Flag if global is supported.
-     * 
      */
     @Import(name="isGlobal")
       private final @Nullable Output<Either<String,IsGlobal>> isGlobal;
@@ -42,7 +40,6 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
 
     /**
      * Network group Id.
-     * 
      */
     @Import(name="networkGroupId")
       private final @Nullable Output<String> networkGroupId;
@@ -53,7 +50,6 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
 
     /**
      * Flag if need to use hub gateway.
-     * 
      */
     @Import(name="useHubGateway")
       private final @Nullable Output<Either<String,UseHubGateway>> useHubGateway;

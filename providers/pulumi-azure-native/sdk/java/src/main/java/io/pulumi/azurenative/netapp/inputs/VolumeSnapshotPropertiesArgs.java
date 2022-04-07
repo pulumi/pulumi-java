@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Volume Snapshot Properties
- * 
  */
 public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Snapshot Policy ResourceId
-     * 
      */
     @Import(name="snapshotPolicyId")
       private final @Nullable Output<String> snapshotPolicyId;

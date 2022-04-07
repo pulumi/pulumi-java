@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class BudgetTimePeriodResponse {
     /**
      * The end date for the budget. If not provided, we default this to 10 years from the start date.
-     * 
      */
     private final @Nullable String endDate;
     /**
      * The start date for the budget.
-     * 
      */
     private final String startDate;
 
@@ -32,14 +30,12 @@ public final class BudgetTimePeriodResponse {
 
     /**
      * The end date for the budget. If not provided, we default this to 10 years from the start date.
-     * 
     */
     public Optional<String> getEndDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
      * The start date for the budget.
-     * 
     */
     public String getStartDate() {
         return this.startDate;

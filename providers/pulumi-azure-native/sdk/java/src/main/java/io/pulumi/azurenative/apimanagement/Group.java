@@ -18,7 +18,169 @@ import javax.annotation.Nullable;
  * Contract details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateGroup
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @group = new AzureNative.ApiManagement.Group("group", new AzureNative.ApiManagement.GroupArgs
+ *         {
+ *             DisplayName = "temp group",
+ *             GroupId = "tempgroup",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewGroup(ctx, "group", &apimanagement.GroupArgs{
+ * 			DisplayName:       pulumi.String("temp group"),
+ * 			GroupId:           pulumi.String("tempgroup"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const group = new azure_native.apimanagement.Group("group", {
+ *     displayName: "temp group",
+ *     groupId: "tempgroup",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * group = azure_native.apimanagement.Group("group",
+ *     display_name="temp group",
+ *     group_id="tempgroup",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ApiManagementCreateGroupExternal
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @group = new AzureNative.ApiManagement.Group("group", new AzureNative.ApiManagement.GroupArgs
+ *         {
+ *             Description = "new group to test",
+ *             DisplayName = "NewGroup (samiraad.onmicrosoft.com)",
+ *             ExternalId = "aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d",
+ *             GroupId = "aadGroup",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             Type = "external",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewGroup(ctx, "group", &apimanagement.GroupArgs{
+ * 			Description:       pulumi.String("new group to test"),
+ * 			DisplayName:       pulumi.String("NewGroup (samiraad.onmicrosoft.com)"),
+ * 			ExternalId:        pulumi.String("aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d"),
+ * 			GroupId:           pulumi.String("aadGroup"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			Type:              "external",
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const group = new azure_native.apimanagement.Group("group", {
+ *     description: "new group to test",
+ *     displayName: "NewGroup (samiraad.onmicrosoft.com)",
+ *     externalId: "aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d",
+ *     groupId: "aadGroup",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     type: "external",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * group = azure_native.apimanagement.Group("group",
+ *     description="new group to test",
+ *     display_name="NewGroup (samiraad.onmicrosoft.com)",
+ *     external_id="aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d",
+ *     group_id="aadGroup",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     type="external")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +195,72 @@ import javax.annotation.Nullable;
 public class Group extends io.pulumi.resources.CustomResource {
     /**
      * true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
-     * 
      */
     @Export(name="builtIn", type=Boolean.class, parameters={})
     private Output<Boolean> builtIn;
 
     /**
      * @return true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
-     * 
      */
     public Output<Boolean> getBuiltIn() {
         return this.builtIn;
     }
     /**
      * Group description. Can contain HTML formatting tags.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Group description. Can contain HTML formatting tags.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Group name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Group name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
-     * 
      */
     @Export(name="externalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalId;
 
     /**
      * @return For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
-     * 
      */
     public Output</* @Nullable */ String> getExternalId() {
         return this.externalId;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

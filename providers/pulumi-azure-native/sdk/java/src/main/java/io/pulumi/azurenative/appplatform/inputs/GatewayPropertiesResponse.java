@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Spring Cloud Gateway properties payload
- * 
  */
 public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * API metadata property for Spring Cloud Gateway
-     * 
      */
     @Import(name="apiMetadataProperties")
       private final @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties;
@@ -39,7 +37,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Cross-Origin Resource Sharing property
-     * 
      */
     @Import(name="corsProperties")
       private final @Nullable GatewayCorsPropertiesResponse corsProperties;
@@ -50,7 +47,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Indicate if only https is allowed.
-     * 
      */
     @Import(name="httpsOnly")
       private final @Nullable Boolean httpsOnly;
@@ -61,7 +57,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Collection of instances belong to Spring Cloud Gateway.
-     * 
      */
     @Import(name="instances", required=true)
       private final List<GatewayInstanceResponse> instances;
@@ -72,7 +67,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Properties of the Spring Cloud Gateway Operator.
-     * 
      */
     @Import(name="operatorProperties", required=true)
       private final GatewayOperatorPropertiesResponse operatorProperties;
@@ -83,7 +77,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * State of the Spring Cloud Gateway.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -94,7 +87,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Indicates whether the Spring Cloud Gateway exposes endpoint.
-     * 
      */
     @Import(name="public")
       private final @Nullable Boolean public_;
@@ -105,7 +97,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The requested resource quantity for required CPU and Memory.
-     * 
      */
     @Import(name="resourceRequests")
       private final @Nullable GatewayResourceRequestsResponse resourceRequests;
@@ -116,7 +107,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Single sign-on related configuration
-     * 
      */
     @Import(name="ssoProperties")
       private final @Nullable SsoPropertiesResponse ssoProperties;
@@ -127,7 +117,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * URL of the Spring Cloud Gateway, exposed when 'public' is true.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Server version.
-     * 
      */
     @EnumType
     public enum ServerVersion {

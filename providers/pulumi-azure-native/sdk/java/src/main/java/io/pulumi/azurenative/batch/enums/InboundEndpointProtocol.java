@@ -12,12 +12,10 @@ import java.util.StringJoiner;
     public enum InboundEndpointProtocol {
         /**
          * Use TCP for the endpoint.
-         * 
          */
         TCP("TCP"),
         /**
          * Use UDP for the endpoint.
-         * 
          */
         UDP("UDP");
 

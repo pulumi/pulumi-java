@@ -14,37 +14,30 @@ import javax.annotation.Nullable;
 public final class LabAnnouncementPropertiesResponse {
     /**
      * Is the lab announcement active/enabled at this time?
-     * 
      */
     private final @Nullable String enabled;
     /**
      * The time at which the announcement expires (null for never)
-     * 
      */
     private final @Nullable String expirationDate;
     /**
      * Has this announcement expired?
-     * 
      */
     private final @Nullable Boolean expired;
     /**
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
-     * 
      */
     private final @Nullable String markdown;
     /**
      * The provisioning status of the resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The plain text title for the lab announcement
-     * 
      */
     private final @Nullable String title;
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     private final String uniqueIdentifier;
 
@@ -68,49 +61,42 @@ public final class LabAnnouncementPropertiesResponse {
 
     /**
      * Is the lab announcement active/enabled at this time?
-     * 
     */
     public Optional<String> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The time at which the announcement expires (null for never)
-     * 
     */
     public Optional<String> getExpirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
     /**
      * Has this announcement expired?
-     * 
     */
     public Optional<Boolean> getExpired() {
         return Optional.ofNullable(this.expired);
     }
     /**
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
-     * 
     */
     public Optional<String> getMarkdown() {
         return Optional.ofNullable(this.markdown);
     }
     /**
      * The provisioning status of the resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The plain text title for the lab announcement
-     * 
     */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
     */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;

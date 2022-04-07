@@ -24,7 +24,6 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
 
     /**
      * The error that occurs when preparing notebook.
-     * 
      */
     @Import(name="notebookPreparationError")
       private final @Nullable NotebookPreparationErrorResponse notebookPreparationError;
@@ -35,7 +34,6 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
 
     /**
      * the data plane resourceId that used to initialize notebook component
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

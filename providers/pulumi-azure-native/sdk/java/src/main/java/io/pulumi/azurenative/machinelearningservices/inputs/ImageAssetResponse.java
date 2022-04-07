@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An Image asset.
- * 
  */
 public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Asset Id.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -32,7 +30,6 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The mime type.
-     * 
      */
     @Import(name="mimeType")
       private final @Nullable String mimeType;
@@ -43,7 +40,6 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether the Asset is unpacked.
-     * 
      */
     @Import(name="unpack")
       private final @Nullable Boolean unpack;
@@ -54,7 +50,6 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Url of the Asset.
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The available data types for MCAS (Microsoft Cloud App Security) data connector.
- * 
  */
 public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
 
     /**
      * Alerts data type connection.
-     * 
      */
     @Import(name="alerts")
       private final @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
@@ -31,7 +29,6 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
 
     /**
      * Discovery log data type connection.
-     * 
      */
     @Import(name="discoveryLogs")
       private final @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs;

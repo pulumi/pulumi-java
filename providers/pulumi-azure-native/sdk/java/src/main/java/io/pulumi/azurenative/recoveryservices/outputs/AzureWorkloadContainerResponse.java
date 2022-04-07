@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class AzureWorkloadContainerResponse {
     /**
      * Type of backup management for the container.
-     * 
      */
     private final @Nullable String backupManagementType;
     /**
@@ -23,47 +22,38 @@ public final class AzureWorkloadContainerResponse {
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'AzureWorkloadContainer'.
-     * 
      */
     private final String containerType;
     /**
      * Additional details of a workload container.
-     * 
      */
     private final @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo;
     /**
      * Friendly name of the container.
-     * 
      */
     private final @Nullable String friendlyName;
     /**
      * Status of health of the container.
-     * 
      */
     private final @Nullable String healthStatus;
     /**
      * Time stamp when this container was updated.
-     * 
      */
     private final @Nullable String lastUpdatedTime;
     /**
      * Re-Do Operation
-     * 
      */
     private final @Nullable String operationType;
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     private final @Nullable String registrationStatus;
     /**
      * ARM ID of the virtual machine represented by this Azure Workload Container
-     * 
      */
     private final @Nullable String sourceResourceId;
     /**
      * Workload type for which registration was sent.
-     * 
      */
     private final @Nullable String workloadType;
 
@@ -93,7 +83,6 @@ public final class AzureWorkloadContainerResponse {
 
     /**
      * Type of backup management for the container.
-     * 
     */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
@@ -104,63 +93,54 @@ public final class AzureWorkloadContainerResponse {
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'AzureWorkloadContainer'.
-     * 
     */
     public String getContainerType() {
         return this.containerType;
     }
     /**
      * Additional details of a workload container.
-     * 
     */
     public Optional<AzureWorkloadContainerExtendedInfoResponse> getExtendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Friendly name of the container.
-     * 
     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
-     * 
     */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Time stamp when this container was updated.
-     * 
     */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Re-Do Operation
-     * 
     */
     public Optional<String> getOperationType() {
         return Optional.ofNullable(this.operationType);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
     */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
      * ARM ID of the virtual machine represented by this Azure Workload Container
-     * 
     */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Workload type for which registration was sent.
-     * 
     */
     public Optional<String> getWorkloadType() {
         return Optional.ofNullable(this.workloadType);

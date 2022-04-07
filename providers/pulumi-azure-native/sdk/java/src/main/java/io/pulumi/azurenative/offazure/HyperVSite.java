@@ -19,7 +19,117 @@ import javax.annotation.Nullable;
  * Site REST Resource.
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Hyper-V site
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hyperVSite = new AzureNative.OffAzure.HyperVSite("hyperVSite", new AzureNative.OffAzure.HyperVSiteArgs
+ *         {
+ *             Location = "eastus",
+ *             Properties = new AzureNative.OffAzure.Inputs.SitePropertiesArgs
+ *             {
+ *                 ServicePrincipalIdentityDetails = new AzureNative.OffAzure.Inputs.SiteSpnPropertiesArgs
+ *                 {
+ *                     AadAuthority = "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *                     ApplicationId = "e9f013df-2a2a-4871-b766-e79867f30348",
+ *                     Audience = "https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
+ *                     ObjectId = "2cd492bc-7ef3-4ee0-b301-59a88108b47b",
+ *                     TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *                 },
+ *             },
+ *             ResourceGroupName = "pajindTest",
+ *             SiteName = "appliance1e39site",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	offazure "github.com/pulumi/pulumi-azure-native/sdk/go/azure/offazure"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := offazure.NewHyperVSite(ctx, "hyperVSite", &offazure.HyperVSiteArgs{
+ * 			Location: pulumi.String("eastus"),
+ * 			Properties: &offazure.SitePropertiesArgs{
+ * 				ServicePrincipalIdentityDetails: &offazure.SiteSpnPropertiesArgs{
+ * 					AadAuthority:  pulumi.String("https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47"),
+ * 					ApplicationId: pulumi.String("e9f013df-2a2a-4871-b766-e79867f30348"),
+ * 					Audience:      pulumi.String("https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp"),
+ * 					ObjectId:      pulumi.String("2cd492bc-7ef3-4ee0-b301-59a88108b47b"),
+ * 					TenantId:      pulumi.String("72f988bf-86f1-41af-91ab-2d7cd011db47"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("pajindTest"),
+ * 			SiteName:          pulumi.String("appliance1e39site"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const hyperVSite = new azure_native.offazure.HyperVSite("hyperVSite", {
+ *     location: "eastus",
+ *     properties: {
+ *         servicePrincipalIdentityDetails: {
+ *             aadAuthority: "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *             applicationId: "e9f013df-2a2a-4871-b766-e79867f30348",
+ *             audience: "https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
+ *             objectId: "2cd492bc-7ef3-4ee0-b301-59a88108b47b",
+ *             tenantId: "72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *         },
+ *     },
+ *     resourceGroupName: "pajindTest",
+ *     siteName: "appliance1e39site",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * hyper_v_site = azure_native.offazure.HyperVSite("hyperVSite",
+ *     location="eastus",
+ *     properties=azure_native.offazure.SitePropertiesArgs(
+ *         service_principal_identity_details=azure_native.offazure.SiteSpnPropertiesArgs(
+ *             aad_authority="https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *             application_id="e9f013df-2a2a-4871-b766-e79867f30348",
+ *             audience="https://72f988bf-86f1-41af-91ab-2d7cd011db47/MaheshSite17ac9agentauthaadapp",
+ *             object_id="2cd492bc-7ef3-4ee0-b301-59a88108b47b",
+ *             tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
+ *         ),
+ *     ),
+ *     resource_group_name="pajindTest",
+ *     site_name="appliance1e39site")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +144,48 @@ import javax.annotation.Nullable;
 public class HyperVSite extends io.pulumi.resources.CustomResource {
     /**
      * eTag for concurrency control.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
      * @return eTag for concurrency control.
-     * 
      */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
     /**
      * Azure location in which Sites is created.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Azure location in which Sites is created.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Name of the Hyper-V site.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the Hyper-V site.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Nested properties of Hyper-V site.
-     * 
      */
     @Export(name="properties", type=SitePropertiesResponse.class, parameters={})
     private Output<SitePropertiesResponse> properties;
 
     /**
      * @return Nested properties of Hyper-V site.
-     * 
      */
     public Output<SitePropertiesResponse> getProperties() {
         return this.properties;
@@ -96,14 +198,12 @@ public class HyperVSite extends io.pulumi.resources.CustomResource {
     }
     /**
      * Type of resource. Type = Microsoft.OffAzure/HyperVSites.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of resource. Type = Microsoft.OffAzure/HyperVSites.
-     * 
      */
     public Output<String> getType() {
         return this.type;

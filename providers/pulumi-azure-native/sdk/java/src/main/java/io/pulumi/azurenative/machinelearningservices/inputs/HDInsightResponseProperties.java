@@ -18,7 +18,6 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
 
     /**
      * Public IP address of the master node of the cluster.
-     * 
      */
     @Import(name="address")
       private final @Nullable String address;
@@ -29,7 +28,6 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
 
     /**
      * Admin credentials for master node of the cluster
-     * 
      */
     @Import(name="administratorAccount")
       private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
@@ -40,7 +38,6 @@ public final class HDInsightResponseProperties extends io.pulumi.resources.Invok
 
     /**
      * Port open for ssh connections on the master node of the cluster.
-     * 
      */
     @Import(name="sshPort")
       private final @Nullable Integer sshPort;

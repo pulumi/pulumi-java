@@ -22,7 +22,186 @@ import javax.annotation.Nullable;
  * An Application Insights component definition.
  * API Version: 2015-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ComponentCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var component = new AzureNative.Insights.Component("component", new AzureNative.Insights.ComponentArgs
+ *         {
+ *             ApplicationType = "web",
+ *             FlowType = "Bluefield",
+ *             Kind = "web",
+ *             Location = "South Central US",
+ *             RequestSource = "rest",
+ *             ResourceGroupName = "my-resource-group",
+ *             ResourceName = "my-component",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewComponent(ctx, "component", &insights.ComponentArgs{
+ * 			ApplicationType:   pulumi.String("web"),
+ * 			FlowType:          pulumi.String("Bluefield"),
+ * 			Kind:              pulumi.String("web"),
+ * 			Location:          pulumi.String("South Central US"),
+ * 			RequestSource:     pulumi.String("rest"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			ResourceName:      pulumi.String("my-component"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const component = new azure_native.insights.Component("component", {
+ *     applicationType: "web",
+ *     flowType: "Bluefield",
+ *     kind: "web",
+ *     location: "South Central US",
+ *     requestSource: "rest",
+ *     resourceGroupName: "my-resource-group",
+ *     resourceName: "my-component",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * component = azure_native.insights.Component("component",
+ *     application_type="web",
+ *     flow_type="Bluefield",
+ *     kind="web",
+ *     location="South Central US",
+ *     request_source="rest",
+ *     resource_group_name="my-resource-group",
+ *     resource_name="my-component")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ComponentUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var component = new AzureNative.Insights.Component("component", new AzureNative.Insights.ComponentArgs
+ *         {
+ *             Kind = "web",
+ *             Location = "South Central US",
+ *             ResourceGroupName = "my-resource-group",
+ *             ResourceName = "my-component",
+ *             Tags = 
+ *             {
+ *                 { "ApplicationGatewayType", "Internal-Only" },
+ *                 { "BillingEntity", "Self" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewComponent(ctx, "component", &insights.ComponentArgs{
+ * 			Kind:              pulumi.String("web"),
+ * 			Location:          pulumi.String("South Central US"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			ResourceName:      pulumi.String("my-component"),
+ * 			Tags: pulumi.StringMap{
+ * 				"ApplicationGatewayType": pulumi.String("Internal-Only"),
+ * 				"BillingEntity":          pulumi.String("Self"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const component = new azure_native.insights.Component("component", {
+ *     kind: "web",
+ *     location: "South Central US",
+ *     resourceGroupName: "my-resource-group",
+ *     resourceName: "my-component",
+ *     tags: {
+ *         ApplicationGatewayType: "Internal-Only",
+ *         BillingEntity: "Self",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * component = azure_native.insights.Component("component",
+ *     kind="web",
+ *     location="South Central US",
+ *     resource_group_name="my-resource-group",
+ *     resource_name="my-component",
+ *     tags={
+ *         "ApplicationGatewayType": "Internal-Only",
+ *         "BillingEntity": "Self",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,322 +216,276 @@ import javax.annotation.Nullable;
 public class Component extends io.pulumi.resources.CustomResource {
     /**
      * Application Insights Unique ID for your Application.
-     * 
      */
     @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
      * @return Application Insights Unique ID for your Application.
-     * 
      */
     public Output<String> getAppId() {
         return this.appId;
     }
     /**
      * The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
-     * 
      */
     @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
      * @return The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
-     * 
      */
     public Output<String> getApplicationId() {
         return this.applicationId;
     }
     /**
      * Type of application being monitored.
-     * 
      */
     @Export(name="applicationType", type=String.class, parameters={})
     private Output<String> applicationType;
 
     /**
      * @return Type of application being monitored.
-     * 
      */
     public Output<String> getApplicationType() {
         return this.applicationType;
     }
     /**
      * Application Insights component connection string.
-     * 
      */
     @Export(name="connectionString", type=String.class, parameters={})
     private Output<String> connectionString;
 
     /**
      * @return Application Insights component connection string.
-     * 
      */
     public Output<String> getConnectionString() {
         return this.connectionString;
     }
     /**
      * Creation Date for the Application Insights component, in ISO 8601 format.
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
      * @return Creation Date for the Application Insights component, in ISO 8601 format.
-     * 
      */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * Disable IP masking.
-     * 
      */
     @Export(name="disableIpMasking", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableIpMasking;
 
     /**
      * @return Disable IP masking.
-     * 
      */
     public Output</* @Nullable */ Boolean> getDisableIpMasking() {
         return this.disableIpMasking;
     }
     /**
      * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
-     * 
      */
     @Export(name="flowType", type=String.class, parameters={})
     private Output</* @Nullable */ String> flowType;
 
     /**
      * @return Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
-     * 
      */
     public Output</* @Nullable */ String> getFlowType() {
         return this.flowType;
     }
     /**
      * The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
-     * 
      */
     @Export(name="hockeyAppId", type=String.class, parameters={})
     private Output</* @Nullable */ String> hockeyAppId;
 
     /**
      * @return The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
-     * 
      */
     public Output</* @Nullable */ String> getHockeyAppId() {
         return this.hockeyAppId;
     }
     /**
      * Token used to authenticate communications with between Application Insights and HockeyApp.
-     * 
      */
     @Export(name="hockeyAppToken", type=String.class, parameters={})
     private Output<String> hockeyAppToken;
 
     /**
      * @return Token used to authenticate communications with between Application Insights and HockeyApp.
-     * 
      */
     public Output<String> getHockeyAppToken() {
         return this.hockeyAppToken;
     }
     /**
      * Purge data immediately after 30 days.
-     * 
      */
     @Export(name="immediatePurgeDataOn30Days", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> immediatePurgeDataOn30Days;
 
     /**
      * @return Purge data immediately after 30 days.
-     * 
      */
     public Output</* @Nullable */ Boolean> getImmediatePurgeDataOn30Days() {
         return this.immediatePurgeDataOn30Days;
     }
     /**
      * Indicates the flow of the ingestion.
-     * 
      */
     @Export(name="ingestionMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> ingestionMode;
 
     /**
      * @return Indicates the flow of the ingestion.
-     * 
      */
     public Output</* @Nullable */ String> getIngestionMode() {
         return this.ingestionMode;
     }
     /**
      * Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.
-     * 
      */
     @Export(name="instrumentationKey", type=String.class, parameters={})
     private Output<String> instrumentationKey;
 
     /**
      * @return Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.
-     * 
      */
     public Output<String> getInstrumentationKey() {
         return this.instrumentationKey;
     }
     /**
      * The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of linked private link scope resources.
-     * 
      */
     @Export(name="privateLinkScopedResources", type=List.class, parameters={PrivateLinkScopedResourceResponse.class})
     private Output<List<PrivateLinkScopedResourceResponse>> privateLinkScopedResources;
 
     /**
      * @return List of linked private link scope resources.
-     * 
      */
     public Output<List<PrivateLinkScopedResourceResponse>> getPrivateLinkScopedResources() {
         return this.privateLinkScopedResources;
     }
     /**
      * Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
-     * 
      */
     @Export(name="requestSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestSource;
 
     /**
      * @return Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
-     * 
      */
     public Output</* @Nullable */ String> getRequestSource() {
         return this.requestSource;
     }
     /**
      * Retention period in days.
-     * 
      */
     @Export(name="retentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionInDays;
 
     /**
      * @return Retention period in days.
-     * 
      */
     public Output</* @Nullable */ Integer> getRetentionInDays() {
         return this.retentionInDays;
     }
     /**
      * Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
-     * 
      */
     @Export(name="samplingPercentage", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> samplingPercentage;
 
     /**
      * @return Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
-     * 
      */
     public Output</* @Nullable */ Double> getSamplingPercentage() {
         return this.samplingPercentage;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Azure Tenant Id.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return Azure Tenant Id.
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

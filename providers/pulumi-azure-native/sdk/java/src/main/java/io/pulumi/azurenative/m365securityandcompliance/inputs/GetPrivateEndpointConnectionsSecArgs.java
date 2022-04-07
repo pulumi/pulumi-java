@@ -14,7 +14,6 @@ public final class GetPrivateEndpointConnectionsSecArgs extends io.pulumi.resour
 
     /**
      * The name of the private endpoint connection associated with the Azure resource
-     * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
@@ -25,7 +24,6 @@ public final class GetPrivateEndpointConnectionsSecArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group that contains the service instance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetPrivateEndpointConnectionsSecArgs extends io.pulumi.resour
 
     /**
      * The name of the service instance.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Marketo server linked service.
- * 
  */
 public final class MarketoLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The client Id of your Marketo service.
-     * 
      */
     @Import(name="clientId", required=true)
       private final Object clientId;
@@ -50,7 +47,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The client secret of your Marketo service.
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
@@ -61,7 +57,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -72,7 +67,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -83,7 +77,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -94,7 +87,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * The endpoint of the Marketo server. (i.e. 123-ABC-321.mktorest.com)
-     * 
      */
     @Import(name="endpoint", required=true)
       private final Object endpoint;
@@ -105,7 +97,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -117,7 +108,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
     /**
      * Type of linked service.
      * Expected value is 'Marketo'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -128,7 +118,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     * 
      */
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Object useEncryptedEndpoints;
@@ -139,7 +128,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="useHostVerification")
       private final @Nullable Object useHostVerification;
@@ -150,7 +138,6 @@ public final class MarketoLinkedServiceResponse extends io.pulumi.resources.Invo
 
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     * 
      */
     @Import(name="usePeerVerification")
       private final @Nullable Object usePeerVerification;

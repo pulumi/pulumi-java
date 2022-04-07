@@ -16,7 +16,6 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
 
     /**
      * Management Group ID.
-     * 
      */
     @Import(name="groupId", required=true)
       private final Output<String> groupId;
@@ -27,7 +26,6 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
 
     /**
      * Subscription ID.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;

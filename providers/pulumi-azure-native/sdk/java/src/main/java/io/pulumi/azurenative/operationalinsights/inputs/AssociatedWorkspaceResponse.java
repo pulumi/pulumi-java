@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The list of Log Analytics workspaces associated with the cluster.
- * 
  */
 public final class AssociatedWorkspaceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
 
     /**
      * The time of workspace association.
-     * 
      */
     @Import(name="associateDate", required=true)
       private final String associateDate;
@@ -29,7 +27,6 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
 
     /**
      * The ResourceId id the assigned workspace.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;
@@ -40,7 +37,6 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
 
     /**
      * The id of the assigned workspace.
-     * 
      */
     @Import(name="workspaceId", required=true)
       private final String workspaceId;
@@ -51,7 +47,6 @@ public final class AssociatedWorkspaceResponse extends io.pulumi.resources.Invok
 
     /**
      * The name id the assigned workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

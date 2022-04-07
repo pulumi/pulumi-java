@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The endpoint details.
- * 
  */
 public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The URL of the endpoint.
-     * 
      */
     @Import(name="endpointUrl")
       private final @Nullable String endpointUrl;
@@ -31,7 +29,6 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the endpoint.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * DDoS custom policy properties.
- * 
  */
 public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
 
     /**
      * The protocol for which the DDoS protection policy is being customized.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable String protocol;
@@ -31,7 +29,6 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
 
     /**
      * The customized DDoS protection source rate.
-     * 
      */
     @Import(name="sourceRateOverride")
       private final @Nullable String sourceRateOverride;
@@ -42,7 +39,6 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
 
     /**
      * The customized DDoS protection trigger rate.
-     * 
      */
     @Import(name="triggerRateOverride")
       private final @Nullable String triggerRateOverride;
@@ -53,7 +49,6 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
 
     /**
      * The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
-     * 
      */
     @Import(name="triggerSensitivityOverride")
       private final @Nullable String triggerSensitivityOverride;

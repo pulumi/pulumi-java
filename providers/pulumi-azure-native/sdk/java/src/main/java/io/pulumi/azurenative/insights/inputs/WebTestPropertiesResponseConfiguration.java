@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An XML configuration specification for a WebTest.
- * 
  */
 public final class WebTestPropertiesResponseConfiguration extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class WebTestPropertiesResponseConfiguration extends io.pulumi.reso
 
     /**
      * The XML specification of a WebTest to run against an application.
-     * 
      */
     @Import(name="webTest")
       private final @Nullable String webTest;

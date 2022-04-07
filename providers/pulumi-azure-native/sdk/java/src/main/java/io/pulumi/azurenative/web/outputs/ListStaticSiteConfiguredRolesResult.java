@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class ListStaticSiteConfiguredRolesResult {
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Kind of resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource Name.
-     * 
      */
     private final String name;
     /**
      * List of string resources.
-     * 
      */
     private final List<String> properties;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -54,35 +49,30 @@ public final class ListStaticSiteConfiguredRolesResult {
 
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * List of string resources.
-     * 
     */
     public List<String> getProperties() {
         return this.properties;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

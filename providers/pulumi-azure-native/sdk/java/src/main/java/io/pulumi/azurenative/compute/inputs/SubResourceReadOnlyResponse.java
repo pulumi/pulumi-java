@@ -14,7 +14,6 @@ public final class SubResourceReadOnlyResponse extends io.pulumi.resources.Invok
 
     /**
      * Resource Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

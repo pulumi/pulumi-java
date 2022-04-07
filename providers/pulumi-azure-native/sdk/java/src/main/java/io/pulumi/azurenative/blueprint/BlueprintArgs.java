@@ -22,7 +22,6 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the blueprint definition.
-     * 
      */
     @Import(name="blueprintName")
       private final @Nullable Output<String> blueprintName;
@@ -33,7 +32,6 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Multi-line explain this resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -44,7 +42,6 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * One-liner string explain this resource.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -55,7 +52,6 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters required by this blueprint definition.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionArgs>> parameters;
@@ -66,7 +62,6 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource group placeholders defined by this blueprint definition.
-     * 
      */
     @Import(name="resourceGroups")
       private final @Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
@@ -77,7 +72,6 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     * 
      */
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
@@ -88,7 +82,6 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scope where this blueprint definition can be assigned.
-     * 
      */
     @Import(name="targetScope", required=true)
       private final Output<Either<String,BlueprintTargetScope>> targetScope;
@@ -99,7 +92,6 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Published versions of this blueprint definition.
-     * 
      */
     @Import(name="versions")
       private final @Nullable Output<Object> versions;

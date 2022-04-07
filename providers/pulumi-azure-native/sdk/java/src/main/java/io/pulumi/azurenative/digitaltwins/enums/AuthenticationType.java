@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the authentication type being used for connecting to the endpoint.
-     * 
      */
     @EnumType
     public enum AuthenticationType {

@@ -14,43 +14,35 @@ import javax.annotation.Nullable;
 public final class HiveSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     private final @Nullable Object additionalColumns;
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
      * A query to retrieve data from source. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object query;
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     private final @Nullable Object queryTimeout;
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object sourceRetryCount;
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
      * Expected value is 'HiveSource'.
-     * 
      */
     private final String type;
 
@@ -76,49 +68,42 @@ public final class HiveSourceResponse {
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
     */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
     */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * A query to retrieve data from source. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getQuery() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
     */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
     */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
@@ -126,7 +111,6 @@ public final class HiveSourceResponse {
     /**
      * Copy source type.
      * Expected value is 'HiveSource'.
-     * 
     */
     public String getType() {
         return this.type;

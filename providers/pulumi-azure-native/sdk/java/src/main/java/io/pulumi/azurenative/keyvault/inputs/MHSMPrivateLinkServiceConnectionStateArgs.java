@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * An object that represents the approval state of the private link connection.
- * 
  */
 public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
 
     /**
      * A message indicating if changes on the service provider require any updates on the consumer.
-     * 
      */
     @Import(name="actionsRequired")
       private final @Nullable Output<Either<String,ActionsRequired>> actionsRequired;
@@ -34,7 +32,6 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
 
     /**
      * The reason for approval or rejection.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +42,6 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
 
     /**
      * Indicates whether the connection has been approved, rejected or removed by the key vault owner.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;

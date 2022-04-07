@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the uri of a disk.
- * 
  */
 public final class VirtualHardDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualHardDiskResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Specifies the virtual hard disk's uri.
-     * 
      */
     @Import(name="uri")
       private final @Nullable String uri;

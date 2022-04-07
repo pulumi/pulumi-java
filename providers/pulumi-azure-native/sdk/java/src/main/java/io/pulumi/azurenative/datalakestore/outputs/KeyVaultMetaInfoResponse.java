@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class KeyVaultMetaInfoResponse {
     /**
      * The name of the user managed encryption key.
-     * 
      */
     private final String encryptionKeyName;
     /**
      * The version of the user managed encryption key.
-     * 
      */
     private final String encryptionKeyVersion;
     /**
      * The resource identifier for the user managed Key Vault being used to encrypt.
-     * 
      */
     private final String keyVaultResourceId;
 
@@ -37,21 +34,18 @@ public final class KeyVaultMetaInfoResponse {
 
     /**
      * The name of the user managed encryption key.
-     * 
     */
     public String getEncryptionKeyName() {
         return this.encryptionKeyName;
     }
     /**
      * The version of the user managed encryption key.
-     * 
     */
     public String getEncryptionKeyVersion() {
         return this.encryptionKeyVersion;
     }
     /**
      * The resource identifier for the user managed Key Vault being used to encrypt.
-     * 
     */
     public String getKeyVaultResourceId() {
         return this.keyVaultResourceId;

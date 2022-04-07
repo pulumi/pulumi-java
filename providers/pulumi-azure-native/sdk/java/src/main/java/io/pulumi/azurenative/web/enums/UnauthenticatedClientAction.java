@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The action to take when an unauthenticated client attempts to access the app.
-     * 
      */
     @EnumType
     public enum UnauthenticatedClientAction {

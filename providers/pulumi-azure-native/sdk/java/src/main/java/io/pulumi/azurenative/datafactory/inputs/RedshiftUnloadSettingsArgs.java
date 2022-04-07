@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.
- * 
  */
 public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
 
     /**
      * The bucket of the interim Amazon S3 which will be used to store the unloaded data from Amazon Redshift source. The bucket must be in the same region as the Amazon Redshift source. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="bucketName", required=true)
       private final Output<Object> bucketName;
@@ -31,7 +29,6 @@ public final class RedshiftUnloadSettingsArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.
-     * 
      */
     @Import(name="s3LinkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> s3LinkedServiceName;

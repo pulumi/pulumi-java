@@ -19,7 +19,87 @@ import javax.annotation.Nullable;
  * Defines the HybridIdentityMetadata.
  * API Version: 2020-10-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateHybridIdentityMetadata
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hybridIdentityMetadatum = new AzureNative.ConnectedVMwarevSphere.HybridIdentityMetadatum("hybridIdentityMetadatum", new AzureNative.ConnectedVMwarevSphere.HybridIdentityMetadatumArgs
+ *         {
+ *             MetadataName = "default",
+ *             PublicKey = "8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2",
+ *             ResourceGroupName = "testrg",
+ *             VirtualMachineName = "ContosoVm",
+ *             VmId = "f8b82dff-38ef-4220-99ef-d3a3f86ddc6c",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	connectedvmwarevsphere "github.com/pulumi/pulumi-azure-native/sdk/go/azure/connectedvmwarevsphere"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connectedvmwarevsphere.NewHybridIdentityMetadatum(ctx, "hybridIdentityMetadatum", &connectedvmwarevsphere.HybridIdentityMetadatumArgs{
+ * 			MetadataName:       pulumi.String("default"),
+ * 			PublicKey:          pulumi.String("8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2"),
+ * 			ResourceGroupName:  pulumi.String("testrg"),
+ * 			VirtualMachineName: pulumi.String("ContosoVm"),
+ * 			VmId:               pulumi.String("f8b82dff-38ef-4220-99ef-d3a3f86ddc6c"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const hybridIdentityMetadatum = new azure_native.connectedvmwarevsphere.HybridIdentityMetadatum("hybridIdentityMetadatum", {
+ *     metadataName: "default",
+ *     publicKey: "8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2",
+ *     resourceGroupName: "testrg",
+ *     virtualMachineName: "ContosoVm",
+ *     vmId: "f8b82dff-38ef-4220-99ef-d3a3f86ddc6c",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * hybrid_identity_metadatum = azure_native.connectedvmwarevsphere.HybridIdentityMetadatum("hybridIdentityMetadatum",
+ *     metadata_name="default",
+ *     public_key="8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2",
+ *     resource_group_name="testrg",
+ *     virtual_machine_name="ContosoVm",
+ *     vm_id="f8b82dff-38ef-4220-99ef-d3a3f86ddc6c")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +114,84 @@ import javax.annotation.Nullable;
 public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource {
     /**
      * The identity of the resource.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output<IdentityResponse> identity;
 
     /**
      * @return The identity of the resource.
-     * 
      */
     public Output<IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets or sets the provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the Public Key.
-     * 
      */
     @Export(name="publicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicKey;
 
     /**
      * @return Gets or sets the Public Key.
-     * 
      */
     public Output</* @Nullable */ String> getPublicKey() {
         return this.publicKey;
     }
     /**
      * The system data.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system data.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets or sets the Vm Id.
-     * 
      */
     @Export(name="vmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmId;
 
     /**
      * @return Gets or sets the Vm Id.
-     * 
      */
     public Output</* @Nullable */ String> getVmId() {
         return this.vmId;

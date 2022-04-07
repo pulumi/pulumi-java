@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the peering configuration.
- * 
  */
 public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
 
     /**
      * The communities of bgp peering. Specified for microsoft peering.
-     * 
      */
     @Import(name="advertisedCommunities")
       private final @Nullable Output<List<String>> advertisedCommunities;
@@ -33,7 +31,6 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
 
     /**
      * The reference to AdvertisedPublicPrefixes.
-     * 
      */
     @Import(name="advertisedPublicPrefixes")
       private final @Nullable Output<List<String>> advertisedPublicPrefixes;
@@ -44,7 +41,6 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
 
     /**
      * The CustomerASN of the peering.
-     * 
      */
     @Import(name="customerASN")
       private final @Nullable Output<Integer> customerASN;
@@ -55,7 +51,6 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
 
     /**
      * The legacy mode of the peering.
-     * 
      */
     @Import(name="legacyMode")
       private final @Nullable Output<Integer> legacyMode;
@@ -66,7 +61,6 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
 
     /**
      * The RoutingRegistryName of the configuration.
-     * 
      */
     @Import(name="routingRegistryName")
       private final @Nullable Output<String> routingRegistryName;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * An traffic selector policy for a virtual network gateway connection.
- * 
  */
 public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
 
     /**
      * A collection of local address spaces in CIDR format.
-     * 
      */
     @Import(name="localAddressRanges", required=true)
       private final Output<List<String>> localAddressRanges;
@@ -31,7 +29,6 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
 
     /**
      * A collection of remote address spaces in CIDR format.
-     * 
      */
     @Import(name="remoteAddressRanges", required=true)
       private final Output<List<String>> remoteAddressRanges;

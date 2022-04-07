@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cloud error.
- * 
  */
 public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cloud error additional info.
-     * 
      */
     @Import(name="additionalInfo", required=true)
       private final List<AdditionalErrorInfoResponse> additionalInfo;
@@ -33,7 +31,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cloud error code.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -44,7 +41,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cloud error details.
-     * 
      */
     @Import(name="details", required=true)
       private final List<CloudErrorResponse> details;
@@ -55,7 +51,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cloud error message.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -66,7 +61,6 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cloud error target.
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;

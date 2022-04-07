@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes related incident information for the bookmark
- * 
  */
 public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Incident Id
-     * 
      */
     @Import(name="incidentId")
       private final @Nullable Output<String> incidentId;
@@ -33,7 +31,6 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Relation Name
-     * 
      */
     @Import(name="relationName")
       private final @Nullable Output<String> relationName;
@@ -44,7 +41,6 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The severity of the incident
-     * 
      */
     @Import(name="severity")
       private final @Nullable Output<Either<String,IncidentSeverity>> severity;
@@ -55,7 +51,6 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The title of the incident
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

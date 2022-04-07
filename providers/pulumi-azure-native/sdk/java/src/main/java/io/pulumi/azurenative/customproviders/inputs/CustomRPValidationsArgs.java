@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A validation to apply on custom resource provider requests.
- * 
  */
 public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
-     * 
      */
     @Import(name="specification", required=true)
       private final Output<String> specification;
@@ -33,7 +31,6 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The type of validation to run against a matching request.
-     * 
      */
     @Import(name="validationType")
       private final @Nullable Output<Either<String,ValidationType>> validationType;

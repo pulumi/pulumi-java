@@ -23,7 +23,104 @@ import javax.annotation.Nullable;
  * Base class for backup ProtectionIntent.
  * API Version: 2021-02-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or Update Azure Vm Protection Intent
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var protectionIntent = new AzureNative.RecoveryServices.ProtectionIntent("protectionIntent", new AzureNative.RecoveryServices.ProtectionIntentArgs
+ *         {
+ *             FabricName = "Azure",
+ *             IntentObjectName = "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
+ *             Properties = new AzureNative.RecoveryServices.Inputs.AzureResourceProtectionIntentArgs
+ *             {
+ *                 PolicyId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy",
+ *                 ProtectionIntentItemType = "AzureResourceItem",
+ *                 SourceResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel",
+ *             },
+ *             ResourceGroupName = "myRG",
+ *             VaultName = "myVault",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recoveryservices.NewProtectionIntent(ctx, "protectionIntent", &recoveryservices.ProtectionIntentArgs{
+ * 			FabricName:       pulumi.String("Azure"),
+ * 			IntentObjectName: pulumi.String("vm;iaasvmcontainerv2;chamsrgtest;chamscandel"),
+ * 			Properties: recoveryservices.AzureResourceProtectionIntent{
+ * 				PolicyId:                 "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy",
+ * 				ProtectionIntentItemType: "AzureResourceItem",
+ * 				SourceResourceId:         "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel",
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myRG"),
+ * 			VaultName:         pulumi.String("myVault"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const protectionIntent = new azure_native.recoveryservices.ProtectionIntent("protectionIntent", {
+ *     fabricName: "Azure",
+ *     intentObjectName: "vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
+ *     properties: {
+ *         policyId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy",
+ *         protectionIntentItemType: "AzureResourceItem",
+ *         sourceResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel",
+ *     },
+ *     resourceGroupName: "myRG",
+ *     vaultName: "myVault",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * protection_intent = azure_native.recoveryservices.ProtectionIntent("protectionIntent",
+ *     fabric_name="Azure",
+ *     intent_object_name="vm;iaasvmcontainerv2;chamsrgtest;chamscandel",
+ *     properties=azure_native.recoveryservices.AzureResourceProtectionIntentArgs(
+ *         policy_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.RecoveryServices/vaults/myVault/backupPolicies/myPolicy",
+ *         protection_intent_item_type="AzureResourceItem",
+ *         source_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/chamsrgtest/providers/Microsoft.Compute/virtualMachines/chamscandel",
+ *     ),
+ *     resource_group_name="myRG",
+ *     vault_name="myVault")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,84 +135,72 @@ import javax.annotation.Nullable;
 public class ProtectionIntent extends io.pulumi.resources.CustomResource {
     /**
      * Optional ETag.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
      * @return Optional ETag.
-     * 
      */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name associated with the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name associated with the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * ProtectionIntentResource properties
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return ProtectionIntentResource properties
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
      */
     public Output<String> getType() {
         return this.type;

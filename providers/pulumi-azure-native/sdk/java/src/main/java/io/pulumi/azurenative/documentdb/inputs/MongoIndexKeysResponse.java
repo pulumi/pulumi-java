@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB MongoDB collection resource object
- * 
  */
 public final class MongoIndexKeysResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MongoIndexKeysResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * List of keys for each MongoDB collection in the Azure Cosmos DB service
-     * 
      */
     @Import(name="keys")
       private final @Nullable List<String> keys;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
- * 
  */
 public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
-     * 
      */
     @Import(name="actionHostName")
       private final @Nullable Output<String> actionHostName;
@@ -34,7 +32,6 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
      * https://www.siteextensions.net/packages/TiPCallback/
-     * 
      */
     @Import(name="changeDecisionCallbackUrl")
       private final @Nullable Output<String> changeDecisionCallbackUrl;
@@ -45,7 +42,6 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies interval in minutes to reevaluate ReroutePercentage.
-     * 
      */
     @Import(name="changeIntervalInMinutes")
       private final @Nullable Output<Integer> changeIntervalInMinutes;
@@ -55,10 +51,9 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or
-     * <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm
+     * In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or 
+     * <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm 
      * can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.
-     * 
      */
     @Import(name="changeStep")
       private final @Nullable Output<Double> changeStep;
@@ -69,7 +64,6 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies upper boundary below which ReroutePercentage will stay.
-     * 
      */
     @Import(name="maxReroutePercentage")
       private final @Nullable Output<Double> maxReroutePercentage;
@@ -80,7 +74,6 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies lower boundary above which ReroutePercentage will stay.
-     * 
      */
     @Import(name="minReroutePercentage")
       private final @Nullable Output<Double> minReroutePercentage;
@@ -91,7 +84,6 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -102,7 +94,6 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Percentage of the traffic which will be redirected to <code>ActionHostName</code>.
-     * 
      */
     @Import(name="reroutePercentage")
       private final @Nullable Output<Double> reroutePercentage;

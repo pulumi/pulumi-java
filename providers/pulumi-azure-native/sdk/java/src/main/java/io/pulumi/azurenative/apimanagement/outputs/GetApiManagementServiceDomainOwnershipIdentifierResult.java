@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
     /**
      * The domain ownership identifier value.
-     * 
      */
     private final String domainOwnershipIdentifier;
 
@@ -22,7 +21,6 @@ public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
 
     /**
      * The domain ownership identifier value.
-     * 
     */
     public String getDomainOwnershipIdentifier() {
         return this.domainOwnershipIdentifier;

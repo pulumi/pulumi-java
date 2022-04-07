@@ -14,7 +14,6 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
 
     /**
      * The name of the remediation.
-     * 
      */
     @Import(name="remediationName", required=true)
       private final String remediationName;
@@ -25,7 +24,6 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
 
     /**
      * Resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

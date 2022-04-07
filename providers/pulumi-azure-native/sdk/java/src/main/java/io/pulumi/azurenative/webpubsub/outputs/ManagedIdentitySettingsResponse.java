@@ -14,7 +14,6 @@ public final class ManagedIdentitySettingsResponse {
     /**
      * The Resource indicating the App ID URI of the target resource.
      * It also appears in the aud (audience) claim of the issued token.
-     * 
      */
     private final @Nullable String resource;
 
@@ -26,7 +25,6 @@ public final class ManagedIdentitySettingsResponse {
     /**
      * The Resource indicating the App ID URI of the target resource.
      * It also appears in the aud (audience) claim of the issued token.
-     * 
     */
     public Optional<String> getResource() {
         return Optional.ofNullable(this.resource);

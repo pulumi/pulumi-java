@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The name of the SKU for Azure Dev Spaces Controller.
-     * 
      */
     @EnumType
     public enum SkuName {

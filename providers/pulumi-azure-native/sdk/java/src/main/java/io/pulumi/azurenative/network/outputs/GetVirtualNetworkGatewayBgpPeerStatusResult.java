@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
     /**
      * List of BGP peers.
-     * 
      */
     private final @Nullable List<BgpPeerStatusResponse> value;
 
@@ -24,7 +23,6 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
 
     /**
      * List of BGP peers.
-     * 
     */
     public List<BgpPeerStatusResponse> getValue() {
         return this.value == null ? List.of() : this.value;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the properties for manual resolution.
- * 
  */
 public final class ManualResolutionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManualResolutionPropertiesResponse extends io.pulumi.resource
 
     /**
      * Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.
-     * 
      */
     @Import(name="targetId")
       private final @Nullable String targetId;

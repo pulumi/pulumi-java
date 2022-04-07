@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Common input details for network mapping operation.
- * 
  */
 public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
 
     /**
      * Fabric specific input properties.
-     * 
      */
     @Import(name="fabricSpecificDetails")
       private final @Nullable Output<Object> fabricSpecificDetails;
@@ -35,7 +33,6 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
 
     /**
      * Recovery fabric Name.
-     * 
      */
     @Import(name="recoveryFabricName")
       private final @Nullable Output<String> recoveryFabricName;
@@ -46,7 +43,6 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
 
     /**
      * Recovery network Id.
-     * 
      */
     @Import(name="recoveryNetworkId")
       private final @Nullable Output<String> recoveryNetworkId;

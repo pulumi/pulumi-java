@@ -20,7 +20,128 @@ import javax.annotation.Nullable;
  * A SQL Analytics pool
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a SQL Analytics pool
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlPool = new AzureNative.Synapse.SqlPool("sqlPool", new AzureNative.Synapse.SqlPoolArgs
+ *         {
+ *             Collation = "",
+ *             CreateMode = "",
+ *             Location = "Southeast Asia",
+ *             MaxSizeBytes = 0,
+ *             RecoverableDatabaseId = "",
+ *             ResourceGroupName = "ExampleResourceGroup",
+ *             Sku = new AzureNative.Synapse.Inputs.SkuArgs
+ *             {
+ *                 Name = "",
+ *                 Tier = "",
+ *             },
+ *             SourceDatabaseId = "",
+ *             SqlPoolName = "ExampleSqlPool",
+ *             StorageAccountType = "LRS",
+ *             Tags = ,
+ *             WorkspaceName = "ExampleWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewSqlPool(ctx, "sqlPool", &synapse.SqlPoolArgs{
+ * 			Collation:             pulumi.String(""),
+ * 			CreateMode:            pulumi.String(""),
+ * 			Location:              pulumi.String("Southeast Asia"),
+ * 			MaxSizeBytes:          pulumi.Float64(0),
+ * 			RecoverableDatabaseId: pulumi.String(""),
+ * 			ResourceGroupName:     pulumi.String("ExampleResourceGroup"),
+ * 			Sku: &synapse.SkuArgs{
+ * 				Name: pulumi.String(""),
+ * 				Tier: pulumi.String(""),
+ * 			},
+ * 			SourceDatabaseId:   pulumi.String(""),
+ * 			SqlPoolName:        pulumi.String("ExampleSqlPool"),
+ * 			StorageAccountType: pulumi.String("LRS"),
+ * 			Tags:               nil,
+ * 			WorkspaceName:      pulumi.String("ExampleWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
+ *     collation: "",
+ *     createMode: "",
+ *     location: "Southeast Asia",
+ *     maxSizeBytes: 0,
+ *     recoverableDatabaseId: "",
+ *     resourceGroupName: "ExampleResourceGroup",
+ *     sku: {
+ *         name: "",
+ *         tier: "",
+ *     },
+ *     sourceDatabaseId: "",
+ *     sqlPoolName: "ExampleSqlPool",
+ *     storageAccountType: "LRS",
+ *     tags: {},
+ *     workspaceName: "ExampleWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_pool = azure_native.synapse.SqlPool("sqlPool",
+ *     collation="",
+ *     create_mode="",
+ *     location="Southeast Asia",
+ *     max_size_bytes=0,
+ *     recoverable_database_id="",
+ *     resource_group_name="ExampleResourceGroup",
+ *     sku=azure_native.synapse.SkuArgs(
+ *         name="",
+ *         tier="",
+ *     ),
+ *     source_database_id="",
+ *     sql_pool_name="ExampleSqlPool",
+ *     storage_account_type="LRS",
+ *     tags={},
+ *     workspace_name="ExampleWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,14 +156,12 @@ import javax.annotation.Nullable;
 public class SqlPool extends io.pulumi.resources.CustomResource {
     /**
      * Collation mode
-     * 
      */
     @Export(name="collation", type=String.class, parameters={})
     private Output</* @Nullable */ String> collation;
 
     /**
      * @return Collation mode
-     * 
      */
     public Output</* @Nullable */ String> getCollation() {
         return this.collation;
@@ -57,7 +176,6 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
      * 
      * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
-     * 
      */
     @Export(name="createMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> createMode;
@@ -72,189 +190,162 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Recovery: Creates a sql pool by a geo-replicated backup. sourceDatabaseId  must be specified as the recoverableDatabaseId to restore.
      * 
      * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
-     * 
      */
     public Output</* @Nullable */ String> getCreateMode() {
         return this.createMode;
     }
     /**
      * Date the SQL pool was created
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationDate;
 
     /**
      * @return Date the SQL pool was created
-     * 
      */
     public Output</* @Nullable */ String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Maximum size in bytes
-     * 
      */
     @Export(name="maxSizeBytes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxSizeBytes;
 
     /**
      * @return Maximum size in bytes
-     * 
      */
     public Output</* @Nullable */ Double> getMaxSizeBytes() {
         return this.maxSizeBytes;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return Resource state
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Backup database to restore from
-     * 
      */
     @Export(name="recoverableDatabaseId", type=String.class, parameters={})
     private Output</* @Nullable */ String> recoverableDatabaseId;
 
     /**
      * @return Backup database to restore from
-     * 
      */
     public Output</* @Nullable */ String> getRecoverableDatabaseId() {
         return this.recoverableDatabaseId;
     }
     /**
      * Snapshot time to restore
-     * 
      */
     @Export(name="restorePointInTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> restorePointInTime;
 
     /**
      * @return Snapshot time to restore
-     * 
      */
     public Output</* @Nullable */ String> getRestorePointInTime() {
         return this.restorePointInTime;
     }
     /**
      * SQL pool SKU
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return SQL pool SKU
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Source database to create from
-     * 
      */
     @Export(name="sourceDatabaseId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceDatabaseId;
 
     /**
      * @return Source database to create from
-     * 
      */
     public Output</* @Nullable */ String> getSourceDatabaseId() {
         return this.sourceDatabaseId;
     }
     /**
      * Resource status
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return Resource status
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * The storage account type used to store backups for this sql pool.
-     * 
      */
     @Export(name="storageAccountType", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountType;
 
     /**
      * @return The storage account type used to store backups for this sql pool.
-     * 
      */
     public Output</* @Nullable */ String> getStorageAccountType() {
         return this.storageAccountType;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the delta health policies for the cluster upgrade.
- * 
  */
 public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
 
     /**
      * Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
-     * 
      */
     @Import(name="applicationDeltaHealthPolicies")
       private final @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;

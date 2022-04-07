@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Azure Data Explorer sink.
- * 
  */
 public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -32,7 +30,6 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * If set to true, any aggregation will be skipped. Default is false. Type: boolean.
-     * 
      */
     @Import(name="flushImmediately")
       private final @Nullable Output<Object> flushImmediately;
@@ -43,7 +40,6 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * An explicit column mapping description provided in a json format. Type: string.
-     * 
      */
     @Import(name="ingestionMappingAsJson")
       private final @Nullable Output<Object> ingestionMappingAsJson;
@@ -54,7 +50,6 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * A name of a pre-created csv mapping that was defined on the target Kusto table. Type: string.
-     * 
      */
     @Import(name="ingestionMappingName")
       private final @Nullable Output<Object> ingestionMappingName;
@@ -65,7 +60,6 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -76,7 +70,6 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
@@ -87,7 +80,6 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
@@ -99,7 +91,6 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
     /**
      * Copy sink type.
      * Expected value is 'AzureDataExplorerSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -110,7 +101,6 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
@@ -121,7 +111,6 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;

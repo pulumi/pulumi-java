@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties used to create a new server by restoring from a backup.
- * 
  */
 public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
     /**
      * The mode to create a new server.
      * Expected value is 'PointInTimeRestore'.
-     * 
      */
     @Import(name="createMode", required=true)
       private final Output<String> createMode;
@@ -39,7 +37,6 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
 
     /**
      * Status showing whether the server enabled infrastructure encryption.
-     * 
      */
     @Import(name="infrastructureEncryption")
       private final @Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption;
@@ -50,7 +47,6 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
 
     /**
      * Enforce a minimal Tls version for the server.
-     * 
      */
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
@@ -61,7 +57,6 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
 
     /**
      * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
@@ -72,7 +67,6 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
 
     /**
      * Restore point creation time (ISO8601 format), specifying the time to restore from.
-     * 
      */
     @Import(name="restorePointInTime", required=true)
       private final Output<String> restorePointInTime;
@@ -83,7 +77,6 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
 
     /**
      * The source server id to restore from.
-     * 
      */
     @Import(name="sourceServerId", required=true)
       private final Output<String> sourceServerId;
@@ -94,7 +87,6 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
 
     /**
      * Enable ssl enforcement or not when connect to server.
-     * 
      */
     @Import(name="sslEnforcement")
       private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
@@ -105,7 +97,6 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
 
     /**
      * Storage profile of a server.
-     * 
      */
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
@@ -116,7 +107,6 @@ public final class ServerPropertiesForRestoreArgs extends io.pulumi.resources.Re
 
     /**
      * Server version.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Either<String,ServerVersion>> version;

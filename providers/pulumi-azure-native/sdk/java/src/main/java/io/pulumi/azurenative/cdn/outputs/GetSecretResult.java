@@ -19,32 +19,26 @@ public final class GetSecretResult {
     private final String deploymentStatus;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * object which contains secret parameters
-     * 
      */
     private final @Nullable Object parameters;
     /**
      * Provisioning status
-     * 
      */
     private final String provisioningState;
     /**
      * Read only system data
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -71,42 +65,36 @@ public final class GetSecretResult {
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * object which contains secret parameters
-     * 
     */
     public Optional<Object> getParameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * Provisioning status
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

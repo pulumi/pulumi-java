@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class OpenIdAuthenticationSettingsContractResponse {
     /**
      * How to send token to the server.
-     * 
      */
     private final @Nullable List<String> bearerTokenSendingMethods;
     /**
      * OAuth authorization server identifier.
-     * 
      */
     private final @Nullable String openidProviderId;
 
@@ -33,14 +31,12 @@ public final class OpenIdAuthenticationSettingsContractResponse {
 
     /**
      * How to send token to the server.
-     * 
     */
     public List<String> getBearerTokenSendingMethods() {
         return this.bearerTokenSendingMethods == null ? List.of() : this.bearerTokenSendingMethods;
     }
     /**
      * OAuth authorization server identifier.
-     * 
     */
     public Optional<String> getOpenidProviderId() {
         return Optional.ofNullable(this.openidProviderId);

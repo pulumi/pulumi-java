@@ -23,7 +23,536 @@ import javax.annotation.Nullable;
  * Information about workspace.
  * API Version: 2018-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a workspace which is ready for Customer-Managed Key (CMK) encryption
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspace = new AzureNative.Databricks.Workspace("workspace", new AzureNative.Databricks.WorkspaceArgs
+ *         {
+ *             Location = "westus",
+ *             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+ *             Parameters = new AzureNative.Databricks.Inputs.WorkspaceCustomParametersArgs
+ *             {
+ *                 PrepareEncryption = new AzureNative.Databricks.Inputs.WorkspaceCustomBooleanParameterArgs
+ *                 {
+ *                     Value = true,
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databricks "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databricks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databricks.NewWorkspace(ctx, "workspace", &databricks.WorkspaceArgs{
+ * 			Location:               pulumi.String("westus"),
+ * 			ManagedResourceGroupId: pulumi.String("/subscriptions/subid/resourceGroups/myManagedRG"),
+ * 			Parameters: &databricks.WorkspaceCustomParametersArgs{
+ * 				PrepareEncryption: &databricks.WorkspaceCustomBooleanParameterArgs{
+ * 					Value: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspace = new azure_native.databricks.Workspace("workspace", {
+ *     location: "westus",
+ *     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+ *     parameters: {
+ *         prepareEncryption: {
+ *             value: true,
+ *         },
+ *     },
+ *     resourceGroupName: "rg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace = azure_native.databricks.Workspace("workspace",
+ *     location="westus",
+ *     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+ *     parameters=azure_native.databricks.WorkspaceCustomParametersArgs(
+ *         prepare_encryption=azure_native.databricks.WorkspaceCustomBooleanParameterArgs(
+ *             value=True,
+ *         ),
+ *     ),
+ *     resource_group_name="rg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create or update workspace
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspace = new AzureNative.Databricks.Workspace("workspace", new AzureNative.Databricks.WorkspaceArgs
+ *         {
+ *             Location = "westus",
+ *             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+ *             ResourceGroupName = "rg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databricks "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databricks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databricks.NewWorkspace(ctx, "workspace", &databricks.WorkspaceArgs{
+ * 			Location:               pulumi.String("westus"),
+ * 			ManagedResourceGroupId: pulumi.String("/subscriptions/subid/resourceGroups/myManagedRG"),
+ * 			ResourceGroupName:      pulumi.String("rg"),
+ * 			WorkspaceName:          pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspace = new azure_native.databricks.Workspace("workspace", {
+ *     location: "westus",
+ *     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+ *     resourceGroupName: "rg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace = azure_native.databricks.Workspace("workspace",
+ *     location="westus",
+ *     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+ *     resource_group_name="rg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create or update workspace with custom parameters
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspace = new AzureNative.Databricks.Workspace("workspace", new AzureNative.Databricks.WorkspaceArgs
+ *         {
+ *             Location = "westus",
+ *             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+ *             Parameters = new AzureNative.Databricks.Inputs.WorkspaceCustomParametersArgs
+ *             {
+ *                 CustomPrivateSubnetName = new AzureNative.Databricks.Inputs.WorkspaceCustomStringParameterArgs
+ *                 {
+ *                     Value = "myPrivateSubnet",
+ *                 },
+ *                 CustomPublicSubnetName = new AzureNative.Databricks.Inputs.WorkspaceCustomStringParameterArgs
+ *                 {
+ *                     Value = "myPublicSubnet",
+ *                 },
+ *                 CustomVirtualNetworkId = new AzureNative.Databricks.Inputs.WorkspaceCustomStringParameterArgs
+ *                 {
+ *                     Value = "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databricks "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databricks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databricks.NewWorkspace(ctx, "workspace", &databricks.WorkspaceArgs{
+ * 			Location:               pulumi.String("westus"),
+ * 			ManagedResourceGroupId: pulumi.String("/subscriptions/subid/resourceGroups/myManagedRG"),
+ * 			Parameters: &databricks.WorkspaceCustomParametersArgs{
+ * 				CustomPrivateSubnetName: &databricks.WorkspaceCustomStringParameterArgs{
+ * 					Value: pulumi.String("myPrivateSubnet"),
+ * 				},
+ * 				CustomPublicSubnetName: &databricks.WorkspaceCustomStringParameterArgs{
+ * 					Value: pulumi.String("myPublicSubnet"),
+ * 				},
+ * 				CustomVirtualNetworkId: &databricks.WorkspaceCustomStringParameterArgs{
+ * 					Value: pulumi.String("/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspace = new azure_native.databricks.Workspace("workspace", {
+ *     location: "westus",
+ *     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+ *     parameters: {
+ *         customPrivateSubnetName: {
+ *             value: "myPrivateSubnet",
+ *         },
+ *         customPublicSubnetName: {
+ *             value: "myPublicSubnet",
+ *         },
+ *         customVirtualNetworkId: {
+ *             value: "/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
+ *         },
+ *     },
+ *     resourceGroupName: "rg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace = azure_native.databricks.Workspace("workspace",
+ *     location="westus",
+ *     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+ *     parameters=azure_native.databricks.WorkspaceCustomParametersArgs(
+ *         custom_private_subnet_name=azure_native.databricks.WorkspaceCustomStringParameterArgs(
+ *             value="myPrivateSubnet",
+ *         ),
+ *         custom_public_subnet_name=azure_native.databricks.WorkspaceCustomStringParameterArgs(
+ *             value="myPublicSubnet",
+ *         ),
+ *         custom_virtual_network_id=azure_native.databricks.WorkspaceCustomStringParameterArgs(
+ *             value="/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork",
+ *         ),
+ *     ),
+ *     resource_group_name="rg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Enable Customer-Managed Key (CMK) encryption on a workspace which is prepared for encryption
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspace = new AzureNative.Databricks.Workspace("workspace", new AzureNative.Databricks.WorkspaceArgs
+ *         {
+ *             Location = "westus",
+ *             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+ *             Parameters = new AzureNative.Databricks.Inputs.WorkspaceCustomParametersArgs
+ *             {
+ *                 Encryption = new AzureNative.Databricks.Inputs.WorkspaceEncryptionParameterArgs
+ *                 {
+ *                     Value = new AzureNative.Databricks.Inputs.EncryptionArgs
+ *                     {
+ *                         KeyName = "myKeyName",
+ *                         KeySource = "Microsoft.Keyvault",
+ *                         KeyVaultUri = "https://myKeyVault.vault.azure.net/",
+ *                         KeyVersion = "00000000000000000000000000000000",
+ *                     },
+ *                 },
+ *                 PrepareEncryption = new AzureNative.Databricks.Inputs.WorkspaceCustomBooleanParameterArgs
+ *                 {
+ *                     Value = true,
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databricks "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databricks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databricks.NewWorkspace(ctx, "workspace", &databricks.WorkspaceArgs{
+ * 			Location:               pulumi.String("westus"),
+ * 			ManagedResourceGroupId: pulumi.String("/subscriptions/subid/resourceGroups/myManagedRG"),
+ * 			Parameters: &databricks.WorkspaceCustomParametersArgs{
+ * 				Encryption: &databricks.WorkspaceEncryptionParameterArgs{
+ * 					Value: &databricks.EncryptionArgs{
+ * 						KeyName:     pulumi.String("myKeyName"),
+ * 						KeySource:   pulumi.String("Microsoft.Keyvault"),
+ * 						KeyVaultUri: pulumi.String("https://myKeyVault.vault.azure.net/"),
+ * 						KeyVersion:  pulumi.String("00000000000000000000000000000000"),
+ * 					},
+ * 				},
+ * 				PrepareEncryption: &databricks.WorkspaceCustomBooleanParameterArgs{
+ * 					Value: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspace = new azure_native.databricks.Workspace("workspace", {
+ *     location: "westus",
+ *     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+ *     parameters: {
+ *         encryption: {
+ *             value: {
+ *                 keyName: "myKeyName",
+ *                 keySource: "Microsoft.Keyvault",
+ *                 keyVaultUri: "https://myKeyVault.vault.azure.net/",
+ *                 keyVersion: "00000000000000000000000000000000",
+ *             },
+ *         },
+ *         prepareEncryption: {
+ *             value: true,
+ *         },
+ *     },
+ *     resourceGroupName: "rg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace = azure_native.databricks.Workspace("workspace",
+ *     location="westus",
+ *     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+ *     parameters=azure_native.databricks.WorkspaceCustomParametersArgs(
+ *         encryption=azure_native.databricks.WorkspaceEncryptionParameterArgs(
+ *             value=azure_native.databricks.EncryptionArgs(
+ *                 key_name="myKeyName",
+ *                 key_source="Microsoft.Keyvault",
+ *                 key_vault_uri="https://myKeyVault.vault.azure.net/",
+ *                 key_version="00000000000000000000000000000000",
+ *             ),
+ *         ),
+ *         prepare_encryption=azure_native.databricks.WorkspaceCustomBooleanParameterArgs(
+ *             value=True,
+ *         ),
+ *     ),
+ *     resource_group_name="rg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Revert Customer-Managed Key (CMK) encryption to Microsoft Managed Keys encryption on a workspace
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspace = new AzureNative.Databricks.Workspace("workspace", new AzureNative.Databricks.WorkspaceArgs
+ *         {
+ *             Location = "westus",
+ *             ManagedResourceGroupId = "/subscriptions/subid/resourceGroups/myManagedRG",
+ *             Parameters = new AzureNative.Databricks.Inputs.WorkspaceCustomParametersArgs
+ *             {
+ *                 Encryption = new AzureNative.Databricks.Inputs.WorkspaceEncryptionParameterArgs
+ *                 {
+ *                     Value = new AzureNative.Databricks.Inputs.EncryptionArgs
+ *                     {
+ *                         KeySource = "Default",
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databricks "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databricks"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databricks.NewWorkspace(ctx, "workspace", &databricks.WorkspaceArgs{
+ * 			Location:               pulumi.String("westus"),
+ * 			ManagedResourceGroupId: pulumi.String("/subscriptions/subid/resourceGroups/myManagedRG"),
+ * 			Parameters: &databricks.WorkspaceCustomParametersArgs{
+ * 				Encryption: &databricks.WorkspaceEncryptionParameterArgs{
+ * 					Value: &databricks.EncryptionArgs{
+ * 						KeySource: pulumi.String("Default"),
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspace = new azure_native.databricks.Workspace("workspace", {
+ *     location: "westus",
+ *     managedResourceGroupId: "/subscriptions/subid/resourceGroups/myManagedRG",
+ *     parameters: {
+ *         encryption: {
+ *             value: {
+ *                 keySource: "Default",
+ *             },
+ *         },
+ *     },
+ *     resourceGroupName: "rg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace = azure_native.databricks.Workspace("workspace",
+ *     location="westus",
+ *     managed_resource_group_id="/subscriptions/subid/resourceGroups/myManagedRG",
+ *     parameters=azure_native.databricks.WorkspaceCustomParametersArgs(
+ *         encryption=azure_native.databricks.WorkspaceEncryptionParameterArgs(
+ *             value=azure_native.databricks.EncryptionArgs(
+ *                 key_source="Default",
+ *             ),
+ *         ),
+ *     ),
+ *     resource_group_name="rg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,224 +567,192 @@ import javax.annotation.Nullable;
 public class Workspace extends io.pulumi.resources.CustomResource {
     /**
      * The workspace provider authorizations.
-     * 
      */
     @Export(name="authorizations", type=List.class, parameters={WorkspaceProviderAuthorizationResponse.class})
     private Output</* @Nullable */ List<WorkspaceProviderAuthorizationResponse>> authorizations;
 
     /**
      * @return The workspace provider authorizations.
-     * 
      */
     public Output</* @Nullable */ List<WorkspaceProviderAuthorizationResponse>> getAuthorizations() {
         return this.authorizations;
     }
     /**
      * Indicates the Object ID, PUID and Application ID of entity that created the workspace.
-     * 
      */
     @Export(name="createdBy", type=CreatedByResponse.class, parameters={})
     private Output</* @Nullable */ CreatedByResponse> createdBy;
 
     /**
      * @return Indicates the Object ID, PUID and Application ID of entity that created the workspace.
-     * 
      */
     public Output</* @Nullable */ CreatedByResponse> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Specifies the date and time when the workspace is created.
-     * 
      */
     @Export(name="createdDateTime", type=String.class, parameters={})
     private Output<String> createdDateTime;
 
     /**
      * @return Specifies the date and time when the workspace is created.
-     * 
      */
     public Output<String> getCreatedDateTime() {
         return this.createdDateTime;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The managed resource group Id.
-     * 
      */
     @Export(name="managedResourceGroupId", type=String.class, parameters={})
     private Output<String> managedResourceGroupId;
 
     /**
      * @return The managed resource group Id.
-     * 
      */
     public Output<String> getManagedResourceGroupId() {
         return this.managedResourceGroupId;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The workspace's custom parameters.
-     * 
      */
     @Export(name="parameters", type=WorkspaceCustomParametersResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceCustomParametersResponse> parameters;
 
     /**
      * @return The workspace's custom parameters.
-     * 
      */
     public Output</* @Nullable */ WorkspaceCustomParametersResponse> getParameters() {
         return this.parameters;
     }
     /**
      * The workspace provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The workspace provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the resource.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The SKU of the resource.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The details of Managed Identity of Storage Account
-     * 
      */
     @Export(name="storageAccountIdentity", type=ManagedIdentityConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityConfigurationResponse> storageAccountIdentity;
 
     /**
      * @return The details of Managed Identity of Storage Account
-     * 
      */
     public Output</* @Nullable */ ManagedIdentityConfigurationResponse> getStorageAccountIdentity() {
         return this.storageAccountIdentity;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The blob URI where the UI definition file is located.
-     * 
      */
     @Export(name="uiDefinitionUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uiDefinitionUri;
 
     /**
      * @return The blob URI where the UI definition file is located.
-     * 
      */
     public Output</* @Nullable */ String> getUiDefinitionUri() {
         return this.uiDefinitionUri;
     }
     /**
      * Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
-     * 
      */
     @Export(name="updatedBy", type=CreatedByResponse.class, parameters={})
     private Output</* @Nullable */ CreatedByResponse> updatedBy;
 
     /**
      * @return Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
-     * 
      */
     public Output</* @Nullable */ CreatedByResponse> getUpdatedBy() {
         return this.updatedBy;
     }
     /**
      * The unique identifier of the databricks workspace in databricks control plane.
-     * 
      */
     @Export(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
     /**
      * @return The unique identifier of the databricks workspace in databricks control plane.
-     * 
      */
     public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
-     * 
      */
     @Export(name="workspaceUrl", type=String.class, parameters={})
     private Output<String> workspaceUrl;
 
     /**
      * @return The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
-     * 
      */
     public Output<String> getWorkspaceUrl() {
         return this.workspaceUrl;

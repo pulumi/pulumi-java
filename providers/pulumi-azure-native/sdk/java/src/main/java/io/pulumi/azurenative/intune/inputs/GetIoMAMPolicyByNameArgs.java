@@ -16,7 +16,6 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Location hostName for the tenant
-     * 
      */
     @Import(name="hostName", required=true)
       private final String hostName;
@@ -27,7 +26,6 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Unique name for the policy
-     * 
      */
     @Import(name="policyName", required=true)
       private final String policyName;
@@ -38,7 +36,6 @@ public final class GetIoMAMPolicyByNameArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * select specific fields in entity.
-     * 
      */
     @Import(name="select")
       private final @Nullable String select;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes properties of an component as related to the standard
- * 
  */
 public final class StandardComponentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class StandardComponentPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Component Key matching componentMetadata
-     * 
      */
     @Import(name="key")
       private final @Nullable String key;

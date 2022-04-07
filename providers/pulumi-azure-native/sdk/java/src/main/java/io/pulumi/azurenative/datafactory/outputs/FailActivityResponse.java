@@ -17,38 +17,31 @@ import javax.annotation.Nullable;
 public final class FailActivityResponse {
     /**
      * Activity depends on condition.
-     * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
      * Activity description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The error code that categorizes the error type of the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
-     * 
      */
     private final Object errorCode;
     /**
      * The error message that surfaced in the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
-     * 
      */
     private final Object message;
     /**
      * Activity name.
-     * 
      */
     private final String name;
     /**
      * Type of activity.
      * Expected value is 'Fail'.
-     * 
      */
     private final String type;
     /**
      * Activity user properties.
-     * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
@@ -72,35 +65,30 @@ public final class FailActivityResponse {
 
     /**
      * Activity depends on condition.
-     * 
     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The error code that categorizes the error type of the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
-     * 
     */
     public Object getErrorCode() {
         return this.errorCode;
     }
     /**
      * The error message that surfaced in the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
-     * 
     */
     public Object getMessage() {
         return this.message;
     }
     /**
      * Activity name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -108,14 +96,12 @@ public final class FailActivityResponse {
     /**
      * Type of activity.
      * Expected value is 'Fail'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
-     * 
     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;

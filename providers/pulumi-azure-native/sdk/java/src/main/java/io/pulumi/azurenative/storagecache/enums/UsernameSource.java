@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * This setting determines how the cache gets username and group names for clients.
-     * 
      */
     @EnumType
     public enum UsernameSource {

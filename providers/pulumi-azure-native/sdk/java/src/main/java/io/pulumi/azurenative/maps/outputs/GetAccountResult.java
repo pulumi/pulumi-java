@@ -14,37 +14,30 @@ import java.util.Objects;
 public final class GetAccountResult {
     /**
      * The fully qualified Maps Account resource identifier.
-     * 
      */
     private final String id;
     /**
      * The location of the resource.
-     * 
      */
     private final String location;
     /**
      * The name of the Maps Account, which is unique within a Resource Group.
-     * 
      */
     private final String name;
     /**
      * The map account properties.
-     * 
      */
     private final MapsAccountPropertiesResponse properties;
     /**
      * The SKU of this account.
-     * 
      */
     private final SkuResponse sku;
     /**
      * Gets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
-     * 
      */
     private final Map<String,String> tags;
     /**
      * Azure resource type.
-     * 
      */
     private final String type;
 
@@ -68,49 +61,42 @@ public final class GetAccountResult {
 
     /**
      * The fully qualified Maps Account resource identifier.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the Maps Account, which is unique within a Resource Group.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The map account properties.
-     * 
     */
     public MapsAccountPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The SKU of this account.
-     * 
     */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * Gets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Azure resource type.
-     * 
     */
     public String getType() {
         return this.type;

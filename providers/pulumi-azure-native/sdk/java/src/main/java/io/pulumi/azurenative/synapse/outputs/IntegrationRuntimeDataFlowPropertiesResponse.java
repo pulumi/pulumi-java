@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class IntegrationRuntimeDataFlowPropertiesResponse {
     /**
      * Compute type of the cluster which will execute data flow job.
-     * 
      */
     private final @Nullable String computeType;
     /**
      * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
-     * 
      */
     private final @Nullable Integer coreCount;
     /**
      * Time to live (in minutes) setting of the cluster which will execute data flow job.
-     * 
      */
     private final @Nullable Integer timeToLive;
 
@@ -40,21 +37,18 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse {
 
     /**
      * Compute type of the cluster which will execute data flow job.
-     * 
     */
     public Optional<String> getComputeType() {
         return Optional.ofNullable(this.computeType);
     }
     /**
      * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
-     * 
     */
     public Optional<Integer> getCoreCount() {
         return Optional.ofNullable(this.coreCount);
     }
     /**
      * Time to live (in minutes) setting of the cluster which will execute data flow job.
-     * 
     */
     public Optional<Integer> getTimeToLive() {
         return Optional.ofNullable(this.timeToLive);

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the resource properties.
- * 
  */
 public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets administrator username.
-     * 
      */
     @Import(name="adminUsername")
       private final @Nullable String adminUsername;
@@ -31,7 +29,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets computer name.
-     * 
      */
     @Import(name="computerName")
       private final @Nullable String computerName;
@@ -42,7 +39,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets os name.
-     * 
      */
     @Import(name="osName", required=true)
       private final String osName;
@@ -53,7 +49,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the type of the os.
-     * 
      */
     @Import(name="osType")
       private final @Nullable String osType;
@@ -64,7 +59,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the current running status of VMware Tools running in the guest operating system.
-     * 
      */
     @Import(name="toolsRunningStatus", required=true)
       private final String toolsRunningStatus;
@@ -75,7 +69,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the current version of VMware Tools.
-     * 
      */
     @Import(name="toolsVersion", required=true)
       private final String toolsVersion;
@@ -86,7 +79,6 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets or sets the current version status of VMware Tools installed in the guest operating system.
-     * 
      */
     @Import(name="toolsVersionStatus", required=true)
       private final String toolsVersionStatus;

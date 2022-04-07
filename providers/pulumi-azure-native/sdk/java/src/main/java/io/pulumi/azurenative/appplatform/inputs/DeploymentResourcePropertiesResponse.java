@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Deployment resource properties payload
- * 
  */
 public final class DeploymentResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
 
     /**
      * Indicates whether the Deployment is active
-     * 
      */
     @Import(name="active", required=true)
       private final Boolean active;
@@ -36,7 +34,6 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
 
     /**
      * App name of the deployment
-     * 
      */
     @Import(name="appName", required=true)
       private final String appName;
@@ -47,7 +44,6 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
 
     /**
      * Date time when the resource is created
-     * 
      */
     @Import(name="createdTime", required=true)
       private final String createdTime;
@@ -58,7 +54,6 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
 
     /**
      * Deployment settings of the Deployment
-     * 
      */
     @Import(name="deploymentSettings")
       private final @Nullable DeploymentSettingsResponse deploymentSettings;
@@ -69,7 +64,6 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
 
     /**
      * Collection of instances belong to the Deployment
-     * 
      */
     @Import(name="instances", required=true)
       private final List<DeploymentInstanceResponse> instances;
@@ -80,7 +74,6 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
 
     /**
      * Provisioning state of the Deployment
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -91,7 +84,6 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
 
     /**
      * Uploaded source information of the deployment.
-     * 
      */
     @Import(name="source")
       private final @Nullable UserSourceInfoResponse source;
@@ -102,7 +94,6 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
 
     /**
      * Status of the Deployment
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

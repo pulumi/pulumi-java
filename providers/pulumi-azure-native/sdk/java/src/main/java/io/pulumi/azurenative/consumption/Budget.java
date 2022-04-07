@@ -24,7 +24,336 @@ import javax.annotation.Nullable;
  * A budget resource.
  * API Version: 2019-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdateBudget
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var budget = new AzureNative.Consumption.Budget("budget", new AzureNative.Consumption.BudgetArgs
+ *         {
+ *             Amount = 100.65,
+ *             BudgetName = "TestBudget",
+ *             Category = "Cost",
+ *             ETag = "\"1d34d016a593709\"",
+ *             Filter = new AzureNative.Consumption.Inputs.BudgetFilterArgs
+ *             {
+ *                 And = 
+ *                 {
+ *                     new AzureNative.Consumption.Inputs.BudgetFilterPropertiesArgs
+ *                     {
+ *                         Dimensions = new AzureNative.Consumption.Inputs.BudgetComparisonExpressionArgs
+ *                         {
+ *                             Name = "ResourceId",
+ *                             Operator = "In",
+ *                             Values = 
+ *                             {
+ *                                 "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/MSVM2",
+ *                                 "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/platformcloudplatformGeneric1",
+ *                             },
+ *                         },
+ *                     },
+ *                     new AzureNative.Consumption.Inputs.BudgetFilterPropertiesArgs
+ *                     {
+ *                         Tags = new AzureNative.Consumption.Inputs.BudgetComparisonExpressionArgs
+ *                         {
+ *                             Name = "category",
+ *                             Operator = "In",
+ *                             Values = 
+ *                             {
+ *                                 "Dev",
+ *                                 "Prod",
+ *                             },
+ *                         },
+ *                     },
+ *                     new AzureNative.Consumption.Inputs.BudgetFilterPropertiesArgs
+ *                     {
+ *                         Tags = new AzureNative.Consumption.Inputs.BudgetComparisonExpressionArgs
+ *                         {
+ *                             Name = "department",
+ *                             Operator = "In",
+ *                             Values = 
+ *                             {
+ *                                 "engineering",
+ *                                 "sales",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Notifications = 
+ *             {
+ *                 { "Actual_GreaterThan_80_Percent", new AzureNative.Consumption.Inputs.NotificationArgs
+ *                 {
+ *                     ContactEmails = 
+ *                     {
+ *                         "johndoe@contoso.com",
+ *                         "janesmith@contoso.com",
+ *                     },
+ *                     ContactGroups = 
+ *                     {
+ *                         "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/microsoft.insights/actionGroups/SampleActionGroup",
+ *                     },
+ *                     ContactRoles = 
+ *                     {
+ *                         "Contributor",
+ *                         "Reader",
+ *                     },
+ *                     Enabled = true,
+ *                     Locale = "en-us",
+ *                     Operator = "GreaterThan",
+ *                     Threshold = 80,
+ *                     ThresholdType = "Actual",
+ *                 } },
+ *             },
+ *             Scope = "subscriptions/00000000-0000-0000-0000-000000000000",
+ *             TimeGrain = "Monthly",
+ *             TimePeriod = new AzureNative.Consumption.Inputs.BudgetTimePeriodArgs
+ *             {
+ *                 EndDate = "2018-10-31T00:00:00Z",
+ *                 StartDate = "2017-10-01T00:00:00Z",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	consumption "github.com/pulumi/pulumi-azure-native/sdk/go/azure/consumption"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := consumption.NewBudget(ctx, "budget", &consumption.BudgetArgs{
+ * 			Amount:     pulumi.Float64(100.65),
+ * 			BudgetName: pulumi.String("TestBudget"),
+ * 			Category:   pulumi.String("Cost"),
+ * 			ETag:       pulumi.String("\"1d34d016a593709\""),
+ * 			Filter: &consumption.BudgetFilterArgs{
+ * 				And: consumption.BudgetFilterPropertiesArray{
+ * 					&consumption.BudgetFilterPropertiesArgs{
+ * 						Dimensions: &consumption.BudgetComparisonExpressionArgs{
+ * 							Name:     pulumi.String("ResourceId"),
+ * 							Operator: pulumi.String("In"),
+ * 							Values: pulumi.StringArray{
+ * 								pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/MSVM2"),
+ * 								pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/platformcloudplatformGeneric1"),
+ * 							},
+ * 						},
+ * 					},
+ * 					&consumption.BudgetFilterPropertiesArgs{
+ * 						Tags: &consumption.BudgetComparisonExpressionArgs{
+ * 							Name:     pulumi.String("category"),
+ * 							Operator: pulumi.String("In"),
+ * 							Values: pulumi.StringArray{
+ * 								pulumi.String("Dev"),
+ * 								pulumi.String("Prod"),
+ * 							},
+ * 						},
+ * 					},
+ * 					&consumption.BudgetFilterPropertiesArgs{
+ * 						Tags: &consumption.BudgetComparisonExpressionArgs{
+ * 							Name:     pulumi.String("department"),
+ * 							Operator: pulumi.String("In"),
+ * 							Values: pulumi.StringArray{
+ * 								pulumi.String("engineering"),
+ * 								pulumi.String("sales"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Notifications: consumption.NotificationMap{
+ * 				"Actual_GreaterThan_80_Percent": &consumption.NotificationArgs{
+ * 					ContactEmails: pulumi.StringArray{
+ * 						pulumi.String("johndoe@contoso.com"),
+ * 						pulumi.String("janesmith@contoso.com"),
+ * 					},
+ * 					ContactGroups: pulumi.StringArray{
+ * 						pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/microsoft.insights/actionGroups/SampleActionGroup"),
+ * 					},
+ * 					ContactRoles: pulumi.StringArray{
+ * 						pulumi.String("Contributor"),
+ * 						pulumi.String("Reader"),
+ * 					},
+ * 					Enabled:       pulumi.Bool(true),
+ * 					Locale:        pulumi.String("en-us"),
+ * 					Operator:      pulumi.String("GreaterThan"),
+ * 					Threshold:     pulumi.Float64(80),
+ * 					ThresholdType: pulumi.String("Actual"),
+ * 				},
+ * 			},
+ * 			Scope:     pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
+ * 			TimeGrain: pulumi.String("Monthly"),
+ * 			TimePeriod: &consumption.BudgetTimePeriodArgs{
+ * 				EndDate:   pulumi.String("2018-10-31T00:00:00Z"),
+ * 				StartDate: pulumi.String("2017-10-01T00:00:00Z"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const budget = new azure_native.consumption.Budget("budget", {
+ *     amount: 100.65,
+ *     budgetName: "TestBudget",
+ *     category: "Cost",
+ *     eTag: "\"1d34d016a593709\"",
+ *     filter: {
+ *         and: [
+ *             {
+ *                 dimensions: {
+ *                     name: "ResourceId",
+ *                     operator: "In",
+ *                     values: [
+ *                         "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/MSVM2",
+ *                         "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/platformcloudplatformGeneric1",
+ *                     ],
+ *                 },
+ *             },
+ *             {
+ *                 tags: {
+ *                     name: "category",
+ *                     operator: "In",
+ *                     values: [
+ *                         "Dev",
+ *                         "Prod",
+ *                     ],
+ *                 },
+ *             },
+ *             {
+ *                 tags: {
+ *                     name: "department",
+ *                     operator: "In",
+ *                     values: [
+ *                         "engineering",
+ *                         "sales",
+ *                     ],
+ *                 },
+ *             },
+ *         ],
+ *     },
+ *     notifications: {
+ *         Actual_GreaterThan_80_Percent: {
+ *             contactEmails: [
+ *                 "johndoe@contoso.com",
+ *                 "janesmith@contoso.com",
+ *             ],
+ *             contactGroups: ["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/microsoft.insights/actionGroups/SampleActionGroup"],
+ *             contactRoles: [
+ *                 "Contributor",
+ *                 "Reader",
+ *             ],
+ *             enabled: true,
+ *             locale: "en-us",
+ *             operator: "GreaterThan",
+ *             threshold: 80,
+ *             thresholdType: "Actual",
+ *         },
+ *     },
+ *     scope: "subscriptions/00000000-0000-0000-0000-000000000000",
+ *     timeGrain: "Monthly",
+ *     timePeriod: {
+ *         endDate: "2018-10-31T00:00:00Z",
+ *         startDate: "2017-10-01T00:00:00Z",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * budget = azure_native.consumption.Budget("budget",
+ *     amount=100.65,
+ *     budget_name="TestBudget",
+ *     category="Cost",
+ *     e_tag="\"1d34d016a593709\"",
+ *     filter=azure_native.consumption.BudgetFilterArgs(
+ *         and_=[
+ *             azure_native.consumption.BudgetFilterPropertiesArgs(
+ *                 dimensions=azure_native.consumption.BudgetComparisonExpressionArgs(
+ *                     name="ResourceId",
+ *                     operator="In",
+ *                     values=[
+ *                         "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/MSVM2",
+ *                         "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Compute/virtualMachines/platformcloudplatformGeneric1",
+ *                     ],
+ *                 ),
+ *             ),
+ *             azure_native.consumption.BudgetFilterPropertiesArgs(
+ *                 tags=azure_native.consumption.BudgetComparisonExpressionArgs(
+ *                     name="category",
+ *                     operator="In",
+ *                     values=[
+ *                         "Dev",
+ *                         "Prod",
+ *                     ],
+ *                 ),
+ *             ),
+ *             azure_native.consumption.BudgetFilterPropertiesArgs(
+ *                 tags=azure_native.consumption.BudgetComparisonExpressionArgs(
+ *                     name="department",
+ *                     operator="In",
+ *                     values=[
+ *                         "engineering",
+ *                         "sales",
+ *                     ],
+ *                 ),
+ *             ),
+ *         ],
+ *     ),
+ *     notifications={
+ *         "Actual_GreaterThan_80_Percent": azure_native.consumption.NotificationArgs(
+ *             contact_emails=[
+ *                 "johndoe@contoso.com",
+ *                 "janesmith@contoso.com",
+ *             ],
+ *             contact_groups=["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/microsoft.insights/actionGroups/SampleActionGroup"],
+ *             contact_roles=[
+ *                 "Contributor",
+ *                 "Reader",
+ *             ],
+ *             enabled=True,
+ *             locale="en-us",
+ *             operator="GreaterThan",
+ *             threshold=80,
+ *             threshold_type="Actual",
+ *         ),
+ *     },
+ *     scope="subscriptions/00000000-0000-0000-0000-000000000000",
+ *     time_grain="Monthly",
+ *     time_period=azure_native.consumption.BudgetTimePeriodArgs(
+ *         end_date="2018-10-31T00:00:00Z",
+ *         start_date="2017-10-01T00:00:00Z",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,154 +368,132 @@ import javax.annotation.Nullable;
 public class Budget extends io.pulumi.resources.CustomResource {
     /**
      * The total amount of cost to track with the budget
-     * 
      */
     @Export(name="amount", type=Double.class, parameters={})
     private Output<Double> amount;
 
     /**
      * @return The total amount of cost to track with the budget
-     * 
      */
     public Output<Double> getAmount() {
         return this.amount;
     }
     /**
      * The category of the budget, whether the budget tracks cost or usage.
-     * 
      */
     @Export(name="category", type=String.class, parameters={})
     private Output<String> category;
 
     /**
      * @return The category of the budget, whether the budget tracks cost or usage.
-     * 
      */
     public Output<String> getCategory() {
         return this.category;
     }
     /**
      * The current amount of cost which is being tracked for a budget.
-     * 
      */
     @Export(name="currentSpend", type=CurrentSpendResponse.class, parameters={})
     private Output<CurrentSpendResponse> currentSpend;
 
     /**
      * @return The current amount of cost which is being tracked for a budget.
-     * 
      */
     public Output<CurrentSpendResponse> getCurrentSpend() {
         return this.currentSpend;
     }
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
      * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     * 
      */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
     /**
      * May be used to filter budgets by user-specified dimensions and/or tags.
-     * 
      */
     @Export(name="filter", type=BudgetFilterResponse.class, parameters={})
     private Output</* @Nullable */ BudgetFilterResponse> filter;
 
     /**
      * @return May be used to filter budgets by user-specified dimensions and/or tags.
-     * 
      */
     public Output</* @Nullable */ BudgetFilterResponse> getFilter() {
         return this.filter;
     }
     /**
      * The forecasted cost which is being tracked for a budget.
-     * 
      */
     @Export(name="forecastSpend", type=ForecastSpendResponse.class, parameters={})
     private Output<ForecastSpendResponse> forecastSpend;
 
     /**
      * @return The forecasted cost which is being tracked for a budget.
-     * 
      */
     public Output<ForecastSpendResponse> getForecastSpend() {
         return this.forecastSpend;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Dictionary of notifications associated with the budget. Budget can have up to five notifications.
-     * 
      */
     @Export(name="notifications", type=Map.class, parameters={String.class, NotificationResponse.class})
     private Output</* @Nullable */ Map<String,NotificationResponse>> notifications;
 
     /**
      * @return Dictionary of notifications associated with the budget. Budget can have up to five notifications.
-     * 
      */
     public Output</* @Nullable */ Map<String,NotificationResponse>> getNotifications() {
         return this.notifications;
     }
     /**
      * The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
-     * 
      */
     @Export(name="timeGrain", type=String.class, parameters={})
     private Output<String> timeGrain;
 
     /**
      * @return The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
-     * 
      */
     public Output<String> getTimeGrain() {
         return this.timeGrain;
     }
     /**
      * Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
-     * 
      */
     @Export(name="timePeriod", type=BudgetTimePeriodResponse.class, parameters={})
     private Output<BudgetTimePeriodResponse> timePeriod;
 
     /**
      * @return Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
-     * 
      */
     public Output<BudgetTimePeriodResponse> getTimePeriod() {
         return this.timePeriod;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

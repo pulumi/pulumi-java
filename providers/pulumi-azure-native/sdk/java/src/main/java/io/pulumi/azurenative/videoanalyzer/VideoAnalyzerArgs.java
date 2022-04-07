@@ -21,7 +21,6 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Video Analyzer account name.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -32,7 +31,6 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The account encryption properties.
-     * 
      */
     @Import(name="encryption", required=true)
       private final Output<AccountEncryptionArgs> encryption;
@@ -43,7 +41,6 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The set of managed identities associated with the Video Analyzer resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<VideoAnalyzerIdentityArgs> identity;
@@ -54,7 +51,6 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -65,7 +61,6 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The storage accounts for this resource.
-     * 
      */
     @Import(name="storageAccounts", required=true)
       private final Output<List<StorageAccountArgs>> storageAccounts;
@@ -87,7 +81,6 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

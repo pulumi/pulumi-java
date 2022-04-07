@@ -14,7 +14,6 @@ public final class GetVirtualHubArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name of the VirtualHub.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetVirtualHubArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the VirtualHub.
-     * 
      */
     @Import(name="virtualHubName", required=true)
       private final String virtualHubName;

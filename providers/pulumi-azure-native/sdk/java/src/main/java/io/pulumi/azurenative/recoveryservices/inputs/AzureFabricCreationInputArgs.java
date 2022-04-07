@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Fabric provider specific settings.
- * 
  */
 public final class AzureFabricCreationInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
     /**
      * Gets the class type.
      * Expected value is 'Azure'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -32,7 +30,6 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The Location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;

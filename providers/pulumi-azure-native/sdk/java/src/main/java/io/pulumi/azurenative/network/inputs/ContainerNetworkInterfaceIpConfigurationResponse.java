@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The ip configuration for a container network interface.
- * 
  */
 public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -31,7 +29,6 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
 
     /**
      * The name of the resource. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -42,7 +39,6 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
 
     /**
      * The provisioning state of the container network interface IP configuration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -53,7 +49,6 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse extends io.p
 
     /**
      * Sub Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

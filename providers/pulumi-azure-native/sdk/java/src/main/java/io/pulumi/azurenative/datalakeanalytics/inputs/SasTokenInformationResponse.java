@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * SAS token information.
- * 
  */
 public final class SasTokenInformationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SasTokenInformationResponse extends io.pulumi.resources.Invok
 
     /**
      * The access token for the associated Azure Storage Container.
-     * 
      */
     @Import(name="accessToken", required=true)
       private final String accessToken;

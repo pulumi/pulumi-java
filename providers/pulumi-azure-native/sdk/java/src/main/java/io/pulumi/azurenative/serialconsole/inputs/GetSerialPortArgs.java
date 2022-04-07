@@ -14,7 +14,6 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.
-     * 
      */
     @Import(name="parentResource", required=true)
       private final String parentResource;
@@ -25,7 +24,6 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'
-     * 
      */
     @Import(name="parentResourceType", required=true)
       private final String parentResourceType;
@@ -36,7 +34,6 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The namespace of the resource provider.
-     * 
      */
     @Import(name="resourceProviderNamespace", required=true)
       private final String resourceProviderNamespace;
@@ -58,7 +54,6 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the serial port to connect to.
-     * 
      */
     @Import(name="serialPort", required=true)
       private final String serialPort;

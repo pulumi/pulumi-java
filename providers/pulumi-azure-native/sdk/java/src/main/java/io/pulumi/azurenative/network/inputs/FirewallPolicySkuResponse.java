@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of Firewall policy.
- * 
  */
 public final class FirewallPolicySkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class FirewallPolicySkuResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Tier of Firewall Policy.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

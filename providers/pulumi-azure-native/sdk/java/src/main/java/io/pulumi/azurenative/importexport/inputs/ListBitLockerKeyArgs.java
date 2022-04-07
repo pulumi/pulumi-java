@@ -14,7 +14,6 @@ public final class ListBitLockerKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the import/export job.
-     * 
      */
     @Import(name="jobName", required=true)
       private final String jobName;
@@ -25,7 +24,6 @@ public final class ListBitLockerKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The resource group name uniquely identifies the resource group within the user subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

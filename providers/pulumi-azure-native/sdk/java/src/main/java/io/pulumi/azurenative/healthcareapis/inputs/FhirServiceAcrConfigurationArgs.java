@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure container registry configuration information
- * 
  */
 public final class FhirServiceAcrConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class FhirServiceAcrConfigurationArgs extends io.pulumi.resources.R
 
     /**
      * The list of the Azure container registry login servers.
-     * 
      */
     @Import(name="loginServers")
       private final @Nullable Output<List<String>> loginServers;

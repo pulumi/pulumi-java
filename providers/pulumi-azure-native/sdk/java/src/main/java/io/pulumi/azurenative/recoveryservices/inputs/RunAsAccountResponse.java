@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * CS Accounts Details.
- * 
  */
 public final class RunAsAccountResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RunAsAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The CS RunAs account Id.
-     * 
      */
     @Import(name="accountId")
       private final @Nullable String accountId;
@@ -31,7 +29,6 @@ public final class RunAsAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The CS RunAs account name.
-     * 
      */
     @Import(name="accountName")
       private final @Nullable String accountName;

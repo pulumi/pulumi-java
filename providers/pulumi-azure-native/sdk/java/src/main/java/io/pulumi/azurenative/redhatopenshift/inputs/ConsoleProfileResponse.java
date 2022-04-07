@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ConsoleProfile represents a console profile.
- * 
  */
 public final class ConsoleProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConsoleProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The URL to access the cluster console (immutable).
-     * 
      */
     @Import(name="url")
       private final @Nullable String url;

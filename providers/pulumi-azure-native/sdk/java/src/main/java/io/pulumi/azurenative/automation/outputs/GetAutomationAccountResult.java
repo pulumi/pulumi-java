@@ -21,97 +21,78 @@ import javax.annotation.Nullable;
 public final class GetAutomationAccountResult {
     /**
      * URL of automation hybrid service which is used for hybrid worker on-boarding.
-     * 
      */
     private final @Nullable String automationHybridServiceUrl;
     /**
      * Gets the creation time.
-     * 
      */
     private final String creationTime;
     /**
      * Gets or sets the description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Indicates whether requests using non-AAD authentication are blocked
-     * 
      */
     private final @Nullable Boolean disableLocalAuth;
     /**
      * Encryption properties for the automation account
-     * 
      */
     private final @Nullable EncryptionPropertiesResponse encryption;
     /**
      * Gets or sets the etag of the resource.
-     * 
      */
     private final @Nullable String etag;
     /**
      * Fully qualified resource Id for the resource
-     * 
      */
     private final String id;
     /**
      * Identity for the resource.
-     * 
      */
     private final @Nullable IdentityResponse identity;
     /**
      * Gets or sets the last modified by.
-     * 
      */
     private final @Nullable String lastModifiedBy;
     /**
      * Gets the last modified time.
-     * 
      */
     private final String lastModifiedTime;
     /**
      * The Azure Region where the resource lives
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * List of Automation operations supported by the Automation resource provider.
-     * 
      */
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
      * Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
-     * 
      */
     private final @Nullable Boolean publicNetworkAccess;
     /**
      * Gets or sets the SKU of account.
-     * 
      */
     private final @Nullable SkuResponse sku;
     /**
      * Gets status of account.
-     * 
      */
     private final String state;
     /**
      * Resource system metadata.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The type of the resource.
-     * 
      */
     private final String type;
 
@@ -159,133 +140,114 @@ public final class GetAutomationAccountResult {
 
     /**
      * URL of automation hybrid service which is used for hybrid worker on-boarding.
-     * 
     */
     public Optional<String> getAutomationHybridServiceUrl() {
         return Optional.ofNullable(this.automationHybridServiceUrl);
     }
     /**
      * Gets the creation time.
-     * 
     */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Indicates whether requests using non-AAD authentication are blocked
-     * 
     */
     public Optional<Boolean> getDisableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
     /**
      * Encryption properties for the automation account
-     * 
     */
     public Optional<EncryptionPropertiesResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Gets or sets the etag of the resource.
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Identity for the resource.
-     * 
     */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Gets or sets the last modified by.
-     * 
     */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * Gets the last modified time.
-     * 
     */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The Azure Region where the resource lives
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * List of Automation operations supported by the Automation resource provider.
-     * 
     */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
      * Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
-     * 
     */
     public Optional<Boolean> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Gets or sets the SKU of account.
-     * 
     */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Gets status of account.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Resource system metadata.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
-     * 
     */
     public String getType() {
         return this.type;

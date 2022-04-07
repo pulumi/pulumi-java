@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure ML Batch Execution activity.
- * 
  */
 public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -39,7 +37,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -50,7 +47,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
 
     /**
      * Key,Value pairs to be passed to the Azure ML Batch Execution Service endpoint. Keys must match the names of web service parameters defined in the published Azure ML web service. Values will be passed in the GlobalParameters property of the Azure ML batch execution request.
-     * 
      */
     @Import(name="globalParameters")
       private final @Nullable Map<String,Object> globalParameters;
@@ -61,7 +57,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -72,7 +67,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -83,7 +77,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -95,7 +88,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
     /**
      * Type of activity.
      * Expected value is 'AzureMLBatchExecution'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -106,7 +98,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
@@ -117,7 +108,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
 
     /**
      * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
-     * 
      */
     @Import(name="webServiceInputs")
       private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs;
@@ -128,7 +118,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
 
     /**
      * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
-     * 
      */
     @Import(name="webServiceOutputs")
       private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;

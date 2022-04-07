@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * AKS properties
- * 
  */
 public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Number of agents
-     * 
      */
     @Import(name="agentCount")
       private final @Nullable Integer agentCount;
@@ -36,7 +34,6 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Agent virtual machine size
-     * 
      */
     @Import(name="agentVmSize")
       private final @Nullable String agentVmSize;
@@ -47,7 +44,6 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
 
     /**
      * AKS networking configuration for vnet
-     * 
      */
     @Import(name="aksNetworkingConfiguration")
       private final @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration;
@@ -58,7 +54,6 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Cluster full qualified domain name
-     * 
      */
     @Import(name="clusterFqdn")
       private final @Nullable String clusterFqdn;
@@ -69,7 +64,6 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Intended usage of the cluster
-     * 
      */
     @Import(name="clusterPurpose")
       private final @Nullable String clusterPurpose;
@@ -80,7 +74,6 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
 
     /**
      * SSL configuration
-     * 
      */
     @Import(name="sslConfiguration")
       private final @Nullable SslConfigurationResponse sslConfiguration;
@@ -91,7 +84,6 @@ public final class AKSResponseProperties extends io.pulumi.resources.InvokeArgs 
 
     /**
      * System services
-     * 
      */
     @Import(name="systemServices", required=true)
       private final List<SystemServiceResponse> systemServices;

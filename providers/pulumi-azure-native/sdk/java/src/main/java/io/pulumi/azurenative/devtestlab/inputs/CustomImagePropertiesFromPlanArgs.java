@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for plan on a custom image.
- * 
  */
 public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
 
     /**
      * The id of the plan, equivalent to name of the plan
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -31,7 +29,6 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
 
     /**
      * The offer for the plan from the marketplace image the custom image is derived from
-     * 
      */
     @Import(name="offer")
       private final @Nullable Output<String> offer;
@@ -42,7 +39,6 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
 
     /**
      * The publisher for the plan from the marketplace image the custom image is derived from
-     * 
      */
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;

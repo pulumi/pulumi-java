@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The Private Endpoint Connection resource.
- * 
  */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * private endpoint connection Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -31,7 +29,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * private endpoint connection name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -42,7 +39,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The resource of private end point.
-     * 
      */
     @Import(name="privateEndpoint", required=true)
       private final PrivateEndpointResponse privateEndpoint;
@@ -53,7 +49,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * A collection of information about the state of the connection between DiskAccess and Virtual Network.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
@@ -64,7 +59,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -75,7 +69,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * private endpoint connection type
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

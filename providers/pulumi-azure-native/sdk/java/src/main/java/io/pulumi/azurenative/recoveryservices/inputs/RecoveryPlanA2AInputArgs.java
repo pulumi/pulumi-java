@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Recovery plan A2A input.
- * 
  */
 public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
     /**
      * Gets the Instance type.
      * Expected value is 'A2A'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -32,7 +30,6 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
 
     /**
      * The primary zone.
-     * 
      */
     @Import(name="primaryZone")
       private final @Nullable Output<String> primaryZone;
@@ -43,7 +40,6 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
 
     /**
      * The recovery zone.
-     * 
      */
     @Import(name="recoveryZone")
       private final @Nullable Output<String> recoveryZone;

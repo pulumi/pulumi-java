@@ -18,7 +18,6 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the database for which setting the transparent data encryption applies.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
@@ -29,7 +28,6 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -40,7 +38,6 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
@@ -51,7 +48,6 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
 
     /**
      * The status of the database transparent data encryption.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
@@ -62,7 +58,6 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the transparent data encryption configuration.
-     * 
      */
     @Import(name="transparentDataEncryptionName")
       private final @Nullable Output<String> transparentDataEncryptionName;

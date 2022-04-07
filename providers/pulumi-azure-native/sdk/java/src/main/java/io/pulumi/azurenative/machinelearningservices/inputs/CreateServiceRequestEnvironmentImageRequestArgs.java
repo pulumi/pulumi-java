@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Environment, models and assets needed for inferencing.
- * 
  */
 public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
 
     /**
      * The list of assets.
-     * 
      */
     @Import(name="assets")
       private final @Nullable Output<List<ImageAssetArgs>> assets;
@@ -36,7 +34,6 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
 
     /**
      * The name of the driver file.
-     * 
      */
     @Import(name="driverProgram")
       private final @Nullable Output<String> driverProgram;
@@ -47,7 +44,6 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
 
     /**
      * The details of the AZURE ML environment.
-     * 
      */
     @Import(name="environment")
       private final @Nullable Output<EnvironmentImageRequestEnvironmentArgs> environment;
@@ -58,7 +54,6 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
 
     /**
      * The unique identifying details of the AZURE ML environment.
-     * 
      */
     @Import(name="environmentReference")
       private final @Nullable Output<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference;
@@ -69,7 +64,6 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
 
     /**
      * The list of model Ids.
-     * 
      */
     @Import(name="modelIds")
       private final @Nullable Output<List<String>> modelIds;
@@ -80,7 +74,6 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
 
     /**
      * The list of models.
-     * 
      */
     @Import(name="models")
       private final @Nullable Output<List<ModelArgs>> models;

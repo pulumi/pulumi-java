@@ -19,7 +19,79 @@ import javax.annotation.Nullable;
  * The DataManager resource.
  * API Version: 2019-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DataManagers_CreatePUT41
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataManager = new AzureNative.HybridData.DataManager("dataManager", new AzureNative.HybridData.DataManagerArgs
+ *         {
+ *             DataManagerName = "TestAzureSDKOperations",
+ *             Location = "westus",
+ *             ResourceGroupName = "ResourceGroupForSDKTest",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hybriddata "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybriddata"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hybriddata.NewDataManager(ctx, "dataManager", &hybriddata.DataManagerArgs{
+ * 			DataManagerName:   pulumi.String("TestAzureSDKOperations"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("ResourceGroupForSDKTest"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataManager = new azure_native.hybriddata.DataManager("dataManager", {
+ *     dataManagerName: "TestAzureSDKOperations",
+ *     location: "westus",
+ *     resourceGroupName: "ResourceGroupForSDKTest",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_manager = azure_native.hybriddata.DataManager("dataManager",
+ *     data_manager_name="TestAzureSDKOperations",
+ *     location="westus",
+ *     resource_group_name="ResourceGroupForSDKTest")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +106,12 @@ import javax.annotation.Nullable;
 public class DataManager extends io.pulumi.resources.CustomResource {
     /**
      * Etag of the Resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the Resource.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
@@ -50,7 +120,6 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
      * US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
      * region is specified on update the request will succeed.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
@@ -59,35 +128,30 @@ public class DataManager extends io.pulumi.resources.CustomResource {
      * @return The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
      * US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
      * region is specified on update the request will succeed.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The sku type.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The sku type.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
@@ -95,7 +159,6 @@ public class DataManager extends io.pulumi.resources.CustomResource {
     /**
      * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
      * (across resource groups).
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
@@ -103,21 +166,18 @@ public class DataManager extends io.pulumi.resources.CustomResource {
     /**
      * @return The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
      * (across resource groups).
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

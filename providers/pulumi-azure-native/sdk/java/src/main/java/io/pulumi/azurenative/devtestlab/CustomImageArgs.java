@@ -23,7 +23,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The author of the custom image.
-     * 
      */
     @Import(name="author")
       private final @Nullable Output<String> author;
@@ -34,7 +33,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage information about the plan related to this custom image
-     * 
      */
     @Import(name="customImagePlan")
       private final @Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan;
@@ -45,7 +43,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Storage information about the data disks present in the custom image
-     * 
      */
     @Import(name="dataDiskStorageInfo")
       private final @Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
@@ -56,7 +53,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The description of the custom image.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -67,7 +63,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
-     * 
      */
     @Import(name="isPlanAuthorized")
       private final @Nullable Output<Boolean> isPlanAuthorized;
@@ -78,7 +73,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -89,7 +83,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -100,7 +93,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Managed Image Id backing the custom image.
-     * 
      */
     @Import(name="managedImageId")
       private final @Nullable Output<String> managedImageId;
@@ -111,7 +103,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Managed Snapshot Id backing the custom image.
-     * 
      */
     @Import(name="managedSnapshotId")
       private final @Nullable Output<String> managedSnapshotId;
@@ -122,7 +113,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the custom image.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -133,7 +123,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -144,7 +133,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -155,7 +143,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The VHD from which the image is to be created.
-     * 
      */
     @Import(name="vhd")
       private final @Nullable Output<CustomImagePropertiesCustomArgs> vhd;
@@ -166,7 +153,6 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The virtual machine from which the image is to be created.
-     * 
      */
     @Import(name="vm")
       private final @Nullable Output<CustomImagePropertiesFromVmArgs> vm;

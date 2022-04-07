@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Signifies whether SSL needs to be enabled or not.
-     * 
      */
     @EnumType
     public enum SSLStatus {

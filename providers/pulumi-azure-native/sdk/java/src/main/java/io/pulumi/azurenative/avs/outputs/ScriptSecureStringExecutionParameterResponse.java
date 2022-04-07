@@ -13,18 +13,15 @@ import javax.annotation.Nullable;
 public final class ScriptSecureStringExecutionParameterResponse {
     /**
      * The parameter name
-     * 
      */
     private final String name;
     /**
      * A secure value for the passed parameter, not to be stored in logs
-     * 
      */
     private final @Nullable String secureValue;
     /**
      * The type of execution parameter
      * Expected value is 'SecureValue'.
-     * 
      */
     private final String type;
 
@@ -40,14 +37,12 @@ public final class ScriptSecureStringExecutionParameterResponse {
 
     /**
      * The parameter name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * A secure value for the passed parameter, not to be stored in logs
-     * 
     */
     public Optional<String> getSecureValue() {
         return Optional.ofNullable(this.secureValue);
@@ -55,7 +50,6 @@ public final class ScriptSecureStringExecutionParameterResponse {
     /**
      * The type of execution parameter
      * Expected value is 'SecureValue'.
-     * 
     */
     public String getType() {
         return this.type;

@@ -15,7 +15,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Count of databases
-     * 
      */
     @Import(name="databaseCount", required=true)
       private final Integer databaseCount;
@@ -26,7 +25,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -37,7 +35,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -49,7 +46,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     /**
      * Result type
      * Expected value is 'MigrationLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -60,7 +56,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Source server name
-     * 
      */
     @Import(name="sourceServer", required=true)
       private final String sourceServer;
@@ -71,7 +66,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Source server version
-     * 
      */
     @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
@@ -82,7 +76,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -93,7 +86,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Target server name
-     * 
      */
     @Import(name="targetServer", required=true)
       private final String targetServer;
@@ -104,7 +96,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Target server version
-     * 
      */
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;

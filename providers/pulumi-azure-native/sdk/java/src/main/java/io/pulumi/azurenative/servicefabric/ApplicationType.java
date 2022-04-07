@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * The application type name resource
  * API Version: 2020-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Put an application type
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var applicationType = new AzureNative.ServiceFabric.ApplicationType("applicationType", new AzureNative.ServiceFabric.ApplicationTypeArgs
+ *         {
+ *             ApplicationTypeName = "myAppType",
+ *             ClusterName = "myCluster",
+ *             ResourceGroupName = "resRg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicefabric.NewApplicationType(ctx, "applicationType", &servicefabric.ApplicationTypeArgs{
+ * 			ApplicationTypeName: pulumi.String("myAppType"),
+ * 			ClusterName:         pulumi.String("myCluster"),
+ * 			ResourceGroupName:   pulumi.String("resRg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const applicationType = new azure_native.servicefabric.ApplicationType("applicationType", {
+ *     applicationTypeName: "myAppType",
+ *     clusterName: "myCluster",
+ *     resourceGroupName: "resRg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * application_type = azure_native.servicefabric.ApplicationType("applicationType",
+ *     application_type_name="myAppType",
+ *     cluster_name="myCluster",
+ *     resource_group_name="resRg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +105,72 @@ import javax.annotation.Nullable;
 public class ApplicationType extends io.pulumi.resources.CustomResource {
     /**
      * Azure resource etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Azure resource etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * It will be deprecated in New API, resource location depends on the parent resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return It will be deprecated in New API, resource location depends on the parent resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current deployment or provisioning state, which only appears in the response.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The current deployment or provisioning state, which only appears in the response.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Azure resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Azure resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

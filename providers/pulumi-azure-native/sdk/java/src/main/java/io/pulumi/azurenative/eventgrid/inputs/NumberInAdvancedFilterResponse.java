@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * NumberIn Advanced Filter.
- * 
  */
 public final class NumberInAdvancedFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class NumberInAdvancedFilterResponse extends io.pulumi.resources.In
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     @Import(name="key")
       private final @Nullable String key;
@@ -34,7 +32,6 @@ public final class NumberInAdvancedFilterResponse extends io.pulumi.resources.In
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'NumberIn'.
-     * 
      */
     @Import(name="operatorType", required=true)
       private final String operatorType;
@@ -45,7 +42,6 @@ public final class NumberInAdvancedFilterResponse extends io.pulumi.resources.In
 
     /**
      * The set of filter values.
-     * 
      */
     @Import(name="values")
       private final @Nullable List<Double> values;

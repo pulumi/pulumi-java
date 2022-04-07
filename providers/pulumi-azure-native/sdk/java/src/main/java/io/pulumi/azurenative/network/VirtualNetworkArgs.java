@@ -26,7 +26,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The AddressSpace that contains an array of IP address ranges that can be used by subnets.
-     * 
      */
     @Import(name="addressSpace")
       private final @Nullable Output<AddressSpaceArgs> addressSpace;
@@ -37,7 +36,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
-     * 
      */
     @Import(name="bgpCommunities")
       private final @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
@@ -48,7 +46,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The DDoS protection plan associated with the virtual network.
-     * 
      */
     @Import(name="ddosProtectionPlan")
       private final @Nullable Output<SubResourceArgs> ddosProtectionPlan;
@@ -59,7 +56,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
-     * 
      */
     @Import(name="dhcpOptions")
       private final @Nullable Output<DhcpOptionsArgs> dhcpOptions;
@@ -70,7 +66,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
-     * 
      */
     @Import(name="enableDdosProtection")
       private final @Nullable Output<Boolean> enableDdosProtection;
@@ -81,7 +76,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates if VM protection is enabled for all the subnets in the virtual network.
-     * 
      */
     @Import(name="enableVmProtection")
       private final @Nullable Output<Boolean> enableVmProtection;
@@ -92,7 +86,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The extended location of the virtual network.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -103,7 +96,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -114,7 +106,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Array of IpAllocation which reference this VNET.
-     * 
      */
     @Import(name="ipAllocations")
       private final @Nullable Output<List<SubResourceArgs>> ipAllocations;
@@ -125,7 +116,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -136,7 +126,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -147,7 +136,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of subnets in a Virtual Network.
-     * 
      */
     @Import(name="subnets")
       private final @Nullable Output<List<SubnetArgs>> subnets;
@@ -158,7 +146,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -169,7 +156,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the virtual network.
-     * 
      */
     @Import(name="virtualNetworkName")
       private final @Nullable Output<String> virtualNetworkName;
@@ -180,7 +166,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of peerings in a Virtual Network.
-     * 
      */
     @Import(name="virtualNetworkPeerings")
       private final @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;

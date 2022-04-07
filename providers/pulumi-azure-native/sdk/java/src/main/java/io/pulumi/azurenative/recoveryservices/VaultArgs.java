@@ -20,7 +20,6 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity for the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityDataArgs> identity;
@@ -31,7 +30,6 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -42,7 +40,6 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the vault.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<VaultPropertiesArgs> properties;
@@ -53,7 +50,6 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -64,7 +60,6 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifies the unique system identifier for each Azure resource.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -75,7 +70,6 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -86,7 +80,6 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="vaultName")
       private final @Nullable Output<String> vaultName;

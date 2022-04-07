@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Target platform for the project
-     * 
      */
     @EnumType
     public enum ProjectTargetPlatform {

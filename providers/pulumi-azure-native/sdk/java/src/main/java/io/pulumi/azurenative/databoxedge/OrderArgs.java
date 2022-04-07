@@ -20,7 +20,6 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The contact details.
-     * 
      */
     @Import(name="contactInformation", required=true)
       private final Output<ContactDetailsArgs> contactInformation;
@@ -31,7 +30,6 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The order details of a device.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -42,7 +40,6 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -53,7 +50,6 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ShipmentType of the order
-     * 
      */
     @Import(name="shipmentType")
       private final @Nullable Output<Either<String,ShipmentType>> shipmentType;
@@ -64,7 +60,6 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The shipping address.
-     * 
      */
     @Import(name="shippingAddress")
       private final @Nullable Output<AddressArgs> shippingAddress;

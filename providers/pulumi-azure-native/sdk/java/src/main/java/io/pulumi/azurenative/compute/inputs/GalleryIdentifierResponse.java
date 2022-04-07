@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Describes the gallery unique name.
- * 
  */
 public final class GalleryIdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class GalleryIdentifierResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
-     * 
      */
     @Import(name="uniqueName", required=true)
       private final String uniqueName;

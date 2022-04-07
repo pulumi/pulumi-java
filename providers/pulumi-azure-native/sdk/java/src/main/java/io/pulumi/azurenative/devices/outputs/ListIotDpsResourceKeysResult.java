@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ListIotDpsResourceKeysResult {
     /**
      * The next link.
-     * 
      */
     private final String nextLink;
     /**
      * The list of shared access policies.
-     * 
      */
     private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value;
 
@@ -33,14 +31,12 @@ public final class ListIotDpsResourceKeysResult {
 
     /**
      * The next link.
-     * 
     */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * The list of shared access policies.
-     * 
     */
     public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> getValue() {
         return this.value == null ? List.of() : this.value;

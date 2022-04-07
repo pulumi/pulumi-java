@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Migration phase of Network Interface resource.
-     * 
      */
     @EnumType
     public enum NetworkInterfaceMigrationPhase {

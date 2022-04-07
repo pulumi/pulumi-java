@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Copy log details for a storage account of a DataBox job
- * 
  */
 public final class DataBoxAccountCopyLogDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class DataBoxAccountCopyLogDetailsResponse extends io.pulumi.resour
 
     /**
      * Account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -30,7 +28,6 @@ public final class DataBoxAccountCopyLogDetailsResponse extends io.pulumi.resour
     /**
      * Indicates the type of job details.
      * Expected value is 'DataBox'.
-     * 
      */
     @Import(name="copyLogDetailsType", required=true)
       private final String copyLogDetailsType;
@@ -41,7 +38,6 @@ public final class DataBoxAccountCopyLogDetailsResponse extends io.pulumi.resour
 
     /**
      * Link for copy logs.
-     * 
      */
     @Import(name="copyLogLink", required=true)
       private final String copyLogLink;
@@ -52,7 +48,6 @@ public final class DataBoxAccountCopyLogDetailsResponse extends io.pulumi.resour
 
     /**
      * Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
-     * 
      */
     @Import(name="copyVerboseLogLink", required=true)
       private final String copyVerboseLogLink;

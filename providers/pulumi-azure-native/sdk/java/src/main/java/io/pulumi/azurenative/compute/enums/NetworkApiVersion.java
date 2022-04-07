@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
-     * 
      */
     @EnumType
     public enum NetworkApiVersion {

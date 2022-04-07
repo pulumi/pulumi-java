@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
-     * 
      */
     @EnumType
     public enum CleanupOptions {

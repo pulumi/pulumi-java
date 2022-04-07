@@ -13,27 +13,22 @@ import javax.annotation.Nullable;
 public final class IdentifierResponse {
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Kind of resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource Name.
-     * 
      */
     private final String name;
     /**
      * Resource type.
-     * 
      */
     private final String type;
     /**
      * String representation of the identity.
-     * 
      */
     private final @Nullable String value;
 
@@ -53,35 +48,30 @@ public final class IdentifierResponse {
 
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * String representation of the identity.
-     * 
     */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class AzureFirewallNatRCActionResponse {
     /**
      * The type of action.
-     * 
      */
     private final @Nullable String type;
 
@@ -24,7 +23,6 @@ public final class AzureFirewallNatRCActionResponse {
 
     /**
      * The type of action.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

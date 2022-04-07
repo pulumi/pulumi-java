@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The storage Account.
- * 
  */
 public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The container in the storage account, only to be specified for WASB storage accounts.
-     * 
      */
     @Import(name="container")
       private final @Nullable String container;
@@ -32,7 +30,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
-     * 
      */
     @Import(name="fileSystem")
       private final @Nullable String fileSystem;
@@ -43,7 +40,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The file share name.
-     * 
      */
     @Import(name="fileshare")
       private final @Nullable String fileshare;
@@ -54,7 +50,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Whether or not the storage account is the default storage account.
-     * 
      */
     @Import(name="isDefault")
       private final @Nullable Boolean isDefault;
@@ -65,7 +60,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The storage account access key.
-     * 
      */
     @Import(name="key")
       private final @Nullable String key;
@@ -76,7 +70,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
-     * 
      */
     @Import(name="msiResourceId")
       private final @Nullable String msiResourceId;
@@ -87,7 +80,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the storage account.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -98,7 +90,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;
@@ -109,7 +100,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The shared access signature key.
-     * 
      */
     @Import(name="saskey")
       private final @Nullable String saskey;

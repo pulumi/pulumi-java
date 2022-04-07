@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The custom domain assigned to this storage account. This can be set via Update.
- * 
  */
 public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.
-     * 
      */
     @Import(name="useSubDomainName")
       private final @Nullable Output<Boolean> useSubDomainName;

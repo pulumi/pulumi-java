@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a custom preset for encoding the input content using the encoder processor.
- * 
  */
 public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Describes a custom preset for encoding audio.
-     * 
      */
     @Import(name="audioEncoder")
       private final @Nullable Output<AudioEncoderAacArgs> audioEncoder;
@@ -34,7 +32,6 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderCustomPreset'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -45,7 +42,6 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Describes a custom preset for encoding video.
-     * 
      */
     @Import(name="videoEncoder")
       private final @Nullable Output<VideoEncoderH264Args> videoEncoder;

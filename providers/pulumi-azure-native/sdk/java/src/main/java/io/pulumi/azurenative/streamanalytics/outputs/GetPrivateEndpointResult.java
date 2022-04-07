@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class GetPrivateEndpointResult {
     /**
      * Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.
-     * 
      */
     private final String etag;
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * The properties associated with a private endpoint.
-     * 
      */
     private final PrivateEndpointPropertiesResponse properties;
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     private final String type;
 
@@ -52,35 +47,30 @@ public final class GetPrivateEndpointResult {
 
     /**
      * Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The properties associated with a private endpoint.
-     * 
     */
     public PrivateEndpointPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
     */
     public String getType() {
         return this.type;

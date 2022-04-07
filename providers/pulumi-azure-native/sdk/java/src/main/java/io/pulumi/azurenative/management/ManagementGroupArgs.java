@@ -17,7 +17,6 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The details of a management group used during creation.
-     * 
      */
     @Import(name="details")
       private final @Nullable Output<CreateManagementGroupDetailsArgs> details;
@@ -28,7 +27,6 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -39,7 +37,6 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Management Group ID.
-     * 
      */
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
@@ -50,7 +47,6 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

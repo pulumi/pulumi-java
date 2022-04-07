@@ -14,7 +14,6 @@ public final class ListIngestionSettingConnectionStringsArgs extends io.pulumi.r
 
     /**
      * Name of the ingestion setting
-     * 
      */
     @Import(name="ingestionSettingName", required=true)
       private final String ingestionSettingName;

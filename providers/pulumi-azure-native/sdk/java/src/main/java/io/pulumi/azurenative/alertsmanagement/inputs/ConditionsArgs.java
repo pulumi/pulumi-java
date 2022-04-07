@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Conditions in alert instance to be matched for a given action rule. Default value is all. Multiple values could be provided with comma separation.
- * 
  */
 public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * filter alerts by alert context (payload)
-     * 
      */
     @Import(name="alertContext")
       private final @Nullable Output<ConditionArgs> alertContext;
@@ -31,7 +29,6 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * filter alerts by alert rule id
-     * 
      */
     @Import(name="alertRuleId")
       private final @Nullable Output<ConditionArgs> alertRuleId;
@@ -42,7 +39,6 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * filter alerts by alert rule description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<ConditionArgs> description;
@@ -53,7 +49,6 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * filter alerts by monitor condition
-     * 
      */
     @Import(name="monitorCondition")
       private final @Nullable Output<ConditionArgs> monitorCondition;
@@ -64,7 +59,6 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * filter alerts by monitor service
-     * 
      */
     @Import(name="monitorService")
       private final @Nullable Output<ConditionArgs> monitorService;
@@ -75,7 +69,6 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * filter alerts by severity
-     * 
      */
     @Import(name="severity")
       private final @Nullable Output<ConditionArgs> severity;
@@ -86,7 +79,6 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * filter alerts by target resource type
-     * 
      */
     @Import(name="targetResourceType")
       private final @Nullable Output<ConditionArgs> targetResourceType;

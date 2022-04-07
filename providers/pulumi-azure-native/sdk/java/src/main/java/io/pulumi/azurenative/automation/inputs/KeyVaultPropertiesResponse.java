@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings concerning key vault encryption for a configuration store.
- * 
  */
 public final class KeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The name of key used to encrypt data.
-     * 
      */
     @Import(name="keyName")
       private final @Nullable String keyName;
@@ -31,7 +29,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The key version of the key used to encrypt data.
-     * 
      */
     @Import(name="keyVersion")
       private final @Nullable String keyVersion;
@@ -42,7 +39,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
 
     /**
      * The URI of the key vault key used to encrypt data.
-     * 
      */
     @Import(name="keyvaultUri")
       private final @Nullable String keyvaultUri;

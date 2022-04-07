@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol permitted for a request made with the account SAS.
-     * 
      */
     @EnumType
     public enum HttpProtocol {

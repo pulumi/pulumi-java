@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Visibility state of the partner registration.
-     * 
      */
     @EnumType
     public enum PartnerRegistrationVisibilityState {

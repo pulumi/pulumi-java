@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a column to sort
- * 
  */
 public final class OrderBy extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OrderBy extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes the actual column name to sort by
-     * 
      */
     @Import(name="field")
       private final @Nullable String field;
@@ -31,7 +29,6 @@ public final class OrderBy extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Describes if results should be in ascending/descending order
-     * 
      */
     @Import(name="order")
       private final @Nullable String order;

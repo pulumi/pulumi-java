@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional information on Backup engine specific backup item.
- * 
  */
 public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Backup Management server protecting this backup item
-     * 
      */
     @Import(name="backupEngineName")
       private final @Nullable Output<String> backupEngineName;
@@ -38,7 +36,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -49,7 +46,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the backup set the backup item belongs to
-     * 
      */
     @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
@@ -60,7 +56,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Unique name of container
-     * 
      */
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
@@ -71,7 +66,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
@@ -82,7 +76,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Time for deferred deletion in UTC
-     * 
      */
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
@@ -93,7 +86,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
-     * 
      */
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
@@ -104,7 +96,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Extended info of the backup item.
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable Output<DPMProtectedItemExtendedInfoArgs> extendedInfo;
@@ -115,7 +106,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Friendly name of the managed item
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -126,7 +116,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
-     * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
@@ -137,7 +126,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
-     * 
      */
     @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
@@ -148,7 +136,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
-     * 
      */
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
@@ -159,7 +146,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
-     * 
      */
     @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
@@ -170,7 +156,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -182,7 +167,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
     /**
      * backup item type.
      * Expected value is 'DPMProtectedItem'.
-     * 
      */
     @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
@@ -193,7 +177,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Protection state of the backup engine
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectedItemState>> protectionState;
@@ -204,7 +187,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
@@ -215,7 +197,6 @@ public final class DPMProtectedItemArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Type of workload this item represents.
-     * 
      */
     @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;

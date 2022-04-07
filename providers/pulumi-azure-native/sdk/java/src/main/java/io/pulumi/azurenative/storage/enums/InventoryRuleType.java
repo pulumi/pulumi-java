@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The valid value is Inventory
-     * 
      */
     @EnumType
     public enum InventoryRuleType {

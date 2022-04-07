@@ -14,7 +14,6 @@ public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resource
 
     /**
      * The name of the Managed Network.
-     * 
      */
     @Import(name="managedNetworkName", required=true)
       private final String managedNetworkName;
@@ -25,7 +24,6 @@ public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resource
 
     /**
      * The name of the Managed Network Peering Policy.
-     * 
      */
     @Import(name="managedNetworkPeeringPolicyName", required=true)
       private final String managedNetworkPeeringPolicyName;
@@ -36,7 +34,6 @@ public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resource
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

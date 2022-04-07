@@ -16,7 +16,6 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the Data Lake Store account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The URL of this trusted identity provider.
-     * 
      */
     @Import(name="idProvider", required=true)
       private final Output<String> idProvider;
@@ -38,7 +36,6 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the trusted identity provider. This is used for differentiation of providers in the account.
-     * 
      */
     @Import(name="trustedIdProviderName")
       private final @Nullable Output<String> trustedIdProviderName;

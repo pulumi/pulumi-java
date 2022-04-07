@@ -17,43 +17,35 @@ import javax.annotation.Nullable;
 public final class ModelEnvironmentDefinitionResponseResponseR {
     /**
      * The packages from Bioconductor.
-     * 
      */
     private final @Nullable List<String> bioConductorPackages;
     /**
      * The CRAN packages to use.
-     * 
      */
     private final @Nullable List<RCranPackageResponse> cranPackages;
     /**
      * The packages from custom urls.
-     * 
      */
     private final @Nullable List<String> customUrlPackages;
     /**
      * The packages directly from GitHub.
-     * 
      */
     private final @Nullable List<RGitHubPackageResponseResponse> gitHubPackages;
     /**
      * The version of R to be installed
-     * 
      */
     private final @Nullable String rVersion;
     /**
      * The Rscript path to use if an environment build is not required.
      * The path specified gets used to call the user script.
-     * 
      */
     private final @Nullable String rscriptPath;
     /**
      * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
-     * 
      */
     private final @Nullable String snapshotDate;
     /**
      * Indicates whether the environment is managed by user or by AzureML.
-     * 
      */
     private final @Nullable Boolean userManaged;
 
@@ -79,35 +71,30 @@ public final class ModelEnvironmentDefinitionResponseResponseR {
 
     /**
      * The packages from Bioconductor.
-     * 
     */
     public List<String> getBioConductorPackages() {
         return this.bioConductorPackages == null ? List.of() : this.bioConductorPackages;
     }
     /**
      * The CRAN packages to use.
-     * 
     */
     public List<RCranPackageResponse> getCranPackages() {
         return this.cranPackages == null ? List.of() : this.cranPackages;
     }
     /**
      * The packages from custom urls.
-     * 
     */
     public List<String> getCustomUrlPackages() {
         return this.customUrlPackages == null ? List.of() : this.customUrlPackages;
     }
     /**
      * The packages directly from GitHub.
-     * 
     */
     public List<RGitHubPackageResponseResponse> getGitHubPackages() {
         return this.gitHubPackages == null ? List.of() : this.gitHubPackages;
     }
     /**
      * The version of R to be installed
-     * 
     */
     public Optional<String> getRVersion() {
         return Optional.ofNullable(this.rVersion);
@@ -115,21 +102,18 @@ public final class ModelEnvironmentDefinitionResponseResponseR {
     /**
      * The Rscript path to use if an environment build is not required.
      * The path specified gets used to call the user script.
-     * 
     */
     public Optional<String> getRscriptPath() {
         return Optional.ofNullable(this.rscriptPath);
     }
     /**
      * Date of MRAN snapshot to use in YYYY-MM-DD format, e.g. "2019-04-17"
-     * 
     */
     public Optional<String> getSnapshotDate() {
         return Optional.ofNullable(this.snapshotDate);
     }
     /**
      * Indicates whether the environment is managed by user or by AzureML.
-     * 
     */
     public Optional<Boolean> getUserManaged() {
         return Optional.ofNullable(this.userManaged);

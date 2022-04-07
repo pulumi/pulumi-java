@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class HealthStateResponse {
     /**
      * Health state name
-     * 
      */
     private final String healthStateName;
     /**
      * Severity of alert fired
-     * 
      */
     private final Double severity;
 
@@ -31,14 +29,12 @@ public final class HealthStateResponse {
 
     /**
      * Health state name
-     * 
     */
     public String getHealthStateName() {
         return this.healthStateName;
     }
     /**
      * Severity of alert fired
-     * 
     */
     public Double getSeverity() {
         return this.severity;

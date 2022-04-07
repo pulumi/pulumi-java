@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network manager security group item.
- * 
  */
 public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
 
     /**
      * Network manager group Id.
-     * 
      */
     @Import(name="networkGroupId")
       private final @Nullable Output<String> networkGroupId;

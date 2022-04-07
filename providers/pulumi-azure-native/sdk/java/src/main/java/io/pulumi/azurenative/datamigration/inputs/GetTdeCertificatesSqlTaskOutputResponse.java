@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Output of the task that gets TDE certificates in Base64 encoded format.
- * 
  */
 public final class GetTdeCertificatesSqlTaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends io.pulumi.res
 
     /**
      * Mapping from certificate name to base 64 encoded format.
-     * 
      */
     @Import(name="base64EncodedCertificates", required=true)
       private final Map<String,List<String>> base64EncodedCertificates;
@@ -32,7 +30,6 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends io.pulumi.res
 
     /**
      * Validation errors
-     * 
      */
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;

@@ -25,7 +25,543 @@ import javax.annotation.Nullable;
  * The security automation resource.
  * API Version: 2019-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a security automation for all assessments (including all severities)
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var automation = new AzureNative.Security.Automation("automation", new AzureNative.Security.AutomationArgs
+ *         {
+ *             Actions = 
+ *             {
+ *                 new AzureNative.Security.Inputs.AutomationActionLogicAppArgs
+ *                 {
+ *                     ActionType = "LogicApp",
+ *                     LogicAppResourceId = "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ *                     Uri = "https://exampleTriggerUri1.com",
+ *                 },
+ *             },
+ *             AutomationName = "exampleAutomation",
+ *             Description = "An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment",
+ *             IsEnabled = true,
+ *             Location = "Central US",
+ *             ResourceGroupName = "exampleResourceGroup",
+ *             Scopes = 
+ *             {
+ *                 new AzureNative.Security.Inputs.AutomationScopeArgs
+ *                 {
+ *                     Description = "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+ *                     ScopePath = "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+ *                 },
+ *             },
+ *             Sources = 
+ *             {
+ *                 new AzureNative.Security.Inputs.AutomationSourceArgs
+ *                 {
+ *                     EventSource = "Assessments",
+ *                 },
+ *             },
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewAutomation(ctx, "automation", &security.AutomationArgs{
+ * 			Actions: pulumi.AnyArray{
+ * 				security.AutomationActionLogicApp{
+ * 					ActionType:         "LogicApp",
+ * 					LogicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ * 					Uri:                "https://exampleTriggerUri1.com",
+ * 				},
+ * 			},
+ * 			AutomationName:    pulumi.String("exampleAutomation"),
+ * 			Description:       pulumi.String("An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment"),
+ * 			IsEnabled:         pulumi.Bool(true),
+ * 			Location:          pulumi.String("Central US"),
+ * 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+ * 			Scopes: []security.AutomationScopeArgs{
+ * 				&security.AutomationScopeArgs{
+ * 					Description: pulumi.String("A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5"),
+ * 					ScopePath:   pulumi.String("/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup"),
+ * 				},
+ * 			},
+ * 			Sources: []security.AutomationSourceArgs{
+ * 				&security.AutomationSourceArgs{
+ * 					EventSource: pulumi.String("Assessments"),
+ * 				},
+ * 			},
+ * 			Tags: nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const automation = new azure_native.security.Automation("automation", {
+ *     actions: [{
+ *         actionType: "LogicApp",
+ *         logicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ *         uri: "https://exampleTriggerUri1.com",
+ *     }],
+ *     automationName: "exampleAutomation",
+ *     description: "An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment",
+ *     isEnabled: true,
+ *     location: "Central US",
+ *     resourceGroupName: "exampleResourceGroup",
+ *     scopes: [{
+ *         description: "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+ *         scopePath: "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+ *     }],
+ *     sources: [{
+ *         eventSource: "Assessments",
+ *     }],
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * automation = azure_native.security.Automation("automation",
+ *     actions=[azure_native.security.AutomationActionLogicAppArgs(
+ *         action_type="LogicApp",
+ *         logic_app_resource_id="/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ *         uri="https://exampleTriggerUri1.com",
+ *     )],
+ *     automation_name="exampleAutomation",
+ *     description="An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment",
+ *     is_enabled=True,
+ *     location="Central US",
+ *     resource_group_name="exampleResourceGroup",
+ *     scopes=[azure_native.security.AutomationScopeArgs(
+ *         description="A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+ *         scope_path="/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+ *     )],
+ *     sources=[azure_native.security.AutomationSourceArgs(
+ *         event_source="Assessments",
+ *     )],
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create or update a security automation for all high severity assessments
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var automation = new AzureNative.Security.Automation("automation", new AzureNative.Security.AutomationArgs
+ *         {
+ *             Actions = 
+ *             {
+ *                 new AzureNative.Security.Inputs.AutomationActionLogicAppArgs
+ *                 {
+ *                     ActionType = "LogicApp",
+ *                     LogicAppResourceId = "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ *                     Uri = "https://exampleTriggerUri1.com",
+ *                 },
+ *             },
+ *             AutomationName = "exampleAutomation",
+ *             Description = "An example of a security automation that triggers one LogicApp resource (myTest1) on any high severity security assessment",
+ *             IsEnabled = true,
+ *             Location = "Central US",
+ *             ResourceGroupName = "exampleResourceGroup",
+ *             Scopes = 
+ *             {
+ *                 new AzureNative.Security.Inputs.AutomationScopeArgs
+ *                 {
+ *                     Description = "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+ *                     ScopePath = "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+ *                 },
+ *             },
+ *             Sources = 
+ *             {
+ *                 new AzureNative.Security.Inputs.AutomationSourceArgs
+ *                 {
+ *                     EventSource = "Assessments",
+ *                     RuleSets = 
+ *                     {
+ *                         new AzureNative.Security.Inputs.AutomationRuleSetArgs
+ *                         {
+ *                             Rules = 
+ *                             {
+ *                                 new AzureNative.Security.Inputs.AutomationTriggeringRuleArgs
+ *                                 {
+ *                                     ExpectedValue = "High",
+ *                                     Operator = "Equals",
+ *                                     PropertyJPath = "properties.metadata.severity",
+ *                                     PropertyType = "String",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewAutomation(ctx, "automation", &security.AutomationArgs{
+ * 			Actions: pulumi.AnyArray{
+ * 				security.AutomationActionLogicApp{
+ * 					ActionType:         "LogicApp",
+ * 					LogicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ * 					Uri:                "https://exampleTriggerUri1.com",
+ * 				},
+ * 			},
+ * 			AutomationName:    pulumi.String("exampleAutomation"),
+ * 			Description:       pulumi.String("An example of a security automation that triggers one LogicApp resource (myTest1) on any high severity security assessment"),
+ * 			IsEnabled:         pulumi.Bool(true),
+ * 			Location:          pulumi.String("Central US"),
+ * 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+ * 			Scopes: []security.AutomationScopeArgs{
+ * 				&security.AutomationScopeArgs{
+ * 					Description: pulumi.String("A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5"),
+ * 					ScopePath:   pulumi.String("/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup"),
+ * 				},
+ * 			},
+ * 			Sources: []security.AutomationSourceArgs{
+ * 				&security.AutomationSourceArgs{
+ * 					EventSource: pulumi.String("Assessments"),
+ * 					RuleSets: security.AutomationRuleSetArray{
+ * 						&security.AutomationRuleSetArgs{
+ * 							Rules: security.AutomationTriggeringRuleArray{
+ * 								&security.AutomationTriggeringRuleArgs{
+ * 									ExpectedValue: pulumi.String("High"),
+ * 									Operator:      pulumi.String("Equals"),
+ * 									PropertyJPath: pulumi.String("properties.metadata.severity"),
+ * 									PropertyType:  pulumi.String("String"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const automation = new azure_native.security.Automation("automation", {
+ *     actions: [{
+ *         actionType: "LogicApp",
+ *         logicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ *         uri: "https://exampleTriggerUri1.com",
+ *     }],
+ *     automationName: "exampleAutomation",
+ *     description: "An example of a security automation that triggers one LogicApp resource (myTest1) on any high severity security assessment",
+ *     isEnabled: true,
+ *     location: "Central US",
+ *     resourceGroupName: "exampleResourceGroup",
+ *     scopes: [{
+ *         description: "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+ *         scopePath: "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+ *     }],
+ *     sources: [{
+ *         eventSource: "Assessments",
+ *         ruleSets: [{
+ *             rules: [{
+ *                 expectedValue: "High",
+ *                 operator: "Equals",
+ *                 propertyJPath: "properties.metadata.severity",
+ *                 propertyType: "String",
+ *             }],
+ *         }],
+ *     }],
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * automation = azure_native.security.Automation("automation",
+ *     actions=[azure_native.security.AutomationActionLogicAppArgs(
+ *         action_type="LogicApp",
+ *         logic_app_resource_id="/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ *         uri="https://exampleTriggerUri1.com",
+ *     )],
+ *     automation_name="exampleAutomation",
+ *     description="An example of a security automation that triggers one LogicApp resource (myTest1) on any high severity security assessment",
+ *     is_enabled=True,
+ *     location="Central US",
+ *     resource_group_name="exampleResourceGroup",
+ *     scopes=[azure_native.security.AutomationScopeArgs(
+ *         description="A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+ *         scope_path="/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+ *     )],
+ *     sources=[azure_native.security.AutomationSourceArgs(
+ *         event_source="Assessments",
+ *         rule_sets=[azure_native.security.AutomationRuleSetArgs(
+ *             rules=[azure_native.security.AutomationTriggeringRuleArgs(
+ *                 expected_value="High",
+ *                 operator="Equals",
+ *                 property_j_path="properties.metadata.severity",
+ *                 property_type="String",
+ *             )],
+ *         )],
+ *     )],
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Disable or enable a security automation
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var automation = new AzureNative.Security.Automation("automation", new AzureNative.Security.AutomationArgs
+ *         {
+ *             Actions = 
+ *             {
+ *                 new AzureNative.Security.Inputs.AutomationActionLogicAppArgs
+ *                 {
+ *                     ActionType = "LogicApp",
+ *                     LogicAppResourceId = "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ *                     Uri = "https://exampleTriggerUri1.com",
+ *                 },
+ *             },
+ *             AutomationName = "exampleAutomation",
+ *             Description = "An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment of type customAssessment",
+ *             IsEnabled = false,
+ *             Location = "Central US",
+ *             ResourceGroupName = "exampleResourceGroup",
+ *             Scopes = 
+ *             {
+ *                 new AzureNative.Security.Inputs.AutomationScopeArgs
+ *                 {
+ *                     Description = "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+ *                     ScopePath = "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+ *                 },
+ *             },
+ *             Sources = 
+ *             {
+ *                 new AzureNative.Security.Inputs.AutomationSourceArgs
+ *                 {
+ *                     EventSource = "Assessments",
+ *                     RuleSets = 
+ *                     {
+ *                         new AzureNative.Security.Inputs.AutomationRuleSetArgs
+ *                         {
+ *                             Rules = 
+ *                             {
+ *                                 new AzureNative.Security.Inputs.AutomationTriggeringRuleArgs
+ *                                 {
+ *                                     ExpectedValue = "customAssessment",
+ *                                     Operator = "Equals",
+ *                                     PropertyJPath = "$.Entity.AssessmentType",
+ *                                     PropertyType = "String",
+ *                                 },
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewAutomation(ctx, "automation", &security.AutomationArgs{
+ * 			Actions: pulumi.AnyArray{
+ * 				security.AutomationActionLogicApp{
+ * 					ActionType:         "LogicApp",
+ * 					LogicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ * 					Uri:                "https://exampleTriggerUri1.com",
+ * 				},
+ * 			},
+ * 			AutomationName:    pulumi.String("exampleAutomation"),
+ * 			Description:       pulumi.String("An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment of type customAssessment"),
+ * 			IsEnabled:         pulumi.Bool(false),
+ * 			Location:          pulumi.String("Central US"),
+ * 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+ * 			Scopes: []security.AutomationScopeArgs{
+ * 				&security.AutomationScopeArgs{
+ * 					Description: pulumi.String("A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5"),
+ * 					ScopePath:   pulumi.String("/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup"),
+ * 				},
+ * 			},
+ * 			Sources: []security.AutomationSourceArgs{
+ * 				&security.AutomationSourceArgs{
+ * 					EventSource: pulumi.String("Assessments"),
+ * 					RuleSets: security.AutomationRuleSetArray{
+ * 						&security.AutomationRuleSetArgs{
+ * 							Rules: security.AutomationTriggeringRuleArray{
+ * 								&security.AutomationTriggeringRuleArgs{
+ * 									ExpectedValue: pulumi.String("customAssessment"),
+ * 									Operator:      pulumi.String("Equals"),
+ * 									PropertyJPath: pulumi.String(fmt.Sprintf("%v%v", "$", ".Entity.AssessmentType")),
+ * 									PropertyType:  pulumi.String("String"),
+ * 								},
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Tags: nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const automation = new azure_native.security.Automation("automation", {
+ *     actions: [{
+ *         actionType: "LogicApp",
+ *         logicAppResourceId: "/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ *         uri: "https://exampleTriggerUri1.com",
+ *     }],
+ *     automationName: "exampleAutomation",
+ *     description: "An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment of type customAssessment",
+ *     isEnabled: false,
+ *     location: "Central US",
+ *     resourceGroupName: "exampleResourceGroup",
+ *     scopes: [{
+ *         description: "A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+ *         scopePath: "/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+ *     }],
+ *     sources: [{
+ *         eventSource: "Assessments",
+ *         ruleSets: [{
+ *             rules: [{
+ *                 expectedValue: "customAssessment",
+ *                 operator: "Equals",
+ *                 propertyJPath: `$.Entity.AssessmentType`,
+ *                 propertyType: "String",
+ *             }],
+ *         }],
+ *     }],
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * automation = azure_native.security.Automation("automation",
+ *     actions=[azure_native.security.AutomationActionLogicAppArgs(
+ *         action_type="LogicApp",
+ *         logic_app_resource_id="/subscriptions/e54a4a18-5b94-4f90-9471-bd3decad8a2e/resourceGroups/sample/providers/Microsoft.Logic/workflows/MyTest1",
+ *         uri="https://exampleTriggerUri1.com",
+ *     )],
+ *     automation_name="exampleAutomation",
+ *     description="An example of a security automation that triggers one LogicApp resource (myTest1) on any security assessment of type customAssessment",
+ *     is_enabled=False,
+ *     location="Central US",
+ *     resource_group_name="exampleResourceGroup",
+ *     scopes=[azure_native.security.AutomationScopeArgs(
+ *         description="A description that helps to identify this scope - for example: security assessments that relate to the resource group myResourceGroup within the subscription a5caac9c-5c04-49af-b3d0-e204f40345d5",
+ *         scope_path="/subscriptions/a5caac9c-5c04-49af-b3d0-e204f40345d5/resourceGroups/myResourceGroup",
+ *     )],
+ *     sources=[azure_native.security.AutomationSourceArgs(
+ *         event_source="Assessments",
+ *         rule_sets=[azure_native.security.AutomationRuleSetArgs(
+ *             rules=[azure_native.security.AutomationTriggeringRuleArgs(
+ *                 expected_value="customAssessment",
+ *                 operator="Equals",
+ *                 property_j_path="$.Entity.AssessmentType",
+ *                 property_type="String",
+ *             )],
+ *         )],
+ *     )],
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,154 +576,132 @@ import javax.annotation.Nullable;
 public class Automation extends io.pulumi.resources.CustomResource {
     /**
      * A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
-     * 
      */
     @Export(name="actions", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> actions;
 
     /**
      * @return A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
-     * 
      */
     public Output</* @Nullable */ List<Object>> getActions() {
         return this.actions;
     }
     /**
      * The security automation description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The security automation description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Entity tag is used for comparing two or more entities from the same requested resource.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Indicates whether the security automation is enabled.
-     * 
      */
     @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
      * @return Indicates whether the security automation is enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Kind of the resource
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of the resource
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Location where the resource is stored
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Location where the resource is stored
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
-     * 
      */
     @Export(name="scopes", type=List.class, parameters={AutomationScopeResponse.class})
     private Output</* @Nullable */ List<AutomationScopeResponse>> scopes;
 
     /**
      * @return A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
-     * 
      */
     public Output</* @Nullable */ List<AutomationScopeResponse>> getScopes() {
         return this.scopes;
     }
     /**
      * A collection of the source event types which evaluate the security automation set of rules.
-     * 
      */
     @Export(name="sources", type=List.class, parameters={AutomationSourceResponse.class})
     private Output</* @Nullable */ List<AutomationSourceResponse>> sources;
 
     /**
      * @return A collection of the source event types which evaluate the security automation set of rules.
-     * 
      */
     public Output</* @Nullable */ List<AutomationSourceResponse>> getSources() {
         return this.sources;
     }
     /**
      * A list of key value pairs that describe the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return A list of key value pairs that describe the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

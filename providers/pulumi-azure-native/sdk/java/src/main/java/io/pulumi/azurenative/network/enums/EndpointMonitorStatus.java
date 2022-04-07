@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The monitoring status of the endpoint.
-     * 
      */
     @EnumType
     public enum EndpointMonitorStatus {

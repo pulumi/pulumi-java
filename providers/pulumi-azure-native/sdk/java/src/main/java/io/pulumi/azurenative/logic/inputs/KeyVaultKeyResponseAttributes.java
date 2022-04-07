@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The key attributes.
- * 
  */
 public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.Inv
 
     /**
      * When the key was created.
-     * 
      */
     @Import(name="created")
       private final @Nullable Double created;
@@ -32,7 +30,6 @@ public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.Inv
 
     /**
      * Whether the key is enabled or not.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
@@ -43,7 +40,6 @@ public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.Inv
 
     /**
      * When the key was updated.
-     * 
      */
     @Import(name="updated")
       private final @Nullable Double updated;

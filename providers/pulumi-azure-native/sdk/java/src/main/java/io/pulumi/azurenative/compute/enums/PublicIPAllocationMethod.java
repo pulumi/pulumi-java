@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specify the public IP allocation type
-     * 
      */
     @EnumType
     public enum PublicIPAllocationMethod {

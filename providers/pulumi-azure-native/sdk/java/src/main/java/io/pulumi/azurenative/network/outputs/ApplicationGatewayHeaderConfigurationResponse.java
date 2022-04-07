@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ApplicationGatewayHeaderConfigurationResponse {
     /**
      * Header name of the header configuration.
-     * 
      */
     private final @Nullable String headerName;
     /**
      * Header value of the header configuration.
-     * 
      */
     private final @Nullable String headerValue;
 
@@ -32,14 +30,12 @@ public final class ApplicationGatewayHeaderConfigurationResponse {
 
     /**
      * Header name of the header configuration.
-     * 
     */
     public Optional<String> getHeaderName() {
         return Optional.ofNullable(this.headerName);
     }
     /**
      * Header value of the header configuration.
-     * 
     */
     public Optional<String> getHeaderValue() {
         return Optional.ofNullable(this.headerValue);

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines a global parameter in the graph.
- * 
  */
 public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of this graph parameter.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -35,7 +33,6 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Association links for this parameter to nodes in the graph.
-     * 
      */
     @Import(name="links", required=true)
       private final Output<List<GraphParameterLinkArgs>> links;
@@ -46,7 +43,6 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Graph parameter's type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ParameterType>> type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Information of user assigned identity used by this add-on.
- * 
  */
 public final class ManagedClusterAddonProfileResponseIdentity extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManagedClusterAddonProfileResponseIdentity extends io.pulumi.
 
     /**
      * The client id of the user assigned identity.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -31,7 +29,6 @@ public final class ManagedClusterAddonProfileResponseIdentity extends io.pulumi.
 
     /**
      * The object id of the user assigned identity.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable String objectId;
@@ -42,7 +39,6 @@ public final class ManagedClusterAddonProfileResponseIdentity extends io.pulumi.
 
     /**
      * The resource id of the user assigned identity.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

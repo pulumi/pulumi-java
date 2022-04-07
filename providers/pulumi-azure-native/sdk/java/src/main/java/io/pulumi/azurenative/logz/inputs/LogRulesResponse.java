@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set of rules for sending logs for the Monitor resource.
- * 
  */
 public final class LogRulesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class LogRulesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
-     * 
      */
     @Import(name="filteringTags")
       private final @Nullable List<FilteringTagResponse> filteringTags;
@@ -33,7 +31,6 @@ public final class LogRulesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Flag specifying if AAD logs should be sent for the Monitor resource.
-     * 
      */
     @Import(name="sendAadLogs")
       private final @Nullable Boolean sendAadLogs;
@@ -44,7 +41,6 @@ public final class LogRulesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
-     * 
      */
     @Import(name="sendActivityLogs")
       private final @Nullable Boolean sendActivityLogs;
@@ -55,7 +51,6 @@ public final class LogRulesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Flag specifying if subscription logs should be sent for the Monitor resource.
-     * 
      */
     @Import(name="sendSubscriptionLogs")
       private final @Nullable Boolean sendSubscriptionLogs;

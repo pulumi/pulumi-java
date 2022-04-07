@@ -19,7 +19,117 @@ import javax.annotation.Nullable;
  * A custom API
  * API Version: 2016-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Replace a custom API
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var customApi = new AzureNative.Web.CustomApi("customApi", new AzureNative.Web.CustomApiArgs
+ *         {
+ *             ApiName = "testCustomApi",
+ *             Properties = new AzureNative.Web.Inputs.CustomApiPropertiesDefinitionArgs
+ *             {
+ *                 ApiDefinitions = new AzureNative.Web.Inputs.ApiResourceDefinitionsArgs
+ *                 {
+ *                     OriginalSwaggerUrl = "https://tempuri.org/swagger.json",
+ *                 },
+ *                 ApiType = "Rest",
+ *                 Capabilities = {},
+ *                 Description = "",
+ *                 DisplayName = "testCustomApi",
+ *                 IconUri = "/testIcon.svg",
+ *             },
+ *             ResourceGroupName = "testResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := web.NewCustomApi(ctx, "customApi", &web.CustomApiArgs{
+ * 			ApiName: pulumi.String("testCustomApi"),
+ * 			Properties: &web.CustomApiPropertiesDefinitionArgs{
+ * 				ApiDefinitions: &web.ApiResourceDefinitionsArgs{
+ * 					OriginalSwaggerUrl: pulumi.String("https://tempuri.org/swagger.json"),
+ * 				},
+ * 				ApiType:      pulumi.String("Rest"),
+ * 				Capabilities: pulumi.StringArray{},
+ * 				Description:  pulumi.String(""),
+ * 				DisplayName:  pulumi.String("testCustomApi"),
+ * 				IconUri:      pulumi.String("/testIcon.svg"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const customApi = new azure_native.web.CustomApi("customApi", {
+ *     apiName: "testCustomApi",
+ *     properties: {
+ *         apiDefinitions: {
+ *             originalSwaggerUrl: "https://tempuri.org/swagger.json",
+ *         },
+ *         apiType: "Rest",
+ *         capabilities: [],
+ *         description: "",
+ *         displayName: "testCustomApi",
+ *         iconUri: "/testIcon.svg",
+ *     },
+ *     resourceGroupName: "testResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * custom_api = azure_native.web.CustomApi("customApi",
+ *     api_name="testCustomApi",
+ *     properties=azure_native.web.CustomApiPropertiesDefinitionArgs(
+ *         api_definitions=azure_native.web.ApiResourceDefinitionsArgs(
+ *             original_swagger_url="https://tempuri.org/swagger.json",
+ *         ),
+ *         api_type="Rest",
+ *         capabilities=[],
+ *         description="",
+ *         display_name="testCustomApi",
+ *         icon_uri="/testIcon.svg",
+ *     ),
+ *     resource_group_name="testResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +144,72 @@ import javax.annotation.Nullable;
 public class CustomApi extends io.pulumi.resources.CustomResource {
     /**
      * Resource ETag
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Resource ETag
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Custom API properties
-     * 
      */
     @Export(name="properties", type=CustomApiPropertiesDefinitionResponse.class, parameters={})
     private Output<CustomApiPropertiesDefinitionResponse> properties;
 
     /**
      * @return Custom API properties
-     * 
      */
     public Output<CustomApiPropertiesDefinitionResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

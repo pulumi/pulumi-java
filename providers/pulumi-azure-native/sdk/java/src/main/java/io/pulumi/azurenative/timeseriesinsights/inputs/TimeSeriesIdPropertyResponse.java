@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The structure of the property that a time series id can have. An environment can have multiple such properties.
- * 
  */
 public final class TimeSeriesIdPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TimeSeriesIdPropertyResponse extends io.pulumi.resources.Invo
 
     /**
      * The name of the property.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class TimeSeriesIdPropertyResponse extends io.pulumi.resources.Invo
 
     /**
      * The type of the property.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

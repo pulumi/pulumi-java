@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Health Monitor Description
- * 
  */
 public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Health Monitor Details
-     * 
      */
     @Import(name="details", required=true)
       private final String details;
@@ -29,7 +27,6 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Health Monitor Id
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -40,7 +37,6 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Health Monitor Name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

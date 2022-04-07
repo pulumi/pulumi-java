@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of item included in the filter. Currently only 'AgentAddress' is supported.
-     * 
      */
     @EnumType
     public enum ConnectionMonitorEndpointFilterItemType {

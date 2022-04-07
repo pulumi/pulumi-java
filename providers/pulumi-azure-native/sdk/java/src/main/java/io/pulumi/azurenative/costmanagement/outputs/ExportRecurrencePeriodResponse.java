@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class ExportRecurrencePeriodResponse {
     /**
      * The start date of recurrence.
-     * 
      */
     private final String from;
     /**
      * The end date of recurrence.
-     * 
      */
     private final @Nullable String to;
 
@@ -32,14 +30,12 @@ public final class ExportRecurrencePeriodResponse {
 
     /**
      * The start date of recurrence.
-     * 
     */
     public String getFrom() {
         return this.from;
     }
     /**
      * The end date of recurrence.
-     * 
     */
     public Optional<String> getTo() {
         return Optional.ofNullable(this.to);

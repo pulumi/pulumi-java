@@ -18,7 +18,124 @@ import javax.annotation.Nullable;
  * A Policy.
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Policies_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var policy = new AzureNative.DevTestLab.Policy("policy", new AzureNative.DevTestLab.PolicyArgs
+ *         {
+ *             Description = "{policyDescription}",
+ *             EvaluatorType = "{policyEvaluatorType}",
+ *             FactData = "{policyFactData}",
+ *             FactName = "{policyFactName}",
+ *             LabName = "{labName}",
+ *             Location = "{location}",
+ *             Name = "{policyName}",
+ *             PolicySetName = "{policySetName}",
+ *             ResourceGroupName = "resourceGroupName",
+ *             Status = "{policyStatus}",
+ *             Tags = 
+ *             {
+ *                 { "tagName1", "tagValue1" },
+ *             },
+ *             Threshold = "{policyThreshold}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewPolicy(ctx, "policy", &devtestlab.PolicyArgs{
+ * 			Description:       pulumi.String("{policyDescription}"),
+ * 			EvaluatorType:     pulumi.String("{policyEvaluatorType}"),
+ * 			FactData:          pulumi.String("{policyFactData}"),
+ * 			FactName:          pulumi.String("{policyFactName}"),
+ * 			LabName:           pulumi.String("{labName}"),
+ * 			Location:          pulumi.String("{location}"),
+ * 			Name:              pulumi.String("{policyName}"),
+ * 			PolicySetName:     pulumi.String("{policySetName}"),
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 			Status:            pulumi.String("{policyStatus}"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tagName1": pulumi.String("tagValue1"),
+ * 			},
+ * 			Threshold: pulumi.String("{policyThreshold}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const policy = new azure_native.devtestlab.Policy("policy", {
+ *     description: "{policyDescription}",
+ *     evaluatorType: "{policyEvaluatorType}",
+ *     factData: "{policyFactData}",
+ *     factName: "{policyFactName}",
+ *     labName: "{labName}",
+ *     location: "{location}",
+ *     name: "{policyName}",
+ *     policySetName: "{policySetName}",
+ *     resourceGroupName: "resourceGroupName",
+ *     status: "{policyStatus}",
+ *     tags: {
+ *         tagName1: "tagValue1",
+ *     },
+ *     threshold: "{policyThreshold}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * policy = azure_native.devtestlab.Policy("policy",
+ *     description="{policyDescription}",
+ *     evaluator_type="{policyEvaluatorType}",
+ *     fact_data="{policyFactData}",
+ *     fact_name="{policyFactName}",
+ *     lab_name="{labName}",
+ *     location="{location}",
+ *     name="{policyName}",
+ *     policy_set_name="{policySetName}",
+ *     resource_group_name="resourceGroupName",
+ *     status="{policyStatus}",
+ *     tags={
+ *         "tagName1": "tagValue1",
+ *     },
+ *     threshold="{policyThreshold}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,182 +150,156 @@ import javax.annotation.Nullable;
 public class Policy extends io.pulumi.resources.CustomResource {
     /**
      * The creation date of the policy.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return The creation date of the policy.
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The description of the policy.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the policy.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
-     * 
      */
     @Export(name="evaluatorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> evaluatorType;
 
     /**
      * @return The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
-     * 
      */
     public Output</* @Nullable */ String> getEvaluatorType() {
         return this.evaluatorType;
     }
     /**
      * The fact data of the policy.
-     * 
      */
     @Export(name="factData", type=String.class, parameters={})
     private Output</* @Nullable */ String> factData;
 
     /**
      * @return The fact data of the policy.
-     * 
      */
     public Output</* @Nullable */ String> getFactData() {
         return this.factData;
     }
     /**
      * The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
-     * 
      */
     @Export(name="factName", type=String.class, parameters={})
     private Output</* @Nullable */ String> factName;
 
     /**
      * @return The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
-     * 
      */
     public Output</* @Nullable */ String> getFactName() {
         return this.factName;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The status of the policy.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return The status of the policy.
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
-     * 
      */
     @Export(name="threshold", type=String.class, parameters={})
     private Output</* @Nullable */ String> threshold;
 
     /**
      * @return The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
-     * 
      */
     public Output</* @Nullable */ String> getThreshold() {
         return this.threshold;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;

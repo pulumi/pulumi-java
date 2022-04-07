@@ -27,7 +27,274 @@ import javax.annotation.Nullable;
  * Snapshot resource.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a snapshot by importing an unmanaged blob from a different subscription.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var snapshot = new AzureNative.Compute.Snapshot("snapshot", new AzureNative.Compute.SnapshotArgs
+ *         {
+ *             CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+ *             {
+ *                 CreateOption = "Import",
+ *                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *                 StorageAccountId = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+ *             },
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             SnapshotName = "mySnapshot1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
+ * 			CreationData: &compute.CreationDataArgs{
+ * 				CreateOption:     pulumi.String("Import"),
+ * 				SourceUri:        pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
+ * 				StorageAccountId: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount"),
+ * 			},
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			SnapshotName:      pulumi.String("mySnapshot1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const snapshot = new azure_native.compute.Snapshot("snapshot", {
+ *     creationData: {
+ *         createOption: "Import",
+ *         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *         storageAccountId: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+ *     },
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     snapshotName: "mySnapshot1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * snapshot = azure_native.compute.Snapshot("snapshot",
+ *     creation_data=azure_native.compute.CreationDataArgs(
+ *         create_option="Import",
+ *         source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *         storage_account_id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+ *     ),
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     snapshot_name="mySnapshot1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a snapshot by importing an unmanaged blob from the same subscription.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var snapshot = new AzureNative.Compute.Snapshot("snapshot", new AzureNative.Compute.SnapshotArgs
+ *         {
+ *             CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+ *             {
+ *                 CreateOption = "Import",
+ *                 SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *             },
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             SnapshotName = "mySnapshot1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
+ * 			CreationData: &compute.CreationDataArgs{
+ * 				CreateOption: pulumi.String("Import"),
+ * 				SourceUri:    pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
+ * 			},
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			SnapshotName:      pulumi.String("mySnapshot1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const snapshot = new azure_native.compute.Snapshot("snapshot", {
+ *     creationData: {
+ *         createOption: "Import",
+ *         sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *     },
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     snapshotName: "mySnapshot1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * snapshot = azure_native.compute.Snapshot("snapshot",
+ *     creation_data=azure_native.compute.CreationDataArgs(
+ *         create_option="Import",
+ *         source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *     ),
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     snapshot_name="mySnapshot1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a snapshot from an existing snapshot in the same or a different subscription.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var snapshot = new AzureNative.Compute.Snapshot("snapshot", new AzureNative.Compute.SnapshotArgs
+ *         {
+ *             CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+ *             {
+ *                 CreateOption = "Copy",
+ *                 SourceResourceId = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
+ *             },
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             SnapshotName = "mySnapshot2",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewSnapshot(ctx, "snapshot", &compute.SnapshotArgs{
+ * 			CreationData: &compute.CreationDataArgs{
+ * 				CreateOption:     pulumi.String("Copy"),
+ * 				SourceResourceId: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1"),
+ * 			},
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			SnapshotName:      pulumi.String("mySnapshot2"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const snapshot = new azure_native.compute.Snapshot("snapshot", {
+ *     creationData: {
+ *         createOption: "Copy",
+ *         sourceResourceId: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
+ *     },
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     snapshotName: "mySnapshot2",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * snapshot = azure_native.compute.Snapshot("snapshot",
+ *     creation_data=azure_native.compute.CreationDataArgs(
+ *         create_option="Copy",
+ *         source_resource_id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot1",
+ *     ),
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     snapshot_name="mySnapshot2")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -42,322 +309,276 @@ import javax.annotation.Nullable;
 public class Snapshot extends io.pulumi.resources.CustomResource {
     /**
      * Disk source information. CreationData information cannot be changed after the disk has been created.
-     * 
      */
     @Export(name="creationData", type=CreationDataResponse.class, parameters={})
     private Output<CreationDataResponse> creationData;
 
     /**
      * @return Disk source information. CreationData information cannot be changed after the disk has been created.
-     * 
      */
     public Output<CreationDataResponse> getCreationData() {
         return this.creationData;
     }
     /**
      * ARM id of the DiskAccess resource for using private endpoints on disks.
-     * 
      */
     @Export(name="diskAccessId", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskAccessId;
 
     /**
      * @return ARM id of the DiskAccess resource for using private endpoints on disks.
-     * 
      */
     public Output</* @Nullable */ String> getDiskAccessId() {
         return this.diskAccessId;
     }
     /**
      * The size of the disk in bytes. This field is read only.
-     * 
      */
     @Export(name="diskSizeBytes", type=Double.class, parameters={})
     private Output<Double> diskSizeBytes;
 
     /**
      * @return The size of the disk in bytes. This field is read only.
-     * 
      */
     public Output<Double> getDiskSizeBytes() {
         return this.diskSizeBytes;
     }
     /**
      * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-     * 
      */
     @Export(name="diskSizeGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> diskSizeGB;
 
     /**
      * @return If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
-     * 
      */
     public Output</* @Nullable */ Integer> getDiskSizeGB() {
         return this.diskSizeGB;
     }
     /**
      * The state of the snapshot.
-     * 
      */
     @Export(name="diskState", type=String.class, parameters={})
     private Output<String> diskState;
 
     /**
      * @return The state of the snapshot.
-     * 
      */
     public Output<String> getDiskState() {
         return this.diskState;
     }
     /**
      * Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
-     * 
      */
     @Export(name="encryption", type=EncryptionResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionResponse> encryption;
 
     /**
      * @return Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
-     * 
      */
     public Output</* @Nullable */ EncryptionResponse> getEncryption() {
         return this.encryption;
     }
     /**
      * Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
-     * 
      */
     @Export(name="encryptionSettingsCollection", type=EncryptionSettingsCollectionResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionSettingsCollectionResponse> encryptionSettingsCollection;
 
     /**
      * @return Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
-     * 
      */
     public Output</* @Nullable */ EncryptionSettingsCollectionResponse> getEncryptionSettingsCollection() {
         return this.encryptionSettingsCollection;
     }
     /**
      * The extended location where the snapshot will be created. Extended location cannot be changed.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return The extended location where the snapshot will be created. Extended location cannot be changed.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
-     * 
      */
     @Export(name="hyperVGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> hyperVGeneration;
 
     /**
      * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
-     * 
      */
     public Output</* @Nullable */ String> getHyperVGeneration() {
         return this.hyperVGeneration;
     }
     /**
      * Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
-     * 
      */
     @Export(name="incremental", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> incremental;
 
     /**
      * @return Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIncremental() {
         return this.incremental;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Unused. Always Null.
-     * 
      */
     @Export(name="managedBy", type=String.class, parameters={})
     private Output<String> managedBy;
 
     /**
      * @return Unused. Always Null.
-     * 
      */
     public Output<String> getManagedBy() {
         return this.managedBy;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Policy for accessing the disk via network.
-     * 
      */
     @Export(name="networkAccessPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkAccessPolicy;
 
     /**
      * @return Policy for accessing the disk via network.
-     * 
      */
     public Output</* @Nullable */ String> getNetworkAccessPolicy() {
         return this.networkAccessPolicy;
     }
     /**
      * The Operating System type.
-     * 
      */
     @Export(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
     /**
      * @return The Operating System type.
-     * 
      */
     public Output</* @Nullable */ String> getOsType() {
         return this.osType;
     }
     /**
      * The disk provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The disk provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Purchase plan information for the image from which the source disk for the snapshot was originally created.
-     * 
      */
     @Export(name="purchasePlan", type=PurchasePlanResponse.class, parameters={})
     private Output</* @Nullable */ PurchasePlanResponse> purchasePlan;
 
     /**
      * @return Purchase plan information for the image from which the source disk for the snapshot was originally created.
-     * 
      */
     public Output</* @Nullable */ PurchasePlanResponse> getPurchasePlan() {
         return this.purchasePlan;
     }
     /**
      * The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
-     * 
      */
     @Export(name="sku", type=SnapshotSkuResponse.class, parameters={})
     private Output</* @Nullable */ SnapshotSkuResponse> sku;
 
     /**
      * @return The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
-     * 
      */
     public Output</* @Nullable */ SnapshotSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Indicates the OS on a snapshot supports hibernation.
-     * 
      */
     @Export(name="supportsHibernation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> supportsHibernation;
 
     /**
      * @return Indicates the OS on a snapshot supports hibernation.
-     * 
      */
     public Output</* @Nullable */ Boolean> getSupportsHibernation() {
         return this.supportsHibernation;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The time when the snapshot was created.
-     * 
      */
     @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
      * @return The time when the snapshot was created.
-     * 
      */
     public Output<String> getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Unique Guid identifying the resource.
-     * 
      */
     @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**
      * @return Unique Guid identifying the resource.
-     * 
      */
     public Output<String> getUniqueId() {
         return this.uniqueId;

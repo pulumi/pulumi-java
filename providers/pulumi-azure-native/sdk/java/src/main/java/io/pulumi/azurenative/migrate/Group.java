@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * A group created in a Migration project.
  * API Version: 2019-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Groups_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var @group = new AzureNative.Migrate.Group("group", new AzureNative.Migrate.GroupArgs
+ *         {
+ *             ETag = "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
+ *             GroupName = "Group2",
+ *             ProjectName = "abgoyalWEselfhostb72bproject",
+ *             Properties = ,
+ *             ResourceGroupName = "abgoyal-westEurope",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := migrate.NewGroup(ctx, "group", &migrate.GroupArgs{
+ * 			ETag:              pulumi.String("\"1e000c2c-0000-0d00-0000-5cdaa4190000\""),
+ * 			GroupName:         pulumi.String("Group2"),
+ * 			ProjectName:       pulumi.String("abgoyalWEselfhostb72bproject"),
+ * 			Properties:        nil,
+ * 			ResourceGroupName: pulumi.String("abgoyal-westEurope"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const group = new azure_native.migrate.Group("group", {
+ *     eTag: "\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
+ *     groupName: "Group2",
+ *     projectName: "abgoyalWEselfhostb72bproject",
+ *     properties: {},
+ *     resourceGroupName: "abgoyal-westEurope",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * group = azure_native.migrate.Group("group",
+ *     e_tag="\"1e000c2c-0000-0d00-0000-5cdaa4190000\"",
+ *     group_name="Group2",
+ *     project_name="abgoyalWEselfhostb72bproject",
+ *     properties=azure_native.migrate.GroupPropertiesArgs(),
+ *     resource_group_name="abgoyal-westEurope")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +113,48 @@ import javax.annotation.Nullable;
 public class Group extends io.pulumi.resources.CustomResource {
     /**
      * For optimistic concurrency control.
-     * 
      */
     @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
      * @return For optimistic concurrency control.
-     * 
      */
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
     /**
      * Name of the group.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the group.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the group.
-     * 
      */
     @Export(name="properties", type=GroupPropertiesResponse.class, parameters={})
     private Output<GroupPropertiesResponse> properties;
 
     /**
      * @return Properties of the group.
-     * 
      */
     public Output<GroupPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
-     * 
      */
     public Output<String> getType() {
         return this.type;

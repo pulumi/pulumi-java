@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class PrivateEndpointPropertyResponse {
     /**
      * Resource id of the private endpoint.
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class PrivateEndpointPropertyResponse {
 
     /**
      * Resource id of the private endpoint.
-     * 
     */
     public String getId() {
         return this.id;

@@ -18,7 +18,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the environment.
-     * 
      */
     @Import(name="environmentName")
       private final @Nullable Output<String> environmentName;
@@ -29,7 +28,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the environment Setting.
-     * 
      */
     @Import(name="environmentSettingName", required=true)
       private final Output<String> environmentSettingName;
@@ -40,7 +38,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab Account.
-     * 
      */
     @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
@@ -51,7 +48,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -62,7 +58,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -73,7 +68,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
@@ -84,7 +78,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -95,7 +88,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The set of a VM and the setting id it was created for
-     * 
      */
     @Import(name="resourceSets")
       private final @Nullable Output<ResourceSetArgs> resourceSets;
@@ -106,7 +98,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -117,7 +108,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;

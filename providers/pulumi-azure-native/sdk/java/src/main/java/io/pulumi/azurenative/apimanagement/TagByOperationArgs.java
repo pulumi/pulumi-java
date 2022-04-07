@@ -16,7 +16,6 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
-     * 
      */
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
@@ -27,7 +26,6 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Operation identifier within an API. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="operationId", required=true)
       private final Output<String> operationId;
@@ -38,7 +36,6 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -60,7 +56,6 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tag identifier. Must be unique in the current API Management service instance.
-     * 
      */
     @Import(name="tagId")
       private final @Nullable Output<String> tagId;

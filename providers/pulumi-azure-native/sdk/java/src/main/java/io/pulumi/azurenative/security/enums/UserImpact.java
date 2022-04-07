@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The user impact of the assessment
-     * 
      */
     @EnumType
     public enum UserImpact {

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Dataset reference type.
- * 
  */
 public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Arguments for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
@@ -33,7 +31,6 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Reference dataset name.
-     * 
      */
     @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
@@ -44,7 +41,6 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Dataset reference type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

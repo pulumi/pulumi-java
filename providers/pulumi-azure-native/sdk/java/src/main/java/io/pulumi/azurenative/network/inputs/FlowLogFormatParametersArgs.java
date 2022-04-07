@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Parameters that define the flow log format.
- * 
  */
 public final class FlowLogFormatParametersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
 
     /**
      * The file type of flow log.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,FlowLogFormatType>> type;
@@ -34,7 +32,6 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
 
     /**
      * The version (revision) of the flow log.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Integer> version;

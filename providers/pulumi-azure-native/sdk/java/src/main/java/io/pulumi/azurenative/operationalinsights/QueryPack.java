@@ -18,7 +18,162 @@ import javax.annotation.Nullable;
  * An Log Analytics QueryPack definition.
  * API Version: 2019-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### QueryPackCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var queryPack = new AzureNative.OperationalInsights.QueryPack("queryPack", new AzureNative.OperationalInsights.QueryPackArgs
+ *         {
+ *             Location = "South Central US",
+ *             QueryPackName = "my-querypack",
+ *             ResourceGroupName = "my-resource-group",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationalinsights.NewQueryPack(ctx, "queryPack", &operationalinsights.QueryPackArgs{
+ * 			Location:          pulumi.String("South Central US"),
+ * 			QueryPackName:     pulumi.String("my-querypack"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const queryPack = new azure_native.operationalinsights.QueryPack("queryPack", {
+ *     location: "South Central US",
+ *     queryPackName: "my-querypack",
+ *     resourceGroupName: "my-resource-group",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * query_pack = azure_native.operationalinsights.QueryPack("queryPack",
+ *     location="South Central US",
+ *     query_pack_name="my-querypack",
+ *     resource_group_name="my-resource-group")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### QueryPackUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var queryPack = new AzureNative.OperationalInsights.QueryPack("queryPack", new AzureNative.OperationalInsights.QueryPackArgs
+ *         {
+ *             Location = "South Central US",
+ *             QueryPackName = "my-querypack",
+ *             ResourceGroupName = "my-resource-group",
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationalinsights.NewQueryPack(ctx, "queryPack", &operationalinsights.QueryPackArgs{
+ * 			Location:          pulumi.String("South Central US"),
+ * 			QueryPackName:     pulumi.String("my-querypack"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const queryPack = new azure_native.operationalinsights.QueryPack("queryPack", {
+ *     location: "South Central US",
+ *     queryPackName: "my-querypack",
+ *     resourceGroupName: "my-resource-group",
+ *     tags: {
+ *         Tag1: "Value1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * query_pack = azure_native.operationalinsights.QueryPack("queryPack",
+ *     location="South Central US",
+ *     query_pack_name="my-querypack",
+ *     resource_group_name="my-resource-group",
+ *     tags={
+ *         "Tag1": "Value1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,112 +188,96 @@ import javax.annotation.Nullable;
 public class QueryPack extends io.pulumi.resources.CustomResource {
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The unique ID of your application. This field cannot be changed.
-     * 
      */
     @Export(name="queryPackId", type=String.class, parameters={})
     private Output<String> queryPackId;
 
     /**
      * @return The unique ID of your application. This field cannot be changed.
-     * 
      */
     public Output<String> getQueryPackId() {
         return this.queryPackId;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
-     * 
      */
     @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
      * @return Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
-     * 
      */
     public Output<String> getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
-     * 
      */
     @Export(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
     /**
      * @return Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
-     * 
      */
     public Output<String> getTimeModified() {
         return this.timeModified;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

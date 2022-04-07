@@ -17,7 +17,6 @@ public final class DedicatedHostGroupInstanceViewResponse extends io.pulumi.reso
 
     /**
      * List of instance view of the dedicated hosts under the dedicated host group.
-     * 
      */
     @Import(name="hosts")
       private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;

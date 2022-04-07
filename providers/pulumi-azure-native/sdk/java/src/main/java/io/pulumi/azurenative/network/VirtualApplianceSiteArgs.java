@@ -17,7 +17,6 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
 
     /**
      * Address Prefix.
-     * 
      */
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
@@ -28,7 +27,6 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -39,7 +37,6 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of the virtual appliance site.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -50,7 +47,6 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the Network Virtual Appliance.
-     * 
      */
     @Import(name="networkVirtualApplianceName", required=true)
       private final Output<String> networkVirtualApplianceName;
@@ -61,7 +57,6 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
 
     /**
      * Office 365 Policy.
-     * 
      */
     @Import(name="o365Policy")
       private final @Nullable Output<Office365PolicyPropertiesArgs> o365Policy;
@@ -72,7 +67,6 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the site.
-     * 
      */
     @Import(name="siteName")
       private final @Nullable Output<String> siteName;

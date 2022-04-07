@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class AzureADMetricsPropertiesFormatResponse {
     /**
      * The provisioning state of the resource.
-     * 
      */
     private final String provisioningState;
 
@@ -22,7 +21,6 @@ public final class AzureADMetricsPropertiesFormatResponse {
 
     /**
      * The provisioning state of the resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;

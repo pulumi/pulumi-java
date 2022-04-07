@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
-     * 
      */
     @EnumType
     public enum StatusType {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The load balancer sku for the managed cluster.
-     * 
      */
     @EnumType
     public enum LoadBalancerSku {

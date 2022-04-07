@@ -17,7 +17,6 @@ public final class DatasetCreateRequestRegistrationArgs extends io.pulumi.resour
 
     /**
      * The description for the dataset.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -28,7 +27,6 @@ public final class DatasetCreateRequestRegistrationArgs extends io.pulumi.resour
 
     /**
      * The name of the dataset.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -39,7 +37,6 @@ public final class DatasetCreateRequestRegistrationArgs extends io.pulumi.resour
 
     /**
      * Tags associated with the dataset.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

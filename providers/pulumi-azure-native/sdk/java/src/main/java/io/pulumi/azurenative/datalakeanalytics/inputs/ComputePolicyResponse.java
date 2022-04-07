@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Data Lake Analytics compute policy information.
- * 
  */
 public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The resource identifier.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -30,7 +28,6 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The maximum degree of parallelism per job this user can use to submit jobs.
-     * 
      */
     @Import(name="maxDegreeOfParallelismPerJob", required=true)
       private final Integer maxDegreeOfParallelismPerJob;
@@ -41,7 +38,6 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The minimum priority per job this user can use to submit jobs.
-     * 
      */
     @Import(name="minPriorityPerJob", required=true)
       private final Integer minPriorityPerJob;
@@ -52,7 +48,6 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -63,7 +58,6 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The AAD object identifier for the entity to create a policy for.
-     * 
      */
     @Import(name="objectId", required=true)
       private final String objectId;
@@ -74,7 +68,6 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The type of AAD object the object identifier refers to.
-     * 
      */
     @Import(name="objectType", required=true)
       private final String objectType;
@@ -85,7 +78,6 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

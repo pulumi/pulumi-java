@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Deployment on error behavior with additional details.
- * 
  */
 public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
 
     /**
      * The deployment to be used on error case.
-     * 
      */
     @Import(name="deploymentName")
       private final @Nullable String deploymentName;
@@ -31,7 +29,6 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
 
     /**
      * The state of the provisioning for the on error deployment.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -42,7 +39,6 @@ public final class OnErrorDeploymentExtendedResponse extends io.pulumi.resources
 
     /**
      * The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

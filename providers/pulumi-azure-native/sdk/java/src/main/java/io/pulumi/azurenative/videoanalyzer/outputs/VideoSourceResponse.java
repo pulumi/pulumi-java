@@ -12,23 +12,19 @@ import java.util.Objects;
 public final class VideoSourceResponse {
     /**
      * Node name. Must be unique within the topology.
-     * 
      */
     private final String name;
     /**
      * Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
-     * 
      */
     private final VideoSequenceAbsoluteTimeMarkersResponse timeSequences;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSource'.
-     * 
      */
     private final String type;
     /**
      * Name of the Video Analyzer video resource to be used as the source.
-     * 
      */
     private final String videoName;
 
@@ -46,14 +42,12 @@ public final class VideoSourceResponse {
 
     /**
      * Node name. Must be unique within the topology.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
-     * 
     */
     public VideoSequenceAbsoluteTimeMarkersResponse getTimeSequences() {
         return this.timeSequences;
@@ -61,14 +55,12 @@ public final class VideoSourceResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSource'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Name of the Video Analyzer video resource to be used as the source.
-     * 
     */
     public String getVideoName() {
         return this.videoName;

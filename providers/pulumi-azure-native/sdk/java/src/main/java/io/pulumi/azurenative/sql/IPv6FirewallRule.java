@@ -17,7 +17,165 @@ import javax.annotation.Nullable;
  * An IPv6 server firewall rule.
  * API Version: 2021-08-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create an IPv6 firewall rule max/min
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var iPv6FirewallRule = new AzureNative.Sql.IPv6FirewallRule("iPv6FirewallRule", new AzureNative.Sql.IPv6FirewallRuleArgs
+ *         {
+ *             EndIPv6Address = "0000:0000:0000:0000:0000:ffff:0000:0003",
+ *             FirewallRuleName = "firewallrulecrudtest-5370",
+ *             ResourceGroupName = "firewallrulecrudtest-12",
+ *             ServerName = "firewallrulecrudtest-6285",
+ *             StartIPv6Address = "0000:0000:0000:0000:0000:ffff:0000:0003",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewIPv6FirewallRule(ctx, "iPv6FirewallRule", &sql.IPv6FirewallRuleArgs{
+ * 			EndIPv6Address:    pulumi.String("0000:0000:0000:0000:0000:ffff:0000:0003"),
+ * 			FirewallRuleName:  pulumi.String("firewallrulecrudtest-5370"),
+ * 			ResourceGroupName: pulumi.String("firewallrulecrudtest-12"),
+ * 			ServerName:        pulumi.String("firewallrulecrudtest-6285"),
+ * 			StartIPv6Address:  pulumi.String("0000:0000:0000:0000:0000:ffff:0000:0003"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const iPv6FirewallRule = new azure_native.sql.IPv6FirewallRule("iPv6FirewallRule", {
+ *     endIPv6Address: "0000:0000:0000:0000:0000:ffff:0000:0003",
+ *     firewallRuleName: "firewallrulecrudtest-5370",
+ *     resourceGroupName: "firewallrulecrudtest-12",
+ *     serverName: "firewallrulecrudtest-6285",
+ *     startIPv6Address: "0000:0000:0000:0000:0000:ffff:0000:0003",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * i_pv6_firewall_rule = azure_native.sql.IPv6FirewallRule("iPv6FirewallRule",
+ *     end_i_pv6_address="0000:0000:0000:0000:0000:ffff:0000:0003",
+ *     firewall_rule_name="firewallrulecrudtest-5370",
+ *     resource_group_name="firewallrulecrudtest-12",
+ *     server_name="firewallrulecrudtest-6285",
+ *     start_i_pv6_address="0000:0000:0000:0000:0000:ffff:0000:0003")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Update an IPv6 firewall rule max/min
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var iPv6FirewallRule = new AzureNative.Sql.IPv6FirewallRule("iPv6FirewallRule", new AzureNative.Sql.IPv6FirewallRuleArgs
+ *         {
+ *             EndIPv6Address = "0000:0000:0000:0000:0000:ffff:0000:0001",
+ *             FirewallRuleName = "firewallrulecrudtest-3927",
+ *             ResourceGroupName = "firewallrulecrudtest-12",
+ *             ServerName = "firewallrulecrudtest-6285",
+ *             StartIPv6Address = "0000:0000:0000:0000:0000:ffff:0000:0001",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewIPv6FirewallRule(ctx, "iPv6FirewallRule", &sql.IPv6FirewallRuleArgs{
+ * 			EndIPv6Address:    pulumi.String("0000:0000:0000:0000:0000:ffff:0000:0001"),
+ * 			FirewallRuleName:  pulumi.String("firewallrulecrudtest-3927"),
+ * 			ResourceGroupName: pulumi.String("firewallrulecrudtest-12"),
+ * 			ServerName:        pulumi.String("firewallrulecrudtest-6285"),
+ * 			StartIPv6Address:  pulumi.String("0000:0000:0000:0000:0000:ffff:0000:0001"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const iPv6FirewallRule = new azure_native.sql.IPv6FirewallRule("iPv6FirewallRule", {
+ *     endIPv6Address: "0000:0000:0000:0000:0000:ffff:0000:0001",
+ *     firewallRuleName: "firewallrulecrudtest-3927",
+ *     resourceGroupName: "firewallrulecrudtest-12",
+ *     serverName: "firewallrulecrudtest-6285",
+ *     startIPv6Address: "0000:0000:0000:0000:0000:ffff:0000:0001",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * i_pv6_firewall_rule = azure_native.sql.IPv6FirewallRule("iPv6FirewallRule",
+ *     end_i_pv6_address="0000:0000:0000:0000:0000:ffff:0000:0001",
+ *     firewall_rule_name="firewallrulecrudtest-3927",
+ *     resource_group_name="firewallrulecrudtest-12",
+ *     server_name="firewallrulecrudtest-6285",
+ *     start_i_pv6_address="0000:0000:0000:0000:0000:ffff:0000:0001")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +190,48 @@ import javax.annotation.Nullable;
 public class IPv6FirewallRule extends io.pulumi.resources.CustomResource {
     /**
      * The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
-     * 
      */
     @Export(name="endIPv6Address", type=String.class, parameters={})
     private Output</* @Nullable */ String> endIPv6Address;
 
     /**
      * @return The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
-     * 
      */
     public Output</* @Nullable */ String> getEndIPv6Address() {
         return this.endIPv6Address;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The start IP address of the firewall rule. Must be IPv6 format.
-     * 
      */
     @Export(name="startIPv6Address", type=String.class, parameters={})
     private Output</* @Nullable */ String> startIPv6Address;
 
     /**
      * @return The start IP address of the firewall rule. Must be IPv6 format.
-     * 
      */
     public Output</* @Nullable */ String> getStartIPv6Address() {
         return this.startIPv6Address;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

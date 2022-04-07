@@ -15,43 +15,35 @@ import javax.annotation.Nullable;
 public final class OnlineEndpointResponse {
     /**
      * Inference endpoint authentication mode type
-     * 
      */
     private final String authMode;
     /**
      * Description of the inference endpoint.
-     * 
      */
     private final @Nullable String description;
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
-     * 
      */
     private final @Nullable Map<String,String> properties;
     /**
      * State of endpoint provisioning.
-     * 
      */
     private final String provisioningState;
     /**
      * Endpoint URI.
-     * 
      */
     private final String scoringUri;
     /**
      * Endpoint Swagger URI.
-     * 
      */
     private final String swaggerUri;
     /**
      * ARM resource ID of the compute if it exists.
      * optional
-     * 
      */
     private final @Nullable String target;
     /**
      * Traffic rules on how the traffic will be routed across deployments.
-     * 
      */
     private final @Nullable Map<String,Integer> traffic;
 
@@ -77,42 +69,36 @@ public final class OnlineEndpointResponse {
 
     /**
      * Inference endpoint authentication mode type
-     * 
     */
     public String getAuthMode() {
         return this.authMode;
     }
     /**
      * Description of the inference endpoint.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
-     * 
     */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * State of endpoint provisioning.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Endpoint URI.
-     * 
     */
     public String getScoringUri() {
         return this.scoringUri;
     }
     /**
      * Endpoint Swagger URI.
-     * 
     */
     public String getSwaggerUri() {
         return this.swaggerUri;
@@ -120,14 +106,12 @@ public final class OnlineEndpointResponse {
     /**
      * ARM resource ID of the compute if it exists.
      * optional
-     * 
     */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * Traffic rules on how the traffic will be routed across deployments.
-     * 
     */
     public Map<String,Integer> getTraffic() {
         return this.traffic == null ? Map.of() : this.traffic;

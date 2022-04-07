@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Outstanding conditions that will need to be resolved.
- * 
  */
 public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The issue requiring attention.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -29,7 +27,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time when the condition was raised.
-     * 
      */
     @Import(name="timestamp", required=true)
       private final String timestamp;

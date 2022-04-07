@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The default consistency level and configuration settings of the Cosmos DB account.
-     * 
      */
     @EnumType
     public enum DefaultConsistencyLevel {

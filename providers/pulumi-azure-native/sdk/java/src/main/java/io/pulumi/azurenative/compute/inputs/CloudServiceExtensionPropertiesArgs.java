@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Extension Properties.
- * 
  */
 public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
-     * 
      */
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
@@ -38,7 +36,6 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
      * If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
      * it is up to handler implementation whether to re-run it or not
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -49,7 +46,6 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Protected settings for the extension which are encrypted before sent to the role instance.
-     * 
      */
     @Import(name="protectedSettings")
       private final @Nullable Output<String> protectedSettings;
@@ -67,7 +63,6 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
 
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
@@ -78,7 +73,6 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.
-     * 
      */
     @Import(name="rolesAppliedTo")
       private final @Nullable Output<List<String>> rolesAppliedTo;
@@ -89,7 +83,6 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<String> settings;
@@ -100,7 +93,6 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Specifies the type of the extension.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -111,7 +103,6 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
 
     /**
      * Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.
-     * 
      */
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;

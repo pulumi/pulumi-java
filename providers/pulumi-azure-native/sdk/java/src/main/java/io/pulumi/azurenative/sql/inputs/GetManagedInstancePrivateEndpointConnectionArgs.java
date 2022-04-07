@@ -14,7 +14,6 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends io.pu
 
     /**
      * The name of the managed instance.
-     * 
      */
     @Import(name="managedInstanceName", required=true)
       private final String managedInstanceName;
@@ -25,7 +24,6 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends io.pu
 
     /**
      * The name of the private endpoint connection.
-     * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
@@ -36,7 +34,6 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends io.pu
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

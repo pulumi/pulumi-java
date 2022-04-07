@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters to provide for the Microsoft Teams channel.
- * 
  */
 public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Whether this channel accepted terms
-     * 
      */
     @Import(name="acceptedTerms")
       private final @Nullable Output<Boolean> acceptedTerms;
@@ -32,7 +30,6 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Webhook for Microsoft Teams channel calls
-     * 
      */
     @Import(name="callingWebHook")
       private final @Nullable Output<String> callingWebHook;
@@ -43,7 +40,6 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Deployment environment for Microsoft Teams channel calls
-     * 
      */
     @Import(name="deploymentEnvironment")
       private final @Nullable Output<String> deploymentEnvironment;
@@ -54,7 +50,6 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Enable calling for Microsoft Teams channel
-     * 
      */
     @Import(name="enableCalling")
       private final @Nullable Output<Boolean> enableCalling;
@@ -65,7 +60,6 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Webhook for Microsoft Teams channel calls
-     * 
      */
     @Import(name="incomingCallRoute")
       private final @Nullable Output<String> incomingCallRoute;
@@ -76,7 +70,6 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
 
     /**
      * Whether this channel is enabled for the bot
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;

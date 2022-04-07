@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the resource properties.
- * 
  */
 public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Gets or sets the list of network interfaces associated with the virtual machine.
-     * 
      */
     @Import(name="networkInterfaces")
       private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Notification settings for a schedule.
- * 
  */
 public final class NotificationSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
 
     /**
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
-     * 
      */
     @Import(name="emailRecipient")
       private final @Nullable String emailRecipient;
@@ -32,7 +30,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
 
     /**
      * The locale to use when sending a notification (fallback for unsupported languages is EN).
-     * 
      */
     @Import(name="notificationLocale")
       private final @Nullable String notificationLocale;
@@ -43,7 +40,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
 
     /**
      * If notifications are enabled for this schedule (i.e. Enabled, Disabled).
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -54,7 +50,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
 
     /**
      * Time in minutes before event at which notification will be sent.
-     * 
      */
     @Import(name="timeInMinutes")
       private final @Nullable Integer timeInMinutes;
@@ -65,7 +60,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
 
     /**
      * The webhook URL to which the notification will be sent.
-     * 
      */
     @Import(name="webhookUrl")
       private final @Nullable String webhookUrl;

@@ -14,7 +14,6 @@ public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the Private DNS zone (without a terminating dot).
-     * 
      */
     @Import(name="privateZoneName", required=true)
       private final String privateZoneName;
@@ -25,7 +24,6 @@ public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the virtual network link.
-     * 
      */
     @Import(name="virtualNetworkLinkName", required=true)
       private final String virtualNetworkLinkName;

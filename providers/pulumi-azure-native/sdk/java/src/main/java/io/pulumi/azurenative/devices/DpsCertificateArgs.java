@@ -17,7 +17,6 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
-     * 
      */
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
@@ -28,7 +27,6 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the certificate create or update.
-     * 
      */
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
@@ -39,7 +37,6 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * True indicates that the certificate will be created in verified state and proof of possession will not be required.
-     * 
      */
     @Import(name="isVerified")
       private final @Nullable Output<Boolean> isVerified;
@@ -50,7 +47,6 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the provisioning service.
-     * 
      */
     @Import(name="provisioningServiceName", required=true)
       private final Output<String> provisioningServiceName;
@@ -61,7 +57,6 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource group identifier.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

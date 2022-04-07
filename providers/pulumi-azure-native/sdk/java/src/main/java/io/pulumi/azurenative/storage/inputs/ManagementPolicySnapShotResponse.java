@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Management policy action for snapshot.
- * 
  */
 public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.
 
     /**
      * The function to delete the blob snapshot
-     * 
      */
     @Import(name="delete")
       private final @Nullable DateAfterCreationResponse delete;
@@ -31,7 +29,6 @@ public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.
 
     /**
      * The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier
-     * 
      */
     @Import(name="tierToArchive")
       private final @Nullable DateAfterCreationResponse tierToArchive;
@@ -42,7 +39,6 @@ public final class ManagementPolicySnapShotResponse extends io.pulumi.resources.
 
     /**
      * The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier
-     * 
      */
     @Import(name="tierToCool")
       private final @Nullable DateAfterCreationResponse tierToCool;

@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ListIngestionSettingConnectionStringsResult {
     /**
      * Connection strings
-     * 
      */
     private final List<IngestionConnectionStringResponse> value;
 
@@ -23,7 +22,6 @@ public final class ListIngestionSettingConnectionStringsResult {
 
     /**
      * Connection strings
-     * 
     */
     public List<IngestionConnectionStringResponse> getValue() {
         return this.value;

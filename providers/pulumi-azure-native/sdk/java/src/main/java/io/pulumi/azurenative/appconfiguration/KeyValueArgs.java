@@ -17,7 +17,6 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the configuration store.
-     * 
      */
     @Import(name="configStoreName", required=true)
       private final Output<String> configStoreName;
@@ -29,7 +28,6 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The content type of the key-value's value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -40,7 +38,6 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
-     * 
      */
     @Import(name="keyValueName")
       private final @Nullable Output<String> keyValueName;
@@ -51,7 +48,6 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A dictionary of tags that can help identify what a key-value may be applicable for.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -73,7 +68,6 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value of the key-value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity source for a MongoDB Atlas database.
- * 
  */
 public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -33,7 +31,6 @@ public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Specifies the number of documents to return in each batch of the response from MongoDB Atlas instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="batchSize")
       private final @Nullable Object batchSize;
@@ -44,7 +41,6 @@ public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Cursor methods for Mongodb query
-     * 
      */
     @Import(name="cursorMethods")
       private final @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods;
@@ -55,7 +51,6 @@ public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -66,7 +61,6 @@ public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="filter")
       private final @Nullable Object filter;
@@ -77,7 +71,6 @@ public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -88,7 +81,6 @@ public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
@@ -99,7 +91,6 @@ public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -110,7 +101,6 @@ public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.Invoke
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -122,7 +112,6 @@ public final class MongoDbAtlasSourceResponse extends io.pulumi.resources.Invoke
     /**
      * Copy source type.
      * Expected value is 'MongoDbAtlasSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Database migration errors for online migration
- * 
  */
 public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.res
 
     /**
      * Event text.
-     * 
      */
     @Import(name="eventText", required=true)
       private final String eventText;
@@ -29,7 +27,6 @@ public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.res
 
     /**
      * Event type.
-     * 
      */
     @Import(name="eventTypeString", required=true)
       private final String eventTypeString;
@@ -40,7 +37,6 @@ public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.res
 
     /**
      * String value of timestamp.
-     * 
      */
     @Import(name="timestampString", required=true)
       private final String timestampString;

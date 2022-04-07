@@ -16,7 +16,6 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The configuration name. Should always be "$default".
-     * 
      */
     @Import(name="configName")
       private final @Nullable Output<String> configName;
@@ -27,7 +26,6 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -38,7 +36,6 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name to access Standard Namespace after migration
-     * 
      */
     @Import(name="postMigrationName", required=true)
       private final Output<String> postMigrationName;
@@ -49,7 +46,6 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Existing premium Namespace ARM Id name which has no entities, will be used for migration
-     * 
      */
     @Import(name="targetNamespace", required=true)
       private final Output<String> targetNamespace;

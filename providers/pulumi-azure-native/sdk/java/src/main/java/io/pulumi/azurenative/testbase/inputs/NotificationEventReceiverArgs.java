@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A notification event receivers.
- * 
  */
 public final class NotificationEventReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
 
     /**
      * The type of the notification event receiver.
-     * 
      */
     @Import(name="receiverType")
       private final @Nullable Output<String> receiverType;
@@ -32,7 +30,6 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
 
     /**
      * The notification event receiver value.
-     * 
      */
     @Import(name="receiverValue")
       private final @Nullable Output<NotificationReceiverValueArgs> receiverValue;

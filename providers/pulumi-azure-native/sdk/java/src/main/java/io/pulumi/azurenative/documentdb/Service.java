@@ -20,7 +20,173 @@ import javax.annotation.Nullable;
  * Properties for the database account.
  * API Version: 2021-04-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DataTransferServiceCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var service = new AzureNative.DocumentDB.Service("service", new AzureNative.DocumentDB.ServiceArgs
+ *         {
+ *             AccountName = "ddb1",
+ *             InstanceCount = 1,
+ *             InstanceSize = "Cosmos.D4s",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "DataTransfer",
+ *             ServiceType = "DataTransfer",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewService(ctx, "service", &documentdb.ServiceArgs{
+ * 			AccountName:       pulumi.String("ddb1"),
+ * 			InstanceCount:     pulumi.Int(1),
+ * 			InstanceSize:      pulumi.String("Cosmos.D4s"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("DataTransfer"),
+ * 			ServiceType:       pulumi.String("DataTransfer"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const service = new azure_native.documentdb.Service("service", {
+ *     accountName: "ddb1",
+ *     instanceCount: 1,
+ *     instanceSize: "Cosmos.D4s",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "DataTransfer",
+ *     serviceType: "DataTransfer",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service = azure_native.documentdb.Service("service",
+ *     account_name="ddb1",
+ *     instance_count=1,
+ *     instance_size="Cosmos.D4s",
+ *     resource_group_name="rg1",
+ *     service_name="DataTransfer",
+ *     service_type="DataTransfer")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### SqlDedicatedGatewayServiceCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var service = new AzureNative.DocumentDB.Service("service", new AzureNative.DocumentDB.ServiceArgs
+ *         {
+ *             AccountName = "ddb1",
+ *             InstanceCount = 1,
+ *             InstanceSize = "Cosmos.D4s",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "SqlDedicatedGateway",
+ *             ServiceType = "SqlDedicatedGateway",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewService(ctx, "service", &documentdb.ServiceArgs{
+ * 			AccountName:       pulumi.String("ddb1"),
+ * 			InstanceCount:     pulumi.Int(1),
+ * 			InstanceSize:      pulumi.String("Cosmos.D4s"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("SqlDedicatedGateway"),
+ * 			ServiceType:       pulumi.String("SqlDedicatedGateway"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const service = new azure_native.documentdb.Service("service", {
+ *     accountName: "ddb1",
+ *     instanceCount: 1,
+ *     instanceSize: "Cosmos.D4s",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "SqlDedicatedGateway",
+ *     serviceType: "SqlDedicatedGateway",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service = azure_native.documentdb.Service("service",
+ *     account_name="ddb1",
+ *     instance_count=1,
+ *     instance_size="Cosmos.D4s",
+ *     resource_group_name="rg1",
+ *     service_name="SqlDedicatedGateway",
+ *     service_type="SqlDedicatedGateway")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,42 +201,36 @@ import javax.annotation.Nullable;
 public class Service extends io.pulumi.resources.CustomResource {
     /**
      * The name of the database account.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the database account.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Services response resource.
-     * 
      */
     @Export(name="properties", type=Either.class, parameters={DataTransferServiceResourcePropertiesResponse.class, SqlDedicatedGatewayServiceResourcePropertiesResponse.class})
     private Output<Either<DataTransferServiceResourcePropertiesResponse,SqlDedicatedGatewayServiceResourcePropertiesResponse>> properties;
 
     /**
      * @return Services response resource.
-     * 
      */
     public Output<Either<DataTransferServiceResourcePropertiesResponse,SqlDedicatedGatewayServiceResourcePropertiesResponse>> getProperties() {
         return this.properties;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

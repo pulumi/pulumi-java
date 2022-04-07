@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties required to create a connection to Azure SQL database Managed instance
- * 
  */
 public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource id for Azure SQL database Managed instance
-     * 
      */
     @Import(name="managedInstanceResourceId", required=true)
       private final Output<String> managedInstanceResourceId;
@@ -31,7 +29,6 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Password credential.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -43,7 +40,6 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     /**
      * Type of connection info
      * Expected value is 'MiSqlConnectionInfo'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -54,7 +50,6 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
 
     /**
      * User name
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

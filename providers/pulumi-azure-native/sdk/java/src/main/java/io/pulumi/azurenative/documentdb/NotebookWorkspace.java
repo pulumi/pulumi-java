@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * A notebook workspace resource
  * API Version: 2021-03-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CosmosDBNotebookWorkspaceCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var notebookWorkspace = new AzureNative.DocumentDB.NotebookWorkspace("notebookWorkspace", new AzureNative.DocumentDB.NotebookWorkspaceArgs
+ *         {
+ *             AccountName = "ddb1",
+ *             NotebookWorkspaceName = "default",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewNotebookWorkspace(ctx, "notebookWorkspace", &documentdb.NotebookWorkspaceArgs{
+ * 			AccountName:           pulumi.String("ddb1"),
+ * 			NotebookWorkspaceName: pulumi.String("default"),
+ * 			ResourceGroupName:     pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const notebookWorkspace = new azure_native.documentdb.NotebookWorkspace("notebookWorkspace", {
+ *     accountName: "ddb1",
+ *     notebookWorkspaceName: "default",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * notebook_workspace = azure_native.documentdb.NotebookWorkspace("notebookWorkspace",
+ *     account_name="ddb1",
+ *     notebook_workspace_name="default",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +104,48 @@ import javax.annotation.Nullable;
 public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
     /**
      * The name of the database account.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the database account.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Specifies the endpoint of Notebook server.
-     * 
      */
     @Export(name="notebookServerEndpoint", type=String.class, parameters={})
     private Output<String> notebookServerEndpoint;
 
     /**
      * @return Specifies the endpoint of Notebook server.
-     * 
      */
     public Output<String> getNotebookServerEndpoint() {
         return this.notebookServerEndpoint;
     }
     /**
      * Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

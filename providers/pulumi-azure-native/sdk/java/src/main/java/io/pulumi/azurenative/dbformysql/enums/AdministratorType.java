@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of administrator.
-     * 
      */
     @EnumType
     public enum AdministratorType {

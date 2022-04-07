@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * ExpressRoute circuit peering identifier.
- * 
  */
 public final class ExpressRouteCircuitPeeringIdArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ExpressRouteCircuitPeeringIdArgs extends io.pulumi.resources.
 
     /**
      * The ID of the ExpressRoute circuit peering.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;

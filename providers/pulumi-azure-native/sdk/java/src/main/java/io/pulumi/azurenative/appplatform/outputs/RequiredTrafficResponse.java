@@ -13,27 +13,22 @@ import java.util.Objects;
 public final class RequiredTrafficResponse {
     /**
      * The direction of required traffic
-     * 
      */
     private final String direction;
     /**
      * The FQDN list of required traffic
-     * 
      */
     private final List<String> fqdns;
     /**
      * The ip list of required traffic
-     * 
      */
     private final List<String> ips;
     /**
      * The port of required traffic
-     * 
      */
     private final Integer port;
     /**
      * The protocol of required traffic
-     * 
      */
     private final String protocol;
 
@@ -53,35 +48,30 @@ public final class RequiredTrafficResponse {
 
     /**
      * The direction of required traffic
-     * 
     */
     public String getDirection() {
         return this.direction;
     }
     /**
      * The FQDN list of required traffic
-     * 
     */
     public List<String> getFqdns() {
         return this.fqdns;
     }
     /**
      * The ip list of required traffic
-     * 
     */
     public List<String> getIps() {
         return this.ips;
     }
     /**
      * The port of required traffic
-     * 
     */
     public Integer getPort() {
         return this.port;
     }
     /**
      * The protocol of required traffic
-     * 
     */
     public String getProtocol() {
         return this.protocol;

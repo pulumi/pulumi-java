@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Firewall Policy NAT Rule Collection.
- * 
  */
 public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
 
     /**
      * The action type of a Nat rule collection.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<FirewallPolicyNatRuleCollectionActionArgs> action;
@@ -38,7 +36,6 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
 
     /**
      * The name of the rule collection.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -49,7 +46,6 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
 
     /**
      * Priority of the Firewall Policy Rule Collection resource.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -61,7 +57,6 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
     /**
      * The type of the rule collection.
      * Expected value is 'FirewallPolicyNatRuleCollection'.
-     * 
      */
     @Import(name="ruleCollectionType", required=true)
       private final Output<String> ruleCollectionType;
@@ -72,7 +67,6 @@ public final class FirewallPolicyNatRuleCollectionArgs extends io.pulumi.resourc
 
     /**
      * List of rules included in a rule collection.
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<Object>> rules;

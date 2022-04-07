@@ -24,7 +24,6 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource provider hosted within ProviderHub.
-     * 
      */
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;

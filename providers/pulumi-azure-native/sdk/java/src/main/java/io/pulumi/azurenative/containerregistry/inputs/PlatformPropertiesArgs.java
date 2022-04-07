@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The platform properties against which the run has to happen.
- * 
  */
 public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The OS architecture.
-     * 
      */
     @Import(name="architecture")
       private final @Nullable Output<Either<String,Architecture>> architecture;
@@ -35,7 +33,6 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The operating system type required for the run.
-     * 
      */
     @Import(name="os", required=true)
       private final Output<Either<String,OS>> os;
@@ -46,7 +43,6 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Variant of the CPU.
-     * 
      */
     @Import(name="variant")
       private final @Nullable Output<Either<String,Variant>> variant;

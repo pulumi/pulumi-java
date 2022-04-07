@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * Represents an instance of a DNC controller.
  * API Version: 2021-03-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create controller
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var controllerDetails = new AzureNative.DelegatedNetwork.ControllerDetails("controllerDetails", new AzureNative.DelegatedNetwork.ControllerDetailsArgs
+ *         {
+ *             Location = "West US",
+ *             ResourceGroupName = "TestRG",
+ *             ResourceName = "testcontroller",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	delegatednetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/delegatednetwork"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := delegatednetwork.NewControllerDetails(ctx, "controllerDetails", &delegatednetwork.ControllerDetailsArgs{
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("TestRG"),
+ * 			ResourceName:      pulumi.String("testcontroller"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const controllerDetails = new azure_native.delegatednetwork.ControllerDetails("controllerDetails", {
+ *     location: "West US",
+ *     resourceGroupName: "TestRG",
+ *     resourceName: "testcontroller",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * controller_details = azure_native.delegatednetwork.ControllerDetails("controllerDetails",
+ *     location="West US",
+ *     resource_group_name="TestRG",
+ *     resource_name="testcontroller")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +105,108 @@ import javax.annotation.Nullable;
 public class ControllerDetails extends io.pulumi.resources.CustomResource {
     /**
      * dnc application id should be used by customer to authenticate with dnc gateway.
-     * 
      */
     @Export(name="dncAppId", type=String.class, parameters={})
     private Output<String> dncAppId;
 
     /**
      * @return dnc application id should be used by customer to authenticate with dnc gateway.
-     * 
      */
     public Output<String> getDncAppId() {
         return this.dncAppId;
     }
     /**
      * dnc endpoint url that customers can use to connect to
-     * 
      */
     @Export(name="dncEndpoint", type=String.class, parameters={})
     private Output<String> dncEndpoint;
 
     /**
      * @return dnc endpoint url that customers can use to connect to
-     * 
      */
     public Output<String> getDncEndpoint() {
         return this.dncEndpoint;
     }
     /**
      * tenant id of dnc application id
-     * 
      */
     @Export(name="dncTenantId", type=String.class, parameters={})
     private Output<String> dncTenantId;
 
     /**
      * @return tenant id of dnc application id
-     * 
      */
     public Output<String> getDncTenantId() {
         return this.dncTenantId;
     }
     /**
      * Location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current state of dnc controller resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The current state of dnc controller resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource guid.
-     * 
      */
     @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
      * @return Resource guid.
-     * 
      */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

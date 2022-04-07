@@ -16,7 +16,6 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * PEM formatted public key.
-     * 
      */
     @Import(name="pem")
       private final @Nullable String pem;

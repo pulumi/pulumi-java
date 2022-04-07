@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of SqlServerInstance.
- * 
  */
 public final class SqlServerInstancePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * SQL Server collation.
-     * 
      */
     @Import(name="collation")
       private final @Nullable String collation;
@@ -31,7 +29,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * ARM Resource id of the container resource (Azure Arc for Servers).
-     * 
      */
     @Import(name="containerResourceId", required=true)
       private final String containerResourceId;
@@ -42,7 +39,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * The time when the resource was created.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -53,7 +49,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * SQL Server current version.
-     * 
      */
     @Import(name="currentVersion")
       private final @Nullable String currentVersion;
@@ -64,7 +59,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * SQL Server edition.
-     * 
      */
     @Import(name="edition")
       private final @Nullable String edition;
@@ -75,7 +69,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * SQL Server instance name.
-     * 
      */
     @Import(name="instanceName")
       private final @Nullable String instanceName;
@@ -86,7 +79,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * SQL Server license type.
-     * 
      */
     @Import(name="licenseType")
       private final @Nullable String licenseType;
@@ -97,7 +89,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * SQL Server update level.
-     * 
      */
     @Import(name="patchLevel")
       private final @Nullable String patchLevel;
@@ -108,7 +99,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * SQL Server product ID.
-     * 
      */
     @Import(name="productId")
       private final @Nullable String productId;
@@ -126,7 +116,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * The cloud connectivity status.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -137,7 +126,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * Dynamic TCP ports used by SQL Server.
-     * 
      */
     @Import(name="tcpDynamicPorts")
       private final @Nullable String tcpDynamicPorts;
@@ -148,7 +136,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * Static TCP ports used by SQL Server.
-     * 
      */
     @Import(name="tcpStaticPorts")
       private final @Nullable String tcpStaticPorts;
@@ -159,7 +146,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * The number of logical processors used by the SQL Server instance.
-     * 
      */
     @Import(name="vCore")
       private final @Nullable String vCore;
@@ -170,7 +156,6 @@ public final class SqlServerInstancePropertiesResponse extends io.pulumi.resourc
 
     /**
      * SQL Server version.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

@@ -18,7 +18,6 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -29,7 +28,6 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
 
     /**
      * SQL pool name
-     * 
      */
     @Import(name="sqlPoolName", required=true)
       private final Output<String> sqlPoolName;
@@ -40,7 +38,6 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
 
     /**
      * The status of the database transparent data encryption.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
@@ -51,7 +48,6 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
 
     /**
      * The name of the transparent data encryption configuration.
-     * 
      */
     @Import(name="transparentDataEncryptionName")
       private final @Nullable Output<String> transparentDataEncryptionName;
@@ -62,7 +58,6 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

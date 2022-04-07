@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * Model that represents a branch in the step.
- * 
  */
 public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of actions.
-     * 
      */
     @Import(name="actions", required=true)
       private final Output<List<Object>> actions;
@@ -35,7 +33,6 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * String of the branch name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;

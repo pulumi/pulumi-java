@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The json object containing security policy waf parameters
- * 
  */
 public final class SecurityPolicyWebApplicationFirewallParametersResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
 
     /**
      * Waf associations
-     * 
      */
     @Import(name="associations")
       private final @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
@@ -35,7 +33,6 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
     /**
      * The type of the Security policy to create.
      * Expected value is 'WebApplicationFirewall'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -46,7 +43,6 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="wafPolicy")
       private final @Nullable ResourceReferenceResponse wafPolicy;

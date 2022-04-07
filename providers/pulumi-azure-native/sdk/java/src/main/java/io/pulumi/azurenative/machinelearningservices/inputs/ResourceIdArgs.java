@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Represents a resource ID. For example, for a subnet, it is the resource URL for the subnet.
- * 
  */
 public final class ResourceIdArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ResourceIdArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the resource
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

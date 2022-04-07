@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The X12 message identifier.
- * 
  */
 public final class X12MessageIdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class X12MessageIdentifierResponse extends io.pulumi.resources.Invo
 
     /**
      * The message id.
-     * 
      */
     @Import(name="messageId", required=true)
       private final String messageId;

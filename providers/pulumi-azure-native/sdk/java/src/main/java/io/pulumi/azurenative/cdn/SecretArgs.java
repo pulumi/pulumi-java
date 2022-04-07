@@ -20,7 +20,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * object which contains secret parameters
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
@@ -31,7 +30,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the CDN profile which is unique within the resource group.
-     * 
      */
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
@@ -42,7 +40,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -53,7 +50,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Secret under the profile.
-     * 
      */
     @Import(name="secretName")
       private final @Nullable Output<String> secretName;

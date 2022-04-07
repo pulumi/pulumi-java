@@ -14,7 +14,6 @@ public final class GetDicomServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of DICOM Service resource.
-     * 
      */
     @Import(name="dicomServiceName", required=true)
       private final String dicomServiceName;
@@ -25,7 +24,6 @@ public final class GetDicomServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group that contains the service instance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetDicomServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of workspace resource.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

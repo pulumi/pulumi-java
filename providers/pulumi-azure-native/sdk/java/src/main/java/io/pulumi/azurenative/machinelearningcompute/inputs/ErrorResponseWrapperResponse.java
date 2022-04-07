@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Wrapper for error response to follow ARM guidelines.
- * 
  */
 public final class ErrorResponseWrapperResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ErrorResponseWrapperResponse extends io.pulumi.resources.Invo
 
     /**
      * The error response.
-     * 
      */
     @Import(name="error")
       private final @Nullable ErrorResponseResponse error;

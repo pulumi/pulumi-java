@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class SourceLifeCycleResponse {
     /**
      * Delete Option
-     * 
      */
     private final AbsoluteDeleteOptionResponse deleteAfter;
     /**
      * DataStoreInfo base
-     * 
      */
     private final DataStoreInfoBaseResponse sourceDataStore;
     private final @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings;
@@ -37,14 +35,12 @@ public final class SourceLifeCycleResponse {
 
     /**
      * Delete Option
-     * 
     */
     public AbsoluteDeleteOptionResponse getDeleteAfter() {
         return this.deleteAfter;
     }
     /**
      * DataStoreInfo base
-     * 
     */
     public DataStoreInfoBaseResponse getSourceDataStore() {
         return this.sourceDataStore;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set of actions in the Rewrite Rule in Application Gateway.
- * 
  */
 public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
 
     /**
      * Request Header Actions in the Action Set.
-     * 
      */
     @Import(name="requestHeaderConfigurations")
       private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations;
@@ -33,7 +31,6 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
 
     /**
      * Response Header Actions in the Action Set.
-     * 
      */
     @Import(name="responseHeaderConfigurations")
       private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations;
@@ -44,7 +41,6 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
 
     /**
      * Url Configuration Action in the Action Set.
-     * 
      */
     @Import(name="urlConfiguration")
       private final @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;

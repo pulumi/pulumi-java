@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A user that can be assigned to a compute instance.
- * 
  */
 public final class AssignedUserResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class AssignedUserResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * User’s AAD Object Id.
-     * 
      */
     @Import(name="objectId", required=true)
       private final String objectId;
@@ -29,7 +27,6 @@ public final class AssignedUserResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * User’s AAD Tenant Id.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;

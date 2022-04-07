@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Azure Data Explorer (Kusto) source.
- * 
  */
 public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
@@ -32,7 +30,6 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -43,7 +40,6 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -54,7 +50,6 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
 
     /**
      * The name of the Boolean option that controls whether truncation is applied to result-sets that go beyond a certain row-count limit.
-     * 
      */
     @Import(name="noTruncation")
       private final @Nullable Object noTruncation;
@@ -65,7 +60,6 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
 
     /**
      * Database query. Should be a Kusto Query Language (KQL) query. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="query", required=true)
       private final Object query;
@@ -76,7 +70,6 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
@@ -87,7 +80,6 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
@@ -98,7 +90,6 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
@@ -110,7 +101,6 @@ public final class AzureDataExplorerSourceResponse extends io.pulumi.resources.I
     /**
      * Copy source type.
      * Expected value is 'AzureDataExplorerSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

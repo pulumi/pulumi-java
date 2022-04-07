@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The metric dimension
- * 
  */
 public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The dimension value.
-     * 
      */
     @Import(name="sourceName", required=true)
       private final Output<String> sourceName;
@@ -30,7 +28,6 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The dimension type.
-     * 
      */
     @Import(name="sourceType", required=true)
       private final Output<String> sourceType;

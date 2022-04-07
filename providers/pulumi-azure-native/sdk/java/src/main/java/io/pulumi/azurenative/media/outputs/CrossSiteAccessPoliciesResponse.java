@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class CrossSiteAccessPoliciesResponse {
     /**
      * The content of clientaccesspolicy.xml used by Silverlight.
-     * 
      */
     private final @Nullable String clientAccessPolicy;
     /**
      * The content of crossdomain.xml used by Silverlight.
-     * 
      */
     private final @Nullable String crossDomainPolicy;
 
@@ -32,14 +30,12 @@ public final class CrossSiteAccessPoliciesResponse {
 
     /**
      * The content of clientaccesspolicy.xml used by Silverlight.
-     * 
     */
     public Optional<String> getClientAccessPolicy() {
         return Optional.ofNullable(this.clientAccessPolicy);
     }
     /**
      * The content of crossdomain.xml used by Silverlight.
-     * 
     */
     public Optional<String> getCrossDomainPolicy() {
         return Optional.ofNullable(this.crossDomainPolicy);

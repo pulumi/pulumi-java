@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The SKU of the cognitive services account.
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Gets the sku tier. This is based on the SKU name.
-     * 
      */
     @Import(name="tier", required=true)
       private final String tier;

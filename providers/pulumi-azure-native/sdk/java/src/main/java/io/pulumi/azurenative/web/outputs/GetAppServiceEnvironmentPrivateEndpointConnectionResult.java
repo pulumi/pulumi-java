@@ -16,38 +16,31 @@ import javax.annotation.Nullable;
 public final class GetAppServiceEnvironmentPrivateEndpointConnectionResult {
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Private IPAddresses mapped to the remote private endpoint
-     * 
      */
     private final @Nullable List<String> ipAddresses;
     /**
      * Kind of resource.
-     * 
      */
     private final @Nullable String kind;
     /**
      * Resource Name.
-     * 
      */
     private final String name;
     /**
      * PrivateEndpoint of a remote private endpoint connection
-     * 
      */
     private final @Nullable ArmIdWrapperResponse privateEndpoint;
     /**
      * The state of a private link connection
-     * 
      */
     private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
     private final String provisioningState;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -73,42 +66,36 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionResult {
 
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Private IPAddresses mapped to the remote private endpoint
-     * 
     */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
      * Kind of resource.
-     * 
     */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * PrivateEndpoint of a remote private endpoint connection
-     * 
     */
     public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The state of a private link connection
-     * 
     */
     public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -118,7 +105,6 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionResult {
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

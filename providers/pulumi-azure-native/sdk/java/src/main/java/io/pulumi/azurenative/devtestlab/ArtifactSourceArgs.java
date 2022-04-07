@@ -20,7 +20,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The folder containing Azure Resource Manager templates.
-     * 
      */
     @Import(name="armTemplateFolderPath")
       private final @Nullable Output<String> armTemplateFolderPath;
@@ -31,7 +30,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The artifact source's branch reference.
-     * 
      */
     @Import(name="branchRef")
       private final @Nullable Output<String> branchRef;
@@ -42,7 +40,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The artifact source's display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -53,7 +50,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The folder containing artifacts.
-     * 
      */
     @Import(name="folderPath")
       private final @Nullable Output<String> folderPath;
@@ -64,7 +60,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -75,7 +70,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -86,7 +80,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the artifact source.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -97,7 +90,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The security token to authenticate to the artifact source.
-     * 
      */
     @Import(name="securityToken")
       private final @Nullable Output<String> securityToken;
@@ -119,7 +110,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The artifact source's type.
-     * 
      */
     @Import(name="sourceType")
       private final @Nullable Output<Either<String,SourceControlType>> sourceType;
@@ -130,7 +120,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates if the artifact source is enabled (values: Enabled, Disabled).
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,EnableStatus>> status;
@@ -141,7 +130,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -152,7 +140,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The artifact source's URI.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Customer End point to store/retrieve data during a contact.
- * 
  */
 public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an end point.
-     * 
      */
     @Import(name="endPointName", required=true)
       private final Output<String> endPointName;
@@ -32,7 +30,6 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IP Address.
-     * 
      */
     @Import(name="ipAddress", required=true)
       private final Output<String> ipAddress;
@@ -43,7 +40,6 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * TCP port to listen on to receive data.
-     * 
      */
     @Import(name="port", required=true)
       private final Output<String> port;
@@ -54,7 +50,6 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Protocol either UDP or TCP.
-     * 
      */
     @Import(name="protocol", required=true)
       private final Output<Either<String,Protocol>> protocol;

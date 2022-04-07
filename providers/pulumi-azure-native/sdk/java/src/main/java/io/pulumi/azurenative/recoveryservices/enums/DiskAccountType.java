@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The disk type.
-     * 
      */
     @EnumType
     public enum DiskAccountType {

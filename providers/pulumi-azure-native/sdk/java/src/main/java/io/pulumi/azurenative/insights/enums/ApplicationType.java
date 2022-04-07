@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of application being monitored.
-     * 
      */
     @EnumType
     public enum ApplicationType {

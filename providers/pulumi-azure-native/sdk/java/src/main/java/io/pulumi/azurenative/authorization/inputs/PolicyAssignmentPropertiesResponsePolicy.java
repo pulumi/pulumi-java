@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the policy
- * 
  */
 public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
 
     /**
      * Id of the policy
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -32,7 +30,6 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
 
     /**
      * The name of the entity last modified it
-     * 
      */
     @Import(name="lastModifiedBy", required=true)
       private final PrincipalResponse lastModifiedBy;
@@ -43,7 +40,6 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends io.pulumi.re
 
     /**
      * The last modified date time.
-     * 
      */
     @Import(name="lastModifiedDateTime")
       private final @Nullable String lastModifiedDateTime;

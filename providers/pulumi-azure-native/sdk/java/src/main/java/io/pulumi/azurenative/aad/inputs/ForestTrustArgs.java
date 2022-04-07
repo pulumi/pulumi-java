@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Forest Trust Setting
- * 
  */
 public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Friendly Name
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -31,7 +29,6 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Remote Dns ips
-     * 
      */
     @Import(name="remoteDnsIps")
       private final @Nullable Output<String> remoteDnsIps;
@@ -42,7 +39,6 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Trust Direction
-     * 
      */
     @Import(name="trustDirection")
       private final @Nullable Output<String> trustDirection;
@@ -53,7 +49,6 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Trust Password
-     * 
      */
     @Import(name="trustPassword")
       private final @Nullable Output<String> trustPassword;
@@ -64,7 +59,6 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Trusted Domain FQDN
-     * 
      */
     @Import(name="trustedDomainFqdn")
       private final @Nullable Output<String> trustedDomainFqdn;

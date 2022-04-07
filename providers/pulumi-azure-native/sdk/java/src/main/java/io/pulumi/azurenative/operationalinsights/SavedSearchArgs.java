@@ -18,8 +18,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     public static final SavedSearchArgs Empty = new SavedSearchArgs();
 
     /**
-     * The category of the saved search. This helps the user to find a saved search faster.
-     * 
+     * The category of the saved search. This helps the user to find a saved search faster. 
      */
     @Import(name="category", required=true)
       private final Output<String> category;
@@ -30,7 +29,6 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Saved search display name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -41,7 +39,6 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The function alias if query serves as a function.
-     * 
      */
     @Import(name="functionAlias")
       private final @Nullable Output<String> functionAlias;
@@ -52,7 +49,6 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
-     * 
      */
     @Import(name="functionParameters")
       private final @Nullable Output<String> functionParameters;
@@ -63,7 +59,6 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The query expression for the saved search.
-     * 
      */
     @Import(name="query", required=true)
       private final Output<String> query;
@@ -74,7 +69,6 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The id of the saved search.
-     * 
      */
     @Import(name="savedSearchId")
       private final @Nullable Output<String> savedSearchId;
@@ -96,7 +89,6 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags attached to the saved search.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<List<TagArgs>> tags;
@@ -107,7 +99,6 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version number of the query language. The current version is 2 and is the default.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<Double> version;
@@ -118,7 +109,6 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

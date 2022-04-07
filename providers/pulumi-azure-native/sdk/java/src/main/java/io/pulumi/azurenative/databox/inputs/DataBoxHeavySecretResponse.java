@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The secrets related to a databox heavy.
- * 
  */
 public final class DataBoxHeavySecretResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DataBoxHeavySecretResponse extends io.pulumi.resources.Invoke
 
     /**
      * Per account level access credentials.
-     * 
      */
     @Import(name="accountCredentialDetails", required=true)
       private final List<AccountCredentialDetailsResponse> accountCredentialDetails;
@@ -32,7 +30,6 @@ public final class DataBoxHeavySecretResponse extends io.pulumi.resources.Invoke
 
     /**
      * Password for out of the box experience on device.
-     * 
      */
     @Import(name="devicePassword", required=true)
       private final String devicePassword;
@@ -43,7 +40,6 @@ public final class DataBoxHeavySecretResponse extends io.pulumi.resources.Invoke
 
     /**
      * Serial number of the assigned device.
-     * 
      */
     @Import(name="deviceSerialNumber", required=true)
       private final String deviceSerialNumber;
@@ -54,7 +50,6 @@ public final class DataBoxHeavySecretResponse extends io.pulumi.resources.Invoke
 
     /**
      * The base 64 encoded public key to authenticate with the device
-     * 
      */
     @Import(name="encodedValidationCertPubKey", required=true)
       private final String encodedValidationCertPubKey;
@@ -65,7 +60,6 @@ public final class DataBoxHeavySecretResponse extends io.pulumi.resources.Invoke
 
     /**
      * Network configuration of the appliance.
-     * 
      */
     @Import(name="networkConfigurations", required=true)
       private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;

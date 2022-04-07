@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The provisioning state.
-     * 
      */
     @EnumType
     public enum WorkflowProvisioningState {

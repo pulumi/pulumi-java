@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies how the LCM(Local Configuration Manager) actually applies the configuration to the target nodes. Possible values are ApplyOnly, ApplyAndMonitor, and ApplyAndAutoCorrect.
-     * 
      */
     @EnumType
     public enum ConfigurationMode {

@@ -24,7 +24,100 @@ import javax.annotation.Nullable;
  * Linker of source and target resource
  * API Version: 2021-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutLink
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var linker = new AzureNative.ServiceLinker.Linker("linker", new AzureNative.ServiceLinker.LinkerArgs
+ *         {
+ *             AuthInfo = new AzureNative.ServiceLinker.Inputs.SecretAuthInfoArgs
+ *             {
+ *                 AuthType = "secret",
+ *                 Name = "name",
+ *                 Secret = "secret",
+ *             },
+ *             LinkerName = "linkName",
+ *             ResourceUri = "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Web/sites/test-app",
+ *             TargetId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicelinker "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicelinker"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicelinker.NewLinker(ctx, "linker", &servicelinker.LinkerArgs{
+ * 			AuthInfo: servicelinker.SecretAuthInfo{
+ * 				AuthType: "secret",
+ * 				Name:     "name",
+ * 				Secret:   "secret",
+ * 			},
+ * 			LinkerName:  pulumi.String("linkName"),
+ * 			ResourceUri: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Web/sites/test-app"),
+ * 			TargetId:    pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const linker = new azure_native.servicelinker.Linker("linker", {
+ *     authInfo: {
+ *         authType: "secret",
+ *         name: "name",
+ *         secret: "secret",
+ *     },
+ *     linkerName: "linkName",
+ *     resourceUri: "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Web/sites/test-app",
+ *     targetId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * linker = azure_native.servicelinker.Linker("linker",
+ *     auth_info=azure_native.servicelinker.SecretAuthInfoArgs(
+ *         auth_type="secret",
+ *         name="name",
+ *         secret="secret",
+ *     ),
+ *     linker_name="linkName",
+ *     resource_uri="subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.Web/sites/test-app",
+ *     target_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test-rg/providers/Microsoft.DocumentDb/databaseAccounts/test-acc/mongodbDatabases/test-db")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,98 +132,84 @@ import javax.annotation.Nullable;
 public class Linker extends io.pulumi.resources.CustomResource {
     /**
      * The authentication type.
-     * 
      */
     @Export(name="authInfo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> authInfo;
 
     /**
      * @return The authentication type.
-     * 
      */
     public Output</* @Nullable */ Object> getAuthInfo() {
         return this.authInfo;
     }
     /**
      * The application client type
-     * 
      */
     @Export(name="clientType", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientType;
 
     /**
      * @return The application client type
-     * 
      */
     public Output</* @Nullable */ String> getClientType() {
         return this.clientType;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
-     * The provisioning state.
-     * 
+     * The provisioning state. 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
-     * @return The provisioning state.
-     * 
+     * @return The provisioning state. 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system data.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system data.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The resource Id of target service.
-     * 
      */
     @Export(name="targetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetId;
 
     /**
      * @return The resource Id of target service.
-     * 
      */
     public Output</* @Nullable */ String> getTargetId() {
         return this.targetId;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -21,7 +21,150 @@ import javax.annotation.Nullable;
  * Address Resource.
  * API Version: 2021-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateAddress
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var addressByName = new AzureNative.EdgeOrder.AddressByName("addressByName", new AzureNative.EdgeOrder.AddressByNameArgs
+ *         {
+ *             AddressName = "TestMSAddressName",
+ *             ContactDetails = new AzureNative.EdgeOrder.Inputs.ContactDetailsArgs
+ *             {
+ *                 ContactName = "Petr Cech",
+ *                 EmailList = 
+ *                 {
+ *                     "testemail@microsoft.com",
+ *                 },
+ *                 Phone = "1234567890",
+ *                 PhoneExtension = "",
+ *             },
+ *             Location = "westus",
+ *             ResourceGroupName = "TestRG",
+ *             ShippingAddress = new AzureNative.EdgeOrder.Inputs.ShippingAddressArgs
+ *             {
+ *                 AddressType = "None",
+ *                 City = "San Francisco",
+ *                 CompanyName = "Microsoft",
+ *                 Country = "US",
+ *                 PostalCode = "94107",
+ *                 StateOrProvince = "CA",
+ *                 StreetAddress1 = "16 TOWNSEND ST",
+ *                 StreetAddress2 = "UNIT 1",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	edgeorder "github.com/pulumi/pulumi-azure-native/sdk/go/azure/edgeorder"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := edgeorder.NewAddressByName(ctx, "addressByName", &edgeorder.AddressByNameArgs{
+ * 			AddressName: pulumi.String("TestMSAddressName"),
+ * 			ContactDetails: &edgeorder.ContactDetailsArgs{
+ * 				ContactName: pulumi.String("Petr Cech"),
+ * 				EmailList: pulumi.StringArray{
+ * 					pulumi.String("testemail@microsoft.com"),
+ * 				},
+ * 				Phone:          pulumi.String("1234567890"),
+ * 				PhoneExtension: pulumi.String(""),
+ * 			},
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("TestRG"),
+ * 			ShippingAddress: &edgeorder.ShippingAddressArgs{
+ * 				AddressType:     pulumi.String("None"),
+ * 				City:            pulumi.String("San Francisco"),
+ * 				CompanyName:     pulumi.String("Microsoft"),
+ * 				Country:         pulumi.String("US"),
+ * 				PostalCode:      pulumi.String("94107"),
+ * 				StateOrProvince: pulumi.String("CA"),
+ * 				StreetAddress1:  pulumi.String("16 TOWNSEND ST"),
+ * 				StreetAddress2:  pulumi.String("UNIT 1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const addressByName = new azure_native.edgeorder.AddressByName("addressByName", {
+ *     addressName: "TestMSAddressName",
+ *     contactDetails: {
+ *         contactName: "Petr Cech",
+ *         emailList: ["testemail@microsoft.com"],
+ *         phone: "1234567890",
+ *         phoneExtension: "",
+ *     },
+ *     location: "westus",
+ *     resourceGroupName: "TestRG",
+ *     shippingAddress: {
+ *         addressType: "None",
+ *         city: "San Francisco",
+ *         companyName: "Microsoft",
+ *         country: "US",
+ *         postalCode: "94107",
+ *         stateOrProvince: "CA",
+ *         streetAddress1: "16 TOWNSEND ST",
+ *         streetAddress2: "UNIT 1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * address_by_name = azure_native.edgeorder.AddressByName("addressByName",
+ *     address_name="TestMSAddressName",
+ *     contact_details=azure_native.edgeorder.ContactDetailsArgs(
+ *         contact_name="Petr Cech",
+ *         email_list=["testemail@microsoft.com"],
+ *         phone="1234567890",
+ *         phone_extension="",
+ *     ),
+ *     location="westus",
+ *     resource_group_name="TestRG",
+ *     shipping_address=azure_native.edgeorder.ShippingAddressArgs(
+ *         address_type="None",
+ *         city="San Francisco",
+ *         company_name="Microsoft",
+ *         country="US",
+ *         postal_code="94107",
+ *         state_or_province="CA",
+ *         street_address1="16 TOWNSEND ST",
+ *         street_address2="UNIT 1",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,112 +179,96 @@ import javax.annotation.Nullable;
 public class AddressByName extends io.pulumi.resources.CustomResource {
     /**
      * Status of address validation
-     * 
      */
     @Export(name="addressValidationStatus", type=String.class, parameters={})
     private Output<String> addressValidationStatus;
 
     /**
      * @return Status of address validation
-     * 
      */
     public Output<String> getAddressValidationStatus() {
         return this.addressValidationStatus;
     }
     /**
      * Contact details for the address
-     * 
      */
     @Export(name="contactDetails", type=ContactDetailsResponse.class, parameters={})
     private Output<ContactDetailsResponse> contactDetails;
 
     /**
      * @return Contact details for the address
-     * 
      */
     public Output<ContactDetailsResponse> getContactDetails() {
         return this.contactDetails;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Shipping details for the address
-     * 
      */
     @Export(name="shippingAddress", type=ShippingAddressResponse.class, parameters={})
     private Output</* @Nullable */ ShippingAddressResponse> shippingAddress;
 
     /**
      * @return Shipping details for the address
-     * 
      */
     public Output</* @Nullable */ ShippingAddressResponse> getShippingAddress() {
         return this.shippingAddress;
     }
     /**
      * Represents resource creation and update time
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Represents resource creation and update time
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

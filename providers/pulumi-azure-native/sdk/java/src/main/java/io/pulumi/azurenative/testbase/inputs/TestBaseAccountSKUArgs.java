@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a Test Base Account SKU.
- * 
  */
 public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The locations that the SKU is available.
-     * 
      */
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
@@ -34,7 +32,6 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The name of the SKU. This is typically a letter + number code, such as B0 or S0.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -45,7 +42,6 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The type of resource the SKU applies to.
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
@@ -56,7 +52,6 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The tier of this particular SKU.
-     * 
      */
     @Import(name="tier", required=true)
       private final Output<Either<String,Tier>> tier;

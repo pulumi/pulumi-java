@@ -16,62 +16,50 @@ import javax.annotation.Nullable;
 public final class LocalNetworkGatewayResponse {
     /**
      * Local network gateway's BGP speaker settings.
-     * 
      */
     private final @Nullable BgpSettingsResponse bgpSettings;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * FQDN of local network gateway.
-     * 
      */
     private final @Nullable String fqdn;
     /**
      * IP address of local network gateway.
-     * 
      */
     private final @Nullable String gatewayIpAddress;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * Local network site address space.
-     * 
      */
     private final @Nullable AddressSpaceResponse localNetworkAddressSpace;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The provisioning state of the local network gateway resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The resource GUID property of the local network gateway resource.
-     * 
      */
     private final String resourceGuid;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -105,84 +93,72 @@ public final class LocalNetworkGatewayResponse {
 
     /**
      * Local network gateway's BGP speaker settings.
-     * 
     */
     public Optional<BgpSettingsResponse> getBgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * FQDN of local network gateway.
-     * 
     */
     public Optional<String> getFqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * IP address of local network gateway.
-     * 
     */
     public Optional<String> getGatewayIpAddress() {
         return Optional.ofNullable(this.gatewayIpAddress);
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Local network site address space.
-     * 
     */
     public Optional<AddressSpaceResponse> getLocalNetworkAddressSpace() {
         return Optional.ofNullable(this.localNetworkAddressSpace);
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the local network gateway resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the local network gateway resource.
-     * 
     */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

@@ -14,7 +14,6 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The resource name of the Test Base Package.
-     * 
      */
     @Import(name="packageName", required=true)
       private final String packageName;
@@ -25,7 +24,6 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group that contains the resource.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetPackageDownloadURLArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The resource name of the Test Base Account.
-     * 
      */
     @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;

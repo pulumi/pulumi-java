@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties pertaining to the Nfs3Target
- * 
  */
 public final class Nfs3TargetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class Nfs3TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;
@@ -31,7 +29,6 @@ public final class Nfs3TargetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Identifies the StorageCache usage model to be used for this storage target.
-     * 
      */
     @Import(name="usageModel")
       private final @Nullable String usageModel;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AS2ErrorSettingsResponse {
     /**
      * The value indicating whether to resend message If MDN is not received.
-     * 
      */
     private final Boolean resendIfMDNNotReceived;
     /**
      * The value indicating whether to suspend duplicate message.
-     * 
      */
     private final Boolean suspendDuplicateMessage;
 
@@ -30,14 +28,12 @@ public final class AS2ErrorSettingsResponse {
 
     /**
      * The value indicating whether to resend message If MDN is not received.
-     * 
     */
     public Boolean getResendIfMDNNotReceived() {
         return this.resendIfMDNNotReceived;
     }
     /**
      * The value indicating whether to suspend duplicate message.
-     * 
     */
     public Boolean getSuspendDuplicateMessage() {
         return this.suspendDuplicateMessage;

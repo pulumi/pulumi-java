@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The SKU of the GPU resource.
-     * 
      */
     @EnumType
     public enum GpuSku {

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Json read settings.
- * 
  */
 public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Compression settings.
-     * 
      */
     @Import(name="compressionProperties")
       private final @Nullable Object compressionProperties;
@@ -36,7 +34,6 @@ public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeAr
     /**
      * The read setting type.
      * Expected value is 'JsonReadSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Timeline Query Errors.
- * 
  */
 public final class TimelineErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class TimelineErrorResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the error message
-     * 
      */
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
@@ -31,7 +29,6 @@ public final class TimelineErrorResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the query kind
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -42,7 +39,6 @@ public final class TimelineErrorResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * the query id
-     * 
      */
     @Import(name="queryId")
       private final @Nullable String queryId;

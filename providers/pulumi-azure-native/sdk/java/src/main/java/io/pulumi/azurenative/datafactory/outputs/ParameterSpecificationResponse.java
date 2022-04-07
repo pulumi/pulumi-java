@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class ParameterSpecificationResponse {
     /**
      * Default value of parameter.
-     * 
      */
     private final @Nullable Object defaultValue;
     /**
      * Parameter type.
-     * 
      */
     private final String type;
 
@@ -33,14 +31,12 @@ public final class ParameterSpecificationResponse {
 
     /**
      * Default value of parameter.
-     * 
     */
     public Optional<Object> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Parameter type.
-     * 
     */
     public String getType() {
         return this.type;

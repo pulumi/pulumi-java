@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ACL for a private endpoint
- * 
  */
 public final class PrivateEndpointACLResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PrivateEndpointACLResponse extends io.pulumi.resources.Invoke
 
     /**
      * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-     * 
      */
     @Import(name="allow")
       private final @Nullable List<String> allow;
@@ -32,7 +30,6 @@ public final class PrivateEndpointACLResponse extends io.pulumi.resources.Invoke
 
     /**
      * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
-     * 
      */
     @Import(name="deny")
       private final @Nullable List<String> deny;
@@ -43,7 +40,6 @@ public final class PrivateEndpointACLResponse extends io.pulumi.resources.Invoke
 
     /**
      * Name of the private endpoint connection
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

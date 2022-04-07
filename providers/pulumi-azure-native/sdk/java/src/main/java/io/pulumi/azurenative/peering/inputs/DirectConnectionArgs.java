@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that define a direct connection.
- * 
  */
 public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The bandwidth of the connection.
-     * 
      */
     @Import(name="bandwidthInMbps")
       private final @Nullable Output<Integer> bandwidthInMbps;
@@ -36,7 +34,6 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The BGP session associated with the connection.
-     * 
      */
     @Import(name="bgpSession")
       private final @Nullable Output<BgpSessionArgs> bgpSession;
@@ -47,7 +44,6 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The unique identifier (GUID) for the connection.
-     * 
      */
     @Import(name="connectionIdentifier")
       private final @Nullable Output<String> connectionIdentifier;
@@ -58,7 +54,6 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The PeeringDB.com ID of the facility at which the connection has to be set up.
-     * 
      */
     @Import(name="peeringDBFacilityId")
       private final @Nullable Output<Integer> peeringDBFacilityId;
@@ -69,7 +64,6 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The field indicating if Microsoft provides session ip addresses.
-     * 
      */
     @Import(name="sessionAddressProvider")
       private final @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider;
@@ -80,7 +74,6 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The flag that indicates whether or not the connection is used for peering service.
-     * 
      */
     @Import(name="useForPeeringService")
       private final @Nullable Output<Boolean> useForPeeringService;

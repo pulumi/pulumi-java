@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ServiceProviderParameterResponseConstraints {
     /**
      * Whether required the constraints of the bot meta data.
-     * 
      */
     private final @Nullable Boolean required;
 
@@ -24,7 +23,6 @@ public final class ServiceProviderParameterResponseConstraints {
 
     /**
      * Whether required the constraints of the bot meta data.
-     * 
     */
     public Optional<Boolean> getRequired() {
         return Optional.ofNullable(this.required);

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * ExpressRouteLink Mac Security Configuration.
- * 
  */
 public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
 
     /**
      * Keyvault Secret Identifier URL containing Mac security CAK key.
-     * 
      */
     @Import(name="cakSecretIdentifier")
       private final @Nullable Output<String> cakSecretIdentifier;
@@ -34,7 +32,6 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
 
     /**
      * Mac security cipher.
-     * 
      */
     @Import(name="cipher")
       private final @Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher;
@@ -45,7 +42,6 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
 
     /**
      * Keyvault Secret Identifier URL containing Mac security CKN key.
-     * 
      */
     @Import(name="cknSecretIdentifier")
       private final @Nullable Output<String> cknSecretIdentifier;
@@ -56,7 +52,6 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
 
     /**
      * Sci mode enabled/disabled.
-     * 
      */
     @Import(name="sciState")
       private final @Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState;

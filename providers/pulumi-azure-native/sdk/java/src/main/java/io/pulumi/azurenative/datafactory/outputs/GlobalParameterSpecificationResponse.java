@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class GlobalParameterSpecificationResponse {
     /**
      * Global Parameter type.
-     * 
      */
     private final String type;
     /**
      * Value of parameter.
-     * 
      */
     private final Object value;
 
@@ -31,14 +29,12 @@ public final class GlobalParameterSpecificationResponse {
 
     /**
      * Global Parameter type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Value of parameter.
-     * 
     */
     public Object getValue() {
         return this.value;

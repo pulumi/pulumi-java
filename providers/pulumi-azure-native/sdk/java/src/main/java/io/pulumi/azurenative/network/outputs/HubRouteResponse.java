@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class HubRouteResponse {
     /**
      * The type of destinations (eg: CIDR, ResourceId, Service).
-     * 
      */
     private final String destinationType;
     /**
      * List of all destinations.
-     * 
      */
     private final List<String> destinations;
     /**
      * The name of the Route that is unique within a RouteTable. This name can be used to access this route.
-     * 
      */
     private final String name;
     /**
      * NextHop resource ID.
-     * 
      */
     private final String nextHop;
     /**
      * The type of next hop (eg: ResourceId).
-     * 
      */
     private final String nextHopType;
 
@@ -52,35 +47,30 @@ public final class HubRouteResponse {
 
     /**
      * The type of destinations (eg: CIDR, ResourceId, Service).
-     * 
     */
     public String getDestinationType() {
         return this.destinationType;
     }
     /**
      * List of all destinations.
-     * 
     */
     public List<String> getDestinations() {
         return this.destinations;
     }
     /**
      * The name of the Route that is unique within a RouteTable. This name can be used to access this route.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * NextHop resource ID.
-     * 
     */
     public String getNextHop() {
         return this.nextHop;
     }
     /**
      * The type of next hop (eg: ResourceId).
-     * 
     */
     public String getNextHopType() {
         return this.nextHopType;

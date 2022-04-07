@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * A map to describe the settings of an action.
- * 
  */
 public final class KeyValuePairArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class KeyValuePairArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the setting for the action.
-     * 
      */
     @Import(name="key", required=true)
       private final Output<String> key;
@@ -30,7 +28,6 @@ public final class KeyValuePairArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The value of the setting for the action.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

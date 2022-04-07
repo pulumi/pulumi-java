@@ -14,32 +14,26 @@ import javax.annotation.Nullable;
 public final class GetDataConnectionResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
      */
     private final String id;
     /**
      * Kind of the endpoint for the data connection
-     * 
      */
     private final String kind;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * The name of the resource
-     * 
      */
     private final String name;
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     private final String type;
 
@@ -61,42 +55,36 @@ public final class GetDataConnectionResult {
 
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of the endpoint for the data connection
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
     */
     public String getType() {
         return this.type;

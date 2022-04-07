@@ -21,7 +21,222 @@ import javax.annotation.Nullable;
  * disk encryption set resource.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a disk encryption set with key vault from a different subscription.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var diskEncryptionSet = new AzureNative.Compute.DiskEncryptionSet("diskEncryptionSet", new AzureNative.Compute.DiskEncryptionSetArgs
+ *         {
+ *             ActiveKey = new AzureNative.Compute.Inputs.KeyForDiskEncryptionSetArgs
+ *             {
+ *                 KeyUrl = "https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
+ *             },
+ *             DiskEncryptionSetName = "myDiskEncryptionSet",
+ *             EncryptionType = "EncryptionAtRestWithCustomerKey",
+ *             Identity = new AzureNative.Compute.Inputs.EncryptionSetIdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewDiskEncryptionSet(ctx, "diskEncryptionSet", &compute.DiskEncryptionSetArgs{
+ * 			ActiveKey: &compute.KeyForDiskEncryptionSetArgs{
+ * 				KeyUrl: pulumi.String("https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}"),
+ * 			},
+ * 			DiskEncryptionSetName: pulumi.String("myDiskEncryptionSet"),
+ * 			EncryptionType:        pulumi.String("EncryptionAtRestWithCustomerKey"),
+ * 			Identity: &compute.EncryptionSetIdentityArgs{
+ * 				Type: pulumi.String("SystemAssigned"),
+ * 			},
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const diskEncryptionSet = new azure_native.compute.DiskEncryptionSet("diskEncryptionSet", {
+ *     activeKey: {
+ *         keyUrl: "https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
+ *     },
+ *     diskEncryptionSetName: "myDiskEncryptionSet",
+ *     encryptionType: "EncryptionAtRestWithCustomerKey",
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * disk_encryption_set = azure_native.compute.DiskEncryptionSet("diskEncryptionSet",
+ *     active_key=azure_native.compute.KeyForDiskEncryptionSetArgs(
+ *         key_url="https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
+ *     ),
+ *     disk_encryption_set_name="myDiskEncryptionSet",
+ *     encryption_type="EncryptionAtRestWithCustomerKey",
+ *     identity=azure_native.compute.EncryptionSetIdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="West US",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a disk encryption set.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var diskEncryptionSet = new AzureNative.Compute.DiskEncryptionSet("diskEncryptionSet", new AzureNative.Compute.DiskEncryptionSetArgs
+ *         {
+ *             ActiveKey = new AzureNative.Compute.Inputs.KeyForDiskEncryptionSetArgs
+ *             {
+ *                 KeyUrl = "https://myvmvault.vault-int.azure-int.net/keys/{key}",
+ *                 SourceVault = new AzureNative.Compute.Inputs.SourceVaultArgs
+ *                 {
+ *                     Id = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
+ *                 },
+ *             },
+ *             DiskEncryptionSetName = "myDiskEncryptionSet",
+ *             EncryptionType = "EncryptionAtRestWithCustomerKey",
+ *             Identity = new AzureNative.Compute.Inputs.EncryptionSetIdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewDiskEncryptionSet(ctx, "diskEncryptionSet", &compute.DiskEncryptionSetArgs{
+ * 			ActiveKey: &compute.KeyForDiskEncryptionSetArgs{
+ * 				KeyUrl: pulumi.String("https://myvmvault.vault-int.azure-int.net/keys/{key}"),
+ * 				SourceVault: &compute.SourceVaultArgs{
+ * 					Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault"),
+ * 				},
+ * 			},
+ * 			DiskEncryptionSetName: pulumi.String("myDiskEncryptionSet"),
+ * 			EncryptionType:        pulumi.String("EncryptionAtRestWithCustomerKey"),
+ * 			Identity: &compute.EncryptionSetIdentityArgs{
+ * 				Type: pulumi.String("SystemAssigned"),
+ * 			},
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const diskEncryptionSet = new azure_native.compute.DiskEncryptionSet("diskEncryptionSet", {
+ *     activeKey: {
+ *         keyUrl: "https://myvmvault.vault-int.azure-int.net/keys/{key}",
+ *         sourceVault: {
+ *             id: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
+ *         },
+ *     },
+ *     diskEncryptionSetName: "myDiskEncryptionSet",
+ *     encryptionType: "EncryptionAtRestWithCustomerKey",
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * disk_encryption_set = azure_native.compute.DiskEncryptionSet("diskEncryptionSet",
+ *     active_key=azure_native.compute.KeyForDiskEncryptionSetArgs(
+ *         key_url="https://myvmvault.vault-int.azure-int.net/keys/{key}",
+ *         source_vault=azure_native.compute.SourceVaultArgs(
+ *             id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
+ *         ),
+ *     ),
+ *     disk_encryption_set_name="myDiskEncryptionSet",
+ *     encryption_type="EncryptionAtRestWithCustomerKey",
+ *     identity=azure_native.compute.EncryptionSetIdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="West US",
+ *     resource_group_name="myResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,154 +251,132 @@ import javax.annotation.Nullable;
 public class DiskEncryptionSet extends io.pulumi.resources.CustomResource {
     /**
      * The key vault key which is currently used by this disk encryption set.
-     * 
      */
     @Export(name="activeKey", type=KeyForDiskEncryptionSetResponse.class, parameters={})
     private Output</* @Nullable */ KeyForDiskEncryptionSetResponse> activeKey;
 
     /**
      * @return The key vault key which is currently used by this disk encryption set.
-     * 
      */
     public Output</* @Nullable */ KeyForDiskEncryptionSetResponse> getActiveKey() {
         return this.activeKey;
     }
     /**
      * The type of key used to encrypt the data of the disk.
-     * 
      */
     @Export(name="encryptionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionType;
 
     /**
      * @return The type of key used to encrypt the data of the disk.
-     * 
      */
     public Output</* @Nullable */ String> getEncryptionType() {
         return this.encryptionType;
     }
     /**
      * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
-     * 
      */
     @Export(name="identity", type=EncryptionSetIdentityResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionSetIdentityResponse> identity;
 
     /**
      * @return The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
-     * 
      */
     public Output</* @Nullable */ EncryptionSetIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The time when the active key of this disk encryption set was updated.
-     * 
      */
     @Export(name="lastKeyRotationTimestamp", type=String.class, parameters={})
     private Output<String> lastKeyRotationTimestamp;
 
     /**
      * @return The time when the active key of this disk encryption set was updated.
-     * 
      */
     public Output<String> getLastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
-     * 
      */
     @Export(name="previousKeys", type=List.class, parameters={KeyForDiskEncryptionSetResponse.class})
     private Output<List<KeyForDiskEncryptionSetResponse>> previousKeys;
 
     /**
      * @return A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
-     * 
      */
     public Output<List<KeyForDiskEncryptionSetResponse>> getPreviousKeys() {
         return this.previousKeys;
     }
     /**
      * The disk encryption set provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The disk encryption set provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
-     * 
      */
     @Export(name="rotationToLatestKeyVersionEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rotationToLatestKeyVersionEnabled;
 
     /**
      * @return Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
-     * 
      */
     public Output</* @Nullable */ Boolean> getRotationToLatestKeyVersionEnabled() {
         return this.rotationToLatestKeyVersionEnabled;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

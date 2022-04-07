@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The HTTP method to use for the request.
-     * 
      */
     @EnumType
     public enum RestRequestMethod {

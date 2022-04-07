@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PrivateLinkServicePropertiesResponseAutoApproval {
     /**
      * The list of subscriptions.
-     * 
      */
     private final @Nullable List<String> subscriptions;
 
@@ -24,7 +23,6 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval {
 
     /**
      * The list of subscriptions.
-     * 
     */
     public List<String> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;

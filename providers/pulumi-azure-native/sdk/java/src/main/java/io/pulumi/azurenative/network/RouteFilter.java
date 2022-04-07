@@ -20,7 +20,135 @@ import javax.annotation.Nullable;
  * Route Filter Resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RouteFilterCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var routeFilter = new AzureNative.Network.RouteFilter("routeFilter", new AzureNative.Network.RouteFilterArgs
+ *         {
+ *             Location = "West US",
+ *             ResourceGroupName = "rg1",
+ *             RouteFilterName = "filterName",
+ *             Rules = 
+ *             {
+ *                 new AzureNative.Network.Inputs.RouteFilterRuleArgs
+ *                 {
+ *                     Access = "Allow",
+ *                     Communities = 
+ *                     {
+ *                         "12076:5030",
+ *                         "12076:5040",
+ *                     },
+ *                     Name = "ruleName",
+ *                     RouteFilterRuleType = "Community",
+ *                 },
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewRouteFilter(ctx, "routeFilter", &network.RouteFilterArgs{
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			RouteFilterName:   pulumi.String("filterName"),
+ * 			Rules: []network.RouteFilterRuleArgs{
+ * 				&network.RouteFilterRuleArgs{
+ * 					Access: pulumi.String("Allow"),
+ * 					Communities: pulumi.StringArray{
+ * 						pulumi.String("12076:5030"),
+ * 						pulumi.String("12076:5040"),
+ * 					},
+ * 					Name:                pulumi.String("ruleName"),
+ * 					RouteFilterRuleType: pulumi.String("Community"),
+ * 				},
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const routeFilter = new azure_native.network.RouteFilter("routeFilter", {
+ *     location: "West US",
+ *     resourceGroupName: "rg1",
+ *     routeFilterName: "filterName",
+ *     rules: [{
+ *         access: "Allow",
+ *         communities: [
+ *             "12076:5030",
+ *             "12076:5040",
+ *         ],
+ *         name: "ruleName",
+ *         routeFilterRuleType: "Community",
+ *     }],
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * route_filter = azure_native.network.RouteFilter("routeFilter",
+ *     location="West US",
+ *     resource_group_name="rg1",
+ *     route_filter_name="filterName",
+ *     rules=[azure_native.network.RouteFilterRuleArgs(
+ *         access="Allow",
+ *         communities=[
+ *             "12076:5030",
+ *             "12076:5040",
+ *         ],
+ *         name="ruleName",
+ *         route_filter_rule_type="Community",
+ *     )],
+ *     tags={
+ *         "key1": "value1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +163,108 @@ import javax.annotation.Nullable;
 public class RouteFilter extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * A collection of references to express route circuit ipv6 peerings.
-     * 
      */
     @Export(name="ipv6Peerings", type=List.class, parameters={ExpressRouteCircuitPeeringResponse.class})
     private Output<List<ExpressRouteCircuitPeeringResponse>> ipv6Peerings;
 
     /**
      * @return A collection of references to express route circuit ipv6 peerings.
-     * 
      */
     public Output<List<ExpressRouteCircuitPeeringResponse>> getIpv6Peerings() {
         return this.ipv6Peerings;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A collection of references to express route circuit peerings.
-     * 
      */
     @Export(name="peerings", type=List.class, parameters={ExpressRouteCircuitPeeringResponse.class})
     private Output<List<ExpressRouteCircuitPeeringResponse>> peerings;
 
     /**
      * @return A collection of references to express route circuit peerings.
-     * 
      */
     public Output<List<ExpressRouteCircuitPeeringResponse>> getPeerings() {
         return this.peerings;
     }
     /**
      * The provisioning state of the route filter resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the route filter resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Collection of RouteFilterRules contained within a route filter.
-     * 
      */
     @Export(name="rules", type=List.class, parameters={RouteFilterRuleResponse.class})
     private Output</* @Nullable */ List<RouteFilterRuleResponse>> rules;
 
     /**
      * @return Collection of RouteFilterRules contained within a route filter.
-     * 
      */
     public Output</* @Nullable */ List<RouteFilterRuleResponse>> getRules() {
         return this.rules;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

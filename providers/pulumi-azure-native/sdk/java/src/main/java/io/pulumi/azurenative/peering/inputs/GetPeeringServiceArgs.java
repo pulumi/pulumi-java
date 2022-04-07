@@ -14,7 +14,6 @@ public final class GetPeeringServiceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the peering.
-     * 
      */
     @Import(name="peeringServiceName", required=true)
       private final String peeringServiceName;
@@ -25,7 +24,6 @@ public final class GetPeeringServiceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

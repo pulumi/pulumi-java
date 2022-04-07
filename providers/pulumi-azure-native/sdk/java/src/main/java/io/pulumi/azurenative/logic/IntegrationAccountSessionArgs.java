@@ -18,7 +18,6 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
 
     /**
      * The session content.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<Object> content;
@@ -29,7 +28,6 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
@@ -40,7 +38,6 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
 
     /**
      * The integration account session name.
-     * 
      */
     @Import(name="sessionName")
       private final @Nullable Output<String> sessionName;
@@ -73,7 +68,6 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

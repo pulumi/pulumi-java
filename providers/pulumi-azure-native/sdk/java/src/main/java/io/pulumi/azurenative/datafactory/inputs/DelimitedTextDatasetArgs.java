@@ -31,7 +31,6 @@ import javax.annotation.Nullable;
 
 /**
  * Delimited text dataset.
- * 
  */
 public final class DelimitedTextDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -39,7 +38,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -50,7 +48,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The column delimiter. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="columnDelimiter")
       private final @Nullable Output<Object> columnDelimiter;
@@ -61,7 +58,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The data compressionCodec. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="compressionCodec")
       private final @Nullable Output<Object> compressionCodec;
@@ -72,7 +68,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The data compression method used for DelimitedText.
-     * 
      */
     @Import(name="compressionLevel")
       private final @Nullable Output<Object> compressionLevel;
@@ -83,7 +78,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -94,7 +88,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encodingName")
       private final @Nullable Output<Object> encodingName;
@@ -105,7 +98,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The escape character. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="escapeChar")
       private final @Nullable Output<Object> escapeChar;
@@ -116,7 +108,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="firstRowAsHeader")
       private final @Nullable Output<Object> firstRowAsHeader;
@@ -127,7 +118,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
@@ -138,7 +128,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -149,7 +138,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The location of the delimited text storage.
-     * 
      */
     @Import(name="location", required=true)
       private final Output<Object> location;
@@ -160,7 +148,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The null value string. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="nullValue")
       private final @Nullable Output<Object> nullValue;
@@ -171,7 +158,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -182,7 +168,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The quote character. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="quoteChar")
       private final @Nullable Output<Object> quoteChar;
@@ -193,7 +178,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * The row delimiter. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="rowDelimiter")
       private final @Nullable Output<Object> rowDelimiter;
@@ -204,7 +188,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
@@ -215,7 +198,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
@@ -227,7 +209,6 @@ public final class DelimitedTextDatasetArgs extends io.pulumi.resources.Resource
     /**
      * Type of dataset.
      * Expected value is 'DelimitedText'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

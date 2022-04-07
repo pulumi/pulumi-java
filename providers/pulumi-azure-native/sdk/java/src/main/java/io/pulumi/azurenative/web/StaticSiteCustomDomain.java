@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * Static Site Custom Domain Overview ARM resource.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a custom domain for a static site
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var staticSiteCustomDomain = new AzureNative.Web.StaticSiteCustomDomain("staticSiteCustomDomain", new AzureNative.Web.StaticSiteCustomDomainArgs
+ *         {
+ *             DomainName = "custom.domain.net",
+ *             Name = "testStaticSite0",
+ *             ResourceGroupName = "rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := web.NewStaticSiteCustomDomain(ctx, "staticSiteCustomDomain", &web.StaticSiteCustomDomainArgs{
+ * 			DomainName:        pulumi.String("custom.domain.net"),
+ * 			Name:              pulumi.String("testStaticSite0"),
+ * 			ResourceGroupName: pulumi.String("rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const staticSiteCustomDomain = new azure_native.web.StaticSiteCustomDomain("staticSiteCustomDomain", {
+ *     domainName: "custom.domain.net",
+ *     name: "testStaticSite0",
+ *     resourceGroupName: "rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * static_site_custom_domain = azure_native.web.StaticSiteCustomDomain("staticSiteCustomDomain",
+ *     domain_name="custom.domain.net",
+ *     name="testStaticSite0",
+ *     resource_group_name="rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,28 +104,24 @@ import javax.annotation.Nullable;
 public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
     /**
      * The date and time on which the custom domain was created for the static site.
-     * 
      */
     @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
      * @return The date and time on which the custom domain was created for the static site.
-     * 
      */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
     /**
      * The domain name for the static site custom domain.
-     * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
      * @return The domain name for the static site custom domain.
-     * 
      */
     public Output<String> getDomainName() {
         return this.domainName;
@@ -66,70 +134,60 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The status of the custom domain
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The status of the custom domain
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The TXT record validation token
-     * 
      */
     @Export(name="validationToken", type=String.class, parameters={})
     private Output<String> validationToken;
 
     /**
      * @return The TXT record validation token
-     * 
      */
     public Output<String> getValidationToken() {
         return this.validationToken;

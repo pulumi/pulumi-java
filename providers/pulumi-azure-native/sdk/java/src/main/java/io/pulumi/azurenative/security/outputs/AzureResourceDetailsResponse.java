@@ -11,13 +11,11 @@ import java.util.Objects;
 public final class AzureResourceDetailsResponse {
     /**
      * Azure resource Id of the assessed resource
-     * 
      */
     private final String id;
     /**
      * The platform where the assessed resource resides
      * Expected value is 'Azure'.
-     * 
      */
     private final String source;
 
@@ -31,7 +29,6 @@ public final class AzureResourceDetailsResponse {
 
     /**
      * Azure resource Id of the assessed resource
-     * 
     */
     public String getId() {
         return this.id;
@@ -39,7 +36,6 @@ public final class AzureResourceDetailsResponse {
     /**
      * The platform where the assessed resource resides
      * Expected value is 'Azure'.
-     * 
     */
     public String getSource() {
         return this.source;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates the conflict resolution mode.
-     * 
      */
     @EnumType
     public enum ConflictResolutionMode {

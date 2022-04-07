@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Deployment dependency information.
- * 
  */
 public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of dependencies.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<BasicDependencyResponse> dependsOn;
@@ -33,7 +31,6 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ID of the dependency.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -44,7 +41,6 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The dependency resource name.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable String resourceName;
@@ -55,7 +51,6 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The dependency resource type.
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable String resourceType;

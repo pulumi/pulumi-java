@@ -14,7 +14,6 @@ public final class GetLabAccountRegionalAvailabilityArgs extends io.pulumi.resou
 
     /**
      * The name of the lab Account.
-     * 
      */
     @Import(name="labAccountName", required=true)
       private final String labAccountName;
@@ -25,7 +24,6 @@ public final class GetLabAccountRegionalAvailabilityArgs extends io.pulumi.resou
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

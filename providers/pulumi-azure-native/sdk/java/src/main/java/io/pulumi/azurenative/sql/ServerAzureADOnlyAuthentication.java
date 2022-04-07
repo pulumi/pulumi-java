@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * Azure Active Directory only authentication.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates Azure Active Directory only authentication object.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverAzureADOnlyAuthentication = new AzureNative.Sql.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", new AzureNative.Sql.ServerAzureADOnlyAuthenticationArgs
+ *         {
+ *             AuthenticationName = "Default",
+ *             AzureADOnlyAuthentication = false,
+ *             ResourceGroupName = "sqlcrudtest-4799",
+ *             ServerName = "sqlcrudtest-6440",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewServerAzureADOnlyAuthentication(ctx, "serverAzureADOnlyAuthentication", &sql.ServerAzureADOnlyAuthenticationArgs{
+ * 			AuthenticationName:        pulumi.String("Default"),
+ * 			AzureADOnlyAuthentication: pulumi.Bool(false),
+ * 			ResourceGroupName:         pulumi.String("sqlcrudtest-4799"),
+ * 			ServerName:                pulumi.String("sqlcrudtest-6440"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverAzureADOnlyAuthentication = new azure_native.sql.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication", {
+ *     authenticationName: "Default",
+ *     azureADOnlyAuthentication: false,
+ *     resourceGroupName: "sqlcrudtest-4799",
+ *     serverName: "sqlcrudtest-6440",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_azure_ad_only_authentication = azure_native.sql.ServerAzureADOnlyAuthentication("serverAzureADOnlyAuthentication",
+ *     authentication_name="Default",
+ *     azure_ad_only_authentication=False,
+ *     resource_group_name="sqlcrudtest-4799",
+ *     server_name="sqlcrudtest-6440")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +109,36 @@ import javax.annotation.Nullable;
 public class ServerAzureADOnlyAuthentication extends io.pulumi.resources.CustomResource {
     /**
      * Azure Active Directory only Authentication enabled.
-     * 
      */
     @Export(name="azureADOnlyAuthentication", type=Boolean.class, parameters={})
     private Output<Boolean> azureADOnlyAuthentication;
 
     /**
      * @return Azure Active Directory only Authentication enabled.
-     * 
      */
     public Output<Boolean> getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class FlowAccessControlConfigurationPolicyResponse {
     /**
      * The allowed caller IP address ranges.
-     * 
      */
     private final @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses;
     /**
      * The authentication policies for workflow.
-     * 
      */
     private final @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
 
@@ -34,14 +32,12 @@ public final class FlowAccessControlConfigurationPolicyResponse {
 
     /**
      * The allowed caller IP address ranges.
-     * 
     */
     public List<IpAddressRangeResponse> getAllowedCallerIpAddresses() {
         return this.allowedCallerIpAddresses == null ? List.of() : this.allowedCallerIpAddresses;
     }
     /**
      * The authentication policies for workflow.
-     * 
     */
     public Optional<OpenAuthenticationAccessPoliciesResponse> getOpenAuthenticationPolicies() {
         return Optional.ofNullable(this.openAuthenticationPolicies);

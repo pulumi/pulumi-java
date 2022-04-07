@@ -23,7 +23,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The cluster's billing type.
-     * 
      */
     @Import(name="billingType")
       private final @Nullable Output<Either<String,BillingType>> billingType;
@@ -34,7 +33,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Log Analytics cluster.
-     * 
      */
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
@@ -45,7 +43,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity of the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -56,7 +53,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
-     * 
      */
     @Import(name="isAvailabilityZonesEnabled")
       private final @Nullable Output<Boolean> isAvailabilityZonesEnabled;
@@ -67,7 +63,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
-     * 
      */
     @Import(name="isDoubleEncryptionEnabled")
       private final @Nullable Output<Boolean> isDoubleEncryptionEnabled;
@@ -78,7 +73,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The associated key properties.
-     * 
      */
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
@@ -89,7 +83,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -100,7 +93,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -111,7 +103,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sku properties.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<ClusterSkuArgs> sku;
@@ -122,7 +113,6 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

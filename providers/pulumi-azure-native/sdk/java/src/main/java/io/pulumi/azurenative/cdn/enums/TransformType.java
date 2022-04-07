@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Describes what transforms were applied before matching.
-     * 
      */
     @EnumType
     public enum TransformType {

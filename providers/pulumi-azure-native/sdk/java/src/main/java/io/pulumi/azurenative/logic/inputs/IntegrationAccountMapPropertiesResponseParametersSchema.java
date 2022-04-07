@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The parameters schema of integration account map.
- * 
  */
 public final class IntegrationAccountMapPropertiesResponseParametersSchema extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema exten
 
     /**
      * The reference name.
-     * 
      */
     @Import(name="ref")
       private final @Nullable String ref;

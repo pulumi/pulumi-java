@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity for the resource.
- * 
  */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The principal ID of the resource identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -31,7 +29,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The tenant ID of the resource identity.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -42,7 +39,6 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identity type. This is the only required field when adding a system assigned identity to a resource.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

@@ -20,7 +20,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the proxy resource holding details of HCI ArcSetting information.
-     * 
      */
     @Import(name="arcSettingName", required=true)
       private final Output<String> arcSettingName;
@@ -31,7 +30,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
@@ -42,7 +40,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
@@ -53,7 +50,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of resource creation (UTC).
-     * 
      */
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
@@ -64,7 +60,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity that created the resource.
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
@@ -75,7 +70,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity that created the resource.
-     * 
      */
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
@@ -86,7 +80,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the machine extension.
-     * 
      */
     @Import(name="extensionName")
       private final @Nullable Output<String> extensionName;
@@ -97,7 +90,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -108,7 +100,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
@@ -119,7 +110,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identity that last modified the resource.
-     * 
      */
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
@@ -130,7 +120,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of identity that last modified the resource.
-     * 
      */
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
@@ -141,7 +130,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Protected settings (may contain secrets).
-     * 
      */
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
@@ -152,7 +140,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
@@ -163,7 +150,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -174,7 +160,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Json formatted public settings for the extension.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
@@ -185,7 +170,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -196,7 +180,6 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;

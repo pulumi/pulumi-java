@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class AzureContainerInfoResponse {
     /**
      * Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
-     * 
      */
     private final String containerName;
     /**
      * Storage format used for the file represented by the share.
-     * 
      */
     private final String dataFormat;
     /**
      * ID of the storage account credential used to access storage.
-     * 
      */
     private final String storageAccountCredentialId;
 
@@ -37,21 +34,18 @@ public final class AzureContainerInfoResponse {
 
     /**
      * Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
-     * 
     */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * Storage format used for the file represented by the share.
-     * 
     */
     public String getDataFormat() {
         return this.dataFormat;
     }
     /**
      * ID of the storage account credential used to access storage.
-     * 
     */
     public String getStorageAccountCredentialId() {
         return this.storageAccountCredentialId;

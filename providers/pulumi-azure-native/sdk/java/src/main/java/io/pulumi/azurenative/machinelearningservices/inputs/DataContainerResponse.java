@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container for data asset versions.
- * 
  */
 public final class DataContainerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DataContainerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The asset description text.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class DataContainerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The asset property dictionary.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -43,7 +40,6 @@ public final class DataContainerResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;

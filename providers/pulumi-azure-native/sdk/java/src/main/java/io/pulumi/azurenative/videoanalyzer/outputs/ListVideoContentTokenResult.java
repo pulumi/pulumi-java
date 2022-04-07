@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ListVideoContentTokenResult {
     /**
      * The content token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
-     * 
      */
     private final String expirationDate;
     /**
      * The content token value to be added to the video content URL as the value for the "token" query string parameter. The token is specific to a single video.
-     * 
      */
     private final String token;
 
@@ -30,14 +28,12 @@ public final class ListVideoContentTokenResult {
 
     /**
      * The content token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
-     * 
     */
     public String getExpirationDate() {
         return this.expirationDate;
     }
     /**
      * The content token value to be added to the video content URL as the value for the "token" query string parameter. The token is specific to a single video.
-     * 
     */
     public String getToken() {
         return this.token;

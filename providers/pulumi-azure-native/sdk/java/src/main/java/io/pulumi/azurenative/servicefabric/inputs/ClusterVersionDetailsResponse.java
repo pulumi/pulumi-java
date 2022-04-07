@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The detail of the Service Fabric runtime version result
- * 
  */
 public final class ClusterVersionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
 
     /**
      * The Service Fabric runtime version of the cluster.
-     * 
      */
     @Import(name="codeVersion")
       private final @Nullable String codeVersion;
@@ -31,7 +29,6 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
 
     /**
      * Indicates if this version is for Windows or Linux operating system.
-     * 
      */
     @Import(name="environment")
       private final @Nullable String environment;
@@ -42,7 +39,6 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
 
     /**
      * The date of expiry of support of the version.
-     * 
      */
     @Import(name="supportExpiryUtc")
       private final @Nullable String supportExpiryUtc;

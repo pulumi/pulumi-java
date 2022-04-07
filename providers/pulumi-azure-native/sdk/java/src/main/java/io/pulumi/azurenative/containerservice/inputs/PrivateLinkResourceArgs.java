@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A private link resource
- * 
  */
 public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The group ID of the resource.
-     * 
      */
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
@@ -32,7 +30,6 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The ID of the private link resource.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -43,7 +40,6 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the private link resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -54,7 +50,6 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * RequiredMembers of the resource
-     * 
      */
     @Import(name="requiredMembers")
       private final @Nullable Output<List<String>> requiredMembers;
@@ -65,7 +60,6 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

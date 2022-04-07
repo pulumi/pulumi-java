@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * SSIS embedded child package.
- * 
  */
 public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Content for embedded child package. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="packageContent", required=true)
       private final Object packageContent;
@@ -32,7 +30,6 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Last modified date for embedded child package.
-     * 
      */
     @Import(name="packageLastModifiedDate")
       private final @Nullable String packageLastModifiedDate;
@@ -43,7 +40,6 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name for embedded child package.
-     * 
      */
     @Import(name="packageName")
       private final @Nullable String packageName;
@@ -54,7 +50,6 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Path for embedded child package. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="packagePath", required=true)
       private final Object packagePath;

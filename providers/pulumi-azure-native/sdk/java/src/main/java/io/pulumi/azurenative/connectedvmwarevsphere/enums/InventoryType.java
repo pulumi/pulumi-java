@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * They inventory type.
-     * 
      */
     @EnumType
     public enum InventoryType {

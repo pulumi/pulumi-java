@@ -18,7 +18,75 @@ import javax.annotation.Nullable;
  * Tenant configuration.
  * API Version: 2020-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update Tenant configuration
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tenantConfiguration = new AzureNative.Portal.TenantConfiguration("tenantConfiguration", new AzureNative.Portal.TenantConfigurationArgs
+ *         {
+ *             ConfigurationName = "default",
+ *             EnforcePrivateMarkdownStorage = true,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	portal "github.com/pulumi/pulumi-azure-native/sdk/go/azure/portal"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := portal.NewTenantConfiguration(ctx, "tenantConfiguration", &portal.TenantConfigurationArgs{
+ * 			ConfigurationName:             pulumi.String("default"),
+ * 			EnforcePrivateMarkdownStorage: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const tenantConfiguration = new azure_native.portal.TenantConfiguration("tenantConfiguration", {
+ *     configurationName: "default",
+ *     enforcePrivateMarkdownStorage: true,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * tenant_configuration = azure_native.portal.TenantConfiguration("tenantConfiguration",
+ *     configuration_name="default",
+ *     enforce_private_markdown_storage=True)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +101,36 @@ import javax.annotation.Nullable;
 public class TenantConfiguration extends io.pulumi.resources.CustomResource {
     /**
      * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
-     * 
      */
     @Export(name="enforcePrivateMarkdownStorage", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enforcePrivateMarkdownStorage;
 
     /**
      * @return When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnforcePrivateMarkdownStorage() {
         return this.enforcePrivateMarkdownStorage;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

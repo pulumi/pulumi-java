@@ -57,48 +57,39 @@ import javax.annotation.Nullable;
 public final class ForEachActivityResponse {
     /**
      * List of activities to execute .
-     * 
      */
     private final List<Object> activities;
     /**
      * Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
-     * 
      */
     private final @Nullable Integer batchCount;
     /**
      * Activity depends on condition.
-     * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
      * Activity description.
-     * 
      */
     private final @Nullable String description;
     /**
      * Should the loop be executed in sequence or in parallel (max 50)
-     * 
      */
     private final @Nullable Boolean isSequential;
     /**
      * Collection to iterate.
-     * 
      */
     private final ExpressionResponse items;
     /**
      * Activity name.
-     * 
      */
     private final String name;
     /**
      * Type of activity.
      * Expected value is 'ForEach'.
-     * 
      */
     private final String type;
     /**
      * Activity user properties.
-     * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
@@ -126,49 +117,42 @@ public final class ForEachActivityResponse {
 
     /**
      * List of activities to execute .
-     * 
     */
     public List<Object> getActivities() {
         return this.activities;
     }
     /**
      * Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
-     * 
     */
     public Optional<Integer> getBatchCount() {
         return Optional.ofNullable(this.batchCount);
     }
     /**
      * Activity depends on condition.
-     * 
     */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Should the loop be executed in sequence or in parallel (max 50)
-     * 
     */
     public Optional<Boolean> getIsSequential() {
         return Optional.ofNullable(this.isSequential);
     }
     /**
      * Collection to iterate.
-     * 
     */
     public ExpressionResponse getItems() {
         return this.items;
     }
     /**
      * Activity name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -176,14 +160,12 @@ public final class ForEachActivityResponse {
     /**
      * Type of activity.
      * Expected value is 'ForEach'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
-     * 
     */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;

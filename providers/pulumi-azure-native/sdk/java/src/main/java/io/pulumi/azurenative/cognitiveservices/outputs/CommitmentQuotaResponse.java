@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class CommitmentQuotaResponse {
     /**
      * Commitment quota quantity.
-     * 
      */
     private final @Nullable Double quantity;
     /**
      * Commitment quota unit.
-     * 
      */
     private final @Nullable String unit;
 
@@ -33,14 +31,12 @@ public final class CommitmentQuotaResponse {
 
     /**
      * Commitment quota quantity.
-     * 
     */
     public Optional<Double> getQuantity() {
         return Optional.ofNullable(this.quantity);
     }
     /**
      * Commitment quota unit.
-     * 
     */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);

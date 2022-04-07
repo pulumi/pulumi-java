@@ -33,7 +33,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
     /**
      * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     @Import(name="deadLetterDestination")
       private final @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
@@ -45,7 +44,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
     /**
      * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     @Import(name="deadLetterWithResourceIdentity")
       private final @Nullable Output<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity;
@@ -57,7 +55,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
     /**
      * Information about the destination where events have to be delivered for the event subscription.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     @Import(name="deliveryWithResourceIdentity")
       private final @Nullable Output<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity;
@@ -69,7 +66,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
     /**
      * Information about the destination where events have to be delivered for the event subscription.
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     @Import(name="destination")
       private final @Nullable Output<Object> destination;
@@ -80,7 +76,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
 
     /**
      * The event delivery schema for the event subscription.
-     * 
      */
     @Import(name="eventDeliverySchema")
       private final @Nullable Output<Either<String,EventDeliverySchema>> eventDeliverySchema;
@@ -91,7 +86,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
 
     /**
      * Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
-     * 
      */
     @Import(name="eventSubscriptionName")
       private final @Nullable Output<String> eventSubscriptionName;
@@ -102,7 +96,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
 
     /**
      * Expiration time of the event subscription.
-     * 
      */
     @Import(name="expirationTimeUtc")
       private final @Nullable Output<String> expirationTimeUtc;
@@ -113,7 +106,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
 
     /**
      * Information about the filter for the event subscription.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<EventSubscriptionFilterArgs> filter;
@@ -124,7 +116,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
 
     /**
      * List of user defined labels.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
@@ -135,7 +126,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
 
     /**
      * Name of the partner topic.
-     * 
      */
     @Import(name="partnerTopicName", required=true)
       private final Output<String> partnerTopicName;
@@ -146,7 +136,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -157,7 +146,6 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
 
     /**
      * The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
-     * 
      */
     @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The source image used for creating the disk.
- * 
  */
 public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A relative uri containing either a Platform Image Repository or user image reference.
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;
@@ -32,7 +30,6 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
-     * 
      */
     @Import(name="lun")
       private final @Nullable Output<Integer> lun;

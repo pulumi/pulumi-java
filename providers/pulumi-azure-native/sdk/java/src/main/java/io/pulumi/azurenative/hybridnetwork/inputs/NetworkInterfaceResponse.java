@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network interface properties.
- * 
  */
 public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A list of IP configurations of the network interface.
-     * 
      */
     @Import(name="ipConfigurations")
       private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
@@ -33,7 +31,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The MAC address of the network interface.
-     * 
      */
     @Import(name="macAddress")
       private final @Nullable String macAddress;
@@ -44,7 +41,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the network interface.
-     * 
      */
     @Import(name="networkInterfaceName")
       private final @Nullable String networkInterfaceName;
@@ -55,7 +51,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The type of the VM switch.
-     * 
      */
     @Import(name="vmSwitchType")
       private final @Nullable String vmSwitchType;

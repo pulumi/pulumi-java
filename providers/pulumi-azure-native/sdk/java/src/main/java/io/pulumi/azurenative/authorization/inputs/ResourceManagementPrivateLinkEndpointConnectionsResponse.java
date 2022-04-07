@@ -17,7 +17,6 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse exte
 
     /**
      * The private endpoint connections.
-     * 
      */
     @Import(name="privateEndpointConnections")
       private final @Nullable List<String> privateEndpointConnections;

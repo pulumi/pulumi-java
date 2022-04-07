@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * DNS settings of a network interface.
- * 
  */
 public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
 
     /**
      * If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
-     * 
      */
     @Import(name="appliedDnsServers", required=true)
       private final List<String> appliedDnsServers;
@@ -32,7 +30,6 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
 
     /**
      * List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
-     * 
      */
     @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
@@ -43,7 +40,6 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
 
     /**
      * Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
-     * 
      */
     @Import(name="internalDnsNameLabel")
       private final @Nullable String internalDnsNameLabel;
@@ -54,7 +50,6 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
 
     /**
      * Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
-     * 
      */
     @Import(name="internalDomainNameSuffix", required=true)
       private final String internalDomainNameSuffix;
@@ -65,7 +60,6 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
 
     /**
      * Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
-     * 
      */
     @Import(name="internalFqdn", required=true)
       private final String internalFqdn;

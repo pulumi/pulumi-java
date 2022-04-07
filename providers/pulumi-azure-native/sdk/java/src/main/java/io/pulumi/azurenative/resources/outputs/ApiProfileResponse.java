@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ApiProfileResponse {
     /**
      * The API version.
-     * 
      */
     private final String apiVersion;
     /**
      * The profile version.
-     * 
      */
     private final String profileVersion;
 
@@ -30,14 +28,12 @@ public final class ApiProfileResponse {
 
     /**
      * The API version.
-     * 
     */
     public String getApiVersion() {
         return this.apiVersion;
     }
     /**
      * The profile version.
-     * 
     */
     public String getProfileVersion() {
         return this.profileVersion;

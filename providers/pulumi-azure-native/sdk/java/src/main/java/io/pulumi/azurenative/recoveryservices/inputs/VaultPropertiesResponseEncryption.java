@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Customer Managed Key details of the resource.
- * 
  */
 public final class VaultPropertiesResponseEncryption extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class VaultPropertiesResponseEncryption extends io.pulumi.resources
 
     /**
      * Enabling/Disabling the Double Encryption state
-     * 
      */
     @Import(name="infrastructureEncryption")
       private final @Nullable String infrastructureEncryption;
@@ -33,7 +31,6 @@ public final class VaultPropertiesResponseEncryption extends io.pulumi.resources
 
     /**
      * The details of the identity used for CMK
-     * 
      */
     @Import(name="kekIdentity")
       private final @Nullable CmkKekIdentityResponse kekIdentity;
@@ -44,7 +41,6 @@ public final class VaultPropertiesResponseEncryption extends io.pulumi.resources
 
     /**
      * The properties of the Key Vault which hosts CMK
-     * 
      */
     @Import(name="keyVaultProperties")
       private final @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;

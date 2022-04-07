@@ -24,7 +24,6 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * The policy set definition description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -35,7 +34,6 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * The display name of the policy set definition.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -46,7 +44,6 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * The ID of the management group.
-     * 
      */
     @Import(name="managementGroupId", required=true)
       private final Output<String> managementGroupId;
@@ -57,7 +54,6 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -68,7 +64,6 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * The policy set definition parameters that can be used in policy definition references.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
@@ -79,7 +74,6 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * The metadata describing groups of policy definition references within the policy set definition.
-     * 
      */
     @Import(name="policyDefinitionGroups")
       private final @Nullable Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
@@ -90,7 +84,6 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * An array of policy definition references.
-     * 
      */
     @Import(name="policyDefinitions", required=true)
       private final Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
@@ -101,7 +94,6 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * The name of the policy set definition to create.
-     * 
      */
     @Import(name="policySetDefinitionName")
       private final @Nullable Output<String> policySetDefinitionName;
@@ -112,7 +104,6 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
-     * 
      */
     @Import(name="policyType")
       private final @Nullable Output<Either<String,PolicyType>> policyType;

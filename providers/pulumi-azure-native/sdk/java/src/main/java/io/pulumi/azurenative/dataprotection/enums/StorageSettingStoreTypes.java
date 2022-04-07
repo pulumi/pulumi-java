@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the type of the datastore.
-     * 
      */
     @EnumType
     public enum StorageSettingStoreTypes {

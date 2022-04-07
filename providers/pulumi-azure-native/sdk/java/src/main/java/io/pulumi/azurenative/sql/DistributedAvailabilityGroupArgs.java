@@ -18,7 +18,6 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
 
     /**
      * The distributed availability group name.
-     * 
      */
     @Import(name="distributedAvailabilityGroupName")
       private final @Nullable Output<String> distributedAvailabilityGroupName;
@@ -29,7 +28,6 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
 
     /**
      * The name of the managed instance.
-     * 
      */
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
@@ -40,7 +38,6 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
 
     /**
      * The primary availability group name
-     * 
      */
     @Import(name="primaryAvailabilityGroupName")
       private final @Nullable Output<String> primaryAvailabilityGroupName;
@@ -51,7 +48,6 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
 
     /**
      * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
-     * 
      */
     @Import(name="replicationMode")
       private final @Nullable Output<Either<String,ReplicationMode>> replicationMode;
@@ -62,7 +58,6 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
 
     /**
      * The secondary availability group name
-     * 
      */
     @Import(name="secondaryAvailabilityGroupName")
       private final @Nullable Output<String> secondaryAvailabilityGroupName;
@@ -84,7 +78,6 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
 
     /**
      * The source endpoint
-     * 
      */
     @Import(name="sourceEndpoint")
       private final @Nullable Output<String> sourceEndpoint;
@@ -95,7 +88,6 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
 
     /**
      * The name of the target database
-     * 
      */
     @Import(name="targetDatabase")
       private final @Nullable Output<String> targetDatabase;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The user owned storage for Cognitive Services account.
- * 
  */
 public final class UserOwnedStorageArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UserOwnedStorageArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Full resource id of a Microsoft.Storage resource.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;

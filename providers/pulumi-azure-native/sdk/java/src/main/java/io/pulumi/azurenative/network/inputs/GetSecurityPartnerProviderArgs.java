@@ -14,7 +14,6 @@ public final class GetSecurityPartnerProviderArgs extends io.pulumi.resources.In
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetSecurityPartnerProviderArgs extends io.pulumi.resources.In
 
     /**
      * The name of the Security Partner Provider.
-     * 
      */
     @Import(name="securityPartnerProviderName", required=true)
       private final String securityPartnerProviderName;

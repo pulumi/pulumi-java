@@ -20,7 +20,92 @@ import javax.annotation.Nullable;
  * CDN profile is a logical grouping of endpoints that share the same settings, such as CDN provider and pricing tier.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Profiles_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var profile = new AzureNative.Cdn.Profile("profile", new AzureNative.Cdn.ProfileArgs
+ *         {
+ *             Location = "WestCentralUs",
+ *             ProfileName = "profile1",
+ *             ResourceGroupName = "RG",
+ *             Sku = new AzureNative.Cdn.Inputs.SkuArgs
+ *             {
+ *                 Name = "Standard_Verizon",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cdn.NewProfile(ctx, "profile", &cdn.ProfileArgs{
+ * 			Location:          pulumi.String("WestCentralUs"),
+ * 			ProfileName:       pulumi.String("profile1"),
+ * 			ResourceGroupName: pulumi.String("RG"),
+ * 			Sku: &cdn.SkuArgs{
+ * 				Name: pulumi.String("Standard_Verizon"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const profile = new azure_native.cdn.Profile("profile", {
+ *     location: "WestCentralUs",
+ *     profileName: "profile1",
+ *     resourceGroupName: "RG",
+ *     sku: {
+ *         name: "Standard_Verizon",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * profile = azure_native.cdn.Profile("profile",
+ *     location="WestCentralUs",
+ *     profile_name="profile1",
+ *     resource_group_name="RG",
+ *     sku=azure_native.cdn.SkuArgs(
+ *         name="Standard_Verizon",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +120,108 @@ import javax.annotation.Nullable;
 public class Profile extends io.pulumi.resources.CustomResource {
     /**
      * The Id of the frontdoor.
-     * 
      */
     @Export(name="frontdoorId", type=String.class, parameters={})
     private Output<String> frontdoorId;
 
     /**
      * @return The Id of the frontdoor.
-     * 
      */
     public Output<String> getFrontdoorId() {
         return this.frontdoorId;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning status of the profile.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning status of the profile.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the profile.
-     * 
      */
     @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
      * @return Resource status of the profile.
-     * 
      */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
     /**
      * The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
      * @return The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
-     * 
      */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

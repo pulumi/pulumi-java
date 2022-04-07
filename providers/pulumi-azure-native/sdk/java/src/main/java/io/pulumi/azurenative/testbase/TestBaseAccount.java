@@ -20,7 +20,96 @@ import javax.annotation.Nullable;
  * The Test Base Account resource.
  * API Version: 2020-12-16-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TestBaseAccountCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var testBaseAccount = new AzureNative.TestBase.TestBaseAccount("testBaseAccount", new AzureNative.TestBase.TestBaseAccountArgs
+ *         {
+ *             Location = "westus",
+ *             ResourceGroupName = "contoso-rg1",
+ *             Sku = new AzureNative.TestBase.Inputs.TestBaseAccountSKUArgs
+ *             {
+ *                 Name = "S0",
+ *                 Tier = "Standard",
+ *             },
+ *             TestBaseAccountName = "contoso-testBaseAccount1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	testbase "github.com/pulumi/pulumi-azure-native/sdk/go/azure/testbase"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := testbase.NewTestBaseAccount(ctx, "testBaseAccount", &testbase.TestBaseAccountArgs{
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("contoso-rg1"),
+ * 			Sku: &testbase.TestBaseAccountSKUArgs{
+ * 				Name: pulumi.String("S0"),
+ * 				Tier: pulumi.String("Standard"),
+ * 			},
+ * 			TestBaseAccountName: pulumi.String("contoso-testBaseAccount1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const testBaseAccount = new azure_native.testbase.TestBaseAccount("testBaseAccount", {
+ *     location: "westus",
+ *     resourceGroupName: "contoso-rg1",
+ *     sku: {
+ *         name: "S0",
+ *         tier: "Standard",
+ *     },
+ *     testBaseAccountName: "contoso-testBaseAccount1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * test_base_account = azure_native.testbase.TestBaseAccount("testBaseAccount",
+ *     location="westus",
+ *     resource_group_name="contoso-rg1",
+ *     sku=azure_native.testbase.TestBaseAccountSKUArgs(
+ *         name="S0",
+ *         tier="Standard",
+ *     ),
+ *     test_base_account_name="contoso-testBaseAccount1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +124,108 @@ import javax.annotation.Nullable;
 public class TestBaseAccount extends io.pulumi.resources.CustomResource {
     /**
      * The access level of the Test Base Account.
-     * 
      */
     @Export(name="accessLevel", type=String.class, parameters={})
     private Output<String> accessLevel;
 
     /**
      * @return The access level of the Test Base Account.
-     * 
      */
     public Output<String> getAccessLevel() {
         return this.accessLevel;
     }
     /**
      * Resource Etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Resource Etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the Test Base Account.
-     * 
      */
     @Export(name="sku", type=TestBaseAccountSKUResponse.class, parameters={})
     private Output<TestBaseAccountSKUResponse> sku;
 
     /**
      * @return The SKU of the Test Base Account.
-     * 
      */
     public Output<TestBaseAccountSKUResponse> getSku() {
         return this.sku;
     }
     /**
      * The system metadata relating to this resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

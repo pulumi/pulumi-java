@@ -16,7 +16,6 @@ public final class GetVirtualMachineScaleSetArgs extends io.pulumi.resources.Inv
 
     /**
      * The expand expression to apply on the operation. 'UserData' retrieves the UserData property of the VM scale set that was provided by the user during the VM scale set Create/Update operation
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetVirtualMachineScaleSetArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetVirtualMachineScaleSetArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the VM scale set.
-     * 
      */
     @Import(name="vmScaleSetName", required=true)
       private final String vmScaleSetName;

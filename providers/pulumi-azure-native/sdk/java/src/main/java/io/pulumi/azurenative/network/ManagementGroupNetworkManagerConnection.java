@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * The Network Manager Connection resource
  * API Version: 2021-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or Update Management Group Network Manager Connection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managementGroupNetworkManagerConnection = new AzureNative.Network.ManagementGroupNetworkManagerConnection("managementGroupNetworkManagerConnection", new AzureNative.Network.ManagementGroupNetworkManagerConnectionArgs
+ *         {
+ *             ManagementGroupId = "managementGroupA",
+ *             NetworkManagerConnectionName = "TestNMConnection",
+ *             NetworkManagerId = "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewManagementGroupNetworkManagerConnection(ctx, "managementGroupNetworkManagerConnection", &network.ManagementGroupNetworkManagerConnectionArgs{
+ * 			ManagementGroupId:            pulumi.String("managementGroupA"),
+ * 			NetworkManagerConnectionName: pulumi.String("TestNMConnection"),
+ * 			NetworkManagerId:             pulumi.String("/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managementGroupNetworkManagerConnection = new azure_native.network.ManagementGroupNetworkManagerConnection("managementGroupNetworkManagerConnection", {
+ *     managementGroupId: "managementGroupA",
+ *     networkManagerConnectionName: "TestNMConnection",
+ *     networkManagerId: "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * management_group_network_manager_connection = azure_native.network.ManagementGroupNetworkManagerConnection("managementGroupNetworkManagerConnection",
+ *     management_group_id="managementGroupA",
+ *     network_manager_connection_name="TestNMConnection",
+ *     network_manager_id="/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +105,72 @@ import javax.annotation.Nullable;
 public class ManagementGroupNetworkManagerConnection extends io.pulumi.resources.CustomResource {
     /**
      * A description of the scope connection.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the scope connection.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Network Manager Id.
-     * 
      */
     @Export(name="networkManagerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkManagerId;
 
     /**
      * @return Network Manager Id.
-     * 
      */
     public Output</* @Nullable */ String> getNetworkManagerId() {
         return this.networkManagerId;
     }
     /**
      * The system metadata related to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

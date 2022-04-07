@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Schedule for backup
- * 
  */
 public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class BackupScheduleResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * ISO 8601 repeating time interval format
-     * 
      */
     @Import(name="repeatingTimeIntervals", required=true)
       private final List<String> repeatingTimeIntervals;

@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class StorageQueueMessageResponse {
     /**
      * Gets or sets the message.
-     * 
      */
     private final @Nullable String message;
     /**
      * Gets or sets the queue name.
-     * 
      */
     private final @Nullable String queueName;
     /**
      * Gets or sets the SAS key.
-     * 
      */
     private final @Nullable String sasToken;
     /**
      * Gets or sets the storage account name.
-     * 
      */
     private final @Nullable String storageAccount;
 
@@ -46,28 +42,24 @@ public final class StorageQueueMessageResponse {
 
     /**
      * Gets or sets the message.
-     * 
     */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Gets or sets the queue name.
-     * 
     */
     public Optional<String> getQueueName() {
         return Optional.ofNullable(this.queueName);
     }
     /**
      * Gets or sets the SAS key.
-     * 
     */
     public Optional<String> getSasToken() {
         return Optional.ofNullable(this.sasToken);
     }
     /**
      * Gets or sets the storage account name.
-     * 
     */
     public Optional<String> getStorageAccount() {
         return Optional.ofNullable(this.storageAccount);

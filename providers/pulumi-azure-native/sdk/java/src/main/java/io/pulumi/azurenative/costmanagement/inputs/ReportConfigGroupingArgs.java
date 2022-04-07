@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The group by expression to be used in the report.
- * 
  */
 public final class ReportConfigGroupingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ReportConfigGroupingArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the column to group. This version supports subscription lowest possible grain.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class ReportConfigGroupingArgs extends io.pulumi.resources.Resource
 
     /**
      * Has type of the column to group.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ReportConfigColumnType>> type;

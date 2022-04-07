@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The kind of the peering.
-     * 
      */
     @EnumType
     public enum Kind {

@@ -18,7 +18,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -29,7 +28,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Kind of synchronization on trigger.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,TriggerKind>> kind;
@@ -40,7 +38,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the share subscription which will hold the data set sink.
-     * 
      */
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
@@ -62,7 +58,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the trigger.
-     * 
      */
     @Import(name="triggerName")
       private final @Nullable Output<String> triggerName;

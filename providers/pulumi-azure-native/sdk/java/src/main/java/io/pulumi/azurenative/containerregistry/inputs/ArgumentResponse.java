@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a run argument.
- * 
  */
 public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Flag to indicate whether the argument represents a secret and want to be removed from build logs.
-     * 
      */
     @Import(name="isSecret")
       private final @Nullable Boolean isSecret;
@@ -32,7 +30,6 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the argument.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -43,7 +40,6 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The value of the argument.
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

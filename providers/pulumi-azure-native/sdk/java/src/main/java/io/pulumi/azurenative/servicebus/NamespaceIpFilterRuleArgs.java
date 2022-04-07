@@ -18,7 +18,6 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The IP Filter Action
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<Either<String,IPAction>> action;
@@ -29,7 +28,6 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * IP Filter name
-     * 
      */
     @Import(name="filterName")
       private final @Nullable Output<String> filterName;
@@ -40,7 +38,6 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The IP Filter Rule name.
-     * 
      */
     @Import(name="ipFilterRuleName")
       private final @Nullable Output<String> ipFilterRuleName;
@@ -51,7 +48,6 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * IP Mask
-     * 
      */
     @Import(name="ipMask")
       private final @Nullable Output<String> ipMask;
@@ -62,7 +58,6 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -73,7 +68,6 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

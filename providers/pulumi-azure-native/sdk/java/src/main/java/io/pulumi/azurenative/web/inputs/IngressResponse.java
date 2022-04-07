@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container App Ingress configuration.
- * 
  */
 public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
-     * 
      */
     @Import(name="allowInsecure")
       private final @Nullable Boolean allowInsecure;
@@ -35,7 +33,6 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Bool indicating if app exposes an external http endpoint
-     * 
      */
     @Import(name="external")
       private final @Nullable Boolean external;
@@ -46,7 +43,6 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Hostname.
-     * 
      */
     @Import(name="fqdn", required=true)
       private final String fqdn;
@@ -57,7 +53,6 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Target Port in containers for traffic from ingress
-     * 
      */
     @Import(name="targetPort")
       private final @Nullable Integer targetPort;
@@ -75,7 +70,6 @@ public final class IngressResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Ingress transport protocol
-     * 
      */
     @Import(name="transport")
       private final @Nullable String transport;

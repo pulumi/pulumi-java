@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class EncryptionServiceResponse {
     /**
      * A boolean indicating whether or not the service encrypts the data as it is stored.
-     * 
      */
     private final @Nullable Boolean enabled;
     /**
      * Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.
-     * 
      */
     private final @Nullable String keyType;
     /**
      * Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.
-     * 
      */
     private final String lastEnabledTime;
 
@@ -40,21 +37,18 @@ public final class EncryptionServiceResponse {
 
     /**
      * A boolean indicating whether or not the service encrypts the data as it is stored.
-     * 
     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.
-     * 
     */
     public Optional<String> getKeyType() {
         return Optional.ofNullable(this.keyType);
     }
     /**
      * Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.
-     * 
     */
     public String getLastEnabledTime() {
         return this.lastEnabledTime;

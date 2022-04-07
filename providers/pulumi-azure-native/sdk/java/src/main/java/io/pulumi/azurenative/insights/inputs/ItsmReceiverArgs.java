@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * An Itsm receiver.
- * 
  */
 public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Unique identification of ITSM connection among multiple defined in above workspace.
-     * 
      */
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
@@ -30,7 +28,6 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Itsm receiver. Names must be unique across all receivers within an action group.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -41,7 +38,6 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'
-     * 
      */
     @Import(name="region", required=true)
       private final Output<String> region;
@@ -52,7 +48,6 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
-     * 
      */
     @Import(name="ticketConfiguration", required=true)
       private final Output<String> ticketConfiguration;
@@ -63,7 +58,6 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * OMS LA instance identifier.
-     * 
      */
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;

@@ -21,7 +21,1193 @@ import javax.annotation.Nullable;
  * The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a virtual machine image from a blob with DiskEncryptionSet resource.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image = new AzureNative.Compute.Image("image", new AzureNative.Compute.ImageArgs
+ *         {
+ *             ImageName = "myImage",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             StorageProfile = new AzureNative.Compute.Inputs.ImageStorageProfileArgs
+ *             {
+ *                 OsDisk = new AzureNative.Compute.Inputs.ImageOSDiskArgs
+ *                 {
+ *                     BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *                     DiskEncryptionSet = new AzureNative.Compute.Inputs.DiskEncryptionSetParametersArgs
+ *                     {
+ *                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *                     },
+ *                     OsState = "Generalized",
+ *                     OsType = "Linux",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+ * 			ImageName:         pulumi.String("myImage"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			StorageProfile: &compute.ImageStorageProfileArgs{
+ * 				OsDisk: &compute.ImageOSDiskArgs{
+ * 					BlobUri: pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
+ * 					DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+ * 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+ * 					},
+ * 					OsState: "Generalized",
+ * 					OsType:  "Linux",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const image = new azure_native.compute.Image("image", {
+ *     imageName: "myImage",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     storageProfile: {
+ *         osDisk: {
+ *             blobUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *             diskEncryptionSet: {
+ *                 id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *             },
+ *             osState: "Generalized",
+ *             osType: "Linux",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * image = azure_native.compute.Image("image",
+ *     image_name="myImage",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     storage_profile=azure_native.compute.ImageStorageProfileArgs(
+ *         os_disk=azure_native.compute.ImageOSDiskArgs(
+ *             blob_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *             disk_encryption_set=azure_native.compute.DiskEncryptionSetParametersArgs(
+ *                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *             ),
+ *             os_state="Generalized",
+ *             os_type="Linux",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a virtual machine image from a blob.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image = new AzureNative.Compute.Image("image", new AzureNative.Compute.ImageArgs
+ *         {
+ *             ImageName = "myImage",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             StorageProfile = new AzureNative.Compute.Inputs.ImageStorageProfileArgs
+ *             {
+ *                 OsDisk = new AzureNative.Compute.Inputs.ImageOSDiskArgs
+ *                 {
+ *                     BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *                     OsState = "Generalized",
+ *                     OsType = "Linux",
+ *                 },
+ *                 ZoneResilient = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+ * 			ImageName:         pulumi.String("myImage"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			StorageProfile: &compute.ImageStorageProfileArgs{
+ * 				OsDisk: &compute.ImageOSDiskArgs{
+ * 					BlobUri: pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
+ * 					OsState: "Generalized",
+ * 					OsType:  "Linux",
+ * 				},
+ * 				ZoneResilient: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const image = new azure_native.compute.Image("image", {
+ *     imageName: "myImage",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     storageProfile: {
+ *         osDisk: {
+ *             blobUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *             osState: "Generalized",
+ *             osType: "Linux",
+ *         },
+ *         zoneResilient: true,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * image = azure_native.compute.Image("image",
+ *     image_name="myImage",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     storage_profile=azure_native.compute.ImageStorageProfileArgs(
+ *         os_disk=azure_native.compute.ImageOSDiskArgs(
+ *             blob_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *             os_state="Generalized",
+ *             os_type="Linux",
+ *         ),
+ *         zone_resilient=True,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a virtual machine image from a managed disk with DiskEncryptionSet resource.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image = new AzureNative.Compute.Image("image", new AzureNative.Compute.ImageArgs
+ *         {
+ *             ImageName = "myImage",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             StorageProfile = new AzureNative.Compute.Inputs.ImageStorageProfileArgs
+ *             {
+ *                 OsDisk = new AzureNative.Compute.Inputs.ImageOSDiskArgs
+ *                 {
+ *                     DiskEncryptionSet = new AzureNative.Compute.Inputs.DiskEncryptionSetParametersArgs
+ *                     {
+ *                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *                     },
+ *                     ManagedDisk = new AzureNative.Compute.Inputs.SubResourceArgs
+ *                     {
+ *                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+ *                     },
+ *                     OsState = "Generalized",
+ *                     OsType = "Linux",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+ * 			ImageName:         pulumi.String("myImage"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			StorageProfile: &compute.ImageStorageProfileArgs{
+ * 				OsDisk: &compute.ImageOSDiskArgs{
+ * 					DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+ * 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+ * 					},
+ * 					ManagedDisk: &compute.SubResourceArgs{
+ * 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk"),
+ * 					},
+ * 					OsState: "Generalized",
+ * 					OsType:  "Linux",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const image = new azure_native.compute.Image("image", {
+ *     imageName: "myImage",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     storageProfile: {
+ *         osDisk: {
+ *             diskEncryptionSet: {
+ *                 id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *             },
+ *             managedDisk: {
+ *                 id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+ *             },
+ *             osState: "Generalized",
+ *             osType: "Linux",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * image = azure_native.compute.Image("image",
+ *     image_name="myImage",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     storage_profile=azure_native.compute.ImageStorageProfileArgs(
+ *         os_disk=azure_native.compute.ImageOSDiskArgs(
+ *             disk_encryption_set=azure_native.compute.DiskEncryptionSetParametersArgs(
+ *                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *             ),
+ *             managed_disk=azure_native.compute.SubResourceArgs(
+ *                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+ *             ),
+ *             os_state="Generalized",
+ *             os_type="Linux",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a virtual machine image from a managed disk.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image = new AzureNative.Compute.Image("image", new AzureNative.Compute.ImageArgs
+ *         {
+ *             ImageName = "myImage",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             StorageProfile = new AzureNative.Compute.Inputs.ImageStorageProfileArgs
+ *             {
+ *                 OsDisk = new AzureNative.Compute.Inputs.ImageOSDiskArgs
+ *                 {
+ *                     ManagedDisk = new AzureNative.Compute.Inputs.SubResourceArgs
+ *                     {
+ *                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+ *                     },
+ *                     OsState = "Generalized",
+ *                     OsType = "Linux",
+ *                 },
+ *                 ZoneResilient = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+ * 			ImageName:         pulumi.String("myImage"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			StorageProfile: &compute.ImageStorageProfileArgs{
+ * 				OsDisk: &compute.ImageOSDiskArgs{
+ * 					ManagedDisk: &compute.SubResourceArgs{
+ * 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk"),
+ * 					},
+ * 					OsState: "Generalized",
+ * 					OsType:  "Linux",
+ * 				},
+ * 				ZoneResilient: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const image = new azure_native.compute.Image("image", {
+ *     imageName: "myImage",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     storageProfile: {
+ *         osDisk: {
+ *             managedDisk: {
+ *                 id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+ *             },
+ *             osState: "Generalized",
+ *             osType: "Linux",
+ *         },
+ *         zoneResilient: true,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * image = azure_native.compute.Image("image",
+ *     image_name="myImage",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     storage_profile=azure_native.compute.ImageStorageProfileArgs(
+ *         os_disk=azure_native.compute.ImageOSDiskArgs(
+ *             managed_disk=azure_native.compute.SubResourceArgs(
+ *                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+ *             ),
+ *             os_state="Generalized",
+ *             os_type="Linux",
+ *         ),
+ *         zone_resilient=True,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a virtual machine image from a snapshot with DiskEncryptionSet resource.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image = new AzureNative.Compute.Image("image", new AzureNative.Compute.ImageArgs
+ *         {
+ *             ImageName = "myImage",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             StorageProfile = new AzureNative.Compute.Inputs.ImageStorageProfileArgs
+ *             {
+ *                 OsDisk = new AzureNative.Compute.Inputs.ImageOSDiskArgs
+ *                 {
+ *                     DiskEncryptionSet = new AzureNative.Compute.Inputs.DiskEncryptionSetParametersArgs
+ *                     {
+ *                         Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *                     },
+ *                     OsState = "Generalized",
+ *                     OsType = "Linux",
+ *                     Snapshot = new AzureNative.Compute.Inputs.SubResourceArgs
+ *                     {
+ *                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+ * 			ImageName:         pulumi.String("myImage"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			StorageProfile: &compute.ImageStorageProfileArgs{
+ * 				OsDisk: &compute.ImageOSDiskArgs{
+ * 					DiskEncryptionSet: &compute.DiskEncryptionSetParametersArgs{
+ * 						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+ * 					},
+ * 					OsState: "Generalized",
+ * 					OsType:  "Linux",
+ * 					Snapshot: &compute.SubResourceArgs{
+ * 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const image = new azure_native.compute.Image("image", {
+ *     imageName: "myImage",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     storageProfile: {
+ *         osDisk: {
+ *             diskEncryptionSet: {
+ *                 id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *             },
+ *             osState: "Generalized",
+ *             osType: "Linux",
+ *             snapshot: {
+ *                 id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+ *             },
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * image = azure_native.compute.Image("image",
+ *     image_name="myImage",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     storage_profile=azure_native.compute.ImageStorageProfileArgs(
+ *         os_disk=azure_native.compute.ImageOSDiskArgs(
+ *             disk_encryption_set=azure_native.compute.DiskEncryptionSetParametersArgs(
+ *                 id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+ *             ),
+ *             os_state="Generalized",
+ *             os_type="Linux",
+ *             snapshot=azure_native.compute.SubResourceArgs(
+ *                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+ *             ),
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a virtual machine image from a snapshot.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image = new AzureNative.Compute.Image("image", new AzureNative.Compute.ImageArgs
+ *         {
+ *             ImageName = "myImage",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             StorageProfile = new AzureNative.Compute.Inputs.ImageStorageProfileArgs
+ *             {
+ *                 OsDisk = new AzureNative.Compute.Inputs.ImageOSDiskArgs
+ *                 {
+ *                     OsState = "Generalized",
+ *                     OsType = "Linux",
+ *                     Snapshot = new AzureNative.Compute.Inputs.SubResourceArgs
+ *                     {
+ *                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+ *                     },
+ *                 },
+ *                 ZoneResilient = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+ * 			ImageName:         pulumi.String("myImage"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			StorageProfile: &compute.ImageStorageProfileArgs{
+ * 				OsDisk: &compute.ImageOSDiskArgs{
+ * 					OsState: "Generalized",
+ * 					OsType:  "Linux",
+ * 					Snapshot: &compute.SubResourceArgs{
+ * 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot"),
+ * 					},
+ * 				},
+ * 				ZoneResilient: pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const image = new azure_native.compute.Image("image", {
+ *     imageName: "myImage",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     storageProfile: {
+ *         osDisk: {
+ *             osState: "Generalized",
+ *             osType: "Linux",
+ *             snapshot: {
+ *                 id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+ *             },
+ *         },
+ *         zoneResilient: false,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * image = azure_native.compute.Image("image",
+ *     image_name="myImage",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     storage_profile=azure_native.compute.ImageStorageProfileArgs(
+ *         os_disk=azure_native.compute.ImageOSDiskArgs(
+ *             os_state="Generalized",
+ *             os_type="Linux",
+ *             snapshot=azure_native.compute.SubResourceArgs(
+ *                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+ *             ),
+ *         ),
+ *         zone_resilient=False,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a virtual machine image from an existing virtual machine.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image = new AzureNative.Compute.Image("image", new AzureNative.Compute.ImageArgs
+ *         {
+ *             ImageName = "myImage",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             SourceVirtualMachine = new AzureNative.Compute.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+ * 			ImageName:         pulumi.String("myImage"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			SourceVirtualMachine: &compute.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const image = new azure_native.compute.Image("image", {
+ *     imageName: "myImage",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     sourceVirtualMachine: {
+ *         id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * image = azure_native.compute.Image("image",
+ *     image_name="myImage",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     source_virtual_machine=azure_native.compute.SubResourceArgs(
+ *         id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a virtual machine image that includes a data disk from a blob.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image = new AzureNative.Compute.Image("image", new AzureNative.Compute.ImageArgs
+ *         {
+ *             ImageName = "myImage",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             StorageProfile = new AzureNative.Compute.Inputs.ImageStorageProfileArgs
+ *             {
+ *                 DataDisks = 
+ *                 {
+ *                     new AzureNative.Compute.Inputs.ImageDataDiskArgs
+ *                     {
+ *                         BlobUri = "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
+ *                         Lun = 1,
+ *                     },
+ *                 },
+ *                 OsDisk = new AzureNative.Compute.Inputs.ImageOSDiskArgs
+ *                 {
+ *                     BlobUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *                     OsState = "Generalized",
+ *                     OsType = "Linux",
+ *                 },
+ *                 ZoneResilient = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+ * 			ImageName:         pulumi.String("myImage"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			StorageProfile: &compute.ImageStorageProfileArgs{
+ * 				DataDisks: compute.ImageDataDiskArray{
+ * 					&compute.ImageDataDiskArgs{
+ * 						BlobUri: pulumi.String("https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd"),
+ * 						Lun:     pulumi.Int(1),
+ * 					},
+ * 				},
+ * 				OsDisk: &compute.ImageOSDiskArgs{
+ * 					BlobUri: pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
+ * 					OsState: "Generalized",
+ * 					OsType:  "Linux",
+ * 				},
+ * 				ZoneResilient: pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const image = new azure_native.compute.Image("image", {
+ *     imageName: "myImage",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     storageProfile: {
+ *         dataDisks: [{
+ *             blobUri: "https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
+ *             lun: 1,
+ *         }],
+ *         osDisk: {
+ *             blobUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *             osState: "Generalized",
+ *             osType: "Linux",
+ *         },
+ *         zoneResilient: false,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * image = azure_native.compute.Image("image",
+ *     image_name="myImage",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     storage_profile=azure_native.compute.ImageStorageProfileArgs(
+ *         data_disks=[azure_native.compute.ImageDataDiskArgs(
+ *             blob_uri="https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd",
+ *             lun=1,
+ *         )],
+ *         os_disk=azure_native.compute.ImageOSDiskArgs(
+ *             blob_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+ *             os_state="Generalized",
+ *             os_type="Linux",
+ *         ),
+ *         zone_resilient=False,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a virtual machine image that includes a data disk from a managed disk.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image = new AzureNative.Compute.Image("image", new AzureNative.Compute.ImageArgs
+ *         {
+ *             ImageName = "myImage",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             StorageProfile = new AzureNative.Compute.Inputs.ImageStorageProfileArgs
+ *             {
+ *                 DataDisks = 
+ *                 {
+ *                     new AzureNative.Compute.Inputs.ImageDataDiskArgs
+ *                     {
+ *                         Lun = 1,
+ *                         ManagedDisk = new AzureNative.Compute.Inputs.SubResourceArgs
+ *                         {
+ *                             Id = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
+ *                         },
+ *                     },
+ *                 },
+ *                 OsDisk = new AzureNative.Compute.Inputs.ImageOSDiskArgs
+ *                 {
+ *                     ManagedDisk = new AzureNative.Compute.Inputs.SubResourceArgs
+ *                     {
+ *                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+ *                     },
+ *                     OsState = "Generalized",
+ *                     OsType = "Linux",
+ *                 },
+ *                 ZoneResilient = false,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+ * 			ImageName:         pulumi.String("myImage"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			StorageProfile: &compute.ImageStorageProfileArgs{
+ * 				DataDisks: compute.ImageDataDiskArray{
+ * 					&compute.ImageDataDiskArgs{
+ * 						Lun: pulumi.Int(1),
+ * 						ManagedDisk: &compute.SubResourceArgs{
+ * 							Id: pulumi.String("subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2"),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsDisk: &compute.ImageOSDiskArgs{
+ * 					ManagedDisk: &compute.SubResourceArgs{
+ * 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk"),
+ * 					},
+ * 					OsState: "Generalized",
+ * 					OsType:  "Linux",
+ * 				},
+ * 				ZoneResilient: pulumi.Bool(false),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const image = new azure_native.compute.Image("image", {
+ *     imageName: "myImage",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     storageProfile: {
+ *         dataDisks: [{
+ *             lun: 1,
+ *             managedDisk: {
+ *                 id: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
+ *             },
+ *         }],
+ *         osDisk: {
+ *             managedDisk: {
+ *                 id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+ *             },
+ *             osState: "Generalized",
+ *             osType: "Linux",
+ *         },
+ *         zoneResilient: false,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * image = azure_native.compute.Image("image",
+ *     image_name="myImage",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     storage_profile=azure_native.compute.ImageStorageProfileArgs(
+ *         data_disks=[azure_native.compute.ImageDataDiskArgs(
+ *             lun=1,
+ *             managed_disk=azure_native.compute.SubResourceArgs(
+ *                 id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2",
+ *             ),
+ *         )],
+ *         os_disk=azure_native.compute.ImageOSDiskArgs(
+ *             managed_disk=azure_native.compute.SubResourceArgs(
+ *                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk",
+ *             ),
+ *             os_state="Generalized",
+ *             os_type="Linux",
+ *         ),
+ *         zone_resilient=False,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a virtual machine image that includes a data disk from a snapshot.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var image = new AzureNative.Compute.Image("image", new AzureNative.Compute.ImageArgs
+ *         {
+ *             ImageName = "myImage",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             StorageProfile = new AzureNative.Compute.Inputs.ImageStorageProfileArgs
+ *             {
+ *                 DataDisks = 
+ *                 {
+ *                     new AzureNative.Compute.Inputs.ImageDataDiskArgs
+ *                     {
+ *                         Lun = 1,
+ *                         Snapshot = new AzureNative.Compute.Inputs.SubResourceArgs
+ *                         {
+ *                             Id = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
+ *                         },
+ *                     },
+ *                 },
+ *                 OsDisk = new AzureNative.Compute.Inputs.ImageOSDiskArgs
+ *                 {
+ *                     OsState = "Generalized",
+ *                     OsType = "Linux",
+ *                     Snapshot = new AzureNative.Compute.Inputs.SubResourceArgs
+ *                     {
+ *                         Id = "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+ *                     },
+ *                 },
+ *                 ZoneResilient = true,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := compute.NewImage(ctx, "image", &compute.ImageArgs{
+ * 			ImageName:         pulumi.String("myImage"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			StorageProfile: &compute.ImageStorageProfileArgs{
+ * 				DataDisks: compute.ImageDataDiskArray{
+ * 					&compute.ImageDataDiskArgs{
+ * 						Lun: pulumi.Int(1),
+ * 						Snapshot: &compute.SubResourceArgs{
+ * 							Id: pulumi.String("subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2"),
+ * 						},
+ * 					},
+ * 				},
+ * 				OsDisk: &compute.ImageOSDiskArgs{
+ * 					OsState: "Generalized",
+ * 					OsType:  "Linux",
+ * 					Snapshot: &compute.SubResourceArgs{
+ * 						Id: pulumi.String("subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot"),
+ * 					},
+ * 				},
+ * 				ZoneResilient: pulumi.Bool(true),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const image = new azure_native.compute.Image("image", {
+ *     imageName: "myImage",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     storageProfile: {
+ *         dataDisks: [{
+ *             lun: 1,
+ *             snapshot: {
+ *                 id: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
+ *             },
+ *         }],
+ *         osDisk: {
+ *             osState: "Generalized",
+ *             osType: "Linux",
+ *             snapshot: {
+ *                 id: "subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+ *             },
+ *         },
+ *         zoneResilient: true,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * image = azure_native.compute.Image("image",
+ *     image_name="myImage",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     storage_profile=azure_native.compute.ImageStorageProfileArgs(
+ *         data_disks=[azure_native.compute.ImageDataDiskArgs(
+ *             lun=1,
+ *             snapshot=azure_native.compute.SubResourceArgs(
+ *                 id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2",
+ *             ),
+ *         )],
+ *         os_disk=azure_native.compute.ImageOSDiskArgs(
+ *             os_state="Generalized",
+ *             os_type="Linux",
+ *             snapshot=azure_native.compute.SubResourceArgs(
+ *                 id="subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+ *             ),
+ *         ),
+ *         zone_resilient=True,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,126 +1222,108 @@ import javax.annotation.Nullable;
 public class Image extends io.pulumi.resources.CustomResource {
     /**
      * The extended location of the Image.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return The extended location of the Image.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
-     * 
      */
     @Export(name="hyperVGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> hyperVGeneration;
 
     /**
      * @return Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
-     * 
      */
     public Output</* @Nullable */ String> getHyperVGeneration() {
         return this.hyperVGeneration;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The source virtual machine from which Image is created.
-     * 
      */
     @Export(name="sourceVirtualMachine", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> sourceVirtualMachine;
 
     /**
      * @return The source virtual machine from which Image is created.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getSourceVirtualMachine() {
         return this.sourceVirtualMachine;
     }
     /**
      * Specifies the storage settings for the virtual machine disks.
-     * 
      */
     @Export(name="storageProfile", type=ImageStorageProfileResponse.class, parameters={})
     private Output</* @Nullable */ ImageStorageProfileResponse> storageProfile;
 
     /**
      * @return Specifies the storage settings for the virtual machine disks.
-     * 
      */
     public Output</* @Nullable */ ImageStorageProfileResponse> getStorageProfile() {
         return this.storageProfile;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

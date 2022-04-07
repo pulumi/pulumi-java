@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Location of the resource.
-     * 
      */
     @EnumType
     public enum Location {

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of a report.
- * 
  */
 public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Has definition for data in this report.
-     * 
      */
     @Import(name="dataset")
       private final @Nullable Output<ReportDatasetArgs> dataset;
@@ -36,7 +34,6 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Has time period for pulling data for the report.
-     * 
      */
     @Import(name="timePeriod")
       private final @Nullable Output<ReportTimePeriodArgs> timePeriod;
@@ -47,7 +44,6 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-     * 
      */
     @Import(name="timeframe", required=true)
       private final Output<Either<String,TimeframeType>> timeframe;
@@ -58,7 +54,6 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The type of the report.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ReportType>> type;

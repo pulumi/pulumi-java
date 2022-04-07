@@ -17,37 +17,30 @@ import javax.annotation.Nullable;
 public final class EventContentResponse {
     /**
      * The action that encompasses the provided event.
-     * 
      */
     private final @Nullable String action;
     /**
      * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
-     * 
      */
     private final @Nullable ActorResponse actor;
     /**
      * The event ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * The request that generated the event.
-     * 
      */
     private final @Nullable RequestResponse request;
     /**
      * The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
-     * 
      */
     private final @Nullable SourceResponse source;
     /**
      * The target of the event.
-     * 
      */
     private final @Nullable TargetResponse target;
     /**
      * The time at which the event occurred.
-     * 
      */
     private final @Nullable String timestamp;
 
@@ -71,49 +64,42 @@ public final class EventContentResponse {
 
     /**
      * The action that encompasses the provided event.
-     * 
     */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
-     * 
     */
     public Optional<ActorResponse> getActor() {
         return Optional.ofNullable(this.actor);
     }
     /**
      * The event ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The request that generated the event.
-     * 
     */
     public Optional<RequestResponse> getRequest() {
         return Optional.ofNullable(this.request);
     }
     /**
      * The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
-     * 
     */
     public Optional<SourceResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The target of the event.
-     * 
     */
     public Optional<TargetResponse> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * The time at which the event occurred.
-     * 
     */
     public Optional<String> getTimestamp() {
         return Optional.ofNullable(this.timestamp);

@@ -18,7 +18,235 @@ import javax.annotation.Nullable;
  * Represents MicrosoftSecurityIncidentCreation rule.
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates a Fusion alert rule.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var microsoftSecurityIncidentCreationAlertRule = new AzureNative.SecurityInsights.MicrosoftSecurityIncidentCreationAlertRule("microsoftSecurityIncidentCreationAlertRule", new AzureNative.SecurityInsights.MicrosoftSecurityIncidentCreationAlertRuleArgs
+ *         {
+ *             ResourceGroupName = "myRg",
+ *             RuleId = "myFirstFusionRule",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewMicrosoftSecurityIncidentCreationAlertRule(ctx, "microsoftSecurityIncidentCreationAlertRule", &securityinsights.MicrosoftSecurityIncidentCreationAlertRuleArgs{
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			RuleId:            pulumi.String("myFirstFusionRule"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const microsoftSecurityIncidentCreationAlertRule = new azure_native.securityinsights.MicrosoftSecurityIncidentCreationAlertRule("microsoftSecurityIncidentCreationAlertRule", {
+ *     resourceGroupName: "myRg",
+ *     ruleId: "myFirstFusionRule",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * microsoft_security_incident_creation_alert_rule = azure_native.securityinsights.MicrosoftSecurityIncidentCreationAlertRule("microsoftSecurityIncidentCreationAlertRule",
+ *     resource_group_name="myRg",
+ *     rule_id="myFirstFusionRule",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates a MicrosoftSecurityIncidentCreation rule.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var microsoftSecurityIncidentCreationAlertRule = new AzureNative.SecurityInsights.MicrosoftSecurityIncidentCreationAlertRule("microsoftSecurityIncidentCreationAlertRule", new AzureNative.SecurityInsights.MicrosoftSecurityIncidentCreationAlertRuleArgs
+ *         {
+ *             DisplayName = "testing displayname",
+ *             Enabled = true,
+ *             Kind = "MicrosoftSecurityIncidentCreation",
+ *             ProductFilter = "Microsoft Cloud App Security",
+ *             ResourceGroupName = "myRg",
+ *             RuleId = "microsoftSecurityIncidentCreationRuleExample",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewMicrosoftSecurityIncidentCreationAlertRule(ctx, "microsoftSecurityIncidentCreationAlertRule", &securityinsights.MicrosoftSecurityIncidentCreationAlertRuleArgs{
+ * 			DisplayName:       pulumi.String("testing displayname"),
+ * 			Enabled:           pulumi.Bool(true),
+ * 			Kind:              pulumi.String("MicrosoftSecurityIncidentCreation"),
+ * 			ProductFilter:     pulumi.String("Microsoft Cloud App Security"),
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			RuleId:            pulumi.String("microsoftSecurityIncidentCreationRuleExample"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const microsoftSecurityIncidentCreationAlertRule = new azure_native.securityinsights.MicrosoftSecurityIncidentCreationAlertRule("microsoftSecurityIncidentCreationAlertRule", {
+ *     displayName: "testing displayname",
+ *     enabled: true,
+ *     kind: "MicrosoftSecurityIncidentCreation",
+ *     productFilter: "Microsoft Cloud App Security",
+ *     resourceGroupName: "myRg",
+ *     ruleId: "microsoftSecurityIncidentCreationRuleExample",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * microsoft_security_incident_creation_alert_rule = azure_native.securityinsights.MicrosoftSecurityIncidentCreationAlertRule("microsoftSecurityIncidentCreationAlertRule",
+ *     display_name="testing displayname",
+ *     enabled=True,
+ *     kind="MicrosoftSecurityIncidentCreation",
+ *     product_filter="Microsoft Cloud App Security",
+ *     resource_group_name="myRg",
+ *     rule_id="microsoftSecurityIncidentCreationRuleExample",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates a Scheduled alert rule.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var microsoftSecurityIncidentCreationAlertRule = new AzureNative.SecurityInsights.MicrosoftSecurityIncidentCreationAlertRule("microsoftSecurityIncidentCreationAlertRule", new AzureNative.SecurityInsights.MicrosoftSecurityIncidentCreationAlertRuleArgs
+ *         {
+ *             ResourceGroupName = "myRg",
+ *             RuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewMicrosoftSecurityIncidentCreationAlertRule(ctx, "microsoftSecurityIncidentCreationAlertRule", &securityinsights.MicrosoftSecurityIncidentCreationAlertRuleArgs{
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			RuleId:            pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const microsoftSecurityIncidentCreationAlertRule = new azure_native.securityinsights.MicrosoftSecurityIncidentCreationAlertRule("microsoftSecurityIncidentCreationAlertRule", {
+ *     resourceGroupName: "myRg",
+ *     ruleId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * microsoft_security_incident_creation_alert_rule = azure_native.securityinsights.MicrosoftSecurityIncidentCreationAlertRule("microsoftSecurityIncidentCreationAlertRule",
+ *     resource_group_name="myRg",
+ *     rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +261,84 @@ import javax.annotation.Nullable;
 public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resources.CustomResource {
     /**
      * The Name of the alert rule template used to create this rule.
-     * 
      */
     @Export(name="alertRuleTemplateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertRuleTemplateName;
 
     /**
      * @return The Name of the alert rule template used to create this rule.
-     * 
      */
     public Output</* @Nullable */ String> getAlertRuleTemplateName() {
         return this.alertRuleTemplateName;
     }
     /**
      * The description of the alert rule.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The description of the alert rule.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The display name for alerts created by this alert rule.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name for alerts created by this alert rule.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * the alerts' displayNames on which the cases will not be generated
-     * 
      */
     @Export(name="displayNamesExcludeFilter", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> displayNamesExcludeFilter;
 
     /**
      * @return the alerts' displayNames on which the cases will not be generated
-     * 
      */
     public Output</* @Nullable */ List<String>> getDisplayNamesExcludeFilter() {
         return this.displayNamesExcludeFilter;
     }
     /**
      * the alerts' displayNames on which the cases will be generated
-     * 
      */
     @Export(name="displayNamesFilter", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> displayNamesFilter;
 
     /**
      * @return the alerts' displayNames on which the cases will be generated
-     * 
      */
     public Output</* @Nullable */ List<String>> getDisplayNamesFilter() {
         return this.displayNamesFilter;
     }
     /**
      * Determines whether this alert rule is enabled or disabled.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
     /**
      * @return Determines whether this alert rule is enabled or disabled.
-     * 
      */
     public Output<Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
@@ -132,7 +346,6 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
     /**
      * The kind of the alert rule
      * Expected value is 'MicrosoftSecurityIncidentCreation'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -140,77 +353,66 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
     /**
      * @return The kind of the alert rule
      * Expected value is 'MicrosoftSecurityIncidentCreation'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The last time that this alert has been modified.
-     * 
      */
     @Export(name="lastModifiedUtc", type=String.class, parameters={})
     private Output<String> lastModifiedUtc;
 
     /**
      * @return The last time that this alert has been modified.
-     * 
      */
     public Output<String> getLastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The alerts' productName on which the cases will be generated
-     * 
      */
     @Export(name="productFilter", type=String.class, parameters={})
     private Output<String> productFilter;
 
     /**
      * @return The alerts' productName on which the cases will be generated
-     * 
      */
     public Output<String> getProductFilter() {
         return this.productFilter;
     }
     /**
      * the alerts' severities on which the cases will be generated
-     * 
      */
     @Export(name="severitiesFilter", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> severitiesFilter;
 
     /**
      * @return the alerts' severities on which the cases will be generated
-     * 
      */
     public Output</* @Nullable */ List<String>> getSeveritiesFilter() {
         return this.severitiesFilter;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

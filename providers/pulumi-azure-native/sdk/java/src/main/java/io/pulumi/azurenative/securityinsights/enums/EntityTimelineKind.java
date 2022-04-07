@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The entity query kind
-     * 
      */
     @EnumType
     public enum EntityTimelineKind {
         /**
          * activity
-         * 
          */
         Activity("Activity"),
         /**
          * bookmarks
-         * 
          */
         Bookmark("Bookmark"),
         /**
          * security alerts
-         * 
          */
         SecurityAlert("SecurityAlert");
 

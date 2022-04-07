@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of data present in the report.
- * 
  */
 public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-     * 
      */
     @Import(name="aggregation")
       private final @Nullable Output<Map<String,ReportConfigAggregationArgs>> aggregation;
@@ -40,7 +38,6 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable Output<ReportConfigDatasetConfigurationArgs> configuration;
@@ -51,7 +48,6 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Has filter expression to use in the report.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<ReportConfigFilterArgs> filter;
@@ -62,7 +58,6 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The granularity of rows in the report.
-     * 
      */
     @Import(name="granularity")
       private final @Nullable Output<Either<String,ReportGranularityType>> granularity;
@@ -73,7 +68,6 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
-     * 
      */
     @Import(name="grouping")
       private final @Nullable Output<List<ReportConfigGroupingArgs>> grouping;
@@ -84,7 +78,6 @@ public final class ReportConfigDatasetArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Array of order by expression to use in the report.
-     * 
      */
     @Import(name="sorting")
       private final @Nullable Output<List<ReportConfigSortingArgs>> sorting;

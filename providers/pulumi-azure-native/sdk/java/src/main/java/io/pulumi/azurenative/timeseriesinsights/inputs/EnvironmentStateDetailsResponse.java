@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An object that contains the details about an environment's state.
- * 
  */
 public final class EnvironmentStateDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EnvironmentStateDetailsResponse extends io.pulumi.resources.I
 
     /**
      * Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -31,7 +29,6 @@ public final class EnvironmentStateDetailsResponse extends io.pulumi.resources.I
 
     /**
      * A message that describes the state in detail.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;

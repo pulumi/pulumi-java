@@ -14,7 +14,6 @@ public final class GetResourceGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group to get. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

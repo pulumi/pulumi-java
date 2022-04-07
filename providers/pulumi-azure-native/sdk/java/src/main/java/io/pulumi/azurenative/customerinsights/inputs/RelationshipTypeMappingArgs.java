@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Maps fields in Profile to their corresponding StrongIds in Related Profile.
- * 
  */
 public final class RelationshipTypeMappingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RelationshipTypeMappingArgs extends io.pulumi.resources.Resou
 
     /**
      * Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
-     * 
      */
     @Import(name="fieldMappings", required=true)
       private final Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings;

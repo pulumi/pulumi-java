@@ -19,7 +19,169 @@ import javax.annotation.Nullable;
  * Azure Resource Manager resource envelope.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdate Model Version.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var modelVersion = new AzureNative.MachineLearningServices.ModelVersion("modelVersion", new AzureNative.MachineLearningServices.ModelVersionArgs
+ *         {
+ *             Name = "testContainer",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.ModelVersionArgs
+ *             {
+ *                 DatastoreId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspace123/datastores/datastore123",
+ *                 Description = "Model version description",
+ *                 Flavors = 
+ *                 {
+ *                     { "python_function", new AzureNative.MachineLearningServices.Inputs.FlavorDataArgs
+ *                     {
+ *                         Data = 
+ *                         {
+ *                             { "loader_module", "myLoaderModule" },
+ *                         },
+ *                     } },
+ *                 },
+ *                 Path = "path/in/datastore",
+ *                 Properties = 
+ *                 {
+ *                     { "prop1", "value1" },
+ *                     { "prop2", "value2" },
+ *                 },
+ *                 Tags = 
+ *                 {
+ *                     { "tag1", "value1" },
+ *                     { "tag2", "value2" },
+ *                 },
+ *             },
+ *             ResourceGroupName = "testrg123",
+ *             Version = "1",
+ *             WorkspaceName = "workspace123",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewModelVersion(ctx, "modelVersion", &machinelearningservices.ModelVersionArgs{
+ * 			Name: pulumi.String("testContainer"),
+ * 			Properties: &machinelearningservices.ModelVersionArgs{
+ * 				DatastoreId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspace123/datastores/datastore123"),
+ * 				Description: pulumi.String("Model version description"),
+ * 				Flavors: machinelearningservices.FlavorDataMap{
+ * 					"python_function": &machinelearningservices.FlavorDataArgs{
+ * 						Data: pulumi.StringMap{
+ * 							"loader_module": pulumi.String("myLoaderModule"),
+ * 						},
+ * 					},
+ * 				},
+ * 				Path: pulumi.String("path/in/datastore"),
+ * 				Properties: pulumi.StringMap{
+ * 					"prop1": pulumi.String("value1"),
+ * 					"prop2": pulumi.String("value2"),
+ * 				},
+ * 				Tags: pulumi.StringMap{
+ * 					"tag1": pulumi.String("value1"),
+ * 					"tag2": pulumi.String("value2"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			Version:           pulumi.String("1"),
+ * 			WorkspaceName:     pulumi.String("workspace123"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const modelVersion = new azure_native.machinelearningservices.ModelVersion("modelVersion", {
+ *     name: "testContainer",
+ *     properties: {
+ *         datastoreId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspace123/datastores/datastore123",
+ *         description: "Model version description",
+ *         flavors: {
+ *             python_function: {
+ *                 data: {
+ *                     loader_module: "myLoaderModule",
+ *                 },
+ *             },
+ *         },
+ *         path: "path/in/datastore",
+ *         properties: {
+ *             prop1: "value1",
+ *             prop2: "value2",
+ *         },
+ *         tags: {
+ *             tag1: "value1",
+ *             tag2: "value2",
+ *         },
+ *     },
+ *     resourceGroupName: "testrg123",
+ *     version: "1",
+ *     workspaceName: "workspace123",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * model_version = azure_native.machinelearningservices.ModelVersion("modelVersion",
+ *     name="testContainer",
+ *     properties=azure_native.machinelearningservices.ModelVersionArgs(
+ *         datastore_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspace123/datastores/datastore123",
+ *         description="Model version description",
+ *         flavors={
+ *             "python_function": azure_native.machinelearningservices.FlavorDataArgs(
+ *                 data={
+ *                     "loader_module": "myLoaderModule",
+ *                 },
+ *             ),
+ *         },
+ *         path="path/in/datastore",
+ *         properties={
+ *             "prop1": "value1",
+ *             "prop2": "value2",
+ *         },
+ *         tags={
+ *             "tag1": "value1",
+ *             "tag2": "value2",
+ *         },
+ *     ),
+ *     resource_group_name="testrg123",
+ *     version="1",
+ *     workspace_name="workspace123")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +196,48 @@ import javax.annotation.Nullable;
 public class ModelVersion extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Export(name="properties", type=ModelVersionResponse.class, parameters={})
     private Output<ModelVersionResponse> properties;
 
     /**
      * @return Additional attributes of the entity.
-     * 
      */
     public Output<ModelVersionResponse> getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System data associated with resource provider
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

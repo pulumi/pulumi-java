@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger that schedules pipeline reruns for all fixed time interval windows from a requested start time to requested end time.
- * 
  */
 public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
 
     /**
      * List of tags that can be used for describing the trigger.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -34,7 +32,6 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
 
     /**
      * Trigger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +42,6 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
 
     /**
      * The parent trigger reference.
-     * 
      */
     @Import(name="parentTrigger", required=true)
       private final Output<Object> parentTrigger;
@@ -56,7 +52,6 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
 
     /**
      * The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
-     * 
      */
     @Import(name="requestedEndTime", required=true)
       private final Output<String> requestedEndTime;
@@ -67,7 +62,6 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
 
     /**
      * The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
-     * 
      */
     @Import(name="requestedStartTime", required=true)
       private final Output<String> requestedStartTime;
@@ -78,7 +72,6 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
 
     /**
      * The max number of parallel time windows (ready for execution) for which a rerun is triggered.
-     * 
      */
     @Import(name="rerunConcurrency", required=true)
       private final Output<Integer> rerunConcurrency;
@@ -90,7 +83,6 @@ public final class RerunTumblingWindowTriggerArgs extends io.pulumi.resources.Re
     /**
      * Trigger type.
      * Expected value is 'RerunTumblingWindowTrigger'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Name value pair.
- * 
  */
 public final class NameValuePairArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class NameValuePairArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Pair name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class NameValuePairArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Pair value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

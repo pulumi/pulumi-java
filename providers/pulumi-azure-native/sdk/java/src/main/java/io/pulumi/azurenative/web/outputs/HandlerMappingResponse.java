@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class HandlerMappingResponse {
     /**
      * Command-line arguments to be passed to the script processor.
-     * 
      */
     private final @Nullable String arguments;
     /**
      * Requests with this extension will be handled using the specified FastCGI application.
-     * 
      */
     private final @Nullable String extension;
     /**
      * The absolute path to the FastCGI application.
-     * 
      */
     private final @Nullable String scriptProcessor;
 
@@ -39,21 +36,18 @@ public final class HandlerMappingResponse {
 
     /**
      * Command-line arguments to be passed to the script processor.
-     * 
     */
     public Optional<String> getArguments() {
         return Optional.ofNullable(this.arguments);
     }
     /**
      * Requests with this extension will be handled using the specified FastCGI application.
-     * 
     */
     public Optional<String> getExtension() {
         return Optional.ofNullable(this.extension);
     }
     /**
      * The absolute path to the FastCGI application.
-     * 
     */
     public Optional<String> getScriptProcessor() {
         return Optional.ofNullable(this.scriptProcessor);

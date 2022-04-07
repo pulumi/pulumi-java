@@ -14,7 +14,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the application resource.
-     * 
      */
     @Import(name="applicationName", required=true)
       private final String applicationName;
@@ -25,7 +24,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the cluster resource.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -36,7 +34,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the service resource in the format of {applicationName}~{serviceName}.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;

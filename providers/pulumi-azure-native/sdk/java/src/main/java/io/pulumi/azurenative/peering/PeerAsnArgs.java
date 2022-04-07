@@ -21,7 +21,6 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Autonomous System Number (ASN) of the peer.
-     * 
      */
     @Import(name="peerAsn")
       private final @Nullable Output<Integer> peerAsn;
@@ -32,7 +31,6 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The peer ASN name.
-     * 
      */
     @Import(name="peerAsnName")
       private final @Nullable Output<String> peerAsnName;
@@ -43,7 +41,6 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The contact details of the peer.
-     * 
      */
     @Import(name="peerContactDetail")
       private final @Nullable Output<List<ContactDetailArgs>> peerContactDetail;
@@ -54,7 +51,6 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the peer.
-     * 
      */
     @Import(name="peerName")
       private final @Nullable Output<String> peerName;
@@ -65,7 +61,6 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The validation state of the ASN associated with the peer.
-     * 
      */
     @Import(name="validationState")
       private final @Nullable Output<Either<String,ValidationState>> validationState;

@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for Google Cloud Storage.
- * 
  */
 public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * The access key identifier of the Google Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="accessKeyId")
       private final @Nullable Output<Object> accessKeyId;
@@ -39,7 +37,6 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -50,7 +47,6 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -61,7 +57,6 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -72,7 +67,6 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -83,7 +77,6 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -94,7 +87,6 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.
-     * 
      */
     @Import(name="secretAccessKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
@@ -105,7 +97,6 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
 
     /**
      * This value specifies the endpoint to access with the Google Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="serviceUrl")
       private final @Nullable Output<Object> serviceUrl;
@@ -117,7 +108,6 @@ public final class GoogleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
     /**
      * Type of linked service.
      * Expected value is 'GoogleCloudStorage'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

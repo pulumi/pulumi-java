@@ -19,7 +19,171 @@ import javax.annotation.Nullable;
  * Policy that determines how a video can be accessed.
  * API Version: 2021-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Register access policy entity.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var accessPolicy = new AzureNative.VideoAnalyzer.AccessPolicy("accessPolicy", new AzureNative.VideoAnalyzer.AccessPolicyArgs
+ *         {
+ *             AccessPolicyName = "accessPolicyName1",
+ *             AccountName = "testaccount2",
+ *             Authentication = new AzureNative.VideoAnalyzer.Inputs.JwtAuthenticationArgs
+ *             {
+ *                 Audiences = 
+ *                 {
+ *                     "audience1",
+ *                 },
+ *                 Claims = 
+ *                 {
+ *                     new AzureNative.VideoAnalyzer.Inputs.TokenClaimArgs
+ *                     {
+ *                         Name = "claimname1",
+ *                         Value = "claimvalue1",
+ *                     },
+ *                     new AzureNative.VideoAnalyzer.Inputs.TokenClaimArgs
+ *                     {
+ *                         Name = "claimname2",
+ *                         Value = "claimvalue2",
+ *                     },
+ *                 },
+ *                 Issuers = 
+ *                 {
+ *                     "issuer1",
+ *                     "issuer2",
+ *                 },
+ *                 Keys = 
+ *                 {
+ *                     new AzureNative.VideoAnalyzer.Inputs.RsaTokenKeyArgs
+ *                     {
+ *                         Alg = "RS256",
+ *                         E = "ZLFzZTY0IQ==",
+ *                         Kid = "123",
+ *                         N = "YmFzZTY0IQ==",
+ *                         Type = "#Microsoft.VideoAnalyzer.RsaTokenKey",
+ *                     },
+ *                     new AzureNative.VideoAnalyzer.Inputs.EccTokenKeyArgs
+ *                     {
+ *                         Alg = "ES256",
+ *                         Kid = "124",
+ *                         Type = "#Microsoft.VideoAnalyzer.EccTokenKey",
+ *                         X = "XX==",
+ *                         Y = "YY==",
+ *                     },
+ *                 },
+ *                 Type = "#Microsoft.VideoAnalyzer.JwtAuthentication",
+ *             },
+ *             ResourceGroupName = "testrg",
+ *             Role = "Reader",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const accessPolicy = new azure_native.videoanalyzer.AccessPolicy("accessPolicy", {
+ *     accessPolicyName: "accessPolicyName1",
+ *     accountName: "testaccount2",
+ *     authentication: {
+ *         audiences: ["audience1"],
+ *         claims: [
+ *             {
+ *                 name: "claimname1",
+ *                 value: "claimvalue1",
+ *             },
+ *             {
+ *                 name: "claimname2",
+ *                 value: "claimvalue2",
+ *             },
+ *         ],
+ *         issuers: [
+ *             "issuer1",
+ *             "issuer2",
+ *         ],
+ *         keys: [
+ *             {
+ *                 alg: "RS256",
+ *                 e: "ZLFzZTY0IQ==",
+ *                 kid: "123",
+ *                 n: "YmFzZTY0IQ==",
+ *                 type: "#Microsoft.VideoAnalyzer.RsaTokenKey",
+ *             },
+ *             {
+ *                 alg: "ES256",
+ *                 kid: "124",
+ *                 type: "#Microsoft.VideoAnalyzer.EccTokenKey",
+ *                 x: "XX==",
+ *                 y: "YY==",
+ *             },
+ *         ],
+ *         type: "#Microsoft.VideoAnalyzer.JwtAuthentication",
+ *     },
+ *     resourceGroupName: "testrg",
+ *     role: "Reader",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * access_policy = azure_native.videoanalyzer.AccessPolicy("accessPolicy",
+ *     access_policy_name="accessPolicyName1",
+ *     account_name="testaccount2",
+ *     authentication={
+ *         "audiences": ["audience1"],
+ *         "claims": [
+ *             azure_native.videoanalyzer.TokenClaimArgs(
+ *                 name="claimname1",
+ *                 value="claimvalue1",
+ *             ),
+ *             azure_native.videoanalyzer.TokenClaimArgs(
+ *                 name="claimname2",
+ *                 value="claimvalue2",
+ *             ),
+ *         ],
+ *         "issuers": [
+ *             "issuer1",
+ *             "issuer2",
+ *         ],
+ *         "keys": [
+ *             azure_native.videoanalyzer.RsaTokenKeyArgs(
+ *                 alg="RS256",
+ *                 e="ZLFzZTY0IQ==",
+ *                 kid="123",
+ *                 n="YmFzZTY0IQ==",
+ *                 type="#Microsoft.VideoAnalyzer.RsaTokenKey",
+ *             ),
+ *             azure_native.videoanalyzer.EccTokenKeyArgs(
+ *                 alg="ES256",
+ *                 kid="124",
+ *                 type="#Microsoft.VideoAnalyzer.EccTokenKey",
+ *                 x="XX==",
+ *                 y="YY==",
+ *             ),
+ *         ],
+ *         "type": "#Microsoft.VideoAnalyzer.JwtAuthentication",
+ *     },
+ *     resource_group_name="testrg",
+ *     role="Reader")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +198,60 @@ import javax.annotation.Nullable;
 public class AccessPolicy extends io.pulumi.resources.CustomResource {
     /**
      * Authentication method to be used when validating client API access.
-     * 
      */
     @Export(name="authentication", type=JwtAuthenticationResponse.class, parameters={})
     private Output</* @Nullable */ JwtAuthenticationResponse> authentication;
 
     /**
      * @return Authentication method to be used when validating client API access.
-     * 
      */
     public Output</* @Nullable */ JwtAuthenticationResponse> getAuthentication() {
         return this.authentication;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Defines the access level granted by this policy.
-     * 
      */
     @Export(name="role", type=String.class, parameters={})
     private Output</* @Nullable */ String> role;
 
     /**
      * @return Defines the access level granted by this policy.
-     * 
      */
     public Output</* @Nullable */ String> getRole() {
         return this.role;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class PortResponse {
     /**
      * The port number.
-     * 
      */
     private final Integer port;
     /**
      * The protocol associated with the port.
-     * 
      */
     private final @Nullable String protocol;
 
@@ -33,14 +31,12 @@ public final class PortResponse {
 
     /**
      * The port number.
-     * 
     */
     public Integer getPort() {
         return this.port;
     }
     /**
      * The protocol associated with the port.
-     * 
     */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);

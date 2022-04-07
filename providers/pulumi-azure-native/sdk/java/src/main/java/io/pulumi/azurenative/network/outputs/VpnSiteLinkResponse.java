@@ -15,47 +15,38 @@ import javax.annotation.Nullable;
 public final class VpnSiteLinkResponse {
     /**
      * The set of bgp properties.
-     * 
      */
     private final @Nullable VpnLinkBgpSettingsResponse bgpProperties;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * FQDN of vpn-site-link.
-     * 
      */
     private final @Nullable String fqdn;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * The ip-address for the vpn-site-link.
-     * 
      */
     private final @Nullable String ipAddress;
     /**
      * The link provider properties.
-     * 
      */
     private final @Nullable VpnLinkProviderPropertiesResponse linkProperties;
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     private final @Nullable String name;
     /**
      * The provisioning state of the VPN site link resource.
-     * 
      */
     private final String provisioningState;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -83,63 +74,54 @@ public final class VpnSiteLinkResponse {
 
     /**
      * The set of bgp properties.
-     * 
     */
     public Optional<VpnLinkBgpSettingsResponse> getBgpProperties() {
         return Optional.ofNullable(this.bgpProperties);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * FQDN of vpn-site-link.
-     * 
     */
     public Optional<String> getFqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The ip-address for the vpn-site-link.
-     * 
     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The link provider properties.
-     * 
     */
     public Optional<VpnLinkProviderPropertiesResponse> getLinkProperties() {
         return Optional.ofNullable(this.linkProperties);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the VPN site link resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The Source NAT direction of a VPN NAT.
-     * 
      */
     @EnumType
     public enum VpnNatRuleMode {

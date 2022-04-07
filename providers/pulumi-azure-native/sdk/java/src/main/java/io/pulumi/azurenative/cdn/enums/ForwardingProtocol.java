@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Protocol this rule will use when forwarding traffic to backends.
-     * 
      */
     @EnumType
     public enum ForwardingProtocol {

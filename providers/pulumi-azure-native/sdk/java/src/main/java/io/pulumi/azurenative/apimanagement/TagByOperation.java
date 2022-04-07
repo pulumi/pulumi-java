@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * Tag Contract details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateApiOperationTag
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var tagByOperation = new AzureNative.ApiManagement.TagByOperation("tagByOperation", new AzureNative.ApiManagement.TagByOperationArgs
+ *         {
+ *             ApiId = "5931a75ae4bbd512a88c680b",
+ *             OperationId = "5931a75ae4bbd512a88c680a",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *             TagId = "tagId1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewTagByOperation(ctx, "tagByOperation", &apimanagement.TagByOperationArgs{
+ * 			ApiId:             pulumi.String("5931a75ae4bbd512a88c680b"),
+ * 			OperationId:       pulumi.String("5931a75ae4bbd512a88c680a"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 			TagId:             pulumi.String("tagId1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const tagByOperation = new azure_native.apimanagement.TagByOperation("tagByOperation", {
+ *     apiId: "5931a75ae4bbd512a88c680b",
+ *     operationId: "5931a75ae4bbd512a88c680a",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ *     tagId: "tagId1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * tag_by_operation = azure_native.apimanagement.TagByOperation("tagByOperation",
+ *     api_id="5931a75ae4bbd512a88c680b",
+ *     operation_id="5931a75ae4bbd512a88c680a",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1",
+ *     tag_id="tagId1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +112,36 @@ import javax.annotation.Nullable;
 public class TagByOperation extends io.pulumi.resources.CustomResource {
     /**
      * Tag name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Tag name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

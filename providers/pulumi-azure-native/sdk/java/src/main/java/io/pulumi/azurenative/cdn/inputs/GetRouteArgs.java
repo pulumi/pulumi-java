@@ -14,7 +14,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the endpoint under the profile which is unique globally.
-     * 
      */
     @Import(name="endpointName", required=true)
       private final String endpointName;
@@ -25,7 +24,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the CDN profile which is unique within the resource group.
-     * 
      */
     @Import(name="profileName", required=true)
       private final String profileName;
@@ -36,7 +34,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the routing rule.
-     * 
      */
     @Import(name="routeName", required=true)
       private final String routeName;

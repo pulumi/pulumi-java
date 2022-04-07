@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Connection status
- * 
  */
 public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
 
     /**
      * Connection error
-     * 
      */
     @Import(name="error")
       private final @Nullable Output<ConnectionErrorArgs> error;
@@ -32,7 +30,6 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
 
     /**
      * The gateway status
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<String> status;
@@ -43,7 +40,6 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
 
     /**
      * Target of the error
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<String> target;

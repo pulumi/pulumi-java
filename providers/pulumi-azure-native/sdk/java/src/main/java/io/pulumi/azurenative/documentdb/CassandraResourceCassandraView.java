@@ -21,7 +21,108 @@ import javax.annotation.Nullable;
  * An Azure Cosmos DB Cassandra view.
  * API Version: 2021-07-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CosmosDBCassandraViewCreateUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cassandraResourceCassandraView = new AzureNative.DocumentDB.CassandraResourceCassandraView("cassandraResourceCassandraView", new AzureNative.DocumentDB.CassandraResourceCassandraViewArgs
+ *         {
+ *             AccountName = "ddb1",
+ *             KeyspaceName = "keyspacename",
+ *             Options = ,
+ *             Resource = new AzureNative.DocumentDB.Inputs.CassandraViewResourceArgs
+ *             {
+ *                 Id = "viewname",
+ *                 ViewDefinition = "SELECT columna, columnb, columnc FROM keyspacename.srctablename WHERE columna IS NOT NULL AND columnc IS NOT NULL PRIMARY KEY (columnc, columna)",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             Tags = ,
+ *             ViewName = "viewname",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := documentdb.NewCassandraResourceCassandraView(ctx, "cassandraResourceCassandraView", &documentdb.CassandraResourceCassandraViewArgs{
+ * 			AccountName:  pulumi.String("ddb1"),
+ * 			KeyspaceName: pulumi.String("keyspacename"),
+ * 			Options:      nil,
+ * 			Resource: &documentdb.CassandraViewResourceArgs{
+ * 				Id:             pulumi.String("viewname"),
+ * 				ViewDefinition: pulumi.String("SELECT columna, columnb, columnc FROM keyspacename.srctablename WHERE columna IS NOT NULL AND columnc IS NOT NULL PRIMARY KEY (columnc, columna)"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Tags:              nil,
+ * 			ViewName:          pulumi.String("viewname"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cassandraResourceCassandraView = new azure_native.documentdb.CassandraResourceCassandraView("cassandraResourceCassandraView", {
+ *     accountName: "ddb1",
+ *     keyspaceName: "keyspacename",
+ *     options: {},
+ *     resource: {
+ *         id: "viewname",
+ *         viewDefinition: "SELECT columna, columnb, columnc FROM keyspacename.srctablename WHERE columna IS NOT NULL AND columnc IS NOT NULL PRIMARY KEY (columnc, columna)",
+ *     },
+ *     resourceGroupName: "rg1",
+ *     tags: {},
+ *     viewName: "viewname",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cassandra_resource_cassandra_view = azure_native.documentdb.CassandraResourceCassandraView("cassandraResourceCassandraView",
+ *     account_name="ddb1",
+ *     keyspace_name="keyspacename",
+ *     options=azure_native.documentdb.CreateUpdateOptionsArgs(),
+ *     resource=azure_native.documentdb.CassandraViewResourceArgs(
+ *         id="viewname",
+ *         view_definition="SELECT columna, columnb, columnc FROM keyspacename.srctablename WHERE columna IS NOT NULL AND columnc IS NOT NULL PRIMARY KEY (columnc, columna)",
+ *     ),
+ *     resource_group_name="rg1",
+ *     tags={},
+ *     view_name="viewname")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,42 +137,36 @@ import javax.annotation.Nullable;
 public class CassandraResourceCassandraView extends io.pulumi.resources.CustomResource {
     /**
      * Identity for the resource.
-     * 
      */
     @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
      * @return Identity for the resource.
-     * 
      */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The location of the resource group to which the resource belongs.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource group to which the resource belongs.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the ARM resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the ARM resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -90,28 +185,24 @@ public class CassandraResourceCassandraView extends io.pulumi.resources.CustomRe
     }
     /**
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of Azure resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of Azure resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

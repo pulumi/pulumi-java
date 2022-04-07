@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Creator resource properties
- * 
  */
 public final class CreatorPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CreatorPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;

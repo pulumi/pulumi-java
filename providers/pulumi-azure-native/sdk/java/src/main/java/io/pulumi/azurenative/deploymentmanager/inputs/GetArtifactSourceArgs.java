@@ -14,7 +14,6 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the artifact source.
-     * 
      */
     @Import(name="artifactSourceName", required=true)
       private final String artifactSourceName;
@@ -25,7 +24,6 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

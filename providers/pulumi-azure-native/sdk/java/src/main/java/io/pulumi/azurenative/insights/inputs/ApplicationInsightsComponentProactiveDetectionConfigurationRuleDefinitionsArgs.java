@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Static definitions of the ProactiveDetection configuration rule (same values for all components).
- * 
  */
 public final class ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
 
     /**
      * The rule description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -32,7 +30,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
 
     /**
      * The rule name as it is displayed in UI
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -43,7 +40,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
 
     /**
      * URL which displays additional info about the proactive detection rule
-     * 
      */
     @Import(name="helpUrl")
       private final @Nullable Output<String> helpUrl;
@@ -54,7 +50,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
 
     /**
      * A flag indicating whether the rule is enabled by default
-     * 
      */
     @Import(name="isEnabledByDefault")
       private final @Nullable Output<Boolean> isEnabledByDefault;
@@ -65,7 +60,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
 
     /**
      * A flag indicating whether the rule is hidden (from the UI)
-     * 
      */
     @Import(name="isHidden")
       private final @Nullable Output<Boolean> isHidden;
@@ -76,7 +70,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
 
     /**
      * A flag indicating whether the rule is in preview
-     * 
      */
     @Import(name="isInPreview")
       private final @Nullable Output<Boolean> isInPreview;
@@ -87,7 +80,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
 
     /**
      * The rule name
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -98,7 +90,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
 
     /**
      * A flag indicating whether email notifications are supported for detections for this rule
-     * 
      */
     @Import(name="supportsEmailNotifications")
       private final @Nullable Output<Boolean> supportsEmailNotifications;

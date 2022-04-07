@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Default value.
- * 
  */
 public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources
 
     /**
      * Column name. Type: object (or Expression with resultType string).
-     * 
      */
     @Import(name="columnName")
       private final @Nullable Object columnName;
@@ -31,7 +29,6 @@ public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources
 
     /**
      * The default value of the column. Type: object (or Expression with resultType string).
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Object defaultValue;

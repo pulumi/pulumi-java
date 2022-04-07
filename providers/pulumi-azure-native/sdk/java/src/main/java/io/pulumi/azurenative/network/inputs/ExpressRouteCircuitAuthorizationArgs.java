@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Authorization in an ExpressRouteCircuit resource.
- * 
  */
 public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
 
     /**
      * The authorization key.
-     * 
      */
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
@@ -33,7 +31,6 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
 
     /**
      * The authorization use status.
-     * 
      */
     @Import(name="authorizationUseStatus")
       private final @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
@@ -44,7 +41,6 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -55,7 +51,6 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

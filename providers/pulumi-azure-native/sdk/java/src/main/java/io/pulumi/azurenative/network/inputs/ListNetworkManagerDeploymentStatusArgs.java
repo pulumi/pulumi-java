@@ -19,7 +19,6 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
 
     /**
      * List of deployment types.
-     * 
      */
     @Import(name="deploymentTypes")
       private final @Nullable List<Either<String,ConfigurationType>> deploymentTypes;
@@ -30,7 +29,6 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
@@ -41,7 +39,6 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
 
     /**
      * List of locations.
-     * 
      */
     @Import(name="regions")
       private final @Nullable List<String> regions;
@@ -52,7 +49,6 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -63,7 +59,6 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
 
     /**
      * Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
-     * 
      */
     @Import(name="skipToken")
       private final @Nullable String skipToken;

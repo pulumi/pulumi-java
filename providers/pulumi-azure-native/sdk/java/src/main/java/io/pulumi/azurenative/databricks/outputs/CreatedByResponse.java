@@ -11,17 +11,14 @@ import java.util.Objects;
 public final class CreatedByResponse {
     /**
      * The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
-     * 
      */
     private final String applicationId;
     /**
      * The Object ID that created the workspace.
-     * 
      */
     private final String oid;
     /**
      * The Personal Object ID corresponding to the object ID above
-     * 
      */
     private final String puid;
 
@@ -37,21 +34,18 @@ public final class CreatedByResponse {
 
     /**
      * The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
-     * 
     */
     public String getApplicationId() {
         return this.applicationId;
     }
     /**
      * The Object ID that created the workspace.
-     * 
     */
     public String getOid() {
         return this.oid;
     }
     /**
      * The Personal Object ID corresponding to the object ID above
-     * 
     */
     public String getPuid() {
         return this.puid;

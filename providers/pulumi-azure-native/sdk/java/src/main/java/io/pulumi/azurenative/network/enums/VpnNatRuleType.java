@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of NAT rule for VPN NAT.
-     * 
      */
     @EnumType
     public enum VpnNatRuleType {

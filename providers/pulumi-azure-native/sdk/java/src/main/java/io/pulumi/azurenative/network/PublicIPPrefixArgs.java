@@ -26,7 +26,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The customIpPrefix that this prefix is associated with.
-     * 
      */
     @Import(name="customIPPrefix")
       private final @Nullable Output<SubResourceArgs> customIPPrefix;
@@ -37,7 +36,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The extended location of the public ip address.
-     * 
      */
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
@@ -48,7 +46,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -59,7 +56,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The list of tags associated with the public IP prefix.
-     * 
      */
     @Import(name="ipTags")
       private final @Nullable Output<List<IpTagArgs>> ipTags;
@@ -70,7 +66,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -81,7 +76,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * NatGateway of Public IP Prefix.
-     * 
      */
     @Import(name="natGateway")
       private final @Nullable Output<NatGatewayArgs> natGateway;
@@ -92,7 +86,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Length of the Public IP Prefix.
-     * 
      */
     @Import(name="prefixLength")
       private final @Nullable Output<Integer> prefixLength;
@@ -103,7 +96,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The public IP address version.
-     * 
      */
     @Import(name="publicIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
@@ -114,7 +106,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the public IP prefix.
-     * 
      */
     @Import(name="publicIpPrefixName")
       private final @Nullable Output<String> publicIpPrefixName;
@@ -125,7 +116,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -136,7 +126,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The public IP prefix SKU.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<PublicIPPrefixSkuArgs> sku;
@@ -147,7 +136,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -158,7 +146,6 @@ public final class PublicIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
-     * 
      */
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;

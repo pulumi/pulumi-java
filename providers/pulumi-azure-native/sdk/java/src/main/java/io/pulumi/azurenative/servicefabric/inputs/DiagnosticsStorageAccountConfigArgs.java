@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The storage account information for storing Service Fabric diagnostic logs.
- * 
  */
 public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
 
     /**
      * The blob endpoint of the azure storage account.
-     * 
      */
     @Import(name="blobEndpoint", required=true)
       private final Output<String> blobEndpoint;
@@ -31,7 +29,6 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
 
     /**
      * The protected diagnostics storage key name.
-     * 
      */
     @Import(name="protectedAccountKeyName", required=true)
       private final Output<String> protectedAccountKeyName;
@@ -42,7 +39,6 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
 
     /**
      * The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
-     * 
      */
     @Import(name="protectedAccountKeyName2")
       private final @Nullable Output<String> protectedAccountKeyName2;
@@ -53,7 +49,6 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
 
     /**
      * The queue endpoint of the azure storage account.
-     * 
      */
     @Import(name="queueEndpoint", required=true)
       private final Output<String> queueEndpoint;
@@ -64,7 +59,6 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
 
     /**
      * The Azure storage account name.
-     * 
      */
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
@@ -75,7 +69,6 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
 
     /**
      * The table endpoint of the azure storage account.
-     * 
      */
     @Import(name="tableEndpoint", required=true)
       private final Output<String> tableEndpoint;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The artifact source's type.
-     * 
      */
     @EnumType
     public enum SourceControlType {

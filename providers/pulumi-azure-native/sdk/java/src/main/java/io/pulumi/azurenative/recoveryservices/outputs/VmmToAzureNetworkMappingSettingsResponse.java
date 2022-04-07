@@ -12,7 +12,6 @@ public final class VmmToAzureNetworkMappingSettingsResponse {
     /**
      * Gets the Instance type.
      * Expected value is 'VmmToAzure'.
-     * 
      */
     private final String instanceType;
 
@@ -24,7 +23,6 @@ public final class VmmToAzureNetworkMappingSettingsResponse {
     /**
      * Gets the Instance type.
      * Expected value is 'VmmToAzure'.
-     * 
     */
     public String getInstanceType() {
         return this.instanceType;

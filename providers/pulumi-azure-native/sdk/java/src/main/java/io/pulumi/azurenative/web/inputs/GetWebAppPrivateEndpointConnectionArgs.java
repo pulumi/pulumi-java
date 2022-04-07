@@ -14,7 +14,6 @@ public final class GetWebAppPrivateEndpointConnectionArgs extends io.pulumi.reso
 
     /**
      * Name of the site.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetWebAppPrivateEndpointConnectionArgs extends io.pulumi.reso
 
     /**
      * Name of the private endpoint connection.
-     * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
@@ -36,7 +34,6 @@ public final class GetWebAppPrivateEndpointConnectionArgs extends io.pulumi.reso
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -24,7 +24,6 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Optional ETag.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -35,7 +34,6 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -46,7 +44,6 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Backup policy to be created.
-     * 
      */
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
@@ -57,7 +54,6 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * ProtectionPolicyResource properties
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
@@ -68,7 +64,6 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -79,7 +74,6 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -90,7 +84,6 @@ public final class ProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;

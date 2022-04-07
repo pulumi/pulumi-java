@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Table properties
- * 
  */
 public final class DatabaseTableResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class DatabaseTableResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Indicates whether table is empty or not
-     * 
      */
     @Import(name="hasRows", required=true)
       private final Boolean hasRows;
@@ -30,7 +28,6 @@ public final class DatabaseTableResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Schema-qualified name of the table
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

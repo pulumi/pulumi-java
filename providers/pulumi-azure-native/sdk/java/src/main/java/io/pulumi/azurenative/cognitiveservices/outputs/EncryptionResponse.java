@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class EncryptionResponse {
     /**
      * Enumerates the possible value of keySource for Encryption
-     * 
      */
     private final @Nullable String keySource;
     /**
      * Properties of KeyVault
-     * 
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
@@ -33,14 +31,12 @@ public final class EncryptionResponse {
 
     /**
      * Enumerates the possible value of keySource for Encryption
-     * 
     */
     public Optional<String> getKeySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
      * Properties of KeyVault
-     * 
     */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);

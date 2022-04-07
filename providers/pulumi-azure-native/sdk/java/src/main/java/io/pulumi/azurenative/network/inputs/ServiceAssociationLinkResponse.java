@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * ServiceAssociationLink resource.
- * 
  */
 public final class ServiceAssociationLinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
 
     /**
      * If true, the resource can be deleted.
-     * 
      */
     @Import(name="allowDelete")
       private final @Nullable Boolean allowDelete;
@@ -33,7 +31,6 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -44,7 +41,6 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -55,7 +51,6 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
 
     /**
      * Link to the external resource.
-     * 
      */
     @Import(name="link")
       private final @Nullable String link;
@@ -66,7 +61,6 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
 
     /**
      * Resource type of the linked resource.
-     * 
      */
     @Import(name="linkedResourceType")
       private final @Nullable String linkedResourceType;
@@ -77,7 +71,6 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
 
     /**
      * A list of locations.
-     * 
      */
     @Import(name="locations")
       private final @Nullable List<String> locations;
@@ -88,7 +81,6 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
 
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -99,7 +91,6 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
 
     /**
      * The provisioning state of the service association link resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -110,7 +101,6 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class TokenPasswordResponse {
     /**
      * The creation datetime of the password.
-     * 
      */
     private final @Nullable String creationTime;
     /**
      * The expiry datetime of the password.
-     * 
      */
     private final @Nullable String expiry;
     /**
      * The password name "password1" or "password2"
-     * 
      */
     private final @Nullable String name;
     /**
      * The password value.
-     * 
      */
     private final String value;
 
@@ -46,28 +42,24 @@ public final class TokenPasswordResponse {
 
     /**
      * The creation datetime of the password.
-     * 
     */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The expiry datetime of the password.
-     * 
     */
     public Optional<String> getExpiry() {
         return Optional.ofNullable(this.expiry);
     }
     /**
      * The password name "password1" or "password2"
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The password value.
-     * 
     */
     public String getValue() {
         return this.value;

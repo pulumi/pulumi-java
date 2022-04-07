@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class CassandraSchemaResponse {
     /**
      * List of cluster key.
-     * 
      */
     private final @Nullable List<ClusterKeyResponse> clusterKeys;
     /**
      * List of Cassandra table columns.
-     * 
      */
     private final @Nullable List<ColumnResponse> columns;
     /**
      * List of partition key.
-     * 
      */
     private final @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
 
@@ -41,21 +38,18 @@ public final class CassandraSchemaResponse {
 
     /**
      * List of cluster key.
-     * 
     */
     public List<ClusterKeyResponse> getClusterKeys() {
         return this.clusterKeys == null ? List.of() : this.clusterKeys;
     }
     /**
      * List of Cassandra table columns.
-     * 
     */
     public List<ColumnResponse> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
      * List of partition key.
-     * 
     */
     public List<CassandraPartitionKeyResponse> getPartitionKeys() {
         return this.partitionKeys == null ? List.of() : this.partitionKeys;

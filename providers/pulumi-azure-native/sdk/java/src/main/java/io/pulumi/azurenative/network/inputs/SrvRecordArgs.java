@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An SRV record.
- * 
  */
 public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The port value for this SRV record.
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Integer> port;
@@ -32,7 +30,6 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The priority value for this SRV record.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -43,7 +40,6 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target domain name for this SRV record.
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<String> target;
@@ -54,7 +50,6 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The weight value for this SRV record.
-     * 
      */
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;

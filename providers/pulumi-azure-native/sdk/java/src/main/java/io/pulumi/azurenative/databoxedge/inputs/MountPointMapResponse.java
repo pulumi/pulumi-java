@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The share mount point.
- * 
  */
 public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Mount point for the share.
-     * 
      */
     @Import(name="mountPoint", required=true)
       private final String mountPoint;
@@ -29,7 +27,6 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Mounting type.
-     * 
      */
     @Import(name="mountType", required=true)
       private final String mountType;
@@ -40,7 +37,6 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * ID of the role to which share is mounted.
-     * 
      */
     @Import(name="roleId", required=true)
       private final String roleId;
@@ -51,7 +47,6 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Role type.
-     * 
      */
     @Import(name="roleType", required=true)
       private final String roleType;
@@ -62,7 +57,6 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * ID of the share mounted to the role VM.
-     * 
      */
     @Import(name="shareId", required=true)
       private final String shareId;

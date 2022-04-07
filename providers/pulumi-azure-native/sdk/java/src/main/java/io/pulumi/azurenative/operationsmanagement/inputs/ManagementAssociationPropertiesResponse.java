@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * ManagementAssociation properties supported by the OperationsManagement resource provider.
- * 
  */
 public final class ManagementAssociationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ManagementAssociationPropertiesResponse extends io.pulumi.res
 
     /**
      * The applicationId of the appliance for this association.
-     * 
      */
     @Import(name="applicationId", required=true)
       private final String applicationId;

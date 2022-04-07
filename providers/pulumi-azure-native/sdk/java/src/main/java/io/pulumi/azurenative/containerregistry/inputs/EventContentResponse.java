@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The content of the event request message.
- * 
  */
 public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The action that encompasses the provided event.
-     * 
      */
     @Import(name="action")
       private final @Nullable String action;
@@ -35,7 +33,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
-     * 
      */
     @Import(name="actor")
       private final @Nullable ActorResponse actor;
@@ -46,7 +43,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The event ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -57,7 +53,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The request that generated the event.
-     * 
      */
     @Import(name="request")
       private final @Nullable RequestResponse request;
@@ -68,7 +63,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.
-     * 
      */
     @Import(name="source")
       private final @Nullable SourceResponse source;
@@ -79,7 +73,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The target of the event.
-     * 
      */
     @Import(name="target")
       private final @Nullable TargetResponse target;
@@ -90,7 +83,6 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The time at which the event occurred.
-     * 
      */
     @Import(name="timestamp")
       private final @Nullable String timestamp;

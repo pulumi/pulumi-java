@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
-     * 
      */
     @EnumType
     public enum KeySource {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * time aggregation type. How the data that is collected should be combined over time. The default value is Average.
-     * 
      */
     @EnumType
     public enum TimeAggregationType {

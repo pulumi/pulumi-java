@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SQL image sku.
-     * 
      */
     @EnumType
     public enum SqlVmGroupImageSku {

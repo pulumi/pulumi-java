@@ -14,7 +14,6 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the NetApp account
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the backup
-     * 
      */
     @Import(name="backupName", required=true)
       private final String backupName;
@@ -36,7 +34,6 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the capacity pool
-     * 
      */
     @Import(name="poolName", required=true)
       private final String poolName;
@@ -47,7 +44,6 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -58,7 +54,6 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the volume
-     * 
      */
     @Import(name="volumeName", required=true)
       private final String volumeName;

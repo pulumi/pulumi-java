@@ -20,62 +20,50 @@ import javax.annotation.Nullable;
 public final class CustomApiPropertiesDefinitionResponse {
     /**
      * API Definitions
-     * 
      */
     private final @Nullable ApiResourceDefinitionsResponse apiDefinitions;
     /**
      * The API type
-     * 
      */
     private final @Nullable String apiType;
     /**
      * The API backend service
-     * 
      */
     private final @Nullable ApiResourceBackendServiceResponse backendService;
     /**
      * Brand color
-     * 
      */
     private final @Nullable String brandColor;
     /**
      * The custom API capabilities
-     * 
      */
     private final @Nullable List<String> capabilities;
     /**
      * Connection parameters
-     * 
      */
     private final @Nullable Map<String,ConnectionParameterResponse> connectionParameters;
     /**
      * The custom API description
-     * 
      */
     private final @Nullable String description;
     /**
      * The display name
-     * 
      */
     private final @Nullable String displayName;
     /**
      * The icon URI
-     * 
      */
     private final @Nullable String iconUri;
     /**
      * Runtime URLs
-     * 
      */
     private final @Nullable List<String> runtimeUrls;
     /**
      * The JSON representation of the swagger
-     * 
      */
     private final @Nullable Object swagger;
     /**
      * The WSDL definition
-     * 
      */
     private final @Nullable WsdlDefinitionResponse wsdlDefinition;
 
@@ -109,84 +97,72 @@ public final class CustomApiPropertiesDefinitionResponse {
 
     /**
      * API Definitions
-     * 
     */
     public Optional<ApiResourceDefinitionsResponse> getApiDefinitions() {
         return Optional.ofNullable(this.apiDefinitions);
     }
     /**
      * The API type
-     * 
     */
     public Optional<String> getApiType() {
         return Optional.ofNullable(this.apiType);
     }
     /**
      * The API backend service
-     * 
     */
     public Optional<ApiResourceBackendServiceResponse> getBackendService() {
         return Optional.ofNullable(this.backendService);
     }
     /**
      * Brand color
-     * 
     */
     public Optional<String> getBrandColor() {
         return Optional.ofNullable(this.brandColor);
     }
     /**
      * The custom API capabilities
-     * 
     */
     public List<String> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
     /**
      * Connection parameters
-     * 
     */
     public Map<String,ConnectionParameterResponse> getConnectionParameters() {
         return this.connectionParameters == null ? Map.of() : this.connectionParameters;
     }
     /**
      * The custom API description
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The icon URI
-     * 
     */
     public Optional<String> getIconUri() {
         return Optional.ofNullable(this.iconUri);
     }
     /**
      * Runtime URLs
-     * 
     */
     public List<String> getRuntimeUrls() {
         return this.runtimeUrls == null ? List.of() : this.runtimeUrls;
     }
     /**
      * The JSON representation of the swagger
-     * 
     */
     public Optional<Object> getSwagger() {
         return Optional.ofNullable(this.swagger);
     }
     /**
      * The WSDL definition
-     * 
     */
     public Optional<WsdlDefinitionResponse> getWsdlDefinition() {
         return Optional.ofNullable(this.wsdlDefinition);

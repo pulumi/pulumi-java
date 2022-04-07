@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of a prediction grade.
- * 
  */
 public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the grade.
-     * 
      */
     @Import(name="gradeName")
       private final @Nullable Output<String> gradeName;
@@ -32,7 +30,6 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Maximum score threshold.
-     * 
      */
     @Import(name="maxScoreThreshold")
       private final @Nullable Output<Integer> maxScoreThreshold;
@@ -43,7 +40,6 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Minimum score threshold.
-     * 
      */
     @Import(name="minScoreThreshold")
       private final @Nullable Output<Integer> minScoreThreshold;

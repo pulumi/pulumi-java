@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Configuration for a scoring code asset.
- * 
  */
 public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * ARM resource ID of the code asset.
-     * 
      */
     @Import(name="codeId")
       private final @Nullable String codeId;
@@ -31,7 +29,6 @@ public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The script to execute on startup. eg. "score.py"
-     * 
      */
     @Import(name="scoringScript", required=true)
       private final String scoringScript;

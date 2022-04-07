@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Configures which HTTP method to use to probe the backends defined under backendPools.
-     * 
      */
     @EnumType
     public enum FrontDoorHealthProbeMethod {

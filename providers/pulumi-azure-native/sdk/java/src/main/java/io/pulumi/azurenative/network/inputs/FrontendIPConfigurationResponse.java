@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Frontend IP address of the load balancer.
- * 
  */
 public final class FrontendIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -35,7 +33,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -46,7 +43,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * An array of references to inbound pools that use this frontend IP.
-     * 
      */
     @Import(name="inboundNatPools", required=true)
       private final List<SubResourceResponse> inboundNatPools;
@@ -57,7 +53,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * An array of references to inbound rules that use this frontend IP.
-     * 
      */
     @Import(name="inboundNatRules", required=true)
       private final List<SubResourceResponse> inboundNatRules;
@@ -68,7 +63,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * An array of references to load balancing rules that use this frontend IP.
-     * 
      */
     @Import(name="loadBalancingRules", required=true)
       private final List<SubResourceResponse> loadBalancingRules;
@@ -79,7 +73,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -90,7 +83,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * An array of references to outbound rules that use this frontend IP.
-     * 
      */
     @Import(name="outboundRules", required=true)
       private final List<SubResourceResponse> outboundRules;
@@ -101,7 +93,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * The private IP address of the IP configuration.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
@@ -112,7 +103,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
-     * 
      */
     @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
@@ -123,7 +113,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * The Private IP allocation method.
-     * 
      */
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
@@ -134,7 +123,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * The provisioning state of the frontend IP configuration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -145,7 +133,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * The reference to the Public IP resource.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable PublicIPAddressResponse publicIPAddress;
@@ -156,7 +143,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * The reference to the Public IP Prefix resource.
-     * 
      */
     @Import(name="publicIPPrefix")
       private final @Nullable SubResourceResponse publicIPPrefix;
@@ -167,7 +153,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * The reference to the subnet resource.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
@@ -178,7 +163,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -189,7 +173,6 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
 
     /**
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
-     * 
      */
     @Import(name="zones")
       private final @Nullable List<String> zones;

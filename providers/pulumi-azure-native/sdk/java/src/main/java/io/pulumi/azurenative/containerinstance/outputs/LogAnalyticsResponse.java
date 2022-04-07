@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class LogAnalyticsResponse {
     /**
      * The log type to be used.
-     * 
      */
     private final @Nullable String logType;
     /**
      * Metadata for log analytics.
-     * 
      */
     private final @Nullable Map<String,String> metadata;
     /**
      * The workspace id for log analytics
-     * 
      */
     private final String workspaceId;
     /**
      * The workspace key for log analytics
-     * 
      */
     private final String workspaceKey;
     /**
      * The workspace resource id for log analytics
-     * 
      */
     private final @Nullable Map<String,String> workspaceResourceId;
 
@@ -54,35 +49,30 @@ public final class LogAnalyticsResponse {
 
     /**
      * The log type to be used.
-     * 
     */
     public Optional<String> getLogType() {
         return Optional.ofNullable(this.logType);
     }
     /**
      * Metadata for log analytics.
-     * 
     */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The workspace id for log analytics
-     * 
     */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * The workspace key for log analytics
-     * 
     */
     public String getWorkspaceKey() {
         return this.workspaceKey;
     }
     /**
      * The workspace resource id for log analytics
-     * 
     */
     public Map<String,String> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Map.of() : this.workspaceResourceId;

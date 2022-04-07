@@ -14,7 +14,6 @@ public final class GetCassandraResourceCassandraTableArgs extends io.pulumi.reso
 
     /**
      * Cosmos DB database account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetCassandraResourceCassandraTableArgs extends io.pulumi.reso
 
     /**
      * Cosmos DB keyspace name.
-     * 
      */
     @Import(name="keyspaceName", required=true)
       private final String keyspaceName;
@@ -36,7 +34,6 @@ public final class GetCassandraResourceCassandraTableArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetCassandraResourceCassandraTableArgs extends io.pulumi.reso
 
     /**
      * Cosmos DB table name.
-     * 
      */
     @Import(name="tableName", required=true)
       private final String tableName;

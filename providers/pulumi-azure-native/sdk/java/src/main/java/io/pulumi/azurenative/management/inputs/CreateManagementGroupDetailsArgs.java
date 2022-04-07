@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The details of a management group used during creation.
- * 
  */
 public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
 
     /**
      * (Optional) The ID of the parent management group used during creation.
-     * 
      */
     @Import(name="parent")
       private final @Nullable Output<CreateParentGroupInfoArgs> parent;

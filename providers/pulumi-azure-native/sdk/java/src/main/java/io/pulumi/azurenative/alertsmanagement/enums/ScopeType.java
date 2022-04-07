@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * type of target scope
-     * 
      */
     @EnumType
     public enum ScopeType {

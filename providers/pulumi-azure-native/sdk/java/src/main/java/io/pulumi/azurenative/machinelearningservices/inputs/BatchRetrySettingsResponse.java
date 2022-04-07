@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Retry settings for a batch inference operation.
- * 
  */
 public final class BatchRetrySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class BatchRetrySettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Maximum retry count for a mini-batch
-     * 
      */
     @Import(name="maxRetries")
       private final @Nullable Integer maxRetries;
@@ -32,7 +30,6 @@ public final class BatchRetrySettingsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Invocation timeout for a mini-batch, in ISO 8601 format.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable String timeout;

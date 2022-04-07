@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The ssh username, password, and ssh public key.
- * 
  */
 public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resourc
 
     /**
      * The password.
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -32,7 +30,6 @@ public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resourc
 
     /**
      * The SSH profile.
-     * 
      */
     @Import(name="sshProfile")
       private final @Nullable SshProfileResponse sshProfile;
@@ -43,7 +40,6 @@ public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resourc
 
     /**
      * The username.
-     * 
      */
     @Import(name="username")
       private final @Nullable String username;

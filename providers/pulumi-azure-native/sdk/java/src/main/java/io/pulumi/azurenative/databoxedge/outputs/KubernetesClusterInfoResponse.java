@@ -14,17 +14,14 @@ import java.util.Objects;
 public final class KubernetesClusterInfoResponse {
     /**
      * Etcd configuration
-     * 
      */
     private final EtcdInfoResponse etcdInfo;
     /**
      * Kubernetes cluster nodes
-     * 
      */
     private final List<NodeInfoResponse> nodes;
     /**
      * Kubernetes cluster version
-     * 
      */
     private final String version;
 
@@ -40,21 +37,18 @@ public final class KubernetesClusterInfoResponse {
 
     /**
      * Etcd configuration
-     * 
     */
     public EtcdInfoResponse getEtcdInfo() {
         return this.etcdInfo;
     }
     /**
      * Kubernetes cluster nodes
-     * 
     */
     public List<NodeInfoResponse> getNodes() {
         return this.nodes;
     }
     /**
      * Kubernetes cluster version
-     * 
     */
     public String getVersion() {
         return this.version;

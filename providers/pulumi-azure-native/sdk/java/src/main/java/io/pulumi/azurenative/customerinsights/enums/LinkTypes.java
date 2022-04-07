@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Link type.
-     * 
      */
     @EnumType
     public enum LinkTypes {

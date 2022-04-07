@@ -14,7 +14,6 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends io.pu
 
     /**
      * The ID that uniquely identifies a billing account.
-     * 
      */
     @Import(name="billingAccountName", required=true)
       private final String billingAccountName;
@@ -25,7 +24,6 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends io.pu
 
     /**
      * The ID that uniquely identifies a role assignment.
-     * 
      */
     @Import(name="billingRoleAssignmentName", required=true)
       private final String billingRoleAssignmentName;
@@ -36,7 +34,6 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends io.pu
 
     /**
      * The ID that uniquely identifies an enrollment account.
-     * 
      */
     @Import(name="enrollmentAccountName", required=true)
       private final String enrollmentAccountName;

@@ -24,7 +24,6 @@ import javax.annotation.Nullable;
 
 /**
  * Command job definition.
- * 
  */
 public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -32,7 +31,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM resource ID of the code asset.
-     * 
      */
     @Import(name="codeId")
       private final @Nullable Output<String> codeId;
@@ -43,7 +41,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The command to execute on startup of the job. eg. "python train.py"
-     * 
      */
     @Import(name="command", required=true)
       private final Output<String> command;
@@ -54,7 +51,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Compute binding for the job.
-     * 
      */
     @Import(name="compute", required=true)
       private final Output<ComputeConfigurationArgs> compute;
@@ -65,7 +61,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The asset description text.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -76,7 +71,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
-     * 
      */
     @Import(name="distribution")
       private final @Nullable Output<Object> distribution;
@@ -87,7 +81,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ARM resource ID of the Environment specification for the job.
-     * 
      */
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
@@ -98,7 +91,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Environment variables included in the job.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
@@ -109,7 +101,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
-     * 
      */
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
@@ -121,7 +112,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
      * Defaults to AmlToken if null.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
@@ -132,7 +122,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Mapping of input data bindings used in the job.
-     * 
      */
     @Import(name="inputDataBindings")
       private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
@@ -144,7 +133,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Enum to determine the type of job.
      * Expected value is 'Command'.
-     * 
      */
     @Import(name="jobType", required=true)
       private final Output<String> jobType;
@@ -155,7 +143,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Mapping of output data bindings used in the job.
-     * 
      */
     @Import(name="outputDataBindings")
       private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
@@ -167,7 +154,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Job priority for scheduling policy. Only applies to AMLCompute.
      * Private preview feature and only available to users on the allow list.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -178,7 +164,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The asset property dictionary.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -189,7 +174,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -200,7 +184,6 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;

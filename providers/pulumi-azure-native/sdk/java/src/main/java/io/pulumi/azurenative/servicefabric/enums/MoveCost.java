@@ -10,28 +10,23 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the move cost for the service.
-     * 
      */
     @EnumType
     public enum MoveCost {
         /**
          * Zero move cost. This value is zero.
-         * 
          */
         Zero("Zero"),
         /**
          * Specifies the move cost of the service as Low. The value is 1.
-         * 
          */
         Low("Low"),
         /**
          * Specifies the move cost of the service as Medium. The value is 2.
-         * 
          */
         Medium("Medium"),
         /**
          * Specifies the move cost of the service as High. The value is 3.
-         * 
          */
         High("High");
 

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class representing the details of the solution.
- * 
  */
 public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets the count of assessments reported by the solution.
-     * 
      */
     @Import(name="assessmentCount")
       private final @Nullable Output<Integer> assessmentCount;
@@ -33,7 +31,6 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets the extended details reported by the solution.
-     * 
      */
     @Import(name="extendedDetails")
       private final @Nullable Output<Map<String,String>> extendedDetails;
@@ -44,7 +41,6 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Gets or sets the count of groups reported by the solution.
-     * 
      */
     @Import(name="groupCount")
       private final @Nullable Output<Integer> groupCount;

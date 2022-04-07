@@ -22,11 +22,133 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * The task run that has the ARM resource and properties.
+ * The task run that has the ARM resource and properties. 
  * The task run will have the information of request and result of a run.
  * API Version: 2019-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### TaskRuns_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var taskRun = new AzureNative.ContainerRegistry.TaskRun("taskRun", new AzureNative.ContainerRegistry.TaskRunArgs
+ *         {
+ *             ForceUpdateTag = "test",
+ *             RegistryName = "myRegistry",
+ *             ResourceGroupName = "myResourceGroup",
+ *             RunRequest = new AzureNative.ContainerRegistry.Inputs.EncodedTaskRunRequestArgs
+ *             {
+ *                 Credentials = ,
+ *                 EncodedTaskContent = "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+ *                 EncodedValuesContent = "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+ *                 Platform = new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
+ *                 {
+ *                     Architecture = "amd64",
+ *                     Os = "Linux",
+ *                 },
+ *                 Type = "EncodedTaskRunRequest",
+ *                 Values = {},
+ *             },
+ *             TaskRunName = "myRun",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewTaskRun(ctx, "taskRun", &containerregistry.TaskRunArgs{
+ * 			ForceUpdateTag:    pulumi.String("test"),
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			RunRequest: containerregistry.EncodedTaskRunRequest{
+ * 				Credentials:          nil,
+ * 				EncodedTaskContent:   "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+ * 				EncodedValuesContent: "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+ * 				Platform: containerregistry.PlatformProperties{
+ * 					Architecture: "amd64",
+ * 					Os:           "Linux",
+ * 				},
+ * 				Type:   "EncodedTaskRunRequest",
+ * 				Values: []containerregistry.SetValue{},
+ * 			},
+ * 			TaskRunName: pulumi.String("myRun"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const taskRun = new azure_native.containerregistry.TaskRun("taskRun", {
+ *     forceUpdateTag: "test",
+ *     registryName: "myRegistry",
+ *     resourceGroupName: "myResourceGroup",
+ *     runRequest: {
+ *         credentials: {},
+ *         encodedTaskContent: "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+ *         encodedValuesContent: "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+ *         platform: {
+ *             architecture: "amd64",
+ *             os: "Linux",
+ *         },
+ *         type: "EncodedTaskRunRequest",
+ *         values: [],
+ *     },
+ *     taskRunName: "myRun",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * task_run = azure_native.containerregistry.TaskRun("taskRun",
+ *     force_update_tag="test",
+ *     registry_name="myRegistry",
+ *     resource_group_name="myResourceGroup",
+ *     run_request=azure_native.containerregistry.EncodedTaskRunRequestArgs(
+ *         credentials=azure_native.containerregistry.CredentialsArgs(),
+ *         encoded_task_content="c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+ *         encoded_values_content="Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+ *         platform=azure_native.containerregistry.PlatformPropertiesArgs(
+ *             architecture="amd64",
+ *             os="Linux",
+ *         ),
+ *         type="EncodedTaskRunRequest",
+ *         values=[],
+ *     ),
+ *     task_run_name="myRun")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -41,126 +163,108 @@ import javax.annotation.Nullable;
 public class TaskRun extends io.pulumi.resources.CustomResource {
     /**
      * How the run should be forced to rerun even if the run request configuration has not changed
-     * 
      */
     @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
      * @return How the run should be forced to rerun even if the run request configuration has not changed
-     * 
      */
     public Output</* @Nullable */ String> getForceUpdateTag() {
         return this.forceUpdateTag;
     }
     /**
      * Identity for the resource.
-     * 
      */
     @Export(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
     /**
      * @return Identity for the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The location of the resource
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of this task run
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of this task run
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The request (parameters) for the run
-     * 
      */
     @Export(name="runRequest", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> runRequest;
 
     /**
      * @return The request (parameters) for the run
-     * 
      */
     public Output</* @Nullable */ Object> getRunRequest() {
         return this.runRequest;
     }
     /**
      * The result of this task run
-     * 
      */
     @Export(name="runResult", type=RunResponse.class, parameters={})
     private Output<RunResponse> runResult;
 
     /**
      * @return The result of this task run
-     * 
      */
     public Output<RunResponse> getRunResult() {
         return this.runResult;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

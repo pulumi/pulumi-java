@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * SKU parameters supplied to the create Redis operation.
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
-     * 
      */
     @Import(name="capacity", required=true)
       private final Integer capacity;
@@ -30,7 +28,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
-     * 
      */
     @Import(name="family", required=true)
       private final String family;
@@ -41,7 +38,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

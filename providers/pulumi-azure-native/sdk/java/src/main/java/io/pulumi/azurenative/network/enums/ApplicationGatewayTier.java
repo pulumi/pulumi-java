@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Tier of an application gateway.
-     * 
      */
     @EnumType
     public enum ApplicationGatewayTier {

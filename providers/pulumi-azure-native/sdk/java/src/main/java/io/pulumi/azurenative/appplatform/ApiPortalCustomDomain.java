@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * Custom domain of the API portal
  * API Version: 2022-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiPortalCustomDomains_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var apiPortalCustomDomain = new AzureNative.AppPlatform.ApiPortalCustomDomain("apiPortalCustomDomain", new AzureNative.AppPlatform.ApiPortalCustomDomainArgs
+ *         {
+ *             ApiPortalName = "default",
+ *             DomainName = "myDomainName",
+ *             Properties = new AzureNative.AppPlatform.Inputs.ApiPortalCustomDomainPropertiesArgs
+ *             {
+ *                 Thumbprint = "*",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewApiPortalCustomDomain(ctx, "apiPortalCustomDomain", &appplatform.ApiPortalCustomDomainArgs{
+ * 			ApiPortalName: pulumi.String("default"),
+ * 			DomainName:    pulumi.String("myDomainName"),
+ * 			Properties: &appplatform.ApiPortalCustomDomainPropertiesArgs{
+ * 				Thumbprint: pulumi.String("*"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const apiPortalCustomDomain = new azure_native.appplatform.ApiPortalCustomDomain("apiPortalCustomDomain", {
+ *     apiPortalName: "default",
+ *     domainName: "myDomainName",
+ *     properties: {
+ *         thumbprint: "*",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * api_portal_custom_domain = azure_native.appplatform.ApiPortalCustomDomain("apiPortalCustomDomain",
+ *     api_portal_name="default",
+ *     domain_name="myDomainName",
+ *     properties=azure_native.appplatform.ApiPortalCustomDomainPropertiesArgs(
+ *         thumbprint="*",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +123,48 @@ import javax.annotation.Nullable;
 public class ApiPortalCustomDomain extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The properties of custom domain for API portal
-     * 
      */
     @Export(name="properties", type=ApiPortalCustomDomainPropertiesResponse.class, parameters={})
     private Output<ApiPortalCustomDomainPropertiesResponse> properties;
 
     /**
      * @return The properties of custom domain for API portal
-     * 
      */
     public Output<ApiPortalCustomDomainPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

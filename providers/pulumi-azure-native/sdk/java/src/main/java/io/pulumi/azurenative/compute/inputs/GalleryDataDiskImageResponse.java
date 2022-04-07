@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * This is the data disk image.
- * 
  */
 public final class GalleryDataDiskImageResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
 
     /**
      * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
-     * 
      */
     @Import(name="hostCaching")
       private final @Nullable String hostCaching;
@@ -33,7 +31,6 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
 
     /**
      * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
-     * 
      */
     @Import(name="lun", required=true)
       private final Integer lun;
@@ -44,7 +41,6 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
 
     /**
      * This property indicates the size of the VHD to be created.
-     * 
      */
     @Import(name="sizeInGB", required=true)
       private final Integer sizeInGB;
@@ -55,7 +51,6 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
 
     /**
      * The gallery artifact version source.
-     * 
      */
     @Import(name="source")
       private final @Nullable GalleryArtifactVersionSourceResponse source;

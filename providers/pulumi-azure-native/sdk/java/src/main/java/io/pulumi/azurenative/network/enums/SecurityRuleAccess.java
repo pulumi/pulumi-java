@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The network traffic is allowed or denied.
-     * 
      */
     @EnumType
     public enum SecurityRuleAccess {

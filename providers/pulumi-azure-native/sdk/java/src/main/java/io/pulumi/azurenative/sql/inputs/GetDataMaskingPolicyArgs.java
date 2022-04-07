@@ -14,7 +14,6 @@ public final class GetDataMaskingPolicyArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the database for which the data masking rule applies.
-     * 
      */
     @Import(name="dataMaskingPolicyName", required=true)
       private final String dataMaskingPolicyName;
@@ -25,7 +24,6 @@ public final class GetDataMaskingPolicyArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the database.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -36,7 +34,6 @@ public final class GetDataMaskingPolicyArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetDataMaskingPolicyArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final String serverName;

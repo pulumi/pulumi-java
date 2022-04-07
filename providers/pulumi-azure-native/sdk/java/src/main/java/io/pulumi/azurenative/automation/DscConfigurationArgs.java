@@ -20,7 +20,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -31,7 +30,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The create or update parameters for configuration.
-     * 
      */
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
@@ -42,7 +40,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the description of the configuration.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -53,7 +50,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -64,7 +60,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets progress log option.
-     * 
      */
     @Import(name="logProgress")
       private final @Nullable Output<Boolean> logProgress;
@@ -75,7 +70,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets verbose log option.
-     * 
      */
     @Import(name="logVerbose")
       private final @Nullable Output<Boolean> logVerbose;
@@ -86,7 +80,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets name of the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -97,7 +90,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the configuration parameters.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters;
@@ -108,7 +100,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -119,7 +110,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the source.
-     * 
      */
     @Import(name="source", required=true)
       private final Output<ContentSourceArgs> source;
@@ -130,7 +120,6 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the tags attached to the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

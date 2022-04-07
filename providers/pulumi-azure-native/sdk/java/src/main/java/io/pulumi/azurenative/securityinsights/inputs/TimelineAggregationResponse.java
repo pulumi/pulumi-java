@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * timeline aggregation information per kind
- * 
  */
 public final class TimelineAggregationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
 
     /**
      * the total items found for a kind
-     * 
      */
     @Import(name="count", required=true)
       private final Integer count;
@@ -30,7 +28,6 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
 
     /**
      * the query kind
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;

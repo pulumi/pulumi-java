@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class GetServerAzureADOnlyAuthenticationResult {
     /**
      * Azure Active Directory only Authentication enabled.
-     * 
      */
     private final Boolean azureADOnlyAuthentication;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -45,28 +41,24 @@ public final class GetServerAzureADOnlyAuthenticationResult {
 
     /**
      * Azure Active Directory only Authentication enabled.
-     * 
     */
     public Boolean getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

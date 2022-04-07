@@ -18,7 +18,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity for the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -29,7 +28,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Friendly name of the linked workspace
-     * 
      */
     @Import(name="linkName")
       private final @Nullable Output<String> linkName;
@@ -40,7 +38,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * location of the linked service.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Friendly name of the linked service
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -62,7 +58,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * LinkedService specific properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<LinkedServicePropsArgs> properties;
@@ -73,7 +68,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

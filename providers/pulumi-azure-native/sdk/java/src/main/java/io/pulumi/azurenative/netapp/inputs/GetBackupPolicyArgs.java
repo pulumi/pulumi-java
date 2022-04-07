@@ -14,7 +14,6 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the NetApp account
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Backup policy Name which uniquely identify backup policy.
-     * 
      */
     @Import(name="backupPolicyName", required=true)
       private final String backupPolicyName;
@@ -36,7 +34,6 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

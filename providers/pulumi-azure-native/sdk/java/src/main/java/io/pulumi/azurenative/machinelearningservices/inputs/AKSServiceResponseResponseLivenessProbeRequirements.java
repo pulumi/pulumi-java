@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The liveness probe requirements.
- * 
  */
 public final class AKSServiceResponseResponseLivenessProbeRequirements extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
 
     /**
      * The number of failures to allow before returning an unhealthy status.
-     * 
      */
     @Import(name="failureThreshold")
       private final @Nullable Integer failureThreshold;
@@ -31,7 +29,6 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
 
     /**
      * The delay before the first probe in seconds.
-     * 
      */
     @Import(name="initialDelaySeconds")
       private final @Nullable Integer initialDelaySeconds;
@@ -42,7 +39,6 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
 
     /**
      * The length of time between probes in seconds.
-     * 
      */
     @Import(name="periodSeconds")
       private final @Nullable Integer periodSeconds;
@@ -53,7 +49,6 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
 
     /**
      * The number of successful probes before returning a healthy status.
-     * 
      */
     @Import(name="successThreshold")
       private final @Nullable Integer successThreshold;
@@ -64,7 +59,6 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
 
     /**
      * The probe timeout in seconds.
-     * 
      */
     @Import(name="timeoutSeconds")
       private final @Nullable Integer timeoutSeconds;

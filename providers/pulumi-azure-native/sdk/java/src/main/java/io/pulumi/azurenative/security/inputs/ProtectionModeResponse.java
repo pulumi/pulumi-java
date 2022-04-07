@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
- * 
  */
 public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
      */
     @Import(name="exe")
       private final @Nullable String exe;
@@ -31,7 +29,6 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
      */
     @Import(name="executable")
       private final @Nullable String executable;
@@ -42,7 +39,6 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
      */
     @Import(name="msi")
       private final @Nullable String msi;
@@ -53,7 +49,6 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
      */
     @Import(name="script")
       private final @Nullable String script;

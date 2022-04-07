@@ -12,7 +12,6 @@ public final class ContentKeyPolicyUnknownConfigurationResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyUnknownConfiguration'.
-     * 
      */
     private final String odataType;
 
@@ -24,7 +23,6 @@ public final class ContentKeyPolicyUnknownConfigurationResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyUnknownConfiguration'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;

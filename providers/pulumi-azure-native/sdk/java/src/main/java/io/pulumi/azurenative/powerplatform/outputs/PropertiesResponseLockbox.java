@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class PropertiesResponseLockbox {
     /**
      * lockbox configuration
-     * 
      */
     private final @Nullable String state;
 
@@ -24,7 +23,6 @@ public final class PropertiesResponseLockbox {
 
     /**
      * lockbox configuration
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);

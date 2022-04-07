@@ -17,7 +17,6 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
 
     /**
      * Linked storage accounts type.
-     * 
      */
     @Import(name="dataSourceType")
       private final @Nullable Output<String> dataSourceType;
@@ -28,7 +27,6 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -39,7 +37,6 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
 
     /**
      * Linked storage accounts resources ids.
-     * 
      */
     @Import(name="storageAccountIds")
       private final @Nullable Output<List<String>> storageAccountIds;
@@ -50,7 +47,6 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

@@ -115,14 +115,12 @@ public class IoMAMPolicyByName extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource Location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource Location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
@@ -135,14 +133,12 @@ public class IoMAMPolicyByName extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
@@ -173,14 +169,12 @@ public class IoMAMPolicyByName extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource Tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource Tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
@@ -193,14 +187,12 @@ public class IoMAMPolicyByName extends io.pulumi.resources.CustomResource {
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

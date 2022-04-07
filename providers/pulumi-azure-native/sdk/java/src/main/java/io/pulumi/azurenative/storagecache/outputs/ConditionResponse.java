@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ConditionResponse {
     /**
      * The issue requiring attention.
-     * 
      */
     private final String message;
     /**
      * The time when the condition was raised.
-     * 
      */
     private final String timestamp;
 
@@ -30,14 +28,12 @@ public final class ConditionResponse {
 
     /**
      * The issue requiring attention.
-     * 
     */
     public String getMessage() {
         return this.message;
     }
     /**
      * The time when the condition was raised.
-     * 
     */
     public String getTimestamp() {
         return this.timestamp;

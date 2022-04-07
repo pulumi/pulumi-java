@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes parsed pattern entity
- * 
  */
 public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
 
     /**
      * Pattern type key
-     * 
      */
     @Import(name="patternTypeKey")
       private final @Nullable Output<String> patternTypeKey;
@@ -33,7 +31,6 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
 
     /**
      * Pattern type keys
-     * 
      */
     @Import(name="patternTypeValues")
       private final @Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;

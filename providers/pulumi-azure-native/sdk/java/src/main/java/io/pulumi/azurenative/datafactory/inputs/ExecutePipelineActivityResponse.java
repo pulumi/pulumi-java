@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Execute pipeline activity.
- * 
  */
 public final class ExecutePipelineActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -38,7 +36,6 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -49,7 +46,6 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -60,7 +56,6 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
 
     /**
      * Pipeline parameters.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
@@ -71,7 +66,6 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
 
     /**
      * Pipeline reference.
-     * 
      */
     @Import(name="pipeline", required=true)
       private final PipelineReferenceResponse pipeline;
@@ -83,7 +77,6 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
     /**
      * Type of activity.
      * Expected value is 'ExecutePipeline'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -94,7 +87,6 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
@@ -105,7 +97,6 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
 
     /**
      * Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
-     * 
      */
     @Import(name="waitOnCompletion")
       private final @Nullable Boolean waitOnCompletion;

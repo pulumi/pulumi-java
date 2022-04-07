@@ -22,7 +22,6 @@ import javax.annotation.Nullable;
 
 /**
  * Open Data Protocol (OData) linked service.
- * 
  */
 public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -30,7 +29,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specify the resource you are requesting authorization to use Directory. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="aadResourceId")
       private final @Nullable Output<Object> aadResourceId;
@@ -41,7 +39,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specify the credential type (key or cert) is used for service principal.
-     * 
      */
     @Import(name="aadServicePrincipalCredentialType")
       private final @Nullable Output<Either<String,ODataAadServicePrincipalCredentialType>> aadServicePrincipalCredentialType;
@@ -52,7 +49,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -63,7 +59,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
-     * 
      */
     @Import(name="authHeaders")
       private final @Nullable Output<Object> authHeaders;
@@ -74,7 +69,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Type of authentication used to connect to the OData service.
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,ODataAuthenticationType>> authenticationType;
@@ -85,7 +79,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
@@ -96,7 +89,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -107,7 +99,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -118,7 +109,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -129,7 +119,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -140,7 +129,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Password of the OData service.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -151,7 +139,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalEmbeddedCert")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCert;
@@ -162,7 +149,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalEmbeddedCertPassword")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCertPassword;
@@ -173,7 +159,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specify the application id of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
@@ -184,7 +169,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
@@ -195,7 +179,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Specify the tenant information (domain name or tenant ID) under which your application resides. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
@@ -207,7 +190,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     /**
      * Type of linked service.
      * Expected value is 'OData'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -218,7 +200,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The URL of the OData service endpoint. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="url", required=true)
       private final Output<Object> url;
@@ -229,7 +210,6 @@ public final class ODataLinkedServiceArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * User name of the OData service. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<Object> userName;

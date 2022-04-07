@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents a path that is recommended to be allowed and its properties
- * 
  */
 public final class PathRecommendationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The recommendation action of the machine or rule
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<String> action;
@@ -35,7 +33,6 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Whether the application is commonly run on the machine
-     * 
      */
     @Import(name="common")
       private final @Nullable Output<Boolean> common;
@@ -46,7 +43,6 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The configuration status of the machines group or machine or rule
-     * 
      */
     @Import(name="configurationStatus")
       private final @Nullable Output<String> configurationStatus;
@@ -57,7 +53,6 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The type of the file (for Linux files - Executable is used)
-     * 
      */
     @Import(name="fileType")
       private final @Nullable Output<String> fileType;
@@ -68,7 +63,6 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The full path of the file, or an identifier of the application
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;
@@ -79,7 +73,6 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Represents the publisher information of a process/rule
-     * 
      */
     @Import(name="publisherInfo")
       private final @Nullable Output<PublisherInfoArgs> publisherInfo;
@@ -90,7 +83,6 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The type of the rule to be allowed
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

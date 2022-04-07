@@ -15,37 +15,30 @@ import javax.annotation.Nullable;
 public final class ArtifactInstallPropertiesResponse {
     /**
      * The artifact's identifier.
-     * 
      */
     private final @Nullable String artifactId;
     /**
      * The artifact's title.
-     * 
      */
     private final @Nullable String artifactTitle;
     /**
      * The status message from the deployment.
-     * 
      */
     private final @Nullable String deploymentStatusMessage;
     /**
      * The time that the artifact starts to install on the virtual machine.
-     * 
      */
     private final @Nullable String installTime;
     /**
      * The parameters of the artifact.
-     * 
      */
     private final @Nullable List<ArtifactParameterPropertiesResponse> parameters;
     /**
      * The status of the artifact.
-     * 
      */
     private final @Nullable String status;
     /**
      * The status message from the virtual machine extension.
-     * 
      */
     private final @Nullable String vmExtensionStatusMessage;
 
@@ -69,49 +62,42 @@ public final class ArtifactInstallPropertiesResponse {
 
     /**
      * The artifact's identifier.
-     * 
     */
     public Optional<String> getArtifactId() {
         return Optional.ofNullable(this.artifactId);
     }
     /**
      * The artifact's title.
-     * 
     */
     public Optional<String> getArtifactTitle() {
         return Optional.ofNullable(this.artifactTitle);
     }
     /**
      * The status message from the deployment.
-     * 
     */
     public Optional<String> getDeploymentStatusMessage() {
         return Optional.ofNullable(this.deploymentStatusMessage);
     }
     /**
      * The time that the artifact starts to install on the virtual machine.
-     * 
     */
     public Optional<String> getInstallTime() {
         return Optional.ofNullable(this.installTime);
     }
     /**
      * The parameters of the artifact.
-     * 
     */
     public List<ArtifactParameterPropertiesResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * The status of the artifact.
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The status message from the virtual machine extension.
-     * 
     */
     public Optional<String> getVmExtensionStatusMessage() {
         return Optional.ofNullable(this.vmExtensionStatusMessage);

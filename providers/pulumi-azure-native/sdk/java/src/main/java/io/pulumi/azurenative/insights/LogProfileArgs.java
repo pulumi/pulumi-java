@@ -19,7 +19,6 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
-     * 
      */
     @Import(name="categories", required=true)
       private final Output<List<String>> categories;
@@ -30,7 +29,6 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
-     * 
      */
     @Import(name="locations", required=true)
       private final Output<List<String>> locations;
@@ -52,7 +49,6 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the log profile.
-     * 
      */
     @Import(name="logProfileName")
       private final @Nullable Output<String> logProfileName;
@@ -63,7 +59,6 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the retention policy for the events in the log.
-     * 
      */
     @Import(name="retentionPolicy", required=true)
       private final Output<RetentionPolicyArgs> retentionPolicy;
@@ -74,7 +69,6 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
-     * 
      */
     @Import(name="serviceBusRuleId")
       private final @Nullable Output<String> serviceBusRuleId;
@@ -85,7 +79,6 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the resource id of the storage account to which you would like to send the Activity Log.
-     * 
      */
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
@@ -96,7 +89,6 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

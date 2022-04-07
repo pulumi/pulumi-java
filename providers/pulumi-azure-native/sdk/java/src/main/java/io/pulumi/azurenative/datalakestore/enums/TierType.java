@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The commitment tier to use for next month.
-     * 
      */
     @EnumType
     public enum TierType {

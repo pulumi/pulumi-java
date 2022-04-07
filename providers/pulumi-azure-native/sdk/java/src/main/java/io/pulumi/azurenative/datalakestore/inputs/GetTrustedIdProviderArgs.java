@@ -14,7 +14,6 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the Data Lake Store account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the trusted identity provider to retrieve.
-     * 
      */
     @Import(name="trustedIdProviderName", required=true)
       private final String trustedIdProviderName;

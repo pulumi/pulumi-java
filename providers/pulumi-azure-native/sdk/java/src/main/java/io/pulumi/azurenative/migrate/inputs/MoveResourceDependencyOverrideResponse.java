@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the dependency override of the move resource.
- * 
  */
 public final class MoveResourceDependencyOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MoveResourceDependencyOverrideResponse extends io.pulumi.reso
 
     /**
      * Gets or sets the ARM ID of the dependent resource.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -32,7 +30,6 @@ public final class MoveResourceDependencyOverrideResponse extends io.pulumi.reso
     /**
      * Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
      * the dependent resource.
-     * 
      */
     @Import(name="targetId")
       private final @Nullable String targetId;

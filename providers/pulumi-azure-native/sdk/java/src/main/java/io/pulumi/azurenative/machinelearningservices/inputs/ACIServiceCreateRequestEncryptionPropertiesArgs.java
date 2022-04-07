@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The encryption properties.
- * 
  */
 public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
 
     /**
      * Encryption Key name
-     * 
      */
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
@@ -30,7 +28,6 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
 
     /**
      * Encryption Key Version
-     * 
      */
     @Import(name="keyVersion", required=true)
       private final Output<String> keyVersion;
@@ -41,7 +38,6 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends io.pu
 
     /**
      * vault base Url
-     * 
      */
     @Import(name="vaultBaseUrl", required=true)
       private final Output<String> vaultBaseUrl;

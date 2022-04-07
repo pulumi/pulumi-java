@@ -16,7 +16,6 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -27,7 +26,6 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
 
     /**
      * Unique identifier of the edge device.
-     * 
      */
     @Import(name="deviceId")
       private final @Nullable String deviceId;
@@ -38,7 +36,6 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The start and end date for a budget.
- * 
  */
 public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The end date for the budget. If not provided, we default this to 10 years from the start date.
-     * 
      */
     @Import(name="endDate")
       private final @Nullable String endDate;
@@ -31,7 +29,6 @@ public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The start date for the budget.
-     * 
      */
     @Import(name="startDate", required=true)
       private final String startDate;

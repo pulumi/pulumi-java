@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Properties describing the software upgrade state of the Cache.
- * 
  */
 public final class CacheUpgradeStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * Version string of the firmware currently installed on this Cache.
-     * 
      */
     @Import(name="currentFirmwareVersion", required=true)
       private final String currentFirmwareVersion;
@@ -29,7 +27,6 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * Time at which the pending firmware update will automatically be installed on the Cache.
-     * 
      */
     @Import(name="firmwareUpdateDeadline", required=true)
       private final String firmwareUpdateDeadline;
@@ -40,7 +37,6 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
-     * 
      */
     @Import(name="firmwareUpdateStatus", required=true)
       private final String firmwareUpdateStatus;
@@ -51,7 +47,6 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * Time of the last successful firmware update.
-     * 
      */
     @Import(name="lastFirmwareUpdate", required=true)
       private final String lastFirmwareUpdate;
@@ -62,7 +57,6 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
 
     /**
      * When firmwareUpdateAvailable is true, this field holds the version string for the update.
-     * 
      */
     @Import(name="pendingFirmwareVersion", required=true)
       private final String pendingFirmwareVersion;

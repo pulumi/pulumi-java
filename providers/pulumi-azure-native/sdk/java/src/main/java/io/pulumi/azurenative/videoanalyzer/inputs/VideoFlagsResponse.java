@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Video flags contain information about the available video actions and its dynamic properties based on the current video state.
- * 
  */
 public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value indicating whether or not the video can be streamed. Only "archive" type videos can be streamed.
-     * 
      */
     @Import(name="canStream", required=true)
       private final Boolean canStream;
@@ -29,7 +27,6 @@ public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value indicating whether or not there has ever been data recorded or uploaded into the video. Newly created videos have this value set to false.
-     * 
      */
     @Import(name="hasData", required=true)
       private final Boolean hasData;
@@ -40,7 +37,6 @@ public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn't necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
-     * 
      */
     @Import(name="isRecording", required=true)
       private final Boolean isRecording;

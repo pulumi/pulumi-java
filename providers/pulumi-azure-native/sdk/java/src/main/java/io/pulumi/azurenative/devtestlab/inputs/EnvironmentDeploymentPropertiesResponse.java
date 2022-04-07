@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of an environment deployment.
- * 
  */
 public final class EnvironmentDeploymentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class EnvironmentDeploymentPropertiesResponse extends io.pulumi.res
 
     /**
      * The Azure Resource Manager template's identifier.
-     * 
      */
     @Import(name="armTemplateId")
       private final @Nullable String armTemplateId;
@@ -33,7 +31,6 @@ public final class EnvironmentDeploymentPropertiesResponse extends io.pulumi.res
 
     /**
      * The parameters of the Azure Resource Manager template.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<ArmTemplateParameterPropertiesResponse> parameters;

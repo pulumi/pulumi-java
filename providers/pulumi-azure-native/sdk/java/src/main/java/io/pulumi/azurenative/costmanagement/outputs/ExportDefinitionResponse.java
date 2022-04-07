@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class ExportDefinitionResponse {
     /**
      * The definition for data in the export.
-     * 
      */
     private final @Nullable ExportDatasetResponse dataSet;
     /**
      * Has time period for pulling data for the export.
-     * 
      */
     private final @Nullable ExportTimePeriodResponse timePeriod;
     /**
      * The time frame for pulling data for the export. If custom, then a specific time period must be provided.
-     * 
      */
     private final String timeframe;
     /**
      * The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
-     * 
      */
     private final String type;
 
@@ -48,28 +44,24 @@ public final class ExportDefinitionResponse {
 
     /**
      * The definition for data in the export.
-     * 
     */
     public Optional<ExportDatasetResponse> getDataSet() {
         return Optional.ofNullable(this.dataSet);
     }
     /**
      * Has time period for pulling data for the export.
-     * 
     */
     public Optional<ExportTimePeriodResponse> getTimePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
     /**
      * The time frame for pulling data for the export. If custom, then a specific time period must be provided.
-     * 
     */
     public String getTimeframe() {
         return this.timeframe;
     }
     /**
      * The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
-     * 
     */
     public String getType() {
         return this.type;

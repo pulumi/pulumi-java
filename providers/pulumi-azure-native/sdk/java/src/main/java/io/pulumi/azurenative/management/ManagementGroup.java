@@ -19,7 +19,97 @@ import javax.annotation.Nullable;
  * The management group details.
  * API Version: 2020-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutManagementGroup
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managementGroup = new AzureNative.Management.ManagementGroup("managementGroup", new AzureNative.Management.ManagementGroupArgs
+ *         {
+ *             Details = new AzureNative.Management.Inputs.CreateManagementGroupDetailsArgs
+ *             {
+ *                 Parent = new AzureNative.Management.Inputs.CreateParentGroupInfoArgs
+ *                 {
+ *                     Id = "/providers/Microsoft.Management/managementGroups/RootGroup",
+ *                 },
+ *             },
+ *             DisplayName = "ChildGroup",
+ *             GroupId = "ChildGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	management "github.com/pulumi/pulumi-azure-native/sdk/go/azure/management"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := management.NewManagementGroup(ctx, "managementGroup", &management.ManagementGroupArgs{
+ * 			Details: &management.CreateManagementGroupDetailsArgs{
+ * 				Parent: &management.CreateParentGroupInfoArgs{
+ * 					Id: pulumi.String("/providers/Microsoft.Management/managementGroups/RootGroup"),
+ * 				},
+ * 			},
+ * 			DisplayName: pulumi.String("ChildGroup"),
+ * 			GroupId:     pulumi.String("ChildGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managementGroup = new azure_native.management.ManagementGroup("managementGroup", {
+ *     details: {
+ *         parent: {
+ *             id: "/providers/Microsoft.Management/managementGroups/RootGroup",
+ *         },
+ *     },
+ *     displayName: "ChildGroup",
+ *     groupId: "ChildGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * management_group = azure_native.management.ManagementGroup("managementGroup",
+ *     details=azure_native.management.CreateManagementGroupDetailsArgs(
+ *         parent=azure_native.management.CreateParentGroupInfoArgs(
+ *             id="/providers/Microsoft.Management/managementGroups/RootGroup",
+ *         ),
+ *     ),
+ *     display_name="ChildGroup",
+ *     group_id="ChildGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +124,72 @@ import javax.annotation.Nullable;
 public class ManagementGroup extends io.pulumi.resources.CustomResource {
     /**
      * The list of children.
-     * 
      */
     @Export(name="children", type=List.class, parameters={ManagementGroupChildInfoResponse.class})
     private Output</* @Nullable */ List<ManagementGroupChildInfoResponse>> children;
 
     /**
      * @return The list of children.
-     * 
      */
     public Output</* @Nullable */ List<ManagementGroupChildInfoResponse>> getChildren() {
         return this.children;
     }
     /**
      * The details of a management group.
-     * 
      */
     @Export(name="details", type=ManagementGroupDetailsResponse.class, parameters={})
     private Output</* @Nullable */ ManagementGroupDetailsResponse> details;
 
     /**
      * @return The details of a management group.
-     * 
      */
     public Output</* @Nullable */ ManagementGroupDetailsResponse> getDetails() {
         return this.details;
     }
     /**
      * The friendly name of the management group.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The friendly name of the management group.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the management group. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of the resource.  For example, Microsoft.Management/managementGroups
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.  For example, Microsoft.Management/managementGroups
-     * 
      */
     public Output<String> getType() {
         return this.type;

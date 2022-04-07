@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class EncryptionDetailsResponse {
     /**
      * Customer Managed Key Details
-     * 
      */
     private final @Nullable CustomerManagedKeyDetailsResponse cmk;
     /**
      * Double Encryption enabled
-     * 
      */
     private final Boolean doubleEncryptionEnabled;
 
@@ -33,14 +31,12 @@ public final class EncryptionDetailsResponse {
 
     /**
      * Customer Managed Key Details
-     * 
     */
     public Optional<CustomerManagedKeyDetailsResponse> getCmk() {
         return Optional.ofNullable(this.cmk);
     }
     /**
      * Double Encryption enabled
-     * 
     */
     public Boolean getDoubleEncryptionEnabled() {
         return this.doubleEncryptionEnabled;

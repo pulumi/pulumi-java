@@ -18,7 +18,99 @@ import javax.annotation.Nullable;
  * A type of trigger based on schedule
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Triggers_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var scheduledTrigger = new AzureNative.DataShare.ScheduledTrigger("scheduledTrigger", new AzureNative.DataShare.ScheduledTriggerArgs
+ *         {
+ *             AccountName = "Account1",
+ *             Kind = "ScheduleBased",
+ *             RecurrenceInterval = "Day",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareSubscriptionName = "ShareSubscription1",
+ *             SynchronizationMode = "Incremental",
+ *             SynchronizationTime = "2018-11-14T04:47:52.9614956Z",
+ *             TriggerName = "Trigger1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewScheduledTrigger(ctx, "scheduledTrigger", &datashare.ScheduledTriggerArgs{
+ * 			AccountName:           pulumi.String("Account1"),
+ * 			Kind:                  pulumi.String("ScheduleBased"),
+ * 			RecurrenceInterval:    pulumi.String("Day"),
+ * 			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+ * 			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+ * 			SynchronizationMode:   pulumi.String("Incremental"),
+ * 			SynchronizationTime:   pulumi.String("2018-11-14T04:47:52.9614956Z"),
+ * 			TriggerName:           pulumi.String("Trigger1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const scheduledTrigger = new azure_native.datashare.ScheduledTrigger("scheduledTrigger", {
+ *     accountName: "Account1",
+ *     kind: "ScheduleBased",
+ *     recurrenceInterval: "Day",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareSubscriptionName: "ShareSubscription1",
+ *     synchronizationMode: "Incremental",
+ *     synchronizationTime: "2018-11-14T04:47:52.9614956Z",
+ *     triggerName: "Trigger1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * scheduled_trigger = azure_native.datashare.ScheduledTrigger("scheduledTrigger",
+ *     account_name="Account1",
+ *     kind="ScheduleBased",
+ *     recurrence_interval="Day",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_subscription_name="ShareSubscription1",
+ *     synchronization_mode="Incremental",
+ *     synchronization_time="2018-11-14T04:47:52.9614956Z",
+ *     trigger_name="Trigger1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,14 +125,12 @@ import javax.annotation.Nullable;
 public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
     /**
      * Time at which the trigger was created.
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
      * @return Time at which the trigger was created.
-     * 
      */
     public Output<String> getCreatedAt() {
         return this.createdAt;
@@ -48,7 +138,6 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
     /**
      * Kind of synchronization on trigger.
      * Expected value is 'ScheduleBased'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -56,133 +145,114 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
     /**
      * @return Kind of synchronization on trigger.
      * Expected value is 'ScheduleBased'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the azure resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets the provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets the provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Recurrence Interval
-     * 
      */
     @Export(name="recurrenceInterval", type=String.class, parameters={})
     private Output<String> recurrenceInterval;
 
     /**
      * @return Recurrence Interval
-     * 
      */
     public Output<String> getRecurrenceInterval() {
         return this.recurrenceInterval;
     }
     /**
      * Synchronization mode
-     * 
      */
     @Export(name="synchronizationMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> synchronizationMode;
 
     /**
      * @return Synchronization mode
-     * 
      */
     public Output</* @Nullable */ String> getSynchronizationMode() {
         return this.synchronizationMode;
     }
     /**
      * Synchronization time
-     * 
      */
     @Export(name="synchronizationTime", type=String.class, parameters={})
     private Output<String> synchronizationTime;
 
     /**
      * @return Synchronization time
-     * 
      */
     public Output<String> getSynchronizationTime() {
         return this.synchronizationTime;
     }
     /**
      * System Data of the Azure resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System Data of the Azure resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Gets the trigger state
-     * 
      */
     @Export(name="triggerStatus", type=String.class, parameters={})
     private Output<String> triggerStatus;
 
     /**
      * @return Gets the trigger state
-     * 
      */
     public Output<String> getTriggerStatus() {
         return this.triggerStatus;
     }
     /**
      * Type of the azure resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the azure resource
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Name of the user who created the trigger.
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
      * @return Name of the user who created the trigger.
-     * 
      */
     public Output<String> getUserName() {
         return this.userName;

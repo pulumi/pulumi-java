@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Select video tracks from the input by specifying a track identifier.
- * 
  */
 public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.SelectVideoTrackById'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -32,7 +30,6 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
 
     /**
      * Track identifier to select
-     * 
      */
     @Import(name="trackId", required=true)
       private final Output<Double> trackId;

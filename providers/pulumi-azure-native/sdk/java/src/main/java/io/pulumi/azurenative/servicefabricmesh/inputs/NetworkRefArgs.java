@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a network reference in a service.
- * 
  */
 public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of endpoints that are exposed on this network.
-     * 
      */
     @Import(name="endpointRefs")
       private final @Nullable Output<List<EndpointRefArgs>> endpointRefs;
@@ -33,7 +31,6 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the network
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

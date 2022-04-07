@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Task errors for Sql Server to Azure Sql DB migration.
- * 
  */
 public final class MigrateSqlServerSqlDbTaskOutputErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class MigrateSqlServerSqlDbTaskOutputErrorResponse extends io.pulum
 
     /**
      * Migration error
-     * 
      */
     @Import(name="error", required=true)
       private final ReportableExceptionResponse error;
@@ -30,7 +28,6 @@ public final class MigrateSqlServerSqlDbTaskOutputErrorResponse extends io.pulum
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -42,7 +39,6 @@ public final class MigrateSqlServerSqlDbTaskOutputErrorResponse extends io.pulum
     /**
      * Result type
      * Expected value is 'ErrorOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;

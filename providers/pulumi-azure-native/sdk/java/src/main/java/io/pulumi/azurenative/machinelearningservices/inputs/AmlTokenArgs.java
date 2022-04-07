@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * AML Token identity configuration.
- * 
  */
 public final class AmlTokenArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AmlTokenArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Enum to determine identity framework.
      * Expected value is 'AMLToken'.
-     * 
      */
     @Import(name="identityType", required=true)
       private final Output<String> identityType;

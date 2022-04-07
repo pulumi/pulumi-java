@@ -16,7 +16,6 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the peering service.
-     * 
      */
     @Import(name="peeringServiceName", required=true)
       private final Output<String> peeringServiceName;
@@ -27,7 +26,6 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The peering service prefix key
-     * 
      */
     @Import(name="peeringServicePrefixKey")
       private final @Nullable Output<String> peeringServicePrefixKey;
@@ -38,7 +36,6 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The prefix from which your traffic originates.
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
@@ -49,7 +46,6 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the prefix.
-     * 
      */
     @Import(name="prefixName")
       private final @Nullable Output<String> prefixName;
@@ -60,7 +56,6 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

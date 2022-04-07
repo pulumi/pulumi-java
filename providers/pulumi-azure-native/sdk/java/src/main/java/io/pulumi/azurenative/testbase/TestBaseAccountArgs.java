@@ -19,7 +19,6 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group that contains the resource.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -41,7 +39,6 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The flag indicating if we would like to restore the Test Base Accounts which were soft deleted before.
-     * 
      */
     @Import(name="restore")
       private final @Nullable Output<Boolean> restore;
@@ -52,7 +49,6 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The SKU of the Test Base Account.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<TestBaseAccountSKUArgs> sku;
@@ -63,7 +59,6 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -74,7 +69,6 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The resource name of the Test Base Account.
-     * 
      */
     @Import(name="testBaseAccountName")
       private final @Nullable Output<String> testBaseAccountName;

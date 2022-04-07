@@ -16,7 +16,6 @@ public final class MachineResponseIdentity extends io.pulumi.resources.InvokeArg
 
     /**
      * The identity's principal id.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -27,7 +26,6 @@ public final class MachineResponseIdentity extends io.pulumi.resources.InvokeArg
 
     /**
      * The identity's tenant id.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -38,7 +36,6 @@ public final class MachineResponseIdentity extends io.pulumi.resources.InvokeArg
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

@@ -20,7 +20,96 @@ import javax.annotation.Nullable;
  * Private endpoint connection resource.
  * API Version: 2019-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### KeyVaultPutPrivateEndpointConnection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.KeyVault.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.KeyVault.PrivateEndpointConnectionArgs
+ *         {
+ *             PrivateEndpointConnectionName = "sample-pec",
+ *             PrivateLinkServiceConnectionState = new AzureNative.KeyVault.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 Description = "My name is Joe and I'm approving this.",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "sample-group",
+ *             VaultName = "sample-vault",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := keyvault.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &keyvault.PrivateEndpointConnectionArgs{
+ * 			PrivateEndpointConnectionName: pulumi.String("sample-pec"),
+ * 			PrivateLinkServiceConnectionState: &keyvault.PrivateLinkServiceConnectionStateArgs{
+ * 				Description: pulumi.String("My name is Joe and I'm approving this."),
+ * 				Status:      pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("sample-group"),
+ * 			VaultName:         pulumi.String("sample-vault"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.keyvault.PrivateEndpointConnection("privateEndpointConnection", {
+ *     privateEndpointConnectionName: "sample-pec",
+ *     privateLinkServiceConnectionState: {
+ *         description: "My name is Joe and I'm approving this.",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "sample-group",
+ *     vaultName: "sample-vault",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.keyvault.PrivateEndpointConnection("privateEndpointConnection",
+ *     private_endpoint_connection_name="sample-pec",
+ *     private_link_service_connection_state=azure_native.keyvault.PrivateLinkServiceConnectionStateArgs(
+ *         description="My name is Joe and I'm approving this.",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="sample-group",
+ *     vault_name="sample-vault")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,112 +124,96 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * Modified whenever there is a change in the state of private endpoint connection.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Modified whenever there is a change in the state of private endpoint connection.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Azure location of the key vault resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Azure location of the key vault resource.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Name of the key vault resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the key vault resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the private endpoint object.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return Properties of the private endpoint object.
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * Approval state of the private link connection.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return Approval state of the private link connection.
-     * 
      */
     public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * Provisioning state of the private endpoint connection.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the private endpoint connection.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Tags assigned to the key vault resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
      * @return Tags assigned to the key vault resource.
-     * 
      */
     public Output<Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type of the key vault resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type of the key vault resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

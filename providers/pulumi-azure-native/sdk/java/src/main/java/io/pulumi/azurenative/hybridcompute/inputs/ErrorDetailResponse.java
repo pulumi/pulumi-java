@@ -17,7 +17,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error's code.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -28,7 +27,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Additional error details.
-     * 
      */
     @Import(name="details")
       private final @Nullable List<ErrorDetailResponse> details;
@@ -39,7 +37,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A human readable error message.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -50,7 +47,6 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Indicates which property in the request is responsible for the error.
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;

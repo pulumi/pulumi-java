@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource type managed by the resource provider.
- * 
  */
 public final class ProviderResourceTypeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
 
     /**
      * The aliases that are supported by this resource type.
-     * 
      */
     @Import(name="aliases")
       private final @Nullable List<AliasResponse> aliases;
@@ -37,7 +35,6 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
 
     /**
      * The API profiles for the resource provider.
-     * 
      */
     @Import(name="apiProfiles", required=true)
       private final List<ApiProfileResponse> apiProfiles;
@@ -48,7 +45,6 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
 
     /**
      * The API version.
-     * 
      */
     @Import(name="apiVersions")
       private final @Nullable List<String> apiVersions;
@@ -59,7 +55,6 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
 
     /**
      * The additional capabilities offered by this resource type.
-     * 
      */
     @Import(name="capabilities")
       private final @Nullable String capabilities;
@@ -70,7 +65,6 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
 
     /**
      * The default API version.
-     * 
      */
     @Import(name="defaultApiVersion", required=true)
       private final String defaultApiVersion;
@@ -81,7 +75,6 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
 
     /**
      * The location mappings that are supported by this resource type.
-     * 
      */
     @Import(name="locationMappings")
       private final @Nullable List<ProviderExtendedLocationResponse> locationMappings;
@@ -92,7 +85,6 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
 
     /**
      * The collection of locations where this resource type can be created.
-     * 
      */
     @Import(name="locations")
       private final @Nullable List<String> locations;
@@ -103,7 +95,6 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
 
     /**
      * The properties.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
@@ -114,7 +105,6 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
 
     /**
      * The resource type.
-     * 
      */
     @Import(name="resourceType")
       private final @Nullable String resourceType;

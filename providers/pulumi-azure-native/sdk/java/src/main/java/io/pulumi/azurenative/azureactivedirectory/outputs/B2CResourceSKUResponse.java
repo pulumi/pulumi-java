@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class B2CResourceSKUResponse {
     /**
      * The name of the SKU for the tenant.
-     * 
      */
     private final @Nullable String name;
     /**
      * The tier of the tenant.
-     * 
      */
     private final @Nullable String tier;
 
@@ -32,14 +30,12 @@ public final class B2CResourceSKUResponse {
 
     /**
      * The name of the SKU for the tenant.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The tier of the tenant.
-     * 
     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);

@@ -20,7 +20,121 @@ import javax.annotation.Nullable;
  * The relationship resource format.
  * API Version: 2017-04-26.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Relationships_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var relationship = new AzureNative.CustomerInsights.Relationship("relationship", new AzureNative.CustomerInsights.RelationshipArgs
+ *         {
+ *             Cardinality = "OneToOne",
+ *             Description = 
+ *             {
+ *                 { "en-us", "Relationship Description" },
+ *             },
+ *             DisplayName = 
+ *             {
+ *                 { "en-us", "Relationship DisplayName" },
+ *             },
+ *             Fields = {},
+ *             HubName = "sdkTestHub",
+ *             ProfileType = "testProfile2326994",
+ *             RelatedProfileType = "testProfile2326994",
+ *             RelationshipName = "SomeRelationship",
+ *             ResourceGroupName = "TestHubRG",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerinsights.NewRelationship(ctx, "relationship", &customerinsights.RelationshipArgs{
+ * 			Cardinality: "OneToOne",
+ * 			Description: pulumi.StringMap{
+ * 				"en-us": pulumi.String("Relationship Description"),
+ * 			},
+ * 			DisplayName: pulumi.StringMap{
+ * 				"en-us": pulumi.String("Relationship DisplayName"),
+ * 			},
+ * 			Fields:             customerinsights.PropertyDefinitionArray{},
+ * 			HubName:            pulumi.String("sdkTestHub"),
+ * 			ProfileType:        pulumi.String("testProfile2326994"),
+ * 			RelatedProfileType: pulumi.String("testProfile2326994"),
+ * 			RelationshipName:   pulumi.String("SomeRelationship"),
+ * 			ResourceGroupName:  pulumi.String("TestHubRG"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const relationship = new azure_native.customerinsights.Relationship("relationship", {
+ *     cardinality: "OneToOne",
+ *     description: {
+ *         "en-us": "Relationship Description",
+ *     },
+ *     displayName: {
+ *         "en-us": "Relationship DisplayName",
+ *     },
+ *     fields: [],
+ *     hubName: "sdkTestHub",
+ *     profileType: "testProfile2326994",
+ *     relatedProfileType: "testProfile2326994",
+ *     relationshipName: "SomeRelationship",
+ *     resourceGroupName: "TestHubRG",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * relationship = azure_native.customerinsights.Relationship("relationship",
+ *     cardinality="OneToOne",
+ *     description={
+ *         "en-us": "Relationship Description",
+ *     },
+ *     display_name={
+ *         "en-us": "Relationship DisplayName",
+ *     },
+ *     fields=[],
+ *     hub_name="sdkTestHub",
+ *     profile_type="testProfile2326994",
+ *     related_profile_type="testProfile2326994",
+ *     relationship_name="SomeRelationship",
+ *     resource_group_name="TestHubRG")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,196 +149,168 @@ import javax.annotation.Nullable;
 public class Relationship extends io.pulumi.resources.CustomResource {
     /**
      * The Relationship Cardinality.
-     * 
      */
     @Export(name="cardinality", type=String.class, parameters={})
     private Output</* @Nullable */ String> cardinality;
 
     /**
      * @return The Relationship Cardinality.
-     * 
      */
     public Output</* @Nullable */ String> getCardinality() {
         return this.cardinality;
     }
     /**
      * Localized descriptions for the Relationship.
-     * 
      */
     @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
      * @return Localized descriptions for the Relationship.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDescription() {
         return this.description;
     }
     /**
      * Localized display name for the Relationship.
-     * 
      */
     @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
      * @return Localized display name for the Relationship.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getDisplayName() {
         return this.displayName;
     }
     /**
      * The expiry date time in UTC.
-     * 
      */
     @Export(name="expiryDateTimeUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiryDateTimeUtc;
 
     /**
      * @return The expiry date time in UTC.
-     * 
      */
     public Output</* @Nullable */ String> getExpiryDateTimeUtc() {
         return this.expiryDateTimeUtc;
     }
     /**
      * The properties of the Relationship.
-     * 
      */
     @Export(name="fields", type=List.class, parameters={PropertyDefinitionResponse.class})
     private Output</* @Nullable */ List<PropertyDefinitionResponse>> fields;
 
     /**
      * @return The properties of the Relationship.
-     * 
      */
     public Output</* @Nullable */ List<PropertyDefinitionResponse>> getFields() {
         return this.fields;
     }
     /**
      * Optional property to be used to map fields in profile to their strong ids in related profile.
-     * 
      */
     @Export(name="lookupMappings", type=List.class, parameters={RelationshipTypeMappingResponse.class})
     private Output</* @Nullable */ List<RelationshipTypeMappingResponse>> lookupMappings;
 
     /**
      * @return Optional property to be used to map fields in profile to their strong ids in related profile.
-     * 
      */
     public Output</* @Nullable */ List<RelationshipTypeMappingResponse>> getLookupMappings() {
         return this.lookupMappings;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Profile type.
-     * 
      */
     @Export(name="profileType", type=String.class, parameters={})
     private Output<String> profileType;
 
     /**
      * @return Profile type.
-     * 
      */
     public Output<String> getProfileType() {
         return this.profileType;
     }
     /**
      * Provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Related profile being referenced.
-     * 
      */
     @Export(name="relatedProfileType", type=String.class, parameters={})
     private Output<String> relatedProfileType;
 
     /**
      * @return Related profile being referenced.
-     * 
      */
     public Output<String> getRelatedProfileType() {
         return this.relatedProfileType;
     }
     /**
      * The relationship guid id.
-     * 
      */
     @Export(name="relationshipGuidId", type=String.class, parameters={})
     private Output<String> relationshipGuidId;
 
     /**
      * @return The relationship guid id.
-     * 
      */
     public Output<String> getRelationshipGuidId() {
         return this.relationshipGuidId;
     }
     /**
      * The Relationship name.
-     * 
      */
     @Export(name="relationshipName", type=String.class, parameters={})
     private Output<String> relationshipName;
 
     /**
      * @return The Relationship name.
-     * 
      */
     public Output<String> getRelationshipName() {
         return this.relationshipName;
     }
     /**
      * The hub name.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return The hub name.
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

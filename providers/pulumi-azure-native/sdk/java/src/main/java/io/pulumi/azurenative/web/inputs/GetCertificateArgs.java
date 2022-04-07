@@ -14,7 +14,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the certificate.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

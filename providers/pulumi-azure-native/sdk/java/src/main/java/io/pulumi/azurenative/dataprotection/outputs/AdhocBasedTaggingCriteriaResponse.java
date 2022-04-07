@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class AdhocBasedTaggingCriteriaResponse {
     /**
      * Retention tag information
-     * 
      */
     private final @Nullable RetentionTagResponse tagInfo;
 
@@ -24,7 +23,6 @@ public final class AdhocBasedTaggingCriteriaResponse {
 
     /**
      * Retention tag information
-     * 
     */
     public Optional<RetentionTagResponse> getTagInfo() {
         return Optional.ofNullable(this.tagInfo);

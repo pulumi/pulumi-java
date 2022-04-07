@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Datadog organization properties
- * 
  */
 public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
 
     /**
      * Api key associated to the Datadog organization.
-     * 
      */
     @Import(name="apiKey")
       private final @Nullable Output<String> apiKey;
@@ -31,7 +29,6 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
 
     /**
      * Application key associated to the Datadog organization.
-     * 
      */
     @Import(name="applicationKey")
       private final @Nullable Output<String> applicationKey;
@@ -42,7 +39,6 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
 
     /**
      * The Id of the Enterprise App used for Single sign on.
-     * 
      */
     @Import(name="enterpriseAppId")
       private final @Nullable Output<String> enterpriseAppId;
@@ -53,7 +49,6 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
 
     /**
      * The auth code used to linking to an existing datadog organization.
-     * 
      */
     @Import(name="linkingAuthCode")
       private final @Nullable Output<String> linkingAuthCode;
@@ -64,7 +59,6 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
 
     /**
      * The client_id from an existing in exchange for an auth token to link organization.
-     * 
      */
     @Import(name="linkingClientId")
       private final @Nullable Output<String> linkingClientId;
@@ -75,7 +69,6 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
 
     /**
      * The redirect uri for linking.
-     * 
      */
     @Import(name="redirectUri")
       private final @Nullable Output<String> redirectUri;

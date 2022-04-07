@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class MachineLearningServiceErrorResponse {
     /**
      * The error response.
-     * 
      */
     private final ErrorResponseResponse error;
 
@@ -22,7 +21,6 @@ public final class MachineLearningServiceErrorResponse {
 
     /**
      * The error response.
-     * 
     */
     public ErrorResponseResponse getError() {
         return this.error;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * HTTP Proxy configuration for the VM.
- * 
  */
 public final class HttpProxyConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HttpProxyConfigurationResponse extends io.pulumi.resources.In
 
     /**
      * Gets or sets httpsProxy url.
-     * 
      */
     @Import(name="httpsProxy")
       private final @Nullable String httpsProxy;

@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * A routing rule represents a specification for traffic to treat and where to send it, along with health probe information.
- * 
  */
 public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Protocol schemes to match for this rule
-     * 
      */
     @Import(name="acceptedProtocols")
       private final @Nullable List<String> acceptedProtocols;
@@ -37,7 +35,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable String enabledState;
@@ -48,7 +45,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Frontend endpoints associated with this rule
-     * 
      */
     @Import(name="frontendEndpoints")
       private final @Nullable List<SubResourceResponse> frontendEndpoints;
@@ -59,7 +55,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -70,7 +65,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -81,7 +75,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The route patterns of the rule.
-     * 
      */
     @Import(name="patternsToMatch")
       private final @Nullable List<String> patternsToMatch;
@@ -92,7 +85,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource status.
-     * 
      */
     @Import(name="resourceState", required=true)
       private final String resourceState;
@@ -103,7 +95,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A reference to the routing configuration.
-     * 
      */
     @Import(name="routeConfiguration")
       private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
@@ -114,7 +105,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A reference to a specific Rules Engine Configuration to apply to this route.
-     * 
      */
     @Import(name="rulesEngine")
       private final @Nullable SubResourceResponse rulesEngine;
@@ -125,7 +115,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -136,7 +125,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Defines the Web Application Firewall policy for each routing rule (if applicable)
-     * 
      */
     @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;

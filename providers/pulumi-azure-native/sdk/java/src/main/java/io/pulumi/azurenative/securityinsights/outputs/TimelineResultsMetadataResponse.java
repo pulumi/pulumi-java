@@ -15,17 +15,14 @@ import javax.annotation.Nullable;
 public final class TimelineResultsMetadataResponse {
     /**
      * timeline aggregation per kind
-     * 
      */
     private final List<TimelineAggregationResponse> aggregations;
     /**
      * information about the failure queries
-     * 
      */
     private final @Nullable List<TimelineErrorResponse> errors;
     /**
      * the total items found for the timeline request
-     * 
      */
     private final Integer totalCount;
 
@@ -41,21 +38,18 @@ public final class TimelineResultsMetadataResponse {
 
     /**
      * timeline aggregation per kind
-     * 
     */
     public List<TimelineAggregationResponse> getAggregations() {
         return this.aggregations;
     }
     /**
      * information about the failure queries
-     * 
     */
     public List<TimelineErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * the total items found for the timeline request
-     * 
     */
     public Integer getTotalCount() {
         return this.totalCount;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the common properties for all audio codecs.
- * 
  */
 public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The bitrate, in bits per second, of the output encoded audio.
-     * 
      */
     @Import(name="bitrate")
       private final @Nullable Output<Integer> bitrate;
@@ -32,7 +30,6 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of channels in the audio.
-     * 
      */
     @Import(name="channels")
       private final @Nullable Output<Integer> channels;
@@ -43,7 +40,6 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -55,7 +51,6 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.Audio'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -66,7 +61,6 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The sampling rate to use for encoding in hertz.
-     * 
      */
     @Import(name="samplingRate")
       private final @Nullable Output<Integer> samplingRate;

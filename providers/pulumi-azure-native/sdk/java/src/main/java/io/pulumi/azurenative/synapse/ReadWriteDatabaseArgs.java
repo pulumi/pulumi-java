@@ -16,7 +16,6 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the database in the Kusto pool.
-     * 
      */
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
@@ -27,7 +26,6 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The time the data should be kept in cache for fast queries in TimeSpan.
-     * 
      */
     @Import(name="hotCachePeriod")
       private final @Nullable Output<String> hotCachePeriod;
@@ -39,7 +37,6 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     /**
      * Kind of the database
      * Expected value is 'ReadWrite'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -50,7 +47,6 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the Kusto pool.
-     * 
      */
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
@@ -61,7 +57,6 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -72,7 +67,6 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -83,7 +77,6 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The time the data should be kept before it stops being accessible to queries in TimeSpan.
-     * 
      */
     @Import(name="softDeletePeriod")
       private final @Nullable Output<String> softDeletePeriod;
@@ -94,7 +87,6 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

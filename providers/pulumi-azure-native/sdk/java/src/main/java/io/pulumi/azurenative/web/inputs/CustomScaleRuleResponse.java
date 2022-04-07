@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container App container Custom scaling rule.
- * 
  */
 public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Authentication secrets for the custom scale rule.
-     * 
      */
     @Import(name="auth")
       private final @Nullable List<ScaleRuleAuthResponse> auth;
@@ -34,7 +32,6 @@ public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Metadata properties to describe custom scale rule.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Map<String,String> metadata;
@@ -46,7 +43,6 @@ public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArg
     /**
      * Type of the custom scale rule
      * eg: azure-servicebus, redis etc.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

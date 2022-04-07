@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * System data for notebook resource
- * 
  */
 public final class NotebookResourceSystemDataResponse extends io.pulumi.resources.InvokeArgs {
 

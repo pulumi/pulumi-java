@@ -24,7 +24,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties of any lab announcement associated with this lab
-     * 
      */
     @Import(name="announcement")
       private final @Nullable Output<LabAnnouncementPropertiesArgs> announcement;
@@ -35,7 +34,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The access rights to be granted to the user when provisioning an environment
-     * 
      */
     @Import(name="environmentPermission")
       private final @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission;
@@ -46,7 +44,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Extended properties of the lab used for experimental features
-     * 
      */
     @Import(name="extendedProperties")
       private final @Nullable Output<Map<String,String>> extendedProperties;
@@ -57,7 +54,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
-     * 
      */
     @Import(name="labStorageType")
       private final @Nullable Output<Either<String,StorageType>> labStorageType;
@@ -68,7 +64,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -79,7 +74,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
-     * 
      */
     @Import(name="mandatoryArtifactsResourceIdsLinux")
       private final @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux;
@@ -90,7 +84,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
-     * 
      */
     @Import(name="mandatoryArtifactsResourceIdsWindows")
       private final @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows;
@@ -101,7 +94,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -114,7 +106,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * The setting to enable usage of premium data disks.
      * When its value is 'Enabled', creation of standard or premium data disks is allowed.
      * When its value is 'Disabled', only creation of standard data disks is allowed.
-     * 
      */
     @Import(name="premiumDataDisks")
       private final @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks;
@@ -125,7 +116,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -136,7 +126,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties of any lab support message associated with this lab
-     * 
      */
     @Import(name="support")
       private final @Nullable Output<LabSupportPropertiesArgs> support;
@@ -147,7 +136,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

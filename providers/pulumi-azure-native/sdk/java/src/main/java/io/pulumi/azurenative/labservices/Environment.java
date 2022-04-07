@@ -34,224 +34,192 @@ import javax.annotation.Nullable;
 public class Environment extends io.pulumi.resources.CustomResource {
     /**
      * The name or email address of the user who has claimed the environment
-     * 
      */
     @Export(name="claimedByUserName", type=String.class, parameters={})
     private Output<String> claimedByUserName;
 
     /**
      * @return The name or email address of the user who has claimed the environment
-     * 
      */
     public Output<String> getClaimedByUserName() {
         return this.claimedByUserName;
     }
     /**
      * The AAD object Id of the user who has claimed the environment
-     * 
      */
     @Export(name="claimedByUserObjectId", type=String.class, parameters={})
     private Output<String> claimedByUserObjectId;
 
     /**
      * @return The AAD object Id of the user who has claimed the environment
-     * 
      */
     public Output<String> getClaimedByUserObjectId() {
         return this.claimedByUserObjectId;
     }
     /**
      * The user principal Id of the user who has claimed the environment
-     * 
      */
     @Export(name="claimedByUserPrincipalId", type=String.class, parameters={})
     private Output<String> claimedByUserPrincipalId;
 
     /**
      * @return The user principal Id of the user who has claimed the environment
-     * 
      */
     public Output<String> getClaimedByUserPrincipalId() {
         return this.claimedByUserPrincipalId;
     }
     /**
      * Is the environment claimed or not
-     * 
      */
     @Export(name="isClaimed", type=Boolean.class, parameters={})
     private Output<Boolean> isClaimed;
 
     /**
      * @return Is the environment claimed or not
-     * 
      */
     public Output<Boolean> getIsClaimed() {
         return this.isClaimed;
     }
     /**
      * Last known power state of the environment
-     * 
      */
     @Export(name="lastKnownPowerState", type=String.class, parameters={})
     private Output<String> lastKnownPowerState;
 
     /**
      * @return Last known power state of the environment
-     * 
      */
     public Output<String> getLastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
      * The details of the latest operation. ex: status, error
-     * 
      */
     @Export(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
     /**
      * @return The details of the latest operation. ex: status, error
-     * 
      */
     public Output<LatestOperationResultResponse> getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Network details of the environment
-     * 
      */
     @Export(name="networkInterface", type=NetworkInterfaceResponse.class, parameters={})
     private Output<NetworkInterfaceResponse> networkInterface;
 
     /**
      * @return Network details of the environment
-     * 
      */
     public Output<NetworkInterfaceResponse> getNetworkInterface() {
         return this.networkInterface;
     }
     /**
      * When the password was last reset on the environment.
-     * 
      */
     @Export(name="passwordLastReset", type=String.class, parameters={})
     private Output<String> passwordLastReset;
 
     /**
      * @return When the password was last reset on the environment.
-     * 
      */
     public Output<String> getPasswordLastReset() {
         return this.passwordLastReset;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The set of a VM and the setting id it was created for
-     * 
      */
     @Export(name="resourceSets", type=ResourceSetResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetResponse> resourceSets;
 
     /**
      * @return The set of a VM and the setting id it was created for
-     * 
      */
     public Output</* @Nullable */ ResourceSetResponse> getResourceSets() {
         return this.resourceSets;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * How long the environment has been used by a lab user
-     * 
      */
     @Export(name="totalUsage", type=String.class, parameters={})
     private Output<String> totalUsage;
 
     /**
      * @return How long the environment has been used by a lab user
-     * 
      */
     public Output<String> getTotalUsage() {
         return this.totalUsage;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output</* @Nullable */ String> getUniqueIdentifier() {
         return this.uniqueIdentifier;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class SelectedCertificateInputResponse {
     /**
      * Name of certificate to be exported.
-     * 
      */
     private final String certificateName;
     /**
      * Password to use for encrypting the exported certificate.
-     * 
      */
     private final String password;
 
@@ -30,14 +28,12 @@ public final class SelectedCertificateInputResponse {
 
     /**
      * Name of certificate to be exported.
-     * 
     */
     public String getCertificateName() {
         return this.certificateName;
     }
     /**
      * Password to use for encrypting the exported certificate.
-     * 
     */
     public String getPassword() {
         return this.password;

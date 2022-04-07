@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Table's schema.
- * 
  */
 public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A list of table custom columns.
-     * 
      */
     @Import(name="columns")
       private final @Nullable Output<List<ColumnArgs>> columns;
@@ -33,7 +31,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Table description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -44,7 +41,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Table display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -55,7 +51,6 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Table name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

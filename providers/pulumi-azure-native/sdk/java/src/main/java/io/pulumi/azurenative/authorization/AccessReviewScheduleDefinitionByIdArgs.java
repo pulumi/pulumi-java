@@ -24,7 +24,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
-     * 
      */
     @Import(name="autoApplyDecisionsEnabled")
       private final @Nullable Output<Boolean> autoApplyDecisionsEnabled;
@@ -35,7 +34,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * This is the collection of backup reviewers.
-     * 
      */
     @Import(name="backupReviewers")
       private final @Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers;
@@ -46,7 +44,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * This specifies the behavior for the autoReview feature when an access review completes.
-     * 
      */
     @Import(name="defaultDecision")
       private final @Nullable Output<Either<String,DefaultDecisionType>> defaultDecision;
@@ -57,7 +54,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * Flag to indicate whether reviewers are required to provide a justification when reviewing access.
-     * 
      */
     @Import(name="defaultDecisionEnabled")
       private final @Nullable Output<Boolean> defaultDecisionEnabled;
@@ -68,7 +64,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * The description provided by the access review creator and visible to admins.
-     * 
      */
     @Import(name="descriptionForAdmins")
       private final @Nullable Output<String> descriptionForAdmins;
@@ -79,7 +74,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * The description provided by the access review creator to be shown to reviewers.
-     * 
      */
     @Import(name="descriptionForReviewers")
       private final @Nullable Output<String> descriptionForReviewers;
@@ -90,7 +84,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * The display name for the schedule definition.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -101,7 +94,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * The DateTime when the review is scheduled to end. Required if type is endDate
-     * 
      */
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
@@ -112,7 +104,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-     * 
      */
     @Import(name="inactiveDuration")
       private final @Nullable Output<String> inactiveDuration;
@@ -123,7 +114,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * The duration in days for an instance.
-     * 
      */
     @Import(name="instanceDurationInDays")
       private final @Nullable Output<Integer> instanceDurationInDays;
@@ -134,7 +124,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * This is the collection of instances returned when one does an expand on it.
-     * 
      */
     @Import(name="instances")
       private final @Nullable Output<List<AccessReviewInstanceArgs>> instances;
@@ -145,7 +134,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
@@ -156,7 +144,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * Flag to indicate whether the reviewer is required to pass justification when recording a decision.
-     * 
      */
     @Import(name="justificationRequiredOnApproval")
       private final @Nullable Output<Boolean> justificationRequiredOnApproval;
@@ -167,7 +154,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * Flag to indicate whether sending mails to reviewers and the review creator is enabled.
-     * 
      */
     @Import(name="mailNotificationsEnabled")
       private final @Nullable Output<Boolean> mailNotificationsEnabled;
@@ -178,7 +164,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * The number of times to repeat the access review. Required and must be positive if type is numbered.
-     * 
      */
     @Import(name="numberOfOccurrences")
       private final @Nullable Output<Integer> numberOfOccurrences;
@@ -189,7 +174,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * Flag to indicate whether showing recommendations to reviewers is enabled.
-     * 
      */
     @Import(name="recommendationsEnabled")
       private final @Nullable Output<Boolean> recommendationsEnabled;
@@ -200,7 +184,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * Flag to indicate whether sending reminder emails to reviewers are enabled.
-     * 
      */
     @Import(name="reminderNotificationsEnabled")
       private final @Nullable Output<Boolean> reminderNotificationsEnabled;
@@ -211,7 +194,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * This is the collection of reviewers.
-     * 
      */
     @Import(name="reviewers")
       private final @Nullable Output<List<AccessReviewReviewerArgs>> reviewers;
@@ -222,7 +204,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * The id of the access review schedule definition.
-     * 
      */
     @Import(name="scheduleDefinitionId")
       private final @Nullable Output<String> scheduleDefinitionId;
@@ -233,7 +214,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-     * 
      */
     @Import(name="startDate")
       private final @Nullable Output<String> startDate;
@@ -244,7 +224,6 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
 
     /**
      * The recurrence range type. The possible values are: endDate, noEnd, numbered.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;

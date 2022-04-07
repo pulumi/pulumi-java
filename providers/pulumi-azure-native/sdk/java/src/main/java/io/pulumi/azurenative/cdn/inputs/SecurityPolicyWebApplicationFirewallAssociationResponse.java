@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * settings for security policy patterns to match
- * 
  */
 public final class SecurityPolicyWebApplicationFirewallAssociationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
 
     /**
      * List of domains.
-     * 
      */
     @Import(name="domains")
       private final @Nullable List<ResourceReferenceResponse> domains;
@@ -33,7 +31,6 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
 
     /**
      * List of paths
-     * 
      */
     @Import(name="patternsToMatch")
       private final @Nullable List<String> patternsToMatch;

@@ -16,7 +16,6 @@ public final class DatabricksResponseProperties extends io.pulumi.resources.Invo
 
     /**
      * Databricks access token
-     * 
      */
     @Import(name="databricksAccessToken")
       private final @Nullable String databricksAccessToken;
@@ -27,7 +26,6 @@ public final class DatabricksResponseProperties extends io.pulumi.resources.Invo
 
     /**
      * Workspace Url
-     * 
      */
     @Import(name="workspaceUrl")
       private final @Nullable String workspaceUrl;

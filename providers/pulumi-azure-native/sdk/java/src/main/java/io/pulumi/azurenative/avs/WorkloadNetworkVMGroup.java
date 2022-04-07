@@ -18,7 +18,96 @@ import javax.annotation.Nullable;
  * NSX VM Group
  * API Version: 2020-07-17-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WorkloadNetworks_CreateVMGroup
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workloadNetworkVMGroup = new AzureNative.AVS.WorkloadNetworkVMGroup("workloadNetworkVMGroup", new AzureNative.AVS.WorkloadNetworkVMGroupArgs
+ *         {
+ *             DisplayName = "vmGroup1",
+ *             Members = 
+ *             {
+ *                 "564d43da-fefc-2a3b-1d92-42855622fa50",
+ *             },
+ *             PrivateCloudName = "cloud1",
+ *             ResourceGroupName = "group1",
+ *             Revision = 1,
+ *             VmGroupId = "vmGroup1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewWorkloadNetworkVMGroup(ctx, "workloadNetworkVMGroup", &avs.WorkloadNetworkVMGroupArgs{
+ * 			DisplayName: pulumi.String("vmGroup1"),
+ * 			Members: pulumi.StringArray{
+ * 				pulumi.String("564d43da-fefc-2a3b-1d92-42855622fa50"),
+ * 			},
+ * 			PrivateCloudName:  pulumi.String("cloud1"),
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 			Revision:          pulumi.Float64(1),
+ * 			VmGroupId:         pulumi.String("vmGroup1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workloadNetworkVMGroup = new azure_native.avs.WorkloadNetworkVMGroup("workloadNetworkVMGroup", {
+ *     displayName: "vmGroup1",
+ *     members: ["564d43da-fefc-2a3b-1d92-42855622fa50"],
+ *     privateCloudName: "cloud1",
+ *     resourceGroupName: "group1",
+ *     revision: 1,
+ *     vmGroupId: "vmGroup1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workload_network_vm_group = azure_native.avs.WorkloadNetworkVMGroup("workloadNetworkVMGroup",
+ *     display_name="vmGroup1",
+ *     members=["564d43da-fefc-2a3b-1d92-42855622fa50"],
+ *     private_cloud_name="cloud1",
+ *     resource_group_name="group1",
+ *     revision=1,
+ *     vm_group_id="vmGroup1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +122,84 @@ import javax.annotation.Nullable;
 public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
     /**
      * Display name of the VM group.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Display name of the VM group.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Virtual machine members of this group.
-     * 
      */
     @Export(name="members", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> members;
 
     /**
      * @return Virtual machine members of this group.
-     * 
      */
     public Output</* @Nullable */ List<String>> getMembers() {
         return this.members;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
-     * 
      */
     @Export(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
     /**
      * @return NSX revision number.
-     * 
      */
     public Output</* @Nullable */ Double> getRevision() {
         return this.revision;
     }
     /**
      * VM Group status.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return VM Group status.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

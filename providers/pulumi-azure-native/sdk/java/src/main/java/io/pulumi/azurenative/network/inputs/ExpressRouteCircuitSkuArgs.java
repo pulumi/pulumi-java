@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains SKU in an ExpressRouteCircuit.
- * 
  */
 public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
 
     /**
      * The family of the SKU.
-     * 
      */
     @Import(name="family")
       private final @Nullable Output<Either<String,ExpressRouteCircuitSkuFamily>> family;
@@ -34,7 +32,6 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
 
     /**
      * The name of the SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -45,7 +42,6 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
 
     /**
      * The tier of the SKU.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier;

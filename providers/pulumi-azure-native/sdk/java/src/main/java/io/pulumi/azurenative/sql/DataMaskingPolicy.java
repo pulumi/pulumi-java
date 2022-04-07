@@ -17,7 +17,169 @@ import javax.annotation.Nullable;
  * Represents a database data masking policy.
  * API Version: 2014-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update data masking policy max
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataMaskingPolicy = new AzureNative.Sql.DataMaskingPolicy("dataMaskingPolicy", new AzureNative.Sql.DataMaskingPolicyArgs
+ *         {
+ *             DataMaskingPolicyName = "Default",
+ *             DataMaskingState = "Enabled",
+ *             DatabaseName = "sqlcrudtest-331",
+ *             ExemptPrincipals = "testuser;",
+ *             ResourceGroupName = "sqlcrudtest-6852",
+ *             ServerName = "sqlcrudtest-2080",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewDataMaskingPolicy(ctx, "dataMaskingPolicy", &sql.DataMaskingPolicyArgs{
+ * 			DataMaskingPolicyName: pulumi.String("Default"),
+ * 			DataMaskingState:      "Enabled",
+ * 			DatabaseName:          pulumi.String("sqlcrudtest-331"),
+ * 			ExemptPrincipals:      pulumi.String("testuser;"),
+ * 			ResourceGroupName:     pulumi.String("sqlcrudtest-6852"),
+ * 			ServerName:            pulumi.String("sqlcrudtest-2080"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataMaskingPolicy = new azure_native.sql.DataMaskingPolicy("dataMaskingPolicy", {
+ *     dataMaskingPolicyName: "Default",
+ *     dataMaskingState: "Enabled",
+ *     databaseName: "sqlcrudtest-331",
+ *     exemptPrincipals: "testuser;",
+ *     resourceGroupName: "sqlcrudtest-6852",
+ *     serverName: "sqlcrudtest-2080",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_masking_policy = azure_native.sql.DataMaskingPolicy("dataMaskingPolicy",
+ *     data_masking_policy_name="Default",
+ *     data_masking_state="Enabled",
+ *     database_name="sqlcrudtest-331",
+ *     exempt_principals="testuser;",
+ *     resource_group_name="sqlcrudtest-6852",
+ *     server_name="sqlcrudtest-2080")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create or update data masking policy min
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataMaskingPolicy = new AzureNative.Sql.DataMaskingPolicy("dataMaskingPolicy", new AzureNative.Sql.DataMaskingPolicyArgs
+ *         {
+ *             DataMaskingPolicyName = "Default",
+ *             DataMaskingState = "Enabled",
+ *             DatabaseName = "sqlcrudtest-331",
+ *             ResourceGroupName = "sqlcrudtest-6852",
+ *             ServerName = "sqlcrudtest-2080",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewDataMaskingPolicy(ctx, "dataMaskingPolicy", &sql.DataMaskingPolicyArgs{
+ * 			DataMaskingPolicyName: pulumi.String("Default"),
+ * 			DataMaskingState:      "Enabled",
+ * 			DatabaseName:          pulumi.String("sqlcrudtest-331"),
+ * 			ResourceGroupName:     pulumi.String("sqlcrudtest-6852"),
+ * 			ServerName:            pulumi.String("sqlcrudtest-2080"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataMaskingPolicy = new azure_native.sql.DataMaskingPolicy("dataMaskingPolicy", {
+ *     dataMaskingPolicyName: "Default",
+ *     dataMaskingState: "Enabled",
+ *     databaseName: "sqlcrudtest-331",
+ *     resourceGroupName: "sqlcrudtest-6852",
+ *     serverName: "sqlcrudtest-2080",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_masking_policy = azure_native.sql.DataMaskingPolicy("dataMaskingPolicy",
+ *     data_masking_policy_name="Default",
+ *     data_masking_state="Enabled",
+ *     database_name="sqlcrudtest-331",
+ *     resource_group_name="sqlcrudtest-6852",
+ *     server_name="sqlcrudtest-2080")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,112 +194,96 @@ import javax.annotation.Nullable;
 public class DataMaskingPolicy extends io.pulumi.resources.CustomResource {
     /**
      * The list of the application principals. This is a legacy parameter and is no longer used.
-     * 
      */
     @Export(name="applicationPrincipals", type=String.class, parameters={})
     private Output<String> applicationPrincipals;
 
     /**
      * @return The list of the application principals. This is a legacy parameter and is no longer used.
-     * 
      */
     public Output<String> getApplicationPrincipals() {
         return this.applicationPrincipals;
     }
     /**
      * The state of the data masking policy.
-     * 
      */
     @Export(name="dataMaskingState", type=String.class, parameters={})
     private Output<String> dataMaskingState;
 
     /**
      * @return The state of the data masking policy.
-     * 
      */
     public Output<String> getDataMaskingState() {
         return this.dataMaskingState;
     }
     /**
      * The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
-     * 
      */
     @Export(name="exemptPrincipals", type=String.class, parameters={})
     private Output</* @Nullable */ String> exemptPrincipals;
 
     /**
      * @return The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
-     * 
      */
     public Output</* @Nullable */ String> getExemptPrincipals() {
         return this.exemptPrincipals;
     }
     /**
      * The kind of data masking policy. Metadata, used for Azure portal.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The kind of data masking policy. Metadata, used for Azure portal.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The location of the data masking policy.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the data masking policy.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The masking level. This is a legacy parameter and is no longer used.
-     * 
      */
     @Export(name="maskingLevel", type=String.class, parameters={})
     private Output<String> maskingLevel;
 
     /**
      * @return The masking level. This is a legacy parameter and is no longer used.
-     * 
      */
     public Output<String> getMaskingLevel() {
         return this.maskingLevel;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Name of Ssl predefined policy.
-     * 
      */
     @EnumType
     public enum ApplicationGatewaySslPolicyName {

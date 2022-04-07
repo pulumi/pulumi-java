@@ -12,8 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The provider extended location.
- * 
+ * The provider extended location. 
  */
 public final class ProviderExtendedLocationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
 
     /**
      * The extended locations for the azure location.
-     * 
      */
     @Import(name="extendedLocations")
       private final @Nullable List<String> extendedLocations;
@@ -32,7 +30,6 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
 
     /**
      * The azure location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -43,7 +40,6 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
 
     /**
      * The extended location type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

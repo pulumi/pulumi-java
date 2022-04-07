@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Model asset version details.
- * 
  */
 public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ARM resource ID of the datastore where the asset is located.
-     * 
      */
     @Import(name="datastoreId")
       private final @Nullable Output<String> datastoreId;
@@ -34,7 +32,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The asset description text.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +42,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Mapping of model flavors to their properties.
-     * 
      */
     @Import(name="flavors")
       private final @Nullable Output<Map<String,FlavorDataArgs>> flavors;
@@ -56,7 +52,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If the name version are system generated (anonymous registration).
-     * 
      */
     @Import(name="isAnonymous")
       private final @Nullable Output<Boolean> isAnonymous;
@@ -67,7 +62,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path of the file/directory in the datastore.
-     * 
      */
     @Import(name="path", required=true)
       private final Output<String> path;
@@ -78,7 +72,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The asset property dictionary.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -89,7 +82,6 @@ public final class ModelVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

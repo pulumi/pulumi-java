@@ -19,8 +19,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * A linked service for an SSH File Transfer Protocol (SFTP) server.
- * 
+ * A linked service for an SSH File Transfer Protocol (SFTP) server. 
  */
 public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The authentication type to be used to connect to the FTP server.
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
@@ -50,7 +47,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -61,7 +57,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -72,7 +67,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -83,7 +77,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The SFTP server host name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="host", required=true)
       private final Object host;
@@ -94,7 +87,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="hostKeyFingerprint")
       private final @Nullable Object hostKeyFingerprint;
@@ -105,7 +97,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -116,7 +107,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The password to decrypt the SSH private key if the SSH private key is encrypted.
-     * 
      */
     @Import(name="passPhrase")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase;
@@ -127,7 +117,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Password to logon the SFTP server for Basic authentication.
-     * 
      */
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -138,7 +127,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The TCP port number that the SFTP server uses to listen for client connections. Default value is 22. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="port")
       private final @Nullable Object port;
@@ -149,7 +137,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
-     * 
      */
     @Import(name="privateKeyContent")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent;
@@ -160,7 +147,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The SSH private key file path for SshPublicKey authentication. Only valid for on-premises copy. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="privateKeyPath")
       private final @Nullable Object privateKeyPath;
@@ -171,7 +157,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * If true, skip the SSH host key validation. Default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="skipHostKeyValidation")
       private final @Nullable Object skipHostKeyValidation;
@@ -183,7 +168,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
     /**
      * Type of linked service.
      * Expected value is 'Sftp'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -194,7 +178,6 @@ public final class SftpServerLinkedServiceResponse extends io.pulumi.resources.I
 
     /**
      * The username used to log on to the SFTP server. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="userName")
       private final @Nullable Object userName;

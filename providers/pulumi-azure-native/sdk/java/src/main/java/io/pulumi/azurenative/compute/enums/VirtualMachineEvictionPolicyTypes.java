@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.
-     * 
      */
     @EnumType
     public enum VirtualMachineEvictionPolicyTypes {

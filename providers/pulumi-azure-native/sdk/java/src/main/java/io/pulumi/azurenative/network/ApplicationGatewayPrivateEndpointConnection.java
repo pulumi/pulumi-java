@@ -19,7 +19,100 @@ import javax.annotation.Nullable;
  * Private Endpoint connection on an application gateway.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update Application Gateway Private Endpoint Connection
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var applicationGatewayPrivateEndpointConnection = new AzureNative.Network.ApplicationGatewayPrivateEndpointConnection("applicationGatewayPrivateEndpointConnection", new AzureNative.Network.ApplicationGatewayPrivateEndpointConnectionArgs
+ *         {
+ *             ApplicationGatewayName = "appgw",
+ *             ConnectionName = "connection1",
+ *             Name = "connection1",
+ *             PrivateLinkServiceConnectionState = new AzureNative.Network.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 Description = "approved it for some reason.",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewApplicationGatewayPrivateEndpointConnection(ctx, "applicationGatewayPrivateEndpointConnection", &network.ApplicationGatewayPrivateEndpointConnectionArgs{
+ * 			ApplicationGatewayName: pulumi.String("appgw"),
+ * 			ConnectionName:         pulumi.String("connection1"),
+ * 			Name:                   pulumi.String("connection1"),
+ * 			PrivateLinkServiceConnectionState: &network.PrivateLinkServiceConnectionStateArgs{
+ * 				Description: pulumi.String("approved it for some reason."),
+ * 				Status:      pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const applicationGatewayPrivateEndpointConnection = new azure_native.network.ApplicationGatewayPrivateEndpointConnection("applicationGatewayPrivateEndpointConnection", {
+ *     applicationGatewayName: "appgw",
+ *     connectionName: "connection1",
+ *     name: "connection1",
+ *     privateLinkServiceConnectionState: {
+ *         description: "approved it for some reason.",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * application_gateway_private_endpoint_connection = azure_native.network.ApplicationGatewayPrivateEndpointConnection("applicationGatewayPrivateEndpointConnection",
+ *     application_gateway_name="appgw",
+ *     connection_name="connection1",
+ *     name="connection1",
+ *     private_link_service_connection_state=azure_native.network.PrivateLinkServiceConnectionStateArgs(
+ *         description="approved it for some reason.",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +127,84 @@ import javax.annotation.Nullable;
 public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The consumer link id.
-     * 
      */
     @Export(name="linkIdentifier", type=String.class, parameters={})
     private Output<String> linkIdentifier;
 
     /**
      * @return The consumer link id.
-     * 
      */
     public Output<String> getLinkIdentifier() {
         return this.linkIdentifier;
     }
     /**
      * Name of the private endpoint connection on an application gateway.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the private endpoint connection on an application gateway.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output<PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The resource of private end point.
-     * 
      */
     public Output<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the application gateway private endpoint connection resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the application gateway private endpoint connection resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

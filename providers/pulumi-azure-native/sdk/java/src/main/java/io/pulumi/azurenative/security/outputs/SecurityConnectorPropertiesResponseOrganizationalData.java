@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class SecurityConnectorPropertiesResponseOrganizationalData {
     /**
      * If the multi cloud account is of membership type organization, list of accounts excluded from offering
-     * 
      */
     private final @Nullable List<String> excludedAccountIds;
     /**
      * The multi cloud account's membership type in the organization
-     * 
      */
     private final @Nullable String organizationMembershipType;
     /**
      * If the multi cloud account is not of membership type organization, this will be the ID of the account's parent
-     * 
      */
     private final @Nullable String parentHierarchyId;
     /**
      * If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
-     * 
      */
     private final @Nullable String stacksetName;
 
@@ -47,28 +43,24 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
 
     /**
      * If the multi cloud account is of membership type organization, list of accounts excluded from offering
-     * 
     */
     public List<String> getExcludedAccountIds() {
         return this.excludedAccountIds == null ? List.of() : this.excludedAccountIds;
     }
     /**
      * The multi cloud account's membership type in the organization
-     * 
     */
     public Optional<String> getOrganizationMembershipType() {
         return Optional.ofNullable(this.organizationMembershipType);
     }
     /**
      * If the multi cloud account is not of membership type organization, this will be the ID of the account's parent
-     * 
     */
     public Optional<String> getParentHierarchyId() {
         return Optional.ofNullable(this.parentHierarchyId);
     }
     /**
      * If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
-     * 
     */
     public Optional<String> getStacksetName() {
         return Optional.ofNullable(this.stacksetName);

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Information to be stored in Vault properties as an element of privateEndpointConnections List.
- * 
  */
 public final class PrivateEndpointConnectionVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends io.p
 
     /**
      * Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -30,7 +28,6 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends io.p
 
     /**
      * Private Endpoint Connection Response Properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final VaultPrivateEndpointConnectionResponse properties;

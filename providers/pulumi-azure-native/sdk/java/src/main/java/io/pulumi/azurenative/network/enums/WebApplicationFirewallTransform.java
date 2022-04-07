@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Transforms applied before matching.
-     * 
      */
     @EnumType
     public enum WebApplicationFirewallTransform {

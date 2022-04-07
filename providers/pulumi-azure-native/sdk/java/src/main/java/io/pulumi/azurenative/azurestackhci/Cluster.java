@@ -20,7 +20,87 @@ import javax.annotation.Nullable;
  * Cluster details.
  * API Version: 2020-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create cluster
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var cluster = new AzureNative.AzureStackHCI.Cluster("cluster", new AzureNative.AzureStackHCI.ClusterArgs
+ *         {
+ *             AadClientId = "24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
+ *             AadTenantId = "7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
+ *             ClusterName = "myCluster",
+ *             Location = "East US",
+ *             ResourceGroupName = "test-rg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	azurestackhci "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azurestackhci"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := azurestackhci.NewCluster(ctx, "cluster", &azurestackhci.ClusterArgs{
+ * 			AadClientId:       pulumi.String("24a6e53d-04e5-44d2-b7cc-1b732a847dfc"),
+ * 			AadTenantId:       pulumi.String("7e589cc1-a8b6-4dff-91bd-5ec0fa18db94"),
+ * 			ClusterName:       pulumi.String("myCluster"),
+ * 			Location:          pulumi.String("East US"),
+ * 			ResourceGroupName: pulumi.String("test-rg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const cluster = new azure_native.azurestackhci.Cluster("cluster", {
+ *     aadClientId: "24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
+ *     aadTenantId: "7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
+ *     clusterName: "myCluster",
+ *     location: "East US",
+ *     resourceGroupName: "test-rg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * cluster = azure_native.azurestackhci.Cluster("cluster",
+ *     aad_client_id="24a6e53d-04e5-44d2-b7cc-1b732a847dfc",
+ *     aad_tenant_id="7e589cc1-a8b6-4dff-91bd-5ec0fa18db94",
+ *     cluster_name="myCluster",
+ *     location="East US",
+ *     resource_group_name="test-rg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,294 +115,252 @@ import javax.annotation.Nullable;
 public class Cluster extends io.pulumi.resources.CustomResource {
     /**
      * App id of cluster AAD identity.
-     * 
      */
     @Export(name="aadClientId", type=String.class, parameters={})
     private Output<String> aadClientId;
 
     /**
      * @return App id of cluster AAD identity.
-     * 
      */
     public Output<String> getAadClientId() {
         return this.aadClientId;
     }
     /**
      * Tenant id of cluster AAD identity.
-     * 
      */
     @Export(name="aadTenantId", type=String.class, parameters={})
     private Output<String> aadTenantId;
 
     /**
      * @return Tenant id of cluster AAD identity.
-     * 
      */
     public Output<String> getAadTenantId() {
         return this.aadTenantId;
     }
     /**
      * Type of billing applied to the resource.
-     * 
      */
     @Export(name="billingModel", type=String.class, parameters={})
     private Output<String> billingModel;
 
     /**
      * @return Type of billing applied to the resource.
-     * 
      */
     public Output<String> getBillingModel() {
         return this.billingModel;
     }
     /**
      * Unique, immutable resource id.
-     * 
      */
     @Export(name="cloudId", type=String.class, parameters={})
     private Output<String> cloudId;
 
     /**
      * @return Unique, immutable resource id.
-     * 
      */
     public Output<String> getCloudId() {
         return this.cloudId;
     }
     /**
      * The timestamp of resource creation (UTC).
-     * 
      */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
     /**
      * @return The timestamp of resource creation (UTC).
-     * 
      */
     public Output</* @Nullable */ String> getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The identity that created the resource.
-     * 
      */
     @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
     /**
      * @return The identity that created the resource.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The type of identity that created the resource.
-     * 
      */
     @Export(name="createdByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdByType;
 
     /**
      * @return The type of identity that created the resource.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedByType() {
         return this.createdByType;
     }
     /**
      * Most recent billing meter timestamp.
-     * 
      */
     @Export(name="lastBillingTimestamp", type=String.class, parameters={})
     private Output<String> lastBillingTimestamp;
 
     /**
      * @return Most recent billing meter timestamp.
-     * 
      */
     public Output<String> getLastBillingTimestamp() {
         return this.lastBillingTimestamp;
     }
     /**
      * The timestamp of resource last modification (UTC)
-     * 
      */
     @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedAt;
 
     /**
      * @return The timestamp of resource last modification (UTC)
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * The identity that last modified the resource.
-     * 
      */
     @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
      * @return The identity that last modified the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The type of identity that last modified the resource.
-     * 
      */
     @Export(name="lastModifiedByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedByType;
 
     /**
      * @return The type of identity that last modified the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedByType() {
         return this.lastModifiedByType;
     }
     /**
      * Most recent cluster sync timestamp.
-     * 
      */
     @Export(name="lastSyncTimestamp", type=String.class, parameters={})
     private Output<String> lastSyncTimestamp;
 
     /**
      * @return Most recent cluster sync timestamp.
-     * 
      */
     public Output<String> getLastSyncTimestamp() {
         return this.lastSyncTimestamp;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * First cluster sync timestamp.
-     * 
      */
     @Export(name="registrationTimestamp", type=String.class, parameters={})
     private Output<String> registrationTimestamp;
 
     /**
      * @return First cluster sync timestamp.
-     * 
      */
     public Output<String> getRegistrationTimestamp() {
         return this.registrationTimestamp;
     }
     /**
      * Properties reported by cluster agent.
-     * 
      */
     @Export(name="reportedProperties", type=ClusterReportedPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ClusterReportedPropertiesResponse> reportedProperties;
 
     /**
      * @return Properties reported by cluster agent.
-     * 
      */
     public Output</* @Nullable */ ClusterReportedPropertiesResponse> getReportedProperties() {
         return this.reportedProperties;
     }
     /**
      * Status of the cluster agent.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Status of the cluster agent.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Number of days remaining in the trial period.
-     * 
      */
     @Export(name="trialDaysRemaining", type=Double.class, parameters={})
     private Output<Double> trialDaysRemaining;
 
     /**
      * @return Number of days remaining in the trial period.
-     * 
      */
     public Output<Double> getTrialDaysRemaining() {
         return this.trialDaysRemaining;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

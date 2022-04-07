@@ -18,7 +18,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The resource of private endpoint.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
@@ -29,7 +28,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the private endpoint connection.
-     * 
      */
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
@@ -40,7 +38,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
@@ -51,7 +48,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the managed cluster resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

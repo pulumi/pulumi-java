@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the encryption key properties
- * 
  */
 public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
 
     /**
      * The type of kek encryption key
-     * 
      */
     @Import(name="kekType")
       private final @Nullable Output<Either<String,EncryptionKekType>> kekType;
@@ -32,8 +30,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
     }
 
     /**
-     * Specifies the url for kek encryption key.
-     * 
+     * Specifies the url for kek encryption key. 
      */
     @Import(name="kekUrl")
       private final @Nullable Output<String> kekUrl;
@@ -43,8 +40,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
     }
 
     /**
-     * Specifies the keyvault resource id for kek encryption key.
-     * 
+     * Specifies the keyvault resource id for kek encryption key. 
      */
     @Import(name="kekVaultResourceID")
       private final @Nullable Output<String> kekVaultResourceID;

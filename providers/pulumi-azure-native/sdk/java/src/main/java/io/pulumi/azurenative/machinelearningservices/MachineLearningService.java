@@ -25,7 +25,326 @@ import javax.annotation.Nullable;
  * Machine Learning service object wrapped into ARM resource envelope.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Or Update service
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var machineLearningService = new AzureNative.MachineLearningServices.MachineLearningService("machineLearningService", new AzureNative.MachineLearningServices.MachineLearningServiceArgs
+ *         {
+ *             ComputeType = "ACI",
+ *             EnvironmentImageRequest = new AzureNative.MachineLearningServices.Inputs.CreateServiceRequestEnvironmentImageRequestArgs
+ *             {
+ *                 Assets = 
+ *                 {
+ *                     new AzureNative.MachineLearningServices.Inputs.ImageAssetArgs
+ *                     {
+ *                         MimeType = "application/x-python",
+ *                         Unpack = false,
+ *                         Url = "aml://storage/azureml/score.py",
+ *                     },
+ *                 },
+ *                 DriverProgram = "score.py",
+ *                 Environment = new AzureNative.MachineLearningServices.Inputs.EnvironmentImageRequestEnvironmentArgs
+ *                 {
+ *                     Docker = new AzureNative.MachineLearningServices.Inputs.ModelEnvironmentDefinitionDockerArgs
+ *                     {
+ *                         BaseImage = "mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04",
+ *                         BaseImageRegistry = ,
+ *                     },
+ *                     EnvironmentVariables = 
+ *                     {
+ *                         { "EXAMPLE_ENV_VAR", "EXAMPLE_VALUE" },
+ *                     },
+ *                     Name = "AzureML-Scikit-learn-0.20.3",
+ *                     Python = new AzureNative.MachineLearningServices.Inputs.ModelEnvironmentDefinitionPythonArgs
+ *                     {
+ *                         CondaDependencies = 
+ *                         {
+ *                             { "channels", 
+ *                             {
+ *                                 "conda-forge",
+ *                             } },
+ *                             { "dependencies", 
+ *                             {
+ *                                 "python=3.6.2",
+ *                                 
+ *                                 {
+ *                                     { "pip", 
+ *                                     {
+ *                                         "azureml-core==1.0.69",
+ *                                         "azureml-defaults==1.0.69",
+ *                                         "azureml-telemetry==1.0.69",
+ *                                         "azureml-train-restclients-hyperdrive==1.0.69",
+ *                                         "azureml-train-core==1.0.69",
+ *                                         "scikit-learn==0.20.3",
+ *                                         "scipy==1.2.1",
+ *                                         "numpy==1.16.2",
+ *                                         "joblib==0.13.2",
+ *                                     } },
+ *                                 },
+ *                             } },
+ *                             { "name", "azureml_ae1acbe6e1e6aabbad900b53c491a17c" },
+ *                         },
+ *                         InterpreterPath = "python",
+ *                         UserManagedDependencies = false,
+ *                     },
+ *                     Spark = new AzureNative.MachineLearningServices.Inputs.ModelEnvironmentDefinitionSparkArgs
+ *                     {
+ *                         Packages = {},
+ *                         PrecachePackages = true,
+ *                         Repositories = {},
+ *                     },
+ *                     Version = "3",
+ *                 },
+ *                 Models = 
+ *                 {
+ *                     new AzureNative.MachineLearningServices.Inputs.ModelArgs
+ *                     {
+ *                         MimeType = "application/x-python",
+ *                         Name = "sklearn_regression_model.pkl",
+ *                         Url = "aml://storage/azureml/sklearn_regression_model.pkl",
+ *                     },
+ *                 },
+ *             },
+ *             Location = "eastus2",
+ *             ResourceGroupName = "testrg123",
+ *             ServiceName = "service456",
+ *             WorkspaceName = "workspaces123",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewMachineLearningService(ctx, "machineLearningService", &machinelearningservices.MachineLearningServiceArgs{
+ * 			ComputeType: pulumi.String("ACI"),
+ * 			EnvironmentImageRequest: &machinelearningservices.CreateServiceRequestEnvironmentImageRequestArgs{
+ * 				Assets: machinelearningservices.ImageAssetArray{
+ * 					&machinelearningservices.ImageAssetArgs{
+ * 						MimeType: pulumi.String("application/x-python"),
+ * 						Unpack:   pulumi.Bool(false),
+ * 						Url:      pulumi.String("aml://storage/azureml/score.py"),
+ * 					},
+ * 				},
+ * 				DriverProgram: pulumi.String("score.py"),
+ * 				Environment: &machinelearningservices.EnvironmentImageRequestEnvironmentArgs{
+ * 					Docker: &machinelearningservices.ModelEnvironmentDefinitionDockerArgs{
+ * 						BaseImage:         pulumi.String("mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04"),
+ * 						BaseImageRegistry: nil,
+ * 					},
+ * 					EnvironmentVariables: pulumi.StringMap{
+ * 						"EXAMPLE_ENV_VAR": pulumi.String("EXAMPLE_VALUE"),
+ * 					},
+ * 					Name: pulumi.String("AzureML-Scikit-learn-0.20.3"),
+ * 					Python: &machinelearningservices.ModelEnvironmentDefinitionPythonArgs{
+ * 						CondaDependencies: pulumi.Any{
+ * 							Channels: []string{
+ * 								"conda-forge",
+ * 							},
+ * 							Dependencies: []interface{}{
+ * 								"python=3.6.2",
+ * 								map[string]interface{}{
+ * 									"pip": []string{
+ * 										"azureml-core==1.0.69",
+ * 										"azureml-defaults==1.0.69",
+ * 										"azureml-telemetry==1.0.69",
+ * 										"azureml-train-restclients-hyperdrive==1.0.69",
+ * 										"azureml-train-core==1.0.69",
+ * 										"scikit-learn==0.20.3",
+ * 										"scipy==1.2.1",
+ * 										"numpy==1.16.2",
+ * 										"joblib==0.13.2",
+ * 									},
+ * 								},
+ * 							},
+ * 							Name: "azureml_ae1acbe6e1e6aabbad900b53c491a17c",
+ * 						},
+ * 						InterpreterPath:         pulumi.String("python"),
+ * 						UserManagedDependencies: pulumi.Bool(false),
+ * 					},
+ * 					Spark: &machinelearningservices.ModelEnvironmentDefinitionSparkArgs{
+ * 						Packages:         machinelearningservices.SparkMavenPackageArray{},
+ * 						PrecachePackages: pulumi.Bool(true),
+ * 						Repositories:     pulumi.StringArray{},
+ * 					},
+ * 					Version: pulumi.String("3"),
+ * 				},
+ * 				Models: machinelearningservices.ModelArray{
+ * 					&machinelearningservices.ModelArgs{
+ * 						MimeType: pulumi.String("application/x-python"),
+ * 						Name:     pulumi.String("sklearn_regression_model.pkl"),
+ * 						Url:      pulumi.String("aml://storage/azureml/sklearn_regression_model.pkl"),
+ * 					},
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("eastus2"),
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			ServiceName:       pulumi.String("service456"),
+ * 			WorkspaceName:     pulumi.String("workspaces123"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const machineLearningService = new azure_native.machinelearningservices.MachineLearningService("machineLearningService", {
+ *     computeType: "ACI",
+ *     environmentImageRequest: {
+ *         assets: [{
+ *             mimeType: "application/x-python",
+ *             unpack: false,
+ *             url: "aml://storage/azureml/score.py",
+ *         }],
+ *         driverProgram: "score.py",
+ *         environment: {
+ *             docker: {
+ *                 baseImage: "mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04",
+ *                 baseImageRegistry: {},
+ *             },
+ *             environmentVariables: {
+ *                 EXAMPLE_ENV_VAR: "EXAMPLE_VALUE",
+ *             },
+ *             name: "AzureML-Scikit-learn-0.20.3",
+ *             python: {
+ *                 condaDependencies: {
+ *                     channels: ["conda-forge"],
+ *                     dependencies: [
+ *                         "python=3.6.2",
+ *                         {
+ *                             pip: [
+ *                                 "azureml-core==1.0.69",
+ *                                 "azureml-defaults==1.0.69",
+ *                                 "azureml-telemetry==1.0.69",
+ *                                 "azureml-train-restclients-hyperdrive==1.0.69",
+ *                                 "azureml-train-core==1.0.69",
+ *                                 "scikit-learn==0.20.3",
+ *                                 "scipy==1.2.1",
+ *                                 "numpy==1.16.2",
+ *                                 "joblib==0.13.2",
+ *                             ],
+ *                         },
+ *                     ],
+ *                     name: "azureml_ae1acbe6e1e6aabbad900b53c491a17c",
+ *                 },
+ *                 interpreterPath: "python",
+ *                 userManagedDependencies: false,
+ *             },
+ *             spark: {
+ *                 packages: [],
+ *                 precachePackages: true,
+ *                 repositories: [],
+ *             },
+ *             version: "3",
+ *         },
+ *         models: [{
+ *             mimeType: "application/x-python",
+ *             name: "sklearn_regression_model.pkl",
+ *             url: "aml://storage/azureml/sklearn_regression_model.pkl",
+ *         }],
+ *     },
+ *     location: "eastus2",
+ *     resourceGroupName: "testrg123",
+ *     serviceName: "service456",
+ *     workspaceName: "workspaces123",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * machine_learning_service = azure_native.machinelearningservices.MachineLearningService("machineLearningService",
+ *     compute_type="ACI",
+ *     environment_image_request=azure_native.machinelearningservices.CreateServiceRequestEnvironmentImageRequestArgs(
+ *         assets=[azure_native.machinelearningservices.ImageAssetArgs(
+ *             mime_type="application/x-python",
+ *             unpack=False,
+ *             url="aml://storage/azureml/score.py",
+ *         )],
+ *         driver_program="score.py",
+ *         environment=azure_native.machinelearningservices.EnvironmentImageRequestEnvironmentArgs(
+ *             docker=azure_native.machinelearningservices.ModelEnvironmentDefinitionDockerArgs(
+ *                 base_image="mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04",
+ *                 base_image_registry=azure_native.machinelearningservices.ModelDockerSectionBaseImageRegistryArgs(),
+ *             ),
+ *             environment_variables={
+ *                 "EXAMPLE_ENV_VAR": "EXAMPLE_VALUE",
+ *             },
+ *             name="AzureML-Scikit-learn-0.20.3",
+ *             python=azure_native.machinelearningservices.ModelEnvironmentDefinitionPythonArgs(
+ *                 conda_dependencies={
+ *                     "channels": ["conda-forge"],
+ *                     "dependencies": [
+ *                         "python=3.6.2",
+ *                         {
+ *                             "pip": [
+ *                                 "azureml-core==1.0.69",
+ *                                 "azureml-defaults==1.0.69",
+ *                                 "azureml-telemetry==1.0.69",
+ *                                 "azureml-train-restclients-hyperdrive==1.0.69",
+ *                                 "azureml-train-core==1.0.69",
+ *                                 "scikit-learn==0.20.3",
+ *                                 "scipy==1.2.1",
+ *                                 "numpy==1.16.2",
+ *                                 "joblib==0.13.2",
+ *                             ],
+ *                         },
+ *                     ],
+ *                     "name": "azureml_ae1acbe6e1e6aabbad900b53c491a17c",
+ *                 },
+ *                 interpreter_path="python",
+ *                 user_managed_dependencies=False,
+ *             ),
+ *             spark=azure_native.machinelearningservices.ModelEnvironmentDefinitionSparkArgs(
+ *                 packages=[],
+ *                 precache_packages=True,
+ *                 repositories=[],
+ *             ),
+ *             version="3",
+ *         ),
+ *         models=[azure_native.machinelearningservices.ModelArgs(
+ *             mime_type="application/x-python",
+ *             name="sklearn_regression_model.pkl",
+ *             url="aml://storage/azureml/sklearn_regression_model.pkl",
+ *         )],
+ *     ),
+ *     location="eastus2",
+ *     resource_group_name="testrg123",
+ *     service_name="service456",
+ *     workspace_name="workspaces123")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,119 +356,102 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: ACIService, AKSService, EndpointVariant.
- * 
  */
 @Deprecated /* Please use one of the variants: ACIService, AKSService, EndpointVariant. */
 @ResourceType(type="azure-native:machinelearningservices:MachineLearningService")
 public class MachineLearningService extends io.pulumi.resources.CustomResource {
     /**
      * The identity of the resource.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return The identity of the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Specifies the location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Specifies the name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Specifies the name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Service properties
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return Service properties
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * The sku of the workspace.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The sku of the workspace.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Contains resource tags defined as key/value pairs.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Specifies the type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Specifies the type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

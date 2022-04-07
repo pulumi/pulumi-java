@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A class that contains the optimized auto scale definition.
- * 
  */
 public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * A boolean value that indicate if the optimized autoscale feature is enabled or not.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
@@ -31,7 +29,6 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Maximum allowed instances count.
-     * 
      */
     @Import(name="maximum", required=true)
       private final Output<Integer> maximum;
@@ -42,7 +39,6 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Minimum allowed instances count.
-     * 
      */
     @Import(name="minimum", required=true)
       private final Output<Integer> minimum;
@@ -53,7 +49,6 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The version of the template defined, for instance 1.
-     * 
      */
     @Import(name="version", required=true)
       private final Output<Integer> version;

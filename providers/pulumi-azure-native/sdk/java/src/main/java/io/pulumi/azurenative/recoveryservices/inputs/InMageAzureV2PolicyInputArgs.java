@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * VMWare Azure specific policy Input.
- * 
  */
 public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The app consistent snapshot frequency (in minutes).
-     * 
      */
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
@@ -34,7 +32,6 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The crash consistent snapshot frequency (in minutes).
-     * 
      */
     @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> crashConsistentFrequencyInMinutes;
@@ -46,7 +43,6 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
     /**
      * The class type.
      * Expected value is 'InMageAzureV2'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -57,7 +53,6 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
 
     /**
      * A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.
-     * 
      */
     @Import(name="multiVmSyncStatus", required=true)
       private final Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
@@ -68,7 +63,6 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The duration in minutes until which the recovery points need to be stored.
-     * 
      */
     @Import(name="recoveryPointHistory")
       private final @Nullable Output<Integer> recoveryPointHistory;
@@ -79,7 +73,6 @@ public final class InMageAzureV2PolicyInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery point threshold in minutes.
-     * 
      */
     @Import(name="recoveryPointThresholdInMinutes")
       private final @Nullable Output<Integer> recoveryPointThresholdInMinutes;

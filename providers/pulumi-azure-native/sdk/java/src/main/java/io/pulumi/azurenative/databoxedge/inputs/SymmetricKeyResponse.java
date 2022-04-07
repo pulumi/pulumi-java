@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Symmetric key for authentication.
- * 
  */
 public final class SymmetricKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SymmetricKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Connection string based on the symmetric key.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable AsymmetricEncryptedSecretResponse connectionString;

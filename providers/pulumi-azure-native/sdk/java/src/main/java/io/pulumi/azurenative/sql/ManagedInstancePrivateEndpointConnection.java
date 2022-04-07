@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * A private endpoint connection
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Approve or reject a private endpoint connection with a given name.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var managedInstancePrivateEndpointConnection = new AzureNative.Sql.ManagedInstancePrivateEndpointConnection("managedInstancePrivateEndpointConnection", new AzureNative.Sql.ManagedInstancePrivateEndpointConnectionArgs
+ *         {
+ *             ManagedInstanceName = "test-cl",
+ *             PrivateEndpointConnectionName = "private-endpoint-connection-name",
+ *             PrivateLinkServiceConnectionState = new AzureNative.Sql.Inputs.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs
+ *             {
+ *                 Description = "Approved by johndoe@contoso.com",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "Default",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewManagedInstancePrivateEndpointConnection(ctx, "managedInstancePrivateEndpointConnection", &sql.ManagedInstancePrivateEndpointConnectionArgs{
+ * 			ManagedInstanceName:           pulumi.String("test-cl"),
+ * 			PrivateEndpointConnectionName: pulumi.String("private-endpoint-connection-name"),
+ * 			PrivateLinkServiceConnectionState: &sql.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs{
+ * 				Description: pulumi.String("Approved by johndoe@contoso.com"),
+ * 				Status:      pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("Default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const managedInstancePrivateEndpointConnection = new azure_native.sql.ManagedInstancePrivateEndpointConnection("managedInstancePrivateEndpointConnection", {
+ *     managedInstanceName: "test-cl",
+ *     privateEndpointConnectionName: "private-endpoint-connection-name",
+ *     privateLinkServiceConnectionState: {
+ *         description: "Approved by johndoe@contoso.com",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "Default",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * managed_instance_private_endpoint_connection = azure_native.sql.ManagedInstancePrivateEndpointConnection("managedInstancePrivateEndpointConnection",
+ *     managed_instance_name="test-cl",
+ *     private_endpoint_connection_name="private-endpoint-connection-name",
+ *     private_link_service_connection_state=azure_native.sql.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs(
+ *         description="Approved by johndoe@contoso.com",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="Default")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +123,60 @@ import javax.annotation.Nullable;
 public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Private endpoint which the connection belongs to.
-     * 
      */
     @Export(name="privateEndpoint", type=ManagedInstancePrivateEndpointPropertyResponse.class, parameters={})
     private Output</* @Nullable */ ManagedInstancePrivateEndpointPropertyResponse> privateEndpoint;
 
     /**
      * @return Private endpoint which the connection belongs to.
-     * 
      */
     public Output</* @Nullable */ ManagedInstancePrivateEndpointPropertyResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * Connection State of the Private Endpoint Connection.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse.class, parameters={})
     private Output</* @Nullable */ ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState;
 
     /**
      * @return Connection State of the Private Endpoint Connection.
-     * 
      */
     public Output</* @Nullable */ ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * State of the Private Endpoint Connection.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return State of the Private Endpoint Connection.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

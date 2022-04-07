@@ -20,7 +20,6 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
 
     /**
      * Name of the backup.
-     * 
      */
     @Import(name="backupName")
       private final @Nullable Output<String> backupName;
@@ -31,7 +30,6 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
 
     /**
      * Schedule for the backup if it is executed periodically.
-     * 
      */
     @Import(name="backupSchedule")
       private final @Nullable Output<BackupScheduleArgs> backupSchedule;
@@ -42,7 +40,6 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
 
     /**
      * Databases included in the backup.
-     * 
      */
     @Import(name="databases")
       private final @Nullable Output<List<DatabaseBackupSettingArgs>> databases;
@@ -53,7 +50,6 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
 
     /**
      * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -64,7 +60,6 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
 
     /**
      * Kind of resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<String> kind;
@@ -75,7 +70,6 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
 
     /**
      * Name of the app.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -86,7 +80,6 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -97,7 +90,6 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
 
     /**
      * Name of the deployment slot. If a slot is not specified, the API will update the backup configuration for the production slot.
-     * 
      */
     @Import(name="slot", required=true)
       private final Output<String> slot;
@@ -108,7 +100,6 @@ public final class WebAppBackupConfigurationSlotArgs extends io.pulumi.resources
 
     /**
      * SAS URL to the container.
-     * 
      */
     @Import(name="storageAccountUrl", required=true)
       private final Output<String> storageAccountUrl;

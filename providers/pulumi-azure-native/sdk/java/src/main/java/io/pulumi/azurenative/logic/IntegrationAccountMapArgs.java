@@ -21,7 +21,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
 
     /**
      * The content.
-     * 
      */
     @Import(name="content")
       private final @Nullable Output<String> content;
@@ -32,7 +31,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
 
     /**
      * The content type.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -43,7 +41,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
 
     /**
      * The integration account name.
-     * 
      */
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
@@ -54,7 +51,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -65,7 +61,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
 
     /**
      * The integration account map name.
-     * 
      */
     @Import(name="mapName")
       private final @Nullable Output<String> mapName;
@@ -76,7 +71,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
 
     /**
      * The map type.
-     * 
      */
     @Import(name="mapType", required=true)
       private final Output<Either<String,MapType>> mapType;
@@ -87,7 +81,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
 
     /**
      * The metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
@@ -98,7 +91,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
 
     /**
      * The parameters schema of integration account map.
-     * 
      */
     @Import(name="parametersSchema")
       private final @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
@@ -109,7 +101,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -120,7 +111,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the AzureFirewallRCAction.
- * 
  */
 public final class AzureFirewallRCActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AzureFirewallRCActionArgs extends io.pulumi.resources.Resourc
 
     /**
      * The type of action.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,AzureFirewallRCActionType>> type;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Gets or sets private link service connection state.
- * 
  */
 public final class VaultPrivateLinkServiceConnectionStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends io.pul
 
     /**
      * Gets or sets actions required.
-     * 
      */
     @Import(name="actionsRequired", required=true)
       private final String actionsRequired;
@@ -29,7 +27,6 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends io.pul
 
     /**
      * Gets or sets description.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -40,7 +37,6 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends io.pul
 
     /**
      * Gets or sets the status.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network Manager Deployment Status.
- * 
  */
 public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
 
     /**
      * Commit Time.
-     * 
      */
     @Import(name="commitTime")
       private final @Nullable String commitTime;
@@ -32,7 +30,6 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
 
     /**
      * List of configuration ids.
-     * 
      */
     @Import(name="configurationIds")
       private final @Nullable List<String> configurationIds;
@@ -43,7 +40,6 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
 
     /**
      * Deployment Status.
-     * 
      */
     @Import(name="deploymentStatus")
       private final @Nullable String deploymentStatus;
@@ -54,7 +50,6 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
 
     /**
      * Configuration Deployment Type.
-     * 
      */
     @Import(name="deploymentType")
       private final @Nullable String deploymentType;
@@ -65,7 +60,6 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
 
     /**
      * Error Message.
-     * 
      */
     @Import(name="errorMessage")
       private final @Nullable String errorMessage;
@@ -76,7 +70,6 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
 
     /**
      * Region Name.
-     * 
      */
     @Import(name="region")
       private final @Nullable String region;

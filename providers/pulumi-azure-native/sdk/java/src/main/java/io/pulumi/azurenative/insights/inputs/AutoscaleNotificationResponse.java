@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Autoscale notification.
- * 
  */
 public final class AutoscaleNotificationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class AutoscaleNotificationResponse extends io.pulumi.resources.Inv
 
     /**
      * the email notification.
-     * 
      */
     @Import(name="email")
       private final @Nullable EmailNotificationResponse email;
@@ -34,7 +32,6 @@ public final class AutoscaleNotificationResponse extends io.pulumi.resources.Inv
 
     /**
      * the operation associated with the notification and its value must be "scale"
-     * 
      */
     @Import(name="operation", required=true)
       private final String operation;
@@ -45,7 +42,6 @@ public final class AutoscaleNotificationResponse extends io.pulumi.resources.Inv
 
     /**
      * the collection of webhook notifications.
-     * 
      */
     @Import(name="webhooks")
       private final @Nullable List<WebhookNotificationResponse> webhooks;

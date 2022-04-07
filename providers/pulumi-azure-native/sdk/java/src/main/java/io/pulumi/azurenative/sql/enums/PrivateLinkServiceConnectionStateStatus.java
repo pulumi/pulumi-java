@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The private link service connection status.
-     * 
      */
     @EnumType
     public enum PrivateLinkServiceConnectionStateStatus {

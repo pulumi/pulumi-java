@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration of the automation rule condition
- * 
  */
 public final class AutomationRulePropertyValuesConditionResponseConditionProperties extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
 
     /**
      * The operator to use for evaluation the condition
-     * 
      */
     @Import(name="operator")
       private final @Nullable String operator;
@@ -32,7 +30,6 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
 
     /**
      * The property to evaluate
-     * 
      */
     @Import(name="propertyName")
       private final @Nullable String propertyName;
@@ -43,7 +40,6 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
 
     /**
      * The values to use for evaluating the condition
-     * 
      */
     @Import(name="propertyValues")
       private final @Nullable List<String> propertyValues;

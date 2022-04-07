@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * DatabricksSparkPython activity.
- * 
  */
 public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -38,7 +36,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -49,7 +46,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
 
     /**
      * A list of libraries to be installed on the cluster that will execute the job.
-     * 
      */
     @Import(name="libraries")
       private final @Nullable Output<List<Map<String,Object>>> libraries;
@@ -60,7 +56,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
@@ -71,7 +66,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -82,7 +76,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
 
     /**
      * Command line parameters that will be passed to the Python file.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<Object>> parameters;
@@ -93,7 +86,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
@@ -104,7 +96,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
 
     /**
      * The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="pythonFile", required=true)
       private final Output<Object> pythonFile;
@@ -116,7 +107,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
     /**
      * Type of activity.
      * Expected value is 'DatabricksSparkPython'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -127,7 +117,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

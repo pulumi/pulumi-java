@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Power query source.
- * 
  */
 public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Dataset reference.
-     * 
      */
     @Import(name="dataset")
       private final @Nullable DatasetReferenceResponse dataset;
@@ -34,7 +32,6 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Transformation description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -45,7 +42,6 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Flowlet Reference
-     * 
      */
     @Import(name="flowlet")
       private final @Nullable DataFlowReferenceResponse flowlet;
@@ -56,7 +52,6 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedService")
       private final @Nullable LinkedServiceReferenceResponse linkedService;
@@ -67,7 +62,6 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Transformation name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -78,7 +72,6 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Schema linked service reference.
-     * 
      */
     @Import(name="schemaLinkedService")
       private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;
@@ -89,7 +82,6 @@ public final class PowerQuerySourceResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * source script.
-     * 
      */
     @Import(name="script")
       private final @Nullable String script;

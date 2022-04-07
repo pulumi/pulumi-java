@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the source of an event channel.
- * 
  */
 public final class EventChannelSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class EventChannelSourceArgs extends io.pulumi.resources.ResourceAr
     /**
      * The identifier of the resource that's the source of the events.
      * This represents a unique resource in the partner's resource model.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<String> source;

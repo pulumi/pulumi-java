@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The URIs that are used to perform a retrieval of a public blob, file, web or dfs object via a internet routing endpoint.
- * 
  */
 public final class StorageAccountInternetEndpointsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class StorageAccountInternetEndpointsResponse extends io.pulumi.res
 
     /**
      * Gets the blob endpoint.
-     * 
      */
     @Import(name="blob", required=true)
       private final String blob;
@@ -29,7 +27,6 @@ public final class StorageAccountInternetEndpointsResponse extends io.pulumi.res
 
     /**
      * Gets the dfs endpoint.
-     * 
      */
     @Import(name="dfs", required=true)
       private final String dfs;
@@ -40,7 +37,6 @@ public final class StorageAccountInternetEndpointsResponse extends io.pulumi.res
 
     /**
      * Gets the file endpoint.
-     * 
      */
     @Import(name="file", required=true)
       private final String file;
@@ -51,7 +47,6 @@ public final class StorageAccountInternetEndpointsResponse extends io.pulumi.res
 
     /**
      * Gets the web endpoint.
-     * 
      */
     @Import(name="web", required=true)
       private final String web;

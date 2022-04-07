@@ -11,9 +11,8 @@ import javax.annotation.Nullable;
 
 
 /**
- * The IIS handler mappings used to define which handler processes HTTP requests with certain extension.
+ * The IIS handler mappings used to define which handler processes HTTP requests with certain extension. 
  * For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
- * 
  */
 public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Command-line arguments to be passed to the script processor.
-     * 
      */
     @Import(name="arguments")
       private final @Nullable Output<String> arguments;
@@ -32,7 +30,6 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Requests with this extension will be handled using the specified FastCGI application.
-     * 
      */
     @Import(name="extension")
       private final @Nullable Output<String> extension;
@@ -43,7 +40,6 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The absolute path to the FastCGI application.
-     * 
      */
     @Import(name="scriptProcessor")
       private final @Nullable Output<String> scriptProcessor;

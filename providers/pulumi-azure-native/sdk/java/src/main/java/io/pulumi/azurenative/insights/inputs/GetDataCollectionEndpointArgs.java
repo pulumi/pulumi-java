@@ -14,7 +14,6 @@ public final class GetDataCollectionEndpointArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the data collection endpoint. The name is case insensitive.
-     * 
      */
     @Import(name="dataCollectionEndpointName", required=true)
       private final String dataCollectionEndpointName;
@@ -25,7 +24,6 @@ public final class GetDataCollectionEndpointArgs extends io.pulumi.resources.Inv
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

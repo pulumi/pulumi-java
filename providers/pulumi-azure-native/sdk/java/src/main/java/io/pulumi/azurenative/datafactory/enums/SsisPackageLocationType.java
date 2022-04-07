@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of SSIS package location.
-     * 
      */
     @EnumType
     public enum SsisPackageLocationType {

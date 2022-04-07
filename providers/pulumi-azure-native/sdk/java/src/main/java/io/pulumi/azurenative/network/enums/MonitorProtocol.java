@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.
-     * 
      */
     @EnumType
     public enum MonitorProtocol {

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Ssis parameter.
- * 
  */
 public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Parameter type.
-     * 
      */
     @Import(name="dataType")
       private final @Nullable String dataType;
@@ -33,7 +31,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Default value of parameter.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable String defaultValue;
@@ -44,7 +41,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Parameter description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -55,7 +51,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Design default value of parameter.
-     * 
      */
     @Import(name="designDefaultValue")
       private final @Nullable String designDefaultValue;
@@ -66,7 +61,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Parameter id.
-     * 
      */
     @Import(name="id")
       private final @Nullable Double id;
@@ -77,7 +71,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Parameter name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -88,7 +81,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Whether parameter is required.
-     * 
      */
     @Import(name="required")
       private final @Nullable Boolean required;
@@ -99,7 +91,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Whether parameter is sensitive.
-     * 
      */
     @Import(name="sensitive")
       private final @Nullable Boolean sensitive;
@@ -110,7 +101,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Default sensitive value of parameter.
-     * 
      */
     @Import(name="sensitiveDefaultValue")
       private final @Nullable String sensitiveDefaultValue;
@@ -121,7 +111,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Parameter value set.
-     * 
      */
     @Import(name="valueSet")
       private final @Nullable Boolean valueSet;
@@ -132,7 +121,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Parameter value type.
-     * 
      */
     @Import(name="valueType")
       private final @Nullable String valueType;
@@ -143,7 +131,6 @@ public final class SsisParameterResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Parameter reference variable.
-     * 
      */
     @Import(name="variable")
       private final @Nullable String variable;

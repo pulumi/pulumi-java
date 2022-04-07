@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties of a encoded task step.
- * 
  */
 public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
-     * 
      */
     @Import(name="contextAccessToken")
       private final @Nullable Output<String> contextAccessToken;
@@ -33,7 +31,6 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The URL(absolute or relative) of the source context for the task step.
-     * 
      */
     @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
@@ -44,7 +41,6 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Base64 encoded value of the template/definition file content.
-     * 
      */
     @Import(name="encodedTaskContent", required=true)
       private final Output<String> encodedTaskContent;
@@ -55,7 +51,6 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Base64 encoded value of the parameters/values file content.
-     * 
      */
     @Import(name="encodedValuesContent")
       private final @Nullable Output<String> encodedValuesContent;
@@ -67,7 +62,6 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     /**
      * The type of the step.
      * Expected value is 'EncodedTask'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -78,7 +72,6 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The collection of overridable values that can be passed when running a task.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;

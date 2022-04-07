@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * KPack ClusterStack properties payload
- * 
  */
 public final class StackPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class StackPropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Id of the ClusterStack.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -31,7 +29,6 @@ public final class StackPropertiesArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Version of the ClusterStack
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

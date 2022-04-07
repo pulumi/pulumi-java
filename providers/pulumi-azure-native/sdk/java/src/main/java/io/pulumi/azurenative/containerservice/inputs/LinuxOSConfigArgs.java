@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * OS configurations of Linux agent nodes.
- * 
  */
 public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
-     * 
      */
     @Import(name="swapFileSizeMB")
       private final @Nullable Output<Integer> swapFileSizeMB;
@@ -33,7 +31,6 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sysctl settings for Linux agent nodes.
-     * 
      */
     @Import(name="sysctls")
       private final @Nullable Output<SysctlConfigArgs> sysctls;
@@ -44,7 +41,6 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Transparent Huge Page defrag configuration.
-     * 
      */
     @Import(name="transparentHugePageDefrag")
       private final @Nullable Output<String> transparentHugePageDefrag;
@@ -55,7 +51,6 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Transparent Huge Page enabled configuration.
-     * 
      */
     @Import(name="transparentHugePageEnabled")
       private final @Nullable Output<String> transparentHugePageEnabled;

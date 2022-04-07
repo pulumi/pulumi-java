@@ -25,7 +25,79 @@ import javax.annotation.Nullable;
  * Machine Learning service object wrapped into ARM resource envelope.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Or Update service
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var endpointVariant = new AzureNative.MachineLearningServices.EndpointVariant("endpointVariant", new AzureNative.MachineLearningServices.EndpointVariantArgs
+ *         {
+ *             ResourceGroupName = "testrg123",
+ *             ServiceName = "service456",
+ *             WorkspaceName = "workspaces123",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewEndpointVariant(ctx, "endpointVariant", &machinelearningservices.EndpointVariantArgs{
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			ServiceName:       pulumi.String("service456"),
+ * 			WorkspaceName:     pulumi.String("workspaces123"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const endpointVariant = new azure_native.machinelearningservices.EndpointVariant("endpointVariant", {
+ *     resourceGroupName: "testrg123",
+ *     serviceName: "service456",
+ *     workspaceName: "workspaces123",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * endpoint_variant = azure_native.machinelearningservices.EndpointVariant("endpointVariant",
+ *     resource_group_name="testrg123",
+ *     service_name="service456",
+ *     workspace_name="workspaces123")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,112 +112,96 @@ import javax.annotation.Nullable;
 public class EndpointVariant extends io.pulumi.resources.CustomResource {
     /**
      * The identity of the resource.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return The identity of the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Specifies the location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Specifies the name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Specifies the name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Service properties
-     * 
      */
     @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
      * @return Service properties
-     * 
      */
     public Output<Object> getProperties() {
         return this.properties;
     }
     /**
      * The sku of the workspace.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The sku of the workspace.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Read only system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Read only system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Contains resource tags defined as key/value pairs.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Specifies the type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Specifies the type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

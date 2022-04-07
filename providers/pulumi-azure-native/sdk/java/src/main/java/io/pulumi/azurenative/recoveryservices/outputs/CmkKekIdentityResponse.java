@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class CmkKekIdentityResponse {
     /**
      * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
-     * 
      */
     private final @Nullable Boolean useSystemAssignedIdentity;
     /**
      * The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
-     * 
      */
     private final @Nullable String userAssignedIdentity;
 
@@ -33,14 +31,12 @@ public final class CmkKekIdentityResponse {
 
     /**
      * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
-     * 
     */
     public Optional<Boolean> getUseSystemAssignedIdentity() {
         return Optional.ofNullable(this.useSystemAssignedIdentity);
     }
     /**
      * The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
-     * 
     */
     public Optional<String> getUserAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);

@@ -14,7 +14,6 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
 
     /**
      * Logical key name to get key-values for.
-     * 
      */
     @Import(name="keyName", required=true)
       private final String keyName;
@@ -25,7 +24,6 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
 
     /**
      * Name of the provisioning service.
-     * 
      */
     @Import(name="provisioningServiceName", required=true)
       private final String provisioningServiceName;
@@ -36,7 +34,6 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
 
     /**
      * The name of the resource group that contains the provisioning service.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

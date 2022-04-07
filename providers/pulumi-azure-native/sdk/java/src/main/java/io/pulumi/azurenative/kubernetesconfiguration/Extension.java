@@ -24,7 +24,151 @@ import javax.annotation.Nullable;
  * The Extension Instance object.
  * API Version: 2020-07-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Extension
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var extension = new AzureNative.KubernetesConfiguration.Extension("extension", new AzureNative.KubernetesConfiguration.ExtensionArgs
+ *         {
+ *             AutoUpgradeMinorVersion = true,
+ *             ClusterName = "clusterName1",
+ *             ClusterResourceName = "connectedClusters",
+ *             ClusterRp = "Microsoft.Kubernetes",
+ *             ConfigurationProtectedSettings = 
+ *             {
+ *                 { "omsagent.secret.key", "secretKeyValue01" },
+ *             },
+ *             ConfigurationSettings = 
+ *             {
+ *                 { "omsagent.env.clusterName", "clusterName1" },
+ *                 { "omsagent.secret.wsid", "a38cef99-5a89-52ed-b6db-22095c23664b" },
+ *             },
+ *             ExtensionInstanceName = "ClusterMonitor",
+ *             ExtensionType = "azuremonitor-containers",
+ *             ReleaseTrain = "Preview",
+ *             ResourceGroupName = "rg1",
+ *             Scope = new AzureNative.KubernetesConfiguration.Inputs.ScopeArgs
+ *             {
+ *                 Cluster = new AzureNative.KubernetesConfiguration.Inputs.ScopeClusterArgs
+ *                 {
+ *                     ReleaseNamespace = "kube-system",
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	kubernetesconfiguration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kubernetesconfiguration"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kubernetesconfiguration.NewExtension(ctx, "extension", &kubernetesconfiguration.ExtensionArgs{
+ * 			AutoUpgradeMinorVersion: pulumi.Bool(true),
+ * 			ClusterName:             pulumi.String("clusterName1"),
+ * 			ClusterResourceName:     pulumi.String("connectedClusters"),
+ * 			ClusterRp:               pulumi.String("Microsoft.Kubernetes"),
+ * 			ConfigurationProtectedSettings: pulumi.StringMap{
+ * 				"omsagent.secret.key": pulumi.String("secretKeyValue01"),
+ * 			},
+ * 			ConfigurationSettings: pulumi.StringMap{
+ * 				"omsagent.env.clusterName": pulumi.String("clusterName1"),
+ * 				"omsagent.secret.wsid":     pulumi.String("a38cef99-5a89-52ed-b6db-22095c23664b"),
+ * 			},
+ * 			ExtensionInstanceName: pulumi.String("ClusterMonitor"),
+ * 			ExtensionType:         pulumi.String("azuremonitor-containers"),
+ * 			ReleaseTrain:          pulumi.String("Preview"),
+ * 			ResourceGroupName:     pulumi.String("rg1"),
+ * 			Scope: &kubernetesconfiguration.ScopeArgs{
+ * 				Cluster: &kubernetesconfiguration.ScopeClusterArgs{
+ * 					ReleaseNamespace: pulumi.String("kube-system"),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const extension = new azure_native.kubernetesconfiguration.Extension("extension", {
+ *     autoUpgradeMinorVersion: true,
+ *     clusterName: "clusterName1",
+ *     clusterResourceName: "connectedClusters",
+ *     clusterRp: "Microsoft.Kubernetes",
+ *     configurationProtectedSettings: {
+ *         "omsagent.secret.key": "secretKeyValue01",
+ *     },
+ *     configurationSettings: {
+ *         "omsagent.env.clusterName": "clusterName1",
+ *         "omsagent.secret.wsid": "a38cef99-5a89-52ed-b6db-22095c23664b",
+ *     },
+ *     extensionInstanceName: "ClusterMonitor",
+ *     extensionType: "azuremonitor-containers",
+ *     releaseTrain: "Preview",
+ *     resourceGroupName: "rg1",
+ *     scope: {
+ *         cluster: {
+ *             releaseNamespace: "kube-system",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * extension = azure_native.kubernetesconfiguration.Extension("extension",
+ *     auto_upgrade_minor_version=True,
+ *     cluster_name="clusterName1",
+ *     cluster_resource_name="connectedClusters",
+ *     cluster_rp="Microsoft.Kubernetes",
+ *     configuration_protected_settings={
+ *         "omsagent.secret.key": "secretKeyValue01",
+ *     },
+ *     configuration_settings={
+ *         "omsagent.env.clusterName": "clusterName1",
+ *         "omsagent.secret.wsid": "a38cef99-5a89-52ed-b6db-22095c23664b",
+ *     },
+ *     extension_instance_name="ClusterMonitor",
+ *     extension_type="azuremonitor-containers",
+ *     release_train="Preview",
+ *     resource_group_name="rg1",
+ *     scope=azure_native.kubernetesconfiguration.ScopeArgs(
+ *         cluster=azure_native.kubernetesconfiguration.ScopeClusterArgs(
+ *             release_namespace="kube-system",
+ *         ),
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,238 +183,204 @@ import javax.annotation.Nullable;
 public class Extension extends io.pulumi.resources.CustomResource {
     /**
      * Flag to note if this instance participates in auto upgrade of minor version, or not.
-     * 
      */
     @Export(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpgradeMinorVersion;
 
     /**
      * @return Flag to note if this instance participates in auto upgrade of minor version, or not.
-     * 
      */
     public Output</* @Nullable */ Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion;
     }
     /**
      * Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
-     * 
      */
     @Export(name="configurationProtectedSettings", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> configurationProtectedSettings;
 
     /**
      * @return Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getConfigurationProtectedSettings() {
         return this.configurationProtectedSettings;
     }
     /**
      * Configuration settings, as name-value pairs for configuring this instance of the extension.
-     * 
      */
     @Export(name="configurationSettings", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> configurationSettings;
 
     /**
      * @return Configuration settings, as name-value pairs for configuring this instance of the extension.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getConfigurationSettings() {
         return this.configurationSettings;
     }
     /**
      * DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Error information from the Agent - e.g. errors during installation.
-     * 
      */
     @Export(name="errorInfo", type=ErrorDefinitionResponse.class, parameters={})
     private Output<ErrorDefinitionResponse> errorInfo;
 
     /**
      * @return Error information from the Agent - e.g. errors during installation.
-     * 
      */
     public Output<ErrorDefinitionResponse> getErrorInfo() {
         return this.errorInfo;
     }
     /**
      * Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
-     * 
      */
     @Export(name="extensionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> extensionType;
 
     /**
      * @return Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
-     * 
      */
     public Output</* @Nullable */ String> getExtensionType() {
         return this.extensionType;
     }
     /**
      * The identity of the configuration.
-     * 
      */
     @Export(name="identity", type=ConfigurationIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ConfigurationIdentityResponse> identity;
 
     /**
      * @return The identity of the configuration.
-     * 
      */
     public Output</* @Nullable */ ConfigurationIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * Status of installation of this instance of the extension.
-     * 
      */
     @Export(name="installState", type=String.class, parameters={})
     private Output<String> installState;
 
     /**
      * @return Status of installation of this instance of the extension.
-     * 
      */
     public Output<String> getInstallState() {
         return this.installState;
     }
     /**
      * DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
      * @return DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
-     * 
      */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * DateLiteral (per ISO8601) noting the time of last status from the agent.
-     * 
      */
     @Export(name="lastStatusTime", type=String.class, parameters={})
     private Output<String> lastStatusTime;
 
     /**
      * @return DateLiteral (per ISO8601) noting the time of last status from the agent.
-     * 
      */
     public Output<String> getLastStatusTime() {
         return this.lastStatusTime;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
-     * 
      */
     @Export(name="releaseTrain", type=String.class, parameters={})
     private Output</* @Nullable */ String> releaseTrain;
 
     /**
      * @return ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
-     * 
      */
     public Output</* @Nullable */ String> getReleaseTrain() {
         return this.releaseTrain;
     }
     /**
      * Scope at which the extension instance is installed.
-     * 
      */
     @Export(name="scope", type=ScopeResponse.class, parameters={})
     private Output</* @Nullable */ ScopeResponse> scope;
 
     /**
      * @return Scope at which the extension instance is installed.
-     * 
      */
     public Output</* @Nullable */ ScopeResponse> getScope() {
         return this.scope;
     }
     /**
      * Status from this instance of the extension.
-     * 
      */
     @Export(name="statuses", type=List.class, parameters={ExtensionStatusResponse.class})
     private Output</* @Nullable */ List<ExtensionStatusResponse>> statuses;
 
     /**
      * @return Status from this instance of the extension.
-     * 
      */
     public Output</* @Nullable */ List<ExtensionStatusResponse>> getStatuses() {
         return this.statuses;
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output</* @Nullable */ SystemDataResponse> systemData;
 
     /**
      * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
-     * 
      */
     public Output</* @Nullable */ SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
      * @return Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
-     * 
      */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;

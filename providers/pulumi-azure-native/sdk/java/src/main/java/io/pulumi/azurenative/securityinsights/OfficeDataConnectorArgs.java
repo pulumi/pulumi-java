@@ -17,7 +17,6 @@ public final class OfficeDataConnectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Connector ID
-     * 
      */
     @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
@@ -28,7 +27,6 @@ public final class OfficeDataConnectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The available data types for the connector.
-     * 
      */
     @Import(name="dataTypes")
       private final @Nullable Output<OfficeDataConnectorDataTypesArgs> dataTypes;
@@ -40,7 +38,6 @@ public final class OfficeDataConnectorArgs extends io.pulumi.resources.ResourceA
     /**
      * The kind of the data connector
      * Expected value is 'Office365'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -51,7 +48,6 @@ public final class OfficeDataConnectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class OfficeDataConnectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The tenant id to connect to, and get the data from.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
@@ -73,7 +68,6 @@ public final class OfficeDataConnectorArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

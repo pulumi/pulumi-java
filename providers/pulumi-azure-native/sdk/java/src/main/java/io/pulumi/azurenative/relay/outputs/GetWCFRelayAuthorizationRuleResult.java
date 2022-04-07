@@ -12,22 +12,18 @@ import java.util.Objects;
 public final class GetWCFRelayAuthorizationRuleResult {
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The rights associated with the rule.
-     * 
      */
     private final List<String> rights;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -45,28 +41,24 @@ public final class GetWCFRelayAuthorizationRuleResult {
 
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
-     * 
     */
     public List<String> getRights() {
         return this.rights;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

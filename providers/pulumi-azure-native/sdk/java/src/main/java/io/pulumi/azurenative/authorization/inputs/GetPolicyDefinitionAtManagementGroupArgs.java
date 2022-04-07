@@ -14,7 +14,6 @@ public final class GetPolicyDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * The ID of the management group.
-     * 
      */
     @Import(name="managementGroupId", required=true)
       private final String managementGroupId;
@@ -25,7 +24,6 @@ public final class GetPolicyDefinitionAtManagementGroupArgs extends io.pulumi.re
 
     /**
      * The name of the policy definition to get.
-     * 
      */
     @Import(name="policyDefinitionName", required=true)
       private final String policyDefinitionName;

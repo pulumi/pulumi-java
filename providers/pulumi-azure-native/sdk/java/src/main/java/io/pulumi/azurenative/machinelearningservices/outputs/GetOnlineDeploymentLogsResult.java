@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class GetOnlineDeploymentLogsResult {
     /**
      * The retrieved online deployment logs.
-     * 
      */
     private final @Nullable String content;
 
@@ -24,7 +23,6 @@ public final class GetOnlineDeploymentLogsResult {
 
     /**
      * The retrieved online deployment logs.
-     * 
     */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);

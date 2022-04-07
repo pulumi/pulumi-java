@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ApiManagementConfigResponse {
     /**
      * APIM-Api Identifier.
-     * 
      */
     private final @Nullable String id;
 
@@ -24,7 +23,6 @@ public final class ApiManagementConfigResponse {
 
     /**
      * APIM-Api Identifier.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);

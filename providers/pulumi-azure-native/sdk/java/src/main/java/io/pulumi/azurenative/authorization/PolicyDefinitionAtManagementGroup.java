@@ -20,7 +20,217 @@ import javax.annotation.Nullable;
  * The policy definition.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a policy definition at management group level
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var policyDefinitionAtManagementGroup = new AzureNative.Authorization.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", new AzureNative.Authorization.PolicyDefinitionAtManagementGroupArgs
+ *         {
+ *             Description = "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
+ *             DisplayName = "Enforce resource naming convention",
+ *             ManagementGroupId = "MyManagementGroup",
+ *             Metadata = 
+ *             {
+ *                 { "category", "Naming" },
+ *             },
+ *             Mode = "All",
+ *             Parameters = 
+ *             {
+ *                 { "prefix", new AzureNative.Authorization.Inputs.ParameterDefinitionsValueArgs
+ *                 {
+ *                     Metadata = new AzureNative.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
+ *                     {
+ *                         Description = "Resource name prefix",
+ *                         DisplayName = "Prefix",
+ *                     },
+ *                     Type = "String",
+ *                 } },
+ *                 { "suffix", new AzureNative.Authorization.Inputs.ParameterDefinitionsValueArgs
+ *                 {
+ *                     Metadata = new AzureNative.Authorization.Inputs.ParameterDefinitionsValueMetadataArgs
+ *                     {
+ *                         Description = "Resource name suffix",
+ *                         DisplayName = "Suffix",
+ *                     },
+ *                     Type = "String",
+ *                 } },
+ *             },
+ *             PolicyDefinitionName = "ResourceNaming",
+ *             PolicyRule = 
+ *             {
+ *                 { "if", 
+ *                 {
+ *                     { "not", 
+ *                     {
+ *                         { "field", "name" },
+ *                         { "like", "[concat(parameters('prefix'), '*', parameters('suffix'))]" },
+ *                     } },
+ *                 } },
+ *                 { "then", 
+ *                 {
+ *                     { "effect", "deny" },
+ *                 } },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewPolicyDefinitionAtManagementGroup(ctx, "policyDefinitionAtManagementGroup", &authorization.PolicyDefinitionAtManagementGroupArgs{
+ * 			Description:       pulumi.String("Force resource names to begin with given 'prefix' and/or end with given 'suffix'"),
+ * 			DisplayName:       pulumi.String("Enforce resource naming convention"),
+ * 			ManagementGroupId: pulumi.String("MyManagementGroup"),
+ * 			Metadata: pulumi.Any{
+ * 				Category: "Naming",
+ * 			},
+ * 			Mode: pulumi.String("All"),
+ * 			Parameters: authorization.ParameterDefinitionsValueMap{
+ * 				"prefix": &authorization.ParameterDefinitionsValueArgs{
+ * 					Metadata: &authorization.ParameterDefinitionsValueMetadataArgs{
+ * 						Description: pulumi.String("Resource name prefix"),
+ * 						DisplayName: pulumi.String("Prefix"),
+ * 					},
+ * 					Type: pulumi.String("String"),
+ * 				},
+ * 				"suffix": &authorization.ParameterDefinitionsValueArgs{
+ * 					Metadata: &authorization.ParameterDefinitionsValueMetadataArgs{
+ * 						Description: pulumi.String("Resource name suffix"),
+ * 						DisplayName: pulumi.String("Suffix"),
+ * 					},
+ * 					Type: pulumi.String("String"),
+ * 				},
+ * 			},
+ * 			PolicyDefinitionName: pulumi.String("ResourceNaming"),
+ * 			PolicyRule: pulumi.Any{
+ * 				If: map[string]interface{}{
+ * 					"not": map[string]interface{}{
+ * 						"field": "name",
+ * 						"like":  "[concat(parameters('prefix'), '*', parameters('suffix'))]",
+ * 					},
+ * 				},
+ * 				Then: map[string]interface{}{
+ * 					"effect": "deny",
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const policyDefinitionAtManagementGroup = new azure_native.authorization.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup", {
+ *     description: "Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
+ *     displayName: "Enforce resource naming convention",
+ *     managementGroupId: "MyManagementGroup",
+ *     metadata: {
+ *         category: "Naming",
+ *     },
+ *     mode: "All",
+ *     parameters: {
+ *         prefix: {
+ *             metadata: {
+ *                 description: "Resource name prefix",
+ *                 displayName: "Prefix",
+ *             },
+ *             type: "String",
+ *         },
+ *         suffix: {
+ *             metadata: {
+ *                 description: "Resource name suffix",
+ *                 displayName: "Suffix",
+ *             },
+ *             type: "String",
+ *         },
+ *     },
+ *     policyDefinitionName: "ResourceNaming",
+ *     policyRule: {
+ *         "if": {
+ *             not: {
+ *                 field: "name",
+ *                 like: "[concat(parameters('prefix'), '*', parameters('suffix'))]",
+ *             },
+ *         },
+ *         then: {
+ *             effect: "deny",
+ *         },
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * policy_definition_at_management_group = azure_native.authorization.PolicyDefinitionAtManagementGroup("policyDefinitionAtManagementGroup",
+ *     description="Force resource names to begin with given 'prefix' and/or end with given 'suffix'",
+ *     display_name="Enforce resource naming convention",
+ *     management_group_id="MyManagementGroup",
+ *     metadata={
+ *         "category": "Naming",
+ *     },
+ *     mode="All",
+ *     parameters={
+ *         "prefix": azure_native.authorization.ParameterDefinitionsValueArgs(
+ *             metadata=azure_native.authorization.ParameterDefinitionsValueMetadataArgs(
+ *                 description="Resource name prefix",
+ *                 display_name="Prefix",
+ *             ),
+ *             type="String",
+ *         ),
+ *         "suffix": azure_native.authorization.ParameterDefinitionsValueArgs(
+ *             metadata=azure_native.authorization.ParameterDefinitionsValueMetadataArgs(
+ *                 description="Resource name suffix",
+ *                 display_name="Suffix",
+ *             ),
+ *             type="String",
+ *         ),
+ *     },
+ *     policy_definition_name="ResourceNaming",
+ *     policy_rule={
+ *         "if": {
+ *             "not": {
+ *                 "field": "name",
+ *                 "like": "[concat(parameters('prefix'), '*', parameters('suffix'))]",
+ *             },
+ *         },
+ *         "then": {
+ *             "effect": "deny",
+ *         },
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +245,108 @@ import javax.annotation.Nullable;
 public class PolicyDefinitionAtManagementGroup extends io.pulumi.resources.CustomResource {
     /**
      * The policy definition description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The policy definition description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The display name of the policy definition.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The display name of the policy definition.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
      */
     @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
      * @return The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
      */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
     /**
      * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
-     * 
      */
     @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
      * @return The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
-     * 
      */
     public Output</* @Nullable */ String> getMode() {
         return this.mode;
     }
     /**
      * The name of the policy definition.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the policy definition.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
-     * 
      */
     @Export(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionsValueResponse.class})
     private Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> parameters;
 
     /**
      * @return The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
-     * 
      */
     public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> getParameters() {
         return this.parameters;
     }
     /**
      * The policy rule.
-     * 
      */
     @Export(name="policyRule", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> policyRule;
 
     /**
      * @return The policy rule.
-     * 
      */
     public Output</* @Nullable */ Object> getPolicyRule() {
         return this.policyRule;
     }
     /**
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
-     * 
      */
     @Export(name="policyType", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyType;
 
     /**
      * @return The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
-     * 
      */
     public Output</* @Nullable */ String> getPolicyType() {
         return this.policyType;
     }
     /**
      * The type of the resource (Microsoft.Authorization/policyDefinitions).
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource (Microsoft.Authorization/policyDefinitions).
-     * 
      */
     public Output<String> getType() {
         return this.type;

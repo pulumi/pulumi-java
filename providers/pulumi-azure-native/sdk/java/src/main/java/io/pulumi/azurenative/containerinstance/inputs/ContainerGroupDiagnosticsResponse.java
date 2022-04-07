@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container group diagnostic information.
- * 
  */
 public final class ContainerGroupDiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ContainerGroupDiagnosticsResponse extends io.pulumi.resources
 
     /**
      * Container group log analytics information.
-     * 
      */
     @Import(name="logAnalytics")
       private final @Nullable LogAnalyticsResponse logAnalytics;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container Account Description
- * 
  */
 public final class ContainerAccountResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The account name
-     * 
      */
     @Import(name="accountName")
       private final @Nullable String accountName;
@@ -31,7 +29,6 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The account password
-     * 
      */
     @Import(name="password")
       private final @Nullable String password;
@@ -42,7 +39,6 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The account spn
-     * 
      */
     @Import(name="spn")
       private final @Nullable String spn;

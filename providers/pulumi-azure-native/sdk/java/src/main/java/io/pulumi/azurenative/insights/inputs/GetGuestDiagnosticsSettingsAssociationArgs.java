@@ -14,7 +14,6 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
 
     /**
      * The name of the diagnostic settings association.
-     * 
      */
     @Import(name="associationName", required=true)
       private final String associationName;
@@ -25,7 +24,6 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
 
     /**
      * The fully qualified ID of the resource, including the resource name and resource type.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final String resourceUri;

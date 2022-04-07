@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * Represents a Sql pool transparent data encryption configuration.
  * API Version: 2021-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a Sql pool's transparent data encryption configuration
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var sqlPoolTransparentDataEncryption = new AzureNative.Synapse.SqlPoolTransparentDataEncryption("sqlPoolTransparentDataEncryption", new AzureNative.Synapse.SqlPoolTransparentDataEncryptionArgs
+ *         {
+ *             ResourceGroupName = "sqlcrudtest-6852",
+ *             SqlPoolName = "sqlcrudtest-9187",
+ *             Status = "Enabled",
+ *             TransparentDataEncryptionName = "current",
+ *             WorkspaceName = "sqlcrudtest-2080",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := synapse.NewSqlPoolTransparentDataEncryption(ctx, "sqlPoolTransparentDataEncryption", &synapse.SqlPoolTransparentDataEncryptionArgs{
+ * 			ResourceGroupName:             pulumi.String("sqlcrudtest-6852"),
+ * 			SqlPoolName:                   pulumi.String("sqlcrudtest-9187"),
+ * 			Status:                        pulumi.String("Enabled"),
+ * 			TransparentDataEncryptionName: pulumi.String("current"),
+ * 			WorkspaceName:                 pulumi.String("sqlcrudtest-2080"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const sqlPoolTransparentDataEncryption = new azure_native.synapse.SqlPoolTransparentDataEncryption("sqlPoolTransparentDataEncryption", {
+ *     resourceGroupName: "sqlcrudtest-6852",
+ *     sqlPoolName: "sqlcrudtest-9187",
+ *     status: "Enabled",
+ *     transparentDataEncryptionName: "current",
+ *     workspaceName: "sqlcrudtest-2080",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sql_pool_transparent_data_encryption = azure_native.synapse.SqlPoolTransparentDataEncryption("sqlPoolTransparentDataEncryption",
+ *     resource_group_name="sqlcrudtest-6852",
+ *     sql_pool_name="sqlcrudtest-9187",
+ *     status="Enabled",
+ *     transparent_data_encryption_name="current",
+ *     workspace_name="sqlcrudtest-2080")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +112,48 @@ import javax.annotation.Nullable;
 public class SqlPoolTransparentDataEncryption extends io.pulumi.resources.CustomResource {
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The status of the database transparent data encryption.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return The status of the database transparent data encryption.
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

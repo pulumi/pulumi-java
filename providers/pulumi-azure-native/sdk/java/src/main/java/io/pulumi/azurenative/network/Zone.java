@@ -20,7 +20,92 @@ import javax.annotation.Nullable;
  * Describes a DNS zone.
  * API Version: 2018-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create zone
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var zone = new AzureNative.Network.Zone("zone", new AzureNative.Network.ZoneArgs
+ *         {
+ *             Location = "Global",
+ *             ResourceGroupName = "rg1",
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             ZoneName = "zone1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewZone(ctx, "zone", &network.ZoneArgs{
+ * 			Location:          pulumi.String("Global"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			ZoneName: pulumi.String("zone1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const zone = new azure_native.network.Zone("zone", {
+ *     location: "Global",
+ *     resourceGroupName: "rg1",
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     zoneName: "zone1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * zone = azure_native.network.Zone("zone",
+ *     location="Global",
+ *     resource_group_name="rg1",
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     zone_name="zone1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,168 +120,144 @@ import javax.annotation.Nullable;
 public class Zone extends io.pulumi.resources.CustomResource {
     /**
      * The etag of the zone.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return The etag of the zone.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="maxNumberOfRecordSets", type=Double.class, parameters={})
     private Output<Double> maxNumberOfRecordSets;
 
     /**
      * @return The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<Double> getMaxNumberOfRecordSets() {
         return this.maxNumberOfRecordSets;
     }
     /**
      * The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="maxNumberOfRecordsPerRecordSet", type=Double.class, parameters={})
     private Output<Double> maxNumberOfRecordsPerRecordSet;
 
     /**
      * @return The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<Double> getMaxNumberOfRecordsPerRecordSet() {
         return this.maxNumberOfRecordsPerRecordSet;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
 
     /**
      * @return The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<List<String>> getNameServers() {
         return this.nameServers;
     }
     /**
      * The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="numberOfRecordSets", type=Double.class, parameters={})
     private Output<Double> numberOfRecordSets;
 
     /**
      * @return The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<Double> getNumberOfRecordSets() {
         return this.numberOfRecordSets;
     }
     /**
      * A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
-     * 
      */
     @Export(name="registrationVirtualNetworks", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> registrationVirtualNetworks;
 
     /**
      * @return A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
-     * 
      */
     public Output</* @Nullable */ List<SubResourceResponse>> getRegistrationVirtualNetworks() {
         return this.registrationVirtualNetworks;
     }
     /**
      * A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
-     * 
      */
     @Export(name="resolutionVirtualNetworks", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> resolutionVirtualNetworks;
 
     /**
      * @return A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
-     * 
      */
     public Output</* @Nullable */ List<SubResourceResponse>> getResolutionVirtualNetworks() {
         return this.resolutionVirtualNetworks;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The type of this DNS zone (Public or Private).
-     * 
      */
     @Export(name="zoneType", type=String.class, parameters={})
     private Output</* @Nullable */ String> zoneType;
 
     /**
      * @return The type of this DNS zone (Public or Private).
-     * 
      */
     public Output</* @Nullable */ String> getZoneType() {
         return this.zoneType;

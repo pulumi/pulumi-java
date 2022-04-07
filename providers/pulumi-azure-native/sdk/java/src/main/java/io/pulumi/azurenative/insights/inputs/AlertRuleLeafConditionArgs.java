@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 /**
  * An Activity Log Alert rule condition that is met by comparing the field and value of an Activity Log event.
  * This condition must contain 'field' and either 'equals' or 'containsAny'.
- * 
  */
 public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
 
     /**
      * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
-     * 
      */
     @Import(name="containsAny")
       private final @Nullable Output<List<String>> containsAny;
@@ -33,7 +31,6 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
 
     /**
      * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
-     * 
      */
     @Import(name="equals")
       private final @Nullable Output<String> equals;
@@ -45,7 +42,6 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
     /**
      * The name of the Activity Log event's field that this condition will examine.
      * The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
-     * 
      */
     @Import(name="field")
       private final @Nullable Output<String> field;

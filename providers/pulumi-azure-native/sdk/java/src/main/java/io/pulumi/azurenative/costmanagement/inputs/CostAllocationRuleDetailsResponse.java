@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Resource details of the cost allocation rule
- * 
  */
 public final class CostAllocationRuleDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CostAllocationRuleDetailsResponse extends io.pulumi.resources
 
     /**
      * Source resources for cost allocation. At this time, this list can contain no more than one element.
-     * 
      */
     @Import(name="sourceResources")
       private final @Nullable List<SourceCostAllocationResourceResponse> sourceResources;
@@ -33,7 +31,6 @@ public final class CostAllocationRuleDetailsResponse extends io.pulumi.resources
 
     /**
      * Target resources for cost allocation. At this time, this list can contain no more than one element.
-     * 
      */
     @Import(name="targetResources")
       private final @Nullable List<TargetCostAllocationResourceResponse> targetResources;

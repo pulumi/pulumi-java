@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the connection monitor endpoint scope item.
- * 
  */
 public final class ConnectionMonitorEndpointScopeItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ConnectionMonitorEndpointScopeItemResponse extends io.pulumi.
 
     /**
      * The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
-     * 
      */
     @Import(name="address")
       private final @Nullable String address;

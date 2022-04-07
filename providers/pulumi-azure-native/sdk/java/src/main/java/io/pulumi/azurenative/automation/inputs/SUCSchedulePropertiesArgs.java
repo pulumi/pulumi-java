@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of schedule parameters.
- * 
  */
 public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the advanced schedule.
-     * 
      */
     @Import(name="advancedSchedule")
       private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
@@ -36,7 +34,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the creation time.
-     * 
      */
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
@@ -47,7 +44,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -58,7 +54,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the end time of the schedule.
-     * 
      */
     @Import(name="expiryTime")
       private final @Nullable Output<String> expiryTime;
@@ -69,7 +64,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the expiry time's offset in minutes.
-     * 
      */
     @Import(name="expiryTimeOffsetMinutes")
       private final @Nullable Output<Double> expiryTimeOffsetMinutes;
@@ -80,7 +74,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the frequency of the schedule.
-     * 
      */
     @Import(name="frequency")
       private final @Nullable Output<Either<String,ScheduleFrequency>> frequency;
@@ -91,7 +84,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the interval of the schedule.
-     * 
      */
     @Import(name="interval")
       private final @Nullable Output<Double> interval;
@@ -102,7 +94,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets a value indicating whether this schedule is enabled.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
@@ -113,7 +104,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the last modified time.
-     * 
      */
     @Import(name="lastModifiedTime")
       private final @Nullable Output<String> lastModifiedTime;
@@ -124,7 +114,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the next run time of the schedule.
-     * 
      */
     @Import(name="nextRun")
       private final @Nullable Output<String> nextRun;
@@ -135,7 +124,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the next run time's offset in minutes.
-     * 
      */
     @Import(name="nextRunOffsetMinutes")
       private final @Nullable Output<Double> nextRunOffsetMinutes;
@@ -146,7 +134,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the start time of the schedule.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
@@ -157,7 +144,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets the time zone of the schedule.
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;

@@ -19,7 +19,129 @@ import javax.annotation.Nullable;
  * Security assessment metadata
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create security assessment metadata for subscription
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var assessmentMetadataInSubscription = new AzureNative.Security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", new AzureNative.Security.AssessmentMetadataInSubscriptionArgs
+ *         {
+ *             AssessmentMetadataName = "ca039e75-a276-4175-aebc-bcd41e4b14b7",
+ *             AssessmentType = "CustomerManaged",
+ *             Categories = 
+ *             {
+ *                 "Compute",
+ *             },
+ *             Description = "Install an endpoint protection solution on your virtual machines scale sets, to protect them from threats and vulnerabilities.",
+ *             DisplayName = "Install endpoint protection solution on virtual machine scale sets",
+ *             ImplementationEffort = "Low",
+ *             RemediationDescription = "To install an endpoint protection solution: 1.  <a href=\"https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq#how-do-i-turn-on-antimalware-in-my-virtual-machine-scale-set\">Follow the instructions in How do I turn on antimalware in my virtual machine scale set</a>",
+ *             Severity = "Medium",
+ *             Threats = 
+ *             {
+ *                 "dataExfiltration",
+ *                 "dataSpillage",
+ *                 "maliciousInsider",
+ *             },
+ *             UserImpact = "Low",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewAssessmentMetadataInSubscription(ctx, "assessmentMetadataInSubscription", &security.AssessmentMetadataInSubscriptionArgs{
+ * 			AssessmentMetadataName: pulumi.String("ca039e75-a276-4175-aebc-bcd41e4b14b7"),
+ * 			AssessmentType:         pulumi.String("CustomerManaged"),
+ * 			Categories: pulumi.StringArray{
+ * 				pulumi.String("Compute"),
+ * 			},
+ * 			Description:            pulumi.String("Install an endpoint protection solution on your virtual machines scale sets, to protect them from threats and vulnerabilities."),
+ * 			DisplayName:            pulumi.String("Install endpoint protection solution on virtual machine scale sets"),
+ * 			ImplementationEffort:   pulumi.String("Low"),
+ * 			RemediationDescription: pulumi.String("To install an endpoint protection solution: 1.  <a href=\"https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq#how-do-i-turn-on-antimalware-in-my-virtual-machine-scale-set\">Follow the instructions in How do I turn on antimalware in my virtual machine scale set</a>"),
+ * 			Severity:               pulumi.String("Medium"),
+ * 			Threats: pulumi.StringArray{
+ * 				pulumi.String("dataExfiltration"),
+ * 				pulumi.String("dataSpillage"),
+ * 				pulumi.String("maliciousInsider"),
+ * 			},
+ * 			UserImpact: pulumi.String("Low"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const assessmentMetadataInSubscription = new azure_native.security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription", {
+ *     assessmentMetadataName: "ca039e75-a276-4175-aebc-bcd41e4b14b7",
+ *     assessmentType: "CustomerManaged",
+ *     categories: ["Compute"],
+ *     description: "Install an endpoint protection solution on your virtual machines scale sets, to protect them from threats and vulnerabilities.",
+ *     displayName: "Install endpoint protection solution on virtual machine scale sets",
+ *     implementationEffort: "Low",
+ *     remediationDescription: "To install an endpoint protection solution: 1.  <a href=\"https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq#how-do-i-turn-on-antimalware-in-my-virtual-machine-scale-set\">Follow the instructions in How do I turn on antimalware in my virtual machine scale set</a>",
+ *     severity: "Medium",
+ *     threats: [
+ *         "dataExfiltration",
+ *         "dataSpillage",
+ *         "maliciousInsider",
+ *     ],
+ *     userImpact: "Low",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * assessment_metadata_in_subscription = azure_native.security.AssessmentMetadataInSubscription("assessmentMetadataInSubscription",
+ *     assessment_metadata_name="ca039e75-a276-4175-aebc-bcd41e4b14b7",
+ *     assessment_type="CustomerManaged",
+ *     categories=["Compute"],
+ *     description="Install an endpoint protection solution on your virtual machines scale sets, to protect them from threats and vulnerabilities.",
+ *     display_name="Install endpoint protection solution on virtual machine scale sets",
+ *     implementation_effort="Low",
+ *     remediation_description="To install an endpoint protection solution: 1.  <a href=\"https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq#how-do-i-turn-on-antimalware-in-my-virtual-machine-scale-set\">Follow the instructions in How do I turn on antimalware in my virtual machine scale set</a>",
+ *     severity="Medium",
+ *     threats=[
+ *         "dataExfiltration",
+ *         "dataSpillage",
+ *         "maliciousInsider",
+ *     ],
+ *     user_impact="Low")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +156,12 @@ import javax.annotation.Nullable;
 public class AssessmentMetadataInSubscription extends io.pulumi.resources.CustomResource {
     /**
      * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
-     * 
      */
     @Export(name="assessmentType", type=String.class, parameters={})
     private Output<String> assessmentType;
 
     /**
      * @return BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
-     * 
      */
     public Output<String> getAssessmentType() {
         return this.assessmentType;
@@ -54,126 +174,108 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
     }
     /**
      * Human readable description of the assessment
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Human readable description of the assessment
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * User friendly display name of the assessment
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return User friendly display name of the assessment
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The implementation effort required to remediate this assessment
-     * 
      */
     @Export(name="implementationEffort", type=String.class, parameters={})
     private Output</* @Nullable */ String> implementationEffort;
 
     /**
      * @return The implementation effort required to remediate this assessment
-     * 
      */
     public Output</* @Nullable */ String> getImplementationEffort() {
         return this.implementationEffort;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Describes the partner that created the assessment
-     * 
      */
     @Export(name="partnerData", type=SecurityAssessmentMetadataPartnerDataResponse.class, parameters={})
     private Output</* @Nullable */ SecurityAssessmentMetadataPartnerDataResponse> partnerData;
 
     /**
      * @return Describes the partner that created the assessment
-     * 
      */
     public Output</* @Nullable */ SecurityAssessmentMetadataPartnerDataResponse> getPartnerData() {
         return this.partnerData;
     }
     /**
      * Azure resource ID of the policy definition that turns this assessment calculation on
-     * 
      */
     @Export(name="policyDefinitionId", type=String.class, parameters={})
     private Output<String> policyDefinitionId;
 
     /**
      * @return Azure resource ID of the policy definition that turns this assessment calculation on
-     * 
      */
     public Output<String> getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
      * True if this assessment is in preview release status
-     * 
      */
     @Export(name="preview", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> preview;
 
     /**
      * @return True if this assessment is in preview release status
-     * 
      */
     public Output</* @Nullable */ Boolean> getPreview() {
         return this.preview;
     }
     /**
      * Human readable description of what you should do to mitigate this security issue
-     * 
      */
     @Export(name="remediationDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> remediationDescription;
 
     /**
      * @return Human readable description of what you should do to mitigate this security issue
-     * 
      */
     public Output</* @Nullable */ String> getRemediationDescription() {
         return this.remediationDescription;
     }
     /**
      * The severity level of the assessment
-     * 
      */
     @Export(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
     /**
      * @return The severity level of the assessment
-     * 
      */
     public Output<String> getSeverity() {
         return this.severity;
@@ -186,28 +288,24 @@ public class AssessmentMetadataInSubscription extends io.pulumi.resources.Custom
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The user impact of the assessment
-     * 
      */
     @Export(name="userImpact", type=String.class, parameters={})
     private Output</* @Nullable */ String> userImpact;
 
     /**
      * @return The user impact of the assessment
-     * 
      */
     public Output</* @Nullable */ String> getUserImpact() {
         return this.userImpact;

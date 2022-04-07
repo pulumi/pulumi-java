@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of an artifact.
- * 
  */
 public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The artifact's identifier.
-     * 
      */
     @Import(name="artifactId")
       private final @Nullable Output<String> artifactId;
@@ -33,7 +31,6 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The artifact's title.
-     * 
      */
     @Import(name="artifactTitle")
       private final @Nullable Output<String> artifactTitle;
@@ -44,7 +41,6 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The status message from the deployment.
-     * 
      */
     @Import(name="deploymentStatusMessage")
       private final @Nullable Output<String> deploymentStatusMessage;
@@ -55,7 +51,6 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The time that the artifact starts to install on the virtual machine.
-     * 
      */
     @Import(name="installTime")
       private final @Nullable Output<String> installTime;
@@ -66,7 +61,6 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The parameters of the artifact.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters;
@@ -77,7 +71,6 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The status of the artifact.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<String> status;
@@ -88,7 +81,6 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The status message from the virtual machine extension.
-     * 
      */
     @Import(name="vmExtensionStatusMessage")
       private final @Nullable Output<String> vmExtensionStatusMessage;

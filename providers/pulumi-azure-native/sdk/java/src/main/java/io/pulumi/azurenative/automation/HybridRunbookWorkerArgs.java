@@ -16,7 +16,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -27,7 +26,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The hybrid runbook worker group name
-     * 
      */
     @Import(name="hybridRunbookWorkerGroupName", required=true)
       private final Output<String> hybridRunbookWorkerGroupName;
@@ -38,7 +36,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The hybrid runbook worker id
-     * 
      */
     @Import(name="hybridRunbookWorkerId")
       private final @Nullable Output<String> hybridRunbookWorkerId;
@@ -49,7 +46,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Gets or sets the name of the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -60,7 +56,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -71,7 +66,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Azure Resource Manager Id for a virtual machine.
-     * 
      */
     @Import(name="vmResourceId")
       private final @Nullable Output<String> vmResourceId;

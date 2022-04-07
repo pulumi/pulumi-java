@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class VirtualNetworkGatewaySkuResponse {
     /**
      * The capacity.
-     * 
      */
     private final Integer capacity;
     /**
      * Gateway SKU name.
-     * 
      */
     private final @Nullable String name;
     /**
      * Gateway SKU tier.
-     * 
      */
     private final @Nullable String tier;
 
@@ -40,21 +37,18 @@ public final class VirtualNetworkGatewaySkuResponse {
 
     /**
      * The capacity.
-     * 
     */
     public Integer getCapacity() {
         return this.capacity;
     }
     /**
      * Gateway SKU name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gateway SKU tier.
-     * 
     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);

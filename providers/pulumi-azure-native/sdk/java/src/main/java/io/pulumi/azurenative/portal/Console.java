@@ -17,7 +17,84 @@ import javax.annotation.Nullable;
  * Cloud shell console
  * API Version: 2018-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutConsole
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var console = new AzureNative.Portal.Console("console", new AzureNative.Portal.ConsoleArgs
+ *         {
+ *             ConsoleName = "default",
+ *             Properties = new AzureNative.Portal.Inputs.ConsoleCreatePropertiesArgs
+ *             {
+ *                 OsType = "Linux",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	portal "github.com/pulumi/pulumi-azure-native/sdk/go/azure/portal"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := portal.NewConsole(ctx, "console", &portal.ConsoleArgs{
+ * 			ConsoleName: pulumi.String("default"),
+ * 			Properties: &portal.ConsoleCreatePropertiesArgs{
+ * 				OsType: pulumi.String("Linux"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const console = new azure_native.portal.Console("console", {
+ *     consoleName: "default",
+ *     properties: {
+ *         osType: "Linux",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * console = azure_native.portal.Console("console",
+ *     console_name="default",
+ *     properties=azure_native.portal.ConsoleCreatePropertiesArgs(
+ *         os_type="Linux",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,14 +109,12 @@ import javax.annotation.Nullable;
 public class Console extends io.pulumi.resources.CustomResource {
     /**
      * Cloud shell console properties.
-     * 
      */
     @Export(name="properties", type=ConsolePropertiesResponse.class, parameters={})
     private Output<ConsolePropertiesResponse> properties;
 
     /**
      * @return Cloud shell console properties.
-     * 
      */
     public Output<ConsolePropertiesResponse> getProperties() {
         return this.properties;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
- * 
  */
 public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
 
     /**
      * /29 IP address space to carve out Customer addresses for tunnels.
-     * 
      */
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
@@ -33,7 +31,6 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
 
     /**
      * The authorization key.
-     * 
      */
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
@@ -44,7 +41,6 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
 
     /**
      * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
-     * 
      */
     @Import(name="expressRouteCircuitPeering")
       private final @Nullable Output<SubResourceArgs> expressRouteCircuitPeering;
@@ -55,7 +51,6 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -66,7 +61,6 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
 
     /**
      * IPv6 Address PrefixProperties of the express route circuit connection.
-     * 
      */
     @Import(name="ipv6CircuitConnectionConfig")
       private final @Nullable Output<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig;
@@ -77,7 +71,6 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -88,7 +81,6 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
 
     /**
      * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
-     * 
      */
     @Import(name="peerExpressRouteCircuitPeering")
       private final @Nullable Output<SubResourceArgs> peerExpressRouteCircuitPeering;

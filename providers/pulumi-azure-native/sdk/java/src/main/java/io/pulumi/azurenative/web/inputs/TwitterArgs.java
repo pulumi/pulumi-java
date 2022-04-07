@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the Twitter provider.
- * 
  */
 public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -32,7 +30,6 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the app registration for the Twitter provider.
-     * 
      */
     @Import(name="registration")
       private final @Nullable Output<TwitterRegistrationArgs> registration;

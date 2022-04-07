@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Asset sink.
- * 
  */
 public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Asset name.
-     * 
      */
     @Import(name="assetName", required=true)
       private final Output<String> assetName;
@@ -31,7 +29,6 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Sink inputs.
-     * 
      */
     @Import(name="inputs", required=true)
       private final Output<List<String>> inputs;
@@ -42,7 +39,6 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Sink name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -54,7 +50,6 @@ public final class MediaGraphAssetSinkArgs extends io.pulumi.resources.ResourceA
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphAssetSink'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;

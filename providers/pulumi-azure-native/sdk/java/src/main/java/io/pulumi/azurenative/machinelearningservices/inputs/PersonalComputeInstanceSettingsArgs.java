@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for a personal compute instance.
- * 
  */
 public final class PersonalComputeInstanceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PersonalComputeInstanceSettingsArgs extends io.pulumi.resourc
 
     /**
      * A user explicitly assigned to a personal compute instance.
-     * 
      */
     @Import(name="assignedUser")
       private final @Nullable Output<AssignedUserArgs> assignedUser;

@@ -14,7 +14,6 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
 
     /**
      * The name of the API Management service.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final String serviceName;
@@ -36,7 +34,6 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
 
     /**
      * Subscription entity Identifier. The entity represents the association between a user and a product in API Management.
-     * 
      */
     @Import(name="sid", required=true)
       private final String sid;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Gets the application HTTP endpoints.
- * 
  */
 public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
 
     /**
      * The list of access modes for the application.
-     * 
      */
     @Import(name="accessModes")
       private final @Nullable Output<List<String>> accessModes;
@@ -34,7 +32,6 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
 
     /**
      * The destination port to connect to.
-     * 
      */
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
@@ -45,7 +42,6 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
 
     /**
      * The value indicates whether to disable GatewayAuth.
-     * 
      */
     @Import(name="disableGatewayAuth")
       private final @Nullable Output<Boolean> disableGatewayAuth;
@@ -56,7 +52,6 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
 
     /**
      * The private ip address of the endpoint.
-     * 
      */
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
@@ -67,7 +62,6 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
 
     /**
      * The subdomain suffix of the application.
-     * 
      */
     @Import(name="subDomainSuffix")
       private final @Nullable Output<String> subDomainSuffix;

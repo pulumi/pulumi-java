@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The data disks groups for the role.
- * 
  */
 public final class DataDisksGroupsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DataDisksGroupsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * ReadOnly. The DiskSize in GB. Do not set this value.
-     * 
      */
     @Import(name="diskSizeGB", required=true)
       private final Integer diskSizeGB;
@@ -32,7 +30,6 @@ public final class DataDisksGroupsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The number of disks per node.
-     * 
      */
     @Import(name="disksPerNode")
       private final @Nullable Integer disksPerNode;
@@ -43,7 +40,6 @@ public final class DataDisksGroupsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * ReadOnly. The storage account type. Do not set this value.
-     * 
      */
     @Import(name="storageAccountType", required=true)
       private final String storageAccountType;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class AddressDetailsResponse {
     /**
      * Customer address and contact details. It should be address resource
-     * 
      */
     private final AddressPropertiesResponse forwardAddress;
     /**
      * Return shipping address
-     * 
      */
     private final AddressPropertiesResponse returnAddress;
 
@@ -30,14 +28,12 @@ public final class AddressDetailsResponse {
 
     /**
      * Customer address and contact details. It should be address resource
-     * 
     */
     public AddressPropertiesResponse getForwardAddress() {
         return this.forwardAddress;
     }
     /**
      * Return shipping address
-     * 
     */
     public AddressPropertiesResponse getReturnAddress() {
         return this.returnAddress;

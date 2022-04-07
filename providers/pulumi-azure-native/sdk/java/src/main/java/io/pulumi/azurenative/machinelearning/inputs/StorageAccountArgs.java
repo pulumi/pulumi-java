@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Access information for a storage account.
- * 
  */
 public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the key used to access the storage account.
-     * 
      */
     @Import(name="key")
       private final @Nullable Output<String> key;
@@ -31,7 +29,6 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the name of the storage account.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

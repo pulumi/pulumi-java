@@ -12,7 +12,6 @@ public final class ManagedCertificateParametersResponse {
     /**
      * The type of the Secret to create.
      * Expected value is 'ManagedCertificate'.
-     * 
      */
     private final String type;
 
@@ -24,7 +23,6 @@ public final class ManagedCertificateParametersResponse {
     /**
      * The type of the Secret to create.
      * Expected value is 'ManagedCertificate'.
-     * 
     */
     public String getType() {
         return this.type;

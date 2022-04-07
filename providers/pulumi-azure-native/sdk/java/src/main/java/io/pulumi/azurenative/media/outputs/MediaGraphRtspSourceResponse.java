@@ -14,23 +14,19 @@ import java.util.Objects;
 public final class MediaGraphRtspSourceResponse {
     /**
      * RTSP endpoint of the stream being connected to.
-     * 
      */
     private final Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
     /**
      * Source name.
-     * 
      */
     private final String name;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphRtspSource'.
-     * 
      */
     private final String odataType;
     /**
      * Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
-     * 
      */
     private final String transport;
 
@@ -48,14 +44,12 @@ public final class MediaGraphRtspSourceResponse {
 
     /**
      * RTSP endpoint of the stream being connected to.
-     * 
     */
     public Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> getEndpoint() {
         return this.endpoint;
     }
     /**
      * Source name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -63,14 +57,12 @@ public final class MediaGraphRtspSourceResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphRtspSource'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
-     * 
     */
     public String getTransport() {
         return this.transport;

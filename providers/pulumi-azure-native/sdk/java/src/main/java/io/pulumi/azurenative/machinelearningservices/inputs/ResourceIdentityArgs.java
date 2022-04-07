@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service identity associated with a resource.
- * 
  */
 public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Defines values for a ResourceIdentity's type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ResourceIdentityAssignment>> type;
@@ -35,7 +33,6 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;

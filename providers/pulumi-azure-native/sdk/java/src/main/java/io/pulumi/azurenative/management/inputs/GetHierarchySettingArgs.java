@@ -14,7 +14,6 @@ public final class GetHierarchySettingArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * Management Group ID.
-     * 
      */
     @Import(name="groupId", required=true)
       private final String groupId;

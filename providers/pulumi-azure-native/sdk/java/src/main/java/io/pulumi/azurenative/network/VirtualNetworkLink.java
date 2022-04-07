@@ -20,7 +20,113 @@ import javax.annotation.Nullable;
  * Describes a link to virtual network for a Private DNS zone.
  * API Version: 2020-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PUT Private DNS Zone Virtual Network Link
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetworkLink = new AzureNative.Network.VirtualNetworkLink("virtualNetworkLink", new AzureNative.Network.VirtualNetworkLinkArgs
+ *         {
+ *             Location = "Global",
+ *             PrivateZoneName = "privatezone1.com",
+ *             RegistrationEnabled = false,
+ *             ResourceGroupName = "resourceGroup1",
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             VirtualNetwork = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName",
+ *             },
+ *             VirtualNetworkLinkName = "virtualNetworkLink1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetworkLink(ctx, "virtualNetworkLink", &network.VirtualNetworkLinkArgs{
+ * 			Location:            pulumi.String("Global"),
+ * 			PrivateZoneName:     pulumi.String("privatezone1.com"),
+ * 			RegistrationEnabled: pulumi.Bool(false),
+ * 			ResourceGroupName:   pulumi.String("resourceGroup1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			VirtualNetwork: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName"),
+ * 			},
+ * 			VirtualNetworkLinkName: pulumi.String("virtualNetworkLink1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetworkLink = new azure_native.network.VirtualNetworkLink("virtualNetworkLink", {
+ *     location: "Global",
+ *     privateZoneName: "privatezone1.com",
+ *     registrationEnabled: false,
+ *     resourceGroupName: "resourceGroup1",
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     virtualNetwork: {
+ *         id: "/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName",
+ *     },
+ *     virtualNetworkLinkName: "virtualNetworkLink1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network_link = azure_native.network.VirtualNetworkLink("virtualNetworkLink",
+ *     location="Global",
+ *     private_zone_name="privatezone1.com",
+ *     registration_enabled=False,
+ *     resource_group_name="resourceGroup1",
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     virtual_network=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName",
+ *     ),
+ *     virtual_network_link_name="virtualNetworkLink1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +141,108 @@ import javax.annotation.Nullable;
 public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
     /**
      * The ETag of the virtual network link.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return The ETag of the virtual network link.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The Azure Region where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The Azure Region where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
-     * 
      */
     @Export(name="registrationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> registrationEnabled;
 
     /**
      * @return Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
-     * 
      */
     public Output</* @Nullable */ Boolean> getRegistrationEnabled() {
         return this.registrationEnabled;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The reference of the virtual network.
-     * 
      */
     @Export(name="virtualNetwork", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualNetwork;
 
     /**
      * @return The reference of the virtual network.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getVirtualNetwork() {
         return this.virtualNetwork;
     }
     /**
      * The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="virtualNetworkLinkState", type=String.class, parameters={})
     private Output<String> virtualNetworkLinkState;
 
     /**
      * @return The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<String> getVirtualNetworkLinkState() {
         return this.virtualNetworkLinkState;

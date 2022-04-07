@@ -18,7 +18,6 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Azure location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -29,7 +28,6 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Azure resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -54,7 +52,6 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Power BI Embedded Workspace Collection name
-     * 
      */
     @Import(name="workspaceCollectionName")
       private final @Nullable Output<String> workspaceCollectionName;

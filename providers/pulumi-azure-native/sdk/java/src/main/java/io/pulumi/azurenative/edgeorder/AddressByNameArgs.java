@@ -19,7 +19,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
-     * 
      */
     @Import(name="addressName")
       private final @Nullable Output<String> addressName;
@@ -30,7 +29,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contact details for the address
-     * 
      */
     @Import(name="contactDetails", required=true)
       private final Output<ContactDetailsArgs> contactDetails;
@@ -41,7 +39,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -52,7 +49,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Shipping details for the address
-     * 
      */
     @Import(name="shippingAddress")
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;
@@ -74,7 +69,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

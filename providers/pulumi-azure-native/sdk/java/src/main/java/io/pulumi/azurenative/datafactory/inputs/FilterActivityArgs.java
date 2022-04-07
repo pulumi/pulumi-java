@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Filter and return results from input array based on the conditions.
- * 
  */
 public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Condition to be used for filtering the input.
-     * 
      */
     @Import(name="condition", required=true)
       private final Output<ExpressionArgs> condition;
@@ -35,7 +33,6 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -46,7 +43,6 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -57,7 +53,6 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Input array on which filter should be applied.
-     * 
      */
     @Import(name="items", required=true)
       private final Output<ExpressionArgs> items;
@@ -68,7 +63,6 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -80,7 +74,6 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Type of activity.
      * Expected value is 'Filter'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -91,7 +84,6 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;

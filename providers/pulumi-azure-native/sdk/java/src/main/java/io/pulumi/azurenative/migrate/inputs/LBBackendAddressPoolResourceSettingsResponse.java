@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines load balancer backend address pool properties.
- * 
  */
 public final class LBBackendAddressPoolResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LBBackendAddressPoolResourceSettingsResponse extends io.pulum
 
     /**
      * Gets or sets the backend address pool name.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

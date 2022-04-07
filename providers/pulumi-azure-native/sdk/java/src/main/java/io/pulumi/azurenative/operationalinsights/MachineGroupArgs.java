@@ -21,7 +21,6 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
-     * 
      */
     @Import(name="count")
       private final @Nullable Output<Integer> count;
@@ -32,7 +31,6 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User defined name for the group
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -43,7 +41,6 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of the machine group
-     * 
      */
     @Import(name="groupType")
       private final @Nullable Output<Either<String,MachineGroupType>> groupType;
@@ -55,7 +52,6 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Additional resource type qualifier.
      * Expected value is 'machineGroup'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -66,7 +62,6 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Machine Group resource name.
-     * 
      */
     @Import(name="machineGroupName")
       private final @Nullable Output<String> machineGroupName;
@@ -77,7 +72,6 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
-     * 
      */
     @Import(name="machines")
       private final @Nullable Output<List<MachineReferenceWithHintsArgs>> machines;
@@ -88,7 +82,6 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource group name within the specified subscriptionId.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -99,7 +92,6 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * OMS workspace containing the resources of interest.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

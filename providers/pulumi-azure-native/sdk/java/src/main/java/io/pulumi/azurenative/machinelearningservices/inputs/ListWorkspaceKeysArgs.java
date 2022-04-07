@@ -14,7 +14,6 @@ public final class ListWorkspaceKeysArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of the resource group in which workspace is located.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class ListWorkspaceKeysArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Name of Azure Machine Learning workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

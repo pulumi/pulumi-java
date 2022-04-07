@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Schedule-based autoscale request parameters
- * 
  */
 public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Array of schedule-based autoscale rules
-     * 
      */
     @Import(name="schedule")
       private final @Nullable Output<List<AutoscaleScheduleArgs>> schedule;
@@ -33,7 +31,6 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The time zone for the autoscale schedule times
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;

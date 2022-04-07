@@ -24,7 +24,104 @@ import javax.annotation.Nullable;
  * Define the virtualMachineTemplate.
  * API Version: 2020-10-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateVirtualMachineTemplate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualMachineTemplate = new AzureNative.ConnectedVMwarevSphere.VirtualMachineTemplate("virtualMachineTemplate", new AzureNative.ConnectedVMwarevSphere.VirtualMachineTemplateArgs
+ *         {
+ *             ExtendedLocation = new AzureNative.ConnectedVMwarevSphere.Inputs.ExtendedLocationArgs
+ *             {
+ *                 Name = "/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso",
+ *                 Type = "customLocation",
+ *             },
+ *             Location = "East US",
+ *             MoRefId = "aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *             ResourceGroupName = "testrg",
+ *             VCenterId = "/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter",
+ *             VirtualMachineTemplateName = "WebFrontEndTemplate",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	connectedvmwarevsphere "github.com/pulumi/pulumi-azure-native/sdk/go/azure/connectedvmwarevsphere"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connectedvmwarevsphere.NewVirtualMachineTemplate(ctx, "virtualMachineTemplate", &connectedvmwarevsphere.VirtualMachineTemplateArgs{
+ * 			ExtendedLocation: &connectedvmwarevsphere.ExtendedLocationArgs{
+ * 				Name: pulumi.String("/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso"),
+ * 				Type: pulumi.String("customLocation"),
+ * 			},
+ * 			Location:                   pulumi.String("East US"),
+ * 			MoRefId:                    pulumi.String("aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"),
+ * 			ResourceGroupName:          pulumi.String("testrg"),
+ * 			VCenterId:                  pulumi.String("/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter"),
+ * 			VirtualMachineTemplateName: pulumi.String("WebFrontEndTemplate"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualMachineTemplate = new azure_native.connectedvmwarevsphere.VirtualMachineTemplate("virtualMachineTemplate", {
+ *     extendedLocation: {
+ *         name: "/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso",
+ *         type: "customLocation",
+ *     },
+ *     location: "East US",
+ *     moRefId: "aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     resourceGroupName: "testrg",
+ *     vCenterId: "/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter",
+ *     virtualMachineTemplateName: "WebFrontEndTemplate",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_machine_template = azure_native.connectedvmwarevsphere.VirtualMachineTemplate("virtualMachineTemplate",
+ *     extended_location=azure_native.connectedvmwarevsphere.ExtendedLocationArgs(
+ *         name="/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso",
+ *         type="customLocation",
+ *     ),
+ *     location="East US",
+ *     mo_ref_id="aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+ *     resource_group_name="testrg",
+ *     v_center_id="/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter",
+ *     virtual_machine_template_name="WebFrontEndTemplate")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,140 +136,120 @@ import javax.annotation.Nullable;
 public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
     /**
      * Gets the name of the corresponding resource in Kubernetes.
-     * 
      */
     @Export(name="customResourceName", type=String.class, parameters={})
     private Output<String> customResourceName;
 
     /**
      * @return Gets the name of the corresponding resource in Kubernetes.
-     * 
      */
     public Output<String> getCustomResourceName() {
         return this.customResourceName;
     }
     /**
      * Gets or sets the disks the template.
-     * 
      */
     @Export(name="disks", type=List.class, parameters={VirtualDiskResponse.class})
     private Output<List<VirtualDiskResponse>> disks;
 
     /**
      * @return Gets or sets the disks the template.
-     * 
      */
     public Output<List<VirtualDiskResponse>> getDisks() {
         return this.disks;
     }
     /**
      * Gets or sets the extended location.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return Gets or sets the extended location.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * Firmware type
-     * 
      */
     @Export(name="firmwareType", type=String.class, parameters={})
     private Output<String> firmwareType;
 
     /**
      * @return Firmware type
-     * 
      */
     public Output<String> getFirmwareType() {
         return this.firmwareType;
     }
     /**
      * Gets or sets the folder path of the template.
-     * 
      */
     @Export(name="folderPath", type=String.class, parameters={})
     private Output<String> folderPath;
 
     /**
      * @return Gets or sets the folder path of the template.
-     * 
      */
     public Output<String> getFolderPath() {
         return this.folderPath;
     }
     /**
      * Gets or sets the inventory Item ID for the virtual machine template.
-     * 
      */
     @Export(name="inventoryItemId", type=String.class, parameters={})
     private Output</* @Nullable */ String> inventoryItemId;
 
     /**
      * @return Gets or sets the inventory Item ID for the virtual machine template.
-     * 
      */
     public Output</* @Nullable */ String> getInventoryItemId() {
         return this.inventoryItemId;
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Gets or sets the location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Gets or sets the location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Gets or sets memory size in MBs for the template.
-     * 
      */
     @Export(name="memorySizeMB", type=Integer.class, parameters={})
     private Output<Integer> memorySizeMB;
 
     /**
      * @return Gets or sets memory size in MBs for the template.
-     * 
      */
     public Output<Integer> getMemorySizeMB() {
         return this.memorySizeMB;
     }
     /**
      * Gets or sets the vCenter Managed Object name for the virtual machine template.
-     * 
      */
     @Export(name="moName", type=String.class, parameters={})
     private Output<String> moName;
 
     /**
      * @return Gets or sets the vCenter Managed Object name for the virtual machine template.
-     * 
      */
     public Output<String> getMoName() {
         return this.moName;
@@ -180,7 +257,6 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine
      * template.
-     * 
      */
     @Export(name="moRefId", type=String.class, parameters={})
     private Output</* @Nullable */ String> moRefId;
@@ -188,49 +264,42 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
     /**
      * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine
      * template.
-     * 
      */
     public Output</* @Nullable */ String> getMoRefId() {
         return this.moRefId;
     }
     /**
      * Gets or sets the name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets or sets the name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the network interfaces of the template.
-     * 
      */
     @Export(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
     private Output<List<NetworkInterfaceResponse>> networkInterfaces;
 
     /**
      * @return Gets or sets the network interfaces of the template.
-     * 
      */
     public Output<List<NetworkInterfaceResponse>> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * Gets or sets the number of vCPUs for the template.
-     * 
      */
     @Export(name="numCPUs", type=Integer.class, parameters={})
     private Output<Integer> numCPUs;
 
     /**
      * @return Gets or sets the number of vCPUs for the template.
-     * 
      */
     public Output<Integer> getNumCPUs() {
         return this.numCPUs;
@@ -238,7 +307,6 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the number of cores per socket for the template.
      * Defaults to 1 if unspecified.
-     * 
      */
     @Export(name="numCoresPerSocket", type=Integer.class, parameters={})
     private Output<Integer> numCoresPerSocket;
@@ -246,161 +314,138 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
     /**
      * @return Gets or sets the number of cores per socket for the template.
      * Defaults to 1 if unspecified.
-     * 
      */
     public Output<Integer> getNumCoresPerSocket() {
         return this.numCoresPerSocket;
     }
     /**
      * Gets or sets os name.
-     * 
      */
     @Export(name="osName", type=String.class, parameters={})
     private Output<String> osName;
 
     /**
      * @return Gets or sets os name.
-     * 
      */
     public Output<String> getOsName() {
         return this.osName;
     }
     /**
      * Gets or sets the type of the os.
-     * 
      */
     @Export(name="osType", type=String.class, parameters={})
     private Output<String> osType;
 
     /**
      * @return Gets or sets the type of the os.
-     * 
      */
     public Output<String> getOsType() {
         return this.osType;
     }
     /**
      * Gets or sets the provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets or sets the provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource status information.
-     * 
      */
     @Export(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
     private Output<List<ResourceStatusResponse>> statuses;
 
     /**
      * @return The resource status information.
-     * 
      */
     public Output<List<ResourceStatusResponse>> getStatuses() {
         return this.statuses;
     }
     /**
      * The system data.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system data.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Gets or sets the Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Gets or sets the Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets or sets the current version of VMware Tools.
-     * 
      */
     @Export(name="toolsVersion", type=String.class, parameters={})
     private Output<String> toolsVersion;
 
     /**
      * @return Gets or sets the current version of VMware Tools.
-     * 
      */
     public Output<String> getToolsVersion() {
         return this.toolsVersion;
     }
     /**
      * Gets or sets the current version status of VMware Tools installed in the guest operating system.
-     * 
      */
     @Export(name="toolsVersionStatus", type=String.class, parameters={})
     private Output<String> toolsVersionStatus;
 
     /**
      * @return Gets or sets the current version status of VMware Tools installed in the guest operating system.
-     * 
      */
     public Output<String> getToolsVersionStatus() {
         return this.toolsVersionStatus;
     }
     /**
      * Gets or sets the type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets or sets the type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets or sets a unique identifier for this resource.
-     * 
      */
     @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
      * @return Gets or sets a unique identifier for this resource.
-     * 
      */
     public Output<String> getUuid() {
         return this.uuid;
     }
     /**
      * Gets or sets the ARM Id of the vCenter resource in which this template resides.
-     * 
      */
     @Export(name="vCenterId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vCenterId;
 
     /**
      * @return Gets or sets the ARM Id of the vCenter resource in which this template resides.
-     * 
      */
     public Output</* @Nullable */ String> getVCenterId() {
         return this.vCenterId;

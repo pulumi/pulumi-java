@@ -13,23 +13,19 @@ import javax.annotation.Nullable;
 public final class RecoveryPlanScriptActionDetailsResponse {
     /**
      * The fabric location.
-     * 
      */
     private final String fabricLocation;
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is 'ScriptActionDetails'.
-     * 
      */
     private final String instanceType;
     /**
      * The script path.
-     * 
      */
     private final String path;
     /**
      * The script timeout.
-     * 
      */
     private final @Nullable String timeout;
 
@@ -47,7 +43,6 @@ public final class RecoveryPlanScriptActionDetailsResponse {
 
     /**
      * The fabric location.
-     * 
     */
     public String getFabricLocation() {
         return this.fabricLocation;
@@ -55,21 +50,18 @@ public final class RecoveryPlanScriptActionDetailsResponse {
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is 'ScriptActionDetails'.
-     * 
     */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The script path.
-     * 
     */
     public String getPath() {
         return this.path;
     }
     /**
      * The script timeout.
-     * 
     */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);

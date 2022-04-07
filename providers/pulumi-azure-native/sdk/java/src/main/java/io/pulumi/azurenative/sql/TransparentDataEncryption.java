@@ -17,7 +17,87 @@ import javax.annotation.Nullable;
  * Represents a database transparent data encryption configuration.
  * API Version: 2014-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update a database's transparent data encryption configuration
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var transparentDataEncryption = new AzureNative.Sql.TransparentDataEncryption("transparentDataEncryption", new AzureNative.Sql.TransparentDataEncryptionArgs
+ *         {
+ *             DatabaseName = "sqlcrudtest-9187",
+ *             ResourceGroupName = "sqlcrudtest-6852",
+ *             ServerName = "sqlcrudtest-2080",
+ *             Status = "Enabled",
+ *             TransparentDataEncryptionName = "current",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewTransparentDataEncryption(ctx, "transparentDataEncryption", &sql.TransparentDataEncryptionArgs{
+ * 			DatabaseName:                  pulumi.String("sqlcrudtest-9187"),
+ * 			ResourceGroupName:             pulumi.String("sqlcrudtest-6852"),
+ * 			ServerName:                    pulumi.String("sqlcrudtest-2080"),
+ * 			Status:                        pulumi.String("Enabled"),
+ * 			TransparentDataEncryptionName: pulumi.String("current"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const transparentDataEncryption = new azure_native.sql.TransparentDataEncryption("transparentDataEncryption", {
+ *     databaseName: "sqlcrudtest-9187",
+ *     resourceGroupName: "sqlcrudtest-6852",
+ *     serverName: "sqlcrudtest-2080",
+ *     status: "Enabled",
+ *     transparentDataEncryptionName: "current",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * transparent_data_encryption = azure_native.sql.TransparentDataEncryption("transparentDataEncryption",
+ *     database_name="sqlcrudtest-9187",
+ *     resource_group_name="sqlcrudtest-6852",
+ *     server_name="sqlcrudtest-2080",
+ *     status="Enabled",
+ *     transparent_data_encryption_name="current")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +112,48 @@ import javax.annotation.Nullable;
 public class TransparentDataEncryption extends io.pulumi.resources.CustomResource {
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The status of the database transparent data encryption.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return The status of the database transparent data encryption.
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

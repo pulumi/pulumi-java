@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The authentication mechanism to use to connect to the HBase server.
-     * 
      */
     @EnumType
     public enum HBaseAuthenticationType {

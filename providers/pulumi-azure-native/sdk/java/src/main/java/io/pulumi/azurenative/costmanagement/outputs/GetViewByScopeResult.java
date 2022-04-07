@@ -19,97 +19,78 @@ import javax.annotation.Nullable;
 public final class GetViewByScopeResult {
     /**
      * Show costs accumulated over time.
-     * 
      */
     private final @Nullable String accumulated;
     /**
      * Chart type of the main view in Cost Analysis. Required.
-     * 
      */
     private final @Nullable String chart;
     /**
      * Date the user created this view.
-     * 
      */
     private final String createdOn;
     /**
      * Selected currency.
-     * 
      */
     private final String currency;
     /**
      * Has definition for data in this report config.
-     * 
      */
     private final @Nullable ReportConfigDatasetResponse dataSet;
     /**
      * Selected date range for viewing cost in.
-     * 
      */
     private final String dateRange;
     /**
      * User input name of the view. Required.
-     * 
      */
     private final @Nullable String displayName;
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     * 
      */
     private final @Nullable String eTag;
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * Include monetary commitment
-     * 
      */
     private final Boolean includeMonetaryCommitment;
     /**
      * List of KPIs to show in Cost Analysis UI.
-     * 
      */
     private final @Nullable List<KpiPropertiesResponse> kpis;
     /**
      * Metric to use when displaying costs.
-     * 
      */
     private final @Nullable String metric;
     /**
      * Date when the user last modified this view.
-     * 
      */
     private final String modifiedOn;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Configuration of 3 sub-views in the Cost Analysis UI.
-     * 
      */
     private final @Nullable List<PivotPropertiesResponse> pivots;
     /**
      * Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
-     * 
      */
     private final @Nullable String scope;
     /**
      * Has time period for pulling data for the report.
-     * 
      */
     private final @Nullable ReportConfigTimePeriodResponse timePeriod;
     /**
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-     * 
      */
     private final String timeframe;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -157,133 +138,114 @@ public final class GetViewByScopeResult {
 
     /**
      * Show costs accumulated over time.
-     * 
     */
     public Optional<String> getAccumulated() {
         return Optional.ofNullable(this.accumulated);
     }
     /**
      * Chart type of the main view in Cost Analysis. Required.
-     * 
     */
     public Optional<String> getChart() {
         return Optional.ofNullable(this.chart);
     }
     /**
      * Date the user created this view.
-     * 
     */
     public String getCreatedOn() {
         return this.createdOn;
     }
     /**
      * Selected currency.
-     * 
     */
     public String getCurrency() {
         return this.currency;
     }
     /**
      * Has definition for data in this report config.
-     * 
     */
     public Optional<ReportConfigDatasetResponse> getDataSet() {
         return Optional.ofNullable(this.dataSet);
     }
     /**
      * Selected date range for viewing cost in.
-     * 
     */
     public String getDateRange() {
         return this.dateRange;
     }
     /**
      * User input name of the view. Required.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     * 
     */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Include monetary commitment
-     * 
     */
     public Boolean getIncludeMonetaryCommitment() {
         return this.includeMonetaryCommitment;
     }
     /**
      * List of KPIs to show in Cost Analysis UI.
-     * 
     */
     public List<KpiPropertiesResponse> getKpis() {
         return this.kpis == null ? List.of() : this.kpis;
     }
     /**
      * Metric to use when displaying costs.
-     * 
     */
     public Optional<String> getMetric() {
         return Optional.ofNullable(this.metric);
     }
     /**
      * Date when the user last modified this view.
-     * 
     */
     public String getModifiedOn() {
         return this.modifiedOn;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Configuration of 3 sub-views in the Cost Analysis UI.
-     * 
     */
     public List<PivotPropertiesResponse> getPivots() {
         return this.pivots == null ? List.of() : this.pivots;
     }
     /**
      * Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
-     * 
     */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Has time period for pulling data for the report.
-     * 
     */
     public Optional<ReportConfigTimePeriodResponse> getTimePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
     /**
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
-     * 
     */
     public String getTimeframe() {
         return this.timeframe;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

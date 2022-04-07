@@ -14,7 +14,6 @@ public final class ListApplianceClusterUserCredentialArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class ListApplianceClusterUserCredentialArgs extends io.pulumi.reso
 
     /**
      * Appliances name.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

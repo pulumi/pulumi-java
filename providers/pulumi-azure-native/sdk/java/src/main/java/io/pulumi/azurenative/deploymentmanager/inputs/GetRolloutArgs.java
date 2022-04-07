@@ -17,7 +17,6 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -28,7 +27,6 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.
-     * 
      */
     @Import(name="retryAttempt")
       private final @Nullable Integer retryAttempt;
@@ -39,7 +37,6 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The rollout name.
-     * 
      */
     @Import(name="rolloutName", required=true)
       private final String rolloutName;

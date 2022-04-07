@@ -15,7 +15,6 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse extends io.pulum
 
     /**
      * Migration error
-     * 
      */
     @Import(name="error", required=true)
       private final ReportableExceptionResponse error;
@@ -26,7 +25,6 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse extends io.pulum
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -38,7 +36,6 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse extends io.pulum
     /**
      * Result type
      * Expected value is 'ErrorOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;

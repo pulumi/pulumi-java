@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define a match condition
- * 
  */
 public final class RulesEngineMatchConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
 
     /**
      * Describes if this is negate condition or not
-     * 
      */
     @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
@@ -33,7 +31,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
 
     /**
      * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
-     * 
      */
     @Import(name="rulesEngineMatchValue", required=true)
       private final List<String> rulesEngineMatchValue;
@@ -44,7 +41,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
 
     /**
      * Match Variable
-     * 
      */
     @Import(name="rulesEngineMatchVariable", required=true)
       private final String rulesEngineMatchVariable;
@@ -55,7 +51,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
 
     /**
      * Describes operator to apply to the match condition.
-     * 
      */
     @Import(name="rulesEngineOperator", required=true)
       private final String rulesEngineOperator;
@@ -66,7 +61,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
 
     /**
      * Name of selector in RequestHeader or RequestBody to be matched
-     * 
      */
     @Import(name="selector")
       private final @Nullable String selector;
@@ -77,7 +71,6 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
 
     /**
      * List of transforms
-     * 
      */
     @Import(name="transforms")
       private final @Nullable List<String> transforms;

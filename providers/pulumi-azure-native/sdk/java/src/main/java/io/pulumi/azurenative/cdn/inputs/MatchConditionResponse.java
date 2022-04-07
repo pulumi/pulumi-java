@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Define match conditions
- * 
  */
 public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * List of possible match values.
-     * 
      */
     @Import(name="matchValue", required=true)
       private final List<String> matchValue;
@@ -33,7 +31,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Match variable to compare against.
-     * 
      */
     @Import(name="matchVariable", required=true)
       private final String matchVariable;
@@ -44,7 +41,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Describes if the result of this condition should be negated.
-     * 
      */
     @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
@@ -55,7 +51,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Describes operator to be matched
-     * 
      */
     @Import(name="operator", required=true)
       private final String operator;
@@ -66,7 +61,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
-     * 
      */
     @Import(name="selector")
       private final @Nullable String selector;
@@ -77,7 +71,6 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * List of transforms.
-     * 
      */
     @Import(name="transforms")
       private final @Nullable List<String> transforms;

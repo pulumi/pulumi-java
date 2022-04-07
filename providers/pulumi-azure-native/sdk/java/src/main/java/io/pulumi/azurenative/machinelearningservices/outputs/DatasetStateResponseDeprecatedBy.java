@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class DatasetStateResponseDeprecatedBy {
     /**
      * Unique Dataset identifier.
-     * 
      */
     private final String datasetId;
     /**
      * Definition Version
-     * 
      */
     private final @Nullable String definitionVersion;
 
@@ -32,14 +30,12 @@ public final class DatasetStateResponseDeprecatedBy {
 
     /**
      * Unique Dataset identifier.
-     * 
     */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * Definition Version
-     * 
     */
     public Optional<String> getDefinitionVersion() {
         return Optional.ofNullable(this.definitionVersion);

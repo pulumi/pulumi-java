@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class CacheActiveDirectorySettingsResponseCredentials {
     /**
      * Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
-     * 
      */
     private final String password;
     /**
      * Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
-     * 
      */
     private final String username;
 
@@ -30,14 +28,12 @@ public final class CacheActiveDirectorySettingsResponseCredentials {
 
     /**
      * Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
-     * 
     */
     public String getPassword() {
         return this.password;
     }
     /**
      * Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
-     * 
     */
     public String getUsername() {
         return this.username;

@@ -23,7 +23,139 @@ import javax.annotation.Nullable;
  * Represents an instance of an Analysis Services resource.
  * API Version: 2017-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a server.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serverDetails = new AzureNative.AnalysisServices.ServerDetails("serverDetails", new AzureNative.AnalysisServices.ServerDetailsArgs
+ *         {
+ *             AsAdministrators = new AzureNative.AnalysisServices.Inputs.ServerAdministratorsArgs
+ *             {
+ *                 Members = 
+ *                 {
+ *                     "azsdktest@microsoft.com",
+ *                     "azsdktest2@microsoft.com",
+ *                 },
+ *             },
+ *             Location = "West US",
+ *             ResourceGroupName = "TestRG",
+ *             ServerName = "azsdktest",
+ *             Sku = new AzureNative.AnalysisServices.Inputs.ResourceSkuArgs
+ *             {
+ *                 Capacity = 1,
+ *                 Name = "S1",
+ *                 Tier = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "testKey", "testValue" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	analysisservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/analysisservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := analysisservices.NewServerDetails(ctx, "serverDetails", &analysisservices.ServerDetailsArgs{
+ * 			AsAdministrators: &analysisservices.ServerAdministratorsArgs{
+ * 				Members: pulumi.StringArray{
+ * 					pulumi.String("azsdktest@microsoft.com"),
+ * 					pulumi.String("azsdktest2@microsoft.com"),
+ * 				},
+ * 			},
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("TestRG"),
+ * 			ServerName:        pulumi.String("azsdktest"),
+ * 			Sku: &analysisservices.ResourceSkuArgs{
+ * 				Capacity: pulumi.Int(1),
+ * 				Name:     pulumi.String("S1"),
+ * 				Tier:     pulumi.String("Standard"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"testKey": pulumi.String("testValue"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serverDetails = new azure_native.analysisservices.ServerDetails("serverDetails", {
+ *     asAdministrators: {
+ *         members: [
+ *             "azsdktest@microsoft.com",
+ *             "azsdktest2@microsoft.com",
+ *         ],
+ *     },
+ *     location: "West US",
+ *     resourceGroupName: "TestRG",
+ *     serverName: "azsdktest",
+ *     sku: {
+ *         capacity: 1,
+ *         name: "S1",
+ *         tier: "Standard",
+ *     },
+ *     tags: {
+ *         testKey: "testValue",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * server_details = azure_native.analysisservices.ServerDetails("serverDetails",
+ *     as_administrators=azure_native.analysisservices.ServerAdministratorsArgs(
+ *         members=[
+ *             "azsdktest@microsoft.com",
+ *             "azsdktest2@microsoft.com",
+ *         ],
+ *     ),
+ *     location="West US",
+ *     resource_group_name="TestRG",
+ *     server_name="azsdktest",
+ *     sku=azure_native.analysisservices.ResourceSkuArgs(
+ *         capacity=1,
+ *         name="S1",
+ *         tier="Standard",
+ *     ),
+ *     tags={
+ *         "testKey": "testValue",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,210 +170,180 @@ import javax.annotation.Nullable;
 public class ServerDetails extends io.pulumi.resources.CustomResource {
     /**
      * A collection of AS server administrators
-     * 
      */
     @Export(name="asAdministrators", type=ServerAdministratorsResponse.class, parameters={})
     private Output</* @Nullable */ ServerAdministratorsResponse> asAdministrators;
 
     /**
      * @return A collection of AS server administrators
-     * 
      */
     public Output</* @Nullable */ ServerAdministratorsResponse> getAsAdministrators() {
         return this.asAdministrators;
     }
     /**
      * The SAS container URI to the backup container.
-     * 
      */
     @Export(name="backupBlobContainerUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> backupBlobContainerUri;
 
     /**
      * @return The SAS container URI to the backup container.
-     * 
      */
     public Output</* @Nullable */ String> getBackupBlobContainerUri() {
         return this.backupBlobContainerUri;
     }
     /**
      * The gateway details configured for the AS server.
-     * 
      */
     @Export(name="gatewayDetails", type=GatewayDetailsResponse.class, parameters={})
     private Output</* @Nullable */ GatewayDetailsResponse> gatewayDetails;
 
     /**
      * @return The gateway details configured for the AS server.
-     * 
      */
     public Output</* @Nullable */ GatewayDetailsResponse> getGatewayDetails() {
         return this.gatewayDetails;
     }
     /**
      * The firewall settings for the AS server.
-     * 
      */
     @Export(name="ipV4FirewallSettings", type=IPv4FirewallSettingsResponse.class, parameters={})
     private Output</* @Nullable */ IPv4FirewallSettingsResponse> ipV4FirewallSettings;
 
     /**
      * @return The firewall settings for the AS server.
-     * 
      */
     public Output</* @Nullable */ IPv4FirewallSettingsResponse> getIpV4FirewallSettings() {
         return this.ipV4FirewallSettings;
     }
     /**
      * Location of the Analysis Services resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Location of the Analysis Services resource.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The managed mode of the server (0 = not managed, 1 = managed).
-     * 
      */
     @Export(name="managedMode", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> managedMode;
 
     /**
      * @return The managed mode of the server (0 = not managed, 1 = managed).
-     * 
      */
     public Output</* @Nullable */ Integer> getManagedMode() {
         return this.managedMode;
     }
     /**
      * The name of the Analysis Services resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the Analysis Services resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.
-     * 
      */
     @Export(name="querypoolConnectionMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> querypoolConnectionMode;
 
     /**
      * @return How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.
-     * 
      */
     public Output</* @Nullable */ String> getQuerypoolConnectionMode() {
         return this.querypoolConnectionMode;
     }
     /**
      * The full name of the Analysis Services resource.
-     * 
      */
     @Export(name="serverFullName", type=String.class, parameters={})
     private Output<String> serverFullName;
 
     /**
      * @return The full name of the Analysis Services resource.
-     * 
      */
     public Output<String> getServerFullName() {
         return this.serverFullName;
     }
     /**
      * The server monitor mode for AS server
-     * 
      */
     @Export(name="serverMonitorMode", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> serverMonitorMode;
 
     /**
      * @return The server monitor mode for AS server
-     * 
      */
     public Output</* @Nullable */ Integer> getServerMonitorMode() {
         return this.serverMonitorMode;
     }
     /**
      * The SKU of the Analysis Services resource.
-     * 
      */
     @Export(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output<ResourceSkuResponse> sku;
 
     /**
      * @return The SKU of the Analysis Services resource.
-     * 
      */
     public Output<ResourceSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Key-value pairs of additional resource provisioning properties.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the Analysis Services resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the Analysis Services resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

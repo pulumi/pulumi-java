@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a daily schedule.
- * 
  */
 public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The time of day the schedule will occur.
-     * 
      */
     @Import(name="time")
       private final @Nullable Output<String> time;

@@ -18,7 +18,124 @@ import javax.annotation.Nullable;
  * Default rollout definition.
  * API Version: 2020-11-20.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DefaultRollouts_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var defaultRollout = new AzureNative.ProviderHub.DefaultRollout("defaultRollout", new AzureNative.ProviderHub.DefaultRolloutArgs
+ *         {
+ *             Properties = new AzureNative.ProviderHub.Inputs.DefaultRolloutPropertiesArgs
+ *             {
+ *                 Specification = new AzureNative.ProviderHub.Inputs.DefaultRolloutPropertiesSpecificationArgs
+ *                 {
+ *                     Canary = new AzureNative.ProviderHub.Inputs.DefaultRolloutSpecificationCanaryArgs
+ *                     {
+ *                         SkipRegions = 
+ *                         {
+ *                             "eastus2euap",
+ *                         },
+ *                     },
+ *                     RestOfTheWorldGroupTwo = new AzureNative.ProviderHub.Inputs.DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs
+ *                     {
+ *                         WaitDuration = "PT4H",
+ *                     },
+ *                 },
+ *             },
+ *             ProviderNamespace = "Microsoft.Contoso",
+ *             RolloutName = "2020week10",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	providerhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/providerhub"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := providerhub.NewDefaultRollout(ctx, "defaultRollout", &providerhub.DefaultRolloutArgs{
+ * 			Properties: &providerhub.DefaultRolloutPropertiesArgs{
+ * 				Specification: &providerhub.DefaultRolloutPropertiesSpecificationArgs{
+ * 					Canary: &providerhub.DefaultRolloutSpecificationCanaryArgs{
+ * 						SkipRegions: pulumi.StringArray{
+ * 							pulumi.String("eastus2euap"),
+ * 						},
+ * 					},
+ * 					RestOfTheWorldGroupTwo: &providerhub.DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs{
+ * 						WaitDuration: pulumi.String("PT4H"),
+ * 					},
+ * 				},
+ * 			},
+ * 			ProviderNamespace: pulumi.String("Microsoft.Contoso"),
+ * 			RolloutName:       pulumi.String("2020week10"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const defaultRollout = new azure_native.providerhub.DefaultRollout("defaultRollout", {
+ *     properties: {
+ *         specification: {
+ *             canary: {
+ *                 skipRegions: ["eastus2euap"],
+ *             },
+ *             restOfTheWorldGroupTwo: {
+ *                 waitDuration: "PT4H",
+ *             },
+ *         },
+ *     },
+ *     providerNamespace: "Microsoft.Contoso",
+ *     rolloutName: "2020week10",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * default_rollout = azure_native.providerhub.DefaultRollout("defaultRollout",
+ *     properties=azure_native.providerhub.DefaultRolloutPropertiesArgs(
+ *         specification=azure_native.providerhub.DefaultRolloutPropertiesSpecificationArgs(
+ *             canary=azure_native.providerhub.DefaultRolloutSpecificationCanaryArgs(
+ *                 skip_regions=["eastus2euap"],
+ *             ),
+ *             rest_of_the_world_group_two=azure_native.providerhub.DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs(
+ *                 wait_duration="PT4H",
+ *             ),
+ *         ),
+ *     ),
+ *     provider_namespace="Microsoft.Contoso",
+ *     rollout_name="2020week10")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +150,36 @@ import javax.annotation.Nullable;
 public class DefaultRollout extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the rollout.
-     * 
      */
     @Export(name="properties", type=DefaultRolloutResponseProperties.class, parameters={})
     private Output<DefaultRolloutResponseProperties> properties;
 
     /**
      * @return Properties of the rollout.
-     * 
      */
     public Output<DefaultRolloutResponseProperties> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

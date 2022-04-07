@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of an Azure Firewall.
- * 
  */
 public final class AzureFirewallSkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureFirewallSkuResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of an Azure Firewall SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class AzureFirewallSkuResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Tier of an Azure Firewall.
-     * 
      */
     @Import(name="tier")
       private final @Nullable String tier;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * InMage protected disk details.
- * 
  */
 public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The disk capacity in bytes.
-     * 
      */
     @Import(name="diskCapacityInBytes")
       private final @Nullable Double diskCapacityInBytes;
@@ -33,7 +31,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The disk id.
-     * 
      */
     @Import(name="diskId")
       private final @Nullable String diskId;
@@ -44,7 +41,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The disk name.
-     * 
      */
     @Import(name="diskName")
       private final @Nullable String diskName;
@@ -55,7 +51,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * A value indicating whether disk is resized.
-     * 
      */
     @Import(name="diskResized")
       private final @Nullable String diskResized;
@@ -66,7 +61,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The file system capacity in bytes.
-     * 
      */
     @Import(name="fileSystemCapacityInBytes")
       private final @Nullable Double fileSystemCapacityInBytes;
@@ -77,7 +71,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The health error code for the disk.
-     * 
      */
     @Import(name="healthErrorCode")
       private final @Nullable String healthErrorCode;
@@ -88,7 +81,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The last RPO calculated time.
-     * 
      */
     @Import(name="lastRpoCalculatedTime")
       private final @Nullable String lastRpoCalculatedTime;
@@ -99,7 +91,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The protection stage.
-     * 
      */
     @Import(name="protectionStage")
       private final @Nullable String protectionStage;
@@ -110,7 +101,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The PS data transit in MB.
-     * 
      */
     @Import(name="psDataInMB")
       private final @Nullable Double psDataInMB;
@@ -121,7 +111,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The resync duration in seconds.
-     * 
      */
     @Import(name="resyncDurationInSeconds")
       private final @Nullable Double resyncDurationInSeconds;
@@ -132,7 +121,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The resync progress percentage.
-     * 
      */
     @Import(name="resyncProgressPercentage")
       private final @Nullable Integer resyncProgressPercentage;
@@ -143,7 +131,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * A value indicating whether resync is required for this disk.
-     * 
      */
     @Import(name="resyncRequired")
       private final @Nullable String resyncRequired;
@@ -154,7 +141,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The RPO in seconds.
-     * 
      */
     @Import(name="rpoInSeconds")
       private final @Nullable Double rpoInSeconds;
@@ -165,7 +151,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The source data transit in MB.
-     * 
      */
     @Import(name="sourceDataInMB")
       private final @Nullable Double sourceDataInMB;
@@ -176,7 +161,6 @@ public final class InMageProtectedDiskDetailsResponse extends io.pulumi.resource
 
     /**
      * The target data transit in MB.
-     * 
      */
     @Import(name="targetDataInMB")
       private final @Nullable Double targetDataInMB;

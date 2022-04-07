@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Distribute via VHD in a storage account.
- * 
  */
 public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
 
     /**
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
-     * 
      */
     @Import(name="artifactTags")
       private final @Nullable Output<Map<String,String>> artifactTags;
@@ -32,7 +30,6 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
 
     /**
      * The name to be used for the associated RunOutput.
-     * 
      */
     @Import(name="runOutputName", required=true)
       private final Output<String> runOutputName;
@@ -44,7 +41,6 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
     /**
      * Type of distribution.
      * Expected value is 'VHD'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

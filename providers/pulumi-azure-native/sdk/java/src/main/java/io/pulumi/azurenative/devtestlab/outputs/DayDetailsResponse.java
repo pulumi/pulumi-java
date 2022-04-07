@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DayDetailsResponse {
     /**
      * The time of day the schedule will occur.
-     * 
      */
     private final @Nullable String time;
 
@@ -24,7 +23,6 @@ public final class DayDetailsResponse {
 
     /**
      * The time of day the schedule will occur.
-     * 
     */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);

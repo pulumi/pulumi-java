@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Policy for how namespace and files are recalled during FastDr.
-     * 
      */
     @EnumType
     public enum InitialDownloadPolicy {

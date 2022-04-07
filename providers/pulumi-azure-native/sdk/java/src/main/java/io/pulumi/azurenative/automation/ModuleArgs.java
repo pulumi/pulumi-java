@@ -18,7 +18,6 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -29,7 +28,6 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the module content link.
-     * 
      */
     @Import(name="contentLink", required=true)
       private final Output<ContentLinkArgs> contentLink;
@@ -40,7 +38,6 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -51,7 +48,6 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of module.
-     * 
      */
     @Import(name="moduleName")
       private final @Nullable Output<String> moduleName;
@@ -62,7 +58,6 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets name of the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -73,7 +68,6 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the tags attached to the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

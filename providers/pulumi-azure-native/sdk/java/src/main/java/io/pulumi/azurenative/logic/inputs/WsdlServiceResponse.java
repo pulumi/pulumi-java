@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The WSDL service.
- * 
  */
 public final class WsdlServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WsdlServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The list of endpoints' qualified names.
-     * 
      */
     @Import(name="endpointQualifiedNames")
       private final @Nullable List<String> endpointQualifiedNames;
@@ -32,7 +30,6 @@ public final class WsdlServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The qualified name.
-     * 
      */
     @Import(name="qualifiedName")
       private final @Nullable String qualifiedName;

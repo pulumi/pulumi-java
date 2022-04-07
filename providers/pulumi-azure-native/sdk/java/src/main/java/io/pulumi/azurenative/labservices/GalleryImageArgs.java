@@ -18,7 +18,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the gallery Image.
-     * 
      */
     @Import(name="galleryImageName")
       private final @Nullable Output<String> galleryImageName;
@@ -29,7 +28,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether this gallery image is enabled.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
@@ -40,7 +38,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates whether this gallery has been overridden for this lab account
-     * 
      */
     @Import(name="isOverride")
       private final @Nullable Output<Boolean> isOverride;
@@ -51,7 +48,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates if the plan has been authorized for programmatic deployment.
-     * 
      */
     @Import(name="isPlanAuthorized")
       private final @Nullable Output<Boolean> isPlanAuthorized;
@@ -62,7 +58,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab Account.
-     * 
      */
     @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
@@ -73,7 +68,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -84,7 +78,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
@@ -95,7 +88,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -106,7 +98,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -117,7 +108,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;

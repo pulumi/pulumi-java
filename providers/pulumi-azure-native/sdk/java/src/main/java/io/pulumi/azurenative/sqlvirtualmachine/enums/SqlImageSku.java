@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * SQL Server edition type.
-     * 
      */
     @EnumType
     public enum SqlImageSku {

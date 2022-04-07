@@ -19,7 +19,162 @@ import javax.annotation.Nullable;
  * An Azure Monitor PrivateLinkScope definition.
  * API Version: 2019-10-17-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PrivateLinkScopeCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateLinkScope = new AzureNative.Insights.PrivateLinkScope("privateLinkScope", new AzureNative.Insights.PrivateLinkScopeArgs
+ *         {
+ *             Location = "Global",
+ *             ResourceGroupName = "my-resource-group",
+ *             ScopeName = "my-privatelinkscope",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewPrivateLinkScope(ctx, "privateLinkScope", &insights.PrivateLinkScopeArgs{
+ * 			Location:          pulumi.String("Global"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			ScopeName:         pulumi.String("my-privatelinkscope"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateLinkScope = new azure_native.insights.PrivateLinkScope("privateLinkScope", {
+ *     location: "Global",
+ *     resourceGroupName: "my-resource-group",
+ *     scopeName: "my-privatelinkscope",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_link_scope = azure_native.insights.PrivateLinkScope("privateLinkScope",
+ *     location="Global",
+ *     resource_group_name="my-resource-group",
+ *     scope_name="my-privatelinkscope")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### PrivateLinkScopeUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateLinkScope = new AzureNative.Insights.PrivateLinkScope("privateLinkScope", new AzureNative.Insights.PrivateLinkScopeArgs
+ *         {
+ *             Location = "Global",
+ *             ResourceGroupName = "my-resource-group",
+ *             ScopeName = "my-privatelinkscope",
+ *             Tags = 
+ *             {
+ *                 { "Tag1", "Value1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewPrivateLinkScope(ctx, "privateLinkScope", &insights.PrivateLinkScopeArgs{
+ * 			Location:          pulumi.String("Global"),
+ * 			ResourceGroupName: pulumi.String("my-resource-group"),
+ * 			ScopeName:         pulumi.String("my-privatelinkscope"),
+ * 			Tags: pulumi.StringMap{
+ * 				"Tag1": pulumi.String("Value1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateLinkScope = new azure_native.insights.PrivateLinkScope("privateLinkScope", {
+ *     location: "Global",
+ *     resourceGroupName: "my-resource-group",
+ *     scopeName: "my-privatelinkscope",
+ *     tags: {
+ *         Tag1: "Value1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_link_scope = azure_native.insights.PrivateLinkScope("privateLinkScope",
+ *     location="Global",
+ *     resource_group_name="my-resource-group",
+ *     scope_name="my-privatelinkscope",
+ *     tags={
+ *         "Tag1": "Value1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,84 +189,72 @@ import javax.annotation.Nullable;
 public class PrivateLinkScope extends io.pulumi.resources.CustomResource {
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of private endpoint connections.
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return List of private endpoint connections.
-     * 
      */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

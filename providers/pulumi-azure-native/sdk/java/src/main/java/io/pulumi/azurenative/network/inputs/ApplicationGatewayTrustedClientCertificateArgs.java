@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trusted client certificates of an application gateway.
- * 
  */
 public final class ApplicationGatewayTrustedClientCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationGatewayTrustedClientCertificateArgs extends io.pul
 
     /**
      * Certificate public data.
-     * 
      */
     @Import(name="data")
       private final @Nullable Output<String> data;
@@ -31,7 +29,6 @@ public final class ApplicationGatewayTrustedClientCertificateArgs extends io.pul
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -42,7 +39,6 @@ public final class ApplicationGatewayTrustedClientCertificateArgs extends io.pul
 
     /**
      * Name of the trusted client certificate that is unique within an Application Gateway.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

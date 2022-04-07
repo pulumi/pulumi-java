@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Database connection string information.
- * 
  */
 public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Connection string value.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
@@ -32,7 +30,6 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of connection string.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -43,7 +40,6 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Type of database.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ConnectionStringType> type;

@@ -11,8 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Key Vault Secret Url and vault id of the encryption key
- * 
+ * Key Vault Secret Url and vault id of the encryption key 
  */
 public final class KeyVaultAndSecretReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class KeyVaultAndSecretReferenceArgs extends io.pulumi.resources.Re
 
     /**
      * Url pointing to a key or secret in KeyVault
-     * 
      */
     @Import(name="secretUrl", required=true)
       private final Output<String> secretUrl;
@@ -31,7 +29,6 @@ public final class KeyVaultAndSecretReferenceArgs extends io.pulumi.resources.Re
 
     /**
      * Resource id of the KeyVault containing the key or secret
-     * 
      */
     @Import(name="sourceVault", required=true)
       private final Output<SourceVaultArgs> sourceVault;

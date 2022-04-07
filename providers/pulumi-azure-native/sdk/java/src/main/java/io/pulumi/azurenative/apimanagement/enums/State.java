@@ -10,33 +10,27 @@ import java.util.StringJoiner;
 
     /**
      * Status of the issue.
-     * 
      */
     @EnumType
     public enum State {
         /**
          * The issue is proposed.
-         * 
          */
         Proposed("proposed"),
         /**
          * The issue is opened.
-         * 
          */
         Open("open"),
         /**
          * The issue was removed.
-         * 
          */
         Removed("removed"),
         /**
          * The issue is now resolved.
-         * 
          */
         Resolved("resolved"),
         /**
          * The issue was closed.
-         * 
          */
         Closed("closed");
 

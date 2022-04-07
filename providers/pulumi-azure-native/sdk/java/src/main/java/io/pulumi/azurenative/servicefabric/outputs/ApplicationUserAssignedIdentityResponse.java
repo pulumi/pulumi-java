@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ApplicationUserAssignedIdentityResponse {
     /**
      * The friendly name of user assigned identity.
-     * 
      */
     private final String name;
     /**
      * The principal id of user assigned identity.
-     * 
      */
     private final String principalId;
 
@@ -30,14 +28,12 @@ public final class ApplicationUserAssignedIdentityResponse {
 
     /**
      * The friendly name of user assigned identity.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The principal id of user assigned identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;

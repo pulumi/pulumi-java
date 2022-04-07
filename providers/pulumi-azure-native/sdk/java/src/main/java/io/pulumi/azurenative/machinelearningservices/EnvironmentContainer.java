@@ -19,7 +19,134 @@ import javax.annotation.Nullable;
  * Azure Resource Manager resource envelope.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdate Environment Container.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var environmentContainer = new AzureNative.MachineLearningServices.EnvironmentContainer("environmentContainer", new AzureNative.MachineLearningServices.EnvironmentContainerArgs
+ *         {
+ *             Name = "testEnvironment",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.EnvironmentContainerArgs
+ *             {
+ *                 Description = "string",
+ *                 Properties = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 Tags = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *             },
+ *             ResourceGroupName = "testrg123",
+ *             WorkspaceName = "testworkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearningservices.NewEnvironmentContainer(ctx, "environmentContainer", &machinelearningservices.EnvironmentContainerArgs{
+ * 			Name: pulumi.String("testEnvironment"),
+ * 			Properties: &machinelearningservices.EnvironmentContainerArgs{
+ * 				Description: pulumi.String("string"),
+ * 				Properties: pulumi.StringMap{
+ * 					"additionalProp1": pulumi.String("string"),
+ * 					"additionalProp2": pulumi.String("string"),
+ * 					"additionalProp3": pulumi.String("string"),
+ * 				},
+ * 				Tags: pulumi.StringMap{
+ * 					"additionalProp1": pulumi.String("string"),
+ * 					"additionalProp2": pulumi.String("string"),
+ * 					"additionalProp3": pulumi.String("string"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("testrg123"),
+ * 			WorkspaceName:     pulumi.String("testworkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const environmentContainer = new azure_native.machinelearningservices.EnvironmentContainer("environmentContainer", {
+ *     name: "testEnvironment",
+ *     properties: {
+ *         description: "string",
+ *         properties: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         tags: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *     },
+ *     resourceGroupName: "testrg123",
+ *     workspaceName: "testworkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * environment_container = azure_native.machinelearningservices.EnvironmentContainer("environmentContainer",
+ *     name="testEnvironment",
+ *     properties=azure_native.machinelearningservices.EnvironmentContainerArgs(
+ *         description="string",
+ *         properties={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         tags={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *     ),
+ *     resource_group_name="testrg123",
+ *     workspace_name="testworkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,56 +161,48 @@ import javax.annotation.Nullable;
 public class EnvironmentContainer extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Export(name="properties", type=EnvironmentContainerResponse.class, parameters={})
     private Output<EnvironmentContainerResponse> properties;
 
     /**
      * @return Additional attributes of the entity.
-     * 
      */
     public Output<EnvironmentContainerResponse> getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System data associated with resource provider
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

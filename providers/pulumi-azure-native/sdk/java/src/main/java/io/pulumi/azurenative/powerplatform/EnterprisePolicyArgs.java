@@ -23,7 +23,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The encryption settings for a configuration store.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<PropertiesEncryptionArgs> encryption;
@@ -34,7 +33,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Name of the EnterprisePolicy.
-     * 
      */
     @Import(name="enterprisePolicyName")
       private final @Nullable Output<String> enterprisePolicyName;
@@ -45,7 +43,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The identity of the EnterprisePolicy.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<EnterprisePolicyIdentityArgs> identity;
@@ -56,7 +53,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The kind (type) of Enterprise Policy.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,EnterprisePolicyKind>> kind;
@@ -67,7 +63,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -78,7 +73,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Settings concerning lockbox.
-     * 
      */
     @Import(name="lockbox")
       private final @Nullable Output<PropertiesLockboxArgs> lockbox;
@@ -89,7 +83,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Settings concerning network injection.
-     * 
      */
     @Import(name="networkInjection")
       private final @Nullable Output<PropertiesNetworkInjectionArgs> networkInjection;
@@ -100,7 +93,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -111,7 +103,6 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

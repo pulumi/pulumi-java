@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class for site properties.
- * 
  */
 public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * AAD Authority URL which was used to request the token for the service principal.
-     * 
      */
     @Import(name="aadAuthority")
       private final @Nullable String aadAuthority;
@@ -31,7 +29,6 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="applicationId")
       private final @Nullable String applicationId;
@@ -42,7 +39,6 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Intended audience for the service principal.
-     * 
      */
     @Import(name="audience")
       private final @Nullable String audience;
@@ -53,7 +49,6 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable String objectId;
@@ -64,7 +59,6 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Raw certificate data for building certificate expiry flows.
-     * 
      */
     @Import(name="rawCertData")
       private final @Nullable String rawCertData;
@@ -75,7 +69,6 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
      */
     @Import(name="tenantId")
       private final @Nullable String tenantId;

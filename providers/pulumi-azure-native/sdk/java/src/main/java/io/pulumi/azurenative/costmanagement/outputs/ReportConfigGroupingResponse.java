@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ReportConfigGroupingResponse {
     /**
      * The name of the column to group. This version supports subscription lowest possible grain.
-     * 
      */
     private final String name;
     /**
      * Has type of the column to group.
-     * 
      */
     private final String type;
 
@@ -30,14 +28,12 @@ public final class ReportConfigGroupingResponse {
 
     /**
      * The name of the column to group. This version supports subscription lowest possible grain.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Has type of the column to group.
-     * 
     */
     public String getType() {
         return this.type;

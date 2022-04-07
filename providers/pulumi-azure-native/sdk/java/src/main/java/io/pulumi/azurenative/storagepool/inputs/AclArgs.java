@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Access Control List (ACL) for an iSCSI target portal group
- * 
  */
 public final class AclArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
-     * 
      */
     @Import(name="initiatorIqn", required=true)
       private final Output<String> initiatorIqn;
@@ -31,7 +29,6 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of LUN names mapped to the ACL.
-     * 
      */
     @Import(name="mappedLuns", required=true)
       private final Output<List<String>> mappedLuns;
@@ -42,7 +39,6 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -53,7 +49,6 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
-     * 
      */
     @Import(name="username", required=true)
       private final Output<String> username;

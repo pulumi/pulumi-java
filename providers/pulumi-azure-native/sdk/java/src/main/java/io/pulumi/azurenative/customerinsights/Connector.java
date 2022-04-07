@@ -21,7 +21,117 @@ import javax.annotation.Nullable;
  * The connector resource format.
  * API Version: 2017-04-26.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Connectors_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var connector = new AzureNative.CustomerInsights.Connector("connector", new AzureNative.CustomerInsights.ConnectorArgs
+ *         {
+ *             ConnectorName = "testConnector",
+ *             ConnectorProperties = 
+ *             {
+ *                 { "connectionKeyVaultUrl", 
+ *                 {
+ *                     { "organizationId", "XXX" },
+ *                     { "organizationUrl", "https://XXX.crmlivetie.com/" },
+ *                 } },
+ *             },
+ *             ConnectorType = "AzureBlob",
+ *             Description = "Test connector",
+ *             DisplayName = "testConnector",
+ *             HubName = "sdkTestHub",
+ *             ResourceGroupName = "TestHubRG",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerinsights.NewConnector(ctx, "connector", &customerinsights.ConnectorArgs{
+ * 			ConnectorName: pulumi.String("testConnector"),
+ * 			ConnectorProperties: pulumi.AnyMap{
+ * 				"connectionKeyVaultUrl": pulumi.Any{
+ * 					OrganizationId:  "XXX",
+ * 					OrganizationUrl: "https://XXX.crmlivetie.com/",
+ * 				},
+ * 			},
+ * 			ConnectorType:     pulumi.String("AzureBlob"),
+ * 			Description:       pulumi.String("Test connector"),
+ * 			DisplayName:       pulumi.String("testConnector"),
+ * 			HubName:           pulumi.String("sdkTestHub"),
+ * 			ResourceGroupName: pulumi.String("TestHubRG"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const connector = new azure_native.customerinsights.Connector("connector", {
+ *     connectorName: "testConnector",
+ *     connectorProperties: {
+ *         connectionKeyVaultUrl: {
+ *             organizationId: "XXX",
+ *             organizationUrl: "https://XXX.crmlivetie.com/",
+ *         },
+ *     },
+ *     connectorType: "AzureBlob",
+ *     description: "Test connector",
+ *     displayName: "testConnector",
+ *     hubName: "sdkTestHub",
+ *     resourceGroupName: "TestHubRG",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * connector = azure_native.customerinsights.Connector("connector",
+ *     connector_name="testConnector",
+ *     connector_properties={
+ *         "connectionKeyVaultUrl": {
+ *             "organizationId": "XXX",
+ *             "organizationUrl": "https://XXX.crmlivetie.com/",
+ *         },
+ *     },
+ *     connector_type="AzureBlob",
+ *     description="Test connector",
+ *     display_name="testConnector",
+ *     hub_name="sdkTestHub",
+ *     resource_group_name="TestHubRG")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,182 +146,156 @@ import javax.annotation.Nullable;
 public class Connector extends io.pulumi.resources.CustomResource {
     /**
      * ID of the connector.
-     * 
      */
     @Export(name="connectorId", type=Integer.class, parameters={})
     private Output<Integer> connectorId;
 
     /**
      * @return ID of the connector.
-     * 
      */
     public Output<Integer> getConnectorId() {
         return this.connectorId;
     }
     /**
      * Name of the connector.
-     * 
      */
     @Export(name="connectorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorName;
 
     /**
      * @return Name of the connector.
-     * 
      */
     public Output</* @Nullable */ String> getConnectorName() {
         return this.connectorName;
     }
     /**
      * The connector properties.
-     * 
      */
     @Export(name="connectorProperties", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> connectorProperties;
 
     /**
      * @return The connector properties.
-     * 
      */
     public Output<Map<String,Object>> getConnectorProperties() {
         return this.connectorProperties;
     }
     /**
      * Type of connector.
-     * 
      */
     @Export(name="connectorType", type=String.class, parameters={})
     private Output<String> connectorType;
 
     /**
      * @return Type of connector.
-     * 
      */
     public Output<String> getConnectorType() {
         return this.connectorType;
     }
     /**
      * The created time.
-     * 
      */
     @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
      * @return The created time.
-     * 
      */
     public Output<String> getCreated() {
         return this.created;
     }
     /**
      * Description of the connector.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Description of the connector.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Display name of the connector.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Display name of the connector.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * If this is an internal connector.
-     * 
      */
     @Export(name="isInternal", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isInternal;
 
     /**
      * @return If this is an internal connector.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsInternal() {
         return this.isInternal;
     }
     /**
      * The last modified time.
-     * 
      */
     @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
      * @return The last modified time.
-     * 
      */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of connector.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of connector.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The hub name.
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
      * @return The hub name.
-     * 
      */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

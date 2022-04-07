@@ -17,7 +17,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The friendly string identifier of the creator of the NotebookProxy resource.
-     * 
      */
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
@@ -28,7 +27,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The public DNS name
-     * 
      */
     @Import(name="publicDns")
       private final @Nullable Output<String> publicDns;
@@ -39,7 +37,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Allow public network access on a V-Net locked notebook resource
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
@@ -50,7 +47,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The region of the NotebookProxy resource.
-     * 
      */
     @Import(name="region")
       private final @Nullable Output<String> region;
@@ -61,7 +57,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -72,7 +67,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -83,7 +77,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The alternate application ID used for auth token request in the data plane
-     * 
      */
     @Import(name="secondaryAppId")
       private final @Nullable Output<String> secondaryAppId;
@@ -94,7 +87,6 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * System data for notebook resource
-     * 
      */
     @Import(name="systemData")
       private final @Nullable Output<NotebookResourceSystemDataArgs> systemData;

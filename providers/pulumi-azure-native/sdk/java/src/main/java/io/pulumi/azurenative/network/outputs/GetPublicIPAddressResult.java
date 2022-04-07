@@ -25,122 +25,98 @@ import javax.annotation.Nullable;
 public final class GetPublicIPAddressResult {
     /**
      * The DDoS protection custom policy associated with the public IP address.
-     * 
      */
     private final @Nullable DdosSettingsResponse ddosSettings;
     /**
      * The FQDN of the DNS record associated with the public IP address.
-     * 
      */
     private final @Nullable PublicIPAddressDnsSettingsResponse dnsSettings;
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final String etag;
     /**
      * The extended location of the public ip address.
-     * 
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
      * Resource ID.
-     * 
      */
     private final @Nullable String id;
     /**
      * The idle timeout of the public IP address.
-     * 
      */
     private final @Nullable Integer idleTimeoutInMinutes;
     /**
      * The IP address associated with the public IP address resource.
-     * 
      */
     private final @Nullable String ipAddress;
     /**
      * The IP configuration associated with the public IP address.
-     * 
      */
     private final IPConfigurationResponse ipConfiguration;
     /**
      * The list of tags associated with the public IP address.
-     * 
      */
     private final @Nullable List<IpTagResponse> ipTags;
     /**
      * The linked public IP address of the public IP address resource.
-     * 
      */
     private final @Nullable PublicIPAddressResponse linkedPublicIPAddress;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Migration phase of Public IP Address.
-     * 
      */
     private final @Nullable String migrationPhase;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The NatGateway for the Public IP address.
-     * 
      */
     private final @Nullable NatGatewayResponse natGateway;
     /**
      * The provisioning state of the public IP address resource.
-     * 
      */
     private final String provisioningState;
     /**
      * The public IP address version.
-     * 
      */
     private final @Nullable String publicIPAddressVersion;
     /**
      * The public IP address allocation method.
-     * 
      */
     private final @Nullable String publicIPAllocationMethod;
     /**
      * The Public IP Prefix this Public IP Address should be allocated from.
-     * 
      */
     private final @Nullable SubResourceResponse publicIPPrefix;
     /**
      * The resource GUID property of the public IP address resource.
-     * 
      */
     private final String resourceGuid;
     /**
      * The service public IP address of the public IP address resource.
-     * 
      */
     private final @Nullable PublicIPAddressResponse servicePublicIPAddress;
     /**
      * The public IP address SKU.
-     * 
      */
     private final @Nullable PublicIPAddressSkuResponse sku;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
     /**
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
-     * 
      */
     private final @Nullable List<String> zones;
 
@@ -198,168 +174,144 @@ public final class GetPublicIPAddressResult {
 
     /**
      * The DDoS protection custom policy associated with the public IP address.
-     * 
     */
     public Optional<DdosSettingsResponse> getDdosSettings() {
         return Optional.ofNullable(this.ddosSettings);
     }
     /**
      * The FQDN of the DNS record associated with the public IP address.
-     * 
     */
     public Optional<PublicIPAddressDnsSettingsResponse> getDnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the public ip address.
-     * 
     */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Resource ID.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The idle timeout of the public IP address.
-     * 
     */
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
      * The IP address associated with the public IP address resource.
-     * 
     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The IP configuration associated with the public IP address.
-     * 
     */
     public IPConfigurationResponse getIpConfiguration() {
         return this.ipConfiguration;
     }
     /**
      * The list of tags associated with the public IP address.
-     * 
     */
     public List<IpTagResponse> getIpTags() {
         return this.ipTags == null ? List.of() : this.ipTags;
     }
     /**
      * The linked public IP address of the public IP address resource.
-     * 
     */
     public Optional<PublicIPAddressResponse> getLinkedPublicIPAddress() {
         return Optional.ofNullable(this.linkedPublicIPAddress);
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Migration phase of Public IP Address.
-     * 
     */
     public Optional<String> getMigrationPhase() {
         return Optional.ofNullable(this.migrationPhase);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The NatGateway for the Public IP address.
-     * 
     */
     public Optional<NatGatewayResponse> getNatGateway() {
         return Optional.ofNullable(this.natGateway);
     }
     /**
      * The provisioning state of the public IP address resource.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The public IP address version.
-     * 
     */
     public Optional<String> getPublicIPAddressVersion() {
         return Optional.ofNullable(this.publicIPAddressVersion);
     }
     /**
      * The public IP address allocation method.
-     * 
     */
     public Optional<String> getPublicIPAllocationMethod() {
         return Optional.ofNullable(this.publicIPAllocationMethod);
     }
     /**
      * The Public IP Prefix this Public IP Address should be allocated from.
-     * 
     */
     public Optional<SubResourceResponse> getPublicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
     /**
      * The resource GUID property of the public IP address resource.
-     * 
     */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The service public IP address of the public IP address resource.
-     * 
     */
     public Optional<PublicIPAddressResponse> getServicePublicIPAddress() {
         return Optional.ofNullable(this.servicePublicIPAddress);
     }
     /**
      * The public IP address SKU.
-     * 
     */
     public Optional<PublicIPAddressSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
-     * 
     */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;

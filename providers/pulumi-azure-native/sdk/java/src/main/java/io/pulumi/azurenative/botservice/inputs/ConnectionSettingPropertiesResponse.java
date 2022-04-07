@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties for a Connection Setting Item
- * 
  */
 public final class ConnectionSettingPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Client Id associated with the Connection Setting.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable String clientId;
@@ -33,7 +31,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Client Secret associated with the Connection Setting
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable String clientSecret;
@@ -44,7 +41,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Id associated with the Connection Setting.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -55,7 +51,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Name associated with the Connection Setting.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -66,7 +61,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Service Provider Parameters associated with the Connection Setting
-     * 
      */
     @Import(name="parameters")
       private final @Nullable List<ConnectionSettingParameterResponse> parameters;
@@ -77,7 +71,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Provisioning state of the resource
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -88,7 +81,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Scopes associated with the Connection Setting
-     * 
      */
     @Import(name="scopes")
       private final @Nullable String scopes;
@@ -99,7 +91,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Service Provider Display Name associated with the Connection Setting
-     * 
      */
     @Import(name="serviceProviderDisplayName")
       private final @Nullable String serviceProviderDisplayName;
@@ -110,7 +101,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Service Provider Id associated with the Connection Setting
-     * 
      */
     @Import(name="serviceProviderId")
       private final @Nullable String serviceProviderId;
@@ -121,7 +111,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
 
     /**
      * Setting Id set by the service for the Connection Setting.
-     * 
      */
     @Import(name="settingId", required=true)
       private final String settingId;

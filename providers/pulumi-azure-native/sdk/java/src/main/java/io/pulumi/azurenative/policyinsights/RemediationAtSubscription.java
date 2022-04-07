@@ -19,7 +19,175 @@ import javax.annotation.Nullable;
  * The remediation definition.
  * API Version: 2019-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create remediation at subscription scope
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var remediationAtSubscription = new AzureNative.PolicyInsights.RemediationAtSubscription("remediationAtSubscription", new AzureNative.PolicyInsights.RemediationAtSubscriptionArgs
+ *         {
+ *             PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *             RemediationName = "storageRemediation",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	policyinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/policyinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := policyinsights.NewRemediationAtSubscription(ctx, "remediationAtSubscription", &policyinsights.RemediationAtSubscriptionArgs{
+ * 			PolicyAssignmentId: pulumi.String("/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5"),
+ * 			RemediationName:    pulumi.String("storageRemediation"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const remediationAtSubscription = new azure_native.policyinsights.RemediationAtSubscription("remediationAtSubscription", {
+ *     policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *     remediationName: "storageRemediation",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * remediation_at_subscription = azure_native.policyinsights.RemediationAtSubscription("remediationAtSubscription",
+ *     policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *     remediation_name="storageRemediation")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create remediation at subscription scope with all properties
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var remediationAtSubscription = new AzureNative.PolicyInsights.RemediationAtSubscription("remediationAtSubscription", new AzureNative.PolicyInsights.RemediationAtSubscriptionArgs
+ *         {
+ *             Filters = new AzureNative.PolicyInsights.Inputs.RemediationFiltersArgs
+ *             {
+ *                 Locations = 
+ *                 {
+ *                     "eastus",
+ *                     "westus",
+ *                 },
+ *             },
+ *             PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *             PolicyDefinitionReferenceId = "8c8fa9e4",
+ *             RemediationName = "storageRemediation",
+ *             ResourceDiscoveryMode = "ReEvaluateCompliance",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	policyinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/policyinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := policyinsights.NewRemediationAtSubscription(ctx, "remediationAtSubscription", &policyinsights.RemediationAtSubscriptionArgs{
+ * 			Filters: &policyinsights.RemediationFiltersArgs{
+ * 				Locations: pulumi.StringArray{
+ * 					pulumi.String("eastus"),
+ * 					pulumi.String("westus"),
+ * 				},
+ * 			},
+ * 			PolicyAssignmentId:          pulumi.String("/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5"),
+ * 			PolicyDefinitionReferenceId: pulumi.String("8c8fa9e4"),
+ * 			RemediationName:             pulumi.String("storageRemediation"),
+ * 			ResourceDiscoveryMode:       pulumi.String("ReEvaluateCompliance"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const remediationAtSubscription = new azure_native.policyinsights.RemediationAtSubscription("remediationAtSubscription", {
+ *     filters: {
+ *         locations: [
+ *             "eastus",
+ *             "westus",
+ *         ],
+ *     },
+ *     policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *     policyDefinitionReferenceId: "8c8fa9e4",
+ *     remediationName: "storageRemediation",
+ *     resourceDiscoveryMode: "ReEvaluateCompliance",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * remediation_at_subscription = azure_native.policyinsights.RemediationAtSubscription("remediationAtSubscription",
+ *     filters=azure_native.policyinsights.RemediationFiltersArgs(
+ *         locations=[
+ *             "eastus",
+ *             "westus",
+ *         ],
+ *     ),
+ *     policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *     policy_definition_reference_id="8c8fa9e4",
+ *     remediation_name="storageRemediation",
+ *     resource_discovery_mode="ReEvaluateCompliance")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,140 +202,120 @@ import javax.annotation.Nullable;
 public class RemediationAtSubscription extends io.pulumi.resources.CustomResource {
     /**
      * The time at which the remediation was created.
-     * 
      */
     @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
      * @return The time at which the remediation was created.
-     * 
      */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
     /**
      * The deployment status summary for all deployments created by the remediation.
-     * 
      */
     @Export(name="deploymentStatus", type=RemediationDeploymentSummaryResponse.class, parameters={})
     private Output<RemediationDeploymentSummaryResponse> deploymentStatus;
 
     /**
      * @return The deployment status summary for all deployments created by the remediation.
-     * 
      */
     public Output<RemediationDeploymentSummaryResponse> getDeploymentStatus() {
         return this.deploymentStatus;
     }
     /**
      * The filters that will be applied to determine which resources to remediate.
-     * 
      */
     @Export(name="filters", type=RemediationFiltersResponse.class, parameters={})
     private Output</* @Nullable */ RemediationFiltersResponse> filters;
 
     /**
      * @return The filters that will be applied to determine which resources to remediate.
-     * 
      */
     public Output</* @Nullable */ RemediationFiltersResponse> getFilters() {
         return this.filters;
     }
     /**
      * The time at which the remediation was last updated.
-     * 
      */
     @Export(name="lastUpdatedOn", type=String.class, parameters={})
     private Output<String> lastUpdatedOn;
 
     /**
      * @return The time at which the remediation was last updated.
-     * 
      */
     public Output<String> getLastUpdatedOn() {
         return this.lastUpdatedOn;
     }
     /**
      * The name of the remediation.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the remediation.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource ID of the policy assignment that should be remediated.
-     * 
      */
     @Export(name="policyAssignmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyAssignmentId;
 
     /**
      * @return The resource ID of the policy assignment that should be remediated.
-     * 
      */
     public Output</* @Nullable */ String> getPolicyAssignmentId() {
         return this.policyAssignmentId;
     }
     /**
      * The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
-     * 
      */
     @Export(name="policyDefinitionReferenceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyDefinitionReferenceId;
 
     /**
      * @return The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
-     * 
      */
     public Output</* @Nullable */ String> getPolicyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId;
     }
     /**
      * The status of the remediation.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The status of the remediation.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
-     * 
      */
     @Export(name="resourceDiscoveryMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceDiscoveryMode;
 
     /**
      * @return The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
-     * 
      */
     public Output</* @Nullable */ String> getResourceDiscoveryMode() {
         return this.resourceDiscoveryMode;
     }
     /**
      * The type of the remediation.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the remediation.
-     * 
      */
     public Output<String> getType() {
         return this.type;

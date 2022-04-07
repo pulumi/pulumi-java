@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * describes if the policy is in enabled state or disabled state
-     * 
      */
     @EnumType
     public enum PolicyEnabledState {

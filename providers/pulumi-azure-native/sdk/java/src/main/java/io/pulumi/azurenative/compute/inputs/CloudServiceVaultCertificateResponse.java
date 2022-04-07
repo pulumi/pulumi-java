@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a single certificate reference in a Key Vault, and where the certificate should reside on the role instance.
- * 
  */
 public final class CloudServiceVaultCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CloudServiceVaultCertificateResponse extends io.pulumi.resour
 
     /**
      * This is the URL of a certificate that has been uploaded to Key Vault as a secret.
-     * 
      */
     @Import(name="certificateUrl")
       private final @Nullable String certificateUrl;

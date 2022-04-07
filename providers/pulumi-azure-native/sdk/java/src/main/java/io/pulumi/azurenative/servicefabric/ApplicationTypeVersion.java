@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * An application type version resource for the specified application type name resource.
  * API Version: 2020-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Put an application type version
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var applicationTypeVersion = new AzureNative.ServiceFabric.ApplicationTypeVersion("applicationTypeVersion", new AzureNative.ServiceFabric.ApplicationTypeVersionArgs
+ *         {
+ *             AppPackageUrl = "http://fakelink.test.com/MyAppType",
+ *             ApplicationTypeName = "myAppType",
+ *             ClusterName = "myCluster",
+ *             ResourceGroupName = "resRg",
+ *             Version = "1.0",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicefabric.NewApplicationTypeVersion(ctx, "applicationTypeVersion", &servicefabric.ApplicationTypeVersionArgs{
+ * 			AppPackageUrl:       pulumi.String("http://fakelink.test.com/MyAppType"),
+ * 			ApplicationTypeName: pulumi.String("myAppType"),
+ * 			ClusterName:         pulumi.String("myCluster"),
+ * 			ResourceGroupName:   pulumi.String("resRg"),
+ * 			Version:             pulumi.String("1.0"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const applicationTypeVersion = new azure_native.servicefabric.ApplicationTypeVersion("applicationTypeVersion", {
+ *     appPackageUrl: "http://fakelink.test.com/MyAppType",
+ *     applicationTypeName: "myAppType",
+ *     clusterName: "myCluster",
+ *     resourceGroupName: "resRg",
+ *     version: "1.0",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * application_type_version = azure_native.servicefabric.ApplicationTypeVersion("applicationTypeVersion",
+ *     app_package_url="http://fakelink.test.com/MyAppType",
+ *     application_type_name="myAppType",
+ *     cluster_name="myCluster",
+ *     resource_group_name="resRg",
+ *     version="1.0")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,112 +113,96 @@ import javax.annotation.Nullable;
 public class ApplicationTypeVersion extends io.pulumi.resources.CustomResource {
     /**
      * The URL to the application package
-     * 
      */
     @Export(name="appPackageUrl", type=String.class, parameters={})
     private Output<String> appPackageUrl;
 
     /**
      * @return The URL to the application package
-     * 
      */
     public Output<String> getAppPackageUrl() {
         return this.appPackageUrl;
     }
     /**
      * List of application type parameters that can be overridden when creating or updating the application.
-     * 
      */
     @Export(name="defaultParameterList", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> defaultParameterList;
 
     /**
      * @return List of application type parameters that can be overridden when creating or updating the application.
-     * 
      */
     public Output<Map<String,String>> getDefaultParameterList() {
         return this.defaultParameterList;
     }
     /**
      * Azure resource etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Azure resource etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * It will be deprecated in New API, resource location depends on the parent resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return It will be deprecated in New API, resource location depends on the parent resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current deployment or provisioning state, which only appears in the response
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The current deployment or provisioning state, which only appears in the response
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Azure resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Azure resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

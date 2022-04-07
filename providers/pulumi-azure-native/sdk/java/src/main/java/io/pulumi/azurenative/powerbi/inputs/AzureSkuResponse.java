@@ -14,7 +14,6 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SKU name
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SKU tier
-     * 
      */
     @Import(name="tier", required=true)
       private final String tier;

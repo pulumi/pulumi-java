@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual application in an app.
- * 
  */
 public final class VirtualApplicationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Physical path.
-     * 
      */
     @Import(name="physicalPath")
       private final @Nullable String physicalPath;
@@ -34,7 +32,6 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
 
     /**
      * <code>true</code> if preloading is enabled; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="preloadEnabled")
       private final @Nullable Boolean preloadEnabled;
@@ -45,7 +42,6 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Virtual directories for virtual application.
-     * 
      */
     @Import(name="virtualDirectories")
       private final @Nullable List<VirtualDirectoryResponse> virtualDirectories;
@@ -56,7 +52,6 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Virtual path.
-     * 
      */
     @Import(name="virtualPath")
       private final @Nullable String virtualPath;

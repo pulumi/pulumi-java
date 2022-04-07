@@ -17,7 +17,95 @@ import javax.annotation.Nullable;
  * Definition of the credential.
  * API Version: 2019-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a credential
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var credential = new AzureNative.Automation.Credential("credential", new AzureNative.Automation.CredentialArgs
+ *         {
+ *             AutomationAccountName = "myAutomationAccount18",
+ *             CredentialName = "myCredential",
+ *             Description = "my description goes here",
+ *             Name = "myCredential",
+ *             Password = "<password>",
+ *             ResourceGroupName = "rg",
+ *             UserName = "mylingaiah",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := automation.NewCredential(ctx, "credential", &automation.CredentialArgs{
+ * 			AutomationAccountName: pulumi.String("myAutomationAccount18"),
+ * 			CredentialName:        pulumi.String("myCredential"),
+ * 			Description:           pulumi.String("my description goes here"),
+ * 			Name:                  pulumi.String("myCredential"),
+ * 			Password:              pulumi.String("<password>"),
+ * 			ResourceGroupName:     pulumi.String("rg"),
+ * 			UserName:              pulumi.String("mylingaiah"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const credential = new azure_native.automation.Credential("credential", {
+ *     automationAccountName: "myAutomationAccount18",
+ *     credentialName: "myCredential",
+ *     description: "my description goes here",
+ *     name: "myCredential",
+ *     password: "<password>",
+ *     resourceGroupName: "rg",
+ *     userName: "mylingaiah",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * credential = azure_native.automation.Credential("credential",
+ *     automation_account_name="myAutomationAccount18",
+ *     credential_name="myCredential",
+ *     description="my description goes here",
+ *     name="myCredential",
+ *     password="<password>",
+ *     resource_group_name="rg",
+ *     user_name="mylingaiah")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +120,72 @@ import javax.annotation.Nullable;
 public class Credential extends io.pulumi.resources.CustomResource {
     /**
      * Gets the creation time.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return Gets the creation time.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Gets or sets the description.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Gets the last modified time.
-     * 
      */
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
      * @return Gets the last modified time.
-     * 
      */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets the user name of the credential.
-     * 
      */
     @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
      * @return Gets the user name of the credential.
-     * 
      */
     public Output<String> getUserName() {
         return this.userName;

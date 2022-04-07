@@ -19,7 +19,108 @@ import javax.annotation.Nullable;
  * A Service Fabric.
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ServiceFabrics_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var serviceFabric = new AzureNative.DevTestLab.ServiceFabric("serviceFabric", new AzureNative.DevTestLab.ServiceFabricArgs
+ *         {
+ *             EnvironmentId = "{environmentId}",
+ *             ExternalServiceFabricId = "{serviceFabricId}",
+ *             LabName = "{labName}",
+ *             Location = "{location}",
+ *             Name = "{serviceFabricName}",
+ *             ResourceGroupName = "resourceGroupName",
+ *             Tags = 
+ *             {
+ *                 { "tagName1", "tagValue1" },
+ *             },
+ *             UserName = "{userName}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewServiceFabric(ctx, "serviceFabric", &devtestlab.ServiceFabricArgs{
+ * 			EnvironmentId:           pulumi.String("{environmentId}"),
+ * 			ExternalServiceFabricId: pulumi.String("{serviceFabricId}"),
+ * 			LabName:                 pulumi.String("{labName}"),
+ * 			Location:                pulumi.String("{location}"),
+ * 			Name:                    pulumi.String("{serviceFabricName}"),
+ * 			ResourceGroupName:       pulumi.String("resourceGroupName"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tagName1": pulumi.String("tagValue1"),
+ * 			},
+ * 			UserName: pulumi.String("{userName}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const serviceFabric = new azure_native.devtestlab.ServiceFabric("serviceFabric", {
+ *     environmentId: "{environmentId}",
+ *     externalServiceFabricId: "{serviceFabricId}",
+ *     labName: "{labName}",
+ *     location: "{location}",
+ *     name: "{serviceFabricName}",
+ *     resourceGroupName: "resourceGroupName",
+ *     tags: {
+ *         tagName1: "tagValue1",
+ *     },
+ *     userName: "{userName}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service_fabric = azure_native.devtestlab.ServiceFabric("serviceFabric",
+ *     environment_id="{environmentId}",
+ *     external_service_fabric_id="{serviceFabricId}",
+ *     lab_name="{labName}",
+ *     location="{location}",
+ *     name="{serviceFabricName}",
+ *     resource_group_name="resourceGroupName",
+ *     tags={
+ *         "tagName1": "tagValue1",
+ *     },
+ *     user_name="{userName}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,126 +135,108 @@ import javax.annotation.Nullable;
 public class ServiceFabric extends io.pulumi.resources.CustomResource {
     /**
      * The applicable schedule for the virtual machine.
-     * 
      */
     @Export(name="applicableSchedule", type=ApplicableScheduleResponse.class, parameters={})
     private Output<ApplicableScheduleResponse> applicableSchedule;
 
     /**
      * @return The applicable schedule for the virtual machine.
-     * 
      */
     public Output<ApplicableScheduleResponse> getApplicableSchedule() {
         return this.applicableSchedule;
     }
     /**
      * The resource id of the environment under which the service fabric resource is present
-     * 
      */
     @Export(name="environmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentId;
 
     /**
      * @return The resource id of the environment under which the service fabric resource is present
-     * 
      */
     public Output</* @Nullable */ String> getEnvironmentId() {
         return this.environmentId;
     }
     /**
      * The backing service fabric resource's id
-     * 
      */
     @Export(name="externalServiceFabricId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalServiceFabricId;
 
     /**
      * @return The backing service fabric resource's id
-     * 
      */
     public Output</* @Nullable */ String> getExternalServiceFabricId() {
         return this.externalServiceFabricId;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;

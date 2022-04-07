@@ -23,8 +23,7 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
     public static final AzurePowerShellScriptArgs Empty = new AzurePowerShellScriptArgs();
 
     /**
-     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
-     * 
+     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2' 
      */
     @Import(name="arguments")
       private final @Nullable Output<String> arguments;
@@ -35,7 +34,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Azure PowerShell module version to be used.
-     * 
      */
     @Import(name="azPowerShellVersion", required=true)
       private final Output<String> azPowerShellVersion;
@@ -46,7 +44,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
-     * 
      */
     @Import(name="cleanupPreference")
       private final @Nullable Output<Either<String,CleanupOptions>> cleanupPreference;
@@ -57,7 +54,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Container settings.
-     * 
      */
     @Import(name="containerSettings")
       private final @Nullable Output<ContainerConfigurationArgs> containerSettings;
@@ -68,7 +64,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * The environment variables to pass over to the script.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
@@ -79,7 +74,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -90,7 +84,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
@@ -102,7 +95,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
     /**
      * Type of the script.
      * Expected value is 'AzurePowerShell'.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<String> kind;
@@ -113,7 +105,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * The location of the ACI and the storage account for the deployment script.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -124,7 +115,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Uri for the script. This is the entry point for the external script.
-     * 
      */
     @Import(name="primaryScriptUri")
       private final @Nullable Output<String> primaryScriptUri;
@@ -135,7 +125,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -146,7 +135,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
-     * 
      */
     @Import(name="retentionInterval", required=true)
       private final Output<String> retentionInterval;
@@ -157,7 +145,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Script body.
-     * 
      */
     @Import(name="scriptContent")
       private final @Nullable Output<String> scriptContent;
@@ -168,7 +155,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the deployment script.
-     * 
      */
     @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
@@ -179,7 +165,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Storage Account settings.
-     * 
      */
     @Import(name="storageAccountSettings")
       private final @Nullable Output<StorageAccountConfigurationArgs> storageAccountSettings;
@@ -190,7 +175,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Supporting files for the external script.
-     * 
      */
     @Import(name="supportingScriptUris")
       private final @Nullable Output<List<String>> supportingScriptUris;
@@ -201,7 +185,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -212,7 +195,6 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
 
     /**
      * Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
-     * 
      */
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;

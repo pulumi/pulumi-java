@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The TrackAttribute to filter the tracks by.
-     * 
      */
     @EnumType
     public enum TrackAttribute {
         /**
          * The bitrate of the track.
-         * 
          */
         Bitrate("Bitrate"),
         /**
          * The language of the track.
-         * 
          */
         Language("Language");
 

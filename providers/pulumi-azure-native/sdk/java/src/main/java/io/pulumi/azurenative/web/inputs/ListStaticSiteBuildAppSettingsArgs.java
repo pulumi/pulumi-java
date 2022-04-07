@@ -14,7 +14,6 @@ public final class ListStaticSiteBuildAppSettingsArgs extends io.pulumi.resource
 
     /**
      * The stage site identifier.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final String environmentName;
@@ -25,7 +24,6 @@ public final class ListStaticSiteBuildAppSettingsArgs extends io.pulumi.resource
 
     /**
      * Name of the static site.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -36,7 +34,6 @@ public final class ListStaticSiteBuildAppSettingsArgs extends io.pulumi.resource
 
     /**
      * Name of the resource group to which the resource belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines reference to subnet.
- * 
  */
 public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets the name of the proxy resource on the target side.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Gets the ARM resource ID of the tracked resource being referenced.
-     * 
      */
     @Import(name="sourceArmResourceId", required=true)
       private final String sourceArmResourceId;

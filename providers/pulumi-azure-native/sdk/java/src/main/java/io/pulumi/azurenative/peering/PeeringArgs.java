@@ -22,7 +22,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties that define a direct peering.
-     * 
      */
     @Import(name="direct")
       private final @Nullable Output<PeeringPropertiesDirectArgs> direct;
@@ -33,7 +32,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The properties that define an exchange peering.
-     * 
      */
     @Import(name="exchange")
       private final @Nullable Output<PeeringPropertiesExchangeArgs> exchange;
@@ -44,7 +42,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of the peering.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
@@ -55,7 +52,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -66,7 +62,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the peering.
-     * 
      */
     @Import(name="peeringLocation")
       private final @Nullable Output<String> peeringLocation;
@@ -77,7 +72,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the peering.
-     * 
      */
     @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
@@ -88,7 +82,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -99,7 +92,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU that defines the tier and kind of the peering.
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<PeeringSkuArgs> sku;
@@ -110,7 +102,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

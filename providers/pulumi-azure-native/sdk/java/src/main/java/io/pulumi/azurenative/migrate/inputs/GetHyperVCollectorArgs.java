@@ -14,7 +14,6 @@ public final class GetHyperVCollectorArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Unique name of a Hyper-V collector within a project.
-     * 
      */
     @Import(name="hyperVCollectorName", required=true)
       private final String hyperVCollectorName;
@@ -25,7 +24,6 @@ public final class GetHyperVCollectorArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the Azure Migrate project.
-     * 
      */
     @Import(name="projectName", required=true)
       private final String projectName;
@@ -36,7 +34,6 @@ public final class GetHyperVCollectorArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the Azure Resource Group that project is part of.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -16,7 +16,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
@@ -27,7 +26,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The parameters supplied to the create or update credential operation.
-     * 
      */
     @Import(name="credentialName")
       private final @Nullable Output<String> credentialName;
@@ -38,7 +36,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the description of the credential.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -49,7 +46,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the name of the credential.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -60,7 +56,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the password of the credential.
-     * 
      */
     @Import(name="password", required=true)
       private final Output<String> password;
@@ -71,7 +66,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -82,7 +76,6 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the user name of the credential.
-     * 
      */
     @Import(name="userName", required=true)
       private final Output<String> userName;

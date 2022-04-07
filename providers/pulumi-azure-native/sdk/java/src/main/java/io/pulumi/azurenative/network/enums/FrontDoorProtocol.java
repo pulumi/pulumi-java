@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Accepted protocol schemes.
-     * 
      */
     @EnumType
     public enum FrontDoorProtocol {

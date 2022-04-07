@@ -14,7 +14,6 @@ public final class GetFluidRelayServerArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The resource name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetFluidRelayServerArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The resource group containing the resource.
-     * 
      */
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;

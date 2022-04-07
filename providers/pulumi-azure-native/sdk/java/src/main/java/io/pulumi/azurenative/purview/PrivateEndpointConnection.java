@@ -19,7 +19,96 @@ import javax.annotation.Nullable;
  * A private endpoint connection class.
  * API Version: 2020-12-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PrivateEndpointConnections_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnection = new AzureNative.Purview.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.Purview.PrivateEndpointConnectionArgs
+ *         {
+ *             AccountName = "account1",
+ *             PrivateEndpointConnectionName = "privateEndpointConnection1",
+ *             PrivateLinkServiceConnectionState = new AzureNative.Purview.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 Description = "Approved by johndoe@company.com",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "SampleResourceGroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	purview "github.com/pulumi/pulumi-azure-native/sdk/go/azure/purview"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := purview.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &purview.PrivateEndpointConnectionArgs{
+ * 			AccountName:                   pulumi.String("account1"),
+ * 			PrivateEndpointConnectionName: pulumi.String("privateEndpointConnection1"),
+ * 			PrivateLinkServiceConnectionState: &purview.PrivateLinkServiceConnectionStateArgs{
+ * 				Description: pulumi.String("Approved by johndoe@company.com"),
+ * 				Status:      pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnection = new azure_native.purview.PrivateEndpointConnection("privateEndpointConnection", {
+ *     accountName: "account1",
+ *     privateEndpointConnectionName: "privateEndpointConnection1",
+ *     privateLinkServiceConnectionState: {
+ *         description: "Approved by johndoe@company.com",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "SampleResourceGroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connection = azure_native.purview.PrivateEndpointConnection("privateEndpointConnection",
+ *     account_name="account1",
+ *     private_endpoint_connection_name="privateEndpointConnection1",
+ *     private_link_service_connection_state=azure_native.purview.PrivateLinkServiceConnectionStateArgs(
+ *         description="Approved by johndoe@company.com",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="SampleResourceGroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +123,60 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets or sets the name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The private endpoint information.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The private endpoint information.
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * The private link service connection state.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return The private link service connection state.
-     * 
      */
     public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets or sets the type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

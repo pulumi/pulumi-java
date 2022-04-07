@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration that services will be excluded when creating cluster.
- * 
  */
 public final class ExcludedServicesConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ExcludedServicesConfigResponse extends io.pulumi.resources.In
 
     /**
      * The config id of excluded services.
-     * 
      */
     @Import(name="excludedServicesConfigId")
       private final @Nullable String excludedServicesConfigId;
@@ -31,7 +29,6 @@ public final class ExcludedServicesConfigResponse extends io.pulumi.resources.In
 
     /**
      * The list of excluded services.
-     * 
      */
     @Import(name="excludedServicesList")
       private final @Nullable String excludedServicesList;

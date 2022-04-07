@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The activation properties of the connected registry.
- * 
  */
 public final class ActivationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ActivationPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * The activation status of the connected registry.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

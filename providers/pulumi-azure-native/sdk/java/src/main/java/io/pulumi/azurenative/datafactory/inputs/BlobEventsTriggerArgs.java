@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Trigger that runs every time a Blob event occurs.
- * 
  */
 public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * List of tags that can be used for describing the trigger.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -37,7 +35,6 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
-     * 
      */
     @Import(name="blobPathBeginsWith")
       private final @Nullable Output<String> blobPathBeginsWith;
@@ -48,7 +45,6 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
-     * 
      */
     @Import(name="blobPathEndsWith")
       private final @Nullable Output<String> blobPathEndsWith;
@@ -59,7 +55,6 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Trigger description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -70,7 +65,6 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The type of events that cause this trigger to fire.
-     * 
      */
     @Import(name="events", required=true)
       private final Output<List<Either<String,BlobEventTypes>>> events;
@@ -81,7 +75,6 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * If set to true, blobs with zero bytes will be ignored.
-     * 
      */
     @Import(name="ignoreEmptyBlobs")
       private final @Nullable Output<Boolean> ignoreEmptyBlobs;
@@ -92,7 +85,6 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Pipelines that need to be started.
-     * 
      */
     @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
@@ -103,7 +95,6 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The ARM resource ID of the Storage Account.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;
@@ -115,7 +106,6 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     /**
      * Trigger type.
      * Expected value is 'BlobEventsTrigger'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The rule type of the rule.
-     * 
      */
     @EnumType
     public enum RouteFilterRuleType {

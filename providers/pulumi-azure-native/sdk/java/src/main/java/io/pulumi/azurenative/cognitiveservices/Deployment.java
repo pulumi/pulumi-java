@@ -19,7 +19,126 @@ import javax.annotation.Nullable;
  * Cognitive Services account deployment.
  * API Version: 2021-10-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutDeployment
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var deployment = new AzureNative.CognitiveServices.Deployment("deployment", new AzureNative.CognitiveServices.DeploymentArgs
+ *         {
+ *             AccountName = "accountName",
+ *             DeploymentName = "deploymentName",
+ *             Properties = new AzureNative.CognitiveServices.Inputs.DeploymentPropertiesArgs
+ *             {
+ *                 Model = new AzureNative.CognitiveServices.Inputs.DeploymentModelArgs
+ *                 {
+ *                     Format = "OpenAI",
+ *                     Name = "ada",
+ *                     Version = "1",
+ *                 },
+ *                 ScaleSettings = new AzureNative.CognitiveServices.Inputs.DeploymentScaleSettingsArgs
+ *                 {
+ *                     Capacity = 1,
+ *                     ScaleType = "Manual",
+ *                 },
+ *             },
+ *             ResourceGroupName = "resourceGroupName",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	cognitiveservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cognitiveservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := cognitiveservices.NewDeployment(ctx, "deployment", &cognitiveservices.DeploymentArgs{
+ * 			AccountName:    pulumi.String("accountName"),
+ * 			DeploymentName: pulumi.String("deploymentName"),
+ * 			Properties: &cognitiveservices.DeploymentPropertiesArgs{
+ * 				Model: &cognitiveservices.DeploymentModelArgs{
+ * 					Format:  pulumi.String("OpenAI"),
+ * 					Name:    pulumi.String("ada"),
+ * 					Version: pulumi.String("1"),
+ * 				},
+ * 				ScaleSettings: &cognitiveservices.DeploymentScaleSettingsArgs{
+ * 					Capacity:  pulumi.Int(1),
+ * 					ScaleType: pulumi.String("Manual"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("resourceGroupName"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const deployment = new azure_native.cognitiveservices.Deployment("deployment", {
+ *     accountName: "accountName",
+ *     deploymentName: "deploymentName",
+ *     properties: {
+ *         model: {
+ *             format: "OpenAI",
+ *             name: "ada",
+ *             version: "1",
+ *         },
+ *         scaleSettings: {
+ *             capacity: 1,
+ *             scaleType: "Manual",
+ *         },
+ *     },
+ *     resourceGroupName: "resourceGroupName",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * deployment = azure_native.cognitiveservices.Deployment("deployment",
+ *     account_name="accountName",
+ *     deployment_name="deploymentName",
+ *     properties=azure_native.cognitiveservices.DeploymentPropertiesArgs(
+ *         model=azure_native.cognitiveservices.DeploymentModelArgs(
+ *             format="OpenAI",
+ *             name="ada",
+ *             version="1",
+ *         ),
+ *         scale_settings=azure_native.cognitiveservices.DeploymentScaleSettingsArgs(
+ *             capacity=1,
+ *             scale_type="Manual",
+ *         ),
+ *     ),
+ *     resource_group_name="resourceGroupName")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +153,60 @@ import javax.annotation.Nullable;
 public class Deployment extends io.pulumi.resources.CustomResource {
     /**
      * Resource Etag.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return Resource Etag.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of Cognitive Services account deployment.
-     * 
      */
     @Export(name="properties", type=DeploymentPropertiesResponse.class, parameters={})
     private Output<DeploymentPropertiesResponse> properties;
 
     /**
      * @return Properties of Cognitive Services account deployment.
-     * 
      */
     public Output<DeploymentPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

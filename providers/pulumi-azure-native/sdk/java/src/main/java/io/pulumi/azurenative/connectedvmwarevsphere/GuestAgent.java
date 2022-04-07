@@ -21,7 +21,113 @@ import javax.annotation.Nullable;
  * Defines the GuestAgent.
  * API Version: 2020-10-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateGuestAgent
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var guestAgent = new AzureNative.ConnectedVMwarevSphere.GuestAgent("guestAgent", new AzureNative.ConnectedVMwarevSphere.GuestAgentArgs
+ *         {
+ *             Credentials = new AzureNative.ConnectedVMwarevSphere.Inputs.GuestCredentialArgs
+ *             {
+ *                 Password = "<password>",
+ *                 Username = "tempuser",
+ *             },
+ *             HttpProxyConfig = new AzureNative.ConnectedVMwarevSphere.Inputs.HttpProxyConfigurationArgs
+ *             {
+ *                 HttpsProxy = "http://192.1.2.3:8080",
+ *             },
+ *             Name = "default",
+ *             ProvisioningAction = "install",
+ *             ResourceGroupName = "testrg",
+ *             VirtualMachineName = "ContosoVm",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	connectedvmwarevsphere "github.com/pulumi/pulumi-azure-native/sdk/go/azure/connectedvmwarevsphere"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connectedvmwarevsphere.NewGuestAgent(ctx, "guestAgent", &connectedvmwarevsphere.GuestAgentArgs{
+ * 			Credentials: &connectedvmwarevsphere.GuestCredentialArgs{
+ * 				Password: pulumi.String("<password>"),
+ * 				Username: pulumi.String("tempuser"),
+ * 			},
+ * 			HttpProxyConfig: &connectedvmwarevsphere.HttpProxyConfigurationArgs{
+ * 				HttpsProxy: pulumi.String("http://192.1.2.3:8080"),
+ * 			},
+ * 			Name:               pulumi.String("default"),
+ * 			ProvisioningAction: pulumi.String("install"),
+ * 			ResourceGroupName:  pulumi.String("testrg"),
+ * 			VirtualMachineName: pulumi.String("ContosoVm"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const guestAgent = new azure_native.connectedvmwarevsphere.GuestAgent("guestAgent", {
+ *     credentials: {
+ *         password: "<password>",
+ *         username: "tempuser",
+ *     },
+ *     httpProxyConfig: {
+ *         httpsProxy: "http://192.1.2.3:8080",
+ *     },
+ *     name: "default",
+ *     provisioningAction: "install",
+ *     resourceGroupName: "testrg",
+ *     virtualMachineName: "ContosoVm",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * guest_agent = azure_native.connectedvmwarevsphere.GuestAgent("guestAgent",
+ *     credentials=azure_native.connectedvmwarevsphere.GuestCredentialArgs(
+ *         password="<password>",
+ *         username="tempuser",
+ *     ),
+ *     http_proxy_config=azure_native.connectedvmwarevsphere.HttpProxyConfigurationArgs(
+ *         https_proxy="http://192.1.2.3:8080",
+ *     ),
+ *     name="default",
+ *     provisioning_action="install",
+ *     resource_group_name="testrg",
+ *     virtual_machine_name="ContosoVm")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,154 +142,132 @@ import javax.annotation.Nullable;
 public class GuestAgent extends io.pulumi.resources.CustomResource {
     /**
      * Username / Password Credentials to provision guest agent.
-     * 
      */
     @Export(name="credentials", type=GuestCredentialResponse.class, parameters={})
     private Output</* @Nullable */ GuestCredentialResponse> credentials;
 
     /**
      * @return Username / Password Credentials to provision guest agent.
-     * 
      */
     public Output</* @Nullable */ GuestCredentialResponse> getCredentials() {
         return this.credentials;
     }
     /**
      * Gets the name of the corresponding resource in Kubernetes.
-     * 
      */
     @Export(name="customResourceName", type=String.class, parameters={})
     private Output<String> customResourceName;
 
     /**
      * @return Gets the name of the corresponding resource in Kubernetes.
-     * 
      */
     public Output<String> getCustomResourceName() {
         return this.customResourceName;
     }
     /**
      * HTTP Proxy configuration for the VM.
-     * 
      */
     @Export(name="httpProxyConfig", type=HttpProxyConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ HttpProxyConfigurationResponse> httpProxyConfig;
 
     /**
      * @return HTTP Proxy configuration for the VM.
-     * 
      */
     public Output</* @Nullable */ HttpProxyConfigurationResponse> getHttpProxyConfig() {
         return this.httpProxyConfig;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the guest agent provisioning action.
-     * 
      */
     @Export(name="provisioningAction", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningAction;
 
     /**
      * @return Gets or sets the guest agent provisioning action.
-     * 
      */
     public Output</* @Nullable */ String> getProvisioningAction() {
         return this.provisioningAction;
     }
     /**
      * Gets or sets the provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets or sets the provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the guest agent status.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Gets or sets the guest agent status.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The resource status information.
-     * 
      */
     @Export(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
     private Output<List<ResourceStatusResponse>> statuses;
 
     /**
      * @return The resource status information.
-     * 
      */
     public Output<List<ResourceStatusResponse>> getStatuses() {
         return this.statuses;
     }
     /**
      * The system data.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system data.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets or sets a unique identifier for this resource.
-     * 
      */
     @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
      * @return Gets or sets a unique identifier for this resource.
-     * 
      */
     public Output<String> getUuid() {
         return this.uuid;

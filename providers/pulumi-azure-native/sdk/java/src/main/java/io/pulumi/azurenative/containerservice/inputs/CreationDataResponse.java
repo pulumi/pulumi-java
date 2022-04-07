@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Data used when creating a target resource from a source resource.
- * 
  */
 public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is the ARM ID of the source object to be used to create the target object.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;

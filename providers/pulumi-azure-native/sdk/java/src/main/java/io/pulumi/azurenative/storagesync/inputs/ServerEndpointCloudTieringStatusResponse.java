@@ -16,7 +16,6 @@ import java.util.Objects;
 
 /**
  * Server endpoint cloud tiering status object.
- * 
  */
 public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
 
     /**
      * Information regarding how well the local cache on the server is performing.
-     * 
      */
     @Import(name="cachePerformance", required=true)
       private final CloudTieringCachePerformanceResponse cachePerformance;
@@ -35,7 +33,6 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
 
     /**
      * Status of the date policy
-     * 
      */
     @Import(name="datePolicyStatus", required=true)
       private final CloudTieringDatePolicyStatusResponse datePolicyStatus;
@@ -46,7 +43,6 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
 
     /**
      * Information regarding files that failed to be tiered
-     * 
      */
     @Import(name="filesNotTiering", required=true)
       private final CloudTieringFilesNotTieringResponse filesNotTiering;
@@ -57,7 +53,6 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
 
     /**
      * Cloud tiering health state.
-     * 
      */
     @Import(name="health", required=true)
       private final String health;
@@ -68,7 +63,6 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
 
     /**
      * The last updated timestamp of health state
-     * 
      */
     @Import(name="healthLastUpdatedTimestamp", required=true)
       private final String healthLastUpdatedTimestamp;
@@ -79,7 +73,6 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
 
     /**
      * Last cloud tiering result (HResult)
-     * 
      */
     @Import(name="lastCloudTieringResult", required=true)
       private final Integer lastCloudTieringResult;
@@ -90,7 +83,6 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
 
     /**
      * Last cloud tiering success timestamp
-     * 
      */
     @Import(name="lastSuccessTimestamp", required=true)
       private final String lastSuccessTimestamp;
@@ -101,7 +93,6 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
 
     /**
      * Last updated timestamp
-     * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
@@ -112,7 +103,6 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
 
     /**
      * Information regarding how much local space cloud tiering is saving.
-     * 
      */
     @Import(name="spaceSavings", required=true)
       private final CloudTieringSpaceSavingsResponse spaceSavings;
@@ -123,7 +113,6 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
 
     /**
      * Status of the volume free space policy
-     * 
      */
     @Import(name="volumeFreeSpacePolicyStatus", required=true)
       private final CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * App resource properties payload
- * 
  */
 public final class AppResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the active deployment of the App
-     * 
      */
     @Import(name="activeDeploymentName")
       private final @Nullable String activeDeploymentName;
@@ -34,7 +32,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Date time when the resource is created
-     * 
      */
     @Import(name="createdTime", required=true)
       private final String createdTime;
@@ -45,7 +42,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Fully qualified dns Name.
-     * 
      */
     @Import(name="fqdn")
       private final @Nullable String fqdn;
@@ -56,7 +52,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Indicate if only https is allowed.
-     * 
      */
     @Import(name="httpsOnly")
       private final @Nullable Boolean httpsOnly;
@@ -67,7 +62,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Persistent disk settings
-     * 
      */
     @Import(name="persistentDisk")
       private final @Nullable PersistentDiskResponse persistentDisk;
@@ -78,7 +72,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Provisioning state of the App
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -89,7 +82,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Indicates whether the App exposes public endpoint
-     * 
      */
     @Import(name="public")
       private final @Nullable Boolean public_;
@@ -100,7 +92,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Temporary disk settings
-     * 
      */
     @Import(name="temporaryDisk")
       private final @Nullable TemporaryDiskResponse temporaryDisk;
@@ -111,7 +102,6 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * URL of the App
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

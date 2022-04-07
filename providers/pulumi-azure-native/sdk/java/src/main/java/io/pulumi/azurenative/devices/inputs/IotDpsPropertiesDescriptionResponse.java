@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * the service specific properties of a provisioning service, including keys, linked iot hubs, current state, and system generated properties such as hostname and idScope
- * 
  */
 public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * Allocation policy to be used by this provisioning service.
-     * 
      */
     @Import(name="allocationPolicy")
       private final @Nullable String allocationPolicy;
@@ -36,7 +34,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * List of authorization keys for a provisioning service.
-     * 
      */
     @Import(name="authorizationPolicies")
       private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies;
@@ -47,7 +44,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * Device endpoint for this provisioning service.
-     * 
      */
     @Import(name="deviceProvisioningHostName", required=true)
       private final String deviceProvisioningHostName;
@@ -58,7 +54,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * Unique identifier of this provisioning service.
-     * 
      */
     @Import(name="idScope", required=true)
       private final String idScope;
@@ -69,7 +64,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * List of IoT hubs associated with this provisioning service.
-     * 
      */
     @Import(name="iotHubs")
       private final @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs;
@@ -80,7 +74,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * The IP filter rules.
-     * 
      */
     @Import(name="ipFilterRules")
       private final @Nullable List<TargetIpFilterRuleResponse> ipFilterRules;
@@ -91,7 +84,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * Private endpoint connections created on this IotHub
-     * 
      */
     @Import(name="privateEndpointConnections")
       private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
@@ -102,7 +94,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * The ARM provisioning state of the provisioning service.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -113,7 +104,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * Whether requests from Public Network are allowed
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
@@ -124,7 +114,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * Service endpoint for provisioning service.
-     * 
      */
     @Import(name="serviceOperationsHostName", required=true)
       private final String serviceOperationsHostName;
@@ -135,7 +124,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
 
     /**
      * Current state of the provisioning service.
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

@@ -14,7 +14,6 @@ public final class GetLiveTokenArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identifier of the resource.
-     * 
      */
     @Import(name="resourceUri", required=true)
       private final String resourceUri;

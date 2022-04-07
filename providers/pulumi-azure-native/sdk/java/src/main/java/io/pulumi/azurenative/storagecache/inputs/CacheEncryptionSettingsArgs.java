@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cache encryption settings.
- * 
  */
 public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class CacheEncryptionSettingsArgs extends io.pulumi.resources.Resou
 
     /**
      * Specifies the location of the key encryption key in Key Vault.
-     * 
      */
     @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;

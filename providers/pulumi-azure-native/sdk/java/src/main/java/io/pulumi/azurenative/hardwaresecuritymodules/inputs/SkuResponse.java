@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of the dedicated HSM
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SKU of the dedicated HSM
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;

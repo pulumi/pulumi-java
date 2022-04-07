@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class MigrationProgressResponse {
     /**
      * Completion Percentage
-     * 
      */
     private final @Nullable Double completionPercentage;
     /**
      * Progress Message
-     * 
      */
     private final @Nullable String progressMessage;
 
@@ -33,14 +31,12 @@ public final class MigrationProgressResponse {
 
     /**
      * Completion Percentage
-     * 
     */
     public Optional<Double> getCompletionPercentage() {
         return Optional.ofNullable(this.completionPercentage);
     }
     /**
      * Progress Message
-     * 
     */
     public Optional<String> getProgressMessage() {
         return Optional.ofNullable(this.progressMessage);

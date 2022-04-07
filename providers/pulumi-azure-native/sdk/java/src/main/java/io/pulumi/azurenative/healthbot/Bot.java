@@ -21,7 +21,92 @@ import javax.annotation.Nullable;
  * HealthBot resource definition
  * API Version: 2020-12-08.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### BotCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var bot = new AzureNative.HealthBot.Bot("bot", new AzureNative.HealthBot.BotArgs
+ *         {
+ *             BotName = "samplebotname",
+ *             Location = "East US",
+ *             ResourceGroupName = "healthbotClient",
+ *             Sku = new AzureNative.HealthBot.Inputs.SkuArgs
+ *             {
+ *                 Name = "F0",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	healthbot "github.com/pulumi/pulumi-azure-native/sdk/go/azure/healthbot"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := healthbot.NewBot(ctx, "bot", &healthbot.BotArgs{
+ * 			BotName:           pulumi.String("samplebotname"),
+ * 			Location:          pulumi.String("East US"),
+ * 			ResourceGroupName: pulumi.String("healthbotClient"),
+ * 			Sku: &healthbot.SkuArgs{
+ * 				Name: "F0",
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const bot = new azure_native.healthbot.Bot("bot", {
+ *     botName: "samplebotname",
+ *     location: "East US",
+ *     resourceGroupName: "healthbotClient",
+ *     sku: {
+ *         name: "F0",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * bot = azure_native.healthbot.Bot("bot",
+ *     bot_name="samplebotname",
+ *     location="East US",
+ *     resource_group_name="healthbotClient",
+ *     sku=azure_native.healthbot.SkuArgs(
+ *         name="F0",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,98 +121,84 @@ import javax.annotation.Nullable;
 public class Bot extends io.pulumi.resources.CustomResource {
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The set of properties specific to Healthbot resource.
-     * 
      */
     @Export(name="properties", type=HealthBotPropertiesResponse.class, parameters={})
     private Output<HealthBotPropertiesResponse> properties;
 
     /**
      * @return The set of properties specific to Healthbot resource.
-     * 
      */
     public Output<HealthBotPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * SKU of the HealthBot.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
      * @return SKU of the HealthBot.
-     * 
      */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

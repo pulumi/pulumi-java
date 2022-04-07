@@ -21,7 +21,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the blueprint assignment.
-     * 
      */
     @Import(name="assignmentName")
       private final @Nullable Output<String> assignmentName;
@@ -32,7 +31,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * ID of the published version of a blueprint definition.
-     * 
      */
     @Import(name="blueprintId")
       private final @Nullable Output<String> blueprintId;
@@ -43,7 +41,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Multi-line explain this resource.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -54,7 +51,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * One-liner string explain this resource.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -65,7 +61,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Managed identity for this blueprint assignment.
-     * 
      */
     @Import(name="identity", required=true)
       private final Output<ManagedServiceIdentityArgs> identity;
@@ -76,7 +71,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of this blueprint assignment.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -87,7 +81,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines how resources deployed by a blueprint assignment are locked.
-     * 
      */
     @Import(name="locks")
       private final @Nullable Output<AssignmentLockSettingsArgs> locks;
@@ -98,7 +91,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Blueprint assignment parameter values.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<Map<String,ParameterValueArgs>> parameters;
@@ -109,7 +101,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Names and locations of resource group placeholders.
-     * 
      */
     @Import(name="resourceGroups", required=true)
       private final Output<Map<String,ResourceGroupValueArgs>> resourceGroups;
@@ -120,7 +111,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     * 
      */
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
@@ -131,7 +121,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<String> scope;

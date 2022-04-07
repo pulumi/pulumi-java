@@ -18,7 +18,89 @@ import javax.annotation.Nullable;
  * Single item in List or Get Migration Config operation
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### MigrationConfigurationsStartMigration
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var migrationConfig = new AzureNative.ServiceBus.MigrationConfig("migrationConfig", new AzureNative.ServiceBus.MigrationConfigArgs
+ *         {
+ *             ConfigName = "$default",
+ *             NamespaceName = "sdk-Namespace-41",
+ *             PostMigrationName = "sdk-PostMigration-5919",
+ *             ResourceGroupName = "ResourceGroup",
+ *             TargetNamespace = "/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicebus.NewMigrationConfig(ctx, "migrationConfig", &servicebus.MigrationConfigArgs{
+ * 			ConfigName:        pulumi.String(fmt.Sprintf("%v%v", "$", "default")),
+ * 			NamespaceName:     pulumi.String("sdk-Namespace-41"),
+ * 			PostMigrationName: pulumi.String("sdk-PostMigration-5919"),
+ * 			ResourceGroupName: pulumi.String("ResourceGroup"),
+ * 			TargetNamespace:   pulumi.String("/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const migrationConfig = new azure_native.servicebus.MigrationConfig("migrationConfig", {
+ *     configName: `$default`,
+ *     namespaceName: "sdk-Namespace-41",
+ *     postMigrationName: "sdk-PostMigration-5919",
+ *     resourceGroupName: "ResourceGroup",
+ *     targetNamespace: "/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * migration_config = azure_native.servicebus.MigrationConfig("migrationConfig",
+ *     config_name="$default",
+ *     namespace_name="sdk-Namespace-41",
+ *     post_migration_name="sdk-PostMigration-5919",
+ *     resource_group_name="ResourceGroup",
+ *     target_namespace="/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,98 +115,84 @@ import javax.annotation.Nullable;
 public class MigrationConfig extends io.pulumi.resources.CustomResource {
     /**
      * State in which Standard to Premium Migration is, possible values : Unknown, Reverting, Completing, Initiating, Syncing, Active
-     * 
      */
     @Export(name="migrationState", type=String.class, parameters={})
     private Output<String> migrationState;
 
     /**
      * @return State in which Standard to Premium Migration is, possible values : Unknown, Reverting, Completing, Initiating, Syncing, Active
-     * 
      */
     public Output<String> getMigrationState() {
         return this.migrationState;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Number of entities pending to be replicated.
-     * 
      */
     @Export(name="pendingReplicationOperationsCount", type=Double.class, parameters={})
     private Output<Double> pendingReplicationOperationsCount;
 
     /**
      * @return Number of entities pending to be replicated.
-     * 
      */
     public Output<Double> getPendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
     /**
      * Name to access Standard Namespace after migration
-     * 
      */
     @Export(name="postMigrationName", type=String.class, parameters={})
     private Output<String> postMigrationName;
 
     /**
      * @return Name to access Standard Namespace after migration
-     * 
      */
     public Output<String> getPostMigrationName() {
         return this.postMigrationName;
     }
     /**
-     * Provisioning state of Migration Configuration
-     * 
+     * Provisioning state of Migration Configuration 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
-     * @return Provisioning state of Migration Configuration
-     * 
+     * @return Provisioning state of Migration Configuration 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Existing premium Namespace ARM Id name which has no entities, will be used for migration
-     * 
      */
     @Export(name="targetNamespace", type=String.class, parameters={})
     private Output<String> targetNamespace;
 
     /**
      * @return Existing premium Namespace ARM Id name which has no entities, will be used for migration
-     * 
      */
     public Output<String> getTargetNamespace() {
         return this.targetNamespace;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Oracle Service Cloud linked service.
- * 
  */
 public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -28,7 +27,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -39,7 +37,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -50,7 +47,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -61,7 +57,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -72,7 +67,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The URL of the Oracle Service Cloud instance.
-     * 
      */
     @Import(name="host", required=true)
       private final Object host;
@@ -83,7 +77,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -94,7 +87,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The password corresponding to the user name that you provided in the username key.
-     * 
      */
     @Import(name="password", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
@@ -106,7 +98,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
     /**
      * Type of linked service.
      * Expected value is 'OracleServiceCloud'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -117,7 +108,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Object useEncryptedEndpoints;
@@ -128,7 +118,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="useHostVerification")
       private final @Nullable Object useHostVerification;
@@ -139,7 +128,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="usePeerVerification")
       private final @Nullable Object usePeerVerification;
@@ -150,7 +138,6 @@ public final class OracleServiceCloudLinkedServiceResponse extends io.pulumi.res
 
     /**
      * The user name that you use to access Oracle Service Cloud server.
-     * 
      */
     @Import(name="username", required=true)
       private final Object username;

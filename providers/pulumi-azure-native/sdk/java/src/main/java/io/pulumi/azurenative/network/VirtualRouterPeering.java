@@ -18,7 +18,87 @@ import javax.annotation.Nullable;
  * Virtual Router Peering resource.
  * API Version: 2020-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Virtual Router Peering
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualRouterPeering = new AzureNative.Network.VirtualRouterPeering("virtualRouterPeering", new AzureNative.Network.VirtualRouterPeeringArgs
+ *         {
+ *             PeerAsn = 20000,
+ *             PeerIp = "192.168.1.5",
+ *             PeeringName = "peering1",
+ *             ResourceGroupName = "rg1",
+ *             VirtualRouterName = "virtualRouter",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualRouterPeering(ctx, "virtualRouterPeering", &network.VirtualRouterPeeringArgs{
+ * 			PeerAsn:           pulumi.Float64(20000),
+ * 			PeerIp:            pulumi.String("192.168.1.5"),
+ * 			PeeringName:       pulumi.String("peering1"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			VirtualRouterName: pulumi.String("virtualRouter"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualRouterPeering = new azure_native.network.VirtualRouterPeering("virtualRouterPeering", {
+ *     peerAsn: 20000,
+ *     peerIp: "192.168.1.5",
+ *     peeringName: "peering1",
+ *     resourceGroupName: "rg1",
+ *     virtualRouterName: "virtualRouter",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_router_peering = azure_native.network.VirtualRouterPeering("virtualRouterPeering",
+ *     peer_asn=20000,
+ *     peer_ip="192.168.1.5",
+ *     peering_name="peering1",
+ *     resource_group_name="rg1",
+ *     virtual_router_name="virtualRouter")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +113,72 @@ import javax.annotation.Nullable;
 public class VirtualRouterPeering extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Name of the virtual router peering that is unique within a virtual router.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return Name of the virtual router peering that is unique within a virtual router.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * Peer ASN.
-     * 
      */
     @Export(name="peerAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> peerAsn;
 
     /**
      * @return Peer ASN.
-     * 
      */
     public Output</* @Nullable */ Double> getPeerAsn() {
         return this.peerAsn;
     }
     /**
      * Peer IP.
-     * 
      */
     @Export(name="peerIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerIp;
 
     /**
      * @return Peer IP.
-     * 
      */
     public Output</* @Nullable */ String> getPeerIp() {
         return this.peerIp;
     }
     /**
      * The provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Peering type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Peering type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -19,7 +19,92 @@ import javax.annotation.Nullable;
  * Describes a Private DNS zone.
  * API Version: 2020-06-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PUT Private DNS Zone
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateZone = new AzureNative.Network.PrivateZone("privateZone", new AzureNative.Network.PrivateZoneArgs
+ *         {
+ *             Location = "Global",
+ *             PrivateZoneName = "privatezone1.com",
+ *             ResourceGroupName = "resourceGroup1",
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewPrivateZone(ctx, "privateZone", &network.PrivateZoneArgs{
+ * 			Location:          pulumi.String("Global"),
+ * 			PrivateZoneName:   pulumi.String("privatezone1.com"),
+ * 			ResourceGroupName: pulumi.String("resourceGroup1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateZone = new azure_native.network.PrivateZone("privateZone", {
+ *     location: "Global",
+ *     privateZoneName: "privatezone1.com",
+ *     resourceGroupName: "resourceGroup1",
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_zone = azure_native.network.PrivateZone("privateZone",
+ *     location="Global",
+ *     private_zone_name="privatezone1.com",
+ *     resource_group_name="resourceGroup1",
+ *     tags={
+ *         "key1": "value1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,182 +119,156 @@ import javax.annotation.Nullable;
 public class PrivateZone extends io.pulumi.resources.CustomResource {
     /**
      * The ETag of the zone.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return The ETag of the zone.
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * Private zone internal Id
-     * 
      */
     @Export(name="internalId", type=String.class, parameters={})
     private Output<String> internalId;
 
     /**
      * @return Private zone internal Id
-     * 
      */
     public Output<String> getInternalId() {
         return this.internalId;
     }
     /**
      * The Azure Region where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The Azure Region where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="maxNumberOfRecordSets", type=Double.class, parameters={})
     private Output<Double> maxNumberOfRecordSets;
 
     /**
      * @return The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<Double> getMaxNumberOfRecordSets() {
         return this.maxNumberOfRecordSets;
     }
     /**
      * The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="maxNumberOfVirtualNetworkLinks", type=Double.class, parameters={})
     private Output<Double> maxNumberOfVirtualNetworkLinks;
 
     /**
      * @return The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<Double> getMaxNumberOfVirtualNetworkLinks() {
         return this.maxNumberOfVirtualNetworkLinks;
     }
     /**
      * The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="maxNumberOfVirtualNetworkLinksWithRegistration", type=Double.class, parameters={})
     private Output<Double> maxNumberOfVirtualNetworkLinksWithRegistration;
 
     /**
      * @return The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<Double> getMaxNumberOfVirtualNetworkLinksWithRegistration() {
         return this.maxNumberOfVirtualNetworkLinksWithRegistration;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="numberOfRecordSets", type=Double.class, parameters={})
     private Output<Double> numberOfRecordSets;
 
     /**
      * @return The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<Double> getNumberOfRecordSets() {
         return this.numberOfRecordSets;
     }
     /**
      * The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="numberOfVirtualNetworkLinks", type=Double.class, parameters={})
     private Output<Double> numberOfVirtualNetworkLinks;
 
     /**
      * @return The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<Double> getNumberOfVirtualNetworkLinks() {
         return this.numberOfVirtualNetworkLinks;
     }
     /**
      * The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="numberOfVirtualNetworkLinksWithRegistration", type=Double.class, parameters={})
     private Output<Double> numberOfVirtualNetworkLinksWithRegistration;
 
     /**
      * @return The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<Double> getNumberOfVirtualNetworkLinksWithRegistration() {
         return this.numberOfVirtualNetworkLinksWithRegistration;
     }
     /**
      * The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
-     * 
      */
     public Output<String> getType() {
         return this.type;

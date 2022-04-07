@@ -17,32 +17,26 @@ import javax.annotation.Nullable;
 public final class InitContainerDefinitionResponse {
     /**
      * The command to execute within the init container in exec form.
-     * 
      */
     private final @Nullable List<String> command;
     /**
      * The environment variables to set in the init container.
-     * 
      */
     private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
     /**
      * The image of the init container.
-     * 
      */
     private final @Nullable String image;
     /**
      * The instance view of the init container. Only valid in response.
-     * 
      */
     private final InitContainerPropertiesDefinitionResponseInstanceView instanceView;
     /**
      * The name for the init container.
-     * 
      */
     private final String name;
     /**
      * The volume mounts available to the init container.
-     * 
      */
     private final @Nullable List<VolumeMountResponse> volumeMounts;
 
@@ -64,42 +58,36 @@ public final class InitContainerDefinitionResponse {
 
     /**
      * The command to execute within the init container in exec form.
-     * 
     */
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * The environment variables to set in the init container.
-     * 
     */
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
      * The image of the init container.
-     * 
     */
     public Optional<String> getImage() {
         return Optional.ofNullable(this.image);
     }
     /**
      * The instance view of the init container. Only valid in response.
-     * 
     */
     public InitContainerPropertiesDefinitionResponseInstanceView getInstanceView() {
         return this.instanceView;
     }
     /**
      * The name for the init container.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The volume mounts available to the init container.
-     * 
     */
     public List<VolumeMountResponse> getVolumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;

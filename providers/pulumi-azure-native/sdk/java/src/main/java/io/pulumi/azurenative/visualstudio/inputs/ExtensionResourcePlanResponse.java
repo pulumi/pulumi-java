@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Plan data for an extension resource.
- * 
  */
 public final class ExtensionResourcePlanResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ExtensionResourcePlanResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the plan.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -31,7 +29,6 @@ public final class ExtensionResourcePlanResponse extends io.pulumi.resources.Inv
 
     /**
      * Product name.
-     * 
      */
     @Import(name="product")
       private final @Nullable String product;
@@ -42,7 +39,6 @@ public final class ExtensionResourcePlanResponse extends io.pulumi.resources.Inv
 
     /**
      * Optional: the promotion code associated with the plan.
-     * 
      */
     @Import(name="promotionCode")
       private final @Nullable String promotionCode;
@@ -53,7 +49,6 @@ public final class ExtensionResourcePlanResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the extension publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable String publisher;
@@ -64,7 +59,6 @@ public final class ExtensionResourcePlanResponse extends io.pulumi.resources.Inv
 
     /**
      * A string that uniquely identifies the plan version.
-     * 
      */
     @Import(name="version")
       private final @Nullable String version;

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure to Azure VM synced configuration details.
- * 
  */
 public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.r
 
     /**
      * The Azure VM input endpoints.
-     * 
      */
     @Import(name="inputEndpoints")
       private final @Nullable List<InputEndpointResponse> inputEndpoints;
@@ -34,7 +32,6 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.r
 
     /**
      * The Azure VM tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;

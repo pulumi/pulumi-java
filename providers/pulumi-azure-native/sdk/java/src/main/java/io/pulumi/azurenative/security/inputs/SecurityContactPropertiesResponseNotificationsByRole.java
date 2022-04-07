@@ -13,15 +13,13 @@ import javax.annotation.Nullable;
 
 /**
  * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
- * 
  */
 public final class SecurityContactPropertiesResponseNotificationsByRole extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityContactPropertiesResponseNotificationsByRole Empty = new SecurityContactPropertiesResponseNotificationsByRole();
 
     /**
-     * Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
-     * 
+     * Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: 
      */
     @Import(name="roles")
       private final @Nullable List<String> roles;
@@ -32,7 +30,6 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
 
     /**
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;

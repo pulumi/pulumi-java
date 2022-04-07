@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Custom API properties
- * 
  */
 public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * API Definitions
-     * 
      */
     @Import(name="apiDefinitions")
       private final @Nullable ApiResourceDefinitionsResponse apiDefinitions;
@@ -38,7 +36,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * The API type
-     * 
      */
     @Import(name="apiType")
       private final @Nullable String apiType;
@@ -49,7 +46,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * The API backend service
-     * 
      */
     @Import(name="backendService")
       private final @Nullable ApiResourceBackendServiceResponse backendService;
@@ -60,7 +56,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * Brand color
-     * 
      */
     @Import(name="brandColor")
       private final @Nullable String brandColor;
@@ -71,7 +66,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * The custom API capabilities
-     * 
      */
     @Import(name="capabilities")
       private final @Nullable List<String> capabilities;
@@ -82,7 +76,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * Connection parameters
-     * 
      */
     @Import(name="connectionParameters")
       private final @Nullable Map<String,ConnectionParameterResponse> connectionParameters;
@@ -93,7 +86,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * The custom API description
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -104,7 +96,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * The display name
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -115,7 +106,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * The icon URI
-     * 
      */
     @Import(name="iconUri")
       private final @Nullable String iconUri;
@@ -126,7 +116,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * Runtime URLs
-     * 
      */
     @Import(name="runtimeUrls")
       private final @Nullable List<String> runtimeUrls;
@@ -137,7 +126,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * The JSON representation of the swagger
-     * 
      */
     @Import(name="swagger")
       private final @Nullable Object swagger;
@@ -148,7 +136,6 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
 
     /**
      * The WSDL definition
-     * 
      */
     @Import(name="wsdlDefinition")
       private final @Nullable WsdlDefinitionResponse wsdlDefinition;

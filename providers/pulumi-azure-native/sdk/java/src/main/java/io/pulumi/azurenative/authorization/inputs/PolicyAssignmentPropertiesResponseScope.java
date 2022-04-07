@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Details of the resource scope
- * 
  */
 public final class PolicyAssignmentPropertiesResponseScope extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PolicyAssignmentPropertiesResponseScope extends io.pulumi.res
 
     /**
      * Display name of the resource
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -31,7 +29,6 @@ public final class PolicyAssignmentPropertiesResponseScope extends io.pulumi.res
 
     /**
      * Scope id of the resource
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -42,7 +39,6 @@ public final class PolicyAssignmentPropertiesResponseScope extends io.pulumi.res
 
     /**
      * Type of the resource
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

@@ -22,213 +22,171 @@ import javax.annotation.Nullable;
 public final class A2AReplicationDetailsResponse {
     /**
      * The agent version.
-     * 
      */
     private final @Nullable String agentVersion;
     /**
      * The fabric specific object Id of the virtual machine.
-     * 
      */
     private final @Nullable String fabricObjectId;
     /**
      * The initial primary fabric location.
-     * 
      */
     private final String initialPrimaryFabricLocation;
     /**
      * The initial primary availability zone.
-     * 
      */
     private final String initialPrimaryZone;
     /**
      * The initial recovery fabric location.
-     * 
      */
     private final String initialRecoveryFabricLocation;
     /**
      * The initial recovery availability zone.
-     * 
      */
     private final String initialRecoveryZone;
     /**
      * Gets the Instance type.
      * Expected value is 'A2A'.
-     * 
      */
     private final String instanceType;
     /**
      * A value indicating whether replication agent update is required.
-     * 
      */
     private final @Nullable Boolean isReplicationAgentUpdateRequired;
     /**
      * The last heartbeat received from the source server.
-     * 
      */
     private final @Nullable String lastHeartbeat;
     /**
      * The time (in UTC) when the last RPO value was calculated by Protection Service.
-     * 
      */
     private final @Nullable String lastRpoCalculatedTime;
     /**
      * An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the "same" protected item even though other internal Ids/ARM Id might be changing.
-     * 
      */
     private final @Nullable String lifecycleId;
     /**
      * The management Id.
-     * 
      */
     private final @Nullable String managementId;
     /**
      * The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
-     * 
      */
     private final @Nullable String monitoringJobType;
     /**
      * The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
-     * 
      */
     private final @Nullable Integer monitoringPercentageCompletion;
     /**
      * Whether Multi VM group is auto created or specified by user.
-     * 
      */
     private final @Nullable String multiVmGroupCreateOption;
     /**
      * The multi vm group Id.
-     * 
      */
     private final @Nullable String multiVmGroupId;
     /**
      * The multi vm group name.
-     * 
      */
     private final @Nullable String multiVmGroupName;
     /**
      * The type of operating system.
-     * 
      */
     private final @Nullable String osType;
     /**
      * Primary fabric location.
-     * 
      */
     private final @Nullable String primaryFabricLocation;
     /**
      * The list of protected disks.
-     * 
      */
     private final @Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks;
     /**
      * The list of protected managed disks.
-     * 
      */
     private final @Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks;
     /**
      * The recovery availability set.
-     * 
      */
     private final @Nullable String recoveryAvailabilitySet;
     /**
      * The recovery availability zone.
-     * 
      */
     private final @Nullable String recoveryAvailabilityZone;
     /**
      * The recovery resource group.
-     * 
      */
     private final @Nullable String recoveryAzureResourceGroupId;
     /**
      * The name of recovery virtual machine.
-     * 
      */
     private final @Nullable String recoveryAzureVMName;
     /**
      * The size of recovery virtual machine.
-     * 
      */
     private final @Nullable String recoveryAzureVMSize;
     /**
      * The recovery boot diagnostic storage account Arm Id.
-     * 
      */
     private final @Nullable String recoveryBootDiagStorageAccountId;
     /**
      * The recovery cloud service.
-     * 
      */
     private final @Nullable String recoveryCloudService;
     /**
      * The recovery fabric location.
-     * 
      */
     private final @Nullable String recoveryFabricLocation;
     /**
      * The recovery fabric object Id.
-     * 
      */
     private final @Nullable String recoveryFabricObjectId;
     /**
      * The recovery proximity placement group Id.
-     * 
      */
     private final @Nullable String recoveryProximityPlacementGroupId;
     /**
      * The last RPO value in seconds.
-     * 
      */
     private final @Nullable Double rpoInSeconds;
     /**
      * The recovery virtual network.
-     * 
      */
     private final @Nullable String selectedRecoveryAzureNetworkId;
     /**
      * The test failover virtual network.
-     * 
      */
     private final @Nullable String selectedTfoAzureNetworkId;
     /**
      * The test failover fabric object Id.
-     * 
      */
     private final @Nullable String testFailoverRecoveryFabricObjectId;
     /**
      * The test failover VM name.
-     * 
      */
     private final @Nullable String tfoAzureVMName;
     /**
      * The list of unprotected disks.
-     * 
      */
     private final @Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks;
     /**
      * The encryption type of the VM.
-     * 
      */
     private final String vmEncryptionType;
     /**
      * The virtual machine nic details.
-     * 
      */
     private final @Nullable List<VMNicDetailsResponse> vmNics;
     /**
      * The protection state for the vm.
-     * 
      */
     private final @Nullable String vmProtectionState;
     /**
      * The protection state description for the vm.
-     * 
      */
     private final @Nullable String vmProtectionStateDescription;
     /**
      * The synced configuration details.
-     * 
      */
     private final @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails;
 
@@ -322,42 +280,36 @@ public final class A2AReplicationDetailsResponse {
 
     /**
      * The agent version.
-     * 
     */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * The fabric specific object Id of the virtual machine.
-     * 
     */
     public Optional<String> getFabricObjectId() {
         return Optional.ofNullable(this.fabricObjectId);
     }
     /**
      * The initial primary fabric location.
-     * 
     */
     public String getInitialPrimaryFabricLocation() {
         return this.initialPrimaryFabricLocation;
     }
     /**
      * The initial primary availability zone.
-     * 
     */
     public String getInitialPrimaryZone() {
         return this.initialPrimaryZone;
     }
     /**
      * The initial recovery fabric location.
-     * 
     */
     public String getInitialRecoveryFabricLocation() {
         return this.initialRecoveryFabricLocation;
     }
     /**
      * The initial recovery availability zone.
-     * 
     */
     public String getInitialRecoveryZone() {
         return this.initialRecoveryZone;
@@ -365,252 +317,216 @@ public final class A2AReplicationDetailsResponse {
     /**
      * Gets the Instance type.
      * Expected value is 'A2A'.
-     * 
     */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * A value indicating whether replication agent update is required.
-     * 
     */
     public Optional<Boolean> getIsReplicationAgentUpdateRequired() {
         return Optional.ofNullable(this.isReplicationAgentUpdateRequired);
     }
     /**
      * The last heartbeat received from the source server.
-     * 
     */
     public Optional<String> getLastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
      * The time (in UTC) when the last RPO value was calculated by Protection Service.
-     * 
     */
     public Optional<String> getLastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
     /**
      * An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the "same" protected item even though other internal Ids/ARM Id might be changing.
-     * 
     */
     public Optional<String> getLifecycleId() {
         return Optional.ofNullable(this.lifecycleId);
     }
     /**
      * The management Id.
-     * 
     */
     public Optional<String> getManagementId() {
         return Optional.ofNullable(this.managementId);
     }
     /**
      * The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
-     * 
     */
     public Optional<String> getMonitoringJobType() {
         return Optional.ofNullable(this.monitoringJobType);
     }
     /**
      * The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
-     * 
     */
     public Optional<Integer> getMonitoringPercentageCompletion() {
         return Optional.ofNullable(this.monitoringPercentageCompletion);
     }
     /**
      * Whether Multi VM group is auto created or specified by user.
-     * 
     */
     public Optional<String> getMultiVmGroupCreateOption() {
         return Optional.ofNullable(this.multiVmGroupCreateOption);
     }
     /**
      * The multi vm group Id.
-     * 
     */
     public Optional<String> getMultiVmGroupId() {
         return Optional.ofNullable(this.multiVmGroupId);
     }
     /**
      * The multi vm group name.
-     * 
     */
     public Optional<String> getMultiVmGroupName() {
         return Optional.ofNullable(this.multiVmGroupName);
     }
     /**
      * The type of operating system.
-     * 
     */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Primary fabric location.
-     * 
     */
     public Optional<String> getPrimaryFabricLocation() {
         return Optional.ofNullable(this.primaryFabricLocation);
     }
     /**
      * The list of protected disks.
-     * 
     */
     public List<A2AProtectedDiskDetailsResponse> getProtectedDisks() {
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
     /**
      * The list of protected managed disks.
-     * 
     */
     public List<A2AProtectedManagedDiskDetailsResponse> getProtectedManagedDisks() {
         return this.protectedManagedDisks == null ? List.of() : this.protectedManagedDisks;
     }
     /**
      * The recovery availability set.
-     * 
     */
     public Optional<String> getRecoveryAvailabilitySet() {
         return Optional.ofNullable(this.recoveryAvailabilitySet);
     }
     /**
      * The recovery availability zone.
-     * 
     */
     public Optional<String> getRecoveryAvailabilityZone() {
         return Optional.ofNullable(this.recoveryAvailabilityZone);
     }
     /**
      * The recovery resource group.
-     * 
     */
     public Optional<String> getRecoveryAzureResourceGroupId() {
         return Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
     /**
      * The name of recovery virtual machine.
-     * 
     */
     public Optional<String> getRecoveryAzureVMName() {
         return Optional.ofNullable(this.recoveryAzureVMName);
     }
     /**
      * The size of recovery virtual machine.
-     * 
     */
     public Optional<String> getRecoveryAzureVMSize() {
         return Optional.ofNullable(this.recoveryAzureVMSize);
     }
     /**
      * The recovery boot diagnostic storage account Arm Id.
-     * 
     */
     public Optional<String> getRecoveryBootDiagStorageAccountId() {
         return Optional.ofNullable(this.recoveryBootDiagStorageAccountId);
     }
     /**
      * The recovery cloud service.
-     * 
     */
     public Optional<String> getRecoveryCloudService() {
         return Optional.ofNullable(this.recoveryCloudService);
     }
     /**
      * The recovery fabric location.
-     * 
     */
     public Optional<String> getRecoveryFabricLocation() {
         return Optional.ofNullable(this.recoveryFabricLocation);
     }
     /**
      * The recovery fabric object Id.
-     * 
     */
     public Optional<String> getRecoveryFabricObjectId() {
         return Optional.ofNullable(this.recoveryFabricObjectId);
     }
     /**
      * The recovery proximity placement group Id.
-     * 
     */
     public Optional<String> getRecoveryProximityPlacementGroupId() {
         return Optional.ofNullable(this.recoveryProximityPlacementGroupId);
     }
     /**
      * The last RPO value in seconds.
-     * 
     */
     public Optional<Double> getRpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
     /**
      * The recovery virtual network.
-     * 
     */
     public Optional<String> getSelectedRecoveryAzureNetworkId() {
         return Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
     /**
      * The test failover virtual network.
-     * 
     */
     public Optional<String> getSelectedTfoAzureNetworkId() {
         return Optional.ofNullable(this.selectedTfoAzureNetworkId);
     }
     /**
      * The test failover fabric object Id.
-     * 
     */
     public Optional<String> getTestFailoverRecoveryFabricObjectId() {
         return Optional.ofNullable(this.testFailoverRecoveryFabricObjectId);
     }
     /**
      * The test failover VM name.
-     * 
     */
     public Optional<String> getTfoAzureVMName() {
         return Optional.ofNullable(this.tfoAzureVMName);
     }
     /**
      * The list of unprotected disks.
-     * 
     */
     public List<A2AUnprotectedDiskDetailsResponse> getUnprotectedDisks() {
         return this.unprotectedDisks == null ? List.of() : this.unprotectedDisks;
     }
     /**
      * The encryption type of the VM.
-     * 
     */
     public String getVmEncryptionType() {
         return this.vmEncryptionType;
     }
     /**
      * The virtual machine nic details.
-     * 
     */
     public List<VMNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The protection state for the vm.
-     * 
     */
     public Optional<String> getVmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
     /**
      * The protection state description for the vm.
-     * 
     */
     public Optional<String> getVmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }
     /**
      * The synced configuration details.
-     * 
     */
     public Optional<AzureToAzureVmSyncedConfigDetailsResponse> getVmSyncedConfigDetails() {
         return Optional.ofNullable(this.vmSyncedConfigDetails);

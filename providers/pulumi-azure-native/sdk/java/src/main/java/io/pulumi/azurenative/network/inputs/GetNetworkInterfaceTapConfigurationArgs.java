@@ -14,7 +14,6 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
 
     /**
      * The name of the network interface.
-     * 
      */
     @Import(name="networkInterfaceName", required=true)
       private final String networkInterfaceName;
@@ -25,7 +24,6 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
 
     /**
      * The name of the tap configuration.
-     * 
      */
     @Import(name="tapConfigurationName", required=true)
       private final String tapConfigurationName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Upstream auth settings. If not set, no auth is used for upstream messages.
- * 
  */
 public final class UpstreamAuthSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class UpstreamAuthSettingsResponse extends io.pulumi.resources.Invo
 
     /**
      * Managed identity settings for upstream.
-     * 
      */
     @Import(name="managedIdentity")
       private final @Nullable ManagedIdentitySettingsResponse managedIdentity;
@@ -32,7 +30,6 @@ public final class UpstreamAuthSettingsResponse extends io.pulumi.resources.Invo
 
     /**
      * Upstream auth type enum.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

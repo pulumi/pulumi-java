@@ -18,7 +18,95 @@ import javax.annotation.Nullable;
  * Data Lake Analytics compute policy information.
  * API Version: 2016-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates the specified compute policy
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var computePolicy = new AzureNative.DataLakeAnalytics.ComputePolicy("computePolicy", new AzureNative.DataLakeAnalytics.ComputePolicyArgs
+ *         {
+ *             AccountName = "contosoadla",
+ *             ComputePolicyName = "test_policy",
+ *             MaxDegreeOfParallelismPerJob = 10,
+ *             MinPriorityPerJob = 30,
+ *             ObjectId = "776b9091-8916-4638-87f7-9c989a38da98",
+ *             ObjectType = "User",
+ *             ResourceGroupName = "contosorg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datalakeanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datalakeanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datalakeanalytics.NewComputePolicy(ctx, "computePolicy", &datalakeanalytics.ComputePolicyArgs{
+ * 			AccountName:                  pulumi.String("contosoadla"),
+ * 			ComputePolicyName:            pulumi.String("test_policy"),
+ * 			MaxDegreeOfParallelismPerJob: pulumi.Int(10),
+ * 			MinPriorityPerJob:            pulumi.Int(30),
+ * 			ObjectId:                     pulumi.String("776b9091-8916-4638-87f7-9c989a38da98"),
+ * 			ObjectType:                   pulumi.String("User"),
+ * 			ResourceGroupName:            pulumi.String("contosorg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const computePolicy = new azure_native.datalakeanalytics.ComputePolicy("computePolicy", {
+ *     accountName: "contosoadla",
+ *     computePolicyName: "test_policy",
+ *     maxDegreeOfParallelismPerJob: 10,
+ *     minPriorityPerJob: 30,
+ *     objectId: "776b9091-8916-4638-87f7-9c989a38da98",
+ *     objectType: "User",
+ *     resourceGroupName: "contosorg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * compute_policy = azure_native.datalakeanalytics.ComputePolicy("computePolicy",
+ *     account_name="contosoadla",
+ *     compute_policy_name="test_policy",
+ *     max_degree_of_parallelism_per_job=10,
+ *     min_priority_per_job=30,
+ *     object_id="776b9091-8916-4638-87f7-9c989a38da98",
+ *     object_type="User",
+ *     resource_group_name="contosorg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +121,72 @@ import javax.annotation.Nullable;
 public class ComputePolicy extends io.pulumi.resources.CustomResource {
     /**
      * The maximum degree of parallelism per job this user can use to submit jobs.
-     * 
      */
     @Export(name="maxDegreeOfParallelismPerJob", type=Integer.class, parameters={})
     private Output<Integer> maxDegreeOfParallelismPerJob;
 
     /**
      * @return The maximum degree of parallelism per job this user can use to submit jobs.
-     * 
      */
     public Output<Integer> getMaxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
     /**
      * The minimum priority per job this user can use to submit jobs.
-     * 
      */
     @Export(name="minPriorityPerJob", type=Integer.class, parameters={})
     private Output<Integer> minPriorityPerJob;
 
     /**
      * @return The minimum priority per job this user can use to submit jobs.
-     * 
      */
     public Output<Integer> getMinPriorityPerJob() {
         return this.minPriorityPerJob;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The AAD object identifier for the entity to create a policy for.
-     * 
      */
     @Export(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
     /**
      * @return The AAD object identifier for the entity to create a policy for.
-     * 
      */
     public Output<String> getObjectId() {
         return this.objectId;
     }
     /**
      * The type of AAD object the object identifier refers to.
-     * 
      */
     @Export(name="objectType", type=String.class, parameters={})
     private Output<String> objectType;
 
     /**
      * @return The type of AAD object the object identifier refers to.
-     * 
      */
     public Output<String> getObjectType() {
         return this.objectType;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

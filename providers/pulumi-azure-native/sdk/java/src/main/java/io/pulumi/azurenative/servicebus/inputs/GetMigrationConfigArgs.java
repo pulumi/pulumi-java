@@ -14,7 +14,6 @@ public final class GetMigrationConfigArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The configuration name. Should always be "$default".
-     * 
      */
     @Import(name="configName", required=true)
       private final String configName;
@@ -25,7 +24,6 @@ public final class GetMigrationConfigArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
@@ -36,7 +34,6 @@ public final class GetMigrationConfigArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of the FirewallPolicyFilterRuleAction.
- * 
  */
 public final class FirewallPolicyFilterRuleActionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class FirewallPolicyFilterRuleActionResponse extends io.pulumi.reso
 
     /**
      * The type of action.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

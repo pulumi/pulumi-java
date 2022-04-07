@@ -20,7 +20,68 @@ import javax.annotation.Nullable;
  * Access Review History Definition.
  * API Version: 2021-11-16-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PutAccessReviewHistoryDefinition
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var accessReviewHistoryDefinitionById = new AzureNative.Authorization.AccessReviewHistoryDefinitionById("accessReviewHistoryDefinitionById", new AzureNative.Authorization.AccessReviewHistoryDefinitionByIdArgs
+ *         {
+ *             HistoryDefinitionId = "44724910-d7a5-4c29-b28f-db73e717165a",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := authorization.NewAccessReviewHistoryDefinitionById(ctx, "accessReviewHistoryDefinitionById", &authorization.AccessReviewHistoryDefinitionByIdArgs{
+ * 			HistoryDefinitionId: pulumi.String("44724910-d7a5-4c29-b28f-db73e717165a"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const accessReviewHistoryDefinitionById = new azure_native.authorization.AccessReviewHistoryDefinitionById("accessReviewHistoryDefinitionById", {historyDefinitionId: "44724910-d7a5-4c29-b28f-db73e717165a"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * access_review_history_definition_by_id = azure_native.authorization.AccessReviewHistoryDefinitionById("accessReviewHistoryDefinitionById", history_definition_id="44724910-d7a5-4c29-b28f-db73e717165a")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,252 +96,216 @@ import javax.annotation.Nullable;
 public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.CustomResource {
     /**
      * Date time when history definition was created
-     * 
      */
     @Export(name="createdDateTime", type=String.class, parameters={})
     private Output<String> createdDateTime;
 
     /**
      * @return Date time when history definition was created
-     * 
      */
     public Output<String> getCreatedDateTime() {
         return this.createdDateTime;
     }
     /**
      * Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
-     * 
      */
     @Export(name="decisions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> decisions;
 
     /**
      * @return Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
-     * 
      */
     public Output</* @Nullable */ List<String>> getDecisions() {
         return this.decisions;
     }
     /**
      * The display name for the history definition.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The display name for the history definition.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The DateTime when the review is scheduled to end. Required if type is endDate
-     * 
      */
     @Export(name="endDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endDate;
 
     /**
      * @return The DateTime when the review is scheduled to end. Required if type is endDate
-     * 
      */
     public Output</* @Nullable */ String> getEndDate() {
         return this.endDate;
     }
     /**
      * Set of access review history instances for this history definition.
-     * 
      */
     @Export(name="instances", type=List.class, parameters={AccessReviewHistoryInstanceResponse.class})
     private Output</* @Nullable */ List<AccessReviewHistoryInstanceResponse>> instances;
 
     /**
      * @return Set of access review history instances for this history definition.
-     * 
      */
     public Output</* @Nullable */ List<AccessReviewHistoryInstanceResponse>> getInstances() {
         return this.instances;
     }
     /**
      * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-     * 
      */
     @Export(name="interval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> interval;
 
     /**
      * @return The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-     * 
      */
     public Output</* @Nullable */ Integer> getInterval() {
         return this.interval;
     }
     /**
      * The access review history definition unique id.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The access review history definition unique id.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The number of times to repeat the access review. Required and must be positive if type is numbered.
-     * 
      */
     @Export(name="numberOfOccurrences", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> numberOfOccurrences;
 
     /**
      * @return The number of times to repeat the access review. Required and must be positive if type is numbered.
-     * 
      */
     public Output</* @Nullable */ Integer> getNumberOfOccurrences() {
         return this.numberOfOccurrences;
     }
     /**
      * The identity id
-     * 
      */
     @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
      * @return The identity id
-     * 
      */
     public Output<String> getPrincipalId() {
         return this.principalId;
     }
     /**
      * The identity display name
-     * 
      */
     @Export(name="principalName", type=String.class, parameters={})
     private Output<String> principalName;
 
     /**
      * @return The identity display name
-     * 
      */
     public Output<String> getPrincipalName() {
         return this.principalName;
     }
     /**
      * The identity type : user/servicePrincipal
-     * 
      */
     @Export(name="principalType", type=String.class, parameters={})
     private Output<String> principalType;
 
     /**
      * @return The identity type : user/servicePrincipal
-     * 
      */
     public Output<String> getPrincipalType() {
         return this.principalType;
     }
     /**
      * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
-     * 
      */
     @Export(name="reviewHistoryPeriodEndDateTime", type=String.class, parameters={})
     private Output<String> reviewHistoryPeriodEndDateTime;
 
     /**
      * @return Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
-     * 
      */
     public Output<String> getReviewHistoryPeriodEndDateTime() {
         return this.reviewHistoryPeriodEndDateTime;
     }
     /**
      * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
-     * 
      */
     @Export(name="reviewHistoryPeriodStartDateTime", type=String.class, parameters={})
     private Output<String> reviewHistoryPeriodStartDateTime;
 
     /**
      * @return Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
-     * 
      */
     public Output<String> getReviewHistoryPeriodStartDateTime() {
         return this.reviewHistoryPeriodStartDateTime;
     }
     /**
      * A collection of scopes used when selecting review history data
-     * 
      */
     @Export(name="scopes", type=List.class, parameters={AccessReviewScopeResponse.class})
     private Output</* @Nullable */ List<AccessReviewScopeResponse>> scopes;
 
     /**
      * @return A collection of scopes used when selecting review history data
-     * 
      */
     public Output</* @Nullable */ List<AccessReviewScopeResponse>> getScopes() {
         return this.scopes;
     }
     /**
      * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-     * 
      */
     @Export(name="startDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> startDate;
 
     /**
      * @return The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-     * 
      */
     public Output</* @Nullable */ String> getStartDate() {
         return this.startDate;
     }
     /**
      * This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The user principal name(if valid)
-     * 
      */
     @Export(name="userPrincipalName", type=String.class, parameters={})
     private Output<String> userPrincipalName;
 
     /**
      * @return The user principal name(if valid)
-     * 
      */
     public Output<String> getUserPrincipalName() {
         return this.userPrincipalName;

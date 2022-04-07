@@ -32,126 +32,108 @@ import javax.annotation.Nullable;
 public class AttestationProvider extends io.pulumi.resources.CustomResource {
     /**
      * Gets the uri of attestation service
-     * 
      */
     @Export(name="attestUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> attestUri;
 
     /**
      * @return Gets the uri of attestation service
-     * 
      */
     public Output</* @Nullable */ String> getAttestUri() {
         return this.attestUri;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of private endpoint connections associated with the attestation provider.
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return List of private endpoint connections associated with the attestation provider.
-     * 
      */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Status of attestation service.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return Status of attestation service.
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * The system metadata relating to this resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Trust model for the attestation provider.
-     * 
      */
     @Export(name="trustModel", type=String.class, parameters={})
     private Output</* @Nullable */ String> trustModel;
 
     /**
      * @return Trust model for the attestation provider.
-     * 
      */
     public Output</* @Nullable */ String> getTrustModel() {
         return this.trustModel;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

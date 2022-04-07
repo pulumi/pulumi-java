@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Managed integration runtime status.
- * 
  */
 public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
 
     /**
      * The time at which the integration runtime was created, in ISO8601 format.
-     * 
      */
     @Import(name="createTime", required=true)
       private final String createTime;
@@ -33,7 +31,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
 
     /**
      * The data factory name which the integration runtime belong to.
-     * 
      */
     @Import(name="dataFactoryName", required=true)
       private final String dataFactoryName;
@@ -44,7 +41,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
 
     /**
      * The last operation result that occurred on this integration runtime.
-     * 
      */
     @Import(name="lastOperation", required=true)
       private final ManagedIntegrationRuntimeOperationResultResponse lastOperation;
@@ -55,7 +51,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
 
     /**
      * The list of nodes for managed integration runtime.
-     * 
      */
     @Import(name="nodes", required=true)
       private final List<ManagedIntegrationRuntimeNodeResponse> nodes;
@@ -66,7 +61,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
 
     /**
      * The errors that occurred on this integration runtime.
-     * 
      */
     @Import(name="otherErrors", required=true)
       private final List<ManagedIntegrationRuntimeErrorResponse> otherErrors;
@@ -77,7 +71,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
 
     /**
      * The state of integration runtime.
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -89,7 +82,6 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
     /**
      * The type of integration runtime.
      * Expected value is 'Managed'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

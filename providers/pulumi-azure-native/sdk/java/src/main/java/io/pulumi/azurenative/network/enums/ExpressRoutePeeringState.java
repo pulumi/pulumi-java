@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The peering state.
-     * 
      */
     @EnumType
     public enum ExpressRoutePeeringState {

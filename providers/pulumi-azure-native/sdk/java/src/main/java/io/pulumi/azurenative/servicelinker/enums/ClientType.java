@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The application client type
-     * 
      */
     @EnumType
     public enum ClientType {

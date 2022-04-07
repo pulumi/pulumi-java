@@ -34,210 +34,180 @@ import javax.annotation.Nullable;
 public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
     /**
      * Custom settings for changing the behavior of the App Service Environment.
-     * 
      */
     @Export(name="clusterSettings", type=List.class, parameters={NameValuePairResponse.class})
     private Output</* @Nullable */ List<NameValuePairResponse>> clusterSettings;
 
     /**
      * @return Custom settings for changing the behavior of the App Service Environment.
-     * 
      */
     public Output</* @Nullable */ List<NameValuePairResponse>> getClusterSettings() {
         return this.clusterSettings;
     }
     /**
      * Dedicated Host Count
-     * 
      */
     @Export(name="dedicatedHostCount", type=Integer.class, parameters={})
     private Output<Integer> dedicatedHostCount;
 
     /**
      * @return Dedicated Host Count
-     * 
      */
     public Output<Integer> getDedicatedHostCount() {
         return this.dedicatedHostCount;
     }
     /**
      * DNS suffix of the App Service Environment.
-     * 
      */
     @Export(name="dnsSuffix", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsSuffix;
 
     /**
      * @return DNS suffix of the App Service Environment.
-     * 
      */
     public Output</* @Nullable */ String> getDnsSuffix() {
         return this.dnsSuffix;
     }
     /**
      * Scale factor for front-ends.
-     * 
      */
     @Export(name="frontEndScaleFactor", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> frontEndScaleFactor;
 
     /**
      * @return Scale factor for front-ends.
-     * 
      */
     public Output</* @Nullable */ Integer> getFrontEndScaleFactor() {
         return this.frontEndScaleFactor;
     }
     /**
      * Flag that displays whether an ASE has linux workers or not
-     * 
      */
     @Export(name="hasLinuxWorkers", type=Boolean.class, parameters={})
     private Output<Boolean> hasLinuxWorkers;
 
     /**
      * @return Flag that displays whether an ASE has linux workers or not
-     * 
      */
     public Output<Boolean> getHasLinuxWorkers() {
         return this.hasLinuxWorkers;
     }
     /**
      * Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
-     * 
      */
     @Export(name="internalLoadBalancingMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> internalLoadBalancingMode;
 
     /**
      * @return Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
-     * 
      */
     public Output</* @Nullable */ String> getInternalLoadBalancingMode() {
         return this.internalLoadBalancingMode;
     }
     /**
      * Number of IP SSL addresses reserved for the App Service Environment.
-     * 
      */
     @Export(name="ipsslAddressCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ipsslAddressCount;
 
     /**
      * @return Number of IP SSL addresses reserved for the App Service Environment.
-     * 
      */
     public Output</* @Nullable */ Integer> getIpsslAddressCount() {
         return this.ipsslAddressCount;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource Location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Maximum number of VMs in the App Service Environment.
-     * 
      */
     @Export(name="maximumNumberOfMachines", type=Integer.class, parameters={})
     private Output<Integer> maximumNumberOfMachines;
 
     /**
      * @return Maximum number of VMs in the App Service Environment.
-     * 
      */
     public Output<Integer> getMaximumNumberOfMachines() {
         return this.maximumNumberOfMachines;
     }
     /**
      * Number of front-end instances.
-     * 
      */
     @Export(name="multiRoleCount", type=Integer.class, parameters={})
     private Output<Integer> multiRoleCount;
 
     /**
      * @return Number of front-end instances.
-     * 
      */
     public Output<Integer> getMultiRoleCount() {
         return this.multiRoleCount;
     }
     /**
      * Front-end VM size, e.g. "Medium", "Large".
-     * 
      */
     @Export(name="multiSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> multiSize;
 
     /**
      * @return Front-end VM size, e.g. "Medium", "Large".
-     * 
      */
     public Output</* @Nullable */ String> getMultiSize() {
         return this.multiSize;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the App Service Environment.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the App Service Environment.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Current status of the App Service Environment.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Current status of the App Service Environment.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
@@ -245,7 +215,6 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
     /**
      * <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
      *  (most likely because NSG blocked the incoming traffic).
-     * 
      */
     @Export(name="suspended", type=Boolean.class, parameters={})
     private Output<Boolean> suspended;
@@ -253,63 +222,54 @@ public class AppServiceEnvironment extends io.pulumi.resources.CustomResource {
     /**
      * @return <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
      *  (most likely because NSG blocked the incoming traffic).
-     * 
      */
     public Output<Boolean> getSuspended() {
         return this.suspended;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * User added ip ranges to whitelist on ASE db
-     * 
      */
     @Export(name="userWhitelistedIpRanges", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> userWhitelistedIpRanges;
 
     /**
      * @return User added ip ranges to whitelist on ASE db
-     * 
      */
     public Output</* @Nullable */ List<String>> getUserWhitelistedIpRanges() {
         return this.userWhitelistedIpRanges;
     }
     /**
      * Description of the Virtual Network.
-     * 
      */
     @Export(name="virtualNetwork", type=VirtualNetworkProfileResponse.class, parameters={})
     private Output<VirtualNetworkProfileResponse> virtualNetwork;
 
     /**
      * @return Description of the Virtual Network.
-     * 
      */
     public Output<VirtualNetworkProfileResponse> getVirtualNetwork() {
         return this.virtualNetwork;

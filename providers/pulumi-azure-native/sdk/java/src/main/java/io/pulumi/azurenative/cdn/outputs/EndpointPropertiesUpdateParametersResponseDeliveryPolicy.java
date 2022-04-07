@@ -15,12 +15,10 @@ import javax.annotation.Nullable;
 public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy {
     /**
      * User-friendly description of the policy.
-     * 
      */
     private final @Nullable String description;
     /**
      * A list of the delivery rules.
-     * 
      */
     private final List<DeliveryRuleResponse> rules;
 
@@ -34,14 +32,12 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy {
 
     /**
      * User-friendly description of the policy.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of the delivery rules.
-     * 
     */
     public List<DeliveryRuleResponse> getRules() {
         return this.rules;

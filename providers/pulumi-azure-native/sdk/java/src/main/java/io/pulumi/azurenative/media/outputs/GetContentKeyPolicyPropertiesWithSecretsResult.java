@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class GetContentKeyPolicyPropertiesWithSecretsResult {
     /**
      * The creation date of the Policy
-     * 
      */
     private final String created;
     /**
      * A description for the Policy.
-     * 
      */
     private final @Nullable String description;
     /**
      * The last modified date of the Policy
-     * 
      */
     private final String lastModified;
     /**
      * The Key Policy options.
-     * 
      */
     private final List<ContentKeyPolicyOptionResponse> options;
     /**
      * The legacy Policy ID.
-     * 
      */
     private final String policyId;
 
@@ -55,35 +50,30 @@ public final class GetContentKeyPolicyPropertiesWithSecretsResult {
 
     /**
      * The creation date of the Policy
-     * 
     */
     public String getCreated() {
         return this.created;
     }
     /**
      * A description for the Policy.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The last modified date of the Policy
-     * 
     */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * The Key Policy options.
-     * 
     */
     public List<ContentKeyPolicyOptionResponse> getOptions() {
         return this.options;
     }
     /**
      * The legacy Policy ID.
-     * 
     */
     public String getPolicyId() {
         return this.policyId;

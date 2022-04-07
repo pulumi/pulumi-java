@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure retention rule
- * 
  */
 public final class AzureRetentionRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -43,8 +42,8 @@ public final class AzureRetentionRuleResponse extends io.pulumi.resources.Invoke
     }
 
     /**
-     * Expected value is 'AzureRetentionRule'.
      * 
+     * Expected value is 'AzureRetentionRule'.
      */
     @Import(name="objectType", required=true)
       private final String objectType;

@@ -18,57 +18,46 @@ import javax.annotation.Nullable;
 public final class ScheduleCreationParameterResponse {
     /**
      * If the schedule will occur once each day of the week, specify the daily recurrence.
-     * 
      */
     private final @Nullable DayDetailsResponse dailyRecurrence;
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
-     * 
      */
     private final @Nullable HourDetailsResponse hourlyRecurrence;
     /**
      * The location of the new virtual machine or environment
-     * 
      */
     private final String location;
     /**
      * The name of the virtual machine or environment
-     * 
      */
     private final @Nullable String name;
     /**
      * Notification settings.
-     * 
      */
     private final @Nullable NotificationSettingsResponse notificationSettings;
     /**
      * The status of the schedule (i.e. Enabled, Disabled)
-     * 
      */
     private final @Nullable String status;
     /**
      * The tags of the resource.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * The resource ID to which the schedule belongs
-     * 
      */
     private final @Nullable String targetResourceId;
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     * 
      */
     private final @Nullable String taskType;
     /**
      * The time zone ID (e.g. Pacific Standard time).
-     * 
      */
     private final @Nullable String timeZoneId;
     /**
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
-     * 
      */
     private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
@@ -100,77 +89,66 @@ public final class ScheduleCreationParameterResponse {
 
     /**
      * If the schedule will occur once each day of the week, specify the daily recurrence.
-     * 
     */
     public Optional<DayDetailsResponse> getDailyRecurrence() {
         return Optional.ofNullable(this.dailyRecurrence);
     }
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
-     * 
     */
     public Optional<HourDetailsResponse> getHourlyRecurrence() {
         return Optional.ofNullable(this.hourlyRecurrence);
     }
     /**
      * The location of the new virtual machine or environment
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the virtual machine or environment
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Notification settings.
-     * 
     */
     public Optional<NotificationSettingsResponse> getNotificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
     /**
      * The status of the schedule (i.e. Enabled, Disabled)
-     * 
     */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags of the resource.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource ID to which the schedule belongs
-     * 
     */
     public Optional<String> getTargetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
-     * 
     */
     public Optional<String> getTaskType() {
         return Optional.ofNullable(this.taskType);
     }
     /**
      * The time zone ID (e.g. Pacific Standard time).
-     * 
     */
     public Optional<String> getTimeZoneId() {
         return Optional.ofNullable(this.timeZoneId);
     }
     /**
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
-     * 
     */
     public Optional<WeekDetailsResponse> getWeeklyRecurrence() {
         return Optional.ofNullable(this.weeklyRecurrence);

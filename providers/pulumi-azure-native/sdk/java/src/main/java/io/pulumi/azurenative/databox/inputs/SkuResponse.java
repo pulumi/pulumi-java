@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Sku.
- * 
  */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The display name of the sku.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -31,7 +29,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku family.
-     * 
      */
     @Import(name="family")
       private final @Nullable String family;
@@ -42,7 +39,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The sku name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

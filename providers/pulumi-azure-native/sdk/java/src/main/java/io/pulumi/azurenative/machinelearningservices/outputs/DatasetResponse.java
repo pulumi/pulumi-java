@@ -17,62 +17,50 @@ import javax.annotation.Nullable;
 public final class DatasetResponse {
     /**
      * The dataset creation time (UTC).
-     * 
      */
     private final String createdTime;
     /**
      * Unique Dataset identifier.
-     * 
      */
     private final String datasetId;
     /**
      * Dataset state
-     * 
      */
     private final @Nullable DatasetStateResponse datasetState;
     /**
      * Dataset Type.
-     * 
      */
     private final String datasetType;
     /**
      * Name of the default compute to be used for any Dataset actions (such as Profile, Write).
-     * 
      */
     private final String defaultCompute;
     /**
      * Description about this dataset version.
-     * 
      */
     private final String description;
     /**
      * eTag description
-     * 
      */
     private final String etag;
     /**
      * Flag to hide Dataset in UI
-     * 
      */
     private final Boolean isVisible;
     /**
      * Last created Dataset definition.
-     * 
      */
     private final @Nullable DatasetResponseLatest latest;
     /**
      * The dataset last modified time (UTC).
-     * 
      */
     private final String modifiedTime;
     /**
      * Unique dataset name
-     * 
      */
     private final String name;
     /**
      * Tags for this dataset version.
-     * 
      */
     private final Map<String,String> tags;
 
@@ -106,84 +94,72 @@ public final class DatasetResponse {
 
     /**
      * The dataset creation time (UTC).
-     * 
     */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Unique Dataset identifier.
-     * 
     */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * Dataset state
-     * 
     */
     public Optional<DatasetStateResponse> getDatasetState() {
         return Optional.ofNullable(this.datasetState);
     }
     /**
      * Dataset Type.
-     * 
     */
     public String getDatasetType() {
         return this.datasetType;
     }
     /**
      * Name of the default compute to be used for any Dataset actions (such as Profile, Write).
-     * 
     */
     public String getDefaultCompute() {
         return this.defaultCompute;
     }
     /**
      * Description about this dataset version.
-     * 
     */
     public String getDescription() {
         return this.description;
     }
     /**
      * eTag description
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Flag to hide Dataset in UI
-     * 
     */
     public Boolean getIsVisible() {
         return this.isVisible;
     }
     /**
      * Last created Dataset definition.
-     * 
     */
     public Optional<DatasetResponseLatest> getLatest() {
         return Optional.ofNullable(this.latest);
     }
     /**
      * The dataset last modified time (UTC).
-     * 
     */
     public String getModifiedTime() {
         return this.modifiedTime;
     }
     /**
      * Unique dataset name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Tags for this dataset version.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags;

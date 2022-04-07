@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Agent disk details.
- * 
  */
 public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The disk capacity in bytes.
-     * 
      */
     @Import(name="capacityInBytes", required=true)
       private final Double capacityInBytes;
@@ -31,7 +29,6 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The disk Id.
-     * 
      */
     @Import(name="diskId", required=true)
       private final String diskId;
@@ -42,7 +39,6 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The disk name.
-     * 
      */
     @Import(name="diskName", required=true)
       private final String diskName;
@@ -53,7 +49,6 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A value indicating whether the disk is the OS disk.
-     * 
      */
     @Import(name="isOSDisk", required=true)
       private final String isOSDisk;
@@ -64,7 +59,6 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The lun of disk.
-     * 
      */
     @Import(name="lunId", required=true)
       private final Integer lunId;

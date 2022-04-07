@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class VMInfoResponse {
     /**
      * Azure resource Id of the VM.
-     * 
      */
     private final String id;
     /**
      * UUID(Universally Unique Identifier) of the VM.
-     * 
      */
     private final String uuid;
 
@@ -30,14 +28,12 @@ public final class VMInfoResponse {
 
     /**
      * Azure resource Id of the VM.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * UUID(Universally Unique Identifier) of the VM.
-     * 
     */
     public String getUuid() {
         return this.uuid;

@@ -18,7 +18,6 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
 
     /**
      * The key type.
-     * 
      */
     @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
@@ -29,7 +28,6 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
 
     /**
      * The expiry time.
-     * 
      */
     @Import(name="notAfter")
       private final @Nullable String notAfter;
@@ -40,7 +38,6 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -51,7 +48,6 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
 
     /**
      * The workflow name.
-     * 
      */
     @Import(name="workflowName", required=true)
       private final String workflowName;

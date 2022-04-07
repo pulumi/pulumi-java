@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class CertificateResponse {
     /**
      * PEM formatted public key.
-     * 
      */
     private final @Nullable String pem;
 
@@ -24,7 +23,6 @@ public final class CertificateResponse {
 
     /**
      * PEM formatted public key.
-     * 
     */
     public Optional<String> getPem() {
         return Optional.ofNullable(this.pem);

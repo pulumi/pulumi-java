@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the policy for a monitored application upgrade.
- * 
  */
 public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -34,7 +33,6 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
 
     /**
      * If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).
-     * 
      */
     @Import(name="forceRestart")
       private final @Nullable Boolean forceRestart;
@@ -45,7 +43,6 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
 
     /**
      * Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.
-     * 
      */
     @Import(name="recreateApplication")
       private final @Nullable Boolean recreateApplication;
@@ -56,7 +53,6 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
 
     /**
      * The policy used for monitoring the application upgrade
-     * 
      */
     @Import(name="rollingUpgradeMonitoringPolicy")
       private final @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy;
@@ -67,7 +63,6 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
 
     /**
      * The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.
-     * 
      */
     @Import(name="upgradeMode")
       private final @Nullable String upgradeMode;
@@ -78,7 +73,6 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
 
     /**
      * The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).
-     * 
      */
     @Import(name="upgradeReplicaSetCheckTimeout")
       private final @Nullable String upgradeReplicaSetCheckTimeout;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
- * 
  */
 public final class EncryptionSetIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class EncryptionSetIdentityArgs extends io.pulumi.resources.Resourc
 
     /**
      * The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,DiskEncryptionSetIdentityType>> type;

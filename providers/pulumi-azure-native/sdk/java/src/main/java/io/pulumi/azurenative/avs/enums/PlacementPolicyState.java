@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Whether the placement policy is enabled or disabled
-     * 
      */
     @EnumType
     public enum PlacementPolicyState {

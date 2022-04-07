@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Health status of protected item.
-     * 
      */
     @EnumType
     public enum HealthStatus {

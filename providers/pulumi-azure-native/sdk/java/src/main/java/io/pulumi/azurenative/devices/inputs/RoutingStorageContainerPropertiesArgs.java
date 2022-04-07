@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties related to a storage container endpoint.
- * 
  */
 public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * Method used to authenticate against the storage endpoint
-     * 
      */
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
@@ -34,7 +32,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
-     * 
      */
     @Import(name="batchFrequencyInSeconds")
       private final @Nullable Output<Integer> batchFrequencyInSeconds;
@@ -45,7 +42,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * The connection string of the storage account.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
@@ -56,7 +52,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * The name of storage container in the storage account.
-     * 
      */
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
@@ -67,7 +62,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
-     * 
      */
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
@@ -78,7 +72,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * The url of the storage endpoint. It must include the protocol https://
-     * 
      */
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
@@ -89,7 +82,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
-     * 
      */
     @Import(name="fileNameFormat")
       private final @Nullable Output<String> fileNameFormat;
@@ -100,7 +92,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * Id of the storage container endpoint
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -111,7 +102,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
-     * 
      */
     @Import(name="maxChunkSizeInBytes")
       private final @Nullable Output<Integer> maxChunkSizeInBytes;
@@ -122,7 +112,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -133,7 +122,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * The name of the resource group of the storage account.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
@@ -144,7 +132,6 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
 
     /**
      * The subscription identifier of the storage account.
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;

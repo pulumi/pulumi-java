@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Online endpoint configuration
- * 
  */
 public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Inference endpoint authentication mode type
-     * 
      */
     @Import(name="authMode", required=true)
       private final Output<Either<String,EndpointAuthMode>> authMode;
@@ -36,7 +34,6 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the inference endpoint.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -48,7 +45,6 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * EndpointAuthKeys to set initially on an Endpoint.
      * This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.
-     * 
      */
     @Import(name="keys")
       private final @Nullable Output<EndpointAuthKeysArgs> keys;
@@ -59,7 +55,6 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -71,7 +66,6 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * ARM resource ID of the compute if it exists.
      * optional
-     * 
      */
     @Import(name="target")
       private final @Nullable Output<String> target;
@@ -82,7 +76,6 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Traffic rules on how the traffic will be routed across deployments.
-     * 
      */
     @Import(name="traffic")
       private final @Nullable Output<Map<String,Integer>> traffic;

@@ -16,7 +16,6 @@ public final class InputDataBindingResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * ARM resource ID of the registered dataVersion.
-     * 
      */
     @Import(name="dataId")
       private final @Nullable String dataId;
@@ -27,7 +26,6 @@ public final class InputDataBindingResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Mechanism for accessing the data artifact.
-     * 
      */
     @Import(name="mode")
       private final @Nullable String mode;
@@ -38,7 +36,6 @@ public final class InputDataBindingResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Location of data inside the container process.
-     * 
      */
     @Import(name="pathOnCompute")
       private final @Nullable String pathOnCompute;

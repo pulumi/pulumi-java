@@ -16,7 +16,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of destination storage account.
-     * 
      */
     @Import(name="destinationAccountId")
       private final @Nullable Output<String> destinationAccountId;
@@ -27,7 +26,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The SAS URL for the destination storage container. It must grant write permission.
-     * 
      */
     @Import(name="destinationAddress")
       private final @Nullable Output<String> destinationAddress;
@@ -38,7 +36,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The location ID of the destination storage container.
-     * 
      */
     @Import(name="destinationStorageLocationId")
       private final @Nullable Output<String> destinationStorageLocationId;
@@ -49,7 +46,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The subscription ID of the destination storage container.
-     * 
      */
     @Import(name="destinationStorageSubscriptionId")
       private final @Nullable Output<String> destinationStorageSubscriptionId;
@@ -60,7 +56,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The Continuous Export destination type. This has to be 'Blob'.
-     * 
      */
     @Import(name="destinationType")
       private final @Nullable Output<String> destinationType;
@@ -71,7 +66,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The Continuous Export configuration ID. This is unique within a Application Insights component.
-     * 
      */
     @Import(name="exportId")
       private final @Nullable Output<String> exportId;
@@ -82,7 +76,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Set to 'true' to create a Continuous Export configuration as enabled, otherwise set it to 'false'.
-     * 
      */
     @Import(name="isEnabled")
       private final @Nullable Output<String> isEnabled;
@@ -93,7 +86,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Deprecated
-     * 
      */
     @Import(name="notificationQueueEnabled")
       private final @Nullable Output<String> notificationQueueEnabled;
@@ -104,7 +96,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Deprecated
-     * 
      */
     @Import(name="notificationQueueUri")
       private final @Nullable Output<String> notificationQueueUri;
@@ -115,7 +106,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The document types to be exported, as comma separated values. Allowed values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
-     * 
      */
     @Import(name="recordTypes")
       private final @Nullable Output<String> recordTypes;
@@ -126,7 +116,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -137,7 +126,6 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the Application Insights component resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;

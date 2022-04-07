@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the machine group
-     * 
      */
     @EnumType
     public enum MachineGroupType {

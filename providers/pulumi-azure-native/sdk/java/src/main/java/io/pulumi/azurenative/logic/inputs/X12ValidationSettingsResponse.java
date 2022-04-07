@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The X12 agreement validation settings.
- * 
  */
 public final class X12ValidationSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class X12ValidationSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to allow leading and trailing spaces and zeroes.
-     * 
      */
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
@@ -31,7 +29,6 @@ public final class X12ValidationSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to check for duplicate group control number.
-     * 
      */
     @Import(name="checkDuplicateGroupControlNumber", required=true)
       private final Boolean checkDuplicateGroupControlNumber;
@@ -42,7 +39,6 @@ public final class X12ValidationSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to check for duplicate interchange control number.
-     * 
      */
     @Import(name="checkDuplicateInterchangeControlNumber", required=true)
       private final Boolean checkDuplicateInterchangeControlNumber;
@@ -53,7 +49,6 @@ public final class X12ValidationSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to check for duplicate transaction set control number.
-     * 
      */
     @Import(name="checkDuplicateTransactionSetControlNumber", required=true)
       private final Boolean checkDuplicateTransactionSetControlNumber;
@@ -64,7 +59,6 @@ public final class X12ValidationSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * The validity period of interchange control number.
-     * 
      */
     @Import(name="interchangeControlNumberValidityDays", required=true)
       private final Integer interchangeControlNumberValidityDays;
@@ -75,7 +69,6 @@ public final class X12ValidationSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * The trailing separator policy.
-     * 
      */
     @Import(name="trailingSeparatorPolicy", required=true)
       private final String trailingSeparatorPolicy;
@@ -86,7 +79,6 @@ public final class X12ValidationSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to trim leading and trailing spaces and zeroes.
-     * 
      */
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
@@ -97,7 +89,6 @@ public final class X12ValidationSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to validate character set in the message.
-     * 
      */
     @Import(name="validateCharacterSet", required=true)
       private final Boolean validateCharacterSet;
@@ -108,7 +99,6 @@ public final class X12ValidationSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to Whether to validate EDI types.
-     * 
      */
     @Import(name="validateEDITypes", required=true)
       private final Boolean validateEDITypes;
@@ -119,7 +109,6 @@ public final class X12ValidationSettingsResponse extends io.pulumi.resources.Inv
 
     /**
      * The value indicating whether to Whether to validate XSD types.
-     * 
      */
     @Import(name="validateXSDTypes", required=true)
       private final Boolean validateXSDTypes;

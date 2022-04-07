@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the token store.
- * 
  */
 public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the storage of the tokens if blob storage is used.
-     * 
      */
     @Import(name="azureBlobStorage")
       private final @Nullable Output<BlobStorageTokenStoreArgs> azureBlobStorage;
@@ -35,7 +33,6 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * <code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
      *  The default is <code>false</code>.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -46,7 +43,6 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the storage of the tokens if a file system is used.
-     * 
      */
     @Import(name="fileSystem")
       private final @Nullable Output<FileSystemTokenStoreArgs> fileSystem;
@@ -58,7 +54,6 @@ public final class TokenStoreArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The number of hours after session token expiration that a session token can be used to
      * call the token refresh API. The default is 72 hours.
-     * 
      */
     @Import(name="tokenRefreshExtensionHours")
       private final @Nullable Output<Double> tokenRefreshExtensionHours;

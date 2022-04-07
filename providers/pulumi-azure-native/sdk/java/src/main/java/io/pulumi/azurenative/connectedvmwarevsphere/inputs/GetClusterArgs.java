@@ -14,7 +14,6 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

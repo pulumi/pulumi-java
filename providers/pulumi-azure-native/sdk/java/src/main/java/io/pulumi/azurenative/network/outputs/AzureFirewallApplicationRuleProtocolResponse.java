@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class AzureFirewallApplicationRuleProtocolResponse {
     /**
      * Port number for the protocol, cannot be greater than 64000. This field is optional.
-     * 
      */
     private final @Nullable Integer port;
     /**
      * Protocol type.
-     * 
      */
     private final @Nullable String protocolType;
 
@@ -33,14 +31,12 @@ public final class AzureFirewallApplicationRuleProtocolResponse {
 
     /**
      * Port number for the protocol, cannot be greater than 64000. This field is optional.
-     * 
     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Protocol type.
-     * 
     */
     public Optional<String> getProtocolType() {
         return Optional.ofNullable(this.protocolType);

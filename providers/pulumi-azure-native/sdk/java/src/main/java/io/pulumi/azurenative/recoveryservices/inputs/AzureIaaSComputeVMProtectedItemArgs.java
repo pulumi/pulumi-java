@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * IaaS VM workload-specific backup item representing the Azure Resource Manager VM.
- * 
  */
 public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
@@ -42,7 +40,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Name of the backup set the backup item belongs to
-     * 
      */
     @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
@@ -53,7 +50,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Unique name of container
-     * 
      */
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
@@ -64,7 +60,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
@@ -75,7 +70,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Time for deferred deletion in UTC
-     * 
      */
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
@@ -86,7 +80,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
-     * 
      */
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
@@ -97,7 +90,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Additional information for this backup item.
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable Output<AzureIaaSVMProtectedItemExtendedInfoArgs> extendedInfo;
@@ -108,7 +100,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Extended Properties for Azure IaasVM Backup.
-     * 
      */
     @Import(name="extendedProperties")
       private final @Nullable Output<ExtendedPropertiesArgs> extendedProperties;
@@ -119,7 +110,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Friendly name of the VM represented by this backup item.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -130,7 +120,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Health status of protected item.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable Output<Either<String,HealthStatus>> healthStatus;
@@ -141,7 +130,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
-     * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
@@ -152,7 +140,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
-     * 
      */
     @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
@@ -163,7 +150,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
-     * 
      */
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
@@ -174,7 +160,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Health details of different KPIs
-     * 
      */
     @Import(name="kpisHealths")
       private final @Nullable Output<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
@@ -185,7 +170,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Last backup operation status.
-     * 
      */
     @Import(name="lastBackupStatus")
       private final @Nullable Output<String> lastBackupStatus;
@@ -196,7 +180,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Timestamp of the last backup operation on this backup item.
-     * 
      */
     @Import(name="lastBackupTime")
       private final @Nullable Output<String> lastBackupTime;
@@ -207,7 +190,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
-     * 
      */
     @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
@@ -218,7 +200,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
@@ -229,7 +210,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Data ID of the protected item.
-     * 
      */
     @Import(name="protectedItemDataId")
       private final @Nullable Output<String> protectedItemDataId;
@@ -241,7 +221,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
     /**
      * backup item type.
      * Expected value is 'Microsoft.Compute/virtualMachines'.
-     * 
      */
     @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
@@ -252,7 +231,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionState>> protectionState;
@@ -263,7 +241,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Backup status of this backup item.
-     * 
      */
     @Import(name="protectionStatus")
       private final @Nullable Output<String> protectionStatus;
@@ -274,7 +251,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
@@ -285,7 +261,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Fully qualified ARM ID of the virtual machine represented by this item.
-     * 
      */
     @Import(name="virtualMachineId")
       private final @Nullable Output<String> virtualMachineId;
@@ -296,7 +271,6 @@ public final class AzureIaaSComputeVMProtectedItemArgs extends io.pulumi.resourc
 
     /**
      * Type of workload this item represents.
-     * 
      */
     @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;

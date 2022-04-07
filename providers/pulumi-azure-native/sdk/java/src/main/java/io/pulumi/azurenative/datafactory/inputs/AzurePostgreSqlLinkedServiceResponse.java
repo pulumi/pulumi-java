@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure PostgreSQL linked service.
- * 
  */
 public final class AzurePostgreSqlLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class AzurePostgreSqlLinkedServiceResponse extends io.pulumi.resour
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -37,7 +35,6 @@ public final class AzurePostgreSqlLinkedServiceResponse extends io.pulumi.resour
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -48,7 +45,6 @@ public final class AzurePostgreSqlLinkedServiceResponse extends io.pulumi.resour
 
     /**
      * An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Object connectionString;
@@ -59,7 +55,6 @@ public final class AzurePostgreSqlLinkedServiceResponse extends io.pulumi.resour
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -70,7 +65,6 @@ public final class AzurePostgreSqlLinkedServiceResponse extends io.pulumi.resour
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -81,7 +75,6 @@ public final class AzurePostgreSqlLinkedServiceResponse extends io.pulumi.resour
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -92,7 +85,6 @@ public final class AzurePostgreSqlLinkedServiceResponse extends io.pulumi.resour
 
     /**
      * The Azure key vault secret reference of password in connection string.
-     * 
      */
     @Import(name="password")
       private final @Nullable AzureKeyVaultSecretReferenceResponse password;
@@ -104,7 +96,6 @@ public final class AzurePostgreSqlLinkedServiceResponse extends io.pulumi.resour
     /**
      * Type of linked service.
      * Expected value is 'AzurePostgreSql'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

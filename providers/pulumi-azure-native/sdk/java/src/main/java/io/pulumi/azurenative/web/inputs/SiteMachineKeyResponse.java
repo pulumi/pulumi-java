@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * MachineKey of an app.
- * 
  */
 public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Algorithm used for decryption.
-     * 
      */
     @Import(name="decryption")
       private final @Nullable String decryption;
@@ -31,7 +29,6 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Decryption key.
-     * 
      */
     @Import(name="decryptionKey")
       private final @Nullable String decryptionKey;
@@ -42,7 +39,6 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * MachineKey validation.
-     * 
      */
     @Import(name="validation")
       private final @Nullable String validation;
@@ -53,7 +49,6 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Validation key.
-     * 
      */
     @Import(name="validationKey")
       private final @Nullable String validationKey;

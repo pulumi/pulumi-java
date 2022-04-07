@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.
- * 
  */
 public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
 
     /**
      * The number of partitions.
-     * 
      */
     @Import(name="count", required=true)
       private final Output<Integer> count;
@@ -56,7 +54,6 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     /**
      * Enumerates the ways that a service can be partitioned.
      * Expected value is 'UniformInt64Range'.
-     * 
      */
     @Import(name="partitionScheme", required=true)
       private final Output<String> partitionScheme;

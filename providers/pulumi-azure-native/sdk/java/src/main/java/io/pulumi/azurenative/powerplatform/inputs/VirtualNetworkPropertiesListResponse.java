@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * A list of private link resources
- * 
  */
 public final class VirtualNetworkPropertiesListResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class VirtualNetworkPropertiesListResponse extends io.pulumi.resour
 
     /**
      * Next page link if any.
-     * 
      */
     @Import(name="nextLink")
       private final @Nullable String nextLink;
@@ -33,7 +31,6 @@ public final class VirtualNetworkPropertiesListResponse extends io.pulumi.resour
 
     /**
      * Array of virtual networks.
-     * 
      */
     @Import(name="value")
       private final @Nullable List<VirtualNetworkPropertiesResponse> value;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * List of properties of a link provider.
- * 
  */
 public final class VpnLinkProviderPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VpnLinkProviderPropertiesResponse extends io.pulumi.resources
 
     /**
      * Name of the link provider.
-     * 
      */
     @Import(name="linkProviderName")
       private final @Nullable String linkProviderName;
@@ -32,7 +30,6 @@ public final class VpnLinkProviderPropertiesResponse extends io.pulumi.resources
 
     /**
      * Link speed.
-     * 
      */
     @Import(name="linkSpeedInMbps")
       private final @Nullable Integer linkSpeedInMbps;

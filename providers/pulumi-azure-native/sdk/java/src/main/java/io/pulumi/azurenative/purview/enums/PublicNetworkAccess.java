@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the public network access.
-     * 
      */
     @EnumType
     public enum PublicNetworkAccess {

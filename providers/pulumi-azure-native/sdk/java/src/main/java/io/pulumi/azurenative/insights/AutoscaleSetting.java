@@ -21,7 +21,650 @@ import javax.annotation.Nullable;
  * The autoscale setting resource.
  * API Version: 2015-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update an autoscale setting
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var autoscaleSetting = new AzureNative.Insights.AutoscaleSetting("autoscaleSetting", new AzureNative.Insights.AutoscaleSettingArgs
+ *         {
+ *             AutoscaleSettingName = "MySetting",
+ *             Enabled = true,
+ *             Location = "West US",
+ *             Notifications = 
+ *             {
+ *                 new AzureNative.Insights.Inputs.AutoscaleNotificationArgs
+ *                 {
+ *                     Email = new AzureNative.Insights.Inputs.EmailNotificationArgs
+ *                     {
+ *                         CustomEmails = 
+ *                         {
+ *                             "gu@ms.com",
+ *                             "ge@ns.net",
+ *                         },
+ *                         SendToSubscriptionAdministrator = true,
+ *                         SendToSubscriptionCoAdministrators = true,
+ *                     },
+ *                     Operation = "Scale",
+ *                     Webhooks = 
+ *                     {
+ *                         new AzureNative.Insights.Inputs.WebhookNotificationArgs
+ *                         {
+ *                             Properties = ,
+ *                             ServiceUri = "http://myservice.com",
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             Profiles = 
+ *             {
+ *                 new AzureNative.Insights.Inputs.AutoscaleProfileArgs
+ *                 {
+ *                     Capacity = new AzureNative.Insights.Inputs.ScaleCapacityArgs
+ *                     {
+ *                         Default = "1",
+ *                         Maximum = "10",
+ *                         Minimum = "1",
+ *                     },
+ *                     FixedDate = new AzureNative.Insights.Inputs.TimeWindowArgs
+ *                     {
+ *                         End = "2015-03-05T14:30:00Z",
+ *                         Start = "2015-03-05T14:00:00Z",
+ *                         TimeZone = "UTC",
+ *                     },
+ *                     Name = "adios",
+ *                     Rules = 
+ *                     {
+ *                         new AzureNative.Insights.Inputs.ScaleRuleArgs
+ *                         {
+ *                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
+ *                             {
+ *                                 DividePerInstance = false,
+ *                                 MetricName = "Percentage CPU",
+ *                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                                 Operator = "GreaterThan",
+ *                                 Statistic = "Average",
+ *                                 Threshold = 10,
+ *                                 TimeAggregation = "Average",
+ *                                 TimeGrain = "PT1M",
+ *                                 TimeWindow = "PT5M",
+ *                             },
+ *                             ScaleAction = new AzureNative.Insights.Inputs.ScaleActionArgs
+ *                             {
+ *                                 Cooldown = "PT5M",
+ *                                 Direction = "Increase",
+ *                                 Type = "ChangeCount",
+ *                                 Value = "1",
+ *                             },
+ *                         },
+ *                         new AzureNative.Insights.Inputs.ScaleRuleArgs
+ *                         {
+ *                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
+ *                             {
+ *                                 DividePerInstance = false,
+ *                                 MetricName = "Percentage CPU",
+ *                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                                 Operator = "GreaterThan",
+ *                                 Statistic = "Average",
+ *                                 Threshold = 15,
+ *                                 TimeAggregation = "Average",
+ *                                 TimeGrain = "PT2M",
+ *                                 TimeWindow = "PT5M",
+ *                             },
+ *                             ScaleAction = new AzureNative.Insights.Inputs.ScaleActionArgs
+ *                             {
+ *                                 Cooldown = "PT6M",
+ *                                 Direction = "Decrease",
+ *                                 Type = "ChangeCount",
+ *                                 Value = "2",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *                 new AzureNative.Insights.Inputs.AutoscaleProfileArgs
+ *                 {
+ *                     Capacity = new AzureNative.Insights.Inputs.ScaleCapacityArgs
+ *                     {
+ *                         Default = "1",
+ *                         Maximum = "10",
+ *                         Minimum = "1",
+ *                     },
+ *                     Name = "saludos",
+ *                     Recurrence = new AzureNative.Insights.Inputs.RecurrenceArgs
+ *                     {
+ *                         Frequency = "Week",
+ *                         Schedule = new AzureNative.Insights.Inputs.RecurrentScheduleArgs
+ *                         {
+ *                             Days = 
+ *                             {
+ *                                 "1",
+ *                             },
+ *                             Hours = 
+ *                             {
+ *                                 5,
+ *                             },
+ *                             Minutes = 
+ *                             {
+ *                                 15,
+ *                             },
+ *                             TimeZone = "UTC",
+ *                         },
+ *                     },
+ *                     Rules = 
+ *                     {
+ *                         new AzureNative.Insights.Inputs.ScaleRuleArgs
+ *                         {
+ *                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
+ *                             {
+ *                                 DividePerInstance = false,
+ *                                 MetricName = "Percentage CPU",
+ *                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                                 Operator = "GreaterThan",
+ *                                 Statistic = "Average",
+ *                                 Threshold = 10,
+ *                                 TimeAggregation = "Average",
+ *                                 TimeGrain = "PT1M",
+ *                                 TimeWindow = "PT5M",
+ *                             },
+ *                             ScaleAction = new AzureNative.Insights.Inputs.ScaleActionArgs
+ *                             {
+ *                                 Cooldown = "PT5M",
+ *                                 Direction = "Increase",
+ *                                 Type = "ChangeCount",
+ *                                 Value = "1",
+ *                             },
+ *                         },
+ *                         new AzureNative.Insights.Inputs.ScaleRuleArgs
+ *                         {
+ *                             MetricTrigger = new AzureNative.Insights.Inputs.MetricTriggerArgs
+ *                             {
+ *                                 DividePerInstance = false,
+ *                                 MetricName = "Percentage CPU",
+ *                                 MetricResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                                 Operator = "GreaterThan",
+ *                                 Statistic = "Average",
+ *                                 Threshold = 15,
+ *                                 TimeAggregation = "Average",
+ *                                 TimeGrain = "PT2M",
+ *                                 TimeWindow = "PT5M",
+ *                             },
+ *                             ScaleAction = new AzureNative.Insights.Inputs.ScaleActionArgs
+ *                             {
+ *                                 Cooldown = "PT6M",
+ *                                 Direction = "Decrease",
+ *                                 Type = "ChangeCount",
+ *                                 Value = "2",
+ *                             },
+ *                         },
+ *                     },
+ *                 },
+ *             },
+ *             ResourceGroupName = "TestingMetricsScaleSet",
+ *             Tags = ,
+ *             TargetResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := insights.NewAutoscaleSetting(ctx, "autoscaleSetting", &insights.AutoscaleSettingArgs{
+ * 			AutoscaleSettingName: pulumi.String("MySetting"),
+ * 			Enabled:              pulumi.Bool(true),
+ * 			Location:             pulumi.String("West US"),
+ * 			Notifications: []insights.AutoscaleNotificationArgs{
+ * 				&insights.AutoscaleNotificationArgs{
+ * 					Email: &insights.EmailNotificationArgs{
+ * 						CustomEmails: pulumi.StringArray{
+ * 							pulumi.String("gu@ms.com"),
+ * 							pulumi.String("ge@ns.net"),
+ * 						},
+ * 						SendToSubscriptionAdministrator:    pulumi.Bool(true),
+ * 						SendToSubscriptionCoAdministrators: pulumi.Bool(true),
+ * 					},
+ * 					Operation: "Scale",
+ * 					Webhooks: insights.WebhookNotificationArray{
+ * 						&insights.WebhookNotificationArgs{
+ * 							Properties: nil,
+ * 							ServiceUri: pulumi.String("http://myservice.com"),
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			Profiles: insights.AutoscaleProfileArray{
+ * 				&insights.AutoscaleProfileArgs{
+ * 					Capacity: &insights.ScaleCapacityArgs{
+ * 						Default: pulumi.String("1"),
+ * 						Maximum: pulumi.String("10"),
+ * 						Minimum: pulumi.String("1"),
+ * 					},
+ * 					FixedDate: &insights.TimeWindowArgs{
+ * 						End:      pulumi.String("2015-03-05T14:30:00Z"),
+ * 						Start:    pulumi.String("2015-03-05T14:00:00Z"),
+ * 						TimeZone: pulumi.String("UTC"),
+ * 					},
+ * 					Name: pulumi.String("adios"),
+ * 					Rules: insights.ScaleRuleArray{
+ * 						&insights.ScaleRuleArgs{
+ * 							MetricTrigger: &insights.MetricTriggerArgs{
+ * 								DividePerInstance: pulumi.Bool(false),
+ * 								MetricName:        pulumi.String("Percentage CPU"),
+ * 								MetricResourceUri: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc"),
+ * 								Operator:          "GreaterThan",
+ * 								Statistic:         "Average",
+ * 								Threshold:         pulumi.Float64(10),
+ * 								TimeAggregation:   "Average",
+ * 								TimeGrain:         pulumi.String("PT1M"),
+ * 								TimeWindow:        pulumi.String("PT5M"),
+ * 							},
+ * 							ScaleAction: &insights.ScaleActionArgs{
+ * 								Cooldown:  pulumi.String("PT5M"),
+ * 								Direction: "Increase",
+ * 								Type:      "ChangeCount",
+ * 								Value:     pulumi.String("1"),
+ * 							},
+ * 						},
+ * 						&insights.ScaleRuleArgs{
+ * 							MetricTrigger: &insights.MetricTriggerArgs{
+ * 								DividePerInstance: pulumi.Bool(false),
+ * 								MetricName:        pulumi.String("Percentage CPU"),
+ * 								MetricResourceUri: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc"),
+ * 								Operator:          "GreaterThan",
+ * 								Statistic:         "Average",
+ * 								Threshold:         pulumi.Float64(15),
+ * 								TimeAggregation:   "Average",
+ * 								TimeGrain:         pulumi.String("PT2M"),
+ * 								TimeWindow:        pulumi.String("PT5M"),
+ * 							},
+ * 							ScaleAction: &insights.ScaleActionArgs{
+ * 								Cooldown:  pulumi.String("PT6M"),
+ * 								Direction: "Decrease",
+ * 								Type:      "ChangeCount",
+ * 								Value:     pulumi.String("2"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 				&insights.AutoscaleProfileArgs{
+ * 					Capacity: &insights.ScaleCapacityArgs{
+ * 						Default: pulumi.String("1"),
+ * 						Maximum: pulumi.String("10"),
+ * 						Minimum: pulumi.String("1"),
+ * 					},
+ * 					Name: pulumi.String("saludos"),
+ * 					Recurrence: &insights.RecurrenceArgs{
+ * 						Frequency: "Week",
+ * 						Schedule: &insights.RecurrentScheduleArgs{
+ * 							Days: pulumi.StringArray{
+ * 								pulumi.String("1"),
+ * 							},
+ * 							Hours: pulumi.IntArray{
+ * 								pulumi.Int(5),
+ * 							},
+ * 							Minutes: pulumi.IntArray{
+ * 								pulumi.Int(15),
+ * 							},
+ * 							TimeZone: pulumi.String("UTC"),
+ * 						},
+ * 					},
+ * 					Rules: insights.ScaleRuleArray{
+ * 						&insights.ScaleRuleArgs{
+ * 							MetricTrigger: &insights.MetricTriggerArgs{
+ * 								DividePerInstance: pulumi.Bool(false),
+ * 								MetricName:        pulumi.String("Percentage CPU"),
+ * 								MetricResourceUri: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc"),
+ * 								Operator:          "GreaterThan",
+ * 								Statistic:         "Average",
+ * 								Threshold:         pulumi.Float64(10),
+ * 								TimeAggregation:   "Average",
+ * 								TimeGrain:         pulumi.String("PT1M"),
+ * 								TimeWindow:        pulumi.String("PT5M"),
+ * 							},
+ * 							ScaleAction: &insights.ScaleActionArgs{
+ * 								Cooldown:  pulumi.String("PT5M"),
+ * 								Direction: "Increase",
+ * 								Type:      "ChangeCount",
+ * 								Value:     pulumi.String("1"),
+ * 							},
+ * 						},
+ * 						&insights.ScaleRuleArgs{
+ * 							MetricTrigger: &insights.MetricTriggerArgs{
+ * 								DividePerInstance: pulumi.Bool(false),
+ * 								MetricName:        pulumi.String("Percentage CPU"),
+ * 								MetricResourceUri: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc"),
+ * 								Operator:          "GreaterThan",
+ * 								Statistic:         "Average",
+ * 								Threshold:         pulumi.Float64(15),
+ * 								TimeAggregation:   "Average",
+ * 								TimeGrain:         pulumi.String("PT2M"),
+ * 								TimeWindow:        pulumi.String("PT5M"),
+ * 							},
+ * 							ScaleAction: &insights.ScaleActionArgs{
+ * 								Cooldown:  pulumi.String("PT6M"),
+ * 								Direction: "Decrease",
+ * 								Type:      "ChangeCount",
+ * 								Value:     pulumi.String("2"),
+ * 							},
+ * 						},
+ * 					},
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("TestingMetricsScaleSet"),
+ * 			Tags:              nil,
+ * 			TargetResourceUri: pulumi.String("/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSetting", {
+ *     autoscaleSettingName: "MySetting",
+ *     enabled: true,
+ *     location: "West US",
+ *     notifications: [{
+ *         email: {
+ *             customEmails: [
+ *                 "gu@ms.com",
+ *                 "ge@ns.net",
+ *             ],
+ *             sendToSubscriptionAdministrator: true,
+ *             sendToSubscriptionCoAdministrators: true,
+ *         },
+ *         operation: "Scale",
+ *         webhooks: [{
+ *             properties: {},
+ *             serviceUri: "http://myservice.com",
+ *         }],
+ *     }],
+ *     profiles: [
+ *         {
+ *             capacity: {
+ *                 "default": "1",
+ *                 maximum: "10",
+ *                 minimum: "1",
+ *             },
+ *             fixedDate: {
+ *                 end: "2015-03-05T14:30:00Z",
+ *                 start: "2015-03-05T14:00:00Z",
+ *                 timeZone: "UTC",
+ *             },
+ *             name: "adios",
+ *             rules: [
+ *                 {
+ *                     metricTrigger: {
+ *                         dividePerInstance: false,
+ *                         metricName: "Percentage CPU",
+ *                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                         operator: "GreaterThan",
+ *                         statistic: "Average",
+ *                         threshold: 10,
+ *                         timeAggregation: "Average",
+ *                         timeGrain: "PT1M",
+ *                         timeWindow: "PT5M",
+ *                     },
+ *                     scaleAction: {
+ *                         cooldown: "PT5M",
+ *                         direction: "Increase",
+ *                         type: "ChangeCount",
+ *                         value: "1",
+ *                     },
+ *                 },
+ *                 {
+ *                     metricTrigger: {
+ *                         dividePerInstance: false,
+ *                         metricName: "Percentage CPU",
+ *                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                         operator: "GreaterThan",
+ *                         statistic: "Average",
+ *                         threshold: 15,
+ *                         timeAggregation: "Average",
+ *                         timeGrain: "PT2M",
+ *                         timeWindow: "PT5M",
+ *                     },
+ *                     scaleAction: {
+ *                         cooldown: "PT6M",
+ *                         direction: "Decrease",
+ *                         type: "ChangeCount",
+ *                         value: "2",
+ *                     },
+ *                 },
+ *             ],
+ *         },
+ *         {
+ *             capacity: {
+ *                 "default": "1",
+ *                 maximum: "10",
+ *                 minimum: "1",
+ *             },
+ *             name: "saludos",
+ *             recurrence: {
+ *                 frequency: "Week",
+ *                 schedule: {
+ *                     days: ["1"],
+ *                     hours: [5],
+ *                     minutes: [15],
+ *                     timeZone: "UTC",
+ *                 },
+ *             },
+ *             rules: [
+ *                 {
+ *                     metricTrigger: {
+ *                         dividePerInstance: false,
+ *                         metricName: "Percentage CPU",
+ *                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                         operator: "GreaterThan",
+ *                         statistic: "Average",
+ *                         threshold: 10,
+ *                         timeAggregation: "Average",
+ *                         timeGrain: "PT1M",
+ *                         timeWindow: "PT5M",
+ *                     },
+ *                     scaleAction: {
+ *                         cooldown: "PT5M",
+ *                         direction: "Increase",
+ *                         type: "ChangeCount",
+ *                         value: "1",
+ *                     },
+ *                 },
+ *                 {
+ *                     metricTrigger: {
+ *                         dividePerInstance: false,
+ *                         metricName: "Percentage CPU",
+ *                         metricResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                         operator: "GreaterThan",
+ *                         statistic: "Average",
+ *                         threshold: 15,
+ *                         timeAggregation: "Average",
+ *                         timeGrain: "PT2M",
+ *                         timeWindow: "PT5M",
+ *                     },
+ *                     scaleAction: {
+ *                         cooldown: "PT6M",
+ *                         direction: "Decrease",
+ *                         type: "ChangeCount",
+ *                         value: "2",
+ *                     },
+ *                 },
+ *             ],
+ *         },
+ *     ],
+ *     resourceGroupName: "TestingMetricsScaleSet",
+ *     tags: {},
+ *     targetResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * autoscale_setting = azure_native.insights.AutoscaleSetting("autoscaleSetting",
+ *     autoscale_setting_name="MySetting",
+ *     enabled=True,
+ *     location="West US",
+ *     notifications=[azure_native.insights.AutoscaleNotificationArgs(
+ *         email=azure_native.insights.EmailNotificationArgs(
+ *             custom_emails=[
+ *                 "gu@ms.com",
+ *                 "ge@ns.net",
+ *             ],
+ *             send_to_subscription_administrator=True,
+ *             send_to_subscription_co_administrators=True,
+ *         ),
+ *         operation="Scale",
+ *         webhooks=[azure_native.insights.WebhookNotificationArgs(
+ *             properties={},
+ *             service_uri="http://myservice.com",
+ *         )],
+ *     )],
+ *     profiles=[
+ *         azure_native.insights.AutoscaleProfileArgs(
+ *             capacity=azure_native.insights.ScaleCapacityArgs(
+ *                 default="1",
+ *                 maximum="10",
+ *                 minimum="1",
+ *             ),
+ *             fixed_date=azure_native.insights.TimeWindowArgs(
+ *                 end="2015-03-05T14:30:00Z",
+ *                 start="2015-03-05T14:00:00Z",
+ *                 time_zone="UTC",
+ *             ),
+ *             name="adios",
+ *             rules=[
+ *                 azure_native.insights.ScaleRuleArgs(
+ *                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+ *                         divide_per_instance=False,
+ *                         metric_name="Percentage CPU",
+ *                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                         operator="GreaterThan",
+ *                         statistic="Average",
+ *                         threshold=10,
+ *                         time_aggregation="Average",
+ *                         time_grain="PT1M",
+ *                         time_window="PT5M",
+ *                     ),
+ *                     scale_action=azure_native.insights.ScaleActionArgs(
+ *                         cooldown="PT5M",
+ *                         direction="Increase",
+ *                         type="ChangeCount",
+ *                         value="1",
+ *                     ),
+ *                 ),
+ *                 azure_native.insights.ScaleRuleArgs(
+ *                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+ *                         divide_per_instance=False,
+ *                         metric_name="Percentage CPU",
+ *                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                         operator="GreaterThan",
+ *                         statistic="Average",
+ *                         threshold=15,
+ *                         time_aggregation="Average",
+ *                         time_grain="PT2M",
+ *                         time_window="PT5M",
+ *                     ),
+ *                     scale_action=azure_native.insights.ScaleActionArgs(
+ *                         cooldown="PT6M",
+ *                         direction="Decrease",
+ *                         type="ChangeCount",
+ *                         value="2",
+ *                     ),
+ *                 ),
+ *             ],
+ *         ),
+ *         azure_native.insights.AutoscaleProfileArgs(
+ *             capacity=azure_native.insights.ScaleCapacityArgs(
+ *                 default="1",
+ *                 maximum="10",
+ *                 minimum="1",
+ *             ),
+ *             name="saludos",
+ *             recurrence=azure_native.insights.RecurrenceArgs(
+ *                 frequency="Week",
+ *                 schedule=azure_native.insights.RecurrentScheduleArgs(
+ *                     days=["1"],
+ *                     hours=[5],
+ *                     minutes=[15],
+ *                     time_zone="UTC",
+ *                 ),
+ *             ),
+ *             rules=[
+ *                 azure_native.insights.ScaleRuleArgs(
+ *                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+ *                         divide_per_instance=False,
+ *                         metric_name="Percentage CPU",
+ *                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                         operator="GreaterThan",
+ *                         statistic="Average",
+ *                         threshold=10,
+ *                         time_aggregation="Average",
+ *                         time_grain="PT1M",
+ *                         time_window="PT5M",
+ *                     ),
+ *                     scale_action=azure_native.insights.ScaleActionArgs(
+ *                         cooldown="PT5M",
+ *                         direction="Increase",
+ *                         type="ChangeCount",
+ *                         value="1",
+ *                     ),
+ *                 ),
+ *                 azure_native.insights.ScaleRuleArgs(
+ *                     metric_trigger=azure_native.insights.MetricTriggerArgs(
+ *                         divide_per_instance=False,
+ *                         metric_name="Percentage CPU",
+ *                         metric_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc",
+ *                         operator="GreaterThan",
+ *                         statistic="Average",
+ *                         threshold=15,
+ *                         time_aggregation="Average",
+ *                         time_grain="PT2M",
+ *                         time_window="PT5M",
+ *                     ),
+ *                     scale_action=azure_native.insights.ScaleActionArgs(
+ *                         cooldown="PT6M",
+ *                         direction="Decrease",
+ *                         type="ChangeCount",
+ *                         value="2",
+ *                     ),
+ *                 ),
+ *             ],
+ *         ),
+ *     ],
+ *     resource_group_name="TestingMetricsScaleSet",
+ *     tags={},
+ *     target_resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/TestingMetricsScaleSet/providers/Microsoft.Compute/virtualMachineScaleSets/testingsc")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,126 +679,108 @@ import javax.annotation.Nullable;
 public class AutoscaleSetting extends io.pulumi.resources.CustomResource {
     /**
      * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
      * @return the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * the collection of notifications.
-     * 
      */
     @Export(name="notifications", type=List.class, parameters={AutoscaleNotificationResponse.class})
     private Output</* @Nullable */ List<AutoscaleNotificationResponse>> notifications;
 
     /**
      * @return the collection of notifications.
-     * 
      */
     public Output</* @Nullable */ List<AutoscaleNotificationResponse>> getNotifications() {
         return this.notifications;
     }
     /**
      * the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
-     * 
      */
     @Export(name="profiles", type=List.class, parameters={AutoscaleProfileResponse.class})
     private Output<List<AutoscaleProfileResponse>> profiles;
 
     /**
      * @return the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
-     * 
      */
     public Output<List<AutoscaleProfileResponse>> getProfiles() {
         return this.profiles;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * the location of the resource that the autoscale setting should be added to.
-     * 
      */
     @Export(name="targetResourceLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceLocation;
 
     /**
      * @return the location of the resource that the autoscale setting should be added to.
-     * 
      */
     public Output</* @Nullable */ String> getTargetResourceLocation() {
         return this.targetResourceLocation;
     }
     /**
      * the resource identifier of the resource that the autoscale setting should be added to.
-     * 
      */
     @Export(name="targetResourceUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceUri;
 
     /**
      * @return the resource identifier of the resource that the autoscale setting should be added to.
-     * 
      */
     public Output</* @Nullable */ String> getTargetResourceUri() {
         return this.targetResourceUri;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

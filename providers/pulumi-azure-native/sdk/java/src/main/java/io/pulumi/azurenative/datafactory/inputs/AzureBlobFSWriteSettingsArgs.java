@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure blobFS write settings.
- * 
  */
 public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
 
     /**
      * Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="blockSizeInMB")
       private final @Nullable Output<Object> blockSizeInMB;
@@ -32,7 +30,6 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
 
     /**
      * The type of copy behavior for copy sink.
-     * 
      */
     @Import(name="copyBehavior")
       private final @Nullable Output<Object> copyBehavior;
@@ -43,7 +40,6 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -54,7 +50,6 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -66,7 +61,6 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
     /**
      * The write setting type.
      * Expected value is 'AzureBlobFSWriteSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

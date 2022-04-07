@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The azure table storage linked service.
- * 
  */
 public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
 
     /**
      * The Azure key vault secret reference of accountKey in connection string.
-     * 
      */
     @Import(name="accountKey")
       private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
@@ -37,7 +35,6 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -48,7 +45,6 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -59,7 +55,6 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
 
     /**
      * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="connectionString")
       private final @Nullable Object connectionString;
@@ -70,7 +65,6 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -81,7 +75,6 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable String encryptedCredential;
@@ -92,7 +85,6 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -103,7 +95,6 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
 
     /**
      * The Azure key vault secret reference of sasToken in sas uri.
-     * 
      */
     @Import(name="sasToken")
       private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
@@ -114,7 +105,6 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
 
     /**
      * SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
      */
     @Import(name="sasUri")
       private final @Nullable Object sasUri;
@@ -126,7 +116,6 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     /**
      * Type of linked service.
      * Expected value is 'AzureTableStorage'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

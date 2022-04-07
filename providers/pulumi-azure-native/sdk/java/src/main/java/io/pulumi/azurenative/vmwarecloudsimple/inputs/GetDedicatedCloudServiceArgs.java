@@ -14,7 +14,6 @@ public final class GetDedicatedCloudServiceArgs extends io.pulumi.resources.Invo
 
     /**
      * dedicated cloud Service name
-     * 
      */
     @Import(name="dedicatedCloudServiceName", required=true)
       private final String dedicatedCloudServiceName;
@@ -25,7 +24,6 @@ public final class GetDedicatedCloudServiceArgs extends io.pulumi.resources.Invo
 
     /**
      * The name of the resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

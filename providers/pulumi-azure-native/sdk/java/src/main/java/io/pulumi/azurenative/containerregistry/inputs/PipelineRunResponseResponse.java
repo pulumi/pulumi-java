@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * The response properties returned for a pipeline run.
- * 
  */
 public final class PipelineRunResponseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
 
     /**
      * The digest of the tar used to transfer the artifacts.
-     * 
      */
     @Import(name="catalogDigest")
       private final @Nullable String catalogDigest;
@@ -36,7 +34,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
 
     /**
      * The time the pipeline run finished.
-     * 
      */
     @Import(name="finishTime")
       private final @Nullable String finishTime;
@@ -47,7 +44,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
 
     /**
      * The artifacts imported in the pipeline run.
-     * 
      */
     @Import(name="importedArtifacts")
       private final @Nullable List<String> importedArtifacts;
@@ -58,7 +54,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
 
     /**
      * The detailed error message for the pipeline run in the case of failure.
-     * 
      */
     @Import(name="pipelineRunErrorMessage")
       private final @Nullable String pipelineRunErrorMessage;
@@ -69,7 +64,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
 
     /**
      * The current progress of the copy operation.
-     * 
      */
     @Import(name="progress")
       private final @Nullable ProgressPropertiesResponse progress;
@@ -80,7 +74,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
 
     /**
      * The source of the pipeline run.
-     * 
      */
     @Import(name="source")
       private final @Nullable ImportPipelineSourcePropertiesResponse source;
@@ -91,7 +84,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
 
     /**
      * The time the pipeline run started.
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;
@@ -102,7 +94,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
 
     /**
      * The current status of the pipeline run.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -113,7 +104,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
 
     /**
      * The target of the pipeline run.
-     * 
      */
     @Import(name="target")
       private final @Nullable ExportPipelineTargetPropertiesResponse target;
@@ -124,7 +114,6 @@ public final class PipelineRunResponseResponse extends io.pulumi.resources.Invok
 
     /**
      * The trigger that caused the pipeline run.
-     * 
      */
     @Import(name="trigger")
       private final @Nullable PipelineTriggerDescriptorResponse trigger;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The publishing profile of a gallery image Version.
- * 
  */
 public final class GalleryImageVersionPublishingProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
 
     /**
      * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
-     * 
      */
     @Import(name="endOfLifeDate")
       private final @Nullable String endOfLifeDate;
@@ -35,7 +33,6 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
 
     /**
      * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
-     * 
      */
     @Import(name="excludeFromLatest")
       private final @Nullable Boolean excludeFromLatest;
@@ -46,7 +43,6 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
 
     /**
      * The timestamp for when the gallery image version is published.
-     * 
      */
     @Import(name="publishedDate", required=true)
       private final String publishedDate;
@@ -57,7 +53,6 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
 
     /**
      * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
-     * 
      */
     @Import(name="replicaCount")
       private final @Nullable Integer replicaCount;
@@ -68,7 +63,6 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
 
     /**
      * Specifies the storage account type to be used to store the image. This property is not updatable.
-     * 
      */
     @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
@@ -79,7 +73,6 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
 
     /**
      * The target regions where the Image Version is going to be replicated to. This property is updatable.
-     * 
      */
     @Import(name="targetRegions")
       private final @Nullable List<TargetRegionResponse> targetRegions;

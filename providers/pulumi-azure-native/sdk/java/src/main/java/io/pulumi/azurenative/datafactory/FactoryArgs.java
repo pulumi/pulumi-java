@@ -24,7 +24,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties to enable Customer Managed Key for the factory.
-     * 
      */
     @Import(name="encryption")
       private final @Nullable Output<EncryptionConfigurationArgs> encryption;
@@ -35,7 +34,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName")
       private final @Nullable Output<String> factoryName;
@@ -46,7 +44,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of parameters for factory.
-     * 
      */
     @Import(name="globalParameters")
       private final @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
@@ -57,7 +54,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Managed service identity of the factory.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<FactoryIdentityArgs> identity;
@@ -68,7 +64,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -79,7 +74,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether or not public network access is allowed for the data factory.
-     * 
      */
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
@@ -90,7 +84,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Git repo information of the factory.
-     * 
      */
     @Import(name="repoConfiguration")
       private final @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
@@ -101,7 +94,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -112,7 +104,6 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -16,22 +16,18 @@ public final class WebClientCertificateAuthenticationResponse {
     /**
      * Type of authentication used to connect to the web table source.
      * Expected value is 'ClientCertificate'.
-     * 
      */
     private final String authenticationType;
     /**
      * Password for the PFX file.
-     * 
      */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Base64-encoded contents of a PFX file.
-     * 
      */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
-     * 
      */
     private final Object url;
 
@@ -50,28 +46,24 @@ public final class WebClientCertificateAuthenticationResponse {
     /**
      * Type of authentication used to connect to the web table source.
      * Expected value is 'ClientCertificate'.
-     * 
     */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * Password for the PFX file.
-     * 
     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password;
     }
     /**
      * Base64-encoded contents of a PFX file.
-     * 
     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPfx() {
         return this.pfx;
     }
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
-     * 
     */
     public Object getUrl() {
         return this.url;

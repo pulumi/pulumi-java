@@ -19,7 +19,88 @@ import javax.annotation.Nullable;
  * Response on GET of a hybrid use benefit
  * API Version: 2019-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### HybridUseBenefit
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hybridUseBenefit = new AzureNative.SoftwarePlan.HybridUseBenefit("hybridUseBenefit", new AzureNative.SoftwarePlan.HybridUseBenefitArgs
+ *         {
+ *             PlanId = "94f46eda-45f8-493a-8425-251921463a89",
+ *             Scope = "subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
+ *             Sku = new AzureNative.SoftwarePlan.Inputs.SkuArgs
+ *             {
+ *                 Name = "SQL_Server_Perpetual",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	softwareplan "github.com/pulumi/pulumi-azure-native/sdk/go/azure/softwareplan"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := softwareplan.NewHybridUseBenefit(ctx, "hybridUseBenefit", &softwareplan.HybridUseBenefitArgs{
+ * 			PlanId: pulumi.String("94f46eda-45f8-493a-8425-251921463a89"),
+ * 			Scope:  pulumi.String("subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}"),
+ * 			Sku: &softwareplan.SkuArgs{
+ * 				Name: pulumi.String("SQL_Server_Perpetual"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const hybridUseBenefit = new azure_native.softwareplan.HybridUseBenefit("hybridUseBenefit", {
+ *     planId: "94f46eda-45f8-493a-8425-251921463a89",
+ *     scope: "subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
+ *     sku: {
+ *         name: "SQL_Server_Perpetual",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * hybrid_use_benefit = azure_native.softwareplan.HybridUseBenefit("hybridUseBenefit",
+ *     plan_id="94f46eda-45f8-493a-8425-251921463a89",
+ *     scope="subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
+ *     sku=azure_native.softwareplan.SkuArgs(
+ *         name="SQL_Server_Perpetual",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,98 +115,84 @@ import javax.annotation.Nullable;
 public class HybridUseBenefit extends io.pulumi.resources.CustomResource {
     /**
      * Created date
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return Created date
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * Indicates the revision of the hybrid use benefit
-     * 
      */
     @Export(name="etag", type=Integer.class, parameters={})
     private Output<Integer> etag;
 
     /**
      * @return Indicates the revision of the hybrid use benefit
-     * 
      */
     public Output<Integer> getEtag() {
         return this.etag;
     }
     /**
      * Last updated date
-     * 
      */
     @Export(name="lastUpdatedDate", type=String.class, parameters={})
     private Output<String> lastUpdatedDate;
 
     /**
      * @return Last updated date
-     * 
      */
     public Output<String> getLastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Hybrid use benefit SKU
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
      * @return Hybrid use benefit SKU
-     * 
      */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Video sink in a live topology allows for video and audio to be captured, optionally archived, and published via a video resource. If archiving is enabled, this results in a video of type 'archive'. If used in a batch topology, this allows for video and audio to be stored as a file, and published via a video resource of type 'file'
- * 
  */
 public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of upstream node references within the topology to be used as inputs for this node.
-     * 
      */
     @Import(name="inputs", required=true)
       private final List<NodeInputResponse> inputs;
@@ -35,7 +33,6 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Node name. Must be unique within the topology.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -47,7 +44,6 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -58,7 +54,6 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Optional video properties to be used in case a new video resource needs to be created on the service.
-     * 
      */
     @Import(name="videoCreationProperties")
       private final @Nullable VideoCreationPropertiesResponse videoCreationProperties;
@@ -69,7 +64,6 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
-     * 
      */
     @Import(name="videoName", required=true)
       private final String videoName;
@@ -80,7 +74,6 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where "kind" is set to "live".
-     * 
      */
     @Import(name="videoPublishingOptions")
       private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;

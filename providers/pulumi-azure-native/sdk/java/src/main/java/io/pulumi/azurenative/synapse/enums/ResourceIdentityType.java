@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of managed identity for the workspace
-     * 
      */
     @EnumType
     public enum ResourceIdentityType {

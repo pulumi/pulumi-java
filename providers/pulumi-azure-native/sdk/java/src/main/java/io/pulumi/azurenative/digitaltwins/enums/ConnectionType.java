@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of time series connection resource.
-     * 
      */
     @EnumType
     public enum ConnectionType {

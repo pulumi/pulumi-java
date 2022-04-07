@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class StorageAccountPropertiesResponse {
     /**
      * ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.
-     * 
      */
     private final @Nullable String resourceId;
 
@@ -24,7 +23,6 @@ public final class StorageAccountPropertiesResponse {
 
     /**
      * ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.
-     * 
     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);

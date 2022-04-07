@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class ServicesResourceResponseIdentity {
     /**
      * The principal ID of the resource identity.
-     * 
      */
     private final String principalId;
     /**
      * The tenant ID of the resource.
-     * 
      */
     private final String tenantId;
     /**
      * Type of identity being specified, currently SystemAssigned and None are allowed.
-     * 
      */
     private final @Nullable String type;
 
@@ -39,21 +36,18 @@ public final class ServicesResourceResponseIdentity {
 
     /**
      * The principal ID of the resource identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of the resource.
-     * 
     */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Type of identity being specified, currently SystemAssigned and None are allowed.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

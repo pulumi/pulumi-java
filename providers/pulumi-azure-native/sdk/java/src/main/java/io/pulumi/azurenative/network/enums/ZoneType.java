@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of this DNS zone (Public or Private).
-     * 
      */
     @EnumType
     public enum ZoneType {

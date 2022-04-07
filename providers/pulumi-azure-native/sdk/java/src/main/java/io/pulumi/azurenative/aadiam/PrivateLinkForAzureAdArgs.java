@@ -19,7 +19,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     /**
      * Flag indicating whether all tenants are allowed
-     * 
      */
     @Import(name="allTenants")
       private final @Nullable Output<Boolean> allTenants;
@@ -30,7 +29,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of this resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,7 +39,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     /**
      * Guid of the owner tenant
-     * 
      */
     @Import(name="ownerTenantId")
       private final @Nullable Output<String> ownerTenantId;
@@ -52,7 +49,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     /**
      * The name of the private link policy in Azure AD.
-     * 
      */
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
@@ -63,7 +59,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the resource group
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
@@ -74,7 +69,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of an Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     /**
      * Name of the private link policy resource
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -96,7 +89,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     /**
      * Subscription Identifier
-     * 
      */
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
@@ -107,7 +99,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -118,7 +109,6 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
 
     /**
      * The list of tenantIds.
-     * 
      */
     @Import(name="tenants")
       private final @Nullable Output<List<String>> tenants;

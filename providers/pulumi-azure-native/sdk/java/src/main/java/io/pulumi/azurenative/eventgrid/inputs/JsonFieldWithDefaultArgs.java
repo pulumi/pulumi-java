@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
  * in the Event Grid Event schema. This is currently used in the mappings for the 'subject',
  * 'eventtype' and 'dataversion' properties. This represents a field in the input event schema
  * along with a default value to be used, and at least one of these two properties should be provided.
- * 
  */
 public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.Resource
 
     /**
      * The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload.
-     * 
      */
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
@@ -34,7 +32,6 @@ public final class JsonFieldWithDefaultArgs extends io.pulumi.resources.Resource
 
     /**
      * Name of a field in the input event schema that's to be used as the source of a mapping.
-     * 
      */
     @Import(name="sourceField")
       private final @Nullable Output<String> sourceField;

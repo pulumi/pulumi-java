@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Describes the http configuration for external connectivity for this network.
- * 
  */
 public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * description for routing.
-     * 
      */
     @Import(name="hosts", required=true)
       private final Output<List<HttpHostConfigArgs>> hosts;
@@ -33,7 +31,6 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * http gateway config name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -44,7 +41,6 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the port at which the service endpoint below needs to be exposed.
-     * 
      */
     @Import(name="port", required=true)
       private final Output<Integer> port;

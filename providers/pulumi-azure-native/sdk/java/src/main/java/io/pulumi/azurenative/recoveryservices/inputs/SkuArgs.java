@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identifies the unique system identifier for each Azure resource.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Sku name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;
@@ -33,7 +31,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Sku tier.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<String> tier;

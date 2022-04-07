@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class DisallowedResponse {
     /**
      * A list of disk types.
-     * 
      */
     private final @Nullable List<String> diskTypes;
 
@@ -24,7 +23,6 @@ public final class DisallowedResponse {
 
     /**
      * A list of disk types.
-     * 
     */
     public List<String> getDiskTypes() {
         return this.diskTypes == null ? List.of() : this.diskTypes;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enabled or Disabled flag to turn on Group-based filtered sync
-     * 
      */
     @EnumType
     public enum FilteredSync {

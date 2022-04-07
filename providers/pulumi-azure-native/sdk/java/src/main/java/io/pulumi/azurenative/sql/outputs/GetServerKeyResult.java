@@ -12,47 +12,38 @@ import java.util.Objects;
 public final class GetServerKeyResult {
     /**
      * Key auto rotation opt-in flag. Either true or false.
-     * 
      */
     private final Boolean autoRotationEnabled;
     /**
      * The server key creation date.
-     * 
      */
     private final String creationDate;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
-     * 
      */
     private final String kind;
     /**
      * Resource location.
-     * 
      */
     private final String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Subregion of the server key.
-     * 
      */
     private final String subregion;
     /**
      * Thumbprint of the server key.
-     * 
      */
     private final String thumbprint;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -80,63 +71,54 @@ public final class GetServerKeyResult {
 
     /**
      * Key auto rotation opt-in flag. Either true or false.
-     * 
     */
     public Boolean getAutoRotationEnabled() {
         return this.autoRotationEnabled;
     }
     /**
      * The server key creation date.
-     * 
     */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Subregion of the server key.
-     * 
     */
     public String getSubregion() {
         return this.subregion;
     }
     /**
      * Thumbprint of the server key.
-     * 
     */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

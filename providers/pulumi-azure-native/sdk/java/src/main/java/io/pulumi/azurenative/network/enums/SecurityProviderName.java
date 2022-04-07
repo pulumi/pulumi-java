@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The security provider name.
-     * 
      */
     @EnumType
     public enum SecurityProviderName {

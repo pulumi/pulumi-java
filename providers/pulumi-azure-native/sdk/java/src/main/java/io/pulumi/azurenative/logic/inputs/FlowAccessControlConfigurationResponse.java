@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The access control configuration.
- * 
  */
 public final class FlowAccessControlConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
 
     /**
      * The access control configuration for workflow actions.
-     * 
      */
     @Import(name="actions")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse actions;
@@ -31,7 +29,6 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
 
     /**
      * The access control configuration for accessing workflow run contents.
-     * 
      */
     @Import(name="contents")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse contents;
@@ -42,7 +39,6 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
 
     /**
      * The access control configuration for invoking workflow triggers.
-     * 
      */
     @Import(name="triggers")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse triggers;
@@ -53,7 +49,6 @@ public final class FlowAccessControlConfigurationResponse extends io.pulumi.reso
 
     /**
      * The access control configuration for workflow management.
-     * 
      */
     @Import(name="workflowManagement")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;

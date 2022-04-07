@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class SkuResponse {
     /**
      * SKU family name
-     * 
      */
     private final String family;
     /**
      * SKU name to specify whether the key vault is a standard vault or a premium vault.
-     * 
      */
     private final String name;
 
@@ -30,14 +28,12 @@ public final class SkuResponse {
 
     /**
      * SKU family name
-     * 
     */
     public String getFamily() {
         return this.family;
     }
     /**
      * SKU name to specify whether the key vault is a standard vault or a premium vault.
-     * 
     */
     public String getName() {
         return this.name;

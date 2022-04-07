@@ -20,7 +20,6 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data flow name.
-     * 
      */
     @Import(name="dataFlowName")
       private final @Nullable Output<String> dataFlowName;
@@ -31,7 +30,6 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
@@ -42,7 +40,6 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Data flow properties.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<Object> properties;
@@ -53,7 +50,6 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

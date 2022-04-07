@@ -19,7 +19,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
-     * 
      */
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
@@ -30,7 +29,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the machine extension.
-     * 
      */
     @Import(name="extensionName")
       private final @Nullable Output<String> extensionName;
@@ -41,7 +39,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
-     * 
      */
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
@@ -52,7 +49,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -63,7 +59,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the machine where the extension should be created or updated.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -74,7 +69,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
-     * 
      */
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
@@ -85,7 +79,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the extension handler publisher.
-     * 
      */
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
@@ -96,7 +89,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The Resource Group Name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -107,7 +99,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Json formatted public settings for the extension.
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
@@ -118,7 +109,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -129,7 +119,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;
@@ -140,7 +129,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specifies the version of the script handler.
-     * 
      */
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;

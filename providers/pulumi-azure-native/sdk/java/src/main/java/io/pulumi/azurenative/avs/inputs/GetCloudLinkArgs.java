@@ -14,7 +14,6 @@ public final class GetCloudLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the cloud link resource
-     * 
      */
     @Import(name="cloudLinkName", required=true)
       private final String cloudLinkName;
@@ -25,7 +24,6 @@ public final class GetCloudLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the private cloud
-     * 
      */
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
@@ -36,7 +34,6 @@ public final class GetCloudLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

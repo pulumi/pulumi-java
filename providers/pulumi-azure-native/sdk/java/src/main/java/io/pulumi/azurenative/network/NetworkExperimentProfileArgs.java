@@ -19,7 +19,6 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * The state of the Experiment
-     * 
      */
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,State>> enabledState;
@@ -30,7 +29,6 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -41,7 +39,6 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * The name of the Profile
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -52,7 +49,6 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * The Profile identifier associated with the Tenant and Partner
-     * 
      */
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
@@ -63,7 +59,6 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

@@ -27,7 +27,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of DatabaseInfo
-     * 
      */
     @Import(name="databasesInfo")
       private final @Nullable Output<List<DatabaseInfoArgs>> databasesInfo;
@@ -38,7 +37,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group
-     * 
      */
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
@@ -49,7 +47,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -60,7 +57,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the project
-     * 
      */
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
@@ -71,7 +67,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the service
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
@@ -82,7 +77,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information for connecting to source
-     * 
      */
     @Import(name="sourceConnectionInfo")
       private final @Nullable Output<Object> sourceConnectionInfo;
@@ -93,7 +87,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Source platform for the project
-     * 
      */
     @Import(name="sourcePlatform", required=true)
       private final Output<Either<String,ProjectSourcePlatform>> sourcePlatform;
@@ -104,7 +97,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -115,7 +107,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Information for connecting to target
-     * 
      */
     @Import(name="targetConnectionInfo")
       private final @Nullable Output<Object> targetConnectionInfo;
@@ -126,7 +117,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Target platform for the project
-     * 
      */
     @Import(name="targetPlatform", required=true)
       private final Output<Either<String,ProjectTargetPlatform>> targetPlatform;

@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * API portal properties payload
- * 
  */
 public final class ApiPortalPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -25,7 +24,6 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * The array of resource Ids of gateway to integrate with API portal.
-     * 
      */
     @Import(name="gatewayIds")
       private final @Nullable List<String> gatewayIds;
@@ -36,7 +34,6 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Indicate if only https is allowed.
-     * 
      */
     @Import(name="httpsOnly")
       private final @Nullable Boolean httpsOnly;
@@ -47,7 +44,6 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Collection of instances belong to API portal.
-     * 
      */
     @Import(name="instances", required=true)
       private final List<ApiPortalInstanceResponse> instances;
@@ -58,7 +54,6 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * State of the API portal.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -69,7 +64,6 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Indicates whether the API portal exposes endpoint.
-     * 
      */
     @Import(name="public")
       private final @Nullable Boolean public_;
@@ -80,7 +74,6 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * The requested resource quantity for required CPU and Memory.
-     * 
      */
     @Import(name="resourceRequests", required=true)
       private final ApiPortalResourceRequestsResponse resourceRequests;
@@ -91,7 +84,6 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Collection of OpenAPI source URL locations.
-     * 
      */
     @Import(name="sourceUrls")
       private final @Nullable List<String> sourceUrls;
@@ -102,7 +94,6 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * Single sign-on related configuration
-     * 
      */
     @Import(name="ssoProperties")
       private final @Nullable SsoPropertiesResponse ssoProperties;
@@ -113,7 +104,6 @@ public final class ApiPortalPropertiesResponse extends io.pulumi.resources.Invok
 
     /**
      * URL of the API portal, exposed when 'public' is true.
-     * 
      */
     @Import(name="url", required=true)
       private final String url;

@@ -19,7 +19,91 @@ import javax.annotation.Nullable;
  * Represents an incident comment
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates an incident comment.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var incidentComment = new AzureNative.SecurityInsights.IncidentComment("incidentComment", new AzureNative.SecurityInsights.IncidentCommentArgs
+ *         {
+ *             IncidentCommentId = "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+ *             IncidentId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             Message = "Some message",
+ *             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+ *             ResourceGroupName = "myRg",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewIncidentComment(ctx, "incidentComment", &securityinsights.IncidentCommentArgs{
+ * 			IncidentCommentId:                   pulumi.String("4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014"),
+ * 			IncidentId:                          pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			Message:                             pulumi.String("Some message"),
+ * 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
+ * 			ResourceGroupName:                   pulumi.String("myRg"),
+ * 			WorkspaceName:                       pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const incidentComment = new azure_native.securityinsights.IncidentComment("incidentComment", {
+ *     incidentCommentId: "4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+ *     incidentId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     message: "Some message",
+ *     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+ *     resourceGroupName: "myRg",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * incident_comment = azure_native.securityinsights.IncidentComment("incidentComment",
+ *     incident_comment_id="4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014",
+ *     incident_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     message="Some message",
+ *     operational_insights_resource_provider="Microsoft.OperationalInsights",
+ *     resource_group_name="myRg",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,112 +118,96 @@ import javax.annotation.Nullable;
 public class IncidentComment extends io.pulumi.resources.CustomResource {
     /**
      * Describes the client that created the comment
-     * 
      */
     @Export(name="author", type=ClientInfoResponse.class, parameters={})
     private Output<ClientInfoResponse> author;
 
     /**
      * @return Describes the client that created the comment
-     * 
      */
     public Output<ClientInfoResponse> getAuthor() {
         return this.author;
     }
     /**
      * The time the comment was created
-     * 
      */
     @Export(name="createdTimeUtc", type=String.class, parameters={})
     private Output<String> createdTimeUtc;
 
     /**
      * @return The time the comment was created
-     * 
      */
     public Output<String> getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
     /**
      * The time the comment was updated
-     * 
      */
     @Export(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
     /**
      * @return The time the comment was updated
-     * 
      */
     public Output<String> getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
      * The comment message
-     * 
      */
     @Export(name="message", type=String.class, parameters={})
     private Output<String> message;
 
     /**
      * @return The comment message
-     * 
      */
     public Output<String> getMessage() {
         return this.message;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

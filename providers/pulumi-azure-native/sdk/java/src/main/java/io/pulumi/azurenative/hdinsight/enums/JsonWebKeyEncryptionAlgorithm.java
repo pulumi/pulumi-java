@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Algorithm identifier for encryption, default RSA-OAEP.
-     * 
      */
     @EnumType
     public enum JsonWebKeyEncryptionAlgorithm {

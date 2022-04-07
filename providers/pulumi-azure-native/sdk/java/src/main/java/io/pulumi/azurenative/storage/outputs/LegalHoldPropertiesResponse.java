@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class LegalHoldPropertiesResponse {
     /**
      * The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
-     * 
      */
     private final Boolean hasLegalHold;
     /**
      * The list of LegalHold tags of a blob container.
-     * 
      */
     private final @Nullable List<TagPropertyResponse> tags;
 
@@ -33,14 +31,12 @@ public final class LegalHoldPropertiesResponse {
 
     /**
      * The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
-     * 
     */
     public Boolean getHasLegalHold() {
         return this.hasLegalHold;
     }
     /**
      * The list of LegalHold tags of a blob container.
-     * 
     */
     public List<TagPropertyResponse> getTags() {
         return this.tags == null ? List.of() : this.tags;

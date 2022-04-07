@@ -15,37 +15,30 @@ import javax.annotation.Nullable;
 public final class ConnectionMonitorEndpointResponse {
     /**
      * Address of the connection monitor endpoint (IP or domain name).
-     * 
      */
     private final @Nullable String address;
     /**
      * Test coverage for the endpoint.
-     * 
      */
     private final @Nullable String coverageLevel;
     /**
      * Filter for sub-items within the endpoint.
-     * 
      */
     private final @Nullable ConnectionMonitorEndpointFilterResponse filter;
     /**
      * The name of the connection monitor endpoint.
-     * 
      */
     private final String name;
     /**
      * Resource ID of the connection monitor endpoint.
-     * 
      */
     private final @Nullable String resourceId;
     /**
      * Endpoint scope.
-     * 
      */
     private final @Nullable ConnectionMonitorEndpointScopeResponse scope;
     /**
      * The endpoint type.
-     * 
      */
     private final @Nullable String type;
 
@@ -69,49 +62,42 @@ public final class ConnectionMonitorEndpointResponse {
 
     /**
      * Address of the connection monitor endpoint (IP or domain name).
-     * 
     */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Test coverage for the endpoint.
-     * 
     */
     public Optional<String> getCoverageLevel() {
         return Optional.ofNullable(this.coverageLevel);
     }
     /**
      * Filter for sub-items within the endpoint.
-     * 
     */
     public Optional<ConnectionMonitorEndpointFilterResponse> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The name of the connection monitor endpoint.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource ID of the connection monitor endpoint.
-     * 
     */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Endpoint scope.
-     * 
     */
     public Optional<ConnectionMonitorEndpointScopeResponse> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The endpoint type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * DirectLine Speech channel definition
- * 
  */
 public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.Resou
     /**
      * The channel name
      * Expected value is 'DirectLineSpeechChannel'.
-     * 
      */
     @Import(name="channelName", required=true)
       private final Output<String> channelName;
@@ -33,7 +31,6 @@ public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.Resou
 
     /**
      * Entity Tag of the resource
-     * 
      */
     @Import(name="etag")
       private final @Nullable Output<String> etag;
@@ -44,7 +41,6 @@ public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.Resou
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -55,7 +51,6 @@ public final class DirectLineSpeechChannelArgs extends io.pulumi.resources.Resou
 
     /**
      * The set of properties specific to DirectLine Speech channel resource
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<DirectLineSpeechChannelPropertiesArgs> properties;

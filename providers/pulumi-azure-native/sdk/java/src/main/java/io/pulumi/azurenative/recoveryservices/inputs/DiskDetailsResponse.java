@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * On-prem disk details data.
- * 
  */
 public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The hard disk max size in MB.
-     * 
      */
     @Import(name="maxSizeMB")
       private final @Nullable Double maxSizeMB;
@@ -32,7 +30,6 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The VHD Id.
-     * 
      */
     @Import(name="vhdId")
       private final @Nullable String vhdId;
@@ -43,7 +40,6 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The VHD name.
-     * 
      */
     @Import(name="vhdName")
       private final @Nullable String vhdName;
@@ -54,7 +50,6 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of the volume.
-     * 
      */
     @Import(name="vhdType")
       private final @Nullable String vhdType;

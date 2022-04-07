@@ -21,7 +21,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the application group
-     * 
      */
     @Import(name="applicationGroupName", required=true)
       private final Output<String> applicationGroupName;
@@ -32,7 +31,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the application within the specified application group
-     * 
      */
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
@@ -43,7 +41,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Type of Application.
-     * 
      */
     @Import(name="applicationType")
       private final @Nullable Output<Either<String,RemoteApplicationType>> applicationType;
@@ -54,7 +51,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Command Line Arguments for Application.
-     * 
      */
     @Import(name="commandLineArguments")
       private final @Nullable Output<String> commandLineArguments;
@@ -65,7 +61,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
-     * 
      */
     @Import(name="commandLineSetting", required=true)
       private final Output<Either<String,CommandLineSetting>> commandLineSetting;
@@ -76,7 +71,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of Application.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -87,7 +81,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies a path for the executable file for the application.
-     * 
      */
     @Import(name="filePath")
       private final @Nullable Output<String> filePath;
@@ -98,7 +91,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Friendly name of Application.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -109,7 +101,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Index of the icon.
-     * 
      */
     @Import(name="iconIndex")
       private final @Nullable Output<Integer> iconIndex;
@@ -120,7 +111,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Path to icon.
-     * 
      */
     @Import(name="iconPath")
       private final @Nullable Output<String> iconPath;
@@ -131,7 +121,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the package application Id for MSIX applications
-     * 
      */
     @Import(name="msixPackageApplicationId")
       private final @Nullable Output<String> msixPackageApplicationId;
@@ -142,7 +131,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the package family name for MSIX applications
-     * 
      */
     @Import(name="msixPackageFamilyName")
       private final @Nullable Output<String> msixPackageFamilyName;
@@ -153,7 +141,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -164,7 +151,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether to show the RemoteApp program in the RD Web Access server.
-     * 
      */
     @Import(name="showInPortal")
       private final @Nullable Output<Boolean> showInPortal;

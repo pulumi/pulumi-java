@@ -14,22 +14,18 @@ import javax.annotation.Nullable;
 public final class HealthProbeParametersResponse {
     /**
      * The number of seconds between health probes.Default is 240sec.
-     * 
      */
     private final @Nullable Integer probeIntervalInSeconds;
     /**
      * The path relative to the origin that is used to determine the health of the origin.
-     * 
      */
     private final @Nullable String probePath;
     /**
      * Protocol to use for health probe.
-     * 
      */
     private final @Nullable String probeProtocol;
     /**
      * The type of health probe request that is made.
-     * 
      */
     private final @Nullable String probeRequestType;
 
@@ -47,28 +43,24 @@ public final class HealthProbeParametersResponse {
 
     /**
      * The number of seconds between health probes.Default is 240sec.
-     * 
     */
     public Optional<Integer> getProbeIntervalInSeconds() {
         return Optional.ofNullable(this.probeIntervalInSeconds);
     }
     /**
      * The path relative to the origin that is used to determine the health of the origin.
-     * 
     */
     public Optional<String> getProbePath() {
         return Optional.ofNullable(this.probePath);
     }
     /**
      * Protocol to use for health probe.
-     * 
     */
     public Optional<String> getProbeProtocol() {
         return Optional.ofNullable(this.probeProtocol);
     }
     /**
      * The type of health probe request that is made.
-     * 
     */
     public Optional<String> getProbeRequestType() {
         return Optional.ofNullable(this.probeRequestType);

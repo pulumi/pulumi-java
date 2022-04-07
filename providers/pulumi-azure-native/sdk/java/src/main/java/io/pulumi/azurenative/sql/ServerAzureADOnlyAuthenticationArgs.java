@@ -17,7 +17,6 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
 
     /**
      * The name of server azure active directory only authentication.
-     * 
      */
     @Import(name="authenticationName")
       private final @Nullable Output<String> authenticationName;
@@ -28,7 +27,6 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
 
     /**
      * Azure Active Directory only Authentication enabled.
-     * 
      */
     @Import(name="azureADOnlyAuthentication", required=true)
       private final Output<Boolean> azureADOnlyAuthentication;
@@ -39,7 +37,6 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
 
     /**
      * The name of the server.
-     * 
      */
     @Import(name="serverName", required=true)
       private final Output<String> serverName;

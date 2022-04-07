@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of source control service.
-     * 
      */
     @EnumType
     public enum SourceControlType {

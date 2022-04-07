@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The key type like 'AzureKeyVault'.
-     * 
      */
     @EnumType
     public enum ServerKeyType {

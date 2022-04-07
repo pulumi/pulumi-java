@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The resource requirements.
- * 
  */
 public final class ResourceRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
 
     /**
      * The resource limits of this container instance.
-     * 
      */
     @Import(name="limits")
       private final @Nullable Output<ResourceLimitsArgs> limits;
@@ -32,7 +30,6 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
 
     /**
      * The resource requests of this container instance.
-     * 
      */
     @Import(name="requests", required=true)
       private final Output<ResourceRequestsArgs> requests;

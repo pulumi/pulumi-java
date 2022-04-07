@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Address Properties
- * 
  */
 public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Status of address validation
-     * 
      */
     @Import(name="addressValidationStatus", required=true)
       private final String addressValidationStatus;
@@ -33,7 +31,6 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Contact details for the address
-     * 
      */
     @Import(name="contactDetails", required=true)
       private final ContactDetailsResponse contactDetails;
@@ -44,7 +41,6 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Shipping details for the address
-     * 
      */
     @Import(name="shippingAddress")
       private final @Nullable ShippingAddressResponse shippingAddress;

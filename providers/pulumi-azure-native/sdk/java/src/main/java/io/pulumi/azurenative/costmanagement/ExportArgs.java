@@ -21,7 +21,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Has the definition for the export.
-     * 
      */
     @Import(name="definition", required=true)
       private final Output<ExportDefinitionArgs> definition;
@@ -32,7 +31,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Has delivery information for the export.
-     * 
      */
     @Import(name="deliveryInfo", required=true)
       private final Output<ExportDeliveryInfoArgs> deliveryInfo;
@@ -43,7 +41,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     * 
      */
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
@@ -54,7 +51,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Export Name.
-     * 
      */
     @Import(name="exportName")
       private final @Nullable Output<String> exportName;
@@ -65,7 +61,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The format of the export being delivered. Currently only 'Csv' is supported.
-     * 
      */
     @Import(name="format")
       private final @Nullable Output<Either<String,FormatType>> format;
@@ -76,7 +71,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Has schedule information for the export.
-     * 
      */
     @Import(name="schedule")
       private final @Nullable Output<ExportScheduleArgs> schedule;
@@ -87,7 +81,6 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scope associated with export operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId} for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.
-     * 
      */
     @Import(name="scope", required=true)
       private final Output<String> scope;

@@ -11,18 +11,15 @@ import java.util.Objects;
 public final class ContentKeyPolicyRsaTokenKeyResponse {
     /**
      * The RSA Parameter exponent
-     * 
      */
     private final String exponent;
     /**
      * The RSA Parameter modulus
-     * 
      */
     private final String modulus;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
-     * 
      */
     private final String odataType;
 
@@ -38,14 +35,12 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
 
     /**
      * The RSA Parameter exponent
-     * 
     */
     public String getExponent() {
         return this.exponent;
     }
     /**
      * The RSA Parameter modulus
-     * 
     */
     public String getModulus() {
         return this.modulus;
@@ -53,7 +48,6 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;

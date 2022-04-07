@@ -16,7 +16,6 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
 
     /**
      * The name of the storage account within the specified resource group.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
 
     /**
      * The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
-     * 
      */
     @Import(name="error404Document")
       private final @Nullable Output<String> error404Document;
@@ -38,7 +36,6 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
 
     /**
      * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
-     * 
      */
     @Import(name="indexDocument")
       private final @Nullable Output<String> indexDocument;
@@ -49,7 +46,6 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

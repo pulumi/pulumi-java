@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * The representation of an edge module.
  * API Version: 2021-05-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Registers an edge module.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var edgeModule = new AzureNative.VideoAnalyzer.EdgeModule("edgeModule", new AzureNative.VideoAnalyzer.EdgeModuleArgs
+ *         {
+ *             AccountName = "testaccount2",
+ *             EdgeModuleName = "edgeModule1",
+ *             ResourceGroupName = "testrg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	videoanalyzer "github.com/pulumi/pulumi-azure-native/sdk/go/azure/videoanalyzer"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := videoanalyzer.NewEdgeModule(ctx, "edgeModule", &videoanalyzer.EdgeModuleArgs{
+ * 			AccountName:       pulumi.String("testaccount2"),
+ * 			EdgeModuleName:    pulumi.String("edgeModule1"),
+ * 			ResourceGroupName: pulumi.String("testrg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const edgeModule = new azure_native.videoanalyzer.EdgeModule("edgeModule", {
+ *     accountName: "testaccount2",
+ *     edgeModuleName: "edgeModule1",
+ *     resourceGroupName: "testrg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * edge_module = azure_native.videoanalyzer.EdgeModule("edgeModule",
+ *     account_name="testaccount2",
+ *     edge_module_name="edgeModule1",
+ *     resource_group_name="testrg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +105,48 @@ import javax.annotation.Nullable;
 public class EdgeModule extends io.pulumi.resources.CustomResource {
     /**
      * Internal ID generated for the instance of the Video Analyzer edge module.
-     * 
      */
     @Export(name="edgeModuleId", type=String.class, parameters={})
     private Output<String> edgeModuleId;
 
     /**
      * @return Internal ID generated for the instance of the Video Analyzer edge module.
-     * 
      */
     public Output<String> getEdgeModuleId() {
         return this.edgeModuleId;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The system metadata relating to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

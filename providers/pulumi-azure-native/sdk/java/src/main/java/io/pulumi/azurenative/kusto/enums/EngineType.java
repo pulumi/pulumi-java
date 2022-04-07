@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The engine type
-     * 
      */
     @EnumType
     public enum EngineType {

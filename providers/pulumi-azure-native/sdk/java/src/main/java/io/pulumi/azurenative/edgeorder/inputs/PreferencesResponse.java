@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Preferences related to the order
- * 
  */
 public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Preferences related to the Encryption.
-     * 
      */
     @Import(name="encryptionPreferences")
       private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
@@ -35,7 +33,6 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Preferences related to the Management resource.
-     * 
      */
     @Import(name="managementResourcePreferences")
       private final @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
@@ -46,7 +43,6 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Notification preferences.
-     * 
      */
     @Import(name="notificationPreferences")
       private final @Nullable List<NotificationPreferenceResponse> notificationPreferences;
@@ -57,7 +53,6 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Preferences related to the shipment logistics of the order.
-     * 
      */
     @Import(name="transportPreferences")
       private final @Nullable TransportPreferencesResponse transportPreferences;

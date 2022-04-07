@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Email Template Parameter contract.
- * 
  */
 public final class EmailTemplateParametersContractPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class EmailTemplateParametersContractPropertiesArgs extends io.pulu
 
     /**
      * Template parameter description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -31,7 +29,6 @@ public final class EmailTemplateParametersContractPropertiesArgs extends io.pulu
 
     /**
      * Template parameter name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -42,7 +39,6 @@ public final class EmailTemplateParametersContractPropertiesArgs extends io.pulu
 
     /**
      * Template parameter title.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * Linked service for Amazon Redshift.
- * 
  */
 public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -39,7 +37,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -50,7 +47,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
 
     /**
      * The database name of the Amazon Redshift source. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="database", required=true)
       private final Output<Object> database;
@@ -61,7 +57,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -72,7 +67,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
@@ -83,7 +77,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -94,7 +87,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
 
     /**
      * The password of the Amazon Redshift source.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
@@ -105,7 +97,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
 
     /**
      * The TCP port number that the Amazon Redshift server uses to listen for client connections. The default value is 5439. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="port")
       private final @Nullable Output<Object> port;
@@ -116,7 +107,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
 
     /**
      * The name of the Amazon Redshift server. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="server", required=true)
       private final Output<Object> server;
@@ -128,7 +118,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
     /**
      * Type of linked service.
      * Expected value is 'AmazonRedshift'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -139,7 +128,6 @@ public final class AmazonRedshiftLinkedServiceArgs extends io.pulumi.resources.R
 
     /**
      * The username of the Amazon Redshift source. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="username")
       private final @Nullable Output<Object> username;

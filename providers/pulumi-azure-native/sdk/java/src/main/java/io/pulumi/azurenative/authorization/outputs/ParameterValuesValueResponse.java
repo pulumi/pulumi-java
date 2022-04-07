@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ParameterValuesValueResponse {
     /**
      * The value of the parameter.
-     * 
      */
     private final @Nullable Object value;
 
@@ -24,7 +23,6 @@ public final class ParameterValuesValueResponse {
 
     /**
      * The value of the parameter.
-     * 
     */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);

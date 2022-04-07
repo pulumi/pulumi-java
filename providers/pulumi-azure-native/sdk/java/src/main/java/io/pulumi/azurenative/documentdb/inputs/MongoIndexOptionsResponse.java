@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB MongoDB collection index options
- * 
  */
 public final class MongoIndexOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MongoIndexOptionsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Expire after seconds
-     * 
      */
     @Import(name="expireAfterSeconds")
       private final @Nullable Integer expireAfterSeconds;
@@ -32,7 +30,6 @@ public final class MongoIndexOptionsResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Is unique or not
-     * 
      */
     @Import(name="unique")
       private final @Nullable Boolean unique;

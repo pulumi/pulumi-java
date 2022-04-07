@@ -18,7 +18,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -29,7 +28,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The relay name.
-     * 
      */
     @Import(name="relayName")
       private final @Nullable Output<String> relayName;
@@ -40,7 +38,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * WCF relay type.
-     * 
      */
     @Import(name="relayType")
       private final @Nullable Output<Relaytype> relayType;
@@ -51,7 +48,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Returns true if client authorization is needed for this relay; otherwise, false.
-     * 
      */
     @Import(name="requiresClientAuthorization")
       private final @Nullable Output<Boolean> requiresClientAuthorization;
@@ -62,7 +58,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Returns true if transport security is needed for this relay; otherwise, false.
-     * 
      */
     @Import(name="requiresTransportSecurity")
       private final @Nullable Output<Boolean> requiresTransportSecurity;
@@ -73,7 +68,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -84,7 +78,6 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
-     * 
      */
     @Import(name="userMetadata")
       private final @Nullable Output<String> userMetadata;

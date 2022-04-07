@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class SubnetResourceSettingsResponse {
     /**
      * Gets or sets address prefix for the subnet.
-     * 
      */
     private final @Nullable String addressPrefix;
     /**
      * Gets or sets the Subnet name.
-     * 
      */
     private final @Nullable String name;
     /**
      * Defines reference to NSG.
-     * 
      */
     private final @Nullable NsgReferenceResponse networkSecurityGroup;
 
@@ -40,21 +37,18 @@ public final class SubnetResourceSettingsResponse {
 
     /**
      * Gets or sets address prefix for the subnet.
-     * 
     */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * Gets or sets the Subnet name.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Defines reference to NSG.
-     * 
     */
     public Optional<NsgReferenceResponse> getNetworkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Rest API method for target endpoint.
-     * 
      */
     @EnumType
     public enum WebActivityMethod {

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Cosmos DB Cassandra keyspace resource object
- * 
  */
 public final class CassandraKeyspaceResourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class CassandraKeyspaceResourceArgs extends io.pulumi.resources.Res
 
     /**
      * Name of the Cosmos DB Cassandra keyspace
-     * 
      */
     @Import(name="id", required=true)
       private final Output<String> id;

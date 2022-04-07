@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * VpnSiteLink Resource.
- * 
  */
 public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The set of bgp properties.
-     * 
      */
     @Import(name="bgpProperties")
       private final @Nullable VpnLinkBgpSettingsResponse bgpProperties;
@@ -33,7 +31,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -44,7 +41,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * FQDN of vpn-site-link.
-     * 
      */
     @Import(name="fqdn")
       private final @Nullable String fqdn;
@@ -55,7 +51,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -66,7 +61,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The ip-address for the vpn-site-link.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
@@ -77,7 +71,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The link provider properties.
-     * 
      */
     @Import(name="linkProperties")
       private final @Nullable VpnLinkProviderPropertiesResponse linkProperties;
@@ -88,7 +81,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -99,7 +91,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of the VPN site link resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -110,7 +101,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

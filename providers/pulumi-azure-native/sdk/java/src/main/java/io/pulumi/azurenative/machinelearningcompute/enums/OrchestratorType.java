@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of orchestrator. It cannot be changed once the cluster is created.
-     * 
      */
     @EnumType
     public enum OrchestratorType {

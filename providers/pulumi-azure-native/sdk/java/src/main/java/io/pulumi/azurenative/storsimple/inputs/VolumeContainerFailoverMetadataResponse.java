@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The metadata of the volume container, that is being considered as part of a failover set.
- * 
  */
 public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.res
 
     /**
      * The path ID of the volume container.
-     * 
      */
     @Import(name="volumeContainerId")
       private final @Nullable String volumeContainerId;
@@ -33,7 +31,6 @@ public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.res
 
     /**
      * The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
-     * 
      */
     @Import(name="volumes")
       private final @Nullable List<VolumeFailoverMetadataResponse> volumes;

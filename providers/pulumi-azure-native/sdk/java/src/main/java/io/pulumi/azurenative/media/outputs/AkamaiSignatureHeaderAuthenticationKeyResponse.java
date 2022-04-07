@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
     /**
      * authentication key
-     * 
      */
     private final @Nullable String base64Key;
     /**
      * The expiration time of the authentication key.
-     * 
      */
     private final @Nullable String expiration;
     /**
      * identifier of the key
-     * 
      */
     private final @Nullable String identifier;
 
@@ -39,21 +36,18 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
 
     /**
      * authentication key
-     * 
     */
     public Optional<String> getBase64Key() {
         return Optional.ofNullable(this.base64Key);
     }
     /**
      * The expiration time of the authentication key.
-     * 
     */
     public Optional<String> getExpiration() {
         return Optional.ofNullable(this.expiration);
     }
     /**
      * identifier of the key
-     * 
     */
     public Optional<String> getIdentifier() {
         return Optional.ofNullable(this.identifier);

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Azure VM family.
-     * 
      */
     @EnumType
     public enum AzureVmFamily {

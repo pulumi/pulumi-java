@@ -27,11 +27,1530 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * The task that has the ARM resource and task properties.
+ * The task that has the ARM resource and task properties. 
  * The task will have all information to schedule a run against it.
  * API Version: 2019-06-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Tasks_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var task = new AzureNative.ContainerRegistry.Task("task", new AzureNative.ContainerRegistry.TaskArgs
+ *         {
+ *             AgentConfiguration = new AzureNative.ContainerRegistry.Inputs.AgentPropertiesArgs
+ *             {
+ *                 Cpu = 2,
+ *             },
+ *             Identity = new AzureNative.ContainerRegistry.Inputs.IdentityPropertiesArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             IsSystemTask = false,
+ *             Location = "eastus",
+ *             LogTemplate = "acr/tasks:{{.Run.OS}}",
+ *             Platform = new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
+ *             {
+ *                 Architecture = "amd64",
+ *                 Os = "Linux",
+ *             },
+ *             RegistryName = "myRegistry",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Status = "Enabled",
+ *             Step = new AzureNative.ContainerRegistry.Inputs.DockerBuildStepArgs
+ *             {
+ *                 Arguments = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+ *                     {
+ *                         IsSecret = false,
+ *                         Name = "mytestargument",
+ *                         Value = "mytestvalue",
+ *                     },
+ *                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+ *                     {
+ *                         IsSecret = true,
+ *                         Name = "mysecrettestargument",
+ *                         Value = "mysecrettestvalue",
+ *                     },
+ *                 },
+ *                 ContextPath = "src",
+ *                 DockerFilePath = "src/DockerFile",
+ *                 ImageNames = 
+ *                 {
+ *                     "azurerest:testtag",
+ *                 },
+ *                 IsPushEnabled = true,
+ *                 NoCache = false,
+ *                 Type = "Docker",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "testkey", "value" },
+ *             },
+ *             TaskName = "mytTask",
+ *             Trigger = new AzureNative.ContainerRegistry.Inputs.TriggerPropertiesArgs
+ *             {
+ *                 BaseImageTrigger = new AzureNative.ContainerRegistry.Inputs.BaseImageTriggerArgs
+ *                 {
+ *                     BaseImageTriggerType = "Runtime",
+ *                     Name = "myBaseImageTrigger",
+ *                     UpdateTriggerEndpoint = "https://user:pass@mycicd.webhook.com?token=foo",
+ *                     UpdateTriggerPayloadType = "Token",
+ *                 },
+ *                 SourceTriggers = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.SourceTriggerArgs
+ *                     {
+ *                         Name = "mySourceTrigger",
+ *                         SourceRepository = new AzureNative.ContainerRegistry.Inputs.SourcePropertiesArgs
+ *                         {
+ *                             Branch = "master",
+ *                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
+ *                             SourceControlAuthProperties = new AzureNative.ContainerRegistry.Inputs.AuthInfoArgs
+ *                             {
+ *                                 Token = "xxxxx",
+ *                                 TokenType = "PAT",
+ *                             },
+ *                             SourceControlType = "Github",
+ *                         },
+ *                         SourceTriggerEvents = 
+ *                         {
+ *                             "commit",
+ *                         },
+ *                     },
+ *                 },
+ *                 TimerTriggers = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.TimerTriggerArgs
+ *                     {
+ *                         Name = "myTimerTrigger",
+ *                         Schedule = "30 9 * * 1-5",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
+ * 			AgentConfiguration: &containerregistry.AgentPropertiesArgs{
+ * 				Cpu: pulumi.Int(2),
+ * 			},
+ * 			Identity: &containerregistry.IdentityPropertiesArgs{
+ * 				Type: "SystemAssigned",
+ * 			},
+ * 			IsSystemTask: pulumi.Bool(false),
+ * 			Location:     pulumi.String("eastus"),
+ * 			LogTemplate:  pulumi.String("acr/tasks:{{.Run.OS}}"),
+ * 			Platform: &containerregistry.PlatformPropertiesArgs{
+ * 				Architecture: pulumi.String("amd64"),
+ * 				Os:           pulumi.String("Linux"),
+ * 			},
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Status:            pulumi.String("Enabled"),
+ * 			Step: containerregistry.DockerBuildStep{
+ * 				Arguments: []containerregistry.Argument{
+ * 					containerregistry.Argument{
+ * 						IsSecret: false,
+ * 						Name:     "mytestargument",
+ * 						Value:    "mytestvalue",
+ * 					},
+ * 					containerregistry.Argument{
+ * 						IsSecret: true,
+ * 						Name:     "mysecrettestargument",
+ * 						Value:    "mysecrettestvalue",
+ * 					},
+ * 				},
+ * 				ContextPath:    "src",
+ * 				DockerFilePath: "src/DockerFile",
+ * 				ImageNames: []string{
+ * 					"azurerest:testtag",
+ * 				},
+ * 				IsPushEnabled: true,
+ * 				NoCache:       false,
+ * 				Type:          "Docker",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"testkey": pulumi.String("value"),
+ * 			},
+ * 			TaskName: pulumi.String("mytTask"),
+ * 			Trigger: &containerregistry.TriggerPropertiesArgs{
+ * 				BaseImageTrigger: &containerregistry.BaseImageTriggerArgs{
+ * 					BaseImageTriggerType:     pulumi.String("Runtime"),
+ * 					Name:                     pulumi.String("myBaseImageTrigger"),
+ * 					UpdateTriggerEndpoint:    pulumi.String("https://user:pass@mycicd.webhook.com?token=foo"),
+ * 					UpdateTriggerPayloadType: pulumi.String("Token"),
+ * 				},
+ * 				SourceTriggers: containerregistry.SourceTriggerArray{
+ * 					&containerregistry.SourceTriggerArgs{
+ * 						Name: pulumi.String("mySourceTrigger"),
+ * 						SourceRepository: &containerregistry.SourcePropertiesArgs{
+ * 							Branch:        pulumi.String("master"),
+ * 							RepositoryUrl: pulumi.String("https://github.com/Azure/azure-rest-api-specs"),
+ * 							SourceControlAuthProperties: &containerregistry.AuthInfoArgs{
+ * 								Token:     pulumi.String("xxxxx"),
+ * 								TokenType: pulumi.String("PAT"),
+ * 							},
+ * 							SourceControlType: pulumi.String("Github"),
+ * 						},
+ * 						SourceTriggerEvents: pulumi.StringArray{
+ * 							pulumi.String("commit"),
+ * 						},
+ * 					},
+ * 				},
+ * 				TimerTriggers: containerregistry.TimerTriggerArray{
+ * 					&containerregistry.TimerTriggerArgs{
+ * 						Name:     pulumi.String("myTimerTrigger"),
+ * 						Schedule: pulumi.String("30 9 * * 1-5"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const task = new azure_native.containerregistry.Task("task", {
+ *     agentConfiguration: {
+ *         cpu: 2,
+ *     },
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     isSystemTask: false,
+ *     location: "eastus",
+ *     logTemplate: "acr/tasks:{{.Run.OS}}",
+ *     platform: {
+ *         architecture: "amd64",
+ *         os: "Linux",
+ *     },
+ *     registryName: "myRegistry",
+ *     resourceGroupName: "myResourceGroup",
+ *     status: "Enabled",
+ *     step: {
+ *         arguments: [
+ *             {
+ *                 isSecret: false,
+ *                 name: "mytestargument",
+ *                 value: "mytestvalue",
+ *             },
+ *             {
+ *                 isSecret: true,
+ *                 name: "mysecrettestargument",
+ *                 value: "mysecrettestvalue",
+ *             },
+ *         ],
+ *         contextPath: "src",
+ *         dockerFilePath: "src/DockerFile",
+ *         imageNames: ["azurerest:testtag"],
+ *         isPushEnabled: true,
+ *         noCache: false,
+ *         type: "Docker",
+ *     },
+ *     tags: {
+ *         testkey: "value",
+ *     },
+ *     taskName: "mytTask",
+ *     trigger: {
+ *         baseImageTrigger: {
+ *             baseImageTriggerType: "Runtime",
+ *             name: "myBaseImageTrigger",
+ *             updateTriggerEndpoint: "https://user:pass@mycicd.webhook.com?token=foo",
+ *             updateTriggerPayloadType: "Token",
+ *         },
+ *         sourceTriggers: [{
+ *             name: "mySourceTrigger",
+ *             sourceRepository: {
+ *                 branch: "master",
+ *                 repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
+ *                 sourceControlAuthProperties: {
+ *                     token: "xxxxx",
+ *                     tokenType: "PAT",
+ *                 },
+ *                 sourceControlType: "Github",
+ *             },
+ *             sourceTriggerEvents: ["commit"],
+ *         }],
+ *         timerTriggers: [{
+ *             name: "myTimerTrigger",
+ *             schedule: "30 9 * * 1-5",
+ *         }],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * task = azure_native.containerregistry.Task("task",
+ *     agent_configuration=azure_native.containerregistry.AgentPropertiesArgs(
+ *         cpu=2,
+ *     ),
+ *     identity=azure_native.containerregistry.IdentityPropertiesArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     is_system_task=False,
+ *     location="eastus",
+ *     log_template="acr/tasks:{{.Run.OS}}",
+ *     platform=azure_native.containerregistry.PlatformPropertiesArgs(
+ *         architecture="amd64",
+ *         os="Linux",
+ *     ),
+ *     registry_name="myRegistry",
+ *     resource_group_name="myResourceGroup",
+ *     status="Enabled",
+ *     step=azure_native.containerregistry.DockerBuildStepArgs(
+ *         arguments=[
+ *             azure_native.containerregistry.ArgumentArgs(
+ *                 is_secret=False,
+ *                 name="mytestargument",
+ *                 value="mytestvalue",
+ *             ),
+ *             azure_native.containerregistry.ArgumentArgs(
+ *                 is_secret=True,
+ *                 name="mysecrettestargument",
+ *                 value="mysecrettestvalue",
+ *             ),
+ *         ],
+ *         context_path="src",
+ *         docker_file_path="src/DockerFile",
+ *         image_names=["azurerest:testtag"],
+ *         is_push_enabled=True,
+ *         no_cache=False,
+ *         type="Docker",
+ *     ),
+ *     tags={
+ *         "testkey": "value",
+ *     },
+ *     task_name="mytTask",
+ *     trigger=azure_native.containerregistry.TriggerPropertiesArgs(
+ *         base_image_trigger=azure_native.containerregistry.BaseImageTriggerArgs(
+ *             base_image_trigger_type="Runtime",
+ *             name="myBaseImageTrigger",
+ *             update_trigger_endpoint="https://user:pass@mycicd.webhook.com?token=foo",
+ *             update_trigger_payload_type="Token",
+ *         ),
+ *         source_triggers=[azure_native.containerregistry.SourceTriggerArgs(
+ *             name="mySourceTrigger",
+ *             source_repository=azure_native.containerregistry.SourcePropertiesArgs(
+ *                 branch="master",
+ *                 repository_url="https://github.com/Azure/azure-rest-api-specs",
+ *                 source_control_auth_properties=azure_native.containerregistry.AuthInfoArgs(
+ *                     token="xxxxx",
+ *                     token_type="PAT",
+ *                 ),
+ *                 source_control_type="Github",
+ *             ),
+ *             source_trigger_events=["commit"],
+ *         )],
+ *         timer_triggers=[azure_native.containerregistry.TimerTriggerArgs(
+ *             name="myTimerTrigger",
+ *             schedule="30 9 * * 1-5",
+ *         )],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Tasks_Create_QuickTask
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var task = new AzureNative.ContainerRegistry.Task("task", new AzureNative.ContainerRegistry.TaskArgs
+ *         {
+ *             IsSystemTask = true,
+ *             Location = "eastus",
+ *             LogTemplate = "acr/tasks:{{.Run.OS}}",
+ *             RegistryName = "myRegistry",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Status = "Enabled",
+ *             Tags = 
+ *             {
+ *                 { "testkey", "value" },
+ *             },
+ *             TaskName = "quicktask",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
+ * 			IsSystemTask:      pulumi.Bool(true),
+ * 			Location:          pulumi.String("eastus"),
+ * 			LogTemplate:       pulumi.String("acr/tasks:{{.Run.OS}}"),
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Status:            pulumi.String("Enabled"),
+ * 			Tags: pulumi.StringMap{
+ * 				"testkey": pulumi.String("value"),
+ * 			},
+ * 			TaskName: pulumi.String("quicktask"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const task = new azure_native.containerregistry.Task("task", {
+ *     isSystemTask: true,
+ *     location: "eastus",
+ *     logTemplate: "acr/tasks:{{.Run.OS}}",
+ *     registryName: "myRegistry",
+ *     resourceGroupName: "myResourceGroup",
+ *     status: "Enabled",
+ *     tags: {
+ *         testkey: "value",
+ *     },
+ *     taskName: "quicktask",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * task = azure_native.containerregistry.Task("task",
+ *     is_system_task=True,
+ *     location="eastus",
+ *     log_template="acr/tasks:{{.Run.OS}}",
+ *     registry_name="myRegistry",
+ *     resource_group_name="myResourceGroup",
+ *     status="Enabled",
+ *     tags={
+ *         "testkey": "value",
+ *     },
+ *     task_name="quicktask")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Tasks_Create_WithSystemAndUserIdentities
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var task = new AzureNative.ContainerRegistry.Task("task", new AzureNative.ContainerRegistry.TaskArgs
+ *         {
+ *             AgentConfiguration = new AzureNative.ContainerRegistry.Inputs.AgentPropertiesArgs
+ *             {
+ *                 Cpu = 2,
+ *             },
+ *             Identity = new AzureNative.ContainerRegistry.Inputs.IdentityPropertiesArgs
+ *             {
+ *                 Type = "SystemAssigned, UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2",  },
+ *                 },
+ *             },
+ *             IsSystemTask = false,
+ *             Location = "eastus",
+ *             Platform = new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
+ *             {
+ *                 Architecture = "amd64",
+ *                 Os = "Linux",
+ *             },
+ *             RegistryName = "myRegistry",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Status = "Enabled",
+ *             Step = new AzureNative.ContainerRegistry.Inputs.DockerBuildStepArgs
+ *             {
+ *                 Arguments = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+ *                     {
+ *                         IsSecret = false,
+ *                         Name = "mytestargument",
+ *                         Value = "mytestvalue",
+ *                     },
+ *                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+ *                     {
+ *                         IsSecret = true,
+ *                         Name = "mysecrettestargument",
+ *                         Value = "mysecrettestvalue",
+ *                     },
+ *                 },
+ *                 ContextPath = "src",
+ *                 DockerFilePath = "src/DockerFile",
+ *                 ImageNames = 
+ *                 {
+ *                     "azurerest:testtag",
+ *                 },
+ *                 IsPushEnabled = true,
+ *                 NoCache = false,
+ *                 Type = "Docker",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "testkey", "value" },
+ *             },
+ *             TaskName = "mytTask",
+ *             Trigger = new AzureNative.ContainerRegistry.Inputs.TriggerPropertiesArgs
+ *             {
+ *                 BaseImageTrigger = new AzureNative.ContainerRegistry.Inputs.BaseImageTriggerArgs
+ *                 {
+ *                     BaseImageTriggerType = "Runtime",
+ *                     Name = "myBaseImageTrigger",
+ *                     UpdateTriggerEndpoint = "https://user:pass@mycicd.webhook.com?token=foo",
+ *                     UpdateTriggerPayloadType = "Default",
+ *                 },
+ *                 SourceTriggers = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.SourceTriggerArgs
+ *                     {
+ *                         Name = "mySourceTrigger",
+ *                         SourceRepository = new AzureNative.ContainerRegistry.Inputs.SourcePropertiesArgs
+ *                         {
+ *                             Branch = "master",
+ *                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
+ *                             SourceControlAuthProperties = new AzureNative.ContainerRegistry.Inputs.AuthInfoArgs
+ *                             {
+ *                                 Token = "xxxxx",
+ *                                 TokenType = "PAT",
+ *                             },
+ *                             SourceControlType = "Github",
+ *                         },
+ *                         SourceTriggerEvents = 
+ *                         {
+ *                             "commit",
+ *                         },
+ *                     },
+ *                 },
+ *                 TimerTriggers = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.TimerTriggerArgs
+ *                     {
+ *                         Name = "myTimerTrigger",
+ *                         Schedule = "30 9 * * 1-5",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
+ * 			AgentConfiguration: &containerregistry.AgentPropertiesArgs{
+ * 				Cpu: pulumi.Int(2),
+ * 			},
+ * 			Identity: &containerregistry.IdentityPropertiesArgs{
+ * 				Type: "SystemAssigned, UserAssigned",
+ * 				UserAssignedIdentities: containerregistry.UserIdentityPropertiesMap{
+ * 					"/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": nil,
+ * 				},
+ * 			},
+ * 			IsSystemTask: pulumi.Bool(false),
+ * 			Location:     pulumi.String("eastus"),
+ * 			Platform: &containerregistry.PlatformPropertiesArgs{
+ * 				Architecture: pulumi.String("amd64"),
+ * 				Os:           pulumi.String("Linux"),
+ * 			},
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Status:            pulumi.String("Enabled"),
+ * 			Step: containerregistry.DockerBuildStep{
+ * 				Arguments: []containerregistry.Argument{
+ * 					containerregistry.Argument{
+ * 						IsSecret: false,
+ * 						Name:     "mytestargument",
+ * 						Value:    "mytestvalue",
+ * 					},
+ * 					containerregistry.Argument{
+ * 						IsSecret: true,
+ * 						Name:     "mysecrettestargument",
+ * 						Value:    "mysecrettestvalue",
+ * 					},
+ * 				},
+ * 				ContextPath:    "src",
+ * 				DockerFilePath: "src/DockerFile",
+ * 				ImageNames: []string{
+ * 					"azurerest:testtag",
+ * 				},
+ * 				IsPushEnabled: true,
+ * 				NoCache:       false,
+ * 				Type:          "Docker",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"testkey": pulumi.String("value"),
+ * 			},
+ * 			TaskName: pulumi.String("mytTask"),
+ * 			Trigger: &containerregistry.TriggerPropertiesArgs{
+ * 				BaseImageTrigger: &containerregistry.BaseImageTriggerArgs{
+ * 					BaseImageTriggerType:     pulumi.String("Runtime"),
+ * 					Name:                     pulumi.String("myBaseImageTrigger"),
+ * 					UpdateTriggerEndpoint:    pulumi.String("https://user:pass@mycicd.webhook.com?token=foo"),
+ * 					UpdateTriggerPayloadType: pulumi.String("Default"),
+ * 				},
+ * 				SourceTriggers: containerregistry.SourceTriggerArray{
+ * 					&containerregistry.SourceTriggerArgs{
+ * 						Name: pulumi.String("mySourceTrigger"),
+ * 						SourceRepository: &containerregistry.SourcePropertiesArgs{
+ * 							Branch:        pulumi.String("master"),
+ * 							RepositoryUrl: pulumi.String("https://github.com/Azure/azure-rest-api-specs"),
+ * 							SourceControlAuthProperties: &containerregistry.AuthInfoArgs{
+ * 								Token:     pulumi.String("xxxxx"),
+ * 								TokenType: pulumi.String("PAT"),
+ * 							},
+ * 							SourceControlType: pulumi.String("Github"),
+ * 						},
+ * 						SourceTriggerEvents: pulumi.StringArray{
+ * 							pulumi.String("commit"),
+ * 						},
+ * 					},
+ * 				},
+ * 				TimerTriggers: containerregistry.TimerTriggerArray{
+ * 					&containerregistry.TimerTriggerArgs{
+ * 						Name:     pulumi.String("myTimerTrigger"),
+ * 						Schedule: pulumi.String("30 9 * * 1-5"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const task = new azure_native.containerregistry.Task("task", {
+ *     agentConfiguration: {
+ *         cpu: 2,
+ *     },
+ *     identity: {
+ *         type: "SystemAssigned, UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+ *         },
+ *     },
+ *     isSystemTask: false,
+ *     location: "eastus",
+ *     platform: {
+ *         architecture: "amd64",
+ *         os: "Linux",
+ *     },
+ *     registryName: "myRegistry",
+ *     resourceGroupName: "myResourceGroup",
+ *     status: "Enabled",
+ *     step: {
+ *         arguments: [
+ *             {
+ *                 isSecret: false,
+ *                 name: "mytestargument",
+ *                 value: "mytestvalue",
+ *             },
+ *             {
+ *                 isSecret: true,
+ *                 name: "mysecrettestargument",
+ *                 value: "mysecrettestvalue",
+ *             },
+ *         ],
+ *         contextPath: "src",
+ *         dockerFilePath: "src/DockerFile",
+ *         imageNames: ["azurerest:testtag"],
+ *         isPushEnabled: true,
+ *         noCache: false,
+ *         type: "Docker",
+ *     },
+ *     tags: {
+ *         testkey: "value",
+ *     },
+ *     taskName: "mytTask",
+ *     trigger: {
+ *         baseImageTrigger: {
+ *             baseImageTriggerType: "Runtime",
+ *             name: "myBaseImageTrigger",
+ *             updateTriggerEndpoint: "https://user:pass@mycicd.webhook.com?token=foo",
+ *             updateTriggerPayloadType: "Default",
+ *         },
+ *         sourceTriggers: [{
+ *             name: "mySourceTrigger",
+ *             sourceRepository: {
+ *                 branch: "master",
+ *                 repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
+ *                 sourceControlAuthProperties: {
+ *                     token: "xxxxx",
+ *                     tokenType: "PAT",
+ *                 },
+ *                 sourceControlType: "Github",
+ *             },
+ *             sourceTriggerEvents: ["commit"],
+ *         }],
+ *         timerTriggers: [{
+ *             name: "myTimerTrigger",
+ *             schedule: "30 9 * * 1-5",
+ *         }],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * task = azure_native.containerregistry.Task("task",
+ *     agent_configuration=azure_native.containerregistry.AgentPropertiesArgs(
+ *         cpu=2,
+ *     ),
+ *     identity=azure_native.containerregistry.IdentityPropertiesArgs(
+ *         type="SystemAssigned, UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_native.containerregistry.UserIdentityPropertiesArgs(),
+ *         },
+ *     ),
+ *     is_system_task=False,
+ *     location="eastus",
+ *     platform=azure_native.containerregistry.PlatformPropertiesArgs(
+ *         architecture="amd64",
+ *         os="Linux",
+ *     ),
+ *     registry_name="myRegistry",
+ *     resource_group_name="myResourceGroup",
+ *     status="Enabled",
+ *     step=azure_native.containerregistry.DockerBuildStepArgs(
+ *         arguments=[
+ *             azure_native.containerregistry.ArgumentArgs(
+ *                 is_secret=False,
+ *                 name="mytestargument",
+ *                 value="mytestvalue",
+ *             ),
+ *             azure_native.containerregistry.ArgumentArgs(
+ *                 is_secret=True,
+ *                 name="mysecrettestargument",
+ *                 value="mysecrettestvalue",
+ *             ),
+ *         ],
+ *         context_path="src",
+ *         docker_file_path="src/DockerFile",
+ *         image_names=["azurerest:testtag"],
+ *         is_push_enabled=True,
+ *         no_cache=False,
+ *         type="Docker",
+ *     ),
+ *     tags={
+ *         "testkey": "value",
+ *     },
+ *     task_name="mytTask",
+ *     trigger=azure_native.containerregistry.TriggerPropertiesArgs(
+ *         base_image_trigger=azure_native.containerregistry.BaseImageTriggerArgs(
+ *             base_image_trigger_type="Runtime",
+ *             name="myBaseImageTrigger",
+ *             update_trigger_endpoint="https://user:pass@mycicd.webhook.com?token=foo",
+ *             update_trigger_payload_type="Default",
+ *         ),
+ *         source_triggers=[azure_native.containerregistry.SourceTriggerArgs(
+ *             name="mySourceTrigger",
+ *             source_repository=azure_native.containerregistry.SourcePropertiesArgs(
+ *                 branch="master",
+ *                 repository_url="https://github.com/Azure/azure-rest-api-specs",
+ *                 source_control_auth_properties=azure_native.containerregistry.AuthInfoArgs(
+ *                     token="xxxxx",
+ *                     token_type="PAT",
+ *                 ),
+ *                 source_control_type="Github",
+ *             ),
+ *             source_trigger_events=["commit"],
+ *         )],
+ *         timer_triggers=[azure_native.containerregistry.TimerTriggerArgs(
+ *             name="myTimerTrigger",
+ *             schedule="30 9 * * 1-5",
+ *         )],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Tasks_Create_WithUserIdentities
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var task = new AzureNative.ContainerRegistry.Task("task", new AzureNative.ContainerRegistry.TaskArgs
+ *         {
+ *             AgentConfiguration = new AzureNative.ContainerRegistry.Inputs.AgentPropertiesArgs
+ *             {
+ *                 Cpu = 2,
+ *             },
+ *             Identity = new AzureNative.ContainerRegistry.Inputs.IdentityPropertiesArgs
+ *             {
+ *                 Type = "UserAssigned",
+ *                 UserAssignedIdentities = 
+ *                 {
+ *                     { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1",  },
+ *                     { "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2",  },
+ *                 },
+ *             },
+ *             IsSystemTask = false,
+ *             Location = "eastus",
+ *             Platform = new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
+ *             {
+ *                 Architecture = "amd64",
+ *                 Os = "Linux",
+ *             },
+ *             RegistryName = "myRegistry",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Status = "Enabled",
+ *             Step = new AzureNative.ContainerRegistry.Inputs.DockerBuildStepArgs
+ *             {
+ *                 Arguments = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+ *                     {
+ *                         IsSecret = false,
+ *                         Name = "mytestargument",
+ *                         Value = "mytestvalue",
+ *                     },
+ *                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+ *                     {
+ *                         IsSecret = true,
+ *                         Name = "mysecrettestargument",
+ *                         Value = "mysecrettestvalue",
+ *                     },
+ *                 },
+ *                 ContextPath = "src",
+ *                 DockerFilePath = "src/DockerFile",
+ *                 ImageNames = 
+ *                 {
+ *                     "azurerest:testtag",
+ *                 },
+ *                 IsPushEnabled = true,
+ *                 NoCache = false,
+ *                 Type = "Docker",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "testkey", "value" },
+ *             },
+ *             TaskName = "mytTask",
+ *             Trigger = new AzureNative.ContainerRegistry.Inputs.TriggerPropertiesArgs
+ *             {
+ *                 BaseImageTrigger = new AzureNative.ContainerRegistry.Inputs.BaseImageTriggerArgs
+ *                 {
+ *                     BaseImageTriggerType = "Runtime",
+ *                     Name = "myBaseImageTrigger",
+ *                     UpdateTriggerEndpoint = "https://user:pass@mycicd.webhook.com?token=foo",
+ *                     UpdateTriggerPayloadType = "Default",
+ *                 },
+ *                 SourceTriggers = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.SourceTriggerArgs
+ *                     {
+ *                         Name = "mySourceTrigger",
+ *                         SourceRepository = new AzureNative.ContainerRegistry.Inputs.SourcePropertiesArgs
+ *                         {
+ *                             Branch = "master",
+ *                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
+ *                             SourceControlAuthProperties = new AzureNative.ContainerRegistry.Inputs.AuthInfoArgs
+ *                             {
+ *                                 Token = "xxxxx",
+ *                                 TokenType = "PAT",
+ *                             },
+ *                             SourceControlType = "Github",
+ *                         },
+ *                         SourceTriggerEvents = 
+ *                         {
+ *                             "commit",
+ *                         },
+ *                     },
+ *                 },
+ *                 TimerTriggers = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.TimerTriggerArgs
+ *                     {
+ *                         Name = "myTimerTrigger",
+ *                         Schedule = "30 9 * * 1-5",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
+ * 			AgentConfiguration: &containerregistry.AgentPropertiesArgs{
+ * 				Cpu: pulumi.Int(2),
+ * 			},
+ * 			Identity: &containerregistry.IdentityPropertiesArgs{
+ * 				Type: "UserAssigned",
+ * 				UserAssignedIdentities: containerregistry.UserIdentityPropertiesMap{
+ * 					"/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1":  nil,
+ * 					"/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": nil,
+ * 				},
+ * 			},
+ * 			IsSystemTask: pulumi.Bool(false),
+ * 			Location:     pulumi.String("eastus"),
+ * 			Platform: &containerregistry.PlatformPropertiesArgs{
+ * 				Architecture: pulumi.String("amd64"),
+ * 				Os:           pulumi.String("Linux"),
+ * 			},
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Status:            pulumi.String("Enabled"),
+ * 			Step: containerregistry.DockerBuildStep{
+ * 				Arguments: []containerregistry.Argument{
+ * 					containerregistry.Argument{
+ * 						IsSecret: false,
+ * 						Name:     "mytestargument",
+ * 						Value:    "mytestvalue",
+ * 					},
+ * 					containerregistry.Argument{
+ * 						IsSecret: true,
+ * 						Name:     "mysecrettestargument",
+ * 						Value:    "mysecrettestvalue",
+ * 					},
+ * 				},
+ * 				ContextPath:    "src",
+ * 				DockerFilePath: "src/DockerFile",
+ * 				ImageNames: []string{
+ * 					"azurerest:testtag",
+ * 				},
+ * 				IsPushEnabled: true,
+ * 				NoCache:       false,
+ * 				Type:          "Docker",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"testkey": pulumi.String("value"),
+ * 			},
+ * 			TaskName: pulumi.String("mytTask"),
+ * 			Trigger: &containerregistry.TriggerPropertiesArgs{
+ * 				BaseImageTrigger: &containerregistry.BaseImageTriggerArgs{
+ * 					BaseImageTriggerType:     pulumi.String("Runtime"),
+ * 					Name:                     pulumi.String("myBaseImageTrigger"),
+ * 					UpdateTriggerEndpoint:    pulumi.String("https://user:pass@mycicd.webhook.com?token=foo"),
+ * 					UpdateTriggerPayloadType: pulumi.String("Default"),
+ * 				},
+ * 				SourceTriggers: containerregistry.SourceTriggerArray{
+ * 					&containerregistry.SourceTriggerArgs{
+ * 						Name: pulumi.String("mySourceTrigger"),
+ * 						SourceRepository: &containerregistry.SourcePropertiesArgs{
+ * 							Branch:        pulumi.String("master"),
+ * 							RepositoryUrl: pulumi.String("https://github.com/Azure/azure-rest-api-specs"),
+ * 							SourceControlAuthProperties: &containerregistry.AuthInfoArgs{
+ * 								Token:     pulumi.String("xxxxx"),
+ * 								TokenType: pulumi.String("PAT"),
+ * 							},
+ * 							SourceControlType: pulumi.String("Github"),
+ * 						},
+ * 						SourceTriggerEvents: pulumi.StringArray{
+ * 							pulumi.String("commit"),
+ * 						},
+ * 					},
+ * 				},
+ * 				TimerTriggers: containerregistry.TimerTriggerArray{
+ * 					&containerregistry.TimerTriggerArgs{
+ * 						Name:     pulumi.String("myTimerTrigger"),
+ * 						Schedule: pulumi.String("30 9 * * 1-5"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const task = new azure_native.containerregistry.Task("task", {
+ *     agentConfiguration: {
+ *         cpu: 2,
+ *     },
+ *     identity: {
+ *         type: "UserAssigned",
+ *         userAssignedIdentities: {
+ *             "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
+ *             "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": {},
+ *         },
+ *     },
+ *     isSystemTask: false,
+ *     location: "eastus",
+ *     platform: {
+ *         architecture: "amd64",
+ *         os: "Linux",
+ *     },
+ *     registryName: "myRegistry",
+ *     resourceGroupName: "myResourceGroup",
+ *     status: "Enabled",
+ *     step: {
+ *         arguments: [
+ *             {
+ *                 isSecret: false,
+ *                 name: "mytestargument",
+ *                 value: "mytestvalue",
+ *             },
+ *             {
+ *                 isSecret: true,
+ *                 name: "mysecrettestargument",
+ *                 value: "mysecrettestvalue",
+ *             },
+ *         ],
+ *         contextPath: "src",
+ *         dockerFilePath: "src/DockerFile",
+ *         imageNames: ["azurerest:testtag"],
+ *         isPushEnabled: true,
+ *         noCache: false,
+ *         type: "Docker",
+ *     },
+ *     tags: {
+ *         testkey: "value",
+ *     },
+ *     taskName: "mytTask",
+ *     trigger: {
+ *         baseImageTrigger: {
+ *             baseImageTriggerType: "Runtime",
+ *             name: "myBaseImageTrigger",
+ *             updateTriggerEndpoint: "https://user:pass@mycicd.webhook.com?token=foo",
+ *             updateTriggerPayloadType: "Default",
+ *         },
+ *         sourceTriggers: [{
+ *             name: "mySourceTrigger",
+ *             sourceRepository: {
+ *                 branch: "master",
+ *                 repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
+ *                 sourceControlAuthProperties: {
+ *                     token: "xxxxx",
+ *                     tokenType: "PAT",
+ *                 },
+ *                 sourceControlType: "Github",
+ *             },
+ *             sourceTriggerEvents: ["commit"],
+ *         }],
+ *         timerTriggers: [{
+ *             name: "myTimerTrigger",
+ *             schedule: "30 9 * * 1-5",
+ *         }],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * task = azure_native.containerregistry.Task("task",
+ *     agent_configuration=azure_native.containerregistry.AgentPropertiesArgs(
+ *         cpu=2,
+ *     ),
+ *     identity=azure_native.containerregistry.IdentityPropertiesArgs(
+ *         type="UserAssigned",
+ *         user_assigned_identities={
+ *             "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": azure_native.containerregistry.UserIdentityPropertiesArgs(),
+ *             "/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2": azure_native.containerregistry.UserIdentityPropertiesArgs(),
+ *         },
+ *     ),
+ *     is_system_task=False,
+ *     location="eastus",
+ *     platform=azure_native.containerregistry.PlatformPropertiesArgs(
+ *         architecture="amd64",
+ *         os="Linux",
+ *     ),
+ *     registry_name="myRegistry",
+ *     resource_group_name="myResourceGroup",
+ *     status="Enabled",
+ *     step=azure_native.containerregistry.DockerBuildStepArgs(
+ *         arguments=[
+ *             azure_native.containerregistry.ArgumentArgs(
+ *                 is_secret=False,
+ *                 name="mytestargument",
+ *                 value="mytestvalue",
+ *             ),
+ *             azure_native.containerregistry.ArgumentArgs(
+ *                 is_secret=True,
+ *                 name="mysecrettestargument",
+ *                 value="mysecrettestvalue",
+ *             ),
+ *         ],
+ *         context_path="src",
+ *         docker_file_path="src/DockerFile",
+ *         image_names=["azurerest:testtag"],
+ *         is_push_enabled=True,
+ *         no_cache=False,
+ *         type="Docker",
+ *     ),
+ *     tags={
+ *         "testkey": "value",
+ *     },
+ *     task_name="mytTask",
+ *     trigger=azure_native.containerregistry.TriggerPropertiesArgs(
+ *         base_image_trigger=azure_native.containerregistry.BaseImageTriggerArgs(
+ *             base_image_trigger_type="Runtime",
+ *             name="myBaseImageTrigger",
+ *             update_trigger_endpoint="https://user:pass@mycicd.webhook.com?token=foo",
+ *             update_trigger_payload_type="Default",
+ *         ),
+ *         source_triggers=[azure_native.containerregistry.SourceTriggerArgs(
+ *             name="mySourceTrigger",
+ *             source_repository=azure_native.containerregistry.SourcePropertiesArgs(
+ *                 branch="master",
+ *                 repository_url="https://github.com/Azure/azure-rest-api-specs",
+ *                 source_control_auth_properties=azure_native.containerregistry.AuthInfoArgs(
+ *                     token="xxxxx",
+ *                     token_type="PAT",
+ *                 ),
+ *                 source_control_type="Github",
+ *             ),
+ *             source_trigger_events=["commit"],
+ *         )],
+ *         timer_triggers=[azure_native.containerregistry.TimerTriggerArgs(
+ *             name="myTimerTrigger",
+ *             schedule="30 9 * * 1-5",
+ *         )],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Tasks_Create_WithUserIdentities_WithSystemIdentity
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var task = new AzureNative.ContainerRegistry.Task("task", new AzureNative.ContainerRegistry.TaskArgs
+ *         {
+ *             AgentConfiguration = new AzureNative.ContainerRegistry.Inputs.AgentPropertiesArgs
+ *             {
+ *                 Cpu = 2,
+ *             },
+ *             Identity = new AzureNative.ContainerRegistry.Inputs.IdentityPropertiesArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             IsSystemTask = false,
+ *             Location = "eastus",
+ *             Platform = new AzureNative.ContainerRegistry.Inputs.PlatformPropertiesArgs
+ *             {
+ *                 Architecture = "amd64",
+ *                 Os = "Linux",
+ *             },
+ *             RegistryName = "myRegistry",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Status = "Enabled",
+ *             Step = new AzureNative.ContainerRegistry.Inputs.DockerBuildStepArgs
+ *             {
+ *                 Arguments = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+ *                     {
+ *                         IsSecret = false,
+ *                         Name = "mytestargument",
+ *                         Value = "mytestvalue",
+ *                     },
+ *                     new AzureNative.ContainerRegistry.Inputs.ArgumentArgs
+ *                     {
+ *                         IsSecret = true,
+ *                         Name = "mysecrettestargument",
+ *                         Value = "mysecrettestvalue",
+ *                     },
+ *                 },
+ *                 ContextPath = "src",
+ *                 DockerFilePath = "src/DockerFile",
+ *                 ImageNames = 
+ *                 {
+ *                     "azurerest:testtag",
+ *                 },
+ *                 IsPushEnabled = true,
+ *                 NoCache = false,
+ *                 Type = "Docker",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "testkey", "value" },
+ *             },
+ *             TaskName = "mytTask",
+ *             Trigger = new AzureNative.ContainerRegistry.Inputs.TriggerPropertiesArgs
+ *             {
+ *                 BaseImageTrigger = new AzureNative.ContainerRegistry.Inputs.BaseImageTriggerArgs
+ *                 {
+ *                     BaseImageTriggerType = "Runtime",
+ *                     Name = "myBaseImageTrigger",
+ *                 },
+ *                 SourceTriggers = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.SourceTriggerArgs
+ *                     {
+ *                         Name = "mySourceTrigger",
+ *                         SourceRepository = new AzureNative.ContainerRegistry.Inputs.SourcePropertiesArgs
+ *                         {
+ *                             Branch = "master",
+ *                             RepositoryUrl = "https://github.com/Azure/azure-rest-api-specs",
+ *                             SourceControlAuthProperties = new AzureNative.ContainerRegistry.Inputs.AuthInfoArgs
+ *                             {
+ *                                 Token = "xxxxx",
+ *                                 TokenType = "PAT",
+ *                             },
+ *                             SourceControlType = "Github",
+ *                         },
+ *                         SourceTriggerEvents = 
+ *                         {
+ *                             "commit",
+ *                         },
+ *                     },
+ *                 },
+ *                 TimerTriggers = 
+ *                 {
+ *                     new AzureNative.ContainerRegistry.Inputs.TimerTriggerArgs
+ *                     {
+ *                         Name = "myTimerTrigger",
+ *                         Schedule = "30 9 * * 1-5",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewTask(ctx, "task", &containerregistry.TaskArgs{
+ * 			AgentConfiguration: &containerregistry.AgentPropertiesArgs{
+ * 				Cpu: pulumi.Int(2),
+ * 			},
+ * 			Identity: &containerregistry.IdentityPropertiesArgs{
+ * 				Type: "SystemAssigned",
+ * 			},
+ * 			IsSystemTask: pulumi.Bool(false),
+ * 			Location:     pulumi.String("eastus"),
+ * 			Platform: &containerregistry.PlatformPropertiesArgs{
+ * 				Architecture: pulumi.String("amd64"),
+ * 				Os:           pulumi.String("Linux"),
+ * 			},
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Status:            pulumi.String("Enabled"),
+ * 			Step: containerregistry.DockerBuildStep{
+ * 				Arguments: []containerregistry.Argument{
+ * 					containerregistry.Argument{
+ * 						IsSecret: false,
+ * 						Name:     "mytestargument",
+ * 						Value:    "mytestvalue",
+ * 					},
+ * 					containerregistry.Argument{
+ * 						IsSecret: true,
+ * 						Name:     "mysecrettestargument",
+ * 						Value:    "mysecrettestvalue",
+ * 					},
+ * 				},
+ * 				ContextPath:    "src",
+ * 				DockerFilePath: "src/DockerFile",
+ * 				ImageNames: []string{
+ * 					"azurerest:testtag",
+ * 				},
+ * 				IsPushEnabled: true,
+ * 				NoCache:       false,
+ * 				Type:          "Docker",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"testkey": pulumi.String("value"),
+ * 			},
+ * 			TaskName: pulumi.String("mytTask"),
+ * 			Trigger: &containerregistry.TriggerPropertiesArgs{
+ * 				BaseImageTrigger: &containerregistry.BaseImageTriggerArgs{
+ * 					BaseImageTriggerType: pulumi.String("Runtime"),
+ * 					Name:                 pulumi.String("myBaseImageTrigger"),
+ * 				},
+ * 				SourceTriggers: containerregistry.SourceTriggerArray{
+ * 					&containerregistry.SourceTriggerArgs{
+ * 						Name: pulumi.String("mySourceTrigger"),
+ * 						SourceRepository: &containerregistry.SourcePropertiesArgs{
+ * 							Branch:        pulumi.String("master"),
+ * 							RepositoryUrl: pulumi.String("https://github.com/Azure/azure-rest-api-specs"),
+ * 							SourceControlAuthProperties: &containerregistry.AuthInfoArgs{
+ * 								Token:     pulumi.String("xxxxx"),
+ * 								TokenType: pulumi.String("PAT"),
+ * 							},
+ * 							SourceControlType: pulumi.String("Github"),
+ * 						},
+ * 						SourceTriggerEvents: pulumi.StringArray{
+ * 							pulumi.String("commit"),
+ * 						},
+ * 					},
+ * 				},
+ * 				TimerTriggers: containerregistry.TimerTriggerArray{
+ * 					&containerregistry.TimerTriggerArgs{
+ * 						Name:     pulumi.String("myTimerTrigger"),
+ * 						Schedule: pulumi.String("30 9 * * 1-5"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const task = new azure_native.containerregistry.Task("task", {
+ *     agentConfiguration: {
+ *         cpu: 2,
+ *     },
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     isSystemTask: false,
+ *     location: "eastus",
+ *     platform: {
+ *         architecture: "amd64",
+ *         os: "Linux",
+ *     },
+ *     registryName: "myRegistry",
+ *     resourceGroupName: "myResourceGroup",
+ *     status: "Enabled",
+ *     step: {
+ *         arguments: [
+ *             {
+ *                 isSecret: false,
+ *                 name: "mytestargument",
+ *                 value: "mytestvalue",
+ *             },
+ *             {
+ *                 isSecret: true,
+ *                 name: "mysecrettestargument",
+ *                 value: "mysecrettestvalue",
+ *             },
+ *         ],
+ *         contextPath: "src",
+ *         dockerFilePath: "src/DockerFile",
+ *         imageNames: ["azurerest:testtag"],
+ *         isPushEnabled: true,
+ *         noCache: false,
+ *         type: "Docker",
+ *     },
+ *     tags: {
+ *         testkey: "value",
+ *     },
+ *     taskName: "mytTask",
+ *     trigger: {
+ *         baseImageTrigger: {
+ *             baseImageTriggerType: "Runtime",
+ *             name: "myBaseImageTrigger",
+ *         },
+ *         sourceTriggers: [{
+ *             name: "mySourceTrigger",
+ *             sourceRepository: {
+ *                 branch: "master",
+ *                 repositoryUrl: "https://github.com/Azure/azure-rest-api-specs",
+ *                 sourceControlAuthProperties: {
+ *                     token: "xxxxx",
+ *                     tokenType: "PAT",
+ *                 },
+ *                 sourceControlType: "Github",
+ *             },
+ *             sourceTriggerEvents: ["commit"],
+ *         }],
+ *         timerTriggers: [{
+ *             name: "myTimerTrigger",
+ *             schedule: "30 9 * * 1-5",
+ *         }],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * task = azure_native.containerregistry.Task("task",
+ *     agent_configuration=azure_native.containerregistry.AgentPropertiesArgs(
+ *         cpu=2,
+ *     ),
+ *     identity=azure_native.containerregistry.IdentityPropertiesArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     is_system_task=False,
+ *     location="eastus",
+ *     platform=azure_native.containerregistry.PlatformPropertiesArgs(
+ *         architecture="amd64",
+ *         os="Linux",
+ *     ),
+ *     registry_name="myRegistry",
+ *     resource_group_name="myResourceGroup",
+ *     status="Enabled",
+ *     step=azure_native.containerregistry.DockerBuildStepArgs(
+ *         arguments=[
+ *             azure_native.containerregistry.ArgumentArgs(
+ *                 is_secret=False,
+ *                 name="mytestargument",
+ *                 value="mytestvalue",
+ *             ),
+ *             azure_native.containerregistry.ArgumentArgs(
+ *                 is_secret=True,
+ *                 name="mysecrettestargument",
+ *                 value="mysecrettestvalue",
+ *             ),
+ *         ],
+ *         context_path="src",
+ *         docker_file_path="src/DockerFile",
+ *         image_names=["azurerest:testtag"],
+ *         is_push_enabled=True,
+ *         no_cache=False,
+ *         type="Docker",
+ *     ),
+ *     tags={
+ *         "testkey": "value",
+ *     },
+ *     task_name="mytTask",
+ *     trigger=azure_native.containerregistry.TriggerPropertiesArgs(
+ *         base_image_trigger=azure_native.containerregistry.BaseImageTriggerArgs(
+ *             base_image_trigger_type="Runtime",
+ *             name="myBaseImageTrigger",
+ *         ),
+ *         source_triggers=[azure_native.containerregistry.SourceTriggerArgs(
+ *             name="mySourceTrigger",
+ *             source_repository=azure_native.containerregistry.SourcePropertiesArgs(
+ *                 branch="master",
+ *                 repository_url="https://github.com/Azure/azure-rest-api-specs",
+ *                 source_control_auth_properties=azure_native.containerregistry.AuthInfoArgs(
+ *                     token="xxxxx",
+ *                     token_type="PAT",
+ *                 ),
+ *                 source_control_type="Github",
+ *             ),
+ *             source_trigger_events=["commit"],
+ *         )],
+ *         timer_triggers=[azure_native.containerregistry.TimerTriggerArgs(
+ *             name="myTimerTrigger",
+ *             schedule="30 9 * * 1-5",
+ *         )],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -46,252 +1565,216 @@ import javax.annotation.Nullable;
 public class Task extends io.pulumi.resources.CustomResource {
     /**
      * The machine configuration of the run agent.
-     * 
      */
     @Export(name="agentConfiguration", type=AgentPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AgentPropertiesResponse> agentConfiguration;
 
     /**
      * @return The machine configuration of the run agent.
-     * 
      */
     public Output</* @Nullable */ AgentPropertiesResponse> getAgentConfiguration() {
         return this.agentConfiguration;
     }
     /**
      * The dedicated agent pool for the task.
-     * 
      */
     @Export(name="agentPoolName", type=String.class, parameters={})
     private Output</* @Nullable */ String> agentPoolName;
 
     /**
      * @return The dedicated agent pool for the task.
-     * 
      */
     public Output</* @Nullable */ String> getAgentPoolName() {
         return this.agentPoolName;
     }
     /**
      * The creation date of task.
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
      * @return The creation date of task.
-     * 
      */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * The properties that describes a set of credentials that will be used when this run is invoked.
-     * 
      */
     @Export(name="credentials", type=CredentialsResponse.class, parameters={})
     private Output</* @Nullable */ CredentialsResponse> credentials;
 
     /**
      * @return The properties that describes a set of credentials that will be used when this run is invoked.
-     * 
      */
     public Output</* @Nullable */ CredentialsResponse> getCredentials() {
         return this.credentials;
     }
     /**
      * Identity for the resource.
-     * 
      */
     @Export(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
     /**
      * @return Identity for the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The value of this property indicates whether the task resource is system task or not.
-     * 
      */
     @Export(name="isSystemTask", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isSystemTask;
 
     /**
      * @return The value of this property indicates whether the task resource is system task or not.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsSystemTask() {
         return this.isSystemTask;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The template that describes the repository and tag information for run log artifact.
-     * 
      */
     @Export(name="logTemplate", type=String.class, parameters={})
     private Output</* @Nullable */ String> logTemplate;
 
     /**
      * @return The template that describes the repository and tag information for run log artifact.
-     * 
      */
     public Output</* @Nullable */ String> getLogTemplate() {
         return this.logTemplate;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The platform properties against which the run has to happen.
-     * 
      */
     @Export(name="platform", type=PlatformPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ PlatformPropertiesResponse> platform;
 
     /**
      * @return The platform properties against which the run has to happen.
-     * 
      */
     public Output</* @Nullable */ PlatformPropertiesResponse> getPlatform() {
         return this.platform;
     }
     /**
      * The provisioning state of the task.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the task.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The current status of task.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return The current status of task.
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * The properties of a task step.
-     * 
      */
     @Export(name="step", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> step;
 
     /**
      * @return The properties of a task step.
-     * 
      */
     public Output</* @Nullable */ Object> getStep() {
         return this.step;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Run timeout in seconds.
-     * 
      */
     @Export(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
      * @return Run timeout in seconds.
-     * 
      */
     public Output</* @Nullable */ Integer> getTimeout() {
         return this.timeout;
     }
     /**
      * The properties that describe all triggers for the task.
-     * 
      */
     @Export(name="trigger", type=TriggerPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ TriggerPropertiesResponse> trigger;
 
     /**
      * @return The properties that describe all triggers for the task.
-     * 
      */
     public Output</* @Nullable */ TriggerPropertiesResponse> getTrigger() {
         return this.trigger;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

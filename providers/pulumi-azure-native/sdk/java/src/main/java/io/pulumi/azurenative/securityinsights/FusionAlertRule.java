@@ -18,7 +18,231 @@ import javax.annotation.Nullable;
  * Represents Fusion alert rule.
  * API Version: 2020-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates a Fusion alert rule.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fusionAlertRule = new AzureNative.SecurityInsights.FusionAlertRule("fusionAlertRule", new AzureNative.SecurityInsights.FusionAlertRuleArgs
+ *         {
+ *             AlertRuleTemplateName = "f71aba3d-28fb-450b-b192-4e76a83015c8",
+ *             Enabled = true,
+ *             Kind = "Fusion",
+ *             ResourceGroupName = "myRg",
+ *             RuleId = "myFirstFusionRule",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewFusionAlertRule(ctx, "fusionAlertRule", &securityinsights.FusionAlertRuleArgs{
+ * 			AlertRuleTemplateName: pulumi.String("f71aba3d-28fb-450b-b192-4e76a83015c8"),
+ * 			Enabled:               pulumi.Bool(true),
+ * 			Kind:                  pulumi.String("Fusion"),
+ * 			ResourceGroupName:     pulumi.String("myRg"),
+ * 			RuleId:                pulumi.String("myFirstFusionRule"),
+ * 			WorkspaceName:         pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fusionAlertRule = new azure_native.securityinsights.FusionAlertRule("fusionAlertRule", {
+ *     alertRuleTemplateName: "f71aba3d-28fb-450b-b192-4e76a83015c8",
+ *     enabled: true,
+ *     kind: "Fusion",
+ *     resourceGroupName: "myRg",
+ *     ruleId: "myFirstFusionRule",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * fusion_alert_rule = azure_native.securityinsights.FusionAlertRule("fusionAlertRule",
+ *     alert_rule_template_name="f71aba3d-28fb-450b-b192-4e76a83015c8",
+ *     enabled=True,
+ *     kind="Fusion",
+ *     resource_group_name="myRg",
+ *     rule_id="myFirstFusionRule",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates a MicrosoftSecurityIncidentCreation rule.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fusionAlertRule = new AzureNative.SecurityInsights.FusionAlertRule("fusionAlertRule", new AzureNative.SecurityInsights.FusionAlertRuleArgs
+ *         {
+ *             ResourceGroupName = "myRg",
+ *             RuleId = "microsoftSecurityIncidentCreationRuleExample",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewFusionAlertRule(ctx, "fusionAlertRule", &securityinsights.FusionAlertRuleArgs{
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			RuleId:            pulumi.String("microsoftSecurityIncidentCreationRuleExample"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fusionAlertRule = new azure_native.securityinsights.FusionAlertRule("fusionAlertRule", {
+ *     resourceGroupName: "myRg",
+ *     ruleId: "microsoftSecurityIncidentCreationRuleExample",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * fusion_alert_rule = azure_native.securityinsights.FusionAlertRule("fusionAlertRule",
+ *     resource_group_name="myRg",
+ *     rule_id="microsoftSecurityIncidentCreationRuleExample",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Creates or updates a Scheduled alert rule.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var fusionAlertRule = new AzureNative.SecurityInsights.FusionAlertRule("fusionAlertRule", new AzureNative.SecurityInsights.FusionAlertRuleArgs
+ *         {
+ *             ResourceGroupName = "myRg",
+ *             RuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *             WorkspaceName = "myWorkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := securityinsights.NewFusionAlertRule(ctx, "fusionAlertRule", &securityinsights.FusionAlertRuleArgs{
+ * 			ResourceGroupName: pulumi.String("myRg"),
+ * 			RuleId:            pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+ * 			WorkspaceName:     pulumi.String("myWorkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const fusionAlertRule = new azure_native.securityinsights.FusionAlertRule("fusionAlertRule", {
+ *     resourceGroupName: "myRg",
+ *     ruleId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     workspaceName: "myWorkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * fusion_alert_rule = azure_native.securityinsights.FusionAlertRule("fusionAlertRule",
+ *     resource_group_name="myRg",
+ *     rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+ *     workspace_name="myWorkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +257,60 @@ import javax.annotation.Nullable;
 public class FusionAlertRule extends io.pulumi.resources.CustomResource {
     /**
      * The Name of the alert rule template used to create this rule.
-     * 
      */
     @Export(name="alertRuleTemplateName", type=String.class, parameters={})
     private Output<String> alertRuleTemplateName;
 
     /**
      * @return The Name of the alert rule template used to create this rule.
-     * 
      */
     public Output<String> getAlertRuleTemplateName() {
         return this.alertRuleTemplateName;
     }
     /**
      * The description of the alert rule.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return The description of the alert rule.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * The display name for alerts created by this alert rule.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return The display name for alerts created by this alert rule.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Determines whether this alert rule is enabled or disabled.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
     /**
      * @return Determines whether this alert rule is enabled or disabled.
-     * 
      */
     public Output<Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * Etag of the azure resource
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
      * @return Etag of the azure resource
-     * 
      */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
@@ -104,7 +318,6 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
     /**
      * The kind of the alert rule
      * Expected value is 'Fusion'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -112,77 +325,66 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
     /**
      * @return The kind of the alert rule
      * Expected value is 'Fusion'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The last time that this alert has been modified.
-     * 
      */
     @Export(name="lastModifiedUtc", type=String.class, parameters={})
     private Output<String> lastModifiedUtc;
 
     /**
      * @return The last time that this alert has been modified.
-     * 
      */
     public Output<String> getLastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The severity for alerts created by this alert rule.
-     * 
      */
     @Export(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
     /**
      * @return The severity for alerts created by this alert rule.
-     * 
      */
     public Output<String> getSeverity() {
         return this.severity;
     }
     /**
      * The tactics of the alert rule
-     * 
      */
     @Export(name="tactics", type=List.class, parameters={String.class})
     private Output<List<String>> tactics;
 
     /**
      * @return The tactics of the alert rule
-     * 
      */
     public Output<List<String>> getTactics() {
         return this.tactics;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

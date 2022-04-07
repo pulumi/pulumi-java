@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The availability information of sizes across regions
- * 
  */
 public final class RegionalAvailabilityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class RegionalAvailabilityResponse extends io.pulumi.resources.Invo
 
     /**
      * Corresponding region
-     * 
      */
     @Import(name="region")
       private final @Nullable String region;
@@ -33,7 +31,6 @@ public final class RegionalAvailabilityResponse extends io.pulumi.resources.Invo
 
     /**
      * List of all the size information for the region
-     * 
      */
     @Import(name="sizeAvailabilities")
       private final @Nullable List<SizeAvailabilityResponse> sizeAvailabilities;

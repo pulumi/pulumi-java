@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The auto-approval list of the private link service.
- * 
  */
 public final class PrivateLinkServicePropertiesResponseAutoApproval extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval extends io.p
 
     /**
      * The list of subscriptions.
-     * 
      */
     @Import(name="subscriptions")
       private final @Nullable List<String> subscriptions;

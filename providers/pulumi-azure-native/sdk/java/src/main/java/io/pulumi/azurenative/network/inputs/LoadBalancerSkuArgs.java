@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * SKU of a load balancer.
- * 
  */
 public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of a load balancer SKU.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<Either<String,LoadBalancerSkuName>> name;
@@ -34,7 +32,6 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Tier of a load balancer SKU.
-     * 
      */
     @Import(name="tier")
       private final @Nullable Output<Either<String,LoadBalancerSkuTier>> tier;

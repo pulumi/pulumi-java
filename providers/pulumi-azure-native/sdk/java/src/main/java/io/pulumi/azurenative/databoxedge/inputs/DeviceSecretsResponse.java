@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Device Secrets
- * 
  */
 public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Keyvault Id of BMCDefaultUserPassword
-     * 
      */
     @Import(name="bmcDefaultUserPassword")
       private final @Nullable SecretResponse bmcDefaultUserPassword;
@@ -31,7 +29,6 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Keyvault Id of HcsDataVolumeBitLockerExternalKey
-     * 
      */
     @Import(name="hcsDataVolumeBitLockerExternalKey")
       private final @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey;
@@ -42,7 +39,6 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Keyvault Id of HcsInternalVolumeBitLockerExternalKey
-     * 
      */
     @Import(name="hcsInternalVolumeBitLockerExternalKey")
       private final @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey;
@@ -53,7 +49,6 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Keyvault Id of RotateKeyForDataVolumeBitlocker
-     * 
      */
     @Import(name="rotateKeyForDataVolumeBitlocker")
       private final @Nullable SecretResponse rotateKeyForDataVolumeBitlocker;
@@ -64,7 +59,6 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Keyvault Id of RotateKeysForSedDrivesSerialized
-     * 
      */
     @Import(name="rotateKeysForSedDrivesSerialized")
       private final @Nullable SecretResponse rotateKeysForSedDrivesSerialized;
@@ -75,7 +69,6 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Keyvault Id of SEDEncryptionExternalKey
-     * 
      */
     @Import(name="sedEncryptionExternalKey")
       private final @Nullable SecretResponse sedEncryptionExternalKey;
@@ -86,7 +79,6 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Keyvault Id of SEDEncryptionExternalKeyId
-     * 
      */
     @Import(name="sedEncryptionExternalKeyId")
       private final @Nullable SecretResponse sedEncryptionExternalKeyId;
@@ -97,7 +89,6 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Keyvault Id of SystemVolumeBitLockerRecoveryKey
-     * 
      */
     @Import(name="systemVolumeBitLockerRecoveryKey")
       private final @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;

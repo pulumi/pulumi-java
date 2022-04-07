@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Management resource preference to link device
- * 
  */
 public final class ManagementResourcePreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ManagementResourcePreferencesResponse extends io.pulumi.resou
 
     /**
      * Customer preferred Management resource ARM ID
-     * 
      */
     @Import(name="preferredManagementResourceId")
       private final @Nullable String preferredManagementResourceId;

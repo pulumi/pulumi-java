@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A resource identity that is managed by the user of the service.
- * 
  */
 public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The client ID of the user-assigned identity.
-     * 
      */
     @Import(name="clientId", required=true)
       private final String clientId;
@@ -29,7 +27,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The principal ID of the user-assigned identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;

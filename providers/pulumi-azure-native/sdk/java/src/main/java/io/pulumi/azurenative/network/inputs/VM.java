@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a Virtual Machine.
- * 
  */
 public final class VM extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VM extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -32,7 +30,6 @@ public final class VM extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -43,7 +40,6 @@ public final class VM extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;

@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class AdditionalWorkspacesPropertiesResponse {
     /**
      * List of data types sent to workspace
-     * 
      */
     private final @Nullable List<String> dataTypes;
     /**
      * Workspace type.
-     * 
      */
     private final @Nullable String type;
     /**
      * Workspace resource id
-     * 
      */
     private final @Nullable String workspace;
 
@@ -40,21 +37,18 @@ public final class AdditionalWorkspacesPropertiesResponse {
 
     /**
      * List of data types sent to workspace
-     * 
     */
     public List<String> getDataTypes() {
         return this.dataTypes == null ? List.of() : this.dataTypes;
     }
     /**
      * Workspace type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Workspace resource id
-     * 
     */
     public Optional<String> getWorkspace() {
         return Optional.ofNullable(this.workspace);

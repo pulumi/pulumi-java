@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * A private link scoped resource
  * API Version: 2020-08-15-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update a scoped resource in a private link scope.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateLinkScopedResource = new AzureNative.HybridCompute.PrivateLinkScopedResource("privateLinkScopedResource", new AzureNative.HybridCompute.PrivateLinkScopedResourceArgs
+ *         {
+ *             LinkedResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
+ *             Name = "scoped-resource-name",
+ *             ResourceGroupName = "myResourceGroup",
+ *             ScopeName = "myPrivateLinkScope",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	hybridcompute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridcompute"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := hybridcompute.NewPrivateLinkScopedResource(ctx, "privateLinkScopedResource", &hybridcompute.PrivateLinkScopedResourceArgs{
+ * 			LinkedResourceId:  pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1"),
+ * 			Name:              pulumi.String("scoped-resource-name"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ScopeName:         pulumi.String("myPrivateLinkScope"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateLinkScopedResource = new azure_native.hybridcompute.PrivateLinkScopedResource("privateLinkScopedResource", {
+ *     linkedResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
+ *     name: "scoped-resource-name",
+ *     resourceGroupName: "myResourceGroup",
+ *     scopeName: "myPrivateLinkScope",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_link_scoped_resource = azure_native.hybridcompute.PrivateLinkScopedResource("privateLinkScopedResource",
+ *     linked_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/machineName1",
+ *     name="scoped-resource-name",
+ *     resource_group_name="myResourceGroup",
+ *     scope_name="myPrivateLinkScope")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,56 +108,48 @@ import javax.annotation.Nullable;
 public class PrivateLinkScopedResource extends io.pulumi.resources.CustomResource {
     /**
      * The resource id of the scoped Azure monitor resource.
-     * 
      */
     @Export(name="linkedResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkedResourceId;
 
     /**
      * @return The resource id of the scoped Azure monitor resource.
-     * 
      */
     public Output</* @Nullable */ String> getLinkedResourceId() {
         return this.linkedResourceId;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the private endpoint connection.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return State of the private endpoint connection.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

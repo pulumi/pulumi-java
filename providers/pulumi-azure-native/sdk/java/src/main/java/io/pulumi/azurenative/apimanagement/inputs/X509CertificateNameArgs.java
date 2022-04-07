@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of server X509Names.
- * 
  */
 public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Thumbprint for the Issuer of the Certificate.
-     * 
      */
     @Import(name="issuerCertificateThumbprint")
       private final @Nullable Output<String> issuerCertificateThumbprint;
@@ -31,7 +29,6 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Common Name of the Certificate.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The method that should be used to authenticate the user.
-     * 
      */
     @EnumType
     public enum ClientCredentialMethod {

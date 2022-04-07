@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The Network Adapter configuration of a DataBox.
- * 
  */
 public final class ApplianceNetworkConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApplianceNetworkConfigurationResponse extends io.pulumi.resou
 
     /**
      * Mac Address.
-     * 
      */
     @Import(name="macAddress", required=true)
       private final String macAddress;
@@ -29,7 +27,6 @@ public final class ApplianceNetworkConfigurationResponse extends io.pulumi.resou
 
     /**
      * Name of the network.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

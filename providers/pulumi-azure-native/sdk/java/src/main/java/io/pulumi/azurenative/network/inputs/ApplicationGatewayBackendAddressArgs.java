@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Backend address of an application gateway.
- * 
  */
 public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
 
     /**
      * Fully qualified domain name (FQDN).
-     * 
      */
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
@@ -31,7 +29,6 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
 
     /**
      * IP address.
-     * 
      */
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;

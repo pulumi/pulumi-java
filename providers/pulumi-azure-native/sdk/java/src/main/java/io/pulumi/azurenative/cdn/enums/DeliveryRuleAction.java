@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The name of the action for the delivery rule.
-     * 
      */
     @EnumType
     public enum DeliveryRuleAction {

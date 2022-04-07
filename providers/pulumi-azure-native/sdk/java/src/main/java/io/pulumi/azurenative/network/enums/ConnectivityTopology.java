@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Connectivity topology type.
-     * 
      */
     @EnumType
     public enum ConnectivityTopology {

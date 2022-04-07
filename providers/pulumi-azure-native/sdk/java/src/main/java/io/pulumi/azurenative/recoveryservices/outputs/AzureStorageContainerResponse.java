@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class AzureStorageContainerResponse {
     /**
      * Type of backup management for the container.
-     * 
      */
     private final @Nullable String backupManagementType;
     /**
@@ -23,42 +22,34 @@ public final class AzureStorageContainerResponse {
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'StorageContainer'.
-     * 
      */
     private final String containerType;
     /**
      * Friendly name of the container.
-     * 
      */
     private final @Nullable String friendlyName;
     /**
      * Status of health of the container.
-     * 
      */
     private final @Nullable String healthStatus;
     /**
      * Number of items backed up in this container.
-     * 
      */
     private final @Nullable Double protectedItemCount;
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     private final @Nullable String registrationStatus;
     /**
      * Resource group name of Recovery Services Vault.
-     * 
      */
     private final @Nullable String resourceGroup;
     /**
      * Fully qualified ARM url.
-     * 
      */
     private final @Nullable String sourceResourceId;
     /**
      * Storage account version.
-     * 
      */
     private final @Nullable String storageAccountVersion;
 
@@ -86,7 +77,6 @@ public final class AzureStorageContainerResponse {
 
     /**
      * Type of backup management for the container.
-     * 
     */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
@@ -97,56 +87,48 @@ public final class AzureStorageContainerResponse {
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'StorageContainer'.
-     * 
     */
     public String getContainerType() {
         return this.containerType;
     }
     /**
      * Friendly name of the container.
-     * 
     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
-     * 
     */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Number of items backed up in this container.
-     * 
     */
     public Optional<Double> getProtectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
     */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
      * Resource group name of Recovery Services Vault.
-     * 
     */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * Fully qualified ARM url.
-     * 
     */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Storage account version.
-     * 
     */
     public Optional<String> getStorageAccountVersion() {
         return Optional.ofNullable(this.storageAccountVersion);

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional Confidential Ledger properties.
- * 
  */
 public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Array of all AAD based Security Principals.
-     * 
      */
     @Import(name="aadBasedSecurityPrincipals")
       private final @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
@@ -34,7 +32,6 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Array of all cert based Security Principals.
-     * 
      */
     @Import(name="certBasedSecurityPrincipals")
       private final @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
@@ -45,7 +42,6 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Endpoint for accessing network identity.
-     * 
      */
     @Import(name="identityServiceUri", required=true)
       private final String identityServiceUri;
@@ -56,7 +52,6 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Internal namespace for the Ledger
-     * 
      */
     @Import(name="ledgerInternalNamespace", required=true)
       private final String ledgerInternalNamespace;
@@ -67,7 +62,6 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Unique name for the Confidential Ledger.
-     * 
      */
     @Import(name="ledgerName", required=true)
       private final String ledgerName;
@@ -78,7 +72,6 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of the Blob Storage Account for saving ledger files
-     * 
      */
     @Import(name="ledgerStorageAccount")
       private final @Nullable String ledgerStorageAccount;
@@ -89,7 +82,6 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Type of Confidential Ledger
-     * 
      */
     @Import(name="ledgerType")
       private final @Nullable String ledgerType;
@@ -100,7 +92,6 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Endpoint for calling Ledger Service.
-     * 
      */
     @Import(name="ledgerUri", required=true)
       private final String ledgerUri;
@@ -111,7 +102,6 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Provisioning state of Ledger Resource
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

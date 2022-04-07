@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Required inbound or outbound traffic for Azure Spring Cloud instance.
- * 
  */
 public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The direction of required traffic
-     * 
      */
     @Import(name="direction", required=true)
       private final String direction;
@@ -31,7 +29,6 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The FQDN list of required traffic
-     * 
      */
     @Import(name="fqdns", required=true)
       private final List<String> fqdns;
@@ -42,7 +39,6 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The ip list of required traffic
-     * 
      */
     @Import(name="ips", required=true)
       private final List<String> ips;
@@ -53,7 +49,6 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The port of required traffic
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;
@@ -64,7 +59,6 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The protocol of required traffic
-     * 
      */
     @Import(name="protocol", required=true)
       private final String protocol;

@@ -16,7 +16,6 @@ public final class ExcludedPathArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-     * 
      */
     @Import(name="path")
       private final @Nullable Output<String> path;

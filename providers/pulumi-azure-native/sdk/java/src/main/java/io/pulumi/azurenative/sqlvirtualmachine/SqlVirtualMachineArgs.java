@@ -28,7 +28,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Auto backup settings for SQL Server.
-     * 
      */
     @Import(name="autoBackupSettings")
       private final @Nullable Output<AutoBackupSettingsArgs> autoBackupSettings;
@@ -39,7 +38,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Auto patching settings for applying critical security updates to SQL virtual machine.
-     * 
      */
     @Import(name="autoPatchingSettings")
       private final @Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings;
@@ -50,7 +48,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Azure Active Directory identity of the server.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
@@ -61,7 +58,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Key vault credential settings.
-     * 
      */
     @Import(name="keyVaultCredentialSettings")
       private final @Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
@@ -72,7 +68,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -83,7 +78,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -94,7 +88,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * SQL Server configuration management settings.
-     * 
      */
     @Import(name="serverConfigurationsManagementSettings")
       private final @Nullable Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
@@ -105,7 +98,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
-     * 
      */
     @Import(name="sqlImageOffer")
       private final @Nullable Output<String> sqlImageOffer;
@@ -116,7 +108,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * SQL Server edition type.
-     * 
      */
     @Import(name="sqlImageSku")
       private final @Nullable Output<Either<String,SqlImageSku>> sqlImageSku;
@@ -127,7 +118,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * SQL Server Management type.
-     * 
      */
     @Import(name="sqlManagement")
       private final @Nullable Output<Either<String,SqlManagementMode>> sqlManagement;
@@ -138,7 +128,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * SQL Server license type.
-     * 
      */
     @Import(name="sqlServerLicenseType")
       private final @Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
@@ -149,7 +138,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
-     * 
      */
     @Import(name="sqlVirtualMachineGroupResourceId")
       private final @Nullable Output<String> sqlVirtualMachineGroupResourceId;
@@ -160,7 +148,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Name of the SQL virtual machine.
-     * 
      */
     @Import(name="sqlVirtualMachineName")
       private final @Nullable Output<String> sqlVirtualMachineName;
@@ -171,7 +158,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Storage Configuration Settings.
-     * 
      */
     @Import(name="storageConfigurationSettings")
       private final @Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings;
@@ -182,7 +168,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -193,7 +178,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * ARM Resource id of underlying virtual machine created from SQL marketplace image.
-     * 
      */
     @Import(name="virtualMachineResourceId")
       private final @Nullable Output<String> virtualMachineResourceId;
@@ -204,7 +188,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
-     * 
      */
     @Import(name="wsfcDomainCredentials")
       private final @Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials;

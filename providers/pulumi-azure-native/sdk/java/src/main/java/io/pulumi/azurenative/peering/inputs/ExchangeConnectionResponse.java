@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The properties that define an exchange connection.
- * 
  */
 public final class ExchangeConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The BGP session associated with the connection.
-     * 
      */
     @Import(name="bgpSession")
       private final @Nullable BgpSessionResponse bgpSession;
@@ -33,7 +31,6 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The unique identifier (GUID) for the connection.
-     * 
      */
     @Import(name="connectionIdentifier")
       private final @Nullable String connectionIdentifier;
@@ -44,7 +41,6 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The state of the connection.
-     * 
      */
     @Import(name="connectionState", required=true)
       private final String connectionState;
@@ -55,7 +51,6 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The error message related to the connection state, if any.
-     * 
      */
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
@@ -66,7 +61,6 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The PeeringDB.com ID of the facility at which the connection has to be set up.
-     * 
      */
     @Import(name="peeringDBFacilityId")
       private final @Nullable Integer peeringDBFacilityId;

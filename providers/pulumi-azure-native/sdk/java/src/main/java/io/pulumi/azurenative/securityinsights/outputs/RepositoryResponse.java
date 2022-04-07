@@ -15,27 +15,22 @@ import javax.annotation.Nullable;
 public final class RepositoryResponse {
     /**
      * Branch name of repository.
-     * 
      */
     private final @Nullable String branch;
     /**
      * Url to access repository action logs.
-     * 
      */
     private final @Nullable String deploymentLogsUrl;
     /**
      * Display url of repository.
-     * 
      */
     private final @Nullable String displayUrl;
     /**
      * Dictionary of source control content type and path mapping.
-     * 
      */
     private final @Nullable List<ContentPathMapResponse> pathMapping;
     /**
      * Url of repository.
-     * 
      */
     private final @Nullable String url;
 
@@ -55,35 +50,30 @@ public final class RepositoryResponse {
 
     /**
      * Branch name of repository.
-     * 
     */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * Url to access repository action logs.
-     * 
     */
     public Optional<String> getDeploymentLogsUrl() {
         return Optional.ofNullable(this.deploymentLogsUrl);
     }
     /**
      * Display url of repository.
-     * 
     */
     public Optional<String> getDisplayUrl() {
         return Optional.ofNullable(this.displayUrl);
     }
     /**
      * Dictionary of source control content type and path mapping.
-     * 
     */
     public List<ContentPathMapResponse> getPathMapping() {
         return this.pathMapping == null ? List.of() : this.pathMapping;
     }
     /**
      * Url of repository.
-     * 
     */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);

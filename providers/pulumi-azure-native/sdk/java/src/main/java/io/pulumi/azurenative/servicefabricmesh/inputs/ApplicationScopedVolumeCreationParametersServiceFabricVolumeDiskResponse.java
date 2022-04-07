@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes parameters for creating application-scoped volumes provided by Service Fabric Volume Disks
- * 
  */
 public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
 
     /**
      * User readable description of the volume.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -32,7 +30,6 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     /**
      * Specifies the application-scoped volume kind.
      * Expected value is 'ServiceFabricVolumeDisk'.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -43,7 +40,6 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
 
     /**
      * Volume size
-     * 
      */
     @Import(name="sizeDisk", required=true)
       private final String sizeDisk;

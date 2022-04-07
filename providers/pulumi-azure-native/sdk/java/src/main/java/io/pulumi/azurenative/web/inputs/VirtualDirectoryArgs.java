@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Directory for virtual application.
- * 
  */
 public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Physical path.
-     * 
      */
     @Import(name="physicalPath")
       private final @Nullable Output<String> physicalPath;
@@ -31,7 +29,6 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Path to virtual application.
-     * 
      */
     @Import(name="virtualPath")
       private final @Nullable Output<String> virtualPath;

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Specifies the metric alert rule criteria for a web test resource.
- * 
  */
 public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
 
     /**
      * The Application Insights resource Id.
-     * 
      */
     @Import(name="componentId", required=true)
       private final Output<String> componentId;
@@ -31,7 +29,6 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
 
     /**
      * The number of failed locations.
-     * 
      */
     @Import(name="failedLocationCount", required=true)
       private final Output<Double> failedLocationCount;
@@ -43,7 +40,6 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     /**
      * specifies the type of the alert criteria.
      * Expected value is 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -54,7 +50,6 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
 
     /**
      * The Application Insights web test Id.
-     * 
      */
     @Import(name="webTestId", required=true)
       private final Output<String> webTestId;

@@ -10,38 +10,31 @@ import java.util.StringJoiner;
 
     /**
      * The track property type.
-     * 
      */
     @EnumType
     public enum FilterTrackPropertyType {
         /**
          * The unknown track property type.
-         * 
          */
         Unknown("Unknown"),
         /**
          * The type.
-         * 
          */
         Type("Type"),
         /**
          * The name.
-         * 
          */
         Name("Name"),
         /**
          * The language.
-         * 
          */
         Language("Language"),
         /**
          * The fourCC.
-         * 
          */
         FourCC("FourCC"),
         /**
          * The bitrate.
-         * 
          */
         Bitrate("Bitrate");
 

@@ -19,7 +19,92 @@ import javax.annotation.Nullable;
  * Resource information with extended details.
  * API Version: 2019-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a secret
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var secret = new AzureNative.KeyVault.Secret("secret", new AzureNative.KeyVault.SecretArgs
+ *         {
+ *             Properties = new AzureNative.KeyVault.Inputs.SecretPropertiesArgs
+ *             {
+ *                 Value = "secret-value",
+ *             },
+ *             ResourceGroupName = "sample-group",
+ *             SecretName = "secret-name",
+ *             VaultName = "sample-vault",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := keyvault.NewSecret(ctx, "secret", &keyvault.SecretArgs{
+ * 			Properties: &keyvault.SecretPropertiesArgs{
+ * 				Value: pulumi.String("secret-value"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("sample-group"),
+ * 			SecretName:        pulumi.String("secret-name"),
+ * 			VaultName:         pulumi.String("sample-vault"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const secret = new azure_native.keyvault.Secret("secret", {
+ *     properties: {
+ *         value: "secret-value",
+ *     },
+ *     resourceGroupName: "sample-group",
+ *     secretName: "secret-name",
+ *     vaultName: "sample-vault",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * secret = azure_native.keyvault.Secret("secret",
+ *     properties=azure_native.keyvault.SecretPropertiesArgs(
+ *         value="secret-value",
+ *     ),
+ *     resource_group_name="sample-group",
+ *     secret_name="secret-name",
+ *     vault_name="sample-vault")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +119,60 @@ import javax.annotation.Nullable;
 public class Secret extends io.pulumi.resources.CustomResource {
     /**
      * Azure location of the key vault resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Azure location of the key vault resource.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Name of the key vault resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the key vault resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the secret
-     * 
      */
     @Export(name="properties", type=SecretPropertiesResponse.class, parameters={})
     private Output<SecretPropertiesResponse> properties;
 
     /**
      * @return Properties of the secret
-     * 
      */
     public Output<SecretPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Tags assigned to the key vault resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
      * @return Tags assigned to the key vault resource.
-     * 
      */
     public Output<Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type of the key vault resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type of the key vault resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

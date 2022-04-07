@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Status from this instance of the extension.
- * 
  */
 public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Status code provided by the Extension
-     * 
      */
     @Import(name="code")
       private final @Nullable Output<String> code;
@@ -33,7 +31,6 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Short description of status of this instance of the extension.
-     * 
      */
     @Import(name="displayStatus")
       private final @Nullable Output<String> displayStatus;
@@ -44,7 +41,6 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Level of the status.
-     * 
      */
     @Import(name="level")
       private final @Nullable Output<Either<String,LevelType>> level;
@@ -55,7 +51,6 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Detailed message of the status from the Extension instance.
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -66,7 +61,6 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * DateLiteral (per ISO8601) noting the time of installation status.
-     * 
      */
     @Import(name="time")
       private final @Nullable Output<String> time;

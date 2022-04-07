@@ -14,7 +14,6 @@ public final class GetDdosCustomPolicyArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the DDoS custom policy.
-     * 
      */
     @Import(name="ddosCustomPolicyName", required=true)
       private final String ddosCustomPolicyName;
@@ -25,7 +24,6 @@ public final class GetDdosCustomPolicyArgs extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

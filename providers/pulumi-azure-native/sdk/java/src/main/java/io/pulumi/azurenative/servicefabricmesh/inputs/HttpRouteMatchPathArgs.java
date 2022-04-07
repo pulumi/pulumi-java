@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Path to match for routing.
- * 
  */
 public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * replacement string for matched part of the Uri.
-     * 
      */
     @Import(name="rewrite")
       private final @Nullable Output<String> rewrite;
@@ -33,7 +31,6 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * how to match value in the Uri
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,PathMatchType>> type;
@@ -44,7 +41,6 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Uri path to match for request.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

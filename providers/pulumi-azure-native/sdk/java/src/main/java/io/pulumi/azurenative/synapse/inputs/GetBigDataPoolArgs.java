@@ -14,7 +14,6 @@ public final class GetBigDataPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Big Data pool name
-     * 
      */
     @Import(name="bigDataPoolName", required=true)
       private final String bigDataPoolName;
@@ -25,7 +24,6 @@ public final class GetBigDataPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetBigDataPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the workspace
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final String workspaceName;

@@ -17,7 +17,6 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -39,7 +37,6 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -50,7 +47,6 @@ public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

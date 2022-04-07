@@ -26,7 +26,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * List of additional workspaces
-     * 
      */
     @Import(name="additionalWorkspaces")
       private final @Nullable Output<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces;
@@ -37,7 +36,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Disabled data sources. Disabling these data sources compromises the system.
-     * 
      */
     @Import(name="disabledDataSources")
       private final @Nullable Output<List<Either<String,DataSource>>> disabledDataSources;
@@ -48,7 +46,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource display name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
@@ -59,7 +56,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * List of additional options for exporting to workspace data.
-     * 
      */
     @Import(name="export")
       private final @Nullable Output<List<Either<String,ExportData>>> export;
@@ -70,7 +66,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * IoT Hub resource IDs
-     * 
      */
     @Import(name="iotHubs", required=true)
       private final Output<List<String>> iotHubs;
@@ -81,7 +76,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -92,7 +86,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * List of the configuration status for each recommendation type.
-     * 
      */
     @Import(name="recommendationsConfiguration")
       private final @Nullable Output<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration;
@@ -103,7 +96,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -114,7 +106,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the IoT Security solution.
-     * 
      */
     @Import(name="solutionName")
       private final @Nullable Output<String> solutionName;
@@ -125,7 +116,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Status of the IoT Security solution.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<Either<String,SecuritySolutionStatus>> status;
@@ -136,7 +126,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -147,7 +136,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Unmasked IP address logging status
-     * 
      */
     @Import(name="unmaskedIpLoggingStatus")
       private final @Nullable Output<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus;
@@ -158,7 +146,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Properties of the IoT Security solution's user defined resources.
-     * 
      */
     @Import(name="userDefinedResources")
       private final @Nullable Output<UserDefinedResourcesPropertiesArgs> userDefinedResources;
@@ -169,7 +156,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Workspace resource ID
-     * 
      */
     @Import(name="workspace")
       private final @Nullable Output<String> workspace;

@@ -14,7 +14,6 @@ public final class GetSqlServerInstanceArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * The name of the Azure resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetSqlServerInstanceArgs extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of SQL Server Instance
-     * 
      */
     @Import(name="sqlServerInstanceName", required=true)
       private final String sqlServerInstanceName;

@@ -18,7 +18,6 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the blueprint artifact.
-     * 
      */
     @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
@@ -29,7 +28,6 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the blueprint definition.
-     * 
      */
     @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
@@ -40,7 +38,6 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the kind of blueprint artifact.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,ArtifactKind>> kind;
@@ -51,7 +48,6 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
-     * 
      */
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;

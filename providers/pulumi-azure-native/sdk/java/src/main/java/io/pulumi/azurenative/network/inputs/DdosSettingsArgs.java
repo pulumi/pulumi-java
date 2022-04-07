@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Contains the DDoS protection settings of the public IP.
- * 
  */
 public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The DDoS custom policy associated with the public IP.
-     * 
      */
     @Import(name="ddosCustomPolicy")
       private final @Nullable Output<SubResourceArgs> ddosCustomPolicy;
@@ -35,7 +33,6 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enables DDoS protection on the public IP.
-     * 
      */
     @Import(name="protectedIP")
       private final @Nullable Output<Boolean> protectedIP;
@@ -46,7 +43,6 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
-     * 
      */
     @Import(name="protectionCoverage")
       private final @Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage;

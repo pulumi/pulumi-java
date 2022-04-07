@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Data Explorer (Kusto) linked service.
- * 
  */
 public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -29,7 +28,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
@@ -40,7 +38,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
@@ -51,7 +48,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
 
     /**
      * The credential reference containing authentication information.
-     * 
      */
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
@@ -62,7 +58,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
 
     /**
      * Database name for connection. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="database", required=true)
       private final Output<Object> database;
@@ -73,7 +68,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -84,7 +78,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
 
     /**
      * The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="endpoint", required=true)
       private final Output<Object> endpoint;
@@ -95,7 +88,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
@@ -106,7 +98,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
 
     /**
      * The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
@@ -117,7 +108,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
 
     /**
      * The key of the service principal used to authenticate against Kusto.
-     * 
      */
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
@@ -128,7 +118,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
 
     /**
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
@@ -140,7 +129,6 @@ public final class AzureDataExplorerLinkedServiceArgs extends io.pulumi.resource
     /**
      * Type of linked service.
      * Expected value is 'AzureDataExplorer'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

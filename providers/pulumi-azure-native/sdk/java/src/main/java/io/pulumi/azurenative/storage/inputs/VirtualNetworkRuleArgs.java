@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual Network rule.
- * 
  */
 public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * The action of virtual network rule.
-     * 
      */
     @Import(name="action")
       private final @Nullable Output<Action> action;
@@ -34,7 +32,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets the state of virtual network rule.
-     * 
      */
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
@@ -45,7 +42,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
-     * 
      */
     @Import(name="virtualNetworkResourceId", required=true)
       private final Output<String> virtualNetworkResourceId;

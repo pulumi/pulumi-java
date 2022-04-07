@@ -15,152 +15,122 @@ import java.util.Objects;
 public final class AssessmentPropertiesResponse {
     /**
      * Storage type selected for this disk.
-     * 
      */
     private final String azureDiskType;
     /**
      * AHUB discount on windows virtual machines.
-     * 
      */
     private final String azureHybridUseBenefit;
     /**
      * Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
-     * 
      */
     private final String azureLocation;
     /**
      * Offer code according to which cost estimation is done.
-     * 
      */
     private final String azureOfferCode;
     /**
      * Pricing tier for Size evaluation.
-     * 
      */
     private final String azurePricingTier;
     /**
      * Storage Redundancy type offered by Azure.
-     * 
      */
     private final String azureStorageRedundancy;
     /**
      * List of azure VM families.
-     * 
      */
     private final List<String> azureVmFamilies;
     /**
      * Confidence rating percentage for assessment. Can be in the range [0, 100].
-     * 
      */
     private final Double confidenceRatingInPercentage;
     /**
      * Time when this project was created. Date-Time represented in ISO-8601 format.
-     * 
      */
     private final String createdTimestamp;
     /**
      * Currency to report prices in.
-     * 
      */
     private final String currency;
     /**
      * Custom discount percentage to be applied on final costs. Can be in the range [0, 100].
-     * 
      */
     private final Double discountPercentage;
     /**
      * Enterprise agreement subscription arm id.
-     * 
      */
     private final String eaSubscriptionId;
     /**
      * Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
      */
     private final Double monthlyBandwidthCost;
     /**
      * Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
      */
     private final Double monthlyComputeCost;
     /**
      * Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
      */
     private final Double monthlyPremiumStorageCost;
     /**
      * Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
      */
     private final Double monthlyStandardSSDStorageCost;
     /**
      * Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
      */
     private final Double monthlyStorageCost;
     /**
      * Number of assessed machines part of this assessment.
-     * 
      */
     private final Integer numberOfMachines;
     /**
      * Percentile of performance data used to recommend Azure size.
-     * 
      */
     private final String percentile;
     /**
      * End time to consider performance data for assessment
-     * 
      */
     private final String perfDataEndTime;
     /**
      * Start time to consider performance data for assessment
-     * 
      */
     private final String perfDataStartTime;
     /**
      * Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.
-     * 
      */
     private final String pricesTimestamp;
     /**
      * Azure reserved instance.
-     * 
      */
     private final String reservedInstance;
     /**
      * Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.
-     * 
      */
     private final Double scalingFactor;
     /**
      * Assessment sizing criterion.
-     * 
      */
     private final String sizingCriterion;
     /**
      * User configurable setting that describes the status of the assessment.
-     * 
      */
     private final String stage;
     /**
      * Whether the assessment has been created and is valid.
-     * 
      */
     private final String status;
     /**
      * Time range of performance data used to recommend a size.
-     * 
      */
     private final String timeRange;
     /**
      * Time when this project was last updated. Date-Time represented in ISO-8601 format.
-     * 
      */
     private final String updatedTimestamp;
     /**
      * Specify the duration for which the VMs are up in the on-premises environment.
-     * 
      */
     private final VmUptimeResponse vmUptime;
 
@@ -230,210 +200,180 @@ public final class AssessmentPropertiesResponse {
 
     /**
      * Storage type selected for this disk.
-     * 
     */
     public String getAzureDiskType() {
         return this.azureDiskType;
     }
     /**
      * AHUB discount on windows virtual machines.
-     * 
     */
     public String getAzureHybridUseBenefit() {
         return this.azureHybridUseBenefit;
     }
     /**
      * Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
-     * 
     */
     public String getAzureLocation() {
         return this.azureLocation;
     }
     /**
      * Offer code according to which cost estimation is done.
-     * 
     */
     public String getAzureOfferCode() {
         return this.azureOfferCode;
     }
     /**
      * Pricing tier for Size evaluation.
-     * 
     */
     public String getAzurePricingTier() {
         return this.azurePricingTier;
     }
     /**
      * Storage Redundancy type offered by Azure.
-     * 
     */
     public String getAzureStorageRedundancy() {
         return this.azureStorageRedundancy;
     }
     /**
      * List of azure VM families.
-     * 
     */
     public List<String> getAzureVmFamilies() {
         return this.azureVmFamilies;
     }
     /**
      * Confidence rating percentage for assessment. Can be in the range [0, 100].
-     * 
     */
     public Double getConfidenceRatingInPercentage() {
         return this.confidenceRatingInPercentage;
     }
     /**
      * Time when this project was created. Date-Time represented in ISO-8601 format.
-     * 
     */
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
     }
     /**
      * Currency to report prices in.
-     * 
     */
     public String getCurrency() {
         return this.currency;
     }
     /**
      * Custom discount percentage to be applied on final costs. Can be in the range [0, 100].
-     * 
     */
     public Double getDiscountPercentage() {
         return this.discountPercentage;
     }
     /**
      * Enterprise agreement subscription arm id.
-     * 
     */
     public String getEaSubscriptionId() {
         return this.eaSubscriptionId;
     }
     /**
      * Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
     */
     public Double getMonthlyBandwidthCost() {
         return this.monthlyBandwidthCost;
     }
     /**
      * Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
     */
     public Double getMonthlyComputeCost() {
         return this.monthlyComputeCost;
     }
     /**
      * Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
     */
     public Double getMonthlyPremiumStorageCost() {
         return this.monthlyPremiumStorageCost;
     }
     /**
      * Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
     */
     public Double getMonthlyStandardSSDStorageCost() {
         return this.monthlyStandardSSDStorageCost;
     }
     /**
      * Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
-     * 
     */
     public Double getMonthlyStorageCost() {
         return this.monthlyStorageCost;
     }
     /**
      * Number of assessed machines part of this assessment.
-     * 
     */
     public Integer getNumberOfMachines() {
         return this.numberOfMachines;
     }
     /**
      * Percentile of performance data used to recommend Azure size.
-     * 
     */
     public String getPercentile() {
         return this.percentile;
     }
     /**
      * End time to consider performance data for assessment
-     * 
     */
     public String getPerfDataEndTime() {
         return this.perfDataEndTime;
     }
     /**
      * Start time to consider performance data for assessment
-     * 
     */
     public String getPerfDataStartTime() {
         return this.perfDataStartTime;
     }
     /**
      * Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.
-     * 
     */
     public String getPricesTimestamp() {
         return this.pricesTimestamp;
     }
     /**
      * Azure reserved instance.
-     * 
     */
     public String getReservedInstance() {
         return this.reservedInstance;
     }
     /**
      * Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.
-     * 
     */
     public Double getScalingFactor() {
         return this.scalingFactor;
     }
     /**
      * Assessment sizing criterion.
-     * 
     */
     public String getSizingCriterion() {
         return this.sizingCriterion;
     }
     /**
      * User configurable setting that describes the status of the assessment.
-     * 
     */
     public String getStage() {
         return this.stage;
     }
     /**
      * Whether the assessment has been created and is valid.
-     * 
     */
     public String getStatus() {
         return this.status;
     }
     /**
      * Time range of performance data used to recommend a size.
-     * 
     */
     public String getTimeRange() {
         return this.timeRange;
     }
     /**
      * Time when this project was last updated. Date-Time represented in ISO-8601 format.
-     * 
     */
     public String getUpdatedTimestamp() {
         return this.updatedTimestamp;
     }
     /**
      * Specify the duration for which the VMs are up in the on-premises environment.
-     * 
     */
     public VmUptimeResponse getVmUptime() {
         return this.vmUptime;

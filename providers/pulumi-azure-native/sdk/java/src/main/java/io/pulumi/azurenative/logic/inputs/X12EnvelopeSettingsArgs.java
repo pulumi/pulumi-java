@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The X12 agreement envelope settings.
- * 
  */
 public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The controls standards id.
-     * 
      */
     @Import(name="controlStandardsId", required=true)
       private final Output<Integer> controlStandardsId;
@@ -37,7 +35,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The control version number.
-     * 
      */
     @Import(name="controlVersionNumber", required=true)
       private final Output<String> controlVersionNumber;
@@ -48,7 +45,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The value indicating whether to enable default group headers.
-     * 
      */
     @Import(name="enableDefaultGroupHeaders", required=true)
       private final Output<Boolean> enableDefaultGroupHeaders;
@@ -59,7 +55,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The functional group id.
-     * 
      */
     @Import(name="functionalGroupId")
       private final @Nullable Output<String> functionalGroupId;
@@ -70,7 +65,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The group control number lower bound.
-     * 
      */
     @Import(name="groupControlNumberLowerBound", required=true)
       private final Output<Integer> groupControlNumberLowerBound;
@@ -81,7 +75,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The group control number upper bound.
-     * 
      */
     @Import(name="groupControlNumberUpperBound", required=true)
       private final Output<Integer> groupControlNumberUpperBound;
@@ -92,7 +85,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The group header agency code.
-     * 
      */
     @Import(name="groupHeaderAgencyCode", required=true)
       private final Output<String> groupHeaderAgencyCode;
@@ -103,7 +95,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The group header date format.
-     * 
      */
     @Import(name="groupHeaderDateFormat", required=true)
       private final Output<Either<String,X12DateFormat>> groupHeaderDateFormat;
@@ -114,7 +105,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The group header time format.
-     * 
      */
     @Import(name="groupHeaderTimeFormat", required=true)
       private final Output<Either<String,X12TimeFormat>> groupHeaderTimeFormat;
@@ -125,7 +115,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The group header version.
-     * 
      */
     @Import(name="groupHeaderVersion", required=true)
       private final Output<String> groupHeaderVersion;
@@ -136,7 +125,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The interchange  control number lower bound.
-     * 
      */
     @Import(name="interchangeControlNumberLowerBound", required=true)
       private final Output<Integer> interchangeControlNumberLowerBound;
@@ -147,7 +135,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The interchange  control number upper bound.
-     * 
      */
     @Import(name="interchangeControlNumberUpperBound", required=true)
       private final Output<Integer> interchangeControlNumberUpperBound;
@@ -158,7 +145,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The value indicating whether to overwrite existing transaction set control number.
-     * 
      */
     @Import(name="overwriteExistingTransactionSetControlNumber", required=true)
       private final Output<Boolean> overwriteExistingTransactionSetControlNumber;
@@ -169,7 +155,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The receiver application id.
-     * 
      */
     @Import(name="receiverApplicationId", required=true)
       private final Output<String> receiverApplicationId;
@@ -180,7 +165,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The value indicating whether to rollover group control number.
-     * 
      */
     @Import(name="rolloverGroupControlNumber", required=true)
       private final Output<Boolean> rolloverGroupControlNumber;
@@ -191,7 +175,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The value indicating whether to rollover interchange control number.
-     * 
      */
     @Import(name="rolloverInterchangeControlNumber", required=true)
       private final Output<Boolean> rolloverInterchangeControlNumber;
@@ -202,7 +185,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The value indicating whether to rollover transaction set control number.
-     * 
      */
     @Import(name="rolloverTransactionSetControlNumber", required=true)
       private final Output<Boolean> rolloverTransactionSetControlNumber;
@@ -213,7 +195,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The sender application id.
-     * 
      */
     @Import(name="senderApplicationId", required=true)
       private final Output<String> senderApplicationId;
@@ -224,7 +205,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The transaction set control number lower bound.
-     * 
      */
     @Import(name="transactionSetControlNumberLowerBound", required=true)
       private final Output<Integer> transactionSetControlNumberLowerBound;
@@ -235,7 +215,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The transaction set control number prefix.
-     * 
      */
     @Import(name="transactionSetControlNumberPrefix")
       private final @Nullable Output<String> transactionSetControlNumberPrefix;
@@ -246,7 +225,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The transaction set control number suffix.
-     * 
      */
     @Import(name="transactionSetControlNumberSuffix")
       private final @Nullable Output<String> transactionSetControlNumberSuffix;
@@ -257,7 +235,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The transaction set control number upper bound.
-     * 
      */
     @Import(name="transactionSetControlNumberUpperBound", required=true)
       private final Output<Integer> transactionSetControlNumberUpperBound;
@@ -268,7 +245,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The usage indicator.
-     * 
      */
     @Import(name="usageIndicator", required=true)
       private final Output<Either<String,UsageIndicator>> usageIndicator;
@@ -279,7 +255,6 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The value indicating whether to use control standards id as repetition character.
-     * 
      */
     @Import(name="useControlStandardsIdAsRepetitionCharacter", required=true)
       private final Output<Boolean> useControlStandardsIdAsRepetitionCharacter;

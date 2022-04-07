@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * The trigger that results in a scaling action.
- * 
  */
 public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -27,7 +26,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
-     * 
      */
     @Import(name="dimensions")
       private final @Nullable Output<List<ScaleRuleMetricDimensionArgs>> dimensions;
@@ -38,7 +36,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * a value indicating whether metric should divide per instance.
-     * 
      */
     @Import(name="dividePerInstance")
       private final @Nullable Output<Boolean> dividePerInstance;
@@ -49,7 +46,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the name of the metric that defines what the rule monitors.
-     * 
      */
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
@@ -60,7 +56,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the namespace of the metric that defines what the rule monitors.
-     * 
      */
     @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
@@ -71,7 +66,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the location of the resource the rule monitors.
-     * 
      */
     @Import(name="metricResourceLocation")
       private final @Nullable Output<String> metricResourceLocation;
@@ -82,7 +76,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the resource identifier of the resource the rule monitors.
-     * 
      */
     @Import(name="metricResourceUri", required=true)
       private final Output<String> metricResourceUri;
@@ -93,7 +86,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the operator that is used to compare the metric data and the threshold.
-     * 
      */
     @Import(name="operator", required=true)
       private final Output<ComparisonOperationType> operator;
@@ -104,7 +96,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the metric statistic type. How the metrics from multiple instances are combined.
-     * 
      */
     @Import(name="statistic", required=true)
       private final Output<MetricStatisticType> statistic;
@@ -115,7 +106,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the threshold of the metric that triggers the scale action.
-     * 
      */
     @Import(name="threshold", required=true)
       private final Output<Double> threshold;
@@ -126,7 +116,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * time aggregation type. How the data that is collected should be combined over time. The default value is Average.
-     * 
      */
     @Import(name="timeAggregation", required=true)
       private final Output<TimeAggregationType> timeAggregation;
@@ -137,7 +126,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
-     * 
      */
     @Import(name="timeGrain", required=true)
       private final Output<String> timeGrain;
@@ -148,7 +136,6 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
-     * 
      */
     @Import(name="timeWindow", required=true)
       private final Output<String> timeWindow;

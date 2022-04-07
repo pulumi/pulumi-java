@@ -12,53 +12,43 @@ import java.util.Objects;
 public final class GetADLSGen2FileSystemDataSetResult {
     /**
      * Unique id for identifying a data set resource
-     * 
      */
     private final String dataSetId;
     /**
      * The file system name.
-     * 
      */
     private final String fileSystem;
     /**
      * The resource id of the azure resource
-     * 
      */
     private final String id;
     /**
      * Kind of data set.
      * Expected value is 'AdlsGen2FileSystem'.
-     * 
      */
     private final String kind;
     /**
      * Name of the azure resource
-     * 
      */
     private final String name;
     /**
      * Resource group of storage account
-     * 
      */
     private final String resourceGroup;
     /**
      * Storage account name of the source data set
-     * 
      */
     private final String storageAccountName;
     /**
      * Subscription id of storage account
-     * 
      */
     private final String subscriptionId;
     /**
      * System Data of the Azure resource.
-     * 
      */
     private final SystemDataResponse systemData;
     /**
      * Type of the azure resource
-     * 
      */
     private final String type;
 
@@ -88,21 +78,18 @@ public final class GetADLSGen2FileSystemDataSetResult {
 
     /**
      * Unique id for identifying a data set resource
-     * 
     */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * The file system name.
-     * 
     */
     public String getFileSystem() {
         return this.fileSystem;
     }
     /**
      * The resource id of the azure resource
-     * 
     */
     public String getId() {
         return this.id;
@@ -110,49 +97,42 @@ public final class GetADLSGen2FileSystemDataSetResult {
     /**
      * Kind of data set.
      * Expected value is 'AdlsGen2FileSystem'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource group of storage account
-     * 
     */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Storage account name of the source data set
-     * 
     */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
     /**
      * Subscription id of storage account
-     * 
     */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * System Data of the Azure resource.
-     * 
     */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
-     * 
     */
     public String getType() {
         return this.type;

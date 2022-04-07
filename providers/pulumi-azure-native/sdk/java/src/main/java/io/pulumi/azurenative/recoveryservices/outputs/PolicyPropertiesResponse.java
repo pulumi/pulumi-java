@@ -25,12 +25,10 @@ import javax.annotation.Nullable;
 public final class PolicyPropertiesResponse {
     /**
      * The FriendlyName.
-     * 
      */
     private final @Nullable String friendlyName;
     /**
      * The ReplicationChannelSetting.
-     * 
      */
     private final @Nullable Object providerSpecificDetails;
 
@@ -44,14 +42,12 @@ public final class PolicyPropertiesResponse {
 
     /**
      * The FriendlyName.
-     * 
     */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The ReplicationChannelSetting.
-     * 
     */
     public Optional<Object> getProviderSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);

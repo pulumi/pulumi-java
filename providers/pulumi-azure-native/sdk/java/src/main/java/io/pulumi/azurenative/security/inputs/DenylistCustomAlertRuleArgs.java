@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * A custom alert rule that checks if a value (depends on the custom alert type) is denied.
- * 
  */
 public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
 
     /**
      * The values to deny. The format of the values depends on the rule type.
-     * 
      */
     @Import(name="denylistValues", required=true)
       private final Output<List<String>> denylistValues;
@@ -32,7 +30,6 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
 
     /**
      * Status of the custom alert.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
@@ -44,7 +41,6 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
     /**
      * The type of the custom alert rule.
      * Expected value is 'DenylistCustomAlertRule'.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Reference to an asset via its path in a job output.
- * 
  */
 public final class OutputPathAssetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class OutputPathAssetReferenceResponse extends io.pulumi.resources.
 
     /**
      * ARM resource ID of the job.
-     * 
      */
     @Import(name="jobId")
       private final @Nullable String jobId;
@@ -31,7 +29,6 @@ public final class OutputPathAssetReferenceResponse extends io.pulumi.resources.
 
     /**
      * The path of the file/directory in the job output.
-     * 
      */
     @Import(name="path")
       private final @Nullable String path;
@@ -43,7 +40,6 @@ public final class OutputPathAssetReferenceResponse extends io.pulumi.resources.
     /**
      * Enum to determine which reference method to use for an asset.
      * Expected value is 'OutputPath'.
-     * 
      */
     @Import(name="referenceType", required=true)
       private final String referenceType;

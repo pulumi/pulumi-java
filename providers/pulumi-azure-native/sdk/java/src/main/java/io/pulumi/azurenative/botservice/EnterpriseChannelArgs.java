@@ -21,7 +21,6 @@ public final class EnterpriseChannelArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Required. Gets or sets the Kind of the resource.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
@@ -32,7 +31,6 @@ public final class EnterpriseChannelArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -43,7 +41,6 @@ public final class EnterpriseChannelArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The set of properties specific to an Enterprise Channel resource.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<EnterpriseChannelPropertiesArgs> properties;
@@ -54,7 +51,6 @@ public final class EnterpriseChannelArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the Bot resource group in the user subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -65,7 +61,6 @@ public final class EnterpriseChannelArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The name of the Bot resource.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -76,7 +71,6 @@ public final class EnterpriseChannelArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Gets or sets the SKU of the resource.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -87,7 +81,6 @@ public final class EnterpriseChannelArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

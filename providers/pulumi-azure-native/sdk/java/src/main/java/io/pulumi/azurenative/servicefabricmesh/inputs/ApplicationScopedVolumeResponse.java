@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a volume whose lifetime is scoped to the application's lifetime.
- * 
  */
 public final class ApplicationScopedVolumeResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ApplicationScopedVolumeResponse extends io.pulumi.resources.I
 
     /**
      * Describes parameters for creating application-scoped volumes.
-     * 
      */
     @Import(name="creationParameters", required=true)
       private final ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters;
@@ -33,7 +31,6 @@ public final class ApplicationScopedVolumeResponse extends io.pulumi.resources.I
 
     /**
      * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
-     * 
      */
     @Import(name="destinationPath", required=true)
       private final String destinationPath;
@@ -44,7 +41,6 @@ public final class ApplicationScopedVolumeResponse extends io.pulumi.resources.I
 
     /**
      * Name of the volume being referenced.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -55,7 +51,6 @@ public final class ApplicationScopedVolumeResponse extends io.pulumi.resources.I
 
     /**
      * The flag indicating whether the volume is read only. Default is 'false'.
-     * 
      */
     @Import(name="readOnly")
       private final @Nullable Boolean readOnly;

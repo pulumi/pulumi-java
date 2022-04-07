@@ -26,7 +26,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fhir Service access policies.
-     * 
      */
     @Import(name="accessPolicies")
       private final @Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
@@ -37,7 +36,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fhir Service Azure container registry configuration.
-     * 
      */
     @Import(name="acrConfiguration")
       private final @Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration;
@@ -48,7 +46,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fhir Service authentication configuration.
-     * 
      */
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
@@ -59,7 +56,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fhir Service Cors configuration.
-     * 
      */
     @Import(name="corsConfiguration")
       private final @Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration;
@@ -70,7 +66,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Fhir Service export configuration.
-     * 
      */
     @Import(name="exportConfiguration")
       private final @Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration;
@@ -81,7 +76,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of FHIR Service resource.
-     * 
      */
     @Import(name="fhirServiceName")
       private final @Nullable Output<String> fhirServiceName;
@@ -92,7 +86,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Setting indicating whether the service has a managed identity associated with it.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
@@ -103,7 +96,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The kind of the service.
-     * 
      */
     @Import(name="kind")
       private final @Nullable Output<Either<String,FhirServiceKind>> kind;
@@ -114,7 +106,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -125,7 +116,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the service instance.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -136,7 +126,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -147,7 +136,6 @@ public final class FhirServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of workspace resource.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

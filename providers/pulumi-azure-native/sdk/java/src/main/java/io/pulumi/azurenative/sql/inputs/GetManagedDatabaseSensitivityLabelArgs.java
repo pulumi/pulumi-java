@@ -14,7 +14,6 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
 
     /**
      * The name of the column.
-     * 
      */
     @Import(name="columnName", required=true)
       private final String columnName;
@@ -25,7 +24,6 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
 
     /**
      * The name of the database.
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -36,7 +34,6 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
 
     /**
      * The name of the managed instance.
-     * 
      */
     @Import(name="managedInstanceName", required=true)
       private final String managedInstanceName;
@@ -47,7 +44,6 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -58,7 +54,6 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
 
     /**
      * The name of the schema.
-     * 
      */
     @Import(name="schemaName", required=true)
       private final String schemaName;
@@ -69,7 +64,6 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
 
     /**
      * The source of the sensitivity label.
-     * 
      */
     @Import(name="sensitivityLabelSource", required=true)
       private final String sensitivityLabelSource;
@@ -80,7 +74,6 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
 
     /**
      * The name of the table.
-     * 
      */
     @Import(name="tableName", required=true)
       private final String tableName;

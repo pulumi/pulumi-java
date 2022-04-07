@@ -16,14 +16,12 @@ import javax.annotation.Nullable;
 public final class PrivateEndpointConnectionResponseProperties {
     /**
      * The list of group ids for the private endpoint connection.
-     * 
      */
     private final @Nullable List<String> groupIds;
     private final @Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint;
     private final @Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState;
     /**
      * The provisioning state.
-     * 
      */
     private final String provisioningState;
 
@@ -41,7 +39,6 @@ public final class PrivateEndpointConnectionResponseProperties {
 
     /**
      * The list of group ids for the private endpoint connection.
-     * 
     */
     public List<String> getGroupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
@@ -54,7 +51,6 @@ public final class PrivateEndpointConnectionResponseProperties {
     }
     /**
      * The provisioning state.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;

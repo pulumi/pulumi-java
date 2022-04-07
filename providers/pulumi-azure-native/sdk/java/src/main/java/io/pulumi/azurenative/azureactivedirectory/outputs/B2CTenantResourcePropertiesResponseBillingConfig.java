@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class B2CTenantResourcePropertiesResponseBillingConfig {
     /**
      * The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
-     * 
      */
     private final @Nullable String billingType;
     /**
      * The data from which the billing type took effect
-     * 
      */
     private final String effectiveStartDateUtc;
 
@@ -32,14 +30,12 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig {
 
     /**
      * The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
-     * 
     */
     public Optional<String> getBillingType() {
         return Optional.ofNullable(this.billingType);
     }
     /**
      * The data from which the billing type took effect
-     * 
     */
     public String getEffectiveStartDateUtc() {
         return this.effectiveStartDateUtc;

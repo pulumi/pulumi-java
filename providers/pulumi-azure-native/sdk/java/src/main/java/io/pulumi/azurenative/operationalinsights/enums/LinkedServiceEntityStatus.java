@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The provisioning state of the linked service.
-     * 
      */
     @EnumType
     public enum LinkedServiceEntityStatus {

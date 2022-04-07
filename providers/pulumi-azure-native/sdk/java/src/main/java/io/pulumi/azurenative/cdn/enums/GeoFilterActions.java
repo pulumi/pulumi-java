@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Action of the geo filter, i.e. allow or block access.
-     * 
      */
     @EnumType
     public enum GeoFilterActions {

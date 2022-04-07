@@ -19,7 +19,87 @@ import javax.annotation.Nullable;
  * This type describes a secret resource.
  * API Version: 2018-09-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdateSecret
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var secret = new AzureNative.ServiceFabricMesh.Secret("secret", new AzureNative.ServiceFabricMesh.SecretArgs
+ *         {
+ *             Location = "EastUS",
+ *             Properties = ,
+ *             ResourceGroupName = "sbz_demo",
+ *             SecretResourceName = "dbConnectionString",
+ *             Tags = ,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	servicefabricmesh "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabricmesh"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := servicefabricmesh.NewSecret(ctx, "secret", &servicefabricmesh.SecretArgs{
+ * 			Location:           pulumi.String("EastUS"),
+ * 			Properties:         nil,
+ * 			ResourceGroupName:  pulumi.String("sbz_demo"),
+ * 			SecretResourceName: pulumi.String("dbConnectionString"),
+ * 			Tags:               nil,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const secret = new azure_native.servicefabricmesh.Secret("secret", {
+ *     location: "EastUS",
+ *     properties: {},
+ *     resourceGroupName: "sbz_demo",
+ *     secretResourceName: "dbConnectionString",
+ *     tags: {},
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * secret = azure_native.servicefabricmesh.Secret("secret",
+ *     location="EastUS",
+ *     properties=azure_native.servicefabricmesh.SecretResourcePropertiesArgs(),
+ *     resource_group_name="sbz_demo",
+ *     secret_resource_name="dbConnectionString",
+ *     tags={})
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,70 +114,60 @@ import javax.annotation.Nullable;
 public class Secret extends io.pulumi.resources.CustomResource {
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Describes the properties of a secret resource.
-     * 
      */
     @Export(name="properties", type=SecretResourcePropertiesResponse.class, parameters={})
     private Output<SecretResourcePropertiesResponse> properties;
 
     /**
      * @return Describes the properties of a secret resource.
-     * 
      */
     public Output<SecretResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;

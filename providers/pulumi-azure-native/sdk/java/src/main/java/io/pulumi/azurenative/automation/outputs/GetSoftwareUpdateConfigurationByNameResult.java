@@ -17,62 +17,50 @@ import javax.annotation.Nullable;
 public final class GetSoftwareUpdateConfigurationByNameResult {
     /**
      * CreatedBy property, which only appears in the response.
-     * 
      */
     private final String createdBy;
     /**
      * Creation time of the resource, which only appears in the response.
-     * 
      */
     private final String creationTime;
     /**
      * Details of provisioning error
-     * 
      */
     private final @Nullable ErrorResponseResponse error;
     /**
      * Resource Id.
-     * 
      */
     private final String id;
     /**
      * LastModifiedBy property, which only appears in the response.
-     * 
      */
     private final String lastModifiedBy;
     /**
      * Last time resource was modified, which only appears in the response.
-     * 
      */
     private final String lastModifiedTime;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Provisioning state for the software update configuration, which only appears in the response.
-     * 
      */
     private final String provisioningState;
     /**
      * Schedule information for the Software update configuration
-     * 
      */
     private final SUCSchedulePropertiesResponse scheduleInfo;
     /**
      * Tasks information for the Software update configuration.
-     * 
      */
     private final @Nullable SoftwareUpdateConfigurationTasksResponse tasks;
     /**
      * Resource type
-     * 
      */
     private final String type;
     /**
      * update specific properties for the Software update configuration
-     * 
      */
     private final UpdateConfigurationResponse updateConfiguration;
 
@@ -106,84 +94,72 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
 
     /**
      * CreatedBy property, which only appears in the response.
-     * 
     */
     public String getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Creation time of the resource, which only appears in the response.
-     * 
     */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Details of provisioning error
-     * 
     */
     public Optional<ErrorResponseResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Resource Id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * LastModifiedBy property, which only appears in the response.
-     * 
     */
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Last time resource was modified, which only appears in the response.
-     * 
     */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state for the software update configuration, which only appears in the response.
-     * 
     */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Schedule information for the Software update configuration
-     * 
     */
     public SUCSchedulePropertiesResponse getScheduleInfo() {
         return this.scheduleInfo;
     }
     /**
      * Tasks information for the Software update configuration.
-     * 
     */
     public Optional<SoftwareUpdateConfigurationTasksResponse> getTasks() {
         return Optional.ofNullable(this.tasks);
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * update specific properties for the Software update configuration
-     * 
     */
     public UpdateConfigurationResponse getUpdateConfiguration() {
         return this.updateConfiguration;

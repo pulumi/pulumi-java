@@ -18,7 +18,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The addon name.
-     * 
      */
     @Import(name="addonName")
       private final @Nullable Output<String> addonName;
@@ -29,7 +28,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The device name.
-     * 
      */
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
@@ -40,7 +38,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Addon type.
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,AddonType>> kind;
@@ -51,7 +48,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The role name.
-     * 
      */
     @Import(name="roleName", required=true)
       private final Output<String> roleName;

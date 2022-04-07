@@ -14,7 +14,6 @@ public final class GetDomainServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the domain service.
-     * 
      */
     @Import(name="domainServiceName", required=true)
       private final String domainServiceName;
@@ -25,7 +24,6 @@ public final class GetDomainServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

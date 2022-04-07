@@ -19,7 +19,113 @@ import javax.annotation.Nullable;
  * The network group resource
  * API Version: 2021-02-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NetworkGroupsPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var networkGroup = new AzureNative.Network.NetworkGroup("networkGroup", new AzureNative.Network.NetworkGroupArgs
+ *         {
+ *             ConditionalMembership = "",
+ *             Description = "A sample group",
+ *             DisplayName = "My Network Group",
+ *             GroupMembers = 
+ *             {
+ *                 new AzureNative.Network.Inputs.GroupMembersItemArgs
+ *                 {
+ *                     ResourceId = "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
+ *                 },
+ *             },
+ *             MemberType = "VirtualNetwork",
+ *             NetworkGroupName = "TestNetworkGroup",
+ *             NetworkManagerName = "testNetworkManager",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewNetworkGroup(ctx, "networkGroup", &network.NetworkGroupArgs{
+ * 			ConditionalMembership: pulumi.String(""),
+ * 			Description:           pulumi.String("A sample group"),
+ * 			DisplayName:           pulumi.String("My Network Group"),
+ * 			GroupMembers: []network.GroupMembersItemArgs{
+ * 				&network.GroupMembersItemArgs{
+ * 					ResourceId: pulumi.String("/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1"),
+ * 				},
+ * 			},
+ * 			MemberType:         pulumi.String("VirtualNetwork"),
+ * 			NetworkGroupName:   pulumi.String("TestNetworkGroup"),
+ * 			NetworkManagerName: pulumi.String("testNetworkManager"),
+ * 			ResourceGroupName:  pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const networkGroup = new azure_native.network.NetworkGroup("networkGroup", {
+ *     conditionalMembership: "",
+ *     description: "A sample group",
+ *     displayName: "My Network Group",
+ *     groupMembers: [{
+ *         resourceId: "/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
+ *     }],
+ *     memberType: "VirtualNetwork",
+ *     networkGroupName: "TestNetworkGroup",
+ *     networkManagerName: "testNetworkManager",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * network_group = azure_native.network.NetworkGroup("networkGroup",
+ *     conditional_membership="",
+ *     description="A sample group",
+ *     display_name="My Network Group",
+ *     group_members=[azure_native.network.GroupMembersItemArgs(
+ *         resource_id="/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1",
+ *     )],
+ *     member_type="VirtualNetwork",
+ *     network_group_name="TestNetworkGroup",
+ *     network_manager_name="testNetworkManager",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,140 +140,120 @@ import javax.annotation.Nullable;
 public class NetworkGroup extends io.pulumi.resources.CustomResource {
     /**
      * Network group conditional filter.
-     * 
      */
     @Export(name="conditionalMembership", type=String.class, parameters={})
     private Output</* @Nullable */ String> conditionalMembership;
 
     /**
      * @return Network group conditional filter.
-     * 
      */
     public Output</* @Nullable */ String> getConditionalMembership() {
         return this.conditionalMembership;
     }
     /**
      * A description of the network group.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description of the network group.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * A friendly name for the network group.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return A friendly name for the network group.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Group members of network group.
-     * 
      */
     @Export(name="groupMembers", type=List.class, parameters={GroupMembersItemResponse.class})
     private Output</* @Nullable */ List<GroupMembersItemResponse>> groupMembers;
 
     /**
      * @return Group members of network group.
-     * 
      */
     public Output</* @Nullable */ List<GroupMembersItemResponse>> getGroupMembers() {
         return this.groupMembers;
     }
     /**
      * Group member type.
-     * 
      */
     @Export(name="memberType", type=String.class, parameters={})
     private Output</* @Nullable */ String> memberType;
 
     /**
      * @return Group member type.
-     * 
      */
     public Output</* @Nullable */ String> getMemberType() {
         return this.memberType;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the scope assignment resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the scope assignment resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata related to this resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata related to this resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -18,7 +18,165 @@ import javax.annotation.Nullable;
  * Class representing a read only following database.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Kusto ReadOnly database update
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var readOnlyFollowingDatabase = new AzureNative.Kusto.ReadOnlyFollowingDatabase("readOnlyFollowingDatabase", new AzureNative.Kusto.ReadOnlyFollowingDatabaseArgs
+ *         {
+ *             ClusterName = "kustoclusterrptest4",
+ *             DatabaseName = "KustoreadOnlyDatabase",
+ *             HotCachePeriod = "P1D",
+ *             Kind = "ReadOnlyFollowing",
+ *             Location = "westus",
+ *             ResourceGroupName = "kustorptest",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kusto.NewReadOnlyFollowingDatabase(ctx, "readOnlyFollowingDatabase", &kusto.ReadOnlyFollowingDatabaseArgs{
+ * 			ClusterName:       pulumi.String("kustoclusterrptest4"),
+ * 			DatabaseName:      pulumi.String("KustoreadOnlyDatabase"),
+ * 			HotCachePeriod:    pulumi.String("P1D"),
+ * 			Kind:              pulumi.String("ReadOnlyFollowing"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("kustorptest"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const readOnlyFollowingDatabase = new azure_native.kusto.ReadOnlyFollowingDatabase("readOnlyFollowingDatabase", {
+ *     clusterName: "kustoclusterrptest4",
+ *     databaseName: "KustoreadOnlyDatabase",
+ *     hotCachePeriod: "P1D",
+ *     kind: "ReadOnlyFollowing",
+ *     location: "westus",
+ *     resourceGroupName: "kustorptest",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * read_only_following_database = azure_native.kusto.ReadOnlyFollowingDatabase("readOnlyFollowingDatabase",
+ *     cluster_name="kustoclusterrptest4",
+ *     database_name="KustoreadOnlyDatabase",
+ *     hot_cache_period="P1D",
+ *     kind="ReadOnlyFollowing",
+ *     location="westus",
+ *     resource_group_name="kustorptest")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Kusto ReadWrite database create or update
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var readOnlyFollowingDatabase = new AzureNative.Kusto.ReadOnlyFollowingDatabase("readOnlyFollowingDatabase", new AzureNative.Kusto.ReadOnlyFollowingDatabaseArgs
+ *         {
+ *             ClusterName = "kustoclusterrptest4",
+ *             DatabaseName = "KustoDatabase8",
+ *             Location = "westus",
+ *             ResourceGroupName = "kustorptest",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := kusto.NewReadOnlyFollowingDatabase(ctx, "readOnlyFollowingDatabase", &kusto.ReadOnlyFollowingDatabaseArgs{
+ * 			ClusterName:       pulumi.String("kustoclusterrptest4"),
+ * 			DatabaseName:      pulumi.String("KustoDatabase8"),
+ * 			Location:          pulumi.String("westus"),
+ * 			ResourceGroupName: pulumi.String("kustorptest"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const readOnlyFollowingDatabase = new azure_native.kusto.ReadOnlyFollowingDatabase("readOnlyFollowingDatabase", {
+ *     clusterName: "kustoclusterrptest4",
+ *     databaseName: "KustoDatabase8",
+ *     location: "westus",
+ *     resourceGroupName: "kustorptest",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * read_only_following_database = azure_native.kusto.ReadOnlyFollowingDatabase("readOnlyFollowingDatabase",
+ *     cluster_name="kustoclusterrptest4",
+ *     database_name="KustoDatabase8",
+ *     location="westus",
+ *     resource_group_name="kustorptest")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,28 +191,24 @@ import javax.annotation.Nullable;
 public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResource {
     /**
      * The name of the attached database configuration cluster
-     * 
      */
     @Export(name="attachedDatabaseConfigurationName", type=String.class, parameters={})
     private Output<String> attachedDatabaseConfigurationName;
 
     /**
      * @return The name of the attached database configuration cluster
-     * 
      */
     public Output<String> getAttachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
     /**
      * The time the data should be kept in cache for fast queries in TimeSpan.
-     * 
      */
     @Export(name="hotCachePeriod", type=String.class, parameters={})
     private Output</* @Nullable */ String> hotCachePeriod;
 
     /**
      * @return The time the data should be kept in cache for fast queries in TimeSpan.
-     * 
      */
     public Output</* @Nullable */ String> getHotCachePeriod() {
         return this.hotCachePeriod;
@@ -62,7 +216,6 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
     /**
      * Kind of the database
      * Expected value is 'ReadOnlyFollowing'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -70,119 +223,102 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
     /**
      * @return Kind of the database
      * Expected value is 'ReadOnlyFollowing'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The name of the leader cluster
-     * 
      */
     @Export(name="leaderClusterResourceId", type=String.class, parameters={})
     private Output<String> leaderClusterResourceId;
 
     /**
      * @return The name of the leader cluster
-     * 
      */
     public Output<String> getLeaderClusterResourceId() {
         return this.leaderClusterResourceId;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The principals modification kind of the database
-     * 
      */
     @Export(name="principalsModificationKind", type=String.class, parameters={})
     private Output<String> principalsModificationKind;
 
     /**
      * @return The principals modification kind of the database
-     * 
      */
     public Output<String> getPrincipalsModificationKind() {
         return this.principalsModificationKind;
     }
     /**
      * The provisioned state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioned state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The time the data should be kept before it stops being accessible to queries in TimeSpan.
-     * 
      */
     @Export(name="softDeletePeriod", type=String.class, parameters={})
     private Output<String> softDeletePeriod;
 
     /**
      * @return The time the data should be kept before it stops being accessible to queries in TimeSpan.
-     * 
      */
     public Output<String> getSoftDeletePeriod() {
         return this.softDeletePeriod;
     }
     /**
      * The statistics of the database.
-     * 
      */
     @Export(name="statistics", type=DatabaseStatisticsResponse.class, parameters={})
     private Output<DatabaseStatisticsResponse> statistics;
 
     /**
      * @return The statistics of the database.
-     * 
      */
     public Output<DatabaseStatisticsResponse> getStatistics() {
         return this.statistics;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -17,42 +17,34 @@ import javax.annotation.Nullable;
 public final class SkuDescriptionResponse {
     /**
      * Capabilities of the SKU, e.g., is traffic manager enabled?
-     * 
      */
     private final @Nullable List<CapabilityResponse> capabilities;
     /**
      * Current number of instances assigned to the resource.
-     * 
      */
     private final @Nullable Integer capacity;
     /**
      * Family code of the resource SKU.
-     * 
      */
     private final @Nullable String family;
     /**
      * Locations of the SKU.
-     * 
      */
     private final @Nullable List<String> locations;
     /**
      * Name of the resource SKU.
-     * 
      */
     private final @Nullable String name;
     /**
      * Size specifier of the resource SKU.
-     * 
      */
     private final @Nullable String size;
     /**
      * Min, max, and default scale values of the SKU.
-     * 
      */
     private final @Nullable SkuCapacityResponse skuCapacity;
     /**
      * Service tier of the resource SKU.
-     * 
      */
     private final @Nullable String tier;
 
@@ -78,56 +70,48 @@ public final class SkuDescriptionResponse {
 
     /**
      * Capabilities of the SKU, e.g., is traffic manager enabled?
-     * 
     */
     public List<CapabilityResponse> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
     /**
      * Current number of instances assigned to the resource.
-     * 
     */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Family code of the resource SKU.
-     * 
     */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * Locations of the SKU.
-     * 
     */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * Name of the resource SKU.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Size specifier of the resource SKU.
-     * 
     */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * Min, max, and default scale values of the SKU.
-     * 
     */
     public Optional<SkuCapacityResponse> getSkuCapacity() {
         return Optional.ofNullable(this.skuCapacity);
     }
     /**
      * Service tier of the resource SKU.
-     * 
     */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);

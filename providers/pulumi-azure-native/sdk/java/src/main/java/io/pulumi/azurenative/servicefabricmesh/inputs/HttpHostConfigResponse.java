@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Describes the hostname properties for http routing.
- * 
  */
 public final class HttpHostConfigResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class HttpHostConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * http hostname config name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -31,7 +29,6 @@ public final class HttpHostConfigResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
-     * 
      */
     @Import(name="routes", required=true)
       private final List<HttpRouteConfigResponse> routes;

@@ -16,27 +16,22 @@ import javax.annotation.Nullable;
 public final class EventHubPropertiesResponse {
     /**
      * The Event Hub-compatible endpoint.
-     * 
      */
     private final String endpoint;
     /**
      * The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
-     * 
      */
     private final @Nullable Integer partitionCount;
     /**
      * The partition ids in the Event Hub-compatible endpoint.
-     * 
      */
     private final List<String> partitionIds;
     /**
      * The Event Hub-compatible name.
-     * 
      */
     private final String path;
     /**
      * The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
-     * 
      */
     private final @Nullable Double retentionTimeInDays;
 
@@ -56,35 +51,30 @@ public final class EventHubPropertiesResponse {
 
     /**
      * The Event Hub-compatible endpoint.
-     * 
     */
     public String getEndpoint() {
         return this.endpoint;
     }
     /**
      * The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
-     * 
     */
     public Optional<Integer> getPartitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
     /**
      * The partition ids in the Event Hub-compatible endpoint.
-     * 
     */
     public List<String> getPartitionIds() {
         return this.partitionIds;
     }
     /**
      * The Event Hub-compatible name.
-     * 
     */
     public String getPath() {
         return this.path;
     }
     /**
      * The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
-     * 
     */
     public Optional<Double> getRetentionTimeInDays() {
         return Optional.ofNullable(this.retentionTimeInDays);

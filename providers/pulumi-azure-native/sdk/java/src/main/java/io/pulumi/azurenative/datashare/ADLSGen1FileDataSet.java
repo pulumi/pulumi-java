@@ -18,7 +18,453 @@ import javax.annotation.Nullable;
  * An ADLS Gen 1 file data set.
  * API Version: 2020-09-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DataSets_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var adlsGen1FileDataSet = new AzureNative.DataShare.ADLSGen1FileDataSet("adlsGen1FileDataSet", new AzureNative.DataShare.ADLSGen1FileDataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewADLSGen1FileDataSet(ctx, "adlsGen1FileDataSet", &datashare.ADLSGen1FileDataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const adlsGen1FileDataSet = new azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * adls_gen1_file_data_set = azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_KustoCluster_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var adlsGen1FileDataSet = new AzureNative.DataShare.ADLSGen1FileDataSet("adlsGen1FileDataSet", new AzureNative.DataShare.ADLSGen1FileDataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewADLSGen1FileDataSet(ctx, "adlsGen1FileDataSet", &datashare.ADLSGen1FileDataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const adlsGen1FileDataSet = new azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * adls_gen1_file_data_set = azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_KustoDatabase_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var adlsGen1FileDataSet = new AzureNative.DataShare.ADLSGen1FileDataSet("adlsGen1FileDataSet", new AzureNative.DataShare.ADLSGen1FileDataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewADLSGen1FileDataSet(ctx, "adlsGen1FileDataSet", &datashare.ADLSGen1FileDataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const adlsGen1FileDataSet = new azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * adls_gen1_file_data_set = azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_SqlDBTable_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var adlsGen1FileDataSet = new AzureNative.DataShare.ADLSGen1FileDataSet("adlsGen1FileDataSet", new AzureNative.DataShare.ADLSGen1FileDataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewADLSGen1FileDataSet(ctx, "adlsGen1FileDataSet", &datashare.ADLSGen1FileDataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const adlsGen1FileDataSet = new azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * adls_gen1_file_data_set = azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_SqlDWTable_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var adlsGen1FileDataSet = new AzureNative.DataShare.ADLSGen1FileDataSet("adlsGen1FileDataSet", new AzureNative.DataShare.ADLSGen1FileDataSetArgs
+ *         {
+ *             AccountName = "Account1",
+ *             DataSetName = "Dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "Share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewADLSGen1FileDataSet(ctx, "adlsGen1FileDataSet", &datashare.ADLSGen1FileDataSetArgs{
+ * 			AccountName:       pulumi.String("Account1"),
+ * 			DataSetName:       pulumi.String("Dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("Share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const adlsGen1FileDataSet = new azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet", {
+ *     accountName: "Account1",
+ *     dataSetName: "Dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "Share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * adls_gen1_file_data_set = azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet",
+ *     account_name="Account1",
+ *     data_set_name="Dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="Share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### DataSets_SynapseWorkspaceSqlPoolTable_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var adlsGen1FileDataSet = new AzureNative.DataShare.ADLSGen1FileDataSet("adlsGen1FileDataSet", new AzureNative.DataShare.ADLSGen1FileDataSetArgs
+ *         {
+ *             AccountName = "sourceAccount",
+ *             DataSetName = "dataset1",
+ *             ResourceGroupName = "SampleResourceGroup",
+ *             ShareName = "share1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datashare.NewADLSGen1FileDataSet(ctx, "adlsGen1FileDataSet", &datashare.ADLSGen1FileDataSetArgs{
+ * 			AccountName:       pulumi.String("sourceAccount"),
+ * 			DataSetName:       pulumi.String("dataset1"),
+ * 			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+ * 			ShareName:         pulumi.String("share1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const adlsGen1FileDataSet = new azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet", {
+ *     accountName: "sourceAccount",
+ *     dataSetName: "dataset1",
+ *     resourceGroupName: "SampleResourceGroup",
+ *     shareName: "share1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * adls_gen1_file_data_set = azure_native.datashare.ADLSGen1FileDataSet("adlsGen1FileDataSet",
+ *     account_name="sourceAccount",
+ *     data_set_name="dataset1",
+ *     resource_group_name="SampleResourceGroup",
+ *     share_name="share1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +479,48 @@ import javax.annotation.Nullable;
 public class ADLSGen1FileDataSet extends io.pulumi.resources.CustomResource {
     /**
      * The ADLS account name.
-     * 
      */
     @Export(name="accountName", type=String.class, parameters={})
     private Output<String> accountName;
 
     /**
      * @return The ADLS account name.
-     * 
      */
     public Output<String> getAccountName() {
         return this.accountName;
     }
     /**
      * Unique id for identifying a data set resource
-     * 
      */
     @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
      * @return Unique id for identifying a data set resource
-     * 
      */
     public Output<String> getDataSetId() {
         return this.dataSetId;
     }
     /**
      * The file name in the ADLS account.
-     * 
      */
     @Export(name="fileName", type=String.class, parameters={})
     private Output<String> fileName;
 
     /**
      * @return The file name in the ADLS account.
-     * 
      */
     public Output<String> getFileName() {
         return this.fileName;
     }
     /**
      * The folder path within the ADLS account.
-     * 
      */
     @Export(name="folderPath", type=String.class, parameters={})
     private Output<String> folderPath;
 
     /**
      * @return The folder path within the ADLS account.
-     * 
      */
     public Output<String> getFolderPath() {
         return this.folderPath;
@@ -90,7 +528,6 @@ public class ADLSGen1FileDataSet extends io.pulumi.resources.CustomResource {
     /**
      * Kind of data set.
      * Expected value is 'AdlsGen1File'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -98,77 +535,66 @@ public class ADLSGen1FileDataSet extends io.pulumi.resources.CustomResource {
     /**
      * @return Kind of data set.
      * Expected value is 'AdlsGen1File'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the azure resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource group of ADLS account.
-     * 
      */
     @Export(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
     /**
      * @return Resource group of ADLS account.
-     * 
      */
     public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Subscription id of ADLS account.
-     * 
      */
     @Export(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
     /**
      * @return Subscription id of ADLS account.
-     * 
      */
     public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * System Data of the Azure resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System Data of the Azure resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the azure resource
-     * 
      */
     public Output<String> getType() {
         return this.type;

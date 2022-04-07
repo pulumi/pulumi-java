@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Represents security alert timeline item.
- * 
  */
 public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
 
     /**
      * The name of the alert type.
-     * 
      */
     @Import(name="alertType", required=true)
       private final String alertType;
@@ -31,7 +29,6 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
 
     /**
      * The alert azure resource id.
-     * 
      */
     @Import(name="azureResourceId", required=true)
       private final String azureResourceId;
@@ -42,7 +39,6 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
 
     /**
      * The alert description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -53,7 +49,6 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
 
     /**
      * The alert name.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -64,7 +59,6 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
 
     /**
      * The alert end time.
-     * 
      */
     @Import(name="endTimeUtc", required=true)
       private final String endTimeUtc;
@@ -76,7 +70,6 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
     /**
      * The entity query kind
      * Expected value is 'SecurityAlert'.
-     * 
      */
     @Import(name="kind", required=true)
       private final String kind;
@@ -87,7 +80,6 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
 
     /**
      * The alert product name.
-     * 
      */
     @Import(name="productName")
       private final @Nullable String productName;
@@ -98,7 +90,6 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
 
     /**
      * The alert severity.
-     * 
      */
     @Import(name="severity", required=true)
       private final String severity;
@@ -109,7 +100,6 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
 
     /**
      * The alert start time.
-     * 
      */
     @Import(name="startTimeUtc", required=true)
       private final String startTimeUtc;
@@ -120,7 +110,6 @@ public final class SecurityAlertTimelineItemResponse extends io.pulumi.resources
 
     /**
      * The alert generated time.
-     * 
      */
     @Import(name="timeGenerated", required=true)
       private final String timeGenerated;

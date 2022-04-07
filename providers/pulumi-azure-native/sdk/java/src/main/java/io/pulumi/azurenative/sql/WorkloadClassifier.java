@@ -17,7 +17,193 @@ import javax.annotation.Nullable;
  * Workload classifier operations for a data warehouse
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a workload group with all properties specified.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workloadClassifier = new AzureNative.Sql.WorkloadClassifier("workloadClassifier", new AzureNative.Sql.WorkloadClassifierArgs
+ *         {
+ *             Context = "test_context",
+ *             DatabaseName = "testdb",
+ *             EndTime = "14:00",
+ *             Importance = "high",
+ *             Label = "test_label",
+ *             MemberName = "dbo",
+ *             ResourceGroupName = "Default-SQL-SouthEastAsia",
+ *             ServerName = "testsvr",
+ *             StartTime = "12:00",
+ *             WorkloadClassifierName = "wlm_workloadclassifier",
+ *             WorkloadGroupName = "wlm_workloadgroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewWorkloadClassifier(ctx, "workloadClassifier", &sql.WorkloadClassifierArgs{
+ * 			Context:                pulumi.String("test_context"),
+ * 			DatabaseName:           pulumi.String("testdb"),
+ * 			EndTime:                pulumi.String("14:00"),
+ * 			Importance:             pulumi.String("high"),
+ * 			Label:                  pulumi.String("test_label"),
+ * 			MemberName:             pulumi.String("dbo"),
+ * 			ResourceGroupName:      pulumi.String("Default-SQL-SouthEastAsia"),
+ * 			ServerName:             pulumi.String("testsvr"),
+ * 			StartTime:              pulumi.String("12:00"),
+ * 			WorkloadClassifierName: pulumi.String("wlm_workloadclassifier"),
+ * 			WorkloadGroupName:      pulumi.String("wlm_workloadgroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workloadClassifier = new azure_native.sql.WorkloadClassifier("workloadClassifier", {
+ *     context: "test_context",
+ *     databaseName: "testdb",
+ *     endTime: "14:00",
+ *     importance: "high",
+ *     label: "test_label",
+ *     memberName: "dbo",
+ *     resourceGroupName: "Default-SQL-SouthEastAsia",
+ *     serverName: "testsvr",
+ *     startTime: "12:00",
+ *     workloadClassifierName: "wlm_workloadclassifier",
+ *     workloadGroupName: "wlm_workloadgroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workload_classifier = azure_native.sql.WorkloadClassifier("workloadClassifier",
+ *     context="test_context",
+ *     database_name="testdb",
+ *     end_time="14:00",
+ *     importance="high",
+ *     label="test_label",
+ *     member_name="dbo",
+ *     resource_group_name="Default-SQL-SouthEastAsia",
+ *     server_name="testsvr",
+ *     start_time="12:00",
+ *     workload_classifier_name="wlm_workloadclassifier",
+ *     workload_group_name="wlm_workloadgroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a workload group with the required properties specified.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workloadClassifier = new AzureNative.Sql.WorkloadClassifier("workloadClassifier", new AzureNative.Sql.WorkloadClassifierArgs
+ *         {
+ *             DatabaseName = "testdb",
+ *             MemberName = "dbo",
+ *             ResourceGroupName = "Default-SQL-SouthEastAsia",
+ *             ServerName = "testsvr",
+ *             WorkloadClassifierName = "wlm_workloadclassifier",
+ *             WorkloadGroupName = "wlm_workloadgroup",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewWorkloadClassifier(ctx, "workloadClassifier", &sql.WorkloadClassifierArgs{
+ * 			DatabaseName:           pulumi.String("testdb"),
+ * 			MemberName:             pulumi.String("dbo"),
+ * 			ResourceGroupName:      pulumi.String("Default-SQL-SouthEastAsia"),
+ * 			ServerName:             pulumi.String("testsvr"),
+ * 			WorkloadClassifierName: pulumi.String("wlm_workloadclassifier"),
+ * 			WorkloadGroupName:      pulumi.String("wlm_workloadgroup"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workloadClassifier = new azure_native.sql.WorkloadClassifier("workloadClassifier", {
+ *     databaseName: "testdb",
+ *     memberName: "dbo",
+ *     resourceGroupName: "Default-SQL-SouthEastAsia",
+ *     serverName: "testsvr",
+ *     workloadClassifierName: "wlm_workloadclassifier",
+ *     workloadGroupName: "wlm_workloadgroup",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workload_classifier = azure_native.sql.WorkloadClassifier("workloadClassifier",
+ *     database_name="testdb",
+ *     member_name="dbo",
+ *     resource_group_name="Default-SQL-SouthEastAsia",
+ *     server_name="testsvr",
+ *     workload_classifier_name="wlm_workloadclassifier",
+ *     workload_group_name="wlm_workloadgroup")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,112 +218,96 @@ import javax.annotation.Nullable;
 public class WorkloadClassifier extends io.pulumi.resources.CustomResource {
     /**
      * The workload classifier context.
-     * 
      */
     @Export(name="context", type=String.class, parameters={})
     private Output</* @Nullable */ String> context;
 
     /**
      * @return The workload classifier context.
-     * 
      */
     public Output</* @Nullable */ String> getContext() {
         return this.context;
     }
     /**
      * The workload classifier end time for classification.
-     * 
      */
     @Export(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
     /**
      * @return The workload classifier end time for classification.
-     * 
      */
     public Output</* @Nullable */ String> getEndTime() {
         return this.endTime;
     }
     /**
      * The workload classifier importance.
-     * 
      */
     @Export(name="importance", type=String.class, parameters={})
     private Output</* @Nullable */ String> importance;
 
     /**
      * @return The workload classifier importance.
-     * 
      */
     public Output</* @Nullable */ String> getImportance() {
         return this.importance;
     }
     /**
      * The workload classifier label.
-     * 
      */
     @Export(name="label", type=String.class, parameters={})
     private Output</* @Nullable */ String> label;
 
     /**
      * @return The workload classifier label.
-     * 
      */
     public Output</* @Nullable */ String> getLabel() {
         return this.label;
     }
     /**
      * The workload classifier member name.
-     * 
      */
     @Export(name="memberName", type=String.class, parameters={})
     private Output<String> memberName;
 
     /**
      * @return The workload classifier member name.
-     * 
      */
     public Output<String> getMemberName() {
         return this.memberName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The workload classifier start time for classification.
-     * 
      */
     @Export(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
     /**
      * @return The workload classifier start time for classification.
-     * 
      */
     public Output</* @Nullable */ String> getStartTime() {
         return this.startTime;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

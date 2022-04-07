@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The JIT scheduling policies.
- * 
  */
 public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The start time of the request.
-     * 
      */
     @Import(name="startTime", required=true)
       private final Output<String> startTime;

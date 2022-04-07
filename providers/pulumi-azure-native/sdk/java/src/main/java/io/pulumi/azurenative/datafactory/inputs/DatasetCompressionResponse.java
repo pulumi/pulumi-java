@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The compression method used on a dataset.
- * 
  */
 public final class DatasetCompressionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class DatasetCompressionResponse extends io.pulumi.resources.Invoke
 
     /**
      * The dataset compression level. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="level")
       private final @Nullable Object level;
@@ -31,7 +29,6 @@ public final class DatasetCompressionResponse extends io.pulumi.resources.Invoke
 
     /**
      * Type of dataset compression. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="type", required=true)
       private final Object type;

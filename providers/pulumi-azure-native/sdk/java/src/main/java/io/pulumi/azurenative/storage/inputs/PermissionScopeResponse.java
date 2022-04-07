@@ -14,7 +14,6 @@ public final class PermissionScopeResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The permissions for the local user. Possible values include: Read (r), Write (w), Delete (d), List (l), and Create (c).
-     * 
      */
     @Import(name="permissions", required=true)
       private final String permissions;
@@ -25,7 +24,6 @@ public final class PermissionScopeResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The name of resource, normally the container name or the file share name, used by the local user.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;
@@ -36,7 +34,6 @@ public final class PermissionScopeResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The service used by the local user, e.g. blob, file.
-     * 
      */
     @Import(name="service", required=true)
       private final String service;

@@ -14,17 +14,14 @@ public final class ListMachineLearningComputeNodesResult {
     /**
      * The type of compute
      * Expected value is 'AmlCompute'.
-     * 
      */
     private final String computeType;
     /**
      * The continuation token.
-     * 
      */
     private final String nextLink;
     /**
      * The collection of returned AmlCompute nodes details.
-     * 
      */
     private final List<AmlComputeNodeInformationResponse> nodes;
 
@@ -41,21 +38,18 @@ public final class ListMachineLearningComputeNodesResult {
     /**
      * The type of compute
      * Expected value is 'AmlCompute'.
-     * 
     */
     public String getComputeType() {
         return this.computeType;
     }
     /**
      * The continuation token.
-     * 
     */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * The collection of returned AmlCompute nodes details.
-     * 
     */
     public List<AmlComputeNodeInformationResponse> getNodes() {
         return this.nodes;

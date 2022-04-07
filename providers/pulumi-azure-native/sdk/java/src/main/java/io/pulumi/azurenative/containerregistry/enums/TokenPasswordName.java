@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The password name "password1" or "password2"
-     * 
      */
     @EnumType
     public enum TokenPasswordName {

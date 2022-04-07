@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 /**
  * Definition of which data will be collected from a separate VM extension that integrates with the Azure Monitor Agent.
  * Collected from either Windows and Linux machines, depending on which extension is defined.
- * 
  */
 public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the VM extension.
-     * 
      */
     @Import(name="extensionName", required=true)
       private final Output<String> extensionName;
@@ -36,7 +34,6 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The extension settings. The format is specific for particular extension.
-     * 
      */
     @Import(name="extensionSettings")
       private final @Nullable Output<Object> extensionSettings;
@@ -47,7 +44,6 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The list of data sources this extension needs data from.
-     * 
      */
     @Import(name="inputDataSources")
       private final @Nullable Output<List<String>> inputDataSources;
@@ -57,9 +53,8 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     }
 
     /**
-     * A friendly name for the data source.
+     * A friendly name for the data source. 
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -71,7 +66,6 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     /**
      * List of streams that this data source will be sent to.
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
-     * 
      */
     @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams;

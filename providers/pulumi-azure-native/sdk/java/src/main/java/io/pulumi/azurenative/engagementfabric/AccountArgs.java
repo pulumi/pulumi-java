@@ -18,7 +18,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Account Name
-     * 
      */
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
@@ -29,7 +28,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -40,7 +38,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource Group Name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -51,7 +48,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU of the resource
-     * 
      */
     @Import(name="sku", required=true)
       private final Output<SKUArgs> sku;
@@ -62,7 +58,6 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

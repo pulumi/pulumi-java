@@ -21,7 +21,146 @@ import javax.annotation.Nullable;
  * The health alert resource.
  * API Version: 2020-08-04-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateResourceHealthAlertRule
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var healthAlert = new AzureNative.AlertsManagement.HealthAlert("healthAlert", new AzureNative.AlertsManagement.HealthAlertArgs
+ *         {
+ *             Actions = 
+ *             {
+ *                 new AzureNative.AlertsManagement.Inputs.HealthAlertActionArgs
+ *                 {
+ *                     ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+ *                     WebHookProperties = 
+ *                     {
+ *                         { "key11", "value11" },
+ *                         { "key12", "value12" },
+ *                     },
+ *                 },
+ *             },
+ *             Criteria = new AzureNative.AlertsManagement.Inputs.HealthAlertCriteriaArgs
+ *             {
+ *                 AllOf = 
+ *                 {
+ *                     new AzureNative.AlertsManagement.Inputs.VmGuestHealthAlertCriterionArgs
+ *                     {
+ *                         HealthStates = 
+ *                         {
+ *                             new AzureNative.AlertsManagement.Inputs.HealthStateArgs
+ *                             {
+ *                                 Severity = 2,
+ *                             },
+ *                             new AzureNative.AlertsManagement.Inputs.HealthStateArgs
+ *                             {
+ *                                 Severity = 3,
+ *                             },
+ *                         },
+ *                         MonitorNames = 
+ *                         {
+ *                             "root",
+ *                         },
+ *                         Namespace = "GuestVmHealth",
+ *                     },
+ *                 },
+ *             },
+ *             Description = "This is the description of the rule1",
+ *             Enabled = true,
+ *             Location = "global",
+ *             ResourceGroupName = "gigtest",
+ *             RuleName = "highcpu",
+ *             Scopes = 
+ *             {
+ *                 "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert", {
+ *     actions: [{
+ *         actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+ *         webHookProperties: {
+ *             key11: "value11",
+ *             key12: "value12",
+ *         },
+ *     }],
+ *     criteria: {
+ *         allOf: [{
+ *             healthStates: [
+ *                 {
+ *                     severity: 2,
+ *                 },
+ *                 {
+ *                     severity: 3,
+ *                 },
+ *             ],
+ *             monitorNames: ["root"],
+ *             namespace: "GuestVmHealth",
+ *         }],
+ *     },
+ *     description: "This is the description of the rule1",
+ *     enabled: true,
+ *     location: "global",
+ *     resourceGroupName: "gigtest",
+ *     ruleName: "highcpu",
+ *     scopes: ["/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme"],
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * health_alert = azure_native.alertsmanagement.HealthAlert("healthAlert",
+ *     actions=[azure_native.alertsmanagement.HealthAlertActionArgs(
+ *         action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+ *         web_hook_properties={
+ *             "key11": "value11",
+ *             "key12": "value12",
+ *         },
+ *     )],
+ *     criteria=azure_native.alertsmanagement.HealthAlertCriteriaArgs(
+ *         all_of=[{
+ *             "healthStates": [
+ *                 azure_native.alertsmanagement.HealthStateArgs(
+ *                     severity=2,
+ *                 ),
+ *                 azure_native.alertsmanagement.HealthStateArgs(
+ *                     severity=3,
+ *                 ),
+ *             ],
+ *             "monitorNames": ["root"],
+ *             "namespace": "GuestVmHealth",
+ *         }],
+ *     ),
+ *     description="This is the description of the rule1",
+ *     enabled=True,
+ *     location="global",
+ *     resource_group_name="gigtest",
+ *     rule_name="highcpu",
+ *     scopes=["/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme"])
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,140 +175,120 @@ import javax.annotation.Nullable;
 public class HealthAlert extends io.pulumi.resources.CustomResource {
     /**
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-     * 
      */
     @Export(name="actions", type=List.class, parameters={HealthAlertActionResponse.class})
     private Output</* @Nullable */ List<HealthAlertActionResponse>> actions;
 
     /**
      * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-     * 
      */
     public Output</* @Nullable */ List<HealthAlertActionResponse>> getActions() {
         return this.actions;
     }
     /**
      * defines the specific alert criteria information.
-     * 
      */
     @Export(name="criteria", type=HealthAlertCriteriaResponse.class, parameters={})
     private Output<HealthAlertCriteriaResponse> criteria;
 
     /**
      * @return defines the specific alert criteria information.
-     * 
      */
     public Output<HealthAlertCriteriaResponse> getCriteria() {
         return this.criteria;
     }
     /**
      * the description of the health alert that will be included in the alert email.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
      * @return the description of the health alert that will be included in the alert email.
-     * 
      */
     public Output<String> getDescription() {
         return this.description;
     }
     /**
      * the flag that indicates whether the health alert is enabled.
-     * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
     /**
      * @return the flag that indicates whether the health alert is enabled.
-     * 
      */
     public Output<Boolean> getEnabled() {
         return this.enabled;
     }
     /**
      * Last time the rule was updated in ISO8601 format.
-     * 
      */
     @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
      * @return Last time the rule was updated in ISO8601 format.
-     * 
      */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Azure resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * the list of resource id's that this health alert is scoped to.
-     * 
      */
     @Export(name="scopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> scopes;
 
     /**
      * @return the list of resource id's that this health alert is scoped to.
-     * 
      */
     public Output</* @Nullable */ List<String>> getScopes() {
         return this.scopes;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Azure resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Azure resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

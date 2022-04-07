@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * State of the private endpoint connection.
- * 
  */
 public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
 
     /**
      * The actions required for private link service connection.
-     * 
      */
     @Import(name="actionsRequired", required=true)
       private final String actionsRequired;
@@ -29,7 +27,6 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
 
     /**
      * The private link service connection description.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -40,7 +37,6 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
 
     /**
      * The private link service connection status.
-     * 
      */
     @Import(name="status", required=true)
       private final String status;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Migration Validation Database level summary result
- * 
  */
 public final class MigrationValidationDatabaseSummaryResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
 
     /**
      * Validation end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -29,7 +27,6 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -40,7 +37,6 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
 
     /**
      * Migration Identifier
-     * 
      */
     @Import(name="migrationId", required=true)
       private final String migrationId;
@@ -51,7 +47,6 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
 
     /**
      * Name of the source database
-     * 
      */
     @Import(name="sourceDatabaseName", required=true)
       private final String sourceDatabaseName;
@@ -62,7 +57,6 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
 
     /**
      * Validation start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -73,7 +67,6 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
 
     /**
      * Current status of validation at the database level
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -84,7 +77,6 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
 
     /**
      * Name of the target database
-     * 
      */
     @Import(name="targetDatabaseName", required=true)
       private final String targetDatabaseName;

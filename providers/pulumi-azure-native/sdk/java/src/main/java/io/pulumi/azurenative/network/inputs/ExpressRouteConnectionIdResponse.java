@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The ID of the ExpressRouteConnection.
- * 
  */
 public final class ExpressRouteConnectionIdResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ExpressRouteConnectionIdResponse extends io.pulumi.resources.
 
     /**
      * The ID of the ExpressRouteConnection.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

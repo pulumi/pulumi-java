@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The attributes of the key.
- * 
  */
 public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Creation time in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     @Import(name="created", required=true)
       private final Double created;
@@ -33,7 +31,6 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Determines whether or not the object is enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
@@ -44,7 +41,6 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Expiry date in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     @Import(name="expires")
       private final @Nullable Double expires;
@@ -55,7 +51,6 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Not before date in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     @Import(name="notBefore")
       private final @Nullable Double notBefore;
@@ -66,7 +61,6 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.
-     * 
      */
     @Import(name="recoveryLevel", required=true)
       private final String recoveryLevel;
@@ -77,7 +71,6 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Last updated time in seconds since 1970-01-01T00:00:00Z.
-     * 
      */
     @Import(name="updated", required=true)
       private final Double updated;

@@ -14,7 +14,6 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
 
     /**
      * The name of lock.
-     * 
      */
     @Import(name="lockName", required=true)
       private final String lockName;
@@ -25,7 +24,6 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
 
     /**
      * An extra path parameter needed in some services, like SQL Databases.
-     * 
      */
     @Import(name="parentResourcePath", required=true)
       private final String parentResourcePath;
@@ -35,8 +33,7 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
     }
 
     /**
-     * The name of the resource group.
-     * 
+     * The name of the resource group. 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -47,7 +44,6 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;
@@ -58,7 +54,6 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
 
     /**
      * The namespace of the resource provider.
-     * 
      */
     @Import(name="resourceProviderNamespace", required=true)
       private final String resourceProviderNamespace;
@@ -69,7 +64,6 @@ public final class GetManagementLockAtResourceLevelArgs extends io.pulumi.resour
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final String resourceType;

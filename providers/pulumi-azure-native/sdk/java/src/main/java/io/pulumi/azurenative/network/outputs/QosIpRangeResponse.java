@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class QosIpRangeResponse {
     /**
      * End IP Address.
-     * 
      */
     private final @Nullable String endIP;
     /**
      * Start IP Address.
-     * 
      */
     private final @Nullable String startIP;
 
@@ -32,14 +30,12 @@ public final class QosIpRangeResponse {
 
     /**
      * End IP Address.
-     * 
     */
     public Optional<String> getEndIP() {
         return Optional.ofNullable(this.endIP);
     }
     /**
      * Start IP Address.
-     * 
     */
     public Optional<String> getStartIP() {
         return Optional.ofNullable(this.startIP);

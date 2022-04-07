@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
-     * 
      */
     @EnumType
     public enum ManagedServiceIdentityType {

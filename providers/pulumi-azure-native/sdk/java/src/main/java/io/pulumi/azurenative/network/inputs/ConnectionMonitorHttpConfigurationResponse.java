@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the HTTP configuration.
- * 
  */
 public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
 
     /**
      * The HTTP method to use.
-     * 
      */
     @Import(name="method")
       private final @Nullable String method;
@@ -35,7 +33,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
 
     /**
      * The path component of the URI. For instance, "/dir1/dir2".
-     * 
      */
     @Import(name="path")
       private final @Nullable String path;
@@ -46,7 +43,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
 
     /**
      * The port to connect to.
-     * 
      */
     @Import(name="port")
       private final @Nullable Integer port;
@@ -57,7 +53,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
 
     /**
      * Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
-     * 
      */
     @Import(name="preferHTTPS")
       private final @Nullable Boolean preferHTTPS;
@@ -68,7 +63,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
 
     /**
      * The HTTP headers to transmit with the request.
-     * 
      */
     @Import(name="requestHeaders")
       private final @Nullable List<HTTPHeaderResponse> requestHeaders;
@@ -79,7 +73,6 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
 
     /**
      * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
-     * 
      */
     @Import(name="validStatusCodeRanges")
       private final @Nullable List<String> validStatusCodeRanges;

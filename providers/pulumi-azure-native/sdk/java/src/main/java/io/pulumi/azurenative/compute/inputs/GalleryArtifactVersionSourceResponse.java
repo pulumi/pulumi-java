@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The gallery artifact version source.
- * 
  */
 public final class GalleryArtifactVersionSourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class GalleryArtifactVersionSourceResponse extends io.pulumi.resour
 
     /**
      * The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class GalleryArtifactVersionSourceResponse extends io.pulumi.resour
 
     /**
      * The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
-     * 
      */
     @Import(name="uri")
       private final @Nullable String uri;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Encapsulation method on physical ports.
-     * 
      */
     @EnumType
     public enum ExpressRoutePortsEncapsulation {

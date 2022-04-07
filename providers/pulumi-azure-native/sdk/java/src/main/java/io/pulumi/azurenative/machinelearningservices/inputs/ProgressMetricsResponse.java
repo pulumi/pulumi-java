@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Progress metrics for a labeling job.
- * 
  */
 public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The completed datapoint count.
-     * 
      */
     @Import(name="completedDatapointCount", required=true)
       private final Double completedDatapointCount;
@@ -30,7 +28,6 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The time of last successful incremental dataset refresh in UTC.
-     * 
      */
     @Import(name="incrementalDatasetLastRefreshTime", required=true)
       private final String incrementalDatasetLastRefreshTime;
@@ -41,7 +38,6 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The skipped datapoint count.
-     * 
      */
     @Import(name="skippedDatapointCount", required=true)
       private final Double skippedDatapointCount;
@@ -52,7 +48,6 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The total datapoint count.
-     * 
      */
     @Import(name="totalDatapointCount", required=true)
       private final Double totalDatapointCount;

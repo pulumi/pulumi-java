@@ -12,12 +12,10 @@ import java.util.StringJoiner;
     public enum NetworkSecurityGroupRuleAccess {
         /**
          * Allow access.
-         * 
          */
         Allow("Allow"),
         /**
          * Deny access.
-         * 
          */
         Deny("Deny");
 

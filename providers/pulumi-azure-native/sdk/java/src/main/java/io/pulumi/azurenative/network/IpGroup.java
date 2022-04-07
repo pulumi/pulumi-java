@@ -19,7 +19,113 @@ import javax.annotation.Nullable;
  * The IpGroups resource information.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdate_IpGroups
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var ipGroup = new AzureNative.Network.IpGroup("ipGroup", new AzureNative.Network.IpGroupArgs
+ *         {
+ *             IpAddresses = 
+ *             {
+ *                 "13.64.39.16/32",
+ *                 "40.74.146.80/31",
+ *                 "40.74.147.32/28",
+ *             },
+ *             IpGroupsName = "ipGroups1",
+ *             Location = "West US",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewIpGroup(ctx, "ipGroup", &network.IpGroupArgs{
+ * 			IpAddresses: pulumi.StringArray{
+ * 				pulumi.String("13.64.39.16/32"),
+ * 				pulumi.String("40.74.146.80/31"),
+ * 				pulumi.String("40.74.147.32/28"),
+ * 			},
+ * 			IpGroupsName:      pulumi.String("ipGroups1"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const ipGroup = new azure_native.network.IpGroup("ipGroup", {
+ *     ipAddresses: [
+ *         "13.64.39.16/32",
+ *         "40.74.146.80/31",
+ *         "40.74.147.32/28",
+ *     ],
+ *     ipGroupsName: "ipGroups1",
+ *     location: "West US",
+ *     resourceGroupName: "myResourceGroup",
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * ip_group = azure_native.network.IpGroup("ipGroup",
+ *     ip_addresses=[
+ *         "13.64.39.16/32",
+ *         "40.74.146.80/31",
+ *         "40.74.147.32/28",
+ *     ],
+ *     ip_groups_name="ipGroups1",
+ *     location="West US",
+ *     resource_group_name="myResourceGroup",
+ *     tags={
+ *         "key1": "value1",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,126 +140,108 @@ import javax.annotation.Nullable;
 public class IpGroup extends io.pulumi.resources.CustomResource {
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * List of references to Firewall Policies resources that this IpGroups is associated with.
-     * 
      */
     @Export(name="firewallPolicies", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> firewallPolicies;
 
     /**
      * @return List of references to Firewall Policies resources that this IpGroups is associated with.
-     * 
      */
     public Output<List<SubResourceResponse>> getFirewallPolicies() {
         return this.firewallPolicies;
     }
     /**
      * List of references to Firewall resources that this IpGroups is associated with.
-     * 
      */
     @Export(name="firewalls", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> firewalls;
 
     /**
      * @return List of references to Firewall resources that this IpGroups is associated with.
-     * 
      */
     public Output<List<SubResourceResponse>> getFirewalls() {
         return this.firewalls;
     }
     /**
      * IpAddresses/IpAddressPrefixes in the IpGroups resource.
-     * 
      */
     @Export(name="ipAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ipAddresses;
 
     /**
      * @return IpAddresses/IpAddressPrefixes in the IpGroups resource.
-     * 
      */
     public Output</* @Nullable */ List<String>> getIpAddresses() {
         return this.ipAddresses;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the IpGroups resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the IpGroups resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

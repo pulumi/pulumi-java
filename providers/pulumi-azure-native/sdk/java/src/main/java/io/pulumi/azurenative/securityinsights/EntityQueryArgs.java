@@ -18,7 +18,6 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * entity query ID
-     * 
      */
     @Import(name="entityQueryId")
       private final @Nullable Output<String> entityQueryId;
@@ -29,7 +28,6 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * the entity query kind
-     * 
      */
     @Import(name="kind", required=true)
       private final Output<Either<String,CustomEntityQueryKind>> kind;
@@ -40,7 +38,6 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
-     * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
@@ -51,7 +48,6 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -62,7 +58,6 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

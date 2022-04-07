@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Settings for upgrading an agentpool
- * 
  */
 public final class AgentPoolUpgradeSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AgentPoolUpgradeSettingsResponse extends io.pulumi.resources.
 
     /**
      * Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default
-     * 
      */
     @Import(name="maxSurge")
       private final @Nullable String maxSurge;

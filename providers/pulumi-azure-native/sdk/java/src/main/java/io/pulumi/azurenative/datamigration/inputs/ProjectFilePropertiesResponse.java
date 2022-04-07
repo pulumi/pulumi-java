@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Base class for file properties.
- * 
  */
 public final class ProjectFilePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
-     * 
      */
     @Import(name="extension")
       private final @Nullable String extension;
@@ -32,7 +30,6 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Relative path of this file resource. This property can be set when creating or updating the file resource.
-     * 
      */
     @Import(name="filePath")
       private final @Nullable String filePath;
@@ -43,7 +40,6 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * Modification DateTime.
-     * 
      */
     @Import(name="lastModified", required=true)
       private final String lastModified;
@@ -54,7 +50,6 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * File content type. This property can be modified to reflect the file content type.
-     * 
      */
     @Import(name="mediaType")
       private final @Nullable String mediaType;
@@ -65,7 +60,6 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
 
     /**
      * File size.
-     * 
      */
     @Import(name="size", required=true)
       private final Double size;

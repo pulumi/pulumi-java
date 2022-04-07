@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Class for solution properties.
- * 
  */
 public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or sets the cleanup state of the solution.
-     * 
      */
     @Import(name="cleanupState")
       private final @Nullable Output<String> cleanupState;
@@ -32,7 +30,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or sets the details of the solution.
-     * 
      */
     @Import(name="details")
       private final @Nullable Output<SolutionDetailsArgs> details;
@@ -43,7 +40,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or sets the goal of the solution.
-     * 
      */
     @Import(name="goal")
       private final @Nullable Output<String> goal;
@@ -54,7 +50,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or sets the purpose of the solution.
-     * 
      */
     @Import(name="purpose")
       private final @Nullable Output<String> purpose;
@@ -65,7 +60,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or sets the current status of the solution.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<String> status;
@@ -76,7 +70,6 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
 
     /**
      * Gets or sets the tool being used in the solution.
-     * 
      */
     @Import(name="tool")
       private final @Nullable Output<String> tool;

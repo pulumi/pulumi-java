@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Sku name.
-     * 
      */
     @EnumType
     public enum IotDpsSku {

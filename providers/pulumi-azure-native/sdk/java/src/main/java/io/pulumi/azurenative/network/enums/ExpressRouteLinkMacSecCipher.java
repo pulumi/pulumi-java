@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Mac security cipher.
-     * 
      */
     @EnumType
     public enum ExpressRouteLinkMacSecCipher {

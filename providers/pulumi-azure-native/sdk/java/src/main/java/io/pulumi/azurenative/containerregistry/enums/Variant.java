@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Variant of the CPU.
-     * 
      */
     @EnumType
     public enum Variant {

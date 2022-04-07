@@ -15,42 +15,34 @@ import javax.annotation.Nullable;
 public final class GetIntegrationAccountSessionResult {
     /**
      * The changed time.
-     * 
      */
     private final String changedTime;
     /**
      * The session content.
-     * 
      */
     private final @Nullable Object content;
     /**
      * The created time.
-     * 
      */
     private final String createdTime;
     /**
      * The resource id.
-     * 
      */
     private final String id;
     /**
      * The resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Gets the resource name.
-     * 
      */
     private final String name;
     /**
      * The resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Gets the resource type.
-     * 
      */
     private final String type;
 
@@ -76,56 +68,48 @@ public final class GetIntegrationAccountSessionResult {
 
     /**
      * The changed time.
-     * 
     */
     public String getChangedTime() {
         return this.changedTime;
     }
     /**
      * The session content.
-     * 
     */
     public Optional<Object> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The created time.
-     * 
     */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The resource id.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets the resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
-     * 
     */
     public String getType() {
         return this.type;

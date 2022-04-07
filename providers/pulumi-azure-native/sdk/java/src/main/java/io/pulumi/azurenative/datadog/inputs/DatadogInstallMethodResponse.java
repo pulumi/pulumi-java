@@ -16,7 +16,6 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
 
     /**
      * The installer version.
-     * 
      */
     @Import(name="installerVersion")
       private final @Nullable String installerVersion;
@@ -27,7 +26,6 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
 
     /**
      * The tool.
-     * 
      */
     @Import(name="tool")
       private final @Nullable String tool;
@@ -38,7 +36,6 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
 
     /**
      * The tool version.
-     * 
      */
     @Import(name="toolVersion")
       private final @Nullable String toolVersion;

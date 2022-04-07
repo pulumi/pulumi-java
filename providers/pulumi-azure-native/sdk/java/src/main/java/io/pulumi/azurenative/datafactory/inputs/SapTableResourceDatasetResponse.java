@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * SAP Table Resource properties.
- * 
  */
 public final class SapTableResourceDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class SapTableResourceDatasetResponse extends io.pulumi.resources.I
 
     /**
      * List of tags that can be used for describing the Dataset.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -37,7 +35,6 @@ public final class SapTableResourceDatasetResponse extends io.pulumi.resources.I
 
     /**
      * Dataset description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -48,7 +45,6 @@ public final class SapTableResourceDatasetResponse extends io.pulumi.resources.I
 
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
@@ -59,7 +55,6 @@ public final class SapTableResourceDatasetResponse extends io.pulumi.resources.I
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
@@ -70,7 +65,6 @@ public final class SapTableResourceDatasetResponse extends io.pulumi.resources.I
 
     /**
      * Parameters for dataset.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -81,7 +75,6 @@ public final class SapTableResourceDatasetResponse extends io.pulumi.resources.I
 
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Object schema;
@@ -92,7 +85,6 @@ public final class SapTableResourceDatasetResponse extends io.pulumi.resources.I
 
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
      */
     @Import(name="structure")
       private final @Nullable Object structure;
@@ -103,7 +95,6 @@ public final class SapTableResourceDatasetResponse extends io.pulumi.resources.I
 
     /**
      * The name of the SAP Table. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="tableName", required=true)
       private final Object tableName;
@@ -115,7 +106,6 @@ public final class SapTableResourceDatasetResponse extends io.pulumi.resources.I
     /**
      * Type of dataset.
      * Expected value is 'SapTableResource'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

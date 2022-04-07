@@ -23,7 +23,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Bandwidth of procured ports in Gbps.
-     * 
      */
     @Import(name="bandwidthInGbps")
       private final @Nullable Output<Integer> bandwidthInGbps;
@@ -34,7 +33,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Encapsulation method on physical ports.
-     * 
      */
     @Import(name="encapsulation")
       private final @Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
@@ -45,7 +43,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the ExpressRoutePort resource.
-     * 
      */
     @Import(name="expressRoutePortName")
       private final @Nullable Output<String> expressRoutePortName;
@@ -56,7 +53,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -67,7 +63,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The identity of ExpressRoutePort, if configured.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
@@ -78,7 +73,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The set of physical links of the ExpressRoutePort resource.
-     * 
      */
     @Import(name="links")
       private final @Nullable Output<List<ExpressRouteLinkArgs>> links;
@@ -89,7 +83,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -100,7 +93,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the peering location that the ExpressRoutePort is mapped to physically.
-     * 
      */
     @Import(name="peeringLocation")
       private final @Nullable Output<String> peeringLocation;
@@ -111,7 +103,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -122,7 +113,6 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

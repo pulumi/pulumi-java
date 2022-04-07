@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The encryption settings for automation account
- * 
  */
 public final class EncryptionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * User identity used for CMK.
-     * 
      */
     @Import(name="identity")
       private final @Nullable EncryptionPropertiesResponseIdentity identity;
@@ -33,7 +31,6 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Encryption Key Source
-     * 
      */
     @Import(name="keySource")
       private final @Nullable String keySource;
@@ -44,7 +41,6 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Key vault properties.
-     * 
      */
     @Import(name="keyVaultProperties")
       private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;

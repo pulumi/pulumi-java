@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of the custom mapping
-     * 
      */
     @EnumType
     public enum InputSchemaMappingType {

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * This type describes the resource limits for a given container. It describes the most amount of resources a container is allowed to use before being restarted.
- * 
  */
 public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * CPU limits in cores. At present, only full cores are supported.
-     * 
      */
     @Import(name="cpu")
       private final @Nullable Double cpu;
@@ -31,7 +29,6 @@ public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The memory limit in GB.
-     * 
      */
     @Import(name="memoryInGB")
       private final @Nullable Double memoryInGB;

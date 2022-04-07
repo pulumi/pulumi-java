@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Rules that can be defined for auto-heal.
- * 
  */
 public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Actions to be executed when a rule is triggered.
-     * 
      */
     @Import(name="actions")
       private final @Nullable Output<AutoHealActionsArgs> actions;
@@ -32,7 +30,6 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Conditions that describe when to execute the auto-heal actions.
-     * 
      */
     @Import(name="triggers")
       private final @Nullable Output<AutoHealTriggersArgs> triggers;

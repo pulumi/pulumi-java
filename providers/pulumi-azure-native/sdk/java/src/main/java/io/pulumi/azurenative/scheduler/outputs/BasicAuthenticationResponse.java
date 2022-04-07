@@ -13,18 +13,15 @@ import javax.annotation.Nullable;
 public final class BasicAuthenticationResponse {
     /**
      * Gets or sets the password, return value will always be empty.
-     * 
      */
     private final @Nullable String password;
     /**
      * Gets or sets the HTTP authentication type.
      * Expected value is 'Basic'.
-     * 
      */
     private final String type;
     /**
      * Gets or sets the username.
-     * 
      */
     private final @Nullable String username;
 
@@ -40,7 +37,6 @@ public final class BasicAuthenticationResponse {
 
     /**
      * Gets or sets the password, return value will always be empty.
-     * 
     */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
@@ -48,14 +44,12 @@ public final class BasicAuthenticationResponse {
     /**
      * Gets or sets the HTTP authentication type.
      * Expected value is 'Basic'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Gets or sets the username.
-     * 
     */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);

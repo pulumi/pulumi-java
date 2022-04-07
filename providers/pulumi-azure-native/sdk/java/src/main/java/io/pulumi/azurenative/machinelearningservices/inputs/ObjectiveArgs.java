@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * Optimization objective.
- * 
  */
 public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Defines supported metric goals for hyperparameter tuning
-     * 
      */
     @Import(name="goal", required=true)
       private final Output<Either<String,Goal>> goal;
@@ -32,7 +30,6 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the metric to optimize.
-     * 
      */
     @Import(name="primaryMetric", required=true)
       private final Output<String> primaryMetric;

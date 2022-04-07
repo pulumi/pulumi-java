@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Blob index tag based filtering for blob objects
- * 
  */
 public final class TagFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class TagFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is the filter tag name, it can have 1 - 128 characters
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class TagFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported
-     * 
      */
     @Import(name="op", required=true)
       private final String op;
@@ -40,7 +37,6 @@ public final class TagFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

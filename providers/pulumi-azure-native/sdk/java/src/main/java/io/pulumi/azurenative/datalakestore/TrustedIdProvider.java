@@ -17,7 +17,83 @@ import javax.annotation.Nullable;
  * Data Lake Store trusted identity provider information.
  * API Version: 2016-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates or updates the specified trusted identity provider. During update, the trusted identity provider with the specified name will be replaced with this new provider
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var trustedIdProvider = new AzureNative.DataLakeStore.TrustedIdProvider("trustedIdProvider", new AzureNative.DataLakeStore.TrustedIdProviderArgs
+ *         {
+ *             AccountName = "contosoadla",
+ *             IdProvider = "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
+ *             ResourceGroupName = "contosorg",
+ *             TrustedIdProviderName = "test_trusted_id_provider_name",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	datalakestore "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datalakestore"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := datalakestore.NewTrustedIdProvider(ctx, "trustedIdProvider", &datalakestore.TrustedIdProviderArgs{
+ * 			AccountName:           pulumi.String("contosoadla"),
+ * 			IdProvider:            pulumi.String("https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1"),
+ * 			ResourceGroupName:     pulumi.String("contosorg"),
+ * 			TrustedIdProviderName: pulumi.String("test_trusted_id_provider_name"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const trustedIdProvider = new azure_native.datalakestore.TrustedIdProvider("trustedIdProvider", {
+ *     accountName: "contosoadla",
+ *     idProvider: "https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
+ *     resourceGroupName: "contosorg",
+ *     trustedIdProviderName: "test_trusted_id_provider_name",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * trusted_id_provider = azure_native.datalakestore.TrustedIdProvider("trustedIdProvider",
+ *     account_name="contosoadla",
+ *     id_provider="https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1",
+ *     resource_group_name="contosorg",
+ *     trusted_id_provider_name="test_trusted_id_provider_name")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,42 +108,36 @@ import javax.annotation.Nullable;
 public class TrustedIdProvider extends io.pulumi.resources.CustomResource {
     /**
      * The URL of this trusted identity provider.
-     * 
      */
     @Export(name="idProvider", type=String.class, parameters={})
     private Output<String> idProvider;
 
     /**
      * @return The URL of this trusted identity provider.
-     * 
      */
     public Output<String> getIdProvider() {
         return this.idProvider;
     }
     /**
      * The resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

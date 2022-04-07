@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A2A enable protection input.
- * 
  */
 public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery disk encryption information.
-     * 
      */
     @Import(name="diskEncryptionInfo")
       private final @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
@@ -35,7 +33,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The fabric specific object Id of the virtual machine.
-     * 
      */
     @Import(name="fabricObjectId")
       private final @Nullable Output<String> fabricObjectId;
@@ -47,7 +44,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     /**
      * The class type.
      * Expected value is 'A2A'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -58,7 +54,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The multi vm group name.
-     * 
      */
     @Import(name="multiVmGroupName")
       private final @Nullable Output<String> multiVmGroupName;
@@ -69,7 +64,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery availability set Id.
-     * 
      */
     @Import(name="recoveryAvailabilitySetId")
       private final @Nullable Output<String> recoveryAvailabilitySetId;
@@ -80,7 +74,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery availability zone.
-     * 
      */
     @Import(name="recoveryAvailabilityZone")
       private final @Nullable Output<String> recoveryAvailabilityZone;
@@ -91,7 +84,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery Azure virtual network ARM id.
-     * 
      */
     @Import(name="recoveryAzureNetworkId")
       private final @Nullable Output<String> recoveryAzureNetworkId;
@@ -102,7 +94,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The boot diagnostic storage account.
-     * 
      */
     @Import(name="recoveryBootDiagStorageAccountId")
       private final @Nullable Output<String> recoveryBootDiagStorageAccountId;
@@ -113,7 +104,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery cloud service Id. Valid for V1 scenarios.
-     * 
      */
     @Import(name="recoveryCloudServiceId")
       private final @Nullable Output<String> recoveryCloudServiceId;
@@ -124,7 +114,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery container Id.
-     * 
      */
     @Import(name="recoveryContainerId")
       private final @Nullable Output<String> recoveryContainerId;
@@ -135,7 +124,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery proximity placement group Id.
-     * 
      */
     @Import(name="recoveryProximityPlacementGroupId")
       private final @Nullable Output<String> recoveryProximityPlacementGroupId;
@@ -146,7 +134,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery resource group Id. Valid for V2 scenarios.
-     * 
      */
     @Import(name="recoveryResourceGroupId")
       private final @Nullable Output<String> recoveryResourceGroupId;
@@ -157,7 +144,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The recovery subnet name.
-     * 
      */
     @Import(name="recoverySubnetName")
       private final @Nullable Output<String> recoverySubnetName;
@@ -168,7 +154,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The list of vm disk details.
-     * 
      */
     @Import(name="vmDisks")
       private final @Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks;
@@ -179,7 +164,6 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
 
     /**
      * The list of vm managed disk details.
-     * 
      */
     @Import(name="vmManagedDisks")
       private final @Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks;

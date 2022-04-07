@@ -16,7 +16,6 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
 
     /**
      * The group id from the provider of resource the shared private link resource is for
-     * 
      */
     @Import(name="groupId", required=true)
       private final Output<String> groupId;
@@ -27,7 +26,6 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
 
     /**
      * The resource id of the resource the shared private link resource is for
-     * 
      */
     @Import(name="privateLinkResourceId", required=true)
       private final Output<String> privateLinkResourceId;
@@ -38,7 +36,6 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
 
     /**
      * The request message for requesting approval of the shared private link resource
-     * 
      */
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
@@ -49,7 +46,6 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -60,7 +56,6 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -71,7 +66,6 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
 
     /**
      * The name of the shared private link resource
-     * 
      */
     @Import(name="sharedPrivateLinkResourceName")
       private final @Nullable Output<String> sharedPrivateLinkResourceName;

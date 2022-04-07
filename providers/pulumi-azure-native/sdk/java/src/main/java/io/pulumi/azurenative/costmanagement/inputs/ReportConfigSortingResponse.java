@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The order by expression to be used in the report.
- * 
  */
 public final class ReportConfigSortingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ReportConfigSortingResponse extends io.pulumi.resources.Invok
 
     /**
      * Direction of sort.
-     * 
      */
     @Import(name="direction")
       private final @Nullable String direction;
@@ -31,7 +29,6 @@ public final class ReportConfigSortingResponse extends io.pulumi.resources.Invok
 
     /**
      * The name of the column to sort.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

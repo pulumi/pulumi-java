@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * PolyBase settings.
- * 
  */
 public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="rejectSampleValue")
       private final @Nullable Output<Object> rejectSampleValue;
@@ -34,7 +32,6 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Reject type.
-     * 
      */
     @Import(name="rejectType")
       private final @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType;
@@ -45,7 +42,6 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specifies the value or the percentage of rows that can be rejected before the query fails. Type: number (or Expression with resultType number), minimum: 0.
-     * 
      */
     @Import(name="rejectValue")
       private final @Nullable Output<Object> rejectValue;
@@ -56,7 +52,6 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="useTypeDefault")
       private final @Nullable Output<Object> useTypeDefault;

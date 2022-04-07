@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the login flow of users using App Service Authentication/Authorization.
- * 
  */
 public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
      * This is an advanced setting typically only needed by Windows Store application backends.
      * Note that URLs within the current domain are always implicitly allowed.
-     * 
      */
     @Import(name="allowedExternalRedirectUrls")
       private final @Nullable Output<List<String>> allowedExternalRedirectUrls;
@@ -39,7 +37,6 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the session cookie's expiration.
-     * 
      */
     @Import(name="cookieExpiration")
       private final @Nullable Output<CookieExpirationArgs> cookieExpiration;
@@ -50,7 +47,6 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the nonce used in the login flow.
-     * 
      */
     @Import(name="nonce")
       private final @Nullable Output<NonceArgs> nonce;
@@ -61,7 +57,6 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="preserveUrlFragmentsForLogins")
       private final @Nullable Output<Boolean> preserveUrlFragmentsForLogins;
@@ -72,7 +67,6 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The routes that specify the endpoints used for login and logout requests.
-     * 
      */
     @Import(name="routes")
       private final @Nullable Output<LoginRoutesArgs> routes;
@@ -83,7 +77,6 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The configuration settings of the token store.
-     * 
      */
     @Import(name="tokenStore")
       private final @Nullable Output<TokenStoreArgs> tokenStore;

@@ -31,7 +31,117 @@ import javax.annotation.Nullable;
  * Event Subscription
  * API Version: 2020-04-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SystemTopicEventSubscriptions_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var systemTopicEventSubscription = new AzureNative.EventGrid.SystemTopicEventSubscription("systemTopicEventSubscription", new AzureNative.EventGrid.SystemTopicEventSubscriptionArgs
+ *         {
+ *             Destination = new AzureNative.EventGrid.Inputs.WebHookEventSubscriptionDestinationArgs
+ *             {
+ *                 EndpointType = "WebHook",
+ *                 EndpointUrl = "https://requestb.in/15ksip71",
+ *             },
+ *             EventSubscriptionName = "exampleEventSubscriptionName1",
+ *             Filter = new AzureNative.EventGrid.Inputs.EventSubscriptionFilterArgs
+ *             {
+ *                 IsSubjectCaseSensitive = false,
+ *                 SubjectBeginsWith = "ExamplePrefix",
+ *                 SubjectEndsWith = "ExampleSuffix",
+ *             },
+ *             ResourceGroupName = "examplerg",
+ *             SystemTopicName = "exampleSystemTopic1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := eventgrid.NewSystemTopicEventSubscription(ctx, "systemTopicEventSubscription", &eventgrid.SystemTopicEventSubscriptionArgs{
+ * 			Destination: eventgrid.WebHookEventSubscriptionDestination{
+ * 				EndpointType: "WebHook",
+ * 				EndpointUrl:  "https://requestb.in/15ksip71",
+ * 			},
+ * 			EventSubscriptionName: pulumi.String("exampleEventSubscriptionName1"),
+ * 			Filter: &eventgrid.EventSubscriptionFilterArgs{
+ * 				IsSubjectCaseSensitive: pulumi.Bool(false),
+ * 				SubjectBeginsWith:      pulumi.String("ExamplePrefix"),
+ * 				SubjectEndsWith:        pulumi.String("ExampleSuffix"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("examplerg"),
+ * 			SystemTopicName:   pulumi.String("exampleSystemTopic1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const systemTopicEventSubscription = new azure_native.eventgrid.SystemTopicEventSubscription("systemTopicEventSubscription", {
+ *     destination: {
+ *         endpointType: "WebHook",
+ *         endpointUrl: "https://requestb.in/15ksip71",
+ *     },
+ *     eventSubscriptionName: "exampleEventSubscriptionName1",
+ *     filter: {
+ *         isSubjectCaseSensitive: false,
+ *         subjectBeginsWith: "ExamplePrefix",
+ *         subjectEndsWith: "ExampleSuffix",
+ *     },
+ *     resourceGroupName: "examplerg",
+ *     systemTopicName: "exampleSystemTopic1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * system_topic_event_subscription = azure_native.eventgrid.SystemTopicEventSubscription("systemTopicEventSubscription",
+ *     destination=azure_native.eventgrid.WebHookEventSubscriptionDestinationArgs(
+ *         endpoint_type="WebHook",
+ *         endpoint_url="https://requestb.in/15ksip71",
+ *     ),
+ *     event_subscription_name="exampleEventSubscriptionName1",
+ *     filter=azure_native.eventgrid.EventSubscriptionFilterArgs(
+ *         is_subject_case_sensitive=False,
+ *         subject_begins_with="ExamplePrefix",
+ *         subject_ends_with="ExampleSuffix",
+ *     ),
+ *     resource_group_name="examplerg",
+ *     system_topic_name="exampleSystemTopic1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -47,7 +157,6 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
     /**
      * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     @Export(name="deadLetterDestination", type=StorageBlobDeadLetterDestinationResponse.class, parameters={})
     private Output</* @Nullable */ StorageBlobDeadLetterDestinationResponse> deadLetterDestination;
@@ -55,7 +164,6 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
     /**
      * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     public Output</* @Nullable */ StorageBlobDeadLetterDestinationResponse> getDeadLetterDestination() {
         return this.deadLetterDestination;
@@ -63,7 +171,6 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
     /**
      * The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     @Export(name="deadLetterWithResourceIdentity", type=DeadLetterWithResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ DeadLetterWithResourceIdentityResponse> deadLetterWithResourceIdentity;
@@ -71,7 +178,6 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
     /**
      * @return The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     public Output</* @Nullable */ DeadLetterWithResourceIdentityResponse> getDeadLetterWithResourceIdentity() {
         return this.deadLetterWithResourceIdentity;
@@ -79,7 +185,6 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
     /**
      * Information about the destination where events have to be delivered for the event subscription.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     @Export(name="deliveryWithResourceIdentity", type=DeliveryWithResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ DeliveryWithResourceIdentityResponse> deliveryWithResourceIdentity;
@@ -87,7 +192,6 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
     /**
      * @return Information about the destination where events have to be delivered for the event subscription.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     public Output</* @Nullable */ DeliveryWithResourceIdentityResponse> getDeliveryWithResourceIdentity() {
         return this.deliveryWithResourceIdentity;
@@ -95,7 +199,6 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
     /**
      * Information about the destination where events have to be delivered for the event subscription.
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     @Export(name="destination", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> destination;
@@ -103,147 +206,126 @@ public class SystemTopicEventSubscription extends io.pulumi.resources.CustomReso
     /**
      * @return Information about the destination where events have to be delivered for the event subscription.
      * Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
      */
     public Output</* @Nullable */ Object> getDestination() {
         return this.destination;
     }
     /**
      * The event delivery schema for the event subscription.
-     * 
      */
     @Export(name="eventDeliverySchema", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventDeliverySchema;
 
     /**
      * @return The event delivery schema for the event subscription.
-     * 
      */
     public Output</* @Nullable */ String> getEventDeliverySchema() {
         return this.eventDeliverySchema;
     }
     /**
      * Expiration time of the event subscription.
-     * 
      */
     @Export(name="expirationTimeUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationTimeUtc;
 
     /**
      * @return Expiration time of the event subscription.
-     * 
      */
     public Output</* @Nullable */ String> getExpirationTimeUtc() {
         return this.expirationTimeUtc;
     }
     /**
      * Information about the filter for the event subscription.
-     * 
      */
     @Export(name="filter", type=EventSubscriptionFilterResponse.class, parameters={})
     private Output</* @Nullable */ EventSubscriptionFilterResponse> filter;
 
     /**
      * @return Information about the filter for the event subscription.
-     * 
      */
     public Output</* @Nullable */ EventSubscriptionFilterResponse> getFilter() {
         return this.filter;
     }
     /**
      * List of user defined labels.
-     * 
      */
     @Export(name="labels", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> labels;
 
     /**
      * @return List of user defined labels.
-     * 
      */
     public Output</* @Nullable */ List<String>> getLabels() {
         return this.labels;
     }
     /**
      * Name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the event subscription.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the event subscription.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
-     * 
      */
     @Export(name="retryPolicy", type=RetryPolicyResponse.class, parameters={})
     private Output</* @Nullable */ RetryPolicyResponse> retryPolicy;
 
     /**
      * @return The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
-     * 
      */
     public Output</* @Nullable */ RetryPolicyResponse> getRetryPolicy() {
         return this.retryPolicy;
     }
     /**
      * The system metadata relating to Event Subscription resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system metadata relating to Event Subscription resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Name of the topic of the event subscription.
-     * 
      */
     @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**
      * @return Name of the topic of the event subscription.
-     * 
      */
     public Output<String> getTopic() {
         return this.topic;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

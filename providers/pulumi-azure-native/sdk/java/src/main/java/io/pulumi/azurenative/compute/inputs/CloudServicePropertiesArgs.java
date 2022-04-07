@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cloud service properties
- * 
  */
 public final class CloudServicePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     /**
      * (Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
      * The default value is `false`.
-     * 
      */
     @Import(name="allowModelOverride")
       private final @Nullable Output<Boolean> allowModelOverride;
@@ -39,7 +37,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Specifies the XML service configuration (.cscfg) for the cloud service.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable Output<String> configuration;
@@ -51,7 +48,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     /**
      * Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
      * This is a write-only property and is not returned in GET calls.
-     * 
      */
     @Import(name="configurationUrl")
       private final @Nullable Output<String> configurationUrl;
@@ -62,7 +58,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Describes a cloud service extension profile.
-     * 
      */
     @Import(name="extensionProfile")
       private final @Nullable Output<CloudServiceExtensionProfileArgs> extensionProfile;
@@ -73,7 +68,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Network Profile for the cloud service.
-     * 
      */
     @Import(name="networkProfile")
       private final @Nullable Output<CloudServiceNetworkProfileArgs> networkProfile;
@@ -84,7 +78,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Describes the OS profile for the cloud service.
-     * 
      */
     @Import(name="osProfile")
       private final @Nullable Output<CloudServiceOsProfileArgs> osProfile;
@@ -96,7 +89,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     /**
      * Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
      * This is a write-only property and is not returned in GET calls.
-     * 
      */
     @Import(name="packageUrl")
       private final @Nullable Output<String> packageUrl;
@@ -107,7 +99,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * Describes the role profile for the cloud service.
-     * 
      */
     @Import(name="roleProfile")
       private final @Nullable Output<CloudServiceRoleProfileArgs> roleProfile;
@@ -119,7 +110,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     /**
      * (Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
      * If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
-     * 
      */
     @Import(name="startCloudService")
       private final @Nullable Output<Boolean> startCloudService;
@@ -132,7 +122,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
      * Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
      * If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
-     * 
      */
     @Import(name="upgradeMode")
       private final @Nullable Output<Either<String,CloudServiceUpgradeMode>> upgradeMode;

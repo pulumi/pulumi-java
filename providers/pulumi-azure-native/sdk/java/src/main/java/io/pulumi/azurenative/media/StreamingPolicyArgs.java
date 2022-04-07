@@ -20,7 +20,6 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -31,7 +30,6 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Configuration of CommonEncryptionCbcs
-     * 
      */
     @Import(name="commonEncryptionCbcs")
       private final @Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs;
@@ -42,7 +40,6 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Configuration of CommonEncryptionCenc
-     * 
      */
     @Import(name="commonEncryptionCenc")
       private final @Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc;
@@ -53,7 +50,6 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Default ContentKey used by current Streaming Policy
-     * 
      */
     @Import(name="defaultContentKeyPolicyName")
       private final @Nullable Output<String> defaultContentKeyPolicyName;
@@ -64,7 +60,6 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Configuration of EnvelopeEncryption
-     * 
      */
     @Import(name="envelopeEncryption")
       private final @Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption;
@@ -75,7 +70,6 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Configurations of NoEncryption
-     * 
      */
     @Import(name="noEncryption")
       private final @Nullable Output<NoEncryptionArgs> noEncryption;
@@ -86,7 +80,6 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -97,7 +90,6 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The Streaming Policy name.
-     * 
      */
     @Import(name="streamingPolicyName")
       private final @Nullable Output<String> streamingPolicyName;

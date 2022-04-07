@@ -19,7 +19,121 @@ import javax.annotation.Nullable;
  * An attestation resource.
  * API Version: 2021-01-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create attestation at resource group scope
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var attestationAtResourceGroup = new AzureNative.PolicyInsights.AttestationAtResourceGroup("attestationAtResourceGroup", new AzureNative.PolicyInsights.AttestationAtResourceGroupArgs
+ *         {
+ *             AttestationName = "790996e6-9871-4b1f-9cd9-ec42cd6ced1e",
+ *             Comments = "This subscription has passed a security audit.",
+ *             ComplianceState = "Compliant",
+ *             Evidence = 
+ *             {
+ *                 new AzureNative.PolicyInsights.Inputs.AttestationEvidenceArgs
+ *                 {
+ *                     Description = "The results of the security audit.",
+ *                     SourceUri = "https://gist.github.com/contoso/9573e238762c60166c090ae16b814011",
+ *                 },
+ *             },
+ *             ExpiresOn = "2021-06-15T00:00:00Z",
+ *             Owner = "55a32e28-3aa5-4eea-9b5a-4cd85153b966",
+ *             PolicyAssignmentId = "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *             PolicyDefinitionReferenceId = "0b158b46-ff42-4799-8e39-08a5c23b4551",
+ *             ResourceGroupName = "myRg",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	policyinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/policyinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := policyinsights.NewAttestationAtResourceGroup(ctx, "attestationAtResourceGroup", &policyinsights.AttestationAtResourceGroupArgs{
+ * 			AttestationName: pulumi.String("790996e6-9871-4b1f-9cd9-ec42cd6ced1e"),
+ * 			Comments:        pulumi.String("This subscription has passed a security audit."),
+ * 			ComplianceState: pulumi.String("Compliant"),
+ * 			Evidence: []policyinsights.AttestationEvidenceArgs{
+ * 				&policyinsights.AttestationEvidenceArgs{
+ * 					Description: pulumi.String("The results of the security audit."),
+ * 					SourceUri:   pulumi.String("https://gist.github.com/contoso/9573e238762c60166c090ae16b814011"),
+ * 				},
+ * 			},
+ * 			ExpiresOn:                   pulumi.String("2021-06-15T00:00:00Z"),
+ * 			Owner:                       pulumi.String("55a32e28-3aa5-4eea-9b5a-4cd85153b966"),
+ * 			PolicyAssignmentId:          pulumi.String("/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5"),
+ * 			PolicyDefinitionReferenceId: pulumi.String("0b158b46-ff42-4799-8e39-08a5c23b4551"),
+ * 			ResourceGroupName:           pulumi.String("myRg"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const attestationAtResourceGroup = new azure_native.policyinsights.AttestationAtResourceGroup("attestationAtResourceGroup", {
+ *     attestationName: "790996e6-9871-4b1f-9cd9-ec42cd6ced1e",
+ *     comments: "This subscription has passed a security audit.",
+ *     complianceState: "Compliant",
+ *     evidence: [{
+ *         description: "The results of the security audit.",
+ *         sourceUri: "https://gist.github.com/contoso/9573e238762c60166c090ae16b814011",
+ *     }],
+ *     expiresOn: "2021-06-15T00:00:00Z",
+ *     owner: "55a32e28-3aa5-4eea-9b5a-4cd85153b966",
+ *     policyAssignmentId: "/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *     policyDefinitionReferenceId: "0b158b46-ff42-4799-8e39-08a5c23b4551",
+ *     resourceGroupName: "myRg",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * attestation_at_resource_group = azure_native.policyinsights.AttestationAtResourceGroup("attestationAtResourceGroup",
+ *     attestation_name="790996e6-9871-4b1f-9cd9-ec42cd6ced1e",
+ *     comments="This subscription has passed a security audit.",
+ *     compliance_state="Compliant",
+ *     evidence=[azure_native.policyinsights.AttestationEvidenceArgs(
+ *         description="The results of the security audit.",
+ *         source_uri="https://gist.github.com/contoso/9573e238762c60166c090ae16b814011",
+ *     )],
+ *     expires_on="2021-06-15T00:00:00Z",
+ *     owner="55a32e28-3aa5-4eea-9b5a-4cd85153b966",
+ *     policy_assignment_id="/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5",
+ *     policy_definition_reference_id="0b158b46-ff42-4799-8e39-08a5c23b4551",
+ *     resource_group_name="myRg")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,168 +148,144 @@ import javax.annotation.Nullable;
 public class AttestationAtResourceGroup extends io.pulumi.resources.CustomResource {
     /**
      * Comments describing why this attestation was created.
-     * 
      */
     @Export(name="comments", type=String.class, parameters={})
     private Output</* @Nullable */ String> comments;
 
     /**
      * @return Comments describing why this attestation was created.
-     * 
      */
     public Output</* @Nullable */ String> getComments() {
         return this.comments;
     }
     /**
      * The compliance state that should be set on the resource.
-     * 
      */
     @Export(name="complianceState", type=String.class, parameters={})
     private Output</* @Nullable */ String> complianceState;
 
     /**
      * @return The compliance state that should be set on the resource.
-     * 
      */
     public Output</* @Nullable */ String> getComplianceState() {
         return this.complianceState;
     }
     /**
      * The evidence supporting the compliance state set in this attestation.
-     * 
      */
     @Export(name="evidence", type=List.class, parameters={AttestationEvidenceResponse.class})
     private Output</* @Nullable */ List<AttestationEvidenceResponse>> evidence;
 
     /**
      * @return The evidence supporting the compliance state set in this attestation.
-     * 
      */
     public Output</* @Nullable */ List<AttestationEvidenceResponse>> getEvidence() {
         return this.evidence;
     }
     /**
      * The time the compliance state should expire.
-     * 
      */
     @Export(name="expiresOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiresOn;
 
     /**
      * @return The time the compliance state should expire.
-     * 
      */
     public Output</* @Nullable */ String> getExpiresOn() {
         return this.expiresOn;
     }
     /**
      * The time the compliance state was last changed in this attestation.
-     * 
      */
     @Export(name="lastComplianceStateChangeAt", type=String.class, parameters={})
     private Output<String> lastComplianceStateChangeAt;
 
     /**
      * @return The time the compliance state was last changed in this attestation.
-     * 
      */
     public Output<String> getLastComplianceStateChangeAt() {
         return this.lastComplianceStateChangeAt;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
-     * 
      */
     @Export(name="owner", type=String.class, parameters={})
     private Output</* @Nullable */ String> owner;
 
     /**
      * @return The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
-     * 
      */
     public Output</* @Nullable */ String> getOwner() {
         return this.owner;
     }
     /**
      * The resource ID of the policy assignment that the attestation is setting the state for.
-     * 
      */
     @Export(name="policyAssignmentId", type=String.class, parameters={})
     private Output<String> policyAssignmentId;
 
     /**
      * @return The resource ID of the policy assignment that the attestation is setting the state for.
-     * 
      */
     public Output<String> getPolicyAssignmentId() {
         return this.policyAssignmentId;
     }
     /**
      * The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
-     * 
      */
     @Export(name="policyDefinitionReferenceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyDefinitionReferenceId;
 
     /**
      * @return The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
-     * 
      */
     public Output</* @Nullable */ String> getPolicyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId;
     }
     /**
      * The status of the attestation.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The status of the attestation.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure blob read settings.
- * 
  */
 public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="deleteFilesAfterCompletion")
       private final @Nullable Object deleteFilesAfterCompletion;
@@ -33,7 +31,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -44,7 +41,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * Indicates whether to enable partition discovery.
-     * 
      */
     @Import(name="enablePartitionDiscovery")
       private final @Nullable Boolean enablePartitionDiscovery;
@@ -55,7 +51,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="fileListPath")
       private final @Nullable Object fileListPath;
@@ -66,7 +61,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -77,7 +71,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * The end of file's modified datetime. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="modifiedDatetimeEnd")
       private final @Nullable Object modifiedDatetimeEnd;
@@ -88,7 +81,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * The start of file's modified datetime. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="modifiedDatetimeStart")
       private final @Nullable Object modifiedDatetimeStart;
@@ -99,7 +91,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="partitionRootPath")
       private final @Nullable Object partitionRootPath;
@@ -110,7 +101,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * The prefix filter for the Azure Blob name. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="prefix")
       private final @Nullable Object prefix;
@@ -121,7 +111,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="recursive")
       private final @Nullable Object recursive;
@@ -133,7 +122,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
     /**
      * The read setting type.
      * Expected value is 'AzureBlobStorageReadSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -144,7 +132,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * Azure blob wildcardFileName. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="wildcardFileName")
       private final @Nullable Object wildcardFileName;
@@ -155,7 +142,6 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
 
     /**
      * Azure blob wildcardFolderPath. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="wildcardFolderPath")
       private final @Nullable Object wildcardFolderPath;

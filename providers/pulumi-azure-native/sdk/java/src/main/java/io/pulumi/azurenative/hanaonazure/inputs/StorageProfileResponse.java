@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the storage settings for the HANA instance disks.
- * 
  */
 public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies information related to SAP system IDs for the hana instance.
-     * 
      */
     @Import(name="hanaSids")
       private final @Nullable List<SAPSystemIDResponse> hanaSids;
@@ -34,7 +32,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * IP Address to connect to storage.
-     * 
      */
     @Import(name="nfsIpAddress", required=true)
       private final String nfsIpAddress;
@@ -45,7 +42,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies information about the operating system disk used by the hana instance.
-     * 
      */
     @Import(name="osDisks")
       private final @Nullable List<DiskResponse> osDisks;

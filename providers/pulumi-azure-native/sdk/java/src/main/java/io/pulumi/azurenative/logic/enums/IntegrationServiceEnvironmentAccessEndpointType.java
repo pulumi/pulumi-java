@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The access endpoint type.
-     * 
      */
     @EnumType
     public enum IntegrationServiceEnvironmentAccessEndpointType {

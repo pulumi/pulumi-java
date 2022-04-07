@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * This represents the details about a lab that the User is in, and its state.
- * 
  */
 public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Id of the lab.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -31,7 +29,6 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the lab
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -42,7 +39,6 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of the lab.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
@@ -53,7 +49,6 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The maximum duration a user can use a VM in this lab.
-     * 
      */
     @Import(name="usageQuota", required=true)
       private final String usageQuota;

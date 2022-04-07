@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ProviderExtendedLocationResponse {
     /**
      * The extended locations for the azure location.
-     * 
      */
     private final @Nullable List<String> extendedLocations;
     /**
      * The azure location.
-     * 
      */
     private final @Nullable String location;
     /**
      * The extended location type.
-     * 
      */
     private final @Nullable String type;
 
@@ -40,21 +37,18 @@ public final class ProviderExtendedLocationResponse {
 
     /**
      * The extended locations for the azure location.
-     * 
     */
     public List<String> getExtendedLocations() {
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
     }
     /**
      * The azure location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The extended location type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An SOA record.
- * 
  */
 public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The email contact for this SOA record.
-     * 
      */
     @Import(name="email")
       private final @Nullable String email;
@@ -32,7 +30,6 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The expire time for this SOA record.
-     * 
      */
     @Import(name="expireTime")
       private final @Nullable Double expireTime;
@@ -43,7 +40,6 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The domain name of the authoritative name server for this SOA record.
-     * 
      */
     @Import(name="host")
       private final @Nullable String host;
@@ -54,7 +50,6 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
-     * 
      */
     @Import(name="minimumTtl")
       private final @Nullable Double minimumTtl;
@@ -65,7 +60,6 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The refresh value for this SOA record.
-     * 
      */
     @Import(name="refreshTime")
       private final @Nullable Double refreshTime;
@@ -76,7 +70,6 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The retry time for this SOA record.
-     * 
      */
     @Import(name="retryTime")
       private final @Nullable Double retryTime;
@@ -87,7 +80,6 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The serial number for this SOA record.
-     * 
      */
     @Import(name="serialNumber")
       private final @Nullable Double serialNumber;

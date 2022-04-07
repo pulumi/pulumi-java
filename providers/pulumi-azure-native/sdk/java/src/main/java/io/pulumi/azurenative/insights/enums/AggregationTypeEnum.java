@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * the criteria time aggregation types.
-     * 
      */
     @EnumType
     public enum AggregationTypeEnum {

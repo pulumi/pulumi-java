@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A Machine Learning compute based on Azure Virtual Machines.
- * 
  */
 public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Location for the underlying compute
-     * 
      */
     @Import(name="computeLocation")
       private final @Nullable String computeLocation;
@@ -36,7 +34,6 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
     /**
      * The type of compute
      * Expected value is 'VirtualMachine'.
-     * 
      */
     @Import(name="computeType", required=true)
       private final String computeType;
@@ -47,7 +44,6 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The description of the Machine Learning compute.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -58,7 +54,6 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
-     * 
      */
     @Import(name="isAttachedCompute", required=true)
       private final Boolean isAttachedCompute;
@@ -76,7 +71,6 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Errors during provisioning
-     * 
      */
     @Import(name="provisioningErrors", required=true)
       private final List<MachineLearningServiceErrorResponse> provisioningErrors;
@@ -87,7 +81,6 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -98,7 +91,6 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * ARM resource id of the underlying compute
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable String resourceId;

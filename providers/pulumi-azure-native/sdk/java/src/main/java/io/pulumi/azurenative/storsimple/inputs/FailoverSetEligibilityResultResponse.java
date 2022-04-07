@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The eligibility result of failover set, for failover.
- * 
  */
 public final class FailoverSetEligibilityResultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class FailoverSetEligibilityResultResponse extends io.pulumi.resour
 
     /**
      * The error message, if the failover set is not eligible for failover.
-     * 
      */
     @Import(name="errorMessage")
       private final @Nullable String errorMessage;
@@ -32,7 +30,6 @@ public final class FailoverSetEligibilityResultResponse extends io.pulumi.resour
 
     /**
      * Represents if this failover set is eligible for failover or not.
-     * 
      */
     @Import(name="isEligibleForFailover")
       private final @Nullable Boolean isEligibleForFailover;

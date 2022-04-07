@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
-     * 
      */
     @EnumType
     public enum HostCachingOptions {

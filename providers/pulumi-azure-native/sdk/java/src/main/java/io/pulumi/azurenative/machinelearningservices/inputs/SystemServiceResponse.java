@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * A system service running on a compute.
- * 
  */
 public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Public IP address
-     * 
      */
     @Import(name="publicIpAddress", required=true)
       private final String publicIpAddress;
@@ -29,7 +27,6 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The type of this system service.
-     * 
      */
     @Import(name="systemServiceType", required=true)
       private final String systemServiceType;
@@ -40,7 +37,6 @@ public final class SystemServiceResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The version for this type.
-     * 
      */
     @Import(name="version", required=true)
       private final String version;

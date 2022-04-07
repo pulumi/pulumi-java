@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetConsoleResult {
     /**
      * Cloud shell console properties.
-     * 
      */
     private final ConsolePropertiesResponse properties;
 
@@ -22,7 +21,6 @@ public final class GetConsoleResult {
 
     /**
      * Cloud shell console properties.
-     * 
     */
     public ConsolePropertiesResponse getProperties() {
         return this.properties;

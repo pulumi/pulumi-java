@@ -14,7 +14,6 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
 
     /**
      * Playback duration
-     * 
      */
     @Import(name="playbackDurationSeconds", required=true)
       private final Double playbackDurationSeconds;
@@ -25,7 +24,6 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
 
     /**
      * Storage duration
-     * 
      */
     @Import(name="storageDurationSeconds", required=true)
       private final Double storageDurationSeconds;

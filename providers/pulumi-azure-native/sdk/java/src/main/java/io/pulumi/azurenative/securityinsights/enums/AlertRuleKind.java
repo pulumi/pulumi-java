@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The alert rule kind
-     * 
      */
     @EnumType
     public enum AlertRuleKind {

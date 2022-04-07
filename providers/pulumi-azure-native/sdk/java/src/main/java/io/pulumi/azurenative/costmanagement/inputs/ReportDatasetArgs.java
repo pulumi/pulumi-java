@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * The definition of data present in the report.
- * 
  */
 public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -28,7 +27,6 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-     * 
      */
     @Import(name="aggregation")
       private final @Nullable Output<Map<String,ReportAggregationArgs>> aggregation;
@@ -39,7 +37,6 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
-     * 
      */
     @Import(name="configuration")
       private final @Nullable Output<ReportDatasetConfigurationArgs> configuration;
@@ -50,7 +47,6 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Has filter expression to use in the report.
-     * 
      */
     @Import(name="filter")
       private final @Nullable Output<ReportFilterArgs> filter;
@@ -61,7 +57,6 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The granularity of rows in the report.
-     * 
      */
     @Import(name="granularity")
       private final @Nullable Output<Either<String,GranularityType>> granularity;
@@ -72,7 +67,6 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
-     * 
      */
     @Import(name="grouping")
       private final @Nullable Output<List<ReportGroupingArgs>> grouping;

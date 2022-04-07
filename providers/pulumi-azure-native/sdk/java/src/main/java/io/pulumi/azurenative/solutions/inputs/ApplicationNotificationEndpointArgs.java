@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Managed application notification endpoint.
- * 
  */
 public final class ApplicationNotificationEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class ApplicationNotificationEndpointArgs extends io.pulumi.resourc
 
     /**
      * The managed application notification endpoint uri.
-     * 
      */
     @Import(name="uri", required=true)
       private final Output<String> uri;

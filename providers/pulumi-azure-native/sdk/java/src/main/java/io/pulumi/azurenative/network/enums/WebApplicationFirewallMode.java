@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The mode of the policy.
-     * 
      */
     @EnumType
     public enum WebApplicationFirewallMode {

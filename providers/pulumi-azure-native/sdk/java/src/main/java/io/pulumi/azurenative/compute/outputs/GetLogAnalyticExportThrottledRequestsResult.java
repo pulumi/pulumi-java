@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GetLogAnalyticExportThrottledRequestsResult {
     /**
      * LogAnalyticsOutput
-     * 
      */
     private final LogAnalyticsOutputResponse properties;
 
@@ -22,7 +21,6 @@ public final class GetLogAnalyticExportThrottledRequestsResult {
 
     /**
      * LogAnalyticsOutput
-     * 
     */
     public LogAnalyticsOutputResponse getProperties() {
         return this.properties;

@@ -24,7 +24,444 @@ import javax.annotation.Nullable;
  * A streaming job object, containing all information associated with the named streaming job.
  * API Version: 2016-03-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a complete streaming job (a streaming job with a transformation, at least 1 input and at least 1 output)
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var streamingJob = new AzureNative.StreamAnalytics.StreamingJob("streamingJob", new AzureNative.StreamAnalytics.StreamingJobArgs
+ *         {
+ *             CompatibilityLevel = "1.0",
+ *             DataLocale = "en-US",
+ *             EventsLateArrivalMaxDelayInSeconds = 5,
+ *             EventsOutOfOrderMaxDelayInSeconds = 0,
+ *             EventsOutOfOrderPolicy = "Drop",
+ *             Functions = {},
+ *             Inputs = 
+ *             {
+ *                 new AzureNative.StreamAnalytics.Inputs.InputArgs
+ *                 {
+ *                     Name = "inputtest",
+ *                     Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
+ *                     {
+ *                         Datasource = new AzureNative.StreamAnalytics.Inputs.BlobStreamInputDataSourceArgs
+ *                         {
+ *                             Container = "containerName",
+ *                             PathPattern = "",
+ *                             StorageAccounts = 
+ *                             {
+ *                                 new AzureNative.StreamAnalytics.Inputs.StorageAccountArgs
+ *                                 {
+ *                                     AccountKey = "yourAccountKey==",
+ *                                     AccountName = "yourAccountName",
+ *                                 },
+ *                             },
+ *                             Type = "Microsoft.Storage/Blob",
+ *                         },
+ *                         Serialization = new AzureNative.StreamAnalytics.Inputs.JsonSerializationArgs
+ *                         {
+ *                             Encoding = "UTF8",
+ *                             Type = "Json",
+ *                         },
+ *                         Type = "Stream",
+ *                     },
+ *                 },
+ *             },
+ *             JobName = "sj7804",
+ *             Location = "West US",
+ *             OutputErrorPolicy = "Drop",
+ *             Outputs = 
+ *             {
+ *                 new AzureNative.StreamAnalytics.Inputs.OutputArgs
+ *                 {
+ *                     Datasource = new AzureNative.StreamAnalytics.Inputs.AzureSqlDatabaseOutputDataSourceArgs
+ *                     {
+ *                         Database = "databaseName",
+ *                         Password = "userPassword",
+ *                         Server = "serverName",
+ *                         Table = "tableName",
+ *                         Type = "Microsoft.Sql/Server/Database",
+ *                         User = "<user>",
+ *                     },
+ *                     Name = "outputtest",
+ *                 },
+ *             },
+ *             ResourceGroupName = "sjrg3276",
+ *             Sku = new AzureNative.StreamAnalytics.Inputs.SkuArgs
+ *             {
+ *                 Name = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *                 { "key3", "value3" },
+ *                 { "randomKey", "randomValue" },
+ *             },
+ *             Transformation = new AzureNative.StreamAnalytics.Inputs.TransformationArgs
+ *             {
+ *                 Name = "transformationtest",
+ *                 Query = "Select Id, Name from inputtest",
+ *                 StreamingUnits = 1,
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := streamanalytics.NewStreamingJob(ctx, "streamingJob", &streamanalytics.StreamingJobArgs{
+ * 			CompatibilityLevel:                 pulumi.String("1.0"),
+ * 			DataLocale:                         pulumi.String("en-US"),
+ * 			EventsLateArrivalMaxDelayInSeconds: pulumi.Int(5),
+ * 			EventsOutOfOrderMaxDelayInSeconds:  pulumi.Int(0),
+ * 			EventsOutOfOrderPolicy:             pulumi.String("Drop"),
+ * 			Functions:                          streamanalytics.FunctionArray{},
+ * 			Inputs: []streamanalytics.InputArgs{
+ * 				&streamanalytics.InputArgs{
+ * 					Name: pulumi.String("inputtest"),
+ * 					Properties: streamanalytics.StreamInputProperties{
+ * 						Datasource: streamanalytics.BlobStreamInputDataSource{
+ * 							Container:   "containerName",
+ * 							PathPattern: "",
+ * 							StorageAccounts: []streamanalytics.StorageAccount{
+ * 								streamanalytics.StorageAccount{
+ * 									AccountKey:  "yourAccountKey==",
+ * 									AccountName: "yourAccountName",
+ * 								},
+ * 							},
+ * 							Type: "Microsoft.Storage/Blob",
+ * 						},
+ * 						Serialization: streamanalytics.JsonSerialization{
+ * 							Encoding: "UTF8",
+ * 							Type:     "Json",
+ * 						},
+ * 						Type: "Stream",
+ * 					},
+ * 				},
+ * 			},
+ * 			JobName:           pulumi.String("sj7804"),
+ * 			Location:          pulumi.String("West US"),
+ * 			OutputErrorPolicy: pulumi.String("Drop"),
+ * 			Outputs: []streamanalytics.OutputArgs{
+ * 				streamanalytics.OutputArgs{
+ * 					Datasource: streamanalytics.AzureSqlDatabaseOutputDataSource{
+ * 						Database: "databaseName",
+ * 						Password: "userPassword",
+ * 						Server:   "serverName",
+ * 						Table:    "tableName",
+ * 						Type:     "Microsoft.Sql/Server/Database",
+ * 						User:     "<user>",
+ * 					},
+ * 					Name: pulumi.String("outputtest"),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("sjrg3276"),
+ * 			Sku: &streamanalytics.SkuArgs{
+ * 				Name: pulumi.String("Standard"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"key1":      pulumi.String("value1"),
+ * 				"key3":      pulumi.String("value3"),
+ * 				"randomKey": pulumi.String("randomValue"),
+ * 			},
+ * 			Transformation: &streamanalytics.TransformationArgs{
+ * 				Name:           pulumi.String("transformationtest"),
+ * 				Query:          pulumi.String("Select Id, Name from inputtest"),
+ * 				StreamingUnits: pulumi.Int(1),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const streamingJob = new azure_native.streamanalytics.StreamingJob("streamingJob", {
+ *     compatibilityLevel: "1.0",
+ *     dataLocale: "en-US",
+ *     eventsLateArrivalMaxDelayInSeconds: 5,
+ *     eventsOutOfOrderMaxDelayInSeconds: 0,
+ *     eventsOutOfOrderPolicy: "Drop",
+ *     functions: [],
+ *     inputs: [{
+ *         name: "inputtest",
+ *         properties: {
+ *             datasource: {
+ *                 container: "containerName",
+ *                 pathPattern: "",
+ *                 storageAccounts: [{
+ *                     accountKey: "yourAccountKey==",
+ *                     accountName: "yourAccountName",
+ *                 }],
+ *                 type: "Microsoft.Storage/Blob",
+ *             },
+ *             serialization: {
+ *                 encoding: "UTF8",
+ *                 type: "Json",
+ *             },
+ *             type: "Stream",
+ *         },
+ *     }],
+ *     jobName: "sj7804",
+ *     location: "West US",
+ *     outputErrorPolicy: "Drop",
+ *     outputs: [{
+ *         datasource: {
+ *             database: "databaseName",
+ *             password: "userPassword",
+ *             server: "serverName",
+ *             table: "tableName",
+ *             type: "Microsoft.Sql/Server/Database",
+ *             user: "<user>",
+ *         },
+ *         name: "outputtest",
+ *     }],
+ *     resourceGroupName: "sjrg3276",
+ *     sku: {
+ *         name: "Standard",
+ *     },
+ *     tags: {
+ *         key1: "value1",
+ *         key3: "value3",
+ *         randomKey: "randomValue",
+ *     },
+ *     transformation: {
+ *         name: "transformationtest",
+ *         query: "Select Id, Name from inputtest",
+ *         streamingUnits: 1,
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * streaming_job = azure_native.streamanalytics.StreamingJob("streamingJob",
+ *     compatibility_level="1.0",
+ *     data_locale="en-US",
+ *     events_late_arrival_max_delay_in_seconds=5,
+ *     events_out_of_order_max_delay_in_seconds=0,
+ *     events_out_of_order_policy="Drop",
+ *     functions=[],
+ *     inputs=[azure_native.streamanalytics.InputArgs(
+ *         name="inputtest",
+ *         properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
+ *             datasource=azure_native.streamanalytics.BlobStreamInputDataSourceArgs(
+ *                 container="containerName",
+ *                 path_pattern="",
+ *                 storage_accounts=[azure_native.streamanalytics.StorageAccountArgs(
+ *                     account_key="yourAccountKey==",
+ *                     account_name="yourAccountName",
+ *                 )],
+ *                 type="Microsoft.Storage/Blob",
+ *             ),
+ *             serialization=azure_native.streamanalytics.JsonSerializationArgs(
+ *                 encoding="UTF8",
+ *                 type="Json",
+ *             ),
+ *             type="Stream",
+ *         ),
+ *     )],
+ *     job_name="sj7804",
+ *     location="West US",
+ *     output_error_policy="Drop",
+ *     outputs=[azure_native.streamanalytics.OutputArgs(
+ *         datasource=azure_native.streamanalytics.AzureSqlDatabaseOutputDataSourceArgs(
+ *             database="databaseName",
+ *             password="userPassword",
+ *             server="serverName",
+ *             table="tableName",
+ *             type="Microsoft.Sql/Server/Database",
+ *             user="<user>",
+ *         ),
+ *         name="outputtest",
+ *     )],
+ *     resource_group_name="sjrg3276",
+ *     sku=azure_native.streamanalytics.SkuArgs(
+ *         name="Standard",
+ *     ),
+ *     tags={
+ *         "key1": "value1",
+ *         "key3": "value3",
+ *         "randomKey": "randomValue",
+ *     },
+ *     transformation=azure_native.streamanalytics.TransformationArgs(
+ *         name="transformationtest",
+ *         query="Select Id, Name from inputtest",
+ *         streaming_units=1,
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Create a streaming job shell (a streaming job with no inputs, outputs, transformation, or functions)
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var streamingJob = new AzureNative.StreamAnalytics.StreamingJob("streamingJob", new AzureNative.StreamAnalytics.StreamingJobArgs
+ *         {
+ *             CompatibilityLevel = "1.0",
+ *             DataLocale = "en-US",
+ *             EventsLateArrivalMaxDelayInSeconds = 16,
+ *             EventsOutOfOrderMaxDelayInSeconds = 5,
+ *             EventsOutOfOrderPolicy = "Drop",
+ *             Functions = {},
+ *             Inputs = {},
+ *             JobName = "sj59",
+ *             Location = "West US",
+ *             OutputErrorPolicy = "Drop",
+ *             Outputs = {},
+ *             ResourceGroupName = "sjrg6936",
+ *             Sku = new AzureNative.StreamAnalytics.Inputs.SkuArgs
+ *             {
+ *                 Name = "Standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *                 { "key3", "value3" },
+ *                 { "randomKey", "randomValue" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := streamanalytics.NewStreamingJob(ctx, "streamingJob", &streamanalytics.StreamingJobArgs{
+ * 			CompatibilityLevel:                 pulumi.String("1.0"),
+ * 			DataLocale:                         pulumi.String("en-US"),
+ * 			EventsLateArrivalMaxDelayInSeconds: pulumi.Int(16),
+ * 			EventsOutOfOrderMaxDelayInSeconds:  pulumi.Int(5),
+ * 			EventsOutOfOrderPolicy:             pulumi.String("Drop"),
+ * 			Functions:                          streamanalytics.FunctionArray{},
+ * 			Inputs:                             streamanalytics.InputArray{},
+ * 			JobName:                            pulumi.String("sj59"),
+ * 			Location:                           pulumi.String("West US"),
+ * 			OutputErrorPolicy:                  pulumi.String("Drop"),
+ * 			Outputs:                            streamanalytics.OutputArray{},
+ * 			ResourceGroupName:                  pulumi.String("sjrg6936"),
+ * 			Sku: &streamanalytics.SkuArgs{
+ * 				Name: pulumi.String("Standard"),
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"key1":      pulumi.String("value1"),
+ * 				"key3":      pulumi.String("value3"),
+ * 				"randomKey": pulumi.String("randomValue"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const streamingJob = new azure_native.streamanalytics.StreamingJob("streamingJob", {
+ *     compatibilityLevel: "1.0",
+ *     dataLocale: "en-US",
+ *     eventsLateArrivalMaxDelayInSeconds: 16,
+ *     eventsOutOfOrderMaxDelayInSeconds: 5,
+ *     eventsOutOfOrderPolicy: "Drop",
+ *     functions: [],
+ *     inputs: [],
+ *     jobName: "sj59",
+ *     location: "West US",
+ *     outputErrorPolicy: "Drop",
+ *     outputs: [],
+ *     resourceGroupName: "sjrg6936",
+ *     sku: {
+ *         name: "Standard",
+ *     },
+ *     tags: {
+ *         key1: "value1",
+ *         key3: "value3",
+ *         randomKey: "randomValue",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * streaming_job = azure_native.streamanalytics.StreamingJob("streamingJob",
+ *     compatibility_level="1.0",
+ *     data_locale="en-US",
+ *     events_late_arrival_max_delay_in_seconds=16,
+ *     events_out_of_order_max_delay_in_seconds=5,
+ *     events_out_of_order_policy="Drop",
+ *     functions=[],
+ *     inputs=[],
+ *     job_name="sj59",
+ *     location="West US",
+ *     output_error_policy="Drop",
+ *     outputs=[],
+ *     resource_group_name="sjrg6936",
+ *     sku=azure_native.streamanalytics.SkuArgs(
+ *         name="Standard",
+ *     ),
+ *     tags={
+ *         "key1": "value1",
+ *         "key3": "value3",
+ *         "randomKey": "randomValue",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,322 +476,276 @@ import javax.annotation.Nullable;
 public class StreamingJob extends io.pulumi.resources.CustomResource {
     /**
      * Controls certain runtime behaviors of the streaming job.
-     * 
      */
     @Export(name="compatibilityLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> compatibilityLevel;
 
     /**
      * @return Controls certain runtime behaviors of the streaming job.
-     * 
      */
     public Output</* @Nullable */ String> getCompatibilityLevel() {
         return this.compatibilityLevel;
     }
     /**
      * Value is an ISO-8601 formatted UTC timestamp indicating when the streaming job was created.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return Value is an ISO-8601 formatted UTC timestamp indicating when the streaming job was created.
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
-     * 
      */
     @Export(name="dataLocale", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataLocale;
 
     /**
      * @return The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
-     * 
      */
     public Output</* @Nullable */ String> getDataLocale() {
         return this.dataLocale;
     }
     /**
      * The current entity tag for the streaming job. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return The current entity tag for the streaming job. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.
-     * 
      */
     @Export(name="eventsLateArrivalMaxDelayInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> eventsLateArrivalMaxDelayInSeconds;
 
     /**
      * @return The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.
-     * 
      */
     public Output</* @Nullable */ Integer> getEventsLateArrivalMaxDelayInSeconds() {
         return this.eventsLateArrivalMaxDelayInSeconds;
     }
     /**
      * The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.
-     * 
      */
     @Export(name="eventsOutOfOrderMaxDelayInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> eventsOutOfOrderMaxDelayInSeconds;
 
     /**
      * @return The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.
-     * 
      */
     public Output</* @Nullable */ Integer> getEventsOutOfOrderMaxDelayInSeconds() {
         return this.eventsOutOfOrderMaxDelayInSeconds;
     }
     /**
      * Indicates the policy to apply to events that arrive out of order in the input event stream.
-     * 
      */
     @Export(name="eventsOutOfOrderPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventsOutOfOrderPolicy;
 
     /**
      * @return Indicates the policy to apply to events that arrive out of order in the input event stream.
-     * 
      */
     public Output</* @Nullable */ String> getEventsOutOfOrderPolicy() {
         return this.eventsOutOfOrderPolicy;
     }
     /**
      * A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
-     * 
      */
     @Export(name="functions", type=List.class, parameters={FunctionResponse.class})
     private Output</* @Nullable */ List<FunctionResponse>> functions;
 
     /**
      * @return A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
-     * 
      */
     public Output</* @Nullable */ List<FunctionResponse>> getFunctions() {
         return this.functions;
     }
     /**
      * A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.
-     * 
      */
     @Export(name="inputs", type=List.class, parameters={InputResponse.class})
     private Output</* @Nullable */ List<InputResponse>> inputs;
 
     /**
      * @return A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.
-     * 
      */
     public Output</* @Nullable */ List<InputResponse>> getInputs() {
         return this.inputs;
     }
     /**
      * A GUID uniquely identifying the streaming job. This GUID is generated upon creation of the streaming job.
-     * 
      */
     @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
     /**
      * @return A GUID uniquely identifying the streaming job. This GUID is generated upon creation of the streaming job.
-     * 
      */
     public Output<String> getJobId() {
         return this.jobId;
     }
     /**
      * Describes the state of the streaming job.
-     * 
      */
     @Export(name="jobState", type=String.class, parameters={})
     private Output<String> jobState;
 
     /**
      * @return Describes the state of the streaming job.
-     * 
      */
     public Output<String> getJobState() {
         return this.jobState;
     }
     /**
      * Value is either an ISO-8601 formatted timestamp indicating the last output event time of the streaming job or null indicating that output has not yet been produced. In case of multiple outputs or multiple streams, this shows the latest value in that set.
-     * 
      */
     @Export(name="lastOutputEventTime", type=String.class, parameters={})
     private Output<String> lastOutputEventTime;
 
     /**
      * @return Value is either an ISO-8601 formatted timestamp indicating the last output event time of the streaming job or null indicating that output has not yet been produced. In case of multiple outputs or multiple streams, this shows the latest value in that set.
-     * 
      */
     public Output<String> getLastOutputEventTime() {
         return this.lastOutputEventTime;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).
-     * 
      */
     @Export(name="outputErrorPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> outputErrorPolicy;
 
     /**
      * @return Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).
-     * 
      */
     public Output</* @Nullable */ String> getOutputErrorPolicy() {
         return this.outputErrorPolicy;
     }
     /**
      * This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
-     * 
      */
     @Export(name="outputStartMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> outputStartMode;
 
     /**
      * @return This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
-     * 
      */
     public Output</* @Nullable */ String> getOutputStartMode() {
         return this.outputStartMode;
     }
     /**
      * Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.
-     * 
      */
     @Export(name="outputStartTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> outputStartTime;
 
     /**
      * @return Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.
-     * 
      */
     public Output</* @Nullable */ String> getOutputStartTime() {
         return this.outputStartTime;
     }
     /**
      * A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.
-     * 
      */
     @Export(name="outputs", type=List.class, parameters={OutputResponse.class})
     private Output</* @Nullable */ List<OutputResponse>> outputs;
 
     /**
      * @return A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.
-     * 
      */
     public Output</* @Nullable */ List<OutputResponse>> getOutputs() {
         return this.outputs;
     }
     /**
      * Describes the provisioning status of the streaming job.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Describes the provisioning status of the streaming job.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
-     * 
      */
     @Export(name="transformation", type=TransformationResponse.class, parameters={})
     private Output</* @Nullable */ TransformationResponse> transformation;
 
     /**
      * @return Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
-     * 
      */
     public Output</* @Nullable */ TransformationResponse> getTransformation() {
         return this.transformation;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
-     * 
      */
     public Output<String> getType() {
         return this.type;

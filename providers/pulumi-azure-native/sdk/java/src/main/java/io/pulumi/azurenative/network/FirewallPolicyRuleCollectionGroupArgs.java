@@ -21,7 +21,6 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
 
     /**
      * The name of the Firewall Policy.
-     * 
      */
     @Import(name="firewallPolicyName", required=true)
       private final Output<String> firewallPolicyName;
@@ -32,7 +31,6 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -43,7 +41,6 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -54,7 +51,6 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
 
     /**
      * Priority of the Firewall Policy Rule Collection Group resource.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -65,7 +61,6 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -76,7 +71,6 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
 
     /**
      * The name of the FirewallPolicyRuleCollectionGroup.
-     * 
      */
     @Import(name="ruleCollectionGroupName")
       private final @Nullable Output<String> ruleCollectionGroupName;
@@ -87,7 +81,6 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
 
     /**
      * Group of Firewall Policy rule collections.
-     * 
      */
     @Import(name="ruleCollections")
       private final @Nullable Output<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections;

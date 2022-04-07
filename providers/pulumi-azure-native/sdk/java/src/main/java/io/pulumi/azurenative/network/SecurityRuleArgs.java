@@ -23,7 +23,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The network traffic is allowed or denied.
-     * 
      */
     @Import(name="access", required=true)
       private final Output<Either<String,SecurityRuleAccess>> access;
@@ -34,7 +33,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A description for this rule. Restricted to 140 chars.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -45,7 +43,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
-     * 
      */
     @Import(name="destinationAddressPrefix")
       private final @Nullable Output<String> destinationAddressPrefix;
@@ -56,7 +53,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
-     * 
      */
     @Import(name="destinationAddressPrefixes")
       private final @Nullable Output<List<String>> destinationAddressPrefixes;
@@ -67,7 +63,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The application security group specified as destination.
-     * 
      */
     @Import(name="destinationApplicationSecurityGroups")
       private final @Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
@@ -78,7 +73,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
-     * 
      */
     @Import(name="destinationPortRange")
       private final @Nullable Output<String> destinationPortRange;
@@ -89,7 +83,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The destination port ranges.
-     * 
      */
     @Import(name="destinationPortRanges")
       private final @Nullable Output<List<String>> destinationPortRanges;
@@ -100,7 +93,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
-     * 
      */
     @Import(name="direction", required=true)
       private final Output<Either<String,SecurityRuleDirection>> direction;
@@ -111,7 +103,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -122,7 +113,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -133,7 +123,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the network security group.
-     * 
      */
     @Import(name="networkSecurityGroupName", required=true)
       private final Output<String> networkSecurityGroupName;
@@ -144,7 +133,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-     * 
      */
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
@@ -155,7 +143,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Network protocol this rule applies to.
-     * 
      */
     @Import(name="protocol", required=true)
       private final Output<Either<String,SecurityRuleProtocol>> protocol;
@@ -166,7 +153,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -177,7 +163,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the security rule.
-     * 
      */
     @Import(name="securityRuleName")
       private final @Nullable Output<String> securityRuleName;
@@ -188,7 +173,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
-     * 
      */
     @Import(name="sourceAddressPrefix")
       private final @Nullable Output<String> sourceAddressPrefix;
@@ -199,7 +183,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The CIDR or source IP ranges.
-     * 
      */
     @Import(name="sourceAddressPrefixes")
       private final @Nullable Output<List<String>> sourceAddressPrefixes;
@@ -210,7 +193,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The application security group specified as source.
-     * 
      */
     @Import(name="sourceApplicationSecurityGroups")
       private final @Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
@@ -221,7 +203,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
-     * 
      */
     @Import(name="sourcePortRange")
       private final @Nullable Output<String> sourcePortRange;
@@ -232,7 +213,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The source port ranges.
-     * 
      */
     @Import(name="sourcePortRanges")
       private final @Nullable Output<List<String>> sourcePortRanges;
@@ -243,7 +223,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the resource.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

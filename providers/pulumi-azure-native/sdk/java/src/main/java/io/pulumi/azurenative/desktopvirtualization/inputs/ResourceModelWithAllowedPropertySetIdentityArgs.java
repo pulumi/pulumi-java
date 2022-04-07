@@ -16,7 +16,6 @@ public final class ResourceModelWithAllowedPropertySetIdentityArgs extends io.pu
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;

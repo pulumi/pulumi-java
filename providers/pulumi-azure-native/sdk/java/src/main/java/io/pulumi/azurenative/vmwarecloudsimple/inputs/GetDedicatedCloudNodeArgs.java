@@ -14,7 +14,6 @@ public final class GetDedicatedCloudNodeArgs extends io.pulumi.resources.InvokeA
 
     /**
      * dedicated cloud node name
-     * 
      */
     @Import(name="dedicatedCloudNodeName", required=true)
       private final String dedicatedCloudNodeName;
@@ -25,7 +24,6 @@ public final class GetDedicatedCloudNodeArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -23,7 +23,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Blockchain member name.
-     * 
      */
     @Import(name="blockchainMemberName")
       private final @Nullable Output<String> blockchainMemberName;
@@ -34,7 +33,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the consortium for the blockchain member.
-     * 
      */
     @Import(name="consortium")
       private final @Nullable Output<String> consortium;
@@ -45,7 +43,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Sets the managed consortium management account password.
-     * 
      */
     @Import(name="consortiumManagementAccountPassword")
       private final @Nullable Output<String> consortiumManagementAccountPassword;
@@ -56,7 +53,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets the display name of the member in the consortium.
-     * 
      */
     @Import(name="consortiumMemberDisplayName")
       private final @Nullable Output<String> consortiumMemberDisplayName;
@@ -67,7 +63,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets the role of the member in the consortium.
-     * 
      */
     @Import(name="consortiumRole")
       private final @Nullable Output<String> consortiumRole;
@@ -78,7 +73,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets firewall rules
-     * 
      */
     @Import(name="firewallRules")
       private final @Nullable Output<List<FirewallRuleArgs>> firewallRules;
@@ -89,7 +83,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The GEO location of the blockchain service.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -100,7 +93,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Sets the basic auth password of the blockchain member.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -111,7 +103,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the blockchain protocol.
-     * 
      */
     @Import(name="protocol")
       private final @Nullable Output<Either<String,BlockchainProtocol>> protocol;
@@ -122,7 +113,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -133,7 +123,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the blockchain member Sku.
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
@@ -144,7 +133,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Tags of the service which is a list of key value pairs that describes the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -155,7 +143,6 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Gets or sets the blockchain validator nodes Sku.
-     * 
      */
     @Import(name="validatorNodesSku")
       private final @Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku;

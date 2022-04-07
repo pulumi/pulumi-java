@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * IsNotNull Advanced Filter.
- * 
  */
 public final class IsNotNullAdvancedFilterResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class IsNotNullAdvancedFilterResponse extends io.pulumi.resources.I
 
     /**
      * The field/property in the event based on which you want to filter.
-     * 
      */
     @Import(name="key")
       private final @Nullable String key;
@@ -32,7 +30,6 @@ public final class IsNotNullAdvancedFilterResponse extends io.pulumi.resources.I
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'IsNotNull'.
-     * 
      */
     @Import(name="operatorType", required=true)
       private final String operatorType;

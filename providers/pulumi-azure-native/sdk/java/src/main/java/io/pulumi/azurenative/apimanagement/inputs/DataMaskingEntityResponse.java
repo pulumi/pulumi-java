@@ -16,7 +16,6 @@ public final class DataMaskingEntityResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Data masking mode.
-     * 
      */
     @Import(name="mode")
       private final @Nullable String mode;
@@ -27,7 +26,6 @@ public final class DataMaskingEntityResponse extends io.pulumi.resources.InvokeA
 
     /**
      * The name of an entity to mask (e.g. a name of a header or a query parameter).
-     * 
      */
     @Import(name="value")
       private final @Nullable String value;

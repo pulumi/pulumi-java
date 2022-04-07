@@ -23,7 +23,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Groups for configuration
-     * 
      */
     @Import(name="appliesToGroups")
       private final @Nullable Output<List<ConnectivityGroupItemArgs>> appliesToGroups;
@@ -34,7 +33,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the network manager connectivity configuration.
-     * 
      */
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
@@ -45,7 +43,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Connectivity topology type.
-     * 
      */
     @Import(name="connectivityTopology", required=true)
       private final Output<Either<String,ConnectivityTopology>> connectivityTopology;
@@ -56,7 +53,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Flag if need to remove current existing peerings.
-     * 
      */
     @Import(name="deleteExistingPeering")
       private final @Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering;
@@ -67,7 +63,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * A description of the connectivity configuration.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -78,7 +73,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * A friendly name for the resource.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -89,7 +83,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * List of hubItems
-     * 
      */
     @Import(name="hubs")
       private final @Nullable Output<List<HubArgs>> hubs;
@@ -100,7 +93,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * Flag if global mesh is supported.
-     * 
      */
     @Import(name="isGlobal")
       private final @Nullable Output<Either<String,IsGlobal>> isGlobal;
@@ -111,7 +103,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the network manager.
-     * 
      */
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
@@ -122,7 +113,6 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

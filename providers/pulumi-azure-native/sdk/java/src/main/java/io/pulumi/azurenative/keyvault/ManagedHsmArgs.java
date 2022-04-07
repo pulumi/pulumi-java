@@ -19,7 +19,6 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The supported Azure location where the managed HSM Pool should be created.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -30,7 +29,6 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the managed HSM Pool
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -41,7 +39,6 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the managed HSM
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<ManagedHsmPropertiesArgs> properties;
@@ -52,7 +49,6 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group that contains the managed HSM pool.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -63,7 +59,6 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * SKU details
-     * 
      */
     @Import(name="sku")
       private final @Nullable Output<ManagedHsmSkuArgs> sku;
@@ -74,7 +69,6 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

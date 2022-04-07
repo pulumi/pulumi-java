@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Backup Vault
- * 
  */
 public final class BackupVaultResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class BackupVaultResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Provisioning state of the BackupVault resource
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -31,7 +29,6 @@ public final class BackupVaultResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Storage Settings
-     * 
      */
     @Import(name="storageSettings", required=true)
       private final List<StorageSettingResponse> storageSettings;

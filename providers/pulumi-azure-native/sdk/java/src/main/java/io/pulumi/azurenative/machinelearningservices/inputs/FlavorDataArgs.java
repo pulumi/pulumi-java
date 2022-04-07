@@ -17,7 +17,6 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Model flavor-specific data.
-     * 
      */
     @Import(name="data")
       private final @Nullable Output<Map<String,String>> data;

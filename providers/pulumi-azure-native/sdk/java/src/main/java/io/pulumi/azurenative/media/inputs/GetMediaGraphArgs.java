@@ -14,7 +14,6 @@ public final class GetMediaGraphArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetMediaGraphArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Media Graph name.
-     * 
      */
     @Import(name="mediaGraphName", required=true)
       private final String mediaGraphName;
@@ -36,7 +34,6 @@ public final class GetMediaGraphArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

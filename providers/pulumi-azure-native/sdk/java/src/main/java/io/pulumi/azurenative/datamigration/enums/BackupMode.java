@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Backup Mode to specify whether to use existing backup or create new backup.
-     * 
      */
     @EnumType
     public enum BackupMode {

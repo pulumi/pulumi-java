@@ -17,7 +17,79 @@ import javax.annotation.Nullable;
  * Authorization in an ExpressRouteCircuit resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create ExpressRouteCircuit Authorization
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var expressRouteCircuitAuthorization = new AzureNative.Network.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization", new AzureNative.Network.ExpressRouteCircuitAuthorizationArgs
+ *         {
+ *             AuthorizationName = "authorizatinName",
+ *             CircuitName = "circuitName",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewExpressRouteCircuitAuthorization(ctx, "expressRouteCircuitAuthorization", &network.ExpressRouteCircuitAuthorizationArgs{
+ * 			AuthorizationName: pulumi.String("authorizatinName"),
+ * 			CircuitName:       pulumi.String("circuitName"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const expressRouteCircuitAuthorization = new azure_native.network.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization", {
+ *     authorizationName: "authorizatinName",
+ *     circuitName: "circuitName",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * express_route_circuit_authorization = azure_native.network.ExpressRouteCircuitAuthorization("expressRouteCircuitAuthorization",
+ *     authorization_name="authorizatinName",
+ *     circuit_name="circuitName",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -32,84 +104,72 @@ import javax.annotation.Nullable;
 public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.CustomResource {
     /**
      * The authorization key.
-     * 
      */
     @Export(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
     /**
      * @return The authorization key.
-     * 
      */
     public Output</* @Nullable */ String> getAuthorizationKey() {
         return this.authorizationKey;
     }
     /**
      * The authorization use status.
-     * 
      */
     @Export(name="authorizationUseStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationUseStatus;
 
     /**
      * @return The authorization use status.
-     * 
      */
     public Output</* @Nullable */ String> getAuthorizationUseStatus() {
         return this.authorizationUseStatus;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The provisioning state of the authorization resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the authorization resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -21,7 +21,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The autoscale setting name.
-     * 
      */
     @Import(name="autoscaleSettingName")
       private final @Nullable Output<String> autoscaleSettingName;
@@ -32,7 +31,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -43,7 +41,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -54,7 +51,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * the name of the autoscale setting.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -65,7 +61,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * the collection of notifications.
-     * 
      */
     @Import(name="notifications")
       private final @Nullable Output<List<AutoscaleNotificationArgs>> notifications;
@@ -76,7 +71,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
-     * 
      */
     @Import(name="profiles", required=true)
       private final Output<List<AutoscaleProfileArgs>> profiles;
@@ -87,7 +81,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -98,7 +91,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -109,7 +101,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * the location of the resource that the autoscale setting should be added to.
-     * 
      */
     @Import(name="targetResourceLocation")
       private final @Nullable Output<String> targetResourceLocation;
@@ -120,7 +111,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * the resource identifier of the resource that the autoscale setting should be added to.
-     * 
      */
     @Import(name="targetResourceUri")
       private final @Nullable Output<String> targetResourceUri;

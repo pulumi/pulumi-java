@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the HTTP authentication type.
-     * 
      */
     @EnumType
     public enum HttpAuthenticationType {

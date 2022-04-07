@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Time interval that the query actually executed on.
- * 
  */
 public final class EntityInsightItemResponseQueryTimeInterval extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EntityInsightItemResponseQueryTimeInterval extends io.pulumi.
 
     /**
      * Insight query end time
-     * 
      */
     @Import(name="endTime")
       private final @Nullable String endTime;
@@ -31,7 +29,6 @@ public final class EntityInsightItemResponseQueryTimeInterval extends io.pulumi.
 
     /**
      * Insight query start time
-     * 
      */
     @Import(name="startTime")
       private final @Nullable String startTime;

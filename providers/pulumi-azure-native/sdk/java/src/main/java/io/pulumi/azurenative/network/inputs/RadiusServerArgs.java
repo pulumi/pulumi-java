@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Radius Server Settings.
- * 
  */
 public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The address of this radius server.
-     * 
      */
     @Import(name="radiusServerAddress", required=true)
       private final Output<String> radiusServerAddress;
@@ -32,7 +30,6 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The initial score assigned to this radius server.
-     * 
      */
     @Import(name="radiusServerScore")
       private final @Nullable Output<Double> radiusServerScore;
@@ -43,7 +40,6 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The secret used for this radius server.
-     * 
      */
     @Import(name="radiusServerSecret")
       private final @Nullable Output<String> radiusServerSecret;

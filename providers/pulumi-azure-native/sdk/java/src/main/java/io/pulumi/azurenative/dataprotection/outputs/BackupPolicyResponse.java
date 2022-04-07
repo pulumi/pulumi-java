@@ -15,17 +15,15 @@ import java.util.Objects;
 public final class BackupPolicyResponse {
     /**
      * Type of datasource for the backup management
-     * 
      */
     private final List<String> datasourceTypes;
     /**
-     * Expected value is 'BackupPolicy'.
      * 
+     * Expected value is 'BackupPolicy'.
      */
     private final String objectType;
     /**
      * Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
-     * 
      */
     private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
 
@@ -41,21 +39,19 @@ public final class BackupPolicyResponse {
 
     /**
      * Type of datasource for the backup management
-     * 
     */
     public List<String> getDatasourceTypes() {
         return this.datasourceTypes;
     }
     /**
-     * Expected value is 'BackupPolicy'.
      * 
+     * Expected value is 'BackupPolicy'.
     */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
-     * 
     */
     public List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> getPolicyRules() {
         return this.policyRules;

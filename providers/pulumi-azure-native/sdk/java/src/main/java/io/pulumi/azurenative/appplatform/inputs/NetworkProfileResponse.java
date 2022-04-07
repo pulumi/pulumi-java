@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Service network profile payload
- * 
  */
 public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -23,7 +22,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the resource group containing network resources of Azure Spring Cloud Apps
-     * 
      */
     @Import(name="appNetworkResourceGroup")
       private final @Nullable String appNetworkResourceGroup;
@@ -34,7 +32,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
-     * 
      */
     @Import(name="appSubnetId")
       private final @Nullable String appSubnetId;
@@ -45,7 +42,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Desired outbound IP resources for Azure Spring Cloud instance.
-     * 
      */
     @Import(name="outboundIPs", required=true)
       private final NetworkProfileResponseOutboundIPs outboundIPs;
@@ -56,7 +52,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Required inbound or outbound traffics for Azure Spring Cloud instance.
-     * 
      */
     @Import(name="requiredTraffics", required=true)
       private final List<RequiredTrafficResponse> requiredTraffics;
@@ -67,7 +62,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Azure Spring Cloud service reserved CIDR
-     * 
      */
     @Import(name="serviceCidr")
       private final @Nullable String serviceCidr;
@@ -78,7 +72,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
-     * 
      */
     @Import(name="serviceRuntimeNetworkResourceGroup")
       private final @Nullable String serviceRuntimeNetworkResourceGroup;
@@ -89,7 +82,6 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
-     * 
      */
     @Import(name="serviceRuntimeSubnetId")
       private final @Nullable String serviceRuntimeSubnetId;

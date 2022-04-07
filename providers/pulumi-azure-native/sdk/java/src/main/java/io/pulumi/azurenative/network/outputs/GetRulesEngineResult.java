@@ -14,27 +14,22 @@ import javax.annotation.Nullable;
 public final class GetRulesEngineResult {
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Resource status.
-     * 
      */
     private final String resourceState;
     /**
      * A list of rules that define a particular Rules Engine Configuration.
-     * 
      */
     private final @Nullable List<RulesEngineRuleResponse> rules;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -54,35 +49,30 @@ public final class GetRulesEngineResult {
 
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource status.
-     * 
     */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * A list of rules that define a particular Rules Engine Configuration.
-     * 
     */
     public List<RulesEngineRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

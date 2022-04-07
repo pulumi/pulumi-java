@@ -20,28 +20,23 @@ import javax.annotation.Nullable;
 public final class FirewallPolicyFilterRuleResponse {
     /**
      * The action type of a Filter rule.
-     * 
      */
     private final @Nullable FirewallPolicyFilterRuleActionResponse action;
     /**
      * The name of the rule.
-     * 
      */
     private final @Nullable String name;
     /**
      * Priority of the Firewall Policy Rule resource.
-     * 
      */
     private final @Nullable Integer priority;
     /**
      * Collection of rule conditions used by a rule.
-     * 
      */
     private final @Nullable List<Object> ruleConditions;
     /**
      * The type of the rule.
      * Expected value is 'FirewallPolicyFilterRule'.
-     * 
      */
     private final String ruleType;
 
@@ -61,28 +56,24 @@ public final class FirewallPolicyFilterRuleResponse {
 
     /**
      * The action type of a Filter rule.
-     * 
     */
     public Optional<FirewallPolicyFilterRuleActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The name of the rule.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule resource.
-     * 
     */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Collection of rule conditions used by a rule.
-     * 
     */
     public List<Object> getRuleConditions() {
         return this.ruleConditions == null ? List.of() : this.ruleConditions;
@@ -90,7 +81,6 @@ public final class FirewallPolicyFilterRuleResponse {
     /**
      * The type of the rule.
      * Expected value is 'FirewallPolicyFilterRule'.
-     * 
     */
     public String getRuleType() {
         return this.ruleType;

@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Authentication mechanism for IoT devices.
- * 
  */
 public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Symmetric key for authentication.
-     * 
      */
     @Import(name="symmetricKey")
       private final @Nullable SymmetricKeyResponse symmetricKey;

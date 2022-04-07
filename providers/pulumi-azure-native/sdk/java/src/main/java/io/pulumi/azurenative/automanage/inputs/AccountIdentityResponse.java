@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Identity for the Automanage account.
- * 
  */
 public final class AccountIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AccountIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The principal id of Automanage account identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -31,7 +29,6 @@ public final class AccountIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The tenant id associated with the Automanage account.
-     * 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -42,7 +39,6 @@ public final class AccountIdentityResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The type of identity used for the Automanage account. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

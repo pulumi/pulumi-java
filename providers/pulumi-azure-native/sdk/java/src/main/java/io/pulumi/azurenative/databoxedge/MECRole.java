@@ -19,7 +19,79 @@ import javax.annotation.Nullable;
  * MEC role.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### RolePut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var mecRole = new AzureNative.DataBoxEdge.MECRole("mecRole", new AzureNative.DataBoxEdge.MECRoleArgs
+ *         {
+ *             DeviceName = "testedgedevice",
+ *             Name = "IoTRole1",
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewMECRole(ctx, "mecRole", &databoxedge.MECRoleArgs{
+ * 			DeviceName:        pulumi.String("testedgedevice"),
+ * 			Name:              pulumi.String("IoTRole1"),
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const mecRole = new azure_native.databoxedge.MECRole("mecRole", {
+ *     deviceName: "testedgedevice",
+ *     name: "IoTRole1",
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * mec_role = azure_native.databoxedge.MECRole("mecRole",
+ *     device_name="testedgedevice",
+ *     name="IoTRole1",
+ *     resource_group_name="GroupForEdgeAutomation")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,14 +106,12 @@ import javax.annotation.Nullable;
 public class MECRole extends io.pulumi.resources.CustomResource {
     /**
      * Activation key of the MEC.
-     * 
      */
     @Export(name="connectionString", type=AsymmetricEncryptedSecretResponse.class, parameters={})
     private Output</* @Nullable */ AsymmetricEncryptedSecretResponse> connectionString;
 
     /**
      * @return Activation key of the MEC.
-     * 
      */
     public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getConnectionString() {
         return this.connectionString;
@@ -49,7 +119,6 @@ public class MECRole extends io.pulumi.resources.CustomResource {
     /**
      * Role type.
      * Expected value is 'MEC'.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
@@ -57,63 +126,54 @@ public class MECRole extends io.pulumi.resources.CustomResource {
     /**
      * @return Role type.
      * Expected value is 'MEC'.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Role status.
-     * 
      */
     @Export(name="roleStatus", type=String.class, parameters={})
     private Output<String> roleStatus;
 
     /**
      * @return Role status.
-     * 
      */
     public Output<String> getRoleStatus() {
         return this.roleStatus;
     }
     /**
      * Role configured on ASE resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Role configured on ASE resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;

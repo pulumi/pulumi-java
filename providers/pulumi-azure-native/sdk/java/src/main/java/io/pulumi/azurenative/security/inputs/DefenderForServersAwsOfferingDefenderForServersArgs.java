@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Defender for servers connection configuration
- * 
  */
 public final class DefenderForServersAwsOfferingDefenderForServersArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class DefenderForServersAwsOfferingDefenderForServersArgs extends i
 
     /**
      * The cloud role ARN in AWS for this feature
-     * 
      */
     @Import(name="cloudRoleArn")
       private final @Nullable Output<String> cloudRoleArn;

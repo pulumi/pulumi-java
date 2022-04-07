@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class BlobInventoryPolicyDefinitionResponse {
     /**
      * An object that defines the filter set.
-     * 
      */
     private final BlobInventoryPolicyFilterResponse filters;
 
@@ -22,7 +21,6 @@ public final class BlobInventoryPolicyDefinitionResponse {
 
     /**
      * An object that defines the filter set.
-     * 
     */
     public BlobInventoryPolicyFilterResponse getFilters() {
         return this.filters;

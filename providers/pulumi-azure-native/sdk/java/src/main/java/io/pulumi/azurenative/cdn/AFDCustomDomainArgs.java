@@ -18,7 +18,6 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource reference to the Azure DNS zone
-     * 
      */
     @Import(name="azureDnsZone")
       private final @Nullable Output<ResourceReferenceArgs> azureDnsZone;
@@ -29,7 +28,6 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the domain under the profile which is unique globally
-     * 
      */
     @Import(name="customDomainName")
       private final @Nullable Output<String> customDomainName;
@@ -40,7 +38,6 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The host name of the domain. Must be a domain name.
-     * 
      */
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
@@ -51,7 +48,6 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the CDN profile which is unique within the resource group.
-     * 
      */
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
@@ -62,7 +58,6 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Name of the Resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
-     * 
      */
     @Import(name="tlsSettings")
       private final @Nullable Output<AFDDomainHttpsParametersArgs> tlsSettings;

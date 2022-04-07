@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The image update trigger that caused a build.
- * 
  */
 public final class ImageUpdateTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
 
     /**
      * The unique ID of the trigger.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -33,7 +31,6 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
 
     /**
      * The list of image updates that caused the build.
-     * 
      */
     @Import(name="images")
       private final @Nullable List<ImageDescriptorResponse> images;
@@ -44,7 +41,6 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
 
     /**
      * The timestamp when the image update happened.
-     * 
      */
     @Import(name="timestamp")
       private final @Nullable String timestamp;

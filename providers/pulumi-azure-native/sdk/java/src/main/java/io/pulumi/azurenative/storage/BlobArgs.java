@@ -20,7 +20,6 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The access tier of the storage blob.
-     * 
      */
     @Import(name="accessTier")
       private final @Nullable Output<BlobAccessTier> accessTier;
@@ -31,7 +30,6 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies the storage account in which to create the storage container.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -42,7 +40,6 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the storage blob. Must be unique within the storage container the blob is located.
-     * 
      */
     @Import(name="blobName")
       private final @Nullable Output<String> blobName;
@@ -53,7 +50,6 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the storage container in which this blob should be created.
-     * 
      */
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
@@ -64,7 +60,6 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The MD5 sum of the blob contents. Cannot be defined if blob type is Append.
-     * 
      */
     @Import(name="contentMd5")
       private final @Nullable Output<String> contentMd5;
@@ -75,7 +70,6 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The content type of the storage blob. Defaults to `application/octet-stream`.
-     * 
      */
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
@@ -86,7 +80,6 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * A map of custom blob metadata.
-     * 
      */
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
@@ -97,7 +90,6 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group within the user's subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -108,7 +100,6 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An asset to copy to the blob contents. This field cannot be specified for Append blobs.
-     * 
      */
     @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
@@ -119,7 +110,6 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The type of the storage blob to be created. Defaults to 'Block'.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<BlobType> type;

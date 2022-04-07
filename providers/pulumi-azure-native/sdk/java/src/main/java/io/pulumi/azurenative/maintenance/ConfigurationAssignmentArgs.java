@@ -16,7 +16,6 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
 
     /**
      * Configuration assignment name
-     * 
      */
     @Import(name="configurationAssignmentName")
       private final @Nullable Output<String> configurationAssignmentName;
@@ -27,7 +26,6 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
 
     /**
      * Location of the resource
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -38,7 +36,6 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
 
     /**
      * The maintenance configuration Id
-     * 
      */
     @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
@@ -49,7 +46,6 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource provider name
-     * 
      */
     @Import(name="providerName", required=true)
       private final Output<String> providerName;
@@ -60,7 +56,6 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -71,7 +66,6 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
 
     /**
      * The unique resourceId
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
@@ -82,7 +76,6 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource identifier
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -93,7 +86,6 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
 
     /**
      * Resource type
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;

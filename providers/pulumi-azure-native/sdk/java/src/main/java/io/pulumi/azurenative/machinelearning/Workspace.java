@@ -18,7 +18,100 @@ import javax.annotation.Nullable;
  * An object that represents a machine learning workspace.
  * API Version: 2016-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WorkspaceCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workspace = new AzureNative.MachineLearning.Workspace("workspace", new AzureNative.MachineLearning.WorkspaceArgs
+ *         {
+ *             Location = "West Europe",
+ *             OwnerEmail = "abc@microsoft.com",
+ *             ResourceGroupName = "myResourceGroup",
+ *             Tags = 
+ *             {
+ *                 { "tagKey1", "TagValue1" },
+ *             },
+ *             UserStorageAccountId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/teststorage",
+ *             WorkspaceName = "testworkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	machinelearning "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearning"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := machinelearning.NewWorkspace(ctx, "workspace", &machinelearning.WorkspaceArgs{
+ * 			Location:          pulumi.String("West Europe"),
+ * 			OwnerEmail:        pulumi.String("abc@microsoft.com"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tagKey1": pulumi.String("TagValue1"),
+ * 			},
+ * 			UserStorageAccountId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/teststorage"),
+ * 			WorkspaceName:        pulumi.String("testworkspace"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workspace = new azure_native.machinelearning.Workspace("workspace", {
+ *     location: "West Europe",
+ *     ownerEmail: "abc@microsoft.com",
+ *     resourceGroupName: "myResourceGroup",
+ *     tags: {
+ *         tagKey1: "TagValue1",
+ *     },
+ *     userStorageAccountId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/teststorage",
+ *     workspaceName: "testworkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workspace = azure_native.machinelearning.Workspace("workspace",
+ *     location="West Europe",
+ *     owner_email="abc@microsoft.com",
+ *     resource_group_name="myResourceGroup",
+ *     tags={
+ *         "tagKey1": "TagValue1",
+ *     },
+ *     user_storage_account_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/teststorage",
+ *     workspace_name="testworkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,168 +126,144 @@ import javax.annotation.Nullable;
 public class Workspace extends io.pulumi.resources.CustomResource {
     /**
      * The creation time for this workspace resource.
-     * 
      */
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
      * @return The creation time for this workspace resource.
-     * 
      */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
     /**
      * The key vault identifier used for encrypted workspaces.
-     * 
      */
     @Export(name="keyVaultIdentifierId", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultIdentifierId;
 
     /**
      * @return The key vault identifier used for encrypted workspaces.
-     * 
      */
     public Output</* @Nullable */ String> getKeyVaultIdentifierId() {
         return this.keyVaultIdentifierId;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The location of the resource. This cannot be changed after the resource is created.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The email id of the owner for this workspace.
-     * 
      */
     @Export(name="ownerEmail", type=String.class, parameters={})
     private Output<String> ownerEmail;
 
     /**
      * @return The email id of the owner for this workspace.
-     * 
      */
     public Output<String> getOwnerEmail() {
         return this.ownerEmail;
     }
     /**
      * The regional endpoint for the machine learning studio service which hosts this workspace.
-     * 
      */
     @Export(name="studioEndpoint", type=String.class, parameters={})
     private Output<String> studioEndpoint;
 
     /**
      * @return The regional endpoint for the machine learning studio service which hosts this workspace.
-     * 
      */
     public Output<String> getStudioEndpoint() {
         return this.studioEndpoint;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The fully qualified arm id of the storage account associated with this workspace.
-     * 
      */
     @Export(name="userStorageAccountId", type=String.class, parameters={})
     private Output<String> userStorageAccountId;
 
     /**
      * @return The fully qualified arm id of the storage account associated with this workspace.
-     * 
      */
     public Output<String> getUserStorageAccountId() {
         return this.userStorageAccountId;
     }
     /**
      * The immutable id associated with this workspace.
-     * 
      */
     @Export(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
     /**
      * @return The immutable id associated with this workspace.
-     * 
      */
     public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * The current state of workspace resource.
-     * 
      */
     @Export(name="workspaceState", type=String.class, parameters={})
     private Output<String> workspaceState;
 
     /**
      * @return The current state of workspace resource.
-     * 
      */
     public Output<String> getWorkspaceState() {
         return this.workspaceState;
     }
     /**
      * The type of this workspace.
-     * 
      */
     @Export(name="workspaceType", type=String.class, parameters={})
     private Output<String> workspaceType;
 
     /**
      * @return The type of this workspace.
-     * 
      */
     public Output<String> getWorkspaceType() {
         return this.workspaceType;

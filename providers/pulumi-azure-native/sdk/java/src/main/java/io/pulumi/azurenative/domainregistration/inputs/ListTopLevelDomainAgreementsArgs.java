@@ -17,7 +17,6 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
 
     /**
      * If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="forTransfer")
       private final @Nullable Boolean forTransfer;
@@ -28,7 +27,6 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
 
     /**
      * If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.
-     * 
      */
     @Import(name="includePrivacy")
       private final @Nullable Boolean includePrivacy;
@@ -39,7 +37,6 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
 
     /**
      * Name of the top-level domain.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;

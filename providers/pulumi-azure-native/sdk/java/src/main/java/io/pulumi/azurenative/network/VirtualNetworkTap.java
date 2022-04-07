@@ -22,7 +22,92 @@ import javax.annotation.Nullable;
  * Virtual Network Tap resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create Virtual Network Tap
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var virtualNetworkTap = new AzureNative.Network.VirtualNetworkTap("virtualNetworkTap", new AzureNative.Network.VirtualNetworkTapArgs
+ *         {
+ *             DestinationNetworkInterfaceIPConfiguration = new AzureNative.Network.Inputs.NetworkInterfaceIPConfigurationArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkInterfaces/testNetworkInterface/ipConfigurations/ipconfig1",
+ *             },
+ *             Location = "centraluseuap",
+ *             ResourceGroupName = "rg1",
+ *             TapName = "test-vtap",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVirtualNetworkTap(ctx, "virtualNetworkTap", &network.VirtualNetworkTapArgs{
+ * 			DestinationNetworkInterfaceIPConfiguration: &network.NetworkInterfaceIPConfigurationArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkInterfaces/testNetworkInterface/ipConfigurations/ipconfig1"),
+ * 			},
+ * 			Location:          pulumi.String("centraluseuap"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			TapName:           pulumi.String("test-vtap"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const virtualNetworkTap = new azure_native.network.VirtualNetworkTap("virtualNetworkTap", {
+ *     destinationNetworkInterfaceIPConfiguration: {
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkInterfaces/testNetworkInterface/ipConfigurations/ipconfig1",
+ *     },
+ *     location: "centraluseuap",
+ *     resourceGroupName: "rg1",
+ *     tapName: "test-vtap",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * virtual_network_tap = azure_native.network.VirtualNetworkTap("virtualNetworkTap",
+ *     destination_network_interface_ip_configuration=azure_native.network.NetworkInterfaceIPConfigurationArgs(
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkInterfaces/testNetworkInterface/ipConfigurations/ipconfig1",
+ *     ),
+ *     location="centraluseuap",
+ *     resource_group_name="rg1",
+ *     tap_name="test-vtap")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -37,154 +122,132 @@ import javax.annotation.Nullable;
 public class VirtualNetworkTap extends io.pulumi.resources.CustomResource {
     /**
      * The reference to the private IP address on the internal Load Balancer that will receive the tap.
-     * 
      */
     @Export(name="destinationLoadBalancerFrontEndIPConfiguration", type=FrontendIPConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FrontendIPConfigurationResponse> destinationLoadBalancerFrontEndIPConfiguration;
 
     /**
      * @return The reference to the private IP address on the internal Load Balancer that will receive the tap.
-     * 
      */
     public Output</* @Nullable */ FrontendIPConfigurationResponse> getDestinationLoadBalancerFrontEndIPConfiguration() {
         return this.destinationLoadBalancerFrontEndIPConfiguration;
     }
     /**
      * The reference to the private IP Address of the collector nic that will receive the tap.
-     * 
      */
     @Export(name="destinationNetworkInterfaceIPConfiguration", type=NetworkInterfaceIPConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ NetworkInterfaceIPConfigurationResponse> destinationNetworkInterfaceIPConfiguration;
 
     /**
      * @return The reference to the private IP Address of the collector nic that will receive the tap.
-     * 
      */
     public Output</* @Nullable */ NetworkInterfaceIPConfigurationResponse> getDestinationNetworkInterfaceIPConfiguration() {
         return this.destinationNetworkInterfaceIPConfiguration;
     }
     /**
      * The VXLAN destination port that will receive the tapped traffic.
-     * 
      */
     @Export(name="destinationPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> destinationPort;
 
     /**
      * @return The VXLAN destination port that will receive the tapped traffic.
-     * 
      */
     public Output</* @Nullable */ Integer> getDestinationPort() {
         return this.destinationPort;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
-     * 
      */
     @Export(name="networkInterfaceTapConfigurations", type=List.class, parameters={NetworkInterfaceTapConfigurationResponse.class})
     private Output<List<NetworkInterfaceTapConfigurationResponse>> networkInterfaceTapConfigurations;
 
     /**
      * @return Specifies the list of resource IDs for the network interface IP configuration that needs to be tapped.
-     * 
      */
     public Output<List<NetworkInterfaceTapConfigurationResponse>> getNetworkInterfaceTapConfigurations() {
         return this.networkInterfaceTapConfigurations;
     }
     /**
      * The provisioning state of the virtual network tap resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the virtual network tap resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the virtual network tap resource.
-     * 
      */
     @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
      * @return The resource GUID property of the virtual network tap resource.
-     * 
      */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

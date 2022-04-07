@@ -19,7 +19,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Description of notification.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -30,7 +29,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
-     * 
      */
     @Import(name="emailRecipient")
       private final @Nullable Output<String> emailRecipient;
@@ -41,7 +39,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The list of event for which this notification is enabled.
-     * 
      */
     @Import(name="events")
       private final @Nullable Output<List<EventArgs>> events;
@@ -52,7 +49,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -63,7 +59,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -74,7 +69,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the notification channel.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -85,7 +79,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The locale to use when sending a notification (fallback for unsupported languages is EN).
-     * 
      */
     @Import(name="notificationLocale")
       private final @Nullable Output<String> notificationLocale;
@@ -96,7 +89,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -107,7 +99,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -118,7 +109,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The webhook URL to send notifications to.
-     * 
      */
     @Import(name="webHookUrl")
       private final @Nullable Output<String> webHookUrl;

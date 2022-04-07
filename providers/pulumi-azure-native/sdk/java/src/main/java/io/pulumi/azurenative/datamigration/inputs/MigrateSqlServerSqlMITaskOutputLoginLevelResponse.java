@@ -16,7 +16,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
 
     /**
      * Login migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -27,7 +26,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
 
     /**
      * Login migration errors and warnings per login
-     * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
@@ -38,7 +36,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -49,7 +46,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
 
     /**
      * Login name.
-     * 
      */
     @Import(name="loginName", required=true)
       private final String loginName;
@@ -60,7 +56,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
 
     /**
      * Login migration progress message
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -72,7 +67,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
     /**
      * Result type
      * Expected value is 'LoginLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -83,7 +77,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
 
     /**
      * Current stage of login
-     * 
      */
     @Import(name="stage", required=true)
       private final String stage;
@@ -94,7 +87,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
 
     /**
      * Login migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -105,7 +97,6 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends io.
 
     /**
      * Current state of login
-     * 
      */
     @Import(name="state", required=true)
       private final String state;

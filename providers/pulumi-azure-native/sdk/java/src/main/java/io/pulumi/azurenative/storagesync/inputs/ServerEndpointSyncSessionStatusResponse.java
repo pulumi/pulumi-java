@@ -14,7 +14,6 @@ import java.util.Objects;
 
 /**
  * Sync Session status object.
- * 
  */
 public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
 
     /**
      * Array of per-item errors coming from the last sync session.
-     * 
      */
     @Import(name="filesNotSyncingErrors", required=true)
       private final List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors;
@@ -33,7 +31,6 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
 
     /**
      * Sync mode
-     * 
      */
     @Import(name="lastSyncMode", required=true)
       private final String lastSyncMode;
@@ -44,7 +41,6 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
 
     /**
      * Last sync per item error count.
-     * 
      */
     @Import(name="lastSyncPerItemErrorCount", required=true)
       private final Double lastSyncPerItemErrorCount;
@@ -55,7 +51,6 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
 
     /**
      * Last sync result (HResult)
-     * 
      */
     @Import(name="lastSyncResult", required=true)
       private final Integer lastSyncResult;
@@ -66,7 +61,6 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
 
     /**
      * Last sync success timestamp
-     * 
      */
     @Import(name="lastSyncSuccessTimestamp", required=true)
       private final String lastSyncSuccessTimestamp;
@@ -77,7 +71,6 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
 
     /**
      * Last sync timestamp
-     * 
      */
     @Import(name="lastSyncTimestamp", required=true)
       private final String lastSyncTimestamp;
@@ -88,7 +81,6 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
 
     /**
      * Count of persistent files not syncing.
-     * 
      */
     @Import(name="persistentFilesNotSyncingCount", required=true)
       private final Double persistentFilesNotSyncingCount;
@@ -99,7 +91,6 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
 
     /**
      * Count of transient files not syncing.
-     * 
      */
     @Import(name="transientFilesNotSyncingCount", required=true)
       private final Double transientFilesNotSyncingCount;

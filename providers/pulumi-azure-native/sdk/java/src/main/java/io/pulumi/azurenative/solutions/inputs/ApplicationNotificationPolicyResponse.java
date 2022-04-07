@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Managed application notification policy.
- * 
  */
 public final class ApplicationNotificationPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ApplicationNotificationPolicyResponse extends io.pulumi.resou
 
     /**
      * The managed application notification endpoint.
-     * 
      */
     @Import(name="notificationEndpoints", required=true)
       private final List<ApplicationNotificationEndpointResponse> notificationEndpoints;

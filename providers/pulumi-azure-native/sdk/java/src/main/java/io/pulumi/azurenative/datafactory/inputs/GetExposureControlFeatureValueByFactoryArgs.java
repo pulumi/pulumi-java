@@ -16,7 +16,6 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
 
     /**
      * The factory name.
-     * 
      */
     @Import(name="factoryName", required=true)
       private final String factoryName;
@@ -27,7 +26,6 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
 
     /**
      * The feature name.
-     * 
      */
     @Import(name="featureName")
       private final @Nullable String featureName;
@@ -38,7 +36,6 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
 
     /**
      * The feature type.
-     * 
      */
     @Import(name="featureType")
       private final @Nullable String featureType;
@@ -49,7 +46,6 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends io.pulumi
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

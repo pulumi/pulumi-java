@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A rule condition based on a certain number of locations failing.
- * 
  */
 public final class LocationThresholdRuleConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
 
     /**
      * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
-     * 
      */
     @Import(name="dataSource")
       private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
@@ -35,7 +33,6 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
 
     /**
      * the number of locations that must fail to activate the alert.
-     * 
      */
     @Import(name="failedLocationCount", required=true)
       private final Output<Integer> failedLocationCount;
@@ -47,7 +44,6 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
     /**
      * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -58,7 +54,6 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
 
     /**
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-     * 
      */
     @Import(name="windowSize")
       private final @Nullable Output<String> windowSize;

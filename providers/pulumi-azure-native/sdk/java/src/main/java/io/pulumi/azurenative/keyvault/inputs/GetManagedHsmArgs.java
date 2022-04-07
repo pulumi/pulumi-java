@@ -14,7 +14,6 @@ public final class GetManagedHsmArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the managed HSM Pool.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -25,7 +24,6 @@ public final class GetManagedHsmArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group that contains the managed HSM pool.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Specifies the return carrier and customer's account with the carrier.
- * 
  */
 public final class ReturnShippingResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ReturnShippingResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The customer's account number with the carrier.
-     * 
      */
     @Import(name="carrierAccountNumber", required=true)
       private final String carrierAccountNumber;
@@ -29,7 +27,6 @@ public final class ReturnShippingResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The carrier's name.
-     * 
      */
     @Import(name="carrierName", required=true)
       private final String carrierName;

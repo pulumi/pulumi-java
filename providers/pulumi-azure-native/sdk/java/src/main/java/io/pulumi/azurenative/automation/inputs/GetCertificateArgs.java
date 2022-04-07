@@ -14,7 +14,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the automation account.
-     * 
      */
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
@@ -25,7 +24,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of certificate.
-     * 
      */
     @Import(name="certificateName", required=true)
       private final String certificateName;
@@ -36,7 +34,6 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The state of the geo backup policy.
-     * 
      */
     @EnumType
     public enum GeoBackupPolicyState {

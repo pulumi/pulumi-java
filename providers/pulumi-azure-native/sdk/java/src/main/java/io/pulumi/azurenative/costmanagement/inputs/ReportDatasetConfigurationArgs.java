@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration of dataset in the report.
- * 
  */
 public final class ReportDatasetConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ReportDatasetConfigurationArgs extends io.pulumi.resources.Re
 
     /**
      * Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
-     * 
      */
     @Import(name="columns")
       private final @Nullable Output<List<String>> columns;

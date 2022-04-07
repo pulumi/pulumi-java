@@ -16,28 +16,23 @@ import javax.annotation.Nullable;
 public final class MediaGraphTlsEndpointResponse {
     /**
      * Polymorphic credentials to present to the endpoint.
-     * 
      */
     private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
-     * 
      */
     private final String odataType;
     /**
      * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.
-     * 
      */
     private final @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
     /**
      * Url for the endpoint.
-     * 
      */
     private final String url;
     /**
      * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
-     * 
      */
     private final @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
 
@@ -57,7 +52,6 @@ public final class MediaGraphTlsEndpointResponse {
 
     /**
      * Polymorphic credentials to present to the endpoint.
-     * 
     */
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
@@ -65,28 +59,24 @@ public final class MediaGraphTlsEndpointResponse {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
-     * 
     */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.
-     * 
     */
     public Optional<MediaGraphPemCertificateListResponse> getTrustedCertificates() {
         return Optional.ofNullable(this.trustedCertificates);
     }
     /**
      * Url for the endpoint.
-     * 
     */
     public String getUrl() {
         return this.url;
     }
     /**
      * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
-     * 
     */
     public Optional<MediaGraphTlsValidationOptionsResponse> getValidationOptions() {
         return Optional.ofNullable(this.validationOptions);

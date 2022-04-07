@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Defines the properties of a health check step.
- * 
  */
 public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
 
     /**
      * The health check step attributes
-     * 
      */
     @Import(name="attributes", required=true)
       private final Output<RestHealthCheckStepAttributesArgs> attributes;
@@ -32,7 +30,6 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
     /**
      * The type of step.
      * Expected value is 'HealthCheck'.
-     * 
      */
     @Import(name="stepType", required=true)
       private final Output<String> stepType;

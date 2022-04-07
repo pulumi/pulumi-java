@@ -12,17 +12,14 @@ import java.util.Objects;
 public final class SourceCostAllocationResourceResponse {
     /**
      * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
-     * 
      */
     private final String name;
     /**
      * Type of resources contained in this cost allocation rule
-     * 
      */
     private final String resourceType;
     /**
      * Source Resources for cost allocation. This list cannot contain more than 25 values.
-     * 
      */
     private final List<String> values;
 
@@ -38,21 +35,18 @@ public final class SourceCostAllocationResourceResponse {
 
     /**
      * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Type of resources contained in this cost allocation rule
-     * 
     */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Source Resources for cost allocation. This list cannot contain more than 25 values.
-     * 
     */
     public List<String> getValues() {
         return this.values;

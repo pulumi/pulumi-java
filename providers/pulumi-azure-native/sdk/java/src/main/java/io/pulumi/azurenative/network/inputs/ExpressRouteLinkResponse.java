@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * ExpressRouteLink child resource definition.
- * 
  */
 public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Administrative state of the physical port.
-     * 
      */
     @Import(name="adminState")
       private final @Nullable String adminState;
@@ -32,7 +30,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Physical fiber port type.
-     * 
      */
     @Import(name="connectorType", required=true)
       private final String connectorType;
@@ -43,7 +40,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -54,7 +50,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -65,7 +60,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of Azure router interface.
-     * 
      */
     @Import(name="interfaceName", required=true)
       private final String interfaceName;
@@ -76,7 +70,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * MacSec configuration.
-     * 
      */
     @Import(name="macSecConfig")
       private final @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig;
@@ -87,7 +80,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of child port resource that is unique among child port resources of the parent.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -98,7 +90,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Mapping between physical port to patch panel port.
-     * 
      */
     @Import(name="patchPanelId", required=true)
       private final String patchPanelId;
@@ -109,7 +100,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The provisioning state of the express route link resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -120,7 +110,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Mapping of physical patch panel to rack.
-     * 
      */
     @Import(name="rackId", required=true)
       private final String rackId;
@@ -131,7 +120,6 @@ public final class ExpressRouteLinkResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * Name of Azure router associated with physical port.
-     * 
      */
     @Import(name="routerName", required=true)
       private final String routerName;

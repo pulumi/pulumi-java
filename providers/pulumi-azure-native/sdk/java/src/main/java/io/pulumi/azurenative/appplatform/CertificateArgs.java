@@ -17,7 +17,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the certificate resource.
-     * 
      */
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
@@ -28,7 +27,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of the certificate resource payload.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<CertificatePropertiesArgs> properties;
@@ -39,7 +37,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the Service resource.
-     * 
      */
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;

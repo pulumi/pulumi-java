@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set of export policy rules
- * 
  */
 public final class VolumePropertiesExportPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class VolumePropertiesExportPolicyArgs extends io.pulumi.resources.
 
     /**
      * Export policy rule
-     * 
      */
     @Import(name="rules")
       private final @Nullable Output<List<ExportPolicyRuleArgs>> rules;

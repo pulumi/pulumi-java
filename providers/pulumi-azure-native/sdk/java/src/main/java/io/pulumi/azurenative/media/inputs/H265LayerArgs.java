@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the settings to be used when encoding the input video into a desired output bitrate layer with the H.265 video codec.
- * 
  */
 public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.
-     * 
      */
     @Import(name="adaptiveBFrame")
       private final @Nullable Output<Boolean> adaptiveBFrame;
@@ -35,7 +33,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.
-     * 
      */
     @Import(name="bFrames")
       private final @Nullable Output<Integer> bFrames;
@@ -46,7 +43,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The average bitrate in bits per second at which to encode the input video when generating this layer. For example: a target bitrate of 3000Kbps or 3Mbps means this value should be 3000000 This is a required field.
-     * 
      */
     @Import(name="bitrate", required=true)
       private final Output<Integer> bitrate;
@@ -57,7 +53,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).
-     * 
      */
     @Import(name="bufferWindow")
       private final @Nullable Output<String> bufferWindow;
@@ -68,7 +63,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.
-     * 
      */
     @Import(name="frameRate")
       private final @Nullable Output<String> frameRate;
@@ -79,7 +73,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
-     * 
      */
     @Import(name="height")
       private final @Nullable Output<String> height;
@@ -90,7 +83,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
-     * 
      */
     @Import(name="label")
       private final @Nullable Output<String> label;
@@ -101,7 +93,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.265 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.
-     * 
      */
     @Import(name="level")
       private final @Nullable Output<String> level;
@@ -112,7 +103,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.
-     * 
      */
     @Import(name="maxBitrate")
       private final @Nullable Output<Integer> maxBitrate;
@@ -124,7 +114,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.H265Layer'.
-     * 
      */
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
@@ -135,7 +124,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * We currently support Main. Default is Auto.
-     * 
      */
     @Import(name="profile")
       private final @Nullable Output<Either<String,H265VideoProfile>> profile;
@@ -146,7 +134,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.
-     * 
      */
     @Import(name="referenceFrames")
       private final @Nullable Output<Integer> referenceFrames;
@@ -157,7 +144,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.
-     * 
      */
     @Import(name="slices")
       private final @Nullable Output<Integer> slices;
@@ -168,7 +154,6 @@ public final class H265LayerArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
-     * 
      */
     @Import(name="width")
       private final @Nullable Output<String> width;

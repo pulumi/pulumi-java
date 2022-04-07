@@ -17,7 +17,6 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Brand color
-     * 
      */
     @Import(name="brandColor")
       private final @Nullable Output<String> brandColor;
@@ -28,7 +27,6 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The custom API description
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -39,7 +37,6 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The display name
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
@@ -50,7 +47,6 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The icon URI
-     * 
      */
     @Import(name="iconUri")
       private final @Nullable Output<String> iconUri;
@@ -61,7 +57,6 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource reference id
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -72,7 +67,6 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the API
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -83,7 +77,6 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The JSON representation of the swagger
-     * 
      */
     @Import(name="swagger")
       private final @Nullable Output<Object> swagger;
@@ -94,7 +87,6 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource reference type
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<String> type;

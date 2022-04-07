@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 public final class KeyVaultKeyResponse {
     /**
      * The key attributes.
-     * 
      */
     private final @Nullable KeyVaultKeyResponseAttributes attributes;
     /**
      * The key id.
-     * 
      */
     private final @Nullable String kid;
 
@@ -33,14 +31,12 @@ public final class KeyVaultKeyResponse {
 
     /**
      * The key attributes.
-     * 
     */
     public Optional<KeyVaultKeyResponseAttributes> getAttributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
      * The key id.
-     * 
     */
     public Optional<String> getKid() {
         return Optional.ofNullable(this.kid);

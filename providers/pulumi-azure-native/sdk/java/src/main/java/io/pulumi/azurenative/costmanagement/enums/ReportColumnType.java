@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Has type of the column to group.
-     * 
      */
     @EnumType
     public enum ReportColumnType {

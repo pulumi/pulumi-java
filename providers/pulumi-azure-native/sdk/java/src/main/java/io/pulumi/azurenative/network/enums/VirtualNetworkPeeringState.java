@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The status of the virtual network peering.
-     * 
      */
     @EnumType
     public enum VirtualNetworkPeeringState {

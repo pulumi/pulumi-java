@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The operator used to compare the metric value against the threshold.
-     * 
      */
     @EnumType
     public enum DynamicThresholdOperator {

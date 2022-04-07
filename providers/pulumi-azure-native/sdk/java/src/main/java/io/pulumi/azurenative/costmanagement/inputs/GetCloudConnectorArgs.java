@@ -16,7 +16,6 @@ public final class GetCloudConnectorArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * Connector Name.
-     * 
      */
     @Import(name="connectorName", required=true)
       private final String connectorName;
@@ -27,7 +26,6 @@ public final class GetCloudConnectorArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * May be used to expand the collectionInfo property. By default, collectionInfo is not included.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The result of the assessment
- * 
  */
 public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Programmatic code for the cause of the assessment status
-     * 
      */
     @Import(name="cause")
       private final @Nullable Output<String> cause;
@@ -33,7 +31,6 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Programmatic code for the status of the assessment
-     * 
      */
     @Import(name="code", required=true)
       private final Output<Either<String,AssessmentStatusCode>> code;
@@ -44,7 +41,6 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Human readable description of the assessment status
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;

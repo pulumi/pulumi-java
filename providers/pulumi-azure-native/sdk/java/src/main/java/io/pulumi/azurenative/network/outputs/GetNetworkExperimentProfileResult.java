@@ -14,42 +14,34 @@ import javax.annotation.Nullable;
 public final class GetNetworkExperimentProfileResult {
     /**
      * The state of the Experiment
-     * 
      */
     private final @Nullable String enabledState;
     /**
      * Gets a unique read-only string that changes whenever the resource is updated.
-     * 
      */
     private final @Nullable String etag;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource location.
-     * 
      */
     private final @Nullable String location;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Resource status.
-     * 
      */
     private final String resourceState;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -75,56 +67,48 @@ public final class GetNetworkExperimentProfileResult {
 
     /**
      * The state of the Experiment
-     * 
     */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Gets a unique read-only string that changes whenever the resource is updated.
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
-     * 
     */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource status.
-     * 
     */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

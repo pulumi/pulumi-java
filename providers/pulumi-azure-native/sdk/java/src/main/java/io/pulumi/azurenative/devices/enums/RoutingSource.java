@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The source that the routing rule is to be applied to, such as DeviceMessages.
-     * 
      */
     @EnumType
     public enum RoutingSource {

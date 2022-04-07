@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Target DNS type (would be used for migration)
-     * 
      */
     @EnumType
     public enum DnsType {

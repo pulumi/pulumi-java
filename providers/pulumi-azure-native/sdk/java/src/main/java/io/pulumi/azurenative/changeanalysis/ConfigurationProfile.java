@@ -20,7 +20,127 @@ import javax.annotation.Nullable;
  * A profile object that contains change analysis configuration, such as notification settings, for this subscription
  * API Version: 2020-04-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ConfigurationProfile_Create
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var configurationProfile = new AzureNative.ChangeAnalysis.ConfigurationProfile("configurationProfile", new AzureNative.ChangeAnalysis.ConfigurationProfileArgs
+ *         {
+ *             ProfileName = "default",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	changeanalysis "github.com/pulumi/pulumi-azure-native/sdk/go/azure/changeanalysis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := changeanalysis.NewConfigurationProfile(ctx, "configurationProfile", &changeanalysis.ConfigurationProfileArgs{
+ * 			ProfileName: pulumi.String("default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const configurationProfile = new azure_native.changeanalysis.ConfigurationProfile("configurationProfile", {profileName: "default"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * configuration_profile = azure_native.changeanalysis.ConfigurationProfile("configurationProfile", profile_name="default")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### ConfigurationProfile_CreateWithIdentity
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var configurationProfile = new AzureNative.ChangeAnalysis.ConfigurationProfile("configurationProfile", new AzureNative.ChangeAnalysis.ConfigurationProfileArgs
+ *         {
+ *             ProfileName = "default",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	changeanalysis "github.com/pulumi/pulumi-azure-native/sdk/go/azure/changeanalysis"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := changeanalysis.NewConfigurationProfile(ctx, "configurationProfile", &changeanalysis.ConfigurationProfileArgs{
+ * 			ProfileName: pulumi.String("default"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const configurationProfile = new azure_native.changeanalysis.ConfigurationProfile("configurationProfile", {profileName: "default"});
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * configuration_profile = azure_native.changeanalysis.ConfigurationProfile("configurationProfile", profile_name="default")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +155,72 @@ import javax.annotation.Nullable;
 public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
     /**
      * The identity block returned by ARM resource that supports managed identity.
-     * 
      */
     @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
      * @return The identity block returned by ARM resource that supports managed identity.
-     * 
      */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The location where the resource is to be deployed.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location where the resource is to be deployed.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The properties of a configuration profile.
-     * 
      */
     @Export(name="properties", type=ConfigurationProfileResourcePropertiesResponse.class, parameters={})
     private Output<ConfigurationProfileResourcePropertiesResponse> properties;
 
     /**
      * @return The properties of a configuration profile.
-     * 
      */
     public Output<ConfigurationProfileResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output</* @Nullable */ SystemDataResponse> systemData;
 
     /**
      * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
-     * 
      */
     public Output</* @Nullable */ SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

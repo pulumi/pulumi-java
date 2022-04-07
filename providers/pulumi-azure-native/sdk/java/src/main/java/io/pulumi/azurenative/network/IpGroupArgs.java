@@ -18,7 +18,6 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -29,7 +28,6 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * IpAddresses/IpAddressPrefixes in the IpGroups resource.
-     * 
      */
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
@@ -40,7 +38,6 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the ipGroups.
-     * 
      */
     @Import(name="ipGroupsName")
       private final @Nullable Output<String> ipGroupsName;
@@ -51,7 +48,6 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -62,7 +58,6 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

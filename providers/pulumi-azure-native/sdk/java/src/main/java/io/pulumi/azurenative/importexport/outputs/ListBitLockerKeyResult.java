@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListBitLockerKeyResult {
     /**
      * drive status
-     * 
      */
     private final @Nullable List<DriveBitLockerKeyResponse> value;
 
@@ -24,7 +23,6 @@ public final class ListBitLockerKeyResult {
 
     /**
      * drive status
-     * 
     */
     public List<DriveBitLockerKeyResponse> getValue() {
         return this.value == null ? List.of() : this.value;

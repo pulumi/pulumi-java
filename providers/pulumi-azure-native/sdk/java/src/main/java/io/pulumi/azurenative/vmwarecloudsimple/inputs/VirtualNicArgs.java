@@ -17,7 +17,6 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual NIC model
- * 
  */
 public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -25,7 +24,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * guest OS customization for nic
-     * 
      */
     @Import(name="customization")
       private final @Nullable Output<GuestOSNICCustomizationArgs> customization;
@@ -36,7 +34,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * NIC ip address
-     * 
      */
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
@@ -47,7 +44,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * NIC MAC address
-     * 
      */
     @Import(name="macAddress")
       private final @Nullable Output<String> macAddress;
@@ -58,7 +54,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Virtual Network
-     * 
      */
     @Import(name="network", required=true)
       private final Output<VirtualNetworkArgs> network;
@@ -69,7 +64,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * NIC type
-     * 
      */
     @Import(name="nicType", required=true)
       private final Output<NICType> nicType;
@@ -80,7 +74,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Is NIC powered on/off on boot
-     * 
      */
     @Import(name="powerOnBoot")
       private final @Nullable Output<Boolean> powerOnBoot;
@@ -91,7 +84,6 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * NIC id
-     * 
      */
     @Import(name="virtualNicId")
       private final @Nullable Output<String> virtualNicId;

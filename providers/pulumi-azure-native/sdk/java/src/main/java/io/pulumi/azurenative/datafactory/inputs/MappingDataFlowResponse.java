@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Mapping data flow.
- * 
  */
 public final class MappingDataFlowResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class MappingDataFlowResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of tags that can be used for describing the data flow.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -37,7 +35,6 @@ public final class MappingDataFlowResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The description of the data flow.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -48,7 +45,6 @@ public final class MappingDataFlowResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
-     * 
      */
     @Import(name="folder")
       private final @Nullable DataFlowResponseFolder folder;
@@ -59,7 +55,6 @@ public final class MappingDataFlowResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * DataFlow script.
-     * 
      */
     @Import(name="script")
       private final @Nullable String script;
@@ -70,7 +65,6 @@ public final class MappingDataFlowResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Data flow script lines.
-     * 
      */
     @Import(name="scriptLines")
       private final @Nullable List<String> scriptLines;
@@ -81,7 +75,6 @@ public final class MappingDataFlowResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of sinks in data flow.
-     * 
      */
     @Import(name="sinks")
       private final @Nullable List<DataFlowSinkResponse> sinks;
@@ -92,7 +85,6 @@ public final class MappingDataFlowResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of sources in data flow.
-     * 
      */
     @Import(name="sources")
       private final @Nullable List<DataFlowSourceResponse> sources;
@@ -103,7 +95,6 @@ public final class MappingDataFlowResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * List of transformations in data flow.
-     * 
      */
     @Import(name="transformations")
       private final @Nullable List<TransformationResponse> transformations;
@@ -115,7 +106,6 @@ public final class MappingDataFlowResponse extends io.pulumi.resources.InvokeArg
     /**
      * Type of data flow.
      * Expected value is 'MappingDataFlow'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Algorithm to use for URL signing
-     * 
      */
     @EnumType
     public enum Algorithm {

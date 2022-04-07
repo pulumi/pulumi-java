@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Backup Instance
- * 
  */
 public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the data source information.
-     * 
      */
     @Import(name="dataSourceInfo", required=true)
       private final Output<DatasourceArgs> dataSourceInfo;
@@ -34,7 +32,6 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the data source set information.
-     * 
      */
     @Import(name="dataSourceSetInfo")
       private final @Nullable Output<DatasourceSetArgs> dataSourceSetInfo;
@@ -45,7 +42,6 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the Backup Instance friendly name.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
@@ -63,7 +59,6 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Gets or sets the policy information.
-     * 
      */
     @Import(name="policyInfo", required=true)
       private final Output<PolicyInfoArgs> policyInfo;

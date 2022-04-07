@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure data lake store write settings.
- * 
  */
 public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
 
     /**
      * The type of copy behavior for copy sink.
-     * 
      */
     @Import(name="copyBehavior")
       private final @Nullable Object copyBehavior;
@@ -32,7 +30,6 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
@@ -43,7 +40,6 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
 
     /**
      * Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="expiryDateTime")
       private final @Nullable Object expiryDateTime;
@@ -54,7 +50,6 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
@@ -66,7 +61,6 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
     /**
      * The write setting type.
      * Expected value is 'AzureDataLakeStoreWriteSettings'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

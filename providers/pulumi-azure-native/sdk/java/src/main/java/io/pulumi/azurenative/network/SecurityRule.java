@@ -19,7 +19,111 @@ import javax.annotation.Nullable;
  * Network security rule.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create security rule
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var securityRule = new AzureNative.Network.SecurityRule("securityRule", new AzureNative.Network.SecurityRuleArgs
+ *         {
+ *             Access = "Deny",
+ *             DestinationAddressPrefix = "11.0.0.0/8",
+ *             DestinationPortRange = "8080",
+ *             Direction = "Outbound",
+ *             NetworkSecurityGroupName = "testnsg",
+ *             Priority = 100,
+ *             Protocol = "*",
+ *             ResourceGroupName = "rg1",
+ *             SecurityRuleName = "rule1",
+ *             SourceAddressPrefix = "10.0.0.0/8",
+ *             SourcePortRange = "*",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewSecurityRule(ctx, "securityRule", &network.SecurityRuleArgs{
+ * 			Access:                   pulumi.String("Deny"),
+ * 			DestinationAddressPrefix: pulumi.String("11.0.0.0/8"),
+ * 			DestinationPortRange:     pulumi.String("8080"),
+ * 			Direction:                pulumi.String("Outbound"),
+ * 			NetworkSecurityGroupName: pulumi.String("testnsg"),
+ * 			Priority:                 pulumi.Int(100),
+ * 			Protocol:                 pulumi.String("*"),
+ * 			ResourceGroupName:        pulumi.String("rg1"),
+ * 			SecurityRuleName:         pulumi.String("rule1"),
+ * 			SourceAddressPrefix:      pulumi.String("10.0.0.0/8"),
+ * 			SourcePortRange:          pulumi.String("*"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const securityRule = new azure_native.network.SecurityRule("securityRule", {
+ *     access: "Deny",
+ *     destinationAddressPrefix: "11.0.0.0/8",
+ *     destinationPortRange: "8080",
+ *     direction: "Outbound",
+ *     networkSecurityGroupName: "testnsg",
+ *     priority: 100,
+ *     protocol: "*",
+ *     resourceGroupName: "rg1",
+ *     securityRuleName: "rule1",
+ *     sourceAddressPrefix: "10.0.0.0/8",
+ *     sourcePortRange: "*",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * security_rule = azure_native.network.SecurityRule("securityRule",
+ *     access="Deny",
+ *     destination_address_prefix="11.0.0.0/8",
+ *     destination_port_range="8080",
+ *     direction="Outbound",
+ *     network_security_group_name="testnsg",
+ *     priority=100,
+ *     protocol="*",
+ *     resource_group_name="rg1",
+ *     security_rule_name="rule1",
+ *     source_address_prefix="10.0.0.0/8",
+ *     source_port_range="*")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -34,266 +138,228 @@ import javax.annotation.Nullable;
 public class SecurityRule extends io.pulumi.resources.CustomResource {
     /**
      * The network traffic is allowed or denied.
-     * 
      */
     @Export(name="access", type=String.class, parameters={})
     private Output<String> access;
 
     /**
      * @return The network traffic is allowed or denied.
-     * 
      */
     public Output<String> getAccess() {
         return this.access;
     }
     /**
      * A description for this rule. Restricted to 140 chars.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return A description for this rule. Restricted to 140 chars.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
-     * 
      */
     @Export(name="destinationAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationAddressPrefix;
 
     /**
      * @return The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
-     * 
      */
     public Output</* @Nullable */ String> getDestinationAddressPrefix() {
         return this.destinationAddressPrefix;
     }
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
-     * 
      */
     @Export(name="destinationAddressPrefixes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> destinationAddressPrefixes;
 
     /**
      * @return The destination address prefixes. CIDR or destination IP ranges.
-     * 
      */
     public Output</* @Nullable */ List<String>> getDestinationAddressPrefixes() {
         return this.destinationAddressPrefixes;
     }
     /**
      * The application security group specified as destination.
-     * 
      */
     @Export(name="destinationApplicationSecurityGroups", type=List.class, parameters={ApplicationSecurityGroupResponse.class})
     private Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> destinationApplicationSecurityGroups;
 
     /**
      * @return The application security group specified as destination.
-     * 
      */
     public Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> getDestinationApplicationSecurityGroups() {
         return this.destinationApplicationSecurityGroups;
     }
     /**
      * The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
-     * 
      */
     @Export(name="destinationPortRange", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationPortRange;
 
     /**
      * @return The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
-     * 
      */
     public Output</* @Nullable */ String> getDestinationPortRange() {
         return this.destinationPortRange;
     }
     /**
      * The destination port ranges.
-     * 
      */
     @Export(name="destinationPortRanges", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> destinationPortRanges;
 
     /**
      * @return The destination port ranges.
-     * 
      */
     public Output</* @Nullable */ List<String>> getDestinationPortRanges() {
         return this.destinationPortRanges;
     }
     /**
      * The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
-     * 
      */
     @Export(name="direction", type=String.class, parameters={})
     private Output<String> direction;
 
     /**
      * @return The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
-     * 
      */
     public Output<String> getDirection() {
         return this.direction;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
     /**
      * The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-     * 
      */
     @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
      * @return The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
-     * 
      */
     public Output</* @Nullable */ Integer> getPriority() {
         return this.priority;
     }
     /**
      * Network protocol this rule applies to.
-     * 
      */
     @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
      * @return Network protocol this rule applies to.
-     * 
      */
     public Output<String> getProtocol() {
         return this.protocol;
     }
     /**
      * The provisioning state of the security rule resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the security rule resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
-     * 
      */
     @Export(name="sourceAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceAddressPrefix;
 
     /**
      * @return The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
-     * 
      */
     public Output</* @Nullable */ String> getSourceAddressPrefix() {
         return this.sourceAddressPrefix;
     }
     /**
      * The CIDR or source IP ranges.
-     * 
      */
     @Export(name="sourceAddressPrefixes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> sourceAddressPrefixes;
 
     /**
      * @return The CIDR or source IP ranges.
-     * 
      */
     public Output</* @Nullable */ List<String>> getSourceAddressPrefixes() {
         return this.sourceAddressPrefixes;
     }
     /**
      * The application security group specified as source.
-     * 
      */
     @Export(name="sourceApplicationSecurityGroups", type=List.class, parameters={ApplicationSecurityGroupResponse.class})
     private Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> sourceApplicationSecurityGroups;
 
     /**
      * @return The application security group specified as source.
-     * 
      */
     public Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> getSourceApplicationSecurityGroups() {
         return this.sourceApplicationSecurityGroups;
     }
     /**
      * The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
-     * 
      */
     @Export(name="sourcePortRange", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourcePortRange;
 
     /**
      * @return The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
-     * 
      */
     public Output</* @Nullable */ String> getSourcePortRange() {
         return this.sourcePortRange;
     }
     /**
      * The source port ranges.
-     * 
      */
     @Export(name="sourcePortRanges", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> sourcePortRanges;
 
     /**
      * @return The source port ranges.
-     * 
      */
     public Output</* @Nullable */ List<String>> getSourcePortRanges() {
         return this.sourcePortRanges;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getType() {
         return this.type;

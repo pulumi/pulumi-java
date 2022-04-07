@@ -19,7 +19,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of capture description
-     * 
      */
     @Import(name="captureDescription")
       private final @Nullable Output<CaptureDescriptionArgs> captureDescription;
@@ -30,7 +29,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Event Hub name
-     * 
      */
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
@@ -41,7 +39,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
-     * 
      */
     @Import(name="messageRetentionInDays")
       private final @Nullable Output<Double> messageRetentionInDays;
@@ -52,7 +49,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Namespace name
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -63,7 +59,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
-     * 
      */
     @Import(name="partitionCount")
       private final @Nullable Output<Double> partitionCount;
@@ -74,7 +69,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the resource group within the azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Enumerates the possible values for the status of the Event Hub.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<EntityStatus> status;

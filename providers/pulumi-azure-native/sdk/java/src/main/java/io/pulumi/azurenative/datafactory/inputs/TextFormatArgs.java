@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The data stored in text format.
- * 
  */
 public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The column delimiter. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="columnDelimiter")
       private final @Nullable Output<Object> columnDelimiter;
@@ -32,7 +30,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Deserializer. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="deserializer")
       private final @Nullable Output<Object> deserializer;
@@ -43,7 +40,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The code page name of the preferred encoding. If miss, the default value is ΓÇ£utf-8ΓÇ¥, unless BOM denotes another Unicode encoding. Refer to the ΓÇ£NameΓÇ¥ column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encodingName")
       private final @Nullable Output<Object> encodingName;
@@ -54,7 +50,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The escape character. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="escapeChar")
       private final @Nullable Output<Object> escapeChar;
@@ -65,7 +60,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="firstRowAsHeader")
       private final @Nullable Output<Object> firstRowAsHeader;
@@ -76,7 +70,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The null value string. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="nullValue")
       private final @Nullable Output<Object> nullValue;
@@ -87,7 +80,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The quote character. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="quoteChar")
       private final @Nullable Output<Object> quoteChar;
@@ -98,7 +90,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The row delimiter. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="rowDelimiter")
       private final @Nullable Output<Object> rowDelimiter;
@@ -109,7 +100,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Serializer. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="serializer")
       private final @Nullable Output<Object> serializer;
@@ -120,7 +110,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The number of lines/rows to be skipped when parsing text files. The default value is 0. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="skipLineCount")
       private final @Nullable Output<Object> skipLineCount;
@@ -131,7 +120,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Treat empty column values in the text file as null. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="treatEmptyAsNull")
       private final @Nullable Output<Object> treatEmptyAsNull;
@@ -143,7 +131,6 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Type of dataset storage format.
      * Expected value is 'TextFormat'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

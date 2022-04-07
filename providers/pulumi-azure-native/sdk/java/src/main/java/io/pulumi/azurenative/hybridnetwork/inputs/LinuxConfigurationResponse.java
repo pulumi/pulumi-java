@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Specifies the Linux operating system settings on the virtual machine.
- * 
  */
 public final class LinuxConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
 
     /**
      * Specifies the ssh key configuration for a Linux OS.
-     * 
      */
     @Import(name="ssh")
       private final @Nullable SshConfigurationResponse ssh;

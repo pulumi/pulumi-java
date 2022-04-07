@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Storage Account workload-specific container.
- * 
  */
 public final class AzureStorageContainerResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
 
     /**
      * Type of backup management for the container.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -36,7 +34,6 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is 'StorageContainer'.
-     * 
      */
     @Import(name="containerType", required=true)
       private final String containerType;
@@ -47,7 +44,6 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
 
     /**
      * Friendly name of the container.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -58,7 +54,6 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
 
     /**
      * Status of health of the container.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
@@ -69,7 +64,6 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
 
     /**
      * Number of items backed up in this container.
-     * 
      */
     @Import(name="protectedItemCount")
       private final @Nullable Double protectedItemCount;
@@ -80,7 +74,6 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
 
     /**
      * Status of registration of the container with the Recovery Services Vault.
-     * 
      */
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
@@ -91,7 +84,6 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
 
     /**
      * Resource group name of Recovery Services Vault.
-     * 
      */
     @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
@@ -102,7 +94,6 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
 
     /**
      * Fully qualified ARM url.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
@@ -113,7 +104,6 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
 
     /**
      * Storage account version.
-     * 
      */
     @Import(name="storageAccountVersion")
       private final @Nullable String storageAccountVersion;

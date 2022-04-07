@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * A custom alert rule that checks if a value (depends on the custom alert type) is within the given range.
- * 
  */
 public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
 
     /**
      * The description of the custom alert.
-     * 
      */
     @Import(name="description", required=true)
       private final String description;
@@ -31,7 +29,6 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
 
     /**
      * The display name of the custom alert.
-     * 
      */
     @Import(name="displayName", required=true)
       private final String displayName;
@@ -42,7 +39,6 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
 
     /**
      * Status of the custom alert.
-     * 
      */
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
@@ -53,7 +49,6 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
 
     /**
      * The maximum threshold.
-     * 
      */
     @Import(name="maxThreshold", required=true)
       private final Integer maxThreshold;
@@ -64,7 +59,6 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
 
     /**
      * The minimum threshold.
-     * 
      */
     @Import(name="minThreshold", required=true)
       private final Integer minThreshold;
@@ -76,7 +70,6 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
     /**
      * The type of the custom alert rule.
      * Expected value is 'ThresholdCustomAlertRule'.
-     * 
      */
     @Import(name="ruleType", required=true)
       private final String ruleType;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
-     * 
      */
     @EnumType
     public enum VpnGatewayGeneration {

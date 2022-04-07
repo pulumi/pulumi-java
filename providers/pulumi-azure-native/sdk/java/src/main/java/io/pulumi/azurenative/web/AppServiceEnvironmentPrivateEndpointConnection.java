@@ -31,70 +31,60 @@ import javax.annotation.Nullable;
 public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.resources.CustomResource {
     /**
      * Private IPAddresses mapped to the remote private endpoint
-     * 
      */
     @Export(name="ipAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ipAddresses;
 
     /**
      * @return Private IPAddresses mapped to the remote private endpoint
-     * 
      */
     public Output</* @Nullable */ List<String>> getIpAddresses() {
         return this.ipAddresses;
     }
     /**
      * Kind of resource.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Kind of resource.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Resource Name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * PrivateEndpoint of a remote private endpoint connection
-     * 
      */
     @Export(name="privateEndpoint", type=ArmIdWrapperResponse.class, parameters={})
     private Output</* @Nullable */ ArmIdWrapperResponse> privateEndpoint;
 
     /**
      * @return PrivateEndpoint of a remote private endpoint connection
-     * 
      */
     public Output</* @Nullable */ ArmIdWrapperResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * The state of a private link connection
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return The state of a private link connection
-     * 
      */
     public Output</* @Nullable */ PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -107,14 +97,12 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.re
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

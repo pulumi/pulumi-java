@@ -14,7 +14,6 @@ public final class ListRemoteRenderingAccountKeysArgs extends io.pulumi.resource
 
     /**
      * Name of an Mixed Reality Account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class ListRemoteRenderingAccountKeysArgs extends io.pulumi.resource
 
     /**
      * Name of an Azure resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

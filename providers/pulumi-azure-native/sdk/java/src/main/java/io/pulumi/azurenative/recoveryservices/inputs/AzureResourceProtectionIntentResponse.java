@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * IaaS VM specific backup protection intent item.
- * 
  */
 public final class AzureResourceProtectionIntentResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -31,7 +29,6 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
 
     /**
      * Friendly name of the VM represented by this backup item.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -42,7 +39,6 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
 
     /**
      * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
-     * 
      */
     @Import(name="itemId")
       private final @Nullable String itemId;
@@ -53,7 +49,6 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable String policyId;
@@ -65,7 +60,6 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
     /**
      * backup protectionIntent type.
      * Expected value is 'AzureResourceItem'.
-     * 
      */
     @Import(name="protectionIntentItemType", required=true)
       private final String protectionIntentItemType;
@@ -76,7 +70,6 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable String protectionState;
@@ -87,7 +80,6 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;

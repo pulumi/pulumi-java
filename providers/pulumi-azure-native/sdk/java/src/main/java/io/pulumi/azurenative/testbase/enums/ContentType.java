@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The type of command content.
-     * 
      */
     @EnumType
     public enum ContentType {

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes the diagnostics options available
- * 
  */
 public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
 
     /**
      * The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
-     * 
      */
     @Import(name="defaultSinkRefs")
       private final @Nullable Output<List<String>> defaultSinkRefs;
@@ -34,7 +32,6 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
 
     /**
      * Status of whether or not sinks are enabled.
-     * 
      */
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
@@ -45,7 +42,6 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
 
     /**
      * List of supported sinks that can be referenced.
-     * 
      */
     @Import(name="sinks")
       private final @Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;

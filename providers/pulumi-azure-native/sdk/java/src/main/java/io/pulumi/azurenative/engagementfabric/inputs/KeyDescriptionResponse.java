@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * The description of the EngagementFabric account key
- * 
  */
 public final class KeyDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class KeyDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The name of the key
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -29,7 +27,6 @@ public final class KeyDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The rank of the key
-     * 
      */
     @Import(name="rank", required=true)
       private final String rank;
@@ -40,7 +37,6 @@ public final class KeyDescriptionResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The value of the key
-     * 
      */
     @Import(name="value", required=true)
       private final String value;

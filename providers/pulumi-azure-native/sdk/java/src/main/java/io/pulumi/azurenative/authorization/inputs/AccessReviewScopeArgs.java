@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Descriptor for what needs to be reviewed
- * 
  */
 public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Flag to indicate whether to expand nested memberships or not.
-     * 
      */
     @Import(name="expandNestedMemberships")
       private final @Nullable Output<Boolean> expandNestedMemberships;
@@ -32,7 +30,6 @@ public final class AccessReviewScopeArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-     * 
      */
     @Import(name="inactiveDuration")
       private final @Nullable Output<String> inactiveDuration;

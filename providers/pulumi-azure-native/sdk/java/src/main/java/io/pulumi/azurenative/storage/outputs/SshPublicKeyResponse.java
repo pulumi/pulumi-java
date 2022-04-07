@@ -13,12 +13,10 @@ import javax.annotation.Nullable;
 public final class SshPublicKeyResponse {
     /**
      * Optional. It is used to store the function/usage of the key
-     * 
      */
     private final @Nullable String description;
     /**
      * Ssh public key base64 encoded. The format should be: '<keyType> <keyData>', e.g. ssh-rsa AAAABBBB
-     * 
      */
     private final @Nullable String key;
 
@@ -32,14 +30,12 @@ public final class SshPublicKeyResponse {
 
     /**
      * Optional. It is used to store the function/usage of the key
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Ssh public key base64 encoded. The format should be: '<keyType> <keyData>', e.g. ssh-rsa AAAABBBB
-     * 
     */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);

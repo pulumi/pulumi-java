@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Inner Error
- * 
  */
 public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Any Key value pairs that can be provided to the client for additional  verbose information.
-     * 
      */
     @Import(name="additionalInfo")
       private final @Nullable Map<String,String> additionalInfo;
@@ -32,7 +30,6 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Unique code for this error
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -43,7 +40,6 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Child Inner Error, to allow Nesting.
-     * 
      */
     @Import(name="embeddedInnerError")
       private final @Nullable InnerErrorResponse embeddedInnerError;

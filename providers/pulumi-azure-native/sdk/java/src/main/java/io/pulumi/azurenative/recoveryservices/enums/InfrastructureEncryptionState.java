@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enabling/Disabling the Double Encryption state
-     * 
      */
     @EnumType
     public enum InfrastructureEncryptionState {

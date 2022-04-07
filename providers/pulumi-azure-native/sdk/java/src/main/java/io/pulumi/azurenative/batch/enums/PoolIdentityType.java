@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * The type of identity used for the Batch Pool.
-     * 
      */
     @EnumType
     public enum PoolIdentityType {
         /**
          * Batch pool has user assigned identities with it.
-         * 
          */
         UserAssigned("UserAssigned"),
         /**
          * Batch pool has no identity associated with it. Setting `None` in update pool will remove existing identities.
-         * 
          */
         None("None");
 

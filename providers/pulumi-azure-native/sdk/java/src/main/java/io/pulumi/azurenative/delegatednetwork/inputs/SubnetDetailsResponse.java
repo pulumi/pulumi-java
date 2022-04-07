@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of orchestrator
- * 
  */
 public final class SubnetDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SubnetDetailsResponse extends io.pulumi.resources.InvokeArgs 
 
     /**
      * subnet arm resource id
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Provisioning state.
-     * 
      */
     @EnumType
     public enum ProvisioningState {

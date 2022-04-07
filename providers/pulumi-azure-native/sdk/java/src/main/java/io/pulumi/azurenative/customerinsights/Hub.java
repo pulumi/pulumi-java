@@ -20,7 +20,100 @@ import javax.annotation.Nullable;
  * Hub resource.
  * API Version: 2017-04-26.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Hubs_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hub = new AzureNative.CustomerInsights.Hub("hub", new AzureNative.CustomerInsights.HubArgs
+ *         {
+ *             HubBillingInfo = new AzureNative.CustomerInsights.Inputs.HubBillingInfoFormatArgs
+ *             {
+ *                 MaxUnits = 5,
+ *                 MinUnits = 1,
+ *                 SkuName = "B0",
+ *             },
+ *             HubName = "sdkTestHub",
+ *             Location = "West US",
+ *             ResourceGroupName = "TestHubRG",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := customerinsights.NewHub(ctx, "hub", &customerinsights.HubArgs{
+ * 			HubBillingInfo: &customerinsights.HubBillingInfoFormatArgs{
+ * 				MaxUnits: pulumi.Int(5),
+ * 				MinUnits: pulumi.Int(1),
+ * 				SkuName:  pulumi.String("B0"),
+ * 			},
+ * 			HubName:           pulumi.String("sdkTestHub"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("TestHubRG"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const hub = new azure_native.customerinsights.Hub("hub", {
+ *     hubBillingInfo: {
+ *         maxUnits: 5,
+ *         minUnits: 1,
+ *         skuName: "B0",
+ *     },
+ *     hubName: "sdkTestHub",
+ *     location: "West US",
+ *     resourceGroupName: "TestHubRG",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * hub = azure_native.customerinsights.Hub("hub",
+ *     hub_billing_info=azure_native.customerinsights.HubBillingInfoFormatArgs(
+ *         max_units=5,
+ *         min_units=1,
+ *         sku_name="B0",
+ *     ),
+ *     hub_name="sdkTestHub",
+ *     location="West US",
+ *     resource_group_name="TestHubRG")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +128,108 @@ import javax.annotation.Nullable;
 public class Hub extends io.pulumi.resources.CustomResource {
     /**
      * API endpoint URL of the hub.
-     * 
      */
     @Export(name="apiEndpoint", type=String.class, parameters={})
     private Output<String> apiEndpoint;
 
     /**
      * @return API endpoint URL of the hub.
-     * 
      */
     public Output<String> getApiEndpoint() {
         return this.apiEndpoint;
     }
     /**
      * Billing settings of the hub.
-     * 
      */
     @Export(name="hubBillingInfo", type=HubBillingInfoFormatResponse.class, parameters={})
     private Output</* @Nullable */ HubBillingInfoFormatResponse> hubBillingInfo;
 
     /**
      * @return Billing settings of the hub.
-     * 
      */
     public Output</* @Nullable */ HubBillingInfoFormatResponse> getHubBillingInfo() {
         return this.hubBillingInfo;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the hub.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the hub.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
-     * 
      */
     @Export(name="tenantFeatures", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> tenantFeatures;
 
     /**
      * @return The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
-     * 
      */
     public Output</* @Nullable */ Integer> getTenantFeatures() {
         return this.tenantFeatures;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Web endpoint URL of the hub.
-     * 
      */
     @Export(name="webEndpoint", type=String.class, parameters={})
     private Output<String> webEndpoint;
 
     /**
      * @return Web endpoint URL of the hub.
-     * 
      */
     public Output<String> getWebEndpoint() {
         return this.webEndpoint;

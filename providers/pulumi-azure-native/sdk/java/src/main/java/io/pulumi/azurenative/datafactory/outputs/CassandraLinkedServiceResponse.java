@@ -21,58 +21,47 @@ import javax.annotation.Nullable;
 public final class CassandraLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     private final @Nullable List<Object> annotations;
     /**
      * AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object authenticationType;
     /**
      * The integration runtime reference.
-     * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
      * Linked service description.
-     * 
      */
     private final @Nullable String description;
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object encryptedCredential;
     /**
      * Host name for connection. Type: string (or Expression with resultType string).
-     * 
      */
     private final Object host;
     /**
      * Parameters for linked service.
-     * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Password for authentication.
-     * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * The port for the connection. Type: integer (or Expression with resultType integer).
-     * 
      */
     private final @Nullable Object port;
     /**
      * Type of linked service.
      * Expected value is 'Cassandra'.
-     * 
      */
     private final String type;
     /**
      * Username for authentication. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object username;
 
@@ -104,63 +93,54 @@ public final class CassandraLinkedServiceResponse {
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
     */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * The integration runtime reference.
-     * 
     */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Host name for connection. Type: string (or Expression with resultType string).
-     * 
     */
     public Object getHost() {
         return this.host;
     }
     /**
      * Parameters for linked service.
-     * 
     */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password for authentication.
-     * 
     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The port for the connection. Type: integer (or Expression with resultType integer).
-     * 
     */
     public Optional<Object> getPort() {
         return Optional.ofNullable(this.port);
@@ -168,14 +148,12 @@ public final class CassandraLinkedServiceResponse {
     /**
      * Type of linked service.
      * Expected value is 'Cassandra'.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * Username for authentication. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getUsername() {
         return Optional.ofNullable(this.username);

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * The service with name and endpoint names
- * 
  */
 public final class WsdlService extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class WsdlService extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of the endpoints' qualified names
-     * 
      */
     @Import(name="endpointQualifiedNames")
       private final @Nullable List<String> endpointQualifiedNames;
@@ -32,7 +30,6 @@ public final class WsdlService extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The service's qualified name
-     * 
      */
     @Import(name="qualifiedName", required=true)
       private final String qualifiedName;

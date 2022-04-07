@@ -17,7 +17,6 @@ public final class ListRemediationDeploymentsAtResourceArgs extends io.pulumi.re
 
     /**
      * The name of the remediation.
-     * 
      */
     @Import(name="remediationName", required=true)
       private final String remediationName;
@@ -28,7 +27,6 @@ public final class ListRemediationDeploymentsAtResourceArgs extends io.pulumi.re
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="resourceId", required=true)
       private final String resourceId;
@@ -39,7 +37,6 @@ public final class ListRemediationDeploymentsAtResourceArgs extends io.pulumi.re
 
     /**
      * Maximum number of records to return.
-     * 
      */
     @Import(name="top")
       private final @Nullable Integer top;

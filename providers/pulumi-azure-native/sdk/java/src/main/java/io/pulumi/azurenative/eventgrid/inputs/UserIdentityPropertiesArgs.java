@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The information about the user identity.
- * 
  */
 public final class UserIdentityPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The client id of user assigned identity.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
@@ -31,7 +29,6 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
 
     /**
      * The principal id of user assigned identity.
-     * 
      */
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;

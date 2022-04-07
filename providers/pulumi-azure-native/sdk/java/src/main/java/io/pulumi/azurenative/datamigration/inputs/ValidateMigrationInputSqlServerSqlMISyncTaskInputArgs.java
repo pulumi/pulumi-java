@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Input for task that migrates SQL Server databases to Azure SQL Database Managed Instance online scenario.
- * 
  */
 public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
 
     /**
      * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
-     * 
      */
     @Import(name="azureApp", required=true)
       private final Output<AzureActiveDirectoryAppArgs> azureApp;
@@ -37,7 +35,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
 
     /**
      * Backup file share information for all selected databases.
-     * 
      */
     @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
@@ -48,7 +45,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
 
     /**
      * Databases to migrate
-     * 
      */
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
@@ -59,7 +55,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
 
     /**
      * Connection information for source SQL Server
-     * 
      */
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
@@ -70,7 +65,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
 
     /**
      * Fully qualified resourceId of storage
-     * 
      */
     @Import(name="storageResourceId", required=true)
       private final Output<String> storageResourceId;
@@ -81,7 +75,6 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
 
     /**
      * Connection information for Azure SQL Database Managed Instance
-     * 
      */
     @Import(name="targetConnectionInfo", required=true)
       private final Output<MiSqlConnectionInfoArgs> targetConnectionInfo;

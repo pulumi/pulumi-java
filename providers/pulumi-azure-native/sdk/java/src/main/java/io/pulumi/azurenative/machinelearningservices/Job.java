@@ -21,7 +21,438 @@ import javax.annotation.Nullable;
  * Azure Resource Manager resource envelope.
  * API Version: 2021-03-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateOrUpdate Command Job.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var job = new AzureNative.MachineLearningServices.Job("job", new AzureNative.MachineLearningServices.JobArgs
+ *         {
+ *             Id = "testJob",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.CommandJobArgs
+ *             {
+ *                 CodeId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/mycode/versions/1",
+ *                 Command = "python file.py test",
+ *                 Compute = new AzureNative.MachineLearningServices.Inputs.ComputeConfigurationArgs
+ *                 {
+ *                     InstanceCount = 1,
+ *                     Target = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute",
+ *                 },
+ *                 Description = "string",
+ *                 Distribution = new AzureNative.MachineLearningServices.Inputs.PyTorchArgs
+ *                 {
+ *                     DistributionType = "PyTorch",
+ *                     ProcessCount = 2,
+ *                 },
+ *                 EnvironmentId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1",
+ *                 EnvironmentVariables = 
+ *                 {
+ *                     { "MY_ENV_VAR1", "string" },
+ *                     { "MY_ENV_VAR2", "string" },
+ *                 },
+ *                 ExperimentName = "myExperiment",
+ *                 Identity = new AzureNative.MachineLearningServices.Inputs.AmlTokenArgs
+ *                 {
+ *                     IdentityType = "AMLToken",
+ *                 },
+ *                 InputDataBindings = 
+ *                 {
+ *                     { "test", new AzureNative.MachineLearningServices.Inputs.InputDataBindingArgs
+ *                     {
+ *                         DataId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/data/mydataset/versions/1",
+ *                         PathOnCompute = "path/on/compute",
+ *                     } },
+ *                 },
+ *                 JobType = "Command",
+ *                 OutputDataBindings = 
+ *                 {
+ *                     { "test", new AzureNative.MachineLearningServices.Inputs.OutputDataBindingArgs
+ *                     {
+ *                         DatastoreId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastore/mydatastore",
+ *                         PathOnCompute = "path/on/compute",
+ *                     } },
+ *                 },
+ *                 Properties = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 Tags = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 Timeout = "PT1M",
+ *             },
+ *             ResourceGroupName = "testrg123",
+ *             WorkspaceName = "testworkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const job = new azure_native.machinelearningservices.Job("job", {
+ *     id: "testJob",
+ *     properties: {
+ *         codeId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/mycode/versions/1",
+ *         command: "python file.py test",
+ *         compute: {
+ *             instanceCount: 1,
+ *             target: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute",
+ *         },
+ *         description: "string",
+ *         distribution: {
+ *             distributionType: "PyTorch",
+ *             processCount: 2,
+ *         },
+ *         environmentId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1",
+ *         environmentVariables: {
+ *             MY_ENV_VAR1: "string",
+ *             MY_ENV_VAR2: "string",
+ *         },
+ *         experimentName: "myExperiment",
+ *         identity: {
+ *             identityType: "AMLToken",
+ *         },
+ *         inputDataBindings: {
+ *             test: {
+ *                 dataId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/data/mydataset/versions/1",
+ *                 pathOnCompute: "path/on/compute",
+ *             },
+ *         },
+ *         jobType: "Command",
+ *         outputDataBindings: {
+ *             test: {
+ *                 datastoreId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastore/mydatastore",
+ *                 pathOnCompute: "path/on/compute",
+ *             },
+ *         },
+ *         properties: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         tags: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         timeout: "PT1M",
+ *     },
+ *     resourceGroupName: "testrg123",
+ *     workspaceName: "testworkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * job = azure_native.machinelearningservices.Job("job",
+ *     id="testJob",
+ *     properties=azure_native.machinelearningservices.CommandJobArgs(
+ *         code_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/mycode/versions/1",
+ *         command="python file.py test",
+ *         compute=azure_native.machinelearningservices.ComputeConfigurationArgs(
+ *             instance_count=1,
+ *             target="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute",
+ *         ),
+ *         description="string",
+ *         distribution=azure_native.machinelearningservices.PyTorchArgs(
+ *             distribution_type="PyTorch",
+ *             process_count=2,
+ *         ),
+ *         environment_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1",
+ *         environment_variables={
+ *             "MY_ENV_VAR1": "string",
+ *             "MY_ENV_VAR2": "string",
+ *         },
+ *         experiment_name="myExperiment",
+ *         identity=azure_native.machinelearningservices.AmlTokenArgs(
+ *             identity_type="AMLToken",
+ *         ),
+ *         input_data_bindings={
+ *             "test": azure_native.machinelearningservices.InputDataBindingArgs(
+ *                 data_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/data/mydataset/versions/1",
+ *                 path_on_compute="path/on/compute",
+ *             ),
+ *         },
+ *         job_type="Command",
+ *         output_data_bindings={
+ *             "test": azure_native.machinelearningservices.OutputDataBindingArgs(
+ *                 datastore_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastore/mydatastore",
+ *                 path_on_compute="path/on/compute",
+ *             ),
+ *         },
+ *         properties={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         tags={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         timeout="PT1M",
+ *     ),
+ *     resource_group_name="testrg123",
+ *     workspace_name="testworkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### CreateOrUpdate Sweep Job.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var job = new AzureNative.MachineLearningServices.Job("job", new AzureNative.MachineLearningServices.JobArgs
+ *         {
+ *             Id = "testJob",
+ *             Properties = new AzureNative.MachineLearningServices.Inputs.SweepJobArgs
+ *             {
+ *                 Algorithm = "Grid",
+ *                 Compute = new AzureNative.MachineLearningServices.Inputs.ComputeConfigurationArgs
+ *                 {
+ *                     InstanceCount = 1,
+ *                     Target = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute",
+ *                 },
+ *                 Description = "string",
+ *                 Identity = new AzureNative.MachineLearningServices.Inputs.AmlTokenArgs
+ *                 {
+ *                     IdentityType = "AMLToken",
+ *                 },
+ *                 JobType = "Sweep",
+ *                 MaxConcurrentTrials = 1,
+ *                 MaxTotalTrials = 1,
+ *                 Objective = new AzureNative.MachineLearningServices.Inputs.ObjectiveArgs
+ *                 {
+ *                     Goal = "Minimize",
+ *                     PrimaryMetric = "string",
+ *                 },
+ *                 Properties = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 SearchSpace = 
+ *                 {
+ *                     { "name",  },
+ *                 },
+ *                 Tags = 
+ *                 {
+ *                     { "additionalProp1", "string" },
+ *                     { "additionalProp2", "string" },
+ *                     { "additionalProp3", "string" },
+ *                 },
+ *                 Timeout = "PT1M",
+ *                 Trial = new AzureNative.MachineLearningServices.Inputs.TrialComponentArgs
+ *                 {
+ *                     CodeId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/mycode/versions/1",
+ *                     Command = "python file.py test",
+ *                     Distribution = new AzureNative.MachineLearningServices.Inputs.PyTorchArgs
+ *                     {
+ *                         DistributionType = "PyTorch",
+ *                         ProcessCount = 2,
+ *                     },
+ *                     EnvironmentId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1",
+ *                     EnvironmentVariables = 
+ *                     {
+ *                         { "MY_ENV_VAR1", "string" },
+ *                         { "MY_ENV_VAR2", "string" },
+ *                     },
+ *                     InputDataBindings = 
+ *                     {
+ *                         { "test", new AzureNative.MachineLearningServices.Inputs.InputDataBindingArgs
+ *                         {
+ *                             DataId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/data/mydataset/versions/1",
+ *                             PathOnCompute = "path/on/compute",
+ *                         } },
+ *                     },
+ *                     OutputDataBindings = 
+ *                     {
+ *                         { "test", new AzureNative.MachineLearningServices.Inputs.OutputDataBindingArgs
+ *                         {
+ *                             DatastoreId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastore/mydatastore",
+ *                             PathOnCompute = "path/on/compute",
+ *                         } },
+ *                     },
+ *                     Timeout = "PT1M",
+ *                 },
+ *             },
+ *             ResourceGroupName = "testrg123",
+ *             WorkspaceName = "testworkspace",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const job = new azure_native.machinelearningservices.Job("job", {
+ *     id: "testJob",
+ *     properties: {
+ *         algorithm: "Grid",
+ *         compute: {
+ *             instanceCount: 1,
+ *             target: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute",
+ *         },
+ *         description: "string",
+ *         identity: {
+ *             identityType: "AMLToken",
+ *         },
+ *         jobType: "Sweep",
+ *         maxConcurrentTrials: 1,
+ *         maxTotalTrials: 1,
+ *         objective: {
+ *             goal: "Minimize",
+ *             primaryMetric: "string",
+ *         },
+ *         properties: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         searchSpace: {
+ *             name: {},
+ *         },
+ *         tags: {
+ *             additionalProp1: "string",
+ *             additionalProp2: "string",
+ *             additionalProp3: "string",
+ *         },
+ *         timeout: "PT1M",
+ *         trial: {
+ *             codeId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/mycode/versions/1",
+ *             command: "python file.py test",
+ *             distribution: {
+ *                 distributionType: "PyTorch",
+ *                 processCount: 2,
+ *             },
+ *             environmentId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1",
+ *             environmentVariables: {
+ *                 MY_ENV_VAR1: "string",
+ *                 MY_ENV_VAR2: "string",
+ *             },
+ *             inputDataBindings: {
+ *                 test: {
+ *                     dataId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/data/mydataset/versions/1",
+ *                     pathOnCompute: "path/on/compute",
+ *                 },
+ *             },
+ *             outputDataBindings: {
+ *                 test: {
+ *                     datastoreId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastore/mydatastore",
+ *                     pathOnCompute: "path/on/compute",
+ *                 },
+ *             },
+ *             timeout: "PT1M",
+ *         },
+ *     },
+ *     resourceGroupName: "testrg123",
+ *     workspaceName: "testworkspace",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * job = azure_native.machinelearningservices.Job("job",
+ *     id="testJob",
+ *     properties=azure_native.machinelearningservices.SweepJobArgs(
+ *         algorithm="Grid",
+ *         compute=azure_native.machinelearningservices.ComputeConfigurationArgs(
+ *             instance_count=1,
+ *             target="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute",
+ *         ),
+ *         description="string",
+ *         identity=azure_native.machinelearningservices.AmlTokenArgs(
+ *             identity_type="AMLToken",
+ *         ),
+ *         job_type="Sweep",
+ *         max_concurrent_trials=1,
+ *         max_total_trials=1,
+ *         objective=azure_native.machinelearningservices.ObjectiveArgs(
+ *             goal="Minimize",
+ *             primary_metric="string",
+ *         ),
+ *         properties={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         search_space={
+ *             "name": {},
+ *         },
+ *         tags={
+ *             "additionalProp1": "string",
+ *             "additionalProp2": "string",
+ *             "additionalProp3": "string",
+ *         },
+ *         timeout="PT1M",
+ *         trial=azure_native.machinelearningservices.TrialComponentArgs(
+ *             code_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/mycode/versions/1",
+ *             command="python file.py test",
+ *             distribution=azure_native.machinelearningservices.PyTorchArgs(
+ *                 distribution_type="PyTorch",
+ *                 process_count=2,
+ *             ),
+ *             environment_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1",
+ *             environment_variables={
+ *                 "MY_ENV_VAR1": "string",
+ *                 "MY_ENV_VAR2": "string",
+ *             },
+ *             input_data_bindings={
+ *                 "test": azure_native.machinelearningservices.InputDataBindingArgs(
+ *                     data_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/data/mydataset/versions/1",
+ *                     path_on_compute="path/on/compute",
+ *                 ),
+ *             },
+ *             output_data_bindings={
+ *                 "test": azure_native.machinelearningservices.OutputDataBindingArgs(
+ *                     datastore_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastore/mydatastore",
+ *                     path_on_compute="path/on/compute",
+ *                 ),
+ *             },
+ *             timeout="PT1M",
+ *         ),
+ *     ),
+ *     resource_group_name="testrg123",
+ *     workspace_name="testworkspace")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -36,56 +467,48 @@ import javax.annotation.Nullable;
 public class Job extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Additional attributes of the entity.
-     * 
      */
     @Export(name="properties", type=Either.class, parameters={CommandJobResponse.class, SweepJobResponse.class})
     private Output<Either<CommandJobResponse,SweepJobResponse>> properties;
 
     /**
      * @return Additional attributes of the entity.
-     * 
      */
     public Output<Either<CommandJobResponse,SweepJobResponse>> getProperties() {
         return this.properties;
     }
     /**
      * System data associated with resource provider
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return System data associated with resource provider
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

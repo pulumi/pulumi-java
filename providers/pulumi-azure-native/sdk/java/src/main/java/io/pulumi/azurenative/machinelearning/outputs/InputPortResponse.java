@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class InputPortResponse {
     /**
      * Port data type.
-     * 
      */
     private final @Nullable String type;
 
@@ -24,7 +23,6 @@ public final class InputPortResponse {
 
     /**
      * Port data type.
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

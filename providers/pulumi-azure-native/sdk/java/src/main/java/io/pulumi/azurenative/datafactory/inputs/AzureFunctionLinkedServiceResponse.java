@@ -21,7 +21,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Function linked service.
- * 
  */
 public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -29,7 +28,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * List of tags that can be used for describing the linked service.
-     * 
      */
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
@@ -40,7 +38,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * Type of authentication (Required to specify MSI) used to connect to AzureFunction. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="authentication")
       private final @Nullable Object authentication;
@@ -51,7 +48,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * The integration runtime reference.
-     * 
      */
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
@@ -62,7 +58,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * The credential reference containing authentication information.
-     * 
      */
     @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
@@ -73,7 +68,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * Linked service description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -84,7 +78,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
@@ -95,7 +88,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.
-     * 
      */
     @Import(name="functionAppUrl", required=true)
       private final Object functionAppUrl;
@@ -106,7 +98,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * Function or Host key for Azure Function App.
-     * 
      */
     @Import(name="functionKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey;
@@ -117,7 +108,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * Parameters for linked service.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
@@ -128,7 +118,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
 
     /**
      * Allowed token audiences for azure function.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Object resourceId;
@@ -140,7 +129,6 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
     /**
      * Type of linked service.
      * Expected value is 'AzureFunction'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

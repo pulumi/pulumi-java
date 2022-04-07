@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * ExtendedLocation complex type.
- * 
  */
 public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the extended location.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The type of the extended location.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ExtendedLocationTypes>> type;

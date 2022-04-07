@@ -12,27 +12,22 @@ import java.util.Objects;
 public final class GetManagedPrivateEndpointResult {
     /**
      * Etag identifies change in the resource.
-     * 
      */
     private final String etag;
     /**
      * The resource identifier.
-     * 
      */
     private final String id;
     /**
      * The resource name.
-     * 
      */
     private final String name;
     /**
      * Managed private endpoint properties.
-     * 
      */
     private final ManagedPrivateEndpointResponse properties;
     /**
      * The resource type.
-     * 
      */
     private final String type;
 
@@ -52,35 +47,30 @@ public final class GetManagedPrivateEndpointResult {
 
     /**
      * Etag identifies change in the resource.
-     * 
     */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource identifier.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Managed private endpoint properties.
-     * 
     */
     public ManagedPrivateEndpointResponse getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
-     * 
     */
     public String getType() {
         return this.type;

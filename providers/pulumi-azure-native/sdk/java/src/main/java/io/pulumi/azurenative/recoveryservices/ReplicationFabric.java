@@ -18,7 +18,72 @@ import javax.annotation.Nullable;
  * Fabric definition.
  * API Version: 2018-07-10.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates an Azure Site Recovery fabric.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var replicationFabric = new AzureNative.RecoveryServices.ReplicationFabric("replicationFabric", new AzureNative.RecoveryServices.ReplicationFabricArgs
+ *         {
+ *             FabricName = "cloud1",
+ *             Properties = new AzureNative.RecoveryServices.Inputs.FabricCreationInputPropertiesArgs
+ *             {
+ *                 CustomDetails = 
+ *                 {
+ *                     { "instanceType", "FabricSpecificCreationInput" },
+ *                 },
+ *             },
+ *             ResourceGroupName = "resourceGroupPS1",
+ *             ResourceName = "vault1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const replicationFabric = new azure_native.recoveryservices.ReplicationFabric("replicationFabric", {
+ *     fabricName: "cloud1",
+ *     properties: {
+ *         customDetails: {
+ *             instanceType: "FabricSpecificCreationInput",
+ *         },
+ *     },
+ *     resourceGroupName: "resourceGroupPS1",
+ *     resourceName: "vault1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * replication_fabric = azure_native.recoveryservices.ReplicationFabric("replicationFabric",
+ *     fabric_name="cloud1",
+ *     properties=azure_native.recoveryservices.FabricCreationInputPropertiesArgs(
+ *         custom_details={
+ *             "instanceType": "FabricSpecificCreationInput",
+ *         },
+ *     ),
+ *     resource_group_name="resourceGroupPS1",
+ *     resource_name="vault1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +98,48 @@ import javax.annotation.Nullable;
 public class ReplicationFabric extends io.pulumi.resources.CustomResource {
     /**
      * Resource Location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource Location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Fabric related data.
-     * 
      */
     @Export(name="properties", type=FabricPropertiesResponse.class, parameters={})
     private Output<FabricPropertiesResponse> properties;
 
     /**
      * @return Fabric related data.
-     * 
      */
     public Output<FabricPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource Type
-     * 
      */
     public Output<String> getType() {
         return this.type;

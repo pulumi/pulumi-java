@@ -21,7 +21,6 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Represents a supported Fabric/Infra. (AKSEdge etc...).
-     * 
      */
     @Import(name="distro")
       private final @Nullable Output<Either<String,Distro>> distro;
@@ -32,7 +31,6 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Identity for the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
@@ -43,7 +41,6 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Contains infrastructure information about the Appliance
-     * 
      */
     @Import(name="infrastructureConfig")
       private final @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
@@ -54,7 +51,6 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -65,7 +61,6 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Certificates pair used to download MSI certificate from HIS
-     * 
      */
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
@@ -76,7 +71,6 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Appliances name.
-     * 
      */
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
@@ -98,7 +91,6 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

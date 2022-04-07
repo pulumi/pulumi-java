@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class JobStatusResponse {
     /**
      * Defines the job name.
-     * 
      */
     private final String jobName;
     /**
      * Gets or sets the monitoring job percentage.
-     * 
      */
     private final String jobProgress;
 
@@ -30,14 +28,12 @@ public final class JobStatusResponse {
 
     /**
      * Defines the job name.
-     * 
     */
     public String getJobName() {
         return this.jobName;
     }
     /**
      * Gets or sets the monitoring job percentage.
-     * 
     */
     public String getJobProgress() {
         return this.jobProgress;

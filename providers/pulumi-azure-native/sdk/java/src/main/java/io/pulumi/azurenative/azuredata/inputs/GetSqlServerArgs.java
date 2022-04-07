@@ -16,7 +16,6 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The child resources to include in the response.
-     * 
      */
     @Import(name="expand")
       private final @Nullable String expand;
@@ -27,7 +26,6 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -38,7 +36,6 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the SQL Server.
-     * 
      */
     @Import(name="sqlServerName", required=true)
       private final String sqlServerName;
@@ -49,7 +46,6 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the SQL Server registration.
-     * 
      */
     @Import(name="sqlServerRegistrationName", required=true)
       private final String sqlServerRegistrationName;

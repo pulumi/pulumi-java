@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class DependencyResponse {
     /**
      * The list of dependencies.
-     * 
      */
     private final @Nullable List<BasicDependencyResponse> dependsOn;
     /**
      * The ID of the dependency.
-     * 
      */
     private final @Nullable String id;
     /**
      * The dependency resource name.
-     * 
      */
     private final @Nullable String resourceName;
     /**
      * The dependency resource type.
-     * 
      */
     private final @Nullable String resourceType;
 
@@ -48,28 +44,24 @@ public final class DependencyResponse {
 
     /**
      * The list of dependencies.
-     * 
     */
     public List<BasicDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * The ID of the dependency.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The dependency resource name.
-     * 
     */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }
     /**
      * The dependency resource type.
-     * 
     */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Data regarding 3rd party partner integration
- * 
  */
 public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
 
     /**
      * Name of the company of the partner
-     * 
      */
     @Import(name="partnerName", required=true)
       private final Output<String> partnerName;
@@ -30,7 +28,6 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
 
     /**
      * secret to authenticate the partner - write only
-     * 
      */
     @Import(name="secret", required=true)
       private final Output<String> secret;

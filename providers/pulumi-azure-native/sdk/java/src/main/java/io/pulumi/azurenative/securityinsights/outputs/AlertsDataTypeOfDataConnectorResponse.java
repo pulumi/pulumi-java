@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class AlertsDataTypeOfDataConnectorResponse {
     /**
      * Alerts data type connection.
-     * 
      */
     private final @Nullable DataConnectorDataTypeCommonResponse alerts;
 
@@ -24,7 +23,6 @@ public final class AlertsDataTypeOfDataConnectorResponse {
 
     /**
      * Alerts data type connection.
-     * 
     */
     public Optional<DataConnectorDataTypeCommonResponse> getAlerts() {
         return Optional.ofNullable(this.alerts);

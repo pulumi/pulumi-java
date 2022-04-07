@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Details of the managed disks.
- * 
  */
 public final class ManagedDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
     /**
      * Account Type of the data to be transferred.
      * Expected value is 'ManagedDisk'.
-     * 
      */
     @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
@@ -30,7 +28,6 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource Group Id of the compute disks.
-     * 
      */
     @Import(name="resourceGroupId", required=true)
       private final String resourceGroupId;
@@ -41,7 +38,6 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
 
     /**
      * Resource Id of the storage account that can be used to copy the vhd for staging.
-     * 
      */
     @Import(name="stagingStorageAccountId", required=true)
       private final String stagingStorageAccountId;

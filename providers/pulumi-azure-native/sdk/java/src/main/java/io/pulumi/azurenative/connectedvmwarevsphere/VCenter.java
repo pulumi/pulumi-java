@@ -23,7 +23,121 @@ import javax.annotation.Nullable;
  * Defines the vCenter.
  * API Version: 2020-10-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateVCenter
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vCenter = new AzureNative.ConnectedVMwarevSphere.VCenter("vCenter", new AzureNative.ConnectedVMwarevSphere.VCenterArgs
+ *         {
+ *             Credentials = new AzureNative.ConnectedVMwarevSphere.Inputs.VICredentialArgs
+ *             {
+ *                 Password = "<password>",
+ *                 Username = "tempuser",
+ *             },
+ *             ExtendedLocation = new AzureNative.ConnectedVMwarevSphere.Inputs.ExtendedLocationArgs
+ *             {
+ *                 Name = "/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso",
+ *                 Type = "customLocation",
+ *             },
+ *             Fqdn = "ContosoVMware.contoso.com",
+ *             Location = "East US",
+ *             Port = 1234,
+ *             ResourceGroupName = "testrg",
+ *             VcenterName = "ContosoVCenter",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	connectedvmwarevsphere "github.com/pulumi/pulumi-azure-native/sdk/go/azure/connectedvmwarevsphere"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := connectedvmwarevsphere.NewVCenter(ctx, "vCenter", &connectedvmwarevsphere.VCenterArgs{
+ * 			Credentials: &connectedvmwarevsphere.VICredentialArgs{
+ * 				Password: pulumi.String("<password>"),
+ * 				Username: pulumi.String("tempuser"),
+ * 			},
+ * 			ExtendedLocation: &connectedvmwarevsphere.ExtendedLocationArgs{
+ * 				Name: pulumi.String("/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso"),
+ * 				Type: pulumi.String("customLocation"),
+ * 			},
+ * 			Fqdn:              pulumi.String("ContosoVMware.contoso.com"),
+ * 			Location:          pulumi.String("East US"),
+ * 			Port:              pulumi.Int(1234),
+ * 			ResourceGroupName: pulumi.String("testrg"),
+ * 			VcenterName:       pulumi.String("ContosoVCenter"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const vCenter = new azure_native.connectedvmwarevsphere.VCenter("vCenter", {
+ *     credentials: {
+ *         password: "<password>",
+ *         username: "tempuser",
+ *     },
+ *     extendedLocation: {
+ *         name: "/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso",
+ *         type: "customLocation",
+ *     },
+ *     fqdn: "ContosoVMware.contoso.com",
+ *     location: "East US",
+ *     port: 1234,
+ *     resourceGroupName: "testrg",
+ *     vcenterName: "ContosoVCenter",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * v_center = azure_native.connectedvmwarevsphere.VCenter("vCenter",
+ *     credentials=azure_native.connectedvmwarevsphere.VICredentialArgs(
+ *         password="<password>",
+ *         username="tempuser",
+ *     ),
+ *     extended_location=azure_native.connectedvmwarevsphere.ExtendedLocationArgs(
+ *         name="/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso",
+ *         type="customLocation",
+ *     ),
+ *     fqdn="ContosoVMware.contoso.com",
+ *     location="East US",
+ *     port=1234,
+ *     resource_group_name="testrg",
+ *     vcenter_name="ContosoVCenter")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -38,238 +152,204 @@ import javax.annotation.Nullable;
 public class VCenter extends io.pulumi.resources.CustomResource {
     /**
      * Gets or sets the connection status to the vCenter.
-     * 
      */
     @Export(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
     /**
      * @return Gets or sets the connection status to the vCenter.
-     * 
      */
     public Output<String> getConnectionStatus() {
         return this.connectionStatus;
     }
     /**
      * Username / Password Credentials to connect to vcenter.
-     * 
      */
     @Export(name="credentials", type=VICredentialResponse.class, parameters={})
     private Output</* @Nullable */ VICredentialResponse> credentials;
 
     /**
      * @return Username / Password Credentials to connect to vcenter.
-     * 
      */
     public Output</* @Nullable */ VICredentialResponse> getCredentials() {
         return this.credentials;
     }
     /**
      * Gets the name of the corresponding resource in Kubernetes.
-     * 
      */
     @Export(name="customResourceName", type=String.class, parameters={})
     private Output<String> customResourceName;
 
     /**
      * @return Gets the name of the corresponding resource in Kubernetes.
-     * 
      */
     public Output<String> getCustomResourceName() {
         return this.customResourceName;
     }
     /**
      * Gets or sets the extended location.
-     * 
      */
     @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
      * @return Gets or sets the extended location.
-     * 
      */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
     /**
      * Gets or sets the FQDN/IPAddress of the vCenter.
-     * 
      */
     @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
      * @return Gets or sets the FQDN/IPAddress of the vCenter.
-     * 
      */
     public Output<String> getFqdn() {
         return this.fqdn;
     }
     /**
      * Gets or sets the instance UUID of the vCenter.
-     * 
      */
     @Export(name="instanceUuid", type=String.class, parameters={})
     private Output<String> instanceUuid;
 
     /**
      * @return Gets or sets the instance UUID of the vCenter.
-     * 
      */
     public Output<String> getInstanceUuid() {
         return this.instanceUuid;
     }
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
      */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
     /**
      * Gets or sets the location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Gets or sets the location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Gets or sets the name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets or sets the name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Gets or sets the port of the vCenter.
-     * 
      */
     @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
      * @return Gets or sets the port of the vCenter.
-     * 
      */
     public Output</* @Nullable */ Integer> getPort() {
         return this.port;
     }
     /**
      * Gets or sets the provisioning state.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Gets or sets the provisioning state.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource status information.
-     * 
      */
     @Export(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
     private Output<List<ResourceStatusResponse>> statuses;
 
     /**
      * @return The resource status information.
-     * 
      */
     public Output<List<ResourceStatusResponse>> getStatuses() {
         return this.statuses;
     }
     /**
      * The system data.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return The system data.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * Gets or sets the Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Gets or sets the Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets or sets the type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets or sets the type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Gets or sets a unique identifier for this resource.
-     * 
      */
     @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
      * @return Gets or sets a unique identifier for this resource.
-     * 
      */
     public Output<String> getUuid() {
         return this.uuid;
     }
     /**
      * Gets or sets the version of the vCenter.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return Gets or sets the version of the vCenter.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

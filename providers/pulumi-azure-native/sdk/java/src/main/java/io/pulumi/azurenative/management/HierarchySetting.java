@@ -18,7 +18,79 @@ import javax.annotation.Nullable;
  * Settings defined at the Management Group scope.
  * API Version: 2020-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### GetGroupSettings
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var hierarchySetting = new AzureNative.Management.HierarchySetting("hierarchySetting", new AzureNative.Management.HierarchySettingArgs
+ *         {
+ *             DefaultManagementGroup = "/providers/Microsoft.Management/managementGroups/DefaultGroup",
+ *             GroupId = "root",
+ *             RequireAuthorizationForGroupCreation = true,
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	management "github.com/pulumi/pulumi-azure-native/sdk/go/azure/management"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := management.NewHierarchySetting(ctx, "hierarchySetting", &management.HierarchySettingArgs{
+ * 			DefaultManagementGroup:               pulumi.String("/providers/Microsoft.Management/managementGroups/DefaultGroup"),
+ * 			GroupId:                              pulumi.String("root"),
+ * 			RequireAuthorizationForGroupCreation: pulumi.Bool(true),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const hierarchySetting = new azure_native.management.HierarchySetting("hierarchySetting", {
+ *     defaultManagementGroup: "/providers/Microsoft.Management/managementGroups/DefaultGroup",
+ *     groupId: "root",
+ *     requireAuthorizationForGroupCreation: true,
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * hierarchy_setting = azure_native.management.HierarchySetting("hierarchySetting",
+ *     default_management_group="/providers/Microsoft.Management/managementGroups/DefaultGroup",
+ *     group_id="root",
+ *     require_authorization_for_group_creation=True)
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,70 +105,60 @@ import javax.annotation.Nullable;
 public class HierarchySetting extends io.pulumi.resources.CustomResource {
     /**
      * Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
-     * 
      */
     @Export(name="defaultManagementGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultManagementGroup;
 
     /**
      * @return Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
-     * 
      */
     public Output</* @Nullable */ String> getDefaultManagementGroup() {
         return this.defaultManagementGroup;
     }
     /**
      * The name of the object. In this case, default.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the object. In this case, default.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
-     * 
      */
     @Export(name="requireAuthorizationForGroupCreation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requireAuthorizationForGroupCreation;
 
     /**
      * @return Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
-     * 
      */
     public Output</* @Nullable */ Boolean> getRequireAuthorizationForGroupCreation() {
         return this.requireAuthorizationForGroupCreation;
     }
     /**
      * The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
      * @return The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
-     * 
      */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of the resource.  For example, Microsoft.Management/managementGroups/settings.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.  For example, Microsoft.Management/managementGroups/settings.
-     * 
      */
     public Output<String> getType() {
         return this.type;

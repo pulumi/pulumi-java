@@ -14,7 +14,6 @@ public final class GetEventHubEventSourceArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the Time Series Insights environment associated with the specified resource group.
-     * 
      */
     @Import(name="environmentName", required=true)
       private final String environmentName;
@@ -25,7 +24,6 @@ public final class GetEventHubEventSourceArgs extends io.pulumi.resources.Invoke
 
     /**
      * The name of the Time Series Insights event source associated with the specified environment.
-     * 
      */
     @Import(name="eventSourceName", required=true)
       private final String eventSourceName;
@@ -36,7 +34,6 @@ public final class GetEventHubEventSourceArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of an Azure Resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

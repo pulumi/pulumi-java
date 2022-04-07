@@ -11,16 +11,14 @@ import javax.annotation.Nullable;
 
 
 /**
- * Specifies the identity properties.
- * 
+ * Specifies the identity properties. 
  */
 public final class IdentityDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityDetailsResponse Empty = new IdentityDetailsResponse();
 
     /**
-     * Specifies the principal id for the identity for the job.
-     * 
+     * Specifies the principal id for the identity for the job. 
      */
     @Import(name="principalId", required=true)
       private final String principalId;
@@ -30,8 +28,7 @@ public final class IdentityDetailsResponse extends io.pulumi.resources.InvokeArg
     }
 
     /**
-     * Specifies the tenant id for the identity for the job.
-     * 
+     * Specifies the tenant id for the identity for the job. 
      */
     @Import(name="tenantId", required=true)
       private final String tenantId;
@@ -42,7 +39,6 @@ public final class IdentityDetailsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * The type of identity
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

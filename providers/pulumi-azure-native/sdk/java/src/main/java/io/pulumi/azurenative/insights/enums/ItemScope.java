@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
-     * 
      */
     @EnumType
     public enum ItemScope {

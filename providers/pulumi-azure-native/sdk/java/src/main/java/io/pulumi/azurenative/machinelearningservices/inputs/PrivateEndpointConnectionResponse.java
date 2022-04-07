@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * The Private Endpoint Connection resource.
- * 
  */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Specifies the resource ID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -37,7 +35,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The identity of the resource.
-     * 
      */
     @Import(name="identity")
       private final @Nullable IdentityResponse identity;
@@ -48,7 +45,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Specifies the location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable String location;
@@ -59,7 +55,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Specifies the name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -70,7 +65,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The resource of private end point.
-     * 
      */
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
@@ -81,7 +75,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
@@ -92,7 +85,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -103,7 +95,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * The sku of the workspace.
-     * 
      */
     @Import(name="sku")
       private final @Nullable SkuResponse sku;
@@ -114,7 +105,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Read only system data
-     * 
      */
     @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
@@ -125,7 +115,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Contains resource tags defined as key/value pairs.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
@@ -136,7 +125,6 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
 
     /**
      * Specifies the type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

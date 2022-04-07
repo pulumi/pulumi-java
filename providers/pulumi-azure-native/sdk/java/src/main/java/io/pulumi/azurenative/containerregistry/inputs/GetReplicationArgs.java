@@ -14,7 +14,6 @@ public final class GetReplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the container registry.
-     * 
      */
     @Import(name="registryName", required=true)
       private final String registryName;
@@ -25,7 +24,6 @@ public final class GetReplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the replication.
-     * 
      */
     @Import(name="replicationName", required=true)
       private final String replicationName;
@@ -36,7 +34,6 @@ public final class GetReplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group to which the container registry belongs.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

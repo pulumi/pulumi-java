@@ -18,7 +18,83 @@ import javax.annotation.Nullable;
  * Contract details.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ApiManagementCreateProductGroup
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var productGroup = new AzureNative.ApiManagement.ProductGroup("productGroup", new AzureNative.ApiManagement.ProductGroupArgs
+ *         {
+ *             GroupId = "templateGroup",
+ *             ProductId = "testproduct",
+ *             ResourceGroupName = "rg1",
+ *             ServiceName = "apimService1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := apimanagement.NewProductGroup(ctx, "productGroup", &apimanagement.ProductGroupArgs{
+ * 			GroupId:           pulumi.String("templateGroup"),
+ * 			ProductId:         pulumi.String("testproduct"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			ServiceName:       pulumi.String("apimService1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const productGroup = new azure_native.apimanagement.ProductGroup("productGroup", {
+ *     groupId: "templateGroup",
+ *     productId: "testproduct",
+ *     resourceGroupName: "rg1",
+ *     serviceName: "apimService1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * product_group = azure_native.apimanagement.ProductGroup("productGroup",
+ *     group_id="templateGroup",
+ *     product_id="testproduct",
+ *     resource_group_name="rg1",
+ *     service_name="apimService1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,84 +109,72 @@ import javax.annotation.Nullable;
 public class ProductGroup extends io.pulumi.resources.CustomResource {
     /**
      * true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
-     * 
      */
     @Export(name="builtIn", type=Boolean.class, parameters={})
     private Output<Boolean> builtIn;
 
     /**
      * @return true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
-     * 
      */
     public Output<Boolean> getBuiltIn() {
         return this.builtIn;
     }
     /**
      * Group description. Can contain HTML formatting tags.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return Group description. Can contain HTML formatting tags.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * Group name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
      * @return Group name.
-     * 
      */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
     /**
      * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
-     * 
      */
     @Export(name="externalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalId;
 
     /**
      * @return For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
-     * 
      */
     public Output</* @Nullable */ String> getExternalId() {
         return this.externalId;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type for API Management resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

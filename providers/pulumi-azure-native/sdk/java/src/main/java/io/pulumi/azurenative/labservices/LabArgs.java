@@ -20,7 +20,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab Account.
-     * 
      */
     @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
@@ -31,7 +30,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab.
-     * 
      */
     @Import(name="labName")
       private final @Nullable Output<String> labName;
@@ -42,7 +40,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -53,7 +50,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum number of users allowed in the lab.
-     * 
      */
     @Import(name="maxUsersInLab")
       private final @Nullable Output<Integer> maxUsersInLab;
@@ -64,7 +60,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
@@ -75,7 +70,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags of the resource.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -97,7 +90,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;
@@ -108,7 +100,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Maximum duration a user can use an environment for in the lab.
-     * 
      */
     @Import(name="usageQuota")
       private final @Nullable Output<String> usageQuota;
@@ -119,7 +110,6 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Lab user access mode (open to all vs. restricted to those listed on the lab).
-     * 
      */
     @Import(name="userAccessMode")
       private final @Nullable Output<Either<String,LabUserAccessMode>> userAccessMode;

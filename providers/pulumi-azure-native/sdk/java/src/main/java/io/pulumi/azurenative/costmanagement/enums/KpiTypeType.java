@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * KPI type (Forecast, Budget).
-     * 
      */
     @EnumType
     public enum KpiTypeType {

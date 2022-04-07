@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Filter First Quality
- * 
  */
 public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The first quality bitrate.
-     * 
      */
     @Import(name="bitrate", required=true)
       private final Output<Integer> bitrate;

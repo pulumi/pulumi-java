@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * The network manager effective connectivity configuration
- * 
  */
 public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
 
     /**
      * Groups for configuration
-     * 
      */
     @Import(name="appliesToGroups")
       private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
@@ -35,7 +33,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
 
     /**
      * Effective configuration groups.
-     * 
      */
     @Import(name="configurationGroups")
       private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
@@ -46,7 +43,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
 
     /**
      * Connectivity topology type.
-     * 
      */
     @Import(name="connectivityTopology", required=true)
       private final String connectivityTopology;
@@ -57,7 +53,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
 
     /**
      * Flag if need to remove current existing peerings.
-     * 
      */
     @Import(name="deleteExistingPeering")
       private final @Nullable String deleteExistingPeering;
@@ -68,7 +63,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
 
     /**
      * A description of the connectivity configuration.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -79,7 +73,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
 
     /**
      * A friendly name for the resource.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -90,7 +83,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
 
     /**
      * List of hubItems
-     * 
      */
     @Import(name="hubs")
       private final @Nullable List<HubResponse> hubs;
@@ -101,7 +93,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -112,7 +103,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
 
     /**
      * Flag if global mesh is supported.
-     * 
      */
     @Import(name="isGlobal")
       private final @Nullable String isGlobal;
@@ -123,7 +113,6 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
 
     /**
      * The provisioning state of the connectivity configuration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;

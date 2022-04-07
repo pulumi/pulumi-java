@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Property/Properties which represent a unique ID.
- * 
  */
 public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Localized descriptions.
-     * 
      */
     @Import(name="description")
       private final @Nullable Map<String,String> description;
@@ -33,7 +31,6 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Localized display name.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Map<String,String> displayName;
@@ -44,7 +41,6 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The properties which make up the unique ID.
-     * 
      */
     @Import(name="keyPropertyNames", required=true)
       private final List<String> keyPropertyNames;
@@ -55,7 +51,6 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Name identifying the strong ID.
-     * 
      */
     @Import(name="strongIdName", required=true)
       private final String strongIdName;

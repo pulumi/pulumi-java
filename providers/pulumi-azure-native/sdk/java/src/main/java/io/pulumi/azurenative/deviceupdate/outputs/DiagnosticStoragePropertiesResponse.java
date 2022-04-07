@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class DiagnosticStoragePropertiesResponse {
     /**
      * Authentication Type
-     * 
      */
     private final String authenticationType;
     /**
      * ConnectionString of the diagnostic storage account
-     * 
      */
     private final @Nullable String connectionString;
     /**
      * ResourceId of the diagnostic storage account
-     * 
      */
     private final String resourceId;
 
@@ -39,21 +36,18 @@ public final class DiagnosticStoragePropertiesResponse {
 
     /**
      * Authentication Type
-     * 
     */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * ConnectionString of the diagnostic storage account
-     * 
     */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * ResourceId of the diagnostic storage account
-     * 
     */
     public String getResourceId() {
         return this.resourceId;

@@ -12,12 +12,10 @@ import java.util.Objects;
 public final class FilesNotTieringErrorResponse {
     /**
      * Error code (HResult)
-     * 
      */
     private final Integer errorCode;
     /**
      * Count of files with this error
-     * 
      */
     private final Double fileCount;
 
@@ -31,14 +29,12 @@ public final class FilesNotTieringErrorResponse {
 
     /**
      * Error code (HResult)
-     * 
     */
     public Integer getErrorCode() {
         return this.errorCode;
     }
     /**
      * Count of files with this error
-     * 
     */
     public Double getFileCount() {
         return this.fileCount;

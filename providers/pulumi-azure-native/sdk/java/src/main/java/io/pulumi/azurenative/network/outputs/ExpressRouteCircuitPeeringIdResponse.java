@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ExpressRouteCircuitPeeringIdResponse {
     /**
      * The ID of the ExpressRoute circuit peering.
-     * 
      */
     private final @Nullable String id;
 
@@ -24,7 +23,6 @@ public final class ExpressRouteCircuitPeeringIdResponse {
 
     /**
      * The ID of the ExpressRoute circuit peering.
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);

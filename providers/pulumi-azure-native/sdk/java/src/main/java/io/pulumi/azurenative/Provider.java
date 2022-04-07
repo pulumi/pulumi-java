@@ -11,7 +11,6 @@ import javax.annotation.Nullable;
 
 /**
  * The provider type for the native Azure package.
- * 
  */
 @ResourceType(type="pulumi:providers:azure-native")
 public class Provider extends io.pulumi.resources.ProviderResource {

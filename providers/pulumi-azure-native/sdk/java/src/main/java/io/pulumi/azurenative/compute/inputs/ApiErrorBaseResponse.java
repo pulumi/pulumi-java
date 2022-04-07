@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Api error base.
- * 
  */
 public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error code.
-     * 
      */
     @Import(name="code")
       private final @Nullable String code;
@@ -31,7 +29,6 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The error message.
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -42,7 +39,6 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The target of the particular error.
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;

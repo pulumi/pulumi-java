@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Metadata pertaining to creation and last modification of the key vault resource.
- * 
  */
 public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The timestamp of the key vault resource creation (UTC).
-     * 
      */
     @Import(name="createdAt")
       private final @Nullable String createdAt;
@@ -31,7 +29,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identity that created the key vault resource.
-     * 
      */
     @Import(name="createdBy")
       private final @Nullable String createdBy;
@@ -42,7 +39,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of identity that created the key vault resource.
-     * 
      */
     @Import(name="createdByType")
       private final @Nullable String createdByType;
@@ -53,7 +49,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The timestamp of the key vault resource last modification (UTC).
-     * 
      */
     @Import(name="lastModifiedAt")
       private final @Nullable String lastModifiedAt;
@@ -64,7 +59,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The identity that last modified the key vault resource.
-     * 
      */
     @Import(name="lastModifiedBy")
       private final @Nullable String lastModifiedBy;
@@ -75,7 +69,6 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The type of identity that last modified the key vault resource.
-     * 
      */
     @Import(name="lastModifiedByType")
       private final @Nullable String lastModifiedByType;

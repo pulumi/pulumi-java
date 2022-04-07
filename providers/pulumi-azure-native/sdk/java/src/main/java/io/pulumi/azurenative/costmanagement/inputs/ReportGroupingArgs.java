@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The group by expression to be used in the report.
- * 
  */
 public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the column to group.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Has type of the column to group.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,ReportColumnType>> type;

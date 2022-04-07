@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Entity representing the reference to the template.
- * 
  */
 public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If included, must match the ContentVersion in the template.
-     * 
      */
     @Import(name="contentVersion")
       private final @Nullable Output<String> contentVersion;
@@ -31,7 +29,6 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The resource id of a Template Spec. Use either the id or uri property, but not both.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -42,7 +39,6 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The query string (for example, a SAS token) to be used with the templateLink URI.
-     * 
      */
     @Import(name="queryString")
       private final @Nullable Output<String> queryString;
@@ -53,7 +49,6 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs
-     * 
      */
     @Import(name="relativePath")
       private final @Nullable Output<String> relativePath;
@@ -64,7 +59,6 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of the template to deploy. Use either the uri or id property, but not both.
-     * 
      */
     @Import(name="uri")
       private final @Nullable Output<String> uri;

@@ -16,7 +16,6 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Video Analyzer account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -27,7 +26,6 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional video description provided by the user. Value can be up to 2048 characters long.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -38,7 +36,6 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -49,7 +46,6 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Optional video title provided by the user. Value can be up to 256 characters long.
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;
@@ -60,7 +56,6 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the video to create or update.
-     * 
      */
     @Import(name="videoName")
       private final @Nullable Output<String> videoName;

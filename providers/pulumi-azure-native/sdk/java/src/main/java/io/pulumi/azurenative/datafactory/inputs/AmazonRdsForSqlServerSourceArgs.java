@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Amazon RDS for SQL Server source.
- * 
  */
 public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
@@ -35,7 +33,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -46,7 +43,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -57,7 +53,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
-     * 
      */
     @Import(name="partitionOption")
       private final @Nullable Output<Object> partitionOption;
@@ -68,7 +63,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * The settings that will be leveraged for Sql source partitioning.
-     * 
      */
     @Import(name="partitionSettings")
       private final @Nullable Output<SqlPartitionSettingsArgs> partitionSettings;
@@ -79,7 +73,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * Which additional types to produce.
-     * 
      */
     @Import(name="produceAdditionalTypes")
       private final @Nullable Output<Object> produceAdditionalTypes;
@@ -90,7 +83,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
@@ -101,7 +93,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
@@ -112,7 +103,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
@@ -123,7 +113,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * SQL reader query. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="sqlReaderQuery")
       private final @Nullable Output<Object> sqlReaderQuery;
@@ -134,7 +123,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="sqlReaderStoredProcedureName")
       private final @Nullable Output<Object> sqlReaderStoredProcedureName;
@@ -145,7 +133,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
 
     /**
      * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
-     * 
      */
     @Import(name="storedProcedureParameters")
       private final @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
@@ -157,7 +144,6 @@ public final class AmazonRdsForSqlServerSourceArgs extends io.pulumi.resources.R
     /**
      * Copy source type.
      * Expected value is 'AmazonRdsForSqlServerSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ConnectionMonitorEndpointScopeItemResponse {
     /**
      * The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
-     * 
      */
     private final @Nullable String address;
 
@@ -24,7 +23,6 @@ public final class ConnectionMonitorEndpointScopeItemResponse {
 
     /**
      * The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
-     * 
     */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);

@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The size of the virtual machine
-     * 
      */
     @EnumType
     public enum ManagedLabVmSize {
         /**
          * The base VM size
-         * 
          */
         Basic("Basic"),
         /**
          * The standard or default VM size
-         * 
          */
         Standard("Standard"),
         /**
          * The most performant VM size
-         * 
          */
         Performance("Performance");
 

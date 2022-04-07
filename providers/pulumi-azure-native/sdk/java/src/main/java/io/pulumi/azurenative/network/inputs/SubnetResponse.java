@@ -25,7 +25,6 @@ import javax.annotation.Nullable;
 
 /**
  * Subnet in a virtual network resource.
- * 
  */
 public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -33,7 +32,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The address prefix for the subnet.
-     * 
      */
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
@@ -44,7 +42,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of address prefixes for the subnet.
-     * 
      */
     @Import(name="addressPrefixes")
       private final @Nullable List<String> addressPrefixes;
@@ -55,7 +52,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Application gateway IP configurations of virtual network resource.
-     * 
      */
     @Import(name="applicationGatewayIpConfigurations")
       private final @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations;
@@ -66,7 +62,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of references to the delegations on the subnet.
-     * 
      */
     @Import(name="delegations")
       private final @Nullable List<DelegationResponse> delegations;
@@ -77,7 +72,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -88,7 +82,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -99,7 +92,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Array of IpAllocation which reference this subnet.
-     * 
      */
     @Import(name="ipAllocations")
       private final @Nullable List<SubResourceResponse> ipAllocations;
@@ -110,7 +102,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Array of IP configuration profiles which reference this subnet.
-     * 
      */
     @Import(name="ipConfigurationProfiles", required=true)
       private final List<IPConfigurationProfileResponse> ipConfigurationProfiles;
@@ -121,7 +112,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of references to the network interface IP configurations using subnet.
-     * 
      */
     @Import(name="ipConfigurations", required=true)
       private final List<IPConfigurationResponse> ipConfigurations;
@@ -132,7 +122,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -143,7 +132,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Nat gateway associated with this subnet.
-     * 
      */
     @Import(name="natGateway")
       private final @Nullable SubResourceResponse natGateway;
@@ -154,7 +142,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The reference to the NetworkSecurityGroup resource.
-     * 
      */
     @Import(name="networkSecurityGroup")
       private final @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
@@ -165,7 +152,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Enable or Disable apply network policies on private end point in the subnet.
-     * 
      */
     @Import(name="privateEndpointNetworkPolicies")
       private final @Nullable String privateEndpointNetworkPolicies;
@@ -176,7 +162,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of references to private endpoints.
-     * 
      */
     @Import(name="privateEndpoints", required=true)
       private final List<PrivateEndpointResponse> privateEndpoints;
@@ -187,7 +172,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Enable or Disable apply network policies on private link service in the subnet.
-     * 
      */
     @Import(name="privateLinkServiceNetworkPolicies")
       private final @Nullable String privateLinkServiceNetworkPolicies;
@@ -198,7 +182,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The provisioning state of the subnet resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -209,7 +192,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
-     * 
      */
     @Import(name="purpose", required=true)
       private final String purpose;
@@ -220,7 +202,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of references to the external resources using subnet.
-     * 
      */
     @Import(name="resourceNavigationLinks", required=true)
       private final List<ResourceNavigationLinkResponse> resourceNavigationLinks;
@@ -231,7 +212,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The reference to the RouteTable resource.
-     * 
      */
     @Import(name="routeTable")
       private final @Nullable RouteTableResponse routeTable;
@@ -242,7 +222,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of references to services injecting into this subnet.
-     * 
      */
     @Import(name="serviceAssociationLinks", required=true)
       private final List<ServiceAssociationLinkResponse> serviceAssociationLinks;
@@ -253,7 +232,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of service endpoint policies.
-     * 
      */
     @Import(name="serviceEndpointPolicies")
       private final @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies;
@@ -264,7 +242,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * An array of service endpoints.
-     * 
      */
     @Import(name="serviceEndpoints")
       private final @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints;
@@ -275,7 +252,6 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Resource type.
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class UserIdentityResponse {
     /**
      * The Azure Active Directory client id.
-     * 
      */
     private final String clientId;
     /**
      * The Azure Active Directory principal id.
-     * 
      */
     private final String principalId;
 
@@ -30,14 +28,12 @@ public final class UserIdentityResponse {
 
     /**
      * The Azure Active Directory client id.
-     * 
     */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The Azure Active Directory principal id.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;

@@ -18,7 +18,148 @@ import javax.annotation.Nullable;
  * Recovery plan details.
  * API Version: 2018-07-10.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Creates a recovery plan with the given details.
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var replicationRecoveryPlan = new AzureNative.RecoveryServices.ReplicationRecoveryPlan("replicationRecoveryPlan", new AzureNative.RecoveryServices.ReplicationRecoveryPlanArgs
+ *         {
+ *             Properties = new AzureNative.RecoveryServices.Inputs.CreateRecoveryPlanInputPropertiesArgs
+ *             {
+ *                 FailoverDeploymentModel = "ResourceManager",
+ *                 Groups = 
+ *                 {
+ *                     new AzureNative.RecoveryServices.Inputs.RecoveryPlanGroupArgs
+ *                     {
+ *                         EndGroupActions = {},
+ *                         GroupType = "Boot",
+ *                         ReplicationProtectedItems = 
+ *                         {
+ *                             new AzureNative.RecoveryServices.Inputs.RecoveryPlanProtectedItemArgs
+ *                             {
+ *                                 Id = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+ *                                 VirtualMachineId = "f8491e4f-817a-40dd-a90c-af773978c75b",
+ *                             },
+ *                         },
+ *                         StartGroupActions = {},
+ *                     },
+ *                 },
+ *                 PrimaryFabricId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1",
+ *                 RecoveryFabricId = "Microsoft Azure",
+ *             },
+ *             RecoveryPlanName = "RPtest1",
+ *             ResourceGroupName = "resourceGroupPS1",
+ *             ResourceName = "vault1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := recoveryservices.NewReplicationRecoveryPlan(ctx, "replicationRecoveryPlan", &recoveryservices.ReplicationRecoveryPlanArgs{
+ * 			Properties: &recoveryservices.CreateRecoveryPlanInputPropertiesArgs{
+ * 				FailoverDeploymentModel: pulumi.String("ResourceManager"),
+ * 				Groups: recoveryservices.RecoveryPlanGroupArray{
+ * 					&recoveryservices.RecoveryPlanGroupArgs{
+ * 						EndGroupActions: recoveryservices.RecoveryPlanActionArray{},
+ * 						GroupType:       pulumi.String("Boot"),
+ * 						ReplicationProtectedItems: recoveryservices.RecoveryPlanProtectedItemArray{
+ * 							&recoveryservices.RecoveryPlanProtectedItemArgs{
+ * 								Id:               pulumi.String("/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b"),
+ * 								VirtualMachineId: pulumi.String("f8491e4f-817a-40dd-a90c-af773978c75b"),
+ * 							},
+ * 						},
+ * 						StartGroupActions: recoveryservices.RecoveryPlanActionArray{},
+ * 					},
+ * 				},
+ * 				PrimaryFabricId:  pulumi.String("/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1"),
+ * 				RecoveryFabricId: pulumi.String("Microsoft Azure"),
+ * 			},
+ * 			RecoveryPlanName:  pulumi.String("RPtest1"),
+ * 			ResourceGroupName: pulumi.String("resourceGroupPS1"),
+ * 			ResourceName:      pulumi.String("vault1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const replicationRecoveryPlan = new azure_native.recoveryservices.ReplicationRecoveryPlan("replicationRecoveryPlan", {
+ *     properties: {
+ *         failoverDeploymentModel: "ResourceManager",
+ *         groups: [{
+ *             endGroupActions: [],
+ *             groupType: "Boot",
+ *             replicationProtectedItems: [{
+ *                 id: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+ *                 virtualMachineId: "f8491e4f-817a-40dd-a90c-af773978c75b",
+ *             }],
+ *             startGroupActions: [],
+ *         }],
+ *         primaryFabricId: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1",
+ *         recoveryFabricId: "Microsoft Azure",
+ *     },
+ *     recoveryPlanName: "RPtest1",
+ *     resourceGroupName: "resourceGroupPS1",
+ *     resourceName: "vault1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * replication_recovery_plan = azure_native.recoveryservices.ReplicationRecoveryPlan("replicationRecoveryPlan",
+ *     properties=azure_native.recoveryservices.CreateRecoveryPlanInputPropertiesArgs(
+ *         failover_deployment_model="ResourceManager",
+ *         groups=[azure_native.recoveryservices.RecoveryPlanGroupArgs(
+ *             end_group_actions=[],
+ *             group_type="Boot",
+ *             replication_protected_items=[azure_native.recoveryservices.RecoveryPlanProtectedItemArgs(
+ *                 id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+ *                 virtual_machine_id="f8491e4f-817a-40dd-a90c-af773978c75b",
+ *             )],
+ *             start_group_actions=[],
+ *         )],
+ *         primary_fabric_id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1",
+ *         recovery_fabric_id="Microsoft Azure",
+ *     ),
+ *     recovery_plan_name="RPtest1",
+ *     resource_group_name="resourceGroupPS1",
+ *     resource_name="vault1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,56 +174,48 @@ import javax.annotation.Nullable;
 public class ReplicationRecoveryPlan extends io.pulumi.resources.CustomResource {
     /**
      * Resource Location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource Location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Resource Name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource Name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The custom details.
-     * 
      */
     @Export(name="properties", type=RecoveryPlanPropertiesResponse.class, parameters={})
     private Output<RecoveryPlanPropertiesResponse> properties;
 
     /**
      * @return The custom details.
-     * 
      */
     public Output<RecoveryPlanPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource Type
-     * 
      */
     public Output<String> getType() {
         return this.type;

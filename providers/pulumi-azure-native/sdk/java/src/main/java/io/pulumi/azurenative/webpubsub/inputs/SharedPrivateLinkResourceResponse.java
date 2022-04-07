@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a Shared Private Link Resource
- * 
  */
 public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * The group id from the provider of resource the shared private link resource is for
-     * 
      */
     @Import(name="groupId", required=true)
       private final String groupId;
@@ -32,7 +30,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * Fully qualified resource Id for the resource.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -43,7 +40,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * The name of the resource.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -54,7 +50,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * The resource id of the resource the shared private link resource is for
-     * 
      */
     @Import(name="privateLinkResourceId", required=true)
       private final String privateLinkResourceId;
@@ -65,7 +60,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * Provisioning state of the shared private link resource
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -76,7 +70,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * The request message for requesting approval of the shared private link resource
-     * 
      */
     @Import(name="requestMessage")
       private final @Nullable String requestMessage;
@@ -87,7 +80,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * Status of the shared private link resource
-     * 
      */
     @Import(name="status", required=true)
       private final String status;
@@ -98,7 +90,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
@@ -109,7 +100,6 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
 
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

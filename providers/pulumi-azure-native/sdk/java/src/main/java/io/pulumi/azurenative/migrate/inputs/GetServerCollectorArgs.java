@@ -14,7 +14,6 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the Azure Migrate project.
-     * 
      */
     @Import(name="projectName", required=true)
       private final String projectName;
@@ -25,7 +24,6 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Name of the Azure Resource Group that project is part of.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
 
     /**
      * Unique name of a Server collector within a project.
-     * 
      */
     @Import(name="serverCollectorName", required=true)
       private final String serverCollectorName;

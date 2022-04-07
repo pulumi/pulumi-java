@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Type of response errors for real user requests for which origin will be deemed unhealthy
-     * 
      */
     @EnumType
     public enum ResponseBasedDetectedErrorTypes {

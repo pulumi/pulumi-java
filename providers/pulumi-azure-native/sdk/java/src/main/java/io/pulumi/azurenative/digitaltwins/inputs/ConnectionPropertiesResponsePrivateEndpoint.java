@@ -14,7 +14,6 @@ public final class ConnectionPropertiesResponsePrivateEndpoint extends io.pulumi
 
     /**
      * The resource identifier.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

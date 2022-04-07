@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * File share information with Path, Username, and Password.
- * 
  */
 public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Password credential used to connect to the share location.
-     * 
      */
     @Import(name="password")
       private final @Nullable Output<String> password;
@@ -31,7 +29,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The folder path for this share.
-     * 
      */
     @Import(name="path", required=true)
       private final Output<String> path;
@@ -42,7 +39,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * User name credential to connect to the share location
-     * 
      */
     @Import(name="userName")
       private final @Nullable Output<String> userName;

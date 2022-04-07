@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Single sign-on related configuration
- * 
  */
 public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The public identifier for the application
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
@@ -32,7 +30,6 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The secret known only to the application and the authorization server
-     * 
      */
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
@@ -43,7 +40,6 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The URI of Issuer Identifier
-     * 
      */
     @Import(name="issuerUri")
       private final @Nullable Output<String> issuerUri;
@@ -54,7 +50,6 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * It defines the specific actions applications can be allowed to do on a user's behalf
-     * 
      */
     @Import(name="scope")
       private final @Nullable Output<List<String>> scope;

@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class GetInputResult {
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource name
-     * 
      */
     private final @Nullable String name;
     /**
      * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
-     * 
      */
     private final Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -49,28 +45,24 @@ public final class GetInputResult {
 
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
-     * 
     */
     public Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Class to specify which protocols are enabled
- * 
  */
 public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Enable DASH protocol or not
-     * 
      */
     @Import(name="dash", required=true)
       private final Output<Boolean> dash;
@@ -30,7 +28,6 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Enable Download protocol or not
-     * 
      */
     @Import(name="download", required=true)
       private final Output<Boolean> download;
@@ -41,7 +38,6 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Enable HLS protocol or not
-     * 
      */
     @Import(name="hls", required=true)
       private final Output<Boolean> hls;
@@ -52,7 +48,6 @@ public final class EnabledProtocolsArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Enable SmoothStreaming protocol or not
-     * 
      */
     @Import(name="smoothStreaming", required=true)
       private final Output<Boolean> smoothStreaming;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The authentication method used to access the Spark server.
-     * 
      */
     @EnumType
     public enum SparkAuthenticationType {

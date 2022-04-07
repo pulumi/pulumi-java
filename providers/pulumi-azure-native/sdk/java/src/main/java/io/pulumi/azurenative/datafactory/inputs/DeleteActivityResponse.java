@@ -34,7 +34,6 @@ import javax.annotation.Nullable;
 
 /**
  * Delete activity.
- * 
  */
 public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -42,7 +41,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Delete activity dataset reference.
-     * 
      */
     @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
@@ -53,7 +51,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -64,7 +61,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -75,7 +71,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="enableLogging")
       private final @Nullable Object enableLogging;
@@ -86,7 +81,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -97,7 +91,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Log storage settings customer need to provide when enableLogging is true.
-     * 
      */
     @Import(name="logStorageSettings")
       private final @Nullable LogStorageSettingsResponse logStorageSettings;
@@ -108,7 +101,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * The max concurrent connections to connect data source at the same time.
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Integer maxConcurrentConnections;
@@ -119,7 +111,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -130,7 +121,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -141,7 +131,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="recursive")
       private final @Nullable Object recursive;
@@ -152,7 +141,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Delete activity store settings.
-     * 
      */
     @Import(name="storeSettings")
       private final @Nullable Object storeSettings;
@@ -164,7 +152,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
     /**
      * Type of activity.
      * Expected value is 'Delete'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -175,7 +162,6 @@ public final class DeleteActivityResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

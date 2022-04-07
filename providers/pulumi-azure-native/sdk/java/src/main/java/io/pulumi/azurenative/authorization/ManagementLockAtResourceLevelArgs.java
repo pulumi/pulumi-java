@@ -20,7 +20,6 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
 
     /**
      * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
-     * 
      */
     @Import(name="level", required=true)
       private final Output<Either<String,LockLevel>> level;
@@ -31,7 +30,6 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
 
     /**
      * The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.
-     * 
      */
     @Import(name="lockName")
       private final @Nullable Output<String> lockName;
@@ -42,7 +40,6 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
 
     /**
      * Notes about the lock. Maximum of 512 characters.
-     * 
      */
     @Import(name="notes")
       private final @Nullable Output<String> notes;
@@ -53,7 +50,6 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
 
     /**
      * The owners of the lock.
-     * 
      */
     @Import(name="owners")
       private final @Nullable Output<List<ManagementLockOwnerArgs>> owners;
@@ -64,7 +60,6 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
 
     /**
      * The parent resource identity.
-     * 
      */
     @Import(name="parentResourcePath", required=true)
       private final Output<String> parentResourcePath;
@@ -74,8 +69,7 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
     }
 
     /**
-     * The name of the resource group containing the resource to lock.
-     * 
+     * The name of the resource group containing the resource to lock. 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -86,7 +80,6 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
 
     /**
      * The name of the resource to lock.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
@@ -97,7 +90,6 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
 
     /**
      * The resource provider namespace of the resource to lock.
-     * 
      */
     @Import(name="resourceProviderNamespace", required=true)
       private final Output<String> resourceProviderNamespace;
@@ -108,7 +100,6 @@ public final class ManagementLockAtResourceLevelArgs extends io.pulumi.resources
 
     /**
      * The resource type of the resource to lock.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;

@@ -21,7 +21,6 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -32,7 +31,6 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
 
     /**
      * An IP address or a range of IP addresses from which to accept requests.
-     * 
      */
     @Import(name="iPAddressOrRange")
       private final @Nullable String iPAddressOrRange;
@@ -43,7 +41,6 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The key to sign the account SAS token with.
-     * 
      */
     @Import(name="keyToSign")
       private final @Nullable String keyToSign;
@@ -54,7 +51,6 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
-     * 
      */
     @Import(name="permissions", required=true)
       private final Either<String,Permissions> permissions;
@@ -65,7 +61,6 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The protocol permitted for a request made with the account SAS.
-     * 
      */
     @Import(name="protocols")
       private final @Nullable HttpProtocol protocols;
@@ -76,7 +71,6 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -87,7 +81,6 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.
-     * 
      */
     @Import(name="resourceTypes", required=true)
       private final Either<String,SignedResourceTypes> resourceTypes;
@@ -98,7 +91,6 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
-     * 
      */
     @Import(name="services", required=true)
       private final Either<String,Services> services;
@@ -109,7 +101,6 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The time at which the shared access signature becomes invalid.
-     * 
      */
     @Import(name="sharedAccessExpiryTime", required=true)
       private final String sharedAccessExpiryTime;
@@ -120,7 +111,6 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
 
     /**
      * The time at which the SAS becomes valid.
-     * 
      */
     @Import(name="sharedAccessStartTime")
       private final @Nullable String sharedAccessStartTime;

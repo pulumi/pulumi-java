@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Billing type Purchase meter details
- * 
  */
 public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
     /**
      * Represents billing type.
      * Expected value is 'Purchase'.
-     * 
      */
     @Import(name="billingType", required=true)
       private final String billingType;
@@ -31,7 +29,6 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * Charging type.
-     * 
      */
     @Import(name="chargingType", required=true)
       private final String chargingType;
@@ -42,7 +39,6 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * Billing unit applicable for Pav2 billing
-     * 
      */
     @Import(name="multiplier", required=true)
       private final Double multiplier;
@@ -53,7 +49,6 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * Product Id
-     * 
      */
     @Import(name="productId", required=true)
       private final String productId;
@@ -64,7 +59,6 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * Sku Id
-     * 
      */
     @Import(name="skuId", required=true)
       private final String skuId;
@@ -75,7 +69,6 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
 
     /**
      * Term Id
-     * 
      */
     @Import(name="termId", required=true)
       private final String termId;

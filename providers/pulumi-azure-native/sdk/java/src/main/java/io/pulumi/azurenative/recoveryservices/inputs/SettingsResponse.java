@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Common settings field for backup management
- * 
  */
 public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
     /**
      * Workload compression flag. This has been added so that 'isSqlCompression'
      * will be deprecated once clients upgrade to consider this flag.
-     * 
      */
     @Import(name="isCompression")
       private final @Nullable Boolean isCompression;
@@ -33,7 +31,6 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * SQL compression flag
-     * 
      */
     @Import(name="issqlcompression")
       private final @Nullable Boolean issqlcompression;
@@ -44,7 +41,6 @@ public final class SettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
-     * 
      */
     @Import(name="timeZone")
       private final @Nullable String timeZone;

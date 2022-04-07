@@ -20,7 +20,96 @@ import javax.annotation.Nullable;
  * The Private Endpoint Connection resource.
  * API Version: 2021-03-25-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### PrivateEndpointConnection_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var privateEndpointConnectionsComp = new AzureNative.M365SecurityAndCompliance.PrivateEndpointConnectionsComp("privateEndpointConnectionsComp", new AzureNative.M365SecurityAndCompliance.PrivateEndpointConnectionsCompArgs
+ *         {
+ *             PrivateEndpointConnectionName = "myConnection",
+ *             PrivateLinkServiceConnectionState = new AzureNative.M365SecurityAndCompliance.Inputs.PrivateLinkServiceConnectionStateArgs
+ *             {
+ *                 Description = "Auto-Approved",
+ *                 Status = "Approved",
+ *             },
+ *             ResourceGroupName = "rgname",
+ *             ResourceName = "service1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	m365securityandcompliance "github.com/pulumi/pulumi-azure-native/sdk/go/azure/m365securityandcompliance"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := m365securityandcompliance.NewPrivateEndpointConnectionsComp(ctx, "privateEndpointConnectionsComp", &m365securityandcompliance.PrivateEndpointConnectionsCompArgs{
+ * 			PrivateEndpointConnectionName: pulumi.String("myConnection"),
+ * 			PrivateLinkServiceConnectionState: &m365securityandcompliance.PrivateLinkServiceConnectionStateArgs{
+ * 				Description: pulumi.String("Auto-Approved"),
+ * 				Status:      pulumi.String("Approved"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rgname"),
+ * 			ResourceName:      pulumi.String("service1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const privateEndpointConnectionsComp = new azure_native.m365securityandcompliance.PrivateEndpointConnectionsComp("privateEndpointConnectionsComp", {
+ *     privateEndpointConnectionName: "myConnection",
+ *     privateLinkServiceConnectionState: {
+ *         description: "Auto-Approved",
+ *         status: "Approved",
+ *     },
+ *     resourceGroupName: "rgname",
+ *     resourceName: "service1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * private_endpoint_connections_comp = azure_native.m365securityandcompliance.PrivateEndpointConnectionsComp("privateEndpointConnectionsComp",
+ *     private_endpoint_connection_name="myConnection",
+ *     private_link_service_connection_state=azure_native.m365securityandcompliance.PrivateLinkServiceConnectionStateArgs(
+ *         description="Auto-Approved",
+ *         status="Approved",
+ *     ),
+ *     resource_group_name="rgname",
+ *     resource_name="service1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +124,72 @@ import javax.annotation.Nullable;
 public class PrivateEndpointConnectionsComp extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The resource of private end point.
-     * 
      */
     @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
      * @return The resource of private end point.
-     * 
      */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
      * @return A collection of information about the state of the connection between service consumer and provider.
-     * 
      */
     public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the private endpoint connection resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the private endpoint connection resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Required property for system data
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Required property for system data
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

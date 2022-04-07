@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Set value for a Variable.
- * 
  */
 public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
@@ -35,7 +33,6 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -46,7 +43,6 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -58,7 +54,6 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
     /**
      * Type of activity.
      * Expected value is 'SetVariable'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -69,7 +64,6 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
@@ -80,7 +74,6 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Value to be set. Could be a static value or Expression
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<Object> value;
@@ -91,7 +84,6 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Name of the variable whose value needs to be set.
-     * 
      */
     @Import(name="variableName")
       private final @Nullable Output<String> variableName;

@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class SasPolicyResponse {
     /**
      * The SAS expiration action. Can only be Log.
-     * 
      */
     private final String expirationAction;
     /**
      * The SAS expiration period, DD.HH:MM:SS.
-     * 
      */
     private final String sasExpirationPeriod;
 
@@ -30,14 +28,12 @@ public final class SasPolicyResponse {
 
     /**
      * The SAS expiration action. Can only be Log.
-     * 
     */
     public String getExpirationAction() {
         return this.expirationAction;
     }
     /**
      * The SAS expiration period, DD.HH:MM:SS.
-     * 
     */
     public String getSasExpirationPeriod() {
         return this.sasExpirationPeriod;

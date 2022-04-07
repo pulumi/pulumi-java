@@ -22,7 +22,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The table plan.
-     * 
      */
     @Import(name="plan")
       private final @Nullable Output<Either<String,TablePlanEnum>> plan;
@@ -33,7 +32,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -44,7 +42,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters of the restore operation that initiated this table.
-     * 
      */
     @Import(name="restoredLogs")
       private final @Nullable Output<RestoredLogsArgs> restoredLogs;
@@ -55,7 +52,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
-     * 
      */
     @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
@@ -66,7 +62,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Table schema.
-     * 
      */
     @Import(name="schema")
       private final @Nullable Output<SchemaArgs> schema;
@@ -77,7 +72,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Parameters of the search job that initiated this table.
-     * 
      */
     @Import(name="searchResults")
       private final @Nullable Output<SearchResultsArgs> searchResults;
@@ -88,7 +82,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the table.
-     * 
      */
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
@@ -99,7 +92,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
-     * 
      */
     @Import(name="totalRetentionInDays")
       private final @Nullable Output<Integer> totalRetentionInDays;
@@ -110,7 +102,6 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the workspace.
-     * 
      */
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;

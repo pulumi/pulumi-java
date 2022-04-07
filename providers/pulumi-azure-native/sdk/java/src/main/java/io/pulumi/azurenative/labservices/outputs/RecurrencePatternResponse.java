@@ -15,22 +15,18 @@ import javax.annotation.Nullable;
 public final class RecurrencePatternResponse {
     /**
      * When the recurrence will expire. This date is inclusive.
-     * 
      */
     private final String expirationDate;
     /**
      * The frequency of the recurrence.
-     * 
      */
     private final String frequency;
     /**
      * The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
-     * 
      */
     private final @Nullable Integer interval;
     /**
      * The week days the schedule runs. Used for when the Frequency is set to Weekly.
-     * 
      */
     private final @Nullable List<String> weekDays;
 
@@ -48,28 +44,24 @@ public final class RecurrencePatternResponse {
 
     /**
      * When the recurrence will expire. This date is inclusive.
-     * 
     */
     public String getExpirationDate() {
         return this.expirationDate;
     }
     /**
      * The frequency of the recurrence.
-     * 
     */
     public String getFrequency() {
         return this.frequency;
     }
     /**
      * The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
-     * 
     */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * The week days the schedule runs. Used for when the Frequency is set to Weekly.
-     * 
     */
     public List<String> getWeekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;

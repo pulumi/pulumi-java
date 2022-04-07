@@ -23,7 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * Describes a container and its runtime properties.
- * 
  */
 public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -31,7 +30,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * Command array to execute within the container in exec form.
-     * 
      */
     @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
@@ -42,7 +40,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * Reference to sinks in DiagnosticsDescription.
-     * 
      */
     @Import(name="diagnostics")
       private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
@@ -53,7 +50,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * The endpoints exposed by this container.
-     * 
      */
     @Import(name="endpoints")
       private final @Nullable Output<List<EndpointPropertiesArgs>> endpoints;
@@ -64,7 +60,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * Override for the default entry point in the container.
-     * 
      */
     @Import(name="entrypoint")
       private final @Nullable Output<String> entrypoint;
@@ -75,7 +70,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * The environment variables to set in this container
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
@@ -86,7 +80,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * The Container image to use.
-     * 
      */
     @Import(name="image", required=true)
       private final Output<String> image;
@@ -97,7 +90,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * Image registry credential.
-     * 
      */
     @Import(name="imageRegistryCredential")
       private final @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential;
@@ -108,7 +100,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * The labels to set in this container.
-     * 
      */
     @Import(name="labels")
       private final @Nullable Output<List<ContainerLabelArgs>> labels;
@@ -119,7 +110,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * The name of the code package.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -130,7 +120,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
-     * 
      */
     @Import(name="reliableCollectionsRefs")
       private final @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
@@ -141,7 +130,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * The resources required by this container.
-     * 
      */
     @Import(name="resources", required=true)
       private final Output<ResourceRequirementsArgs> resources;
@@ -152,7 +140,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
-     * 
      */
     @Import(name="settings")
       private final @Nullable Output<List<SettingArgs>> settings;
@@ -163,7 +150,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.
-     * 
      */
     @Import(name="volumeRefs")
       private final @Nullable Output<List<VolumeReferenceArgs>> volumeRefs;
@@ -174,7 +160,6 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
 
     /**
      * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.
-     * 
      */
     @Import(name="volumes")
       private final @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes;

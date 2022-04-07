@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The Edifact message identifier.
- * 
  */
 public final class EdifactMessageIdentifierArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class EdifactMessageIdentifierArgs extends io.pulumi.resources.Reso
 
     /**
      * The message id on which this envelope settings has to be applied.
-     * 
      */
     @Import(name="messageId", required=true)
       private final Output<String> messageId;

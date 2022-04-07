@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * condition to trigger an action rule
- * 
  */
 public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * operator for a given condition
-     * 
      */
     @Import(name="operator")
       private final @Nullable Output<Either<String,Operator>> operator;
@@ -34,7 +32,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * list of values to match for a given condition.
-     * 
      */
     @Import(name="values")
       private final @Nullable Output<List<String>> values;

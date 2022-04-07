@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The data source that enriched by ueba.
-     * 
      */
     @EnumType
     public enum UebaDataSources {

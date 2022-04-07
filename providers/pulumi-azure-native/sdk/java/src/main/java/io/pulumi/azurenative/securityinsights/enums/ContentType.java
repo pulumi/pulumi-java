@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Content type.
-     * 
      */
     @EnumType
     public enum ContentType {

@@ -16,22 +16,18 @@ import javax.annotation.Nullable;
 public final class ManagedClusterPodIdentityProfileResponse {
     /**
      * Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
-     * 
      */
     private final @Nullable Boolean allowNetworkPluginKubenet;
     /**
      * Whether the pod identity addon is enabled.
-     * 
      */
     private final @Nullable Boolean enabled;
     /**
      * User assigned pod identity settings.
-     * 
      */
     private final @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities;
     /**
      * User assigned pod identity exception settings.
-     * 
      */
     private final @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
 
@@ -49,28 +45,24 @@ public final class ManagedClusterPodIdentityProfileResponse {
 
     /**
      * Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
-     * 
     */
     public Optional<Boolean> getAllowNetworkPluginKubenet() {
         return Optional.ofNullable(this.allowNetworkPluginKubenet);
     }
     /**
      * Whether the pod identity addon is enabled.
-     * 
     */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * User assigned pod identity settings.
-     * 
     */
     public List<ManagedClusterPodIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? List.of() : this.userAssignedIdentities;
     }
     /**
      * User assigned pod identity exception settings.
-     * 
     */
     public List<ManagedClusterPodIdentityExceptionResponse> getUserAssignedIdentityExceptions() {
         return this.userAssignedIdentityExceptions == null ? List.of() : this.userAssignedIdentityExceptions;

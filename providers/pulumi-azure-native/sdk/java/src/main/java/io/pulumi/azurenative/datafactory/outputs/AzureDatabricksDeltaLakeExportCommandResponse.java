@@ -14,18 +14,15 @@ import javax.annotation.Nullable;
 public final class AzureDatabricksDeltaLakeExportCommandResponse {
     /**
      * Specify the date format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object dateFormat;
     /**
      * Specify the timestamp format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object timestampFormat;
     /**
      * The export setting type.
      * Expected value is 'AzureDatabricksDeltaLakeExportCommand'.
-     * 
      */
     private final String type;
 
@@ -41,14 +38,12 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse {
 
     /**
      * Specify the date format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getDateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
     /**
      * Specify the timestamp format for the csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getTimestampFormat() {
         return Optional.ofNullable(this.timestampFormat);
@@ -56,7 +51,6 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse {
     /**
      * The export setting type.
      * Expected value is 'AzureDatabricksDeltaLakeExportCommand'.
-     * 
     */
     public String getType() {
         return this.type;

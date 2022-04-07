@@ -14,7 +14,6 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulum
 
     /**
      * The Media Services account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulum
 
     /**
      * The Content Key Policy name.
-     * 
      */
     @Import(name="contentKeyPolicyName", required=true)
       private final String contentKeyPolicyName;
@@ -36,7 +34,6 @@ public final class GetContentKeyPolicyPropertiesWithSecretsArgs extends io.pulum
 
     /**
      * The name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Cosmos DB MongoDB collection index key
- * 
  */
 public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cosmos DB MongoDB collection index keys
-     * 
      */
     @Import(name="key")
       private final @Nullable MongoIndexKeysResponse key;
@@ -32,7 +30,6 @@ public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Cosmos DB MongoDB collection index key options
-     * 
      */
     @Import(name="options")
       private final @Nullable MongoIndexOptionsResponse options;

@@ -14,7 +14,6 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
 
     /**
      * The name of the kubernetes cluster.
-     * 
      */
     @Import(name="clusterName", required=true)
       private final String clusterName;
@@ -25,7 +24,6 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
 
     /**
      * The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
-     * 
      */
     @Import(name="clusterResourceName", required=true)
       private final String clusterResourceName;
@@ -36,7 +34,6 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
 
     /**
      * The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
-     * 
      */
     @Import(name="clusterRp", required=true)
       private final String clusterRp;
@@ -47,7 +44,6 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -58,7 +54,6 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
 
     /**
      * Name of the Source Control Configuration.
-     * 
      */
     @Import(name="sourceControlConfigurationName", required=true)
       private final String sourceControlConfigurationName;

@@ -17,47 +17,38 @@ import javax.annotation.Nullable;
 public final class NetworkMappingPropertiesResponse {
     /**
      * The fabric specific settings.
-     * 
      */
     private final @Nullable Object fabricSpecificSettings;
     /**
      * The primary fabric friendly name.
-     * 
      */
     private final @Nullable String primaryFabricFriendlyName;
     /**
      * The primary network friendly name.
-     * 
      */
     private final @Nullable String primaryNetworkFriendlyName;
     /**
      * The primary network id for network mapping.
-     * 
      */
     private final @Nullable String primaryNetworkId;
     /**
      * The recovery fabric ARM id.
-     * 
      */
     private final @Nullable String recoveryFabricArmId;
     /**
      * The recovery fabric friendly name.
-     * 
      */
     private final @Nullable String recoveryFabricFriendlyName;
     /**
      * The recovery network friendly name.
-     * 
      */
     private final @Nullable String recoveryNetworkFriendlyName;
     /**
      * The recovery network id for network mapping.
-     * 
      */
     private final @Nullable String recoveryNetworkId;
     /**
      * The pairing state for network mapping.
-     * 
      */
     private final @Nullable String state;
 
@@ -85,63 +76,54 @@ public final class NetworkMappingPropertiesResponse {
 
     /**
      * The fabric specific settings.
-     * 
     */
     public Optional<Object> getFabricSpecificSettings() {
         return Optional.ofNullable(this.fabricSpecificSettings);
     }
     /**
      * The primary fabric friendly name.
-     * 
     */
     public Optional<String> getPrimaryFabricFriendlyName() {
         return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
     /**
      * The primary network friendly name.
-     * 
     */
     public Optional<String> getPrimaryNetworkFriendlyName() {
         return Optional.ofNullable(this.primaryNetworkFriendlyName);
     }
     /**
      * The primary network id for network mapping.
-     * 
     */
     public Optional<String> getPrimaryNetworkId() {
         return Optional.ofNullable(this.primaryNetworkId);
     }
     /**
      * The recovery fabric ARM id.
-     * 
     */
     public Optional<String> getRecoveryFabricArmId() {
         return Optional.ofNullable(this.recoveryFabricArmId);
     }
     /**
      * The recovery fabric friendly name.
-     * 
     */
     public Optional<String> getRecoveryFabricFriendlyName() {
         return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
     /**
      * The recovery network friendly name.
-     * 
     */
     public Optional<String> getRecoveryNetworkFriendlyName() {
         return Optional.ofNullable(this.recoveryNetworkFriendlyName);
     }
     /**
      * The recovery network id for network mapping.
-     * 
     */
     public Optional<String> getRecoveryNetworkId() {
         return Optional.ofNullable(this.recoveryNetworkId);
     }
     /**
      * The pairing state for network mapping.
-     * 
     */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);

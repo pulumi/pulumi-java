@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Status condition of Kubernetes object
- * 
  */
 public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
 
     /**
      * Last time this status condition has changed
-     * 
      */
     @Import(name="lastTransitionTime")
       private final @Nullable String lastTransitionTime;
@@ -31,7 +29,6 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
 
     /**
      * A more verbose description of the object status condition
-     * 
      */
     @Import(name="message")
       private final @Nullable String message;
@@ -42,7 +39,6 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
 
     /**
      * Reason for the specified status condition type status
-     * 
      */
     @Import(name="reason")
       private final @Nullable String reason;
@@ -53,7 +49,6 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
 
     /**
      * Status of the Kubernetes object condition type
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;
@@ -64,7 +59,6 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
 
     /**
      * Object status condition type for this object
-     * 
      */
     @Import(name="type")
       private final @Nullable String type;

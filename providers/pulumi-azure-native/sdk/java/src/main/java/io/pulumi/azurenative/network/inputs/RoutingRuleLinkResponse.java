@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the Resource ID for a Routing Rule.
- * 
  */
 public final class RoutingRuleLinkResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class RoutingRuleLinkResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;

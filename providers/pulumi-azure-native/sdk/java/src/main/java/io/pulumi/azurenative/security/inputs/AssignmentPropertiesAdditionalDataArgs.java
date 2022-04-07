@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Additional data about the assignment
- * 
  */
 public final class AssignmentPropertiesAdditionalDataArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AssignmentPropertiesAdditionalDataArgs extends io.pulumi.reso
 
     /**
      * Exemption category of this assignment
-     * 
      */
     @Import(name="exemptionCategory")
       private final @Nullable Output<String> exemptionCategory;

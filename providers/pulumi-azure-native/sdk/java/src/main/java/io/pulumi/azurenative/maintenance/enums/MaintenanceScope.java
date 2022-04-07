@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
-     * 
      */
     @EnumType
     public enum MaintenanceScope {

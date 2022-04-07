@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Storage type selected for this disk.
-     * 
      */
     @EnumType
     public enum AzureDiskType {

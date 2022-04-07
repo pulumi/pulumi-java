@@ -17,7 +17,6 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -39,7 +37,6 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The name of the Azure Monitor PrivateLinkScope resource.
-     * 
      */
     @Import(name="scopeName")
       private final @Nullable Output<String> scopeName;
@@ -50,7 +47,6 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

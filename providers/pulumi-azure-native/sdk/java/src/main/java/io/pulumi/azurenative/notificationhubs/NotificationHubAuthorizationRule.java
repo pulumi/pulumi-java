@@ -20,7 +20,109 @@ import javax.annotation.Nullable;
  * Description of a Namespace AuthorizationRules.
  * API Version: 2017-04-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### NotificationHubAuthorizationRuleCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var notificationHubAuthorizationRule = new AzureNative.NotificationHubs.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", new AzureNative.NotificationHubs.NotificationHubAuthorizationRuleArgs
+ *         {
+ *             AuthorizationRuleName = "DefaultListenSharedAccessSignature",
+ *             NamespaceName = "nh-sdk-ns",
+ *             NotificationHubName = "nh-sdk-hub",
+ *             Properties = new AzureNative.NotificationHubs.Inputs.SharedAccessAuthorizationRulePropertiesArgs
+ *             {
+ *                 Rights = 
+ *                 {
+ *                     "Listen",
+ *                     "Send",
+ *                 },
+ *             },
+ *             ResourceGroupName = "5ktrial",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	notificationhubs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/notificationhubs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := notificationhubs.NewNotificationHubAuthorizationRule(ctx, "notificationHubAuthorizationRule", &notificationhubs.NotificationHubAuthorizationRuleArgs{
+ * 			AuthorizationRuleName: pulumi.String("DefaultListenSharedAccessSignature"),
+ * 			NamespaceName:         pulumi.String("nh-sdk-ns"),
+ * 			NotificationHubName:   pulumi.String("nh-sdk-hub"),
+ * 			Properties: &notificationhubs.SharedAccessAuthorizationRulePropertiesArgs{
+ * 				Rights: notificationhubs.AccessRightsArray{
+ * 					"Listen",
+ * 					"Send",
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("5ktrial"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const notificationHubAuthorizationRule = new azure_native.notificationhubs.NotificationHubAuthorizationRule("notificationHubAuthorizationRule", {
+ *     authorizationRuleName: "DefaultListenSharedAccessSignature",
+ *     namespaceName: "nh-sdk-ns",
+ *     notificationHubName: "nh-sdk-hub",
+ *     properties: {
+ *         rights: [
+ *             "Listen",
+ *             "Send",
+ *         ],
+ *     },
+ *     resourceGroupName: "5ktrial",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * notification_hub_authorization_rule = azure_native.notificationhubs.NotificationHubAuthorizationRule("notificationHubAuthorizationRule",
+ *     authorization_rule_name="DefaultListenSharedAccessSignature",
+ *     namespace_name="nh-sdk-ns",
+ *     notification_hub_name="nh-sdk-hub",
+ *     properties=azure_native.notificationhubs.SharedAccessAuthorizationRulePropertiesArgs(
+ *         rights=[
+ *             "Listen",
+ *             "Send",
+ *         ],
+ *     ),
+ *     resource_group_name="5ktrial")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,196 +137,168 @@ import javax.annotation.Nullable;
 public class NotificationHubAuthorizationRule extends io.pulumi.resources.CustomResource {
     /**
      * A string that describes the claim type
-     * 
      */
     @Export(name="claimType", type=String.class, parameters={})
     private Output<String> claimType;
 
     /**
      * @return A string that describes the claim type
-     * 
      */
     public Output<String> getClaimType() {
         return this.claimType;
     }
     /**
      * A string that describes the claim value
-     * 
      */
     @Export(name="claimValue", type=String.class, parameters={})
     private Output<String> claimValue;
 
     /**
      * @return A string that describes the claim value
-     * 
      */
     public Output<String> getClaimValue() {
         return this.claimValue;
     }
     /**
      * The created time for this rule
-     * 
      */
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
      * @return The created time for this rule
-     * 
      */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
     /**
      * A string that describes the authorization rule.
-     * 
      */
     @Export(name="keyName", type=String.class, parameters={})
     private Output<String> keyName;
 
     /**
      * @return A string that describes the authorization rule.
-     * 
      */
     public Output<String> getKeyName() {
         return this.keyName;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The last modified time for this rule
-     * 
      */
     @Export(name="modifiedTime", type=String.class, parameters={})
     private Output<String> modifiedTime;
 
     /**
      * @return The last modified time for this rule
-     * 
      */
     public Output<String> getModifiedTime() {
         return this.modifiedTime;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     * 
      */
     @Export(name="primaryKey", type=String.class, parameters={})
     private Output<String> primaryKey;
 
     /**
      * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     * 
      */
     public Output<String> getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * The revision number for the rule
-     * 
      */
     @Export(name="revision", type=Integer.class, parameters={})
     private Output<Integer> revision;
 
     /**
      * @return The revision number for the rule
-     * 
      */
     public Output<Integer> getRevision() {
         return this.revision;
     }
     /**
      * The rights associated with the rule.
-     * 
      */
     @Export(name="rights", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> rights;
 
     /**
      * @return The rights associated with the rule.
-     * 
      */
     public Output</* @Nullable */ List<String>> getRights() {
         return this.rights;
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     * 
      */
     @Export(name="secondaryKey", type=String.class, parameters={})
     private Output<String> secondaryKey;
 
     /**
      * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     * 
      */
     public Output<String> getSecondaryKey() {
         return this.secondaryKey;
     }
     /**
      * The sku of the created namespace
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The sku of the created namespace
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

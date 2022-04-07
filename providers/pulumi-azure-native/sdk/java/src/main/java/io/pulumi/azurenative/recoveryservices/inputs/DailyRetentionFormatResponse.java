@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Daily retention format.
- * 
  */
 public final class DailyRetentionFormatResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DailyRetentionFormatResponse extends io.pulumi.resources.Invo
 
     /**
      * List of days of the month.
-     * 
      */
     @Import(name="daysOfTheMonth")
       private final @Nullable List<DayResponse> daysOfTheMonth;

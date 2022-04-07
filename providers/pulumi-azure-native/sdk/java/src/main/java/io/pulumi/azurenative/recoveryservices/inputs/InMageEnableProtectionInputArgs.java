@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * VMware Azure specific enable protection input.
- * 
  */
 public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
 
     /**
      * The target data store name.
-     * 
      */
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
@@ -33,7 +31,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
 
     /**
      * The enable disk exclusion input.
-     * 
      */
     @Import(name="diskExclusionInput")
       private final @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput;
@@ -44,7 +41,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
 
     /**
      * The disks to include list.
-     * 
      */
     @Import(name="disksToInclude")
       private final @Nullable Output<List<String>> disksToInclude;
@@ -56,7 +52,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     /**
      * The class type.
      * Expected value is 'InMage'.
-     * 
      */
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
@@ -67,7 +62,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
 
     /**
      * The Master Target Id.
-     * 
      */
     @Import(name="masterTargetId", required=true)
       private final Output<String> masterTargetId;
@@ -78,7 +72,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
 
     /**
      * The multi vm group Id.
-     * 
      */
     @Import(name="multiVmGroupId", required=true)
       private final Output<String> multiVmGroupId;
@@ -89,7 +82,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
 
     /**
      * The multi vm group name.
-     * 
      */
     @Import(name="multiVmGroupName", required=true)
       private final Output<String> multiVmGroupName;
@@ -100,7 +92,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
 
     /**
      * The Process Server Id.
-     * 
      */
     @Import(name="processServerId", required=true)
       private final Output<String> processServerId;
@@ -111,7 +102,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
 
     /**
      * The retention drive to use on the MT.
-     * 
      */
     @Import(name="retentionDrive", required=true)
       private final Output<String> retentionDrive;
@@ -122,7 +112,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
 
     /**
      * The CS account Id.
-     * 
      */
     @Import(name="runAsAccountId")
       private final @Nullable Output<String> runAsAccountId;
@@ -133,7 +122,6 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
 
     /**
      * The Vm Name.
-     * 
      */
     @Import(name="vmFriendlyName")
       private final @Nullable Output<String> vmFriendlyName;

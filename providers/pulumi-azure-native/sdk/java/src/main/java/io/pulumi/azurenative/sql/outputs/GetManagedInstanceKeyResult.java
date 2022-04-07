@@ -12,37 +12,30 @@ import java.util.Objects;
 public final class GetManagedInstanceKeyResult {
     /**
      * Key auto rotation opt-in flag. Either true or false.
-     * 
      */
     private final Boolean autoRotationEnabled;
     /**
      * The key creation date.
-     * 
      */
     private final String creationDate;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
-     * 
      */
     private final String kind;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * Thumbprint of the key.
-     * 
      */
     private final String thumbprint;
     /**
      * Resource type.
-     * 
      */
     private final String type;
 
@@ -66,49 +59,42 @@ public final class GetManagedInstanceKeyResult {
 
     /**
      * Key auto rotation opt-in flag. Either true or false.
-     * 
     */
     public Boolean getAutoRotationEnabled() {
         return this.autoRotationEnabled;
     }
     /**
      * The key creation date.
-     * 
     */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Thumbprint of the key.
-     * 
     */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;

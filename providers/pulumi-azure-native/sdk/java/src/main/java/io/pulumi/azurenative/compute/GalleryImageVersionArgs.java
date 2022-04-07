@@ -19,7 +19,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the gallery image definition in which the Image Version is to be created.
-     * 
      */
     @Import(name="galleryImageName", required=true)
       private final Output<String> galleryImageName;
@@ -30,7 +29,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>
-     * 
      */
     @Import(name="galleryImageVersionName")
       private final @Nullable Output<String> galleryImageVersionName;
@@ -41,7 +39,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the Shared Image Gallery in which the Image Definition resides.
-     * 
      */
     @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
@@ -52,7 +49,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource location
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -63,7 +59,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The publishing profile of a gallery image Version.
-     * 
      */
     @Import(name="publishingProfile")
       private final @Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile;
@@ -74,7 +69,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -85,7 +79,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * This is the storage profile of a Gallery Image Version.
-     * 
      */
     @Import(name="storageProfile", required=true)
       private final Output<GalleryImageVersionStorageProfileArgs> storageProfile;
@@ -96,7 +89,6 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Resource tags
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

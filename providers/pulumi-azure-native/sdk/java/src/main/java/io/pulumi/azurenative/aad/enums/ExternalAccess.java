@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
-     * 
      */
     @EnumType
     public enum ExternalAccess {

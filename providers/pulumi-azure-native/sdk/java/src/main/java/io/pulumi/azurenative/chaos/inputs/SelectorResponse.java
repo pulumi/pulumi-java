@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Model that represents a selector in the Experiment resource.
- * 
  */
 public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * String of the selector ID.
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -31,7 +29,6 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * List of Target references.
-     * 
      */
     @Import(name="targets", required=true)
       private final List<TargetReferenceResponse> targets;
@@ -42,7 +39,6 @@ public final class SelectorResponse extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Enum of the selector type.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

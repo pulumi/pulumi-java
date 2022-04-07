@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * AuthenticationPolicy of type Open.
- * 
  */
 public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
 
     /**
      * Open authentication policies.
-     * 
      */
     @Import(name="policies")
       private final @Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;

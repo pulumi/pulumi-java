@@ -17,7 +17,6 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
 
     /**
      * Authorization Rule Name.
-     * 
      */
     @Import(name="authorizationRuleName")
       private final @Nullable Output<String> authorizationRuleName;
@@ -28,7 +27,6 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
 
     /**
      * The namespace name.
-     * 
      */
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
@@ -39,7 +37,6 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
 
     /**
      * Properties of the Namespace AuthorizationRules.
-     * 
      */
     @Import(name="properties", required=true)
       private final Output<SharedAccessAuthorizationRulePropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

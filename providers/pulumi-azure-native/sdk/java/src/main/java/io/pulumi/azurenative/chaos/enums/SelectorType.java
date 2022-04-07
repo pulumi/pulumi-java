@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Enum of the selector type.
-     * 
      */
     @EnumType
     public enum SelectorType {

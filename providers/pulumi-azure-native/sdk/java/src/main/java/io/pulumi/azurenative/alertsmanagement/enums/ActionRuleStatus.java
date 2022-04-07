@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Indicates if the given action rule is enabled or disabled
-     * 
      */
     @EnumType
     public enum ActionRuleStatus {

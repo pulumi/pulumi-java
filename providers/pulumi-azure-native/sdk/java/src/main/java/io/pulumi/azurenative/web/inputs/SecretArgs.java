@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Container App Secret.
- * 
  */
 public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secret Name.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Secret Value.
-     * 
      */
     @Import(name="value")
       private final @Nullable Output<String> value;

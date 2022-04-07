@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The encryption settings for a configuration store.
- * 
  */
 public final class EncryptionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
 
     /**
      * Key vault properties.
-     * 
      */
     @Import(name="keyVaultProperties")
       private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;

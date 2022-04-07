@@ -18,7 +18,92 @@ import javax.annotation.Nullable;
  * The top level data export resource container.
  * API Version: 2020-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### DataExportCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var dataExport = new AzureNative.OperationalInsights.DataExport("dataExport", new AzureNative.OperationalInsights.DataExportArgs
+ *         {
+ *             DataExportName = "export1",
+ *             ResourceGroupName = "RgTest1",
+ *             ResourceId = "/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
+ *             TableNames = 
+ *             {
+ *                 "Heartbeat",
+ *             },
+ *             WorkspaceName = "DeWnTest1234",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := operationalinsights.NewDataExport(ctx, "dataExport", &operationalinsights.DataExportArgs{
+ * 			DataExportName:    pulumi.String("export1"),
+ * 			ResourceGroupName: pulumi.String("RgTest1"),
+ * 			ResourceId:        pulumi.String("/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test"),
+ * 			TableNames: pulumi.StringArray{
+ * 				pulumi.String("Heartbeat"),
+ * 			},
+ * 			WorkspaceName: pulumi.String("DeWnTest1234"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const dataExport = new azure_native.operationalinsights.DataExport("dataExport", {
+ *     dataExportName: "export1",
+ *     resourceGroupName: "RgTest1",
+ *     resourceId: "/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
+ *     tableNames: ["Heartbeat"],
+ *     workspaceName: "DeWnTest1234",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * data_export = azure_native.operationalinsights.DataExport("dataExport",
+ *     data_export_name="export1",
+ *     resource_group_name="RgTest1",
+ *     resource_id="/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
+ *     table_names=["Heartbeat"],
+ *     workspace_name="DeWnTest1234")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +118,108 @@ import javax.annotation.Nullable;
 public class DataExport extends io.pulumi.resources.CustomResource {
     /**
      * The latest data export rule modification time.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdDate;
 
     /**
      * @return The latest data export rule modification time.
-     * 
      */
     public Output</* @Nullable */ String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The data export rule ID.
-     * 
      */
     @Export(name="dataExportId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataExportId;
 
     /**
      * @return The data export rule ID.
-     * 
      */
     public Output</* @Nullable */ String> getDataExportId() {
         return this.dataExportId;
     }
     /**
      * Active when enabled.
-     * 
      */
     @Export(name="enable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enable;
 
     /**
      * @return Active when enabled.
-     * 
      */
     public Output</* @Nullable */ Boolean> getEnable() {
         return this.enable;
     }
     /**
      * Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
-     * 
      */
     @Export(name="eventHubName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubName;
 
     /**
      * @return Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
-     * 
      */
     public Output</* @Nullable */ String> getEventHubName() {
         return this.eventHubName;
     }
     /**
      * Date and time when the export was last modified.
-     * 
      */
     @Export(name="lastModifiedDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedDate;
 
     /**
      * @return Date and time when the export was last modified.
-     * 
      */
     public Output</* @Nullable */ String> getLastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
-     * 
      */
     @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
      * @return The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
-     * 
      */
     public Output<String> getResourceId() {
         return this.resourceId;
     }
     /**
      * An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
-     * 
      */
     @Export(name="tableNames", type=List.class, parameters={String.class})
     private Output<List<String>> tableNames;
 
     /**
      * @return An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
-     * 
      */
     public Output<List<String>> getTableNames() {
         return this.tableNames;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Reject type.
-     * 
      */
     @EnumType
     public enum PolybaseSettingsRejectType {

@@ -14,22 +14,18 @@ import java.util.Objects;
 public final class GetServiceResult {
     /**
      * The unique resource identifier of the database account.
-     * 
      */
     private final String id;
     /**
      * The name of the database account.
-     * 
      */
     private final String name;
     /**
      * Services response resource.
-     * 
      */
     private final Either<DataTransferServiceResourcePropertiesResponse,SqlDedicatedGatewayServiceResourcePropertiesResponse> properties;
     /**
      * The type of Azure resource.
-     * 
      */
     private final String type;
 
@@ -47,28 +43,24 @@ public final class GetServiceResult {
 
     /**
      * The unique resource identifier of the database account.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the database account.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Services response resource.
-     * 
     */
     public Either<DataTransferServiceResourcePropertiesResponse,SqlDedicatedGatewayServiceResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of Azure resource.
-     * 
     */
     public String getType() {
         return this.type;

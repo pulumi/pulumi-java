@@ -18,7 +18,100 @@ import javax.annotation.Nullable;
  * An object that represents a scope map for a container registry.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ScopeMapCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var scopeMap = new AzureNative.ContainerRegistry.ScopeMap("scopeMap", new AzureNative.ContainerRegistry.ScopeMapArgs
+ *         {
+ *             Actions = 
+ *             {
+ *                 "repositories/myrepository/contentWrite",
+ *                 "repositories/myrepository/delete",
+ *             },
+ *             Description = "Developer Scopes",
+ *             RegistryName = "myRegistry",
+ *             ResourceGroupName = "myResourceGroup",
+ *             ScopeMapName = "myScopeMap",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := containerregistry.NewScopeMap(ctx, "scopeMap", &containerregistry.ScopeMapArgs{
+ * 			Actions: pulumi.StringArray{
+ * 				pulumi.String("repositories/myrepository/contentWrite"),
+ * 				pulumi.String("repositories/myrepository/delete"),
+ * 			},
+ * 			Description:       pulumi.String("Developer Scopes"),
+ * 			RegistryName:      pulumi.String("myRegistry"),
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ScopeMapName:      pulumi.String("myScopeMap"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const scopeMap = new azure_native.containerregistry.ScopeMap("scopeMap", {
+ *     actions: [
+ *         "repositories/myrepository/contentWrite",
+ *         "repositories/myrepository/delete",
+ *     ],
+ *     description: "Developer Scopes",
+ *     registryName: "myRegistry",
+ *     resourceGroupName: "myResourceGroup",
+ *     scopeMapName: "myScopeMap",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * scope_map = azure_native.containerregistry.ScopeMap("scopeMap",
+ *     actions=[
+ *         "repositories/myrepository/contentWrite",
+ *         "repositories/myrepository/delete",
+ *     ],
+ *     description="Developer Scopes",
+ *     registry_name="myRegistry",
+ *     resource_group_name="myResourceGroup",
+ *     scope_map_name="myScopeMap")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,7 +128,6 @@ public class ScopeMap extends io.pulumi.resources.CustomResource {
      * The list of scoped permissions for registry artifacts.
      * E.g. repositories/repository-name/content/read,
      * repositories/repository-name/metadata/write
-     * 
      */
     @Export(name="actions", type=List.class, parameters={String.class})
     private Output<List<String>> actions;
@@ -44,91 +136,78 @@ public class ScopeMap extends io.pulumi.resources.CustomResource {
      * @return The list of scoped permissions for registry artifacts.
      * E.g. repositories/repository-name/content/read,
      * repositories/repository-name/metadata/write
-     * 
      */
     public Output<List<String>> getActions() {
         return this.actions;
     }
     /**
      * The creation date of scope map.
-     * 
      */
     @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
      * @return The creation date of scope map.
-     * 
      */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
     /**
      * The user friendly description of the scope map.
-     * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
      * @return The user friendly description of the scope map.
-     * 
      */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Provisioning state of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return Provisioning state of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return Metadata pertaining to creation and last modification of the resource.
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

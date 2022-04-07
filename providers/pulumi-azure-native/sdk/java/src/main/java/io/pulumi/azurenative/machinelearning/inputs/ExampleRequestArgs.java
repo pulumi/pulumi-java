@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * Sample input data for the service's input(s).
- * 
  */
 public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sample input data for the web service's global parameters
-     * 
      */
     @Import(name="globalParameters")
       private final @Nullable Output<Map<String,Object>> globalParameters;
@@ -34,7 +32,6 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sample input data for the web service's input(s) given as an input name to sample input values matrix map.
-     * 
      */
     @Import(name="inputs")
       private final @Nullable Output<Map<String,List<List<Object>>>> inputs;

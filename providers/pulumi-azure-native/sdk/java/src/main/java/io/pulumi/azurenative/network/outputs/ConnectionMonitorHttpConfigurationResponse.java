@@ -17,32 +17,26 @@ import javax.annotation.Nullable;
 public final class ConnectionMonitorHttpConfigurationResponse {
     /**
      * The HTTP method to use.
-     * 
      */
     private final @Nullable String method;
     /**
      * The path component of the URI. For instance, "/dir1/dir2".
-     * 
      */
     private final @Nullable String path;
     /**
      * The port to connect to.
-     * 
      */
     private final @Nullable Integer port;
     /**
      * Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
-     * 
      */
     private final @Nullable Boolean preferHTTPS;
     /**
      * The HTTP headers to transmit with the request.
-     * 
      */
     private final @Nullable List<HTTPHeaderResponse> requestHeaders;
     /**
      * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
-     * 
      */
     private final @Nullable List<String> validStatusCodeRanges;
 
@@ -64,42 +58,36 @@ public final class ConnectionMonitorHttpConfigurationResponse {
 
     /**
      * The HTTP method to use.
-     * 
     */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
     /**
      * The path component of the URI. For instance, "/dir1/dir2".
-     * 
     */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The port to connect to.
-     * 
     */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
-     * 
     */
     public Optional<Boolean> getPreferHTTPS() {
         return Optional.ofNullable(this.preferHTTPS);
     }
     /**
      * The HTTP headers to transmit with the request.
-     * 
     */
     public List<HTTPHeaderResponse> getRequestHeaders() {
         return this.requestHeaders == null ? List.of() : this.requestHeaders;
     }
     /**
      * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
-     * 
     */
     public List<String> getValidStatusCodeRanges() {
         return this.validStatusCodeRanges == null ? List.of() : this.validStatusCodeRanges;

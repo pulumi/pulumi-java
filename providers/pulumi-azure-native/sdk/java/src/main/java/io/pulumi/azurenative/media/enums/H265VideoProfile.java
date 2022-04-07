@@ -10,18 +10,15 @@ import java.util.StringJoiner;
 
     /**
      * We currently support Main. Default is Auto.
-     * 
      */
     @EnumType
     public enum H265VideoProfile {
         /**
          * Tells the encoder to automatically determine the appropriate H.265 profile.
-         * 
          */
         Auto("Auto"),
         /**
          * Main profile (https://x265.readthedocs.io/en/default/cli.html?highlight=profile#profile-level-tier)
-         * 
          */
         Main("Main");
 

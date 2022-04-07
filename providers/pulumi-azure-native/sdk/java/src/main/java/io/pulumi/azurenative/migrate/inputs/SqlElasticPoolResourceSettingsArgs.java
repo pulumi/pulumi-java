@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Defines the Sql ElasticPool resource settings.
- * 
  */
 public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Sql/servers/elasticPools'.
-     * 
      */
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
@@ -34,7 +32,6 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
 
     /**
      * Gets or sets the target Resource name.
-     * 
      */
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
@@ -45,7 +42,6 @@ public final class SqlElasticPoolResourceSettingsArgs extends io.pulumi.resource
 
     /**
      * Defines the zone redundant resource setting.
-     * 
      */
     @Import(name="zoneRedundant")
       private final @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant;

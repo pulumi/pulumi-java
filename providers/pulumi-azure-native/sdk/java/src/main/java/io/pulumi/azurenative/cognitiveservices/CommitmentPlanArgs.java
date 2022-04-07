@@ -17,7 +17,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of Cognitive Services account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -28,7 +27,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the commitmentPlan associated with the Cognitive Services Account
-     * 
      */
     @Import(name="commitmentPlanName")
       private final @Nullable Output<String> commitmentPlanName;
@@ -39,7 +37,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Properties of Cognitive Services account commitment plan.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<CommitmentPlanPropertiesArgs> properties;
@@ -50,7 +47,6 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;

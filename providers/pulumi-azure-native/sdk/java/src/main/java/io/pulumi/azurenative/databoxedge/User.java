@@ -20,7 +20,104 @@ import javax.annotation.Nullable;
  * Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
  * API Version: 2020-12-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### UserPut
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var user = new AzureNative.DataBoxEdge.User("user", new AzureNative.DataBoxEdge.UserArgs
+ *         {
+ *             DeviceName = "testedgedevice",
+ *             EncryptedPassword = new AzureNative.DataBoxEdge.Inputs.AsymmetricEncryptedSecretArgs
+ *             {
+ *                 EncryptionAlgorithm = "None",
+ *                 EncryptionCertThumbprint = "blah",
+ *                 Value = "<value>",
+ *             },
+ *             Name = "user1",
+ *             ResourceGroupName = "GroupForEdgeAutomation",
+ *             UserType = "Share",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := databoxedge.NewUser(ctx, "user", &databoxedge.UserArgs{
+ * 			DeviceName: pulumi.String("testedgedevice"),
+ * 			EncryptedPassword: &databoxedge.AsymmetricEncryptedSecretArgs{
+ * 				EncryptionAlgorithm:      pulumi.String("None"),
+ * 				EncryptionCertThumbprint: pulumi.String("blah"),
+ * 				Value:                    pulumi.String("<value>"),
+ * 			},
+ * 			Name:              pulumi.String("user1"),
+ * 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+ * 			UserType:          pulumi.String("Share"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const user = new azure_native.databoxedge.User("user", {
+ *     deviceName: "testedgedevice",
+ *     encryptedPassword: {
+ *         encryptionAlgorithm: "None",
+ *         encryptionCertThumbprint: "blah",
+ *         value: "<value>",
+ *     },
+ *     name: "user1",
+ *     resourceGroupName: "GroupForEdgeAutomation",
+ *     userType: "Share",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * user = azure_native.databoxedge.User("user",
+ *     device_name="testedgedevice",
+ *     encrypted_password=azure_native.databoxedge.AsymmetricEncryptedSecretArgs(
+ *         encryption_algorithm="None",
+ *         encryption_cert_thumbprint="blah",
+ *         value="<value>",
+ *     ),
+ *     name="user1",
+ *     resource_group_name="GroupForEdgeAutomation",
+ *     user_type="Share")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,84 +132,72 @@ import javax.annotation.Nullable;
 public class User extends io.pulumi.resources.CustomResource {
     /**
      * The password details.
-     * 
      */
     @Export(name="encryptedPassword", type=AsymmetricEncryptedSecretResponse.class, parameters={})
     private Output</* @Nullable */ AsymmetricEncryptedSecretResponse> encryptedPassword;
 
     /**
      * @return The password details.
-     * 
      */
     public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getEncryptedPassword() {
         return this.encryptedPassword;
     }
     /**
      * The object name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The object name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * List of shares that the user has rights on. This field should not be specified during user creation.
-     * 
      */
     @Export(name="shareAccessRights", type=List.class, parameters={ShareAccessRightResponse.class})
     private Output<List<ShareAccessRightResponse>> shareAccessRights;
 
     /**
      * @return List of shares that the user has rights on. This field should not be specified during user creation.
-     * 
      */
     public Output<List<ShareAccessRightResponse>> getShareAccessRights() {
         return this.shareAccessRights;
     }
     /**
      * User in DataBoxEdge Resource
-     * 
      */
     @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
      * @return User in DataBoxEdge Resource
-     * 
      */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The hierarchical type of the object.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Type of the user.
-     * 
      */
     @Export(name="userType", type=String.class, parameters={})
     private Output<String> userType;
 
     /**
      * @return Type of the user.
-     * 
      */
     public Output<String> getUserType() {
         return this.userType;

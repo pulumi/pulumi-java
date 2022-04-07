@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * An error response from the Batch service.
- * 
  */
 public final class DeleteCertificateErrorResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
 
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-     * 
      */
     @Import(name="code", required=true)
       private final String code;
@@ -32,7 +30,6 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
 
     /**
      * A list of additional details about the error.
-     * 
      */
     @Import(name="details")
       private final @Nullable List<DeleteCertificateErrorResponse> details;
@@ -43,7 +40,6 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
 
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
-     * 
      */
     @Import(name="message", required=true)
       private final String message;
@@ -54,7 +50,6 @@ public final class DeleteCertificateErrorResponse extends io.pulumi.resources.In
 
     /**
      * The target of the particular error. For example, the name of the property in error.
-     * 
      */
     @Import(name="target")
       private final @Nullable String target;

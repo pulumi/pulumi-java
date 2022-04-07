@@ -18,7 +18,124 @@ import javax.annotation.Nullable;
  * Properties of an artifact source.
  * API Version: 2018-09-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### ArtifactSources_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var artifactSource = new AzureNative.DevTestLab.ArtifactSource("artifactSource", new AzureNative.DevTestLab.ArtifactSourceArgs
+ *         {
+ *             ArmTemplateFolderPath = "{armTemplateFolderPath}",
+ *             BranchRef = "{branchRef}",
+ *             DisplayName = "{displayName}",
+ *             FolderPath = "{folderPath}",
+ *             LabName = "{labName}",
+ *             Name = "{artifactSourceName}",
+ *             ResourceGroupName = "resourceGroupName",
+ *             SecurityToken = "{securityToken}",
+ *             SourceType = "{VsoGit|GitHub|StorageAccount}",
+ *             Status = "{Enabled|Disabled}",
+ *             Tags = 
+ *             {
+ *                 { "tagName1", "tagValue1" },
+ *             },
+ *             Uri = "{artifactSourceUri}",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := devtestlab.NewArtifactSource(ctx, "artifactSource", &devtestlab.ArtifactSourceArgs{
+ * 			ArmTemplateFolderPath: pulumi.String("{armTemplateFolderPath}"),
+ * 			BranchRef:             pulumi.String("{branchRef}"),
+ * 			DisplayName:           pulumi.String("{displayName}"),
+ * 			FolderPath:            pulumi.String("{folderPath}"),
+ * 			LabName:               pulumi.String("{labName}"),
+ * 			Name:                  pulumi.String("{artifactSourceName}"),
+ * 			ResourceGroupName:     pulumi.String("resourceGroupName"),
+ * 			SecurityToken:         pulumi.String("{securityToken}"),
+ * 			SourceType:            pulumi.String("{VsoGit|GitHub|StorageAccount}"),
+ * 			Status:                pulumi.String("{Enabled|Disabled}"),
+ * 			Tags: pulumi.StringMap{
+ * 				"tagName1": pulumi.String("tagValue1"),
+ * 			},
+ * 			Uri: pulumi.String("{artifactSourceUri}"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const artifactSource = new azure_native.devtestlab.ArtifactSource("artifactSource", {
+ *     armTemplateFolderPath: "{armTemplateFolderPath}",
+ *     branchRef: "{branchRef}",
+ *     displayName: "{displayName}",
+ *     folderPath: "{folderPath}",
+ *     labName: "{labName}",
+ *     name: "{artifactSourceName}",
+ *     resourceGroupName: "resourceGroupName",
+ *     securityToken: "{securityToken}",
+ *     sourceType: "{VsoGit|GitHub|StorageAccount}",
+ *     status: "{Enabled|Disabled}",
+ *     tags: {
+ *         tagName1: "tagValue1",
+ *     },
+ *     uri: "{artifactSourceUri}",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * artifact_source = azure_native.devtestlab.ArtifactSource("artifactSource",
+ *     arm_template_folder_path="{armTemplateFolderPath}",
+ *     branch_ref="{branchRef}",
+ *     display_name="{displayName}",
+ *     folder_path="{folderPath}",
+ *     lab_name="{labName}",
+ *     name="{artifactSourceName}",
+ *     resource_group_name="resourceGroupName",
+ *     security_token="{securityToken}",
+ *     source_type="{VsoGit|GitHub|StorageAccount}",
+ *     status="{Enabled|Disabled}",
+ *     tags={
+ *         "tagName1": "tagValue1",
+ *     },
+ *     uri="{artifactSourceUri}")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,210 +150,180 @@ import javax.annotation.Nullable;
 public class ArtifactSource extends io.pulumi.resources.CustomResource {
     /**
      * The folder containing Azure Resource Manager templates.
-     * 
      */
     @Export(name="armTemplateFolderPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> armTemplateFolderPath;
 
     /**
      * @return The folder containing Azure Resource Manager templates.
-     * 
      */
     public Output</* @Nullable */ String> getArmTemplateFolderPath() {
         return this.armTemplateFolderPath;
     }
     /**
      * The artifact source's branch reference.
-     * 
      */
     @Export(name="branchRef", type=String.class, parameters={})
     private Output</* @Nullable */ String> branchRef;
 
     /**
      * @return The artifact source's branch reference.
-     * 
      */
     public Output</* @Nullable */ String> getBranchRef() {
         return this.branchRef;
     }
     /**
      * The artifact source's creation date.
-     * 
      */
     @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
      * @return The artifact source's creation date.
-     * 
      */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The artifact source's display name.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return The artifact source's display name.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * The folder containing artifacts.
-     * 
      */
     @Export(name="folderPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> folderPath;
 
     /**
      * @return The folder containing artifacts.
-     * 
      */
     public Output</* @Nullable */ String> getFolderPath() {
         return this.folderPath;
     }
     /**
      * The location of the resource.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The location of the resource.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning status of the resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The security token to authenticate to the artifact source.
-     * 
      */
     @Export(name="securityToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityToken;
 
     /**
      * @return The security token to authenticate to the artifact source.
-     * 
      */
     public Output</* @Nullable */ String> getSecurityToken() {
         return this.securityToken;
     }
     /**
      * The artifact source's type.
-     * 
      */
     @Export(name="sourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceType;
 
     /**
      * @return The artifact source's type.
-     * 
      */
     public Output</* @Nullable */ String> getSourceType() {
         return this.sourceType;
     }
     /**
      * Indicates if the artifact source is enabled (values: Enabled, Disabled).
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
      * @return Indicates if the artifact source is enabled (values: Enabled, Disabled).
-     * 
      */
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
     /**
      * The tags of the resource.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The tags of the resource.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
-     * 
      */
     @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
      * @return The unique immutable identifier of a resource (Guid).
-     * 
      */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * The artifact source's URI.
-     * 
      */
     @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**
      * @return The artifact source's URI.
-     * 
      */
     public Output</* @Nullable */ String> getUri() {
         return this.uri;

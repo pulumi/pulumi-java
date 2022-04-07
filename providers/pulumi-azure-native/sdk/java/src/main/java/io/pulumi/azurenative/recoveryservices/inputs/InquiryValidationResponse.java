@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * Validation for inquired protectable items under a given container.
- * 
  */
 public final class InquiryValidationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Error Additional Detail in case the status is non-success.
-     * 
      */
     @Import(name="additionalDetail", required=true)
       private final String additionalDetail;
@@ -32,7 +30,6 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Error Detail in case the status is non-success.
-     * 
      */
     @Import(name="errorDetail")
       private final @Nullable ErrorDetailResponse errorDetail;
@@ -43,7 +40,6 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
 
     /**
      * Status for the Inquiry Validation.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

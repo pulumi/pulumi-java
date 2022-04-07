@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The event delivery schema for the event subscription.
-     * 
      */
     @EnumType
     public enum EventDeliverySchema {

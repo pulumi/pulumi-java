@@ -18,7 +18,165 @@ import javax.annotation.Nullable;
  * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
  * API Version: 2020-05-15.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### CreateEventHubEventSource
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var eventSource = new AzureNative.TimeSeriesInsights.EventSource("eventSource", new AzureNative.TimeSeriesInsights.EventSourceArgs
+ *         {
+ *             EnvironmentName = "env1",
+ *             EventSourceName = "es1",
+ *             Kind = "Microsoft.EventHub",
+ *             Location = "West US",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := timeseriesinsights.NewEventSource(ctx, "eventSource", &timeseriesinsights.EventSourceArgs{
+ * 			EnvironmentName:   pulumi.String("env1"),
+ * 			EventSourceName:   pulumi.String("es1"),
+ * 			Kind:              pulumi.String("Microsoft.EventHub"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource", {
+ *     environmentName: "env1",
+ *     eventSourceName: "es1",
+ *     kind: "Microsoft.EventHub",
+ *     location: "West US",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * event_source = azure_native.timeseriesinsights.EventSource("eventSource",
+ *     environment_name="env1",
+ *     event_source_name="es1",
+ *     kind="Microsoft.EventHub",
+ *     location="West US",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### EventSourcesCreateEventHubWithCustomEnquedTime
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var eventSource = new AzureNative.TimeSeriesInsights.EventSource("eventSource", new AzureNative.TimeSeriesInsights.EventSourceArgs
+ *         {
+ *             EnvironmentName = "env1",
+ *             EventSourceName = "es1",
+ *             Kind = "Microsoft.EventHub",
+ *             Location = "West US",
+ *             ResourceGroupName = "rg1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := timeseriesinsights.NewEventSource(ctx, "eventSource", &timeseriesinsights.EventSourceArgs{
+ * 			EnvironmentName:   pulumi.String("env1"),
+ * 			EventSourceName:   pulumi.String("es1"),
+ * 			Kind:              pulumi.String("Microsoft.EventHub"),
+ * 			Location:          pulumi.String("West US"),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource", {
+ *     environmentName: "env1",
+ *     eventSourceName: "es1",
+ *     kind: "Microsoft.EventHub",
+ *     location: "West US",
+ *     resourceGroupName: "rg1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * event_source = azure_native.timeseriesinsights.EventSource("eventSource",
+ *     environment_name="env1",
+ *     event_source_name="es1",
+ *     kind="Microsoft.EventHub",
+ *     location="West US",
+ *     resource_group_name="rg1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,77 +188,66 @@ import javax.annotation.Nullable;
  * 
  * @Deprecated
  * Please use one of the variants: EventHubEventSource, IoTHubEventSource.
- * 
  */
 @Deprecated /* Please use one of the variants: EventHubEventSource, IoTHubEventSource. */
 @ResourceType(type="azure-native:timeseriesinsights:EventSource")
 public class EventSource extends io.pulumi.resources.CustomResource {
     /**
      * The kind of the event source.
-     * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
      * @return The kind of the event source.
-     * 
      */
     public Output<String> getKind() {
         return this.kind;
     }
     /**
      * Resource location
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Resource tags
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

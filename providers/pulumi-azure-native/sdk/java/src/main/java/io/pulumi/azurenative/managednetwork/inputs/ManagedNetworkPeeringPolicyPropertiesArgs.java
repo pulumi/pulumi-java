@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Properties of a Managed Network Peering Policy
- * 
  */
 public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -24,7 +23,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
 
     /**
      * Gets or sets the hub virtual network ID
-     * 
      */
     @Import(name="hub")
       private final @Nullable Output<ResourceIdArgs> hub;
@@ -35,7 +33,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
 
     /**
      * Gets or sets the mesh group IDs
-     * 
      */
     @Import(name="mesh")
       private final @Nullable Output<List<ResourceIdArgs>> mesh;
@@ -46,7 +43,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
 
     /**
      * Gets or sets the spokes group IDs
-     * 
      */
     @Import(name="spokes")
       private final @Nullable Output<List<ResourceIdArgs>> spokes;
@@ -57,7 +53,6 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
 
     /**
      * Gets or sets the connectivity type of a network structure policy
-     * 
      */
     @Import(name="type", required=true)
       private final Output<Either<String,Type>> type;

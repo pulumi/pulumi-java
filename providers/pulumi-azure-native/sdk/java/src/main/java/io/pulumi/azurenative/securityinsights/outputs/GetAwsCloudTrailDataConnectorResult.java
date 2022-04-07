@@ -14,38 +14,31 @@ import javax.annotation.Nullable;
 public final class GetAwsCloudTrailDataConnectorResult {
     /**
      * The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
-     * 
      */
     private final @Nullable String awsRoleArn;
     /**
      * The available data types for the connector.
-     * 
      */
     private final @Nullable AwsCloudTrailDataConnectorDataTypesResponse dataTypes;
     /**
      * Etag of the azure resource
-     * 
      */
     private final @Nullable String etag;
     /**
      * Azure resource Id
-     * 
      */
     private final String id;
     /**
      * The kind of the data connector
      * Expected value is 'AmazonWebServicesCloudTrail'.
-     * 
      */
     private final String kind;
     /**
      * Azure resource name
-     * 
      */
     private final String name;
     /**
      * Azure resource type
-     * 
      */
     private final String type;
 
@@ -69,28 +62,24 @@ public final class GetAwsCloudTrailDataConnectorResult {
 
     /**
      * The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
-     * 
     */
     public Optional<String> getAwsRoleArn() {
         return Optional.ofNullable(this.awsRoleArn);
     }
     /**
      * The available data types for the connector.
-     * 
     */
     public Optional<AwsCloudTrailDataConnectorDataTypesResponse> getDataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
     /**
      * Etag of the azure resource
-     * 
     */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
-     * 
     */
     public String getId() {
         return this.id;
@@ -98,21 +87,18 @@ public final class GetAwsCloudTrailDataConnectorResult {
     /**
      * The kind of the data connector
      * Expected value is 'AmazonWebServicesCloudTrail'.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Azure resource type
-     * 
     */
     public String getType() {
         return this.type;

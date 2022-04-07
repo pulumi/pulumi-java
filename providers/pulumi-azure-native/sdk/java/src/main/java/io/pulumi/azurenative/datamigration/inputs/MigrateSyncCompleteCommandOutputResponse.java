@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Output for command that completes sync migration for a database.
- * 
  */
 public final class MigrateSyncCompleteCommandOutputResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class MigrateSyncCompleteCommandOutputResponse extends io.pulumi.re
 
     /**
      * List of errors that happened during the command execution
-     * 
      */
     @Import(name="errors", required=true)
       private final List<ReportableExceptionResponse> errors;
@@ -31,7 +29,6 @@ public final class MigrateSyncCompleteCommandOutputResponse extends io.pulumi.re
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;

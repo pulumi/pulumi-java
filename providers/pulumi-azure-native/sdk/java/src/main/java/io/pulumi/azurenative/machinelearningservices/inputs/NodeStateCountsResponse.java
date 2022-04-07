@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Counts of various compute node states on the amlCompute.
- * 
  */
 public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Number of compute nodes in idle state.
-     * 
      */
     @Import(name="idleNodeCount", required=true)
       private final Integer idleNodeCount;
@@ -29,7 +27,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Number of compute nodes which are leaving the amlCompute.
-     * 
      */
     @Import(name="leavingNodeCount", required=true)
       private final Integer leavingNodeCount;
@@ -40,7 +37,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Number of compute nodes which are in preempted state.
-     * 
      */
     @Import(name="preemptedNodeCount", required=true)
       private final Integer preemptedNodeCount;
@@ -51,7 +47,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Number of compute nodes which are being prepared.
-     * 
      */
     @Import(name="preparingNodeCount", required=true)
       private final Integer preparingNodeCount;
@@ -62,7 +57,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Number of compute nodes which are running jobs.
-     * 
      */
     @Import(name="runningNodeCount", required=true)
       private final Integer runningNodeCount;
@@ -73,7 +67,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
 
     /**
      * Number of compute nodes which are in unusable state.
-     * 
      */
     @Import(name="unusableNodeCount", required=true)
       private final Integer unusableNodeCount;

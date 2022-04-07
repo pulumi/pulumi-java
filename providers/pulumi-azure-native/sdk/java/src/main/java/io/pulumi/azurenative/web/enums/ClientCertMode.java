@@ -13,7 +13,6 @@ import java.util.StringJoiner;
      * - ClientCertEnabled: false means ClientCert is ignored.
      * - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
-     * 
      */
     @EnumType
     public enum ClientCertMode {

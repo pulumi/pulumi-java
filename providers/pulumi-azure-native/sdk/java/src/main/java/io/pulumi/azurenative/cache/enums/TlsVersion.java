@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The minimum TLS version for the cluster to support, e.g. '1.2'
-     * 
      */
     @EnumType
     public enum TlsVersion {

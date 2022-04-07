@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Definition of a labeling job.
- * 
  */
 public final class LabelingJobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -26,7 +25,6 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Dataset configuration for the job.
-     * 
      */
     @Import(name="datasetConfiguration", required=true)
       private final Output<LabelingDatasetConfigurationArgs> datasetConfiguration;
@@ -37,7 +35,6 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Instructions for the job.
-     * 
      */
     @Import(name="jobInstructions", required=true)
       private final Output<LabelingJobInstructionsArgs> jobInstructions;
@@ -48,7 +45,6 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Label categories of the job.
-     * 
      */
     @Import(name="labelCategories", required=true)
       private final Output<Map<String,LabelCategoryArgs>> labelCategories;
@@ -59,7 +55,6 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Media specific properties in a labeling job.
-     * 
      */
     @Import(name="labelingJobMediaProperties", required=true)
       private final Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
@@ -70,7 +65,6 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * Machine learning assisted configuration for the job.
-     * 
      */
     @Import(name="mlAssistConfiguration")
       private final @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration;
@@ -81,7 +75,6 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The job property dictionary. Properties can be added, but not removed or altered.
-     * 
      */
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
@@ -92,7 +85,6 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
 
     /**
      * The job tag dictionary. Tags can be added, removed, and updated.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

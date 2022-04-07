@@ -14,7 +14,6 @@ public final class GetStandardArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group within the user's subscription. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetStandardArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The Security Standard key - unique key for the standard type
-     * 
      */
     @Import(name="standardId", required=true)
       private final String standardId;

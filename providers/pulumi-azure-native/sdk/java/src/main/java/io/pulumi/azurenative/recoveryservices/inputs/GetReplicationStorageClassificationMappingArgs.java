@@ -14,7 +14,6 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
 
     /**
      * Fabric name.
-     * 
      */
     @Import(name="fabricName", required=true)
       private final String fabricName;
@@ -25,7 +24,6 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
 
     /**
      * The name of the resource group where the recovery services vault is present.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -36,7 +34,6 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
 
     /**
      * The name of the recovery services vault.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;
@@ -47,7 +44,6 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
 
     /**
      * Storage classification mapping name.
-     * 
      */
     @Import(name="storageClassificationMappingName", required=true)
       private final String storageClassificationMappingName;
@@ -58,7 +54,6 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
 
     /**
      * Storage classification name.
-     * 
      */
     @Import(name="storageClassificationName", required=true)
       private final String storageClassificationName;

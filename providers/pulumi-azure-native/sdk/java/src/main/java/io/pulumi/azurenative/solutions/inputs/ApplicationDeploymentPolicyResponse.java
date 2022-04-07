@@ -10,7 +10,6 @@ import java.util.Objects;
 
 /**
  * Managed application deployment policy.
- * 
  */
 public final class ApplicationDeploymentPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -18,7 +17,6 @@ public final class ApplicationDeploymentPolicyResponse extends io.pulumi.resourc
 
     /**
      * The managed application deployment mode.
-     * 
      */
     @Import(name="deploymentMode", required=true)
       private final String deploymentMode;

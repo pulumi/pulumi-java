@@ -17,7 +17,6 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
 
     /**
      * Management group ID.
-     * 
      */
     @Import(name="managementGroupId", required=true)
       private final String managementGroupId;
@@ -28,7 +27,6 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
 
     /**
      * The namespace for Microsoft Management RP; only "Microsoft.Management" is allowed.
-     * 
      */
     @Import(name="managementGroupsNamespace", required=true)
       private final String managementGroupsNamespace;
@@ -39,7 +37,6 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
 
     /**
      * The name of the remediation.
-     * 
      */
     @Import(name="remediationName", required=true)
       private final String remediationName;
@@ -50,7 +47,6 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
 
     /**
      * Maximum number of records to return.
-     * 
      */
     @Import(name="top")
       private final @Nullable Integer top;

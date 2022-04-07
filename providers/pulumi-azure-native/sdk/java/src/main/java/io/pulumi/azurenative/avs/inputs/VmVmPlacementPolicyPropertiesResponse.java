@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * VM-VM placement policy properties
- * 
  */
 public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
 
     /**
      * placement policy affinity type
-     * 
      */
     @Import(name="affinityType", required=true)
       private final String affinityType;
@@ -32,7 +30,6 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
 
     /**
      * Display name of the placement policy
-     * 
      */
     @Import(name="displayName")
       private final @Nullable String displayName;
@@ -43,7 +40,6 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
 
     /**
      * The provisioning state
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -54,7 +50,6 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
 
     /**
      * Whether the placement policy is enabled or disabled
-     * 
      */
     @Import(name="state")
       private final @Nullable String state;
@@ -66,7 +61,6 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
     /**
      * placement policy type
      * Expected value is 'VmVm'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -77,7 +71,6 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
 
     /**
      * Virtual machine members list
-     * 
      */
     @Import(name="vmMembers", required=true)
       private final List<String> vmMembers;

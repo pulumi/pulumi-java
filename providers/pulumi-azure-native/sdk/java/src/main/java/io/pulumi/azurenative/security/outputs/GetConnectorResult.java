@@ -18,27 +18,22 @@ import javax.annotation.Nullable;
 public final class GetConnectorResult {
     /**
      * Settings for authentication management, these settings are relevant only for the cloud connector.
-     * 
      */
     private final @Nullable Object authenticationDetails;
     /**
      * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
-     * 
      */
     private final @Nullable HybridComputeSettingsPropertiesResponse hybridComputeSettings;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     /**
      * Resource name
-     * 
      */
     private final String name;
     /**
      * Resource type
-     * 
      */
     private final String type;
 
@@ -58,35 +53,30 @@ public final class GetConnectorResult {
 
     /**
      * Settings for authentication management, these settings are relevant only for the cloud connector.
-     * 
     */
     public Optional<Object> getAuthenticationDetails() {
         return Optional.ofNullable(this.authenticationDetails);
     }
     /**
      * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
-     * 
     */
     public Optional<HybridComputeSettingsPropertiesResponse> getHybridComputeSettings() {
         return Optional.ofNullable(this.hybridComputeSettings);
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

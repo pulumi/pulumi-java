@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 /**
  * Network rule set
- * 
  */
 public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -24,7 +23,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
-     * 
      */
     @Import(name="bypass")
       private final @Nullable String bypass;
@@ -35,7 +33,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Specifies the default action of allow or deny when no other rules match.
-     * 
      */
     @Import(name="defaultAction", required=true)
       private final String defaultAction;
@@ -46,7 +43,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Sets the IP ACL rules
-     * 
      */
     @Import(name="ipRules")
       private final @Nullable List<IPRuleResponse> ipRules;
@@ -57,7 +53,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Sets the resource access rules
-     * 
      */
     @Import(name="resourceAccessRules")
       private final @Nullable List<ResourceAccessRuleResponse> resourceAccessRules;
@@ -68,7 +63,6 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
 
     /**
      * Sets the virtual network rules
-     * 
      */
     @Import(name="virtualNetworkRules")
       private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;

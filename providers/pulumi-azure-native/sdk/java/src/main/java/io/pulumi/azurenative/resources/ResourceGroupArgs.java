@@ -17,7 +17,6 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -28,7 +27,6 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The ID of the resource that manages this resource group.
-     * 
      */
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
@@ -39,7 +37,6 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group to create or update. Can include alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters that match the allowed characters.
-     * 
      */
     @Import(name="resourceGroupName")
       private final @Nullable Output<String> resourceGroupName;
@@ -50,7 +47,6 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The tags attached to the resource group.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

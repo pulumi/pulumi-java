@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class ValidationErrorResponse {
     /**
      * Severity of the error
-     * 
      */
     private final String severity;
     /**
      * Error Text
-     * 
      */
     private final String text;
 
@@ -30,14 +28,12 @@ public final class ValidationErrorResponse {
 
     /**
      * Severity of the error
-     * 
     */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * Error Text
-     * 
     */
     public String getText() {
         return this.text;

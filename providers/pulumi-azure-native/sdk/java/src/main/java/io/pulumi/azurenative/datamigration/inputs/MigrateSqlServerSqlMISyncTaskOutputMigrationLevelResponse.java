@@ -15,7 +15,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Count of databases
-     * 
      */
     @Import(name="databaseCount", required=true)
       private final Integer databaseCount;
@@ -26,7 +25,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Number of database level errors
-     * 
      */
     @Import(name="databaseErrorCount", required=true)
       private final Integer databaseErrorCount;
@@ -37,7 +35,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Migration end time
-     * 
      */
     @Import(name="endedOn", required=true)
       private final String endedOn;
@@ -48,7 +45,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -60,7 +56,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     /**
      * Result type
      * Expected value is 'MigrationLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -71,7 +66,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Source server brand version
-     * 
      */
     @Import(name="sourceServerBrandVersion", required=true)
       private final String sourceServerBrandVersion;
@@ -82,7 +76,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Source server name
-     * 
      */
     @Import(name="sourceServerName", required=true)
       private final String sourceServerName;
@@ -93,7 +86,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Source server version
-     * 
      */
     @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
@@ -104,7 +96,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Migration start time
-     * 
      */
     @Import(name="startedOn", required=true)
       private final String startedOn;
@@ -115,7 +106,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Current state of migration
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -126,7 +116,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Target server brand version
-     * 
      */
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
@@ -137,7 +126,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Target server name
-     * 
      */
     @Import(name="targetServerName", required=true)
       private final String targetServerName;
@@ -148,7 +136,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
 
     /**
      * Target server version
-     * 
      */
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;

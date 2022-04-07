@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Azure Function activity.
- * 
  */
 public final class AzureFunctionActivityResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -26,7 +25,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="body")
       private final @Nullable Object body;
@@ -37,7 +35,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Activity depends on condition.
-     * 
      */
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
@@ -48,7 +45,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Activity description.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -59,7 +55,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
-     * 
      */
     @Import(name="functionName", required=true)
       private final Object functionName;
@@ -70,7 +65,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="headers")
       private final @Nullable Object headers;
@@ -81,7 +75,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Linked service reference.
-     * 
      */
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
@@ -92,7 +85,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Rest API method for target endpoint.
-     * 
      */
     @Import(name="method", required=true)
       private final String method;
@@ -103,7 +95,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Activity name.
-     * 
      */
     @Import(name="name", required=true)
       private final String name;
@@ -114,7 +105,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Activity policy.
-     * 
      */
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
@@ -126,7 +116,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
     /**
      * Type of activity.
      * Expected value is 'AzureFunctionActivity'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;
@@ -137,7 +126,6 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
 
     /**
      * Activity user properties.
-     * 
      */
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;

@@ -18,7 +18,6 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The Azure Video Analyzer account name.
-     * 
      */
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
@@ -29,7 +28,6 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * An optional description for the pipeline.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -40,7 +38,6 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
-     * 
      */
     @Import(name="parameters")
       private final @Nullable Output<List<ParameterDefinitionArgs>> parameters;
@@ -51,7 +48,6 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The pipeline job name.
-     * 
      */
     @Import(name="pipelineJobName")
       private final @Nullable Output<String> pipelineJobName;
@@ -62,7 +58,6 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -73,7 +68,6 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Reference to an existing pipeline topology. When activated, this pipeline job will process content according to the pipeline topology definition.
-     * 
      */
     @Import(name="topologyName", required=true)
       private final Output<String> topologyName;

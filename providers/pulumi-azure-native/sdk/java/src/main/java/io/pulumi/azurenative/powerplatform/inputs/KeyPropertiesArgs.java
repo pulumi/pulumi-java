@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Url and version of the KeyVault Secret
- * 
  */
 public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The identifier of the key vault key used to encrypt data.
-     * 
      */
     @Import(name="name")
       private final @Nullable Output<String> name;
@@ -31,7 +29,6 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The version of the identity which will be used to access key vault.
-     * 
      */
     @Import(name="version")
       private final @Nullable Output<String> version;

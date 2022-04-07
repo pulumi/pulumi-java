@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Reference objects for custom activity
- * 
  */
 public final class CustomActivityReferenceObjectResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class CustomActivityReferenceObjectResponse extends io.pulumi.resou
 
     /**
      * Dataset references.
-     * 
      */
     @Import(name="datasets")
       private final @Nullable List<DatasetReferenceResponse> datasets;
@@ -33,7 +31,6 @@ public final class CustomActivityReferenceObjectResponse extends io.pulumi.resou
 
     /**
      * Linked service references.
-     * 
      */
     @Import(name="linkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;

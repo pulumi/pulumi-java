@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
-     * 
      */
     @EnumType
     public enum InstanceOperationType {

@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Name of a public IP address SKU.
-     * 
      */
     @EnumType
     public enum PublicIPAddressSkuName {

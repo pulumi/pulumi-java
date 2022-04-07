@@ -10,23 +10,19 @@ import java.util.StringJoiner;
 
     /**
      * The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
-     * 
      */
     @EnumType
     public enum VirtualNetworkType {
         /**
          * The service is not part of any Virtual Network.
-         * 
          */
         None("None"),
         /**
          * The service is part of Virtual Network and it is accessible from Internet.
-         * 
          */
         External("External"),
         /**
          * The service is part of Virtual Network and it is only accessible from within the virtual network.
-         * 
          */
         Internal("Internal");
 

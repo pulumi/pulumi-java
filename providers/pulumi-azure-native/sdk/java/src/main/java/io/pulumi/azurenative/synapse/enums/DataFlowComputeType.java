@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Compute type of the cluster which will execute data flow job.
-     * 
      */
     @EnumType
     public enum DataFlowComputeType {

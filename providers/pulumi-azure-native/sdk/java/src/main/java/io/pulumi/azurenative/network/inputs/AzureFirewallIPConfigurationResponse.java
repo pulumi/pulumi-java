@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * IP configuration of an Azure Firewall.
- * 
  */
 public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -21,7 +20,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
 
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Import(name="etag", required=true)
       private final String etag;
@@ -32,7 +30,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable String id;
@@ -43,7 +40,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
 
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
      */
     @Import(name="name")
       private final @Nullable String name;
@@ -54,7 +50,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
 
     /**
      * The Firewall Internal Load Balancer IP to be used as the next hop in User Defined Routes.
-     * 
      */
     @Import(name="privateIPAddress", required=true)
       private final String privateIPAddress;
@@ -65,7 +60,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
 
     /**
      * The provisioning state of the Azure firewall IP configuration resource.
-     * 
      */
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
@@ -76,7 +70,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
 
     /**
      * Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.
-     * 
      */
     @Import(name="publicIPAddress")
       private final @Nullable SubResourceResponse publicIPAddress;
@@ -87,7 +80,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
 
     /**
      * Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.
-     * 
      */
     @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
@@ -98,7 +90,6 @@ public final class AzureFirewallIPConfigurationResponse extends io.pulumi.resour
 
     /**
      * Type of the resource.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

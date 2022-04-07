@@ -18,7 +18,135 @@ import javax.annotation.Nullable;
  * Describes the suppression rule
  * API Version: 2019-01-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Update or create suppression rule for subscription
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var alertsSuppressionRule = new AzureNative.Security.AlertsSuppressionRule("alertsSuppressionRule", new AzureNative.Security.AlertsSuppressionRuleArgs
+ *         {
+ *             AlertType = "IpAnomaly",
+ *             AlertsSuppressionRuleName = "dismissIpAnomalyAlerts",
+ *             Comment = "Test VM",
+ *             ExpirationDateUtc = "2019-12-01T19:50:47.083633Z",
+ *             Reason = "FalsePositive",
+ *             State = "Enabled",
+ *             SuppressionAlertsScope = new AzureNative.Security.Inputs.SuppressionAlertsScopeArgs
+ *             {
+ *                 AllOf = 
+ *                 {
+ *                     new AzureNative.Security.Inputs.ScopeElementArgs
+ *                     {
+ *                         Field = "entities.ip.address",
+ *                     },
+ *                     new AzureNative.Security.Inputs.ScopeElementArgs
+ *                     {
+ *                         Field = "entities.process.commandline",
+ *                     },
+ *                 },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := security.NewAlertsSuppressionRule(ctx, "alertsSuppressionRule", &security.AlertsSuppressionRuleArgs{
+ * 			AlertType:                 pulumi.String("IpAnomaly"),
+ * 			AlertsSuppressionRuleName: pulumi.String("dismissIpAnomalyAlerts"),
+ * 			Comment:                   pulumi.String("Test VM"),
+ * 			ExpirationDateUtc:         pulumi.String("2019-12-01T19:50:47.083633Z"),
+ * 			Reason:                    pulumi.String("FalsePositive"),
+ * 			State:                     pulumi.String("Enabled"),
+ * 			SuppressionAlertsScope: &security.SuppressionAlertsScopeArgs{
+ * 				AllOf: []security.ScopeElementArgs{
+ * 					&security.ScopeElementArgs{
+ * 						Field: pulumi.String("entities.ip.address"),
+ * 					},
+ * 					&security.ScopeElementArgs{
+ * 						Field: pulumi.String("entities.process.commandline"),
+ * 					},
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const alertsSuppressionRule = new azure_native.security.AlertsSuppressionRule("alertsSuppressionRule", {
+ *     alertType: "IpAnomaly",
+ *     alertsSuppressionRuleName: "dismissIpAnomalyAlerts",
+ *     comment: "Test VM",
+ *     expirationDateUtc: "2019-12-01T19:50:47.083633Z",
+ *     reason: "FalsePositive",
+ *     state: "Enabled",
+ *     suppressionAlertsScope: {
+ *         allOf: [
+ *             {
+ *                 field: "entities.ip.address",
+ *             },
+ *             {
+ *                 field: "entities.process.commandline",
+ *             },
+ *         ],
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * alerts_suppression_rule = azure_native.security.AlertsSuppressionRule("alertsSuppressionRule",
+ *     alert_type="IpAnomaly",
+ *     alerts_suppression_rule_name="dismissIpAnomalyAlerts",
+ *     comment="Test VM",
+ *     expiration_date_utc="2019-12-01T19:50:47.083633Z",
+ *     reason="FalsePositive",
+ *     state="Enabled",
+ *     suppression_alerts_scope=azure_native.security.SuppressionAlertsScopeArgs(
+ *         all_of=[
+ *             azure_native.security.ScopeElementArgs(
+ *                 field="entities.ip.address",
+ *             ),
+ *             azure_native.security.ScopeElementArgs(
+ *                 field="entities.process.commandline",
+ *             ),
+ *         ],
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,126 +161,108 @@ import javax.annotation.Nullable;
 public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
     /**
      * Type of the alert to automatically suppress. For all alert types, use '*'
-     * 
      */
     @Export(name="alertType", type=String.class, parameters={})
     private Output<String> alertType;
 
     /**
      * @return Type of the alert to automatically suppress. For all alert types, use '*'
-     * 
      */
     public Output<String> getAlertType() {
         return this.alertType;
     }
     /**
      * Any comment regarding the rule
-     * 
      */
     @Export(name="comment", type=String.class, parameters={})
     private Output</* @Nullable */ String> comment;
 
     /**
      * @return Any comment regarding the rule
-     * 
      */
     public Output</* @Nullable */ String> getComment() {
         return this.comment;
     }
     /**
      * Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
-     * 
      */
     @Export(name="expirationDateUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationDateUtc;
 
     /**
      * @return Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
-     * 
      */
     public Output</* @Nullable */ String> getExpirationDateUtc() {
         return this.expirationDateUtc;
     }
     /**
      * The last time this rule was modified
-     * 
      */
     @Export(name="lastModifiedUtc", type=String.class, parameters={})
     private Output<String> lastModifiedUtc;
 
     /**
      * @return The last time this rule was modified
-     * 
      */
     public Output<String> getLastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
      * Resource name
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The reason for dismissing the alert
-     * 
      */
     @Export(name="reason", type=String.class, parameters={})
     private Output<String> reason;
 
     /**
      * @return The reason for dismissing the alert
-     * 
      */
     public Output<String> getReason() {
         return this.reason;
     }
     /**
      * Possible states of the rule
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return Possible states of the rule
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * The suppression conditions
-     * 
      */
     @Export(name="suppressionAlertsScope", type=SuppressionAlertsScopeResponse.class, parameters={})
     private Output</* @Nullable */ SuppressionAlertsScopeResponse> suppressionAlertsScope;
 
     /**
      * @return The suppression conditions
-     * 
      */
     public Output</* @Nullable */ SuppressionAlertsScopeResponse> getSuppressionAlertsScope() {
         return this.suppressionAlertsScope;
     }
     /**
      * Resource type
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type
-     * 
      */
     public Output<String> getType() {
         return this.type;

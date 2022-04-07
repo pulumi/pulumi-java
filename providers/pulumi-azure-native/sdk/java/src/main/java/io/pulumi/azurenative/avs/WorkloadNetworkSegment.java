@@ -20,7 +20,113 @@ import javax.annotation.Nullable;
  * NSX Segment
  * API Version: 2020-07-17-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### WorkloadNetworks_CreateSegments
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var workloadNetworkSegment = new AzureNative.AVS.WorkloadNetworkSegment("workloadNetworkSegment", new AzureNative.AVS.WorkloadNetworkSegmentArgs
+ *         {
+ *             ConnectedGateway = "/infra/tier-1s/gateway",
+ *             DisplayName = "segment1",
+ *             PrivateCloudName = "cloud1",
+ *             ResourceGroupName = "group1",
+ *             Revision = 1,
+ *             SegmentId = "segment1",
+ *             Subnet = new AzureNative.AVS.Inputs.WorkloadNetworkSegmentSubnetArgs
+ *             {
+ *                 DhcpRanges = 
+ *                 {
+ *                     "40.20.0.0-40.20.0.1",
+ *                 },
+ *                 GatewayAddress = "40.20.20.20/16",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := avs.NewWorkloadNetworkSegment(ctx, "workloadNetworkSegment", &avs.WorkloadNetworkSegmentArgs{
+ * 			ConnectedGateway:  pulumi.String("/infra/tier-1s/gateway"),
+ * 			DisplayName:       pulumi.String("segment1"),
+ * 			PrivateCloudName:  pulumi.String("cloud1"),
+ * 			ResourceGroupName: pulumi.String("group1"),
+ * 			Revision:          pulumi.Float64(1),
+ * 			SegmentId:         pulumi.String("segment1"),
+ * 			Subnet: &avs.WorkloadNetworkSegmentSubnetArgs{
+ * 				DhcpRanges: pulumi.StringArray{
+ * 					pulumi.String("40.20.0.0-40.20.0.1"),
+ * 				},
+ * 				GatewayAddress: pulumi.String("40.20.20.20/16"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const workloadNetworkSegment = new azure_native.avs.WorkloadNetworkSegment("workloadNetworkSegment", {
+ *     connectedGateway: "/infra/tier-1s/gateway",
+ *     displayName: "segment1",
+ *     privateCloudName: "cloud1",
+ *     resourceGroupName: "group1",
+ *     revision: 1,
+ *     segmentId: "segment1",
+ *     subnet: {
+ *         dhcpRanges: ["40.20.0.0-40.20.0.1"],
+ *         gatewayAddress: "40.20.20.20/16",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * workload_network_segment = azure_native.avs.WorkloadNetworkSegment("workloadNetworkSegment",
+ *     connected_gateway="/infra/tier-1s/gateway",
+ *     display_name="segment1",
+ *     private_cloud_name="cloud1",
+ *     resource_group_name="group1",
+ *     revision=1,
+ *     segment_id="segment1",
+ *     subnet=azure_native.avs.WorkloadNetworkSegmentSubnetArgs(
+ *         dhcp_ranges=["40.20.0.0-40.20.0.1"],
+ *         gateway_address="40.20.20.20/16",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,126 +141,108 @@ import javax.annotation.Nullable;
 public class WorkloadNetworkSegment extends io.pulumi.resources.CustomResource {
     /**
      * Gateway which to connect segment to.
-     * 
      */
     @Export(name="connectedGateway", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectedGateway;
 
     /**
      * @return Gateway which to connect segment to.
-     * 
      */
     public Output</* @Nullable */ String> getConnectedGateway() {
         return this.connectedGateway;
     }
     /**
      * Display name of the segment.
-     * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
      * @return Display name of the segment.
-     * 
      */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Port Vif which segment is associated with.
-     * 
      */
     @Export(name="portVif", type=List.class, parameters={WorkloadNetworkSegmentPortVifResponse.class})
     private Output<List<WorkloadNetworkSegmentPortVifResponse>> portVif;
 
     /**
      * @return Port Vif which segment is associated with.
-     * 
      */
     public Output<List<WorkloadNetworkSegmentPortVifResponse>> getPortVif() {
         return this.portVif;
     }
     /**
      * The provisioning state
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * NSX revision number.
-     * 
      */
     @Export(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
     /**
      * @return NSX revision number.
-     * 
      */
     public Output</* @Nullable */ Double> getRevision() {
         return this.revision;
     }
     /**
      * Segment status.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return Segment status.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * Subnet which to connect segment to.
-     * 
      */
     @Export(name="subnet", type=WorkloadNetworkSegmentSubnetResponse.class, parameters={})
     private Output</* @Nullable */ WorkloadNetworkSegmentSubnetResponse> subnet;
 
     /**
      * @return Subnet which to connect segment to.
-     * 
      */
     public Output</* @Nullable */ WorkloadNetworkSegmentSubnetResponse> getSubnet() {
         return this.subnet;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

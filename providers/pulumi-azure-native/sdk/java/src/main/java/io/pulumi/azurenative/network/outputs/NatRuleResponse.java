@@ -14,58 +14,47 @@ import javax.annotation.Nullable;
 public final class NatRuleResponse {
     /**
      * Description of the rule.
-     * 
      */
     private final @Nullable String description;
     /**
      * List of destination IP addresses or Service Tags.
-     * 
      */
     private final @Nullable List<String> destinationAddresses;
     /**
      * List of destination ports.
-     * 
      */
     private final @Nullable List<String> destinationPorts;
     /**
      * Array of FirewallPolicyRuleNetworkProtocols.
-     * 
      */
     private final @Nullable List<String> ipProtocols;
     /**
      * Name of the rule.
-     * 
      */
     private final @Nullable String name;
     /**
      * Rule Type.
      * Expected value is 'NatRule'.
-     * 
      */
     private final String ruleType;
     /**
      * List of source IP addresses for this rule.
-     * 
      */
     private final @Nullable List<String> sourceAddresses;
     /**
      * List of source IpGroups for this rule.
-     * 
      */
     private final @Nullable List<String> sourceIpGroups;
     /**
      * The translated address for this NAT rule.
-     * 
      */
     private final @Nullable String translatedAddress;
     /**
      * The translated FQDN for this NAT rule.
-     * 
      */
     private final @Nullable String translatedFqdn;
     /**
      * The translated port for this NAT rule.
-     * 
      */
     private final @Nullable String translatedPort;
 
@@ -97,35 +86,30 @@ public final class NatRuleResponse {
 
     /**
      * Description of the rule.
-     * 
     */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or Service Tags.
-     * 
     */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of destination ports.
-     * 
     */
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Array of FirewallPolicyRuleNetworkProtocols.
-     * 
     */
     public List<String> getIpProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }
     /**
      * Name of the rule.
-     * 
     */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
@@ -133,42 +117,36 @@ public final class NatRuleResponse {
     /**
      * Rule Type.
      * Expected value is 'NatRule'.
-     * 
     */
     public String getRuleType() {
         return this.ruleType;
     }
     /**
      * List of source IP addresses for this rule.
-     * 
     */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
-     * 
     */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
     /**
      * The translated address for this NAT rule.
-     * 
     */
     public Optional<String> getTranslatedAddress() {
         return Optional.ofNullable(this.translatedAddress);
     }
     /**
      * The translated FQDN for this NAT rule.
-     * 
     */
     public Optional<String> getTranslatedFqdn() {
         return Optional.ofNullable(this.translatedFqdn);
     }
     /**
      * The translated port for this NAT rule.
-     * 
     */
     public Optional<String> getTranslatedPort() {
         return Optional.ofNullable(this.translatedPort);

@@ -13,12 +13,10 @@ public final class WebAnonymousAuthenticationResponse {
     /**
      * Type of authentication used to connect to the web table source.
      * Expected value is 'Anonymous'.
-     * 
      */
     private final String authenticationType;
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
-     * 
      */
     private final Object url;
 
@@ -33,14 +31,12 @@ public final class WebAnonymousAuthenticationResponse {
     /**
      * Type of authentication used to connect to the web table source.
      * Expected value is 'Anonymous'.
-     * 
     */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
-     * 
     */
     public Object getUrl() {
         return this.url;

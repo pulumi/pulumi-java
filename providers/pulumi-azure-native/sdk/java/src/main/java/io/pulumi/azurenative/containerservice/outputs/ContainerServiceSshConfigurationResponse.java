@@ -12,7 +12,6 @@ import java.util.Objects;
 public final class ContainerServiceSshConfigurationResponse {
     /**
      * The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
-     * 
      */
     private final List<ContainerServiceSshPublicKeyResponse> publicKeys;
 
@@ -23,7 +22,6 @@ public final class ContainerServiceSshConfigurationResponse {
 
     /**
      * The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
-     * 
     */
     public List<ContainerServiceSshPublicKeyResponse> getPublicKeys() {
         return this.publicKeys;

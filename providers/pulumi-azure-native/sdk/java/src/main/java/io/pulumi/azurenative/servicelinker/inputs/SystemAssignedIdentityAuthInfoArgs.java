@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The authentication info when authType is systemAssignedIdentity
- * 
  */
 public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
     /**
      * The authentication type.
      * Expected value is 'systemAssignedIdentity'.
-     * 
      */
     @Import(name="authType", required=true)
       private final Output<String> authType;

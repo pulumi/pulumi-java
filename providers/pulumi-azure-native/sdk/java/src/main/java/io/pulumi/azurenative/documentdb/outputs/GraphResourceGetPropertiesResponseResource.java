@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class GraphResourceGetPropertiesResponseResource {
     /**
      * Name of the Cosmos DB Graph
-     * 
      */
     private final String id;
 
@@ -22,7 +21,6 @@ public final class GraphResourceGetPropertiesResponseResource {
 
     /**
      * Name of the Cosmos DB Graph
-     * 
     */
     public String getId() {
         return this.id;

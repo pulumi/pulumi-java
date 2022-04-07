@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * Gets or sets the disk backing type.
-     * 
      */
     @EnumType
     public enum DiskType {

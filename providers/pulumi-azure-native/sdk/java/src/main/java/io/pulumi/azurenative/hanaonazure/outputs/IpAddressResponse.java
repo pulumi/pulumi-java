@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class IpAddressResponse {
     /**
      * Specifies the IP address of the network interface.
-     * 
      */
     private final @Nullable String ipAddress;
 
@@ -24,7 +23,6 @@ public final class IpAddressResponse {
 
     /**
      * Specifies the IP address of the network interface.
-     * 
     */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);

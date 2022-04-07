@@ -18,92 +18,74 @@ import javax.annotation.Nullable;
 public final class GetServerResult {
     /**
      * Administrator username for the server. Once created it cannot be changed.
-     * 
      */
     private final @Nullable String administratorLogin;
     /**
      * The Azure Active Directory identity of the server.
-     * 
      */
     private final @Nullable ServerExternalAdministratorResponse administrators;
     /**
      * The fully qualified domain name of the server.
-     * 
      */
     private final String fullyQualifiedDomainName;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * The Azure Active Directory identity of the server.
-     * 
      */
     private final @Nullable ResourceIdentityResponse identity;
     /**
      * A CMK URI of the key to use for encryption.
-     * 
      */
     private final @Nullable String keyId;
     /**
      * Kind of sql server. This is metadata used for the Azure portal experience.
-     * 
      */
     private final String kind;
     /**
      * Resource location.
-     * 
      */
     private final String location;
     /**
      * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
-     * 
      */
     private final @Nullable String minimalTlsVersion;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
      * The resource id of a user assigned identity to be used by default.
-     * 
      */
     private final @Nullable String primaryUserAssignedIdentityId;
     /**
      * List of private endpoint connections on a server
-     * 
      */
     private final List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
      * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
      * The state of the server.
-     * 
      */
     private final String state;
     /**
      * Resource tags.
-     * 
      */
     private final @Nullable Map<String,String> tags;
     /**
      * Resource type.
-     * 
      */
     private final String type;
     /**
      * The version of the server.
-     * 
      */
     private final @Nullable String version;
     /**
      * Whether or not existing server has a workspace created and if it allows connection from workspace
-     * 
      */
     private final String workspaceFeature;
 
@@ -149,126 +131,108 @@ public final class GetServerResult {
 
     /**
      * Administrator username for the server. Once created it cannot be changed.
-     * 
     */
     public Optional<String> getAdministratorLogin() {
         return Optional.ofNullable(this.administratorLogin);
     }
     /**
      * The Azure Active Directory identity of the server.
-     * 
     */
     public Optional<ServerExternalAdministratorResponse> getAdministrators() {
         return Optional.ofNullable(this.administrators);
     }
     /**
      * The fully qualified domain name of the server.
-     * 
     */
     public String getFullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * The Azure Active Directory identity of the server.
-     * 
     */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * A CMK URI of the key to use for encryption.
-     * 
     */
     public Optional<String> getKeyId() {
         return Optional.ofNullable(this.keyId);
     }
     /**
      * Kind of sql server. This is metadata used for the Azure portal experience.
-     * 
     */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location.
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
-     * 
     */
     public Optional<String> getMinimalTlsVersion() {
         return Optional.ofNullable(this.minimalTlsVersion);
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * The resource id of a user assigned identity to be used by default.
-     * 
     */
     public Optional<String> getPrimaryUserAssignedIdentityId() {
         return Optional.ofNullable(this.primaryUserAssignedIdentityId);
     }
     /**
      * List of private endpoint connections on a server
-     * 
     */
     public List<ServerPrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
-     * 
     */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The state of the server.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Resource tags.
-     * 
     */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
-     * 
     */
     public String getType() {
         return this.type;
     }
     /**
      * The version of the server.
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
     /**
      * Whether or not existing server has a workspace created and if it allows connection from workspace
-     * 
     */
     public String getWorkspaceFeature() {
         return this.workspaceFeature;

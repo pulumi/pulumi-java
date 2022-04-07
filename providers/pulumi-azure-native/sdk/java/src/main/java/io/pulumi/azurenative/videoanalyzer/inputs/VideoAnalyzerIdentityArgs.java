@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The managed identity for the Video Analyzer resource.
- * 
  */
 public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
 
     /**
      * The identity type.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -33,7 +31,6 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
 
     /**
      * The User Assigned Managed Identities.
-     * 
      */
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;

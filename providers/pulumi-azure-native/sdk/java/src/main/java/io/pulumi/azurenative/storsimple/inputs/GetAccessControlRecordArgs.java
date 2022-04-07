@@ -14,7 +14,6 @@ public final class GetAccessControlRecordArgs extends io.pulumi.resources.Invoke
 
     /**
      * Name of access control record to be fetched.
-     * 
      */
     @Import(name="accessControlRecordName", required=true)
       private final String accessControlRecordName;
@@ -25,7 +24,6 @@ public final class GetAccessControlRecordArgs extends io.pulumi.resources.Invoke
 
     /**
      * The manager name
-     * 
      */
     @Import(name="managerName", required=true)
       private final String managerName;
@@ -36,7 +34,6 @@ public final class GetAccessControlRecordArgs extends io.pulumi.resources.Invoke
 
     /**
      * The resource group name
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

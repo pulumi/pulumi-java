@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class ListKustoPoolFollowerDatabasesResult {
     /**
      * The list of follower database result.
-     * 
      */
     private final @Nullable List<FollowerDatabaseDefinitionResponse> value;
 
@@ -24,7 +23,6 @@ public final class ListKustoPoolFollowerDatabasesResult {
 
     /**
      * The list of follower database result.
-     * 
     */
     public List<FollowerDatabaseDefinitionResponse> getValue() {
         return this.value == null ? List.of() : this.value;

@@ -15,7 +15,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Number of applied deletes
-     * 
      */
     @Import(name="cdcDeleteCounter", required=true)
       private final String cdcDeleteCounter;
@@ -26,7 +25,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Number of applied inserts
-     * 
      */
     @Import(name="cdcInsertCounter", required=true)
       private final String cdcInsertCounter;
@@ -37,7 +35,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Number of applied updates
-     * 
      */
     @Import(name="cdcUpdateCounter", required=true)
       private final String cdcUpdateCounter;
@@ -48,7 +45,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Number of data errors occurred
-     * 
      */
     @Import(name="dataErrorsCounter", required=true)
       private final Double dataErrorsCounter;
@@ -59,7 +55,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Name of the database
-     * 
      */
     @Import(name="databaseName", required=true)
       private final String databaseName;
@@ -70,7 +65,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Full load end time
-     * 
      */
     @Import(name="fullLoadEndedOn", required=true)
       private final String fullLoadEndedOn;
@@ -81,7 +75,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Estimate to finish full load
-     * 
      */
     @Import(name="fullLoadEstFinishTime", required=true)
       private final String fullLoadEstFinishTime;
@@ -92,7 +85,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Full load start time
-     * 
      */
     @Import(name="fullLoadStartedOn", required=true)
       private final String fullLoadStartedOn;
@@ -103,7 +95,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Number of rows applied in full load
-     * 
      */
     @Import(name="fullLoadTotalRows", required=true)
       private final Double fullLoadTotalRows;
@@ -114,7 +105,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Result identifier
-     * 
      */
     @Import(name="id", required=true)
       private final String id;
@@ -125,7 +115,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Last modified time on target
-     * 
      */
     @Import(name="lastModifiedTime", required=true)
       private final String lastModifiedTime;
@@ -137,7 +126,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
     /**
      * Result type
      * Expected value is 'TableLevelOutput'.
-     * 
      */
     @Import(name="resultType", required=true)
       private final String resultType;
@@ -148,7 +136,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Current state of the table migration
-     * 
      */
     @Import(name="state", required=true)
       private final String state;
@@ -159,7 +146,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Name of the table
-     * 
      */
     @Import(name="tableName", required=true)
       private final String tableName;
@@ -170,7 +156,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse e
 
     /**
      * Total number of applied changes
-     * 
      */
     @Import(name="totalChangesApplied", required=true)
       private final Double totalChangesApplied;

@@ -18,7 +18,100 @@ import javax.annotation.Nullable;
  * Certificate resource payload.
  * API Version: 2020-07-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Certificates_CreateOrUpdate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var certificate = new AzureNative.AppPlatform.Certificate("certificate", new AzureNative.AppPlatform.CertificateArgs
+ *         {
+ *             CertificateName = "mycertificate",
+ *             Properties = new AzureNative.AppPlatform.Inputs.CertificatePropertiesArgs
+ *             {
+ *                 CertVersion = "08a219d06d874795a96db47e06fbb01e",
+ *                 KeyVaultCertName = "mycert",
+ *                 VaultUri = "https://myvault.vault.azure.net",
+ *             },
+ *             ResourceGroupName = "myResourceGroup",
+ *             ServiceName = "myservice",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := appplatform.NewCertificate(ctx, "certificate", &appplatform.CertificateArgs{
+ * 			CertificateName: pulumi.String("mycertificate"),
+ * 			Properties: &appplatform.CertificatePropertiesArgs{
+ * 				CertVersion:      pulumi.String("08a219d06d874795a96db47e06fbb01e"),
+ * 				KeyVaultCertName: pulumi.String("mycert"),
+ * 				VaultUri:         pulumi.String("https://myvault.vault.azure.net"),
+ * 			},
+ * 			ResourceGroupName: pulumi.String("myResourceGroup"),
+ * 			ServiceName:       pulumi.String("myservice"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const certificate = new azure_native.appplatform.Certificate("certificate", {
+ *     certificateName: "mycertificate",
+ *     properties: {
+ *         certVersion: "08a219d06d874795a96db47e06fbb01e",
+ *         keyVaultCertName: "mycert",
+ *         vaultUri: "https://myvault.vault.azure.net",
+ *     },
+ *     resourceGroupName: "myResourceGroup",
+ *     serviceName: "myservice",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * certificate = azure_native.appplatform.Certificate("certificate",
+ *     certificate_name="mycertificate",
+ *     properties=azure_native.appplatform.CertificatePropertiesArgs(
+ *         cert_version="08a219d06d874795a96db47e06fbb01e",
+ *         key_vault_cert_name="mycert",
+ *         vault_uri="https://myvault.vault.azure.net",
+ *     ),
+ *     resource_group_name="myResourceGroup",
+ *     service_name="myservice")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,42 +126,36 @@ import javax.annotation.Nullable;
 public class Certificate extends io.pulumi.resources.CustomResource {
     /**
      * The name of the resource.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Properties of the certificate resource payload.
-     * 
      */
     @Export(name="properties", type=CertificatePropertiesResponse.class, parameters={})
     private Output<CertificatePropertiesResponse> properties;
 
     /**
      * @return Properties of the certificate resource payload.
-     * 
      */
     public Output<CertificatePropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource.
-     * 
      */
     public Output<String> getType() {
         return this.type;

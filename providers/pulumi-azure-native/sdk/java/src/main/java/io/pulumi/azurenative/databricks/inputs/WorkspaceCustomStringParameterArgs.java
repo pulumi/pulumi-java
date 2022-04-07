@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * The Value.
- * 
  */
 public final class WorkspaceCustomStringParameterArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -19,7 +18,6 @@ public final class WorkspaceCustomStringParameterArgs extends io.pulumi.resource
 
     /**
      * The value which should be used for this field.
-     * 
      */
     @Import(name="value", required=true)
       private final Output<String> value;

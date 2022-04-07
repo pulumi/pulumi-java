@@ -13,12 +13,10 @@ public final class DeliveryRuleRequestHeaderConditionResponse {
     /**
      * The name of the condition for the delivery rule.
      * Expected value is 'RequestHeader'.
-     * 
      */
     private final String name;
     /**
      * Defines the parameters for the condition.
-     * 
      */
     private final RequestHeaderMatchConditionParametersResponse parameters;
 
@@ -33,14 +31,12 @@ public final class DeliveryRuleRequestHeaderConditionResponse {
     /**
      * The name of the condition for the delivery rule.
      * Expected value is 'RequestHeader'.
-     * 
     */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
-     * 
     */
     public RequestHeaderMatchConditionParametersResponse getParameters() {
         return this.parameters;

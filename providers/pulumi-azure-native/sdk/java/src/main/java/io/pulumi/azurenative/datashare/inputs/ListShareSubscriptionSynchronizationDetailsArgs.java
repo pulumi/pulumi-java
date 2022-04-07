@@ -16,7 +16,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
 
     /**
      * The name of the share account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -27,7 +26,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
 
     /**
      * Filters the results using OData syntax.
-     * 
      */
     @Import(name="filter")
       private final @Nullable String filter;
@@ -38,7 +36,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
 
     /**
      * Sorts the results using OData syntax.
-     * 
      */
     @Import(name="orderby")
       private final @Nullable String orderby;
@@ -49,7 +46,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -60,7 +56,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
 
     /**
      * The name of the share subscription.
-     * 
      */
     @Import(name="shareSubscriptionName", required=true)
       private final String shareSubscriptionName;
@@ -71,7 +66,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
 
     /**
      * Continuation token
-     * 
      */
     @Import(name="skipToken")
       private final @Nullable String skipToken;
@@ -82,7 +76,6 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends io.pu
 
     /**
      * Synchronization id
-     * 
      */
     @Import(name="synchronizationId", required=true)
       private final String synchronizationId;

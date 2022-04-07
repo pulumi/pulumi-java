@@ -21,7 +21,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Whether do auto analyze.
-     * 
      */
     @Import(name="autoAnalyze", required=true)
       private final Output<Boolean> autoAnalyze;
@@ -32,7 +31,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Description of the prediction.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
@@ -43,7 +41,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Display name of the prediction.
-     * 
      */
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
@@ -54,7 +51,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The prediction grades.
-     * 
      */
     @Import(name="grades")
       private final @Nullable Output<List<PredictionGradesArgs>> grades;
@@ -65,7 +61,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the hub.
-     * 
      */
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
@@ -76,7 +71,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Interaction types involved in the prediction.
-     * 
      */
     @Import(name="involvedInteractionTypes")
       private final @Nullable Output<List<String>> involvedInteractionTypes;
@@ -87,7 +81,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * KPI types involved in the prediction.
-     * 
      */
     @Import(name="involvedKpiTypes")
       private final @Nullable Output<List<String>> involvedKpiTypes;
@@ -98,7 +91,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Relationships involved in the prediction.
-     * 
      */
     @Import(name="involvedRelationships")
       private final @Nullable Output<List<String>> involvedRelationships;
@@ -109,7 +101,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Definition of the link mapping of prediction.
-     * 
      */
     @Import(name="mappings", required=true)
       private final Output<PredictionMappingsArgs> mappings;
@@ -120,7 +111,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Negative outcome expression.
-     * 
      */
     @Import(name="negativeOutcomeExpression", required=true)
       private final Output<String> negativeOutcomeExpression;
@@ -131,7 +121,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Positive outcome expression.
-     * 
      */
     @Import(name="positiveOutcomeExpression", required=true)
       private final Output<String> positiveOutcomeExpression;
@@ -142,7 +131,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the prediction.
-     * 
      */
     @Import(name="predictionName")
       private final @Nullable Output<String> predictionName;
@@ -153,7 +141,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Primary profile type.
-     * 
      */
     @Import(name="primaryProfileType", required=true)
       private final Output<String> primaryProfileType;
@@ -164,7 +151,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -175,7 +161,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Scope expression.
-     * 
      */
     @Import(name="scopeExpression", required=true)
       private final Output<String> scopeExpression;
@@ -186,7 +171,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Score label.
-     * 
      */
     @Import(name="scoreLabel", required=true)
       private final Output<String> scoreLabel;

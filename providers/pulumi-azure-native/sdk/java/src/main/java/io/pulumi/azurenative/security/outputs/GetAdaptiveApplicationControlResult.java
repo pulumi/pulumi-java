@@ -18,49 +18,40 @@ import javax.annotation.Nullable;
 public final class GetAdaptiveApplicationControlResult {
     /**
      * The configuration status of the machines group or machine or rule
-     * 
      */
     private final String configurationStatus;
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
      */
     private final @Nullable String enforcementMode;
     /**
      * Resource Id
-     * 
      */
     private final String id;
     private final List<AdaptiveApplicationControlIssueSummaryResponse> issues;
     /**
      * Location where the resource is stored
-     * 
      */
     private final String location;
     /**
      * Resource name
-     * 
      */
     private final String name;
     private final @Nullable List<PathRecommendationResponse> pathRecommendations;
     /**
      * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-     * 
      */
     private final @Nullable ProtectionModeResponse protectionMode;
     /**
      * The initial recommendation status of the machine group or machine
-     * 
      */
     private final String recommendationStatus;
     /**
      * The source type of the machine group
-     * 
      */
     private final String sourceSystem;
     /**
      * Resource type
-     * 
      */
     private final String type;
     private final @Nullable List<VmRecommendationResponse> vmRecommendations;
@@ -95,21 +86,18 @@ public final class GetAdaptiveApplicationControlResult {
 
     /**
      * The configuration status of the machines group or machine or rule
-     * 
     */
     public String getConfigurationStatus() {
         return this.configurationStatus;
     }
     /**
      * The application control policy enforcement/protection mode of the machine group
-     * 
     */
     public Optional<String> getEnforcementMode() {
         return Optional.ofNullable(this.enforcementMode);
     }
     /**
      * Resource Id
-     * 
     */
     public String getId() {
         return this.id;
@@ -119,14 +107,12 @@ public final class GetAdaptiveApplicationControlResult {
     }
     /**
      * Location where the resource is stored
-     * 
     */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
-     * 
     */
     public String getName() {
         return this.name;
@@ -136,28 +122,24 @@ public final class GetAdaptiveApplicationControlResult {
     }
     /**
      * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-     * 
     */
     public Optional<ProtectionModeResponse> getProtectionMode() {
         return Optional.ofNullable(this.protectionMode);
     }
     /**
      * The initial recommendation status of the machine group or machine
-     * 
     */
     public String getRecommendationStatus() {
         return this.recommendationStatus;
     }
     /**
      * The source type of the machine group
-     * 
     */
     public String getSourceSystem() {
         return this.sourceSystem;
     }
     /**
      * Resource type
-     * 
     */
     public String getType() {
         return this.type;

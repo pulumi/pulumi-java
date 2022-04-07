@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The Relationship Cardinality.
-     * 
      */
     @EnumType
     public enum CardinalityTypes {

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 public final class GetSubscriptionResult {
     /**
      * Determines whether tracing is enabled
-     * 
      */
     private final @Nullable Boolean allowTracing;
     /**
@@ -24,7 +23,6 @@ public final class GetSubscriptionResult {
     private final String createdDate;
     /**
      * The name of the subscription, or null if the subscription has no name.
-     * 
      */
     private final @Nullable String displayName;
     /**
@@ -39,12 +37,10 @@ public final class GetSubscriptionResult {
     private final @Nullable String expirationDate;
     /**
      * Resource ID.
-     * 
      */
     private final String id;
     /**
      * Resource name.
-     * 
      */
     private final String name;
     /**
@@ -54,22 +50,18 @@ public final class GetSubscriptionResult {
     private final @Nullable String notificationDate;
     /**
      * The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
-     * 
      */
     private final @Nullable String ownerId;
     /**
      * Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
      */
     private final @Nullable String primaryKey;
     /**
      * Scope like /products/{productId} or /apis or /apis/{apiId}.
-     * 
      */
     private final String scope;
     /**
      * Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
      */
     private final @Nullable String secondaryKey;
     /**
@@ -79,17 +71,14 @@ public final class GetSubscriptionResult {
     private final @Nullable String startDate;
     /**
      * Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
-     * 
      */
     private final String state;
     /**
      * Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
-     * 
      */
     private final @Nullable String stateComment;
     /**
      * Resource type for API Management resource.
-     * 
      */
     private final String type;
 
@@ -131,7 +120,6 @@ public final class GetSubscriptionResult {
 
     /**
      * Determines whether tracing is enabled
-     * 
     */
     public Optional<Boolean> getAllowTracing() {
         return Optional.ofNullable(this.allowTracing);
@@ -145,7 +133,6 @@ public final class GetSubscriptionResult {
     }
     /**
      * The name of the subscription, or null if the subscription has no name.
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
@@ -166,14 +153,12 @@ public final class GetSubscriptionResult {
     }
     /**
      * Resource ID.
-     * 
     */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
-     * 
     */
     public String getName() {
         return this.name;
@@ -187,28 +172,24 @@ public final class GetSubscriptionResult {
     }
     /**
      * The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
-     * 
     */
     public Optional<String> getOwnerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
     */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Scope like /products/{productId} or /apis or /apis/{apiId}.
-     * 
     */
     public String getScope() {
         return this.scope;
     }
     /**
      * Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
-     * 
     */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
@@ -222,21 +203,18 @@ public final class GetSubscriptionResult {
     }
     /**
      * Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
-     * 
     */
     public String getState() {
         return this.state;
     }
     /**
      * Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
-     * 
     */
     public Optional<String> getStateComment() {
         return Optional.ofNullable(this.stateComment);
     }
     /**
      * Resource type for API Management resource.
-     * 
     */
     public String getType() {
         return this.type;

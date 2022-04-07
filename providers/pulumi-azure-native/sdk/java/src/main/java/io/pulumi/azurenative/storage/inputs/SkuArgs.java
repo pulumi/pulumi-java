@@ -13,7 +13,6 @@ import java.util.Objects;
 
 /**
  * The SKU of the storage account.
- * 
  */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;

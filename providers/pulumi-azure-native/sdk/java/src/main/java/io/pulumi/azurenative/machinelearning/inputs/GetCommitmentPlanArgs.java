@@ -14,7 +14,6 @@ public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The Azure ML commitment plan name.
-     * 
      */
     @Import(name="commitmentPlanName", required=true)
       private final String commitmentPlanName;
@@ -25,7 +24,6 @@ public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs 
 
     /**
      * The resource group name.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

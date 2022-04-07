@@ -14,7 +14,6 @@ public final class ListManagedClusterAccessProfileArgs extends io.pulumi.resourc
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class ListManagedClusterAccessProfileArgs extends io.pulumi.resourc
 
     /**
      * The name of the managed cluster resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;
@@ -36,7 +34,6 @@ public final class ListManagedClusterAccessProfileArgs extends io.pulumi.resourc
 
     /**
      * The name of the role for managed cluster accessProfile resource.
-     * 
      */
     @Import(name="roleName", required=true)
       private final String roleName;

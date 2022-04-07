@@ -15,7 +15,6 @@ import java.util.StringJoiner;
      * STATIC - Static route set on the app only
      * 
      * These values will be used for syncing an app's routes with those from a Virtual Network.
-     * 
      */
     @EnumType
     public enum RouteType {

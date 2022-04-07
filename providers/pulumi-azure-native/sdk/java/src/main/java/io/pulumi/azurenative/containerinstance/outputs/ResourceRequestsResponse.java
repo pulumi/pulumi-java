@@ -14,17 +14,14 @@ import javax.annotation.Nullable;
 public final class ResourceRequestsResponse {
     /**
      * The CPU request of this container instance.
-     * 
      */
     private final Double cpu;
     /**
      * The GPU request of this container instance.
-     * 
      */
     private final @Nullable GpuResourceResponse gpu;
     /**
      * The memory request in GB of this container instance.
-     * 
      */
     private final Double memoryInGB;
 
@@ -40,21 +37,18 @@ public final class ResourceRequestsResponse {
 
     /**
      * The CPU request of this container instance.
-     * 
     */
     public Double getCpu() {
         return this.cpu;
     }
     /**
      * The GPU request of this container instance.
-     * 
     */
     public Optional<GpuResourceResponse> getGpu() {
         return Optional.ofNullable(this.gpu);
     }
     /**
      * The memory request in GB of this container instance.
-     * 
     */
     public Double getMemoryInGB() {
         return this.memoryInGB;

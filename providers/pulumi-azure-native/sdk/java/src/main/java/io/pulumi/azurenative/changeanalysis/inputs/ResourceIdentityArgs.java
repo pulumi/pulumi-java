@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The identity block returned by ARM resource that supports managed identity.
- * 
  */
 public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.
-     * 
      */
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityTypes>> type;

@@ -15,7 +15,6 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
 
     /**
      * The friendly name of user assigned identity.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -26,7 +25,6 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
 
     /**
      * The principal id of user assigned identity.
-     * 
      */
     @Import(name="principalId", required=true)
       private final Output<String> principalId;

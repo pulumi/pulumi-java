@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * Credential details of the shares in account.
- * 
  */
 public final class ShareCredentialDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -19,7 +18,6 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Password for the share.
-     * 
      */
     @Import(name="password", required=true)
       private final String password;
@@ -30,7 +28,6 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Name of the share.
-     * 
      */
     @Import(name="shareName", required=true)
       private final String shareName;
@@ -41,7 +38,6 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Type of the share.
-     * 
      */
     @Import(name="shareType", required=true)
       private final String shareType;
@@ -52,7 +48,6 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
 
     /**
      * Access protocols supported on the device.
-     * 
      */
     @Import(name="supportedAccessProtocols", required=true)
       private final List<String> supportedAccessProtocols;
@@ -63,7 +58,6 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
 
     /**
      * User name for the share.
-     * 
      */
     @Import(name="userName", required=true)
       private final String userName;

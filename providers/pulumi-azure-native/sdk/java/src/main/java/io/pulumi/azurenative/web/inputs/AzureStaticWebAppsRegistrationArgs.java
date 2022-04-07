@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The configuration settings of the registration for the Azure Static Web Apps provider
- * 
  */
 public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
 
     /**
      * The Client ID of the app used for login.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;

@@ -13,22 +13,18 @@ import javax.annotation.Nullable;
 public final class SapTablePartitionSettingsResponse {
     /**
      * The maximum value of partitions the table will be split into. Type: integer (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object maxPartitionsNumber;
     /**
      * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object partitionColumnName;
     /**
      * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object partitionLowerBound;
     /**
      * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
      */
     private final @Nullable Object partitionUpperBound;
 
@@ -46,28 +42,24 @@ public final class SapTablePartitionSettingsResponse {
 
     /**
      * The maximum value of partitions the table will be split into. Type: integer (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getMaxPartitionsNumber() {
         return Optional.ofNullable(this.maxPartitionsNumber);
     }
     /**
      * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getPartitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
     /**
      * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getPartitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
     /**
      * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
     */
     public Optional<Object> getPartitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);

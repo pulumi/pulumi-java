@@ -20,7 +20,92 @@ import javax.annotation.Nullable;
  * The integration account.
  * API Version: 2019-05-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create or update an integration account
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var integrationAccount = new AzureNative.Logic.IntegrationAccount("integrationAccount", new AzureNative.Logic.IntegrationAccountArgs
+ *         {
+ *             IntegrationAccountName = "testIntegrationAccount",
+ *             Location = "westus",
+ *             ResourceGroupName = "testResourceGroup",
+ *             Sku = new AzureNative.Logic.Inputs.IntegrationAccountSkuArgs
+ *             {
+ *                 Name = "Standard",
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := logic.NewIntegrationAccount(ctx, "integrationAccount", &logic.IntegrationAccountArgs{
+ * 			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
+ * 			Location:               pulumi.String("westus"),
+ * 			ResourceGroupName:      pulumi.String("testResourceGroup"),
+ * 			Sku: &logic.IntegrationAccountSkuArgs{
+ * 				Name: pulumi.String("Standard"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const integrationAccount = new azure_native.logic.IntegrationAccount("integrationAccount", {
+ *     integrationAccountName: "testIntegrationAccount",
+ *     location: "westus",
+ *     resourceGroupName: "testResourceGroup",
+ *     sku: {
+ *         name: "Standard",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * integration_account = azure_native.logic.IntegrationAccount("integrationAccount",
+ *     integration_account_name="testIntegrationAccount",
+ *     location="westus",
+ *     resource_group_name="testResourceGroup",
+ *     sku=azure_native.logic.IntegrationAccountSkuArgs(
+ *         name="Standard",
+ *     ))
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -35,98 +120,84 @@ import javax.annotation.Nullable;
 public class IntegrationAccount extends io.pulumi.resources.CustomResource {
     /**
      * The integration service environment.
-     * 
      */
     @Export(name="integrationServiceEnvironment", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment;
 
     /**
      * @return The integration service environment.
-     * 
      */
     public Output</* @Nullable */ ResourceReferenceResponse> getIntegrationServiceEnvironment() {
         return this.integrationServiceEnvironment;
     }
     /**
      * The resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
      * @return The resource location.
-     * 
      */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
     /**
      * Gets the resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Gets the resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * The sku.
-     * 
      */
     @Export(name="sku", type=IntegrationAccountSkuResponse.class, parameters={})
     private Output</* @Nullable */ IntegrationAccountSkuResponse> sku;
 
     /**
      * @return The sku.
-     * 
      */
     public Output</* @Nullable */ IntegrationAccountSkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The workflow state.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
      * @return The workflow state.
-     * 
      */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
     /**
      * The resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return The resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Gets the resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Gets the resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;

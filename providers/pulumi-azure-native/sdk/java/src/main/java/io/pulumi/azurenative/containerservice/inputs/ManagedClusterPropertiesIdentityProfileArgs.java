@@ -16,7 +16,6 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
 
     /**
      * The client id of the user assigned identity.
-     * 
      */
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
@@ -27,7 +26,6 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
 
     /**
      * The object id of the user assigned identity.
-     * 
      */
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
@@ -38,7 +36,6 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends io.pulumi
 
     /**
      * The resource id of the user assigned identity.
-     * 
      */
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;

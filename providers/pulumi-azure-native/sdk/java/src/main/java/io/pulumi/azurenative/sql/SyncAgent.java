@@ -18,7 +18,157 @@ import javax.annotation.Nullable;
  * An Azure SQL Database sync agent.
  * API Version: 2020-11-01-preview.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### Create a new sync agent
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var syncAgent = new AzureNative.Sql.SyncAgent("syncAgent", new AzureNative.Sql.SyncAgentArgs
+ *         {
+ *             ResourceGroupName = "syncagentcrud-65440",
+ *             ServerName = "syncagentcrud-8475",
+ *             SyncAgentName = "syncagentcrud-3187",
+ *             SyncDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewSyncAgent(ctx, "syncAgent", &sql.SyncAgentArgs{
+ * 			ResourceGroupName: pulumi.String("syncagentcrud-65440"),
+ * 			ServerName:        pulumi.String("syncagentcrud-8475"),
+ * 			SyncAgentName:     pulumi.String("syncagentcrud-3187"),
+ * 			SyncDatabaseId:    pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const syncAgent = new azure_native.sql.SyncAgent("syncAgent", {
+ *     resourceGroupName: "syncagentcrud-65440",
+ *     serverName: "syncagentcrud-8475",
+ *     syncAgentName: "syncagentcrud-3187",
+ *     syncDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sync_agent = azure_native.sql.SyncAgent("syncAgent",
+ *     resource_group_name="syncagentcrud-65440",
+ *     server_name="syncagentcrud-8475",
+ *     sync_agent_name="syncagentcrud-3187",
+ *     sync_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### Update a sync agent
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var syncAgent = new AzureNative.Sql.SyncAgent("syncAgent", new AzureNative.Sql.SyncAgentArgs
+ *         {
+ *             ResourceGroupName = "syncagentcrud-65440",
+ *             ServerName = "syncagentcrud-8475",
+ *             SyncAgentName = "syncagentcrud-3187",
+ *             SyncDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := sql.NewSyncAgent(ctx, "syncAgent", &sql.SyncAgentArgs{
+ * 			ResourceGroupName: pulumi.String("syncagentcrud-65440"),
+ * 			ServerName:        pulumi.String("syncagentcrud-8475"),
+ * 			SyncAgentName:     pulumi.String("syncagentcrud-3187"),
+ * 			SyncDatabaseId:    pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const syncAgent = new azure_native.sql.SyncAgent("syncAgent", {
+ *     resourceGroupName: "syncagentcrud-65440",
+ *     serverName: "syncagentcrud-8475",
+ *     syncAgentName: "syncagentcrud-3187",
+ *     syncDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * sync_agent = azure_native.sql.SyncAgent("syncAgent",
+ *     resource_group_name="syncagentcrud-65440",
+ *     server_name="syncagentcrud-8475",
+ *     sync_agent_name="syncagentcrud-3187",
+ *     sync_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -33,112 +183,96 @@ import javax.annotation.Nullable;
 public class SyncAgent extends io.pulumi.resources.CustomResource {
     /**
      * Expiration time of the sync agent version.
-     * 
      */
     @Export(name="expiryTime", type=String.class, parameters={})
     private Output<String> expiryTime;
 
     /**
      * @return Expiration time of the sync agent version.
-     * 
      */
     public Output<String> getExpiryTime() {
         return this.expiryTime;
     }
     /**
      * If the sync agent version is up to date.
-     * 
      */
     @Export(name="isUpToDate", type=Boolean.class, parameters={})
     private Output<Boolean> isUpToDate;
 
     /**
      * @return If the sync agent version is up to date.
-     * 
      */
     public Output<Boolean> getIsUpToDate() {
         return this.isUpToDate;
     }
     /**
      * Last alive time of the sync agent.
-     * 
      */
     @Export(name="lastAliveTime", type=String.class, parameters={})
     private Output<String> lastAliveTime;
 
     /**
      * @return Last alive time of the sync agent.
-     * 
      */
     public Output<String> getLastAliveTime() {
         return this.lastAliveTime;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * State of the sync agent.
-     * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
      * @return State of the sync agent.
-     * 
      */
     public Output<String> getState() {
         return this.state;
     }
     /**
      * ARM resource id of the sync database in the sync agent.
-     * 
      */
     @Export(name="syncDatabaseId", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncDatabaseId;
 
     /**
      * @return ARM resource id of the sync database in the sync agent.
-     * 
      */
     public Output</* @Nullable */ String> getSyncDatabaseId() {
         return this.syncDatabaseId;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * Version of the sync agent.
-     * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
      * @return Version of the sync agent.
-     * 
      */
     public Output<String> getVersion() {
         return this.version;

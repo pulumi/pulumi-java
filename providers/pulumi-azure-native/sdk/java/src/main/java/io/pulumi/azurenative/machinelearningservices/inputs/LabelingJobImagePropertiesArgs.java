@@ -19,7 +19,6 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
 
     /**
      * Annotation type of image labeling tasks.
-     * 
      */
     @Import(name="annotationType")
       private final @Nullable Output<Either<String,ImageAnnotationType>> annotationType;
@@ -30,7 +29,6 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
 
     /**
      * Media type of data asset.
-     * 
      */
     @Import(name="mediaType", required=true)
       private final Output<Either<String,MediaType>> mediaType;

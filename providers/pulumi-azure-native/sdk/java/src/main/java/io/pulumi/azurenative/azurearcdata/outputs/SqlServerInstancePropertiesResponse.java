@@ -13,73 +13,59 @@ import javax.annotation.Nullable;
 public final class SqlServerInstancePropertiesResponse {
     /**
      * SQL Server collation.
-     * 
      */
     private final @Nullable String collation;
     /**
      * ARM Resource id of the container resource (Azure Arc for Servers).
-     * 
      */
     private final String containerResourceId;
     /**
      * The time when the resource was created.
-     * 
      */
     private final String createTime;
     /**
      * SQL Server current version.
-     * 
      */
     private final @Nullable String currentVersion;
     /**
      * SQL Server edition.
-     * 
      */
     private final @Nullable String edition;
     /**
      * SQL Server instance name.
-     * 
      */
     private final @Nullable String instanceName;
     /**
      * SQL Server license type.
-     * 
      */
     private final @Nullable String licenseType;
     /**
      * SQL Server update level.
-     * 
      */
     private final @Nullable String patchLevel;
     /**
      * SQL Server product ID.
-     * 
      */
     private final @Nullable String productId;
     private final String provisioningState;
     /**
      * The cloud connectivity status.
-     * 
      */
     private final String status;
     /**
      * Dynamic TCP ports used by SQL Server.
-     * 
      */
     private final @Nullable String tcpDynamicPorts;
     /**
      * Static TCP ports used by SQL Server.
-     * 
      */
     private final @Nullable String tcpStaticPorts;
     /**
      * The number of logical processors used by the SQL Server instance.
-     * 
      */
     private final @Nullable String vCore;
     /**
      * SQL Server version.
-     * 
      */
     private final @Nullable String version;
 
@@ -119,63 +105,54 @@ public final class SqlServerInstancePropertiesResponse {
 
     /**
      * SQL Server collation.
-     * 
     */
     public Optional<String> getCollation() {
         return Optional.ofNullable(this.collation);
     }
     /**
      * ARM Resource id of the container resource (Azure Arc for Servers).
-     * 
     */
     public String getContainerResourceId() {
         return this.containerResourceId;
     }
     /**
      * The time when the resource was created.
-     * 
     */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * SQL Server current version.
-     * 
     */
     public Optional<String> getCurrentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
     /**
      * SQL Server edition.
-     * 
     */
     public Optional<String> getEdition() {
         return Optional.ofNullable(this.edition);
     }
     /**
      * SQL Server instance name.
-     * 
     */
     public Optional<String> getInstanceName() {
         return Optional.ofNullable(this.instanceName);
     }
     /**
      * SQL Server license type.
-     * 
     */
     public Optional<String> getLicenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * SQL Server update level.
-     * 
     */
     public Optional<String> getPatchLevel() {
         return Optional.ofNullable(this.patchLevel);
     }
     /**
      * SQL Server product ID.
-     * 
     */
     public Optional<String> getProductId() {
         return Optional.ofNullable(this.productId);
@@ -185,35 +162,30 @@ public final class SqlServerInstancePropertiesResponse {
     }
     /**
      * The cloud connectivity status.
-     * 
     */
     public String getStatus() {
         return this.status;
     }
     /**
      * Dynamic TCP ports used by SQL Server.
-     * 
     */
     public Optional<String> getTcpDynamicPorts() {
         return Optional.ofNullable(this.tcpDynamicPorts);
     }
     /**
      * Static TCP ports used by SQL Server.
-     * 
     */
     public Optional<String> getTcpStaticPorts() {
         return Optional.ofNullable(this.tcpStaticPorts);
     }
     /**
      * The number of logical processors used by the SQL Server instance.
-     * 
     */
     public Optional<String> getVCore() {
         return Optional.ofNullable(this.vCore);
     }
     /**
      * SQL Server version.
-     * 
     */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);

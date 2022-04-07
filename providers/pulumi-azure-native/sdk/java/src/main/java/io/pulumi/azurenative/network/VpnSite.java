@@ -25,7 +25,217 @@ import javax.annotation.Nullable;
  * VpnSite Resource.
  * API Version: 2020-11-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### VpnSiteCreate
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var vpnSite = new AzureNative.Network.VpnSite("vpnSite", new AzureNative.Network.VpnSiteArgs
+ *         {
+ *             AddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+ *             {
+ *                 AddressPrefixes = 
+ *                 {
+ *                     "10.0.0.0/16",
+ *                 },
+ *             },
+ *             IsSecuritySite = false,
+ *             Location = "West US",
+ *             O365Policy = new AzureNative.Network.Inputs.O365PolicyPropertiesArgs
+ *             {
+ *                 BreakOutCategories = new AzureNative.Network.Inputs.O365BreakOutCategoryPoliciesArgs
+ *                 {
+ *                     Allow = true,
+ *                     Default = false,
+ *                     Optimize = true,
+ *                 },
+ *             },
+ *             ResourceGroupName = "rg1",
+ *             Tags = 
+ *             {
+ *                 { "key1", "value1" },
+ *             },
+ *             VirtualWan = new AzureNative.Network.Inputs.SubResourceArgs
+ *             {
+ *                 Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
+ *             },
+ *             VpnSiteLinks = 
+ *             {
+ *                 new AzureNative.Network.Inputs.VpnSiteLinkArgs
+ *                 {
+ *                     BgpProperties = new AzureNative.Network.Inputs.VpnLinkBgpSettingsArgs
+ *                     {
+ *                         Asn = 1234,
+ *                         BgpPeeringAddress = "192.168.0.0",
+ *                     },
+ *                     Fqdn = "link1.vpnsite1.contoso.com",
+ *                     IpAddress = "50.50.50.56",
+ *                     LinkProperties = new AzureNative.Network.Inputs.VpnLinkProviderPropertiesArgs
+ *                     {
+ *                         LinkProviderName = "vendor1",
+ *                         LinkSpeedInMbps = 0,
+ *                     },
+ *                     Name = "vpnSiteLink1",
+ *                 },
+ *             },
+ *             VpnSiteName = "vpnSite1",
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := network.NewVpnSite(ctx, "vpnSite", &network.VpnSiteArgs{
+ * 			AddressSpace: &network.AddressSpaceArgs{
+ * 				AddressPrefixes: pulumi.StringArray{
+ * 					pulumi.String("10.0.0.0/16"),
+ * 				},
+ * 			},
+ * 			IsSecuritySite: pulumi.Bool(false),
+ * 			Location:       pulumi.String("West US"),
+ * 			O365Policy: &network.O365PolicyPropertiesArgs{
+ * 				BreakOutCategories: &network.O365BreakOutCategoryPoliciesArgs{
+ * 					Allow:    pulumi.Bool(true),
+ * 					Default:  pulumi.Bool(false),
+ * 					Optimize: pulumi.Bool(true),
+ * 				},
+ * 			},
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			Tags: pulumi.StringMap{
+ * 				"key1": pulumi.String("value1"),
+ * 			},
+ * 			VirtualWan: &network.SubResourceArgs{
+ * 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1"),
+ * 			},
+ * 			VpnSiteLinks: []network.VpnSiteLinkArgs{
+ * 				&network.VpnSiteLinkArgs{
+ * 					BgpProperties: &network.VpnLinkBgpSettingsArgs{
+ * 						Asn:               pulumi.Float64(1234),
+ * 						BgpPeeringAddress: pulumi.String("192.168.0.0"),
+ * 					},
+ * 					Fqdn:      pulumi.String("link1.vpnsite1.contoso.com"),
+ * 					IpAddress: pulumi.String("50.50.50.56"),
+ * 					LinkProperties: &network.VpnLinkProviderPropertiesArgs{
+ * 						LinkProviderName: pulumi.String("vendor1"),
+ * 						LinkSpeedInMbps:  pulumi.Int(0),
+ * 					},
+ * 					Name: pulumi.String("vpnSiteLink1"),
+ * 				},
+ * 			},
+ * 			VpnSiteName: pulumi.String("vpnSite1"),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const vpnSite = new azure_native.network.VpnSite("vpnSite", {
+ *     addressSpace: {
+ *         addressPrefixes: ["10.0.0.0/16"],
+ *     },
+ *     isSecuritySite: false,
+ *     location: "West US",
+ *     o365Policy: {
+ *         breakOutCategories: {
+ *             allow: true,
+ *             "default": false,
+ *             optimize: true,
+ *         },
+ *     },
+ *     resourceGroupName: "rg1",
+ *     tags: {
+ *         key1: "value1",
+ *     },
+ *     virtualWan: {
+ *         id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
+ *     },
+ *     vpnSiteLinks: [{
+ *         bgpProperties: {
+ *             asn: 1234,
+ *             bgpPeeringAddress: "192.168.0.0",
+ *         },
+ *         fqdn: "link1.vpnsite1.contoso.com",
+ *         ipAddress: "50.50.50.56",
+ *         linkProperties: {
+ *             linkProviderName: "vendor1",
+ *             linkSpeedInMbps: 0,
+ *         },
+ *         name: "vpnSiteLink1",
+ *     }],
+ *     vpnSiteName: "vpnSite1",
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * vpn_site = azure_native.network.VpnSite("vpnSite",
+ *     address_space=azure_native.network.AddressSpaceArgs(
+ *         address_prefixes=["10.0.0.0/16"],
+ *     ),
+ *     is_security_site=False,
+ *     location="West US",
+ *     o365_policy=azure_native.network.O365PolicyPropertiesArgs(
+ *         break_out_categories=azure_native.network.O365BreakOutCategoryPoliciesArgs(
+ *             allow=True,
+ *             default=False,
+ *             optimize=True,
+ *         ),
+ *     ),
+ *     resource_group_name="rg1",
+ *     tags={
+ *         "key1": "value1",
+ *     },
+ *     virtual_wan=azure_native.network.SubResourceArgs(
+ *         id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1",
+ *     ),
+ *     vpn_site_links=[azure_native.network.VpnSiteLinkArgs(
+ *         bgp_properties=azure_native.network.VpnLinkBgpSettingsArgs(
+ *             asn=1234,
+ *             bgp_peering_address="192.168.0.0",
+ *         ),
+ *         fqdn="link1.vpnsite1.contoso.com",
+ *         ip_address="50.50.50.56",
+ *         link_properties=azure_native.network.VpnLinkProviderPropertiesArgs(
+ *             link_provider_name="vendor1",
+ *             link_speed_in_mbps=0,
+ *         ),
+ *         name="vpnSiteLink1",
+ *     )],
+ *     vpn_site_name="vpnSite1")
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -40,210 +250,180 @@ import javax.annotation.Nullable;
 public class VpnSite extends io.pulumi.resources.CustomResource {
     /**
      * The AddressSpace that contains an array of IP address ranges.
-     * 
      */
     @Export(name="addressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> addressSpace;
 
     /**
      * @return The AddressSpace that contains an array of IP address ranges.
-     * 
      */
     public Output</* @Nullable */ AddressSpaceResponse> getAddressSpace() {
         return this.addressSpace;
     }
     /**
      * The set of bgp properties.
-     * 
      */
     @Export(name="bgpProperties", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpProperties;
 
     /**
      * @return The set of bgp properties.
-     * 
      */
     public Output</* @Nullable */ BgpSettingsResponse> getBgpProperties() {
         return this.bgpProperties;
     }
     /**
      * The device properties.
-     * 
      */
     @Export(name="deviceProperties", type=DevicePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ DevicePropertiesResponse> deviceProperties;
 
     /**
      * @return The device properties.
-     * 
      */
     public Output</* @Nullable */ DevicePropertiesResponse> getDeviceProperties() {
         return this.deviceProperties;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
      * @return A unique read-only string that changes whenever the resource is updated.
-     * 
      */
     public Output<String> getEtag() {
         return this.etag;
     }
     /**
      * The ip-address for the vpn-site.
-     * 
      */
     @Export(name="ipAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddress;
 
     /**
      * @return The ip-address for the vpn-site.
-     * 
      */
     public Output</* @Nullable */ String> getIpAddress() {
         return this.ipAddress;
     }
     /**
      * IsSecuritySite flag.
-     * 
      */
     @Export(name="isSecuritySite", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isSecuritySite;
 
     /**
      * @return IsSecuritySite flag.
-     * 
      */
     public Output</* @Nullable */ Boolean> getIsSecuritySite() {
         return this.isSecuritySite;
     }
     /**
      * Resource location.
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return Resource location.
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * Resource name.
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return Resource name.
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Office365 Policy.
-     * 
      */
     @Export(name="o365Policy", type=O365PolicyPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ O365PolicyPropertiesResponse> o365Policy;
 
     /**
      * @return Office365 Policy.
-     * 
      */
     public Output</* @Nullable */ O365PolicyPropertiesResponse> getO365Policy() {
         return this.o365Policy;
     }
     /**
      * The provisioning state of the VPN site resource.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The provisioning state of the VPN site resource.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The key for vpn-site that can be used for connections.
-     * 
      */
     @Export(name="siteKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> siteKey;
 
     /**
      * @return The key for vpn-site that can be used for connections.
-     * 
      */
     public Output</* @Nullable */ String> getSiteKey() {
         return this.siteKey;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return Resource type.
-     * 
      */
     public Output<String> getType() {
         return this.type;
     }
     /**
      * The VirtualWAN to which the vpnSite belongs.
-     * 
      */
     @Export(name="virtualWan", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualWan;
 
     /**
      * @return The VirtualWAN to which the vpnSite belongs.
-     * 
      */
     public Output</* @Nullable */ SubResourceResponse> getVirtualWan() {
         return this.virtualWan;
     }
     /**
      * List of all vpn site links.
-     * 
      */
     @Export(name="vpnSiteLinks", type=List.class, parameters={VpnSiteLinkResponse.class})
     private Output</* @Nullable */ List<VpnSiteLinkResponse>> vpnSiteLinks;
 
     /**
      * @return List of all vpn site links.
-     * 
      */
     public Output</* @Nullable */ List<VpnSiteLinkResponse>> getVpnSiteLinks() {
         return this.vpnSiteLinks;

@@ -11,7 +11,6 @@ import java.util.Objects;
 public final class VirtualMachineHealthStatusResponse {
     /**
      * The health status information for the VM.
-     * 
      */
     private final InstanceViewStatusResponse status;
 
@@ -22,7 +21,6 @@ public final class VirtualMachineHealthStatusResponse {
 
     /**
      * The health status information for the VM.
-     * 
     */
     public InstanceViewStatusResponse getStatus() {
         return this.status;

@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Common Data Service for Apps source.
- * 
  */
 public final class CommonDataServiceForAppsSourceArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class CommonDataServiceForAppsSourceArgs extends io.pulumi.resource
 
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
      */
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
@@ -32,7 +30,6 @@ public final class CommonDataServiceForAppsSourceArgs extends io.pulumi.resource
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -43,7 +40,6 @@ public final class CommonDataServiceForAppsSourceArgs extends io.pulumi.resource
 
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -54,7 +50,6 @@ public final class CommonDataServiceForAppsSourceArgs extends io.pulumi.resource
 
     /**
      * FetchXML is a proprietary query language that is used in Microsoft Common Data Service for Apps (online & on-premises). Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="query")
       private final @Nullable Output<Object> query;
@@ -65,7 +60,6 @@ public final class CommonDataServiceForAppsSourceArgs extends io.pulumi.resource
 
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
@@ -76,7 +70,6 @@ public final class CommonDataServiceForAppsSourceArgs extends io.pulumi.resource
 
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
@@ -88,7 +81,6 @@ public final class CommonDataServiceForAppsSourceArgs extends io.pulumi.resource
     /**
      * Copy source type.
      * Expected value is 'CommonDataServiceForAppsSource'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;

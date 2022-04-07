@@ -14,7 +14,6 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the gallery image definition to be retrieved.
-     * 
      */
     @Import(name="galleryImageName", required=true)
       private final String galleryImageName;
@@ -25,7 +24,6 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Shared Image Gallery from which the Image Definitions are to be retrieved.
-     * 
      */
     @Import(name="galleryName", required=true)
       private final String galleryName;
@@ -36,7 +34,6 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

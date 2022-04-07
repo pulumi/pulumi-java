@@ -24,7 +24,502 @@ import javax.annotation.Nullable;
  * Describes an Azure Cognitive Search service and its current state.
  * API Version: 2020-08-01.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * ### SearchCreateOrUpdateService
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var service = new AzureNative.Search.Service("service", new AzureNative.Search.ServiceArgs
+ *         {
+ *             HostingMode = "default",
+ *             Location = "westus",
+ *             PartitionCount = 1,
+ *             ReplicaCount = 3,
+ *             ResourceGroupName = "rg1",
+ *             SearchServiceName = "mysearchservice",
+ *             Sku = new AzureNative.Search.Inputs.SkuArgs
+ *             {
+ *                 Name = "standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "app-name", "My e-commerce app" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
+ * 			HostingMode:       "default",
+ * 			Location:          pulumi.String("westus"),
+ * 			PartitionCount:    pulumi.Int(1),
+ * 			ReplicaCount:      pulumi.Int(3),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			SearchServiceName: pulumi.String("mysearchservice"),
+ * 			Sku: &search.SkuArgs{
+ * 				Name: "standard",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"app-name": pulumi.String("My e-commerce app"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const service = new azure_native.search.Service("service", {
+ *     hostingMode: "default",
+ *     location: "westus",
+ *     partitionCount: 1,
+ *     replicaCount: 3,
+ *     resourceGroupName: "rg1",
+ *     searchServiceName: "mysearchservice",
+ *     sku: {
+ *         name: "standard",
+ *     },
+ *     tags: {
+ *         "app-name": "My e-commerce app",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service = azure_native.search.Service("service",
+ *     hosting_mode="default",
+ *     location="westus",
+ *     partition_count=1,
+ *     replica_count=3,
+ *     resource_group_name="rg1",
+ *     search_service_name="mysearchservice",
+ *     sku=azure_native.search.SkuArgs(
+ *         name="standard",
+ *     ),
+ *     tags={
+ *         "app-name": "My e-commerce app",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### SearchCreateOrUpdateServiceToAllowAccessFromPrivateEndpoints
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var service = new AzureNative.Search.Service("service", new AzureNative.Search.ServiceArgs
+ *         {
+ *             HostingMode = "default",
+ *             Location = "westus",
+ *             PartitionCount = 1,
+ *             PublicNetworkAccess = "disabled",
+ *             ReplicaCount = 3,
+ *             ResourceGroupName = "rg1",
+ *             SearchServiceName = "mysearchservice",
+ *             Sku = new AzureNative.Search.Inputs.SkuArgs
+ *             {
+ *                 Name = "standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "app-name", "My e-commerce app" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
+ * 			HostingMode:         "default",
+ * 			Location:            pulumi.String("westus"),
+ * 			PartitionCount:      pulumi.Int(1),
+ * 			PublicNetworkAccess: "disabled",
+ * 			ReplicaCount:        pulumi.Int(3),
+ * 			ResourceGroupName:   pulumi.String("rg1"),
+ * 			SearchServiceName:   pulumi.String("mysearchservice"),
+ * 			Sku: &search.SkuArgs{
+ * 				Name: "standard",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"app-name": pulumi.String("My e-commerce app"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const service = new azure_native.search.Service("service", {
+ *     hostingMode: "default",
+ *     location: "westus",
+ *     partitionCount: 1,
+ *     publicNetworkAccess: "disabled",
+ *     replicaCount: 3,
+ *     resourceGroupName: "rg1",
+ *     searchServiceName: "mysearchservice",
+ *     sku: {
+ *         name: "standard",
+ *     },
+ *     tags: {
+ *         "app-name": "My e-commerce app",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service = azure_native.search.Service("service",
+ *     hosting_mode="default",
+ *     location="westus",
+ *     partition_count=1,
+ *     public_network_access="disabled",
+ *     replica_count=3,
+ *     resource_group_name="rg1",
+ *     search_service_name="mysearchservice",
+ *     sku=azure_native.search.SkuArgs(
+ *         name="standard",
+ *     ),
+ *     tags={
+ *         "app-name": "My e-commerce app",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### SearchCreateOrUpdateServiceToAllowAccessFromPublicCustomIPs
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var service = new AzureNative.Search.Service("service", new AzureNative.Search.ServiceArgs
+ *         {
+ *             HostingMode = "default",
+ *             Location = "westus",
+ *             NetworkRuleSet = new AzureNative.Search.Inputs.NetworkRuleSetArgs
+ *             {
+ *                 IpRules = 
+ *                 {
+ *                     new AzureNative.Search.Inputs.IpRuleArgs
+ *                     {
+ *                         Value = "123.4.5.6",
+ *                     },
+ *                     new AzureNative.Search.Inputs.IpRuleArgs
+ *                     {
+ *                         Value = "123.4.6.0/18",
+ *                     },
+ *                 },
+ *             },
+ *             PartitionCount = 1,
+ *             ReplicaCount = 1,
+ *             ResourceGroupName = "rg1",
+ *             SearchServiceName = "mysearchservice",
+ *             Sku = new AzureNative.Search.Inputs.SkuArgs
+ *             {
+ *                 Name = "standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "app-name", "My e-commerce app" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
+ * 			HostingMode: "default",
+ * 			Location:    pulumi.String("westus"),
+ * 			NetworkRuleSet: &search.NetworkRuleSetArgs{
+ * 				IpRules: search.IpRuleArray{
+ * 					&search.IpRuleArgs{
+ * 						Value: pulumi.String("123.4.5.6"),
+ * 					},
+ * 					&search.IpRuleArgs{
+ * 						Value: pulumi.String("123.4.6.0/18"),
+ * 					},
+ * 				},
+ * 			},
+ * 			PartitionCount:    pulumi.Int(1),
+ * 			ReplicaCount:      pulumi.Int(1),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			SearchServiceName: pulumi.String("mysearchservice"),
+ * 			Sku: &search.SkuArgs{
+ * 				Name: "standard",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"app-name": pulumi.String("My e-commerce app"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const service = new azure_native.search.Service("service", {
+ *     hostingMode: "default",
+ *     location: "westus",
+ *     networkRuleSet: {
+ *         ipRules: [
+ *             {
+ *                 value: "123.4.5.6",
+ *             },
+ *             {
+ *                 value: "123.4.6.0/18",
+ *             },
+ *         ],
+ *     },
+ *     partitionCount: 1,
+ *     replicaCount: 1,
+ *     resourceGroupName: "rg1",
+ *     searchServiceName: "mysearchservice",
+ *     sku: {
+ *         name: "standard",
+ *     },
+ *     tags: {
+ *         "app-name": "My e-commerce app",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service = azure_native.search.Service("service",
+ *     hosting_mode="default",
+ *     location="westus",
+ *     network_rule_set=azure_native.search.NetworkRuleSetArgs(
+ *         ip_rules=[
+ *             azure_native.search.IpRuleArgs(
+ *                 value="123.4.5.6",
+ *             ),
+ *             azure_native.search.IpRuleArgs(
+ *                 value="123.4.6.0/18",
+ *             ),
+ *         ],
+ *     ),
+ *     partition_count=1,
+ *     replica_count=1,
+ *     resource_group_name="rg1",
+ *     search_service_name="mysearchservice",
+ *     sku=azure_native.search.SkuArgs(
+ *         name="standard",
+ *     ),
+ *     tags={
+ *         "app-name": "My e-commerce app",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% example %}}
+ * ### SearchCreateOrUpdateServiceWithIdentity
+ * ```csharp
+ * using Pulumi;
+ * using AzureNative = Pulumi.AzureNative;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var service = new AzureNative.Search.Service("service", new AzureNative.Search.ServiceArgs
+ *         {
+ *             HostingMode = "default",
+ *             Identity = new AzureNative.Search.Inputs.IdentityArgs
+ *             {
+ *                 Type = "SystemAssigned",
+ *             },
+ *             Location = "westus",
+ *             PartitionCount = 1,
+ *             ReplicaCount = 3,
+ *             ResourceGroupName = "rg1",
+ *             SearchServiceName = "mysearchservice",
+ *             Sku = new AzureNative.Search.Inputs.SkuArgs
+ *             {
+ *                 Name = "standard",
+ *             },
+ *             Tags = 
+ *             {
+ *                 { "app-name", "My e-commerce app" },
+ *             },
+ *         });
+ *     }
+ * 
+ * }
+ * 
+ * ```
+ * 
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		_, err := search.NewService(ctx, "service", &search.ServiceArgs{
+ * 			HostingMode: "default",
+ * 			Identity: &search.IdentityArgs{
+ * 				Type: "SystemAssigned",
+ * 			},
+ * 			Location:          pulumi.String("westus"),
+ * 			PartitionCount:    pulumi.Int(1),
+ * 			ReplicaCount:      pulumi.Int(3),
+ * 			ResourceGroupName: pulumi.String("rg1"),
+ * 			SearchServiceName: pulumi.String("mysearchservice"),
+ * 			Sku: &search.SkuArgs{
+ * 				Name: "standard",
+ * 			},
+ * 			Tags: pulumi.StringMap{
+ * 				"app-name": pulumi.String("My e-commerce app"),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * 
+ * ```
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as azure_native from "@pulumi/azure-native";
+ * 
+ * const service = new azure_native.search.Service("service", {
+ *     hostingMode: "default",
+ *     identity: {
+ *         type: "SystemAssigned",
+ *     },
+ *     location: "westus",
+ *     partitionCount: 1,
+ *     replicaCount: 3,
+ *     resourceGroupName: "rg1",
+ *     searchServiceName: "mysearchservice",
+ *     sku: {
+ *         name: "standard",
+ *     },
+ *     tags: {
+ *         "app-name": "My e-commerce app",
+ *     },
+ * });
+ * 
+ * ```
+ * 
+ * ```python
+ * import pulumi
+ * import pulumi_azure_native as azure_native
+ * 
+ * service = azure_native.search.Service("service",
+ *     hosting_mode="default",
+ *     identity=azure_native.search.IdentityArgs(
+ *         type="SystemAssigned",
+ *     ),
+ *     location="westus",
+ *     partition_count=1,
+ *     replica_count=3,
+ *     resource_group_name="rg1",
+ *     search_service_name="mysearchservice",
+ *     sku=azure_native.search.SkuArgs(
+ *         name="standard",
+ *     ),
+ *     tags={
+ *         "app-name": "My e-commerce app",
+ *     })
+ * 
+ * ```
+ * 
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -39,224 +534,192 @@ import javax.annotation.Nullable;
 public class Service extends io.pulumi.resources.CustomResource {
     /**
      * Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
-     * 
      */
     @Export(name="hostingMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostingMode;
 
     /**
      * @return Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
-     * 
      */
     public Output</* @Nullable */ String> getHostingMode() {
         return this.hostingMode;
     }
     /**
      * The identity of the resource.
-     * 
      */
     @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
      * @return The identity of the resource.
-     * 
      */
     public Output</* @Nullable */ IdentityResponse> getIdentity() {
         return this.identity;
     }
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
      * @return The geo-location where the resource lives
-     * 
      */
     public Output<String> getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
-     * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
      * @return The name of the resource
-     * 
      */
     public Output<String> getName() {
         return this.name;
     }
     /**
      * Network specific rules that determine how the Azure Cognitive Search service may be reached.
-     * 
      */
     @Export(name="networkRuleSet", type=NetworkRuleSetResponse.class, parameters={})
     private Output</* @Nullable */ NetworkRuleSetResponse> networkRuleSet;
 
     /**
      * @return Network specific rules that determine how the Azure Cognitive Search service may be reached.
-     * 
      */
     public Output</* @Nullable */ NetworkRuleSetResponse> getNetworkRuleSet() {
         return this.networkRuleSet;
     }
     /**
      * The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3.
-     * 
      */
     @Export(name="partitionCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> partitionCount;
 
     /**
      * @return The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3.
-     * 
      */
     public Output</* @Nullable */ Integer> getPartitionCount() {
         return this.partitionCount;
     }
     /**
      * The list of private endpoint connections to the Azure Cognitive Search service.
-     * 
      */
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
      * @return The list of private endpoint connections to the Azure Cognitive Search service.
-     * 
      */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The state of the last provisioning operation performed on the search service. Provisioning is an intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState changes to either 'succeeded' or 'failed'. Client applications can poll provisioning status (the recommended polling interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is completed. If you are using the free service, this value tends to come back as 'succeeded' directly in the call to Create search service. This is because the free service uses capacity that is already set up.
-     * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
      * @return The state of the last provisioning operation performed on the search service. Provisioning is an intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState changes to either 'succeeded' or 'failed'. Client applications can poll provisioning status (the recommended polling interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is completed. If you are using the free service, this value tends to come back as 'succeeded' directly in the call to Create search service. This is because the free service uses capacity that is already set up.
-     * 
      */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
-     * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
      * @return This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
-     * 
      */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU.
-     * 
      */
     @Export(name="replicaCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> replicaCount;
 
     /**
      * @return The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU.
-     * 
      */
     public Output</* @Nullable */ Integer> getReplicaCount() {
         return this.replicaCount;
     }
     /**
      * The list of shared private link resources managed by the Azure Cognitive Search service.
-     * 
      */
     @Export(name="sharedPrivateLinkResources", type=List.class, parameters={SharedPrivateLinkResourceResponse.class})
     private Output<List<SharedPrivateLinkResourceResponse>> sharedPrivateLinkResources;
 
     /**
      * @return The list of shared private link resources managed by the Azure Cognitive Search service.
-     * 
      */
     public Output<List<SharedPrivateLinkResourceResponse>> getSharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources;
     }
     /**
      * The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.
-     * 
      */
     @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
      * @return The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.
-     * 
      */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
     /**
      * The status of the search service. Possible values include: 'running': The search service is running and no provisioning operations are underway. 'provisioning': The search service is being provisioned or scaled up or down. 'deleting': The search service is being deleted. 'degraded': The search service is degraded. This can occur when the underlying search units are not healthy. The search service is most likely operational, but performance might be slow and some requests might be dropped. 'disabled': The search service is disabled. In this state, the service will reject all API requests. 'error': The search service is in an error state. If your service is in the degraded, disabled, or error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated services in these states are still chargeable based on the number of search units provisioned.
-     * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
      * @return The status of the search service. Possible values include: 'running': The search service is running and no provisioning operations are underway. 'provisioning': The search service is being provisioned or scaled up or down. 'deleting': The search service is being deleted. 'degraded': The search service is degraded. This can occur when the underlying search units are not healthy. The search service is most likely operational, but performance might be slow and some requests might be dropped. 'disabled': The search service is disabled. In this state, the service will reject all API requests. 'error': The search service is in an error state. If your service is in the degraded, disabled, or error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated services in these states are still chargeable based on the number of search units provisioned.
-     * 
      */
     public Output<String> getStatus() {
         return this.status;
     }
     /**
      * The details of the search service status.
-     * 
      */
     @Export(name="statusDetails", type=String.class, parameters={})
     private Output<String> statusDetails;
 
     /**
      * @return The details of the search service status.
-     * 
      */
     public Output<String> getStatusDetails() {
         return this.statusDetails;
     }
     /**
      * Resource tags.
-     * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
      * @return Resource tags.
-     * 
      */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
-     * 
      */
     public Output<String> getType() {
         return this.type;

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * Snowflake import command settings.
- * 
  */
 public final class SnowflakeImportCopyCommandResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class SnowflakeImportCopyCommandResponse extends io.pulumi.resource
 
     /**
      * Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalCopyOptions": { "DATE_FORMAT": "MM/DD/YYYY", "TIME_FORMAT": "'HH24:MI:SS.FF'" }
-     * 
      */
     @Import(name="additionalCopyOptions")
       private final @Nullable Map<String,Object> additionalCopyOptions;
@@ -33,7 +31,6 @@ public final class SnowflakeImportCopyCommandResponse extends io.pulumi.resource
 
     /**
      * Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalFormatOptions": { "FORCE": "TRUE", "LOAD_UNCERTAIN_FILES": "'FALSE'" }
-     * 
      */
     @Import(name="additionalFormatOptions")
       private final @Nullable Map<String,Object> additionalFormatOptions;
@@ -45,7 +42,6 @@ public final class SnowflakeImportCopyCommandResponse extends io.pulumi.resource
     /**
      * The import setting type.
      * Expected value is 'SnowflakeImportCopyCommand'.
-     * 
      */
     @Import(name="type", required=true)
       private final String type;

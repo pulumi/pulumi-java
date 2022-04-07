@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The group type.
-     * 
      */
     @EnumType
     public enum RecoveryPlanGroupType {

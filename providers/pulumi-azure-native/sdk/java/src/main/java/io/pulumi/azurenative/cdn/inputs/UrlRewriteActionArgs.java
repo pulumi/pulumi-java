@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * Defines the url rewrite action for the delivery rule.
- * 
  */
 public final class UrlRewriteActionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class UrlRewriteActionArgs extends io.pulumi.resources.ResourceArgs
     /**
      * The name of the action for the delivery rule.
      * Expected value is 'UrlRewrite'.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -32,7 +30,6 @@ public final class UrlRewriteActionArgs extends io.pulumi.resources.ResourceArgs
 
     /**
      * Defines the parameters for the action.
-     * 
      */
     @Import(name="parameters", required=true)
       private final Output<UrlRewriteActionParametersArgs> parameters;

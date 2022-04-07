@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * State of a private endpoint connection.
- * 
  */
 public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
 
     /**
      * Actions required on the private endpoint connection.
-     * 
      */
     @Import(name="actionsRequired")
       private final @Nullable Output<String> actionsRequired;
@@ -31,7 +29,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
 
     /**
      * Description of the private endpoint connection.
-     * 
      */
     @Import(name="description")
       private final @Nullable Output<String> description;
@@ -42,7 +39,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
 
     /**
      * Connection status of the private endpoint connection.
-     * 
      */
     @Import(name="status")
       private final @Nullable Output<String> status;

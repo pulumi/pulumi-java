@@ -12,7 +12,6 @@ import java.util.Objects;
 
 /**
  * The routing policy object used in a RoutingIntent resource.
- * 
  */
 public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
-     * 
      */
     @Import(name="destinations", required=true)
       private final Output<List<String>> destinations;
@@ -31,7 +29,6 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The unique name for the routing policy.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -42,7 +39,6 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The next hop resource id on which this routing policy is applicable to.
-     * 
      */
     @Import(name="nextHop", required=true)
       private final Output<String> nextHop;

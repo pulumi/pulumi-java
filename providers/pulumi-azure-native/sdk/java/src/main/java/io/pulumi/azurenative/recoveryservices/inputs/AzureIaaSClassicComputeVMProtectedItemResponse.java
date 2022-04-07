@@ -19,7 +19,6 @@ import javax.annotation.Nullable;
 
 /**
  * IaaS VM workload-specific backup item representing the Classic Compute VM.
- * 
  */
 public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -27,7 +26,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Type of backup management for the backed up item.
-     * 
      */
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
@@ -38,7 +36,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Name of the backup set the backup item belongs to
-     * 
      */
     @Import(name="backupSetName")
       private final @Nullable String backupSetName;
@@ -49,7 +46,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Unique name of container
-     * 
      */
     @Import(name="containerName")
       private final @Nullable String containerName;
@@ -60,7 +56,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
-     * 
      */
     @Import(name="createMode")
       private final @Nullable String createMode;
@@ -71,7 +66,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Time for deferred deletion in UTC
-     * 
      */
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable String deferredDeleteTimeInUTC;
@@ -82,7 +76,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
-     * 
      */
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable String deferredDeleteTimeRemaining;
@@ -93,7 +86,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Additional information for this backup item.
-     * 
      */
     @Import(name="extendedInfo")
       private final @Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo;
@@ -104,7 +96,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Extended Properties for Azure IaasVM Backup.
-     * 
      */
     @Import(name="extendedProperties")
       private final @Nullable ExtendedPropertiesResponse extendedProperties;
@@ -115,7 +106,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Friendly name of the VM represented by this backup item.
-     * 
      */
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
@@ -126,7 +116,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Health details on this backup item.
-     * 
      */
     @Import(name="healthDetails")
       private final @Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails;
@@ -137,7 +126,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Health status of protected item.
-     * 
      */
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
@@ -148,7 +136,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
-     * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
@@ -159,7 +146,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
-     * 
      */
     @Import(name="isRehydrate")
       private final @Nullable Boolean isRehydrate;
@@ -170,7 +156,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
-     * 
      */
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Boolean isScheduledForDeferredDelete;
@@ -181,7 +166,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Health details of different KPIs
-     * 
      */
     @Import(name="kpisHealths")
       private final @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
@@ -192,7 +176,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Last backup operation status.
-     * 
      */
     @Import(name="lastBackupStatus")
       private final @Nullable String lastBackupStatus;
@@ -203,7 +186,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Timestamp of the last backup operation on this backup item.
-     * 
      */
     @Import(name="lastBackupTime")
       private final @Nullable String lastBackupTime;
@@ -214,7 +196,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
-     * 
      */
     @Import(name="lastRecoveryPoint")
       private final @Nullable String lastRecoveryPoint;
@@ -225,7 +206,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * ID of the backup policy with which this item is backed up.
-     * 
      */
     @Import(name="policyId")
       private final @Nullable String policyId;
@@ -236,7 +216,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Data ID of the protected item.
-     * 
      */
     @Import(name="protectedItemDataId")
       private final @Nullable String protectedItemDataId;
@@ -248,7 +227,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
     /**
      * backup item type.
      * Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
-     * 
      */
     @Import(name="protectedItemType", required=true)
       private final String protectedItemType;
@@ -259,7 +237,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Backup state of this backup item.
-     * 
      */
     @Import(name="protectionState")
       private final @Nullable String protectionState;
@@ -270,7 +247,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Backup status of this backup item.
-     * 
      */
     @Import(name="protectionStatus")
       private final @Nullable String protectionStatus;
@@ -281,7 +257,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * ARM ID of the resource to be backed up.
-     * 
      */
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
@@ -292,7 +267,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Fully qualified ARM ID of the virtual machine represented by this item.
-     * 
      */
     @Import(name="virtualMachineId")
       private final @Nullable String virtualMachineId;
@@ -303,7 +277,6 @@ public final class AzureIaaSClassicComputeVMProtectedItemResponse extends io.pul
 
     /**
      * Type of workload this item represents.
-     * 
      */
     @Import(name="workloadType")
       private final @Nullable String workloadType;

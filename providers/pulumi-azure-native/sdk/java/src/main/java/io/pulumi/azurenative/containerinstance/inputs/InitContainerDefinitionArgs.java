@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 
 /**
  * The init container definition.
- * 
  */
 public final class InitContainerDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -23,7 +22,6 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * The command to execute within the init container in exec form.
-     * 
      */
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
@@ -34,7 +32,6 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * The environment variables to set in the init container.
-     * 
      */
     @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
@@ -45,7 +42,6 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * The image of the init container.
-     * 
      */
     @Import(name="image")
       private final @Nullable Output<String> image;
@@ -56,7 +52,6 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * The name for the init container.
-     * 
      */
     @Import(name="name", required=true)
       private final Output<String> name;
@@ -67,7 +62,6 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
 
     /**
      * The volume mounts available to the init container.
-     * 
      */
     @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;

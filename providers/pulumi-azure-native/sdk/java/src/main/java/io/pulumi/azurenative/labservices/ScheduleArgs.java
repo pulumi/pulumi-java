@@ -17,7 +17,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
-     * 
      */
     @Import(name="labName", required=true)
       private final Output<String> labName;
@@ -28,7 +27,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Notes for this schedule.
-     * 
      */
     @Import(name="notes")
       private final @Nullable Output<String> notes;
@@ -39,7 +37,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The recurrence pattern of the scheduled actions.
-     * 
      */
     @Import(name="recurrencePattern")
       private final @Nullable Output<RecurrencePatternArgs> recurrencePattern;
@@ -50,7 +47,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -61,7 +57,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
-     * 
      */
     @Import(name="scheduleName")
       private final @Nullable Output<String> scheduleName;
@@ -72,7 +67,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
-     * 
      */
     @Import(name="startAt")
       private final @Nullable Output<String> startAt;
@@ -83,7 +77,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
-     * 
      */
     @Import(name="stopAt", required=true)
       private final Output<String> stopAt;
@@ -94,7 +87,6 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The IANA timezone id for the schedule.
-     * 
      */
     @Import(name="timeZoneId", required=true)
       private final Output<String> timeZoneId;

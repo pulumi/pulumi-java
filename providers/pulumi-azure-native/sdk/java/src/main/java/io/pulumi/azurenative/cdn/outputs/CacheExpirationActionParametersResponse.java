@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class CacheExpirationActionParametersResponse {
     /**
      * Caching behavior for the requests
-     * 
      */
     private final String cacheBehavior;
     /**
      * The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
-     * 
      */
     private final @Nullable String cacheDuration;
     /**
      * The level at which the content needs to be cached.
-     * 
      */
     private final String cacheType;
     private final String odataType;
@@ -42,21 +39,18 @@ public final class CacheExpirationActionParametersResponse {
 
     /**
      * Caching behavior for the requests
-     * 
     */
     public String getCacheBehavior() {
         return this.cacheBehavior;
     }
     /**
      * The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
-     * 
     */
     public Optional<String> getCacheDuration() {
         return Optional.ofNullable(this.cacheDuration);
     }
     /**
      * The level at which the content needs to be cached.
-     * 
     */
     public String getCacheType() {
         return this.cacheType;

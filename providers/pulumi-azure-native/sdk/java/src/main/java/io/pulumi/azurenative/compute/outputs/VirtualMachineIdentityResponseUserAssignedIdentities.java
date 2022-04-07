@@ -11,12 +11,10 @@ import java.util.Objects;
 public final class VirtualMachineIdentityResponseUserAssignedIdentities {
     /**
      * The client id of user assigned identity.
-     * 
      */
     private final String clientId;
     /**
      * The principal id of user assigned identity.
-     * 
      */
     private final String principalId;
 
@@ -30,14 +28,12 @@ public final class VirtualMachineIdentityResponseUserAssignedIdentities {
 
     /**
      * The client id of user assigned identity.
-     * 
     */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The principal id of user assigned identity.
-     * 
     */
     public String getPrincipalId() {
         return this.principalId;

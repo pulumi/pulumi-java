@@ -21,7 +21,6 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The reference to the device resource.
-     * 
      */
     @Import(name="device")
       private final @Nullable Output<SubResourceArgs> device;
@@ -32,7 +31,6 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The geo-location where the resource lives
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -43,7 +41,6 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The parameters for the managed application.
-     * 
      */
     @Import(name="managedApplicationParameters")
       private final @Nullable Output<Object> managedApplicationParameters;
@@ -54,7 +51,6 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource name for the network function resource.
-     * 
      */
     @Import(name="networkFunctionName")
       private final @Nullable Output<String> networkFunctionName;
@@ -65,7 +61,6 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The network function configurations from the user.
-     * 
      */
     @Import(name="networkFunctionUserConfigurations")
       private final @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
@@ -76,7 +71,6 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -87,7 +81,6 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The sku name for the network function.
-     * 
      */
     @Import(name="skuName")
       private final @Nullable Output<String> skuName;
@@ -98,7 +91,6 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
@@ -109,7 +101,6 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
 
     /**
      * The vendor name for the network function.
-     * 
      */
     @Import(name="vendorName")
       private final @Nullable Output<String> vendorName;

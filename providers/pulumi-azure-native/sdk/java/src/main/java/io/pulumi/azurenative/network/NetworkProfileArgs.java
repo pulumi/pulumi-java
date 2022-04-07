@@ -19,7 +19,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * List of chid container network interface configurations.
-     * 
      */
     @Import(name="containerNetworkInterfaceConfigurations")
       private final @Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
@@ -30,7 +29,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource ID.
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
@@ -41,7 +39,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource location.
-     * 
      */
     @Import(name="location")
       private final @Nullable Output<String> location;
@@ -52,7 +49,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the network profile.
-     * 
      */
     @Import(name="networkProfileName")
       private final @Nullable Output<String> networkProfileName;
@@ -63,7 +59,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the resource group.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
@@ -74,7 +69,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Resource tags.
-     * 
      */
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;

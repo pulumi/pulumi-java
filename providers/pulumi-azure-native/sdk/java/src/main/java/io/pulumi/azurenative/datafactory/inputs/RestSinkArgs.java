@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 
 /**
  * A copy activity Rest service Sink.
- * 
  */
 public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -21,7 +20,6 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="additionalHeaders")
       private final @Nullable Output<Object> additionalHeaders;
@@ -32,7 +30,6 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
      */
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
@@ -42,8 +39,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Http Compression Type to Send data in compressed format with Optimal Compression Level, Default is None. And The Only Supported option is Gzip.
-     * 
+     * Http Compression Type to Send data in compressed format with Optimal Compression Level, Default is None. And The Only Supported option is Gzip. 
      */
     @Import(name="httpCompressionType")
       private final @Nullable Output<Object> httpCompressionType;
@@ -54,7 +50,6 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="httpRequestTimeout")
       private final @Nullable Output<Object> httpRequestTimeout;
@@ -65,7 +60,6 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
@@ -75,8 +69,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The time to await before sending next request, in milliseconds
-     * 
+     * The time to await before sending next request, in milliseconds 
      */
     @Import(name="requestInterval")
       private final @Nullable Output<Object> requestInterval;
@@ -87,7 +80,6 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * The HTTP method used to call the RESTful API. The default is POST. Type: string (or Expression with resultType string).
-     * 
      */
     @Import(name="requestMethod")
       private final @Nullable Output<Object> requestMethod;
@@ -98,7 +90,6 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
      */
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
@@ -109,7 +100,6 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
@@ -121,7 +111,6 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Copy sink type.
      * Expected value is 'RestSink'.
-     * 
      */
     @Import(name="type", required=true)
       private final Output<String> type;
@@ -132,7 +121,6 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
      */
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
@@ -143,7 +131,6 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
      */
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;

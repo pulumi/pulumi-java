@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * An object that represents the approval state of the private link connection.
- * 
  */
 public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
 
     /**
      * A message indicating if changes on the service provider require any updates on the consumer.
-     * 
      */
     @Import(name="actionRequired")
       private final @Nullable String actionRequired;
@@ -31,7 +29,6 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
 
     /**
      * The reason for approval or rejection.
-     * 
      */
     @Import(name="description")
       private final @Nullable String description;
@@ -42,7 +39,6 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
 
     /**
      * Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
-     * 
      */
     @Import(name="status")
       private final @Nullable String status;

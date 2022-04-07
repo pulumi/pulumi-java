@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class VpnNatRuleMappingResponse {
     /**
      * Address space for Vpn NatRule mapping.
-     * 
      */
     private final @Nullable String addressSpace;
 
@@ -24,7 +23,6 @@ public final class VpnNatRuleMappingResponse {
 
     /**
      * Address space for Vpn NatRule mapping.
-     * 
     */
     public Optional<String> getAddressSpace() {
         return Optional.ofNullable(this.addressSpace);

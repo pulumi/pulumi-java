@@ -14,7 +14,6 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource group within the Azure subscription.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * Name of the resource.
-     * 
      */
     @Import(name="resourceName", required=true)
       private final String resourceName;

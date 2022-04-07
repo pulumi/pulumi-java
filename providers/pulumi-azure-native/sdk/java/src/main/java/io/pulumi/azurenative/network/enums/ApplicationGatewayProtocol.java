@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The protocol used for the probe.
-     * 
      */
     @EnumType
     public enum ApplicationGatewayProtocol {

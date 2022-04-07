@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The container Http Get settings, for liveness or readiness probe
- * 
  */
 public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -22,7 +21,6 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The HTTP headers.
-     * 
      */
     @Import(name="httpHeaders")
       private final @Nullable HttpHeadersResponse httpHeaders;
@@ -33,7 +31,6 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The path to probe.
-     * 
      */
     @Import(name="path")
       private final @Nullable String path;
@@ -44,7 +41,6 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The port number to probe.
-     * 
      */
     @Import(name="port", required=true)
       private final Integer port;
@@ -55,7 +51,6 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
 
     /**
      * The scheme.
-     * 
      */
     @Import(name="scheme")
       private final @Nullable String scheme;

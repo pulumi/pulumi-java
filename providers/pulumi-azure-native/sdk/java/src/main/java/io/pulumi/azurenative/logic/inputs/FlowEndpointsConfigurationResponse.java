@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * The endpoints configuration.
- * 
  */
 public final class FlowEndpointsConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
@@ -20,7 +19,6 @@ public final class FlowEndpointsConfigurationResponse extends io.pulumi.resource
 
     /**
      * The connector endpoints.
-     * 
      */
     @Import(name="connector")
       private final @Nullable FlowEndpointsResponse connector;
@@ -31,7 +29,6 @@ public final class FlowEndpointsConfigurationResponse extends io.pulumi.resource
 
     /**
      * The workflow endpoints.
-     * 
      */
     @Import(name="workflow")
       private final @Nullable FlowEndpointsResponse workflow;

@@ -14,7 +14,6 @@ public final class GetSqlServerRegistrationArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
@@ -25,7 +24,6 @@ public final class GetSqlServerRegistrationArgs extends io.pulumi.resources.Invo
 
     /**
      * Name of the SQL Server registration.
-     * 
      */
     @Import(name="sqlServerRegistrationName", required=true)
       private final String sqlServerRegistrationName;

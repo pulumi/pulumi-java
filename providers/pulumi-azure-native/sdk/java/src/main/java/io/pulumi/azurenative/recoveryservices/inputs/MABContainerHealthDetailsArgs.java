@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * MAB workload-specific Health Details.
- * 
  */
 public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
 
     /**
      * Health Code
-     * 
      */
     @Import(name="code")
       private final @Nullable Output<Integer> code;
@@ -33,7 +31,6 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
 
     /**
      * Health Message
-     * 
      */
     @Import(name="message")
       private final @Nullable Output<String> message;
@@ -44,7 +41,6 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
 
     /**
      * Health Recommended Actions
-     * 
      */
     @Import(name="recommendations")
       private final @Nullable Output<List<String>> recommendations;
@@ -55,7 +51,6 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
 
     /**
      * Health Title
-     * 
      */
     @Import(name="title")
       private final @Nullable Output<String> title;

@@ -13,17 +13,14 @@ import javax.annotation.Nullable;
 public final class PolicyAssignmentPropertiesResponseScope {
     /**
      * Display name of the resource
-     * 
      */
     private final @Nullable String displayName;
     /**
      * Scope id of the resource
-     * 
      */
     private final @Nullable String id;
     /**
      * Type of the resource
-     * 
      */
     private final @Nullable String type;
 
@@ -39,21 +36,18 @@ public final class PolicyAssignmentPropertiesResponseScope {
 
     /**
      * Display name of the resource
-     * 
     */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Scope id of the resource
-     * 
     */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Type of the resource
-     * 
     */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);

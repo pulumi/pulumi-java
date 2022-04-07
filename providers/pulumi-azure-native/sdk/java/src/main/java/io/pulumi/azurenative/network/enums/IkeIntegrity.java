@@ -10,7 +10,6 @@ import java.util.StringJoiner;
 
     /**
      * The IKE integrity algorithm (IKE phase 2).
-     * 
      */
     @EnumType
     public enum IkeIntegrity {

@@ -14,7 +14,6 @@ import javax.annotation.Nullable;
 
 /**
  * The regular expressions to match the response content with.
- * 
  */
 public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -22,7 +21,6 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * Indicates whether any or all of the expressions should match with the response content.
-     * 
      */
     @Import(name="matchQuantifier")
       private final @Nullable Output<RestMatchQuantifier> matchQuantifier;
@@ -33,7 +31,6 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
 
     /**
      * The list of regular expressions.
-     * 
      */
     @Import(name="matches")
       private final @Nullable Output<List<String>> matches;

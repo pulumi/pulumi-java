@@ -13,7 +13,6 @@ import javax.annotation.Nullable;
 public final class RateLimitRuleListResponse {
     /**
      * List of rules
-     * 
      */
     private final @Nullable List<RateLimitRuleResponse> rules;
 
@@ -24,7 +23,6 @@ public final class RateLimitRuleListResponse {
 
     /**
      * List of rules
-     * 
     */
     public List<RateLimitRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;

@@ -14,7 +14,6 @@ public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Maps Account.
-     * 
      */
     @Import(name="accountName", required=true)
       private final String accountName;
@@ -25,7 +24,6 @@ public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the Private Atlas instance.
-     * 
      */
     @Import(name="privateAtlasName", required=true)
       private final String privateAtlasName;
@@ -36,7 +34,6 @@ public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
 
     /**
      * The name of the resource group. The name is case insensitive.
-     * 
      */
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;

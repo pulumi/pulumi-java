@@ -12,7 +12,6 @@ import javax.annotation.Nullable;
 
 /**
  * Buildpack properties payload
- * 
  */
 public final class BuildpackPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
@@ -20,7 +19,6 @@ public final class BuildpackPropertiesArgs extends io.pulumi.resources.ResourceA
 
     /**
      * Id of the buildpack
-     * 
      */
     @Import(name="id")
       private final @Nullable Output<String> id;
