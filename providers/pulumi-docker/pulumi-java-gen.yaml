@@ -3,11 +3,5 @@ schema: https://raw.githubusercontent.com/pulumi/pulumi-docker/v3.1.0/provider/c
 out: sdk/java
 versionFile: src/main/resources/io/pulumi/docker/version.txt
 pluginFile: src/main/resources/io/pulumi/docker/plugin.json
-
-packageInfo:
-  packageReferences:
-    "io.pulumi:pulumi": "0.0.1-SNAPSHOT"
-  gprPublishSettings:
-    groupId: io.pulumi
-    artifactId: docker
-    repositoryUrl: https://maven.pkg.github.com/pulumi/pulumi-jvm
+overlays:
+  - "./build"
