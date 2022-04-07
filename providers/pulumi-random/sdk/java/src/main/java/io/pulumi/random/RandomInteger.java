@@ -20,7 +20,134 @@ import javax.annotation.Nullable;
  * 
  * This resource can be used in conjunction with resources that have the `create_before_destroy` lifecycle flag set, to avoid conflicts with unique names during the brief period where both the old and new resources exist concurrently.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * as random from "@pulumi/random";
+ * 
+ * // The following example shows how to generate a random priority
+ * // between 1 and 50000 for a aws_alb_listener_rule resource:
+ * const priority = new random.RandomInteger("priority", {
+ *     min: 1,
+ *     max: 50000,
+ *     keepers: {
+ *         listener_arn: _var.listener_arn,
+ *     },
+ * });
+ * const main = new aws.alb.ListenerRule("main", {
+ *     listenerArn: _var.listener_arn,
+ *     priority: priority.result,
+ *     actions: [{
+ *         type: "forward",
+ *         targetGroupArn: _var.target_group_arn,
+ *     }],
+ * });
+ * // ... (other aws_alb_listener_rule arguments) ...
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_random as random
+ * 
+ * # The following example shows how to generate a random priority
+ * # between 1 and 50000 for a aws_alb_listener_rule resource:
+ * priority = random.RandomInteger("priority",
+ *     min=1,
+ *     max=50000,
+ *     keepers={
+ *         "listener_arn": var["listener_arn"],
+ *     })
+ * main = aws.alb.ListenerRule("main",
+ *     listener_arn=var["listener_arn"],
+ *     priority=priority.result,
+ *     actions=[aws.alb.ListenerRuleActionArgs(
+ *         type="forward",
+ *         target_group_arn=var["target_group_arn"],
+ *     )])
+ * # ... (other aws_alb_listener_rule arguments) ...
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * using Random = Pulumi.Random;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // The following example shows how to generate a random priority
+ *         // between 1 and 50000 for a aws_alb_listener_rule resource:
+ *         var priority = new Random.RandomInteger("priority", new Random.RandomIntegerArgs
+ *         {
+ *             Min = 1,
+ *             Max = 50000,
+ *             Keepers = 
+ *             {
+ *                 { "listener_arn", @var.Listener_arn },
+ *             },
+ *         });
+ *         var main = new Aws.Alb.ListenerRule("main", new Aws.Alb.ListenerRuleArgs
+ *         {
+ *             ListenerArn = @var.Listener_arn,
+ *             Priority = priority.Result,
+ *             Actions = 
+ *             {
+ *                 new Aws.Alb.Inputs.ListenerRuleActionArgs
+ *                 {
+ *                     Type = "forward",
+ *                     TargetGroupArn = @var.Target_group_arn,
+ *                 },
+ *             },
+ *         });
+ *         // ... (other aws_alb_listener_rule arguments) ...
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/alb"
+ * 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		priority, err := random.NewRandomInteger(ctx, "priority", &random.RandomIntegerArgs{
+ * 			Min: pulumi.Int(1),
+ * 			Max: pulumi.Int(50000),
+ * 			Keepers: pulumi.AnyMap{
+ * 				"listener_arn": pulumi.Any(_var.Listener_arn),
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = alb.NewListenerRule(ctx, "main", &alb.ListenerRuleArgs{
+ * 			ListenerArn: pulumi.Any(_var.Listener_arn),
+ * 			Priority:    priority.Result,
+ * 			Actions: alb.ListenerRuleActionArray{
+ * 				&alb.ListenerRuleActionArgs{
+ * 					Type:           pulumi.String("forward"),
+ * 					TargetGroupArn: pulumi.Any(_var.Target_group_arn),
+ * 				},
+ * 			},
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -30,6 +157,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import random:index/randomInteger:RandomInteger priority 15390,1,50000
  * ```
  * 
+ *  
  */
 @ResourceType(type="random:index/randomInteger:RandomInteger")
 public class RandomInteger extends io.pulumi.resources.CustomResource {

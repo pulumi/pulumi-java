@@ -19,8 +19,108 @@ import javax.annotation.Nullable;
 /**
  * The resource `random.RandomShuffle` generates a random permutation of a list of strings given as an argument.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * as random from "@pulumi/random";
+ * 
+ * const az = new random.RandomShuffle("az", {
+ *     inputs: [
+ *         "us-west-1a",
+ *         "us-west-1c",
+ *         "us-west-1d",
+ *         "us-west-1e",
+ *     ],
+ *     resultCount: 2,
+ * });
+ * const example = new aws.elb.LoadBalancer("example", {
+ *     // Place the ELB in any two of the given availability zones, selected
+ *     // at random.
+ *     availabilityZones: az.results,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_random as random
+ * 
+ * az = random.RandomShuffle("az",
+ *     inputs=[
+ *         "us-west-1a",
+ *         "us-west-1c",
+ *         "us-west-1d",
+ *         "us-west-1e",
+ *     ],
+ *     result_count=2)
+ * example = aws.elb.LoadBalancer("example", availability_zones=az.results)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * using Random = Pulumi.Random;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var az = new Random.RandomShuffle("az", new Random.RandomShuffleArgs
+ *         {
+ *             Inputs = 
+ *             {
+ *                 "us-west-1a",
+ *                 "us-west-1c",
+ *                 "us-west-1d",
+ *                 "us-west-1e",
+ *             },
+ *             ResultCount = 2,
+ *         });
+ *         var example = new Aws.Elb.LoadBalancer("example", new Aws.Elb.LoadBalancerArgs
+ *         {
+ *             AvailabilityZones = az.Results,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elb"
+ * 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		az, err := random.NewRandomShuffle(ctx, "az", &random.RandomShuffleArgs{
+ * 			Inputs: pulumi.StringArray{
+ * 				pulumi.String("us-west-1a"),
+ * 				pulumi.String("us-west-1c"),
+ * 				pulumi.String("us-west-1d"),
+ * 				pulumi.String("us-west-1e"),
+ * 			},
+ * 			ResultCount: pulumi.Int(2),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = elb.NewLoadBalancer(ctx, "example", &elb.LoadBalancerArgs{
+ * 			AvailabilityZones: az.Results,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="random:index/randomShuffle:RandomShuffle")
 public class RandomShuffle extends io.pulumi.resources.CustomResource {

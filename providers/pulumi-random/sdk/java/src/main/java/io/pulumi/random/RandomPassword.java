@@ -21,7 +21,108 @@ import javax.annotation.Nullable;
  * 
  * This resource *does* use a cryptographic random number generator.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
+ * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * as random from "@pulumi/random";
+ * 
+ * const password = new random.RandomPassword("password", {
+ *     length: 16,
+ *     special: true,
+ *     overrideSpecial: `_%@`,
+ * });
+ * const example = new aws.rds.Instance("example", {
+ *     instanceClass: "db.t3.micro",
+ *     allocatedStorage: 64,
+ *     engine: "mysql",
+ *     username: "someone",
+ *     password: password.result,
+ * });
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_random as random
+ * 
+ * password = random.RandomPassword("password",
+ *     length=16,
+ *     special=True,
+ *     override_special="_%@")
+ * example = aws.rds.Instance("example",
+ *     instance_class="db.t3.micro",
+ *     allocated_storage=64,
+ *     engine="mysql",
+ *     username="someone",
+ *     password=password.result)
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * using Random = Pulumi.Random;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         var password = new Random.RandomPassword("password", new Random.RandomPasswordArgs
+ *         {
+ *             Length = 16,
+ *             Special = true,
+ *             OverrideSpecial = "_%@",
+ *         });
+ *         var example = new Aws.Rds.Instance("example", new Aws.Rds.InstanceArgs
+ *         {
+ *             InstanceClass = "db.t3.micro",
+ *             AllocatedStorage = 64,
+ *             Engine = "mysql",
+ *             Username = "someone",
+ *             Password = password.Result,
+ *         });
+ *     }
+ * 
+ * }
+ * ```
+ * ```go
+ * package main
+ * 
+ * import (
+ * 	"fmt"
+ * 
+ * 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+ * 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+ * 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+ * )
+ * 
+ * func main() {
+ * 	pulumi.Run(func(ctx *pulumi.Context) error {
+ * 		password, err := random.NewRandomPassword(ctx, "password", &random.RandomPasswordArgs{
+ * 			Length:          pulumi.Int(16),
+ * 			Special:         pulumi.Bool(true),
+ * 			OverrideSpecial: pulumi.String(fmt.Sprintf("%v%v%v", "_", "%", "@")),
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		_, err = rds.NewInstance(ctx, "example", &rds.InstanceArgs{
+ * 			InstanceClass:    pulumi.String("db.t3.micro"),
+ * 			AllocatedStorage: pulumi.Int(64),
+ * 			Engine:           pulumi.String("mysql"),
+ * 			Username:         pulumi.String("someone"),
+ * 			Password:         password.Result,
+ * 		})
+ * 		if err != nil {
+ * 			return err
+ * 		}
+ * 		return nil
+ * 	})
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  * 
  * ## Import
  * 
@@ -31,6 +132,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import random:index/randomPassword:RandomPassword password securepassword
  * ```
  * 
+ *  
  */
 @ResourceType(type="random:index/randomPassword:RandomPassword")
 public class RandomPassword extends io.pulumi.resources.CustomResource {

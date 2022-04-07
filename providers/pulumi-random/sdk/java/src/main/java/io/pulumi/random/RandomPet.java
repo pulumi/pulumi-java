@@ -20,8 +20,81 @@ import javax.annotation.Nullable;
  * 
  * This resource can be used in conjunction with resources that have the `create_before_destroy` lifecycle flag set, to avoid conflicts with unique names during the brief period where both the old and new resources exist concurrently.
  * 
+ * {{% examples %}}
  * ## Example Usage
+ * {{% example %}}
  * 
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as aws from "@pulumi/aws";
+ * import * as random from "@pulumi/random";
+ * 
+ * // The following example shows how to generate a unique pet name
+ * // for an AWS EC2 instance that changes each time a new AMI id is
+ * // selected.
+ * const serverRandomPet = new random.RandomPet("serverRandomPet", {keepers: {
+ *     ami_id: _var.ami_id,
+ * }});
+ * const serverInstance = new aws.ec2.Instance("serverInstance", {
+ *     tags: {
+ *         Name: pulumi.interpolate`web-server-${serverRandomPet.id}`,
+ *     },
+ *     ami: serverRandomPet.keepers.apply(keepers => keepers?.amiId),
+ * });
+ * // ... (other aws_instance arguments) ...
+ * ```
+ * ```python
+ * import pulumi
+ * import pulumi_aws as aws
+ * import pulumi_random as random
+ * 
+ * # The following example shows how to generate a unique pet name
+ * # for an AWS EC2 instance that changes each time a new AMI id is
+ * # selected.
+ * server_random_pet = random.RandomPet("serverRandomPet", keepers={
+ *     "ami_id": var["ami_id"],
+ * })
+ * server_instance = aws.ec2.Instance("serverInstance",
+ *     tags={
+ *         "Name": server_random_pet.id.apply(lambda id: f"web-server-{id}"),
+ *     },
+ *     ami=server_random_pet.keepers["amiId"])
+ * # ... (other aws_instance arguments) ...
+ * ```
+ * ```csharp
+ * using Pulumi;
+ * using Aws = Pulumi.Aws;
+ * using Random = Pulumi.Random;
+ * 
+ * class MyStack : Stack
+ * {
+ *     public MyStack()
+ *     {
+ *         // The following example shows how to generate a unique pet name
+ *         // for an AWS EC2 instance that changes each time a new AMI id is
+ *         // selected.
+ *         var serverRandomPet = new Random.RandomPet("serverRandomPet", new Random.RandomPetArgs
+ *         {
+ *             Keepers = 
+ *             {
+ *                 { "ami_id", @var.Ami_id },
+ *             },
+ *         });
+ *         var serverInstance = new Aws.Ec2.Instance("serverInstance", new Aws.Ec2.InstanceArgs
+ *         {
+ *             Tags = 
+ *             {
+ *                 { "Name", serverRandomPet.Id.Apply(id => $"web-server-{id}") },
+ *             },
+ *             Ami = serverRandomPet.Keepers.Apply(keepers => keepers?.AmiId),
+ *         });
+ *         // ... (other aws_instance arguments) ...
+ *     }
+ * 
+ * }
+ * ```
+ * {{% /example %}}
+ * {{% /examples %}}
  */
 @ResourceType(type="random:index/randomPet:RandomPet")
 public class RandomPet extends io.pulumi.resources.CustomResource {
