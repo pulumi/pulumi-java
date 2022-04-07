@@ -68,6 +68,9 @@ integration_tests::	bin/pulumi-language-jvm
 test_example.%:	bin/pulumi-language-jvm
 	cd tests/examples && PATH=${PATH}:${PWD}/bin go test -run "TestExamples/^$*" -test.v
 
+test_example.random: install_sdk provider.random.install
+test_example.minimal: install_sdk
+
 codegen_tests::
 	cd ./pkg/codegen/jvm && go test ./...
 
